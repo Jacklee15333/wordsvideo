@@ -65,6 +65,12 @@ DEFAULT_SITE_PATH = "laike"              # 2026-11 起的新路径；老路径 p
 KNOWN_SITE_PATHS = ["laike", "pastel"]
 
 
+def _other_fleet(url):
+    """sorryios 新版每种服务一个车队页（#/fleet/mj 是 Midjourney）：不是 GPT 的车队不能当卡片列表。"""
+    m = re.search(r"#/fleet/([^/?#]+)", url or "")
+    return bool(m and re.match(r"(mj|midjourney|gemini|grok|codex|cc|claude|suno|flux|sd|kling|runway)", m.group(1), re.I))
+
+
 def _site_base(path):
     return "%s/%s" % (SITE_ORIGIN, (path or DEFAULT_SITE_PATH).strip("/"))
 
@@ -1014,7 +1020,7 @@ class _WebWorker:
         self._service_name = (cfg.get("serviceName") or "ChatGPT").strip()
         self._login_url = _login_url_for(self._site_path)
         routes = _load_routes()
-        if routes.get("sitePath") == self._site_path and routes.get("carlistUrl"):
+        if routes.get("sitePath") == self._site_path and routes.get("carlistUrl") and not _other_fleet(routes["carlistUrl"]):
             self._carlist_url = routes["carlistUrl"]
         else:
             self._carlist_url = _carlist_url_for(self._site_path)
@@ -1023,7 +1029,7 @@ class _WebWorker:
 
     def _learn_carlist(self, url):
         url = (url or "").strip()
-        if not url or "login" in url:
+        if not url or "login" in url or _other_fleet(url):
             return
         if url != self._carlist_url:
             self._log("记住卡片列表地址: " + url)
@@ -1037,11 +1043,13 @@ class _WebWorker:
             return r.width > 0 && r.height > 0 && getComputedStyle(el).visibility !== 'hidden'; };
         const hasPasswordInput = [...document.querySelectorAll('input[type="password"]')].some(vis);
         const bt = document.body ? (document.body.innerText || '') : '';
-        const hasCardListMarkers =
+        const fleet = (url.match(/#\/fleet\/([^\/?#]+)/) || [])[1] || '';
+        const otherFleet = /^(mj|midjourney|gemini|grok|codex|cc|claude|suno|flux|sd|kling|runway)/i.test(fleet);
+        const hasCardListMarkers = !otherFleet && (
             ((bt.includes('空闲') || bt.includes('繁忙') || bt.includes('正常')) &&
-             (bt.includes('TEAM') || bt.includes('PLUS') || bt.includes('Plus') || bt.includes('PRO')))
-            || /[A-Z]{2}\d{4}-\d{2}/.test(bt);
-        return { url, hasPasswordInput, hasCardListMarkers,
+             (bt.includes('TEAM') || bt.includes('PLUS') || bt.includes('Plus') || bt.includes('PRO') || bt.includes('STANDARD')))
+            || /[A-Z]{2}\d{4}-\d{2}/.test(bt));
+        return { url, hasPasswordInput, hasCardListMarkers, fleet, otherFleet,
                  isLoginPage: url.includes('/login') || hasPasswordInput };
     }"""
 
@@ -1181,12 +1189,35 @@ class _WebWorker:
         self._log("⚠ 没找到卡片列表页（当前 %s）" % self._page.url)
         return False
 
+    _SERVICE_JS = r"""(names) => {
+        const norm = s => (s || '').replace(/\s+/g, '').toLowerCase();
+        const want = names.map(norm);
+        const hits = [];
+        for (const el of document.querySelectorAll('a,button,li,[role="menuitem"],[role="tab"],div,span')) {
+            const t = norm(el.innerText);
+            if (!want.includes(t)) continue;
+            const r = el.getBoundingClientRect();
+            if (r.width < 8 || r.height < 8 || r.bottom < 0 || r.top > window.innerHeight) continue;
+            const clickable = el.matches('a,button,li,[role="menuitem"],[role="tab"]') || getComputedStyle(el).cursor === 'pointer';
+            hits.push({ rank: want.indexOf(t), clickable, left: r.x < window.innerWidth * 0.35, area: r.width * r.height,
+                        name: el.innerText.trim(), cx: Math.round(r.x + r.width / 2), cy: Math.round(r.y + r.height / 2) });
+        }
+        hits.sort((a, b) => (b.left - a.left) || (b.clickable - a.clickable) || (a.rank - b.rank) || (a.area - b.area));
+        return hits[0] || null;
+    }"""
+
     def _try_service_entry(self):
-        """在当前页点服务名（默认 ChatGPT）进入卡片列表。"""
+        """在当前页点服务名进入 GPT 的卡片列表：新版左边栏写的是“GPT”，老版是“ChatGPT”，都试（字要完全一样，优先左边栏）。"""
         before = len(self._context.pages)
-        if not self._click_text(self._service_name):
+        names = [self._service_name, "ChatGPT", "GPT"]
+        hit = self._safe(lambda: self._page.evaluate(self._SERVICE_JS, names), None)
+        if hit:
+            self._page.mouse.click(hit["cx"], hit["cy"])
+            self._log("点击服务入口「%s」" % hit.get("name"))
+        elif not self._click_text(self._service_name):
             return False
-        self._log("点击服务入口「%s」" % self._service_name)
+        else:
+            self._log("点击服务入口「%s」" % self._service_name)
         time.sleep(2)
         self._adopt_new_page(before)
         if self._wait_for_cards(12):
@@ -1484,8 +1515,8 @@ class _WebWorker:
                 if (r.bottom < 0 || r.top > window.innerHeight ||
                     r.width < 150 || r.width > 460 || r.height < 70 || r.height > 280) continue;
                 const t = el.innerText || '';
-                const m = t.match(/[A-Z]{2}\\d{4}-\\d{2}/);
-                const hasTeamOrPlus = t.includes('TEAM') || t.includes('PLUS') ||
+                const m = t.match(/[A-Z]{2}\\d{4}-\\d{2}/) || t.match(/\\b[A-Z]{0,4}\\d{3,5}-\\d{1,3}\\b/);
+                const hasTeamOrPlus = t.includes('TEAM') || t.includes('PLUS') || t.includes('STANDARD') ||
                                       t.includes('Plus') || t.includes('PRO') || !!m;
                 if (!hasTeamOrPlus) continue;
                 let status = '';
@@ -1550,7 +1581,10 @@ class _WebWorker:
                 if (r.width < 150 || r.width > 460 || r.height < 70 || r.height > 280) continue;
                 if ((el.innerText || '').includes(name)) {
                     el.scrollIntoView({block: 'center'});
-                    const rr = el.getBoundingClientRect();
+                    const area = x => { const q = x.getBoundingClientRect(); return q.width * q.height; };
+                    const go = [...el.querySelectorAll('a,button,span,div')].filter(x => /^\\s*进入/.test(x.innerText || '') &&
+                        (x.innerText || '').trim().length <= 6 && area(x) > 0).sort((a, b) => area(a) - area(b))[0];
+                    const rr = (go || el).getBoundingClientRect();
                     return { cx: Math.round(rr.x + rr.width/2), cy: Math.round(rr.y + rr.height/2) };
                 }
             }

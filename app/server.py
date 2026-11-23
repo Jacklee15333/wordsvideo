@@ -429,6 +429,34 @@ def api_relay_post(b):
     return {"ok": ok, "msg": msg}
 
 
+def next_unready(n):
+    """按总表（索引）顺序，接下来还没准备好（缺题目或缺画面）的 n 个词；画面做不成、出题没过的先跳过。"""
+    pw = V.pic_words()
+    skip = {r["word"] for r in C.q("SELECT word FROM picfail")} | set(C.manual_words())
+    _, rows = C.read_index()
+    out = []
+    for r in rows:
+        w = r[2]
+        if w in out or w in skip:
+            continue
+        if r[4] in ("细节数据有", "总表有") and V.folder_of(w) in pw:
+            continue
+        out.append(w)
+        if len(out) >= n:
+            break
+    return out
+
+
+def api_prep(b):
+    """开始页的大按钮：指定的词，或者按总表顺序接着做 n 个，都是出题 → 画面 → 检查一条龙。"""
+    if b.get("mode") == "next":
+        ws = next_unready(max(1, min(200, int(b.get("n") or 5))))
+        if not ws:
+            return {"ok": False, "msg": "总表里的词都准备好了"}
+        return api_words_task({"text": ",".join(ws), "steps": ["chuti", "pics"]})
+    return api_words_task({"text": b.get("text") or "", "steps": ["chuti", "pics"]})
+
+
 def api_words_task(b):
     raw = b.get("text") or ""
     ws = [w.strip() for w in re.split(r"[\n,，、;；]+", raw) if w.strip()]
@@ -472,9 +500,10 @@ GET = {
     "/api/live": api_live,
     "/api/relay": api_relay_get,
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
+    "/api/next": lambda qs: {"words": next_unready(int(qs.get("n", 5)))},
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
-NEED_REPO = {"/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
+NEED_REPO = {"/api/next", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
 POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/task/op": api_task_op,
         "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
         "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,
@@ -482,6 +511,7 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/relay": api_relay_post,
         "/api/open": api_open,
         "/api/words-task": api_words_task,
+        "/api/prep": api_prep,
         "/api/prepare": lambda b: C.prepare(b.get("words") or [])}
 
 
