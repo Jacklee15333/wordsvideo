@@ -17,11 +17,12 @@ description: 接着开发“单词工作台”（GitHub 仓库 Jacklee15333/word
 
 ```
 启动.bat                    装 openpyxl、playwright，跑 app\server.py
-app\VERSION                 版本号（现在 1.6.0）
+app\VERSION                 版本号（现在 1.7.0）
 app\server.py               HTTP 服务、全部接口（/api/...），开 Edge 应用窗口（单独资料夹 data\edge-app）
 app\core.py                 配置、SQLite、git、总表/索引/README、简写稿体检、提示词、出题流水线、AI 调用、任务队列、定时、手动接力
 app\pics.py                 做视频画面（AI 写画面设置 JSON + SVG 插图，检查，可选 WSL 起草检查，存盘）
 app\video.py                出片：引擎同步进 WSL、装环境、建批次、开工、登记视频（WSL 部分没在真机测过）
+app\clip.py               Windows 剪贴板读写（手动接力用）
 app\selfup.py               版本、检查更新（git pull）、备份、回退、让网页 AI 改软件
 app\web_model.py            操作 sorryios 网页 ChatGPT（超能小助 super-assistant 原样拷来，不要改，要改就从超能小助拷新的）
 app\web_tools.py            web_model 要的两个小函数的替身
@@ -43,7 +44,7 @@ data\（不进 git）            config.json（令牌、账号）、app.db、rep
 
 - **数据以 GitHub 为准**：软件在 `data\repo` 克隆一份稀疏副本，出好的东西写进去、提交、马上推送；用户在 GitHub Desktop 里 Pull 就到本地。每组（25 个词）记 README 进度表一行、一次提交（“题目第 N 批第 K 组”，4 组一批）。
 - **出题**：按总表顺序取“缺”的词，提示词＝出题技能的 rules.md + example.md + 附加要求 + 总表材料，要求 AI 只输出一个代码块里的简写稿、最后一行 `ZBQ-END`。体检＝仓库 `工具/lianxi.py`（fmt_word、check_word）+ 附加检查（4 个选项、2–5 题型不重复、句子 ≤12 词）。没过带着报错退回改（默认 3 轮），还不过进“待人工”（自动出题跳过）。
-- **出题用哪个 AI**（任务页「⚙ 设置」三选一 + 模拟）：`web` 网页镜像 ChatGPT（sorryios，web_model 自动操作浏览器）；`api` 接口 AI（OpenAI 兼容、流式；DeepSeek，或 Anthropic `https://api.anthropic.com/v1` + `claude-opus-5-5`）；`relay` 手动接力（软件给提示词，用户复制到网页 AI，比如 zd87 上的 Claude，再把回复粘回来，其余自动；一次 25 个词）；`mock` 只测流程。每个词、README 都记是哪个 AI 出的。
+- **出题用哪个 AI**（任务页「⚙ 设置」三选一 + 模拟）：`web` 网页镜像 ChatGPT（sorryios，web_model 自动操作浏览器）；`api` 接口 AI（OpenAI 兼容、流式；DeepSeek，或 Anthropic `https://api.anthropic.com/v1` + `claude-opus-5-5`）；`relay` 手动接力（比如 zd87 上的 Claude：软件自动把提示词放进 Windows 剪贴板、响一声；用户在网页里粘贴发送，写完点网页的「复制」，软件盯着剪贴板（clip.py，GetClipboardSequenceNumber），看到带 ZBQ-END、提到这批词的回复就自己接着做；也能手动粘回；一次 25 个词）；`mock` 只测流程。每个词、README 都记是哪个 AI 出的。
 - **做视频画面**：pics.py。提示词＝视频技能 data-format.md + pictures.md 摘要 + camera 范例 + 现成场景名（77 个）+ 会动的人（22 个，名字里两个以上“-”的）。AI 输出 JSON 画面设置 + `<<<SVG 名字.svg … >>>END` 插图；人物写 `{"actor": 动作名, x, y, s}`，`words/<词>.py` 在 WSL 里用 prefkit.actor 换成会动的人。检查：JSON、插图都在、动作名对、不许表情图（"e"）、SVG 能解析；出片环境装好了再跑视频技能起草检查（要“还要补：都齐了”）。
 - **任务页**：三步卡片（出题 → 做视频画面 → 出视频）、“做指定的词”输入框、手动接力黄框、实时画面（浏览器截图、AI 实时回复、步骤记录）、每天定时、时间窗口。
 - **出片**：video.py 用 `wsl -d Ubuntu-24.04 -u root -- bash -lc` 调用批量流水线 `~/lwb/scripts/wsl/batch.sh`；“同步引擎进 WSL”代替原来的 02_get_repo.sh。批次 UPLOAD=0，视频拷到 D:\构词视频\<批次>，登记进视频清单。
@@ -85,7 +86,7 @@ data\（不进 git）            config.json（令牌、账号）、app.db、rep
 - **模拟 AI 的测试文字别和源码里的原文一样**（改软件的测试会“出现 2 次”）。
 - **令牌**：用户在对话里发过好几次，每次都提醒他用完作废；令牌只填在软件设置里（data\config.json），不进 git。旧资料里找到的令牌上传前删掉（GitHub 会拦）。
 
-## 七、做到哪了（2026-11-23，v1.6.0）
+## 七、做到哪了（2026-11-23，v1.7.0）
 
 - 词库：9,299 行，约 6,244 行有题目，约 3,000 行缺；有画面设置的只有 kit 的 29 个词；视频 0 个登记。
 - 用户刚开始用软件出题。出题 AI：sorryios 的 ChatGPT 自动；或者手动接力用 zd87（紫刀 AI）上的 Claude。

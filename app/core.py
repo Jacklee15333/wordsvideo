@@ -52,6 +52,7 @@ DEFAULT_CFG = {
     "promptExtra": "",
     "relayChunk": 25,            # 手动接力时一次给几个词（你要复制粘贴，所以一次多给一些）
     "relayUrl": "https://zd87.com/ai-fleet/claude",
+    "relayClipboard": True,      # 手动接力：自动把提示词放进剪贴板；你在网页里点“复制”回复，软件看到就自己接着做
     "port": 8766,
 }
 
@@ -979,17 +980,37 @@ RELAY = {"id": 0, "status": "", "prompt": "", "words": [], "kind": "", "reply": 
 _RELAY_LOCK = threading.Lock()
 
 
+def _looks_reply(text, words):
+    """剪贴板里这段是不是这一批的回复：有结束标记，而且提到了这一批的词（出题）或者有画面设置的 JSON（做画面）。"""
+    t = text or ""
+    if END not in t or len(t) < 80:
+        return False
+    if "【做画面】" in t or "【改软件】" in t or "【出题规矩】" in t:     # 复制的是提示词本身
+        return False
+    return any(("@" + w) in t or ("＠" + w) in t for w in words) or '"pics"' in t
+
+
 def relay_wait(prompt, words):
-    """手动接力：把提示词摆出来，等你在网页 AI 里发送、把回复交回来（最多等 12 小时）。"""
+    """手动接力：提示词放进剪贴板，等你在网页 AI 里发送；你在网页里点“复制”它的回复，软件看到就自己接着做
+    （也可以把回复粘到软件里点「交回给软件」）。最多等 12 小时。"""
     if set(words) <= RELAY_SKIP:            # 这批你点了跳过：改错轮也不再问
         return ""
     RELAY_SKIP.clear()
+    import clip
+    use_clip = clip.WIN and load_cfg().get("relayClipboard", True)
     with _RELAY_LOCK:
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=AI_LIVE.get("kind", ""),
-                     reply="", ts=time.time())
+                     reply="", ts=time.time(), copied=False, hint="", clip=use_clip)
         rid = RELAY["id"]
-    log("要你操作：复制提示词到网页 AI，写完把回复交回来（%s … %s，%d 个词）" % (words[0], words[-1], len(words)),
-        (RUNNER.task or {}).get("id"))
+    tid = (RUNNER.task or {}).get("id")
+    if use_clip and clip.set_text(prompt):
+        RELAY["copied"] = True
+        log("提示词已经放进剪贴板（%s … %s，%d 个词）：到网页 AI 里粘贴、发送；写完点它回复下面的「复制」，软件会自己接着做"
+            % (words[0], words[-1], len(words)), tid)
+    else:
+        log("要你操作：复制提示词到网页 AI，写完把回复交回来（%s … %s，%d 个词）" % (words[0], words[-1], len(words)), tid)
+    clip.beep()
+    last = clip.seq() if use_clip else 0
     end = time.time() + 12 * 3600
     try:
         while time.time() < end:
@@ -1001,6 +1022,20 @@ def relay_wait(prompt, words):
                     return RELAY["reply"]
                 if RELAY["id"] == rid and RELAY["status"] == "跳过":
                     return ""
+            if use_clip:
+                sq = clip.seq()
+                if sq != last:
+                    last = sq
+                    t = clip.get_text()
+                    if t and t.strip() != prompt.strip():
+                        if _looks_reply(t, words):
+                            with _RELAY_LOCK:
+                                if RELAY["id"] == rid and RELAY["status"] == "等你操作":
+                                    RELAY.update(status="交回了", reply=t, hint="")
+                            log("从剪贴板收到了网页 AI 的回复（%d 字），接着做" % len(t), tid)
+                            continue
+                        if any(("@" + w) in t for w in words) or '"pics"' in t:
+                            RELAY["hint"] = "剪贴板里的回复没有最后一行 ZBQ-END：可能还没写完，等它写完再点一次「复制」"
             time.sleep(1)
         raise Fatal("等了 12 小时没交回回复，先停下")
     finally:

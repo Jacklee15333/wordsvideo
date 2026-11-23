@@ -280,12 +280,19 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
         <div id="lNoShot" class="lnoshot" hidden></div>
   <div class="relay" id="rBox" hidden>
     <h3 style="margin:0 0 4px">要你操作：把这一批交给网页 AI <span id="rWords" class="small muted"></span></h3>
+    <div id="rAuto">
     <ol class="steps">
-      <li><button class="btn" id="rCopy">复制提示词</button> <span class="small muted" id="rLen"></span></li>
-      <li><button class="btn ghost" id="rOpen">打开网页 AI</button> <span class="small muted">在网页里粘贴（Ctrl+V）、发送，等它全部写完（最后一行是 ZBQ-END）</span></li>
-      <li>在网页里复制它的整段回复，粘贴到这里：<textarea id="rReply" rows="6" placeholder="把 AI 的整段回复粘贴到这里"></textarea></li>
-      <li><button class="btn" id="rSend">交回给软件</button> <button class="btn ghost sm" id="rSkip">这一批先跳过</button> <span id="rMsg" class="small"></span></li>
+      <li><b>提示词已经自动复制好了</b> <span class="small muted" id="rLen"></span> <button class="btn ghost sm" id="rCopy">再复制一次</button></li>
+      <li><button class="btn ghost sm" id="rOpen">打开网页 AI</button> 在网页里 Ctrl+V 粘贴、发送</li>
+      <li>等它写完（最后一行是 ZBQ-END），点它回复下面的<b>「复制」</b>按钮</li>
+      <li>软件看到剪贴板里的回复，就<b>自己接着往下做</b>了</li>
     </ol>
+    <div id="rHint" class="small" style="color:var(--amber)"></div>
+    <details style="margin:6px 0"><summary class="small muted">剪贴板没反应？手动粘贴回复</summary>
+    <textarea id="rReply" rows="5" placeholder="把 AI 的整段回复粘贴到这里"></textarea>
+      <div style="margin-top:6px"><button class="btn sm" id="rSend">交回给软件</button></div></details>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center"><button class="btn ghost sm" id="rSkip">这一批先跳过</button> <span id="rMsg" class="small"></span></div>
     <p class="small faint" style="margin:0">交回以后，检查、存盘、退回改、记进度、上传都是软件自动做；没过的词会再给你一份“改错”的提示词。</p>
   </div>
 
@@ -719,7 +726,8 @@ async function relayTick(){
   const nt=$('#nTasks');if(on){nt.hidden=false;nt.textContent='要你操作'}
   if(on&&d.id!==RL.id){$('#rReply').value='';$('#rMsg').textContent='';if(page!=='tasks')toast('有一批词等你交给网页 AI（任务页）',8000);else setTimeout(()=>$('#tLive').scrollIntoView({behavior:'smooth',block:'start'}),300)}
   RL=d;
-  if(on){$('#rWords').textContent=`${d.kind||''}：${(d.words||[])[0]||''} … ${(d.words||[]).slice(-1)[0]||''}（${(d.words||[]).length} 个词）`;$('#rLen').textContent=`提示词 ${d.promptLen} 字`}
+  if(on){$('#rHint').textContent=d.hint||'';if(!d.clip)$('#rAuto').querySelector('li b').textContent='先点右边「再复制一次」复制提示词';
+    $('#rWords').textContent=`${d.kind||''}：${(d.words||[])[0]||''} … ${(d.words||[]).slice(-1)[0]||''}（${(d.words||[]).length} 个词）`;$('#rLen').textContent=`提示词 ${d.promptLen} 字`}
 }
 setInterval(relayTick,2500);
 async function copyText(t){try{await navigator.clipboard.writeText(t);return true}catch(e){
