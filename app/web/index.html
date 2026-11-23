@@ -620,10 +620,10 @@ async function gearOpen(){const S=await api('/api/settings'),c=S.cfg,w=S.web||{}
   <label class="f"><span></span><span><input type="checkbox" id="g_ion" ${ib.enabled?'checked':''}> <b>网页 AI 写完自己上传回复</b>（不用你点「复制」）</span></label>
   <div id="g_ibox">
   <label class="f"><span>收件箱仓库</span><input type="text" id="g_irepo" autocomplete="off" value="${esc(ib.repo||'')}" placeholder="用户名/仓库名"></label>
-  <label class="f"><span>收件箱令牌</span><input type="password" id="g_itok" autocomplete="new-password" placeholder="${ib.token?'（已填，不改就空着）':'github_pat_…'}"></label>
-  <div class="tip">网页 AI 用这个令牌把回复传进收件箱仓库，软件每 ${ib.pollSec||15} 秒去看一次，看到就接着检查、存盘、上传到主仓库。<br>
-  <b>令牌会写进发给网页 AI 的提示词</b>（号池账号别人也可能看到），所以：在 GitHub 上单独建一个空的私有仓库当收件箱（比如 wordsvideo-inbox），令牌只给这个仓库 Contents 读写、有效期短一点；别用存题目的主仓库令牌。<br>
-  网页 AI 要能运行代码、能连 GitHub；做不到时它会照常把回复写在聊天里，你点「复制」也行。</div></div></div>
+  <label class="f"><span>收件箱令牌</span><input type="password" id="g_itok" autocomplete="new-password" placeholder="${ib.token?'（已填，不改就空着）':'粘贴「收件箱用」小令牌 github_pat_…'}"></label>
+  <div class="tip">收件箱仓库保持 <b>Jacklee15333/files-transfer-and-receive</b>（中转仓库）不用改；回复放在它的 inbox 文件夹里，软件每 ${ib.pollSec||15} 秒看一次，取走就删。<br>
+  收件箱令牌只填 GitHub 上叫<b>「收件箱用」</b>的小令牌。它会写进发给网页 AI 的提示词，万能令牌填进来软件会拦下、不用。<br>
+  填好点「检测收件箱」，看到“只能写收件箱，不能动主仓库”就可以了。网页 AI 传不上时，它会照常把回复写在聊天里，你点「复制」也行。</div></div></div>
   <div id="g_api">
   <label class="f"><span>接口地址</span><input type="text" id="g_base" value="${esc(c.api.baseUrl||'')}"></label>
   <label class="f"><span>密钥</span><input type="password" id="g_key" autocomplete="new-password" placeholder="${c.api.key?'（已填，不改就空着）':'sk-…'}"></label>
@@ -636,6 +636,7 @@ async function gearOpen(){const S=await api('/api/settings'),c=S.cfg,w=S.web||{}
   <p id="g_msg" class="small muted" style="margin-left:138px"></p>`);
   const pvVis=()=>{const v=document.querySelector('input[name=g_pv]:checked').value;$('#g_web').hidden=v!=='web';$('#g_api').hidden=v!=='api';$('#g_relay').hidden=v!=='relay';$('#g_test').hidden=v!=='web';$('#g_ibox').hidden=!$('#g_ion').checked;$('#g_itest').hidden=v!=='relay'||!$('#g_ion').checked};
   $('#g_ion').onchange=pvVis;
+  $('#g_itok').oninput=()=>{if($('#g_itok').value.trim())$('#g_ion').checked=true};
   $$('input[name=g_pv]').forEach(x=>x.onchange=pvVis);pvVis();
   $('#g_save').onclick=async()=>{const web={aiUsername:$('#g_user').value};if($('#g_pass').value)web.aiPassword=$('#g_pass').value;
     const apiC={baseUrl:$('#g_base').value,model:$('#g_model').value};if($('#g_key').value)apiC.key=$('#g_key').value;

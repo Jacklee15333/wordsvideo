@@ -54,8 +54,9 @@ DEFAULT_CFG = {
     "relayUrl": "https://zd87.com/ai-fleet/claude",
     "relayClipboard": True,      # 手动接力：自动把提示词放进剪贴板；你在网页里点“复制”回复，软件看到就自己接着做
     # 手动接力 · 收件箱：网页 AI 写完自己把回复传到 GitHub（不用你复制）；软件隔一会儿去看，看到就接着做。
-    # 建议单独建一个空仓库当收件箱，令牌只给这个仓库：令牌会写进发给网页 AI 的提示词里
-    "relayInbox": {"enabled": False, "repo": "Jacklee15333/wordsvideo-inbox", "branch": "main", "token": "",
+    # 收件箱就用中转仓库 files-transfer-and-receive 的 inbox/ 文件夹。令牌会写进发给网页 AI 的提示词里，
+    # 所以这里只能填“只给中转仓库”的小令牌（GitHub 上叫「收件箱用」）；能写所有仓库的万能令牌填进来会被拦下
+    "relayInbox": {"enabled": False, "repo": "Jacklee15333/files-transfer-and-receive", "branch": "main", "token": "",
                    "dir": "inbox", "pollSec": 15},
     "port": 8766,
 }
@@ -497,9 +498,12 @@ def check_token():
     try:
         with urllib.request.build_opener(*hs).open(req, timeout=20) as r:
             d = json.loads(r.read().decode("utf-8"))
-        return bool(d.get("permissions", {}).get("push")), ("有写权限" if d.get("permissions", {}).get("push") else "只有读权限，不能上传")
     except Exception as e:
         return False, "检测失败：%s" % str(e)[:120]
+    w = can_write("%s/%s" % m.groups(), tok)       # 公开仓库的 permissions 会误报，真试一下
+    if w is None:
+        return bool(d.get("permissions", {}).get("push")), "能看到仓库，写权限没测出来（网络问题），上传时再看"
+    return w, ("有写权限" if w else "这个令牌写不进 %s/%s：GitHub 令牌设置里要选上这个仓库，Contents 给 Read and write" % m.groups())
 
 
 # ═══════════════════════ 总表、索引、README ═══════════════════════
@@ -996,7 +1000,7 @@ for d in ("", "/home/claude/", "/mnt/user-data/outputs/", "/tmp/"):
     if os.path.exists(d + FILE):
         FILE = d + FILE
         break
-text = open(FILE, encoding="utf-8").read()
+text = open(FILE, encoding="utf-8").read().replace(TOKEN, "***")   # 令牌别跟着传上去
 assert "%(end)s" in text, "文件里没有最后一行 %(end)s：先把回复写完整"
 url = "https://api.github.com/repos/%%s/contents/%%s" %% (REPO, PATH)
 H = {"Authorization": "Bearer " + TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "wordsvideo-relay"}
@@ -1022,13 +1026,31 @@ def inbox_cfg(cfg=None):
     ib["token"] = (ib.get("token") or "").strip()
     ib["repo"] = re.sub(r"^https?://github\.com/|\.git$|/+$", "", (ib.get("repo") or "").strip())
     ib["dir"] = (ib.get("dir") or "inbox").strip("/ ") or "inbox"
+    if ib["repo"].lower() in ("", "jacklee15333/wordsvideo-inbox"):     # v1.8.0 的默认值（这个仓库没建过）
+        ib["repo"] = DEFAULT_CFG["relayInbox"]["repo"]
     return ib
+
+
+def _main_repo(cfg=None):
+    m = re.search(r"github\.com[/:]([^/]+/[^/.]+)", (cfg or load_cfg()).get("repoUrl", ""))
+    return m.group(1) if m else ""
+
+
+def _same_as_master(cfg=None):
+    """收件箱令牌和左边「设置」里的 GitHub 令牌是同一个：那是万能令牌，不能写进提示词。"""
+    cfg = cfg or load_cfg()
+    a, b = inbox_cfg(cfg)["token"], (cfg.get("githubToken") or "").strip()
+    return bool(a) and a == b
 
 
 def inbox_on(cfg=None):
     cfg = cfg or load_cfg()
     ib = inbox_cfg(cfg)
-    return cfg.get("provider") == "relay" and bool(ib.get("enabled")) and bool(ib["token"]) and "/" in ib["repo"]
+    return (cfg.get("provider") == "relay" and bool(ib.get("enabled")) and bool(ib["token"]) and "/" in ib["repo"]
+            and not _same_as_master(cfg) and not INBOX_BAD.get(ib["token"]))
+
+
+INBOX_BAD = {}      # 检测出能写主仓库的收件箱令牌：这次开着软件期间不往提示词里写
 
 
 def _gh(method, path, token, body=None, timeout=30):
@@ -1059,25 +1081,53 @@ def _gh(method, path, token, body=None, timeout=30):
     raise RuntimeError("连不上 GitHub：%s" % str(last)[:160])
 
 
+def can_write(repo, token):
+    """真试一下能不能写：在仓库里建一个不挂在任何提交上的小数据块（仓库里看不到，GitHub 过段时间自己清掉）。
+    不看接口返回的 permissions：公开仓库对令牌没给的仓库也显示“能推”，会误报。返回 True / False / None（连不上）。"""
+    try:
+        st, d = _gh("POST", "/repos/%s/git/blobs" % repo, token, {"content": "wordsvideo-check", "encoding": "utf-8"})
+    except Exception:
+        return None
+    if st == 201:
+        return True
+    if st in (403, 404):
+        return False
+    return None
+
+
 def check_inbox():
-    ib = inbox_cfg()
+    cfg = load_cfg()
+    ib = inbox_cfg(cfg)
     if not ib["token"]:
-        return False, "还没填收件箱令牌"
+        return False, "还没填收件箱令牌（填 GitHub 上叫「收件箱用」的那个小令牌）"
     if "/" not in ib["repo"]:
         return False, "收件箱仓库要写成 用户名/仓库名"
+    if _same_as_master(cfg):
+        return False, "这里填的是万能令牌（和左边「设置」里的 GitHub 令牌一样）。它会被写进发给网页 AI 的提示词，不能用：换成「收件箱用」那个小令牌"
     try:
         st, d = _gh("GET", "/repos/" + ib["repo"], ib["token"])
     except Exception as e:
         return False, str(e)
     if st == 404:
-        return False, "找不到仓库 %s：先在 GitHub 上建好（可以是私有的），令牌要给这个仓库的权限" % ib["repo"]
+        return False, "找不到仓库 %s：检查仓库名，令牌要给这个仓库的权限" % ib["repo"]
     if st != 200:
         return False, "GitHub 不让进（%s）：令牌不对或过期了" % st
-    if not d.get("permissions", {}).get("push"):
-        return False, "令牌只有读权限：要给 Contents 读写"
-    main = re.search(r"github\.com[/:]([^/]+/[^/.]+)", load_cfg().get("repoUrl", ""))
-    same = main and main.group(1).lower() == ib["repo"].lower()
-    return True, "有写权限" + ("（注意：这就是存题目的主仓库，令牌泄露了别人能改你的词库；建议换成单独的空仓库）" if same else "")
+    w = can_write(ib["repo"], ib["token"])
+    if w is None:
+        return False, "连不上 GitHub，没测出来：检查网络或左边「设置」里的代理，再点一次"
+    if not w:
+        return False, "这个令牌写不进 %s：GitHub 令牌设置里要选这个仓库，Contents 给 Read and write" % ib["repo"]
+    main = _main_repo(cfg)
+    if main and main.lower() != ib["repo"].lower():
+        mw = can_write(main, ib["token"])
+        if mw:
+            INBOX_BAD[ib["token"]] = True
+            return False, ("这个令牌还能改主仓库 %s，像是万能令牌：它会写进发给网页 AI 的提示词，别人拿到就能改你的词库。"
+                           "换成只选了 %s 的「收件箱用」小令牌" % (main, ib["repo"]))
+    elif main:
+        return True, "有写权限（注意：收件箱填的就是存题目的主仓库，建议改回 %s）" % DEFAULT_CFG["relayInbox"]["repo"]
+    INBOX_BAD.pop(ib["token"], None)
+    return True, "有写权限，而且只能写收件箱，不能动主仓库 ✓ 可以用了"
 
 
 def inbox_prompt(path):
@@ -1142,6 +1192,10 @@ def relay_wait(prompt, words):
     cfg = load_cfg()
     use_clip = clip.WIN and cfg.get("relayClipboard", True)
     ibox = inbox_on(cfg)
+    ib0 = inbox_cfg(cfg)
+    if not ibox and cfg.get("provider") == "relay" and ib0.get("enabled") and ib0["token"]:
+        log("收件箱令牌像是万能令牌，没写进提示词（这一批照旧要你点「复制」）：「⚙ 设置」里换成「收件箱用」小令牌，点「检测收件箱」",
+            (RUNNER.task or {}).get("id"))
     ipath = ""
     if ibox:      # 每一批一个新文件名，旧回复不会被当成这一批的
         ipath = "%s/%s-%s.txt" % (inbox_cfg(cfg)["dir"], time.strftime("%Y%m%d-%H%M%S"), os.urandom(3).hex())
