@@ -106,6 +106,15 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 .qn .kd{font-size:12px;color:var(--blue);margin-left:6px}
 .errs{background:var(--red-bg);color:var(--red);border-radius:4px;padding:8px 12px;font-size:13px;margin:8px 0}
 .errs.ok{background:var(--pass-bg);color:var(--pass)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.chip{border:1px solid var(--gap);background:#fff;border-radius:16px;padding:3px 14px;cursor:pointer;font-size:13px}
+.chip b{font-family:var(--en);margin-left:4px}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dots{white-space:nowrap;width:62px}
+.dots i{display:inline-block;width:16px;height:16px;line-height:16px;text-align:center;font-size:10px;font-style:normal;border-radius:3px;margin-right:2px;background:#EEF1F4;color:var(--faint)}
+.dots i.y{background:var(--pass);color:#fff}
+.dots i.w{background:var(--red);color:#fff}
+.check li{margin:2px 0}
 .pager{display:flex;gap:8px;align-items:center;margin-top:8px;font-size:12px;color:var(--muted)}
 /* 弹窗 */
 #modal{position:fixed;inset:0;background:rgba(31,42,68,.45);display:none;align-items:center;justify-content:center;z-index:20}
@@ -198,20 +207,27 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 </section>
 
 <section id="p-words">
+  <div class="chips" id="wChips"></div>
   <div class="row">
-    <div style="width:380px;flex:none">
+    <div style="width:430px;flex:none">
       <div style="display:flex;gap:8px;margin-bottom:8px">
         <input type="text" id="wq" placeholder="搜单词或中文意思" style="flex:1">
-        <select id="ws"><option value="">全部</option><option value="done">有题目</option><option value="missing">还缺</option>
+        <select id="ws"><option value="">题目：全部</option><option value="done">有题目</option><option value="missing">还缺</option>
           <option value="manual">待人工</option><option value="orig">总表原有</option></select>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap" class="small">
+        <label><input type="checkbox" id="wAllPage"> 全选这一页</label>
+        <button class="btn ghost sm" id="wAllHit">选中筛出来的全部</button>
+        <span id="wSelN" class="muted">没选</span>
+        <button class="btn sm" id="wPrep">准备选中的词</button>
       </div>
       <div class="box" style="padding:6px 8px"><div class="wlist"><table id="wTable"></table></div>
         <div class="pager" id="wPager"></div></div>
     </div>
-    <div class="col"><div class="box" id="wDetail"><p class="muted">在左边选一个词。</p></div></div>
+    <div class="col"><div class="box" id="wDetail"><p class="muted">在左边选一个词。<br><br>每个词出片前要准备好两样：<b>7 道题</b>（出题）和<b>画面设置</b>（场景、人物、插图）。
+      列表里三个小格依次是 题 · 画 · 片，绿的是有了。勾选几个词点「准备选中的词」：缺题目的会排进出题；缺画面设置的先记下，自动写画面设置是下一步要做的功能。</p></div></div>
   </div>
 </section>
-
 
 <section id="p-video">
   <h2>视频</h2>
@@ -467,17 +483,37 @@ async function sched(id,op){await api('/api/schedule',{id,op});loadTasks()}
 async function taskLog(id){const d=await api('/api/logs?task='+id);modal('任务 #'+id+' 的记录','<pre>'+d.logs.reverse().map(l=>esc(l.ts+'  '+l.msg)).join('\n')+'</pre>')}
 
 /* ───── 单词 ───── */
-let wPage=1,wTimer;
+let wPage=1,wTimer,wReady='',SEL=new Set();
+const RN={'':'全部',ready:'准备好了，可以出片',needpic:'缺画面设置',needq:'缺题目',video:'有视频'};
 $('#wq').oninput=()=>{clearTimeout(wTimer);wTimer=setTimeout(()=>{wPage=1;loadWords()},250)};
 $('#ws').onchange=()=>{wPage=1;loadWords()};
+let WLAST={};
+function selN(){$('#wSelN').textContent=SEL.size?`选了 ${SEL.size} 个`:'没选'}
 async function loadWords(){
-  const d=await api(`/api/words?q=${encodeURIComponent($('#wq').value)}&status=${$('#ws').value}&page=${wPage}`);
-  $('#wTable').innerHTML=d.items.map(it=>`<tr class="click" onclick="openWord('${esc(it.word).replace(/'/g,"\\'")}')"><td class="w">${esc(it.word)}</td>
-    <td class="small muted">${esc(it.meaning).slice(0,26)}</td><td><span class="tag t-${it.status}">${STN[it.status]}</span></td></tr>`).join('')||'<tr><td class="muted">没有找到。</td></tr>';
+  const d=await api(`/api/words?q=${encodeURIComponent($('#wq').value)}&status=${$('#ws').value}&page=${wPage}&ready=${wReady}`);WLAST=d;
+  if(d.notReady){$('#wTable').innerHTML=`<tr><td class="muted">${esc(d.msg)}</td></tr>`;$('#wPager').innerHTML='';$('#wChips').innerHTML='';return}
+  const c=d.counts||{},tot=Object.values(c).reduce((a,b)=>a+b,0);
+  $('#wChips').innerHTML=Object.keys(RN).map(k=>`<span class="chip ${wReady===k?'on':''}" data-r="${k}">${RN[k]}<b>${(k?c[k]:tot)||0}</b></span>`).join('');
+  $$('#wChips .chip').forEach(x=>x.onclick=()=>{wReady=x.dataset.r;wPage=1;loadWords()});
+  $('#wTable').innerHTML=d.items.map(it=>{const w=esc(it.word),q=it.status==='done'||it.status==='orig';
+    return `<tr class="click"><td style="width:22px"><input type="checkbox" class="wck" value="${w}" ${SEL.has(it.word)?'checked':''}></td>
+    <td class="w" onclick="openWord(this.dataset.w)" data-w="${w}">${w}</td><td class="small muted" onclick="openWord(this.parentElement.querySelector('.w').dataset.w)">${esc(it.meaning).slice(0,22)}</td>
+    <td class="dots" title="题目 · 画面设置 · 视频"><i class="${q?'y':(it.status==='manual'?'w':'')}">题</i><i class="${it.pic?'y':''}">画</i><i class="${it.video?'y':''}">片</i></td></tr>`}).join('')||'<tr><td class="muted">没有找到。</td></tr>';
+  $$('.wck').forEach(x=>x.onchange=()=>{x.checked?SEL.add(x.value):SEL.delete(x.value);selN()});
+  $('#wAllPage').checked=false;selN();
   const pages=Math.max(1,Math.ceil(d.total/60));
   $('#wPager').innerHTML=`<button class="btn ghost sm" ${wPage<=1?'disabled':''} onclick="wPage--;loadWords()">上一页</button>
     ${wPage} / ${pages}（${d.total} 个）<button class="btn ghost sm" ${wPage>=pages?'disabled':''} onclick="wPage++;loadWords()">下一页</button>`;
 }
+$('#wAllPage').onchange=()=>{$$('.wck').forEach(x=>{x.checked=$('#wAllPage').checked;x.checked?SEL.add(x.value):SEL.delete(x.value)});selN()};
+$('#wAllHit').onclick=()=>{if(!(WLAST.all||[]).length)return toast('筛出来的太多了（超过 3000 个），先缩小一点');WLAST.all.forEach(w=>SEL.add(w));loadWords()};
+$('#wPrep').onclick=async()=>{if(!SEL.size)return toast('先勾选词');
+  const r=await api('/api/prepare',{words:[...SEL]});
+  modal('准备选中的词',`<p>选了 ${SEL.size} 个词：</p><ul class="check">
+    <li>${r.needq?`<b>${r.needq}</b> 个缺题目，已经排进出题（任务 #${r.task}），在「任务」页能看进度`:'都有题目了'}</li>
+    <li>${r.needpic?`<b>${r.needpic}</b> 个缺画面设置：自动写画面设置是下一步要做的功能，现在还做不了`:'都有画面设置'}</li>
+    <li>${r.ready?`<b>${r.ready}</b> 个已经准备好了，去「视频」页勾选它们建批次就能出片`:'还没有准备好的'}</li></ul>`);
+  SEL.clear();loadWords();poll()};
 function parseCell(c){const o={type:'',ask:'',listen:'',zh:'',stem:[],opts:[],kd:''};
   for(const ln of String(c||'').split('\n')){let m;
     if(m=ln.match(/^【([^】]+)】\s*(.*)$/)){o.type=m[1];o.ask=m[2]}
@@ -507,9 +543,13 @@ async function openWord(w){
       ${(d.table||[]).length>1?`<dt>另一行</dt><dd>${esc(d.table[1]['初中含义'])}｜${esc(d.table[1]['考点'])}</dd>`:''}</dl>
     ${d.record&&d.record['题目生成']?`<p class="small faint" style="margin:10px 0 0">题目：${esc(d.record['题目生成'])}，${esc(d.record['总表版本']||'')}</p>`:''}
     ${man?`<div class="errs">待人工（${esc(man.source||'')}，试了 ${man.attempts} 次）：${esc(JSON.parse(man.errors||'[]').join('；')||'人工标记')}</div>`:''}
+    ${d.video?(()=>{const q=d.record&&d.record['题目'];const tb=(d.table||[])[0]||{};
+      const it=(ok,t)=>`<li><span class="tag ${ok?'t-done':'t-missing'}">${ok?'有':'缺'}</span> ${t}</li>`;
+      return `<ul class="check small" style="list-style:none;padding:0;margin:10px 0 0">${it(!!(tb['考点']&&tb['初中含义']),'总表材料（初中含义、考点）')}${it(!!q||r0['题目']==='总表有','7 道题')}
+        ${it(d.video.pic,'画面设置'+(d.video.pic?'':'（自动写画面设置是下一步的功能）'))}${it(!!d.video.video,'视频')}</ul>`})():''}
     ${d.video?`<p class="small" style="margin:8px 0 0">视频：${d.video.video?`<span class="tag t-done">有</span> ${d.video.files.filter(f=>f.endsWith('.mp4')).map(f=>`<a href="/api/video/file?p=${encodeURIComponent(f)}" target="_blank">${esc(f.split(/[\\/]/).pop())}</a>`).join('　')}`:(d.video.pic?'<span class="tag t-已暂停">有画面设置，能出片</span>':'<span class="tag t-missing">还没有画面设置</span>')}</p>
       ${d.video.files.filter(f=>f.endsWith('关键画面.jpg')).map(f=>`<img src="/api/video/file?p=${encodeURIComponent(f)}" style="max-width:100%;margin-top:6px;border:1px solid var(--rule)">`).join('')}`:''}
-    ${renderQs(d.record)}
+    ${!d.record&&r0["题目"]==="总表有"?"<p class=\"muted\">这个词的 7 道题在总表里（题目1–7 列），出片时直接用。</p>":renderQs(d.record)}
     <h3>简写稿</h3>
     <p class="small muted" style="margin:-4px 0 6px">一道题一行，写法和出题技能一样（听|单|形|选|改|完 开头，“|”分隔）。改好点「体检」，过了再「保存」；保存后没上传，下一组出题或点「上传」时一起传。</p>
     <textarea id="draft" rows="9">${esc(d.draft||'')}</textarea>

@@ -32,7 +32,8 @@ def prepare_repo():
         C.log("仓库就绪：%s，总表 %s" % (C.STATE.get("head"), C.STATE.get("version")))
         C.RUNNER.wake.set()
     except Exception as e:
-        C.STATE["repo"] = "出错"
+        if C.STATE.get("repo") != "等令牌":
+            C.STATE["repo"] = "出错"
         C.STATE["repoError"] = str(e)
         C.log("仓库没准备好：%s" % e)
 
@@ -86,6 +87,9 @@ def api_settings_post(b):
             web.pop("aiPassword", None)
         m.save_config(web)
     C.RUNNER.wake.set()
+    if C.STATE.get("repo") in ("出错", "等令牌", "未准备"):
+        C.STATE["repo"], C.STATE["repoError"] = "正在克隆仓库", ""
+        threading.Thread(target=prepare_repo, daemon=True).start()
     return {"ok": True}
 
 
@@ -302,7 +306,7 @@ def video_file(handler, qs):
 GET = {
     "/api/status": api_status, "/api/settings": api_settings_get, "/api/tasks": api_tasks, "/api/logs": api_logs,
     "/api/word": api_word, "/api/ai/live": api_ai_live,
-    "/api/words": lambda qs: C.search_words(qs.get("q", ""), qs.get("status", ""), int(qs.get("page", 1))),
+    "/api/words": lambda qs: C.search_words(qs.get("q", ""), qs.get("status", ""), int(qs.get("page", 1)), ready=qs.get("ready", "")),
     "/api/map": lambda qs: C.word_map(),
     "/api/manual": lambda qs: {"items": C.q("SELECT * FROM manual ORDER BY ts DESC")},
     "/api/groups": lambda qs: {"items": C.q("SELECT * FROM groups ORDER BY id DESC LIMIT 200")},
@@ -314,9 +318,11 @@ GET = {
     "/api/video": api_video_get,
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
+NEED_REPO = {"/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
 POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/task/op": api_task_op,
         "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
-        "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post}
+        "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,
+        "/api/prepare": lambda b: C.prepare(b.get("words") or [])}
 
 
 class H(BaseHTTPRequestHandler):
@@ -337,6 +343,10 @@ class H(BaseHTTPRequestHandler):
         u = urllib.parse.urlparse(self.path)
         qs = {k: v[0] for k, v in urllib.parse.parse_qs(u.query).items()}
         try:
+            if u.path in NEED_REPO and C.STATE.get("repo") not in ("就绪", "索引和总表对不上"):
+                return self._send(200, {"notReady": True, "msg": "仓库还没准备好：%s %s" % (
+                    C.STATE.get("repo"), C.STATE.get("repoError") or ""), "items": [], "total": 0, "codes": "", "vcodes": "",
+                    "words": [], "readme": [], "mine": [], "counts": {}})
             if u.path in GET:
                 return self._send(200, GET[u.path](qs))
             if u.path == "/api/video/file":

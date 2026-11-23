@@ -184,11 +184,14 @@ def git(*args, auth=False, check=True, cwd=None, timeout=900, proxy=None):
         cmd += ["-c", "http.extraHeader=Authorization: Basic " + b]
     cmd += ["-c", "user.name=" + cfg["gitName"], "-c", "user.email=" + cfg["gitEmail"]]
     cmd += list(args)
-    env = dict(os.environ, GIT_TERMINAL_PROMPT="0", LC_ALL="C.UTF-8")
+    env = dict(os.environ, GIT_TERMINAL_PROMPT="0", GCM_INTERACTIVE="never", LC_ALL="C.UTF-8")
     r = subprocess.run(cmd, cwd=str(cwd or REPO), capture_output=True, text=True, encoding="utf-8",
                        errors="replace", timeout=timeout, env=env, creationflags=NOWIN)
     if check and r.returncode:
-        raise Fatal("git %s 失败：%s" % (" ".join(args[:2]), mask((r.stderr or r.stdout).strip()[-800:])))
+        err = mask((r.stderr or r.stdout).strip()[-800:])
+        if re.search(r"Authentication failed|could not read Username|403|401|Repository not found", err):
+            err = "GitHub 不让进：令牌不对、过期了，或者没给这个仓库的权限（设置里重新填令牌、点「检测令牌」）。原话：" + err[-200:]
+        raise Fatal("git %s 失败：%s" % (" ".join(args[:2]), err))
     return r
 
 
@@ -251,18 +254,28 @@ def ensure_repo():
     """第一次：克隆稀疏副本（只要「总表视频细节数据」和最新总表）。之后：同步到 GitHub 最新。"""
     with REPO_LOCK:
         cfg = load_cfg()
+        ok_mark = DATA / "repo_ok"
+        if (REPO / ".git").exists() and not ok_mark.exists() and (REPO / D / "索引.tsv").exists():
+            ok_mark.write_text(now(), encoding="utf-8")
+        if (REPO / ".git").exists() and not ok_mark.exists():      # 上次克隆到一半就断了：重来
+            import shutil
+            shutil.rmtree(REPO, ignore_errors=True)
         if not (REPO / ".git").exists():
             STATE["repo"] = "正在克隆仓库（第一次要一两分钟）"
             log("克隆仓库 %s → %s" % (cfg["repoUrl"], REPO))
             if REPO.exists():
                 import shutil
                 shutil.rmtree(REPO, ignore_errors=True)
+            if not cfg.get("githubToken") and cfg["repoUrl"].startswith("https://github.com/"):
+                STATE["repo"] = "等令牌"
+                raise Fatal("wordsvideo 是私有仓库：先到「设置 → GitHub 仓库」填令牌、点「保存设置」，软件会自动接着克隆")
             net_git("clone", "--filter=blob:none", "--no-checkout", "--depth", "1", "--branch", cfg["branch"],
                     "--config", "core.protectNTFS=false", "--config", "core.autocrlf=false",
                     "--config", "core.longpaths=true", cfg["repoUrl"], str(REPO), cwd=DATA, auth=True)
             ver, xlsx = _latest_xlsx()
             _sparse(xlsx)
             git("checkout", "-f", cfg["branch"])
+            ok_mark.write_text(now(), encoding="utf-8")
         sync()
 
 
@@ -667,20 +680,49 @@ def word_detail(word):
             "table": TABLE["words"].get(word, []), "record": rec, "manual": m, "draft": draft}
 
 
-def search_words(text="", status="", page=1, size=60):
+def word_rows():
+    """总词库每一行 + 准备情况：题目（有/缺/待人工/总表原有）、画面设置、视频。"""
+    import video as V
     _, rows = read_index()
-    man = manual_words()
-    seen, out = set(), []
-    t = (text or "").strip().lower()
+    man, pw, vd = manual_words(), V.pic_words(), V.videos()
+    out = []
     for r in rows:
         st = "manual" if (r[4] == "缺" and r[2] in man) else {"细节数据有": "done", "缺": "missing"}.get(r[4], "orig")
-        if status and st != status:
-            continue
-        if t and t not in r[2].lower() and t not in r[3]:
-            continue
-        out.append({"批次": r[0], "序号": r[1], "word": r[2], "meaning": r[3], "status": st})
-    n = len(out)
-    return {"total": n, "page": page, "items": out[(page - 1) * size: page * size]}
+        f = V.folder_of(r[2])
+        q_ok, pic, vid = st in ("done", "orig"), f in pw, f in vd
+        ready = "video" if vid else ("ready" if (q_ok and pic) else ("needpic" if q_ok else "needq"))
+        out.append({"批次": r[0], "序号": r[1], "word": r[2], "meaning": r[3], "status": st,
+                    "pic": pic, "video": vid, "ready": ready})
+    return out
+
+
+READY_NAMES = {"video": "有视频", "ready": "准备好了，可以出片", "needpic": "缺画面设置", "needq": "缺题目"}
+
+
+def search_words(text="", status="", page=1, size=60, ready=""):
+    rows = word_rows()
+    t = (text or "").strip().lower()
+    counts = {k: 0 for k in READY_NAMES}
+    for r in rows:
+        counts[r["ready"]] += 1
+    out = [r for r in rows if (not status or r["status"] == status) and (not ready or r["ready"] == ready)
+           and (not t or t in r["word"].lower() or t in r["meaning"])]
+    return {"total": len(out), "page": page, "items": out[(page - 1) * size: page * size],
+            "counts": counts, "all": [r["word"] for r in out] if len(out) <= 3000 else []}
+
+
+def prepare(words):
+    """准备出片：缺题目的排进出题；缺画面设置的先记下（自动写画面设置是下一步的功能）。"""
+    rows = {r["word"]: r for r in word_rows()}
+    needq = [w for w in words if w in rows and rows[w]["status"] in ("missing", "manual")]
+    needpic = [w for w in words if w in rows and not rows[w]["pic"]]
+    tid = None
+    if needq:
+        x("DELETE FROM manual WHERE word IN (%s)" % ",".join("?" * len(needq)), needq)
+        tid = add_task("redo", {"words": needq}, title="准备出片：给 %d 个词出题" % len(needq))
+        RUNNER.wake.set()
+    return {"task": tid, "needq": len(needq), "needpic": len(needpic),
+            "ready": len([w for w in words if w in rows and rows[w]["ready"] == "ready"])}
 
 
 # ═══════════════════════ 提示词 ═══════════════════════
