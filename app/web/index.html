@@ -106,10 +106,13 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 .qn .kd{font-size:12px;color:var(--blue);margin-left:6px}
 .errs{background:var(--red-bg);color:var(--red);border-radius:4px;padding:8px 12px;font-size:13px;margin:8px 0}
 .errs.ok{background:var(--pass-bg);color:var(--pass)}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
-.chip{border:1px solid var(--gap);background:#fff;border-radius:16px;padding:3px 14px;cursor:pointer;font-size:13px}
-.chip b{font-family:var(--en);margin-left:4px}
-.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cats{display:flex;flex-direction:column;gap:2px;background:#fff;border:1px solid var(--rule);border-radius:6px;padding:6px}
+.cats .hd{font-size:12px;color:var(--faint);padding:8px 10px 2px}
+.chip{display:flex;justify-content:space-between;gap:8px;padding:6px 10px;border-radius:4px;cursor:pointer;font-size:13px}
+.chip:hover{background:#F1F5F8}
+.chip b{font:600 13px var(--en)}
+.chip.on{background:var(--ink);color:#fff}
+.chip.all{font-size:14px;font-weight:600}
 .dots{white-space:nowrap;width:62px}
 .dots i{display:inline-block;width:16px;height:16px;line-height:16px;text-align:center;font-size:10px;font-style:normal;border-radius:3px;margin-right:2px;background:#EEF1F4;color:var(--faint)}
 .dots i.y{background:var(--pass);color:#fff}
@@ -207,9 +210,9 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 </section>
 
 <section id="p-words">
-  <div class="chips" id="wChips"></div>
   <div class="row">
-    <div style="width:430px;flex:none">
+    <div style="width:176px;flex:none"><div class="cats" id="wChips"></div></div>
+    <div style="width:420px;flex:none">
       <div style="display:flex;gap:8px;margin-bottom:8px">
         <input type="text" id="wq" placeholder="搜单词或中文意思" style="flex:1">
         <select id="ws"><option value="">题目：全部</option><option value="done">有题目</option><option value="missing">还缺</option>
@@ -484,16 +487,17 @@ async function taskLog(id){const d=await api('/api/logs?task='+id);modal('任务
 
 /* ───── 单词 ───── */
 let wPage=1,wTimer,wReady='',SEL=new Set();
-const RN={'':'全部',ready:'准备好了，可以出片',needpic:'缺画面设置',needq:'缺题目',video:'有视频'};
+const RN={'':'全部单词',ready:'准备好了，可以出片',needpic:'缺画面设置',needq:'缺题目',video:'有视频'};
 $('#wq').oninput=()=>{clearTimeout(wTimer);wTimer=setTimeout(()=>{wPage=1;loadWords()},250)};
 $('#ws').onchange=()=>{wPage=1;loadWords()};
 let WLAST={};
 function selN(){$('#wSelN').textContent=SEL.size?`选了 ${SEL.size} 个`:'没选'}
 async function loadWords(){
   const d=await api(`/api/words?q=${encodeURIComponent($('#wq').value)}&status=${$('#ws').value}&page=${wPage}&ready=${wReady}`);WLAST=d;
-  if(d.notReady){$('#wTable').innerHTML=`<tr><td class="muted">${esc(d.msg)}</td></tr>`;$('#wPager').innerHTML='';$('#wChips').innerHTML='';return}
+  if(d.notReady){$('#wTable').innerHTML=`<tr><td class="muted">${esc(d.msg)}<br><br>${/令牌/.test(d.msg)?'去「设置」填令牌、保存。':'到「设置 → GitHub 仓库」点「重新克隆仓库」再试；还不行把这句话发给我。'}</td></tr>`;$('#wPager').innerHTML='';$('#wChips').innerHTML='';return}
   const c=d.counts||{},tot=Object.values(c).reduce((a,b)=>a+b,0);
-  $('#wChips').innerHTML=Object.keys(RN).map(k=>`<span class="chip ${wReady===k?'on':''}" data-r="${k}">${RN[k]}<b>${(k?c[k]:tot)||0}</b></span>`).join('');
+  const ch=k=>`<span class="chip ${k?'':'all'} ${wReady===k?'on':''}" data-r="${k}"><span>${RN[k]}</span><b>${((k?c[k]:tot)||0).toLocaleString()}</b></span>`;
+  $('#wChips').innerHTML=ch('')+'<div class="hd">出片准备到哪一步</div>'+['ready','needpic','needq','video'].map(ch).join('');
   $$('#wChips .chip').forEach(x=>x.onclick=()=>{wReady=x.dataset.r;wPage=1;loadWords()});
   $('#wTable').innerHTML=d.items.map(it=>{const w=esc(it.word),q=it.status==='done'||it.status==='orig';
     return `<tr class="click"><td style="width:22px"><input type="checkbox" class="wck" value="${w}" ${SEL.has(it.word)?'checked':''}></td>

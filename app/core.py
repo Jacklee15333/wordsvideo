@@ -184,7 +184,7 @@ def git(*args, auth=False, check=True, cwd=None, timeout=900, proxy=None):
         cmd += ["-c", "http.extraHeader=Authorization: Basic " + b]
     cmd += ["-c", "user.name=" + cfg["gitName"], "-c", "user.email=" + cfg["gitEmail"]]
     cmd += list(args)
-    env = dict(os.environ, GIT_TERMINAL_PROMPT="0", GCM_INTERACTIVE="never", LC_ALL="C.UTF-8")
+    env = dict(os.environ, GIT_TERMINAL_PROMPT="0", GCM_INTERACTIVE="never")
     r = subprocess.run(cmd, cwd=str(cwd or REPO), capture_output=True, text=True, encoding="utf-8",
                        errors="replace", timeout=timeout, env=env, creationflags=NOWIN)
     if check and r.returncode:
@@ -224,27 +224,38 @@ def cn2int(s):
     return total + cur
 
 
+def _all_files():
+    """仓库里所有文件（-z：不加引号、不转义；也不往 git 传中文路径参数，Windows 上最稳）。"""
+    return [f for f in git("ls-tree", "-r", "-z", "--name-only", "HEAD").stdout.split("\0") if f]
+
+
 def _latest_xlsx():
-    vers = []
-    for p in git("ls-tree", "-d", "--name-only", "HEAD", TABLE_DIR + "/").stdout.splitlines():
-        m = re.fullmatch(TABLE_DIR + r"/第(.+)版", p.strip())
+    files = _all_files()
+    vers = {}
+    for f in files:
+        m = re.fullmatch(re.escape(TABLE_DIR) + r"/第([^/]+)版/(2词源拆分总表[^/]*\.xlsx)", f)
         if m and cn2int(m.group(1)) > 0:
-            vers.append((cn2int(m.group(1)), p.strip()))
-    for n, p in sorted(vers, reverse=True):
-        files = [f for f in git("ls-tree", "--name-only", "HEAD", p + "/").stdout.splitlines()
-                 if re.search(r"/2词源拆分总表.*\.xlsx$", f)]
-        if files:
-            return p.split("/")[-1], files[0]
-    raise Fatal("仓库「%s」里没找到 第…版/2词源拆分总表*.xlsx" % TABLE_DIR)
+            vers.setdefault(cn2int(m.group(1)), ("第%s版" % m.group(1), f))
+    if not vers:
+        near = [f for f in files if f.endswith(".xlsx")][:5]
+        raise Fatal("仓库「%s」里没找到 第…版/2词源拆分总表*.xlsx（仓库里共 %d 个文件，xlsx 有：%s）" % (
+            TABLE_DIR, len(files), "、".join(near) or "没有"))
+    return vers[max(vers)]
 
 
 def _sparse(xlsx):
+    """只放「词库」「引擎」「素材」到磁盘上；Windows 不许的文件名（con 这类）不放。规则直接写文件，不用中文命令行参数。"""
     pats = ["/词库/", "/引擎/", "/素材/"]
-    for f in git("ls-tree", "-r", "--name-only", "HEAD", D + "/").stdout.splitlines():
-        stem = os.path.splitext(os.path.basename(f))[0].lower()
-        if stem.split(".")[0] in RESERVED:            # Windows 不能有叫 con 的文件：这类文件不放到磁盘上
+    for f in _all_files():
+        if os.path.splitext(os.path.basename(f))[0].split(".")[0].lower() in RESERVED:
             pats.append("!/" + f)
-    git("sparse-checkout", "set", "--no-cone", *pats)
+    git("config", "core.sparseCheckout", "true")
+    git("config", "core.sparseCheckoutCone", "false")
+    info = REPO / ".git" / "info"
+    info.mkdir(parents=True, exist_ok=True)
+    (info / "sparse-checkout").write_text("\n".join(pats) + "\n", encoding="utf-8")
+    if git("rev-parse", "--verify", "-q", "HEAD", check=False).returncode == 0 and (REPO / D).exists():
+        git("sparse-checkout", "reapply", check=False)
 
 
 STATE = {"repo": "未准备", "version": "", "xlsx": "", "repoError": "", "aligned": None}
@@ -282,13 +293,13 @@ def ensure_repo():
 def pending_changes():
     if not (REPO / ".git").exists():
         return 0
-    out = git("status", "--porcelain", "--", "词库", check=False).stdout
+    out = git("status", "--porcelain", check=False).stdout
     return len([l for l in out.splitlines() if l.strip()])
 
 
 def commit_pending(msg):
     with REPO_LOCK:
-        git("add", "-A", "--", "词库")
+        git("add", "-A")
         if git("diff", "--cached", "--quiet", check=False).returncode == 0:
             return ""
         git("commit", "-q", "-m", msg)
