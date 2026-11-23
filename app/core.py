@@ -258,6 +258,21 @@ def _sparse(xlsx):
         git("sparse-checkout", "reapply", check=False)
 
 
+def rmtree(path):
+    """删文件夹。Windows 上 git 的对象文件是只读的，普通删法删不掉、还不报错，所以先去掉只读再删。"""
+    import shutil, stat
+    def onerr(fn, p, _e):
+        try:
+            os.chmod(p, stat.S_IWRITE)
+            fn(p)
+        except Exception:
+            pass
+    if Path(path).exists():
+        shutil.rmtree(str(path), onerror=onerr)
+    if Path(path).exists():
+        raise Fatal("删不掉旧的仓库副本 %s：关掉占用它的程序（资源管理器、GitHub Desktop 打开的这个文件夹），或者手动删掉再重开软件" % path)
+
+
 STATE = {"repo": "未准备", "version": "", "xlsx": "", "repoError": "", "aligned": None}
 
 
@@ -269,14 +284,12 @@ def ensure_repo():
         if (REPO / ".git").exists() and not ok_mark.exists() and (REPO / D / "索引.tsv").exists():
             ok_mark.write_text(now(), encoding="utf-8")
         if (REPO / ".git").exists() and not ok_mark.exists():      # 上次克隆到一半就断了：重来
-            import shutil
-            shutil.rmtree(REPO, ignore_errors=True)
+            rmtree(REPO)
         if not (REPO / ".git").exists():
             STATE["repo"] = "正在克隆仓库（第一次要一两分钟）"
             log("克隆仓库 %s → %s" % (cfg["repoUrl"], REPO))
             if REPO.exists():
-                import shutil
-                shutil.rmtree(REPO, ignore_errors=True)
+                rmtree(REPO)
             if not cfg.get("githubToken") and cfg["repoUrl"].startswith("https://github.com/"):
                 STATE["repo"] = "等令牌"
                 raise Fatal("wordsvideo 是私有仓库：先到「设置 → GitHub 仓库」填令牌、点「保存设置」，软件会自动接着克隆")
@@ -315,8 +328,15 @@ def sync():
         if pending_changes():
             commit_pending("词库：人工修改、视频登记（单词工作台）")
         net_git("fetch", "-q", "origin", br, auth=True)
-        ahead = int(git("rev-list", "--count", "origin/%s..HEAD" % br).stdout.strip() or 0)
-        behind = int(git("rev-list", "--count", "HEAD..origin/%s" % br).stdout.strip() or 0)
+        if git("rev-parse", "--verify", "-q", "HEAD", check=False).returncode:
+            ahead = behind = 0                    # 本地还没有任何提交（上次克隆没做完）：直接取远端
+            git("checkout", "-q", "-f", "-B", br, "origin/" + br)
+        else:
+            ahead = int(git("rev-list", "--count", "origin/%s..HEAD" % br).stdout.strip() or 0)
+            behind = int(git("rev-list", "--count", "HEAD..origin/%s" % br).stdout.strip() or 0)
+        if not ahead:                             # 本地没有要上传的：和 GitHub 完全对齐（也修好半截的副本）
+            git("checkout", "-q", "-f", "-B", br, "origin/" + br)
+            behind = 0
         if behind and ahead:
             r = git("rebase", "origin/" + br, check=False)
             if r.returncode:
@@ -324,11 +344,10 @@ def sync():
                 STATE["repo"] = "要人工处理"
                 raise Fatal("本地有 %d 个没上传的提交，和 GitHub 上别人的新提交冲突（多半是云端也在出题）。"
                             "请先停掉另一边，再在设置里点「重新克隆仓库」。" % ahead)
-        elif behind:
-            git("merge", "-q", "--ff-only", "origin/" + br)
         ver, xlsx = _latest_xlsx()
-        if xlsx != STATE.get("xlsx"):
+        if xlsx != STATE.get("xlsx") or not (REPO / D / "索引.tsv").exists():
             _sparse(xlsx)
+            git("checkout", "-q", "-f", br, check=False)
         STATE.update(version=ver, xlsx=xlsx, ahead=ahead if not behind or not ahead else ahead)
         load_table()
         bad = verify()

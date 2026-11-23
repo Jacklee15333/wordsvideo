@@ -221,10 +221,13 @@ def api_repo(b):
     elif op == "reclone":
         if C.RUNNER.task:
             return {"ok": False, "msg": "有任务在跑，先停掉"}
-        import shutil
         with C.REPO_LOCK:
-            shutil.rmtree(str(C.REPO), ignore_errors=True)
-            C.STATE.update(repo="未准备", xlsx="")
+            try:
+                C.rmtree(C.REPO)
+                (C.DATA / "repo_ok").unlink(missing_ok=True)
+            except Exception as e:
+                return {"ok": False, "msg": str(e)}
+            C.STATE.update(repo="正在克隆仓库", xlsx="", repoError="")
         threading.Thread(target=prepare_repo, daemon=True).start()
     elif op == "token":
         ok, msg = C.check_token()
