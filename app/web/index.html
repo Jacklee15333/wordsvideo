@@ -284,8 +284,8 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
     <ol class="steps">
       <li><b>提示词已经自动复制好了</b> <span class="small muted" id="rLen"></span> <button class="btn ghost sm" id="rCopy">再复制一次</button></li>
       <li><button class="btn ghost sm" id="rOpen">打开网页 AI</button> 在网页里 Ctrl+V 粘贴、发送</li>
-      <li>等它写完（最后一行是 ZBQ-END），点它回复下面的<b>「复制」</b>按钮</li>
-      <li>软件看到剪贴板里的回复，就<b>自己接着往下做</b>了</li>
+      <li id="rStep3">等它写完（最后一行是 ZBQ-END），点它回复下面的<b>「复制」</b>按钮</li>
+      <li id="rStep4">软件看到剪贴板里的回复，就<b>自己接着往下做</b>了</li>
     </ol>
     <div id="rHint" class="small" style="color:var(--amber)"></div>
     <details style="margin:6px 0"><summary class="small muted">剪贴板没反应？手动粘贴回复</summary>
@@ -602,7 +602,7 @@ $('#tRedo').onclick=async()=>{await api('/api/task',{kind:'redo',params:{}});toa
 $('#tPics').onclick=async()=>{await api('/api/task',{kind:'pics',params:{count:+$('#tPCount').value||0}});toast('开始了');loadTasks();poll()};
 $('#tPicRedo').onclick=async()=>{const d=await api('/api/picfail');if(!d.items.length)return;await api('/api/task',{kind:'pics',params:{words:d.items.map(x=>x.word)}});toast('交给 AI 了');loadTasks()};
 $('#tGear').onclick=gearOpen;
-async function gearOpen(){const S=await api('/api/settings'),c=S.cfg,w=S.web||{};
+async function gearOpen(){const S=await api('/api/settings'),c=S.cfg,w=S.web||{},ib=c.relayInbox||{};
   modal('任务用到的设置',`<p class="small muted" style="margin-top:0">这里只放出题、做画面要用的设置。其他的（GitHub 令牌、代理、出视频）在左边「设置」里。</p>
   <div class="pv">
     <label><input type="radio" name="g_pv" value="web" ${c.provider==='web'?'checked':''}> <b>网页镜像 ChatGPT（sorryios）</b><br><span class="small muted">质量最好（会切到最高级模型、思考拉满），慢一些，一次几分钟；软件会自己打开浏览器操作，实时画面里能看到</span></label>
@@ -616,7 +616,14 @@ async function gearOpen(){const S=await api('/api/settings'),c=S.cfg,w=S.web||{}
   <div class="tip">就是 sorryios 的账号密码，和超能小助里登录用的一样</div></div>
   <div id="g_relay">
   <label class="f"><span>网页 AI 地址</span><input type="text" id="g_rurl" autocomplete="off" value="${esc(c.relayUrl||'')}"></label>
-  <label class="f"><span>一次给</span><span><input type="number" id="g_rchunk" value="${c.relayChunk||25}" style="width:70px"> 个词（你要复制粘贴，一次多给一些）</span></label></div>
+  <label class="f"><span>一次给</span><span><input type="number" id="g_rchunk" value="${c.relayChunk||25}" style="width:70px"> 个词（你要复制粘贴，一次多给一些）</span></label>
+  <label class="f"><span></span><span><input type="checkbox" id="g_ion" ${ib.enabled?'checked':''}> <b>网页 AI 写完自己上传回复</b>（不用你点「复制」）</span></label>
+  <div id="g_ibox">
+  <label class="f"><span>收件箱仓库</span><input type="text" id="g_irepo" autocomplete="off" value="${esc(ib.repo||'')}" placeholder="用户名/仓库名"></label>
+  <label class="f"><span>收件箱令牌</span><input type="password" id="g_itok" autocomplete="new-password" placeholder="${ib.token?'（已填，不改就空着）':'github_pat_…'}"></label>
+  <div class="tip">网页 AI 用这个令牌把回复传进收件箱仓库，软件每 ${ib.pollSec||15} 秒去看一次，看到就接着检查、存盘、上传到主仓库。<br>
+  <b>令牌会写进发给网页 AI 的提示词</b>（号池账号别人也可能看到），所以：在 GitHub 上单独建一个空的私有仓库当收件箱（比如 wordsvideo-inbox），令牌只给这个仓库 Contents 读写、有效期短一点；别用存题目的主仓库令牌。<br>
+  网页 AI 要能运行代码、能连 GitHub；做不到时它会照常把回复写在聊天里，你点「复制」也行。</div></div></div>
   <div id="g_api">
   <label class="f"><span>接口地址</span><input type="text" id="g_base" value="${esc(c.api.baseUrl||'')}"></label>
   <label class="f"><span>密钥</span><input type="password" id="g_key" autocomplete="new-password" placeholder="${c.api.key?'（已填，不改就空着）':'sk-…'}"></label>
@@ -625,14 +632,16 @@ async function gearOpen(){const S=await api('/api/settings'),c=S.cfg,w=S.web||{}
   <label class="f"><span>一次发给 AI</span><span><input type="number" id="g_chunk" value="${c.chunkSize}" style="width:70px"> 个词出题</span></label>
   <label class="f"><span>没过最多改</span><span><input type="number" id="g_fix" value="${c.fixRounds}" style="width:70px"> 次，还不过就放一边</span></label>
   <label class="f"><span></span><span><input type="checkbox" id="g_win" ${c.window.enabled?'checked':''}> 只在 <input type="time" id="g_ws" value="${c.window.start}"> 到 <input type="time" id="g_we" value="${c.window.end}"> 干活</span></label>
-  <div style="margin:12px 0 0 138px;display:flex;gap:8px"><button class="btn" id="g_save">保存</button><button class="btn ghost" id="g_test">测登录</button></div>
+  <div style="margin:12px 0 0 138px;display:flex;gap:8px"><button class="btn" id="g_save">保存</button><button class="btn ghost" id="g_test">测登录</button><button class="btn ghost" id="g_itest">检测收件箱</button></div>
   <p id="g_msg" class="small muted" style="margin-left:138px"></p>`);
-  const pvVis=()=>{const v=document.querySelector('input[name=g_pv]:checked').value;$('#g_web').hidden=v!=='web';$('#g_api').hidden=v!=='api';$('#g_relay').hidden=v!=='relay';$('#g_test').hidden=v!=='web'};
+  const pvVis=()=>{const v=document.querySelector('input[name=g_pv]:checked').value;$('#g_web').hidden=v!=='web';$('#g_api').hidden=v!=='api';$('#g_relay').hidden=v!=='relay';$('#g_test').hidden=v!=='web';$('#g_ibox').hidden=!$('#g_ion').checked;$('#g_itest').hidden=v!=='relay'||!$('#g_ion').checked};
+  $('#g_ion').onchange=pvVis;
   $$('input[name=g_pv]').forEach(x=>x.onchange=pvVis);pvVis();
   $('#g_save').onclick=async()=>{const web={aiUsername:$('#g_user').value};if($('#g_pass').value)web.aiPassword=$('#g_pass').value;
     const apiC={baseUrl:$('#g_base').value,model:$('#g_model').value};if($('#g_key').value)apiC.key=$('#g_key').value;
-    await api('/api/settings',{cfg:{provider:document.querySelector('input[name=g_pv]:checked').value,api:apiC,relayUrl:$('#g_rurl').value,relayChunk:+$('#g_rchunk').value||25,chunkSize:+$('#g_chunk').value,fixRounds:+$('#g_fix').value,window:{enabled:$('#g_win').checked,start:$('#g_ws').value,end:$('#g_we').value}},web});
+    await api('/api/settings',{cfg:{provider:document.querySelector('input[name=g_pv]:checked').value,api:apiC,relayUrl:$('#g_rurl').value,relayChunk:+$('#g_rchunk').value||25,relayInbox:Object.assign({enabled:$('#g_ion').checked,repo:$('#g_irepo').value.trim()},$('#g_itok').value.trim()?{token:$('#g_itok').value.trim()}:{}),chunkSize:+$('#g_chunk').value,fixRounds:+$('#g_fix').value,window:{enabled:$('#g_win').checked,start:$('#g_ws').value,end:$('#g_we').value}},web});
     $('#g_msg').textContent='保存好了';poll()};
+  $('#g_itest').onclick=async()=>{$('#g_save').click();await new Promise(r=>setTimeout(r,600));$('#g_msg').textContent='正在检测收件箱…';const d=await api('/api/repo',{op:'inbox'});$('#g_msg').textContent=(d.ok?'✓ ':'✗ ')+(d.msg||'')};
   $('#g_test').onclick=async()=>{$('#g_msg').textContent='正在打开浏览器登录，要等一两分钟…';const d=await api('/api/ai',{op:'test'});$('#g_msg').textContent=(d.ok?'✓ ':'✗ ')+(d.msg||'')}}
 $('#tPush').onclick=async()=>{await api('/api/task',{kind:'push',params:{}});toast('在后台上传');loadTasks()};
 $('#tHelp').onclick=()=>modal('任务怎么用',`<ol class="steps">
@@ -727,6 +736,9 @@ async function relayTick(){
   if(on&&d.id!==RL.id){$('#rReply').value='';$('#rMsg').textContent='';if(page!=='tasks')toast('有一批词等你交给网页 AI（任务页）',8000);else setTimeout(()=>$('#tLive').scrollIntoView({behavior:'smooth',block:'start'}),300)}
   RL=d;
   if(on){$('#rHint').textContent=d.hint||'';if(!d.clip)$('#rAuto').querySelector('li b').textContent='先点右边「再复制一次」复制提示词';
+    if(d.inbox){$('#rStep3').innerHTML='它写完会<b>自己把回复传到收件箱</b>，你不用复制（它要是传不上、把全文写在聊天里了，再点「复制」也行）';
+      $('#rStep4').innerHTML='软件每隔十几秒看一次收件箱，看到就<b>自己接着往下做</b>了 <span class="small muted">'+esc(d.inbox)+'</span>'}
+    else{$('#rStep3').innerHTML='等它写完（最后一行是 ZBQ-END），点它回复下面的<b>「复制」</b>按钮';$('#rStep4').innerHTML='软件看到剪贴板里的回复，就<b>自己接着往下做</b>了'}
     $('#rWords').textContent=`${d.kind||''}：${(d.words||[])[0]||''} … ${(d.words||[]).slice(-1)[0]||''}（${(d.words||[]).length} 个词）`;$('#rLen').textContent=`提示词 ${d.promptLen} 字`}
 }
 setInterval(relayTick,2500);

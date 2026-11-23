@@ -74,6 +74,7 @@ def api_settings_get(qs):
     c = C.load_cfg()
     c["githubToken"] = "（已填）" if c.get("githubToken") else ""
     c["api"] = dict(c["api"], key="（已填）" if c["api"].get("key") else "")
+    c["relayInbox"] = dict(C.inbox_cfg(c), token="（已填）" if C.inbox_cfg(c)["token"] else "")
     w = {}
     m = wm()
     if m:
@@ -91,6 +92,8 @@ def api_settings_post(b):
         cfg.pop("githubToken")
     if isinstance(cfg.get("api"), dict) and cfg["api"].get("key") == "（已填）":
         cfg["api"].pop("key")
+    if isinstance(cfg.get("relayInbox"), dict) and cfg["relayInbox"].get("token") in ("（已填）", None):
+        cfg["relayInbox"].pop("token", None)
     C.save_cfg(cfg)
     web = b.get("web") or {}
     m = wm()
@@ -244,6 +247,9 @@ def api_repo(b):
         threading.Thread(target=prepare_repo, daemon=True).start()
     elif op == "token":
         ok, msg = C.check_token()
+        return {"ok": ok, "msg": msg}
+    elif op == "inbox":
+        ok, msg = C.check_inbox()
         return {"ok": ok, "msg": msg}
     C.RUNNER.wake.set()
     return {"ok": True}

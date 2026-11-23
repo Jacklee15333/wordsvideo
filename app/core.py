@@ -7,7 +7,7 @@
 体检用的是仓库里 工具/lianxi.py 的正本，规矩和范例从 出题技能/zongbiao-questions.skill 里读。
 """
 import base64, datetime, importlib, json, os, pickle, random, re, sqlite3, subprocess, sys
-import threading, time, traceback, urllib.request, zipfile
+import threading, time, traceback, urllib.error, urllib.parse, urllib.request, zipfile
 from pathlib import Path
 
 APP = Path(__file__).resolve().parent
@@ -53,6 +53,10 @@ DEFAULT_CFG = {
     "relayChunk": 25,            # 手动接力时一次给几个词（你要复制粘贴，所以一次多给一些）
     "relayUrl": "https://zd87.com/ai-fleet/claude",
     "relayClipboard": True,      # 手动接力：自动把提示词放进剪贴板；你在网页里点“复制”回复，软件看到就自己接着做
+    # 手动接力 · 收件箱：网页 AI 写完自己把回复传到 GitHub（不用你复制）；软件隔一会儿去看，看到就接着做。
+    # 建议单独建一个空仓库当收件箱，令牌只给这个仓库：令牌会写进发给网页 AI 的提示词里
+    "relayInbox": {"enabled": False, "repo": "Jacklee15333/wordsvideo-inbox", "branch": "main", "token": "",
+                   "dir": "inbox", "pollSec": 15},
     "port": 8766,
 }
 
@@ -90,10 +94,11 @@ def now():
 
 
 def mask(s):
-    t = load_cfg().get("githubToken") or ""
+    cfg = load_cfg()
     s = str(s)
-    if t:
-        s = s.replace(t, "***")
+    for t in (cfg.get("githubToken") or "", (cfg.get("relayInbox") or {}).get("token") or ""):
+        if t.strip():
+            s = s.replace(t.strip(), "***")
     return re.sub(r"(gh[pousr]_|github_pat_)[A-Za-z0-9_]{8,}", r"\1***", s)
 
 
@@ -980,6 +985,143 @@ RELAY = {"id": 0, "status": "", "prompt": "", "words": [], "kind": "", "reply": 
 _RELAY_LOCK = threading.Lock()
 
 
+# ─────── 手动接力 · 收件箱：网页 AI 自己把回复传到 GitHub ───────
+INBOX_SCRIPT = r"""import base64, json, os, urllib.request, urllib.error
+TOKEN = "%(token)s"
+REPO = "%(repo)s"
+BRANCH = "%(branch)s"
+PATH = "%(path)s"
+FILE = "reply.txt"   # 你把回复写进的文件；放在别处就改成那个路径
+for d in ("", "/home/claude/", "/mnt/user-data/outputs/", "/tmp/"):
+    if os.path.exists(d + FILE):
+        FILE = d + FILE
+        break
+text = open(FILE, encoding="utf-8").read()
+assert "%(end)s" in text, "文件里没有最后一行 %(end)s：先把回复写完整"
+url = "https://api.github.com/repos/%%s/contents/%%s" %% (REPO, PATH)
+H = {"Authorization": "Bearer " + TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "wordsvideo-relay"}
+body = {"message": "接力回复 " + PATH, "content": base64.b64encode(text.encode("utf-8")).decode(), "branch": BRANCH}
+try:
+    with urllib.request.urlopen(urllib.request.Request(url + "?ref=" + BRANCH, headers=H), timeout=60) as r:
+        body["sha"] = json.load(r)["sha"]
+except urllib.error.HTTPError as e:
+    if e.code != 404:
+        raise
+req = urllib.request.Request(url, data=json.dumps(body).encode(), headers=H, method="PUT")
+try:
+    with urllib.request.urlopen(req, timeout=120) as r:
+        print("上传好了", r.status, PATH, len(text), "字")
+except urllib.error.HTTPError as e:
+    print("上传失败", e.code, e.read().decode("utf-8", "replace")[:300])
+"""
+
+
+def inbox_cfg(cfg=None):
+    cfg = cfg or load_cfg()
+    ib = dict(DEFAULT_CFG["relayInbox"], **(cfg.get("relayInbox") or {}))
+    ib["token"] = (ib.get("token") or "").strip()
+    ib["repo"] = re.sub(r"^https?://github\.com/|\.git$|/+$", "", (ib.get("repo") or "").strip())
+    ib["dir"] = (ib.get("dir") or "inbox").strip("/ ") or "inbox"
+    return ib
+
+
+def inbox_on(cfg=None):
+    cfg = cfg or load_cfg()
+    ib = inbox_cfg(cfg)
+    return cfg.get("provider") == "relay" and bool(ib.get("enabled")) and bool(ib["token"]) and "/" in ib["repo"]
+
+
+def _gh(method, path, token, body=None, timeout=30):
+    """调 GitHub 接口；连不上就换网络方式（设置里的代理 → 直连 → 系统代理 → 本机代理端口）。返回 (状态码, 内容)。"""
+    first = load_cfg().get("gitProxy") or ""
+    tried, last = [], None
+    for px in [first] + _proxy_candidates():
+        if px in tried:
+            continue
+        tried.append(px)
+        req = urllib.request.Request("https://api.github.com" + path, method=method,
+                                     data=json.dumps(body).encode() if body is not None else None,
+                                     headers={"Authorization": "Bearer " + token, "User-Agent": "chuti-studio",
+                                              "Accept": "application/vnd.github+json", "Content-Type": "application/json"})
+        hs = [urllib.request.ProxyHandler({"http": px, "https": px} if px else {})]
+        try:
+            with urllib.request.build_opener(*hs).open(req, timeout=timeout) as r:
+                raw = r.read().decode("utf-8", "replace")
+                return r.status, (json.loads(raw) if raw.strip() else {})
+        except urllib.error.HTTPError as e:
+            try:
+                d = json.loads(e.read().decode("utf-8", "replace") or "{}")
+            except Exception:
+                d = {}
+            return e.code, d
+        except Exception as e:          # 网络不通：换下一种
+            last = e
+    raise RuntimeError("连不上 GitHub：%s" % str(last)[:160])
+
+
+def check_inbox():
+    ib = inbox_cfg()
+    if not ib["token"]:
+        return False, "还没填收件箱令牌"
+    if "/" not in ib["repo"]:
+        return False, "收件箱仓库要写成 用户名/仓库名"
+    try:
+        st, d = _gh("GET", "/repos/" + ib["repo"], ib["token"])
+    except Exception as e:
+        return False, str(e)
+    if st == 404:
+        return False, "找不到仓库 %s：先在 GitHub 上建好（可以是私有的），令牌要给这个仓库的权限" % ib["repo"]
+    if st != 200:
+        return False, "GitHub 不让进（%s）：令牌不对或过期了" % st
+    if not d.get("permissions", {}).get("push"):
+        return False, "令牌只有读权限：要给 Contents 读写"
+    main = re.search(r"github\.com[/:]([^/]+/[^/.]+)", load_cfg().get("repoUrl", ""))
+    same = main and main.group(1).lower() == ib["repo"].lower()
+    return True, "有写权限" + ("（注意：这就是存题目的主仓库，令牌泄露了别人能改你的词库；建议换成单独的空仓库）" if same else "")
+
+
+def inbox_prompt(path):
+    ib = inbox_cfg()
+    script = INBOX_SCRIPT % {"token": ib["token"], "repo": ib["repo"], "branch": ib["branch"] or "main",
+                             "path": path, "end": END}
+    return ("【写完以后：你自己把回复上传到 GitHub，不用在聊天里贴全文】\n"
+            "1. 把上面要求的完整回复（格式完全一样，最后一行 %s）写进文本文件 reply.txt（用你的建文件工具）。\n"
+            "2. 用代码执行工具运行下面这段 Python（只用标准库），它会把 reply.txt 传到 GitHub：\n"
+            "```python\n%s```\n"
+            "3. 看到“上传好了”以后，在聊天里只回一行：已上传 %s。不要在聊天里再写一遍全文。\n"
+            "4. 要是没有代码执行工具、或者上传失败了：就照常把完整回复直接写在聊天里（最后一行 %s），并说明上传失败的原因。"
+            % (END, script, path, END))
+
+
+def inbox_fetch(path):
+    """看收件箱里有没有这个文件：有就返回 (全文, sha)，没有返回 None。"""
+    ib = inbox_cfg()
+    q = "/repos/%s/contents/%s?ref=%s" % (ib["repo"], urllib.parse.quote(path), urllib.parse.quote(ib["branch"] or "main"))
+    st, d = _gh("GET", q, ib["token"])
+    if st == 404:
+        return None
+    if st != 200:
+        raise RuntimeError("看收件箱出错（%s）：%s" % (st, str(d.get("message", ""))[:120]))
+    raw = d.get("content") or ""
+    if raw:
+        text = base64.b64decode(raw).decode("utf-8", "replace")
+    else:                                   # 超过 1 MB：接口不给内容，走下载地址
+        req = urllib.request.Request(d.get("download_url") or "", headers={"Authorization": "Bearer " + ib["token"],
+                                                                            "User-Agent": "chuti-studio"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            text = r.read().decode("utf-8", "replace")
+    return text, d.get("sha", "")
+
+
+def inbox_delete(path, sha):
+    ib = inbox_cfg()
+    try:
+        _gh("DELETE", "/repos/%s/contents/%s" % (ib["repo"], urllib.parse.quote(path)), ib["token"],
+            {"message": "收件箱：取走了 " + path, "sha": sha, "branch": ib["branch"] or "main"})
+    except Exception as e:
+        log("收件箱里的 %s 没删掉（不要紧，下次不会再用它）：%s" % (path, str(e)[:120]))
+
+
 def _looks_reply(text, words):
     """剪贴板里这段是不是这一批的回复：有结束标记，而且提到了这一批的词（出题）或者有画面设置的 JSON（做画面）。"""
     t = text or ""
@@ -997,23 +1139,51 @@ def relay_wait(prompt, words):
         return ""
     RELAY_SKIP.clear()
     import clip
-    use_clip = clip.WIN and load_cfg().get("relayClipboard", True)
+    cfg = load_cfg()
+    use_clip = clip.WIN and cfg.get("relayClipboard", True)
+    ibox = inbox_on(cfg)
+    ipath = ""
+    if ibox:      # 每一批一个新文件名，旧回复不会被当成这一批的
+        ipath = "%s/%s-%s.txt" % (inbox_cfg(cfg)["dir"], time.strftime("%Y%m%d-%H%M%S"), os.urandom(3).hex())
+        prompt = prompt.rstrip() + "\n\n" + inbox_prompt(ipath)
     with _RELAY_LOCK:
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=AI_LIVE.get("kind", ""),
-                     reply="", ts=time.time(), copied=False, hint="", clip=use_clip)
+                     reply="", ts=time.time(), copied=False, hint="", clip=use_clip, inbox=ipath)
         rid = RELAY["id"]
     tid = (RUNNER.task or {}).get("id")
+    after = ("写完它会自己把回复传到收件箱 %s，软件看到就接着做" % ipath) if ibox else "写完点它回复下面的「复制」，软件会自己接着做"
     if use_clip and clip.set_text(prompt):
         RELAY["copied"] = True
-        log("提示词已经放进剪贴板（%s … %s，%d 个词）：到网页 AI 里粘贴、发送；写完点它回复下面的「复制」，软件会自己接着做"
-            % (words[0], words[-1], len(words)), tid)
+        log("提示词已经放进剪贴板（%s … %s，%d 个词）：到网页 AI 里粘贴、发送；%s" % (words[0], words[-1], len(words), after), tid)
     else:
-        log("要你操作：复制提示词到网页 AI，写完把回复交回来（%s … %s，%d 个词）" % (words[0], words[-1], len(words)), tid)
+        log("要你操作：复制提示词到网页 AI 发送（%s … %s，%d 个词）；%s" % (words[0], words[-1], len(words), after), tid)
     clip.beep()
     last = clip.seq() if use_clip else 0
+    poll = max(5, int(inbox_cfg(cfg).get("pollSec") or 15))
+    next_ib, ib_err = time.time() + poll, 0
     end = time.time() + 12 * 3600
     try:
         while time.time() < end:
+            if ibox and time.time() >= next_ib:
+                next_ib = time.time() + poll
+                try:
+                    got = inbox_fetch(ipath)
+                    ib_err = 0
+                except Exception as e:
+                    got = None
+                    ib_err += 1
+                    if ib_err in (1, 20):
+                        log("看收件箱出错（%s），过一会儿再看" % mask(str(e))[:160], tid)
+                if got:
+                    t, sha = got
+                    if _looks_reply(t, words):
+                        with _RELAY_LOCK:
+                            if RELAY["id"] == rid and RELAY["status"] == "等你操作":
+                                RELAY.update(status="交回了", reply=t, hint="")
+                        log("网页 AI 把回复传到收件箱了（%s，%d 字），接着做" % (ipath, len(t)), tid)
+                        inbox_delete(ipath, sha)
+                        continue
+                    RELAY["hint"] = "收件箱里的回复不完整（没有最后一行 ZBQ-END，或者没提到这批词）：在网页里叫它写完整再传一次"
             if RUNNER.stop_req:
                 raise Stopped(RUNNER.stop_req)
             with _RELAY_LOCK:
