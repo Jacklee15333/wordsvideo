@@ -4,7 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>单词工作台</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/logo-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/logo-192.png">
 <link rel="icon" type="image/svg+xml" href="/logo.svg">
+<link rel="apple-touch-icon" href="/logo-192.png">
 <style>
 :root{
   --paper:#F6F8F9; --sheet:#FFFFFF; --ink:#1F2A44; --muted:#5E6878; --faint:#8A93A3;
@@ -423,6 +426,7 @@ async function poll(){
   const r=ST.repo||{}, s=ST.stats||{};
   $('#nSoft').hidden=!ST.newer;
   $('#foot').innerHTML=`<b>v${esc(ST.version||'')}</b>${ST.newer?` <a href="#" onclick="go('soft');return false" style="color:#9FE3BE">有新版本 v${esc(ST.newer)}</a>`:''}<br>仓库 <b>${esc(r.repo)}</b><br>总表 ${esc(r.version||'—')}<br>版本 ${esc(r.head||'—')}${ST.pending?`<br>${ST.pending} 处修改未上传`:''}<br>AI：${{web:'网页镜像',api:'接口',mock:'模拟'}[ST.provider]||''}`;
+  if(r.offline) $('#foot').innerHTML+=`<br><span style="color:#F3D19B">没连上 GitHub，先用本机的词库（${esc(r.offline)}）</span>`;
   if(r.repoError) $('#foot').innerHTML+=`<br><span style="color:#F3B2AB">${esc(r.repoError).slice(0,140)}</span>`;
   $('#nManual').hidden=!s.manual; $('#nManual').textContent=s.manual||'';
   const t=ST.runner.task;

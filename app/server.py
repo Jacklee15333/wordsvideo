@@ -39,6 +39,17 @@ def prepare_repo():
         C.log("仓库没准备好：%s" % e)
 
 
+def repo_watch():
+    """仓库出错（多半是网络）或离线时，每 3 分钟自己再试一次。"""
+    while True:
+        time.sleep(180)
+        if C.RUNNER.task:
+            continue
+        if C.STATE.get("repo") == "出错" or C.STATE.get("offline"):
+            C.log("再试一次连 GitHub…")
+            prepare_repo()
+
+
 # ═══════════════════════ API ═══════════════════════
 def api_status(qs):
     r = C.RUNNER
@@ -458,6 +469,7 @@ def main():
     if m:
         m.set_logger(lambda s: print(s, flush=True))
     threading.Thread(target=prepare_repo, daemon=True).start()
+    threading.Thread(target=repo_watch, daemon=True).start()
     C.RUNNER.start()
     threading.Timer(20, check_update_bg).start()
     url = "http://127.0.0.1:%d" % port

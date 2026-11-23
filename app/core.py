@@ -197,16 +197,55 @@ def git(*args, auth=False, check=True, cwd=None, timeout=900, proxy=None):
     return r
 
 
+def _is_net(e):
+    t = str(e)
+    return any(k in t for k in NET_ERR) and not re.search(r"returned error|Authentication|不让进|not found", t)
+
+
+def _proxy_candidates():
+    """连不上 GitHub 时挨个试：直连、Windows 系统代理、本机常见的代理端口（Clash 7890/7892/7897，v2rayN 10809…）。"""
+    import socket
+    out = [""]
+    try:
+        sp = urllib.request.getproxies().get("https") or urllib.request.getproxies().get("http")
+        if sp:
+            out.append(sp if "://" in sp else "http://" + sp)
+    except Exception:
+        pass
+    for port in (7890, 7892, 7897, 7891, 10809, 10808, 1080, 8080):
+        try:
+            with socket.create_connection(("127.0.0.1", port), timeout=0.3):
+                out.append("http://127.0.0.1:%d" % port)
+        except Exception:
+            pass
+    return out
+
+
 def net_git(*args, **kw):
-    """要连 GitHub 的 git 命令：连不上就换一种网络（有代理→直连，没代理→不变）再试一次。"""
+    """要连 GitHub 的 git 命令：连不上就换网络方式再试（设置里的代理 → 直连 → 系统代理 → 本机代理端口），
+    试通了就记进设置，下次直接用。"""
+    first = load_cfg().get("gitProxy") or ""
     try:
         return git(*args, **kw)
     except Fatal as e:
-        px = load_cfg().get("gitProxy")
-        if px and any(k in str(e) for k in NET_ERR):
-            log("GitHub 走代理 %s 连不上，改成直连再试" % px)
-            return git(*args, proxy="", **kw)
-        raise
+        if not _is_net(e):
+            raise
+        last = e
+    for px in _proxy_candidates():
+        if px == first:
+            continue
+        log("GitHub %s连不上，改用%s再试" % ("走代理 %s " % first if first else "直连", ("代理 " + px) if px else "直连"))
+        try:
+            r = git(*args, proxy=px, **kw)
+            if r.returncode == 0:
+                save_cfg({"gitProxy": px})
+                log("这样能连上 GitHub，记进设置了：git 代理 = %s" % (px or "直连"))
+            return r
+        except Fatal as e:
+            if not _is_net(e):
+                raise
+            last = e
+    raise Fatal("连不上 GitHub（直连、系统代理、本机代理端口都试过了）。打开 Clash 之类的代理再试；或者在「设置 → git 代理」里填代理地址。最后一次：%s" % str(last)[-200:])
 
 
 NUM = {"零": 0, "一": 1, "二": 2, "两": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9}
@@ -329,7 +368,23 @@ def sync():
         STATE["repo"] = "正在同步"
         if pending_changes():
             commit_pending("词库：人工修改、视频登记（单词工作台）")
-        net_git("fetch", "-q", "origin", br, auth=True)
+        try:
+            net_git("fetch", "-q", "origin", br, auth=True, timeout=120)
+            STATE["offline"] = ""
+        except Fatal as e:
+            # 连不上 GitHub：本机已经有词库就先用本机的（出题会先存在本机，连上后再一起上传）
+            if "连不上 GitHub" in str(e) and git("rev-parse", "--verify", "-q", "HEAD", check=False).returncode == 0 \
+                    and (REPO / D / "索引.tsv").exists():
+                STATE["offline"] = time.strftime("%H:%M")
+                log("没连上 GitHub，先用本机的词库；连上以后会自动同步")
+                ver, xlsx = _latest_xlsx()
+                STATE.update(version=ver, xlsx=xlsx)
+                load_table()
+                bad = verify()
+                STATE.update(aligned=not bad, repoError=bad, head=git("rev-parse", "--short", "HEAD").stdout.strip(),
+                             repo="就绪" if not bad else "索引和总表对不上")
+                return STATE
+            raise
         if git("rev-parse", "--verify", "-q", "HEAD", check=False).returncode:
             ahead = behind = 0                    # 本地还没有任何提交（上次克隆没做完）：直接取远端
             git("checkout", "-q", "-f", "-B", br, "origin/" + br)
