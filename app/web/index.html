@@ -390,8 +390,8 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
       <option value="api">接口（DeepSeek 等 OpenAI 兼容接口）</option>
       <option value="mock">模拟（只试流程，存的是假题，别上传）</option></select></label>
     <div id="webSet">
-      <label class="f"><span>镜像站账号</span><input type="text" id="w_aiUsername"></label>
-      <label class="f"><span>密码</span><input type="password" id="w_aiPassword"></label>
+      <label class="f"><span>镜像站账号</span><input type="text" id="w_aiUsername" autocomplete="off"></label>
+      <label class="f"><span>密码</span><input type="password" id="w_aiPassword" autocomplete="new-password"></label>
       <label class="f"><span>网站路径</span><input type="text" id="w_sitePath" placeholder="laike"></label>
       <div class="tip">sorryios.ai/<b>laike</b>#/login 里的那一段；网站改版换路径时改这里</div>
       <label class="f"><span>模型关键字</span><input type="text" id="w_preferredModel" placeholder="留空＝自动挑最高级"></label>
@@ -406,7 +406,7 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
     </div>
     <div id="apiSet">
       <label class="f"><span>接口地址</span><input type="text" id="a_baseUrl"></label>
-      <label class="f"><span>密钥</span><input type="password" id="a_key"></label>
+      <label class="f"><span>密钥</span><input type="password" id="a_key" autocomplete="new-password"></label>
       <label class="f"><span>模型名</span><input type="text" id="a_model"></label>
     </div>
   </div>
@@ -428,8 +428,8 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
   <div class="box">
     <h3 style="margin-top:0">GitHub 仓库</h3>
     <label class="f"><span>仓库地址</span><input type="text" id="c_repoUrl"></label>
-    <label class="f"><span>分支</span><input type="text" id="c_branch"></label>
-    <label class="f"><span>令牌</span><input type="password" id="c_githubToken" placeholder="github_pat_…"></label>
+    <label class="f"><span>分支</span><input type="text" id="c_branch" autocomplete="off"></label>
+    <label class="f"><span>令牌</span><input type="password" id="c_githubToken" autocomplete="new-password" placeholder="github_pat_…"></label>
     <div class="tip">fine-grained 令牌，只给这个仓库 Contents 读写。只存在本机 data/config.json，不会上传</div>
     <label class="f"><span>git 代理</span><input type="text" id="c_gitProxy" placeholder="空＝直连"></label>
     <div class="tip">走代理连不上时会自动改直连再试一次</div>
@@ -581,12 +581,12 @@ async function gearOpen(){const S=await api('/api/settings'),c=S.cfg,w=S.web||{}
     <label><input type="radio" name="g_pv" value="mock" ${c.provider==='mock'?'checked':''}> <b>模拟</b><br><span class="small muted">不连 AI，只试流程，存进去的是假题，别用来真出题</span></label>
   </div>
   <div id="g_web">
-  <label class="f"><span>镜像站账号</span><input type="text" id="g_user" value="${esc(w.aiUsername||'')}"></label>
-  <label class="f"><span>镜像站密码</span><input type="password" id="g_pass" placeholder="${w.aiPassword?'（已填，不改就空着）':''}"></label>
+  <label class="f"><span>镜像站账号</span><input type="text" id="g_user" autocomplete="off" value="${esc(w.aiUsername||'')}"></label>
+  <label class="f"><span>镜像站密码</span><input type="password" id="g_pass" autocomplete="new-password" placeholder="${w.aiPassword?'（已填，不改就空着）':''}"></label>
   <div class="tip">就是 sorryios 的账号密码，和超能小助里登录用的一样</div></div>
   <div id="g_api">
   <label class="f"><span>接口地址</span><input type="text" id="g_base" value="${esc(c.api.baseUrl||'')}"></label>
-  <label class="f"><span>密钥</span><input type="password" id="g_key" placeholder="${c.api.key?'（已填，不改就空着）':'sk-…'}"></label>
+  <label class="f"><span>密钥</span><input type="password" id="g_key" autocomplete="new-password" placeholder="${c.api.key?'（已填，不改就空着）':'sk-…'}"></label>
   <label class="f"><span>模型名</span><input type="text" id="g_model" value="${esc(c.api.model||'')}"></label>
   <div class="tip">DeepSeek：地址 https://api.deepseek.com，模型 deepseek-chat（快）或 deepseek-reasoner（会思考、更好）</div></div>
   <label class="f"><span>一次发给 AI</span><span><input type="number" id="g_chunk" value="${c.chunkSize}" style="width:70px"> 个词出题</span></label>
