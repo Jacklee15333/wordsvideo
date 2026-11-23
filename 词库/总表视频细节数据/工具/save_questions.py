@@ -19,6 +19,8 @@ for w, qs in src.items():
     if errs:
         print('✗ %s：%s' % (w, '；'.join(errs))); bad += 1; continue
     slug = w.replace(' ', '_').replace('/', '_')
+    if slug.lower() in {'con', 'prn', 'aux', 'nul'} | {'com%d' % i for i in range(1, 10)} | {'lpt%d' % i for i in range(1, 10)}:
+        slug += '_'          # Windows 不许叫 con 这类名字：存成 con_.json
     rel = '词/%s/%s.json' % ((slug[:1].lower() if slug[:1].isalpha() else '_'), slug)
     p = os.path.join(D, rel); os.makedirs(os.path.dirname(p), exist_ok=True)
     rec = json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {'单词': w, '画面': None, '插图': []}

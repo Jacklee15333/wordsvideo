@@ -622,8 +622,10 @@ def save_word(word, qs, version, attribution):
     slug = word.replace(" ", "_").replace("/", "_")
     rel = "词/%s/%s.json" % ((slug[:1].lower() if slug[:1].isalpha() else "_"), slug)
     p = REPO / D / rel
-    if os.path.splitext(slug)[0].lower() in RESERVED:
-        raise Fatal("%s 是 Windows 的保留文件名，存不了，请用云端技能出这个词" % slug)
+    if slug.lower() in RESERVED:
+        slug += "_"                    # Windows 不许叫 con 这类名字：存成 con_.json（和 工具/save_questions.py 一样）
+        rel = "词/%s/%s.json" % (slug[:1].lower(), slug)
+        p = REPO / D / rel
     with REPO_LOCK:
         p.parent.mkdir(parents=True, exist_ok=True)
         rec = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {"单词": word, "画面": None, "插图": []}
