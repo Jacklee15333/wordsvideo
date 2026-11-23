@@ -379,7 +379,9 @@ def api_live(qs):
     """任务页的实时画面：现在在做哪个任务、哪一步、AI 正在写什么、浏览器画面、步骤记录。"""
     r = C.RUNNER
     t = r.task
-    out = {"relay": C.RELAY.get("status") == "等你操作", "running": bool(t), "provider": C.provider_name(), "pv": C.load_cfg().get("provider"), "stage": r.stage,
+    cfg = C.load_cfg()
+    out = {"relay": C.RELAY.get("status") == "等你操作", "running": bool(t), "provider": C.provider_name(), "pv": cfg.get("provider"),
+           "relayUrl": cfg.get("relayUrl", ""), "inbox": C.inbox_on(cfg), "stage": r.stage,
            "state": r.state, "ai": {k: v for k, v in C.AI_LIVE.items()}, "web": None, "logs": []}
     if t:
         out["task"] = C.q("SELECT id,title,kind,progress,started FROM tasks WHERE id=?", (t["id"],), one=True)
@@ -405,6 +407,21 @@ def api_relay_get(qs):
     r.pop("reply", None)
     r["url"] = C.load_cfg().get("relayUrl", "")
     return r
+
+
+def api_open(b):
+    """用你平时的浏览器打开网页 AI。软件自己的窗口用的是单独的浏览器资料夹，在那里打开没登录 zd87。"""
+    url = (C.load_cfg().get("relayUrl") or "").strip()
+    if not re.match(r"^https?://", url):
+        return {"ok": False, "msg": "网页 AI 地址要以 http:// 或 https:// 开头：任务页「⚙ 设置」里改"}
+    try:
+        if sys.platform == "win32":
+            os.startfile(url)
+        else:
+            webbrowser.open(url, new=2)
+        return {"ok": True, "msg": "已经用你平时的浏览器打开 " + url}
+    except Exception as e:
+        return {"ok": False, "msg": "没打开（%s）：请把地址复制到浏览器 %s" % (str(e)[:80], url)}
 
 
 def api_relay_post(b):
@@ -463,6 +480,7 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,
         "/api/self": api_self_post,
         "/api/relay": api_relay_post,
+        "/api/open": api_open,
         "/api/words-task": api_words_task,
         "/api/prepare": lambda b: C.prepare(b.get("words") or [])}
 

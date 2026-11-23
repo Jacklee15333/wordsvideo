@@ -76,12 +76,21 @@ def load_cfg():
             out[k].update(v)
         else:
             out[k] = v
+    if out.get("provider") not in PROVIDERS:
+        # v1.8.1 以前：左边「设置」的下拉框里没有“手动接力”，在那里保存一次就把 relay 存成了空的。空的就是原来的手动接力
+        out["provider"] = "relay" if out.get("provider") == "" else "web"
     return out
+
+
+PROVIDERS = ("web", "api", "relay", "mock")
 
 
 def save_cfg(patch):
     c = load_cfg()
-    for k, v in (patch or {}).items():
+    patch = dict(patch or {})
+    if "provider" in patch and patch["provider"] not in PROVIDERS:      # 认不出的不存，保留原来的
+        patch.pop("provider")
+    for k, v in patch.items():
         if isinstance(v, dict) and isinstance(c.get(k), dict):
             c[k].update(v)
         else:
@@ -990,33 +999,144 @@ _RELAY_LOCK = threading.Lock()
 
 
 # ─────── 手动接力 · 收件箱：网页 AI 自己把回复传到 GitHub ───────
-INBOX_SCRIPT = r"""import base64, json, os, urllib.request, urllib.error
-TOKEN = "%(token)s"
-REPO = "%(repo)s"
-BRANCH = "%(branch)s"
-PATH = "%(path)s"
-FILE = "reply.txt"   # 你把回复写进的文件；放在别处就改成那个路径
+INBOX_SCRIPT = r"""import base64, io, json, os, re, urllib.request, urllib.error, zipfile
+from xml.sax.saxutils import escape
+TOKEN = "__TOKEN__"
+REPO = "__REPO__"
+BRANCH = "__BRANCH__"
+NAME = "__NAME__"          # 收件箱里的文件名（不带扩展名）
+FILE = "reply.txt"         # 你把回复写进的文件；放在别处就改成那个路径
 for d in ("", "/home/claude/", "/mnt/user-data/outputs/", "/tmp/"):
     if os.path.exists(d + FILE):
         FILE = d + FILE
         break
-text = open(FILE, encoding="utf-8").read().replace(TOKEN, "***")   # 令牌别跟着传上去
-assert "%(end)s" in text, "文件里没有最后一行 %(end)s：先把回复写完整"
-url = "https://api.github.com/repos/%%s/contents/%%s" %% (REPO, PATH)
+text = open(FILE, encoding="utf-8").read().replace("\r", "").replace(TOKEN, "***")   # 令牌别跟着传上去
+assert "__END__" in text, "文件里没有最后一行 __END__：先把回复写完整"
+
+# 整理成 Excel：「题目」一题一行（给人看），「原文」一行一格原样放着（给软件读）
+TYPES = {"听": "听力", "单": "单项选择", "形": "适当形式填空", "选": "选词填空", "改": "改错", "完": "完成句子"}
+HEAD = ["单词", "题号", "题型", "中文/问题", "题目", "听力原文", "选项", "答案", "解析", "考点"]
+WHERE = {"听": {3: 1, 5: 2, 6: 3, 8: 4}, "单": {4: 1, 6: 2, 8: 3, 9: 4}, "选": {6: 1, 4: 2, 7: 3, 8: 4, 9: 5},
+         "形": {4: 1, 7: 2, 8: 3, 9: 4}, "改": {4: 1, 7: 2, 8: 3, 9: 4}, "完": {3: 1, 4: 2, 7: 3, 8: 4, 9: 5}}
+qs, iss, src, word, n, in_iss = [HEAD], [["单词", "总表哪里不对"]], [["回复原文（软件从这一页读，别改）", "接下一行"]], "", 0, False
+for line in text.split("\n"):
+    rest = line
+    while len(rest) > 30000:
+        src.append([rest[:30000], "接"])
+        rest = rest[30000:]
+    src.append([rest, ""])
+    l = line.strip().strip("`").strip()
+    if l.startswith("总表问题"):
+        in_iss = True
+    elif in_iss:
+        m = re.match(r"^[-*•]\s*(.+?)[:：]\s*(.+)$", l)
+        if m:
+            iss.append([m.group(1), m.group(2)])
+    elif re.match(r"^(?:\d+[.、)]\s*)?[@＠]", l.strip("*#>_ ")):
+        word, n = re.split(r"[|｜]", re.sub(r"^(?:\d+[.、)]\s*)?[@＠]\s*", "", l.strip("*#>_ ")))[0].strip(), 0
+    else:
+        m = re.match(r"^(?:\d+[.、)]\s*|[-*•]\s*)?([听单形选改完])\s*[|｜](.*)$", l)
+        if m and word:
+            f, n = [m.group(1)] + [v.strip() for v in re.split(r"[|｜]", m.group(2))], n + 1
+            r = [word, n, TYPES[f[0]]] + [""] * 7
+            for c, i in WHERE[f[0]].items():
+                r[c] = f[i].replace("⏎", "\n") if i < len(f) else ""
+            if f[0] in "听单" and r[6]:
+                r[7] = re.split(r"\s+/\s+", r[6])[0]
+            qs.append(r)
+if len(qs) == 1:
+    qs.append(["（这一批没有题目行，比如做画面的回复：内容在「原文」那一页）"])
+BAD = re.compile("[\x00-\x08\x0b\x0c\x0e-\x1f\ufffe\uffff]")
+
+
+def col(i):
+    s, i = "", i + 1
+    while i:
+        i, k = divmod(i - 1, 26)
+        s = chr(65 + k) + s
+    return s
+
+
+def sheet(rows, widths, keep=False):
+    x = ['<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<worksheet xmlns="http://schemas.openxmlformats.org/'
+         'spreadsheetml/2006/main"><sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" '
+         'activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><cols>']
+    x += ['<col min="%d" max="%d" width="%d" customWidth="1"/>' % (i + 1, i + 1, w) for i, w in enumerate(widths)]
+    x.append("</cols><sheetData>")
+    for r, row in enumerate(rows, 1):
+        x.append('<row r="%d">' % r)
+        for c, v in enumerate(row):
+            s = 1 if r == 1 else 2
+            if isinstance(v, int):
+                x.append('<c r="%s%d" s="%d"><v>%d</v></c>' % (col(c), r, 3 if r > 1 else 1, v))
+            elif v or keep:
+                x.append('<c r="%s%d" s="%d" t="inlineStr"><is><t xml:space="preserve">%s</t></is></c>'
+                         % (col(c), r, s, escape(BAD.sub("", str(v)))))
+        x.append("</row>")
+    return "".join(x) + "</sheetData></worksheet>"
+
+
+def xlsx(sheets):
+    R, P = "http://schemas.openxmlformats.org/officeDocument/2006/relationships", "http://schemas.openxmlformats.org/package/2006/"
+    T, H = "application/vnd.openxmlformats-officedocument.spreadsheetml.", '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
+    k = range(1, len(sheets) + 1)
+    b = io.BytesIO()
+    with zipfile.ZipFile(b, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr("[Content_Types].xml", H + '<Types xmlns="%scontent-types"><Default Extension="rels" ContentType="application/'
+                   'vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/>'
+                   '<Override PartName="/xl/workbook.xml" ContentType="%ssheet.main+xml"/><Override PartName="/xl/styles.xml" '
+                   'ContentType="%sstyles+xml"/>%s</Types>' % (P, T, T, "".join(
+                       '<Override PartName="/xl/worksheets/sheet%d.xml" ContentType="%sworksheet+xml"/>' % (i, T) for i in k)))
+        z.writestr("_rels/.rels", H + '<Relationships xmlns="%srelationships"><Relationship Id="rId1" Type="%s/officeDocument" '
+                   'Target="xl/workbook.xml"/></Relationships>' % (P, R))
+        z.writestr("xl/workbook.xml", H + '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" '
+                   'xmlns:r="%s"><sheets>%s</sheets></workbook>' % (R, "".join(
+                       '<sheet name="%s" sheetId="%d" r:id="rId%d"/>' % (sheets[i - 1][0], i, i) for i in k)))
+        z.writestr("xl/_rels/workbook.xml.rels", H + '<Relationships xmlns="%srelationships">%s<Relationship Id="rId%d" '
+                   'Type="%s/styles" Target="styles.xml"/></Relationships>' % (P, "".join(
+                       '<Relationship Id="rId%d" Type="%s/worksheet" Target="worksheets/sheet%d.xml"/>' % (i, R, i) for i in k),
+                       len(sheets) + 1, R))
+        z.writestr("xl/styles.xml", H + '<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><fonts '
+                   'count="2"><font><sz val="11"/><name val="等线"/></font><font><b/><sz val="11"/><name val="等线"/></font></fonts>'
+                   '<fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/>'
+                   '</fill></fills><borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders>'
+                   '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs '
+                   'count="4"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" '
+                   'fillId="0" borderId="0" xfId="0" applyFont="1"/><xf numFmtId="0" fontId="0" fillId="0" borderId="0" '
+                   'xfId="0" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf><xf numFmtId="0" fontId="0" '
+                   'fillId="0" borderId="0" xfId="0" applyAlignment="1"><alignment horizontal="center" vertical="top"/></xf>'
+                   '</cellXfs><cellStyles count="1">'
+                   '<cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>')
+        for i in k:
+            z.writestr("xl/worksheets/sheet%d.xml" % i, sheets[i - 1][1])
+    return b.getvalue()
+
+
+try:
+    sh = [("题目", sheet(qs, [14, 6, 12, 22, 40, 34, 34, 18, 40, 10]))]
+    if len(iss) > 1:
+        sh.append(("总表问题", sheet(iss, [16, 80])))
+    sh.append(("原文", sheet(src, [120, 10], keep=True)))
+    data, path = xlsx(sh), NAME + ".xlsx"
+except Exception as e:
+    print("做 Excel 出错（%s），改传文本文件" % e)
+    data, path = text.encode("utf-8"), NAME + ".txt"
+url = "https://api.github.com/repos/%s/contents/%s" % (REPO, path)
 H = {"Authorization": "Bearer " + TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "wordsvideo-relay"}
-body = {"message": "接力回复 " + PATH, "content": base64.b64encode(text.encode("utf-8")).decode(), "branch": BRANCH}
+body = {"message": "接力回复 " + path, "content": base64.b64encode(data).decode(), "branch": BRANCH}
 try:
-    with urllib.request.urlopen(urllib.request.Request(url + "?ref=" + BRANCH, headers=H), timeout=60) as r:
-        body["sha"] = json.load(r)["sha"]
-except urllib.error.HTTPError as e:
-    if e.code != 404:
-        raise
-req = urllib.request.Request(url, data=json.dumps(body).encode(), headers=H, method="PUT")
-try:
-    with urllib.request.urlopen(req, timeout=120) as r:
-        print("上传好了", r.status, PATH, len(text), "字")
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url + "?ref=" + BRANCH, headers=H), timeout=60) as r:
+            body["sha"] = json.load(r)["sha"]          # 同名文件已经有了（重传）：覆盖它
+    except urllib.error.HTTPError as e:
+        if e.code != 404:
+            raise
+    with urllib.request.urlopen(urllib.request.Request(url, data=json.dumps(body).encode(), headers=H, method="PUT"), timeout=120) as r:
+        print("上传好了", r.status, path, "（%d 道题）" % (len(qs) - 1 if qs[1][1:] else 0))
 except urllib.error.HTTPError as e:
     print("上传失败", e.code, e.read().decode("utf-8", "replace")[:300])
+except Exception as e:
+    print("上传失败（可能连不上 api.github.com）", repr(e)[:300])
 """
 
 
@@ -1130,37 +1250,79 @@ def check_inbox():
     return True, "有写权限，而且只能写收件箱，不能动主仓库 ✓ 可以用了"
 
 
-def inbox_prompt(path):
+def inbox_prompt(name):
+    """name：收件箱里的文件名，不带扩展名（网页 AI 传上来的是 name.xlsx；做不成 Excel 时是 name.txt）。"""
     ib = inbox_cfg()
-    script = INBOX_SCRIPT % {"token": ib["token"], "repo": ib["repo"], "branch": ib["branch"] or "main",
-                             "path": path, "end": END}
-    return ("【写完以后：你自己把回复上传到 GitHub，不用在聊天里贴全文】\n"
+    script = INBOX_SCRIPT
+    for k, v in (("__TOKEN__", ib["token"]), ("__REPO__", ib["repo"]), ("__BRANCH__", ib["branch"] or "main"),
+                 ("__NAME__", name), ("__END__", END)):
+        script = script.replace(k, v)
+    return ("【写完以后：你自己把回复整理成 Excel 传到 GitHub，不用在聊天里贴全文】\n"
             "1. 把上面要求的完整回复（格式完全一样，最后一行 %s）写进文本文件 reply.txt（用你的建文件工具）。\n"
-            "2. 用代码执行工具运行下面这段 Python（只用标准库），它会把 reply.txt 传到 GitHub：\n"
+            "2. 用代码执行工具运行下面这段 Python（只用标准库，不用装任何东西）：它会把 reply.txt 整理成 Excel（.xlsx）传到 GitHub。\n"
             "```python\n%s```\n"
-            "3. 看到“上传好了”以后，在聊天里只回一行：已上传 %s。不要在聊天里再写一遍全文。\n"
+            "3. 看到“上传好了”以后，在聊天里只回一行：已上传 %s.xlsx。不要在聊天里再写一遍全文。\n"
             "4. 要是没有代码执行工具、或者上传失败了：就照常把完整回复直接写在聊天里（最后一行 %s），并说明上传失败的原因。"
-            % (END, script, path, END))
+            % (END, script, name, END))
 
 
-def inbox_fetch(path):
-    """看收件箱里有没有这个文件：有就返回 (全文, sha)，没有返回 None。"""
+def xlsx_reply_text(data):
+    """收件箱里的 Excel → 回复原文：「原文」那一页一行一格，太长的行拆成几格、B 列写“接”。"""
+    import io
+    import openpyxl
+    wb = openpyxl.load_workbook(io.BytesIO(data), data_only=True)
+    if "原文" not in wb.sheetnames:
+        raise ValueError("Excel 里没有「原文」这一页")
+    lines, join = [], False
+    for a, b in wb["原文"].iter_rows(min_row=2, max_col=2, values_only=True):
+        a = "" if a is None else str(a)
+        if join and lines:
+            lines[-1] += a
+        else:
+            lines.append(a)
+        join = (b == "接")
+    return "\n".join(lines)
+
+
+def inbox_fetch(name):
+    """看收件箱里有没有这一批的回复（name.xlsx，或者做不成 Excel 时的 name.txt）：有就返回 (原文, sha, 文件路径)，没有返回 None。"""
     ib = inbox_cfg()
-    q = "/repos/%s/contents/%s?ref=%s" % (ib["repo"], urllib.parse.quote(path), urllib.parse.quote(ib["branch"] or "main"))
-    st, d = _gh("GET", q, ib["token"])
+    br = urllib.parse.quote(ib["branch"] or "main")
+    folder = name.rsplit("/", 1)[0] if "/" in name else ""
+    st, d = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], urllib.parse.quote(folder), br), ib["token"])
+    if st == 404:                           # inbox 文件夹还没有：还没传上来
+        return None
+    if st != 200:
+        raise RuntimeError("看收件箱出错（%s）：%s" % (st, str((d or {}).get("message", ""))[:120]))
+    have = {x.get("path") for x in d} if isinstance(d, list) else set()
+    path = next((name + e for e in (".xlsx", ".txt") if name + e in have), "")
+    if not path:
+        return None
+    st, d = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], urllib.parse.quote(path), br), ib["token"])
     if st == 404:
         return None
     if st != 200:
         raise RuntimeError("看收件箱出错（%s）：%s" % (st, str(d.get("message", ""))[:120]))
     raw = d.get("content") or ""
     if raw:
-        text = base64.b64decode(raw).decode("utf-8", "replace")
+        data = base64.b64decode(raw)
     else:                                   # 超过 1 MB：接口不给内容，走下载地址
         req = urllib.request.Request(d.get("download_url") or "", headers={"Authorization": "Bearer " + ib["token"],
                                                                             "User-Agent": "chuti-studio"})
         with urllib.request.urlopen(req, timeout=60) as r:
-            text = r.read().decode("utf-8", "replace")
-    return text, d.get("sha", "")
+            data = r.read()
+    if path.endswith(".xlsx"):
+        try:
+            text = xlsx_reply_text(data)
+        except Exception as e:
+            raise ExcelBad("收件箱里的 Excel 读不出来（%s）" % str(e)[:100])
+    else:
+        text = data.decode("utf-8", "replace")
+    return text, d.get("sha", ""), path
+
+
+class ExcelBad(Exception):
+    pass
 
 
 def inbox_delete(path, sha):
@@ -1198,14 +1360,14 @@ def relay_wait(prompt, words):
             (RUNNER.task or {}).get("id"))
     ipath = ""
     if ibox:      # 每一批一个新文件名，旧回复不会被当成这一批的
-        ipath = "%s/%s-%s.txt" % (inbox_cfg(cfg)["dir"], time.strftime("%Y%m%d-%H%M%S"), os.urandom(3).hex())
+        ipath = "%s/%s-%s" % (inbox_cfg(cfg)["dir"], time.strftime("%Y%m%d-%H%M%S"), os.urandom(3).hex())
         prompt = prompt.rstrip() + "\n\n" + inbox_prompt(ipath)
     with _RELAY_LOCK:
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=AI_LIVE.get("kind", ""),
-                     reply="", ts=time.time(), copied=False, hint="", clip=use_clip, inbox=ipath)
+                     reply="", ts=time.time(), copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "")
         rid = RELAY["id"]
     tid = (RUNNER.task or {}).get("id")
-    after = ("写完它会自己把回复传到收件箱 %s，软件看到就接着做" % ipath) if ibox else "写完点它回复下面的「复制」，软件会自己接着做"
+    after = ("写完它会自己把回复整理成 Excel 传到中转仓库（%s.xlsx），软件看到就接着做" % ipath) if ibox else "写完点它回复下面的「复制」，软件会自己接着做"
     if use_clip and clip.set_text(prompt):
         RELAY["copied"] = True
         log("提示词已经放进剪贴板（%s … %s，%d 个词）：到网页 AI 里粘贴、发送；%s" % (words[0], words[-1], len(words), after), tid)
@@ -1223,19 +1385,24 @@ def relay_wait(prompt, words):
                 try:
                     got = inbox_fetch(ipath)
                     ib_err = 0
+                except ExcelBad as e:
+                    got = None
+                    if RELAY.get("hint") != str(e) + "：点网页里回复下面的「复制」交回，或者叫它照常把全文写在聊天里":
+                        log(str(e), tid)
+                    RELAY["hint"] = str(e) + "：点网页里回复下面的「复制」交回，或者叫它照常把全文写在聊天里"
                 except Exception as e:
                     got = None
                     ib_err += 1
                     if ib_err in (1, 20):
                         log("看收件箱出错（%s），过一会儿再看" % mask(str(e))[:160], tid)
                 if got:
-                    t, sha = got
+                    t, sha, gpath = got
                     if _looks_reply(t, words):
                         with _RELAY_LOCK:
                             if RELAY["id"] == rid and RELAY["status"] == "等你操作":
                                 RELAY.update(status="交回了", reply=t, hint="")
-                        log("网页 AI 把回复传到收件箱了（%s，%d 字），接着做" % (ipath, len(t)), tid)
-                        inbox_delete(ipath, sha)
+                        log("网页 AI 把回复传到中转仓库了（%s，%d 字），接着做" % (gpath, len(t)), tid)
+                        inbox_delete(gpath, sha)
                         continue
                     RELAY["hint"] = "收件箱里的回复不完整（没有最后一行 ZBQ-END，或者没提到这批词）：在网页里叫它写完整再传一次"
             if RUNNER.stop_req:
@@ -1290,7 +1457,8 @@ def provider_name(cfg=None):
     if pv == "mock":
         return "模拟 AI（只测流程，存的是假题）"
     if pv == "relay":
-        return "手动接力（你在网页 AI 里粘贴提示词、把回复交回来）"
+        return ("手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）" if inbox_on(cfg)
+                else "手动接力（你在网页 AI 里粘贴、发送，写完点「复制」）")
     return "网页镜像 ChatGPT（sorryios）"
 
 
