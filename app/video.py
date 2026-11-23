@@ -5,7 +5,7 @@
   2. 装环境（01 系统软件、03 声音模型、04 显卡）放后台跑，界面看进度；
   3. 选词建批次 → 开工 → 看进度 → 做好的视频拷到 D 盘、登记进「词库/视频清单.tsv」。
 视频文件很大（一个 20–45 MB），不进 git，只登记。"""
-import json, os, re, subprocess, sys, time
+import base64, json, os, re, subprocess, sys, time
 from pathlib import Path
 import core as C
 
@@ -34,13 +34,20 @@ def has_wsl():
     return sys.platform == "win32" and (Path(os.environ.get("SystemRoot", r"C:\Windows")) / "System32" / "wsl.exe").exists()
 
 
+def wsl_argv(cmd):
+    """交给 wsl.exe 的参数。脚本先转成 base64：wsl.exe 会让 Linux 的默认 shell 先把命令行过一遍，
+    直接把脚本当参数传，里面的 $A、$S、$TABLE 这些在脚本开始前就被换成了空的（v1.9.0 起草检查报
+    FileNotFoundError: '' 就是这个原因）。base64 里只有字母、数字和 +/=，过几遍 shell 都不会变。"""
+    b64 = base64.b64encode(cmd.encode("utf-8")).decode("ascii")
+    return ["wsl", "-d", vcfg()["distro"], "-u", "root", "--", "bash", "-lc", "source <(base64 -d <<<%s)" % b64]
+
+
 def wsl(cmd, timeout=600):
-    """在 WSL 里用 root 跑一条 bash 命令，返回 (返回码, 输出)。"""
+    """在 WSL 里用 root 跑一段 bash 脚本（原样交给 bash，只解释一遍），返回 (返回码, 输出)。"""
     if not has_wsl():
         return 127, "这台电脑没有 WSL（只能在 Windows 上用）"
     try:
-        r = subprocess.run(["wsl", "-d", vcfg()["distro"], "-u", "root", "--", "bash", "-lc", cmd],
-                           capture_output=True, timeout=timeout, creationflags=NOWIN)
+        r = subprocess.run(wsl_argv(cmd), capture_output=True, timeout=timeout, creationflags=NOWIN)
         return r.returncode, (_dec(r.stdout) + _dec(r.stderr)).strip()
     except subprocess.TimeoutExpired:
         return 124, "超时（%d 秒）" % timeout

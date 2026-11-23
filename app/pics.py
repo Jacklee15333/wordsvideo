@@ -59,7 +59,7 @@ OUT = """【输出格式（程序按这个格式自动读，请严格照做）�
 5. 最后单独一行写：%s"""
 
 
-def build_prompt(word, fix=None):
+def build_prompt(word, fix=None, todo=""):
     df, pm, ex = docs()
     rows = C.TABLE["words"].get(word) or [{}]
     mat = C.material(word) + ("\n  拆分：" + rows[0].get("拆分", "") if rows[0].get("拆分") else "") + \
@@ -70,6 +70,9 @@ def build_prompt(word, fix=None):
              "【画面怎么画（视频技能 pictures.md 摘要）】\n" + pm,
              "【范例：camera 的画面设置（JSON）】\n" + ex,
              OUT % ("、".join(motions()), "、".join("art/" + s for s in scenes()), END)]
+    if todo and not fix:
+        items = [x.strip() for x in re.split(r"[；;]", todo.split("：", 1)[-1]) if x.strip()]
+        parts.insert(1, "【视频技能先给这个词起草了一遍，说画面设置里要写齐下面这些（每一条都要做到，程序会再起草检查一次）】\n- " + "\n- ".join(items))
     if fix:
         parts.insert(1, "【你上次写的没通过检查，请改好后把 JSON 和全部插图重新完整写一遍】\n问题：\n- " + "\n- ".join(fix[1]) +
                      "\n上次的 JSON：\n" + fix[0][:12000])
@@ -175,7 +178,9 @@ def save(word, P, svgs, checked):
         art.mkdir(parents=True)
         for n, b in svgs.items():
             (art / n).write_text(b + "\n", encoding="utf-8")
-        (base / "words" / (f + ".json")).write_text(json.dumps(P, ensure_ascii=False, indent=1), encoding="utf-8")
+        lx = lianxi_qs(word)
+        (base / "words" / (f + ".json")).write_text(json.dumps(dict(P, lianxi={"qs": lx}) if lx else P, ensure_ascii=False, indent=1),
+                                                     encoding="utf-8")
         (base / "words" / (f + ".py")).write_text(WORD_PY % {"folder": f, "word": word}, encoding="utf-8")
         (base / (f + "ai_art.py")).write_text(ART_PY % {"folder": f}, encoding="utf-8")
         lst = base / "清单.tsv"
@@ -206,25 +211,147 @@ def save(word, P, svgs, checked):
     C.x("DELETE FROM picfail WHERE word=?", (word,))
 
 
-def wsl_draft(word):
-    """出片环境装好了：在 WSL 里用视频技能起草这个词，返回“还要补：……”那一行；没装好返回 None。"""
+def _rec_path(word):
+    _, rows = C.read_index()
+    rel = next((r[6] for r in rows if r[2] == word and len(r) > 6 and r[6]), "")
+    if not rel:
+        slug = word.replace(" ", "_").replace("/", "_")
+        slug = slug + "_" if slug.lower() in C.RESERVED else slug
+        rel = "词/%s/%s.json" % ((slug[:1].lower() if slug[:1].isalpha() else "_"), slug)
+    return C.REPO / C.D / rel
+
+
+def _rec(word):
+    p = _rec_path(word)
+    try:
+        return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    except Exception:
+        return {}
+
+
+def lianxi_qs(word):
+    """这个词出好的 7 道题（细节数据「题目」那几格）→ 视频技能 prefs.lianxi 的写法（照 wordfilm.js 读总表题目格的方法）。
+    这些题还只在细节数据里、总表里没有：不放进画面设置的话，起草检查永远说“练习题还要补”，出片时视频里也是自动凑的题。"""
+    t = (_rec(word) or {}).get("题目") or {}
+    if not t:
+        return []
+    L = C.lianxi()
+    D = L.parse_daan(t.get("答案", ""))
+    out = []
+    for k, col in enumerate(L.COLS, 1):
+        if not t.get(col):
+            continue
+        q = L.parse(t[col])
+        q.pop("bad", None)
+        if not q["opts"] and "；" in str(q.get("ans", "")):
+            q["ans"] = [x.strip() for x in q["ans"].split("；")]
+        a = D.get(k)
+        if a:
+            q["ans"] = a[0] if q["opts"] else ([x.strip() for x in a[0].split("；")] if "；" in a[0] else a[0])
+            q["why"] = a[1] or q["why"]
+        if q.get("type") and q.get("ans"):
+            out.append(q)
+    return out
+
+
+def refresh_lianxi(word):
+    """题目重出、改过以后，把画面设置里的练习题也换成新的。"""
+    pj = C.REPO / EXTRA / "words" / (V.folder_of(word) + ".json")
+    if not pj.exists():
+        return
+    with C.REPO_LOCK:
+        P = json.loads(pj.read_text(encoding="utf-8"))
+        lx = lianxi_qs(word)
+        if lx:
+            P["lianxi"] = {"qs": lx}
+        else:
+            P.pop("lianxi", None)
+        pj.write_text(json.dumps(P, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+_ENV = {"t": 0.0, "ready": False}
+
+
+def env_ready():
+    """这台电脑的出片环境装好了没（WSL 里有视频技能、声音模型、ffmpeg）；10 分钟内不重复问。"""
     if not V.has_wsl():
-        return None
-    env = V.env_status()
-    if not env.get("ready"):
-        return None
+        return False
+    if time.time() - _ENV["t"] > 600:
+        try:
+            _ENV.update(t=time.time(), ready=bool(V.env_status().get("ready")))
+        except Exception:
+            _ENV.update(t=time.time(), ready=False)
+    return _ENV["ready"]
+
+
+DRAFT_SH = r"""set -o pipefail; . ~/.wordfilm-local.env 2>/dev/null
+T="${TABLE:-}"; [ -f "$T" ] || T=@TABLE@
+SY=""; [ -f "${SYL:-}" ] && SY="$SYL"
+S=~/skills/word-construction-video; W=~/wordfilm-work; A="$W/@F@/art"; WK=/tmp/wv-draft-@F@; LOG=/tmp/wv-draft-@F@.log
+say() { echo "WVRESULT:$*"; }
+[ -f "$S/scripts/run.py" ] || { say "检查没跑成：WSL 里没有视频技能（$S），先在「视频」页同步引擎"; exit 0; }
+[ -f "$T" ] || { say "检查没跑成：找不到总表（$T）"; exit 0; }
+mkdir -p "$W" ~/kit-extra
+@MAKE@
+rm -rf "$WK/@SAFE@"
+cd "$S/scripts" && timeout 600 python3 run.py --table "$T" ${SY:+--syl "$SY"} --words @W@ --number 1 --out /tmp/wv-draft --edits "$E" \
+  --edition brief --draft-only --no-preview --work "$WK" > "$LOG" 2>&1
+line=$(grep -a '还要补' "$LOG" | tail -1 | sed 's/^ *//')
+if [ -n "$line" ]; then say "$line"; else say "检查没跑成：起草没出结果：$(tail -3 "$LOG" | tr '\n' ' ')"; fi
+"""
+MAKE_FULL = r"""cp -r @SRC@/. ~/kit-extra/ && find ~/kit-extra -name '*.py' -exec sed -i 's/\r$//' {} +
+rm -rf "$A"; mkdir -p "$A"; cp "$S/references/scenes/"*.svg "$A/" 2>/dev/null
+(cd "$S/scripts" && python3 poses.py "$A" --motion) >/dev/null 2>&1
+E="$W/edits_@F@.json"; ERR=/tmp/wv-art-@F@.err
+python3 ~/kit-extra/@F@ai_art.py "$A" >/dev/null 2>"$ERR" && python3 ~/kit-extra/words/@F@.py "$E" >/dev/null 2>>"$ERR" \
+  || { say "画面设置的程序跑不起来：$(tail -3 "$ERR" | tr '\n' ' ')"; exit 0; }"""
+MAKE_PRE = 'E="$W/pre_@F@.json"; printf \'%s\' @EDITS@ > "$E"'
+ENV_ERR = ("No such file", "ModuleNotFoundError", "No module named", "ImportError", "Permission denied", "command not found")
+
+
+def wsl_draft(word, pre=False):
+    """在 WSL 里用视频技能起草这个词（只起草、不配音不渲染，几秒钟），返回 (结果, 那一行)：
+    "ok"＝还要补：都齐了；"todo"＝还要补别的（交给 AI 改）；"env"＝检查本身没跑成（不是 AI 的问题）；None＝出片环境没装好、跳过。
+    pre=True：还没有画面设置，先起草一遍，看这个词要画什么（放进第一次的提示词）。"""
+    if not env_ready():
+        return None, ""
     f = V.folder_of(word)
-    cmd = """set -o pipefail; . ~/.wordfilm-local.env 2>/dev/null
-mkdir -p ~/kit-extra && cp -r %(src)s/. ~/kit-extra/ && find ~/kit-extra -name '*.py' -exec sed -i 's/\\r$//' {} +
-A=~/wordfilm-work/%(f)s/art; rm -rf "$A"; mkdir -p "$A"; S=~/skills/word-construction-video
-cp "$S/references/scenes/"*.svg "$A/"; cd "$S/scripts" && python3 poses.py "$A" --motion >/dev/null 2>&1
-python3 ~/kit-extra/%(f)sai_art.py "$A" >/dev/null && python3 ~/kit-extra/words/%(f)s.py ~/wordfilm-work/edits_%(f)s.json >/dev/null || { echo '还要补：画面设置的程序跑不起来'; exit 0; }
-timeout 600 python3 run.py --table "$TABLE" ${SYL:+--syl "$SYL"} --words %(w)s --number 1 --out /tmp/wv-draft --edits ~/wordfilm-work/edits_%(f)s.json \\
-  --edition brief --draft-only --no-preview --work /tmp/wv-draft-%(f)s 2>&1 | grep -a '还要补' | tail -1
-""" % {"src": V.q(V.to_wsl(C.REPO / EXTRA)), "f": f, "w": V.q(word)}
-    rc, t = V.wsl(cmd, 900)
-    line = (t.strip().splitlines() or [""])[-1].strip()
-    return line or "还要补：起草没跑出结果（%s）" % t[-200:]
+    table = V.to_wsl(C.REPO / C.STATE["xlsx"]) if C.STATE.get("xlsx") else ""
+    if pre:
+        lx = lianxi_qs(word)
+        edits = json.dumps({word: {"lianxi": {"qs": lx}} if lx else {"_空": True}}, ensure_ascii=False)
+        make = MAKE_PRE.replace("@EDITS@", V.q(edits))
+    else:
+        make = MAKE_FULL.replace("@SRC@", V.q(V.to_wsl(C.REPO / EXTRA)))
+    sh = DRAFT_SH.replace("@MAKE@", make)
+    for k, v in (("@TABLE@", V.q(table)), ("@F@", f), ("@W@", V.q(word)),
+                 ("@SAFE@", re.sub(r'[\\/:*?"<>|\s]+', "_", word).strip("._") or "word")):
+        sh = sh.replace(k, v)
+    rc, t = V.wsl(sh, 900)
+    if rc == 124:
+        return "env", "起草检查超时了"
+    res = [l.split("WVRESULT:", 1)[1].strip() for l in t.splitlines() if "WVRESULT:" in l]
+    line = res[-1] if res else ""
+    if not line:
+        return "env", "WSL 没有回应（%s）：%s" % (rc, " ".join(t.split())[-160:])
+    if line.startswith("还要补"):
+        rest = line.split("：", 1)[1] if "：" in line else line
+        rest = re.sub(r"练习题 lianxi（[^）]*）[；;]?", "", rest).strip("；; ")       # 练习题归出题那一步管，画面改不了
+        if not rest or "都齐了" in rest:
+            return "ok", "还要补：都齐了"
+        return "todo", "还要补：" + rest
+    if line.startswith("画面设置的程序跑不起来"):
+        return ("env" if any(k in line for k in ENV_ERR) else "todo"), line
+    return "env", line
+
+
+def draft_todo(word):
+    """还没有画面设置时先起草一遍：这个词要画齐哪些（放进第一次的提示词，少退回几次）。"""
+    try:
+        st, line = wsl_draft(word, pre=True)
+        return line if st == "todo" else ""
+    except Exception:
+        return ""
 
 
 def pick(n, only=None):
@@ -235,17 +362,96 @@ def pick(n, only=None):
     out = []
     for r in rows:
         w = r[2]
-        if w in out or V2.folder_of(w) in pw or r[4] not in ("细节数据有", "总表有"):
+        if w in out or r[4] not in ("细节数据有", "总表有"):
             continue
         if only is not None:
-            if w not in only:
+            if w not in only or w in _DONE:
                 continue
-        elif w in fail:
+            if V2.folder_of(w) in pw and not (_unchecked(w) and env_ready()):
+                continue                   # 已经有画面、也过了起草检查（或者这台电脑查不了）
+        elif w in fail or V2.folder_of(w) in pw:
             continue
         out.append(w)
         if len(out) >= n:
             break
     return out
+
+
+_DONE = set()      # 这个任务里已经做过的词（做指定的词时不再挑它）
+
+
+def _unchecked(word):
+    """词库/画面设置 里存着、还没过起草检查的画面（上次检查没跑成、检查中途停了）：返回 (P, svgs)，否则 None。"""
+    f = V.folder_of(word)
+    base = C.REPO / EXTRA
+    pj = base / "words" / (f + ".json")
+    if not pj.exists() or "都齐了" in str((_rec(word) or {}).get("检查", "")):
+        return None
+    try:
+        P = json.loads(pj.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    P.pop("lianxi", None)
+    art = base / "art" / f
+    svgs = {x.name: x.read_text(encoding="utf-8").strip() for x in art.glob("*.svg")} if art.exists() else {}
+    return P, svgs
+
+
+def _try(R, tid, w, rounds):
+    """做一个词的画面。返回 (做好了吗, 最后的问题)。
+    存着还没过检查的画面先拿去起草检查（不用问 AI）；没有就先起草一遍看要画什么，再问 AI；没过带着问题退回去改。
+    起草检查本身没跑成（WSL、文件的问题）不算 AI 的错：本机检查过了就先存下，出片时再起草检查。
+    中途停下：临时存的、没过检查的画面清掉，不留下“看着做好了”的半成品。"""
+    temp, fix = False, None
+    try:
+        old = _unchecked(w)
+        if old:
+            P, svgs = old
+            errs = check(w, P, svgs)
+            if not errs:
+                st, line = wsl_draft_safe(w, P, svgs)
+                temp = True
+                if st == "ok":
+                    save(w, P, svgs, True)
+                    C.log("  %s 存着的画面过了起草检查" % w, tid)
+                    return True, []
+                if st in ("env", None):
+                    C.log("  %s 的起草检查没跑成（%s）：画面先照旧，出片时再起草检查" % (w, line[:160]), tid)
+                    save(w, P, svgs, False)
+                    return True, []
+                errs = ["视频技能起草检查没过：" + line]
+            fix = (json.dumps(P, ensure_ascii=False), errs)
+            C.log("  %s 存着的画面没过：%s；交给 AI 改" % (w, "；".join(errs)[:200]), tid)
+        todo = "" if fix else draft_todo(w)
+        if todo:
+            C.log("  %s 先起草了一遍：要画齐的已经写进提示词" % w, tid)
+        errs = []
+        for rnd in range(rounds + 1):
+            rep = R.ask(tid, "做画面" if not (rnd or old) else "画面改第 %d 次" % (rnd + (1 if old else 0)), build_prompt(w, fix, todo), [w])
+            P, raw, svgs, errs = parse(rep)
+            errs = errs or check(w, P, svgs)
+            checked = False
+            if not errs:
+                st, line = wsl_draft_safe(w, P, svgs)
+                temp = True
+                if st == "ok":
+                    checked = True
+                elif st == "todo":
+                    errs = ["视频技能起草检查没过：" + line]
+                elif st == "env":
+                    C.log("  %s 的起草检查没跑成（%s）：这不是 AI 的问题，本机检查过了就先存下，出片时再起草检查" % (w, line[:160]), tid)
+            if not errs:
+                save(w, P, svgs, checked)
+                temp = False
+                return True, []
+            fix = (raw or json.dumps(P or {}, ensure_ascii=False), errs)
+            C.log("  %s 的画面没过：%s" % (w, "；".join(errs)[:200]), tid)
+        return False, errs
+    except BaseException:
+        if temp:
+            unsave(w)
+            C.log("  %s 停下了：临时存的画面（还没过检查）清掉了" % w, tid)
+        raise
 
 
 def do_pics(R, tid, p):
@@ -254,6 +460,8 @@ def do_pics(R, tid, p):
     only = set(p.get("words") or []) or None
     if only:
         C.x("DELETE FROM picfail WHERE word IN (%s)" % ",".join("?" * len(only)), list(only))
+    _DONE.clear()
+    _ENV["t"] = 0.0
     done = 0
     batch = []
     rounds = int(C.load_cfg().get("fixRounds", 3))
@@ -270,24 +478,8 @@ def do_pics(R, tid, p):
             C.log("没有要做画面的词了（要先有题目；做不出来的在“画面没做成”里）", tid)
             break
         w = ws[0]
-        fix, ok = None, False
-        for rnd in range(rounds + 1):
-            rep = R.ask(tid, "做画面" if not rnd else "画面改第 %d 次" % rnd, build_prompt(w, fix), [w])
-            P, raw, svgs, errs = parse(rep)
-            errs = errs or check(w, P, svgs)
-            checked = False
-            if not errs:
-                line = wsl_draft_safe(w, P, svgs)
-                if line is not None:
-                    checked = "都齐了" in line
-                    if not checked:
-                        errs = ["视频技能起草检查没过：" + line]
-            if not errs:
-                save(w, P, svgs, checked)
-                ok = True
-                break
-            fix = (raw or json.dumps(P or {}, ensure_ascii=False), errs)
-            C.log("  %s 的画面没过：%s" % (w, "；".join(errs)[:200]), tid)
+        _DONE.add(w)
+        ok, errs = _try(R, tid, w, rounds)
         if ok:
             batch.append(w)
             C.log("  %s 的画面做好了" % w, tid)
@@ -305,7 +497,7 @@ def do_pics(R, tid, p):
 
 
 def unsave(word):
-    """起草检查最后也没过：把临时存的画面设置删掉，免得被当成“能出片”。"""
+    """起草检查最后也没过（或者检查中途停了）：把临时存的画面设置删掉，免得被当成“能出片”。"""
     f = V.folder_of(word)
     base = C.REPO / EXTRA
     with C.REPO_LOCK:
@@ -323,23 +515,24 @@ def unsave(word):
                 p = C.REPO / C.D / r[6]
                 if p.exists():
                     rec = json.loads(p.read_text(encoding="utf-8"))
-                    if rec.get("画面"):
+                    if rec.get("画面") or "检查" in rec:
                         rec.update({"画面": None, "插图": []})
                         rec.pop("画面生成", None)
+                        rec.pop("检查", None)
                         p.write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
                 r[5] = "缺"
         C.write_index(head, rows)
 
 
 def wsl_draft_safe(w, P, svgs):
-    """先存一份草稿到画面设置文件夹，让 WSL 能读到，再起草检查；没装好出片环境就跳过（返回 None）。"""
+    """先存一份草稿到画面设置文件夹，让 WSL 能读到，再起草检查。返回 (结果, 那一行)，见 wsl_draft；出片环境没装好返回 (None, "")。"""
     try:
-        if not (V.has_wsl() and V.env_status().get("ready")):
-            return None
-        save(w, P, svgs, False)            # 临时存，检查没过会被下一次覆盖；最后没过会清掉
+        if not env_ready():
+            return None, ""
+        save(w, P, svgs, False)            # 临时存；没过会被下一次覆盖，最后没过、中途停下都会清掉
         return wsl_draft(w)
     except Exception as e:
-        return "还要补：起草检查出错（%s）" % str(e)[:100]
+        return "env", "起草检查出错（%s）" % str(e)[:100]
 
 
 def _commit(tid, words):

@@ -797,6 +797,11 @@ def save_word(word, qs, version, attribution):
                 r[4], r[6] = "细节数据有", rel
         write_index(head, rows)
     x("DELETE FROM manual WHERE word=?", (word,))
+    try:                                   # 这个词已经有画面设置：里面的练习题也换成新出的
+        import pics
+        pics.refresh_lianxi(word)
+    except Exception as e:
+        log("画面设置里的练习题没更新（%s）" % str(e)[:100])
     return rel
 
 
