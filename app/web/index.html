@@ -133,7 +133,10 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 #modal pre{white-space:pre-wrap;font:12.5px/1.6 var(--en);margin:0}
 #toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;padding:8px 16px;border-radius:4px;display:none;z-index:30;max-width:460px}
 .acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.acts .box{margin-top:0}
+.acts .box{margin-top:0;position:relative}
+.stepno{position:absolute;right:16px;top:12px;font:600 34px/1 var(--en);color:var(--rule)}
+.big{font:600 22px var(--en);margin-top:6px}
+.big small{font:13px var(--ui);color:var(--muted);margin-left:4px}
 .act h3{margin:0 0 4px}
 .act .btn{margin-top:10px}
 .line{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap}
@@ -203,26 +206,38 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 </section>
 
 <section id="p-tasks">
-  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px"><h2 style="margin:0">任务</h2>
-    <button class="btn sm" id="tHelp">怎么用？看操作步骤</button></div>
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><h2 style="margin:0">任务</h2>
+    <button class="btn sm" id="tHelp">怎么用？看操作步骤</button>
+    <button class="btn ghost sm" id="tGear" title="这里用到的设置">⚙ 设置</button></div>
+  <p class="muted" style="margin:0 0 14px">一个词变成视频要三步，按顺序点下面的按钮就行。每一步都是 AI 自动做、程序自动检查，过了才存。</p>
   <div class="acts">
     <div class="box act">
-      <h3>出题</h3><p class="muted small">给还缺题目的词出 7 道题，按总表顺序往下做。</p>
-      <div class="line">出 <input type="number" id="tCount" value="100" min="0" style="width:80px"> 个词 <span class="faint small">（填 0＝全部做完）</span></div>
-      <div class="line"><label><input type="radio" name="tWhen" value="now" checked> 现在开始</label>
-        <label><input type="radio" name="tWhen" value="at"> 定个时间：</label><input type="datetime-local" id="tAt"></div>
+      <div class="stepno">1</div><h3>出题</h3><p class="muted small">给每个词出 7 道练习题（视频最后的练习和答案）。</p>
+      <div class="big" id="tQ">—</div>
+      <div class="line">出 <input type="number" id="tCount" value="100" min="0" style="width:76px"> 个词</div>
+      <div class="line small"><label><input type="radio" name="tWhen" value="now" checked> 现在开始</label>
+        <label><input type="radio" name="tWhen" value="at"> 到点开始</label><input type="datetime-local" id="tAt" style="width:190px"></div>
       <button class="btn" id="tAdd">开始出题</button>
     </div>
     <div class="box act">
-      <h3>重做待人工的词</h3><p class="muted small">AI 改了几次还没过的词，再交给 AI 试一次。</p>
-      <div class="line" id="tManN" class="muted">—</div>
-      <button class="btn ghost" id="tRedo">全部再试一次</button>
+      <div class="stepno">2</div><h3>做视频画面</h3><p class="muted small">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。</p>
+      <div class="big" id="tP">—</div>
+      <div class="line">做 <input type="number" id="tPCount" value="20" min="0" style="width:76px"> 个词</div>
+      <div class="line small faint">一个词要几分钟，比出题慢</div>
+      <button class="btn" id="tPics">开始做画面</button>
     </div>
     <div class="box act">
-      <h3>上传到 GitHub</h3><p class="muted small">平时每组做完会自动上传。只有你手动改了题、或者上次没传成功时才用。</p>
-      <div class="line" id="tPend">—</div>
-      <button class="btn ghost" id="tPush">现在上传</button>
+      <div class="stepno">3</div><h3>出视频</h3><p class="muted small">题目和画面都有了的词，在这台电脑上配音、渲染成视频。</p>
+      <div class="big" id="tV">—</div>
+      <div class="line small faint">在「视频」页选词、开工</div>
+      <button class="btn" onclick="go('video')">去「视频」页</button>
     </div>
+  </div>
+  <div class="box" style="margin-top:14px;display:flex;gap:18px;align-items:center;flex-wrap:wrap" id="tOther">
+    <span class="muted small">其他：</span>
+    <span id="tManN" class="small">—</span><button class="btn ghost sm" id="tRedo">再交给 AI 试一次</button>
+    <span id="tPicFail" class="small">—</span><button class="btn ghost sm" id="tPicRedo">画面再试一次</button>
+    <span id="tPend" class="small">—</span><button class="btn ghost sm" id="tPush">现在上传</button>
   </div>
   <h3>正在做和排队的</h3>
   <div class="box" id="tNow"></div>
@@ -256,7 +271,7 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
         <div class="pager" id="wPager"></div></div>
     </div>
     <div class="col"><div class="box" id="wDetail"><p class="muted">在左边选一个词。<br><br>每个词出片前要准备好两样：<b>7 道题</b>（出题）和<b>画面设置</b>（场景、人物、插图）。
-      列表里三个小格依次是 题 · 画 · 片，绿的是有了。勾选几个词点「准备选中的词」：缺题目的会排进出题；缺画面设置的先记下，自动写画面设置是下一步要做的功能。</p></div></div>
+      列表里三个小格依次是 题 · 画 · 片，绿的是有了。勾选几个词点「准备选中的词」：缺题目的会排进出题；缺视频画面的排进做画面。</p></div></div>
   </div>
 </section>
 
@@ -520,15 +535,33 @@ $('#tAdd').onclick=async()=>{const at=document.querySelector('input[name=tWhen]:
   if(document.querySelector('input[name=tWhen]:checked').value==='at'&&!at)return toast('先选个开始时间');
   await api('/api/task',{kind:'chuti',params:{count:+$('#tCount').value||0},runAt:at});toast(at?'定好了，到点开始':'开始了');loadTasks();poll()};
 $('#tRedo').onclick=async()=>{await api('/api/task',{kind:'redo',params:{}});toast('交给 AI 了');loadTasks()};
+$('#tPics').onclick=async()=>{await api('/api/task',{kind:'pics',params:{count:+$('#tPCount').value||0}});toast('开始了');loadTasks();poll()};
+$('#tPicRedo').onclick=async()=>{const d=await api('/api/picfail');if(!d.items.length)return;await api('/api/task',{kind:'pics',params:{words:d.items.map(x=>x.word)}});toast('交给 AI 了');loadTasks()};
+$('#tGear').onclick=gearOpen;
+async function gearOpen(){const S=await api('/api/settings'),c=S.cfg,w=S.web||{};
+  modal('任务用到的设置',`<p class="small muted" style="margin-top:0">这里只放出题、做画面要用的设置。其他的（GitHub 令牌、代理、出视频）在左边「设置」里。</p>
+  <label class="f"><span>镜像站账号</span><input type="text" id="g_user" value="${esc(w.aiUsername||'')}"></label>
+  <label class="f"><span>镜像站密码</span><input type="password" id="g_pass" placeholder="${w.aiPassword?'（已填，不改就空着）':''}"></label>
+  <div class="tip">就是 sorryios 的账号密码，和超能小助里登录用的一样</div>
+  <label class="f"><span>一次发给 AI</span><span><input type="number" id="g_chunk" value="${c.chunkSize}" style="width:70px"> 个词出题</span></label>
+  <label class="f"><span>没过最多改</span><span><input type="number" id="g_fix" value="${c.fixRounds}" style="width:70px"> 次，还不过就放一边</span></label>
+  <label class="f"><span></span><span><input type="checkbox" id="g_win" ${c.window.enabled?'checked':''}> 只在 <input type="time" id="g_ws" value="${c.window.start}"> 到 <input type="time" id="g_we" value="${c.window.end}"> 干活</span></label>
+  <div style="margin:12px 0 0 138px;display:flex;gap:8px"><button class="btn" id="g_save">保存</button><button class="btn ghost" id="g_test">测登录</button></div>
+  <p id="g_msg" class="small muted" style="margin-left:138px"></p>`);
+  $('#g_save').onclick=async()=>{const web={aiUsername:$('#g_user').value};if($('#g_pass').value)web.aiPassword=$('#g_pass').value;
+    await api('/api/settings',{cfg:{chunkSize:+$('#g_chunk').value,fixRounds:+$('#g_fix').value,window:{enabled:$('#g_win').checked,start:$('#g_ws').value,end:$('#g_we').value}},web});
+    $('#g_msg').textContent='保存好了';poll()};
+  $('#g_test').onclick=async()=>{$('#g_msg').textContent='正在打开浏览器登录，要等一两分钟…';const d=await api('/api/ai',{op:'test'});$('#g_msg').textContent=(d.ok?'✓ ':'✗ ')+(d.msg||'')}}
 $('#tPush').onclick=async()=>{await api('/api/task',{kind:'push',params:{}});toast('在后台上传');loadTasks()};
 $('#tHelp').onclick=()=>modal('任务怎么用',`<ol class="steps">
-  <li><b>第一次用先到「设置」</b>：填好镜像站账号密码、GitHub 令牌，点「保存设置」。左下角显示“仓库 就绪”才能开始。</li>
-  <li><b>出题</b>：在「出题」里填要出几个词（比如 100），点「开始出题」。软件会按总表顺序，一次拿 10 个词交给网页 AI 写题、自动检查，过了就存，每 25 个词上传一次。</li>
-  <li><b>看进度</b>：「正在做和排队的」里有进度条；「总览」页右边的“动态”能看到每一步在做什么。</li>
-  <li><b>想停一下</b>：点「暂停」，做完手上这一小批就停；点「继续」接着做。点「取消」就不做了，已经存好的题不会丢。</li>
-  <li><b>夜里自动做</b>：在「每天自动出题」里设个时间和数量，点「添加」。到点软件要开着。只想在夜里干活，再去「设置 → 时间窗口」勾上。</li>
-  <li><b>没过的词</b>：AI 改了 3 次还不对的词会进「待人工」，自动出题会跳过它们。你可以点进去自己改，或者在这里点「全部再试一次」。</li>
-  <li><b>上传</b>：平时自动上传，不用管。只有你手动改了题，或者网络断过、左下角提示有没上传的，才点「现在上传」。</li></ol>`);
+  <li><b>先点右上角「⚙ 设置」</b>，填 sorryios 的账号和密码，点「保存」，再点「测登录」。第一次用还要到左边「设置」里填 GitHub 令牌（左下角显示“仓库 就绪”才行）。</li>
+  <li><b>第 1 步 出题</b>：填出几个词（比如 100），点「开始出题」。AI 按总表顺序写 7 道题，程序检查，过了就存，每 25 个词上传一次。</li>
+  <li><b>第 2 步 做视频画面</b>：填做几个词（比如 20），点「开始做画面」。只做已经有题目的词，一个词几分钟。</li>
+  <li><b>第 3 步 出视频</b>：点「去视频页」，勾选题目和画面都有的词，建批次、开工。</li>
+  <li><b>看进度</b>：下面“正在做”里有进度条；点「详情」看每一步做了什么。</li>
+  <li><b>暂停、取消</b>：「暂停」后点「继续」接着做；「取消」就不做了，已经存好的不会丢。</li>
+  <li><b>夜里自动做</b>：在“每天自动出题”里设时间和数量，点「添加」；到点软件要开着。</li>
+  <li><b>没过的词</b>：AI 改了几次还不对的，会放在“其他”那一行，点「再交给 AI 试一次」。</li></ol>`);
 async function taskOp(id,op){await api('/api/task/op',{id,op});setTimeout(()=>{poll();if(page==='tasks')loadTasks()},300)}
 async function loadTasks(){
   const d=await api('/api/tasks');
@@ -548,8 +581,13 @@ async function loadTasks(){
         <button class="btn ghost sm" onclick="taskLog(${t.id})">详情</button></div></div>`};
   $('#tNow').innerHTML=live.map(row).join('')||'<p class="muted" style="margin:0">现在没有在做的事。在上面点「开始出题」就开始了。</p>';
   $('#tDone').innerHTML=done.map(row).join('')||'<p class="muted" style="margin:0">还没有。</p>';
-  const s=ST.stats||{};$('#tManN').textContent=s.manual?`现在有 ${s.manual} 个待人工的词`:'现在没有待人工的词';$('#tRedo').disabled=!s.manual;
-  $('#tPend').textContent=ST.pending?`有 ${ST.pending} 处修改还没上传`:'没有要上传的';
+  const s=ST.stats||{};$('#tManN').textContent=s.manual?`出题没过的词 ${s.manual} 个`:'出题没过的词 0 个';$('#tRedo').disabled=!s.manual;
+  api('/api/words?ready=').then(w=>{const c=w.counts||{};
+    $('#tQ').innerHTML=`${(c.needq||0).toLocaleString()}<small>个词还缺题目</small>`;
+    $('#tP').innerHTML=`${(c.needpic||0).toLocaleString()}<small>个词有题目、还缺画面</small>`;
+    $('#tV').innerHTML=`${(c.ready||0).toLocaleString()}<small>个词可以出视频</small>`}).catch(()=>{});
+  api('/api/picfail').then(f=>{const n=(f.items||[]).length;$('#tPicFail').textContent=`画面没做成的词 ${n} 个`;$('#tPicRedo').disabled=!n}).catch(()=>{});
+  $('#tPend').textContent=ST.pending?`${ST.pending} 处修改还没上传`:'都上传了';$('#tPush').disabled=!ST.pending;
   $('#sList').innerHTML=d.schedules.map(x=>{const p=JSON.parse(x.params||'{}');
     return `<div class="tk"><div class="t1">每天 <b>${x.at}</b> 自动出 <b>${p.count||'全部剩下的'}</b> 个词（星期${[...(x.days||'')].map(i=>DAYN[i-1]).join('、')}）
       ${x.enabled?'':'<span class="tag t-已取消">停用了</span>'}${x.last_date?`<span class="faint small"> 上次 ${x.last_date}</span>`:''}</div>
@@ -563,7 +601,7 @@ async function taskLog(id){const d=await api('/api/logs?task='+id);modal('这个
 
 /* ───── 单词 ───── */
 let wPage=1,wTimer,wReady='',SEL=new Set();
-const RN={'':'全部单词',ready:'准备好了，可以出片',needpic:'缺画面设置',needq:'缺题目',video:'有视频'};
+const RN={'':'全部单词',ready:'可以出视频了',needpic:'缺视频画面',needq:'缺题目',video:'有视频'};
 $('#wq').oninput=()=>{clearTimeout(wTimer);wTimer=setTimeout(()=>{wPage=1;loadWords()},250)};
 $('#ws').onchange=()=>{wPage=1;loadWords()};
 let WLAST={};
@@ -591,7 +629,7 @@ $('#wPrep').onclick=async()=>{if(!SEL.size)return toast('先勾选词');
   const r=await api('/api/prepare',{words:[...SEL]});
   modal('准备选中的词',`<p>选了 ${SEL.size} 个词：</p><ul class="check">
     <li>${r.needq?`<b>${r.needq}</b> 个缺题目，已经排进出题（任务 #${r.task}），在「任务」页能看进度`:'都有题目了'}</li>
-    <li>${r.needpic?`<b>${r.needpic}</b> 个缺画面设置：自动写画面设置是下一步要做的功能，现在还做不了`:'都有画面设置'}</li>
+    <li>${r.needpic?`<b>${r.needpic}</b> 个缺视频画面，已经排进做画面（有题目的 ${r.picNow} 个马上能做，其余等题目出好）`:'都有视频画面'}</li>
     <li>${r.ready?`<b>${r.ready}</b> 个已经准备好了，去「视频」页勾选它们建批次就能出片`:'还没有准备好的'}</li></ul>`);
   SEL.clear();loadWords();poll()};
 function parseCell(c){const o={type:'',ask:'',listen:'',zh:'',stem:[],opts:[],kd:''};
@@ -626,7 +664,7 @@ async function openWord(w){
     ${d.video?(()=>{const q=d.record&&d.record['题目'];const tb=(d.table||[])[0]||{};
       const it=(ok,t)=>`<li><span class="tag ${ok?'t-done':'t-missing'}">${ok?'有':'缺'}</span> ${t}</li>`;
       return `<ul class="check small" style="list-style:none;padding:0;margin:10px 0 0">${it(!!(tb['考点']&&tb['初中含义']),'总表材料（初中含义、考点）')}${it(!!q||r0['题目']==='总表有','7 道题')}
-        ${it(d.video.pic,'画面设置'+(d.video.pic?'':'（自动写画面设置是下一步的功能）'))}${it(!!d.video.video,'视频')}</ul>`})():''}
+        ${it(d.video.pic,'画面设置')}${it(!!d.video.video,'视频')}</ul>`})():''}
     ${d.video?`<p class="small" style="margin:8px 0 0">视频：${d.video.video?`<span class="tag t-done">有</span> ${d.video.files.filter(f=>f.endsWith('.mp4')).map(f=>`<a href="/api/video/file?p=${encodeURIComponent(f)}" target="_blank">${esc(f.split(/[\\/]/).pop())}</a>`).join('　')}`:(d.video.pic?'<span class="tag t-已暂停">有画面设置，能出片</span>':'<span class="tag t-missing">还没有画面设置</span>')}</p>
       ${d.video.files.filter(f=>f.endsWith('关键画面.jpg')).map(f=>`<img src="/api/video/file?p=${encodeURIComponent(f)}" style="max-width:100%;margin-top:6px;border:1px solid var(--rule)">`).join('')}`:''}
     ${!d.record&&r0["题目"]==="总表有"?"<p class=\"muted\">这个词的 7 道题在总表里（题目1–7 列），出片时直接用。</p>":renderQs(d.record)}

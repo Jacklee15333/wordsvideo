@@ -118,6 +118,7 @@ def db():
             failed TEXT, fixed TEXT, commit_id TEXT, pushed INTEGER, ts TEXT, provider TEXT);
         CREATE TABLE IF NOT EXISTS changes(id INTEGER PRIMARY KEY, request TEXT, status TEXT, files TEXT, notes TEXT,
             diff TEXT, edits TEXT, error TEXT, ts TEXT, task_id INTEGER);
+        CREATE TABLE IF NOT EXISTS picfail(word TEXT PRIMARY KEY, errors TEXT, ts TEXT);
         CREATE TABLE IF NOT EXISTS issues(id INTEGER PRIMARY KEY, word TEXT, text TEXT, ts TEXT, task_id INTEGER);
         """)
         _DB.commit()
@@ -816,7 +817,7 @@ def word_rows():
     return out
 
 
-READY_NAMES = {"video": "有视频", "ready": "准备好了，可以出片", "needpic": "缺画面设置", "needq": "缺题目"}
+READY_NAMES = {"video": "有视频", "ready": "准备好了，可以出片", "needpic": "缺视频画面", "needq": "缺题目"}
 
 
 def search_words(text="", status="", page=1, size=60, ready=""):
@@ -841,7 +842,13 @@ def prepare(words):
         x("DELETE FROM manual WHERE word IN (%s)" % ",".join("?" * len(needq)), needq)
         tid = add_task("redo", {"words": needq}, title="准备出片：给 %d 个词出题" % len(needq))
         RUNNER.wake.set()
-    return {"task": tid, "needq": len(needq), "needpic": len(needpic),
+    pic_ok = [w for w in needpic if rows[w]["status"] in ("done", "orig")]
+    ptid = None
+    if needpic:
+        # 缺题目的先出题，题目好了再做画面：所以画面任务排在出题后面
+        ptid = add_task("pics", {"words": needpic}, title="准备出片：给 %d 个词做视频画面" % len(needpic))
+        RUNNER.wake.set()
+    return {"task": tid, "ptask": ptid, "needq": len(needq), "needpic": len(needpic), "picNow": len(pic_ok),
             "ready": len([w for w in words if w in rows and rows[w]["ready"] == "ready"])}
 
 
@@ -990,6 +997,9 @@ def ai_complete(prompt, words, on_progress=None):
 def mock_reply(prompt, words):
     """模拟 AI（试用和自测用）：写出格式对的稿；第一次故意让一部分词漏写考点，测“退回重写”。"""
     time.sleep(0.3)
+    if "【做画面】" in prompt:
+        import pics
+        return pics.mock(prompt, words)
     if "【改软件】" in prompt:                 # 模拟改软件：挑 core.py，改它开头那句说明
         if "全文 =====" not in prompt:
             return "FILES: app/core.py\n" + END
@@ -1013,7 +1023,7 @@ def mock_reply(prompt, words):
 
 
 # ═══════════════════════ 任务 ═══════════════════════
-KIND_NAMES = {"selfedit": "改软件", "chuti": "出题", "redo": "重做待人工的词", "push": "上传到 GitHub", "sync": "同步仓库"}
+KIND_NAMES = {"pics": "做视频画面", "selfedit": "改软件", "chuti": "出题", "redo": "重做待人工的词", "push": "上传到 GitHub", "sync": "同步仓库"}
 
 
 def add_task(kind, params=None, run_after=0, title=""):
@@ -1023,6 +1033,9 @@ def add_task(kind, params=None, run_after=0, title=""):
             title = "出题 %s 个词" % (params.get("count") or "全部剩下的")
         elif kind == "redo":
             title = "重做待人工的 %d 个词" % len(params.get("words") or [])
+        elif kind == "pics":
+            title = ("做视频画面：%d 个指定的词" % len(params["words"])) if params.get("words") else \
+                "做视频画面 %s 个词" % (params.get("count") or "全部能做的")
         else:
             title = KIND_NAMES.get(kind, kind)
     return x("INSERT INTO tasks(kind,title,params,status,created,run_after,progress) VALUES(?,?,?,?,?,?,?)",
@@ -1103,7 +1116,7 @@ class Runner:
         if not t:
             self.state = "空闲"
             return None
-        if t["kind"] in ("chuti", "redo") and not in_window():
+        if t["kind"] in ("chuti", "redo", "pics") and not in_window():
             w = load_cfg()["window"]
             self.state = "等时间窗口（%s–%s）" % (w["start"], w["end"])
             return None
@@ -1122,6 +1135,9 @@ class Runner:
                 self.do_chuti(tid, p)
             elif t["kind"] == "redo":
                 self.do_redo(tid, p)
+            elif t["kind"] == "pics":
+                import pics
+                pics.do_pics(self, tid, p)
             elif t["kind"] == "selfedit":
                 import selfup
                 selfup.do_selfedit(tid, p)

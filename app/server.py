@@ -375,6 +375,7 @@ GET = {
     "/api/words": lambda qs: C.search_words(qs.get("q", ""), qs.get("status", ""), int(qs.get("page", 1)), ready=qs.get("ready", "")),
     "/api/map": lambda qs: C.word_map(),
     "/api/manual": lambda qs: {"items": C.q("SELECT * FROM manual ORDER BY ts DESC")},
+    "/api/picfail": lambda qs: {"items": C.q("SELECT * FROM picfail ORDER BY ts DESC")},
     "/api/groups": lambda qs: {"items": C.q("SELECT * FROM groups ORDER BY id DESC LIMIT 200")},
     "/api/calls": lambda qs: {"items": C.q("SELECT id,task_id,ts,kind,words,secs,ok,error,provider,length(prompt) AS plen,"
                                            "length(reply) AS rlen FROM calls ORDER BY id DESC LIMIT 200")},
@@ -386,7 +387,7 @@ GET = {
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
-NEED_REPO = {"/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
+NEED_REPO = {"/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
 POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/task/op": api_task_op,
         "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
         "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,
