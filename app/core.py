@@ -988,7 +988,8 @@ def relay_wait(prompt, words):
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=AI_LIVE.get("kind", ""),
                      reply="", ts=time.time())
         rid = RELAY["id"]
-    log("要你操作：复制提示词到网页 AI，写完把回复交回来（%s … %s，%d 个词）" % (words[0], words[-1], len(words)))
+    log("要你操作：复制提示词到网页 AI，写完把回复交回来（%s … %s，%d 个词）" % (words[0], words[-1], len(words)),
+        (RUNNER.task or {}).get("id"))
     end = time.time() + 12 * 3600
     try:
         while time.time() < end:

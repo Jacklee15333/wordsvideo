@@ -134,7 +134,8 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 #toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;padding:8px 16px;border-radius:4px;display:none;z-index:30;max-width:460px}
 .acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .acts .box{margin-top:0;position:relative}
-.relay{border:2px solid #E9A23B;background:#FFFBF2}
+.relay{border:2px solid #E9A23B;background:#FFFBF2;border-radius:6px;padding:12px 14px}
+.relay .steps li{padding:4px 0 4px 34px}
 .relay textarea{width:100%;margin-top:6px}
 #wBox{margin-bottom:14px}
 .who{margin:0 0 14px;font-size:13px}
@@ -153,7 +154,7 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 .ltabs{display:flex;gap:14px;margin-bottom:6px;font-size:13px}
 .ltabs a{color:var(--muted);text-decoration:none;padding-bottom:2px}
 .ltabs a.on{color:var(--ink);border-bottom:2px solid var(--base)}
-#lReply{white-space:pre-wrap;font:12.5px/1.6 var(--en);height:360px;overflow:auto;margin:0;background:#fff;border:1px solid var(--rule2);padding:8px}
+#lReply{white-space:pre-wrap;font:12.5px/1.6 var(--en);height:420px;overflow:auto;margin:0;background:#fff;border:1px solid var(--rule2);padding:8px}
 #lLog{height:360px;overflow:auto;font-size:12.5px;background:#fff;border:1px solid var(--rule2);padding:8px}
 @media (max-width:1000px){.lgrid{grid-template-columns:1fr}}
 .stepno{position:absolute;right:16px;top:12px;font:600 34px/1 var(--en);color:var(--rule)}
@@ -233,16 +234,6 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
     <button class="btn ghost sm" id="tGear" title="这里用到的设置">⚙ 设置</button></div>
   <p class="muted" style="margin:0 0 6px">一个词变成视频要三步，按顺序点下面的按钮就行。每一步都是 AI 自动做、程序自动检查，过了才存。</p>
   <div class="who" id="tWho">出题、做画面用的 AI：<b>—</b> <a href="#" onclick="gearOpen();return false">换一个</a></div>
-  <div class="box relay" id="rBox" hidden>
-    <h3 style="margin-top:0">要你操作：把这一批交给网页 AI <span id="rWords" class="small muted"></span></h3>
-    <ol class="steps">
-      <li><button class="btn" id="rCopy">复制提示词</button> <span class="small muted" id="rLen"></span></li>
-      <li><button class="btn ghost" id="rOpen">打开网页 AI</button> <span class="small muted">在网页里粘贴（Ctrl+V）、发送，等它全部写完（最后一行是 ZBQ-END）</span></li>
-      <li>在网页里复制它的整段回复，粘贴到这里：<textarea id="rReply" rows="6" placeholder="把 AI 的整段回复粘贴到这里"></textarea></li>
-      <li><button class="btn" id="rSend">交回给软件</button> <button class="btn ghost sm" id="rSkip">这一批先跳过</button> <span id="rMsg" class="small"></span></li>
-    </ol>
-    <p class="small faint" style="margin:0">交回以后，检查、存盘、退回改、记进度、上传都是软件自动做；没过的词会再给你一份“改错”的提示词。</p>
-  </div>
   <div class="box" id="wBox">
     <h3 style="margin-top:0">做指定的词</h3>
     <div class="line" style="align-items:flex-start"><textarea id="wIn" rows="3" style="flex:1;font-family:var(--en)" placeholder="把要做的单词输进来：一行一个，或者用逗号隔开。比如：protect, camera, explore"></textarea>
@@ -287,6 +278,17 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
         <div class="ltabs"><span class="faint small" id="lWho"></span></div>
         <div id="lShotWrap"><img id="lShot" alt="网页 AI 的浏览器画面"><div id="lShotAge" class="small faint"></div></div>
         <div id="lNoShot" class="lnoshot" hidden></div>
+  <div class="relay" id="rBox" hidden>
+    <h3 style="margin:0 0 4px">要你操作：把这一批交给网页 AI <span id="rWords" class="small muted"></span></h3>
+    <ol class="steps">
+      <li><button class="btn" id="rCopy">复制提示词</button> <span class="small muted" id="rLen"></span></li>
+      <li><button class="btn ghost" id="rOpen">打开网页 AI</button> <span class="small muted">在网页里粘贴（Ctrl+V）、发送，等它全部写完（最后一行是 ZBQ-END）</span></li>
+      <li>在网页里复制它的整段回复，粘贴到这里：<textarea id="rReply" rows="6" placeholder="把 AI 的整段回复粘贴到这里"></textarea></li>
+      <li><button class="btn" id="rSend">交回给软件</button> <button class="btn ghost sm" id="rSkip">这一批先跳过</button> <span id="rMsg" class="small"></span></li>
+    </ol>
+    <p class="small faint" style="margin:0">交回以后，检查、存盘、退回改、记进度、上传都是软件自动做；没过的词会再给你一份“改错”的提示词。</p>
+  </div>
+
         <div style="display:flex;gap:8px;margin-top:8px" id="lBtns"><button class="btn ghost sm" data-ai="show">把浏览器拿到屏幕上</button><button class="btn ghost sm" data-ai="hide">藏起浏览器</button></div>
       </div>
       <div class="lright">
@@ -686,18 +688,23 @@ async function liveTick(){
   $('#tLive').hidden=!d.running;if(!d.running)return;
   const t=d.task||{},ai=d.ai||{};
   $('#lTitle').textContent='正在做：'+(t.title||'');
-  $('#lStage').textContent=d.stage||'';
-  $('#lTime').textContent=ai.started&&!ai.done?'这一次已经等了 '+secs(Date.now()/1000-ai.started):'';
+  $('#lTime').textContent=ai.started&&!ai.done?(d.relay?'等你操作，已经 ':'这一次已经等了 ')+secs(Date.now()/1000-ai.started):'';
+  $('#lStage').textContent=d.relay?'轮到你了：照左边黄框做':(d.stage||'');
   $('#lWho').textContent='用的是：'+d.provider;
   const web=d.pv==='web';
-  $('#lShotWrap').hidden=!web;$('#lBtns').style.display=web?'flex':'none';$('#lNoShot').hidden=web;
+  $('#lShotWrap').hidden=!web;$('#lBtns').style.display=web?'flex':'none';
   if(web){const w=d.web||{};
     if(w.has_shot&&Date.now()-lastShot>1800){lastShot=Date.now();$('#lShot').src='/api/ai/shot?'+Date.now()}
     $('#lShotAge').textContent=w.has_shot?'浏览器画面，每两秒更新':'浏览器还没打开，或者正在打开…（'+(w.stage||'')+'）'}
-  else $('#lNoShot').innerHTML=d.pv==='relay'?'手动接力：网页在你自己的浏览器里。<br>上面黄框里照着做，交回后右边能看到回复。':d.pv==='api'?'接口 AI 没有浏览器画面。<br>右边能看到它一个字一个字写出来的回复。':'模拟 AI 只测流程，没有画面。';
-  const rep=(web&&d.web&&d.web.reply_tail)?d.web.reply_tail:(ai.reply||'');
+  $('#lNoShot').hidden=web||d.relay;
+  if(!web) $('#lNoShot').innerHTML=d.pv==='relay'?'手动接力：网页在你自己的浏览器里。<br>轮到你操作时，这里会出现步骤。':d.pv==='api'?'接口 AI 没有浏览器画面。<br>右边能看到它一个字一个字写出来的回复。':'模拟 AI 只测流程，没有画面。';
+  if(d.relay&&!RL.full||d.relay&&RL.full&&RL.full.id!==RL.id){try{const f=await api('/api/relay?full=1');RL.full={id:f.id,prompt:f.prompt}}catch(e){}}
+  const rep=d.relay?('【这一段就是要你复制到网页 AI 里的提示词（点左边「复制提示词」就复制好了）】\n\n'+((RL.full||{}).prompt||'')):(web&&d.web&&d.web.reply_tail)?d.web.reply_tail:(ai.reply||'');
   const box=$('#lReply'),stick=box.scrollTop+box.clientHeight>=box.scrollHeight-30;
-  box.textContent=rep||(ai.started?'等 AI 开始写…':'还没开始问 AI');if(stick)box.scrollTop=1e9;
+  const newText=rep||(ai.started?'等 AI 开始写…':'还没开始问 AI');
+  if(d.relay){if(box.dataset.rid!==String(RL.id)){box.textContent=newText;box.scrollTop=0;box.dataset.rid=String(RL.id)}}
+  else{box.dataset.rid='';box.textContent=newText;if(stick)box.scrollTop=1e9}
+  document.querySelector('[data-lt=reply]').textContent=d.relay?'要发给网页 AI 的提示词':'AI 正在写（实时）';
   $('#lLog').innerHTML=(d.logs||[]).slice().reverse().map(l=>`<div><span class="faint">${esc(l.ts.slice(11))}</span> ${esc(l.msg)}</div>`).join('')||'<span class="muted">还没有。</span>';
 }
 setInterval(liveTick,2000);
@@ -710,7 +717,7 @@ async function relayTick(){
   const on=d.status==='等你操作';
   $('#rBox').hidden=!on;
   const nt=$('#nTasks');if(on){nt.hidden=false;nt.textContent='要你操作'}
-  if(on&&d.id!==RL.id){$('#rReply').value='';$('#rMsg').textContent='';if(page!=='tasks')toast('有一批词等你交给网页 AI（任务页）',8000)}
+  if(on&&d.id!==RL.id){$('#rReply').value='';$('#rMsg').textContent='';if(page!=='tasks')toast('有一批词等你交给网页 AI（任务页）',8000);else setTimeout(()=>$('#tLive').scrollIntoView({behavior:'smooth',block:'start'}),300)}
   RL=d;
   if(on){$('#rWords').textContent=`${d.kind||''}：${(d.words||[])[0]||''} … ${(d.words||[]).slice(-1)[0]||''}（${(d.words||[]).length} 个词）`;$('#rLen').textContent=`提示词 ${d.promptLen} 字`}
 }
