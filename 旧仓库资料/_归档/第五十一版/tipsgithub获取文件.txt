@@ -1,0 +1,30 @@
+建令牌的步骤：
+
+登录 GitHub，打开 https://github.com/settings/personal-access-tokens/new （右上角头像 → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token）。
+Token name 随便写，比如 upload。Expiration 选最短的，比如 1 天或 7 天。
+Repository access 选 Only select repositories，只勾 ciyuanchaifeng。
+Permissions 里找到 Contents，改成 Read and write，其他都不用动。
+点 Generate token，复制那一串以 github_pat_ 开头的字符发给我。
+
+我会把文件传到仓库里一个新文件夹，比如“最新工作版/第五十二版”，不动现有文件，传完把每个文件的链接发给你。
+
+你下载完后，回到同一个页面把这个令牌删掉（Delete），以后它就不能用了。
+
+还有一点要先说明：我这边的临时空间有时会被清空。如果你发令牌时文件已经没了，我得先重新生成一遍再传。
+
+Permissions 里找到 Contents，改成 Read and write     这个找不到
+
+前面的设置都对。新版页面里 Contents 默认不显示，要自己加进去：
+
+点权限框右上角的 + Add permissions。
+在弹出的列表里找到 Contents，可以在搜索框输入 contents，勾上它。
+勾上以后，下面会多出一行 Contents，右边的权限默认是 Read-only。点它，改成 Read and write。
+这时你可能会看到还多出一行 Metadata，显示 Read-only，这是 GitHub 自动加的，不用管。
+滚到最下面，点绿色的 Generate token，复制以 github_pat_ 开头的那一串发给我。
+
+另外，有效期 30 天有点长。可以在 Expiration 里改成 7 天；保持 30 天也行，只要你下载完文件就回去把它删掉。
+
+
+
+
+github 令牌一个月期限 ： （这里原来是令牌，搬家时删掉了）

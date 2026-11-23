@@ -1,0 +1,32 @@
+# 7A-U4 批量清单（Tab 隔开）：序号	文件夹名	画图脚本（逗号隔开，按先后）	备注
+# 序号 01–14 和归档里的视频文件名对得上；15–30 按视频技能 kit README 里的顺序。02 speaker 不在 kit 里，不在清单。
+# 2026-11-18 在云端逐个画过一遍：24 个词齐全；itself、alarm、thermostat 三个的画面设置过时（kit 的问题），会在准备组卡住，交给画面组；别的词不受影响。
+01	camera	cam	推测
+03	thermostat	thermo	画面设置过时：icon-stat、icon-thermo 两个图标没有脚本画，要画面组处理（见 exceptions.md 第 1 节）
+04	itself	itself	画面设置过时：cn-boy-mirror 动作没有了，可换 cn-boy-self / cn-boy-raise（见 exceptions.md 第 1 节）
+05	alarm	alarm,alarmclock	画面设置过时：cn-boy-drum、cn-girl-drum、west-man-scared 三个动作没有了，要画面组换（见 exceptions.md 第 1 节）
+06	stranger	street,owner	icon-er 由 owner 画
+07	lock	lock	推测
+08	explore	explore
+09	rock	explore,rock
+10	shower	explore,shower	wild-bg 由 explore 画
+11	mode	mode
+12	text_message	textmsg
+13	bedroom	shower,bedroom	推测
+14	bathroom	shower,bedroom,bathroom
+15	suggest	explore,shower,bedroom,suggest
+16	protect	explore,shower,itself,protect	第七十九版样本
+17	review	explore,review
+18	heating	shower,bedroom,thermo,heating
+19	guide	street,explore,textmsg,guide
+20	personal	street,shower,bathroom,personal
+21	owner	owner
+22	alarm_clock	alarm,alarmclock
+23	keep_track_of	street,explore,mode,ktrack	起草后自动改 of 那一句（fixes/keep_track_of.sh）
+24	schedule	schedule
+25	health_care	alarm,healthcare
+26	order	street,alarm,order
+27	signal	street,explore,signal
+28	sense	owner,sense
+29	manage	explore,manage
+30	remind	owner,remind

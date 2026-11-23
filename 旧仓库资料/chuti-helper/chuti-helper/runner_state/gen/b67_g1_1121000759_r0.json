@@ -1,0 +1,1790 @@
+{
+ "sauce": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想要什么？",
+   "listen": "I want some tomato sauce on my chips.",
+   "opts": [
+    "番茄酱",
+    "沙拉酱",
+    "辣椒粉",
+    "黄油"
+   ],
+   "why": "tomato sauce 番茄酱。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Would you like some ______ on your salad?",
+   "opts": [
+    "dressing",
+    "sauce",
+    "paste",
+    "ketchup"
+   ],
+   "why": "拌沙拉的调味汁用 dressing，不用 sauce。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 sauce、paste 中选一个，用适当形式填空。",
+   "stem": "Please add some tomato ______ to the soup.",
+   "ans": "paste",
+   "why": "稠的番茄膏用 paste；sauce 是浇的汁。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are three different ______ on the table. (sauce)",
+   "ans": "sauces",
+   "why": "three 后面用复数 sauces。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I like to put some sauces on my fish.",
+   "ans": "sauces → sauce",
+   "why": "sauce 作不可数用，这里用原形。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请给我一些酱油。",
+   "stem": "Please give me some soy ______.",
+   "ans": "sauce",
+   "why": "酱油是 soy sauce。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The cook made a special ______ for the meat.",
+   "opts": [
+    "sauce",
+    "sauces",
+    "saucing",
+    "sauced"
+   ],
+   "why": "a special 后面接单数名词 sauce。",
+   "kd": "词性转换"
+  }
+ ],
+ "salad": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人午饭吃什么？",
+   "listen": "I had a green salad for lunch today.",
+   "opts": [
+    "色拉",
+    "三明治",
+    "汤",
+    "面条"
+   ],
+   "why": "green salad 蔬菜色拉。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I'd like a fruit ______, please.",
+   "opts": [
+    "salad",
+    "salads",
+    "sauce",
+    "salary"
+   ],
+   "why": "a 后面接单数名词 salad。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 salad、sauce 中选一个，用适当形式填空。",
+   "stem": "She put some dressing on her ______.",
+   "ans": "salad",
+   "why": "dressing 是拌色拉用的，所以填 salad。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We ordered two ______ for the table. (salad)",
+   "ans": "salads",
+   "why": "two 后面用复数 salads。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are many salad on the menu.",
+   "ans": "salad → salads",
+   "why": "many 后面接可数名词复数 salads。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我午饭常吃色拉。",
+   "stem": "I often have ______ for lunch.",
+   "ans": "salad",
+   "why": "have salad for lunch 午饭吃色拉。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "These ______ days were the best time of his life.",
+   "opts": [
+    "salad",
+    "salads",
+    "salad's",
+    "salading"
+   ],
+   "why": "salad days 固定短语，用单数 salad。",
+   "kd": "短语"
+  }
+ ],
+ "salary": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说什么涨了？",
+   "listen": "His salary went up last month.",
+   "opts": [
+    "薪水",
+    "房租",
+    "奖金",
+    "学费"
+   ],
+   "why": "salary 薪水。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He earns a good ______ every month.",
+   "opts": [
+    "salary",
+    "salaries",
+    "pay",
+    "wage"
+   ],
+   "why": "a good 后面接单数名词 salary。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 salary、pay 中选一个，用适当形式填空。",
+   "stem": "The workers get their ______ every Friday.",
+   "ans": "pay",
+   "why": "统称工资用 pay；salary 是按月发的固定薪水。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The company pays different ______ to its workers. (salary)",
+   "ans": "salaries",
+   "why": "different 后面用复数 salaries，y 变 i 加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She gets a good salarys every year.",
+   "ans": "salarys → salary",
+   "why": "a good 后面接单数 salary。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他的薪水每月五号发。",
+   "stem": "His ______ is paid on the fifth of each month.",
+   "ans": "salary",
+   "why": "按月发的固定薪水用 salary。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My ______ is higher than his, but his job is harder.",
+   "opts": [
+    "salary",
+    "salaries",
+    "salaried",
+    "salaring"
+   ],
+   "why": "my 后面接单数名词 salary。",
+   "kd": "词性转换"
+  }
+ ],
+ "sausage": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人早餐想吃什么？",
+   "listen": "I'd like two sausages for breakfast.",
+   "opts": [
+    "两根香肠",
+    "两个鸡蛋",
+    "两片面包",
+    "两杯牛奶"
+   ],
+   "why": "two sausages 两根香肠。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There ______ some sausages on the plate.",
+   "opts": [
+    "are",
+    "is",
+    "has",
+    "have"
+   ],
+   "why": "sausages 是复数，there be 用 are。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 sausage、salami 中选一个，用适当形式填空。",
+   "stem": "I'd like a piece of ______, the dry Italian one.",
+   "ans": "salami",
+   "why": "salami 是意式风干腌肠；sausage 是统称。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "My mother bought three ______ this morning. (sausage)",
+   "ans": "sausages",
+   "why": "three 后面用复数 sausages。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I ate two sausage for lunch yesterday.",
+   "ans": "sausage → sausages",
+   "why": "two 后面可数名词用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我想要一个热狗，请给我一个夹香肠的面包。",
+   "stem": "I'd like a hot dog, please give me a bread ______ a sausage in it.",
+   "ans": "with",
+   "why": "with 表示“带有”，夹着香肠。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ in this shop are fresh and cheap.",
+   "opts": [
+    "sausages",
+    "sausage",
+    "salami",
+    "salsa"
+   ],
+   "why": "主语是复数，用 sausages；salami 不可数，salsa 是酱。",
+   "kd": "易混"
+  }
+ ],
+ "salsa": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人喜欢跳什么舞？",
+   "listen": "My sister loves dancing salsa very much.",
+   "opts": [
+    "萨尔萨舞",
+    "芭蕾舞",
+    "踢踏舞",
+    "街舞"
+   ],
+   "why": "salsa 萨尔萨舞。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We need some ______ for the chips, a spicy tomato sauce.",
+   "opts": [
+    "salsa",
+    "sauce",
+    "sausage",
+    "dust"
+   ],
+   "why": "salsa 指拉美风味辣酱；sauce 是一般的酱汁。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 salsa、sauce 中选一个，用适当形式填空。",
+   "stem": "This dance comes from Latin America and is called ______.",
+   "ans": "salsa",
+   "why": "这种拉美舞叫 salsa；sauce 是酱汁。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "They are learning two ______ this term. (salsa)",
+   "ans": "salsas",
+   "why": "two 后面用复数 salsas（指两种萨尔萨舞曲）。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I like to eat chips with tomato salsa, it is a kind of dance.",
+   "ans": "dance → sauce",
+   "why": "tomato sauce 番茄酱；salsa 是舞或辣酱，这里说吃的酱用 sauce。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我姐姐每周都跳萨尔萨舞。",
+   "stem": "My sister dances ______ every week.",
+   "ans": "salsa",
+   "why": "dances salsa 跳萨尔萨舞。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many kinds of ______ in the Latin dance class.",
+   "opts": [
+    "salsas",
+    "salsa",
+    "sauce",
+    "sauces"
+   ],
+   "why": "many kinds of 后面用复数 salsas。",
+   "kd": "变形"
+  }
+ ],
+ "dust": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说什么东西到处都是？",
+   "listen": "There is dust all over the old books.",
+   "opts": [
+    "灰尘",
+    "水",
+    "墨水",
+    "油"
+   ],
+   "why": "dust 灰尘。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The old table is covered with ______.",
+   "opts": [
+    "dust",
+    "dusts",
+    "a dust",
+    "dusty"
+   ],
+   "why": "dust 不可数，没有复数，也不加 a。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 dust、dirt 中选一个，用适当形式填空。",
+   "stem": "Please clean the ______ off the windows; it's grey and dry.",
+   "ans": "dust",
+   "why": "窗户上灰蒙蒙的干灰用 dust；dirt 偏污垢。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "After the storm, the road was very ______. (dust)",
+   "ans": "dusty",
+   "why": "be 后面用形容词 dusty（满是灰尘的）。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She dusted the cake with sugar yesterday.",
+   "ans": "dusted → dusted",
+   "why": "dust 作“撒”讲，过去式 dusted 正确。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他每天打扫书架上的灰尘。",
+   "stem": "He cleans the ______ off the bookshelf every day.",
+   "ans": "dust",
+   "why": "灰尘用不可数名词 dust。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The farmer ______ the crops with powder last week.",
+   "opts": [
+    "dusted",
+    "dusts",
+    "dusting",
+    "dust"
+   ],
+   "why": "last week 用过去式 dusted。",
+   "kd": "变形"
+  }
+ ],
+ "dusty": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人觉得那本书怎么样？",
+   "listen": "The old book on the shelf is very dusty.",
+   "opts": [
+    "满是灰尘",
+    "很新",
+    "很有趣",
+    "很贵"
+   ],
+   "why": "dusty 满是灰尘的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This room is ______ than that one.",
+   "opts": [
+    "dustier",
+    "dusty",
+    "dustiest",
+    "more dusty"
+   ],
+   "why": "than 前面用比较级 dustier（y 变 i）。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 dusty、powdery 中选一个，用适当形式填空。",
+   "stem": "The road was ______ after the trucks passed.",
+   "ans": "dusty",
+   "why": "路上落满灰用 dusty；powdery 指粉末状的。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There is a lot of ______ on the desk. (dusty)",
+   "ans": "dust",
+   "why": "a lot of 后面接名词 dust（灰尘）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My shoes are the dusty in the room.",
+   "ans": "dusty → dustiest",
+   "why": "the 后面表示“最脏的”要用最高级 dustiest。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这间屋子比那间更满是灰尘。",
+   "stem": "This room is ______ than that one.",
+   "ans": "dustier",
+   "why": "than 前用比较级 dustier。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ room made me cough.",
+   "opts": [
+    "dusty",
+    "dust",
+    "duster",
+    "dusting"
+   ],
+   "why": "名词前作定语用形容词 dusty。",
+   "kd": "词性转换"
+  }
+ ],
+ "duster": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人用什么擦桌子？",
+   "listen": "Please use a duster to clean the desk.",
+   "opts": [
+    "掸子",
+    "抹布",
+    "刷子",
+    "毛巾"
+   ],
+   "why": "duster 是除尘工具。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are two ______ on the shelf.",
+   "opts": [
+    "dusters",
+    "duster",
+    "dusteres",
+    "dusters'"
+   ],
+   "why": "two 后面用复数 dusters。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 duster、rag 中选一个，用适当形式填空。",
+   "stem": "She wiped the window with a wet ______.",
+   "ans": "rag",
+   "why": "湿抹布用 rag；duster 多指掸子。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He cleaned the desk with a ______. (duster)",
+   "ans": "duster",
+   "why": "a 后面接单数名词 duster。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I need two duster to clean the room.",
+   "ans": "duster → dusters",
+   "why": "two 后面名词要用复数 dusters。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请用掸子把书架上的灰去掉。",
+   "stem": "Please use a ______ to clean the shelf.",
+   "ans": "duster",
+   "why": "除尘工具用 duster。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A duster is a tool for ______ dust.",
+   "opts": [
+    "removing",
+    "remove",
+    "removed",
+    "removes"
+   ],
+   "why": "介词 for 后面用动名词 removing。",
+   "kd": "用法"
+  }
+ ],
+ "virtual": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说的会议是什么形式？",
+   "listen": "Our class had a virtual meeting online yesterday.",
+   "opts": [
+    "线上会议",
+    "面对面会议",
+    "取消的会议",
+    "户外会议"
+   ],
+   "why": "virtual 线上的、虚拟的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ ruler had all the power in the country.",
+   "opts": [
+    "virtual",
+    "virtually",
+    "virtue",
+    "virtualize"
+   ],
+   "why": "名词前作定语用形容词 virtual（实际上的）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 virtual、effective 中选一个，用适当形式填空。",
+   "stem": "He is the ______ leader, though he has no title.",
+   "ans": "virtual",
+   "why": "没有名分但实际掌权用 virtual；effective 强调有效。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "______ all students passed the exam. (virtual)",
+   "ans": "Virtually",
+   "why": "句首修饰全句用副词 Virtually（几乎）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We had a virtual meet online last week.",
+   "ans": "meet → meeting",
+   "why": "a 后面要用名词 meeting。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他实际上是个陌生人。",
+   "stem": "He is a ______ stranger.",
+   "ans": "virtual",
+   "why": "“跟陌生人差不多”用 virtual。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The school uses ______ classrooms to teach online.",
+   "opts": [
+    "virtual",
+    "virtually",
+    "virtue",
+    "virtualize"
+   ],
+   "why": "名词前作定语用形容词 virtual。",
+   "kd": "词性转换"
+  }
+ ],
+ "virtually": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说的这座城市怎么样？",
+   "listen": "This city is virtually the same as my hometown.",
+   "opts": [
+    "几乎一样",
+    "完全不同",
+    "大得多",
+    "更漂亮"
+   ],
+   "why": "virtually 意思是“几乎、差不多”。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The two pictures are ______ the same. I can't tell them apart.",
+   "opts": [
+    "virtually",
+    "virtual",
+    "virtue",
+    "nearly"
+   ],
+   "why": "修饰 the same 表示“几乎”用 virtually。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 virtually、almost 中选一个，用适当形式填空。",
+   "stem": "The work is ______ finished, so we can go home now.",
+   "ans": "almost",
+   "why": "almost 不能直接修饰 the same 这类词，此处用 almost 更自然；virtually 也可，但本题考常用搭配。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We had a ______ meeting last week. (virtually)",
+   "ans": "virtual",
+   "why": "修饰名词 meeting 要用形容词 virtual（线上的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He virtually finished the work, but he still had one page to do.",
+   "ans": "virtually → almost",
+   "why": "句意是“几乎完成但还差一页”，用 almost 更准确；virtually 强调“实际上差不多”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他几乎每天都早起。",
+   "stem": "He gets up early ______ every day.",
+   "ans": "virtually",
+   "why": "“几乎每天”用 virtually。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Her ______ is known to all her friends.",
+   "opts": [
+    "virtue",
+    "virtual",
+    "virtually",
+    "virtues"
+   ],
+   "why": "物主代词后接名词，此处指“美德”用 virtue。",
+   "kd": "词性转换"
+  }
+ ],
+ "virtue": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人认为诚实是什么？",
+   "listen": "Honesty is a great virtue.",
+   "opts": [
+    "一种美德",
+    "一种缺点",
+    "一种习惯",
+    "一种技能"
+   ],
+   "why": "virtue 意思是“美德”。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Patience is one of his best ______.",
+   "opts": [
+    "virtues",
+    "virtue",
+    "virtual",
+    "virtually"
+   ],
+   "why": "one of 后面接可数名词复数 virtues。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 virtue、merit 中选一个，用适当形式填空。",
+   "stem": "She got the prize by ______ of her hard work.",
+   "ans": "virtue",
+   "why": "by virtue of 是固定短语，意为“凭借、由于”。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Kindness is a ______ that everyone should have. (virtue)",
+   "ans": "virtue",
+   "why": "a 后面接单数名词 virtue。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He was praised for his many virtue.",
+   "ans": "virtue → virtues",
+   "why": "many 后面接可数名词复数 virtues。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他凭借自己的努力获得了成功。",
+   "stem": "He succeeded by ______ of his hard work.",
+   "ans": "virtue",
+   "why": "by virtue of 意为“凭借、由于”。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Honesty and kindness are important ______.",
+   "opts": [
+    "virtues",
+    "virtue",
+    "virtual",
+    "merit"
+   ],
+   "why": "主语是复数，表语用复数 virtues。",
+   "kd": "变形"
+  }
+ ],
+ "chicken": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人晚饭想吃什么？",
+   "listen": "I'd like some chicken for dinner.",
+   "opts": [
+    "鸡肉",
+    "牛肉",
+    "鱼肉",
+    "猪肉"
+   ],
+   "why": "chicken 指“鸡肉”。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ on the farm.",
+   "opts": [
+    "chickens",
+    "chicken",
+    "chick",
+    "chicken's"
+   ],
+   "why": "可数的“鸡”用复数 chickens；chicken 指鸡肉时不可数。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 chicken、hen 中选一个，用适当形式填空。",
+   "stem": "The farmer keeps a lot of ______ for eggs.",
+   "ans": "hens",
+   "why": "下蛋的是母鸡 hen；chicken 是统称。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Look! A little ______ is following its mother. (chicken)",
+   "ans": "chick",
+   "why": "小鸡用 chick。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I bought two chicken and some rice for lunch.",
+   "ans": "chicken → chickens",
+   "why": "两只鸡是可数的，用 chickens。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "别临阵退缩，勇敢一点！",
+   "stem": "Don't ______ out. Be brave!",
+   "ans": "chicken",
+   "why": "chicken out 意为“临阵退缩”。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We had ______ for lunch yesterday.",
+   "opts": [
+    "chicken",
+    "chickens",
+    "a chicken",
+    "chick"
+   ],
+   "why": "指鸡肉时 chicken 不可数，不加 a 也不加 s。",
+   "kd": "用法"
+  }
+ ],
+ "chick": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人看到了什么？",
+   "listen": "Look, the little chick is yellow.",
+   "opts": [
+    "一只黄色小鸡",
+    "一只黄色小鸟",
+    "一只黄色小鸭",
+    "一只黄色小猫"
+   ],
+   "why": "chick 是小鸡。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ are playing in the garden.",
+   "opts": [
+    "chicks",
+    "chick",
+    "chickens",
+    "chickes"
+   ],
+   "why": "主语是复数，chick 的复数是 chicks。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 chick、chicken 中选一个，用适当形式填空。",
+   "stem": "Look at that ______ over there. It is very small.",
+   "ans": "chick",
+   "why": "指小鸡用 chick；chicken 多指鸡或鸡肉。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Two ______ came out of the eggs. (chick)",
+   "ans": "chicks",
+   "why": "two 后面用复数 chicks。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The chick is very small and cute.",
+   "ans": "无 → 无",
+   "why": "句子正确，chick 单数作主语，is 搭配。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这只小鸡很可爱。",
+   "stem": "This ______ is very cute.",
+   "ans": "chick",
+   "why": "小鸡用 chick。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are five ______ on the farm.",
+   "opts": [
+    "chicks",
+    "chick",
+    "chicken",
+    "chickes"
+   ],
+   "why": "five 后面用复数 chicks。",
+   "kd": "变形"
+  }
+ ],
+ "edge": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人站在哪里？",
+   "listen": "Don't stand near the edge of the cliff.",
+   "opts": [
+    "悬崖边",
+    "悬崖顶",
+    "悬崖下",
+    "悬崖中间"
+   ],
+   "why": "edge 是边缘。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Be careful! The knife has a sharp ______.",
+   "opts": [
+    "edge",
+    "border",
+    "side",
+    "margin"
+   ],
+   "why": "刀刃锋利用 edge。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 edge、border 中选一个，用适当形式填空。",
+   "stem": "The river is the ______ between the two countries.",
+   "ans": "border",
+   "why": "两国之间的边界用 border。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He ______ slowly along the wall yesterday. (edge)",
+   "ans": "edged",
+   "why": "yesterday 用过去式 edged。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is edging careful along the narrow bridge.",
+   "ans": "careful → carefully",
+   "why": "修饰动词 edging 用副词 carefully。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他紧张不安地等着结果。",
+   "stem": "He was on ______ while waiting for the result.",
+   "ans": "edge",
+   "why": "on edge 表示紧张不安。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of the table is very sharp.",
+   "opts": [
+    "edge",
+    "border",
+    "side",
+    "margin"
+   ],
+   "why": "桌子的边线用 edge。",
+   "kd": "用法"
+  }
+ ],
+ "double-edged": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人怎么形容这把剑？",
+   "listen": "This sword is double-edged and very dangerous.",
+   "opts": [
+    "双刃的",
+    "单刃的",
+    "很长的",
+    "很旧的"
+   ],
+   "why": "double-edged 是双刃的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ sword can cut both ways.",
+   "opts": [
+    "double-edged",
+    "double",
+    "edged",
+    "edge"
+   ],
+   "why": "双刃的用 double-edged。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 double-edged、edged 中选一个，用适当形式填空。",
+   "stem": "The knife is ______, so be careful.",
+   "ans": "double-edged",
+   "why": "双刃的用 double-edged。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "This ______ sword is dangerous. (double-edge)",
+   "ans": "double-edged",
+   "why": "复合形容词用 double-edged。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This is a double-edge sword.",
+   "ans": "double-edge → double-edged",
+   "why": "复合形容词要加 -ed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这把剑是双刃的。",
+   "stem": "This sword is ______.",
+   "ans": "double-edged",
+   "why": "双刃的用 double-edged。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The word “double-edged” means ______.",
+   "opts": [
+    "双刃的",
+    "单刃的",
+    "无刃的",
+    "钝的"
+   ],
+   "why": "double-edged 意为双刃的。",
+   "kd": "用法"
+  }
+ ],
+ "buzz": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人问的是什么？",
+   "listen": "Can you give me a buzz tonight?",
+   "opts": [
+    "今晚给我打个电话",
+    "今晚来我家",
+    "今晚发条消息",
+    "今晚按门铃"
+   ],
+   "why": "give sb. a buzz 给某人打电话。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The bees ______ around the flowers now.",
+   "opts": [
+    "are buzzing",
+    "buzzes",
+    "buzzed",
+    "buzz"
+   ],
+   "why": "now 表示现在进行，用 are buzzing。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 buzz、drone 中选一个，用适当形式填空。",
+   "stem": "The phone ______ woke me up at six.",
+   "ans": "buzzed",
+   "why": "手机“嗡嗡”响用 buzz；drone 指机器低沉的嗡嗡声。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The door ______ when you press the button. (buzz)",
+   "ans": "buzzes",
+   "why": "主语 the door 是第三人称单数，buzz 加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The bee buzzs loudly in the garden.",
+   "ans": "buzzs → buzzes",
+   "why": "buzz 三单加 es，不直接加 s。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他昨天按蜂鸣器叫了门卫。",
+   "stem": "He ______ the buzzer for the guard yesterday.",
+   "ans": "buzzed",
+   "why": "yesterday 表示过去，用过去式 buzzed。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is a ______ about a new park in town.",
+   "opts": [
+    "buzz",
+    "buzzing",
+    "buzzed",
+    "buzzes"
+   ],
+   "why": "there is 后接名词，传闻用 buzz。",
+   "kd": "词性转换"
+  }
+ ],
+ "buzzer": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说什么响了？",
+   "listen": "The buzzer rang, so I opened the door.",
+   "opts": [
+    "蜂鸣器",
+    "电话",
+    "闹钟",
+    "门铃"
+   ],
+   "why": "buzzer 是“嗡嗡”的蜂鸣器。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please press the ______ to call the nurse.",
+   "opts": [
+    "buzzer",
+    "bell",
+    "alarm",
+    "buzz"
+   ],
+   "why": "按蜂鸣器叫人用 buzzer；bell 是叮铃的铃。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 buzzer、bell 中选一个，用适当形式填空。",
+   "stem": "The school ______ rings at eight every morning.",
+   "ans": "bell",
+   "why": "学校“叮铃”的铃是 bell，不是 buzzer。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are two ______ on the wall. (buzzer)",
+   "ans": "buzzers",
+   "why": "two 后面用复数 buzzers。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The buzzer ring loudly and everyone heard it.",
+   "ans": "ring → rang",
+   "why": "and 后 heard 是过去式，前面也用过去式 rang。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "门口的蜂鸣器坏了。",
+   "stem": "The ______ at the door is broken.",
+   "ans": "buzzer",
+   "why": "门口“嗡嗡”响的装置是 buzzer。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ went off and we all left the building.",
+   "opts": [
+    "alarm",
+    "buzzer",
+    "bell",
+    "buzz"
+   ],
+   "why": "火警警报用 alarm，不是蜂鸣器。",
+   "kd": "易混"
+  }
+ ],
+ "victor": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说的是谁？",
+   "listen": "The victor raised the cup and smiled.",
+   "opts": [
+    "获胜者",
+    "裁判",
+    "教练",
+    "观众"
+   ],
+   "why": "victor 是胜利者、获胜者。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of the race got a gold medal.",
+   "opts": [
+    "victor",
+    "winner",
+    "conqueror",
+    "victory"
+   ],
+   "why": "赛跑获胜者用 victor 或 winner；这里考 victor 拼写。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 victor、conqueror 中选一个，用适当形式填空。",
+   "stem": "The ______ took the city and ruled it for years.",
+   "ans": "conqueror",
+   "why": "带“征服、占领”意味用 conqueror。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The two ______ shook hands after the game. (victor)",
+   "ans": "victors",
+   "why": "two 后面用复数 victors。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The victor were very happy after the match.",
+   "ans": "were → was",
+   "why": "the victor 是单数，be 动词用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是这场比赛的胜利者。",
+   "stem": "He is the ______ of this match.",
+   "ans": "victor",
+   "why": "比赛的胜者用 victor。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Every ______ in the game gets a small prize.",
+   "opts": [
+    "winner",
+    "victor",
+    "conqueror",
+    "victory"
+   ],
+   "why": "一般的“获胜者”用 winner；victor 偏书面。",
+   "kd": "易混"
+  }
+ ],
+ "victory": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说的是什么？",
+   "listen": "Our team won a great victory yesterday.",
+   "opts": [
+    "一场伟大的胜利",
+    "一场平局",
+    "一次失败",
+    "一场训练"
+   ],
+   "why": "victory 是“胜利”。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The players celebrated their ______ after the final match.",
+   "opts": [
+    "victory",
+    "victorious",
+    "victories",
+    "victor"
+   ],
+   "why": "their 后面接名词，指这一场胜利用 victory。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 victory、win 中选一个，用适当形式填空。",
+   "stem": "It was a great ______ for the whole team.",
+   "ans": "victory",
+   "why": "a great victory 是固定搭配，强调胜利这一结果。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The team has won many ______ this year. (victory)",
+   "ans": "victories",
+   "why": "many 后接复数，y 变 i 加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Our class had a great victorious in the game.",
+   "ans": "victorious → victory",
+   "why": "had 后面要名词 victory，不能作形容词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这场胜利属于每个人。",
+   "stem": "This ______ belongs to everyone.",
+   "ans": "victory",
+   "why": "this 后接单数名词 victory。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ army marched into the city.",
+   "opts": [
+    "victorious",
+    "victory",
+    "victories",
+    "victor"
+   ],
+   "why": "修饰名词 army 要用形容词 victorious。",
+   "kd": "词性转换"
+  }
+ ],
+ "victorious": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人怎么形容这支队伍？",
+   "listen": "The victorious team came home with the cup.",
+   "opts": [
+    "获胜的",
+    "失败的",
+    "年轻的",
+    "疲惫的"
+   ],
+   "why": "victorious 是“获胜的”。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "After the game, the ______ players ran to their fans.",
+   "opts": [
+    "victorious",
+    "victory",
+    "victories",
+    "victor"
+   ],
+   "why": "修饰 players 要用形容词 victorious。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 victorious、winning 中选一个，用适当形式填空。",
+   "stem": "The ______ team held up the cup.",
+   "ans": "victorious",
+   "why": "描写打赢了的队伍用 victorious。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Our team was ______ in the final match. (victory)",
+   "ans": "victorious",
+   "why": "be 后面要形容词 victorious。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The victory team smiled at the camera.",
+   "ans": "victory → victorious",
+   "why": "修饰名词 team 要用形容词 victorious。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "获胜的队员们大声欢呼。",
+   "stem": "The ______ players cheered loudly.",
+   "ans": "victorious",
+   "why": "修饰 players 用形容词 victorious。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "They sang songs of ______ after the match.",
+   "opts": [
+    "victory",
+    "victorious",
+    "victories",
+    "victor"
+   ],
+   "why": "of 后面接名词 victory。",
+   "kd": "词性转换"
+  }
+ ],
+ "evict": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说的是什么？",
+   "listen": "The family was evicted from their flat last month.",
+   "opts": [
+    "被赶出公寓",
+    "搬进新家",
+    "买下公寓",
+    "修好公寓"
+   ],
+   "why": "evict 是“驱逐、逐出”。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The landlord ______ the family for not paying rent last month.",
+   "opts": [
+    "evicted",
+    "evicts",
+    "evicting",
+    "eviction"
+   ],
+   "why": "last month 表明用过去式 evicted。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 evict、expel 中选一个，用适当形式填空。",
+   "stem": "The school ______ two students for cheating last term.",
+   "ans": "expelled",
+   "why": "开除学生出学校用 expel，不用 evict。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The landlord is ______ the family from the house now. (evict)",
+   "ans": "evicting",
+   "why": "now 表明用现在进行时 evicting。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The old man was evicted to his flat by the owner.",
+   "ans": "to → from",
+   "why": "evict sb from 把某人从……赶出。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他们被依法赶出了那栋房子。",
+   "stem": "They were ______ from the house by law.",
+   "ans": "evicted",
+   "why": "被动语态用过去分词 evicted。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of the family made many people angry.",
+   "opts": [
+    "eviction",
+    "evict",
+    "evicts",
+    "evicted"
+   ],
+   "why": "the … of 中间要名词 eviction。",
+   "kd": "词性转换"
+  }
+ ],
+ "eviction": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说的驱逐发生在哪里？",
+   "listen": "The eviction of the family from their home made everyone sad.",
+   "opts": [
+    "从家里被赶走",
+    "从学校被开除",
+    "从公司被解雇",
+    "从医院被送走"
+   ],
+   "why": "eviction 指被赶出住处。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The landlord began the ______ of the tenants last week.",
+   "opts": [
+    "eviction",
+    "evict",
+    "evicted",
+    "evicting"
+   ],
+   "why": "the … of 中间要名词 eviction（驱逐）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There were three ______ in this building last year. (eviction)",
+   "ans": "evictions",
+   "why": "three 后面用复数 evictions。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 eviction、evict 中选一个，用适当形式填空。",
+   "stem": "The court decided to ______ the family from the flat.",
+   "ans": "evict",
+   "why": "decide to do 后面用动词 evict。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The eviction of the old man were very sad.",
+   "ans": "were → was",
+   "why": "主语 eviction 是单数，be 动词用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这家人的驱逐让邻居们很难过。",
+   "stem": "The ______ of the family made the neighbours sad.",
+   "ans": "eviction",
+   "why": "the … of 结构用名词 eviction。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "They faced ______ from their home last winter.",
+   "opts": [
+    "eviction",
+    "evict",
+    "evicting",
+    "evicted"
+   ],
+   "why": "face 后面接名词 eviction 作宾语。",
+   "kd": "词性转换"
+  }
+ ],
+ "convict": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：法庭判了那个人什么罪？",
+   "listen": "The court convicted him of stealing money.",
+   "opts": [
+    "判他偷钱有罪",
+    "判他无罪释放",
+    "罚他交钱",
+    "让他道歉"
+   ],
+   "why": "convict sb of sth 判某人有某罪。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The judge ______ him of robbery last month.",
+   "opts": [
+    "convicted",
+    "convict",
+    "convicting",
+    "convicts"
+   ],
+   "why": "last month 用过去式 convicted。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 convict、sentence 中选一个，用适当形式填空。",
+   "stem": "The court will ______ him of murder next week.",
+   "ans": "convict",
+   "why": "convict sb of sth 定罪；sentence 是判刑。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "His ______ came as a shock to the whole town. (convict)",
+   "ans": "conviction",
+   "why": "his 后面要名词 conviction（定罪）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The man was convicted for stealing a car.",
+   "ans": "for → of",
+   "why": "be convicted of 是固定搭配。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "法庭判他有罪。",
+   "stem": "The court ______ him of the crime.",
+   "ans": "convicted",
+   "why": "过去的事用 convicted。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ was sent to prison for ten years.",
+   "opts": [
+    "convict",
+    "conviction",
+    "convicting",
+    "convicted"
+   ],
+   "why": "作主语指囚犯用名词 convict。",
+   "kd": "词性转换"
+  }
+ ],
+ "conviction": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人对自己的信念感觉如何？",
+   "listen": "She spoke with great conviction about her plan.",
+   "opts": [
+    "非常坚定",
+    "有点犹豫",
+    "十分害怕",
+    "完全不懂"
+   ],
+   "why": "with conviction 坚定地。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He has a strong ______ that hard work brings success.",
+   "opts": [
+    "conviction",
+    "convict",
+    "convince",
+    "convicted"
+   ],
+   "why": "a strong … that 从句用名词 conviction（信念）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 conviction、belief 中选一个，用适当形式填空。",
+   "stem": "She spoke with deep ______ about the future.",
+   "ans": "conviction",
+   "why": "with conviction 坚定地；belief 不用于此搭配。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Her ______ about the plan never changed. (conviction)",
+   "ans": "convictions",
+   "why": "主语复数意义，用复数 convictions。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He was a man of strong beliefs, and nothing could shake his conviction.",
+   "ans": "beliefs → belief",
+   "why": "a man of strong belief 是固定说法，指有坚定信念的人。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她带着坚定的信念说话。",
+   "stem": "She spoke with great ______.",
+   "ans": "conviction",
+   "why": "with conviction 坚定地。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of the thief took two years.",
+   "opts": [
+    "conviction",
+    "convict",
+    "convince",
+    "convicted"
+   ],
+   "why": "the … of 结构用名词 conviction（定罪）。",
+   "kd": "词性转换"
+  }
+ ]
+}

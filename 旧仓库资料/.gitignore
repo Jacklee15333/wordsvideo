@@ -1,0 +1,10 @@
+# 音频不再统一忽略：100MB 以内的音频可以进仓库（GitHub 单文件上限 100MB）
+# 超过 100MB 的音频请在提交前手动排除（gitignore 不支持按体积过滤）
+# 第七十五版：_归档/ 不再忽略——放进 _归档 的旧版本也一起备份到 GitHub（单个文件仍然不能超过 100MB）
+desktop.ini
+Thumbs.db
+~$*
+*.tmp
+最新工作版/提示词日志.txt
+chuti-helper/chuti-helper/repo/
+chuti-helper/chuti-helper/runner_repo/

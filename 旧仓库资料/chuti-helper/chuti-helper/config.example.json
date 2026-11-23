@@ -1,0 +1,48 @@
+{
+  "repo_url": "https://github.com/Jacklee15333/ciyuanchaifeng.git",
+  "branch": "master",
+  "git_proxy": "http://127.0.0.1:7892",
+  "github_token_file": "C:\\Users\\user\\Desktop\\令牌\\gh_token.txt",
+  "skill_file": "C:\\Users\\user\\Desktop\\出题\\zongbiao-questions.skill",
+  "template_file": "prompt_template.txt",
+  "round_words": 300,
+  "upload_every": 25,
+  "poll_seconds": 120,
+  "quiet_minutes": 8,
+  "warn_minutes": 8,
+  "first_commit_minutes": 25,
+  "max_reminders": 3,
+  "notify": {
+    "toast": true,
+    "beep": true,
+    "webhook": null,
+    "webhook_proxy": null
+  },
+  "llm": {
+    "style": "openai",
+    "base_url": "https://api.deepseek.com",
+    "model": "在这里填 DeepSeek 的模型名",
+    "key_file": "C:\\Users\\user\\Desktop\\令牌\\deepseek_key.txt",
+    "max_tokens": 8000,
+    "temperature": 0.3,
+    "timeout": 600,
+    "proxy": null,
+    "label": "DeepSeek（本地接力）"
+  },
+  "relay": {
+    "takeover_minutes": 30,
+    "group_size": 25,
+    "chunk_size": 5,
+    "max_fix_rounds": 3,
+    "check_seconds": 60,
+    "retry_waits": [
+      15,
+      30,
+      60,
+      120,
+      240,
+      300,
+      300
+    ]
+  }
+}
