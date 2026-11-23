@@ -373,7 +373,7 @@ def api_live(qs):
     """任务页的实时画面：现在在做哪个任务、哪一步、AI 正在写什么、浏览器画面、步骤记录。"""
     r = C.RUNNER
     t = r.task
-    out = {"running": bool(t), "provider": C.provider_name(), "pv": C.load_cfg().get("provider"), "stage": r.stage,
+    out = {"relay": C.RELAY.get("status") == "等你操作", "running": bool(t), "provider": C.provider_name(), "pv": C.load_cfg().get("provider"), "stage": r.stage,
            "state": r.state, "ai": {k: v for k, v in C.AI_LIVE.items()}, "web": None, "logs": []}
     if t:
         out["task"] = C.q("SELECT id,title,kind,progress,started FROM tasks WHERE id=?", (t["id"],), one=True)
@@ -389,6 +389,46 @@ def api_live(qs):
             except Exception as e:
                 out["web"] = {"error": str(e)}
     return out
+
+
+def api_relay_get(qs):
+    r = dict(C.RELAY)
+    if qs.get("full") != "1":
+        r["promptLen"] = len(r.get("prompt") or "")
+        r["prompt"] = (r.get("prompt") or "")[:600]
+    r.pop("reply", None)
+    r["url"] = C.load_cfg().get("relayUrl", "")
+    return r
+
+
+def api_relay_post(b):
+    ok, msg = C.relay_submit(b.get("id", 0), b.get("reply", ""), skip=bool(b.get("skip")))
+    return {"ok": ok, "msg": msg}
+
+
+def api_words_task(b):
+    raw = b.get("text") or ""
+    ws = [w.strip() for w in re.split(r"[\n,，、;；]+", raw) if w.strip()]
+    if not ws:
+        return {"ok": False, "msg": "先输入单词"}
+    _, rows = C.read_index()
+    known = {r[2] for r in rows}
+    low = {r[2].lower(): r[2] for r in rows}
+    found, miss = [], []
+    for w in ws:
+        k = w if w in known else low.get(w.lower())
+        (found if k else miss).append(k or w)
+    found = list(dict.fromkeys(found))
+    steps = [x for x in (b.get("steps") or []) if x in ("chuti", "pics")]
+    if not found:
+        return {"ok": False, "msg": "这些词总表里都没有：%s" % "、".join(miss[:20])}
+    if not steps:
+        return {"ok": False, "msg": "至少勾一步（出题 / 做视频画面）"}
+    tid = C.add_task("words", {"words": found, "steps": steps},
+                     title="做指定的 %d 个词：%s" % (len(found), "、".join(found[:5]) + ("…" if len(found) > 5 else "")))
+    C.RUNNER.wake.set()
+    return {"ok": True, "found": len(found), "miss": miss, "task": tid,
+            "msg": "开始了（任务 #%d），%d 个词%s" % (tid, len(found), ("；总表里没有、跳过的：" + "、".join(miss[:20])) if miss else "")}
 
 
 GET = {
@@ -407,6 +447,7 @@ GET = {
     "/api/video": api_video_get,
     "/api/self": api_self_get,
     "/api/live": api_live,
+    "/api/relay": api_relay_get,
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
@@ -415,6 +456,8 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
         "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,
         "/api/self": api_self_post,
+        "/api/relay": api_relay_post,
+        "/api/words-task": api_words_task,
         "/api/prepare": lambda b: C.prepare(b.get("words") or [])}
 
 

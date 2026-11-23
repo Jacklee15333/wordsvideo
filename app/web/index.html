@@ -134,6 +134,9 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 #toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;padding:8px 16px;border-radius:4px;display:none;z-index:30;max-width:460px}
 .acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .acts .box{margin-top:0;position:relative}
+.relay{border:2px solid #E9A23B;background:#FFFBF2}
+.relay textarea{width:100%;margin-top:6px}
+#wBox{margin-bottom:14px}
 .who{margin:0 0 14px;font-size:13px}
 .pv label{display:block;border:1px solid var(--rule);border-radius:6px;padding:8px 12px;margin:6px 0;cursor:pointer}
 .pv label:has(input:checked){border-color:var(--blue);background:#F3F7FD}
@@ -230,6 +233,23 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
     <button class="btn ghost sm" id="tGear" title="这里用到的设置">⚙ 设置</button></div>
   <p class="muted" style="margin:0 0 6px">一个词变成视频要三步，按顺序点下面的按钮就行。每一步都是 AI 自动做、程序自动检查，过了才存。</p>
   <div class="who" id="tWho">出题、做画面用的 AI：<b>—</b> <a href="#" onclick="gearOpen();return false">换一个</a></div>
+  <div class="box relay" id="rBox" hidden>
+    <h3 style="margin-top:0">要你操作：把这一批交给网页 AI <span id="rWords" class="small muted"></span></h3>
+    <ol class="steps">
+      <li><button class="btn" id="rCopy">复制提示词</button> <span class="small muted" id="rLen"></span></li>
+      <li><button class="btn ghost" id="rOpen">打开网页 AI</button> <span class="small muted">在网页里粘贴（Ctrl+V）、发送，等它全部写完（最后一行是 ZBQ-END）</span></li>
+      <li>在网页里复制它的整段回复，粘贴到这里：<textarea id="rReply" rows="6" placeholder="把 AI 的整段回复粘贴到这里"></textarea></li>
+      <li><button class="btn" id="rSend">交回给软件</button> <button class="btn ghost sm" id="rSkip">这一批先跳过</button> <span id="rMsg" class="small"></span></li>
+    </ol>
+    <p class="small faint" style="margin:0">交回以后，检查、存盘、退回改、记进度、上传都是软件自动做；没过的词会再给你一份“改错”的提示词。</p>
+  </div>
+  <div class="box" id="wBox">
+    <h3 style="margin-top:0">做指定的词</h3>
+    <div class="line" style="align-items:flex-start"><textarea id="wIn" rows="3" style="flex:1;font-family:var(--en)" placeholder="把要做的单词输进来：一行一个，或者用逗号隔开。比如：protect, camera, explore"></textarea>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:150px"><label><input type="checkbox" id="wQ" checked> 出题</label><label><input type="checkbox" id="wP" checked> 做视频画面</label>
+        <button class="btn" id="wGo">开始做这些词</button></div></div>
+    <div id="wMsg" class="small muted" style="margin-top:6px">已经有题目的词不会重出；没有题目的词，做画面会等题目出好再做。</div>
+  </div>
   <div class="acts">
     <div class="box act">
       <div class="stepno">1</div><h3>出题</h3><p class="muted small">给每个词出 7 道练习题（视频最后的练习和答案）。</p>
@@ -578,12 +598,16 @@ async function gearOpen(){const S=await api('/api/settings'),c=S.cfg,w=S.web||{}
   <div class="pv">
     <label><input type="radio" name="g_pv" value="web" ${c.provider==='web'?'checked':''}> <b>网页镜像 ChatGPT（sorryios）</b><br><span class="small muted">质量最好（会切到最高级模型、思考拉满），慢一些，一次几分钟；软件会自己打开浏览器操作，实时画面里能看到</span></label>
     <label><input type="radio" name="g_pv" value="api" ${c.provider==='api'?'checked':''}> <b>接口 AI（DeepSeek 等）</b><br><span class="small muted">快、便宜，不用浏览器；质量比网页 ChatGPT 差一些（以前 DeepSeek 接力没过的词多）</span></label>
+    <label><input type="radio" name="g_pv" value="relay" ${c.provider==='relay'?'checked':''}> <b>手动接力（比如 zd87 上的 Claude）</b><br><span class="small muted">软件把提示词准备好，你复制到网页 AI 里发送，再把回复粘回来；检查、存盘、上传都自动。一次给 ${c.relayChunk||25} 个词</span></label>
     <label><input type="radio" name="g_pv" value="mock" ${c.provider==='mock'?'checked':''}> <b>模拟</b><br><span class="small muted">不连 AI，只试流程，存进去的是假题，别用来真出题</span></label>
   </div>
   <div id="g_web">
   <label class="f"><span>镜像站账号</span><input type="text" id="g_user" autocomplete="off" value="${esc(w.aiUsername||'')}"></label>
   <label class="f"><span>镜像站密码</span><input type="password" id="g_pass" autocomplete="new-password" placeholder="${w.aiPassword?'（已填，不改就空着）':''}"></label>
   <div class="tip">就是 sorryios 的账号密码，和超能小助里登录用的一样</div></div>
+  <div id="g_relay">
+  <label class="f"><span>网页 AI 地址</span><input type="text" id="g_rurl" autocomplete="off" value="${esc(c.relayUrl||'')}"></label>
+  <label class="f"><span>一次给</span><span><input type="number" id="g_rchunk" value="${c.relayChunk||25}" style="width:70px"> 个词（你要复制粘贴，一次多给一些）</span></label></div>
   <div id="g_api">
   <label class="f"><span>接口地址</span><input type="text" id="g_base" value="${esc(c.api.baseUrl||'')}"></label>
   <label class="f"><span>密钥</span><input type="password" id="g_key" autocomplete="new-password" placeholder="${c.api.key?'（已填，不改就空着）':'sk-…'}"></label>
@@ -594,11 +618,11 @@ async function gearOpen(){const S=await api('/api/settings'),c=S.cfg,w=S.web||{}
   <label class="f"><span></span><span><input type="checkbox" id="g_win" ${c.window.enabled?'checked':''}> 只在 <input type="time" id="g_ws" value="${c.window.start}"> 到 <input type="time" id="g_we" value="${c.window.end}"> 干活</span></label>
   <div style="margin:12px 0 0 138px;display:flex;gap:8px"><button class="btn" id="g_save">保存</button><button class="btn ghost" id="g_test">测登录</button></div>
   <p id="g_msg" class="small muted" style="margin-left:138px"></p>`);
-  const pvVis=()=>{const v=document.querySelector('input[name=g_pv]:checked').value;$('#g_web').hidden=v!=='web';$('#g_api').hidden=v!=='api';$('#g_test').hidden=v!=='web'};
+  const pvVis=()=>{const v=document.querySelector('input[name=g_pv]:checked').value;$('#g_web').hidden=v!=='web';$('#g_api').hidden=v!=='api';$('#g_relay').hidden=v!=='relay';$('#g_test').hidden=v!=='web'};
   $$('input[name=g_pv]').forEach(x=>x.onchange=pvVis);pvVis();
   $('#g_save').onclick=async()=>{const web={aiUsername:$('#g_user').value};if($('#g_pass').value)web.aiPassword=$('#g_pass').value;
     const apiC={baseUrl:$('#g_base').value,model:$('#g_model').value};if($('#g_key').value)apiC.key=$('#g_key').value;
-    await api('/api/settings',{cfg:{provider:document.querySelector('input[name=g_pv]:checked').value,api:apiC,chunkSize:+$('#g_chunk').value,fixRounds:+$('#g_fix').value,window:{enabled:$('#g_win').checked,start:$('#g_ws').value,end:$('#g_we').value}},web});
+    await api('/api/settings',{cfg:{provider:document.querySelector('input[name=g_pv]:checked').value,api:apiC,relayUrl:$('#g_rurl').value,relayChunk:+$('#g_rchunk').value||25,chunkSize:+$('#g_chunk').value,fixRounds:+$('#g_fix').value,window:{enabled:$('#g_win').checked,start:$('#g_ws').value,end:$('#g_we').value}},web});
     $('#g_msg').textContent='保存好了';poll()};
   $('#g_test').onclick=async()=>{$('#g_msg').textContent='正在打开浏览器登录，要等一两分钟…';const d=await api('/api/ai',{op:'test'});$('#g_msg').textContent=(d.ok?'✓ ':'✗ ')+(d.msg||'')}}
 $('#tPush').onclick=async()=>{await api('/api/task',{kind:'push',params:{}});toast('在后台上传');loadTasks()};
@@ -670,13 +694,35 @@ async function liveTick(){
   if(web){const w=d.web||{};
     if(w.has_shot&&Date.now()-lastShot>1800){lastShot=Date.now();$('#lShot').src='/api/ai/shot?'+Date.now()}
     $('#lShotAge').textContent=w.has_shot?'浏览器画面，每两秒更新':'浏览器还没打开，或者正在打开…（'+(w.stage||'')+'）'}
-  else $('#lNoShot').innerHTML=d.pv==='api'?'接口 AI 没有浏览器画面。<br>右边能看到它一个字一个字写出来的回复。':'模拟 AI 只测流程，没有画面。';
+  else $('#lNoShot').innerHTML=d.pv==='relay'?'手动接力：网页在你自己的浏览器里。<br>上面黄框里照着做，交回后右边能看到回复。':d.pv==='api'?'接口 AI 没有浏览器画面。<br>右边能看到它一个字一个字写出来的回复。':'模拟 AI 只测流程，没有画面。';
   const rep=(web&&d.web&&d.web.reply_tail)?d.web.reply_tail:(ai.reply||'');
   const box=$('#lReply'),stick=box.scrollTop+box.clientHeight>=box.scrollHeight-30;
   box.textContent=rep||(ai.started?'等 AI 开始写…':'还没开始问 AI');if(stick)box.scrollTop=1e9;
   $('#lLog').innerHTML=(d.logs||[]).slice().reverse().map(l=>`<div><span class="faint">${esc(l.ts.slice(11))}</span> ${esc(l.msg)}</div>`).join('')||'<span class="muted">还没有。</span>';
 }
 setInterval(liveTick,2000);
+
+
+/* ───── 手动接力、做指定的词 ───── */
+let RL={};
+async function relayTick(){
+  let d;try{d=await api('/api/relay')}catch(e){return}
+  const on=d.status==='等你操作';
+  $('#rBox').hidden=!on;
+  const nt=$('#nTasks');if(on){nt.hidden=false;nt.textContent='要你操作'}
+  if(on&&d.id!==RL.id){$('#rReply').value='';$('#rMsg').textContent='';if(page!=='tasks')toast('有一批词等你交给网页 AI（任务页）',8000)}
+  RL=d;
+  if(on){$('#rWords').textContent=`${d.kind||''}：${(d.words||[])[0]||''} … ${(d.words||[]).slice(-1)[0]||''}（${(d.words||[]).length} 个词）`;$('#rLen').textContent=`提示词 ${d.promptLen} 字`}
+}
+setInterval(relayTick,2500);
+async function copyText(t){try{await navigator.clipboard.writeText(t);return true}catch(e){
+  const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();return ok}}
+$('#rCopy').onclick=async()=>{const d=await api('/api/relay?full=1');const ok=await copyText(d.prompt||'');$('#rMsg').textContent=ok?'✓ 复制好了，去网页里粘贴':'没复制上，请再点一次';};
+$('#rOpen').onclick=()=>window.open(RL.url||'https://zd87.com/ai-fleet/claude','_blank');
+$('#rSend').onclick=async()=>{const d=await api('/api/relay',{id:RL.id,reply:$('#rReply').value});$('#rMsg').textContent=(d.ok?'✓ ':'✗ ')+d.msg;if(d.ok){$('#rReply').value='';setTimeout(relayTick,800)}};
+$('#rSkip').onclick=async()=>{if(!confirm('这一批先跳过？这些词这次算没做。'))return;const d=await api('/api/relay',{id:RL.id,skip:true});$('#rMsg').textContent=d.msg;setTimeout(relayTick,800)};
+$('#wGo').onclick=async()=>{const steps=[];if($('#wQ').checked)steps.push('chuti');if($('#wP').checked)steps.push('pics');
+  const d=await api('/api/words-task',{text:$('#wIn').value,steps});$('#wMsg').textContent=(d.ok?'✓ ':'✗ ')+d.msg;if(d.ok){$('#wIn').value='';loadTasks();poll()}};
 
 /* ───── 单词 ───── */
 let wPage=1,wTimer,wReady='',SEL=new Set();

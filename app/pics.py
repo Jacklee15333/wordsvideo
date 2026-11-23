@@ -259,7 +259,7 @@ def do_pics(R, tid, p):
     rounds = int(C.load_cfg().get("fixRounds", 3))
     while True:
         R.check_stop()
-        if not C.in_window():
+        if not C.in_window() and C.load_cfg().get("provider") != "relay":
             raise C.Stopped("window")
         if total and done >= total:
             break

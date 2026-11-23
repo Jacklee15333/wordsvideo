@@ -50,6 +50,8 @@ DEFAULT_CFG = {
     "video": {"distro": "Ubuntu-24.04", "winDir": "D:\\构词视频", "gpu": True, "holdQA": False},
     "window": {"enabled": False, "start": "22:00", "end": "07:00"},
     "promptExtra": "",
+    "relayChunk": 25,            # 手动接力时一次给几个词（你要复制粘贴，所以一次多给一些）
+    "relayUrl": "https://zd87.com/ai-fleet/claude",
     "port": 8766,
 }
 
@@ -972,6 +974,54 @@ def _web():
 AI_LIVE = {"reply": "", "provider": "", "kind": "", "words": [], "started": 0.0, "done": 0.0, "secs": 0}
 
 
+RELAY_SKIP = set()
+RELAY = {"id": 0, "status": "", "prompt": "", "words": [], "kind": "", "reply": "", "ts": 0.0}
+_RELAY_LOCK = threading.Lock()
+
+
+def relay_wait(prompt, words):
+    """手动接力：把提示词摆出来，等你在网页 AI 里发送、把回复交回来（最多等 12 小时）。"""
+    if set(words) <= RELAY_SKIP:            # 这批你点了跳过：改错轮也不再问
+        return ""
+    RELAY_SKIP.clear()
+    with _RELAY_LOCK:
+        RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=AI_LIVE.get("kind", ""),
+                     reply="", ts=time.time())
+        rid = RELAY["id"]
+    log("要你操作：复制提示词到网页 AI，写完把回复交回来（%s … %s，%d 个词）" % (words[0], words[-1], len(words)))
+    end = time.time() + 12 * 3600
+    try:
+        while time.time() < end:
+            if RUNNER.stop_req:
+                raise Stopped(RUNNER.stop_req)
+            with _RELAY_LOCK:
+                if RELAY["id"] == rid and RELAY["status"] == "交回了":
+                    AI_LIVE["reply"] = RELAY["reply"]
+                    return RELAY["reply"]
+                if RELAY["id"] == rid and RELAY["status"] == "跳过":
+                    return ""
+            time.sleep(1)
+        raise Fatal("等了 12 小时没交回回复，先停下")
+    finally:
+        with _RELAY_LOCK:
+            if RELAY["id"] == rid:
+                RELAY["status"] = "" if RELAY["status"] != "交回了" else "用完了"
+
+
+def relay_submit(rid, reply, skip=False):
+    with _RELAY_LOCK:
+        if RELAY["id"] != int(rid) or RELAY["status"] != "等你操作":
+            return False, "这一批已经不在等了（可能任务停了），刷新一下"
+        if skip:
+            RELAY["status"] = "跳过"
+            RELAY_SKIP.update(RELAY["words"])
+            return True, "跳过了这一批（这些词算没过，会进“没过的词”）"
+        if len((reply or "").strip()) < 50:
+            return False, "交回来的太短了：要把网页 AI 的整段回复都复制过来"
+        RELAY.update(status="交回了", reply=reply)
+    return True, "收到了，程序在检查"
+
+
 def provider_name(cfg=None):
     cfg = cfg or load_cfg()
     pv = cfg.get("provider", "web")
@@ -979,6 +1029,8 @@ def provider_name(cfg=None):
         return "接口 AI：%s（%s）" % (cfg["api"].get("model") or "?", re.sub(r"^https?://", "", cfg["api"].get("baseUrl", "")).split("/")[0])
     if pv == "mock":
         return "模拟 AI（只测流程，存的是假题）"
+    if pv == "relay":
+        return "手动接力（你在网页 AI 里粘贴提示词、把回复交回来）"
     return "网页镜像 ChatGPT（sorryios）"
 
 
@@ -992,6 +1044,10 @@ def ai_complete(prompt, words, on_progress=None):
             AI_LIVE["reply"] = r[:len(r) * k // 10]
             time.sleep(dl / 10)
         return r
+    if pv == "relay":
+        if os.environ.get("CHUTI_RELAY_AUTO"):           # 自测用：模拟一个人过几秒交回
+            threading.Timer(3, lambda: relay_submit(RELAY["id"], mock_reply(prompt, words))).start()
+        return relay_wait(prompt, words)
     if pv == "api":
         a = cfg["api"]
         if not a.get("key"):
@@ -1061,7 +1117,7 @@ def mock_reply(prompt, words):
 
 
 # ═══════════════════════ 任务 ═══════════════════════
-KIND_NAMES = {"pics": "做视频画面", "selfedit": "改软件", "chuti": "出题", "redo": "重做待人工的词", "push": "上传到 GitHub", "sync": "同步仓库"}
+KIND_NAMES = {"words": "做指定的词", "pics": "做视频画面", "selfedit": "改软件", "chuti": "出题", "redo": "重做待人工的词", "push": "上传到 GitHub", "sync": "同步仓库"}
 
 
 def add_task(kind, params=None, run_after=0, title=""):
@@ -1154,7 +1210,7 @@ class Runner:
         if not t:
             self.state = "空闲"
             return None
-        if t["kind"] in ("chuti", "redo", "pics") and not in_window():
+        if t["kind"] in ("chuti", "redo", "pics", "words") and not in_window() and load_cfg().get("provider") != "relay":
             w = load_cfg()["window"]
             self.state = "等时间窗口（%s–%s）" % (w["start"], w["end"])
             return None
@@ -1173,6 +1229,8 @@ class Runner:
                 self.do_chuti(tid, p)
             elif t["kind"] == "redo":
                 self.do_redo(tid, p)
+            elif t["kind"] == "words":
+                self.do_words(tid, p)
             elif t["kind"] == "pics":
                 import pics
                 pics.do_pics(self, tid, p)
@@ -1232,7 +1290,7 @@ class Runner:
         done = prog.get("processed", 0)
         while True:
             self.check_stop()
-            if not in_window():
+            if not in_window() and load_cfg().get("provider") != "relay":
                 raise Stopped("window")
             left = (total - done) if total else 10 ** 9
             if left <= 0:
@@ -1246,6 +1304,29 @@ class Runner:
             done += len(words)
             self.progress(tid, processed=done, total=total)
         log("任务 #%d 做完了：处理了 %d 个词" % (tid, done), tid)
+
+    def do_words(self, tid, p):
+        """做指定的词：按勾的步骤（出题、做视频画面）走一遍。"""
+        words = [w for w in (p.get("words") or []) if w]
+        steps = p.get("steps") or ["chuti", "pics"]
+        sync()
+        if "chuti" in steps:
+            need = self.pick(10 ** 6, only=set(words))
+            have = [w for w in words if w not in need]
+            if have:
+                log("这些词已经有题目，不重出：%s" % "、".join(have[:30]), tid)
+            if need:
+                x("DELETE FROM manual WHERE word IN (%s)" % ",".join("?" * len(need)), need)
+                log("出题：%d 个词" % len(need), tid)
+                gs = int(load_cfg()["groupSize"])
+                for i in range(0, len(need), gs):
+                    self.check_stop()
+                    self.run_group(tid, need[i:i + gs])
+                    self.progress(tid, processed=min(i + gs, len(need)), total=len(need), step="出题")
+        if "pics" in steps:
+            import pics
+            log("做视频画面：%d 个词（没有题目的会跳过）" % len(words), tid)
+            pics.do_pics(self, tid, {"words": words})
 
     def do_redo(self, tid, p):
         words = [w for w in (p.get("words") or []) if w]
@@ -1291,7 +1372,8 @@ class Runner:
         b, g = next_group_label()
         label = "题目第 %d 批第 %d 组" % (b, g)
         ver = STATE["version"]
-        attr = {"mock": "模拟 AI（测试）", "api": "%s（接口·单词工作台）" % cfg["api"].get("model", "接口 AI")}.get(
+        attr = {"mock": "模拟 AI（测试）", "api": "%s（接口·单词工作台）" % cfg["api"].get("model", "接口 AI"),
+                "relay": "网页 AI 手动接力（单词工作台）"}.get(
             cfg.get("provider"), cfg.get("attribution"))
         log("%s：%s … %s（%d 个词）" % (label, words[0], words[-1], len(words)), tid)
         saved, fixed, issues = [], [], []
@@ -1315,7 +1397,7 @@ class Runner:
                     bad[w] = (lines, errs)
 
         try:
-            cs = max(1, int(cfg["chunkSize"]))
+            cs = max(1, int(cfg["relayChunk"] if cfg.get("provider") == "relay" else cfg["chunkSize"]))
             for i in range(0, len(words), cs):
                 chunk = words[i:i + cs]
                 rep = self.ask(tid, "出题", build_prompt(chunk), chunk)
