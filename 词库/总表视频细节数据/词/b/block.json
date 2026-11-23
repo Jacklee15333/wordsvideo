@@ -1,0 +1,96 @@
+{
+ "单词": "block",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：学校离这里多远？\n听：The school is two blocks away.\nA. 两公里\nB. 两个街区\nC. 两条河\nD. 两座山",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：A big tree ______ the road after the storm.\nA. block\nB. blocks\nC. blocking\nD. blocked\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Walk three ______ and turn left. (block)",
+  "题目4": "【选词填空】从 block、lump 中选一个，用适当形式填空。\n题干：There is a ______ of sugar in my tea; it didn't melt.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The road is block by snow.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：We live in a big ______ of flats.\nA. blocks\nB. block\nC. blocked\nD. blocking\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Children like to build houses ______ toy blocks.\nA. by\nB. of\nC. in\nD. with\n考点：用法",
+  "答案": "【1】B（两个街区）\n讲解：block 街区。\n【2】D（blocked）\n讲解：after the storm 说过去的事，用过去式 blocked（挡住）。\n【3】blocks\n讲解：three 后面用复数，加 s。\n【4】lump\n讲解：没化开的一团是 lump；block 是方方正正的一大块。\n【5】block → blocked\n讲解：被动语态用过去分词。\n【6】B（block）\n讲解：a block of flats 一栋公寓楼。\n【7】D（with）\n讲解：用积木搭用 with。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：学校离这里多远？",
+   "listen": "The school is two blocks away.",
+   "opts": [
+    "两个街区",
+    "两公里",
+    "两条河",
+    "两座山"
+   ],
+   "why": "block 街区。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A big tree ______ the road after the storm.",
+   "opts": [
+    "blocked",
+    "block",
+    "blocks",
+    "blocking"
+   ],
+   "why": "after the storm 说过去的事，用过去式 blocked（挡住）。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Walk three ______ and turn left. (block)",
+   "ans": "blocks",
+   "why": "three 后面用复数，加 s。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 block、lump 中选一个，用适当形式填空。",
+   "stem": "There is a ______ of sugar in my tea; it didn't melt.",
+   "ans": "lump",
+   "why": "没化开的一团是 lump；block 是方方正正的一大块。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The road is block by snow.",
+   "ans": "block → blocked",
+   "why": "被动语态用过去分词。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We live in a big ______ of flats.",
+   "opts": [
+    "block",
+    "blocks",
+    "blocked",
+    "blocking"
+   ],
+   "why": "a block of flats 一栋公寓楼。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Children like to build houses ______ toy blocks.",
+   "opts": [
+    "with",
+    "by",
+    "of",
+    "in"
+   ],
+   "why": "用积木搭用 with。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

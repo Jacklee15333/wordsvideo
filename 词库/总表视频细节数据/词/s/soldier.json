@@ -1,0 +1,92 @@
+{
+ "单词": "soldier",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：那个人是做什么的？\n听：My uncle is a soldier in the army.\nA. 士兵\nB. 医生\nC. 老师\nD. 警察",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The young ______ is guarding the gate.\nA. soldier\nB. soldiers\nC. sailor\nD. sailors",
+  "题目3": "【选词填空】从 soldier、sailor 中选一个，用适当形式填空。\n题干：A ______ works on a ship in the navy.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Many ______ helped the people after the earthquake. (soldier)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The soldiers is marching in the street.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：My grandpa is an old ______; he knows how to fix almost everything.\nA. soldiers\nB. sailor\nC. hand\nD. army\n考点：短语",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：军队派了一千名士兵。\n题干：The army sent 1,000 ______.\n考点：变形",
+  "答案": "【1】A（士兵）\n讲解：soldier 士兵。\n【2】A（soldier）\n讲解：the young 后接单数 soldier。\n【3】sailor\n讲解：在海军舰上的水兵是 sailor。\n【4】soldiers\n讲解：many 后接复数 soldiers。\n【5】is → are\n讲解：主语复数，用 are。\n【6】C（hand）\n讲解：old soldier 老手；口语也说 old hand。\n【7】soldiers\n讲解：1,000 后接复数 soldiers。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：那个人是做什么的？",
+   "listen": "My uncle is a soldier in the army.",
+   "opts": [
+    "士兵",
+    "医生",
+    "老师",
+    "警察"
+   ],
+   "why": "soldier 士兵。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The young ______ is guarding the gate.",
+   "opts": [
+    "soldier",
+    "soldiers",
+    "sailor",
+    "sailors"
+   ],
+   "why": "the young 后接单数 soldier。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 soldier、sailor 中选一个，用适当形式填空。",
+   "stem": "A ______ works on a ship in the navy.",
+   "ans": "sailor",
+   "why": "在海军舰上的水兵是 sailor。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Many ______ helped the people after the earthquake. (soldier)",
+   "ans": "soldiers",
+   "why": "many 后接复数 soldiers。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The soldiers is marching in the street.",
+   "ans": "is → are",
+   "why": "主语复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My grandpa is an old ______; he knows how to fix almost everything.",
+   "opts": [
+    "hand",
+    "soldiers",
+    "sailor",
+    "army"
+   ],
+   "why": "old soldier 老手；口语也说 old hand。",
+   "kd": "短语"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "军队派了一千名士兵。",
+   "stem": "The army sent 1,000 ______.",
+   "ans": "soldiers",
+   "why": "1,000 后接复数 soldiers。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

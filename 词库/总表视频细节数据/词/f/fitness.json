@@ -1,0 +1,93 @@
+{
+ "单词": "fitness",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人每周去哪里？\n听：I go to the fitness centre three times a week.\nA. 购物中心\nB. 图书馆\nC. 健身中心\nD. 电影院",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Swimming is good for your ______.\nA. fit\nB. fitting\nC. fitness\nD. fitnesses\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：You need to exercise to stay ______. (fitness)\n考点：词性转换",
+  "题目4": "【选词填空】从 fitness、health 中选一个，用适当形式填空。\n题干：Smoking is bad for your ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She wears a fitnesses tracker every day.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：每天跑步能提高体能。\n题干：Running every day can ______ your ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：She goes to the gym to keep ______.\nA. fit\nB. fitness\nC. fitting\nD. fitted\n考点：词性转换",
+  "答案": "【1】C（健身中心）\n讲解：fitness centre 健身中心。\n【2】C（fitness）\n讲解：your 后接名词，fitness 不可数。\n【3】fit\n讲解：stay 后接形容词 fit。\n【4】health\n讲解：吸烟伤害的是健康 health。\n【5】fitnesses → fitness\n讲解：fitness 不可数，没有复数。\n【6】improve；fitness\n讲解：improve fitness 提高体能。\n【7】A（fit）\n讲解：keep fit 保持健康，用形容词 fit。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人每周去哪里？",
+   "listen": "I go to the fitness centre three times a week.",
+   "opts": [
+    "健身中心",
+    "购物中心",
+    "图书馆",
+    "电影院"
+   ],
+   "why": "fitness centre 健身中心。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Swimming is good for your ______.",
+   "opts": [
+    "fitness",
+    "fit",
+    "fitting",
+    "fitnesses"
+   ],
+   "why": "your 后接名词，fitness 不可数。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "You need to exercise to stay ______. (fitness)",
+   "ans": "fit",
+   "why": "stay 后接形容词 fit。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 fitness、health 中选一个，用适当形式填空。",
+   "stem": "Smoking is bad for your ______.",
+   "ans": "health",
+   "why": "吸烟伤害的是健康 health。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She wears a fitnesses tracker every day.",
+   "ans": "fitnesses → fitness",
+   "why": "fitness 不可数，没有复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "每天跑步能提高体能。",
+   "stem": "Running every day can ______ your ______.",
+   "ans": "improve；fitness",
+   "why": "improve fitness 提高体能。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She goes to the gym to keep ______.",
+   "opts": [
+    "fit",
+    "fitness",
+    "fitting",
+    "fitted"
+   ],
+   "why": "keep fit 保持健康，用形容词 fit。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

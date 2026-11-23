@@ -1,0 +1,96 @@
+{
+ "单词": "math",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人最喜欢什么科目？\n听：My favorite subject is math.\nA. 英语\nB. 数学\nC. 历史\nD. 音乐",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ is not easy, but it's interesting.\nA. Math\nB. Mathematician\nC. Mathematical\nD. Mathematically",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Zu Chongzhi was a great ______. (mathematics)\n考点：词性转换",
+  "题目4": "【选词填空】从 math、mouth 中选一个，用适当形式填空。\n题干：Open your ______ and say \"Ah\".",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Math are my favorite subject.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Americans say \"math\", and British people say \"______\".\nA. mathes\nB. mathematic\nC. mathematical\nD. maths\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：I'm good ______ math.\nA. in\nB. with\nC. at\nD. for\n考点：用法",
+  "答案": "【1】B（数学）\n讲解：math 数学。\n【2】A（Math）\n讲解：作主语、说科目用名词 math。\n【3】mathematician\n讲解：a great 后面要指人的名词 mathematician（数学家）。\n【4】mouth\n讲解：张开的是嘴 mouth。\n【5】are → is\n讲解：math 不可数，作主语用单数 is。\n【6】D（maths）\n讲解：美式 math，英式 maths。\n【7】C（at）\n讲解：be good at 擅长。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人最喜欢什么科目？",
+   "listen": "My favorite subject is math.",
+   "opts": [
+    "数学",
+    "英语",
+    "历史",
+    "音乐"
+   ],
+   "why": "math 数学。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ is not easy, but it's interesting.",
+   "opts": [
+    "Math",
+    "Mathematician",
+    "Mathematical",
+    "Mathematically"
+   ],
+   "why": "作主语、说科目用名词 math。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Zu Chongzhi was a great ______. (mathematics)",
+   "ans": "mathematician",
+   "why": "a great 后面要指人的名词 mathematician（数学家）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 math、mouth 中选一个，用适当形式填空。",
+   "stem": "Open your ______ and say \"Ah\".",
+   "ans": "mouth",
+   "why": "张开的是嘴 mouth。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Math are my favorite subject.",
+   "ans": "are → is",
+   "why": "math 不可数，作主语用单数 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Americans say \"math\", and British people say \"______\".",
+   "opts": [
+    "maths",
+    "mathes",
+    "mathematic",
+    "mathematical"
+   ],
+   "why": "美式 math，英式 maths。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I'm good ______ math.",
+   "opts": [
+    "at",
+    "in",
+    "with",
+    "for"
+   ],
+   "why": "be good at 擅长。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

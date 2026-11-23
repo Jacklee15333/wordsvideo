@@ -1,0 +1,93 @@
+{
+ "单词": "member",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人是哪个俱乐部的成员？\n听：I'm a member of the football club.\nA. 足球俱乐部\nB. 篮球俱乐部\nC. 读书会\nD. 合唱团",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are five ______ in my family.\nA. members\nB. member\nC. people's\nD. membership\n考点：变形",
+  "题目3": "【选词填空】从 member、participant 中选一个，用适当形式填空。\n题干：Over 500 ______ ran in the city marathon.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：How much is the ______ fee? (member)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She is one of the member of the team.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：非会员要付十元。\n题干：______ pay ten yuan.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Every ______ of the class should help keep it clean.\nA. members\nB. membership\nC. remember\nD. member\n考点：用法",
+  "答案": "【1】A（足球俱乐部）\n讲解：member of the football club。\n【2】A（members）\n讲解：five 后面用复数 members。\n【3】participants\n讲解：马拉松的“参加者”用 participant，不一定是成员。\n【4】membership\n讲解：会员费是 membership fee。\n【5】member → members\n讲解：one of 后面用复数。\n【6】Non-members\n讲解：“非会员”是 non-member，这里用复数。\n【7】D（member）\n讲解：every 后面用单数 member。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人是哪个俱乐部的成员？",
+   "listen": "I'm a member of the football club.",
+   "opts": [
+    "足球俱乐部",
+    "篮球俱乐部",
+    "读书会",
+    "合唱团"
+   ],
+   "why": "member of the football club。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are five ______ in my family.",
+   "opts": [
+    "members",
+    "member",
+    "people's",
+    "membership"
+   ],
+   "why": "five 后面用复数 members。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 member、participant 中选一个，用适当形式填空。",
+   "stem": "Over 500 ______ ran in the city marathon.",
+   "ans": "participants",
+   "why": "马拉松的“参加者”用 participant，不一定是成员。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "How much is the ______ fee? (member)",
+   "ans": "membership",
+   "why": "会员费是 membership fee。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is one of the member of the team.",
+   "ans": "member → members",
+   "why": "one of 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "非会员要付十元。",
+   "stem": "______ pay ten yuan.",
+   "ans": "Non-members",
+   "why": "“非会员”是 non-member，这里用复数。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Every ______ of the class should help keep it clean.",
+   "opts": [
+    "member",
+    "members",
+    "membership",
+    "remember"
+   ],
+   "why": "every 后面用单数 member。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

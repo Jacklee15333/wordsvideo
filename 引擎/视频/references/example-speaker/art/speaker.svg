@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 430">
+<defs>
+  <linearGradient id="wf" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#873700" /><stop offset="0.45" stop-color="#B14F02" /><stop offset="1" stop-color="#7A3100" />
+  </linearGradient>
+  <linearGradient id="ws" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#652B00" /><stop offset="1" stop-color="#441B00" />
+  </linearGradient>
+  <linearGradient id="bf" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2F3340" /><stop offset="1" stop-color="#141519" />
+  </linearGradient>
+  <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#b9bec6" /><stop offset="0.45" stop-color="#576273" /><stop offset="1" stop-color="#252A35" />
+  </linearGradient>
+  <radialGradient id="sur" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0.84" stop-color="#17181c" /><stop offset="0.93" stop-color="#42485A" /><stop offset="1" stop-color="#101114" />
+  </radialGradient>
+  <radialGradient id="cone" cx="0.5" cy="0.45" r="0.55">
+    <stop offset="0.25" stop-color="#464E61" /><stop offset="0.8" stop-color="#252936" /><stop offset="1" stop-color="#141519" />
+  </radialGradient>
+  <radialGradient id="cap" cx="0.38" cy="0.32" r="0.75">
+    <stop offset="0" stop-color="#8c919b" /><stop offset="0.55" stop-color="#313847" /><stop offset="1" stop-color="#15161a" />
+  </radialGradient>
+  <radialGradient id="dome" cx="0.38" cy="0.32" r="0.75">
+    <stop offset="0" stop-color="#ffffff" /><stop offset="0.45" stop-color="#c7cad0" /><stop offset="1" stop-color="#585F71" />
+  </radialGradient>
+  <linearGradient id="port" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#000000" /><stop offset="1" stop-color="#2B303B" />
+  </linearGradient>
+  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.32" /><stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+  </linearGradient>
+  <linearGradient id="topsheen" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.18" /><stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+  </linearGradient>
+</defs>
+<path d="M232 20 L270 38 L270 396 L232 412 Z" fill="url(#ws)" stroke="#1B1A1F" stroke-width="5.51" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="18" y="16" width="220" height="398" rx="12" fill="url(#wf)" stroke="#1B1A1F" stroke-width="6.86" stroke-linejoin="round" stroke-linecap="round" />
+<g stroke="#5a3519" stroke-opacity="0.28" fill="none" stroke-width="1.2">
+  <path d="M26 30 C30 120 22 220 28 320 S26 400 30 408" />
+  <path d="M229 28 C226 140 233 240 228 330 S231 395 228 406" />
+</g>
+<rect x="30" y="28" width="196" height="374" rx="8" fill="url(#bf)" stroke="#1B1A1F" stroke-width="4.13" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="30" y="28" width="196" height="374" rx="8" fill="none" stroke="#1B1A1F" stroke-opacity="0.5" stroke-width="2" />
+<circle cx="128" cy="98" r="40" fill="url(#ring)" stroke="#1B1A1F" stroke-width="4.94" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="128" cy="98" r="34" fill="#18191d" stroke="#1B1A1F" stroke-width="7.13" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="128" cy="98" r="27" fill="#232531" stroke="#1B1A1F" stroke-width="1.5" />
+<circle cx="128" cy="98" r="18" fill="url(#dome)" stroke="#1B1A1F" stroke-width="6.17" stroke-linejoin="round" stroke-linecap="round" />
+<ellipse cx="121" cy="91" rx="6" ry="4" fill="#ffffff" opacity="0.85" stroke="#1B1A1F" stroke-width="2.44" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="128" cy="258" r="88" fill="url(#ring)" stroke="#1B1A1F" stroke-width="5.15" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="128" cy="258" r="80" fill="#0f1013" stroke="#1B1A1F" stroke-width="6.87" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="128" cy="258" r="76" fill="url(#sur)" stroke="#1B1A1F" stroke-width="5.45" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="128" cy="258" r="64" fill="url(#cone)" stroke="#1B1A1F" stroke-width="4.12" stroke-linejoin="round" stroke-linecap="round" />
+<g fill="none" stroke="#5b5f68" stroke-opacity="0.35" stroke-width="1">
+  <circle cx="128" cy="258" r="34" /><circle cx="128" cy="258" r="46" /><circle cx="128" cy="258" r="56" />
+</g>
+<circle cx="128" cy="258" r="23" fill="url(#cap)" stroke="#1B1A1F" stroke-width="6.92" stroke-linejoin="round" stroke-linecap="round" />
+<g fill="#cfd3da" stroke="#55585f" stroke-width="1">
+  <circle cx="66" cy="196" r="3.5" /><circle cx="190" cy="196" r="3.5" /><circle cx="66" cy="320" r="3.5" /><circle cx="190" cy="320" r="3.5" />
+</g>
+<rect x="88" y="366" width="80" height="20" rx="10" fill="url(#port)" stroke="#1B1A1F" stroke-width="4.45" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="88" y="366" width="80" height="20" rx="10" fill="none" stroke="#1B1A1F" stroke-width="1.5" />
+<rect x="18" y="16" width="44" height="398" rx="12" fill="url(#sheen)" stroke="#1B1A1F" stroke-width="6.10" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="18" y="16" width="220" height="40" rx="12" fill="url(#topsheen)" stroke="#1B1A1F" stroke-width="6.03" stroke-linejoin="round" stroke-linecap="round" />
+</svg>

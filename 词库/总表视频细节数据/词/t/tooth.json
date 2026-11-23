@@ -1,0 +1,93 @@
+{
+ "单词": "tooth",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：男孩为什么去看医生？\n听：The boy has a bad tooth.\nA. 牙疼\nB. 头疼\nC. 感冒\nD. 摔伤",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My baby brother has only one ______.\nA. teeth\nB. tooths\nC. tooth\nD. tusk",
+  "题目3": "【选词填空】从 tooth、tusk 中选一个，用适当形式填空。\n题干：The elephant has two long ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Brush your ______ twice a day. (tooth)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I have two loose tooths.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Piano keys used to be made of ______, from elephants' tusks.\nA. ivory\nB. tooth\nC. teeth\nD. tusk\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我牙疼。\n题干：I have a ______.\n考点：用法",
+  "答案": "【1】A（牙疼）\n讲解：bad tooth 坏牙。\n【2】C（tooth）\n讲解：one 后接单数 tooth。\n【3】tusks\n讲解：大象伸出嘴外的长牙是 tusk。\n【4】teeth\n讲解：tooth 的复数不规则：teeth。\n【5】tooths → teeth\n讲解：tooth 的复数是 teeth。\n【6】A（ivory）\n讲解：象牙这种材料叫 ivory。\n【7】toothache\n讲解：牙疼 toothache。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：男孩为什么去看医生？",
+   "listen": "The boy has a bad tooth.",
+   "opts": [
+    "牙疼",
+    "头疼",
+    "感冒",
+    "摔伤"
+   ],
+   "why": "bad tooth 坏牙。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My baby brother has only one ______.",
+   "opts": [
+    "tooth",
+    "teeth",
+    "tooths",
+    "tusk"
+   ],
+   "why": "one 后接单数 tooth。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tooth、tusk 中选一个，用适当形式填空。",
+   "stem": "The elephant has two long ______.",
+   "ans": "tusks",
+   "why": "大象伸出嘴外的长牙是 tusk。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Brush your ______ twice a day. (tooth)",
+   "ans": "teeth",
+   "why": "tooth 的复数不规则：teeth。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I have two loose tooths.",
+   "ans": "tooths → teeth",
+   "why": "tooth 的复数是 teeth。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Piano keys used to be made of ______, from elephants' tusks.",
+   "opts": [
+    "ivory",
+    "tooth",
+    "teeth",
+    "tusk"
+   ],
+   "why": "象牙这种材料叫 ivory。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我牙疼。",
+   "stem": "I have a ______.",
+   "ans": "toothache",
+   "why": "牙疼 toothache。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

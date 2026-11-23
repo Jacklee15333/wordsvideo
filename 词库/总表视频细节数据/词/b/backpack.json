@@ -1,0 +1,92 @@
+{
+ "单词": "backpack",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人去年做了什么？\n听：I backpacked around Europe last year.\nA. 在欧洲工作\nB. 在欧洲读书\nC. 买了一个背包\nD. 背包游欧洲",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He ______ through Yunnan last summer.\nA. backpack\nB. backpacks\nC. backpacking\nD. backpacked\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：My ______ is full of books. (backpack)",
+  "题目4": "【选词填空】从 backpack、rucksack 中选一个，用适当形式填空。\n题干：In Britain, a big bag for climbing is often called a ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She bought two new backpack.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我想去背包旅行。\n题干：I want to go ______.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There are many ______ on the floor of the classroom.\nA. backpack\nB. backpacking\nC. backpacks\nD. backpacker\n考点：变形",
+  "答案": "【1】D（背包游欧洲）\n讲解：backpacked 背包旅行。\n【2】D（backpacked）\n讲解：last summer 是过去，用 backpacked。\n【3】backpack\n讲解：my 后接单数名词 backpack（背包）。\n【4】rucksack\n讲解：英式常说 rucksack。\n【5】backpack → backpacks\n讲解：two 后接复数。\n【6】backpacking\n讲解：go backpacking 去背包旅行。\n【7】C（backpacks）\n讲解：many 后接复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人去年做了什么？",
+   "listen": "I backpacked around Europe last year.",
+   "opts": [
+    "背包游欧洲",
+    "在欧洲工作",
+    "在欧洲读书",
+    "买了一个背包"
+   ],
+   "why": "backpacked 背包旅行。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He ______ through Yunnan last summer.",
+   "opts": [
+    "backpacked",
+    "backpack",
+    "backpacks",
+    "backpacking"
+   ],
+   "why": "last summer 是过去，用 backpacked。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "My ______ is full of books. (backpack)",
+   "ans": "backpack",
+   "why": "my 后接单数名词 backpack（背包）。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 backpack、rucksack 中选一个，用适当形式填空。",
+   "stem": "In Britain, a big bag for climbing is often called a ______.",
+   "ans": "rucksack",
+   "why": "英式常说 rucksack。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She bought two new backpack.",
+   "ans": "backpack → backpacks",
+   "why": "two 后接复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我想去背包旅行。",
+   "stem": "I want to go ______.",
+   "ans": "backpacking",
+   "why": "go backpacking 去背包旅行。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ on the floor of the classroom.",
+   "opts": [
+    "backpacks",
+    "backpack",
+    "backpacking",
+    "backpacker"
+   ],
+   "why": "many 后接复数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

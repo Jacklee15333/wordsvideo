@@ -1,0 +1,92 @@
+{
+ "单词": "mathematics",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他在大学学什么？\n听：He studies mathematics at university.\nA. 数学\nB. 物理\nC. 化学\nD. 生物",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Mathematics ______ very important in daily life.\nA. are\nB. is\nC. be\nD. were\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Isaac Newton was a great ______ and scientist. (mathematics)\n考点：词性转换",
+  "题目4": "【选词填空】从 mathematics、physics 中选一个，用适当形式填空。\n题干：______ is the science of energy, force and light.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She is good in mathematics.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Maths\" is short ______ \"mathematics\".\nA. of\nB. to\nC. with\nD. for\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：数学是一门很有用的学科。\n题干：______ is a very useful subject.\n考点：用法",
+  "答案": "【1】A（数学）\n讲解：mathematics 数学。\n【2】B（is）\n讲解：mathematics 是学科名，作主语用单数 is。\n【3】mathematician\n讲解：a great 后面要指人的名词 mathematician。\n【4】Physics\n讲解：研究能量、力和光的是物理 physics。\n【5】in → at\n讲解：be good at 擅长。\n【6】D（for）\n讲解：be short for 是……的简称。\n【7】Mathematics\n讲解：学科名 mathematics 作主语，谓语用 is。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他在大学学什么？",
+   "listen": "He studies mathematics at university.",
+   "opts": [
+    "数学",
+    "物理",
+    "化学",
+    "生物"
+   ],
+   "why": "mathematics 数学。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Mathematics ______ very important in daily life.",
+   "opts": [
+    "is",
+    "are",
+    "be",
+    "were"
+   ],
+   "why": "mathematics 是学科名，作主语用单数 is。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Isaac Newton was a great ______ and scientist. (mathematics)",
+   "ans": "mathematician",
+   "why": "a great 后面要指人的名词 mathematician。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 mathematics、physics 中选一个，用适当形式填空。",
+   "stem": "______ is the science of energy, force and light.",
+   "ans": "Physics",
+   "why": "研究能量、力和光的是物理 physics。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is good in mathematics.",
+   "ans": "in → at",
+   "why": "be good at 擅长。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Maths\" is short ______ \"mathematics\".",
+   "opts": [
+    "for",
+    "of",
+    "to",
+    "with"
+   ],
+   "why": "be short for 是……的简称。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "数学是一门很有用的学科。",
+   "stem": "______ is a very useful subject.",
+   "ans": "Mathematics",
+   "why": "学科名 mathematics 作主语，谓语用 is。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

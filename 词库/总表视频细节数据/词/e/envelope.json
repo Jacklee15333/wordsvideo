@@ -1,0 +1,97 @@
+{
+ "单词": "envelope",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让对方把信放进哪里？\n听：Please put the letter in the envelope.\nA. 抽屉\nB. 书包\nC. 信封\nD. 盒子",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I need three ______ for these letters.\nA. envelope\nB. envelops\nC. develops\nD. envelopes\n考点：变形",
+  "题目3": "【选词填空】从 envelope、envelop 中选一个，用适当形式填空。\n题干：Thick fog will ______ the whole city tonight.\n考点：易混",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：她把照片放进了一个信封里。\n题干：She put the photos in an ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He wrote the address on a envelope.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Scientists who \"push the envelope\" ______.\nA. write many letters\nB. try new things beyond the limits\nC. buy envelopes\nD. stay at home\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：We put a ______ on the envelope before posting it.\nA. stone\nB. star\nC. stamp\nD. step\n考点：用法",
+  "答案": "【1】C（信封）\n讲解：envelope 信封。\n【2】D（envelopes）\n讲解：three 后面接复数 envelopes。\n【3】envelop\n讲解：will 后面要动词，“笼罩、包住”用 envelop；envelope 是名词“信封”。\n【4】envelope\n讲解：信封 envelope。\n【5】a → an\n讲解：envelope 以元音音素开头，前面用 an。\n【6】B（try new things beyond the limits）\n讲解：push the envelope 挑战极限。\n【7】C（stamp）\n讲解：寄信前要在信封上贴邮票 stamp。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让对方把信放进哪里？",
+   "listen": "Please put the letter in the envelope.",
+   "opts": [
+    "信封",
+    "抽屉",
+    "书包",
+    "盒子"
+   ],
+   "why": "envelope 信封。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I need three ______ for these letters.",
+   "opts": [
+    "envelopes",
+    "envelope",
+    "envelops",
+    "develops"
+   ],
+   "why": "three 后面接复数 envelopes。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 envelope、envelop 中选一个，用适当形式填空。",
+   "stem": "Thick fog will ______ the whole city tonight.",
+   "ans": "envelop",
+   "why": "will 后面要动词，“笼罩、包住”用 envelop；envelope 是名词“信封”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她把照片放进了一个信封里。",
+   "stem": "She put the photos in an ______.",
+   "ans": "envelope",
+   "why": "信封 envelope。"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He wrote the address on a envelope.",
+   "ans": "a → an",
+   "why": "envelope 以元音音素开头，前面用 an。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Scientists who \"push the envelope\" ______.",
+   "opts": [
+    "try new things beyond the limits",
+    "write many letters",
+    "buy envelopes",
+    "stay at home"
+   ],
+   "why": "push the envelope 挑战极限。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We put a ______ on the envelope before posting it.",
+   "opts": [
+    "stamp",
+    "stone",
+    "star",
+    "step"
+   ],
+   "why": "寄信前要在信封上贴邮票 stamp。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

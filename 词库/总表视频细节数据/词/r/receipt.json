@@ -1,0 +1,96 @@
+{
+ "单词": "receipt",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人要什么？\n听：Can I have a receipt, please?\nA. 菜单\nB. 袋子\nC. 收据\nD. 零钱",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please keep your ______ after you pay.\nA. recipe\nB. reception\nC. receipt\nD. receive",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：I have three ______ in my wallet. (receipt)\n考点：变形",
+  "题目4": "【选词填空】从 receipt、recipe 中选一个，用适当形式填空。\n题干：This is my grandma's ______ for dumplings.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The receipts was in my bag.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In \"receipt\", the letter \"p\" is ______.\nA. silent\nB. loud\nC. long\nD. double\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：You can't return the shoes ______ the receipt.\nA. with\nB. for\nC. at\nD. without\n考点：用法",
+  "答案": "【1】C（收据）\n讲解：receipt 收据。\n【2】C（receipt）\n讲解：付款后留好“收据” receipt。\n【3】receipts\n讲解：three 后面用复数 receipts。\n【4】recipe\n讲解：做饺子的“菜谱、配方”用 recipe。\n【5】was → were\n讲解：主语 receipts 是复数，用 were。\n【6】A（silent）\n讲解：receipt 里的 p 不发音。\n【7】D（without）\n讲解：没有收据不能退，用 without。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人要什么？",
+   "listen": "Can I have a receipt, please?",
+   "opts": [
+    "收据",
+    "菜单",
+    "袋子",
+    "零钱"
+   ],
+   "why": "receipt 收据。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please keep your ______ after you pay.",
+   "opts": [
+    "receipt",
+    "recipe",
+    "reception",
+    "receive"
+   ],
+   "why": "付款后留好“收据” receipt。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I have three ______ in my wallet. (receipt)",
+   "ans": "receipts",
+   "why": "three 后面用复数 receipts。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 receipt、recipe 中选一个，用适当形式填空。",
+   "stem": "This is my grandma's ______ for dumplings.",
+   "ans": "recipe",
+   "why": "做饺子的“菜谱、配方”用 recipe。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The receipts was in my bag.",
+   "ans": "was → were",
+   "why": "主语 receipts 是复数，用 were。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In \"receipt\", the letter \"p\" is ______.",
+   "opts": [
+    "silent",
+    "loud",
+    "long",
+    "double"
+   ],
+   "why": "receipt 里的 p 不发音。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can't return the shoes ______ the receipt.",
+   "opts": [
+    "without",
+    "with",
+    "for",
+    "at"
+   ],
+   "why": "没有收据不能退，用 without。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

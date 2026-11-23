@@ -1,0 +1,90 @@
+{
+ "单词": "elderly",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在帮谁？\n听：I'm helping an elderly woman cross the road.\nA. 一个小女孩\nB. 一位老师\nC. 一个警察\nD. 一位老奶奶",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We should take good care of the ______.\nA. elder\nB. eldest\nC. older\nD. elderly",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：My ______ sister goes to college. (elderly)",
+  "题目4": "【选词填空】从 elderly、early 中选一个，用适当形式填空。\n题干：We got up ______ to watch the sunrise.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The elderly needs more help.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：It's more polite to say \"an elderly man\" than \"an ______ man\".\nA. young\nB. old\nC. elder\nD. adult\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：老年人坐公交车免费。\n题干：______ citizens can ride buses for free.\n考点：易混",
+  "答案": "【1】D（一位老奶奶）\n讲解：elderly 上了年纪的。\n【2】D（elderly）\n讲解：the elderly 老年人。\n【3】elder\n讲解：家人之间比长幼用 elder。\n【4】early\n讲解：早起是 early。\n【5】needs → need\n讲解：the elderly 指一类人，谓语用复数。\n【6】B（old）\n讲解：elderly 比 old 客气。\n【7】Senior\n讲解：老年人也说 senior citizens，比 the elderly 更口语。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在帮谁？",
+   "listen": "I'm helping an elderly woman cross the road.",
+   "opts": [
+    "一位老奶奶",
+    "一个小女孩",
+    "一位老师",
+    "一个警察"
+   ],
+   "why": "elderly 上了年纪的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We should take good care of the ______.",
+   "opts": [
+    "elderly",
+    "elder",
+    "eldest",
+    "older"
+   ],
+   "why": "the elderly 老年人。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "My ______ sister goes to college. (elderly)",
+   "ans": "elder",
+   "why": "家人之间比长幼用 elder。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 elderly、early 中选一个，用适当形式填空。",
+   "stem": "We got up ______ to watch the sunrise.",
+   "ans": "early",
+   "why": "早起是 early。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The elderly needs more help.",
+   "ans": "needs → need",
+   "why": "the elderly 指一类人，谓语用复数。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It's more polite to say \"an elderly man\" than \"an ______ man\".",
+   "opts": [
+    "old",
+    "young",
+    "elder",
+    "adult"
+   ],
+   "why": "elderly 比 old 客气。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "老年人坐公交车免费。",
+   "stem": "______ citizens can ride buses for free.",
+   "ans": "Senior",
+   "why": "老年人也说 senior citizens，比 the elderly 更口语。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

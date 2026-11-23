@@ -1,0 +1,92 @@
+{
+ "单词": "worker",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：工人们在做什么？\n听：The workers are building a new bridge.\nA. 修一条路\nB. 盖一所学校\nC. 拆旧房子\nD. 建一座新桥",
+  "题目2": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are 500 ______ in the factory. (worker)\n考点：变形",
+  "题目3": "【单项选择】选出最恰当的一项。\n题干：She is a hard ______. She always does her best.\nA. worker\nB. work\nC. working\nD. works",
+  "题目4": "【选词填空】从 work、worker 中选一个，用适当形式填空。\n题干：He goes to ______ by bus.\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The worker are having lunch.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她在一家银行工作。\n题干：She ______ in a bank.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Doctors and nurses are hospital ______.\nA. works\nB. working\nC. workers\nD. worker\n考点：变形",
+  "答案": "【1】D（建一座新桥）\n讲解：workers 工人。\n【2】workers\n讲解：500 后面用复数 workers。\n【3】A（worker）\n讲解：a hard worker 勤奋的人，a 后面用名词 worker。\n【4】work\n讲解：go to work 去上班，用 work。\n【5】are → is\n讲解：主语 the worker 是单数，用 is。\n【6】works\n讲解：主语单数，work 加 s。\n【7】C（workers）\n讲解：复数主语，表语用复数 workers。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：工人们在做什么？",
+   "listen": "The workers are building a new bridge.",
+   "opts": [
+    "建一座新桥",
+    "修一条路",
+    "盖一所学校",
+    "拆旧房子"
+   ],
+   "why": "workers 工人。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are 500 ______ in the factory. (worker)",
+   "ans": "workers",
+   "why": "500 后面用复数 workers。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She is a hard ______. She always does her best.",
+   "opts": [
+    "worker",
+    "work",
+    "working",
+    "works"
+   ],
+   "why": "a hard worker 勤奋的人，a 后面用名词 worker。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 work、worker 中选一个，用适当形式填空。",
+   "stem": "He goes to ______ by bus.",
+   "ans": "work",
+   "why": "go to work 去上班，用 work。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The worker are having lunch.",
+   "ans": "are → is",
+   "why": "主语 the worker 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她在一家银行工作。",
+   "stem": "She ______ in a bank.",
+   "ans": "works",
+   "why": "主语单数，work 加 s。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Doctors and nurses are hospital ______.",
+   "opts": [
+    "workers",
+    "works",
+    "working",
+    "worker"
+   ],
+   "why": "复数主语，表语用复数 workers。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

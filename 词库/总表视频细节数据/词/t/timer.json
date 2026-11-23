@@ -1,0 +1,92 @@
+{
+ "单词": "timer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：妈妈为什么设了计时器？\n听：Mum set a timer for the cake.\nA. 为了叫醒孩子\nB. 为了做作业\nC. 为了跑步\nD. 为了烤蛋糕",
+  "题目2": "【适当形式填空】用所给单词的适当形式填空。\n题干：The kitchen has two ______. (timer)\n考点：变形",
+  "题目3": "【单项选择】选出最恰当的一项。\n题干：Set the ______ for ten minutes, please.\nA. timer\nB. time\nC. timing\nD. timely",
+  "题目4": "【选词填空】从 time、timer 中选一个，用适当形式填空。\n题干：How much ______ do we have left?\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The timer ring when the eggs are ready.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：计时器响了，比赛结束了。\n题干：The timer ______ and the game was over.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Both ______ are broken.\nA. timer\nB. timers\nC. times\nD. timing\n考点：变形",
+  "答案": "【1】D（为了烤蛋糕）\n讲解：set a timer 设定计时器。\n【2】timers\n讲解：two 后面用复数 timers。\n【3】A（timer）\n讲解：计时器是 timer。\n【4】time\n讲解：剩下多少时间用不可数的 time。\n【5】ring → rings\n讲解：主语 the timer 是单数，动词加 s。\n【6】rang\n讲解：讲过去的事，ring 的过去式是 rang。\n【7】B（timers）\n讲解：both 后面用复数 timers。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：妈妈为什么设了计时器？",
+   "listen": "Mum set a timer for the cake.",
+   "opts": [
+    "为了烤蛋糕",
+    "为了叫醒孩子",
+    "为了做作业",
+    "为了跑步"
+   ],
+   "why": "set a timer 设定计时器。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The kitchen has two ______. (timer)",
+   "ans": "timers",
+   "why": "two 后面用复数 timers。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Set the ______ for ten minutes, please.",
+   "opts": [
+    "timer",
+    "time",
+    "timing",
+    "timely"
+   ],
+   "why": "计时器是 timer。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 time、timer 中选一个，用适当形式填空。",
+   "stem": "How much ______ do we have left?",
+   "ans": "time",
+   "why": "剩下多少时间用不可数的 time。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The timer ring when the eggs are ready.",
+   "ans": "ring → rings",
+   "why": "主语 the timer 是单数，动词加 s。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "计时器响了，比赛结束了。",
+   "stem": "The timer ______ and the game was over.",
+   "ans": "rang",
+   "why": "讲过去的事，ring 的过去式是 rang。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Both ______ are broken.",
+   "opts": [
+    "timers",
+    "timer",
+    "times",
+    "timing"
+   ],
+   "why": "both 后面用复数 timers。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

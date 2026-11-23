@@ -1,0 +1,97 @@
+{
+ "单词": "spider",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在墙上看到了什么？\n听：There is a big spider on the wall.\nA. 蜘蛛\nB. 蚂蚁\nC. 蝴蝶\nD. 蜜蜂",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ have eight legs.\nA. Spiders\nB. Spider\nC. A spiders\nD. Spider's\n考点：变形",
+  "题目3": "【选词填空】从 spider、insect 中选一个，用适当形式填空。\n题干：A bee is an ______.\n考点：易混",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：那只蜘蛛正在织网。\n题干：The ______ is spinning a web.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：A spider have eight legs.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A spider is NOT an insect because it has ______ legs.\nA. six\nB. four\nC. eight\nD. two\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Spiders catch insects in their ______.\nA. nests\nB. holes\nC. boxes\nD. webs\n考点：用法",
+  "答案": "【1】A（蜘蛛）\n讲解：spider 蜘蛛。\n【2】A（Spiders）\n讲解：泛指一类动物，用复数 spiders。\n【3】insect\n讲解：蜜蜂是昆虫 insect。\n【4】spider\n讲解：蜘蛛 spider。\n【5】have → has\n讲解：a spider 是单数，用 has。\n【6】C（eight）\n讲解：蜘蛛有八条腿，昆虫只有六条腿。\n【7】D（webs）\n讲解：蜘蛛用网捉虫子。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在墙上看到了什么？",
+   "listen": "There is a big spider on the wall.",
+   "opts": [
+    "蜘蛛",
+    "蚂蚁",
+    "蝴蝶",
+    "蜜蜂"
+   ],
+   "why": "spider 蜘蛛。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ have eight legs.",
+   "opts": [
+    "Spiders",
+    "Spider",
+    "A spiders",
+    "Spider's"
+   ],
+   "why": "泛指一类动物，用复数 spiders。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 spider、insect 中选一个，用适当形式填空。",
+   "stem": "A bee is an ______.",
+   "ans": "insect",
+   "why": "蜜蜂是昆虫 insect。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "那只蜘蛛正在织网。",
+   "stem": "The ______ is spinning a web.",
+   "ans": "spider",
+   "why": "蜘蛛 spider。"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "A spider have eight legs.",
+   "ans": "have → has",
+   "why": "a spider 是单数，用 has。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A spider is NOT an insect because it has ______ legs.",
+   "opts": [
+    "eight",
+    "six",
+    "four",
+    "two"
+   ],
+   "why": "蜘蛛有八条腿，昆虫只有六条腿。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Spiders catch insects in their ______.",
+   "opts": [
+    "webs",
+    "nests",
+    "holes",
+    "boxes"
+   ],
+   "why": "蜘蛛用网捉虫子。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

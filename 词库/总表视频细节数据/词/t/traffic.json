@@ -1,0 +1,93 @@
+{
+ "单词": "traffic",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人为什么迟到了？\n听：Sorry I'm late. The traffic was heavy.\nA. 起床晚了\nB. 下雨了\nC. 交通拥挤\nD. 迷路了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is too much ______ in the city centre.\nA. traffics\nB. traffic\nC. cars\nD. car\n考点：变形",
+  "题目3": "【选词填空】从 traffic、transport 中选一个，用适当形式填空。\n题干：Buses and trains are public ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There were too ______ cars, so the traffic was heavy. (much)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There are many traffics on the road.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：早上交通很拥挤。\n题干：The traffic is very ______ in the morning.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There is ______ traffic on the road at night, so it's quiet.\nA. few\nB. many\nC. a few\nD. little\n考点：变形",
+  "答案": "【1】C（交通拥挤）\n讲解：heavy traffic 交通拥挤。\n【2】B（traffic）\n讲解：traffic 不可数，用 much 修饰。\n【3】transport\n讲解：公共交通工具是 public transport；traffic 指路上的车流。\n【4】many\n讲解：cars 可数，用 many；traffic 不可数才用 much。\n【5】are many traffics → is much traffic\n讲解：traffic 不可数，不能加 s，也不用 many。\n【6】heavy\n讲解：交通拥挤用 heavy traffic。\n【7】D（little）\n讲解：traffic 不可数，用 little 修饰。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人为什么迟到了？",
+   "listen": "Sorry I'm late. The traffic was heavy.",
+   "opts": [
+    "交通拥挤",
+    "起床晚了",
+    "下雨了",
+    "迷路了"
+   ],
+   "why": "heavy traffic 交通拥挤。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is too much ______ in the city centre.",
+   "opts": [
+    "traffic",
+    "traffics",
+    "cars",
+    "car"
+   ],
+   "why": "traffic 不可数，用 much 修饰。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 traffic、transport 中选一个，用适当形式填空。",
+   "stem": "Buses and trains are public ______.",
+   "ans": "transport",
+   "why": "公共交通工具是 public transport；traffic 指路上的车流。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There were too ______ cars, so the traffic was heavy. (much)",
+   "ans": "many",
+   "why": "cars 可数，用 many；traffic 不可数才用 much。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are many traffics on the road.",
+   "ans": "are many traffics → is much traffic",
+   "why": "traffic 不可数，不能加 s，也不用 many。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "早上交通很拥挤。",
+   "stem": "The traffic is very ______ in the morning.",
+   "ans": "heavy",
+   "why": "交通拥挤用 heavy traffic。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is ______ traffic on the road at night, so it's quiet.",
+   "opts": [
+    "little",
+    "few",
+    "many",
+    "a few"
+   ],
+   "why": "traffic 不可数，用 little 修饰。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

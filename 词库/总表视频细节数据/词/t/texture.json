@@ -1,0 +1,93 @@
+{
+ "单词": "texture",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说这块布摸起来怎么样？\n听：This cloth has a soft texture.\nA. 很粗糙\nB. 很柔软\nC. 很硬\nD. 很薄",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I like the smooth ______ of silk.\nA. text\nB. texture\nC. textile\nD. textual\n考点：易混",
+  "题目3": "【选词填空】从 texture、quality 中选一个，用适当形式填空。\n题干：This phone is cheap, but its ______ is very good.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：These cakes have different ______. (texture)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This kind of rice have a soft texture.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这面墙摸起来很粗糙，很有质感。\n题干：This wall has a rough, ______ surface.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：This cloth feels ______.\nA. softly\nB. softness\nC. soft\nD. soften\n考点：用法",
+  "答案": "【1】B（很柔软）\n讲解：soft texture 手感柔软。\n【2】B（texture）\n讲解：“丝绸光滑的质感”用 texture（质地、手感）。\n【3】quality\n讲解：“质量好坏”用 quality；texture 是摸上去、吃起来的质感。\n【4】textures\n讲解：different 后面要复数 textures。\n【5】have → has\n讲解：主语 this kind of rice 是单数，用 has。\n【6】textured\n讲解：名词 surface 前要形容词 textured（有质感的）。\n【7】C（soft）\n讲解：feel 作系动词“摸起来”，后面接形容词 soft。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说这块布摸起来怎么样？",
+   "listen": "This cloth has a soft texture.",
+   "opts": [
+    "很柔软",
+    "很粗糙",
+    "很硬",
+    "很薄"
+   ],
+   "why": "soft texture 手感柔软。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I like the smooth ______ of silk.",
+   "opts": [
+    "texture",
+    "text",
+    "textile",
+    "textual"
+   ],
+   "why": "“丝绸光滑的质感”用 texture（质地、手感）。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 texture、quality 中选一个，用适当形式填空。",
+   "stem": "This phone is cheap, but its ______ is very good.",
+   "ans": "quality",
+   "why": "“质量好坏”用 quality；texture 是摸上去、吃起来的质感。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "These cakes have different ______. (texture)",
+   "ans": "textures",
+   "why": "different 后面要复数 textures。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This kind of rice have a soft texture.",
+   "ans": "have → has",
+   "why": "主语 this kind of rice 是单数，用 has。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这面墙摸起来很粗糙，很有质感。",
+   "stem": "This wall has a rough, ______ surface.",
+   "ans": "textured",
+   "why": "名词 surface 前要形容词 textured（有质感的）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This cloth feels ______.",
+   "opts": [
+    "soft",
+    "softly",
+    "softness",
+    "soften"
+   ],
+   "why": "feel 作系动词“摸起来”，后面接形容词 soft。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

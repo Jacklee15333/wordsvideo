@@ -1,0 +1,93 @@
+{
+ "单词": "detector",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：家里应该装什么？\n听：Every home needs a smoke detector.\nA. 空调\nB. 烟雾探测器\nC. 电视\nD. 冰箱",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Every home needs a smoke ______.\nA. detective\nB. detection\nC. detector\nD. detect\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The airport has many metal ______. (detector)\n考点：变形",
+  "题目4": "【选词填空】从 detector、sensor 中选一个，用适当形式填空。\n题干：The phone's light ______ changes the screen brightness.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The detector were broken.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A metal detector can find ______.\nA. water\nB. metal\nC. air\nD. sound\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这台机器能察觉到烟。\n题干：This machine can ______ smoke.\n考点：词性转换",
+  "答案": "【1】B（烟雾探测器）\n讲解：detector 探测器。\n【2】C（detector）\n讲解：烟雾探测器是 smoke detector。\n【3】detectors\n讲解：many 后面用复数 detectors。\n【4】sensor\n讲解：感知数值变化的传感器是 sensor。\n【5】were → was\n讲解：主语 detector 单数，谓语用 was。\n【6】B（metal）\n讲解：金属探测器能找到金属。\n【7】detect\n讲解：动词“察觉”是 detect。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：家里应该装什么？",
+   "listen": "Every home needs a smoke detector.",
+   "opts": [
+    "烟雾探测器",
+    "空调",
+    "电视",
+    "冰箱"
+   ],
+   "why": "detector 探测器。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Every home needs a smoke ______.",
+   "opts": [
+    "detector",
+    "detective",
+    "detection",
+    "detect"
+   ],
+   "why": "烟雾探测器是 smoke detector。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The airport has many metal ______. (detector)",
+   "ans": "detectors",
+   "why": "many 后面用复数 detectors。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 detector、sensor 中选一个，用适当形式填空。",
+   "stem": "The phone's light ______ changes the screen brightness.",
+   "ans": "sensor",
+   "why": "感知数值变化的传感器是 sensor。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The detector were broken.",
+   "ans": "were → was",
+   "why": "主语 detector 单数，谓语用 was。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A metal detector can find ______.",
+   "opts": [
+    "metal",
+    "water",
+    "air",
+    "sound"
+   ],
+   "why": "金属探测器能找到金属。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这台机器能察觉到烟。",
+   "stem": "This machine can ______ smoke.",
+   "ans": "detect",
+   "why": "动词“察觉”是 detect。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

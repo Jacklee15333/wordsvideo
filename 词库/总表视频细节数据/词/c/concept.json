@@ -1,0 +1,92 @@
+{
+ "单词": "concept",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说什么对小孩来说很难？\n听：The concept of time is hard for little kids.\nA. 看时间表\nB. 认钟表\nC. 不迟到\nD. 时间的概念",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you explain the ______ of \"gravity\" to us?\nA. concert\nB. content\nC. concept\nD. contest\n考点：易混",
+  "题目3": "【选词填空】从 concept、idea 中选一个，用适当形式填空。\n题干：What a good ______! Let's go swimming.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He doesn't understand the basic concepts on maths.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：老师用一个故事来解释这个概念。\n题干：The teacher used a story to ______ the concept.",
+  "题目6": "【适当形式填空】用所给单词的适当形式填空。\n题干：We learned three new science ______ today. (concept)\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：I have no ______ where he went.\nA. idea\nB. concept\nC. concert\nD. opinion\n考点：易混",
+  "答案": "【1】D（时间的概念）\n讲解：the concept of time 时间的概念。\n【2】C（concept）\n讲解：“引力”这个概念用 concept；concert 是音乐会。\n【3】idea\n讲解：“好主意”用 idea；concept 偏抽象的概念。\n【4】on → of\n讲解：the concepts of … 是“……的概念”，用 of。\n【5】explain\n讲解：“解释”用 explain。\n【6】concepts\n讲解：three 后面用复数 concepts。\n【7】A（idea）\n讲解：have no idea 不知道，是固定说法，不用 concept。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说什么对小孩来说很难？",
+   "listen": "The concept of time is hard for little kids.",
+   "opts": [
+    "时间的概念",
+    "看时间表",
+    "认钟表",
+    "不迟到"
+   ],
+   "why": "the concept of time 时间的概念。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you explain the ______ of \"gravity\" to us?",
+   "opts": [
+    "concept",
+    "concert",
+    "content",
+    "contest"
+   ],
+   "why": "“引力”这个概念用 concept；concert 是音乐会。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 concept、idea 中选一个，用适当形式填空。",
+   "stem": "What a good ______! Let's go swimming.",
+   "ans": "idea",
+   "why": "“好主意”用 idea；concept 偏抽象的概念。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He doesn't understand the basic concepts on maths.",
+   "ans": "on → of",
+   "why": "the concepts of … 是“……的概念”，用 of。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "老师用一个故事来解释这个概念。",
+   "stem": "The teacher used a story to ______ the concept.",
+   "ans": "explain",
+   "why": "“解释”用 explain。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We learned three new science ______ today. (concept)",
+   "ans": "concepts",
+   "why": "three 后面用复数 concepts。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I have no ______ where he went.",
+   "opts": [
+    "idea",
+    "concept",
+    "concert",
+    "opinion"
+   ],
+   "why": "have no idea 不知道，是固定说法，不用 concept。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

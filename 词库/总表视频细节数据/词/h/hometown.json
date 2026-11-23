@@ -1,0 +1,92 @@
+{
+ "单词": "hometown",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的家乡在哪？\n听：My hometown is a small village in Hunan.\nA. 北京\nB. 上海\nC. 广州\nD. 湖南的小村庄",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He went back to his ______ for the Spring Festival.\nA. hometowns\nB. home-town-s\nC. town\nD. hometown",
+  "题目3": "【选词填空】从 hometown、birthplace 中选一个，用适当形式填空。\n题干：Shaoshan is the ______ of Mao Zedong; he was born there.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We come from different ______. (hometown)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：My hometown are very beautiful.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：My grandpa misses his ______ village very much.\nA. homes\nB. homey\nC. home\nD. homeless\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：她很想家。\n题干：She misses her ______.\n考点：易混",
+  "答案": "【1】D（湖南的小村庄）\n讲解：hometown 家乡。\n【2】D（hometown）\n讲解：his 后接单数 hometown。\n【3】birthplace\n讲解：出生地 birthplace。\n【4】hometowns\n讲解：different 后接复数 hometowns。\n【5】are → is\n讲解：主语单数，用 is。\n【6】C（home）\n讲解：若是村子，也常说 my home village。\n【7】home\n讲解：——"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的家乡在哪？",
+   "listen": "My hometown is a small village in Hunan.",
+   "opts": [
+    "湖南的小村庄",
+    "北京",
+    "上海",
+    "广州"
+   ],
+   "why": "hometown 家乡。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He went back to his ______ for the Spring Festival.",
+   "opts": [
+    "hometown",
+    "hometowns",
+    "home-town-s",
+    "town"
+   ],
+   "why": "his 后接单数 hometown。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 hometown、birthplace 中选一个，用适当形式填空。",
+   "stem": "Shaoshan is the ______ of Mao Zedong; he was born there.",
+   "ans": "birthplace",
+   "why": "出生地 birthplace。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We come from different ______. (hometown)",
+   "ans": "hometowns",
+   "why": "different 后接复数 hometowns。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My hometown are very beautiful.",
+   "ans": "are → is",
+   "why": "主语单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My grandpa misses his ______ village very much.",
+   "opts": [
+    "home",
+    "homes",
+    "homey",
+    "homeless"
+   ],
+   "why": "若是村子，也常说 my home village。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她很想家。",
+   "stem": "She misses her ______.",
+   "ans": "home",
+   "why": "——",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

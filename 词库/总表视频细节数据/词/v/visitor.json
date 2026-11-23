@@ -1,0 +1,93 @@
+{
+ "单词": "visitor",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：今天博物馆来了多少人？\n听：There were about 500 visitors in the museum today.\nA. 大约五百人\nB. 大约五十人\nC. 大约五千人\nD. 没有人",
+  "题目2": "【适当形式填空】用所给单词的适当形式填空。\n题干：The park welcomes thousands of ______ every day. (visitor)\n考点：变形",
+  "题目3": "【单项选择】选出最恰当的一项。\n题干：We had a ______ from Canada last week.\nA. visit\nB. visiting\nC. visited\nD. visitor\n考点：词性转换",
+  "题目4": "【选词填空】从 visitor、guest 中选一个，用适当形式填空。\n题干：We invited forty ______ to the wedding.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The visitors was very happy.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他们明天要参观工厂。\n题干：They will ______ the factory tomorrow.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Many ______ come to Hangzhou in spring.\nA. tourist\nB. tourists\nC. tour\nD. touring\n考点：易混",
+  "答案": "【1】A（大约五百人）\n讲解：visitors 参观者。\n【2】visitors\n讲解：thousands of 后面用复数 visitors。\n【3】D（visitor）\n讲解：a 后面要人，用 visitor。\n【4】guests\n讲解：受邀的客人用 guest。\n【5】was → were\n讲解：主语 the visitors 是复数，用 were。\n【6】visit\n讲解：will 后面用原形 visit。\n【7】B（tourists）\n讲解：游客也叫 tourists，many 后面用复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：今天博物馆来了多少人？",
+   "listen": "There were about 500 visitors in the museum today.",
+   "opts": [
+    "大约五百人",
+    "大约五十人",
+    "大约五千人",
+    "没有人"
+   ],
+   "why": "visitors 参观者。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The park welcomes thousands of ______ every day. (visitor)",
+   "ans": "visitors",
+   "why": "thousands of 后面用复数 visitors。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We had a ______ from Canada last week.",
+   "opts": [
+    "visitor",
+    "visit",
+    "visiting",
+    "visited"
+   ],
+   "why": "a 后面要人，用 visitor。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 visitor、guest 中选一个，用适当形式填空。",
+   "stem": "We invited forty ______ to the wedding.",
+   "ans": "guests",
+   "why": "受邀的客人用 guest。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The visitors was very happy.",
+   "ans": "was → were",
+   "why": "主语 the visitors 是复数，用 were。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他们明天要参观工厂。",
+   "stem": "They will ______ the factory tomorrow.",
+   "ans": "visit",
+   "why": "will 后面用原形 visit。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Many ______ come to Hangzhou in spring.",
+   "opts": [
+    "tourists",
+    "tourist",
+    "tour",
+    "touring"
+   ],
+   "why": "游客也叫 tourists，many 后面用复数。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

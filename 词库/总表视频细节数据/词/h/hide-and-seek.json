@@ -1,0 +1,96 @@
+{
+ "单词": "hide-and-seek",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：孩子们在玩什么？\n听：The children are playing hide-and-seek in the garden.\nA. 足球\nB. 捉迷藏\nC. 跳绳\nD. 放风筝",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Let's play ______ after school.\nA. hide-and-seeks\nB. hide-and-seek\nC. hiding-and-seeking\nD. hide and seeks\n考点：变形",
+  "题目3": "【选词填空】从 hide-and-seek、chess 中选一个，用适当形式填空。\n题干：We played ______ with black and white pieces.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：They played a hide-and-seek in the park.\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：玩捉迷藏时，一个人数数，其他人躲起来。\n题干：In this game, one person counts and the others ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In hide-and-seek, the counter must ______ the others.\nA. hide\nB. lose\nC. find\nD. help\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Hide-and-seek ______ my favourite game when I was little.\nA. were\nB. is\nC. are\nD. was\n考点：变形",
+  "答案": "【1】B（捉迷藏）\n讲解：hide-and-seek 捉迷藏。\n【2】B（hide-and-seek）\n讲解：游戏名不加 s。\n【3】chess\n讲解：用黑白棋子下的是 chess。\n【4】a hide-and-seek → hide-and-seek\n讲解：play 后面接游戏名，不加冠词。\n【5】hide\n讲解：主语复数，用 hide。\n【6】C（find）\n讲解：seek 就是“找”。\n【7】D（was）\n讲解：游戏名作主语用单数，when I was little 用过去式。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：孩子们在玩什么？",
+   "listen": "The children are playing hide-and-seek in the garden.",
+   "opts": [
+    "捉迷藏",
+    "足球",
+    "跳绳",
+    "放风筝"
+   ],
+   "why": "hide-and-seek 捉迷藏。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Let's play ______ after school.",
+   "opts": [
+    "hide-and-seek",
+    "hide-and-seeks",
+    "hiding-and-seeking",
+    "hide and seeks"
+   ],
+   "why": "游戏名不加 s。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 hide-and-seek、chess 中选一个，用适当形式填空。",
+   "stem": "We played ______ with black and white pieces.",
+   "ans": "chess",
+   "why": "用黑白棋子下的是 chess。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "They played a hide-and-seek in the park.",
+   "ans": "a hide-and-seek → hide-and-seek",
+   "why": "play 后面接游戏名，不加冠词。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "玩捉迷藏时，一个人数数，其他人躲起来。",
+   "stem": "In this game, one person counts and the others ______.",
+   "ans": "hide",
+   "why": "主语复数，用 hide。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In hide-and-seek, the counter must ______ the others.",
+   "opts": [
+    "find",
+    "hide",
+    "lose",
+    "help"
+   ],
+   "why": "seek 就是“找”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Hide-and-seek ______ my favourite game when I was little.",
+   "opts": [
+    "was",
+    "were",
+    "is",
+    "are"
+   ],
+   "why": "游戏名作主语用单数，when I was little 用过去式。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

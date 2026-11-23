@@ -1,0 +1,92 @@
+{
+ "单词": "open-weight",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这家公司发布了什么？\n听：The company released an open-weight AI model.\nA. 一部手机\nB. 一款游戏\nC. 一本书\nD. 一个开放权重的人工智能模型",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Anyone can download an ______ model.\nA. open-weight\nB. open-weights\nC. open weight\nD. opened-weight",
+  "题目3": "【选词填空】从 open-weight、open-source 中选一个，用适当形式填空。\n题干：An ______ program shares all its code.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The shop is ______ until ten. (open)\n考点：用法",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The model are open-weight.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这个模型可以免费下载。\n题干：You can download the model for ______.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Open-weight models share their ______ with everyone.\nA. weights\nB. weight's\nC. weighs\nD. weighed\n考点：变形",
+  "答案": "【1】D（一个开放权重的人工智能模型）\n讲解：open-weight 开放权重的。\n【2】A（open-weight）\n讲解：开放权重的模型用 open-weight。\n【3】open-source\n讲解：公开全部源代码的是 open-source；open-weight 只公开权重。\n【4】open\n讲解：be open 营业。\n【5】are → is\n讲解：主语 the model 是单数，用 is。\n【6】free\n讲解：for free 免费。\n【7】A（weights）\n讲解：模型公开的是“权重”weights（复数）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这家公司发布了什么？",
+   "listen": "The company released an open-weight AI model.",
+   "opts": [
+    "一个开放权重的人工智能模型",
+    "一部手机",
+    "一款游戏",
+    "一本书"
+   ],
+   "why": "open-weight 开放权重的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Anyone can download an ______ model.",
+   "opts": [
+    "open-weight",
+    "open-weights",
+    "open weight",
+    "opened-weight"
+   ],
+   "why": "开放权重的模型用 open-weight。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 open-weight、open-source 中选一个，用适当形式填空。",
+   "stem": "An ______ program shares all its code.",
+   "ans": "open-source",
+   "why": "公开全部源代码的是 open-source；open-weight 只公开权重。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The shop is ______ until ten. (open)",
+   "ans": "open",
+   "why": "be open 营业。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The model are open-weight.",
+   "ans": "are → is",
+   "why": "主语 the model 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个模型可以免费下载。",
+   "stem": "You can download the model for ______.",
+   "ans": "free",
+   "why": "for free 免费。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Open-weight models share their ______ with everyone.",
+   "opts": [
+    "weights",
+    "weight's",
+    "weighs",
+    "weighed"
+   ],
+   "why": "模型公开的是“权重”weights（复数）。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,97 @@
+{
+ "单词": "recording",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在听什么？\n听：I'm listening to a recording of my speech.\nA. 一首歌\nB. 新闻\nC. 自己演讲的录音\nD. 广播剧",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The teacher played a ______ of the dialogue.\nA. record\nB. recorder\nC. recording\nD. recorded\n考点：易混",
+  "题目3": "【选词填空】从 recording、recorder 中选一个，用适当形式填空。\n题干：Press the button on the ______ to start.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We have three ______ of the concert. (recording)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The recordings is very clear.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：You can make a recording with your ______.\nA. spoon\nB. shoe\nC. phone\nD. pencil\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A video recording has ______.\nA. only sound\nB. only words\nC. pictures and sound\nD. nothing\n考点：用法",
+  "答案": "【1】C（自己演讲的录音）\n讲解：recording 录音。\n【2】C（recording）\n讲解：放的是对话的“录音”，用 recording。\n【3】recorder\n讲解：按的是录音机 recorder 上的按钮。\n【4】recordings\n讲解：three 后面接复数 recordings。\n【5】is → are\n讲解：主语 recordings 是复数，用 are。\n【6】C（phone）\n讲解：用手机就能录音。\n【7】C（pictures and sound）\n讲解：录像有画面也有声音。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在听什么？",
+   "listen": "I'm listening to a recording of my speech.",
+   "opts": [
+    "自己演讲的录音",
+    "一首歌",
+    "新闻",
+    "广播剧"
+   ],
+   "why": "recording 录音。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The teacher played a ______ of the dialogue.",
+   "opts": [
+    "recording",
+    "record",
+    "recorder",
+    "recorded"
+   ],
+   "why": "放的是对话的“录音”，用 recording。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 recording、recorder 中选一个，用适当形式填空。",
+   "stem": "Press the button on the ______ to start.",
+   "ans": "recorder",
+   "why": "按的是录音机 recorder 上的按钮。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We have three ______ of the concert. (recording)",
+   "ans": "recordings",
+   "why": "three 后面接复数 recordings。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The recordings is very clear.",
+   "ans": "is → are",
+   "why": "主语 recordings 是复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can make a recording with your ______.",
+   "opts": [
+    "phone",
+    "spoon",
+    "shoe",
+    "pencil"
+   ],
+   "why": "用手机就能录音。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A video recording has ______.",
+   "opts": [
+    "pictures and sound",
+    "only sound",
+    "only words",
+    "nothing"
+   ],
+   "why": "录像有画面也有声音。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

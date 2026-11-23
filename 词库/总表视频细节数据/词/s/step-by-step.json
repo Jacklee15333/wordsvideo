@@ -1,0 +1,98 @@
+{
+ "单词": "step-by-step",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这是一份什么指南？\n听：Here is a step-by-step guide.\nA. 一步到位的指南\nB. 地图\nC. 菜单\nD. 分步骤的指南",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Here is a ______ guide to making dumplings.\nA. steps-by-steps\nB. step-by-steps\nC. step-by-step\nD. stepped-by-step\n考点：变形",
+  "题目3": "【选词填空】从 step-by-step、one-step 中选一个，用适当形式填空。\n题干：Just press one button. It's a ______ job.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Learn it step by steps.\n考点：短语",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他一步一步地学会了游泳。\n题干：He learned to swim step ______ step.\n考点：短语",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Step-by-step means ______.\nA. 循序渐进的、分步骤的\nB. 一步完成的\nC. 很快的\nD. 跳跃的\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A step-by-step plan is done ______.\nA. all at once\nB. never\nC. bit by bit\nD. quickly\n考点：用法",
+  "答案": "【1】D（分步骤的指南）\n讲解：step-by-step 分步骤的。\n【2】C（step-by-step）\n讲解：“分步骤的”是 step-by-step。\n【3】one-step\n讲解：按一下就好，是一步完成的。\n【4】steps → step\n讲解：step by step 一步一步。\n【5】by\n讲解：step by step 逐步地。\n【6】A（循序渐进的、分步骤的）\n讲解：step-by-step 循序渐进的。\n【7】C（bit by bit）\n讲解：分步骤的计划一点点完成。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这是一份什么指南？",
+   "listen": "Here is a step-by-step guide.",
+   "opts": [
+    "分步骤的指南",
+    "一步到位的指南",
+    "地图",
+    "菜单"
+   ],
+   "why": "step-by-step 分步骤的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Here is a ______ guide to making dumplings.",
+   "opts": [
+    "step-by-step",
+    "steps-by-steps",
+    "step-by-steps",
+    "stepped-by-step"
+   ],
+   "why": "“分步骤的”是 step-by-step。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 step-by-step、one-step 中选一个，用适当形式填空。",
+   "stem": "Just press one button. It's a ______ job.",
+   "ans": "one-step",
+   "why": "按一下就好，是一步完成的。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Learn it step by steps.",
+   "ans": "steps → step",
+   "why": "step by step 一步一步。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他一步一步地学会了游泳。",
+   "stem": "He learned to swim step ______ step.",
+   "ans": "by",
+   "why": "step by step 逐步地。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Step-by-step means ______.",
+   "opts": [
+    "循序渐进的、分步骤的",
+    "一步完成的",
+    "很快的",
+    "跳跃的"
+   ],
+   "why": "step-by-step 循序渐进的。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A step-by-step plan is done ______.",
+   "opts": [
+    "bit by bit",
+    "all at once",
+    "never",
+    "quickly"
+   ],
+   "why": "分步骤的计划一点点完成。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

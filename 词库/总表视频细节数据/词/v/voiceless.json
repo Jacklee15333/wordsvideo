@@ -1,0 +1,96 @@
+{
+ "单词": "voiceless",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：故事讲的是谁？\n听：The story is about voiceless workers.\nA. 唱歌的工人\nB. 老板\nC. 没有发言权的工人\nD. 学生",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We should help ______ people be heard.\nA. voice\nB. voiced\nC. voiceless\nD. voices",
+  "题目3": "【选词填空】从 voiceless、voiced 中选一个，用适当形式填空。\n题干：/v/ is a ______ sound.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：/s/ and /f/ is voiceless sounds.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这些人在城里没有发言权。\n题干：These people have no ______ in the city.\n考点：词性转换",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：/p/ is a voiceless sound because your vocal cords do not ______.\nA. hurt\nB. open\nC. shake\nD. grow\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which sound is voiceless?\nA. /g/\nB. /b/\nC. /k/\nD. /d/\n考点：用法",
+  "答案": "【1】C（没有发言权的工人）\n讲解：voiceless 没有发言权的。\n【2】C（voiceless）\n讲解：名词 people 前用形容词 voiceless。\n【3】voiced\n讲解：发 /v/ 时声带振动，是浊音。\n【4】is → are\n讲解：主语有两个，用 are。\n【5】voice\n讲解：voice 作名词也指“发言权”。\n【6】C（shake）\n讲解：发清音时声带不振动。\n【7】C（/k/）\n讲解：/k/ 是清音，其余是浊音。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：故事讲的是谁？",
+   "listen": "The story is about voiceless workers.",
+   "opts": [
+    "没有发言权的工人",
+    "唱歌的工人",
+    "老板",
+    "学生"
+   ],
+   "why": "voiceless 没有发言权的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We should help ______ people be heard.",
+   "opts": [
+    "voiceless",
+    "voice",
+    "voiced",
+    "voices"
+   ],
+   "why": "名词 people 前用形容词 voiceless。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 voiceless、voiced 中选一个，用适当形式填空。",
+   "stem": "/v/ is a ______ sound.",
+   "ans": "voiced",
+   "why": "发 /v/ 时声带振动，是浊音。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "/s/ and /f/ is voiceless sounds.",
+   "ans": "is → are",
+   "why": "主语有两个，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这些人在城里没有发言权。",
+   "stem": "These people have no ______ in the city.",
+   "ans": "voice",
+   "why": "voice 作名词也指“发言权”。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "/p/ is a voiceless sound because your vocal cords do not ______.",
+   "opts": [
+    "shake",
+    "hurt",
+    "open",
+    "grow"
+   ],
+   "why": "发清音时声带不振动。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which sound is voiceless?",
+   "opts": [
+    "/k/",
+    "/g/",
+    "/b/",
+    "/d/"
+   ],
+   "why": "/k/ 是清音，其余是浊音。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

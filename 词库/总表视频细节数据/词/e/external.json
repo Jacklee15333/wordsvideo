@@ -1,0 +1,94 @@
+{
+ "单词": "external",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：药盒上写着什么？\n听：This cream is for external use only.\nA. 只能内服\nB. 每天三次\nC. 只能外用\nD. 饭后用",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This medicine is for ______ use. Don't drink it.\nA. internal\nB. externally\nC. extreme\nD. external",
+  "题目3": "【选词填空】从 external、internal 中选一个，用适当形式填空。\n题干：The heart is an ______ organ.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The house looks old external.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：心脏在身体里面。\n题干：The heart is ______ the body.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"External\" is close in meaning to \"______\".\nA. inner\nB. outer\nC. central\nD. lower\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Ex-\" in \"external\" means \"______\".\nA. in\nB. again\nC. out\nD. not\n考点：用法",
+  "答案": "【1】C（只能外用）\n讲解：external use 外用。\n【2】D（external）\n讲解：不能喝，是外用的 external。\n【3】internal\n讲解：心脏在体内，是 internal。\n【4】external → externally\n讲解：修饰前面的形容词短语，用副词。\n【5】inside\n讲解：在……里面 inside。\n【6】B（outer）\n讲解：external 外部的。\n【7】C（out）\n讲解：ex- 表示“向外”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：药盒上写着什么？",
+   "listen": "This cream is for external use only.",
+   "opts": [
+    "只能外用",
+    "只能内服",
+    "每天三次",
+    "饭后用"
+   ],
+   "why": "external use 外用。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This medicine is for ______ use. Don't drink it.",
+   "opts": [
+    "external",
+    "internal",
+    "externally",
+    "extreme"
+   ],
+   "why": "不能喝，是外用的 external。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 external、internal 中选一个，用适当形式填空。",
+   "stem": "The heart is an ______ organ.",
+   "ans": "internal",
+   "why": "心脏在体内，是 internal。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The house looks old external.",
+   "ans": "external → externally",
+   "why": "修饰前面的形容词短语，用副词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "心脏在身体里面。",
+   "stem": "The heart is ______ the body.",
+   "ans": "inside",
+   "why": "在……里面 inside。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"External\" is close in meaning to \"______\".",
+   "opts": [
+    "outer",
+    "inner",
+    "central",
+    "lower"
+   ],
+   "why": "external 外部的。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Ex-\" in \"external\" means \"______\".",
+   "opts": [
+    "out",
+    "in",
+    "again",
+    "not"
+   ],
+   "why": "ex- 表示“向外”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

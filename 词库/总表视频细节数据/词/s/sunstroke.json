@@ -1,0 +1,91 @@
+{
+ "单词": "sunstroke",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：那个男孩怎么了？\n听：The boy got sunstroke after playing football in the sun.\nA. 摔伤了\nB. 感冒了\nC. 迷路了\nD. 中暑了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Drink more water in summer, or you may get ______.\nA. sunlight\nB. sunrise\nC. sunset\nD. sunstroke",
+  "题目3": "【选词填空】从 sunstroke、sunburn 中选一个，用适当形式填空。\n题干：His skin turned red and painful. It was ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Many people ______ from sunstroke last summer. (suffer)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Wear a hat, but you won't get sunstroke.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：To stay away from sunstroke, rest in the ______ of a tree.\nA. shadow\nB. sun\nC. light\nD. shade\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：中暑和晒伤不是一回事。\n题干：Sunstroke is different ______ sunburn.\n考点：易混",
+  "答案": "【1】D（中暑了）\n讲解：sunstroke 中暑。\n【2】D（sunstroke）\n讲解：夏天不多喝水可能会中暑 sunstroke。\n【3】sunburn\n讲解：皮肤发红疼痛是晒伤 sunburn，不是中暑。\n【4】suffered\n讲解：last summer 用过去时 suffered。\n【5】but → and\n讲解：“戴帽子，这样就不会中暑”，祈使句后用 and。\n【6】D（shade）\n讲解：躲太阳的阴凉处是 shade；shadow 是影子。\n【7】from\n讲解：be different from 与……不同；中暑是头晕昏倒，晒伤是皮肤发红。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：那个男孩怎么了？",
+   "listen": "The boy got sunstroke after playing football in the sun.",
+   "opts": [
+    "中暑了",
+    "摔伤了",
+    "感冒了",
+    "迷路了"
+   ],
+   "why": "sunstroke 中暑。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Drink more water in summer, or you may get ______.",
+   "opts": [
+    "sunstroke",
+    "sunlight",
+    "sunrise",
+    "sunset"
+   ],
+   "why": "夏天不多喝水可能会中暑 sunstroke。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 sunstroke、sunburn 中选一个，用适当形式填空。",
+   "stem": "His skin turned red and painful. It was ______.",
+   "ans": "sunburn",
+   "why": "皮肤发红疼痛是晒伤 sunburn，不是中暑。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Many people ______ from sunstroke last summer. (suffer)",
+   "ans": "suffered",
+   "why": "last summer 用过去时 suffered。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Wear a hat, but you won't get sunstroke.",
+   "ans": "but → and",
+   "why": "“戴帽子，这样就不会中暑”，祈使句后用 and。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "To stay away from sunstroke, rest in the ______ of a tree.",
+   "opts": [
+    "shade",
+    "shadow",
+    "sun",
+    "light"
+   ],
+   "why": "躲太阳的阴凉处是 shade；shadow 是影子。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "中暑和晒伤不是一回事。",
+   "stem": "Sunstroke is different ______ sunburn.",
+   "ans": "from",
+   "why": "be different from 与……不同；中暑是头晕昏倒，晒伤是皮肤发红。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

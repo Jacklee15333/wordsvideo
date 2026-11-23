@@ -1,0 +1,93 @@
+{
+ "单词": "lion",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：动物园里什么动物最受欢迎？\n听：The lion is the most popular animal in the zoo.\nA. 老虎\nB. 熊猫\nC. 猴子\nD. 狮子",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ is called the king of the animals.\nA. lions\nB. lioness\nC. lion\nD. leopard",
+  "题目3": "【选词填空】从 lion、tiger 中选一个，用适当形式填空。\n题干：The ______ has black stripes on its body.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are three ______ in the zoo. (lion)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He took the lions share of the cake.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他拿走了最大的一份。\n题干：He got the ______ share.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A female lion is called a ______.\nA. lioness\nB. lion\nC. leopard\nD. tigress\n考点：词性转换",
+  "答案": "【1】D（狮子）\n讲解：lion 狮子。\n【2】C（lion）\n讲解：the king of the animals 指狮子，用单数 lion。\n【3】tiger\n讲解：身上有黑色条纹的是老虎 tiger。\n【4】lions\n讲解：three 后接复数 lions。\n【5】lions → lion's\n讲解：the lion's share 最大的一份，要用所有格。\n【6】lion's\n讲解：the lion's share 最大的一份。\n【7】A（lioness）\n讲解：母狮是 lioness。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：动物园里什么动物最受欢迎？",
+   "listen": "The lion is the most popular animal in the zoo.",
+   "opts": [
+    "狮子",
+    "老虎",
+    "熊猫",
+    "猴子"
+   ],
+   "why": "lion 狮子。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ is called the king of the animals.",
+   "opts": [
+    "lion",
+    "lions",
+    "lioness",
+    "leopard"
+   ],
+   "why": "the king of the animals 指狮子，用单数 lion。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 lion、tiger 中选一个，用适当形式填空。",
+   "stem": "The ______ has black stripes on its body.",
+   "ans": "tiger",
+   "why": "身上有黑色条纹的是老虎 tiger。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are three ______ in the zoo. (lion)",
+   "ans": "lions",
+   "why": "three 后接复数 lions。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He took the lions share of the cake.",
+   "ans": "lions → lion's",
+   "why": "the lion's share 最大的一份，要用所有格。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他拿走了最大的一份。",
+   "stem": "He got the ______ share.",
+   "ans": "lion's",
+   "why": "the lion's share 最大的一份。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A female lion is called a ______.",
+   "opts": [
+    "lioness",
+    "lion",
+    "leopard",
+    "tigress"
+   ],
+   "why": "母狮是 lioness。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

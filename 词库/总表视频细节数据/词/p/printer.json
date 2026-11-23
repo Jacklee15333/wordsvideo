@@ -1,0 +1,94 @@
+{
+ "单词": "printer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说什么不能用了？\n听：Our printer doesn't work today.\nA. 电脑\nB. 电视\nC. 电话\nD. 打印机",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We have two ______ in our office.\nA. printer\nB. printing\nC. prints\nD. printers",
+  "题目3": "【选词填空】从 printer、printing 中选一个，用适当形式填空。\n题干：______ helped books spread quickly.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Can you print it with the print in the office?",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我要打印这篇文章。\n题干：I need to ______ this article.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Long ago, a \"printer\" was a ______ who printed books.\nA. machine\nB. person\nC. shop\nD. book\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The big machine in a newspaper factory is often called a printing ______.\nA. press\nB. printer\nC. paper\nD. pen\n考点：易混",
+  "答案": "【1】D（打印机）\n讲解：printer 打印机。\n【2】D（printers）\n讲解：two 后面用复数。\n【3】Printing\n讲解：“印刷术”用 printing。\n【4】print → printer\n讲解：打印用的机器是 printer。\n【5】print\n讲解：动词“打印”用 print。\n【6】B（person）\n讲解：printer 最先指印刷工人，后来才指机器。\n【7】A（press）\n讲解：大型印刷机常说 printing press。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说什么不能用了？",
+   "listen": "Our printer doesn't work today.",
+   "opts": [
+    "打印机",
+    "电脑",
+    "电视",
+    "电话"
+   ],
+   "why": "printer 打印机。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We have two ______ in our office.",
+   "opts": [
+    "printers",
+    "printer",
+    "printing",
+    "prints"
+   ],
+   "why": "two 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 printer、printing 中选一个，用适当形式填空。",
+   "stem": "______ helped books spread quickly.",
+   "ans": "Printing",
+   "why": "“印刷术”用 printing。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Can you print it with the print in the office?",
+   "ans": "print → printer",
+   "why": "打印用的机器是 printer。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我要打印这篇文章。",
+   "stem": "I need to ______ this article.",
+   "ans": "print",
+   "why": "动词“打印”用 print。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Long ago, a \"printer\" was a ______ who printed books.",
+   "opts": [
+    "person",
+    "machine",
+    "shop",
+    "book"
+   ],
+   "why": "printer 最先指印刷工人，后来才指机器。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The big machine in a newspaper factory is often called a printing ______.",
+   "opts": [
+    "press",
+    "printer",
+    "paper",
+    "pen"
+   ],
+   "why": "大型印刷机常说 printing press。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,98 @@
+{
+ "单词": "title",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这本书叫什么名字？\n听：The title of the book is \"Little Women\".\nA. 《简·爱》\nB. 《小妇人》\nC. 《傲慢与偏见》\nD. 《哈利·波特》",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：What's the ______ of your favourite film?\nA. title\nB. heading\nC. headline\nD. subtitle\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She has written three books with funny ______. (title)\n考点：变形",
+  "题目4": "【选词填空】从 title、heading 中选一个，用适当形式填空。\n题干：Each part of the article has a small ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Write the titles of your story at the top.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Dr\" and \"Mr\" are ______ before people's names.\nA. headings\nB. titles\nC. letters\nD. names\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Won the title\" in sports means won the ______.\nA. championship\nB. bus\nC. flower\nD. lesson\n考点：用法",
+  "答案": "【1】B（《小妇人》）\n讲解：title 书名。\n【2】A（title）\n讲解：整部作品的名字用 title。\n【3】titles\n讲解：three books 各有书名，用复数。\n【4】heading\n讲解：文章内部各节的小标题用 heading。\n【5】titles → title\n讲解：一个故事一个标题。\n【6】B（titles）\n讲解：Dr、Mr 是人的头衔。\n【7】A（championship）\n讲解：title 在体育里指冠军。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这本书叫什么名字？",
+   "listen": "The title of the book is \"Little Women\".",
+   "opts": [
+    "《小妇人》",
+    "《简·爱》",
+    "《傲慢与偏见》",
+    "《哈利·波特》"
+   ],
+   "why": "title 书名。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What's the ______ of your favourite film?",
+   "opts": [
+    "title",
+    "heading",
+    "headline",
+    "subtitle"
+   ],
+   "why": "整部作品的名字用 title。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She has written three books with funny ______. (title)",
+   "ans": "titles",
+   "why": "three books 各有书名，用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 title、heading 中选一个，用适当形式填空。",
+   "stem": "Each part of the article has a small ______.",
+   "ans": "heading",
+   "why": "文章内部各节的小标题用 heading。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Write the titles of your story at the top.",
+   "ans": "titles → title",
+   "why": "一个故事一个标题。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Dr\" and \"Mr\" are ______ before people's names.",
+   "opts": [
+    "titles",
+    "headings",
+    "letters",
+    "names"
+   ],
+   "why": "Dr、Mr 是人的头衔。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Won the title\" in sports means won the ______.",
+   "opts": [
+    "championship",
+    "bus",
+    "flower",
+    "lesson"
+   ],
+   "why": "title 在体育里指冠军。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

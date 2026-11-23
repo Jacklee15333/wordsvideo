@@ -1,0 +1,97 @@
+{
+ "单词": "cargo",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这艘船运的是什么？\n听：The ship carries cargo from China to Europe.\nA. 货物\nB. 乘客\nC. 士兵\nD. 动物",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The plane carries both passengers and ______.\nA. cargos\nB. car\nC. cargo\nD. carry\n考点：变形",
+  "题目3": "【选词填空】从 cargo、passenger 中选一个，用适当形式填空。\n题干：Every ______ on the plane must wear a seat belt.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The ship is carrying three ______ of rice. (cargo)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：They loads the cargo onto the ship.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Cargo is close in meaning to ______.\nA. goods\nB. gods\nC. guards\nD. guests\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A cargo ship carries ______.\nA. tourists\nB. students\nC. goods\nD. soldiers\n考点：用法",
+  "答案": "【1】A（货物）\n讲解：cargo 货物。\n【2】C（cargo）\n讲解：作“货物”总称，cargo 常不加 s。\n【3】passenger\n讲解：系安全带的是乘客 passenger。\n【4】cargoes\n讲解：cargo 的复数加 es：cargoes。\n【5】loads → load\n讲解：主语 they 是复数，用 load。\n【6】A（goods）\n讲解：cargo 货物，和 goods 意思相近。\n【7】C（goods）\n讲解：货船运的是货物。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这艘船运的是什么？",
+   "listen": "The ship carries cargo from China to Europe.",
+   "opts": [
+    "货物",
+    "乘客",
+    "士兵",
+    "动物"
+   ],
+   "why": "cargo 货物。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The plane carries both passengers and ______.",
+   "opts": [
+    "cargo",
+    "cargos",
+    "car",
+    "carry"
+   ],
+   "why": "作“货物”总称，cargo 常不加 s。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 cargo、passenger 中选一个，用适当形式填空。",
+   "stem": "Every ______ on the plane must wear a seat belt.",
+   "ans": "passenger",
+   "why": "系安全带的是乘客 passenger。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The ship is carrying three ______ of rice. (cargo)",
+   "ans": "cargoes",
+   "why": "cargo 的复数加 es：cargoes。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "They loads the cargo onto the ship.",
+   "ans": "loads → load",
+   "why": "主语 they 是复数，用 load。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Cargo is close in meaning to ______.",
+   "opts": [
+    "goods",
+    "gods",
+    "guards",
+    "guests"
+   ],
+   "why": "cargo 货物，和 goods 意思相近。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A cargo ship carries ______.",
+   "opts": [
+    "goods",
+    "tourists",
+    "students",
+    "soldiers"
+   ],
+   "why": "货船运的是货物。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

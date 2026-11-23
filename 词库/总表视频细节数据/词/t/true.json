@@ -1,0 +1,93 @@
+{
+ "单词": "true",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她的梦想怎么样了？\n听：Her dream finally came true.\nA. 失败了\nB. 实现了\nC. 改变了\nD. 忘记了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Is it ______ that you are moving to Beijing?\nA. truth\nB. truly\nC. truthful\nD. true",
+  "题目3": "【选词填空】从 true、real 中选一个，用适当形式填空。\n题干：Is this a ______ diamond or a fake one?\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Please tell me the ______. (true)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Yours truely, Tom.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这是我听过最真实的故事。\n题干：This is the ______ story I've heard.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Thank you ______ for your help.\nA. true\nB. truly\nC. truth\nD. truthful\n考点：词性转换",
+  "答案": "【1】B（实现了）\n讲解：come true 实现。\n【2】D（true）\n讲解：be 后面用形容词 true（真的）。\n【3】real\n讲解：“真货、实物”用 real；true 偏“说的话属实”。\n【4】truth\n讲解：tell the truth 说实话，用名词 truth。\n【5】truely → truly\n讲解：true 变副词要去 e 加 ly：truly。\n【6】truest\n讲解：最高级 true 以 e 结尾加 st：truest。\n【7】B（truly）\n讲解：修饰动词 thank 用副词 truly。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她的梦想怎么样了？",
+   "listen": "Her dream finally came true.",
+   "opts": [
+    "实现了",
+    "失败了",
+    "改变了",
+    "忘记了"
+   ],
+   "why": "come true 实现。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Is it ______ that you are moving to Beijing?",
+   "opts": [
+    "true",
+    "truth",
+    "truly",
+    "truthful"
+   ],
+   "why": "be 后面用形容词 true（真的）。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 true、real 中选一个，用适当形式填空。",
+   "stem": "Is this a ______ diamond or a fake one?",
+   "ans": "real",
+   "why": "“真货、实物”用 real；true 偏“说的话属实”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Please tell me the ______. (true)",
+   "ans": "truth",
+   "why": "tell the truth 说实话，用名词 truth。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Yours truely, Tom.",
+   "ans": "truely → truly",
+   "why": "true 变副词要去 e 加 ly：truly。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是我听过最真实的故事。",
+   "stem": "This is the ______ story I've heard.",
+   "ans": "truest",
+   "why": "最高级 true 以 e 结尾加 st：truest。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Thank you ______ for your help.",
+   "opts": [
+    "truly",
+    "true",
+    "truth",
+    "truthful"
+   ],
+   "why": "修饰动词 thank 用副词 truly。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

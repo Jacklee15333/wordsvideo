@@ -1,0 +1,94 @@
+{
+ "单词": "patient",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人要我们对弟弟怎样？\n听：Be patient with your little brother.\nA. 严厉\nB. 有耐心\nC. 安静\nD. 小心",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The doctor has many ______ today.\nA. patient\nB. patients\nC. patience\nD. patiently",
+  "题目3": "【选词填空】从 patient、patience 中选一个，用适当形式填空。\n题干：Learning a language needs a lot of ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She waited patient for the bus.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：别不耐烦，等一下。\n题干：Don't be ______. Wait a minute.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：She is ______ than her sister.\nA. patienter\nB. most patient\nC. patientest\nD. more patient\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：An \"inpatient\" is a patient who ______.\nA. never goes to hospital\nB. is a doctor\nC. stays in hospital\nD. is very patient\n考点：用法",
+  "答案": "【1】B（有耐心）\n讲解：be patient with 对……有耐心。\n【2】B（patients）\n讲解：many 后面用复数，“病人”。\n【3】patience\n讲解：a lot of 后面要名词“耐心”。\n【4】patient → patiently\n讲解：修饰动词 waited 用副词。\n【5】impatient\n讲解：不耐烦的是 impatient。\n【6】D（more patient）\n讲解：patient 的比较级用 more patient。\n【7】C（stays in hospital）\n讲解：inpatient 住院病人。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人要我们对弟弟怎样？",
+   "listen": "Be patient with your little brother.",
+   "opts": [
+    "有耐心",
+    "严厉",
+    "安静",
+    "小心"
+   ],
+   "why": "be patient with 对……有耐心。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The doctor has many ______ today.",
+   "opts": [
+    "patients",
+    "patient",
+    "patience",
+    "patiently"
+   ],
+   "why": "many 后面用复数，“病人”。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 patient、patience 中选一个，用适当形式填空。",
+   "stem": "Learning a language needs a lot of ______.",
+   "ans": "patience",
+   "why": "a lot of 后面要名词“耐心”。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She waited patient for the bus.",
+   "ans": "patient → patiently",
+   "why": "修饰动词 waited 用副词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "别不耐烦，等一下。",
+   "stem": "Don't be ______. Wait a minute.",
+   "ans": "impatient",
+   "why": "不耐烦的是 impatient。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She is ______ than her sister.",
+   "opts": [
+    "more patient",
+    "patienter",
+    "most patient",
+    "patientest"
+   ],
+   "why": "patient 的比较级用 more patient。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An \"inpatient\" is a patient who ______.",
+   "opts": [
+    "stays in hospital",
+    "never goes to hospital",
+    "is a doctor",
+    "is very patient"
+   ],
+   "why": "inpatient 住院病人。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "white-yellow",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这些花是什么颜色？\n听：The flowers are white-yellow.\nA. 纯白\nB. 深黄\nC. 粉红\nD. 黄白色",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She wore a ______ dress.\nA. white-yellows\nB. white-yellow\nC. whitely-yellow\nD. white yellowed",
+  "题目3": "【选词填空】从 white、yellow 中选一个，用适当形式填空。\n题干：Bananas are ______ when they are ready to eat.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The moon looked white-yellow, and the stars was bright.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：雪是白色的。\n题干：Snow is ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"White-yellow\" means mostly white with a little ______.\nA. red\nB. blue\nC. black\nD. yellow\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Colour words like \"white-yellow\" are joined with a ______.\nA. comma\nB. full stop\nC. hyphen\nD. space\n考点：用法",
+  "答案": "【1】D（黄白色）\n讲解：white-yellow 黄白色的。\n【2】B（white-yellow）\n讲解：“黄白色的”是 white-yellow。\n【3】yellow\n讲解：熟香蕉是黄色的。\n【4】was → were\n讲解：stars 是复数。\n【5】white\n讲解：白色 white。\n【6】D（yellow）\n讲解：白中带黄。\n【7】C（hyphen）\n讲解：用连字符连接。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这些花是什么颜色？",
+   "listen": "The flowers are white-yellow.",
+   "opts": [
+    "黄白色",
+    "纯白",
+    "深黄",
+    "粉红"
+   ],
+   "why": "white-yellow 黄白色的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She wore a ______ dress.",
+   "opts": [
+    "white-yellow",
+    "white-yellows",
+    "whitely-yellow",
+    "white yellowed"
+   ],
+   "why": "“黄白色的”是 white-yellow。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 white、yellow 中选一个，用适当形式填空。",
+   "stem": "Bananas are ______ when they are ready to eat.",
+   "ans": "yellow",
+   "why": "熟香蕉是黄色的。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The moon looked white-yellow, and the stars was bright.",
+   "ans": "was → were",
+   "why": "stars 是复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "雪是白色的。",
+   "stem": "Snow is ______.",
+   "ans": "white",
+   "why": "白色 white。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"White-yellow\" means mostly white with a little ______.",
+   "opts": [
+    "yellow",
+    "red",
+    "blue",
+    "black"
+   ],
+   "why": "白中带黄。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Colour words like \"white-yellow\" are joined with a ______.",
+   "opts": [
+    "hyphen",
+    "comma",
+    "full stop",
+    "space"
+   ],
+   "why": "用连字符连接。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

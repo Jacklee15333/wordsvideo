@@ -1,0 +1,98 @@
+{
+ "单词": "assignment",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她今晚要完成什么？\n听：I have to finish my maths assignment tonight.\nA. 英语作业\nB. 画画\nC. 家务\nD. 数学作业",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I have to finish my maths ______ tonight.\nA. assign\nB. assigned\nC. sign\nD. assignment\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The teacher will ______ the tasks. (assignment)\n考点：词性转换",
+  "题目4": "【选词填空】从 assignment、argument 中选一个，用适当形式填空。\n题干：They had an ______ about money.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We have three assignment this week.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Assignment can mean ______.\nA. 作业；任务\nB. 签名\nC. 标志\nD. 争论\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Assignment is the noun of ______.\nA. assign\nB. sign\nC. design\nD. align\n考点：词性转换",
+  "答案": "【1】D（数学作业）\n讲解：assignment 作业、任务。\n【2】D（assignment）\n讲解：my maths 后面要名词 assignment。\n【3】assign\n讲解：will 后面用动词原形 assign。\n【4】argument\n讲解：“争论”用 argument。\n【5】assignment → assignments\n讲解：three 后面用复数 assignments。\n【6】A（作业；任务）\n讲解：assignment 作业；任务。\n【7】A（assign）\n讲解：assign 的名词是 assignment。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她今晚要完成什么？",
+   "listen": "I have to finish my maths assignment tonight.",
+   "opts": [
+    "数学作业",
+    "英语作业",
+    "画画",
+    "家务"
+   ],
+   "why": "assignment 作业、任务。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I have to finish my maths ______ tonight.",
+   "opts": [
+    "assignment",
+    "assign",
+    "assigned",
+    "sign"
+   ],
+   "why": "my maths 后面要名词 assignment。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The teacher will ______ the tasks. (assignment)",
+   "ans": "assign",
+   "why": "will 后面用动词原形 assign。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 assignment、argument 中选一个，用适当形式填空。",
+   "stem": "They had an ______ about money.",
+   "ans": "argument",
+   "why": "“争论”用 argument。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We have three assignment this week.",
+   "ans": "assignment → assignments",
+   "why": "three 后面用复数 assignments。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Assignment can mean ______.",
+   "opts": [
+    "作业；任务",
+    "签名",
+    "标志",
+    "争论"
+   ],
+   "why": "assignment 作业；任务。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Assignment is the noun of ______.",
+   "opts": [
+    "assign",
+    "sign",
+    "design",
+    "align"
+   ],
+   "why": "assign 的名词是 assignment。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

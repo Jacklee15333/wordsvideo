@@ -1,0 +1,98 @@
+{
+ "单词": "validate",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让你做什么？\n听：Please validate your ticket.\nA. 买票\nB. 丢票\nC. 退票\nD. 验票",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The scientist's tests ______ the theory last year.\nA. validated\nB. validates\nC. validating\nD. validate\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The ______ of the results took weeks. (validate)\n考点：词性转换",
+  "题目4": "【选词填空】从 validate、valid 中选一个，用适当形式填空。\n题干：Your passport is still ______.\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The machine validate tickets automatically.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Your ticket must be ______ before you get on the train.\nA. validate\nB. validating\nC. validated\nD. validates\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Please ______ your booking by email.\nA. conform\nB. content\nC. contain\nD. confirm\n考点：易混",
+  "答案": "【1】D（验票）\n讲解：validate 使生效、确认。\n【2】A（validated）\n讲解：last year 用一般过去时，去 e 加 d。\n【3】validation\n讲解：the … of 中间要名词 validation。\n【4】valid\n讲解：be 后要形容词 valid。\n【5】validate → validates\n讲解：主语 machine 是单数，用 validates。\n【6】C（validated）\n讲解：must be + 过去分词构成被动。\n【7】D（confirm）\n讲解：“确认”预订用 confirm，和 validate 意思相近。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让你做什么？",
+   "listen": "Please validate your ticket.",
+   "opts": [
+    "验票",
+    "买票",
+    "丢票",
+    "退票"
+   ],
+   "why": "validate 使生效、确认。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The scientist's tests ______ the theory last year.",
+   "opts": [
+    "validated",
+    "validates",
+    "validating",
+    "validate"
+   ],
+   "why": "last year 用一般过去时，去 e 加 d。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The ______ of the results took weeks. (validate)",
+   "ans": "validation",
+   "why": "the … of 中间要名词 validation。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 validate、valid 中选一个，用适当形式填空。",
+   "stem": "Your passport is still ______.",
+   "ans": "valid",
+   "why": "be 后要形容词 valid。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The machine validate tickets automatically.",
+   "ans": "validate → validates",
+   "why": "主语 machine 是单数，用 validates。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Your ticket must be ______ before you get on the train.",
+   "opts": [
+    "validated",
+    "validate",
+    "validating",
+    "validates"
+   ],
+   "why": "must be + 过去分词构成被动。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please ______ your booking by email.",
+   "opts": [
+    "confirm",
+    "conform",
+    "content",
+    "contain"
+   ],
+   "why": "“确认”预订用 confirm，和 validate 意思相近。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

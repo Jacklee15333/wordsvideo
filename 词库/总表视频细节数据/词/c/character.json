@@ -1,0 +1,94 @@
+{
+ "单词": "character",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人最喜欢故事里的哪个人物？\n听：My favourite character is the little girl.\nA. 老爷爷\nB. 小狗\nC. 小女孩\nD. 国王",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many ______ in this story.\nA. character\nB. characteristic\nC. characters\nD. charactor",
+  "题目3": "【选词填空】从 character、personality 中选一个，用适当形式填空。\n题干：She has a lively ______. She is outgoing and loves to talk.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Chinese charactor are hard to write.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这个汉字怎么写？\n题干：How do you write this Chinese ______?",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Character\" can mean a person's moral ______, like honesty.\nA. clothes\nB. height\nC. qualities\nD. voice\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Characteristic\" can be a noun meaning a typical ______.\nA. person\nB. story\nC. feature\nD. letter\n考点：词性转换",
+  "答案": "【1】C（小女孩）\n讲解：character 人物。\n【2】C（characters）\n讲解：many 后面用复数。\n【3】personality\n讲解：表现在外的“个性”用 personality。\n【4】charactor → characters\n讲解：拼写是 character，主语复数。\n【5】character\n讲解：汉字是 Chinese character。\n【6】C（qualities）\n讲解：character 偏内在的品格。\n【7】C（feature）\n讲解：characteristic 作名词是“特征”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人最喜欢故事里的哪个人物？",
+   "listen": "My favourite character is the little girl.",
+   "opts": [
+    "小女孩",
+    "老爷爷",
+    "小狗",
+    "国王"
+   ],
+   "why": "character 人物。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ in this story.",
+   "opts": [
+    "characters",
+    "character",
+    "characteristic",
+    "charactor"
+   ],
+   "why": "many 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 character、personality 中选一个，用适当形式填空。",
+   "stem": "She has a lively ______. She is outgoing and loves to talk.",
+   "ans": "personality",
+   "why": "表现在外的“个性”用 personality。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Chinese charactor are hard to write.",
+   "ans": "charactor → characters",
+   "why": "拼写是 character，主语复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个汉字怎么写？",
+   "stem": "How do you write this Chinese ______?",
+   "ans": "character",
+   "why": "汉字是 Chinese character。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Character\" can mean a person's moral ______, like honesty.",
+   "opts": [
+    "qualities",
+    "clothes",
+    "height",
+    "voice"
+   ],
+   "why": "character 偏内在的品格。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Characteristic\" can be a noun meaning a typical ______.",
+   "opts": [
+    "feature",
+    "person",
+    "story",
+    "letter"
+   ],
+   "why": "characteristic 作名词是“特征”。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "starlight",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们借着什么光看书？\n听：We read by starlight.\nA. 月光\nB. 灯光\nC. 火光\nD. 星光",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The lake shone in the ______.\nA. starlit\nB. stars light\nC. starlights\nD. starlight",
+  "题目3": "【选词填空】从 starlight、starlit 中选一个，用适当形式填空。\n题干：We walked home on a ______ night.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Starlight are weaker than moonlight.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：月光很亮。\n题干：The ______ is very bright.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Starlight is ______, so we don't say \"a starlight\".\nA. countable\nB. a verb\nC. plural\nD. uncountable\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Starlight\" is made of \"star\" and \"______\".\nA. night\nB. sight\nC. bright\nD. light\n考点：用法",
+  "答案": "【1】D（星光）\n讲解：starlight 星光。\n【2】D（starlight）\n讲解：the 后面要名词。\n【3】starlit\n讲解：名词 night 前用形容词 starlit（星光照耀的）。\n【4】are → is\n讲解：starlight 不可数，谓语用 is。\n【5】moonlight\n讲解：月光是 moonlight。\n【6】D（uncountable）\n讲解：starlight 不可数。\n【7】D（light）\n讲解：star + light。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们借着什么光看书？",
+   "listen": "We read by starlight.",
+   "opts": [
+    "星光",
+    "月光",
+    "灯光",
+    "火光"
+   ],
+   "why": "starlight 星光。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The lake shone in the ______.",
+   "opts": [
+    "starlight",
+    "starlit",
+    "stars light",
+    "starlights"
+   ],
+   "why": "the 后面要名词。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 starlight、starlit 中选一个，用适当形式填空。",
+   "stem": "We walked home on a ______ night.",
+   "ans": "starlit",
+   "why": "名词 night 前用形容词 starlit（星光照耀的）。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Starlight are weaker than moonlight.",
+   "ans": "are → is",
+   "why": "starlight 不可数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "月光很亮。",
+   "stem": "The ______ is very bright.",
+   "ans": "moonlight",
+   "why": "月光是 moonlight。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Starlight is ______, so we don't say \"a starlight\".",
+   "opts": [
+    "uncountable",
+    "countable",
+    "a verb",
+    "plural"
+   ],
+   "why": "starlight 不可数。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Starlight\" is made of \"star\" and \"______\".",
+   "opts": [
+    "light",
+    "night",
+    "sight",
+    "bright"
+   ],
+   "why": "star + light。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

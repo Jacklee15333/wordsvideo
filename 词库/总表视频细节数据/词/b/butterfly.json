@@ -1,0 +1,94 @@
+{
+ "单词": "butterfly",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：花园里有什么？\n听：There is a butterfly in the garden.\nA. 蜜蜂\nB. 鸟\nC. 蝴蝶\nD. 蜻蜓",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Look at those beautiful ______!\nA. butterflys\nB. butterfly\nC. butterflies\nD. butterflyes",
+  "题目3": "【选词填空】从 butterfly、moth 中选一个，用适当形式填空。\n题干：A ______ flies around the light at night.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The butterfly are flying over the flowers.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：她游的是蝶泳。\n题干：She swims the ______ stroke.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Have butterflies in your stomach\" means feel ______.\nA. hungry\nB. sick\nC. nervous\nD. happy\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A butterfly is usually active in the ______.\nA. night\nB. winter\nC. daytime\nD. water\n考点：易混",
+  "答案": "【1】C（蝴蝶）\n讲解：butterfly 蝴蝶。\n【2】C（butterflies）\n讲解：those 后面用复数，y 变 i 加 es。\n【3】moth\n讲解：夜里扑灯的是蛾 moth。\n【4】are → is\n讲解：主语单数。\n【5】butterfly\n讲解：蝶泳 butterfly stroke。\n【6】C（nervous）\n讲解：紧张得心里发慌。\n【7】C（daytime）\n讲解：butterfly 指白天活动的蝶类。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：花园里有什么？",
+   "listen": "There is a butterfly in the garden.",
+   "opts": [
+    "蝴蝶",
+    "蜜蜂",
+    "鸟",
+    "蜻蜓"
+   ],
+   "why": "butterfly 蝴蝶。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Look at those beautiful ______!",
+   "opts": [
+    "butterflies",
+    "butterflys",
+    "butterfly",
+    "butterflyes"
+   ],
+   "why": "those 后面用复数，y 变 i 加 es。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 butterfly、moth 中选一个，用适当形式填空。",
+   "stem": "A ______ flies around the light at night.",
+   "ans": "moth",
+   "why": "夜里扑灯的是蛾 moth。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The butterfly are flying over the flowers.",
+   "ans": "are → is",
+   "why": "主语单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她游的是蝶泳。",
+   "stem": "She swims the ______ stroke.",
+   "ans": "butterfly",
+   "why": "蝶泳 butterfly stroke。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Have butterflies in your stomach\" means feel ______.",
+   "opts": [
+    "nervous",
+    "hungry",
+    "sick",
+    "happy"
+   ],
+   "why": "紧张得心里发慌。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A butterfly is usually active in the ______.",
+   "opts": [
+    "daytime",
+    "night",
+    "winter",
+    "water"
+   ],
+   "why": "butterfly 指白天活动的蝶类。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

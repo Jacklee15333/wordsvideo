@@ -1,0 +1,94 @@
+{
+ "单词": "single-dish",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：晚饭吃的是什么？\n听：We had a single-dish meal for dinner.\nA. 一道菜的饭\nB. 大餐\nC. 自助餐\nD. 快餐",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Fried rice is a good ______ meal.\nA. single-dishes\nB. singly-dish\nC. single-dish\nD. one-dishes",
+  "题目3": "【选词填空】从 dish、food 中选一个，用适当形式填空。\n题干：We need to buy some ______ for the party.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She cooked a single-dish meal, so she used ten pots.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这顿饭只有一道菜。\n题干：This meal has only one ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A single-dish meal is also called a \"one-______ meal\".\nA. pot\nB. plate\nC. cup\nD. spoon\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：For “一道菜”, we say \"a dish\", not \"a ______\".\nA. dish\nB. food\nC. plate\nD. bowl\n考点：易混",
+  "答案": "【1】A（一道菜的饭）\n讲解：single-dish 一道菜就是一顿的。\n【2】C（single-dish）\n讲解：作定语用 single-dish。\n【3】food\n讲解：“食物”不可数，用 food。\n【4】ten pots → one pot\n讲解：只做一道菜，用一个锅。\n【5】dish\n讲解：一道菜 a dish。\n【6】A（pot）\n讲解：也常说 one-pot meal。\n【7】B（food）\n讲解：“一道菜”不用 food。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：晚饭吃的是什么？",
+   "listen": "We had a single-dish meal for dinner.",
+   "opts": [
+    "一道菜的饭",
+    "大餐",
+    "自助餐",
+    "快餐"
+   ],
+   "why": "single-dish 一道菜就是一顿的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Fried rice is a good ______ meal.",
+   "opts": [
+    "single-dish",
+    "single-dishes",
+    "singly-dish",
+    "one-dishes"
+   ],
+   "why": "作定语用 single-dish。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 dish、food 中选一个，用适当形式填空。",
+   "stem": "We need to buy some ______ for the party.",
+   "ans": "food",
+   "why": "“食物”不可数，用 food。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She cooked a single-dish meal, so she used ten pots.",
+   "ans": "ten pots → one pot",
+   "why": "只做一道菜，用一个锅。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这顿饭只有一道菜。",
+   "stem": "This meal has only one ______.",
+   "ans": "dish",
+   "why": "一道菜 a dish。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A single-dish meal is also called a \"one-______ meal\".",
+   "opts": [
+    "pot",
+    "plate",
+    "cup",
+    "spoon"
+   ],
+   "why": "也常说 one-pot meal。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "For “一道菜”, we say \"a dish\", not \"a ______\".",
+   "opts": [
+    "food",
+    "dish",
+    "plate",
+    "bowl"
+   ],
+   "why": "“一道菜”不用 food。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "referee",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：谁吹响了哨子？\n听：The referee blew the whistle.\nA. 裁判\nB. 球员\nC. 观众\nD. 教练",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ showed a red card to the player.\nA. refer\nB. reference\nC. referred\nD. referee",
+  "题目3": "【选词填空】从 referee、umpire 中选一个，用适当形式填空。\n题干：In tennis, the judge is called the ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are three ______ in the match. (referee)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The referee have stopped the game.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：评委们给她打了高分。\n题干：The ______ gave her high marks.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The players must listen ______ the referee.\nA. at\nB. to\nC. for\nD. with\n考点：用法",
+  "答案": "【1】A（裁判）\n讲解：referee 裁判。\n【2】D（referee）\n讲解：足球比赛的裁判是 referee。\n【3】umpire\n讲解：网球、棒球的裁判用 umpire；足球、篮球用 referee。\n【4】referees\n讲解：three 后面用复数 referees。\n【5】have → has\n讲解：主语单数，用 has。\n【6】judges\n讲解：比赛的评委 judges。\n【7】B（to）\n讲解：listen to 听从。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：谁吹响了哨子？",
+   "listen": "The referee blew the whistle.",
+   "opts": [
+    "裁判",
+    "球员",
+    "观众",
+    "教练"
+   ],
+   "why": "referee 裁判。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ showed a red card to the player.",
+   "opts": [
+    "referee",
+    "refer",
+    "reference",
+    "referred"
+   ],
+   "why": "足球比赛的裁判是 referee。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 referee、umpire 中选一个，用适当形式填空。",
+   "stem": "In tennis, the judge is called the ______.",
+   "ans": "umpire",
+   "why": "网球、棒球的裁判用 umpire；足球、篮球用 referee。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are three ______ in the match. (referee)",
+   "ans": "referees",
+   "why": "three 后面用复数 referees。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The referee have stopped the game.",
+   "ans": "have → has",
+   "why": "主语单数，用 has。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "评委们给她打了高分。",
+   "stem": "The ______ gave her high marks.",
+   "ans": "judges",
+   "why": "比赛的评委 judges。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The players must listen ______ the referee.",
+   "opts": [
+    "to",
+    "at",
+    "for",
+    "with"
+   ],
+   "why": "listen to 听从。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "lawyer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她是做什么的？\n听：She is a lawyer.\nA. 医生\nB. 老师\nC. 警察\nD. 律师",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are two ______ in my family.\nA. lawyer\nB. laws\nC. lawyeres\nD. lawyers",
+  "题目3": "【选词填空】从 lawyer、law 中选一个，用适当形式填空。\n题干：She studied ______ at university.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He wants to be a lawyer when he grow up.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：你需要找个律师。\n题干：You need to find a ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In Britain, a lawyer who speaks in a high court is often called a \"______\".\nA. doctor\nB. barrister\nC. judge\nD. teacher\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Lawyer\" comes from \"______\".\nA. low\nB. lay\nC. law\nD. lawn\n考点：词性转换",
+  "答案": "【1】D（律师）\n讲解：lawyer 律师。\n【2】D（lawyers）\n讲解：two 后面用复数。\n【3】law\n讲解：学的科目是法律 law。\n【4】grow → grows\n讲解：主语三单。\n【5】lawyer\n讲解：律师 lawyer。\n【6】B（barrister）\n讲解：英国出庭律师叫 barrister。\n【7】C（law）\n讲解：law + yer。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她是做什么的？",
+   "listen": "She is a lawyer.",
+   "opts": [
+    "律师",
+    "医生",
+    "老师",
+    "警察"
+   ],
+   "why": "lawyer 律师。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are two ______ in my family.",
+   "opts": [
+    "lawyers",
+    "lawyer",
+    "laws",
+    "lawyeres"
+   ],
+   "why": "two 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 lawyer、law 中选一个，用适当形式填空。",
+   "stem": "She studied ______ at university.",
+   "ans": "law",
+   "why": "学的科目是法律 law。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He wants to be a lawyer when he grow up.",
+   "ans": "grow → grows",
+   "why": "主语三单。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你需要找个律师。",
+   "stem": "You need to find a ______.",
+   "ans": "lawyer",
+   "why": "律师 lawyer。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In Britain, a lawyer who speaks in a high court is often called a \"______\".",
+   "opts": [
+    "barrister",
+    "doctor",
+    "judge",
+    "teacher"
+   ],
+   "why": "英国出庭律师叫 barrister。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Lawyer\" comes from \"______\".",
+   "opts": [
+    "law",
+    "low",
+    "lay",
+    "lawn"
+   ],
+   "why": "law + yer。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

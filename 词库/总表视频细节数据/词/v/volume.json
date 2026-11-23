@@ -1,0 +1,94 @@
+{
+ "单词": "volume",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让对方做什么？\n听：Please turn down the volume. The baby is sleeping.\nA. 把灯关掉\nB. 把门关上\nC. 把电视打开\nD. 把音量调小",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you turn up the ______? I can't hear it.\nA. volunteer\nB. voice\nC. value\nD. volume\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：This set of books has five ______. (volume)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Please turn on the volume. It's too loud.\n考点：短语",
+  "题目5": "【选词填空】从 volume、value 中选一个，用适当形式填空。\n题干：This old coin has great ______.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这个盒子的体积是多少？\n题干：What's the ______ ______ this box?\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Volume 2\" of a book means the ______ book of the set.\nA. first\nB. last\nC. second\nD. best\n考点：用法",
+  "答案": "【1】D（把音量调小）\n讲解：turn down the volume 调小音量。\n【2】D（volume）\n讲解：调大“音量”用 turn up the volume。\n【3】volumes\n讲解：five 后面用复数 volumes（卷、册）。\n【4】on → down\n讲解：太吵了要调小：turn down。\n【5】value\n讲解：硬币有“价值”用 value。\n【6】volume；of\n讲解：volume 也指“体积”。\n【7】C（second）\n讲解：Volume 2 是第二卷。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让对方做什么？",
+   "listen": "Please turn down the volume. The baby is sleeping.",
+   "opts": [
+    "把音量调小",
+    "把灯关掉",
+    "把门关上",
+    "把电视打开"
+   ],
+   "why": "turn down the volume 调小音量。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you turn up the ______? I can't hear it.",
+   "opts": [
+    "volume",
+    "volunteer",
+    "voice",
+    "value"
+   ],
+   "why": "调大“音量”用 turn up the volume。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "This set of books has five ______. (volume)",
+   "ans": "volumes",
+   "why": "five 后面用复数 volumes（卷、册）。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please turn on the volume. It's too loud.",
+   "ans": "on → down",
+   "why": "太吵了要调小：turn down。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 volume、value 中选一个，用适当形式填空。",
+   "stem": "This old coin has great ______.",
+   "ans": "value",
+   "why": "硬币有“价值”用 value。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个盒子的体积是多少？",
+   "stem": "What's the ______ ______ this box?",
+   "ans": "volume；of",
+   "why": "volume 也指“体积”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Volume 2\" of a book means the ______ book of the set.",
+   "opts": [
+    "second",
+    "first",
+    "last",
+    "best"
+   ],
+   "why": "Volume 2 是第二卷。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

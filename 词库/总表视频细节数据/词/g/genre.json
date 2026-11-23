@@ -1,0 +1,97 @@
+{
+ "单词": "genre",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人喜欢什么类型的音乐？\n听：What genre of music do you like?\nA. 歌手\nB. 音乐类型\nC. 乐器\nD. 歌名",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：What ______ of music do you like?\nA. gender\nB. general\nC. gene\nD. genre\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：This shop sells books of all ______. (genre)\n考点：变形",
+  "题目4": "【选词填空】从 genre、gender 中选一个，用适当形式填空。\n题干：Write your ______ here: male or female.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Science fiction are my favourite genre.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Genre means ______.\nA. 性别\nB. 类型、体裁\nC. 基因\nD. 天才\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which is a film genre?\nA. ticket\nB. cinema\nC. actor\nD. comedy\n考点：用法",
+  "答案": "【1】B（音乐类型）\n讲解：genre 类型。\n【2】D（genre）\n讲解：音乐的“类型”是 genre。\n【3】genres\n讲解：all 后面用复数 genres。\n【4】gender\n讲解：“性别”是 gender。\n【5】are → is\n讲解：主语 science fiction 单数，谓语用 is。\n【6】B（类型、体裁）\n讲解：genre 类型、体裁。\n【7】D（comedy）\n讲解：喜剧是一种电影类型。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人喜欢什么类型的音乐？",
+   "listen": "What genre of music do you like?",
+   "opts": [
+    "音乐类型",
+    "歌手",
+    "乐器",
+    "歌名"
+   ],
+   "why": "genre 类型。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What ______ of music do you like?",
+   "opts": [
+    "genre",
+    "gender",
+    "general",
+    "gene"
+   ],
+   "why": "音乐的“类型”是 genre。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "This shop sells books of all ______. (genre)",
+   "ans": "genres",
+   "why": "all 后面用复数 genres。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 genre、gender 中选一个，用适当形式填空。",
+   "stem": "Write your ______ here: male or female.",
+   "ans": "gender",
+   "why": "“性别”是 gender。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Science fiction are my favourite genre.",
+   "ans": "are → is",
+   "why": "主语 science fiction 单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Genre means ______.",
+   "opts": [
+    "类型、体裁",
+    "性别",
+    "基因",
+    "天才"
+   ],
+   "why": "genre 类型、体裁。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which is a film genre?",
+   "opts": [
+    "comedy",
+    "ticket",
+    "cinema",
+    "actor"
+   ],
+   "why": "喜剧是一种电影类型。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

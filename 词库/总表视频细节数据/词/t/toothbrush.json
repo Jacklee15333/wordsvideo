@@ -1,0 +1,93 @@
+{
+ "单词": "toothbrush",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人忘带什么了？\n听：I forgot to bring my toothbrush.\nA. 牙刷\nB. 毛巾\nC. 梳子\nD. 拖鞋",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You should change your ______ every three months.\nA. toothbrush\nB. toothbrushes\nC. toothpaste\nD. tooth",
+  "题目3": "【选词填空】从 toothbrush、toothpaste 中选一个，用适当形式填空。\n题干：Put some ______ on your toothbrush.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are four ______ in the cup. (toothbrush)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I bought two new toothbrushs.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Brush your ______ with a toothbrush.\nA. tooth\nB. teeth\nC. tooths\nD. teeths\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我需要一管牙膏。\n题干：I need a ______ of toothpaste.\n考点：用法",
+  "答案": "【1】A（牙刷）\n讲解：toothbrush 牙刷。\n【2】A（toothbrush）\n讲解：your 后接单数 toothbrush。\n【3】toothpaste\n讲解：挤在牙刷上的是牙膏 toothpaste。\n【4】toothbrushes\n讲解：sh 结尾，复数加 es。\n【5】toothbrushs → toothbrushes\n讲解：sh 结尾加 es。\n【6】B（teeth）\n讲解：刷牙 brush your teeth。\n【7】tube\n讲解：一管牙膏 a tube of toothpaste。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人忘带什么了？",
+   "listen": "I forgot to bring my toothbrush.",
+   "opts": [
+    "牙刷",
+    "毛巾",
+    "梳子",
+    "拖鞋"
+   ],
+   "why": "toothbrush 牙刷。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You should change your ______ every three months.",
+   "opts": [
+    "toothbrush",
+    "toothbrushes",
+    "toothpaste",
+    "tooth"
+   ],
+   "why": "your 后接单数 toothbrush。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 toothbrush、toothpaste 中选一个，用适当形式填空。",
+   "stem": "Put some ______ on your toothbrush.",
+   "ans": "toothpaste",
+   "why": "挤在牙刷上的是牙膏 toothpaste。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are four ______ in the cup. (toothbrush)",
+   "ans": "toothbrushes",
+   "why": "sh 结尾，复数加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I bought two new toothbrushs.",
+   "ans": "toothbrushs → toothbrushes",
+   "why": "sh 结尾加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Brush your ______ with a toothbrush.",
+   "opts": [
+    "teeth",
+    "tooth",
+    "tooths",
+    "teeths"
+   ],
+   "why": "刷牙 brush your teeth。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我需要一管牙膏。",
+   "stem": "I need a ______ of toothpaste.",
+   "ans": "tube",
+   "why": "一管牙膏 a tube of toothpaste。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

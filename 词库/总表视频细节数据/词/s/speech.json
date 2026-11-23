@@ -1,0 +1,97 @@
+{
+ "单词": "speech",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人明天要做什么？\n听：I'm going to give a speech tomorrow.\nA. 唱歌\nB. 发表演讲\nC. 跳舞\nD. 考试",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The headmaster gave a ______ at the meeting.\nA. speak\nB. speech\nC. spoken\nD. speaker\n考点：词性转换",
+  "题目3": "【选词填空】从 speech、speak 中选一个，用适当形式填空。\n题干：Can you ______ louder?\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We listened to three ______. (speech)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She gave a short speech in front the class.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A speech is usually more ______ than a talk.\nA. short\nB. funny\nC. quiet\nD. formal\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The speech ______ by the headmaster yesterday.\nA. was given\nB. gave\nC. gives\nD. is giving\n考点：用法",
+  "答案": "【1】B（发表演讲）\n讲解：give a speech 发表演讲。\n【2】B（speech）\n讲解：a 后面要名词 speech（讲话）。\n【3】speak\n讲解：can 后面用动词原形 speak。\n【4】speeches\n讲解：ch 结尾，复数加 es。\n【5】in front → in front of\n讲解：在……前面是 in front of。\n【6】D（formal）\n讲解：speech 比 talk 正式。\n【7】A（was given）\n讲解：讲话是被发表的，yesterday 用 was given。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人明天要做什么？",
+   "listen": "I'm going to give a speech tomorrow.",
+   "opts": [
+    "发表演讲",
+    "唱歌",
+    "跳舞",
+    "考试"
+   ],
+   "why": "give a speech 发表演讲。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The headmaster gave a ______ at the meeting.",
+   "opts": [
+    "speech",
+    "speak",
+    "spoken",
+    "speaker"
+   ],
+   "why": "a 后面要名词 speech（讲话）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 speech、speak 中选一个，用适当形式填空。",
+   "stem": "Can you ______ louder?",
+   "ans": "speak",
+   "why": "can 后面用动词原形 speak。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We listened to three ______. (speech)",
+   "ans": "speeches",
+   "why": "ch 结尾，复数加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She gave a short speech in front the class.",
+   "ans": "in front → in front of",
+   "why": "在……前面是 in front of。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A speech is usually more ______ than a talk.",
+   "opts": [
+    "formal",
+    "short",
+    "funny",
+    "quiet"
+   ],
+   "why": "speech 比 talk 正式。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The speech ______ by the headmaster yesterday.",
+   "opts": [
+    "was given",
+    "gave",
+    "gives",
+    "is giving"
+   ],
+   "why": "讲话是被发表的，yesterday 用 was given。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

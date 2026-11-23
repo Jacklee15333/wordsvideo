@@ -1,0 +1,94 @@
+{
+ "单词": "draw",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人喜欢做什么？\n听：I like to draw pictures of animals.\nA. 看动物\nB. 养动物\nC. 画动物\nD. 拍动物",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He ______ a beautiful horse yesterday.\nA. draws\nB. drew\nC. drawed\nD. drawn",
+  "题目3": "【选词填空】从 draw、paint 中选一个，用适当形式填空。\n题干：She likes to ______ with oil colours.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Have you drew the map yet?",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这孩子正在用铅笔画画。\n题干：The child is ______ a picture with a pencil.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The match ended in a ______: 2–2.\nA. draw\nB. drew\nC. drawn\nD. drawing\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Draw\" can also mean \"______\", as in \"The horse draws a cart.\"\nA. push\nB. cut\nC. carry\nD. pull\n考点：用法",
+  "答案": "【1】C（画动物）\n讲解：draw pictures 画画。\n【2】B（drew）\n讲解：draw 的过去式不规则：drew。\n【3】paint\n讲解：用颜料画用 paint，用线条画用 draw。\n【4】drew → drawn\n讲解：现在完成时用过去分词 drawn。\n【5】drawing\n讲解：is + 现在分词；用铅笔画用 draw。\n【6】A（draw）\n讲解：平局是名词 draw。\n【7】D（pull）\n讲解：draw 也有“拉”的意思。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人喜欢做什么？",
+   "listen": "I like to draw pictures of animals.",
+   "opts": [
+    "画动物",
+    "看动物",
+    "养动物",
+    "拍动物"
+   ],
+   "why": "draw pictures 画画。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He ______ a beautiful horse yesterday.",
+   "opts": [
+    "drew",
+    "draws",
+    "drawed",
+    "drawn"
+   ],
+   "why": "draw 的过去式不规则：drew。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 draw、paint 中选一个，用适当形式填空。",
+   "stem": "She likes to ______ with oil colours.",
+   "ans": "paint",
+   "why": "用颜料画用 paint，用线条画用 draw。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Have you drew the map yet?",
+   "ans": "drew → drawn",
+   "why": "现在完成时用过去分词 drawn。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这孩子正在用铅笔画画。",
+   "stem": "The child is ______ a picture with a pencil.",
+   "ans": "drawing",
+   "why": "is + 现在分词；用铅笔画用 draw。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The match ended in a ______: 2–2.",
+   "opts": [
+    "draw",
+    "drew",
+    "drawn",
+    "drawing"
+   ],
+   "why": "平局是名词 draw。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Draw\" can also mean \"______\", as in \"The horse draws a cart.\"",
+   "opts": [
+    "pull",
+    "push",
+    "cut",
+    "carry"
+   ],
+   "why": "draw 也有“拉”的意思。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

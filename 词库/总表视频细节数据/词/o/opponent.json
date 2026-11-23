@@ -1,0 +1,94 @@
+{
+ "单词": "opponent",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：决赛的对手怎么样？\n听：My opponent in the final was very strong.\nA. 很弱\nB. 生病了\nC. 没来\nD. 很强",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She beat her ______ easily in the match.\nA. opponent\nB. opposite\nC. opposition\nD. oppose",
+  "题目3": "【选词填空】从 opponent、enemy 中选一个，用适当形式填空。\n题干：The two countries were ______ in the war.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Our team beat all its opponent.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：很多人反对这个计划。\n题干：Many people ______ the plan.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Opponent\" is close in meaning to \"______\".\nA. partner\nB. teammate\nC. friend\nD. rival\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：An opponent is someone you play ______ in a game.\nA. with\nB. for\nC. at\nD. against\n考点：用法",
+  "答案": "【1】D（很强）\n讲解：opponent 对手。\n【2】A（opponent）\n讲解：指人“对手”用 opponent。\n【3】enemies\n讲解：战争中的敌人是 enemy，用复数。\n【4】opponent → opponents\n讲解：all 后面用复数。\n【5】oppose\n讲解：动词“反对”是 oppose。\n【6】D（rival）\n讲解：对手 rival。\n【7】D（against）\n讲解：play against 和……对抗。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：决赛的对手怎么样？",
+   "listen": "My opponent in the final was very strong.",
+   "opts": [
+    "很强",
+    "很弱",
+    "生病了",
+    "没来"
+   ],
+   "why": "opponent 对手。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She beat her ______ easily in the match.",
+   "opts": [
+    "opponent",
+    "opposite",
+    "opposition",
+    "oppose"
+   ],
+   "why": "指人“对手”用 opponent。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 opponent、enemy 中选一个，用适当形式填空。",
+   "stem": "The two countries were ______ in the war.",
+   "ans": "enemies",
+   "why": "战争中的敌人是 enemy，用复数。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Our team beat all its opponent.",
+   "ans": "opponent → opponents",
+   "why": "all 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "很多人反对这个计划。",
+   "stem": "Many people ______ the plan.",
+   "ans": "oppose",
+   "why": "动词“反对”是 oppose。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Opponent\" is close in meaning to \"______\".",
+   "opts": [
+    "rival",
+    "partner",
+    "teammate",
+    "friend"
+   ],
+   "why": "对手 rival。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An opponent is someone you play ______ in a game.",
+   "opts": [
+    "against",
+    "with",
+    "for",
+    "at"
+   ],
+   "why": "play against 和……对抗。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

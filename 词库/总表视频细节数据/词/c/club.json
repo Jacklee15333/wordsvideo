@@ -1,0 +1,96 @@
+{
+ "单词": "club",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人去年参加了什么？\n听：I joined the chess club last year.\nA. 象棋俱乐部\nB. 足球俱乐部\nC. 英语俱乐部\nD. 音乐俱乐部",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Would you like to join our English ______?\nA. clubs\nB. cub\nC. clue\nD. club",
+  "题目3": "【选词填空】从 club、team 中选一个，用适当形式填空。\n题干：There are eleven players on a football ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many ______ at our school. (club)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Tom join the music club last term.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In playing cards, \"clubs\" is called ______ in Chinese.\nA. 黑桃\nB. 红心\nC. 梅花\nD. 方块\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The Chinese Football ______ is the national football organization.\nA. Club\nB. Association\nC. Team\nD. Class\n考点：易混",
+  "答案": "【1】A（象棋俱乐部）\n讲解：chess club 象棋俱乐部。\n【2】D（club）\n讲解：join our … 后面用单数 club。\n【3】team\n讲解：场上踢球的是队 team。\n【4】clubs\n讲解：many 后面用复数 clubs。\n【5】join → joined\n讲解：last term 用过去式 joined。\n【6】C（梅花）\n讲解：扑克牌的 clubs 中文叫“梅花”。\n【7】B（Association）\n讲解：全国性的协会、社团用 association。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人去年参加了什么？",
+   "listen": "I joined the chess club last year.",
+   "opts": [
+    "象棋俱乐部",
+    "足球俱乐部",
+    "英语俱乐部",
+    "音乐俱乐部"
+   ],
+   "why": "chess club 象棋俱乐部。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Would you like to join our English ______?",
+   "opts": [
+    "club",
+    "clubs",
+    "cub",
+    "clue"
+   ],
+   "why": "join our … 后面用单数 club。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 club、team 中选一个，用适当形式填空。",
+   "stem": "There are eleven players on a football ______.",
+   "ans": "team",
+   "why": "场上踢球的是队 team。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many ______ at our school. (club)",
+   "ans": "clubs",
+   "why": "many 后面用复数 clubs。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Tom join the music club last term.",
+   "ans": "join → joined",
+   "why": "last term 用过去式 joined。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In playing cards, \"clubs\" is called ______ in Chinese.",
+   "opts": [
+    "梅花",
+    "黑桃",
+    "红心",
+    "方块"
+   ],
+   "why": "扑克牌的 clubs 中文叫“梅花”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The Chinese Football ______ is the national football organization.",
+   "opts": [
+    "Association",
+    "Club",
+    "Team",
+    "Class"
+   ],
+   "why": "全国性的协会、社团用 association。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

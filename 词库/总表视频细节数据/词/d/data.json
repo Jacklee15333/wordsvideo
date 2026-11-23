@@ -1,0 +1,98 @@
+{
+ "单词": "data",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：科学家收集了什么？\n听：The scientist collected a lot of data.\nA. 很多石头\nB. 很多花\nC. 很多数据\nD. 很多书",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The scientist collected a lot of ______.\nA. datas\nB. data\nC. date\nD. dates\n考点：变形",
+  "题目3": "【选词填空】从 data、information 中选一个，用适当形式填空。\n题干：Can you give me some ______ about the hotel?\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：We need many data.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：数据存放在数据库里。\n题干：The data is kept in a ______.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Data means ______.\nA. 数据、资料\nB. 日期\nC. 约会\nD. 数据库\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Data is used with ______.\nA. many\nB. a\nC. an\nD. much, not many\n考点：变形",
+  "答案": "【1】C（很多数据）\n讲解：data 数据。\n【2】B（data）\n讲解：“数据”用 data，不加 s。\n【3】information\n讲解：整理过、有用的“信息”用 information。\n【4】many → much\n讲解：data 不可数，用 much。\n【5】database\n讲解：“数据库”是 database。\n【6】A（数据、资料）\n讲解：data 数据、资料。\n【7】D（much, not many）\n讲解：data 不可数，用 much。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：科学家收集了什么？",
+   "listen": "The scientist collected a lot of data.",
+   "opts": [
+    "很多数据",
+    "很多石头",
+    "很多花",
+    "很多书"
+   ],
+   "why": "data 数据。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The scientist collected a lot of ______.",
+   "opts": [
+    "data",
+    "datas",
+    "date",
+    "dates"
+   ],
+   "why": "“数据”用 data，不加 s。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 data、information 中选一个，用适当形式填空。",
+   "stem": "Can you give me some ______ about the hotel?",
+   "ans": "information",
+   "why": "整理过、有用的“信息”用 information。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We need many data.",
+   "ans": "many → much",
+   "why": "data 不可数，用 much。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "数据存放在数据库里。",
+   "stem": "The data is kept in a ______.",
+   "ans": "database",
+   "why": "“数据库”是 database。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Data means ______.",
+   "opts": [
+    "数据、资料",
+    "日期",
+    "约会",
+    "数据库"
+   ],
+   "why": "data 数据、资料。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Data is used with ______.",
+   "opts": [
+    "much, not many",
+    "many",
+    "a",
+    "an"
+   ],
+   "why": "data 不可数，用 much。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

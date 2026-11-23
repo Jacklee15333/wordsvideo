@@ -1,0 +1,95 @@
+{
+ "单词": "linen",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这件衬衫是什么做的？\n听：This shirt is made of linen.\nA. 棉布\nB. 亚麻布\nC. 丝绸\nD. 皮革",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This tablecloth is made of ______.\nA. line\nB. lining\nC. lion\nD. linen",
+  "题目3": "【选词填空】从 linen、cotton 中选一个，用适当形式填空。\n题干：Most T-shirts are made of soft ______.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The linen shirt were expensive.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这件衬衫是亚麻做的。\n题干：This shirt is made ______ linen.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Bed linen\" means sheets and ______ covers.\nA. book\nB. pillow\nC. car\nD. door\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Linen is made from a ______ called flax.\nA. animal\nB. stone\nC. metal\nD. plant\n考点：用法",
+  "答案": "【1】B（亚麻布）\n讲解：linen 亚麻布。\n【2】D（linen）\n讲解：桌布是“亚麻布” linen 做的。\n【3】cotton\n讲解：大多数 T 恤是棉的 cotton。\n【4】were → was\n讲解：主语 shirt 是单数，用 was。\n【5】of\n讲解：be made of 看得出原材料。\n【6】B（pillow）\n讲解：bed linen 指床单、枕套等布类用品。\n【7】D（plant）\n讲解：亚麻布是用亚麻这种植物做的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这件衬衫是什么做的？",
+   "listen": "This shirt is made of linen.",
+   "opts": [
+    "亚麻布",
+    "棉布",
+    "丝绸",
+    "皮革"
+   ],
+   "why": "linen 亚麻布。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This tablecloth is made of ______.",
+   "opts": [
+    "linen",
+    "line",
+    "lining",
+    "lion"
+   ],
+   "why": "桌布是“亚麻布” linen 做的。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 linen、cotton 中选一个，用适当形式填空。",
+   "stem": "Most T-shirts are made of soft ______.",
+   "ans": "cotton",
+   "why": "大多数 T 恤是棉的 cotton。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The linen shirt were expensive.",
+   "ans": "were → was",
+   "why": "主语 shirt 是单数，用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这件衬衫是亚麻做的。",
+   "stem": "This shirt is made ______ linen.",
+   "ans": "of",
+   "why": "be made of 看得出原材料。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Bed linen\" means sheets and ______ covers.",
+   "opts": [
+    "pillow",
+    "book",
+    "car",
+    "door"
+   ],
+   "why": "bed linen 指床单、枕套等布类用品。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Linen is made from a ______ called flax.",
+   "opts": [
+    "plant",
+    "animal",
+    "stone",
+    "metal"
+   ],
+   "why": "亚麻布是用亚麻这种植物做的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

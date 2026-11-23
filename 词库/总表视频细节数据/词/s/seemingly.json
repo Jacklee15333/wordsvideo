@@ -1,0 +1,90 @@
+{
+ "单词": "seemingly",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说这道题怎么样？\n听：This seemingly simple problem took me an hour.\nA. 很简单很快做完了\nB. 太难了没做出来\nC. 看似简单却花了一小时\nD. 没时间做",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ endless rain finally stopped.\nA. seeming\nB. seem\nC. seemingly\nD. seemed\n考点：词性转换",
+  "题目3": "【选词填空】从 seeming、seemingly 中选一个，用适当形式填空。\n题干：His ______ smile hid his sadness.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The man ______ to be lost, so I helped him. (seemingly)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The test was seemingly easy, so many students failed it.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这只小狗看似睡着了，其实一直在听。\n题干：The puppy was seemingly ______, but it was listening.\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：看起来没人知道答案。\n题干：It ______ that nobody knows the answer.\n考点：词性转换",
+  "答案": "【1】C（看似简单却花了一小时）\n讲解：seemingly simple 看似简单。\n【2】C（seemingly）\n讲解：修饰形容词 endless 要用副词 seemingly（似乎、看似）。\n【3】seeming\n讲解：名词 smile 前要形容词 seeming（表面上的）。\n【4】seemed\n讲解：这里要谓语动词，说过去用 seemed。\n【5】so → but\n讲解：看似容易却很多人不及格，是转折，用 but。\n【6】asleep\n讲解：was 后面接表语形容词 asleep；seemingly 暗示“其实不然”。\n【7】seems\n讲解：It seems that… 看起来……，主语 it 用三单 seems。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说这道题怎么样？",
+   "listen": "This seemingly simple problem took me an hour.",
+   "opts": [
+    "看似简单却花了一小时",
+    "很简单很快做完了",
+    "太难了没做出来",
+    "没时间做"
+   ],
+   "why": "seemingly simple 看似简单。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ endless rain finally stopped.",
+   "opts": [
+    "seemingly",
+    "seeming",
+    "seem",
+    "seemed"
+   ],
+   "why": "修饰形容词 endless 要用副词 seemingly（似乎、看似）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 seeming、seemingly 中选一个，用适当形式填空。",
+   "stem": "His ______ smile hid his sadness.",
+   "ans": "seeming",
+   "why": "名词 smile 前要形容词 seeming（表面上的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The man ______ to be lost, so I helped him. (seemingly)",
+   "ans": "seemed",
+   "why": "这里要谓语动词，说过去用 seemed。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The test was seemingly easy, so many students failed it.",
+   "ans": "so → but",
+   "why": "看似容易却很多人不及格，是转折，用 but。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这只小狗看似睡着了，其实一直在听。",
+   "stem": "The puppy was seemingly ______, but it was listening.",
+   "ans": "asleep",
+   "why": "was 后面接表语形容词 asleep；seemingly 暗示“其实不然”。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "看起来没人知道答案。",
+   "stem": "It ______ that nobody knows the answer.",
+   "ans": "seems",
+   "why": "It seems that… 看起来……，主语 it 用三单 seems。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

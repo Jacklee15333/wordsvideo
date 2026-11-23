@@ -1,0 +1,93 @@
+{
+ "单词": "gate",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在哪里等？\n听：I'll wait for you at the school gate.\nA. 教室里\nB. 公交站\nC. 学校门口\nD. 操场上",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please close the ______ of the garden.\nA. door\nB. gate\nC. window\nD. wall\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The city wall has four ______. (gate)\n考点：变形",
+  "题目4": "【选词填空】从 gate、door 中选一个，用适当形式填空。\n题干：Knock on the ______ before you enter the room.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Let's meet in the gate at 3 pm.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：飞机从 5 号登机口登机。\n题干：The plane boards ______ ______ 5.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There are three ______ at the airport for this flight.\nA. gate\nB. gating\nC. gated\nD. gates\n考点：变形",
+  "答案": "【1】C（学校门口）\n讲解：school gate 校门口。\n【2】B（gate）\n讲解：花园围墙上的门用 gate。\n【3】gates\n讲解：four 后接复数。\n【4】door\n讲解：房间的门用 door。\n【5】in → at\n讲解：在门口用 at the gate。\n【6】at；Gate\n讲解：在登机口用 at Gate 5。\n【7】D（gates）\n讲解：three 后接复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在哪里等？",
+   "listen": "I'll wait for you at the school gate.",
+   "opts": [
+    "学校门口",
+    "教室里",
+    "公交站",
+    "操场上"
+   ],
+   "why": "school gate 校门口。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please close the ______ of the garden.",
+   "opts": [
+    "gate",
+    "door",
+    "window",
+    "wall"
+   ],
+   "why": "花园围墙上的门用 gate。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The city wall has four ______. (gate)",
+   "ans": "gates",
+   "why": "four 后接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 gate、door 中选一个，用适当形式填空。",
+   "stem": "Knock on the ______ before you enter the room.",
+   "ans": "door",
+   "why": "房间的门用 door。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Let's meet in the gate at 3 pm.",
+   "ans": "in → at",
+   "why": "在门口用 at the gate。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "飞机从 5 号登机口登机。",
+   "stem": "The plane boards ______ ______ 5.",
+   "ans": "at；Gate",
+   "why": "在登机口用 at Gate 5。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are three ______ at the airport for this flight.",
+   "opts": [
+    "gates",
+    "gate",
+    "gating",
+    "gated"
+   ],
+   "why": "three 后接复数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

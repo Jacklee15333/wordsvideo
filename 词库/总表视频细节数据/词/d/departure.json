@@ -1,0 +1,92 @@
+{
+ "单词": "departure",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在问什么？\n听：What is the departure time of the flight?\nA. 航班起飞时间\nB. 航班号\nC. 登机口\nD. 票价",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please check the ______ time on your ticket.\nA. departure\nB. depart\nC. department\nD. departed",
+  "题目3": "【选词填空】从 departure、depart 中选一个，用适当形式填空。\n题干：The flight will ______ at six o'clock.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are ten ______ from this airport every hour. (departure)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Our departure were delayed by the snow.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：请在出发前一小时到达。\n题干：Please arrive an hour ______ departure.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：What's the opposite of departure?\nA. arrival\nB. leaving\nC. start\nD. trip\n考点：易混",
+  "答案": "【1】A（航班起飞时间）\n讲解：departure time 出发时间。\n【2】A（departure）\n讲解：“出发时间”是 departure time，用名词 departure。\n【3】depart\n讲解：will 后面接动词原形 depart。\n【4】departures\n讲解：ten 后面用复数 departures。\n【5】were → was\n讲解：主语 departure 是单数，谓语用 was。\n【6】before\n讲解：before departure 出发前。\n【7】A（arrival）\n讲解：departure 离开、出发，反义词是 arrival 到达。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在问什么？",
+   "listen": "What is the departure time of the flight?",
+   "opts": [
+    "航班起飞时间",
+    "航班号",
+    "登机口",
+    "票价"
+   ],
+   "why": "departure time 出发时间。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please check the ______ time on your ticket.",
+   "opts": [
+    "departure",
+    "depart",
+    "department",
+    "departed"
+   ],
+   "why": "“出发时间”是 departure time，用名词 departure。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 departure、depart 中选一个，用适当形式填空。",
+   "stem": "The flight will ______ at six o'clock.",
+   "ans": "depart",
+   "why": "will 后面接动词原形 depart。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are ten ______ from this airport every hour. (departure)",
+   "ans": "departures",
+   "why": "ten 后面用复数 departures。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Our departure were delayed by the snow.",
+   "ans": "were → was",
+   "why": "主语 departure 是单数，谓语用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请在出发前一小时到达。",
+   "stem": "Please arrive an hour ______ departure.",
+   "ans": "before",
+   "why": "before departure 出发前。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What's the opposite of departure?",
+   "opts": [
+    "arrival",
+    "leaving",
+    "start",
+    "trip"
+   ],
+   "why": "departure 离开、出发，反义词是 arrival 到达。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

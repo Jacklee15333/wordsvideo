@@ -1,0 +1,92 @@
+{
+ "单词": "coder",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的哥哥是做什么的？\n听：My brother is a coder.\nA. 写代码的\nB. 医生\nC. 厨师\nD. 老师",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He is a young ______ at a big company.\nA. code\nB. coding\nC. coded\nD. coder",
+  "题目3": "【选词填空】从 coder、code 中选一个，用适当形式填空。\n题干：Enter the ______ to unlock the phone.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The company has fifty ______. (coder)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The coders works late every day.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Software ______\" is a more formal name than \"coder\".\nA. engineer\nB. engine\nC. engineering\nD. engines\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：她每天写代码。\n题干：She does ______ every day.\n考点：词性转换",
+  "答案": "【1】A（写代码的）\n讲解：coder 编码员。\n【2】D（coder）\n讲解：a young 后接人称名词 coder。\n【3】code\n讲解：解锁的密码是 code。\n【4】coders\n讲解：fifty 后接复数 coders。\n【5】works → work\n讲解：主语复数，用 work。\n【6】A（engineer）\n讲解：software engineer 更正式。\n【7】coding\n讲解：写代码 coding。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的哥哥是做什么的？",
+   "listen": "My brother is a coder.",
+   "opts": [
+    "写代码的",
+    "医生",
+    "厨师",
+    "老师"
+   ],
+   "why": "coder 编码员。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He is a young ______ at a big company.",
+   "opts": [
+    "coder",
+    "code",
+    "coding",
+    "coded"
+   ],
+   "why": "a young 后接人称名词 coder。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 coder、code 中选一个，用适当形式填空。",
+   "stem": "Enter the ______ to unlock the phone.",
+   "ans": "code",
+   "why": "解锁的密码是 code。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The company has fifty ______. (coder)",
+   "ans": "coders",
+   "why": "fifty 后接复数 coders。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The coders works late every day.",
+   "ans": "works → work",
+   "why": "主语复数，用 work。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Software ______\" is a more formal name than \"coder\".",
+   "opts": [
+    "engineer",
+    "engine",
+    "engineering",
+    "engines"
+   ],
+   "why": "software engineer 更正式。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她每天写代码。",
+   "stem": "She does ______ every day.",
+   "ans": "coding",
+   "why": "写代码 coding。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

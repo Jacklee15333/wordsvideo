@@ -1,0 +1,1657 @@
+{
+ "style": "core",
+ "board": true,
+ "pics": [
+  {
+   "text": "演讲人、发言人",
+   "pos": "名词",
+   "diff": "站在台上对着大家讲话的人",
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "beam": true,
+     "x": 0.28,
+     "y": -0.02,
+     "len": 0.95,
+     "width": 15,
+     "swing": 7,
+     "period": 5.5,
+     "tilt": -6,
+     "z": -0.5
+    },
+    {
+     "beam": true,
+     "x": 0.72,
+     "y": -0.02,
+     "len": 0.95,
+     "width": 15,
+     "swing": 7,
+     "period": 6.5,
+     "tilt": 6,
+     "z": -0.5
+    },
+    {
+     "svg": "art/banner-speech.svg",
+     "x": 0.5,
+     "y": 0.115,
+     "s": 0.12,
+     "z": -1
+    },
+    {
+     "svg": "art/west-man-present_m00.svg",
+     "frames": [
+      "art/west-man-present_m00.svg",
+      "art/west-man-present_m01.svg",
+      "art/west-man-present_m02.svg",
+      "art/west-man-present_m03.svg",
+      "art/west-man-present_m04.svg",
+      "art/west-man-present_m05.svg",
+      "art/west-man-present_m06.svg",
+      "art/west-man-present_m07.svg",
+      "art/west-man-present_m08.svg",
+      "art/west-man-present_m09.svg",
+      "art/west-man-present_m10.svg",
+      "art/west-man-present_m11.svg"
+     ],
+     "seq": "talk",
+     "mouths": 3,
+     "gfps": 2.6,
+     "mfps": 8,
+     "id": "man",
+     "x": 0.42,
+     "y": 0.5494617647058824,
+     "s": 0.8609999999999999,
+     "delay": 0.0,
+     "z": 0
+    },
+    {
+     "id": "pod",
+     "svg": "art/podium.svg",
+     "x": 0.42,
+     "y": 0.79,
+     "s": 0.41999999999999993,
+     "delay": 0.0,
+     "z": 1
+    },
+    {
+     "id": "mic",
+     "svg": "art/mic.svg",
+     "x": 0.5048163730871994,
+     "y": 0.49511767774936066,
+     "s": 0.2998799999999999,
+     "delay": 0.0,
+     "z": 2
+    },
+    {
+     "waves": true,
+     "x": 0.5326599485061938,
+     "y": 0.41951767774936066,
+     "dir": -20,
+     "spread": 70,
+     "n": 3,
+     "period": 1.25,
+     "r0": 0.03,
+     "r1": 0.22,
+     "lw": 0.011,
+     "color": "#F59E0B",
+     "with": "man",
+     "z": 3,
+     "delay": 0.5
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.95,
+     "s": 0.36,
+     "z": 5,
+     "crowd": 9,
+     "nodWith": "man"
+    }
+   ],
+   "ex": "The speaker talked about saving water.",
+   "exzh": "演讲人讲了节约用水。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "beam": true,
+      "x": 0.22,
+      "y": -0.02,
+      "len": 0.95,
+      "width": 15,
+      "swing": 7,
+      "period": 5.5,
+      "tilt": -6,
+      "z": -0.5
+     },
+     {
+      "beam": true,
+      "x": 0.5,
+      "y": -0.02,
+      "len": 0.95,
+      "width": 15,
+      "swing": 7,
+      "period": 6.5,
+      "tilt": 6,
+      "z": -0.5
+     },
+     {
+      "svg": "art/banner-speech.svg",
+      "x": 0.33,
+      "y": 0.095,
+      "s": 0.155,
+      "z": -1
+     },
+     {
+      "svg": "art/west-man-point_m00.svg",
+      "frames": [
+       "art/west-man-point_m00.svg",
+       "art/west-man-point_m01.svg",
+       "art/west-man-point_m02.svg",
+       "art/west-man-point_m03.svg",
+       "art/west-man-point_m04.svg",
+       "art/west-man-point_m05.svg",
+       "art/west-man-point_m06.svg",
+       "art/west-man-point_m07.svg",
+       "art/west-man-point_m08.svg",
+       "art/west-man-point_m09.svg",
+       "art/west-man-point_m10.svg",
+       "art/west-man-point_m11.svg"
+      ],
+      "seq": "talk",
+      "mouths": 3,
+      "gfps": 2.6,
+      "mfps": 8,
+      "id": "man",
+      "x": 0.33,
+      "y": 0.54800756302521,
+      "s": 0.902,
+      "delay": 0.0,
+      "z": 0
+     },
+     {
+      "id": "pod",
+      "svg": "art/podium.svg",
+      "x": 0.33,
+      "y": 0.7999999999999999,
+      "s": 0.44,
+      "delay": 0.0,
+      "z": 1
+     },
+     {
+      "id": "mic",
+      "svg": "art/mic.svg",
+      "x": 0.3816979229813665,
+      "y": 0.491075662404092,
+      "s": 0.31416,
+      "delay": 0.0,
+      "z": 2
+     },
+     {
+      "waves": true,
+      "x": 0.39866935155279504,
+      "y": 0.411875662404092,
+      "dir": -20,
+      "spread": 70,
+      "n": 3,
+      "period": 1.25,
+      "r0": 0.03,
+      "r1": 0.22,
+      "lw": 0.011,
+      "color": "#F59E0B",
+      "with": "man",
+      "z": 3,
+      "when": "talked",
+      "cue": 0
+     },
+     {
+      "id": "scr",
+      "svg": "art/screen-water.svg",
+      "x": 0.7,
+      "y": 0.4,
+      "s": 0.6,
+      "delay": 0.2,
+      "z": 0
+     },
+     {
+      "svg": "art/drop.svg",
+      "on": "scr",
+      "x": 327,
+      "y": 200,
+      "s": 0.09,
+      "go": [
+       327,
+       300
+      ],
+      "dur": 0.9,
+      "loop": true,
+      "when": "saving water",
+      "cue": 0,
+      "fade": 0.2,
+      "z": 2
+     },
+     {
+      "label": "节约用水",
+      "on": "scr",
+      "x": 150,
+      "y": 260,
+      "size": 0.085,
+      "when": "节约用水",
+      "cue": 1,
+      "color": "#1A66B8",
+      "border": "#2F95E6"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.32,
+      "z": 5,
+      "crowd": 9,
+      "nodWith": "man"
+     }
+    ]
+   }
+  },
+  {
+   "text": "扬声器、音箱",
+   "pos": "名词",
+   "diff": "会发出声音的机器",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "beat": 100,
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.79,
+     "s": 0.46,
+     "z": 0
+    },
+    {
+     "id": "mon",
+     "svg": "art/computer-music.svg",
+     "x": 0.5,
+     "y": 0.42986666666666673,
+     "s": 0.4,
+     "z": 1
+    },
+    {
+     "eq": true,
+     "on": "mon",
+     "x": 282,
+     "y": 138,
+     "w": 0.11049037864680324,
+     "h": 0.08,
+     "n": 7,
+     "z": 1.5
+    },
+    {
+     "id": "spL",
+     "svg": "art/speaker.svg",
+     "x": 0.22999999999999998,
+     "y": 0.3898666666666668,
+     "s": 0.44,
+     "z": 2,
+     "anim": "thump"
+    },
+    {
+     "id": "spR",
+     "svg": "art/speaker.svg",
+     "x": 0.77,
+     "y": 0.3898666666666668,
+     "s": 0.44,
+     "z": 2,
+     "anim": "thump"
+    },
+    {
+     "svg": "art/plant.svg",
+     "x": 0.06,
+     "y": 0.46986666666666677,
+     "s": 0.28,
+     "z": 1
+    },
+    {
+     "svg": "art/mug.svg",
+     "x": 0.925,
+     "y": 0.5518666666666667,
+     "s": 0.12,
+     "z": 2
+    },
+    {
+     "waves": true,
+     "on": "spL",
+     "x": 128,
+     "y": 258,
+     "dir": 180,
+     "spread": 78,
+     "n": 3,
+     "period": 1.2,
+     "r0": 0.15839999999999999,
+     "r1": 0.3284,
+     "lw": 0.012,
+     "color": "#2FB5A9",
+     "z": 3,
+     "delay": 0.4
+    },
+    {
+     "emit": true,
+     "svg": "art/note.svg",
+     "alt": [
+      "art/note2.svg"
+     ],
+     "on": "spL",
+     "x": 68,
+     "y": 70,
+     "s": 0.15,
+     "to": [
+      -0.1,
+      -0.26
+     ],
+     "life": 2.2,
+     "every": 1.2,
+     "offset": 0.0,
+     "z": 4,
+     "delay": 0.4
+    },
+    {
+     "waves": true,
+     "on": "spR",
+     "x": 128,
+     "y": 258,
+     "dir": 0,
+     "spread": 78,
+     "n": 3,
+     "period": 1.2,
+     "r0": 0.15839999999999999,
+     "r1": 0.3284,
+     "lw": 0.012,
+     "color": "#2FB5A9",
+     "z": 3,
+     "delay": 0.4
+    },
+    {
+     "emit": true,
+     "svg": "art/note.svg",
+     "alt": [
+      "art/note2.svg"
+     ],
+     "on": "spR",
+     "x": 188,
+     "y": 70,
+     "s": 0.15,
+     "to": [
+      0.1,
+      -0.26
+     ],
+     "life": 2.2,
+     "every": 1.2,
+     "offset": 0.6,
+     "z": 4,
+     "delay": 0.4
+    }
+   ],
+   "ex": "The music comes out of the speaker.",
+   "exzh": "音乐从音箱里传出来。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "beat": 100,
+    "items": [
+     {
+      "svg": "art/west-girl-music_m00.svg",
+      "frames": [
+       "art/west-girl-music_m00.svg",
+       "art/west-girl-music_m01.svg",
+       "art/west-girl-music_m02.svg",
+       "art/west-girl-music_m03.svg"
+      ],
+      "seq": "loop",
+      "fps": 3.333,
+      "id": "girl",
+      "x": 0.25,
+      "y": 0.345,
+      "s": 0.7,
+      "z": -1
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.745,
+      "s": 0.55,
+      "z": 0
+     },
+     {
+      "id": "mon",
+      "svg": "art/computer-music.svg",
+      "x": 0.58,
+      "y": 0.3391666666666666,
+      "s": 0.42,
+      "z": 1
+     },
+     {
+      "eq": true,
+      "on": "mon",
+      "x": 282,
+      "y": 138,
+      "w": 0.06749999999999999,
+      "h": 0.08399999999999999,
+      "n": 7,
+      "z": 1.5
+     },
+     {
+      "id": "spL",
+      "svg": "art/speaker.svg",
+      "x": 0.45,
+      "y": 0.31766666666666665,
+      "s": 0.42,
+      "z": 2,
+      "anim": "thump"
+     },
+     {
+      "id": "spR",
+      "svg": "art/speaker.svg",
+      "x": 0.71,
+      "y": 0.31766666666666665,
+      "s": 0.42,
+      "z": 2,
+      "anim": "thump"
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.8,
+      "y": 0.3776666666666666,
+      "s": 0.3,
+      "z": 1
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.365,
+      "y": 0.47966666666666663,
+      "s": 0.1,
+      "z": 2
+     },
+     {
+      "waves": true,
+      "on": "spL",
+      "x": 128,
+      "y": 258,
+      "dir": 180,
+      "spread": 78,
+      "n": 3,
+      "period": 1.2,
+      "r0": 0.1512,
+      "r1": 0.32120000000000004,
+      "lw": 0.012,
+      "color": "#2FB5A9",
+      "z": 3,
+      "when": "comes out",
+      "cue": 0
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "alt": [
+       "art/note2.svg"
+      ],
+      "on": "spL",
+      "x": 68,
+      "y": 70,
+      "s": 0.15,
+      "to": [
+       -0.1,
+       -0.24
+      ],
+      "life": 2.2,
+      "every": 1.2,
+      "offset": 0.0,
+      "z": 4,
+      "when": "comes out",
+      "cue": 0
+     },
+     {
+      "waves": true,
+      "on": "spR",
+      "x": 128,
+      "y": 258,
+      "dir": 0,
+      "spread": 78,
+      "n": 3,
+      "period": 1.2,
+      "r0": 0.1512,
+      "r1": 0.32120000000000004,
+      "lw": 0.012,
+      "color": "#2FB5A9",
+      "z": 3,
+      "when": "comes out",
+      "cue": 0
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "alt": [
+       "art/note2.svg"
+      ],
+      "on": "spR",
+      "x": 188,
+      "y": 70,
+      "s": 0.15,
+      "to": [
+       0.1,
+       -0.24
+      ],
+      "life": 2.2,
+      "every": 1.2,
+      "offset": 0.6,
+      "z": 4,
+      "when": "comes out",
+      "cue": 0
+     },
+     {
+      "label": "音箱",
+      "x": 0.45,
+      "y": 0.07,
+      "to": [
+       0.45,
+       0.14
+      ],
+      "size": 0.08,
+      "when": "音箱",
+      "cue": 1
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/west-girl-listen_m00.svg",
+     "frames": [
+      "art/west-girl-listen_m00.svg",
+      "art/west-girl-listen_m01.svg",
+      "art/west-girl-listen_m02.svg",
+      "art/west-girl-listen_m03.svg",
+      "art/west-girl-listen_m04.svg",
+      "art/west-girl-listen_m05.svg",
+      "art/west-girl-listen_m06.svg",
+      "art/west-girl-listen_m07.svg"
+     ],
+     "seq": "blink",
+     "fps": 1.2,
+     "id": "g",
+     "x": 0.8,
+     "y": 0.66,
+     "s": 0.76,
+     "z": 0,
+     "nodWith": "m"
+    },
+    {
+     "svg": "art/cn-teacher-point_m00.svg",
+     "frames": [
+      "art/cn-teacher-point_m00.svg",
+      "art/cn-teacher-point_m01.svg",
+      "art/cn-teacher-point_m02.svg",
+      "art/cn-teacher-point_m03.svg",
+      "art/cn-teacher-point_m04.svg",
+      "art/cn-teacher-point_m05.svg",
+      "art/cn-teacher-point_m06.svg",
+      "art/cn-teacher-point_m07.svg",
+      "art/cn-teacher-point_m08.svg",
+      "art/cn-teacher-point_m09.svg",
+      "art/cn-teacher-point_m10.svg",
+      "art/cn-teacher-point_m11.svg"
+     ],
+     "seq": "talk",
+     "mouths": 3,
+     "gfps": 2.6,
+     "mfps": 8,
+     "id": "m",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 1
+    },
+    {
+     "waves": true,
+     "on": "m",
+     "x": 430,
+     "y": 188,
+     "dir": 0,
+     "spread": 64,
+     "n": 3,
+     "period": 1.2,
+     "r0": 0.03,
+     "r1": 0.16,
+     "lw": 0.012,
+     "color": "#F59E0B",
+     "with": "m",
+     "z": 3,
+     "when": "说"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.95,
+     "s": 0.3,
+     "z": 4
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "svg": "art/west-man-hello_m00.svg",
+     "frames": [
+      "art/west-man-hello_m00.svg",
+      "art/west-man-hello_m01.svg",
+      "art/west-man-hello_m02.svg",
+      "art/west-man-hello_m03.svg",
+      "art/west-man-hello_m04.svg",
+      "art/west-man-hello_m05.svg",
+      "art/west-man-hello_m06.svg",
+      "art/west-man-hello_m07.svg",
+      "art/west-man-hello_m08.svg",
+      "art/west-man-hello_m09.svg",
+      "art/west-man-hello_m10.svg",
+      "art/west-man-hello_m11.svg"
+     ],
+     "seq": "talk",
+     "mouths": 3,
+     "gfps": 4.5,
+     "mfps": 8,
+     "id": "man",
+     "x": 0.36,
+     "y": 0.6138243697478991,
+     "s": 0.7379999999999999,
+     "delay": 0.0,
+     "z": 0
+    },
+    {
+     "id": "pod",
+     "svg": "art/podium.svg",
+     "x": 0.36,
+     "y": 0.82,
+     "s": 0.36,
+     "delay": 0.0,
+     "z": 1
+    },
+    {
+     "id": "mic",
+     "svg": "art/mic.svg",
+     "x": 0.46893602073135615,
+     "y": 0.5672437237851663,
+     "s": 0.25704,
+     "delay": 0.0,
+     "z": 2
+    },
+    {
+     "waves": true,
+     "x": 0.5046976101353297,
+     "y": 0.5024437237851663,
+     "dir": -20,
+     "spread": 70,
+     "n": 3,
+     "period": 1.25,
+     "r0": 0.03,
+     "r1": 0.22,
+     "lw": 0.011,
+     "color": "#F59E0B",
+     "with": "man",
+     "z": 3,
+     "when": "说话的人"
+    },
+    {
+     "id": "pa",
+     "svg": "art/pa-speaker.svg",
+     "x": 0.85,
+     "y": 0.5,
+     "s": 0.82,
+     "when": "东西",
+     "fade": 0.4,
+     "z": 0
+    },
+    {
+     "waves": true,
+     "on": "pa",
+     "x": 170,
+     "y": 150,
+     "dir": 0,
+     "spread": 70,
+     "n": 3,
+     "period": 1.2,
+     "r0": 0.04,
+     "r1": 0.16,
+     "lw": 0.012,
+     "color": "#F59E0B",
+     "with": "man",
+     "when": "东西",
+     "z": 3
+    },
+    {
+     "label": "人",
+     "x": 0.36,
+     "y": 0.93,
+     "size": 0.1,
+     "when": "人或东西",
+     "z": 6
+    },
+    {
+     "label": "东西",
+     "x": 0.85,
+     "y": 0.93,
+     "size": 0.1,
+     "when": "东西",
+     "delay": 0.2,
+     "hideWhen": "说话的人",
+     "z": 6
+    },
+    {
+     "label": "说话的人",
+     "x": 0.7,
+     "y": 0.12,
+     "size": 0.1,
+     "when": "说话的人",
+     "color": "#C2410C",
+     "border": "#F97316",
+     "z": 6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-speak.svg",
+  "p1": "art/icon-er.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/classroom-bg.svg",
+  "items": [
+   {
+    "svg": "art/cn-teacher-listen_m00.svg",
+    "frames": [
+     "art/cn-teacher-listen_m00.svg",
+     "art/cn-teacher-listen_m01.svg",
+     "art/cn-teacher-listen_m02.svg",
+     "art/cn-teacher-listen_m03.svg",
+     "art/cn-teacher-listen_m04.svg",
+     "art/cn-teacher-listen_m05.svg",
+     "art/cn-teacher-listen_m06.svg",
+     "art/cn-teacher-listen_m07.svg"
+    ],
+    "seq": "blink",
+    "fps": 1.2,
+    "x": 0.3,
+    "y": 0.6,
+    "s": 0.9,
+    "z": 0,
+    "nodWith": "m"
+   },
+   {
+    "svg": "art/west-girl-raise_m00.svg",
+    "frames": [
+     "art/west-girl-raise_m00.svg",
+     "art/west-girl-raise_m01.svg",
+     "art/west-girl-raise_m02.svg",
+     "art/west-girl-raise_m03.svg",
+     "art/west-girl-raise_m04.svg",
+     "art/west-girl-raise_m05.svg",
+     "art/west-girl-raise_m06.svg",
+     "art/west-girl-raise_m07.svg",
+     "art/west-girl-raise_m08.svg",
+     "art/west-girl-raise_m09.svg",
+     "art/west-girl-raise_m10.svg",
+     "art/west-girl-raise_m11.svg"
+    ],
+    "seq": "talk",
+    "mouths": 3,
+    "gfps": 2.6,
+    "mfps": 8,
+    "id": "m",
+    "x": 0.7,
+    "y": 0.6,
+    "s": 0.92,
+    "z": 1
+   },
+   {
+    "waves": true,
+    "on": "m",
+    "x": 290,
+    "y": 188,
+    "dir": 180,
+    "spread": 64,
+    "n": 3,
+    "period": 1.2,
+    "r0": 0.03,
+    "r1": 0.2,
+    "lw": 0.012,
+    "color": "#F59E0B",
+    "with": "m",
+    "z": 3,
+    "delay": 0.4
+   },
+   {
+    "svg": "art/class-desks.svg",
+    "x": 0.5,
+    "y": 0.97,
+    "s": 0.3,
+    "z": 4
+   }
+  ]
+ },
+ "flow": [
+  {
+   "node": "“说话的人”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/cn-teacher-laugh_m00.svg",
+      "frames": [
+       "art/cn-teacher-laugh_m00.svg",
+       "art/cn-teacher-laugh_m01.svg",
+       "art/cn-teacher-laugh_m02.svg"
+      ],
+      "seq": "pingpong",
+      "fps": 5,
+      "x": 0.74,
+      "y": 0.62,
+      "s": 0.78,
+      "z": 0,
+      "anim": "breathe"
+     },
+     {
+      "svg": "art/west-girl-explain_m00.svg",
+      "frames": [
+       "art/west-girl-explain_m00.svg",
+       "art/west-girl-explain_m01.svg",
+       "art/west-girl-explain_m02.svg",
+       "art/west-girl-explain_m03.svg",
+       "art/west-girl-explain_m04.svg",
+       "art/west-girl-explain_m05.svg",
+       "art/west-girl-explain_m06.svg",
+       "art/west-girl-explain_m07.svg",
+       "art/west-girl-explain_m08.svg",
+       "art/west-girl-explain_m09.svg",
+       "art/west-girl-explain_m10.svg",
+       "art/west-girl-explain_m11.svg"
+      ],
+      "seq": "talk",
+      "mouths": 3,
+      "gfps": 2.6,
+      "mfps": 8,
+      "id": "m",
+      "x": 0.32,
+      "y": 0.6,
+      "s": 0.84,
+      "z": 1
+     },
+     {
+      "waves": true,
+      "on": "m",
+      "x": 430,
+      "y": 188,
+      "dir": 0,
+      "spread": 64,
+      "n": 3,
+      "period": 1.2,
+      "r0": 0.03,
+      "r1": 0.18,
+      "lw": 0.012,
+      "color": "#F59E0B",
+      "with": "m",
+      "z": 3,
+      "delay": 0.3
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.3,
+      "z": 4
+     },
+     {
+      "label": "说话的人",
+      "x": 0.14,
+      "y": 0.3,
+      "size": 0.07,
+      "delay": 0.5,
+      "z": 6
+     }
+    ]
+   }
+  },
+  {
+   "via": "站在台上，对着大家讲话",
+   "node": "① 演讲人、发言人",
+   "pos": "名词",
+   "pic": 0,
+   "say": "说话的人站到台上，对着大家讲话，就是演讲人、发言人。它说的是人，所以是名词。",
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "beam": true,
+      "x": 0.28,
+      "y": -0.02,
+      "len": 0.95,
+      "width": 15,
+      "swing": 7,
+      "period": 5.5,
+      "tilt": -6,
+      "z": -0.5
+     },
+     {
+      "beam": true,
+      "x": 0.72,
+      "y": -0.02,
+      "len": 0.95,
+      "width": 15,
+      "swing": 7,
+      "period": 6.5,
+      "tilt": 6,
+      "z": -0.5
+     },
+     {
+      "svg": "art/banner-speech.svg",
+      "x": 0.5,
+      "y": 0.11,
+      "s": 0.12,
+      "z": -1
+     },
+     {
+      "svg": "art/west-man-speech_m00.svg",
+      "frames": [
+       "art/west-man-speech_m00.svg",
+       "art/west-man-speech_m01.svg",
+       "art/west-man-speech_m02.svg",
+       "art/west-man-speech_m03.svg",
+       "art/west-man-speech_m04.svg",
+       "art/west-man-speech_m05.svg",
+       "art/west-man-speech_m06.svg",
+       "art/west-man-speech_m07.svg",
+       "art/west-man-speech_m08.svg",
+       "art/west-man-speech_m09.svg",
+       "art/west-man-speech_m10.svg",
+       "art/west-man-speech_m11.svg"
+      ],
+      "seq": "talk",
+      "mouths": 3,
+      "gfps": 2.6,
+      "mfps": 8,
+      "id": "man",
+      "x": 0.42,
+      "y": 0.5494617647058824,
+      "s": 0.8609999999999999,
+      "delay": 0.0,
+      "z": 0,
+      "talkWhen": "讲话"
+     },
+     {
+      "id": "pod",
+      "svg": "art/podium.svg",
+      "x": 0.42,
+      "y": 0.79,
+      "s": 0.42,
+      "z": 1,
+      "when": "台上",
+      "fade": 0.4
+     },
+     {
+      "id": "mic",
+      "svg": "art/mic.svg",
+      "x": 0.5155280139130435,
+      "y": 0.49511767774936066,
+      "s": 0.29988,
+      "z": 2,
+      "when": "台上",
+      "fade": 0.4
+     },
+     {
+      "waves": true,
+      "x": 0.5468880139130434,
+      "y": 0.41951767774936066,
+      "dir": -20,
+      "spread": 70,
+      "n": 3,
+      "period": 1.25,
+      "r0": 0.03,
+      "r1": 0.22,
+      "lw": 0.011,
+      "color": "#F59E0B",
+      "with": "man",
+      "z": 3,
+      "when": "讲话"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.34,
+      "z": 5,
+      "crowd": 9,
+      "nodWith": "man",
+      "when": "对着大家",
+      "fade": 0.4
+     },
+     {
+      "label": "演讲人",
+      "x": 0.8,
+      "y": 0.16,
+      "size": 0.075,
+      "when": "演讲人",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "z": 6
+     }
+    ]
+   }
+  },
+  {
+   "from": 0,
+   "via": "会出声、像人一样“说话”的机器",
+   "node": "② 扬声器、音箱",
+   "pos": "名词",
+   "pic": 1,
+   "rule": "英语里，表示“做这件事的人”的词，也拿来叫做这件事的东西、机器",
+   "ruleEx": "speaker 说话的人 → 扬声器      computer 计算的人 → 计算机",
+   "say": [
+    "英语里，表示做这件事的人的词，也常拿来叫做这件事的机器。",
+    "就像 computer，本来是计算的人，后来计算的机器也叫 computer。",
+    "所以，会出声、像人一样说话的机器，也叫 speaker，就是扬声器、音箱。它说的是一样东西，所以是名词。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "beat": 100,
+    "items": [
+     {
+      "label": "做事的人",
+      "x": 0.24,
+      "y": 0.1,
+      "size": 0.066,
+      "when": "做这件事的人",
+      "cue": 0,
+      "z": 6
+     },
+     {
+      "ray": [
+       [
+        0.39,
+        0.1
+       ],
+       [
+        0.53,
+        0.1
+       ]
+      ],
+      "arrow": true,
+      "color": "#C2410C",
+      "lw": 0.012,
+      "when": "机器",
+      "cue": 0,
+      "dur": 0.5,
+      "z": 6
+     },
+     {
+      "label": "做这件事的机器",
+      "x": 0.74,
+      "y": 0.1,
+      "size": 0.066,
+      "when": "机器",
+      "cue": 0,
+      "delay": 0.3,
+      "z": 6
+     },
+     {
+      "svg": "art/west-clerk-think_m00.svg",
+      "frames": [
+       "art/west-clerk-think_m00.svg",
+       "art/west-clerk-think_m01.svg",
+       "art/west-clerk-think_m02.svg",
+       "art/west-clerk-think_m03.svg",
+       "art/west-clerk-think_m04.svg",
+       "art/west-clerk-think_m05.svg",
+       "art/west-clerk-think_m06.svg",
+       "art/west-clerk-think_m07.svg"
+      ],
+      "seq": "blink",
+      "fps": 0.8,
+      "x": 0.23,
+      "y": 0.5,
+      "s": 0.56,
+      "when": "计算的人",
+      "fade": 0.4,
+      "hideCue": 2,
+      "z": 1
+     },
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.23,
+      "y": 0.8,
+      "s": 0.3,
+      "when": "计算的人",
+      "fade": 0.4,
+      "hideCue": 2,
+      "z": 2
+     },
+     {
+      "label": "computer 计算的人",
+      "x": 0.23,
+      "y": 0.96,
+      "size": 0.058,
+      "when": "计算的人",
+      "delay": 0.2,
+      "hideCue": 2,
+      "z": 6
+     },
+     {
+      "ray": [
+       [
+        0.45,
+        0.56
+       ],
+       [
+        0.55,
+        0.56
+       ]
+      ],
+      "arrow": true,
+      "color": "#C2410C",
+      "lw": 0.012,
+      "when": "计算的机器",
+      "dur": 0.5,
+      "hideCue": 2,
+      "z": 6
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.8,
+      "y": 0.86,
+      "s": 0.24,
+      "when": "计算的机器",
+      "fade": 0.4,
+      "hideCue": 2,
+      "z": 1
+     },
+     {
+      "id": "calc",
+      "svg": "art/computer.svg",
+      "x": 0.78,
+      "y": 0.59,
+      "s": 0.42,
+      "when": "计算的机器",
+      "fade": 0.4,
+      "hideCue": 2,
+      "z": 2
+     },
+     {
+      "label": "computer 计算机",
+      "x": 0.78,
+      "y": 0.96,
+      "size": 0.058,
+      "when": "计算的机器",
+      "delay": 0.2,
+      "hideCue": 2,
+      "z": 6
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.8200000000000001,
+      "s": 0.4,
+      "z": 0,
+      "when": "会出声",
+      "fade": 0.4
+     },
+     {
+      "id": "mon",
+      "svg": "art/computer-music.svg",
+      "x": 0.5,
+      "y": 0.49316666666666664,
+      "s": 0.38,
+      "z": 1,
+      "when": "会出声",
+      "fade": 0.4
+     },
+     {
+      "eq": true,
+      "on": "mon",
+      "x": 282,
+      "y": 138,
+      "w": 0.11822222222222223,
+      "h": 0.076,
+      "n": 7,
+      "z": 1.5,
+      "when": "会出声",
+      "fade": 0.4
+     },
+     {
+      "id": "spL",
+      "svg": "art/speaker.svg",
+      "x": 0.2,
+      "y": 0.44466666666666665,
+      "s": 0.44,
+      "z": 2,
+      "anim": "thump",
+      "when": "会出声",
+      "fade": 0.4
+     },
+     {
+      "id": "spR",
+      "svg": "art/speaker.svg",
+      "x": 0.8,
+      "y": 0.44466666666666665,
+      "s": 0.44,
+      "z": 2,
+      "anim": "thump",
+      "when": "会出声",
+      "fade": 0.4
+     },
+     {
+      "waves": true,
+      "on": "spL",
+      "x": 128,
+      "y": 258,
+      "dir": 180,
+      "spread": 78,
+      "n": 3,
+      "period": 1.2,
+      "r0": 0.15839999999999999,
+      "r1": 0.3284,
+      "lw": 0.012,
+      "color": "#2FB5A9",
+      "z": 3,
+      "when": "说话的机器",
+      "cue": 2
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "alt": [
+       "art/note2.svg"
+      ],
+      "on": "spL",
+      "x": 68,
+      "y": 70,
+      "s": 0.15,
+      "to": [
+       -0.1,
+       -0.26
+      ],
+      "life": 2.2,
+      "every": 1.2,
+      "offset": 0.0,
+      "z": 4,
+      "when": "说话的机器",
+      "cue": 2
+     },
+     {
+      "waves": true,
+      "on": "spR",
+      "x": 128,
+      "y": 258,
+      "dir": 0,
+      "spread": 78,
+      "n": 3,
+      "period": 1.2,
+      "r0": 0.15839999999999999,
+      "r1": 0.3284,
+      "lw": 0.012,
+      "color": "#2FB5A9",
+      "z": 3,
+      "when": "说话的机器",
+      "cue": 2
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "alt": [
+       "art/note2.svg"
+      ],
+      "on": "spR",
+      "x": 188,
+      "y": 70,
+      "s": 0.15,
+      "to": [
+       0.1,
+       -0.26
+      ],
+      "life": 2.2,
+      "every": 1.2,
+      "offset": 0.6,
+      "z": 4,
+      "when": "说话的机器",
+      "cue": 2
+     },
+     {
+      "label": "speaker 扬声器、音箱",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 0.065,
+      "when": "扬声器",
+      "cue": 2,
+      "color": "#7B57D6",
+      "border": "#7B57D6",
+      "z": 6
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "扬声器",
+  "items": [
+   {
+    "w": "speaker",
+    "gloss": "音箱",
+    "note": "电脑、手机、家里的音箱，日常就说 speaker",
+    "pic": {
+     "bg": "blank",
+     "beat": 100,
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.6127450980392157,
+       "s": 1.5784313725490196,
+       "z": -5
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.97,
+       "s": 0.56,
+       "z": 0
+      },
+      {
+       "id": "mon",
+       "svg": "art/computer-music.svg",
+       "x": 0.5,
+       "y": 0.4410333333333333,
+       "s": 0.7,
+       "z": 1
+      },
+      {
+       "eq": true,
+       "on": "mon",
+       "x": 282,
+       "y": 138,
+       "w": 0.11805555555555555,
+       "h": 0.13999999999999999,
+       "n": 7,
+       "z": 1.5
+      },
+      {
+       "id": "spL",
+       "svg": "art/speaker.svg",
+       "x": 0.3,
+       "y": 0.3785333333333333,
+       "s": 0.74,
+       "z": 2,
+       "anim": "thump"
+      },
+      {
+       "id": "spR",
+       "svg": "art/speaker.svg",
+       "x": 0.7,
+       "y": 0.3785333333333333,
+       "s": 0.74,
+       "z": 2,
+       "anim": "thump"
+      },
+      {
+       "waves": true,
+       "on": "spL",
+       "x": 128,
+       "y": 258,
+       "dir": 180,
+       "spread": 78,
+       "n": 3,
+       "period": 1.2,
+       "r0": 0.26639999999999997,
+       "r1": 0.4364,
+       "lw": 0.012,
+       "color": "#2FB5A9",
+       "z": 3,
+       "delay": 0.4
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "alt": [
+        "art/note2.svg"
+       ],
+       "on": "spL",
+       "x": 68,
+       "y": 70,
+       "s": 0.15,
+       "to": [
+        -0.1,
+        -0.36
+       ],
+       "life": 2.2,
+       "every": 1.2,
+       "offset": 0.0,
+       "z": 4,
+       "delay": 0.4
+      },
+      {
+       "waves": true,
+       "on": "spR",
+       "x": 128,
+       "y": 258,
+       "dir": 0,
+       "spread": 78,
+       "n": 3,
+       "period": 1.2,
+       "r0": 0.26639999999999997,
+       "r1": 0.4364,
+       "lw": 0.012,
+       "color": "#2FB5A9",
+       "z": 3,
+       "delay": 0.4
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "alt": [
+        "art/note2.svg"
+       ],
+       "on": "spR",
+       "x": 188,
+       "y": 70,
+       "s": 0.15,
+       "to": [
+        0.1,
+        -0.36
+       ],
+       "life": 2.2,
+       "every": 1.2,
+       "offset": 0.6,
+       "z": 4,
+       "delay": 0.4
+      }
+     ]
+    }
+   },
+   {
+    "w": "loudspeaker",
+    "gloss": "大喇叭",
+    "note": "loud 响亮的 + speaker：广场、车站的大喇叭",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/station-bg.svg",
+       "x": 0.6,
+       "y": 0.20588235294117646,
+       "s": 1.7156862745098038,
+       "z": -5
+      },
+      {
+       "id": "ls",
+       "svg": "art/loudspeaker.svg",
+       "x": 0.27,
+       "y": 0.52,
+       "s": 0.9,
+       "z": 2
+      },
+      {
+       "waves": true,
+       "on": "ls",
+       "x": 96,
+       "y": 150,
+       "dir": 180,
+       "spread": 62,
+       "n": 3,
+       "period": 1.1,
+       "r0": 0.05,
+       "r1": 0.3,
+       "lw": 0.016,
+       "color": "#F59E0B",
+       "z": 3
+      },
+      {
+       "waves": true,
+       "on": "ls",
+       "x": 544,
+       "y": 150,
+       "dir": 0,
+       "spread": 62,
+       "n": 3,
+       "period": 1.1,
+       "r0": 0.05,
+       "r1": 0.42,
+       "lw": 0.016,
+       "color": "#F59E0B",
+       "z": 3
+      },
+      {
+       "svg": "art/walk-west-woman-case_w0.svg",
+       "frames": [
+        "art/walk-west-woman-case_w0.svg",
+        "art/walk-west-woman-case_w1.svg",
+        "art/walk-west-woman-case_w2.svg",
+        "art/walk-west-woman-case_w3.svg",
+        "art/walk-west-woman-case_w4.svg",
+        "art/walk-west-woman-case_w5.svg"
+       ],
+       "fps": 7,
+       "seq": "loop",
+       "x": -0.08,
+       "y": 0.7168,
+       "s": 0.56,
+       "z": 4,
+       "walk": {
+        "from": [
+         -0.08,
+         0.7168
+        ],
+        "to": [
+         1.1,
+         0.7168
+        ],
+        "offset": 0.12
+       }
+      },
+      {
+       "svg": "art/walk-cn-boy-pack_w0.svg",
+       "frames": [
+        "art/walk-cn-boy-pack_w0.svg",
+        "art/walk-cn-boy-pack_w1.svg",
+        "art/walk-cn-boy-pack_w2.svg",
+        "art/walk-cn-boy-pack_w3.svg",
+        "art/walk-cn-boy-pack_w4.svg",
+        "art/walk-cn-boy-pack_w5.svg"
+       ],
+       "fps": 7,
+       "seq": "loop",
+       "x": 1.08,
+       "y": 0.7143999999999999,
+       "s": 0.48,
+       "z": 3,
+       "walk": {
+        "from": [
+         1.08,
+         0.7143999999999999
+        ],
+        "to": [
+         -0.08,
+         0.7143999999999999
+        ],
+        "offset": 0.45
+       }
+      },
+      {
+       "svg": "art/walk-west-man-case_w0.svg",
+       "frames": [
+        "art/walk-west-man-case_w0.svg",
+        "art/walk-west-man-case_w1.svg",
+        "art/walk-west-man-case_w2.svg",
+        "art/walk-west-man-case_w3.svg",
+        "art/walk-west-man-case_w4.svg",
+        "art/walk-west-man-case_w5.svg"
+       ],
+       "fps": 7,
+       "seq": "loop",
+       "x": -0.08,
+       "y": 0.7026,
+       "s": 0.42,
+       "z": 2.5,
+       "walk": {
+        "from": [
+         -0.08,
+         0.7026
+        ],
+        "to": [
+         1.1,
+         0.7026
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "svg": "art/walk-cn-girl_w0.svg",
+       "frames": [
+        "art/walk-cn-girl_w0.svg",
+        "art/walk-cn-girl_w1.svg",
+        "art/walk-cn-girl_w2.svg",
+        "art/walk-cn-girl_w3.svg",
+        "art/walk-cn-girl_w4.svg",
+        "art/walk-cn-girl_w5.svg"
+       ],
+       "fps": 7,
+       "seq": "loop",
+       "x": 1.08,
+       "y": 0.7525999999999999,
+       "s": 0.42,
+       "z": 3.5,
+       "walk": {
+        "from": [
+         1.08,
+         0.7525999999999999
+        ],
+        "to": [
+         -0.08,
+         0.7525999999999999
+        ],
+        "offset": 0.05
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "tip": "loudspeaker 多了 loud，声音更大、更正式"
+ }
+}

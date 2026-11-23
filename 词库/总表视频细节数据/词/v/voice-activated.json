@@ -1,0 +1,91 @@
+{
+ "单词": "voice-activated",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人家的灯是怎么开的？\n听：My lights are voice-activated.\nA. 声控的\nB. 手动的\nC. 定时的\nD. 遥控的",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This ______ speaker plays music when you ask.\nA. voice-activated\nB. voice\nC. voiced\nD. activated",
+  "题目3": "【选词填空】从 voice-activated、hand-made 中选一个，用适当形式填空。\n题干：This ______ cup was made by my grandma.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The voice-activated lights turns on when I speak.",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：The machine is ______ by voice. (activate)",
+  "题目6": "【选词填空】从 voice-activated、voice-controlled 中选一个，用适当形式填空。\n题干：\"Voice-activated\" means almost the same as \"______\".\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：With a voice-activated TV, you don't need a ______.\nA. chair\nB. room\nC. window\nD. remote control\n考点：用法",
+  "答案": "【1】A（声控的）\n讲解：voice-activated 声控的。\n【2】A（voice-activated）\n讲解：一说话就放音乐，是“声控的”。\n【3】hand-made\n讲解：奶奶亲手做的是 hand-made。\n【4】turns → turn\n讲解：主语 lights 是复数，用 turn。\n【5】activated\n讲解：被动 is + 过去分词 activated。\n【6】voice-controlled\n讲解：voice-activated 和 voice-controlled 都是“声控的”。\n【7】D（remote control）\n讲解：声控电视不用遥控器。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人家的灯是怎么开的？",
+   "listen": "My lights are voice-activated.",
+   "opts": [
+    "声控的",
+    "手动的",
+    "定时的",
+    "遥控的"
+   ],
+   "why": "voice-activated 声控的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This ______ speaker plays music when you ask.",
+   "opts": [
+    "voice-activated",
+    "voice",
+    "voiced",
+    "activated"
+   ],
+   "why": "一说话就放音乐，是“声控的”。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 voice-activated、hand-made 中选一个，用适当形式填空。",
+   "stem": "This ______ cup was made by my grandma.",
+   "ans": "hand-made",
+   "why": "奶奶亲手做的是 hand-made。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The voice-activated lights turns on when I speak.",
+   "ans": "turns → turn",
+   "why": "主语 lights 是复数，用 turn。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The machine is ______ by voice. (activate)",
+   "ans": "activated",
+   "why": "被动 is + 过去分词 activated。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 voice-activated、voice-controlled 中选一个，用适当形式填空。",
+   "stem": "\"Voice-activated\" means almost the same as \"______\".",
+   "ans": "voice-controlled",
+   "why": "voice-activated 和 voice-controlled 都是“声控的”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "With a voice-activated TV, you don't need a ______.",
+   "opts": [
+    "remote control",
+    "chair",
+    "room",
+    "window"
+   ],
+   "why": "声控电视不用遥控器。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

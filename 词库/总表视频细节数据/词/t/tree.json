@@ -1,0 +1,93 @@
+{
+ "单词": "tree",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们在植树节做什么？\n听：We plant trees on Tree Planting Day.\nA. 浇花\nB. 种树\nC. 摘苹果\nD. 打扫",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The table is made of ______.\nA. tree\nB. trees\nC. woods\nD. wood\n考点：易混",
+  "题目3": "【选词填空】从 trees、woods 中选一个，用适当形式填空。\n题干：We took a walk in the ______ behind the village.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many tall ______ in the park. (tree)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There is many trees in the park.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：苹果树上有很多苹果。\n题干：There are many apples on the apple ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Money doesn't grow on ______.\nA. tree\nB. trees\nC. wood\nD. woods\n考点：短语",
+  "答案": "【1】B（种树）\n讲解：plant trees 种树。\n【2】D（wood）\n讲解：桌子是木头做的 wood；tree 是活的树。\n【3】woods\n讲解：“树林”用复数 woods。\n【4】trees\n讲解：many 后面用复数 trees。\n【5】is → are\n讲解：trees 是复数，用 there are。\n【6】tree\n讲解：苹果长在树上 on the tree。\n【7】B（trees）\n讲解：Money doesn't grow on trees. 钱不是大风刮来的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们在植树节做什么？",
+   "listen": "We plant trees on Tree Planting Day.",
+   "opts": [
+    "种树",
+    "浇花",
+    "摘苹果",
+    "打扫"
+   ],
+   "why": "plant trees 种树。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The table is made of ______.",
+   "opts": [
+    "wood",
+    "tree",
+    "trees",
+    "woods"
+   ],
+   "why": "桌子是木头做的 wood；tree 是活的树。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 trees、woods 中选一个，用适当形式填空。",
+   "stem": "We took a walk in the ______ behind the village.",
+   "ans": "woods",
+   "why": "“树林”用复数 woods。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many tall ______ in the park. (tree)",
+   "ans": "trees",
+   "why": "many 后面用复数 trees。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There is many trees in the park.",
+   "ans": "is → are",
+   "why": "trees 是复数，用 there are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "苹果树上有很多苹果。",
+   "stem": "There are many apples on the apple ______.",
+   "ans": "tree",
+   "why": "苹果长在树上 on the tree。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Money doesn't grow on ______.",
+   "opts": [
+    "trees",
+    "tree",
+    "wood",
+    "woods"
+   ],
+   "why": "Money doesn't grow on trees. 钱不是大风刮来的。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

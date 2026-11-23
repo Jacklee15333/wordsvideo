@@ -1,0 +1,89 @@
+{
+ "单词": "team",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在哪个队？\n听：I am on the school football team.\nA. 校篮球队\nB. 校足球队\nC. 校排球队\nD. 校游泳队",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Our class has two basketball ______.\nA. teams\nB. team\nC. teamwork\nD. teaming\n考点：变形",
+  "题目3": "【选词填空】从 team、teamwork 中选一个，用适当形式填空。\n题干：Good ______ helped us win the match.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Our team ______ the match yesterday. (win)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She is a member of the swimming teams.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我们是同一个队的。\n题干：We are ______ the same ______.\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他是我的队友。\n题干：He is my ______.\n考点：词性转换",
+  "答案": "【1】B（校足球队）\n讲解：be on the school football team 在校足球队。\n【2】A（teams）\n讲解：two 后面要复数 teams。\n【3】teamwork\n讲解：good 后面要不可数名词 teamwork（团队合作）；team 可数，前面要有冠词。\n【4】won\n讲解：yesterday 说过去，win 的过去式是 won。\n【5】teams → team\n讲解：她是一个游泳队的队员，用单数 the swimming team。\n【6】on；team\n讲解：be on the same team 在同一个队。\n【7】teammate\n讲解：同一个队的人是 teammate（队友）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在哪个队？",
+   "listen": "I am on the school football team.",
+   "opts": [
+    "校足球队",
+    "校篮球队",
+    "校排球队",
+    "校游泳队"
+   ],
+   "why": "be on the school football team 在校足球队。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Our class has two basketball ______.",
+   "opts": [
+    "teams",
+    "team",
+    "teamwork",
+    "teaming"
+   ],
+   "why": "two 后面要复数 teams。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 team、teamwork 中选一个，用适当形式填空。",
+   "stem": "Good ______ helped us win the match.",
+   "ans": "teamwork",
+   "why": "good 后面要不可数名词 teamwork（团队合作）；team 可数，前面要有冠词。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Our team ______ the match yesterday. (win)",
+   "ans": "won",
+   "why": "yesterday 说过去，win 的过去式是 won。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is a member of the swimming teams.",
+   "ans": "teams → team",
+   "why": "她是一个游泳队的队员，用单数 the swimming team。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们是同一个队的。",
+   "stem": "We are ______ the same ______.",
+   "ans": "on；team",
+   "why": "be on the same team 在同一个队。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是我的队友。",
+   "stem": "He is my ______.",
+   "ans": "teammate",
+   "why": "同一个队的人是 teammate（队友）。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "each",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：每个学生得到了什么？\n听：Each student got a book.\nA. 一支笔\nB. 一个本子\nC. 一本书\nD. 一个包",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Each of the students ______ a new desk.\nA. have\nB. has\nC. having\nD. to have",
+  "题目3": "【选词填空】从 each、every 中选一个，用适当形式填空。\n题干：There are trees on ______ side of the road.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Every of them has a phone.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我们应该互相帮助。\n题干：We should help ______ ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Each student ______ a school uniform.\nA. wears\nB. wear\nC. wearing\nD. to wear\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Each\" can be used for two things, but \"every\" is for ______ things.\nA. one\nB. two\nC. no\nD. three or more\n考点：易混",
+  "答案": "【1】C（一本书）\n讲解：each 每个。\n【2】B（has）\n讲解：each of + 复数名词，谓语用单数。\n【3】each\n讲解：路两边各一边，用 each。\n【4】Every → Each\n讲解：every 不能接 of。\n【5】each；other\n讲解：each other 互相。\n【6】A（wears）\n讲解：each + 单数名词作主语，谓语用单数。\n【7】D（three or more）\n讲解：every 用于三个以上。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：每个学生得到了什么？",
+   "listen": "Each student got a book.",
+   "opts": [
+    "一本书",
+    "一支笔",
+    "一个本子",
+    "一个包"
+   ],
+   "why": "each 每个。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Each of the students ______ a new desk.",
+   "opts": [
+    "has",
+    "have",
+    "having",
+    "to have"
+   ],
+   "why": "each of + 复数名词，谓语用单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 each、every 中选一个，用适当形式填空。",
+   "stem": "There are trees on ______ side of the road.",
+   "ans": "each",
+   "why": "路两边各一边，用 each。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Every of them has a phone.",
+   "ans": "Every → Each",
+   "why": "every 不能接 of。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们应该互相帮助。",
+   "stem": "We should help ______ ______.",
+   "ans": "each；other",
+   "why": "each other 互相。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Each student ______ a school uniform.",
+   "opts": [
+    "wears",
+    "wear",
+    "wearing",
+    "to wear"
+   ],
+   "why": "each + 单数名词作主语，谓语用单数。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Each\" can be used for two things, but \"every\" is for ______ things.",
+   "opts": [
+    "three or more",
+    "one",
+    "two",
+    "no"
+   ],
+   "why": "every 用于三个以上。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

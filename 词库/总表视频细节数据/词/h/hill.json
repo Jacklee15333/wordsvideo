@@ -1,0 +1,93 @@
+{
+ "单词": "hill",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们周末去做什么？\n听：We are going to climb the hill this weekend.\nA. 爬山\nB. 游泳\nC. 购物\nD. 看电影",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many ______ around our village.\nA. hill\nB. hilly\nC. hilled\nD. hills\n考点：变形",
+  "题目3": "【选词填空】从 hill、mountain 中选一个，用适当形式填空。\n题干：Mount Qomolangma is the highest ______ in the world.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The road is very ______, so it's hard to ride a bike. (hill)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：My grandpa is 80, but he is not over the hills.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：那位歌手现在已经过气了。\n题干：The singer is ______ the hill now.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The village sits in a valley between two ______.\nA. hill\nB. hills\nC. hilly\nD. hilltop\n考点：变形",
+  "答案": "【1】A（爬山）\n讲解：climb the hill 爬小山。\n【2】D（hills）\n讲解：many 后接复数 hills。\n【3】mountain\n讲解：高峻的山用 mountain，hill 指小山。\n【4】hilly\n讲解：be 后用形容词 hilly（多山的）。\n【5】hills → hill\n讲解：over the hill 过了巅峰、上了年纪，hill 用单数。\n【6】over\n讲解：over the hill 过了巅峰。\n【7】B（hills）\n讲解：two 后接复数 hills。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们周末去做什么？",
+   "listen": "We are going to climb the hill this weekend.",
+   "opts": [
+    "爬山",
+    "游泳",
+    "购物",
+    "看电影"
+   ],
+   "why": "climb the hill 爬小山。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ around our village.",
+   "opts": [
+    "hills",
+    "hill",
+    "hilly",
+    "hilled"
+   ],
+   "why": "many 后接复数 hills。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 hill、mountain 中选一个，用适当形式填空。",
+   "stem": "Mount Qomolangma is the highest ______ in the world.",
+   "ans": "mountain",
+   "why": "高峻的山用 mountain，hill 指小山。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The road is very ______, so it's hard to ride a bike. (hill)",
+   "ans": "hilly",
+   "why": "be 后用形容词 hilly（多山的）。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My grandpa is 80, but he is not over the hills.",
+   "ans": "hills → hill",
+   "why": "over the hill 过了巅峰、上了年纪，hill 用单数。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "那位歌手现在已经过气了。",
+   "stem": "The singer is ______ the hill now.",
+   "ans": "over",
+   "why": "over the hill 过了巅峰。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The village sits in a valley between two ______.",
+   "opts": [
+    "hills",
+    "hill",
+    "hilly",
+    "hilltop"
+   ],
+   "why": "two 后接复数 hills。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

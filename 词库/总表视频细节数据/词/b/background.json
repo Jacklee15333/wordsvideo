@@ -1,0 +1,94 @@
+{
+ "单词": "background",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：照片的背景是什么？\n听：The background of the photo is the sea.\nA. 高山\nB. 城市\nC. 森林\nD. 大海",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He comes from a poor ______.\nA. backgrounds\nB. setting\nC. background\nD. context",
+  "题目3": "【选词填空】从 background、setting 中选一个，用适当形式填空。\n题干：The ______ of the story is a small village in the 1930s.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The two students have different background.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：要理解这个词，你得看上下文。\n题干：You need to look at the ______ to understand the word.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In English, \"a good background\" usually means good ______, not a powerful friend.\nA. education and experience\nB. luck\nC. money only\nD. looks\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The opposite of \"background\" is \"______\".\nA. underground\nB. playground\nC. ground\nD. foreground\n考点：易混",
+  "答案": "【1】D（大海）\n讲解：background 背景。\n【2】C（background）\n讲解：“出身、背景”用 background。\n【3】setting\n讲解：故事发生的具体场景用 setting。\n【4】background → backgrounds\n讲解：different 后面用复数。\n【5】context\n讲解：上下文是 context。\n【6】A（education and experience）\n讲解：英语 background 不暗指“后台”。\n【7】D（foreground）\n讲解：背景的反义是前景 foreground。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：照片的背景是什么？",
+   "listen": "The background of the photo is the sea.",
+   "opts": [
+    "大海",
+    "高山",
+    "城市",
+    "森林"
+   ],
+   "why": "background 背景。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He comes from a poor ______.",
+   "opts": [
+    "background",
+    "backgrounds",
+    "setting",
+    "context"
+   ],
+   "why": "“出身、背景”用 background。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 background、setting 中选一个，用适当形式填空。",
+   "stem": "The ______ of the story is a small village in the 1930s.",
+   "ans": "setting",
+   "why": "故事发生的具体场景用 setting。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The two students have different background.",
+   "ans": "background → backgrounds",
+   "why": "different 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "要理解这个词，你得看上下文。",
+   "stem": "You need to look at the ______ to understand the word.",
+   "ans": "context",
+   "why": "上下文是 context。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In English, \"a good background\" usually means good ______, not a powerful friend.",
+   "opts": [
+    "education and experience",
+    "luck",
+    "money only",
+    "looks"
+   ],
+   "why": "英语 background 不暗指“后台”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The opposite of \"background\" is \"______\".",
+   "opts": [
+    "foreground",
+    "underground",
+    "playground",
+    "ground"
+   ],
+   "why": "背景的反义是前景 foreground。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

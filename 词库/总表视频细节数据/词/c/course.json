@@ -1,0 +1,93 @@
+{
+ "单词": "course",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人这学期上什么课？\n听：I'm taking a cooking course this term.\nA. 烹饪课\nB. 游泳课\nC. 美术课\nD. 英语课",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：—Can I use your pen? —Of ______.\nA. course\nB. cause\nC. coarse\nD. curse\n考点：短语",
+  "题目3": "【选词填空】从 course、class 中选一个，用适当形式填空。\n题干：There are 45 students in our ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She has finished three online ______. (course)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The course start next Monday.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The ship went ______ in the storm.\nA. of course\nB. in course\nC. off course\nD. on course\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：在旅途中我们交了很多朋友。\n题干：______ the course of the trip, we made many friends.\n考点：用法",
+  "答案": "【1】A（烹饪课）\n讲解：cooking course 烹饪课程。\n【2】A（course）\n讲解：Of course. 当然。\n【3】class\n讲解：一个班是 class；course 是一门课。\n【4】courses\n讲解：three 后面接复数 courses。\n【5】start → starts\n讲解：主语 course 是单数，用 starts。\n【6】C（off course）\n讲解：偏离航线是 off course，和 of course 只差一个 f。\n【7】In\n讲解：in the course of 在……期间。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人这学期上什么课？",
+   "listen": "I'm taking a cooking course this term.",
+   "opts": [
+    "烹饪课",
+    "游泳课",
+    "美术课",
+    "英语课"
+   ],
+   "why": "cooking course 烹饪课程。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "—Can I use your pen? —Of ______.",
+   "opts": [
+    "course",
+    "cause",
+    "coarse",
+    "curse"
+   ],
+   "why": "Of course. 当然。",
+   "kd": "短语"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 course、class 中选一个，用适当形式填空。",
+   "stem": "There are 45 students in our ______.",
+   "ans": "class",
+   "why": "一个班是 class；course 是一门课。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She has finished three online ______. (course)",
+   "ans": "courses",
+   "why": "three 后面接复数 courses。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The course start next Monday.",
+   "ans": "start → starts",
+   "why": "主语 course 是单数，用 starts。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ship went ______ in the storm.",
+   "opts": [
+    "off course",
+    "of course",
+    "in course",
+    "on course"
+   ],
+   "why": "偏离航线是 off course，和 of course 只差一个 f。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "在旅途中我们交了很多朋友。",
+   "stem": "______ the course of the trip, we made many friends.",
+   "ans": "In",
+   "why": "in the course of 在……期间。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

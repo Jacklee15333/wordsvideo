@@ -1,0 +1,92 @@
+{
+ "单词": "playlist",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人做了什么？\n听：I made a playlist of my favorite songs.\nA. 写了一首歌\nB. 做了一个歌单\nC. 买了一张唱片\nD. 学了一首歌",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I added this song to my ______.\nA. playground\nB. playlist\nC. plaything\nD. playtime",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She has three ______ on her phone. (playlist)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：This playlist have twenty songs.",
+  "题目5": "【选词填空】从 playlist、playground 中选一个，用适当形式填空。\n题干：Kids are running on the ______.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：What songs are ______ your playlist?\nA. on\nB. at\nC. of\nD. for\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我们为聚会做个歌单吧。\n题干：Let's m______ a playlist for the party.\n考点：短语",
+  "答案": "【1】B（做了一个歌单）\n讲解：playlist 播放列表、歌单。\n【2】B（playlist）\n讲解：歌加进“播放列表” playlist。\n【3】playlists\n讲解：three 后面接复数，加 s。\n【4】have → has\n讲解：主语 playlist 是单数，用 has。\n【5】playground\n讲解：跑来跑去的地方是操场 playground。\n【6】A（on）\n讲解：歌在播放列表“上”用 on。\n【7】make\n讲解：make a playlist 做歌单。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人做了什么？",
+   "listen": "I made a playlist of my favorite songs.",
+   "opts": [
+    "做了一个歌单",
+    "写了一首歌",
+    "买了一张唱片",
+    "学了一首歌"
+   ],
+   "why": "playlist 播放列表、歌单。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I added this song to my ______.",
+   "opts": [
+    "playlist",
+    "playground",
+    "plaything",
+    "playtime"
+   ],
+   "why": "歌加进“播放列表” playlist。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She has three ______ on her phone. (playlist)",
+   "ans": "playlists",
+   "why": "three 后面接复数，加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This playlist have twenty songs.",
+   "ans": "have → has",
+   "why": "主语 playlist 是单数，用 has。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 playlist、playground 中选一个，用适当形式填空。",
+   "stem": "Kids are running on the ______.",
+   "ans": "playground",
+   "why": "跑来跑去的地方是操场 playground。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What songs are ______ your playlist?",
+   "opts": [
+    "on",
+    "at",
+    "of",
+    "for"
+   ],
+   "why": "歌在播放列表“上”用 on。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们为聚会做个歌单吧。",
+   "stem": "Let's m______ a playlist for the party.",
+   "ans": "make",
+   "why": "make a playlist 做歌单。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

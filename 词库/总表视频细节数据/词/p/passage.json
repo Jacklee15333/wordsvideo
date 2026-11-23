@@ -1,0 +1,97 @@
+{
+ "单词": "passage",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让大家读什么？\n听：Please read the passage on page 30.\nA. 一首诗\nB. 第 30 页的短文\nC. 一幅图\nD. 一组单词",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Read the ______ and answer the questions.\nA. passenger\nB. passage\nC. message\nD. package\n考点：易混",
+  "题目3": "【选词填空】从 passage、passenger 中选一个，用适当形式填空。\n题干：The ______ fastened her seat belt.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are three ______ in this test. (passage)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The passage are about animals.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A narrow passage led to the garden. Here passage means ______.\nA. 短文\nB. 乘客\nC. 消息\nD. 通道\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In a reading test, passage is close in meaning to ______.\nA. test\nB. taste\nC. text\nD. ticket\n考点：易混",
+  "答案": "【1】B（第 30 页的短文）\n讲解：passage 一段文章。\n【2】B（passage）\n讲解：阅读的短文是 passage。\n【3】passenger\n讲解：系安全带的是乘客 passenger。\n【4】passages\n讲解：three 后面接复数 passages。\n【5】are → is\n讲解：主语 passage 是单数，用 is。\n【6】D（通道）\n讲解：passage 也指“通道”。\n【7】C（text）\n讲解：阅读题里 passage 和 text 意思相近。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让大家读什么？",
+   "listen": "Please read the passage on page 30.",
+   "opts": [
+    "第 30 页的短文",
+    "一首诗",
+    "一幅图",
+    "一组单词"
+   ],
+   "why": "passage 一段文章。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Read the ______ and answer the questions.",
+   "opts": [
+    "passage",
+    "passenger",
+    "message",
+    "package"
+   ],
+   "why": "阅读的短文是 passage。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 passage、passenger 中选一个，用适当形式填空。",
+   "stem": "The ______ fastened her seat belt.",
+   "ans": "passenger",
+   "why": "系安全带的是乘客 passenger。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are three ______ in this test. (passage)",
+   "ans": "passages",
+   "why": "three 后面接复数 passages。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The passage are about animals.",
+   "ans": "are → is",
+   "why": "主语 passage 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A narrow passage led to the garden. Here passage means ______.",
+   "opts": [
+    "通道",
+    "短文",
+    "乘客",
+    "消息"
+   ],
+   "why": "passage 也指“通道”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In a reading test, passage is close in meaning to ______.",
+   "opts": [
+    "text",
+    "test",
+    "taste",
+    "ticket"
+   ],
+   "why": "阅读题里 passage 和 text 意思相近。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

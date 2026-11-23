@@ -1,0 +1,93 @@
+{
+ "单词": "planet",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说了什么？\n听：The Earth is the planet we live on.\nA. 地球是我们住的行星\nB. 太阳是一颗行星\nC. 月亮是行星\nD. 星星在发光",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The sun is a ______, and it gives off light.\nA. planet\nB. star\nC. moon\nD. sky\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are eight ______ in our solar system. (planet)\n考点：变形",
+  "题目4": "【选词填空】从 planet、planetary 中选一个，用适当形式填空。\n题干：Scientists study ______ science.\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Mars is a planet in our solar system, isn't Mars?",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我们应该保护我们的星球。\n题干：We should protect our ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There may be life on ______ planets.\nA. another\nB. the other\nC. others\nD. other\n考点：用法",
+  "答案": "【1】A（地球是我们住的行星）\n讲解：planet 行星。\n【2】B（star）\n讲解：自己发光的是恒星 star；planet 是绕恒星转的行星。\n【3】planets\n讲解：eight 后面用复数，加 s。\n【4】planetary\n讲解：修饰名词 science 用形容词 planetary。\n【5】isn't Mars → isn't it\n讲解：反义疑问句的主语用代词 it。\n【6】planet\n讲解：our planet 指我们的星球（地球）。\n【7】D（other）\n讲解：复数名词 planets 前面用 other。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说了什么？",
+   "listen": "The Earth is the planet we live on.",
+   "opts": [
+    "地球是我们住的行星",
+    "太阳是一颗行星",
+    "月亮是行星",
+    "星星在发光"
+   ],
+   "why": "planet 行星。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The sun is a ______, and it gives off light.",
+   "opts": [
+    "star",
+    "planet",
+    "moon",
+    "sky"
+   ],
+   "why": "自己发光的是恒星 star；planet 是绕恒星转的行星。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are eight ______ in our solar system. (planet)",
+   "ans": "planets",
+   "why": "eight 后面用复数，加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 planet、planetary 中选一个，用适当形式填空。",
+   "stem": "Scientists study ______ science.",
+   "ans": "planetary",
+   "why": "修饰名词 science 用形容词 planetary。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Mars is a planet in our solar system, isn't Mars?",
+   "ans": "isn't Mars → isn't it",
+   "why": "反义疑问句的主语用代词 it。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们应该保护我们的星球。",
+   "stem": "We should protect our ______.",
+   "ans": "planet",
+   "why": "our planet 指我们的星球（地球）。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There may be life on ______ planets.",
+   "opts": [
+    "other",
+    "another",
+    "the other",
+    "others"
+   ],
+   "why": "复数名词 planets 前面用 other。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

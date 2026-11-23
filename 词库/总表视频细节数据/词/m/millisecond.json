@@ -1,0 +1,94 @@
+{
+ "单词": "millisecond",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：电脑多快能回答？\n听：The computer answers in a millisecond.\nA. 一秒\nB. 一毫秒\nC. 一分钟\nD. 一小时",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The race was won by ten ______.\nA. millisecond\nB. millisecondes\nC. milliseconds\nD. milli-seconds",
+  "题目3": "【选词填空】从 millisecond、minute 中选一个，用适当形式填空。\n题干：There are sixty seconds in a ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：A millisecond are very short.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：一秒钟有一千毫秒。\n题干：There are a thousand ______ in a second.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Milli-\" means ______.\nA. a thousandth\nB. a thousand\nC. a million\nD. a hundred\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Kilo-\" in \"kilometre\" means ______.\nA. a thousandth\nB. a hundred\nC. a thousand times\nD. ten\n考点：易混",
+  "答案": "【1】B（一毫秒）\n讲解：millisecond 毫秒。\n【2】C（milliseconds）\n讲解：ten 后面用复数。\n【3】minute\n讲解：六十秒是一分钟 minute。\n【4】are → is\n讲解：主语单数。\n【5】milliseconds\n讲解：a thousand 后面用复数。\n【6】A（a thousandth）\n讲解：milli- 表示“千分之一”。\n【7】C（a thousand times）\n讲解：kilo- 是乘以一千，milli- 是除以一千。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：电脑多快能回答？",
+   "listen": "The computer answers in a millisecond.",
+   "opts": [
+    "一毫秒",
+    "一秒",
+    "一分钟",
+    "一小时"
+   ],
+   "why": "millisecond 毫秒。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The race was won by ten ______.",
+   "opts": [
+    "milliseconds",
+    "millisecond",
+    "millisecondes",
+    "milli-seconds"
+   ],
+   "why": "ten 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 millisecond、minute 中选一个，用适当形式填空。",
+   "stem": "There are sixty seconds in a ______.",
+   "ans": "minute",
+   "why": "六十秒是一分钟 minute。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "A millisecond are very short.",
+   "ans": "are → is",
+   "why": "主语单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "一秒钟有一千毫秒。",
+   "stem": "There are a thousand ______ in a second.",
+   "ans": "milliseconds",
+   "why": "a thousand 后面用复数。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Milli-\" means ______.",
+   "opts": [
+    "a thousandth",
+    "a thousand",
+    "a million",
+    "a hundred"
+   ],
+   "why": "milli- 表示“千分之一”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Kilo-\" in \"kilometre\" means ______.",
+   "opts": [
+    "a thousand times",
+    "a thousandth",
+    "a hundred",
+    "ten"
+   ],
+   "why": "kilo- 是乘以一千，milli- 是除以一千。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

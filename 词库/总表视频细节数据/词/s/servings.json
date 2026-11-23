@@ -1,0 +1,94 @@
+{
+ "单词": "servings",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这包薯片有几份？\n听：This bag of chips has three servings.\nA. 三片\nB. 三克\nC. 三元\nD. 三份",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Eat five ______ of fruit and vegetables a day.\nA. servings\nB. serving\nC. servers\nD. services",
+  "题目3": "【选词填空】从 servings、serving 中选一个，用适当形式填空。\n题干：Each ______ has 100 calories.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：How many serving are in this box?",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：每份含两克糖。\n题干：Each ______ has two grams of sugar.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Servings\" is the ______ of \"serving\".\nA. past tense\nB. verb\nC. adjective\nD. plural\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：You can find the number of servings on a food ______.\nA. map\nB. ticket\nC. coin\nD. label\n考点：用法",
+  "答案": "【1】D（三份）\n讲解：servings 份。\n【2】A（servings）\n讲解：five 后面用复数。\n【3】serving\n讲解：each 后面用单数。\n【4】serving → servings\n讲解：how many 后面用复数。\n【5】serving\n讲解：each 后面用单数。\n【6】D（plural）\n讲解：servings 是 serving 的复数。\n【7】D（label）\n讲解：营养标签上写着有几份。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这包薯片有几份？",
+   "listen": "This bag of chips has three servings.",
+   "opts": [
+    "三份",
+    "三片",
+    "三克",
+    "三元"
+   ],
+   "why": "servings 份。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Eat five ______ of fruit and vegetables a day.",
+   "opts": [
+    "servings",
+    "serving",
+    "servers",
+    "services"
+   ],
+   "why": "five 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 servings、serving 中选一个，用适当形式填空。",
+   "stem": "Each ______ has 100 calories.",
+   "ans": "serving",
+   "why": "each 后面用单数。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "How many serving are in this box?",
+   "ans": "serving → servings",
+   "why": "how many 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "每份含两克糖。",
+   "stem": "Each ______ has two grams of sugar.",
+   "ans": "serving",
+   "why": "each 后面用单数。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Servings\" is the ______ of \"serving\".",
+   "opts": [
+    "plural",
+    "past tense",
+    "verb",
+    "adjective"
+   ],
+   "why": "servings 是 serving 的复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can find the number of servings on a food ______.",
+   "opts": [
+    "label",
+    "map",
+    "ticket",
+    "coin"
+   ],
+   "why": "营养标签上写着有几份。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

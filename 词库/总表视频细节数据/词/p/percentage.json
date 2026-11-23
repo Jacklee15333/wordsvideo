@@ -1,0 +1,94 @@
+{
+ "单词": "percentage",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：有多少学生通过了考试？\n听：A high percentage of students passed the test.\nA. 很少\nB. 很大比例\nC. 一半\nD. 一个也没有",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：A large ______ of the money was spent on food.\nA. percentage\nB. percent\nC. cent\nD. percentages",
+  "题目3": "【选词填空】从 percentage、percent 中选一个，用适当形式填空。\n题干：Fifty ______ of the students are girls.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The percentage of girls are 60.",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：Ten ______ of the class are absent today. (percentage)",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Percentages are usually written with the sign \"______\".\nA. $\nB. &\nC. %\nD. #\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Thirty percent of the students ______ boys.\nA. is\nB. are\nC. be\nD. being\n考点：用法",
+  "答案": "【1】B（很大比例）\n讲解：percentage 百分比。\n【2】A（percentage）\n讲解：a large 后面用名词 percentage，percent 前面通常有数字。\n【3】percent\n讲解：具体数字后面用 percent。\n【4】are → is\n讲解：主语 the percentage 是单数。\n【5】percent\n讲解：数字后面用 percent。\n【6】C（%）\n讲解：百分比用 % 表示。\n【7】B（are）\n讲解：percent of + 复数名词，谓语用复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：有多少学生通过了考试？",
+   "listen": "A high percentage of students passed the test.",
+   "opts": [
+    "很大比例",
+    "很少",
+    "一半",
+    "一个也没有"
+   ],
+   "why": "percentage 百分比。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A large ______ of the money was spent on food.",
+   "opts": [
+    "percentage",
+    "percent",
+    "cent",
+    "percentages"
+   ],
+   "why": "a large 后面用名词 percentage，percent 前面通常有数字。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 percentage、percent 中选一个，用适当形式填空。",
+   "stem": "Fifty ______ of the students are girls.",
+   "ans": "percent",
+   "why": "具体数字后面用 percent。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The percentage of girls are 60.",
+   "ans": "are → is",
+   "why": "主语 the percentage 是单数。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Ten ______ of the class are absent today. (percentage)",
+   "ans": "percent",
+   "why": "数字后面用 percent。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Percentages are usually written with the sign \"______\".",
+   "opts": [
+    "%",
+    "$",
+    "&",
+    "#"
+   ],
+   "why": "百分比用 % 表示。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Thirty percent of the students ______ boys.",
+   "opts": [
+    "are",
+    "is",
+    "be",
+    "being"
+   ],
+   "why": "percent of + 复数名词，谓语用复数。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "unworn",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说这件衬衫怎么样？\n听：This shirt is unworn; I never put it on.\nA. 穿破了\nB. 从没穿过\nC. 太小了\nD. 很脏",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You can return the shoes if they are ______.\nA. worn\nB. unworn\nC. wore\nD. wearing",
+  "题目3": "【选词填空】从 unworn、worn-out 中选一个，用适当形式填空。\n题干：My old shoes are ______; they have holes in them.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：These jeans are too ______; I need a new pair. (unworn)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The dress was unworn because she never wear it.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她还没穿过这件外套。\n题干：She hasn't ______ this coat yet.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"An unworn dress\" is a dress that ______.\nA. nobody has worn yet\nB. is very old\nC. is too small\nD. is dirty\n考点：用法",
+  "答案": "【1】B（从没穿过）\n讲解：unworn 没穿过的。\n【2】B（unworn）\n讲解：没穿过的才能退。\n【3】worn-out\n讲解：有洞了，是破旧的 worn-out。\n【4】worn\n讲解：要买新的，说明穿旧了，去掉 un-：worn。\n【5】wear → wore\n讲解：全句是过去时，用 wore。\n【6】worn\n讲解：has 后面用过去分词 worn。\n【7】A（nobody has worn yet）\n讲解：unworn 没穿过的、崭新的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说这件衬衫怎么样？",
+   "listen": "This shirt is unworn; I never put it on.",
+   "opts": [
+    "从没穿过",
+    "穿破了",
+    "太小了",
+    "很脏"
+   ],
+   "why": "unworn 没穿过的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can return the shoes if they are ______.",
+   "opts": [
+    "unworn",
+    "worn",
+    "wore",
+    "wearing"
+   ],
+   "why": "没穿过的才能退。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 unworn、worn-out 中选一个，用适当形式填空。",
+   "stem": "My old shoes are ______; they have holes in them.",
+   "ans": "worn-out",
+   "why": "有洞了，是破旧的 worn-out。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "These jeans are too ______; I need a new pair. (unworn)",
+   "ans": "worn",
+   "why": "要买新的，说明穿旧了，去掉 un-：worn。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The dress was unworn because she never wear it.",
+   "ans": "wear → wore",
+   "why": "全句是过去时，用 wore。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她还没穿过这件外套。",
+   "stem": "She hasn't ______ this coat yet.",
+   "ans": "worn",
+   "why": "has 后面用过去分词 worn。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"An unworn dress\" is a dress that ______.",
+   "opts": [
+    "nobody has worn yet",
+    "is very old",
+    "is too small",
+    "is dirty"
+   ],
+   "why": "unworn 没穿过的、崭新的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

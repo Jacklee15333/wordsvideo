@@ -1,0 +1,95 @@
+{
+ "单词": "observation",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：医生决定怎样处理病人？\n听：The patient is kept under observation.\nA. 留院观察\nB. 让他回家\nC. 马上手术\nD. 吃药",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The patient is ______ observation for 24 hours.\nA. in\nB. under\nC. at\nD. on",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We ______ the stars last night. (observation)\n考点：词性转换",
+  "题目4": "【选词填空】从 observation、operation 中选一个，用适当形式填空。\n题干：The doctor did an ______ on his heart.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Our observation shows that the plants grows faster.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Write down your ______ in the notebook.\nA. observe\nB. observing\nC. observer\nD. observations\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Good scientists have good powers of ______.\nA. observe\nB. observation\nC. observer\nD. observant\n考点：用法",
+  "答案": "【1】A（留院观察）\n讲解：under observation 在观察中。\n【2】B（under）\n讲解：under observation 在观察中。\n【3】observed\n讲解：last night 用动词 observe 的过去式。\n【4】operation\n讲解：做心脏手术是 operation。\n【5】grows → grow\n讲解：that 从句主语 the plants 是复数，用 grow。\n【6】D（observations）\n讲解：your 后面要名词，记下的观察结果用复数 observations。\n【7】B（observation）\n讲解：powers of observation 观察力。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：医生决定怎样处理病人？",
+   "listen": "The patient is kept under observation.",
+   "opts": [
+    "留院观察",
+    "让他回家",
+    "马上手术",
+    "吃药"
+   ],
+   "why": "under observation 在观察中。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The patient is ______ observation for 24 hours.",
+   "opts": [
+    "under",
+    "in",
+    "at",
+    "on"
+   ],
+   "why": "under observation 在观察中。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We ______ the stars last night. (observation)",
+   "ans": "observed",
+   "why": "last night 用动词 observe 的过去式。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 observation、operation 中选一个，用适当形式填空。",
+   "stem": "The doctor did an ______ on his heart.",
+   "ans": "operation",
+   "why": "做心脏手术是 operation。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Our observation shows that the plants grows faster.",
+   "ans": "grows → grow",
+   "why": "that 从句主语 the plants 是复数，用 grow。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Write down your ______ in the notebook.",
+   "opts": [
+    "observations",
+    "observe",
+    "observing",
+    "observer"
+   ],
+   "why": "your 后面要名词，记下的观察结果用复数 observations。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Good scientists have good powers of ______.",
+   "opts": [
+    "observation",
+    "observe",
+    "observer",
+    "observant"
+   ],
+   "why": "powers of observation 观察力。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

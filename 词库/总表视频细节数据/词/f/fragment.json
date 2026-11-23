@@ -1,0 +1,93 @@
+{
+ "单词": "fragment",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：地上有什么？\n听：There were fragments of glass on the floor.\nA. 一块蛋糕\nB. 一本书\nC. 玻璃碎片\nD. 一张纸",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The vase broke into small ______.\nA. fragment\nB. fragmented\nC. fraction\nD. fragments\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The country was ______ after the war. (fragment)\n考点：变形",
+  "题目4": "【选词填空】从 fragment、piece 中选一个，用适当形式填空。\n题干：Would you like a ______ of cake?\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He found a fragment of an old pot and put them in the museum.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我只听到了他们谈话的一小段。\n题干：I only heard a ______ of their conversation.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：We read an ______ from the novel in class.\nA. exit\nB. expert\nC. excerpt\nD. extra\n考点：易混",
+  "答案": "【1】C（玻璃碎片）\n讲解：fragment 碎片。\n【2】D（fragments）\n讲解：broke into 后面用复数 fragments。\n【3】fragmented\n讲解：was + 过去分词 fragmented（被分裂）。\n【4】piece\n讲解：“一块”蛋糕用中性的 piece；fragment 是打碎的一小块。\n【5】them → it\n讲解：指代单数 fragment，用 it。\n【6】fragment\n讲解：a fragment of 一个片段。\n【7】C（excerpt）\n讲解：书里的选段用 excerpt。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：地上有什么？",
+   "listen": "There were fragments of glass on the floor.",
+   "opts": [
+    "玻璃碎片",
+    "一块蛋糕",
+    "一本书",
+    "一张纸"
+   ],
+   "why": "fragment 碎片。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The vase broke into small ______.",
+   "opts": [
+    "fragments",
+    "fragment",
+    "fragmented",
+    "fraction"
+   ],
+   "why": "broke into 后面用复数 fragments。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The country was ______ after the war. (fragment)",
+   "ans": "fragmented",
+   "why": "was + 过去分词 fragmented（被分裂）。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 fragment、piece 中选一个，用适当形式填空。",
+   "stem": "Would you like a ______ of cake?",
+   "ans": "piece",
+   "why": "“一块”蛋糕用中性的 piece；fragment 是打碎的一小块。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He found a fragment of an old pot and put them in the museum.",
+   "ans": "them → it",
+   "why": "指代单数 fragment，用 it。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我只听到了他们谈话的一小段。",
+   "stem": "I only heard a ______ of their conversation.",
+   "ans": "fragment",
+   "why": "a fragment of 一个片段。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We read an ______ from the novel in class.",
+   "opts": [
+    "excerpt",
+    "exit",
+    "expert",
+    "extra"
+   ],
+   "why": "书里的选段用 excerpt。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

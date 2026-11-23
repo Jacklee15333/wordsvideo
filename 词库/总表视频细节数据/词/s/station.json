@@ -1,0 +1,93 @@
+{
+ "单词": "station",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在哪里等？\n听：I'll wait for you at the train station.\nA. 火车站\nB. 公交站\nC. 机场\nD. 学校",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is a big railway ______ in our city.\nA. stop\nB. stage\nC. state\nD. station\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are three subway ______ near my school. (station)\n考点：变形",
+  "题目4": "【选词填空】从 station、stop 中选一个，用适当形式填空。\n题干：Get off at the next bus ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The station are very crowded.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Which station can you listen to?\nA. a train station\nB. a radio station\nC. a bus station\nD. a police station\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：火车站离这儿远吗？\n题干：Is the station far ______ here?\n考点：用法",
+  "答案": "【1】A（火车站）\n讲解：station 车站。\n【2】D（station）\n讲解：火车站是 railway station；stop 是小站点。\n【3】stations\n讲解：three 后面用复数 stations。\n【4】stop\n讲解：公交车站一般叫 bus stop。\n【5】are → is\n讲解：主语 station 单数，谓语用 is。\n【6】B（a radio station）\n讲解：能“听”的是电台 radio station。\n【7】from\n讲解：far from 离……远。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在哪里等？",
+   "listen": "I'll wait for you at the train station.",
+   "opts": [
+    "火车站",
+    "公交站",
+    "机场",
+    "学校"
+   ],
+   "why": "station 车站。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is a big railway ______ in our city.",
+   "opts": [
+    "station",
+    "stop",
+    "stage",
+    "state"
+   ],
+   "why": "火车站是 railway station；stop 是小站点。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are three subway ______ near my school. (station)",
+   "ans": "stations",
+   "why": "three 后面用复数 stations。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 station、stop 中选一个，用适当形式填空。",
+   "stem": "Get off at the next bus ______.",
+   "ans": "stop",
+   "why": "公交车站一般叫 bus stop。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The station are very crowded.",
+   "ans": "are → is",
+   "why": "主语 station 单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which station can you listen to?",
+   "opts": [
+    "a radio station",
+    "a train station",
+    "a bus station",
+    "a police station"
+   ],
+   "why": "能“听”的是电台 radio station。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "火车站离这儿远吗？",
+   "stem": "Is the station far ______ here?",
+   "ans": "from",
+   "why": "far from 离……远。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

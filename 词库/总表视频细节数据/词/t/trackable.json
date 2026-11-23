@@ -1,0 +1,91 @@
+{
+ "单词": "trackable",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说包裹怎么样？\n听：The parcel is trackable online.\nA. 已经丢失\nB. 可以在网上追踪\nC. 不能追踪\nD. 已经送到",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：All orders are ______ on our website.\nA. track\nB. trackable\nC. tracking\nD. tracker",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The hunter ______ the deer through the forest yesterday. (trackable)\n考点：词性转换",
+  "题目4": "【选词填空】从 trackable、untrackable 中选一个，用适当形式填空。\n题干：The phone is switched off, so it is ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This parcel is trackable, so we can't find it.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：你的快递可以追踪。\n题干：Your delivery ______ ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Please give me the ______ number of the parcel.\nA. trackable\nB. tracking\nC. tracker\nD. tracked\n考点：词性转换",
+  "答案": "【1】B（可以在网上追踪）\n讲解：trackable 可追踪的。\n【2】B（trackable）\n讲解：be 后面要形容词 trackable。\n【3】tracked\n讲解：yesterday 是过去，用动词 track 的过去式。\n【4】untrackable\n讲解：关机了就无法追踪 untrackable。\n【5】can't → can\n讲解：可追踪，所以能找到，前后要合理。\n【6】is；trackable\n讲解：be trackable 可追踪的。\n【7】B（tracking）\n讲解：快递的“追踪号”说 tracking number。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说包裹怎么样？",
+   "listen": "The parcel is trackable online.",
+   "opts": [
+    "可以在网上追踪",
+    "已经丢失",
+    "不能追踪",
+    "已经送到"
+   ],
+   "why": "trackable 可追踪的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "All orders are ______ on our website.",
+   "opts": [
+    "trackable",
+    "track",
+    "tracking",
+    "tracker"
+   ],
+   "why": "be 后面要形容词 trackable。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The hunter ______ the deer through the forest yesterday. (trackable)",
+   "ans": "tracked",
+   "why": "yesterday 是过去，用动词 track 的过去式。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 trackable、untrackable 中选一个，用适当形式填空。",
+   "stem": "The phone is switched off, so it is ______.",
+   "ans": "untrackable",
+   "why": "关机了就无法追踪 untrackable。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This parcel is trackable, so we can't find it.",
+   "ans": "can't → can",
+   "why": "可追踪，所以能找到，前后要合理。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你的快递可以追踪。",
+   "stem": "Your delivery ______ ______.",
+   "ans": "is；trackable",
+   "why": "be trackable 可追踪的。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please give me the ______ number of the parcel.",
+   "opts": [
+    "tracking",
+    "trackable",
+    "tracker",
+    "tracked"
+   ],
+   "why": "快递的“追踪号”说 tracking number。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,98 @@
+{
+ "单词": "lecture",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人要去听什么？\n听：I'm going to a lecture on history.\nA. 历史考试\nB. 历史电影\nC. 历史讲座\nD. 书展",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The professor gave a ______ on space.\nA. lecturer\nB. lectures\nC. lecture\nD. letter\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Two ______ will be held this week. (lecture)\n考点：变形",
+  "题目4": "【选词填空】从 lecture、lecturer 中选一个，用适当形式填空。\n题干：The ______ spoke for two hours.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I went to a lecture yesterday, so I stayed at home all day.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In French, lecture still means ______.\nA. 阅读\nB. 讲座\nC. 演讲\nD. 课程\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A lecture is usually given at ______.\nA. a shop\nB. a farm\nC. a beach\nD. a university\n考点：用法",
+  "答案": "【1】C（历史讲座）\n讲解：lecture 讲座。\n【2】C（lecture）\n讲解：做“讲座”用 give a lecture。\n【3】lectures\n讲解：two 后面用复数 lectures。\n【4】lecturer\n讲解：讲课的人是 lecturer。\n【5】stayed at home all day → went out\n讲解：去听了讲座就出门了。\n【6】A（阅读）\n讲解：法语 lecture 至今仍是“阅读”。\n【7】D（a university）\n讲解：讲座多在大学里。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人要去听什么？",
+   "listen": "I'm going to a lecture on history.",
+   "opts": [
+    "历史讲座",
+    "历史考试",
+    "历史电影",
+    "书展"
+   ],
+   "why": "lecture 讲座。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The professor gave a ______ on space.",
+   "opts": [
+    "lecture",
+    "lecturer",
+    "lectures",
+    "letter"
+   ],
+   "why": "做“讲座”用 give a lecture。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Two ______ will be held this week. (lecture)",
+   "ans": "lectures",
+   "why": "two 后面用复数 lectures。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 lecture、lecturer 中选一个，用适当形式填空。",
+   "stem": "The ______ spoke for two hours.",
+   "ans": "lecturer",
+   "why": "讲课的人是 lecturer。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I went to a lecture yesterday, so I stayed at home all day.",
+   "ans": "stayed at home all day → went out",
+   "why": "去听了讲座就出门了。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In French, lecture still means ______.",
+   "opts": [
+    "阅读",
+    "讲座",
+    "演讲",
+    "课程"
+   ],
+   "why": "法语 lecture 至今仍是“阅读”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A lecture is usually given at ______.",
+   "opts": [
+    "a university",
+    "a shop",
+    "a farm",
+    "a beach"
+   ],
+   "why": "讲座多在大学里。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

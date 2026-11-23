@@ -1,0 +1,94 @@
+{
+ "单词": "fly",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人明天怎么去北京？\n听：I will fly to Beijing tomorrow.\nA. 坐火车\nB. 坐飞机\nC. 开车\nD. 坐船",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The birds ______ south last winter.\nA. flied\nB. flew\nC. flown\nD. flys",
+  "题目3": "【选词填空】从 fly、flight 中选一个，用适当形式填空。\n题干：Our ______ leaves at 9 a.m.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Have you ever flew a kite?",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：时间过得真快！\n题干：Time ______!",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Children like to ______ kites in spring.\nA. flies\nB. flew\nC. fly\nD. flight\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There are many ______ in the kitchen. Close the door!\nA. flys\nB. fly\nC. flies\nD. flew\n考点：变形",
+  "答案": "【1】B（坐飞机）\n讲解：fly 坐飞机。\n【2】B（flew）\n讲解：last winter 用过去式 flew。\n【3】flight\n讲解：航班是 flight。\n【4】flew → flown\n讲解：现在完成时用过去分词 flown。\n【5】flies\n讲解：Time flies! 时光飞逝。\n【6】C（fly）\n讲解：like to 后面用动词原形。\n【7】C（flies）\n讲解：苍蝇的复数是 flies。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人明天怎么去北京？",
+   "listen": "I will fly to Beijing tomorrow.",
+   "opts": [
+    "坐飞机",
+    "坐火车",
+    "开车",
+    "坐船"
+   ],
+   "why": "fly 坐飞机。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The birds ______ south last winter.",
+   "opts": [
+    "flew",
+    "flied",
+    "flown",
+    "flys"
+   ],
+   "why": "last winter 用过去式 flew。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 fly、flight 中选一个，用适当形式填空。",
+   "stem": "Our ______ leaves at 9 a.m.",
+   "ans": "flight",
+   "why": "航班是 flight。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Have you ever flew a kite?",
+   "ans": "flew → flown",
+   "why": "现在完成时用过去分词 flown。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "时间过得真快！",
+   "stem": "Time ______!",
+   "ans": "flies",
+   "why": "Time flies! 时光飞逝。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Children like to ______ kites in spring.",
+   "opts": [
+    "fly",
+    "flies",
+    "flew",
+    "flight"
+   ],
+   "why": "like to 后面用动词原形。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ in the kitchen. Close the door!",
+   "opts": [
+    "flies",
+    "flys",
+    "fly",
+    "flew"
+   ],
+   "why": "苍蝇的复数是 flies。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

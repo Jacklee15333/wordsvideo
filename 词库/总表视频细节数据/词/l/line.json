@@ -1,0 +1,93 @@
+{
+ "单词": "line",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让大家做什么？\n听：Please stand in a line.\nA. 坐下\nB. 回家\nC. 唱歌\nD. 排成一行",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are three ______ on this page.\nA. line\nB. lined\nC. lines\nD. lining\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The street is ______ with trees. (line)\n考点：变形",
+  "题目4": "【选词填空】从 line、row 中选一个，用适当形式填空。\n题干：We sat in the front ______ of the cinema.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Please draw a line under the words and reads them.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：请排队等候。\n题干：Please wait ______ line.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The phone ______ is busy.\nA. line\nB. lines\nC. lined\nD. lining\n考点：用法",
+  "答案": "【1】D（排成一行）\n讲解：stand in a line 排成一行。\n【2】C（lines）\n讲解：three 后面用复数 lines。\n【3】lined\n讲解：be lined with 两旁排着……，用过去分词，去 e 加 d。\n【4】row\n讲解：电影院的“一排座位”用 row；line 是一条线、一行。\n【5】reads → read\n讲解：祈使句并列，用原形 read。\n【6】in\n讲解：wait in line 排队等候。\n【7】A（line）\n讲解：电话“线路”用 line，is 前用单数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让大家做什么？",
+   "listen": "Please stand in a line.",
+   "opts": [
+    "排成一行",
+    "坐下",
+    "回家",
+    "唱歌"
+   ],
+   "why": "stand in a line 排成一行。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are three ______ on this page.",
+   "opts": [
+    "lines",
+    "line",
+    "lined",
+    "lining"
+   ],
+   "why": "three 后面用复数 lines。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The street is ______ with trees. (line)",
+   "ans": "lined",
+   "why": "be lined with 两旁排着……，用过去分词，去 e 加 d。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 line、row 中选一个，用适当形式填空。",
+   "stem": "We sat in the front ______ of the cinema.",
+   "ans": "row",
+   "why": "电影院的“一排座位”用 row；line 是一条线、一行。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please draw a line under the words and reads them.",
+   "ans": "reads → read",
+   "why": "祈使句并列，用原形 read。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请排队等候。",
+   "stem": "Please wait ______ line.",
+   "ans": "in",
+   "why": "wait in line 排队等候。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The phone ______ is busy.",
+   "opts": [
+    "line",
+    "lines",
+    "lined",
+    "lining"
+   ],
+   "why": "电话“线路”用 line，is 前用单数。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "reset",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让你做什么？\n听：Please reset your password.\nA. 忘记密码\nB. 告诉别人密码\nC. 重设密码\nD. 删除账号",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I ______ my phone last night because it was too slow.\nA. reset\nB. resets\nC. reseted\nD. resetting\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：He is ______ the clock now. (reset)\n考点：变形",
+  "题目4": "【选词填空】从 reset、restart 中选一个，用适当形式填空。\n题干：After the rain stopped, the match ______ at 3 p.m.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She reset her watch every time she travels abroad.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：把机器恢复到出厂设置。\n题干：Reset the machine ______ its factory settings.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：My password ______ by my brother yesterday.\nA. was reset\nB. reset\nC. resets\nD. was reseted\n考点：变形",
+  "答案": "【1】C（重设密码）\n讲解：reset 重置。\n【2】A（reset）\n讲解：reset 的过去式不规则，还是 reset。\n【3】resetting\n讲解：现在分词双写 t 加 ing。\n【4】restarted\n讲解：比赛重新开始用 restart；reset 是恢复到初始状态。\n【5】reset → resets\n讲解：主语三单、every time 一般现在时，用 resets。\n【6】to\n讲解：reset … to 恢复到……。\n【7】A（was reset）\n讲解：密码“被重置”，用被动 was reset。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让你做什么？",
+   "listen": "Please reset your password.",
+   "opts": [
+    "重设密码",
+    "忘记密码",
+    "告诉别人密码",
+    "删除账号"
+   ],
+   "why": "reset 重置。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I ______ my phone last night because it was too slow.",
+   "opts": [
+    "reset",
+    "resets",
+    "reseted",
+    "resetting"
+   ],
+   "why": "reset 的过去式不规则，还是 reset。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He is ______ the clock now. (reset)",
+   "ans": "resetting",
+   "why": "现在分词双写 t 加 ing。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 reset、restart 中选一个，用适当形式填空。",
+   "stem": "After the rain stopped, the match ______ at 3 p.m.",
+   "ans": "restarted",
+   "why": "比赛重新开始用 restart；reset 是恢复到初始状态。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She reset her watch every time she travels abroad.",
+   "ans": "reset → resets",
+   "why": "主语三单、every time 一般现在时，用 resets。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "把机器恢复到出厂设置。",
+   "stem": "Reset the machine ______ its factory settings.",
+   "ans": "to",
+   "why": "reset … to 恢复到……。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My password ______ by my brother yesterday.",
+   "opts": [
+    "was reset",
+    "reset",
+    "resets",
+    "was reseted"
+   ],
+   "why": "密码“被重置”，用被动 was reset。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

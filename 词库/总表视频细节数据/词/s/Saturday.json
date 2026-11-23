@@ -1,0 +1,94 @@
+{
+ "单词": "Saturday",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们哪天去公园？\n听：We will go to the park on Saturday.\nA. 星期天\nB. 星期五\nC. 星期一\nD. 星期六",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I don't go to school ______ Saturdays.\nA. on\nB. in\nC. at\nD. by\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We have no classes on ______. (Saturday)\n考点：变形",
+  "题目4": "【选词填空】从 Saturday、Sunday 中选一个，用适当形式填空。\n题干：______ is the first day of the week in America.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I play football on saturday.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：星期五之后是星期六。\n题干：______ comes after Friday.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Saturday and Sunday are the ______.\nA. weekday\nB. week\nC. weekends\nD. weekend\n考点：用法",
+  "答案": "【1】D（星期六）\n讲解：Saturday 星期六。\n【2】A（on）\n讲解：在星期几前用 on。\n【3】Saturdays\n讲解：说每个星期六用复数 Saturdays。\n【4】Sunday\n讲解：美国一周从星期天开始。\n【5】saturday → Saturday\n讲解：星期几首字母要大写。\n【6】Saturday\n讲解：星期五之后是星期六 Saturday。\n【7】D（weekend）\n讲解：星期六和星期天是周末 weekend。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们哪天去公园？",
+   "listen": "We will go to the park on Saturday.",
+   "opts": [
+    "星期六",
+    "星期天",
+    "星期五",
+    "星期一"
+   ],
+   "why": "Saturday 星期六。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I don't go to school ______ Saturdays.",
+   "opts": [
+    "on",
+    "in",
+    "at",
+    "by"
+   ],
+   "why": "在星期几前用 on。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We have no classes on ______. (Saturday)",
+   "ans": "Saturdays",
+   "why": "说每个星期六用复数 Saturdays。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 Saturday、Sunday 中选一个，用适当形式填空。",
+   "stem": "______ is the first day of the week in America.",
+   "ans": "Sunday",
+   "why": "美国一周从星期天开始。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I play football on saturday.",
+   "ans": "saturday → Saturday",
+   "why": "星期几首字母要大写。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "星期五之后是星期六。",
+   "stem": "______ comes after Friday.",
+   "ans": "Saturday",
+   "why": "星期五之后是星期六 Saturday。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Saturday and Sunday are the ______.",
+   "opts": [
+    "weekend",
+    "weekday",
+    "week",
+    "weekends"
+   ],
+   "why": "星期六和星期天是周末 weekend。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

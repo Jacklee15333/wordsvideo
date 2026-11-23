@@ -1,0 +1,94 @@
+{
+ "单词": "manor",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们参观了什么？\n听：We visited an old manor in England.\nA. 城堡\nB. 教堂\nC. 学校\nD. 古老的庄园",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are three old ______ in this area.\nA. manor\nB. manors\nC. manores\nD. manners",
+  "题目3": "【选词填空】从 manor、manner 中选一个，用适当形式填空。\n题干：She speaks in a polite ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The manor were built 300 years ago.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这座庄园属于一个富有的家庭。\n题干：The manor ______ to a rich family.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Manor\" has a feeling of history: land and a ______.\nA. shop\nB. school\nC. bus\nD. lord\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A ______ is a large house with land, owned by a lord long ago.\nA. mansion\nB. manor\nC. flat\nD. hut\n考点：用法",
+  "答案": "【1】D（古老的庄园）\n讲解：manor 庄园。\n【2】B（manors）\n讲解：three 后面用复数。\n【3】manner\n讲解：方式是 manner。\n【4】were → was\n讲解：主语单数。\n【5】belongs\n讲解：belong to 属于，主语三单。\n【6】D（lord）\n讲解：manor 带“领地、领主”的历史色彩。\n【7】B（manor）\n讲解：带领地的是 manor。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们参观了什么？",
+   "listen": "We visited an old manor in England.",
+   "opts": [
+    "古老的庄园",
+    "城堡",
+    "教堂",
+    "学校"
+   ],
+   "why": "manor 庄园。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are three old ______ in this area.",
+   "opts": [
+    "manors",
+    "manor",
+    "manores",
+    "manners"
+   ],
+   "why": "three 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 manor、manner 中选一个，用适当形式填空。",
+   "stem": "She speaks in a polite ______.",
+   "ans": "manner",
+   "why": "方式是 manner。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The manor were built 300 years ago.",
+   "ans": "were → was",
+   "why": "主语单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这座庄园属于一个富有的家庭。",
+   "stem": "The manor ______ to a rich family.",
+   "ans": "belongs",
+   "why": "belong to 属于，主语三单。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Manor\" has a feeling of history: land and a ______.",
+   "opts": [
+    "lord",
+    "shop",
+    "school",
+    "bus"
+   ],
+   "why": "manor 带“领地、领主”的历史色彩。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ is a large house with land, owned by a lord long ago.",
+   "opts": [
+    "manor",
+    "mansion",
+    "flat",
+    "hut"
+   ],
+   "why": "带领地的是 manor。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

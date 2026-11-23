@@ -1,0 +1,93 @@
+{
+ "单词": "setlist",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：乐队在演唱会前写了什么？\n听：The band wrote the setlist before the concert.\nA. 曲目单\nB. 门票\nC. 菜单\nD. 舞蹈",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The first song on the ______ was my favourite.\nA. setlist\nB. set\nC. list\nD. settle\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The band has two ______ for the tour. (setlist)\n考点：变形",
+  "题目4": "【选词填空】从 setlist、playlist 中选一个，用适当形式填空。\n题干：I made a ______ of my favourite songs on my phone.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The setlist have twenty songs.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A setlist is a list of songs for ______.\nA. a test\nB. a meal\nC. a show\nD. a trip\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：专辑的曲目表在背面。\n题干：The album's ______ is on the back.\n考点：易混",
+  "答案": "【1】A（曲目单）\n讲解：setlist 曲目单。\n【2】A（setlist）\n讲解：一场演出的歌单是 setlist。\n【3】setlists\n讲解：two 后面用复数 setlists。\n【4】playlist\n讲解：自己排的播放列表是 playlist；setlist 是演出歌单。\n【5】have → has\n讲解：主语 setlist 单数，谓语用 has。\n【6】C（a show）\n讲解：setlist 是一场演出的曲目单。\n【7】tracklist\n讲解：专辑曲目表是 tracklist。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：乐队在演唱会前写了什么？",
+   "listen": "The band wrote the setlist before the concert.",
+   "opts": [
+    "曲目单",
+    "门票",
+    "菜单",
+    "舞蹈"
+   ],
+   "why": "setlist 曲目单。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The first song on the ______ was my favourite.",
+   "opts": [
+    "setlist",
+    "set",
+    "list",
+    "settle"
+   ],
+   "why": "一场演出的歌单是 setlist。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The band has two ______ for the tour. (setlist)",
+   "ans": "setlists",
+   "why": "two 后面用复数 setlists。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 setlist、playlist 中选一个，用适当形式填空。",
+   "stem": "I made a ______ of my favourite songs on my phone.",
+   "ans": "playlist",
+   "why": "自己排的播放列表是 playlist；setlist 是演出歌单。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The setlist have twenty songs.",
+   "ans": "have → has",
+   "why": "主语 setlist 单数，谓语用 has。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A setlist is a list of songs for ______.",
+   "opts": [
+    "a show",
+    "a test",
+    "a meal",
+    "a trip"
+   ],
+   "why": "setlist 是一场演出的曲目单。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "专辑的曲目表在背面。",
+   "stem": "The album's ______ is on the back.",
+   "ans": "tracklist",
+   "why": "专辑曲目表是 tracklist。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

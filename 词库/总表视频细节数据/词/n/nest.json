@@ -1,0 +1,97 @@
+{
+ "单词": "nest",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：树上有什么？\n听：There is a bird's nest in the tree.\nA. 一只猫\nB. 一个风筝\nC. 鸟窝\nD. 一个苹果",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The birds are building a ______.\nA. nests\nB. nest\nC. nested\nD. nesting\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We found two ______ in the tree. (nest)\n考点：变形",
+  "题目4": "【选词填空】从 nest、den 中选一个，用适当形式填空。\n题干：The fox is sleeping in its ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The bird make its nest in spring.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Young birds ______ to fly before they leave the nest.\nA. learn\nB. learns\nC. learned\nD. learning\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There are three eggs ______ the nest.\nA. on\nB. at\nC. of\nD. in\n考点：用法",
+  "答案": "【1】C（鸟窝）\n讲解：nest 鸟巢。\n【2】B（nest）\n讲解：a 后面接单数名词 nest。\n【3】nests\n讲解：two 后面接复数。\n【4】den\n讲解：野兽的窝、洞穴是 den；nest 多指鸟巢。\n【5】make → makes\n讲解：主语单数，一般现在时加 s。\n【6】A（learn）\n讲解：说规律用一般现在时，主语复数用原形。\n【7】D（in）\n讲解：在窝里用 in。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：树上有什么？",
+   "listen": "There is a bird's nest in the tree.",
+   "opts": [
+    "鸟窝",
+    "一只猫",
+    "一个风筝",
+    "一个苹果"
+   ],
+   "why": "nest 鸟巢。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The birds are building a ______.",
+   "opts": [
+    "nest",
+    "nests",
+    "nested",
+    "nesting"
+   ],
+   "why": "a 后面接单数名词 nest。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We found two ______ in the tree. (nest)",
+   "ans": "nests",
+   "why": "two 后面接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 nest、den 中选一个，用适当形式填空。",
+   "stem": "The fox is sleeping in its ______.",
+   "ans": "den",
+   "why": "野兽的窝、洞穴是 den；nest 多指鸟巢。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The bird make its nest in spring.",
+   "ans": "make → makes",
+   "why": "主语单数，一般现在时加 s。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Young birds ______ to fly before they leave the nest.",
+   "opts": [
+    "learn",
+    "learns",
+    "learned",
+    "learning"
+   ],
+   "why": "说规律用一般现在时，主语复数用原形。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are three eggs ______ the nest.",
+   "opts": [
+    "in",
+    "on",
+    "at",
+    "of"
+   ],
+   "why": "在窝里用 in。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

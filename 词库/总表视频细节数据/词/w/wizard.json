@@ -1,0 +1,94 @@
+{
+ "单词": "wizard",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：故事里有谁？\n听：There is a wizard in the story.\nA. 一个国王\nB. 一个巫师\nC. 一个农民\nD. 一个士兵",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：A wizard can do ______.\nA. magical\nB. magic\nC. magician\nD. magically\n考点：词性转换",
+  "题目3": "【选词填空】从 wizard、magician 中选一个，用适当形式填空。\n题干：The ______ pulled a rabbit out of his hat at the party.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are three ______ in the film. (wizard)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He is a computer wizards.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他是个电脑高手。\n题干：He is a computer ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A female wizard is usually called a ______.\nA. witch\nB. wizard\nC. wizardess\nD. witches\n考点：易混",
+  "答案": "【1】B（一个巫师）\n讲解：wizard 巫师。\n【2】B（magic）\n讲解：巫师会魔法，can do 后面要名词 magic。\n【3】magician\n讲解：派对上变戏法的是魔术师 magician。\n【4】wizards\n讲解：three 后面用复数 wizards。\n【5】wizards → wizard\n讲解：a 后面用单数 wizard。\n【6】wizard\n讲解：wizard 也指“奇才、高手”。\n【7】A（witch）\n讲解：女巫一般叫 witch。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：故事里有谁？",
+   "listen": "There is a wizard in the story.",
+   "opts": [
+    "一个巫师",
+    "一个国王",
+    "一个农民",
+    "一个士兵"
+   ],
+   "why": "wizard 巫师。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A wizard can do ______.",
+   "opts": [
+    "magic",
+    "magical",
+    "magician",
+    "magically"
+   ],
+   "why": "巫师会魔法，can do 后面要名词 magic。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 wizard、magician 中选一个，用适当形式填空。",
+   "stem": "The ______ pulled a rabbit out of his hat at the party.",
+   "ans": "magician",
+   "why": "派对上变戏法的是魔术师 magician。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are three ______ in the film. (wizard)",
+   "ans": "wizards",
+   "why": "three 后面用复数 wizards。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is a computer wizards.",
+   "ans": "wizards → wizard",
+   "why": "a 后面用单数 wizard。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是个电脑高手。",
+   "stem": "He is a computer ______.",
+   "ans": "wizard",
+   "why": "wizard 也指“奇才、高手”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A female wizard is usually called a ______.",
+   "opts": [
+    "witch",
+    "wizard",
+    "wizardess",
+    "witches"
+   ],
+   "why": "女巫一般叫 witch。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

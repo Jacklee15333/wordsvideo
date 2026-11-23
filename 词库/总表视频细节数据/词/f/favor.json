@@ -1,0 +1,91 @@
+{
+ "单词": "favor",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人想请对方帮什么忙？\n听：Can you do me a favor and carry this bag?\nA. 拿包\nB. 开车\nC. 做饭\nD. 买票",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Will you do me a ______, please?\nA. favorite\nB. favorable\nC. favor\nD. favors",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Thanks for the two ______ you did for me. (favor)\n考点：变形",
+  "题目4": "【选词填空】从 favor、flavor 中选一个，用适当形式填空。\n题干：This soup has a strange ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I'm in favor for your idea.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Favor\" is the American spelling, and \"______\" is the British one.\nA. favourite\nB. flavor\nC. favorable\nD. favour\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：蓝色是我最喜欢的颜色。\n题干：Blue is my ______ color.\n考点：词性转换",
+  "答案": "【1】A（拿包）\n讲解：do me a favor 帮我个忙。\n【2】C（favor）\n讲解：do sb a favor 帮某人一个忙。\n【3】favors\n讲解：two 后面用复数，加 s。\n【4】flavor\n讲解：汤的味道是 flavor；favor 是恩惠。\n【5】for → of\n讲解：in favor of 赞成。\n【6】D（favour）\n讲解：英式拼法是 favour。\n【7】favorite\n讲解：最喜爱的是 favorite。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想请对方帮什么忙？",
+   "listen": "Can you do me a favor and carry this bag?",
+   "opts": [
+    "拿包",
+    "开车",
+    "做饭",
+    "买票"
+   ],
+   "why": "do me a favor 帮我个忙。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Will you do me a ______, please?",
+   "opts": [
+    "favor",
+    "favorite",
+    "favorable",
+    "favors"
+   ],
+   "why": "do sb a favor 帮某人一个忙。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Thanks for the two ______ you did for me. (favor)",
+   "ans": "favors",
+   "why": "two 后面用复数，加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 favor、flavor 中选一个，用适当形式填空。",
+   "stem": "This soup has a strange ______.",
+   "ans": "flavor",
+   "why": "汤的味道是 flavor；favor 是恩惠。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I'm in favor for your idea.",
+   "ans": "for → of",
+   "why": "in favor of 赞成。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Favor\" is the American spelling, and \"______\" is the British one.",
+   "opts": [
+    "favour",
+    "favourite",
+    "flavor",
+    "favorable"
+   ],
+   "why": "英式拼法是 favour。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "蓝色是我最喜欢的颜色。",
+   "stem": "Blue is my ______ color.",
+   "ans": "favorite",
+   "why": "最喜爱的是 favorite。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

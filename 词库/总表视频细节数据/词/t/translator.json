@@ -1,0 +1,93 @@
+{
+ "单词": "translator",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她做什么工作？\n听：She works as a translator.\nA. 老师\nB. 医生\nC. 司机\nD. 翻译",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ translated the book from French.\nA. translation\nB. translate\nC. translating\nD. translator",
+  "题目3": "【选词填空】从 translator、interpreter 中选一个，用适当形式填空。\n题干：The ______ helped them talk to each other at the meeting.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Two ______ worked on the book. (translator)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He wants to be a translators.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这本书已被译成多种语言。\n题干：The book has been ______ into many languages.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The translator ______ English and Chinese well.\nA. speaks\nB. speak\nC. speaking\nD. spoken\n考点：用法",
+  "答案": "【1】D（翻译）\n讲解：translator 译者。\n【2】D（translator）\n讲解：翻译书的人是 translator。\n【3】interpreter\n讲解：会议上当口译的人是 interpreter；translator 多指笔译者。\n【4】translators\n讲解：two 后面用复数 translators。\n【5】translators → translator\n讲解：a 后面用单数 translator。\n【6】translated\n讲解：has been 加过去分词 translated。\n【7】A（speaks）\n讲解：主语单数，用 speaks。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她做什么工作？",
+   "listen": "She works as a translator.",
+   "opts": [
+    "翻译",
+    "老师",
+    "医生",
+    "司机"
+   ],
+   "why": "translator 译者。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ translated the book from French.",
+   "opts": [
+    "translator",
+    "translation",
+    "translate",
+    "translating"
+   ],
+   "why": "翻译书的人是 translator。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 translator、interpreter 中选一个，用适当形式填空。",
+   "stem": "The ______ helped them talk to each other at the meeting.",
+   "ans": "interpreter",
+   "why": "会议上当口译的人是 interpreter；translator 多指笔译者。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Two ______ worked on the book. (translator)",
+   "ans": "translators",
+   "why": "two 后面用复数 translators。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He wants to be a translators.",
+   "ans": "translators → translator",
+   "why": "a 后面用单数 translator。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这本书已被译成多种语言。",
+   "stem": "The book has been ______ into many languages.",
+   "ans": "translated",
+   "why": "has been 加过去分词 translated。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The translator ______ English and Chinese well.",
+   "opts": [
+    "speaks",
+    "speak",
+    "speaking",
+    "spoken"
+   ],
+   "why": "主语单数，用 speaks。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

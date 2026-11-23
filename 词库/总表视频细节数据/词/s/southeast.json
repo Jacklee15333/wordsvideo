@@ -1,0 +1,98 @@
+{
+ "单词": "southeast",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这座城市在哪里？\n听：The city is in the southeast of the country.\nA. 西南部\nB. 东北部\nC. 西北部\nD. 东南部",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Fujian is in ______ China.\nA. southwest\nB. northeast\nC. northwest\nD. southeast\n考点：用法",
+  "题目3": "【选词填空】从 southeast、southwest 中选一个，用适当形式填空。\n题干：Chengdu is in the ______ of China.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The wind is blowing from the east-south.\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：中国的东北冬天很冷。\n题干：The ______ of China is very cold in winter.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In words like \"southeast\", \"south\" or \"north\" comes ______.\nA. last\nB. in the middle\nC. nowhere\nD. first\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Southeastern\" means \"______\".\nA. in the north\nB. very south\nC. sunny\nD. in the southeast\n考点：词性转换",
+  "答案": "【1】D（东南部）\n讲解：southeast 东南。\n【2】D（southeast）\n讲解：福建在中国东南。\n【3】southwest\n讲解：成都在中国西南。\n【4】east-south → southeast\n讲解：英语方位南北在前，说 southeast。\n【5】northeast\n讲解：“东北”是 northeast，南北在前。\n【6】D（first）\n讲解：英语习惯把 north / south 放在前面。\n【7】D（in the southeast）\n讲解：southeastern 东南部的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这座城市在哪里？",
+   "listen": "The city is in the southeast of the country.",
+   "opts": [
+    "东南部",
+    "西南部",
+    "东北部",
+    "西北部"
+   ],
+   "why": "southeast 东南。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Fujian is in ______ China.",
+   "opts": [
+    "southeast",
+    "southwest",
+    "northeast",
+    "northwest"
+   ],
+   "why": "福建在中国东南。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 southeast、southwest 中选一个，用适当形式填空。",
+   "stem": "Chengdu is in the ______ of China.",
+   "ans": "southwest",
+   "why": "成都在中国西南。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The wind is blowing from the east-south.",
+   "ans": "east-south → southeast",
+   "why": "英语方位南北在前，说 southeast。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "中国的东北冬天很冷。",
+   "stem": "The ______ of China is very cold in winter.",
+   "ans": "northeast",
+   "why": "“东北”是 northeast，南北在前。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In words like \"southeast\", \"south\" or \"north\" comes ______.",
+   "opts": [
+    "first",
+    "last",
+    "in the middle",
+    "nowhere"
+   ],
+   "why": "英语习惯把 north / south 放在前面。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Southeastern\" means \"______\".",
+   "opts": [
+    "in the southeast",
+    "in the north",
+    "very south",
+    "sunny"
+   ],
+   "why": "southeastern 东南部的。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

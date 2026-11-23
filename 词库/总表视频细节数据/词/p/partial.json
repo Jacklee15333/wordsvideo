@@ -1,0 +1,94 @@
+{
+ "单词": "partial",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人偏爱什么？\n听：I'm partial to chocolate ice cream.\nA. 香草冰淇淋\nB. 巧克力冰淇淋\nC. 草莓蛋糕\nD. 苹果派",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We only got a ______ answer, not the whole story.\nA. partially\nB. partial\nC. part\nD. partner\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The bridge is ______ finished. (partial)\n考点：词性转换",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：My grandma is partial with sweet food.\n考点：短语",
+  "题目5": "【选词填空】从 partial、impartial 中选一个，用适当形式填空。\n题干：A good judge must be ______ and fair.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"A partial eclipse\" means the sun is ______ covered.\nA. fully\nB. never\nC. always\nD. partly\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我很偏爱中国菜。\n题干：I'm very ______ ______ Chinese food.\n考点：短语",
+  "答案": "【1】B（巧克力冰淇淋）\n讲解：be partial to 偏爱。\n【2】B（partial）\n讲解：修饰 answer 用形容词 partial（部分的）。\n【3】partially\n讲解：修饰 finished 用副词 partially。\n【4】with → to\n讲解：be partial to 偏爱。\n【5】impartial\n讲解：法官要“公正的、不偏不倚的”，用 impartial。\n【6】D（partly）\n讲解：partial 局部的，所以只是部分被遮住。\n【7】partial；to\n讲解：be partial to 偏爱。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人偏爱什么？",
+   "listen": "I'm partial to chocolate ice cream.",
+   "opts": [
+    "巧克力冰淇淋",
+    "香草冰淇淋",
+    "草莓蛋糕",
+    "苹果派"
+   ],
+   "why": "be partial to 偏爱。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We only got a ______ answer, not the whole story.",
+   "opts": [
+    "partial",
+    "partially",
+    "part",
+    "partner"
+   ],
+   "why": "修饰 answer 用形容词 partial（部分的）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The bridge is ______ finished. (partial)",
+   "ans": "partially",
+   "why": "修饰 finished 用副词 partially。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My grandma is partial with sweet food.",
+   "ans": "with → to",
+   "why": "be partial to 偏爱。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 partial、impartial 中选一个，用适当形式填空。",
+   "stem": "A good judge must be ______ and fair.",
+   "ans": "impartial",
+   "why": "法官要“公正的、不偏不倚的”，用 impartial。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"A partial eclipse\" means the sun is ______ covered.",
+   "opts": [
+    "partly",
+    "fully",
+    "never",
+    "always"
+   ],
+   "why": "partial 局部的，所以只是部分被遮住。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我很偏爱中国菜。",
+   "stem": "I'm very ______ ______ Chinese food.",
+   "ans": "partial；to",
+   "why": "be partial to 偏爱。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

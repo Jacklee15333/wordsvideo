@@ -1,0 +1,92 @@
+{
+ "单词": "trader",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：那个人是做什么的？\n听：He is a tea trader.\nA. 茶农\nB. 茶商\nC. 茶艺师\nD. 服务员",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ sold silk to people from other countries.\nA. trade\nB. trader\nC. trades\nD. trading",
+  "题目3": "【选词填空】从 trader、dealer 中选一个，用适当形式填空。\n题干：My uncle is a car ______; he sells new cars.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Many ______ came to the market. (trader)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The trader buy rice from farmers.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Long ago, rich ______ sailed to far countries to buy and sell.\nA. merchant\nB. trade\nC. trades\nD. merchants\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：中国和很多国家都有贸易往来。\n题干：China has ______ with many countries.\n考点：词性转换",
+  "答案": "【1】B（茶商）\n讲解：trader 商人。\n【2】B（trader）\n讲解：卖丝绸的人 trader。\n【3】dealer\n讲解：经销某类商品的商人用 dealer。\n【4】traders\n讲解：many 后接复数 traders。\n【5】buy → buys\n讲解：主语三单，用 buys。\n【6】D（merchants）\n讲解：旧时的大商人 merchants。\n【7】trade\n讲解：名词“贸易”用 trade。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：那个人是做什么的？",
+   "listen": "He is a tea trader.",
+   "opts": [
+    "茶商",
+    "茶农",
+    "茶艺师",
+    "服务员"
+   ],
+   "why": "trader 商人。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ sold silk to people from other countries.",
+   "opts": [
+    "trader",
+    "trade",
+    "trades",
+    "trading"
+   ],
+   "why": "卖丝绸的人 trader。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 trader、dealer 中选一个，用适当形式填空。",
+   "stem": "My uncle is a car ______; he sells new cars.",
+   "ans": "dealer",
+   "why": "经销某类商品的商人用 dealer。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Many ______ came to the market. (trader)",
+   "ans": "traders",
+   "why": "many 后接复数 traders。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The trader buy rice from farmers.",
+   "ans": "buy → buys",
+   "why": "主语三单，用 buys。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Long ago, rich ______ sailed to far countries to buy and sell.",
+   "opts": [
+    "merchants",
+    "merchant",
+    "trade",
+    "trades"
+   ],
+   "why": "旧时的大商人 merchants。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "中国和很多国家都有贸易往来。",
+   "stem": "China has ______ with many countries.",
+   "ans": "trade",
+   "why": "名词“贸易”用 trade。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

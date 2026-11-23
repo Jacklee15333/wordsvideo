@@ -1,0 +1,92 @@
+{
+ "单词": "deviation",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这些结果怎么样？\n听：There is a small deviation in the results.\nA. 完全正确\nB. 全错了\nC. 没有结果\nD. 有一点偏差",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Any ______ from the rules is not allowed.\nA. deviate\nB. deviated\nC. deviates\nD. deviation",
+  "题目3": "【选词填空】从 deviation、departure 中选一个，用适当形式填空。\n题干：The train's ______ time is 9:00.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We found two ______ in the data. (deviation)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The deviations is very small.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：别偏离主题。\n题干：Don't ______ from the topic.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The plane ______ from its course because of the storm.\nA. deviation\nB. deviate\nC. deviates\nD. deviated\n考点：变形",
+  "答案": "【1】D（有一点偏差）\n讲解：deviation 偏离、误差。\n【2】D（deviation）\n讲解：any 后面要名词 deviation。\n【3】departure\n讲解：出发时间用 departure；deviation 是偏离。\n【4】deviations\n讲解：two 后面用复数 deviations。\n【5】is → are\n讲解：主语 the deviations 是复数，用 are。\n【6】deviate\n讲解：动词“偏离”是 deviate。\n【7】D（deviated）\n讲解：讲过去，用过去式 deviated。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这些结果怎么样？",
+   "listen": "There is a small deviation in the results.",
+   "opts": [
+    "有一点偏差",
+    "完全正确",
+    "全错了",
+    "没有结果"
+   ],
+   "why": "deviation 偏离、误差。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Any ______ from the rules is not allowed.",
+   "opts": [
+    "deviation",
+    "deviate",
+    "deviated",
+    "deviates"
+   ],
+   "why": "any 后面要名词 deviation。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 deviation、departure 中选一个，用适当形式填空。",
+   "stem": "The train's ______ time is 9:00.",
+   "ans": "departure",
+   "why": "出发时间用 departure；deviation 是偏离。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We found two ______ in the data. (deviation)",
+   "ans": "deviations",
+   "why": "two 后面用复数 deviations。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The deviations is very small.",
+   "ans": "is → are",
+   "why": "主语 the deviations 是复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "别偏离主题。",
+   "stem": "Don't ______ from the topic.",
+   "ans": "deviate",
+   "why": "动词“偏离”是 deviate。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The plane ______ from its course because of the storm.",
+   "opts": [
+    "deviated",
+    "deviation",
+    "deviate",
+    "deviates"
+   ],
+   "why": "讲过去，用过去式 deviated。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

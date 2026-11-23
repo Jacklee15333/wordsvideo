@@ -1,0 +1,94 @@
+{
+ "单词": "tale",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：妈妈每晚做什么？\n听：Mom reads me a fairy tale every night.\nA. 给我唱歌\nB. 给我做饭\nC. 给我读童话\nD. 陪我写作业",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：\"Snow White\" is a famous fairy ______.\nA. tail\nB. tale\nC. tall\nD. tell\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：I like reading old ______ from China. (tale)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The dog is wagging its tale happily.\n考点：易混",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：你读过《安徒生童话》吗？\n题干：Have you read Andersen's ______ ______?\n考点：短语",
+  "题目6": "【选词填空】从 tale、story 中选一个，用适当形式填空。\n题干：This is a true ______ about my grandpa.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There are many ______ about dragons in China.\nA. tails\nB. tale\nC. tells\nD. tales\n考点：变形",
+  "答案": "【1】C（给我读童话）\n讲解：fairy tale 童话故事。\n【2】B（tale）\n讲解：童话是 fairy tale；tail（尾巴）读音相同、意思不同。\n【3】tales\n讲解：“读古老的故事”泛指用复数 tales。\n【4】tale → tail\n讲解：狗的尾巴是 tail；tale 是故事。\n【5】Fairy；Tales\n讲解：fairy tale 童话。\n【6】story\n讲解：真实的事用最常用的 story；tale 偏传说、童话。\n【7】D（tales）\n讲解：many 后面要复数名词 tales（传说）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：妈妈每晚做什么？",
+   "listen": "Mom reads me a fairy tale every night.",
+   "opts": [
+    "给我读童话",
+    "给我唱歌",
+    "给我做饭",
+    "陪我写作业"
+   ],
+   "why": "fairy tale 童话故事。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Snow White\" is a famous fairy ______.",
+   "opts": [
+    "tale",
+    "tail",
+    "tall",
+    "tell"
+   ],
+   "why": "童话是 fairy tale；tail（尾巴）读音相同、意思不同。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I like reading old ______ from China. (tale)",
+   "ans": "tales",
+   "why": "“读古老的故事”泛指用复数 tales。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The dog is wagging its tale happily.",
+   "ans": "tale → tail",
+   "why": "狗的尾巴是 tail；tale 是故事。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你读过《安徒生童话》吗？",
+   "stem": "Have you read Andersen's ______ ______?",
+   "ans": "Fairy；Tales",
+   "why": "fairy tale 童话。",
+   "kd": "短语"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tale、story 中选一个，用适当形式填空。",
+   "stem": "This is a true ______ about my grandpa.",
+   "ans": "story",
+   "why": "真实的事用最常用的 story；tale 偏传说、童话。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ about dragons in China.",
+   "opts": [
+    "tales",
+    "tails",
+    "tale",
+    "tells"
+   ],
+   "why": "many 后面要复数名词 tales（传说）。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

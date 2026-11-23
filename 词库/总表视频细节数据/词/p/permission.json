@@ -1,0 +1,93 @@
+{
+ "单词": "permission",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人向老师请求什么？\n听：May I have your permission to leave early?\nA. 早点离开\nB. 借书\nC. 晚交作业\nD. 换座位",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You can't enter without ______.\nA. permit\nB. permitted\nC. permissions\nD. permission",
+  "题目3": "【选词填空】从 permission、permit 中选一个，用适当形式填空。\n题干：You can't fish here without a fishing ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：My mother ______ me to go camping last week. (permission)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We got permissions from the school.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：未经允许不要拿别人的东西。\n题干：Don't take other people's things ______ ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：He asked ______ permission to go home.\nA. for\nB. to\nC. with\nD. at\n考点：用法",
+  "答案": "【1】A（早点离开）\n讲解：permission 许可。\n【2】D（permission）\n讲解：without 后面要名词，permission 不可数。\n【3】permit\n讲解：一张“许可证”用 permit。\n【4】permitted\n讲解：动词 permit，last week 用过去式，双写 t。\n【5】permissions → permission\n讲解：permission 不可数，没有复数。\n【6】without；permission\n讲解：without permission 未经允许。\n【7】A（for）\n讲解：ask for permission 请求许可。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人向老师请求什么？",
+   "listen": "May I have your permission to leave early?",
+   "opts": [
+    "早点离开",
+    "借书",
+    "晚交作业",
+    "换座位"
+   ],
+   "why": "permission 许可。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can't enter without ______.",
+   "opts": [
+    "permission",
+    "permit",
+    "permitted",
+    "permissions"
+   ],
+   "why": "without 后面要名词，permission 不可数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 permission、permit 中选一个，用适当形式填空。",
+   "stem": "You can't fish here without a fishing ______.",
+   "ans": "permit",
+   "why": "一张“许可证”用 permit。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "My mother ______ me to go camping last week. (permission)",
+   "ans": "permitted",
+   "why": "动词 permit，last week 用过去式，双写 t。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We got permissions from the school.",
+   "ans": "permissions → permission",
+   "why": "permission 不可数，没有复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "未经允许不要拿别人的东西。",
+   "stem": "Don't take other people's things ______ ______.",
+   "ans": "without；permission",
+   "why": "without permission 未经允许。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He asked ______ permission to go home.",
+   "opts": [
+    "for",
+    "to",
+    "with",
+    "at"
+   ],
+   "why": "ask for permission 请求许可。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

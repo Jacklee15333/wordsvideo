@@ -1,0 +1,91 @@
+{
+ "单词": "interrupt",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人请对方不要做什么？\n听：Please don't interrupt me while I'm speaking.\nA. 离开\nB. 看手机\nC. 睡觉\nD. 打断我说话",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Sorry to ______ you, but there's a phone call for you.\nA. interrupts\nB. interrupted\nC. interrupting\nD. interrupt",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Our class was ______ by a fire drill. (interrupt)\n考点：变形",
+  "题目4": "【选词填空】从 interrupt、introduce 中选一个，用适当形式填空。\n题干：Let me ______ myself. I'm Tom.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He always interrupts his sister when she talk.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：别人说话时不要插嘴。\n题干：Don't ______ in when others are talking.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：It's rude to keep ______ others.\nA. interrupt\nB. interrupted\nC. interrupts\nD. interrupting\n考点：变形",
+  "答案": "【1】D（打断我说话）\n讲解：interrupt 打断。\n【2】D（interrupt）\n讲解：Sorry to 后面用动词原形 interrupt。\n【3】interrupted\n讲解：被动语态用过去分词，加 ed。\n【4】introduce\n讲解：自我介绍是 introduce oneself。\n【5】talk → talks\n讲解：主语 she 是三单，用 talks。\n【6】cut\n讲解：cut in 插话，和 interrupt 意思接近。\n【7】D（interrupting）\n讲解：keep doing 一直做。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人请对方不要做什么？",
+   "listen": "Please don't interrupt me while I'm speaking.",
+   "opts": [
+    "打断我说话",
+    "离开",
+    "看手机",
+    "睡觉"
+   ],
+   "why": "interrupt 打断。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Sorry to ______ you, but there's a phone call for you.",
+   "opts": [
+    "interrupt",
+    "interrupts",
+    "interrupted",
+    "interrupting"
+   ],
+   "why": "Sorry to 后面用动词原形 interrupt。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Our class was ______ by a fire drill. (interrupt)",
+   "ans": "interrupted",
+   "why": "被动语态用过去分词，加 ed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 interrupt、introduce 中选一个，用适当形式填空。",
+   "stem": "Let me ______ myself. I'm Tom.",
+   "ans": "introduce",
+   "why": "自我介绍是 introduce oneself。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He always interrupts his sister when she talk.",
+   "ans": "talk → talks",
+   "why": "主语 she 是三单，用 talks。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "别人说话时不要插嘴。",
+   "stem": "Don't ______ in when others are talking.",
+   "ans": "cut",
+   "why": "cut in 插话，和 interrupt 意思接近。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It's rude to keep ______ others.",
+   "opts": [
+    "interrupting",
+    "interrupt",
+    "interrupted",
+    "interrupts"
+   ],
+   "why": "keep doing 一直做。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

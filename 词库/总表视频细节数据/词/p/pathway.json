@@ -1,0 +1,94 @@
+{
+ "单词": "pathway",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：花园里有什么？\n听：There is a stone pathway in the garden.\nA. 石子小路\nB. 喷泉\nC. 大树\nD. 小屋",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We walked along the ______ to the river.\nA. pathways\nB. path-way\nC. patheway\nD. pathway",
+  "题目3": "【选词填空】从 pathway、highway 中选一个，用适当形式填空。\n题干：Cars drive fast on the ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There are two pathway through the park.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这条小路通向一座小屋。\n题干：The pathway ______ to a small house.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"A pathway to success\" means a way to ______ success.\nA. lose\nB. reach\nC. break\nD. buy\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Pathway\" is made of \"path\" and \"______\".\nA. wall\nB. way\nC. water\nD. wave\n考点：用法",
+  "答案": "【1】A（石子小路）\n讲解：pathway 小路。\n【2】D（pathway）\n讲解：the 后面这里用单数 pathway。\n【3】highway\n讲解：汽车飞驰的是公路 highway。\n【4】pathway → pathways\n讲解：two 后面用复数。\n【5】leads\n讲解：主语单数，lead 加 s。\n【6】B（reach）\n讲解：pathway 也指途径。\n【7】B（way）\n讲解：path + way。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：花园里有什么？",
+   "listen": "There is a stone pathway in the garden.",
+   "opts": [
+    "石子小路",
+    "喷泉",
+    "大树",
+    "小屋"
+   ],
+   "why": "pathway 小路。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We walked along the ______ to the river.",
+   "opts": [
+    "pathway",
+    "pathways",
+    "path-way",
+    "patheway"
+   ],
+   "why": "the 后面这里用单数 pathway。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 pathway、highway 中选一个，用适当形式填空。",
+   "stem": "Cars drive fast on the ______.",
+   "ans": "highway",
+   "why": "汽车飞驰的是公路 highway。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are two pathway through the park.",
+   "ans": "pathway → pathways",
+   "why": "two 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这条小路通向一座小屋。",
+   "stem": "The pathway ______ to a small house.",
+   "ans": "leads",
+   "why": "主语单数，lead 加 s。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"A pathway to success\" means a way to ______ success.",
+   "opts": [
+    "reach",
+    "lose",
+    "break",
+    "buy"
+   ],
+   "why": "pathway 也指途径。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Pathway\" is made of \"path\" and \"______\".",
+   "opts": [
+    "way",
+    "wall",
+    "water",
+    "wave"
+   ],
+   "why": "path + way。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

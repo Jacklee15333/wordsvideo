@@ -1,0 +1,94 @@
+{
+ "单词": "two",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人有几个哥哥？\n听：I have two brothers and one sister.\nA. 一个\nB. 两个\nC. 三个\nD. 没有",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：February is the ______ month of the year.\nA. two\nB. second\nC. twice\nD. twelfth\n考点：变形",
+  "题目3": "【选词填空】从 two、twice 中选一个，用适当形式填空。\n题干：I go swimming ______ a week.\n考点：变形",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Two ______ are playing in the yard. (child)\n考点：用法",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I bought two book yesterday.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：I need a new ______ of shoes.\nA. two\nB. pair\nC. both\nD. twice\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我的两个姐姐都是护士。\n题干：______ my sisters are nurses.\n考点：易混",
+  "答案": "【1】B（两个）\n讲解：two brothers 两个哥哥。\n【2】B（second）\n讲解：表示顺序“第二”用序数词 second。\n【3】twice\n讲解：“每周两次”的“两次”用 twice。\n【4】children\n讲解：two 后面要复数，child 的复数是 children。\n【5】book → books\n讲解：two 后面接可数名词复数 books。\n【6】B（pair）\n讲解：“一双鞋”用 a pair of shoes。\n【7】Both\n讲解：说两个人“都”用 both。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人有几个哥哥？",
+   "listen": "I have two brothers and one sister.",
+   "opts": [
+    "两个",
+    "一个",
+    "三个",
+    "没有"
+   ],
+   "why": "two brothers 两个哥哥。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "February is the ______ month of the year.",
+   "opts": [
+    "second",
+    "two",
+    "twice",
+    "twelfth"
+   ],
+   "why": "表示顺序“第二”用序数词 second。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 two、twice 中选一个，用适当形式填空。",
+   "stem": "I go swimming ______ a week.",
+   "ans": "twice",
+   "why": "“每周两次”的“两次”用 twice。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Two ______ are playing in the yard. (child)",
+   "ans": "children",
+   "why": "two 后面要复数，child 的复数是 children。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I bought two book yesterday.",
+   "ans": "book → books",
+   "why": "two 后面接可数名词复数 books。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I need a new ______ of shoes.",
+   "opts": [
+    "pair",
+    "two",
+    "both",
+    "twice"
+   ],
+   "why": "“一双鞋”用 a pair of shoes。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我的两个姐姐都是护士。",
+   "stem": "______ my sisters are nurses.",
+   "ans": "Both",
+   "why": "说两个人“都”用 both。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

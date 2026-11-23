@@ -1,0 +1,92 @@
+{
+ "单词": "track",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在雪地里看到了什么？\n听：We saw some animal tracks in the snow.\nA. 一棵树\nB. 一个雪人\nC. 一条河\nD. 动物的足迹",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is a narrow ______ through the forest.\nA. tracks\nB. tracking\nC. track\nD. tracked",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The police ______ the thief for three days last week. (track)\n考点：变形",
+  "题目4": "【选词填空】从 track、trace 中选一个，用适当形式填空。\n题干：The thief left no ______ behind him.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I can't keep track at all the things I have to do.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我很难记住所有人的名字。\n题干：It's hard to ______ ______ of everyone's names.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The train runs on two ______.\nA. track\nB. tracks\nC. tracking\nD. trackes\n考点：变形",
+  "答案": "【1】D（动物的足迹）\n讲解：animal tracks 动物足迹。\n【2】C（track）\n讲解：a narrow 后面接单数名词 track（小路）。\n【3】tracked\n讲解：last week 是过去，用 tracked。\n【4】trace\n讲解：“一点痕迹也没留下”用 trace。\n【5】at → of\n讲解：keep track of 记录、掌握。\n【6】keep；track\n讲解：keep track of 记录、了解动态。\n【7】B（tracks）\n讲解：two 后接复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在雪地里看到了什么？",
+   "listen": "We saw some animal tracks in the snow.",
+   "opts": [
+    "动物的足迹",
+    "一棵树",
+    "一个雪人",
+    "一条河"
+   ],
+   "why": "animal tracks 动物足迹。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is a narrow ______ through the forest.",
+   "opts": [
+    "track",
+    "tracks",
+    "tracking",
+    "tracked"
+   ],
+   "why": "a narrow 后面接单数名词 track（小路）。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The police ______ the thief for three days last week. (track)",
+   "ans": "tracked",
+   "why": "last week 是过去，用 tracked。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 track、trace 中选一个，用适当形式填空。",
+   "stem": "The thief left no ______ behind him.",
+   "ans": "trace",
+   "why": "“一点痕迹也没留下”用 trace。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I can't keep track at all the things I have to do.",
+   "ans": "at → of",
+   "why": "keep track of 记录、掌握。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我很难记住所有人的名字。",
+   "stem": "It's hard to ______ ______ of everyone's names.",
+   "ans": "keep；track",
+   "why": "keep track of 记录、了解动态。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The train runs on two ______.",
+   "opts": [
+    "tracks",
+    "track",
+    "tracking",
+    "trackes"
+   ],
+   "why": "two 后接复数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

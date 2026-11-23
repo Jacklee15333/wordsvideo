@@ -1,0 +1,93 @@
+{
+ "单词": "lab",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人现在要去哪里？\n听：I have to go to the science lab now.\nA. 图书馆\nB. 操场\nC. 食堂\nD. 科学实验室",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Our school has three computer ______.\nA. lab\nB. labes\nC. labies\nD. labs\n考点：变形",
+  "题目3": "【选词填空】从 lab、library 中选一个，用适当形式填空。\n题干：I borrowed two books from the ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The chemistry lab ______ on the third floor. (be)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There are a new lab in our school.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：“Lab” is short for ______.\nA. library\nB. labour\nC. label\nD. laboratory\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：实验室里不许吃东西。\n题干：Eating is not allowed ______ the ______.\n考点：用法",
+  "答案": "【1】D（科学实验室）\n讲解：lab 实验室。\n【2】D（labs）\n讲解：three 后面接复数 labs。\n【3】library\n讲解：借书去 library；lab 是实验室。\n【4】is\n讲解：主语 lab 单数，一般现在时用 is。\n【5】are → is\n讲解：a new lab 是单数，用 There is。\n【6】D（laboratory）\n讲解：lab 是 laboratory 的日常说法。\n【7】in；lab\n讲解：在实验室里用 in the lab。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人现在要去哪里？",
+   "listen": "I have to go to the science lab now.",
+   "opts": [
+    "科学实验室",
+    "图书馆",
+    "操场",
+    "食堂"
+   ],
+   "why": "lab 实验室。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Our school has three computer ______.",
+   "opts": [
+    "labs",
+    "lab",
+    "labes",
+    "labies"
+   ],
+   "why": "three 后面接复数 labs。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 lab、library 中选一个，用适当形式填空。",
+   "stem": "I borrowed two books from the ______.",
+   "ans": "library",
+   "why": "借书去 library；lab 是实验室。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The chemistry lab ______ on the third floor. (be)",
+   "ans": "is",
+   "why": "主语 lab 单数，一般现在时用 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are a new lab in our school.",
+   "ans": "are → is",
+   "why": "a new lab 是单数，用 There is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "“Lab” is short for ______.",
+   "opts": [
+    "laboratory",
+    "library",
+    "labour",
+    "label"
+   ],
+   "why": "lab 是 laboratory 的日常说法。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "实验室里不许吃东西。",
+   "stem": "Eating is not allowed ______ the ______.",
+   "ans": "in；lab",
+   "why": "在实验室里用 in the lab。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

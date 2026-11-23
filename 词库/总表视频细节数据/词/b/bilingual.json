@@ -1,0 +1,98 @@
+{
+ "单词": "bilingual",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这是一所什么学校？\n听：It is a bilingual school.\nA. 艺术学校\nB. 双语学校\nC. 体育学校\nD. 音乐学校",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She grew up in a ______ family and speaks Chinese and English.\nA. bicycle\nB. bilingual\nC. biology\nD. billion\n考点：易混",
+  "题目3": "【选词填空】从 bilingual、language 中选一个，用适当形式填空。\n题干：Chinese is the ______ spoken by the most people.\n考点：词性转换",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He is bilingual in three languages.\n考点：易混",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：“bicycle”里的“bi-”表示“两个”。\n题干：\"Bi-\" in \"bicycle\" means \"______\".\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A bilingual person can speak ______ languages well.\nA. three\nB. two\nC. one\nD. ten\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The Latin word \"bilinguis\" means \"with two ______\".\nA. eyes\nB. tongues\nC. hands\nD. books\n考点：用法",
+  "答案": "【1】B（双语学校）\n讲解：bilingual 双语的。\n【2】B（bilingual）\n讲解：说两种语言的家庭用 bilingual。\n【3】language\n讲解：the 后面要名词 language。\n【4】bilingual → trilingual\n讲解：三种语言用 trilingual。\n【5】two\n讲解：bi- 表示“两个”。\n【6】B（two）\n讲解：bilingual 双语的。\n【7】B（tongues）\n讲解：拉丁语 bilinguis 字面是“两条舌头”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这是一所什么学校？",
+   "listen": "It is a bilingual school.",
+   "opts": [
+    "双语学校",
+    "艺术学校",
+    "体育学校",
+    "音乐学校"
+   ],
+   "why": "bilingual 双语的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She grew up in a ______ family and speaks Chinese and English.",
+   "opts": [
+    "bilingual",
+    "bicycle",
+    "biology",
+    "billion"
+   ],
+   "why": "说两种语言的家庭用 bilingual。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 bilingual、language 中选一个，用适当形式填空。",
+   "stem": "Chinese is the ______ spoken by the most people.",
+   "ans": "language",
+   "why": "the 后面要名词 language。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is bilingual in three languages.",
+   "ans": "bilingual → trilingual",
+   "why": "三种语言用 trilingual。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "“bicycle”里的“bi-”表示“两个”。",
+   "stem": "\"Bi-\" in \"bicycle\" means \"______\".",
+   "ans": "two",
+   "why": "bi- 表示“两个”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A bilingual person can speak ______ languages well.",
+   "opts": [
+    "two",
+    "three",
+    "one",
+    "ten"
+   ],
+   "why": "bilingual 双语的。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The Latin word \"bilinguis\" means \"with two ______\".",
+   "opts": [
+    "tongues",
+    "eyes",
+    "hands",
+    "books"
+   ],
+   "why": "拉丁语 bilinguis 字面是“两条舌头”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "museum",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人这个周末要去哪里？\n听：We're going to the science museum this weekend.\nA. 科学博物馆\nB. 科技公司\nC. 科学课\nD. 图书馆",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You can see many old things in a ______.\nA. museum\nB. market\nC. hospital\nD. cinema",
+  "题目3": "【选词填空】从 museum、gallery 中选一个，用适当形式填空。\n题干：In London, many famous paintings are in the National ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are three ______ in our city. (museum)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We visit the museum last Saturday.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：博物馆周一不开门。\n题干：The museum is ______ on Mondays.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：How many ______ did you visit in Beijing?\nA. museum\nB. museumes\nC. museum's\nD. museums\n考点：变形",
+  "答案": "【1】A（科学博物馆）\n讲解：science museum 科学博物馆。\n【2】A（museum）\n讲解：看很多古老东西的地方是博物馆 museum。\n【3】Gallery\n讲解：英式多把美术馆叫 gallery：the National Gallery。\n【4】museums\n讲解：three 后面用复数 museums。\n【5】visit → visited\n讲解：last Saturday 用过去式 visited。\n【6】closed\n讲解：“关门、不开放”用 closed。\n【7】D（museums）\n讲解：how many 后面用复数，直接加 s。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人这个周末要去哪里？",
+   "listen": "We're going to the science museum this weekend.",
+   "opts": [
+    "科学博物馆",
+    "科技公司",
+    "科学课",
+    "图书馆"
+   ],
+   "why": "science museum 科学博物馆。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can see many old things in a ______.",
+   "opts": [
+    "museum",
+    "market",
+    "hospital",
+    "cinema"
+   ],
+   "why": "看很多古老东西的地方是博物馆 museum。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 museum、gallery 中选一个，用适当形式填空。",
+   "stem": "In London, many famous paintings are in the National ______.",
+   "ans": "Gallery",
+   "why": "英式多把美术馆叫 gallery：the National Gallery。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are three ______ in our city. (museum)",
+   "ans": "museums",
+   "why": "three 后面用复数 museums。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We visit the museum last Saturday.",
+   "ans": "visit → visited",
+   "why": "last Saturday 用过去式 visited。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "博物馆周一不开门。",
+   "stem": "The museum is ______ on Mondays.",
+   "ans": "closed",
+   "why": "“关门、不开放”用 closed。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "How many ______ did you visit in Beijing?",
+   "opts": [
+    "museums",
+    "museum",
+    "museumes",
+    "museum's"
+   ],
+   "why": "how many 后面用复数，直接加 s。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

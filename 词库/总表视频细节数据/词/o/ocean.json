@@ -1,0 +1,94 @@
+{
+ "单词": "ocean",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人想在哪里游泳？\n听：I want to swim in the Pacific Ocean.\nA. 大西洋\nB. 印度洋\nC. 太平洋\nD. 北冰洋",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are five ______ on Earth.\nA. oceans\nB. ocean\nC. oceanic\nD. Oceania",
+  "题目3": "【选词填空】从 ocean、sea 中选一个，用适当形式填空。\n题干：The Mediterranean ______ lies between Europe and Africa.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Whales live in ocean.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：大西洋在欧洲和美洲之间。\n题干：The ______ Ocean lies between Europe and America.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Oceanic\" means \"of the ______\".\nA. earth\nB. sky\nC. ocean\nD. mountain\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Ocean\" usually means one of the five big ______.\nA. seas of the world\nB. lakes\nC. rivers\nD. islands\n考点：易混",
+  "答案": "【1】C（太平洋）\n讲解：Pacific Ocean 太平洋。\n【2】A（oceans）\n讲解：five 后面用复数。\n【3】Sea\n讲解：地中海是 sea，不是 ocean。\n【4】ocean → the ocean\n讲解：泛指大海时 ocean 前加 the。\n【5】Atlantic\n讲解：大西洋是 the Atlantic Ocean。\n【6】C（ocean）\n讲解：oceanic 海洋的。\n【7】A（seas of the world）\n讲解：ocean 指大洋，sea 多指较小的海。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想在哪里游泳？",
+   "listen": "I want to swim in the Pacific Ocean.",
+   "opts": [
+    "太平洋",
+    "大西洋",
+    "印度洋",
+    "北冰洋"
+   ],
+   "why": "Pacific Ocean 太平洋。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are five ______ on Earth.",
+   "opts": [
+    "oceans",
+    "ocean",
+    "oceanic",
+    "Oceania"
+   ],
+   "why": "five 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 ocean、sea 中选一个，用适当形式填空。",
+   "stem": "The Mediterranean ______ lies between Europe and Africa.",
+   "ans": "Sea",
+   "why": "地中海是 sea，不是 ocean。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Whales live in ocean.",
+   "ans": "ocean → the ocean",
+   "why": "泛指大海时 ocean 前加 the。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "大西洋在欧洲和美洲之间。",
+   "stem": "The ______ Ocean lies between Europe and America.",
+   "ans": "Atlantic",
+   "why": "大西洋是 the Atlantic Ocean。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Oceanic\" means \"of the ______\".",
+   "opts": [
+    "ocean",
+    "earth",
+    "sky",
+    "mountain"
+   ],
+   "why": "oceanic 海洋的。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Ocean\" usually means one of the five big ______.",
+   "opts": [
+    "seas of the world",
+    "lakes",
+    "rivers",
+    "islands"
+   ],
+   "why": "ocean 指大洋，sea 多指较小的海。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

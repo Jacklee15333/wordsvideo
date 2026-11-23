@@ -1,0 +1,94 @@
+{
+ "单词": "robotics",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她对什么感兴趣？\n听：She is interested in robotics.\nA. 音乐\nB. 机器人学\nC. 历史\nD. 体育",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Our school has a ______ club.\nA. robotic\nB. roboticses\nC. robotics\nD. robotically",
+  "题目3": "【选词填空】从 robotics、robot 中选一个，用适当形式填空。\n题干：We built a small ______ that can walk.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Robotics are very interesting.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这个机器人会说话。\n题干：This ______ can speak.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Robotics\" is a subject, like \"______\".\nA. book\nB. physics\nC. robot\nD. desk\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Robotics is ______.\nA. countable\nB. uncountable\nC. plural\nD. a verb\n考点：变形",
+  "答案": "【1】B（机器人学）\n讲解：robotics 机器人学。\n【2】C（robotics）\n讲解：“机器人社团”用 robotics。\n【3】robot\n讲解：一个机器人用 robot。\n【4】are → is\n讲解：学科名作主语，谓语用单数。\n【5】robot\n讲解：机器人 robot。\n【6】B（physics）\n讲解：-ics 结尾的多是学科。\n【7】B（uncountable）\n讲解：robotics 不可数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她对什么感兴趣？",
+   "listen": "She is interested in robotics.",
+   "opts": [
+    "机器人学",
+    "音乐",
+    "历史",
+    "体育"
+   ],
+   "why": "robotics 机器人学。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Our school has a ______ club.",
+   "opts": [
+    "robotics",
+    "robotic",
+    "roboticses",
+    "robotically"
+   ],
+   "why": "“机器人社团”用 robotics。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 robotics、robot 中选一个，用适当形式填空。",
+   "stem": "We built a small ______ that can walk.",
+   "ans": "robot",
+   "why": "一个机器人用 robot。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Robotics are very interesting.",
+   "ans": "are → is",
+   "why": "学科名作主语，谓语用单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个机器人会说话。",
+   "stem": "This ______ can speak.",
+   "ans": "robot",
+   "why": "机器人 robot。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Robotics\" is a subject, like \"______\".",
+   "opts": [
+    "physics",
+    "book",
+    "robot",
+    "desk"
+   ],
+   "why": "-ics 结尾的多是学科。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Robotics is ______.",
+   "opts": [
+    "uncountable",
+    "countable",
+    "plural",
+    "a verb"
+   ],
+   "why": "robotics 不可数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

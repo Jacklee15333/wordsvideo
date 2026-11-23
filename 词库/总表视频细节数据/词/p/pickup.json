@@ -1,0 +1,94 @@
+{
+ "单词": "pickup",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的爸爸开什么车？\n听：My dad drives a red pickup.\nA. 皮卡\nB. 公交车\nC. 跑车\nD. 自行车",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are two ______ in the farmer's yard.\nA. pickup\nB. pickups\nC. pickupes\nD. picksup\n考点：变形",
+  "题目3": "【选词填空】从 pickup、bus 中选一个，用适当形式填空。\n题干：We took the ______ to school with forty other students.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Can you ______ me ______ at the station? (pick)\n考点：短语",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I need to pickup my sister from school.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我们打了一场临时凑成的篮球赛。\n题干：We played a ______ basketball game.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A pickup is a small ______.\nA. boat\nB. plane\nC. train\nD. truck\n考点：用法",
+  "答案": "【1】A（皮卡）\n讲解：pickup 皮卡。\n【2】B（pickups）\n讲解：two 后面接复数 pickups。\n【3】bus\n讲解：和四十个同学一起坐的是公交车 bus；pickup 是皮卡。\n【4】pick；up\n讲解：pick sb. up 接某人，代词放中间。\n【5】pickup → pick up\n讲解：作动词短语要分开写 pick up。\n【6】pickup\n讲解：pickup 作形容词“临时凑成的”。\n【7】D（truck）\n讲解：pickup 皮卡、轻型卡车。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的爸爸开什么车？",
+   "listen": "My dad drives a red pickup.",
+   "opts": [
+    "皮卡",
+    "公交车",
+    "跑车",
+    "自行车"
+   ],
+   "why": "pickup 皮卡。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are two ______ in the farmer's yard.",
+   "opts": [
+    "pickups",
+    "pickup",
+    "pickupes",
+    "picksup"
+   ],
+   "why": "two 后面接复数 pickups。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 pickup、bus 中选一个，用适当形式填空。",
+   "stem": "We took the ______ to school with forty other students.",
+   "ans": "bus",
+   "why": "和四十个同学一起坐的是公交车 bus；pickup 是皮卡。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Can you ______ me ______ at the station? (pick)",
+   "ans": "pick；up",
+   "why": "pick sb. up 接某人，代词放中间。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I need to pickup my sister from school.",
+   "ans": "pickup → pick up",
+   "why": "作动词短语要分开写 pick up。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们打了一场临时凑成的篮球赛。",
+   "stem": "We played a ______ basketball game.",
+   "ans": "pickup",
+   "why": "pickup 作形容词“临时凑成的”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A pickup is a small ______.",
+   "opts": [
+    "truck",
+    "boat",
+    "plane",
+    "train"
+   ],
+   "why": "pickup 皮卡、轻型卡车。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

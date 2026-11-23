@@ -1,0 +1,94 @@
+{
+ "单词": "grass",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：山坡上的羊在做什么？\n听：The sheep are eating grass on the hill.\nA. 睡觉\nB. 喝水\nC. 吃草\nD. 奔跑",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The cows are eating ______ by the river.\nA. grassy\nB. grass\nC. a grass\nD. glass\n考点：变形",
+  "题目3": "【选词填空】从 grass、glass 中选一个，用适当形式填空。\n题干：Please give me a ______ of water.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The hill is very ______ and green in spring. (grass)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There are some green grass by the river.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：My dad cuts the ______ in front of our house every week.\nA. grassland\nB. glass\nC. lawn\nD. grassy\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：请勿践踏草地。\n题干：Please keep ______ the grass.\n考点：短语",
+  "答案": "【1】C（吃草）\n讲解：eating grass 吃草。\n【2】B（grass）\n讲解：“草”作总称，不可数，不加 a。\n【3】glass\n讲解：“一杯水”是 a glass of water；grass 是“草”。\n【4】grassy\n讲解：be 后面要形容词 grassy（长满草的）。\n【5】are → is\n讲解：grass 不可数，there be 用 is。\n【6】C（lawn）\n讲解：门前修剪整齐的草坪是 lawn。\n【7】off\n讲解：keep off the grass 勿踏草地。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：山坡上的羊在做什么？",
+   "listen": "The sheep are eating grass on the hill.",
+   "opts": [
+    "吃草",
+    "睡觉",
+    "喝水",
+    "奔跑"
+   ],
+   "why": "eating grass 吃草。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The cows are eating ______ by the river.",
+   "opts": [
+    "grass",
+    "grassy",
+    "a grass",
+    "glass"
+   ],
+   "why": "“草”作总称，不可数，不加 a。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 grass、glass 中选一个，用适当形式填空。",
+   "stem": "Please give me a ______ of water.",
+   "ans": "glass",
+   "why": "“一杯水”是 a glass of water；grass 是“草”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The hill is very ______ and green in spring. (grass)",
+   "ans": "grassy",
+   "why": "be 后面要形容词 grassy（长满草的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are some green grass by the river.",
+   "ans": "are → is",
+   "why": "grass 不可数，there be 用 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My dad cuts the ______ in front of our house every week.",
+   "opts": [
+    "lawn",
+    "grassland",
+    "glass",
+    "grassy"
+   ],
+   "why": "门前修剪整齐的草坪是 lawn。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请勿践踏草地。",
+   "stem": "Please keep ______ the grass.",
+   "ans": "off",
+   "why": "keep off the grass 勿踏草地。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

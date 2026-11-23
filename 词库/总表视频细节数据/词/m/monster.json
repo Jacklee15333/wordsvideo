@@ -1,0 +1,93 @@
+{
+ "单词": "monster",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个故事讲的是什么？\n听：This story is about a monster living in the lake.\nA. 一条大鱼\nB. 湖里的怪物\nC. 一位渔夫\nD. 一只鸭子",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The little boy is afraid of ______ under his bed.\nA. monster\nB. monsters\nC. monstrous\nD. master\n考点：变形",
+  "题目3": "【选词填空】从 monster、master 中选一个，用适当形式填空。\n题干：The dog sat down when its ______ told it to.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：A big green ______ appears in the film. (monster)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There were three monster in the cave.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The lion is a wild ______; it lives in Africa.\nA. monster\nB. monsters\nC. ghost\nD. beast\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他们做了一个特大号的汉堡。\n题干：They made a ______ burger.\n考点：易混",
+  "答案": "【1】B（湖里的怪物）\n讲解：monster 怪物。\n【2】B（monsters）\n讲解：泛指怪物用复数 monsters。\n【3】master\n讲解：狗的主人是 master，和 monster 形近。\n【4】monster\n讲解：a 后接单数 monster。\n【5】monster → monsters\n讲解：three 后接复数 monsters。\n【6】D（beast）\n讲解：野兽用 beast，monster 强调可怕、不正常。\n【7】giant\n讲解：作定语表示“特大号”可以说 monster，也常说 giant。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个故事讲的是什么？",
+   "listen": "This story is about a monster living in the lake.",
+   "opts": [
+    "湖里的怪物",
+    "一条大鱼",
+    "一位渔夫",
+    "一只鸭子"
+   ],
+   "why": "monster 怪物。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The little boy is afraid of ______ under his bed.",
+   "opts": [
+    "monsters",
+    "monster",
+    "monstrous",
+    "master"
+   ],
+   "why": "泛指怪物用复数 monsters。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 monster、master 中选一个，用适当形式填空。",
+   "stem": "The dog sat down when its ______ told it to.",
+   "ans": "master",
+   "why": "狗的主人是 master，和 monster 形近。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "A big green ______ appears in the film. (monster)",
+   "ans": "monster",
+   "why": "a 后接单数 monster。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There were three monster in the cave.",
+   "ans": "monster → monsters",
+   "why": "three 后接复数 monsters。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The lion is a wild ______; it lives in Africa.",
+   "opts": [
+    "beast",
+    "monster",
+    "monsters",
+    "ghost"
+   ],
+   "why": "野兽用 beast，monster 强调可怕、不正常。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他们做了一个特大号的汉堡。",
+   "stem": "They made a ______ burger.",
+   "ans": "giant",
+   "why": "作定语表示“特大号”可以说 monster，也常说 giant。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

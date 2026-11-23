@@ -1,0 +1,94 @@
+{
+ "单词": "handwriting",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她的字写得怎么样？\n听：Her handwriting is very neat.\nA. 很乱\nB. 很大\nC. 很小\nD. 很工整",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I can't read your ______. It's too messy.\nA. handwriting\nB. handwritten\nC. handwrite\nD. handwritings\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：This is a ______ letter. (handwriting)\n考点：词性转换",
+  "题目4": "【选词填空】从 handwriting、calligraphy 中选一个，用适当形式填空。\n题干：Chinese ______ is a beautiful art.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：His handwritings are hard to read.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Good handwriting is ______.\nA. messy\nB. small and dark\nC. neat and clear\nD. loud\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他的字很漂亮。\n题干：His ______ is beautiful.\n考点：易混",
+  "答案": "【1】D（很工整）\n讲解：handwriting 笔迹、字迹。\n【2】A（handwriting）\n讲解：your 后面要名词 handwriting。\n【3】handwritten\n讲解：修饰名词 letter 用形容词 handwritten。\n【4】calligraphy\n讲解：“书法”艺术用 calligraphy。\n【5】handwritings are → handwriting is\n讲解：handwriting 不可数，没有复数。\n【6】C（neat and clear）\n讲解：好的字迹工整清楚。\n【7】writing\n讲解：writing 也可以指字迹，同 handwriting。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她的字写得怎么样？",
+   "listen": "Her handwriting is very neat.",
+   "opts": [
+    "很工整",
+    "很乱",
+    "很大",
+    "很小"
+   ],
+   "why": "handwriting 笔迹、字迹。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I can't read your ______. It's too messy.",
+   "opts": [
+    "handwriting",
+    "handwritten",
+    "handwrite",
+    "handwritings"
+   ],
+   "why": "your 后面要名词 handwriting。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "This is a ______ letter. (handwriting)",
+   "ans": "handwritten",
+   "why": "修饰名词 letter 用形容词 handwritten。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 handwriting、calligraphy 中选一个，用适当形式填空。",
+   "stem": "Chinese ______ is a beautiful art.",
+   "ans": "calligraphy",
+   "why": "“书法”艺术用 calligraphy。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "His handwritings are hard to read.",
+   "ans": "handwritings are → handwriting is",
+   "why": "handwriting 不可数，没有复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Good handwriting is ______.",
+   "opts": [
+    "neat and clear",
+    "messy",
+    "small and dark",
+    "loud"
+   ],
+   "why": "好的字迹工整清楚。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他的字很漂亮。",
+   "stem": "His ______ is beautiful.",
+   "ans": "writing",
+   "why": "writing 也可以指字迹，同 handwriting。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

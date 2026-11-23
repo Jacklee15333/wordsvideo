@@ -1,0 +1,94 @@
+{
+ "单词": "servant",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他以前是做什么的？\n听：He was a servant in a rich family.\nA. 主人\nB. 仆人\nC. 客人\nD. 朋友",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The rich man had ten ______.\nA. servant\nB. servants\nC. service\nD. servers",
+  "题目3": "【选词填空】从 servant、serve 中选一个，用适当形式填空。\n题干：The waiter will ______ you soon.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She works as a servants in a big house.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他是一名公务员。\n题干：He is a civil ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Servant\" comes from the verb \"______\".\nA. save\nB. sever\nC. survive\nD. serve\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A \"civil servant\" works for ______.\nA. a rich family\nB. a shop\nC. a farm\nD. the government\n考点：用法",
+  "答案": "【1】B（仆人）\n讲解：servant 仆人。\n【2】B（servants）\n讲解：ten 后面用复数。\n【3】serve\n讲解：will 后面用动词原形。\n【4】servants → servant\n讲解：a 后面用单数。\n【5】servant\n讲解：公务员是 civil servant。\n【6】D（serve）\n讲解：serve 去 e 加 -ant。\n【7】D（the government）\n讲解：civil servant 公务员。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他以前是做什么的？",
+   "listen": "He was a servant in a rich family.",
+   "opts": [
+    "仆人",
+    "主人",
+    "客人",
+    "朋友"
+   ],
+   "why": "servant 仆人。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The rich man had ten ______.",
+   "opts": [
+    "servants",
+    "servant",
+    "service",
+    "servers"
+   ],
+   "why": "ten 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 servant、serve 中选一个，用适当形式填空。",
+   "stem": "The waiter will ______ you soon.",
+   "ans": "serve",
+   "why": "will 后面用动词原形。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She works as a servants in a big house.",
+   "ans": "servants → servant",
+   "why": "a 后面用单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是一名公务员。",
+   "stem": "He is a civil ______.",
+   "ans": "servant",
+   "why": "公务员是 civil servant。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Servant\" comes from the verb \"______\".",
+   "opts": [
+    "serve",
+    "save",
+    "sever",
+    "survive"
+   ],
+   "why": "serve 去 e 加 -ant。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A \"civil servant\" works for ______.",
+   "opts": [
+    "the government",
+    "a rich family",
+    "a shop",
+    "a farm"
+   ],
+   "why": "civil servant 公务员。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

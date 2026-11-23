@@ -1,0 +1,94 @@
+{
+ "单词": "wildlife",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人喜欢拍什么？\n听：I love taking photos of wildlife.\nA. 城市\nB. 花\nC. 野生动物\nD. 人",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We must protect ______.\nA. wildlifes\nB. wildlives\nC. wildly\nD. wildlife",
+  "题目3": "【选词填空】从 wildlife、wild animals 中选一个，用适当形式填空。\n题干：Lions and elephants are ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There are many wildlife in this park.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这片荒野里没有人。\n题干：There are no people in the ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Wildlife ______ birds, fish and insects.\nA. include\nB. including\nC. includes\nD. to include\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Wildlife\" is ______.\nA. countable\nB. always plural\nC. uncountable\nD. a verb\n考点：变形",
+  "答案": "【1】C（野生动物）\n讲解：wildlife 野生动物。\n【2】D（wildlife）\n讲解：wildlife 不可数，不加 s。\n【3】wild animals\n讲解：“一只只野生动物”可数，用 wild animals。\n【4】are many → is a lot of\n讲解：wildlife 不可数，不能用 are many。\n【5】wilderness\n讲解：荒野是 wilderness。\n【6】C（includes）\n讲解：wildlife 不可数，谓语用三单。\n【7】C（uncountable）\n讲解：wildlife 不可数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人喜欢拍什么？",
+   "listen": "I love taking photos of wildlife.",
+   "opts": [
+    "野生动物",
+    "城市",
+    "花",
+    "人"
+   ],
+   "why": "wildlife 野生动物。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We must protect ______.",
+   "opts": [
+    "wildlife",
+    "wildlifes",
+    "wildlives",
+    "wildly"
+   ],
+   "why": "wildlife 不可数，不加 s。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 wildlife、wild animals 中选一个，用适当形式填空。",
+   "stem": "Lions and elephants are ______.",
+   "ans": "wild animals",
+   "why": "“一只只野生动物”可数，用 wild animals。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are many wildlife in this park.",
+   "ans": "are many → is a lot of",
+   "why": "wildlife 不可数，不能用 are many。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这片荒野里没有人。",
+   "stem": "There are no people in the ______.",
+   "ans": "wilderness",
+   "why": "荒野是 wilderness。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Wildlife ______ birds, fish and insects.",
+   "opts": [
+    "includes",
+    "include",
+    "including",
+    "to include"
+   ],
+   "why": "wildlife 不可数，谓语用三单。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Wildlife\" is ______.",
+   "opts": [
+    "uncountable",
+    "countable",
+    "always plural",
+    "a verb"
+   ],
+   "why": "wildlife 不可数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,97 @@
+{
+ "单词": "possible",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说什么是可能的？\n听：It is possible to finish the work today.\nA. 不可能完成\nB. 今天可能完成\nC. 已经完成了\nD. 明天才开始",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please come back as soon as ______.\nA. possibly\nB. possibility\nC. possible\nD. impossible\n考点：用法",
+  "题目3": "【选词填空】从 possible、impossible 中选一个，用适当形式填空。\n题干：Without water, it is ______ for fish to live.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He will ______ come tomorrow. (possible)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Is it possible for we to go there?",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：______ is possible that he will be late.\nA. It\nB. He\nC. She\nD. They\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Is there any ______ that it will rain?\nA. possible\nB. possibility\nC. possibly\nD. possibilities\n考点：词性转换",
+  "答案": "【1】B（今天可能完成）\n讲解：possible 可能的。\n【2】C（possible）\n讲解：as soon as possible 尽快。\n【3】impossible\n讲解：没有水鱼活不了，是“不可能的”。\n【4】possibly\n讲解：修饰动词 come 用副词 possibly。\n【5】we → us\n讲解：介词 for 后面用宾格 us。\n【6】A（It）\n讲解：possible 的主语不能是人，用 it 作形式主语。\n【7】B（possibility）\n讲解：any 后面要名词，possibility that 有……的可能。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说什么是可能的？",
+   "listen": "It is possible to finish the work today.",
+   "opts": [
+    "今天可能完成",
+    "不可能完成",
+    "已经完成了",
+    "明天才开始"
+   ],
+   "why": "possible 可能的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please come back as soon as ______.",
+   "opts": [
+    "possible",
+    "possibly",
+    "possibility",
+    "impossible"
+   ],
+   "why": "as soon as possible 尽快。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 possible、impossible 中选一个，用适当形式填空。",
+   "stem": "Without water, it is ______ for fish to live.",
+   "ans": "impossible",
+   "why": "没有水鱼活不了，是“不可能的”。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He will ______ come tomorrow. (possible)",
+   "ans": "possibly",
+   "why": "修饰动词 come 用副词 possibly。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Is it possible for we to go there?",
+   "ans": "we → us",
+   "why": "介词 for 后面用宾格 us。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ is possible that he will be late.",
+   "opts": [
+    "It",
+    "He",
+    "She",
+    "They"
+   ],
+   "why": "possible 的主语不能是人，用 it 作形式主语。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Is there any ______ that it will rain?",
+   "opts": [
+    "possibility",
+    "possible",
+    "possibly",
+    "possibilities"
+   ],
+   "why": "any 后面要名词，possibility that 有……的可能。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

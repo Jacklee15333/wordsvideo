@@ -1,0 +1,93 @@
+{
+ "单词": "nowhere",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：小猫在哪里？\n听：The cat was nowhere to be found.\nA. 在床下\nB. 在树上\nC. 在门外\nD. 哪儿都找不到",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The poor dog had ______ to sleep, so it slept in the rain.\nA. anywhere\nB. somewhere\nC. everywhere\nD. nowhere",
+  "题目3": "【选词填空】从 nowhere、anywhere 中选一个，用适当形式填空。\n题干：I couldn't find my phone ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We looked ______ for the key. (where)\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The talks went to nowhere.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我想去个暖和的地方。\n题干：I want to go ______ warm.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There is ______ like home.\nA. no place\nB. nowhere place\nC. not place\nD. none place\n考点：短语",
+  "答案": "【1】D（哪儿都找不到）\n讲解：nowhere 任何地方都不。\n【2】D（nowhere）\n讲解：无处可睡，只好淋雨，用 nowhere。\n【3】anywhere\n讲解：couldn't 否定句用 anywhere。\n【4】everywhere\n讲解：“到处”用 everywhere。\n【5】went to nowhere → got nowhere\n讲解：“毫无进展”是 get nowhere。\n【6】somewhere\n讲解：肯定句用 somewhere，形容词放后面。\n【7】A（no place）\n讲解：There's no place like home. 哪儿都不如家好。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：小猫在哪里？",
+   "listen": "The cat was nowhere to be found.",
+   "opts": [
+    "哪儿都找不到",
+    "在床下",
+    "在树上",
+    "在门外"
+   ],
+   "why": "nowhere 任何地方都不。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The poor dog had ______ to sleep, so it slept in the rain.",
+   "opts": [
+    "nowhere",
+    "anywhere",
+    "somewhere",
+    "everywhere"
+   ],
+   "why": "无处可睡，只好淋雨，用 nowhere。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 nowhere、anywhere 中选一个，用适当形式填空。",
+   "stem": "I couldn't find my phone ______.",
+   "ans": "anywhere",
+   "why": "couldn't 否定句用 anywhere。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We looked ______ for the key. (where)",
+   "ans": "everywhere",
+   "why": "“到处”用 everywhere。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The talks went to nowhere.",
+   "ans": "went to nowhere → got nowhere",
+   "why": "“毫无进展”是 get nowhere。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我想去个暖和的地方。",
+   "stem": "I want to go ______ warm.",
+   "ans": "somewhere",
+   "why": "肯定句用 somewhere，形容词放后面。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is ______ like home.",
+   "opts": [
+    "no place",
+    "nowhere place",
+    "not place",
+    "none place"
+   ],
+   "why": "There's no place like home. 哪儿都不如家好。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

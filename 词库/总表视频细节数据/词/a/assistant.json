@@ -1,0 +1,98 @@
+{
+ "单词": "assistant",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的工作是什么？\n听：I work as an assistant to the manager.\nA. 经理\nB. 司机\nC. 经理助理\nD. 厨师",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The shop ______ helped me find a new coat.\nA. assist\nB. assistance\nC. assistant\nD. assisted\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The teacher has two ______. (assistant)\n考点：变形",
+  "题目4": "【选词填空】从 assistant、assistance 中选一个，用适当形式填空。\n题干：We need some ______ with this heavy box.\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She is a assistant in the lab.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：An assistant ______ other people with their work.\nA. stops\nB. hates\nC. helps\nD. teaches\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：An assistant manager is ______ the manager.\nA. above\nB. the same as\nC. below\nD. older than\n考点：用法",
+  "答案": "【1】C（经理助理）\n讲解：assistant 助手。\n【2】C（assistant）\n讲解：shop assistant 店员，要名词 assistant。\n【3】assistants\n讲解：two 后面用复数 assistants。\n【4】assistance\n讲解：需要“帮助”用不可数的 assistance；assistant 是人。\n【5】a → an\n讲解：assistant 以元音音素开头，前面用 an。\n【6】C（helps）\n讲解：assistant 帮助别人工作。\n【7】C（below）\n讲解：assistant 也表示“副的、助理的”，职位在经理之下。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的工作是什么？",
+   "listen": "I work as an assistant to the manager.",
+   "opts": [
+    "经理助理",
+    "经理",
+    "司机",
+    "厨师"
+   ],
+   "why": "assistant 助手。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The shop ______ helped me find a new coat.",
+   "opts": [
+    "assistant",
+    "assist",
+    "assistance",
+    "assisted"
+   ],
+   "why": "shop assistant 店员，要名词 assistant。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The teacher has two ______. (assistant)",
+   "ans": "assistants",
+   "why": "two 后面用复数 assistants。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 assistant、assistance 中选一个，用适当形式填空。",
+   "stem": "We need some ______ with this heavy box.",
+   "ans": "assistance",
+   "why": "需要“帮助”用不可数的 assistance；assistant 是人。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is a assistant in the lab.",
+   "ans": "a → an",
+   "why": "assistant 以元音音素开头，前面用 an。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An assistant ______ other people with their work.",
+   "opts": [
+    "helps",
+    "stops",
+    "hates",
+    "teaches"
+   ],
+   "why": "assistant 帮助别人工作。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An assistant manager is ______ the manager.",
+   "opts": [
+    "below",
+    "above",
+    "the same as",
+    "older than"
+   ],
+   "why": "assistant 也表示“副的、助理的”，职位在经理之下。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

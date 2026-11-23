@@ -1,0 +1,97 @@
+{
+ "单词": "duke",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：谁住在大城堡里？\n听：The duke lives in a big castle.\nA. 国王\nB. 公爵\nC. 农民\nD. 士兵",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There were three ______ at the dinner.\nA. dukes\nB. duke\nC. dukeses\nD. duke's\n考点：变形",
+  "题目3": "【选词填空】从 duke、duck 中选一个，用适当形式填空。\n题干：There is a ______ swimming in the pond.\n考点：易混",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：这位公爵很有钱。\n题干：The ______ is very rich.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The duke's wife is called a dukess.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The land of a duke is called a ______.\nA. city\nB. farm\nC. country\nD. duchy\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A duke is ______ than an earl.\nA. lower\nB. younger\nC. higher\nD. poorer\n考点：用法",
+  "答案": "【1】B（公爵）\n讲解：duke 公爵。\n【2】A（dukes）\n讲解：three 后面接复数 dukes。\n【3】duck\n讲解：池塘里游的是鸭子 duck。\n【4】duke\n讲解：公爵 duke。\n【5】dukess → duchess\n讲解：公爵夫人是 duchess。\n【6】D（duchy）\n讲解：公爵的领地叫 duchy。\n【7】C（higher）\n讲解：英国贵族里公爵比伯爵等级高。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：谁住在大城堡里？",
+   "listen": "The duke lives in a big castle.",
+   "opts": [
+    "公爵",
+    "国王",
+    "农民",
+    "士兵"
+   ],
+   "why": "duke 公爵。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There were three ______ at the dinner.",
+   "opts": [
+    "dukes",
+    "duke",
+    "dukeses",
+    "duke's"
+   ],
+   "why": "three 后面接复数 dukes。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 duke、duck 中选一个，用适当形式填空。",
+   "stem": "There is a ______ swimming in the pond.",
+   "ans": "duck",
+   "why": "池塘里游的是鸭子 duck。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这位公爵很有钱。",
+   "stem": "The ______ is very rich.",
+   "ans": "duke",
+   "why": "公爵 duke。"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The duke's wife is called a dukess.",
+   "ans": "dukess → duchess",
+   "why": "公爵夫人是 duchess。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The land of a duke is called a ______.",
+   "opts": [
+    "duchy",
+    "city",
+    "farm",
+    "country"
+   ],
+   "why": "公爵的领地叫 duchy。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A duke is ______ than an earl.",
+   "opts": [
+    "higher",
+    "lower",
+    "younger",
+    "poorer"
+   ],
+   "why": "英国贵族里公爵比伯爵等级高。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

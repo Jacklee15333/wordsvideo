@@ -1,0 +1,95 @@
+{
+ "单词": "vocabulary",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师说读书能增加什么？\n听：Read more to build your vocabulary.\nA. 写字速度\nB. 词汇量\nC. 数学成绩\nD. 体力",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She has a large English ______.\nA. vocabulary\nB. words\nC. word\nD. vocabularies",
+  "题目3": "【选词填空】从 vocabulary、words 中选一个，用适当形式填空。\n题干：There are ten new ______ in this lesson.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Her vocabulary are growing fast.",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：He ______ new vocabulary every day. (study)",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Many vocabularies\" is wrong; we should say \"many ______\".\nA. word\nB. vocabulary\nC. words\nD. wordes\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A person with a small vocabulary knows ______ words.\nA. many\nB. few\nC. much\nD. little\n考点：用法",
+  "答案": "【1】B（词汇量）\n讲解：vocabulary 词汇量。\n【2】A（vocabulary）\n讲解：a large vocabulary 词汇量大，a 后用单数。\n【3】words\n讲解：具体几个单词用 words；vocabulary 是词的总和。\n【4】are → is\n讲解：主语 vocabulary 是单数，用 is。\n【5】studies\n讲解：主语三单、every day，y 变 i 加 es。\n【6】C（words）\n讲解：“很多单词”说 many words。\n【7】B（few）\n讲解：词汇量小，认识的词很少，可数名词用 few。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师说读书能增加什么？",
+   "listen": "Read more to build your vocabulary.",
+   "opts": [
+    "词汇量",
+    "写字速度",
+    "数学成绩",
+    "体力"
+   ],
+   "why": "vocabulary 词汇量。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She has a large English ______.",
+   "opts": [
+    "vocabulary",
+    "words",
+    "word",
+    "vocabularies"
+   ],
+   "why": "a large vocabulary 词汇量大，a 后用单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 vocabulary、words 中选一个，用适当形式填空。",
+   "stem": "There are ten new ______ in this lesson.",
+   "ans": "words",
+   "why": "具体几个单词用 words；vocabulary 是词的总和。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Her vocabulary are growing fast.",
+   "ans": "are → is",
+   "why": "主语 vocabulary 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He ______ new vocabulary every day. (study)",
+   "ans": "studies",
+   "why": "主语三单、every day，y 变 i 加 es。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Many vocabularies\" is wrong; we should say \"many ______\".",
+   "opts": [
+    "words",
+    "word",
+    "vocabulary",
+    "wordes"
+   ],
+   "why": "“很多单词”说 many words。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A person with a small vocabulary knows ______ words.",
+   "opts": [
+    "few",
+    "many",
+    "much",
+    "little"
+   ],
+   "why": "词汇量小，认识的词很少，可数名词用 few。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

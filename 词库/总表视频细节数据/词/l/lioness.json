@@ -1,0 +1,92 @@
+{
+ "单词": "lioness",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：视频里是什么动物？\n听：The video shows a lioness and her babies.\nA. 老虎和幼崽\nB. 狗和小狗\nC. 猫和小猫\nD. 母狮和幼崽",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ is looking for food for her cubs.\nA. lion\nB. lions\nC. lioness\nD. lionesses",
+  "题目3": "【选词填空】从 lion、lioness 中选一个，用适当形式填空。\n题干：The male ______ has a big mane around his head.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Three ______ were hunting together. (lioness)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：A lioness is a male lion.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A female tiger is called a ______.\nA. tigress\nB. tiger\nC. lioness\nD. tigers\n考点：词性转换",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这只母狮有四只幼崽。\n题干：This lioness ______ four cubs.\n考点：用法",
+  "答案": "【1】D（母狮和幼崽）\n讲解：lioness 母狮。\n【2】C（lioness）\n讲解：her 说明是母狮，单数 lioness。\n【3】lion\n讲解：雄狮是 lion。\n【4】lionesses\n讲解：lioness 的复数加 es：lionesses。\n【5】male → female\n讲解：母狮是雌性的 female lion。\n【6】A（tigress）\n讲解：-ess 表示雌性，母虎是 tigress。\n【7】has\n讲解：主语三单用 has。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：视频里是什么动物？",
+   "listen": "The video shows a lioness and her babies.",
+   "opts": [
+    "母狮和幼崽",
+    "老虎和幼崽",
+    "狗和小狗",
+    "猫和小猫"
+   ],
+   "why": "lioness 母狮。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ is looking for food for her cubs.",
+   "opts": [
+    "lioness",
+    "lion",
+    "lions",
+    "lionesses"
+   ],
+   "why": "her 说明是母狮，单数 lioness。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 lion、lioness 中选一个，用适当形式填空。",
+   "stem": "The male ______ has a big mane around his head.",
+   "ans": "lion",
+   "why": "雄狮是 lion。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Three ______ were hunting together. (lioness)",
+   "ans": "lionesses",
+   "why": "lioness 的复数加 es：lionesses。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "A lioness is a male lion.",
+   "ans": "male → female",
+   "why": "母狮是雌性的 female lion。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A female tiger is called a ______.",
+   "opts": [
+    "tigress",
+    "tiger",
+    "lioness",
+    "tigers"
+   ],
+   "why": "-ess 表示雌性，母虎是 tigress。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这只母狮有四只幼崽。",
+   "stem": "This lioness ______ four cubs.",
+   "ans": "has",
+   "why": "主语三单用 has。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

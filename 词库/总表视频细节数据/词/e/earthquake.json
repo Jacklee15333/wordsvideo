@@ -1,0 +1,97 @@
+{
+ "单词": "earthquake",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说昨晚发生了什么？\n听：There was a big earthquake last night.\nA. 大火\nB. 地震\nC. 大雪\nD. 洪水",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Japan has many ______ every year.\nA. earthquakes\nB. earthquake\nC. earthquaking\nD. quaked\n考点：变形",
+  "题目3": "【选词填空】从 earthquake、flood 中选一个，用适当形式填空。\n题干：Heavy rain caused a ______ in the village.\n考点：易混",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：地震时不要乘电梯。\n题干：Don't take the lift during an ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There were an earthquake here yesterday.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In spoken English, \"earthquake\" is often shortened to \"______\".\nA. earth\nB. shake\nC. quake\nD. quick\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Earthquake = earth + ______.\nA. quick\nB. quake\nC. make\nD. lake\n考点：用法",
+  "答案": "【1】B（地震）\n讲解：earthquake 地震。\n【2】A（earthquakes）\n讲解：many 后面接复数 earthquakes。\n【3】flood\n讲解：大雨引起的是洪水 flood。\n【4】earthquake\n讲解：地震 earthquake，an 后面接元音开头的词。\n【5】were → was\n讲解：an earthquake 是单数，用 was。\n【6】C（quake）\n讲解：口语常把 earthquake 说成 quake。\n【7】B（quake）\n讲解：earth（大地）+ quake（震动）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说昨晚发生了什么？",
+   "listen": "There was a big earthquake last night.",
+   "opts": [
+    "地震",
+    "大火",
+    "大雪",
+    "洪水"
+   ],
+   "why": "earthquake 地震。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Japan has many ______ every year.",
+   "opts": [
+    "earthquakes",
+    "earthquake",
+    "earthquaking",
+    "quaked"
+   ],
+   "why": "many 后面接复数 earthquakes。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 earthquake、flood 中选一个，用适当形式填空。",
+   "stem": "Heavy rain caused a ______ in the village.",
+   "ans": "flood",
+   "why": "大雨引起的是洪水 flood。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "地震时不要乘电梯。",
+   "stem": "Don't take the lift during an ______.",
+   "ans": "earthquake",
+   "why": "地震 earthquake，an 后面接元音开头的词。"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There were an earthquake here yesterday.",
+   "ans": "were → was",
+   "why": "an earthquake 是单数，用 was。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In spoken English, \"earthquake\" is often shortened to \"______\".",
+   "opts": [
+    "quake",
+    "earth",
+    "shake",
+    "quick"
+   ],
+   "why": "口语常把 earthquake 说成 quake。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Earthquake = earth + ______.",
+   "opts": [
+    "quake",
+    "quick",
+    "make",
+    "lake"
+   ],
+   "why": "earth（大地）+ quake（震动）。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

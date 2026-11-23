@@ -1,0 +1,94 @@
+{
+ "单词": "desk",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：书在哪里？\n听：The book is on my desk.\nA. 床上\nB. 书桌上\nC. 椅子上\nD. 书架上",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are forty ______ in our classroom.\nA. desk\nB. deskes\nC. deskies\nD. desks",
+  "题目3": "【选词填空】从 desk、table 中选一个，用适当形式填空。\n题干：We had dinner at the ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He is sitting at his desk and do homework.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我和我的同桌是好朋友。\n题干：My ______ and I are good friends.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Please put your books on the ______.\nA. desks\nB. deskmate\nC. dish\nD. desk\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The \"front desk\" in a hotel is the ______.\nA. kitchen\nB. reception\nC. bedroom\nD. lift\n考点：短语",
+  "答案": "【1】B（书桌上）\n讲解：desk 书桌。\n【2】D（desks）\n讲解：forty 后面用复数。\n【3】table\n讲解：吃饭用的是 table。\n【4】do → doing\n讲解：和 sitting 并列，用 doing。\n【5】deskmate\n讲解：同桌是 deskmate。\n【6】D（desk）\n讲解：the 后面这里用单数。\n【7】B（reception）\n讲解：front desk 前台。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：书在哪里？",
+   "listen": "The book is on my desk.",
+   "opts": [
+    "书桌上",
+    "床上",
+    "椅子上",
+    "书架上"
+   ],
+   "why": "desk 书桌。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are forty ______ in our classroom.",
+   "opts": [
+    "desks",
+    "desk",
+    "deskes",
+    "deskies"
+   ],
+   "why": "forty 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 desk、table 中选一个，用适当形式填空。",
+   "stem": "We had dinner at the ______.",
+   "ans": "table",
+   "why": "吃饭用的是 table。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is sitting at his desk and do homework.",
+   "ans": "do → doing",
+   "why": "和 sitting 并列，用 doing。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我和我的同桌是好朋友。",
+   "stem": "My ______ and I are good friends.",
+   "ans": "deskmate",
+   "why": "同桌是 deskmate。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please put your books on the ______.",
+   "opts": [
+    "desk",
+    "desks",
+    "deskmate",
+    "dish"
+   ],
+   "why": "the 后面这里用单数。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The \"front desk\" in a hotel is the ______.",
+   "opts": [
+    "reception",
+    "kitchen",
+    "bedroom",
+    "lift"
+   ],
+   "why": "front desk 前台。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

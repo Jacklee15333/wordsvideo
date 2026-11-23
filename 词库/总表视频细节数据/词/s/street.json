@@ -1,0 +1,98 @@
+{
+ "单词": "street",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说书店在哪里？\n听：The bookshop is across the street.\nA. 在街对面\nB. 在街角\nC. 在学校旁边\nD. 在楼上",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many shops ______ this street.\nA. at\nB. on\nC. to\nD. of\n考点：用法",
+  "题目3": "【选词填空】从 street、straight 中选一个，用适当形式填空。\n题干：Go ______ and turn left at the second crossing.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The two ______ are very busy. (street)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He lives in a busy streets.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：My house is at the end of the ______.\nA. straight\nB. strict\nC. stream\nD. street\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In an address, \"Street\" is often written as ______.\nA. Str.\nB. Sr.\nC. Sh.\nD. St.\n考点：用法",
+  "答案": "【1】A（在街对面）\n讲解：across the street 在街对面。\n【2】B（on）\n讲解：在街上用 on。\n【3】straight\n讲解：“直走”用 straight，别和 street 弄混。\n【4】streets\n讲解：two 后面接复数 streets。\n【5】streets → street\n讲解：a 后面接单数。\n【6】D（street）\n讲解：at the end of the street 在街的尽头。\n【7】D（St.）\n讲解：地址里 Street 常缩写成 St.。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说书店在哪里？",
+   "listen": "The bookshop is across the street.",
+   "opts": [
+    "在街对面",
+    "在街角",
+    "在学校旁边",
+    "在楼上"
+   ],
+   "why": "across the street 在街对面。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many shops ______ this street.",
+   "opts": [
+    "on",
+    "at",
+    "to",
+    "of"
+   ],
+   "why": "在街上用 on。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 street、straight 中选一个，用适当形式填空。",
+   "stem": "Go ______ and turn left at the second crossing.",
+   "ans": "straight",
+   "why": "“直走”用 straight，别和 street 弄混。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The two ______ are very busy. (street)",
+   "ans": "streets",
+   "why": "two 后面接复数 streets。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He lives in a busy streets.",
+   "ans": "streets → street",
+   "why": "a 后面接单数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My house is at the end of the ______.",
+   "opts": [
+    "street",
+    "straight",
+    "strict",
+    "stream"
+   ],
+   "why": "at the end of the street 在街的尽头。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In an address, \"Street\" is often written as ______.",
+   "opts": [
+    "St.",
+    "Str.",
+    "Sr.",
+    "Sh."
+   ],
+   "why": "地址里 Street 常缩写成 St.。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

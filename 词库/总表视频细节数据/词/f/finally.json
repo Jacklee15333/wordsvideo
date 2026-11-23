@@ -1,0 +1,94 @@
+{
+ "单词": "finally",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：公交车最后来了吗？\n听：After a long wait, the bus finally came.\nA. 没来\nB. 坏了\nC. 开走了\nD. 终于来了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：After a long wait, the bus ______ came.\nA. final\nB. finish\nC. fine\nD. finally\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：This is the ______ game. (finally)\n考点：词性转换",
+  "题目4": "【选词填空】从 finally、fine 中选一个，用适当形式填空。\n题干：I'm ______, thank you.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：After many tries, he finally failed the test.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Finally is close in meaning to ______.\nA. at first\nB. at last\nC. at once\nD. at all\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：最后，我们赢了比赛。\n题干：In the ______, we won the game.\n考点：易混",
+  "答案": "【1】D（终于来了）\n讲解：finally 最后、终于。\n【2】D（finally）\n讲解：修饰动词 came 用副词 finally。\n【3】final\n讲解：修饰名词 game 用形容词 final。\n【4】fine\n讲解：“很好”用 fine。\n【5】failed → passed\n讲解：试了很多次，终于通过了。\n【6】B（at last）\n讲解：finally = at last 终于。\n【7】end\n讲解：in the end 最后。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：公交车最后来了吗？",
+   "listen": "After a long wait, the bus finally came.",
+   "opts": [
+    "终于来了",
+    "没来",
+    "坏了",
+    "开走了"
+   ],
+   "why": "finally 最后、终于。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "After a long wait, the bus ______ came.",
+   "opts": [
+    "finally",
+    "final",
+    "finish",
+    "fine"
+   ],
+   "why": "修饰动词 came 用副词 finally。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "This is the ______ game. (finally)",
+   "ans": "final",
+   "why": "修饰名词 game 用形容词 final。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 finally、fine 中选一个，用适当形式填空。",
+   "stem": "I'm ______, thank you.",
+   "ans": "fine",
+   "why": "“很好”用 fine。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "After many tries, he finally failed the test.",
+   "ans": "failed → passed",
+   "why": "试了很多次，终于通过了。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Finally is close in meaning to ______.",
+   "opts": [
+    "at last",
+    "at first",
+    "at once",
+    "at all"
+   ],
+   "why": "finally = at last 终于。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "最后，我们赢了比赛。",
+   "stem": "In the ______, we won the game.",
+   "ans": "end",
+   "why": "in the end 最后。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

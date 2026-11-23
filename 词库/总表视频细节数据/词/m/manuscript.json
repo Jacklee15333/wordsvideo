@@ -1,0 +1,94 @@
+{
+ "单词": "manuscript",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：作者把什么寄给了出版社？\n听：The writer sent the manuscript to the publisher.\nA. 支票\nB. 手稿\nC. 信\nD. 照片",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Old ______ are kept in the museum.\nA. manuscripts\nB. manuscript\nC. manual\nD. manuscriptes",
+  "题目3": "【选词填空】从 manuscript、book 中选一个，用适当形式填空。\n题干：You can buy this ______ in any bookshop.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The manuscript were written by hand.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这本书是手写的。\n题干：The book was written by ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Today, a typed article not yet published is also called a ______.\nA. magazine\nB. manual\nC. manuscript\nD. menu\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Script\" in \"manuscript\" means \"______\".\nA. spoken\nB. written\nC. painted\nD. printed\n考点：用法",
+  "答案": "【1】B（手稿）\n讲解：manuscript 手稿。\n【2】A（manuscripts）\n讲解：主语复数。\n【3】book\n讲解：书店里卖的是印好的书。\n【4】were → was\n讲解：主语单数。\n【5】hand\n讲解：by hand 用手。\n【6】C（manuscript）\n讲解：还没出版的稿子也叫 manuscript。\n【7】B（written）\n讲解：script 表示“写”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：作者把什么寄给了出版社？",
+   "listen": "The writer sent the manuscript to the publisher.",
+   "opts": [
+    "手稿",
+    "支票",
+    "信",
+    "照片"
+   ],
+   "why": "manuscript 手稿。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Old ______ are kept in the museum.",
+   "opts": [
+    "manuscripts",
+    "manuscript",
+    "manual",
+    "manuscriptes"
+   ],
+   "why": "主语复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 manuscript、book 中选一个，用适当形式填空。",
+   "stem": "You can buy this ______ in any bookshop.",
+   "ans": "book",
+   "why": "书店里卖的是印好的书。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The manuscript were written by hand.",
+   "ans": "were → was",
+   "why": "主语单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这本书是手写的。",
+   "stem": "The book was written by ______.",
+   "ans": "hand",
+   "why": "by hand 用手。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Today, a typed article not yet published is also called a ______.",
+   "opts": [
+    "manuscript",
+    "magazine",
+    "manual",
+    "menu"
+   ],
+   "why": "还没出版的稿子也叫 manuscript。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Script\" in \"manuscript\" means \"______\".",
+   "opts": [
+    "written",
+    "spoken",
+    "painted",
+    "printed"
+   ],
+   "why": "script 表示“写”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

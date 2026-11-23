@@ -1,0 +1,96 @@
+{
+ "单词": "curator",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的妈妈做什么工作？\n听：My mother is a curator at the art museum.\nA. 美术老师\nB. 画家\nC. 保安\nD. 美术馆策展人",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ planned the new show of old coins at the museum.\nA. cure\nB. curtain\nC. cursor\nD. curator",
+  "题目3": "【选词填空】从 curator、director 中选一个，用适当形式填空。\n题干：The ______ of the whole museum is Mr. Wang.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Two ______ are working on the new show. (curator)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The curator have worked here for ten years.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"A curated playlist\" is a list of songs that ______.\nA. nobody likes\nB. someone carefully chose\nC. is very long\nD. is free\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A curator mainly ______.\nA. looks after and shows museum objects\nB. sells tickets\nC. cleans the floor\nD. drives the bus\n考点：用法",
+  "答案": "【1】D（美术馆策展人）\n讲解：curator 策展人、研究馆员。\n【2】D（curator）\n讲解：负责藏品和展览的人是 curator。\n【3】director\n讲解：整座博物馆的馆长通常叫 director。\n【4】curators\n讲解：two 后面用复数 curators。\n【5】have → has\n讲解：主语 curator 是单数，用 has。\n【6】B（someone carefully chose）\n讲解：curate 今天泛指“精选、编排”。\n【7】A（looks after and shows museum objects）\n讲解：curator 负责藏品的研究、保管和展览。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的妈妈做什么工作？",
+   "listen": "My mother is a curator at the art museum.",
+   "opts": [
+    "美术馆策展人",
+    "美术老师",
+    "画家",
+    "保安"
+   ],
+   "why": "curator 策展人、研究馆员。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ planned the new show of old coins at the museum.",
+   "opts": [
+    "curator",
+    "cure",
+    "curtain",
+    "cursor"
+   ],
+   "why": "负责藏品和展览的人是 curator。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 curator、director 中选一个，用适当形式填空。",
+   "stem": "The ______ of the whole museum is Mr. Wang.",
+   "ans": "director",
+   "why": "整座博物馆的馆长通常叫 director。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Two ______ are working on the new show. (curator)",
+   "ans": "curators",
+   "why": "two 后面用复数 curators。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The curator have worked here for ten years.",
+   "ans": "have → has",
+   "why": "主语 curator 是单数，用 has。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"A curated playlist\" is a list of songs that ______.",
+   "opts": [
+    "someone carefully chose",
+    "nobody likes",
+    "is very long",
+    "is free"
+   ],
+   "why": "curate 今天泛指“精选、编排”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A curator mainly ______.",
+   "opts": [
+    "looks after and shows museum objects",
+    "sells tickets",
+    "cleans the floor",
+    "drives the bus"
+   ],
+   "why": "curator 负责藏品的研究、保管和展览。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

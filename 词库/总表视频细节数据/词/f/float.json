@@ -1,0 +1,94 @@
+{
+ "单词": "float",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：什么在水面上漂着？\n听：A leaf is floating on the water.\nA. 一块石头\nB. 一片叶子\nC. 一条鱼\nD. 一条船",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Wood ______ on water, but stone sinks.\nA. floats\nB. float\nC. floating\nD. floated",
+  "题目3": "【选词填空】从 float、drift 中选一个，用适当形式填空。\n题干：The boat had no engine, so it ______ out to sea with the wind.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Can you float in water? I can floating.",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：We visited a ______ market in Thailand. (float)",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Float an idea\" means ______ an idea.\nA. hide\nB. suggest\nC. forget\nD. break\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Float\" means to stay on top of water and not ______.\nA. swim\nB. drink\nC. fly\nD. sink\n考点：易混",
+  "答案": "【1】B（一片叶子）\n讲解：float 漂浮。\n【2】A（floats）\n讲解：一般现在时，主语三单。\n【3】drifted\n讲解：被风带着漂走用 drift。\n【4】floating → float\n讲解：can 后面用动词原形。\n【5】floating\n讲解：水上市场 floating market。\n【6】B（suggest）\n讲解：float 也有“提出”的意思。\n【7】D（sink）\n讲解：float 浮着不沉。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：什么在水面上漂着？",
+   "listen": "A leaf is floating on the water.",
+   "opts": [
+    "一片叶子",
+    "一块石头",
+    "一条鱼",
+    "一条船"
+   ],
+   "why": "float 漂浮。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Wood ______ on water, but stone sinks.",
+   "opts": [
+    "floats",
+    "float",
+    "floating",
+    "floated"
+   ],
+   "why": "一般现在时，主语三单。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 float、drift 中选一个，用适当形式填空。",
+   "stem": "The boat had no engine, so it ______ out to sea with the wind.",
+   "ans": "drifted",
+   "why": "被风带着漂走用 drift。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Can you float in water? I can floating.",
+   "ans": "floating → float",
+   "why": "can 后面用动词原形。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We visited a ______ market in Thailand. (float)",
+   "ans": "floating",
+   "why": "水上市场 floating market。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Float an idea\" means ______ an idea.",
+   "opts": [
+    "suggest",
+    "hide",
+    "forget",
+    "break"
+   ],
+   "why": "float 也有“提出”的意思。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Float\" means to stay on top of water and not ______.",
+   "opts": [
+    "sink",
+    "swim",
+    "drink",
+    "fly"
+   ],
+   "why": "float 浮着不沉。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

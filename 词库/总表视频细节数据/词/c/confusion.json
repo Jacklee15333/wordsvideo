@@ -1,0 +1,94 @@
+{
+ "单词": "confusion",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：会议出了什么问题？\n听：There was some confusion about the time of the meeting.\nA. 会议取消了\nB. 时间搞混了\nC. 会开得很长\nD. 地点变了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：To avoid ______, write your name clearly.\nA. confuse\nB. confusion\nC. confused\nD. confusing",
+  "题目3": "【选词填空】从 confusion、confused 中选一个，用适当形式填空。\n题干：I'm ______. Can you say it again?",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There were a lot of confusion at the station.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他把两个人搞混了。\n题干：He ______ the two people.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Confusion\" is the noun of \"______\".\nA. confess\nB. confuse\nC. conclude\nD. confirm\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Chaos\" is a ______ kind of confusion.\nA. small\nB. complete\nC. quiet\nD. happy\n考点：易混",
+  "答案": "【1】B（时间搞混了）\n讲解：confusion 混淆。\n【2】B（confusion）\n讲解：avoid 后面要名词。\n【3】confused\n讲解：be 后面用形容词。\n【4】were → was\n讲解：confusion 这里不可数，谓语用 was。\n【5】confused\n讲解：confuse 过去式 confused。\n【6】B（confuse）\n讲解：confuse 去 e 加 -ion。\n【7】B（complete）\n讲解：chaos 是完全的混乱。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：会议出了什么问题？",
+   "listen": "There was some confusion about the time of the meeting.",
+   "opts": [
+    "时间搞混了",
+    "会议取消了",
+    "会开得很长",
+    "地点变了"
+   ],
+   "why": "confusion 混淆。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "To avoid ______, write your name clearly.",
+   "opts": [
+    "confusion",
+    "confuse",
+    "confused",
+    "confusing"
+   ],
+   "why": "avoid 后面要名词。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 confusion、confused 中选一个，用适当形式填空。",
+   "stem": "I'm ______. Can you say it again?",
+   "ans": "confused",
+   "why": "be 后面用形容词。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There were a lot of confusion at the station.",
+   "ans": "were → was",
+   "why": "confusion 这里不可数，谓语用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他把两个人搞混了。",
+   "stem": "He ______ the two people.",
+   "ans": "confused",
+   "why": "confuse 过去式 confused。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Confusion\" is the noun of \"______\".",
+   "opts": [
+    "confuse",
+    "confess",
+    "conclude",
+    "confirm"
+   ],
+   "why": "confuse 去 e 加 -ion。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Chaos\" is a ______ kind of confusion.",
+   "opts": [
+    "complete",
+    "small",
+    "quiet",
+    "happy"
+   ],
+   "why": "chaos 是完全的混乱。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "eaten",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人吃过饺子吗？\n听：I have never eaten dumplings before.\nA. 经常吃\nB. 昨天吃了\nC. 不喜欢吃\nD. 从没吃过",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Have you ______ breakfast?\nA. ate\nB. eat\nC. eaten\nD. eating",
+  "题目3": "【选词填空】从 ate、eaten 中选一个，用适当形式填空。\n题干：We ______ noodles at a small shop yesterday.\n考点：变形",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：I'm full. I can't ______ any more. (eaten)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The dog has eaten the cake, and nothing are left.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Have you eaten?\" in English is ______.\nA. a greeting like \"hello\"\nB. a way to say goodbye\nC. a joke\nD. a real question about food\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：桌上还剩一些没吃的面包。\n题干：There is some ______ bread on the table.\n考点：词性转换",
+  "答案": "【1】D（从没吃过）\n讲解：have never eaten 从没吃过。\n【2】C（eaten）\n讲解：have 后接过去分词 eaten。\n【3】ate\n讲解：yesterday 用过去式 ate。\n【4】eat\n讲解：can't 后接动词原形 eat。\n【5】are → is\n讲解：nothing 作主语，谓语用单数 is。\n【6】D（a real question about food）\n讲解：英语里是真问对方吃没吃饭，不是寒暄。\n【7】uneaten\n讲解：没吃的、剩下的 uneaten。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人吃过饺子吗？",
+   "listen": "I have never eaten dumplings before.",
+   "opts": [
+    "从没吃过",
+    "经常吃",
+    "昨天吃了",
+    "不喜欢吃"
+   ],
+   "why": "have never eaten 从没吃过。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Have you ______ breakfast?",
+   "opts": [
+    "eaten",
+    "ate",
+    "eat",
+    "eating"
+   ],
+   "why": "have 后接过去分词 eaten。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 ate、eaten 中选一个，用适当形式填空。",
+   "stem": "We ______ noodles at a small shop yesterday.",
+   "ans": "ate",
+   "why": "yesterday 用过去式 ate。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I'm full. I can't ______ any more. (eaten)",
+   "ans": "eat",
+   "why": "can't 后接动词原形 eat。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The dog has eaten the cake, and nothing are left.",
+   "ans": "are → is",
+   "why": "nothing 作主语，谓语用单数 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Have you eaten?\" in English is ______.",
+   "opts": [
+    "a real question about food",
+    "a greeting like \"hello\"",
+    "a way to say goodbye",
+    "a joke"
+   ],
+   "why": "英语里是真问对方吃没吃饭，不是寒暄。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "桌上还剩一些没吃的面包。",
+   "stem": "There is some ______ bread on the table.",
+   "ans": "uneaten",
+   "why": "没吃的、剩下的 uneaten。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

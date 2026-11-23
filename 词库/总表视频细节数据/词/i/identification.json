@@ -1,0 +1,92 @@
+{
+ "单词": "identification",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：门卫让他出示什么？\n听：The guard asked him to show his identification.\nA. 车票\nB. 钱包\nC. 身份证件\nD. 手机",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You need some ______ to open a bank account.\nA. identify\nB. identified\nC. identification\nD. identifiable",
+  "题目3": "【选词填空】从 identification、identify 中选一个，用适当形式填空。\n题干：The police couldn't ______ the dead fish at first.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The scientist ______ the bird after two days. (identification)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Please show me your identify.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Face ______ is used in many phones now.\nA. recognize\nB. recognizing\nC. recognized\nD. recognition\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我们出示了两种不同的证件。\n题干：We showed two different ______.\n考点：变形",
+  "答案": "【1】C（身份证件）\n讲解：identification 身份证明。\n【2】C（identification）\n讲解：some 后接名词 identification。\n【3】identify\n讲解：couldn't 后接动词原形 identify。\n【4】identified\n讲解：主语后要谓语动词，过去时 identified。\n【5】identify → ID\n讲解：your 后要名词，可用 ID（身份证件）。\n【6】D（recognition）\n讲解：人脸识别 face recognition，与 identification 近义。\n【7】identifications\n讲解：two 后接复数 identifications。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：门卫让他出示什么？",
+   "listen": "The guard asked him to show his identification.",
+   "opts": [
+    "身份证件",
+    "车票",
+    "钱包",
+    "手机"
+   ],
+   "why": "identification 身份证明。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You need some ______ to open a bank account.",
+   "opts": [
+    "identification",
+    "identify",
+    "identified",
+    "identifiable"
+   ],
+   "why": "some 后接名词 identification。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 identification、identify 中选一个，用适当形式填空。",
+   "stem": "The police couldn't ______ the dead fish at first.",
+   "ans": "identify",
+   "why": "couldn't 后接动词原形 identify。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The scientist ______ the bird after two days. (identification)",
+   "ans": "identified",
+   "why": "主语后要谓语动词，过去时 identified。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please show me your identify.",
+   "ans": "identify → ID",
+   "why": "your 后要名词，可用 ID（身份证件）。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Face ______ is used in many phones now.",
+   "opts": [
+    "recognition",
+    "recognize",
+    "recognizing",
+    "recognized"
+   ],
+   "why": "人脸识别 face recognition，与 identification 近义。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们出示了两种不同的证件。",
+   "stem": "We showed two different ______.",
+   "ans": "identifications",
+   "why": "two 后接复数 identifications。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

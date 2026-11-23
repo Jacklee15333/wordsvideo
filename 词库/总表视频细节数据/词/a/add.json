@@ -1,0 +1,93 @@
+{
+ "单词": "add",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让对方加什么？\n听：Please add some salt to the soup.\nA. 盐\nB. 糖\nC. 醋\nD. 水",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please ______ some salt to the soup.\nA. add\nB. adds\nC. added\nD. addition\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ some sugar to her tea yesterday. (add)\n考点：变形",
+  "题目4": "【选词填空】从 add、plus 中选一个，用适当形式填空。\n题干：Two ______ three is five.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Add up all the number.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：另外，他还会弹钢琴。\n题干：In ______, he can play the piano.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Add up means ______.\nA. 加起来\nB. 减去\nC. 起床\nD. 放弃\n考点：短语",
+  "答案": "【1】A（盐）\n讲解：add 添加。\n【2】A（add）\n讲解：please 后面用动词原形 add。\n【3】added\n讲解：yesterday 用过去式 added。\n【4】plus\n讲解：算式里的“加”用 plus。\n【5】number → numbers\n讲解：all the 后面用复数 numbers。\n【6】addition\n讲解：in addition 另外。\n【7】A（加起来）\n讲解：add up 加起来。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让对方加什么？",
+   "listen": "Please add some salt to the soup.",
+   "opts": [
+    "盐",
+    "糖",
+    "醋",
+    "水"
+   ],
+   "why": "add 添加。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please ______ some salt to the soup.",
+   "opts": [
+    "add",
+    "adds",
+    "added",
+    "addition"
+   ],
+   "why": "please 后面用动词原形 add。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ some sugar to her tea yesterday. (add)",
+   "ans": "added",
+   "why": "yesterday 用过去式 added。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 add、plus 中选一个，用适当形式填空。",
+   "stem": "Two ______ three is five.",
+   "ans": "plus",
+   "why": "算式里的“加”用 plus。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Add up all the number.",
+   "ans": "number → numbers",
+   "why": "all the 后面用复数 numbers。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "另外，他还会弹钢琴。",
+   "stem": "In ______, he can play the piano.",
+   "ans": "addition",
+   "why": "in addition 另外。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Add up means ______.",
+   "opts": [
+    "加起来",
+    "减去",
+    "起床",
+    "放弃"
+   ],
+   "why": "add up 加起来。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

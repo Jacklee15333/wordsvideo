@@ -1,0 +1,98 @@
+{
+ "单词": "language",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她会说几种语言？\n听：She can speak three languages.\nA. 两种\nB. 三种\nC. 四种\nD. 五种",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：English is a widely used ______.\nA. languages\nB. speech\nC. language\nD. letter\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：How many ______ can you speak? (language)\n考点：变形",
+  "题目4": "【选词填空】从 language、speech 中选一个，用适当形式填空。\n题干：The headmaster gave a ______ at the meeting.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Please don't use bad languages.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Body language\" means ______.\nA. sign language\nB. how we show feelings with our body\nC. a foreign language\nD. a rude word\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A person who speaks two languages well is ______.\nA. linguistic\nB. bilingual\nC. literary\nD. literal\n考点：用法",
+  "答案": "【1】B（三种）\n讲解：language 语言。\n【2】C（language）\n讲解：a 后面用单数 language。\n【3】languages\n讲解：How many 后面用复数。\n【4】speech\n讲解：“讲话”用 speech。\n【5】languages → language\n讲解：指“措辞”时不可数。\n【6】B（how we show feelings with our body）\n讲解：body language 身体语言。\n【7】B（bilingual）\n讲解：会说两种语言的是 bilingual。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她会说几种语言？",
+   "listen": "She can speak three languages.",
+   "opts": [
+    "三种",
+    "两种",
+    "四种",
+    "五种"
+   ],
+   "why": "language 语言。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "English is a widely used ______.",
+   "opts": [
+    "language",
+    "languages",
+    "speech",
+    "letter"
+   ],
+   "why": "a 后面用单数 language。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "How many ______ can you speak? (language)",
+   "ans": "languages",
+   "why": "How many 后面用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 language、speech 中选一个，用适当形式填空。",
+   "stem": "The headmaster gave a ______ at the meeting.",
+   "ans": "speech",
+   "why": "“讲话”用 speech。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please don't use bad languages.",
+   "ans": "languages → language",
+   "why": "指“措辞”时不可数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Body language\" means ______.",
+   "opts": [
+    "how we show feelings with our body",
+    "sign language",
+    "a foreign language",
+    "a rude word"
+   ],
+   "why": "body language 身体语言。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A person who speaks two languages well is ______.",
+   "opts": [
+    "bilingual",
+    "linguistic",
+    "literary",
+    "literal"
+   ],
+   "why": "会说两种语言的是 bilingual。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "sculpt",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：艺术家在做什么？\n听：The artist is sculpting a horse.\nA. 画一匹马\nB. 雕刻一匹马\nC. 骑马\nD. 喂马",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She likes to ______ animals from wood.\nA. sculpts\nB. sculpted\nC. sculpt\nD. sculpture",
+  "题目3": "【选词填空】从 sculpt、carve 中选一个，用适当形式填空。\n题干：Dad ______ the meat for dinner.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He ______ a statue of his mother last year. (sculpt)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The artist is sculpt a lion.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这座雕塑很美。\n题干：This ______ is beautiful.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：He ______ a beautiful bird out of stone every year.\nA. sculpts\nB. sculpt\nC. sculpture\nD. sculptor\n考点：变形",
+  "答案": "【1】B（雕刻一匹马）\n讲解：sculpt 雕刻。\n【2】C（sculpt）\n讲解：like to 后接动词原形 sculpt。\n【3】carved\n讲解：切肉用 carve，过去式 carved。\n【4】sculpted\n讲解：last year 用过去式 sculpted。\n【5】sculpt → sculpting\n讲解：is 后接现在分词 sculpting。\n【6】sculpture\n讲解：名词“雕塑”用 sculpture。\n【7】A（sculpts）\n讲解：一般现在时，主语三单用 sculpts。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：艺术家在做什么？",
+   "listen": "The artist is sculpting a horse.",
+   "opts": [
+    "雕刻一匹马",
+    "画一匹马",
+    "骑马",
+    "喂马"
+   ],
+   "why": "sculpt 雕刻。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She likes to ______ animals from wood.",
+   "opts": [
+    "sculpt",
+    "sculpts",
+    "sculpted",
+    "sculpture"
+   ],
+   "why": "like to 后接动词原形 sculpt。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 sculpt、carve 中选一个，用适当形式填空。",
+   "stem": "Dad ______ the meat for dinner.",
+   "ans": "carved",
+   "why": "切肉用 carve，过去式 carved。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He ______ a statue of his mother last year. (sculpt)",
+   "ans": "sculpted",
+   "why": "last year 用过去式 sculpted。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The artist is sculpt a lion.",
+   "ans": "sculpt → sculpting",
+   "why": "is 后接现在分词 sculpting。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这座雕塑很美。",
+   "stem": "This ______ is beautiful.",
+   "ans": "sculpture",
+   "why": "名词“雕塑”用 sculpture。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He ______ a beautiful bird out of stone every year.",
+   "opts": [
+    "sculpts",
+    "sculpt",
+    "sculpture",
+    "sculptor"
+   ],
+   "why": "一般现在时，主语三单用 sculpts。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

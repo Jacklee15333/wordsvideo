@@ -1,0 +1,91 @@
+{
+ "单词": "campground",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说露营场怎样？\n听：The campground has hot showers.\nA. 有热水淋浴\nB. 没有水\nC. 很吵\nD. 很远",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We stayed at a big ______ near the river.\nA. campgrounds\nB. camping\nC. camper\nD. campground",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many ______ in this state. (campground)\n考点：变形",
+  "题目4": "【选词填空】从 campground、playground 中选一个，用适当形式填空。\n题干：The kids are playing on the ______ at school.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The campground were full of people last night.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这个露营场有一百多个帐篷位。\n题干：The campground ______ over 100 ______.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：How many ______ are there near here?\nA. campgrounds\nB. campground\nC. camping\nD. camp\n考点：变形",
+  "答案": "【1】A（有热水淋浴）\n讲解：campground 露营场。\n【2】D（campground）\n讲解：a big 后接单数名词。\n【3】campgrounds\n讲解：many 后接复数。\n【4】playground\n讲解：学校的操场是 playground。\n【5】were → was\n讲解：主语单数，用 was。\n【6】has；campsites\n讲解：一个露营场里有多个 campsite。\n【7】A（campgrounds）\n讲解：how many 后接复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说露营场怎样？",
+   "listen": "The campground has hot showers.",
+   "opts": [
+    "有热水淋浴",
+    "没有水",
+    "很吵",
+    "很远"
+   ],
+   "why": "campground 露营场。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We stayed at a big ______ near the river.",
+   "opts": [
+    "campground",
+    "campgrounds",
+    "camping",
+    "camper"
+   ],
+   "why": "a big 后接单数名词。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many ______ in this state. (campground)",
+   "ans": "campgrounds",
+   "why": "many 后接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 campground、playground 中选一个，用适当形式填空。",
+   "stem": "The kids are playing on the ______ at school.",
+   "ans": "playground",
+   "why": "学校的操场是 playground。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The campground were full of people last night.",
+   "ans": "were → was",
+   "why": "主语单数，用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个露营场有一百多个帐篷位。",
+   "stem": "The campground ______ over 100 ______.",
+   "ans": "has；campsites",
+   "why": "一个露营场里有多个 campsite。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "How many ______ are there near here?",
+   "opts": [
+    "campgrounds",
+    "campground",
+    "camping",
+    "camp"
+   ],
+   "why": "how many 后接复数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

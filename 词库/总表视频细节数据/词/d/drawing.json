@@ -1,0 +1,94 @@
+{
+ "单词": "drawing",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：墙上挂着什么？\n听：There is a pencil drawing of a cat on the wall.\nA. 猫的照片\nB. 猫的油画\nC. 猫的铅笔画\nD. 猫的海报",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He showed me some of his ______.\nA. drawing\nB. drawings\nC. draw\nD. drew",
+  "题目3": "【选词填空】从 drawing、painting 中选一个，用适当形式填空。\n题干：The Mona Lisa is a famous oil ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She is good at draw.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这位建筑师正在画房子的图纸。\n题干：The architect is ______ plans of the house.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A quick, simple drawing is also called a ______.\nA. painting\nB. photo\nC. poster\nD. sketch\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Drawing\" comes from the verb \"______\".\nA. drown\nB. dream\nC. drive\nD. draw\n考点：词性转换",
+  "答案": "【1】C（猫的铅笔画）\n讲解：pencil drawing 铅笔画。\n【2】B（drawings）\n讲解：some of his 后面用复数。\n【3】painting\n讲解：油画是 painting。\n【4】draw → drawing\n讲解：介词 at 后面用动名词。\n【5】drawing\n讲解：is + 现在分词；画图纸用 draw。\n【6】D（sketch）\n讲解：速写、草图是 sketch。\n【7】D（draw）\n讲解：drawing 来自 draw。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：墙上挂着什么？",
+   "listen": "There is a pencil drawing of a cat on the wall.",
+   "opts": [
+    "猫的铅笔画",
+    "猫的照片",
+    "猫的油画",
+    "猫的海报"
+   ],
+   "why": "pencil drawing 铅笔画。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He showed me some of his ______.",
+   "opts": [
+    "drawings",
+    "drawing",
+    "draw",
+    "drew"
+   ],
+   "why": "some of his 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 drawing、painting 中选一个，用适当形式填空。",
+   "stem": "The Mona Lisa is a famous oil ______.",
+   "ans": "painting",
+   "why": "油画是 painting。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is good at draw.",
+   "ans": "draw → drawing",
+   "why": "介词 at 后面用动名词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这位建筑师正在画房子的图纸。",
+   "stem": "The architect is ______ plans of the house.",
+   "ans": "drawing",
+   "why": "is + 现在分词；画图纸用 draw。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A quick, simple drawing is also called a ______.",
+   "opts": [
+    "sketch",
+    "painting",
+    "photo",
+    "poster"
+   ],
+   "why": "速写、草图是 sketch。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Drawing\" comes from the verb \"______\".",
+   "opts": [
+    "draw",
+    "drown",
+    "dream",
+    "drive"
+   ],
+   "why": "drawing 来自 draw。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

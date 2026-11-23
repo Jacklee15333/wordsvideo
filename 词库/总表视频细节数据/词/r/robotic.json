@@ -1,0 +1,94 @@
+{
+ "单词": "robotic",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：那是什么？\n听：It's a robotic arm.\nA. 真手\nB. 机械臂\nC. 木手\nD. 断臂",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The factory uses ______ arms to build cars.\nA. robotics\nB. robotic\nC. robotically\nD. robots",
+  "题目3": "【选词填空】从 robotic、automatic 中选一个，用适当形式填空。\n题干：This door is ______. It opens by itself.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：His voice sounded robotically.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我们班做了一个机器人。\n题干：Our class made a ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：When used about people, \"robotic\" means ______.\nA. very kind\nB. very funny\nC. very fast\nD. without feeling, like a machine\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Robotic\" is the adjective of \"______\".\nA. rob\nB. rocket\nC. robot\nD. root\n考点：词性转换",
+  "答案": "【1】B（机械臂）\n讲解：robotic 机器人的。\n【2】B（robotic）\n讲解：名词前面用形容词。\n【3】automatic\n讲解：机器“自动的”用 automatic。\n【4】robotically → robotic\n讲解：sound 后面用形容词。\n【5】robot\n讲解：机器人 robot。\n【6】D（without feeling, like a machine）\n讲解：说人时是贬义，像机器一样没感情。\n【7】C（robot）\n讲解：robot + ic。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：那是什么？",
+   "listen": "It's a robotic arm.",
+   "opts": [
+    "机械臂",
+    "真手",
+    "木手",
+    "断臂"
+   ],
+   "why": "robotic 机器人的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The factory uses ______ arms to build cars.",
+   "opts": [
+    "robotic",
+    "robotics",
+    "robotically",
+    "robots"
+   ],
+   "why": "名词前面用形容词。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 robotic、automatic 中选一个，用适当形式填空。",
+   "stem": "This door is ______. It opens by itself.",
+   "ans": "automatic",
+   "why": "机器“自动的”用 automatic。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "His voice sounded robotically.",
+   "ans": "robotically → robotic",
+   "why": "sound 后面用形容词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们班做了一个机器人。",
+   "stem": "Our class made a ______.",
+   "ans": "robot",
+   "why": "机器人 robot。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "When used about people, \"robotic\" means ______.",
+   "opts": [
+    "without feeling, like a machine",
+    "very kind",
+    "very funny",
+    "very fast"
+   ],
+   "why": "说人时是贬义，像机器一样没感情。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Robotic\" is the adjective of \"______\".",
+   "opts": [
+    "robot",
+    "rob",
+    "rocket",
+    "root"
+   ],
+   "why": "robot + ic。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

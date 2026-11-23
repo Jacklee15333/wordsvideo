@@ -1,0 +1,94 @@
+{
+ "单词": "take",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人每天怎么上学？\n听：I take the bus to school every day.\nA. 骑车\nB. 走路\nC. 坐地铁\nD. 坐公交车",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：It ______ me two hours to finish my homework.\nA. spent\nB. cost\nC. took\nD. paid\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Have you ______ your medicine? (take)\n考点：变形",
+  "题目4": "【选词填空】从 take、bring 中选一个，用适当形式填空。\n题干：Please ______ me a glass of water.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The meeting will take part next Monday.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：你能照顾一下我的猫吗？\n题干：Can you ______ ______ of my cat?\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：We should ______ action to protect the earth.\nA. take\nB. takes\nC. took\nD. taking\n考点：短语",
+  "答案": "【1】D（坐公交车）\n讲解：take the bus 坐公交车。\n【2】C（took）\n讲解：It takes sb. 时间 to do sth.，讲过去用 took。\n【3】taken\n讲解：have 加过去分词 taken。\n【4】bring\n讲解：拿过来给说话人用 bring；take 是拿走、带到别处去。\n【5】take part → take place\n讲解：会议“举行”用 take place；take part in 是参加。\n【6】take；care\n讲解：take care of 照料。\n【7】A（take）\n讲解：should 后面用原形 take；take action 采取行动。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人每天怎么上学？",
+   "listen": "I take the bus to school every day.",
+   "opts": [
+    "坐公交车",
+    "骑车",
+    "走路",
+    "坐地铁"
+   ],
+   "why": "take the bus 坐公交车。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It ______ me two hours to finish my homework.",
+   "opts": [
+    "took",
+    "spent",
+    "cost",
+    "paid"
+   ],
+   "why": "It takes sb. 时间 to do sth.，讲过去用 took。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Have you ______ your medicine? (take)",
+   "ans": "taken",
+   "why": "have 加过去分词 taken。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 take、bring 中选一个，用适当形式填空。",
+   "stem": "Please ______ me a glass of water.",
+   "ans": "bring",
+   "why": "拿过来给说话人用 bring；take 是拿走、带到别处去。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The meeting will take part next Monday.",
+   "ans": "take part → take place",
+   "why": "会议“举行”用 take place；take part in 是参加。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你能照顾一下我的猫吗？",
+   "stem": "Can you ______ ______ of my cat?",
+   "ans": "take；care",
+   "why": "take care of 照料。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We should ______ action to protect the earth.",
+   "opts": [
+    "take",
+    "takes",
+    "took",
+    "taking"
+   ],
+   "why": "should 后面用原形 take；take action 采取行动。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "quality",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人觉得这双鞋怎么样？\n听：These shoes are of good quality.\nA. 价格很贵\nB. 质量很好\nC. 颜色好看\nD. 尺码太小",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We should care about ______, not just quantity.\nA. quantity\nB. quality\nC. qualify\nD. quantities\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Honesty is one of his best ______. (quality)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：This shop sells clothes of high quantity.\n考点：易混",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这家工厂的产品质量很好。\n题干：The factory's products are ______ good ______.\n考点：短语",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：We should buy ______ products.\nA. high quality's\nB. highly quality\nC. high-qualities\nD. high-quality\n考点：词性转换",
+  "题目7": "【选词填空】从 quality、quantity 中选一个，用适当形式填空。\n题干：A large ______ of water is used every day.\n考点：易混",
+  "答案": "【1】B（质量很好）\n讲解：be of good quality 质量好。\n【2】B（quality）\n讲解：“不只是数量”，前面要“质量” quality。\n【3】qualities\n讲解：one of 后面接复数，y 变 i 加 es。\n【4】quantity → quality\n讲解：“高质量”是 high quality；quantity 是数量。\n【5】of；quality\n讲解：be of good quality 质量好。\n【6】D（high-quality）\n讲解：“高质量的”作定语用 high-quality。\n【7】quantity\n讲解：a large quantity of 大量的，说的是“多少”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人觉得这双鞋怎么样？",
+   "listen": "These shoes are of good quality.",
+   "opts": [
+    "质量很好",
+    "价格很贵",
+    "颜色好看",
+    "尺码太小"
+   ],
+   "why": "be of good quality 质量好。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We should care about ______, not just quantity.",
+   "opts": [
+    "quality",
+    "quantity",
+    "qualify",
+    "quantities"
+   ],
+   "why": "“不只是数量”，前面要“质量” quality。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Honesty is one of his best ______. (quality)",
+   "ans": "qualities",
+   "why": "one of 后面接复数，y 变 i 加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This shop sells clothes of high quantity.",
+   "ans": "quantity → quality",
+   "why": "“高质量”是 high quality；quantity 是数量。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这家工厂的产品质量很好。",
+   "stem": "The factory's products are ______ good ______.",
+   "ans": "of；quality",
+   "why": "be of good quality 质量好。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We should buy ______ products.",
+   "opts": [
+    "high-quality",
+    "high quality's",
+    "highly quality",
+    "high-qualities"
+   ],
+   "why": "“高质量的”作定语用 high-quality。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 quality、quantity 中选一个，用适当形式填空。",
+   "stem": "A large ______ of water is used every day.",
+   "ans": "quantity",
+   "why": "a large quantity of 大量的，说的是“多少”。",
+   "kd": "易混",
+   "zh": ""
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

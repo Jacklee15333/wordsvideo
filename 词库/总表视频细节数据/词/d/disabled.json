@@ -1,0 +1,98 @@
+{
+ "单词": "disabled",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说这个停车位是给谁的？\n听：This parking space is for disabled people.\nA. 老师\nB. 老人\nC. 残疾人\nD. 游客",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The school built a lift for ______ students.\nA. disable\nB. disability\nC. disabled\nD. unable\n考点：词性转换",
+  "题目3": "【选词填空】从 disabled、disability 中选一个，用适当形式填空。\n题干：He has a ______, but he still works hard.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She works hard to help people with ______. (disabled)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The disabled is often treated unfairly.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The Paralympics are sports games for ______.\nA. old people\nB. athletes with disabilities\nC. small children\nD. teachers\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A disabled person may need a ______ to move around.\nA. bookcase\nB. bicycle\nC. wheelchair\nD. blackboard\n考点：用法",
+  "答案": "【1】C（残疾人）\n讲解：disabled people 残疾人。\n【2】C（disabled）\n讲解：名词 students 前要形容词 disabled。\n【3】disability\n讲解：a 后面要名词 disability（残疾）。\n【4】disabilities\n讲解：people with disabilities 残障人士，用复数。\n【5】is → are\n讲解：the disabled 指残疾人这一类人，谓语用复数 are。\n【6】B（athletes with disabilities）\n讲解：残奥会是残障运动员的比赛。\n【7】C（wheelchair）\n讲解：残疾人行动可能需要轮椅 wheelchair。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说这个停车位是给谁的？",
+   "listen": "This parking space is for disabled people.",
+   "opts": [
+    "残疾人",
+    "老师",
+    "老人",
+    "游客"
+   ],
+   "why": "disabled people 残疾人。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The school built a lift for ______ students.",
+   "opts": [
+    "disabled",
+    "disable",
+    "disability",
+    "unable"
+   ],
+   "why": "名词 students 前要形容词 disabled。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 disabled、disability 中选一个，用适当形式填空。",
+   "stem": "He has a ______, but he still works hard.",
+   "ans": "disability",
+   "why": "a 后面要名词 disability（残疾）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She works hard to help people with ______. (disabled)",
+   "ans": "disabilities",
+   "why": "people with disabilities 残障人士，用复数。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The disabled is often treated unfairly.",
+   "ans": "is → are",
+   "why": "the disabled 指残疾人这一类人，谓语用复数 are。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The Paralympics are sports games for ______.",
+   "opts": [
+    "athletes with disabilities",
+    "old people",
+    "small children",
+    "teachers"
+   ],
+   "why": "残奥会是残障运动员的比赛。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A disabled person may need a ______ to move around.",
+   "opts": [
+    "wheelchair",
+    "bookcase",
+    "bicycle",
+    "blackboard"
+   ],
+   "why": "残疾人行动可能需要轮椅 wheelchair。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

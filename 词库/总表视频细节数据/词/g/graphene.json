@@ -1,0 +1,97 @@
+{
+ "单词": "graphene",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：科学家在研究什么？\n听：The scientists are studying graphene.\nA. 石墨烯\nB. 石墨\nC. 塑料\nD. 玻璃",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Graphene ______ very thin and strong.\nA. are\nB. is\nC. be\nD. were\n考点：变形",
+  "题目3": "【选词填空】从 graphene、graphite 中选一个，用适当形式填空。\n题干：The \"lead\" in a pencil is really ______.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：They made some new graphenes in the lab.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：石墨烯只有一个原子那么厚。\n题干：______ is only one atom thick.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：We need ______ graphene for the test.\nA. many\nB. a\nC. few\nD. much\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Graphene is made of ______.\nA. carbon\nB. iron\nC. water\nD. glass\n考点：用法",
+  "答案": "【1】A（石墨烯）\n讲解：graphene 石墨烯。\n【2】B（is）\n讲解：graphene 不可数，用 is。\n【3】graphite\n讲解：铅笔芯是整块的石墨 graphite。\n【4】graphenes → graphene\n讲解：graphene 一般不可数，不加 s。\n【5】Graphene\n讲解：石墨烯 graphene，句首大写。\n【6】D（much）\n讲解：graphene 不可数，用 much 修饰。\n【7】A（carbon）\n讲解：石墨烯由碳组成。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：科学家在研究什么？",
+   "listen": "The scientists are studying graphene.",
+   "opts": [
+    "石墨烯",
+    "石墨",
+    "塑料",
+    "玻璃"
+   ],
+   "why": "graphene 石墨烯。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Graphene ______ very thin and strong.",
+   "opts": [
+    "is",
+    "are",
+    "be",
+    "were"
+   ],
+   "why": "graphene 不可数，用 is。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 graphene、graphite 中选一个，用适当形式填空。",
+   "stem": "The \"lead\" in a pencil is really ______.",
+   "ans": "graphite",
+   "why": "铅笔芯是整块的石墨 graphite。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "They made some new graphenes in the lab.",
+   "ans": "graphenes → graphene",
+   "why": "graphene 一般不可数，不加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "石墨烯只有一个原子那么厚。",
+   "stem": "______ is only one atom thick.",
+   "ans": "Graphene",
+   "why": "石墨烯 graphene，句首大写。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We need ______ graphene for the test.",
+   "opts": [
+    "much",
+    "many",
+    "a",
+    "few"
+   ],
+   "why": "graphene 不可数，用 much 修饰。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Graphene is made of ______.",
+   "opts": [
+    "carbon",
+    "iron",
+    "water",
+    "glass"
+   ],
+   "why": "石墨烯由碳组成。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

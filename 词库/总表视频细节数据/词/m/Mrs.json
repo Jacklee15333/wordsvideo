@@ -1,0 +1,92 @@
+{
+ "单词": "Mrs",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：谁是新来的音乐老师？\n听：Mrs Brown is our new music teacher.\nA. 布朗先生\nB. 布朗小姐的爸爸\nC. 布朗同学\nD. 布朗太太",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ Li is married. Her husband is a doctor.\nA. Mr\nB. Miss\nC. Sir\nD. Mrs",
+  "题目3": "【选词填空】从 Mrs、Miss 中选一个，用适当形式填空。\n题干：______ Wang isn't married yet.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Mrs Green ______ two children. (have)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Mrs Smith is a man.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：不知道对方是否结婚，就写 Ms。\n题干：Write “______ Lee” if you don't know if she is married.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Mrs Wang and her husband ______ teachers.\nA. is\nB. am\nC. be\nD. are\n考点：用法",
+  "答案": "【1】D（布朗太太）\n讲解：Mrs 用在已婚女子的姓前。\n【2】D（Mrs）\n讲解：已婚女子用 Mrs。\n【3】Miss\n讲解：未婚女子用 Miss；Mrs 用于已婚女子。\n【4】has\n讲解：主语单数，have 变 has。\n【5】Mrs → Mr\n讲解：男子用 Mr，Mrs 只用于已婚女子。\n【6】Ms\n讲解：不论婚否用 Ms。\n【7】D（are）\n讲解：主语是两个人，用 are。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：谁是新来的音乐老师？",
+   "listen": "Mrs Brown is our new music teacher.",
+   "opts": [
+    "布朗太太",
+    "布朗先生",
+    "布朗小姐的爸爸",
+    "布朗同学"
+   ],
+   "why": "Mrs 用在已婚女子的姓前。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ Li is married. Her husband is a doctor.",
+   "opts": [
+    "Mrs",
+    "Mr",
+    "Miss",
+    "Sir"
+   ],
+   "why": "已婚女子用 Mrs。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 Mrs、Miss 中选一个，用适当形式填空。",
+   "stem": "______ Wang isn't married yet.",
+   "ans": "Miss",
+   "why": "未婚女子用 Miss；Mrs 用于已婚女子。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Mrs Green ______ two children. (have)",
+   "ans": "has",
+   "why": "主语单数，have 变 has。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Mrs Smith is a man.",
+   "ans": "Mrs → Mr",
+   "why": "男子用 Mr，Mrs 只用于已婚女子。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "不知道对方是否结婚，就写 Ms。",
+   "stem": "Write “______ Lee” if you don't know if she is married.",
+   "ans": "Ms",
+   "why": "不论婚否用 Ms。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Mrs Wang and her husband ______ teachers.",
+   "opts": [
+    "are",
+    "is",
+    "am",
+    "be"
+   ],
+   "why": "主语是两个人，用 are。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

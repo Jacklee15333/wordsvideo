@@ -1,0 +1,94 @@
+{
+ "单词": "wish",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人祝你什么？\n听：I wish you a happy birthday.\nA. 考试顺利\nB. 新年快乐\nC. 生日快乐\nD. 一路平安",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I ______ I could fly.\nA. wish\nB. hope\nC. want\nD. like",
+  "题目3": "【选词填空】从 wish、hope 中选一个，用适当形式填空。\n题干：I ______ you will pass the exam.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：My mum wishes me to helping her.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：致以最美好的祝愿。\n题干：Best ______ to you.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：She ______ her friends good luck yesterday.\nA. wishes\nB. wishing\nC. wish\nD. wished\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：We can say \"wish sb sth\", but we can't say \"______ sb sth\".\nA. wish\nB. give\nC. hope\nD. send\n考点：易混",
+  "答案": "【1】C（生日快乐）\n讲解：wish sb sth 祝某人……。\n【2】A（wish）\n讲解：不能实现的愿望用 wish。\n【3】hope\n讲解：盼的是可能发生的事，用 hope。\n【4】to helping → to help\n讲解：wish sb to do。\n【5】wishes\n讲解：best wishes 用复数。\n【6】D（wished）\n讲解：yesterday 用过去式。\n【7】C（hope）\n讲解：hope 不能说 hope sb sth。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人祝你什么？",
+   "listen": "I wish you a happy birthday.",
+   "opts": [
+    "生日快乐",
+    "考试顺利",
+    "新年快乐",
+    "一路平安"
+   ],
+   "why": "wish sb sth 祝某人……。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I ______ I could fly.",
+   "opts": [
+    "wish",
+    "hope",
+    "want",
+    "like"
+   ],
+   "why": "不能实现的愿望用 wish。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 wish、hope 中选一个，用适当形式填空。",
+   "stem": "I ______ you will pass the exam.",
+   "ans": "hope",
+   "why": "盼的是可能发生的事，用 hope。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My mum wishes me to helping her.",
+   "ans": "to helping → to help",
+   "why": "wish sb to do。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "致以最美好的祝愿。",
+   "stem": "Best ______ to you.",
+   "ans": "wishes",
+   "why": "best wishes 用复数。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She ______ her friends good luck yesterday.",
+   "opts": [
+    "wished",
+    "wishes",
+    "wishing",
+    "wish"
+   ],
+   "why": "yesterday 用过去式。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We can say \"wish sb sth\", but we can't say \"______ sb sth\".",
+   "opts": [
+    "hope",
+    "wish",
+    "give",
+    "send"
+   ],
+   "why": "hope 不能说 hope sb sth。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "year",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她多大了？\n听：She is ten years old.\nA. 十个月\nB. 一岁\nC. 十岁\nD. 二十岁",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My brother is three ______ older than me.\nA. year\nB. years\nC. year's\nD. yeares",
+  "题目3": "【选词填空】从 year、age 中选一个，用适当形式填空。\n题干：He started school at the ______ of six.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She is a ten-years-old girl.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这本杂志一年出一期。\n题干：The magazine comes out once a ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The festival is held ______.\nA. yearly\nB. years\nC. yeared\nD. yearful\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：We say “岁” in Chinese, but in English we use \"______ old\".\nA. months\nB. days\nC. ages\nD. years\n考点：用法",
+  "答案": "【1】C（十岁）\n讲解：ten years old 十岁。\n【2】B（years）\n讲解：three 后面用复数。\n【3】age\n讲解：at the age of 在……岁时。\n【4】ten-years-old → ten-year-old\n讲解：连字符定语里 year 不加 s。\n【5】year\n讲解：once a year 一年一次。\n【6】A（yearly）\n讲解：“每年地”用 yearly。\n【7】D（years）\n讲解：英语说年龄用 years old。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她多大了？",
+   "listen": "She is ten years old.",
+   "opts": [
+    "十岁",
+    "十个月",
+    "一岁",
+    "二十岁"
+   ],
+   "why": "ten years old 十岁。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My brother is three ______ older than me.",
+   "opts": [
+    "years",
+    "year",
+    "year's",
+    "yeares"
+   ],
+   "why": "three 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 year、age 中选一个，用适当形式填空。",
+   "stem": "He started school at the ______ of six.",
+   "ans": "age",
+   "why": "at the age of 在……岁时。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is a ten-years-old girl.",
+   "ans": "ten-years-old → ten-year-old",
+   "why": "连字符定语里 year 不加 s。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这本杂志一年出一期。",
+   "stem": "The magazine comes out once a ______.",
+   "ans": "year",
+   "why": "once a year 一年一次。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The festival is held ______.",
+   "opts": [
+    "yearly",
+    "years",
+    "yeared",
+    "yearful"
+   ],
+   "why": "“每年地”用 yearly。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We say “岁” in Chinese, but in English we use \"______ old\".",
+   "opts": [
+    "years",
+    "months",
+    "days",
+    "ages"
+   ],
+   "why": "英语说年龄用 years old。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

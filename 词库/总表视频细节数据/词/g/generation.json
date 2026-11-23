@@ -1,0 +1,93 @@
+{
+ "单词": "generation",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：年轻一代喜欢什么？\n听：The young generation likes using phones.\nA. 用手机\nB. 看报纸\nC. 写信\nD. 听收音机",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The young ______ likes using phones.\nA. generate\nB. generator\nC. general\nD. generation\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Three ______ live in this house. (generation)\n考点：变形",
+  "题目4": "【选词填空】从 generation、generator 中选一个，用适当形式填空。\n题干：The hospital has a ______ in case the power goes off.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The generation gap make it hard to talk.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The generation gap means ______.\nA. 发电量\nB. 代沟\nC. 新一代\nD. 年龄\n考点：短语",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：风能用来发电。\n题干：Wind can ______ power.\n考点：词性转换",
+  "答案": "【1】A（用手机）\n讲解：generation 代、一代人。\n【2】D（generation）\n讲解：the young 后面要名词 generation。\n【3】generations\n讲解：three 后面用复数 generations。\n【4】generator\n讲解：停电用的“发电机”是 generator。\n【5】make → makes\n讲解：主语 gap 单数，谓语用 makes。\n【6】B（代沟）\n讲解：generation gap 代沟。\n【7】generate\n讲解：动词“产生（电）”是 generate。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：年轻一代喜欢什么？",
+   "listen": "The young generation likes using phones.",
+   "opts": [
+    "用手机",
+    "看报纸",
+    "写信",
+    "听收音机"
+   ],
+   "why": "generation 代、一代人。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The young ______ likes using phones.",
+   "opts": [
+    "generation",
+    "generate",
+    "generator",
+    "general"
+   ],
+   "why": "the young 后面要名词 generation。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Three ______ live in this house. (generation)",
+   "ans": "generations",
+   "why": "three 后面用复数 generations。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 generation、generator 中选一个，用适当形式填空。",
+   "stem": "The hospital has a ______ in case the power goes off.",
+   "ans": "generator",
+   "why": "停电用的“发电机”是 generator。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The generation gap make it hard to talk.",
+   "ans": "make → makes",
+   "why": "主语 gap 单数，谓语用 makes。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The generation gap means ______.",
+   "opts": [
+    "代沟",
+    "发电量",
+    "新一代",
+    "年龄"
+   ],
+   "why": "generation gap 代沟。",
+   "kd": "短语"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "风能用来发电。",
+   "stem": "Wind can ______ power.",
+   "ans": "generate",
+   "why": "动词“产生（电）”是 generate。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

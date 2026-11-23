@@ -1,0 +1,94 @@
+{
+ "单词": "drawings",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人要给你看什么？\n听：Let me show you my drawings.\nA. 我的照片\nB. 我画的画\nC. 我的书\nD. 我的衣服",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He made three ______ of the old bridge.\nA. drawing\nB. drawings\nC. drawinges\nD. draws",
+  "题目3": "【选词填空】从 drawings、paintings 中选一个，用适当形式填空。\n题干：Van Gogh's oil ______ are worth millions.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：All of the drawings is on the wall.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：她画了一幅铅笔画。\n题干：She made a pencil ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Drawings\" is the plural of \"______\".\nA. drawing\nB. draw\nC. drawn\nD. drew\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：An architect's drawings show ______.\nA. how a building will look\nB. what the weather is\nC. a person's face\nD. some music\n考点：用法",
+  "答案": "【1】B（我画的画）\n讲解：drawings 图画。\n【2】B（drawings）\n讲解：three 后面用复数 drawings。\n【3】paintings\n讲解：油画用 paintings。\n【4】is → are\n讲解：drawings 是复数，用 are。\n【5】drawing\n讲解：a 后面用单数 drawing。\n【6】A（drawing）\n讲解：drawings 是 drawing 的复数。\n【7】A（how a building will look）\n讲解：建筑师的图纸画出房子的样子。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人要给你看什么？",
+   "listen": "Let me show you my drawings.",
+   "opts": [
+    "我画的画",
+    "我的照片",
+    "我的书",
+    "我的衣服"
+   ],
+   "why": "drawings 图画。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He made three ______ of the old bridge.",
+   "opts": [
+    "drawings",
+    "drawing",
+    "drawinges",
+    "draws"
+   ],
+   "why": "three 后面用复数 drawings。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 drawings、paintings 中选一个，用适当形式填空。",
+   "stem": "Van Gogh's oil ______ are worth millions.",
+   "ans": "paintings",
+   "why": "油画用 paintings。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "All of the drawings is on the wall.",
+   "ans": "is → are",
+   "why": "drawings 是复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她画了一幅铅笔画。",
+   "stem": "She made a pencil ______.",
+   "ans": "drawing",
+   "why": "a 后面用单数 drawing。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Drawings\" is the plural of \"______\".",
+   "opts": [
+    "drawing",
+    "draw",
+    "drawn",
+    "drew"
+   ],
+   "why": "drawings 是 drawing 的复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An architect's drawings show ______.",
+   "opts": [
+    "how a building will look",
+    "what the weather is",
+    "a person's face",
+    "some music"
+   ],
+   "why": "建筑师的图纸画出房子的样子。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

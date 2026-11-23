@@ -1,0 +1,98 @@
+{
+ "单词": "voice",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说她什么很美？\n听：She has a beautiful voice.\nA. 长相\nB. 嗓音\nC. 字\nD. 衣服",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please speak in a low ______.\nA. voice\nB. noise\nC. sound\nD. voices\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：I heard two ______ outside. (voice)\n考点：变形",
+  "题目4": "【选词填空】从 noise、sound 中选一个，用适当形式填空。\n题干：Light travels faster than ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Don't make so much voice; the baby is sleeping.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Students should have a ______ in school rules.\nA. said\nB. say\nC. says\nD. saying\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：She lost her voice ______ singing too much.\nA. before\nB. until\nC. unless\nD. after\n考点：用法",
+  "答案": "【1】B（嗓音）\n讲解：voice 嗓音。\n【2】A（voice）\n讲解：人说话的“嗓音”用 voice，in a low voice 小声地。\n【3】voices\n讲解：two 后面用复数 voices。\n【4】sound\n讲解：物理上的“声音”用 sound。\n【5】voice → noise\n讲解：吵闹声、噪音用 noise。\n【6】B（say）\n讲解：have a say 有发言权，voice 也有这个意思。\n【7】D（after）\n讲解：唱歌太多以后嗓子哑了。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说她什么很美？",
+   "listen": "She has a beautiful voice.",
+   "opts": [
+    "嗓音",
+    "长相",
+    "字",
+    "衣服"
+   ],
+   "why": "voice 嗓音。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please speak in a low ______.",
+   "opts": [
+    "voice",
+    "noise",
+    "sound",
+    "voices"
+   ],
+   "why": "人说话的“嗓音”用 voice，in a low voice 小声地。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I heard two ______ outside. (voice)",
+   "ans": "voices",
+   "why": "two 后面用复数 voices。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 noise、sound 中选一个，用适当形式填空。",
+   "stem": "Light travels faster than ______.",
+   "ans": "sound",
+   "why": "物理上的“声音”用 sound。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Don't make so much voice; the baby is sleeping.",
+   "ans": "voice → noise",
+   "why": "吵闹声、噪音用 noise。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Students should have a ______ in school rules.",
+   "opts": [
+    "say",
+    "said",
+    "says",
+    "saying"
+   ],
+   "why": "have a say 有发言权，voice 也有这个意思。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She lost her voice ______ singing too much.",
+   "opts": [
+    "after",
+    "before",
+    "until",
+    "unless"
+   ],
+   "why": "唱歌太多以后嗓子哑了。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

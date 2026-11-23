@@ -1,0 +1,94 @@
+{
+ "单词": "cookbook",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：妈妈在看什么书？\n听：Mum is reading a cookbook.\nA. 小说\nB. 菜谱\nC. 字典\nD. 杂志",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This ______ has 100 recipes.\nA. cooker\nB. cooking\nC. cookbook\nD. cook\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：My mum has five ______. (cookbook)\n考点：变形",
+  "题目4": "【选词填空】从 cookbook、recipe 中选一个，用适当形式填空。\n题干：Can you give me the ______ for this cake?\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：In British English, a cookbook is called a cooking book.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A cookbook teaches you how to ______.\nA. cook\nB. read\nC. draw\nD. sing\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我妈妈是个好厨师。\n题干：My mum is a good ______.\n考点：易混",
+  "答案": "【1】B（菜谱）\n讲解：cookbook 烹饪书。\n【2】C（cookbook）\n讲解：有 100 个菜谱的是烹饪书 cookbook。\n【3】cookbooks\n讲解：five 后面用复数 cookbooks。\n【4】recipe\n讲解：一道菜的“做法”用 recipe。\n【5】cooking book → cookery book\n讲解：英式说 cookery book。\n【6】A（cook）\n讲解：烹饪书教人做菜。\n【7】cook\n讲解：“厨师”是 cook；cooker 是炊具。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：妈妈在看什么书？",
+   "listen": "Mum is reading a cookbook.",
+   "opts": [
+    "菜谱",
+    "小说",
+    "字典",
+    "杂志"
+   ],
+   "why": "cookbook 烹饪书。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This ______ has 100 recipes.",
+   "opts": [
+    "cookbook",
+    "cooker",
+    "cooking",
+    "cook"
+   ],
+   "why": "有 100 个菜谱的是烹饪书 cookbook。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "My mum has five ______. (cookbook)",
+   "ans": "cookbooks",
+   "why": "five 后面用复数 cookbooks。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 cookbook、recipe 中选一个，用适当形式填空。",
+   "stem": "Can you give me the ______ for this cake?",
+   "ans": "recipe",
+   "why": "一道菜的“做法”用 recipe。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "In British English, a cookbook is called a cooking book.",
+   "ans": "cooking book → cookery book",
+   "why": "英式说 cookery book。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A cookbook teaches you how to ______.",
+   "opts": [
+    "cook",
+    "read",
+    "draw",
+    "sing"
+   ],
+   "why": "烹饪书教人做菜。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我妈妈是个好厨师。",
+   "stem": "My mum is a good ______.",
+   "ans": "cook",
+   "why": "“厨师”是 cook；cooker 是炊具。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

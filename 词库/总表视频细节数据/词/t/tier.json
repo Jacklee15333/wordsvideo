@@ -1,0 +1,94 @@
+{
+ "单词": "tier",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：婚礼蛋糕有几层？\n听：The wedding cake has three tiers.\nA. 两层\nB. 四层\nC. 三层\nD. 一层",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The stadium has four ______ of seats.\nA. tiers\nB. tier\nC. tear\nD. tier's",
+  "题目3": "【选词填空】从 tier、layer 中选一个，用适当形式填空。\n题干：There was a thin ______ of dust on the table.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The cake have three tiers.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这是一所一流大学。\n题干：It's a top-______ university.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Tier\" sounds the same as \"______\" (water from your eyes).\nA. tire\nB. tie\nC. tea\nD. tear\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Tiers are layers placed one ______ another.\nA. under\nB. beside\nC. above\nD. behind\n考点：易混",
+  "答案": "【1】C（三层）\n讲解：tier 层。\n【2】A（tiers）\n讲解：four 后面用复数。\n【3】layer\n讲解：盖在表面的一层用 layer。\n【4】have → has\n讲解：主语单数。\n【5】tier\n讲解：top-tier 顶级的。\n【6】D（tear）\n讲解：tier 和 tear（眼泪）同音。\n【7】C（above）\n讲解：tier 强调上下叠放。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：婚礼蛋糕有几层？",
+   "listen": "The wedding cake has three tiers.",
+   "opts": [
+    "三层",
+    "两层",
+    "四层",
+    "一层"
+   ],
+   "why": "tier 层。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The stadium has four ______ of seats.",
+   "opts": [
+    "tiers",
+    "tier",
+    "tear",
+    "tier's"
+   ],
+   "why": "four 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tier、layer 中选一个，用适当形式填空。",
+   "stem": "There was a thin ______ of dust on the table.",
+   "ans": "layer",
+   "why": "盖在表面的一层用 layer。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The cake have three tiers.",
+   "ans": "have → has",
+   "why": "主语单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是一所一流大学。",
+   "stem": "It's a top-______ university.",
+   "ans": "tier",
+   "why": "top-tier 顶级的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Tier\" sounds the same as \"______\" (water from your eyes).",
+   "opts": [
+    "tear",
+    "tire",
+    "tie",
+    "tea"
+   ],
+   "why": "tier 和 tear（眼泪）同音。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Tiers are layers placed one ______ another.",
+   "opts": [
+    "above",
+    "under",
+    "beside",
+    "behind"
+   ],
+   "why": "tier 强调上下叠放。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

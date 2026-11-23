@@ -1,0 +1,94 @@
+{
+ "单词": "rate",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个国家的出生率怎么样？\n听：The birth rate in the country is falling.\nA. 在上升\nB. 不变\nC. 在下降\nD. 很高",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The film was ______ the best of the year.\nA. rate\nB. rated\nC. rates\nD. rating\n考点：变形",
+  "题目3": "【选词填空】从 rate、ratio 中选一个，用适当形式填空。\n题干：The ______ of boys to girls in our class is 1:1.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The film has a high ______. (rate)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The water is rising at a fast rates.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：无论如何，我会尽力。\n题干：At any ______, I'll try my best.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which word means about the same as \"rate\" (速度)?\nA. price\nB. colour\nC. size\nD. speed\n考点：易混",
+  "答案": "【1】C（在下降）\n讲解：birth rate 出生率，falling 在下降。\n【2】B（rated）\n讲解：被评为，被动语态用过去分词 rated。\n【3】ratio\n讲解：两个数之比用 ratio。\n【4】rating\n讲解：a high 后面要名词 rating（评分）。\n【5】rates → rate\n讲解：a 后面接单数。\n【6】rate\n讲解：at any rate 无论如何。\n【7】D（speed）\n讲解：rate ≈ speed 速度。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个国家的出生率怎么样？",
+   "listen": "The birth rate in the country is falling.",
+   "opts": [
+    "在下降",
+    "在上升",
+    "不变",
+    "很高"
+   ],
+   "why": "birth rate 出生率，falling 在下降。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The film was ______ the best of the year.",
+   "opts": [
+    "rated",
+    "rate",
+    "rates",
+    "rating"
+   ],
+   "why": "被评为，被动语态用过去分词 rated。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 rate、ratio 中选一个，用适当形式填空。",
+   "stem": "The ______ of boys to girls in our class is 1:1.",
+   "ans": "ratio",
+   "why": "两个数之比用 ratio。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The film has a high ______. (rate)",
+   "ans": "rating",
+   "why": "a high 后面要名词 rating（评分）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The water is rising at a fast rates.",
+   "ans": "rates → rate",
+   "why": "a 后面接单数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "无论如何，我会尽力。",
+   "stem": "At any ______, I'll try my best.",
+   "ans": "rate",
+   "why": "at any rate 无论如何。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which word means about the same as \"rate\" (速度)?",
+   "opts": [
+    "speed",
+    "price",
+    "colour",
+    "size"
+   ],
+   "why": "rate ≈ speed 速度。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

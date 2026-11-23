@@ -1,0 +1,93 @@
+{
+ "单词": "correction",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师在作业上做了什么？\n听：The teacher made some corrections on my homework.\nA. 写了评语\nB. 画了画\nC. 打了分\nD. 做了一些改正",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please make a ______ to the date.\nA. correct\nB. correctly\nC. correction\nD. correctness\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many ______ in red ink. (correction)\n考点：变形",
+  "题目4": "【选词填空】从 correction、correctness 中选一个，用适当形式填空。\n题干：We checked the ______ of the answers.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The corrections was made in red.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：请改正你的错误。\n题干：Please ______ your mistakes.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Correction is the noun of ______.\nA. collect\nB. connect\nC. college\nD. correct\n考点：词性转换",
+  "答案": "【1】D（做了一些改正）\n讲解：correction 改正。\n【2】C（correction）\n讲解：make a correction 改正。\n【3】corrections\n讲解：many 后面用复数 corrections。\n【4】correctness\n讲解：“正确与否”用 correctness；correction 是改正。\n【5】was → were\n讲解：主语 corrections 复数，谓语用 were。\n【6】correct\n讲解：动词“改正”用 correct。\n【7】D（correct）\n讲解：correct 的名词是 correction。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师在作业上做了什么？",
+   "listen": "The teacher made some corrections on my homework.",
+   "opts": [
+    "做了一些改正",
+    "写了评语",
+    "画了画",
+    "打了分"
+   ],
+   "why": "correction 改正。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please make a ______ to the date.",
+   "opts": [
+    "correction",
+    "correct",
+    "correctly",
+    "correctness"
+   ],
+   "why": "make a correction 改正。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many ______ in red ink. (correction)",
+   "ans": "corrections",
+   "why": "many 后面用复数 corrections。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 correction、correctness 中选一个，用适当形式填空。",
+   "stem": "We checked the ______ of the answers.",
+   "ans": "correctness",
+   "why": "“正确与否”用 correctness；correction 是改正。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The corrections was made in red.",
+   "ans": "was → were",
+   "why": "主语 corrections 复数，谓语用 were。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请改正你的错误。",
+   "stem": "Please ______ your mistakes.",
+   "ans": "correct",
+   "why": "动词“改正”用 correct。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Correction is the noun of ______.",
+   "opts": [
+    "correct",
+    "collect",
+    "connect",
+    "college"
+   ],
+   "why": "correct 的名词是 correction。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

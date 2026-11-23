@@ -1,0 +1,93 @@
+{
+ "单词": "home",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人什么时候回家？\n听：I go home at five every day.\nA. 四点\nB. 六点\nC. 五点\nD. 七点",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There's no place like ______.\nA. homes\nB. home\nC. house\nD. homey",
+  "题目3": "【选词填空】从 home、house 中选一个，用适当形式填空。\n题干：They bought a big ______ with a garden.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Many people lost their ______ in the flood. (home)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I went to home after school.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The old man has no house; he is ______.\nA. homeless\nB. home\nC. homes\nD. homey\n考点：词性转换",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我放学后待在家里。\n题干：I stay ______ home after school.\n考点：短语",
+  "答案": "【1】C（五点）\n讲解：go home 回家。\n【2】B（home）\n讲解：There's no place like home. 金窝银窝不如自己的狗窝。\n【3】house\n讲解：“房子”这栋建筑用 house。\n【4】homes\n讲解：their 指多人，复数 homes。\n【5】went to home → went home\n讲解：go home 不加 to。\n【6】A（homeless）\n讲解：无家可归的 homeless。\n【7】at\n讲解：at home 在家。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人什么时候回家？",
+   "listen": "I go home at five every day.",
+   "opts": [
+    "五点",
+    "四点",
+    "六点",
+    "七点"
+   ],
+   "why": "go home 回家。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There's no place like ______.",
+   "opts": [
+    "home",
+    "homes",
+    "house",
+    "homey"
+   ],
+   "why": "There's no place like home. 金窝银窝不如自己的狗窝。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 home、house 中选一个，用适当形式填空。",
+   "stem": "They bought a big ______ with a garden.",
+   "ans": "house",
+   "why": "“房子”这栋建筑用 house。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Many people lost their ______ in the flood. (home)",
+   "ans": "homes",
+   "why": "their 指多人，复数 homes。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I went to home after school.",
+   "ans": "went to home → went home",
+   "why": "go home 不加 to。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The old man has no house; he is ______.",
+   "opts": [
+    "homeless",
+    "home",
+    "homes",
+    "homey"
+   ],
+   "why": "无家可归的 homeless。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我放学后待在家里。",
+   "stem": "I stay ______ home after school.",
+   "ans": "at",
+   "why": "at home 在家。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

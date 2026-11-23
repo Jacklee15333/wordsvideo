@@ -1,0 +1,94 @@
+{
+ "单词": "veggie",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人午饭吃了什么汉堡？\n听：I had a veggie burger for lunch.\nA. 牛肉汉堡\nB. 鸡肉汉堡\nC. 素食汉堡\nD. 鱼肉汉堡",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My sister doesn't eat meat. She orders ______ food.\nA. veggies\nB. vegetation\nC. vegetables\nD. veggie\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Kids should eat their ______. (veggie)\n考点：变形",
+  "题目4": "【选词填空】从 veggie、vegetation 中选一个，用适当形式填空。\n题干：The hills are covered with thick ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I like veggie pizza with lots of meat on it.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：veggie 是 vegetarian 的口语简称。\n题干：Veggie is short for ______.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Veggie food has no ______.\nA. rice\nB. meat\nC. beans\nD. tomatoes\n考点：用法",
+  "答案": "【1】C（素食汉堡）\n讲解：veggie 素食的。\n【2】D（veggie）\n讲解：修饰名词 food 用 veggie（素食的）。\n【3】veggies\n讲解：美式口语里 veggies 指蔬菜。\n【4】vegetation\n讲解：山上的植被用 vegetation。\n【5】meat → vegetables\n讲解：素食比萨上没有肉。\n【6】vegetarian\n讲解：veggie 是 vegetarian 的简称。\n【7】B（meat）\n讲解：素食里没有肉。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人午饭吃了什么汉堡？",
+   "listen": "I had a veggie burger for lunch.",
+   "opts": [
+    "素食汉堡",
+    "牛肉汉堡",
+    "鸡肉汉堡",
+    "鱼肉汉堡"
+   ],
+   "why": "veggie 素食的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My sister doesn't eat meat. She orders ______ food.",
+   "opts": [
+    "veggie",
+    "veggies",
+    "vegetation",
+    "vegetables"
+   ],
+   "why": "修饰名词 food 用 veggie（素食的）。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Kids should eat their ______. (veggie)",
+   "ans": "veggies",
+   "why": "美式口语里 veggies 指蔬菜。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 veggie、vegetation 中选一个，用适当形式填空。",
+   "stem": "The hills are covered with thick ______.",
+   "ans": "vegetation",
+   "why": "山上的植被用 vegetation。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I like veggie pizza with lots of meat on it.",
+   "ans": "meat → vegetables",
+   "why": "素食比萨上没有肉。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "veggie 是 vegetarian 的口语简称。",
+   "stem": "Veggie is short for ______.",
+   "ans": "vegetarian",
+   "why": "veggie 是 vegetarian 的简称。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Veggie food has no ______.",
+   "opts": [
+    "meat",
+    "rice",
+    "beans",
+    "tomatoes"
+   ],
+   "why": "素食里没有肉。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

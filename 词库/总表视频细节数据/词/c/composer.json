@@ -1,0 +1,94 @@
+{
+ "单词": "composer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：贝多芬是什么人？\n听：Beethoven was a great composer.\nA. 画家\nB. 作家\nC. 科学家\nD. 作曲家",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Many famous ______ came from Austria.\nA. composers\nB. composer\nC. compose\nD. composition",
+  "题目3": "【选词填空】从 composer、writer 中选一个，用适当形式填空。\n题干：Lu Xun was a famous ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She is a composer, so she writes great novels.",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：The composer is ______ a new song now. (composer)",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In English, \"composer\" usually means a person who writes ______.\nA. books\nB. letters\nC. reports\nD. music\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The ______ of this song is only sixteen.\nA. compose\nB. composition\nC. composed\nD. composer\n考点：用法",
+  "答案": "【1】D（作曲家）\n讲解：composer 作曲家。\n【2】A（composers）\n讲解：many 后面用复数。\n【3】writer\n讲解：写文章的是 writer。\n【4】novels → music\n讲解：composer 写的是音乐。\n【5】composing\n讲解：now 用现在进行时，动词 compose 去 e 加 ing。\n【6】D（music）\n讲解：composer 默认指音乐。\n【7】D（composer）\n讲解：the … of 中间要指人的名词。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：贝多芬是什么人？",
+   "listen": "Beethoven was a great composer.",
+   "opts": [
+    "作曲家",
+    "画家",
+    "作家",
+    "科学家"
+   ],
+   "why": "composer 作曲家。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Many famous ______ came from Austria.",
+   "opts": [
+    "composers",
+    "composer",
+    "compose",
+    "composition"
+   ],
+   "why": "many 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 composer、writer 中选一个，用适当形式填空。",
+   "stem": "Lu Xun was a famous ______.",
+   "ans": "writer",
+   "why": "写文章的是 writer。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is a composer, so she writes great novels.",
+   "ans": "novels → music",
+   "why": "composer 写的是音乐。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The composer is ______ a new song now. (composer)",
+   "ans": "composing",
+   "why": "now 用现在进行时，动词 compose 去 e 加 ing。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In English, \"composer\" usually means a person who writes ______.",
+   "opts": [
+    "music",
+    "books",
+    "letters",
+    "reports"
+   ],
+   "why": "composer 默认指音乐。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of this song is only sixteen.",
+   "opts": [
+    "composer",
+    "compose",
+    "composition",
+    "composed"
+   ],
+   "why": "the … of 中间要指人的名词。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

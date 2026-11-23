@@ -1,0 +1,97 @@
+{
+ "单词": "pedestrian",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人提醒司机注意什么？\n听：Please slow down. There are many pedestrians here.\nA. 这里行人很多\nB. 这里车很多\nC. 这里在修路\nD. 这里不能停车",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Cars must stop for ______ at the zebra crossing.\nA. pedestrian\nB. pedals\nC. pedestals\nD. pedestrians\n考点：易混",
+  "题目3": "【选词填空】从 pedestrian、passenger 中选一个，用适当形式填空。\n题干：The bus driver smiled at every ______ who got on.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：A pedestrian were hit by a bike yesterday.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：行人应该走斑马线。\n题干：Pedestrians should use the ______ ______.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The film was boring and ______; nothing exciting happened.\nA. pedestrians\nB. pedestrian\nC. pedal\nD. pioneer\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A ______ is someone walking past, just like a pedestrian.\nA. passer-by\nB. passenger\nC. pioneer\nD. footman\n考点：易混",
+  "答案": "【1】A（这里行人很多）\n讲解：pedestrian 行人。\n【2】D（pedestrians）\n讲解：泛指“行人”用复数 pedestrians；pedal 是踏板，pedestal 是底座。\n【3】passenger\n讲解：坐车的人是 passenger；路上步行的人是 pedestrian。\n【4】were → was\n讲解：主语 a pedestrian 是单数，用 was。\n【5】zebra；crossing\n讲解：斑马线是 zebra crossing。\n【6】B（pedestrian）\n讲解：作形容词时 pedestrian 意思是“平淡乏味的”。\n【7】A（passer-by）\n讲解：passer-by 路过的人，和 pedestrian 同义。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人提醒司机注意什么？",
+   "listen": "Please slow down. There are many pedestrians here.",
+   "opts": [
+    "这里行人很多",
+    "这里车很多",
+    "这里在修路",
+    "这里不能停车"
+   ],
+   "why": "pedestrian 行人。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Cars must stop for ______ at the zebra crossing.",
+   "opts": [
+    "pedestrians",
+    "pedestrian",
+    "pedals",
+    "pedestals"
+   ],
+   "why": "泛指“行人”用复数 pedestrians；pedal 是踏板，pedestal 是底座。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 pedestrian、passenger 中选一个，用适当形式填空。",
+   "stem": "The bus driver smiled at every ______ who got on.",
+   "ans": "passenger",
+   "why": "坐车的人是 passenger；路上步行的人是 pedestrian。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "A pedestrian were hit by a bike yesterday.",
+   "ans": "were → was",
+   "why": "主语 a pedestrian 是单数，用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "行人应该走斑马线。",
+   "stem": "Pedestrians should use the ______ ______.",
+   "ans": "zebra；crossing",
+   "why": "斑马线是 zebra crossing。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The film was boring and ______; nothing exciting happened.",
+   "opts": [
+    "pedestrian",
+    "pedestrians",
+    "pedal",
+    "pioneer"
+   ],
+   "why": "作形容词时 pedestrian 意思是“平淡乏味的”。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ is someone walking past, just like a pedestrian.",
+   "opts": [
+    "passer-by",
+    "passenger",
+    "pioneer",
+    "footman"
+   ],
+   "why": "passer-by 路过的人，和 pedestrian 同义。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

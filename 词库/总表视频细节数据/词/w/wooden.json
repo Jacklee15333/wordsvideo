@@ -1,0 +1,94 @@
+{
+ "单词": "wooden",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人买了什么？\n听：I bought a wooden box.\nA. 铁盒子\nB. 木盒子\nC. 纸盒子\nD. 塑料盒子",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The old house has ______ floors.\nA. wooded\nB. wooden\nC. woods\nD. woody",
+  "题目3": "【选词填空】从 wooden、wooded 中选一个，用适当形式填空。\n题干：The village is in a ______ valley with lots of trees.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：This chair is made of wooden.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：森林里有很多树。\n题干：There are many ______ in the forest.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：An actor's acting can be called \"wooden\" if it is ______.\nA. very good\nB. funny\nC. loud\nD. stiff and lifeless\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Wooden\" means ______.\nA. made of wood\nB. covered with trees\nC. like a tree\nD. very old\n考点：用法",
+  "答案": "【1】B（木盒子）\n讲解：wooden 木制的。\n【2】B（wooden）\n讲解：“木制的”地板用 wooden。\n【3】wooded\n讲解：长满树的山谷用 wooded。\n【4】wooden → wood\n讲解：of 后面要名词 wood。\n【5】trees\n讲解：many 后面用复数。\n【6】D（stiff and lifeless）\n讲解：wooden 也指“呆板的”。\n【7】A（made of wood）\n讲解：wooden 木头做的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人买了什么？",
+   "listen": "I bought a wooden box.",
+   "opts": [
+    "木盒子",
+    "铁盒子",
+    "纸盒子",
+    "塑料盒子"
+   ],
+   "why": "wooden 木制的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The old house has ______ floors.",
+   "opts": [
+    "wooden",
+    "wooded",
+    "woods",
+    "woody"
+   ],
+   "why": "“木制的”地板用 wooden。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 wooden、wooded 中选一个，用适当形式填空。",
+   "stem": "The village is in a ______ valley with lots of trees.",
+   "ans": "wooded",
+   "why": "长满树的山谷用 wooded。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This chair is made of wooden.",
+   "ans": "wooden → wood",
+   "why": "of 后面要名词 wood。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "森林里有很多树。",
+   "stem": "There are many ______ in the forest.",
+   "ans": "trees",
+   "why": "many 后面用复数。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An actor's acting can be called \"wooden\" if it is ______.",
+   "opts": [
+    "stiff and lifeless",
+    "very good",
+    "funny",
+    "loud"
+   ],
+   "why": "wooden 也指“呆板的”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Wooden\" means ______.",
+   "opts": [
+    "made of wood",
+    "covered with trees",
+    "like a tree",
+    "very old"
+   ],
+   "why": "wooden 木头做的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

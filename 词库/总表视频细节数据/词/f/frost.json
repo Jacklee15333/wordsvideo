@@ -1,0 +1,92 @@
+{
+ "单词": "frost",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：早上草地上有什么？\n听：There was frost on the grass this morning.\nA. 雪\nB. 雨\nC. 冰雹\nD. 霜",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ killed the young plants last night.\nA. frosts\nB. frosty\nC. frost\nD. frozen",
+  "题目3": "【选词填空】从 frost、dew 中选一个，用适当形式填空。\n题干：In summer mornings, there are drops of ______ on the leaves.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We had three hard ______ last winter. (frost)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The cold night frosted the car windows, and the windows was white.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The window glass was ______ last night.\nA. frost\nB. frosts\nC. frosting\nD. frosted\n考点：变形",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：湖面结了一层冰。\n题干：There is a layer of ______ on the lake.\n考点：易混",
+  "答案": "【1】D（霜）\n讲解：frost 霜。\n【2】C（frost）\n讲解：the 后接名词 frost（霜冻）。\n【3】dew\n讲解：不结冰的露水是 dew。\n【4】frosts\n讲解：three 后接复数 frosts。\n【5】was → were\n讲解：主语 windows 复数，用 were。\n【6】D（frosted）\n讲解：被霜覆盖，过去分词 frosted。\n【7】ice\n讲解：冰 ice。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：早上草地上有什么？",
+   "listen": "There was frost on the grass this morning.",
+   "opts": [
+    "霜",
+    "雪",
+    "雨",
+    "冰雹"
+   ],
+   "why": "frost 霜。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ killed the young plants last night.",
+   "opts": [
+    "frost",
+    "frosts",
+    "frosty",
+    "frozen"
+   ],
+   "why": "the 后接名词 frost（霜冻）。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 frost、dew 中选一个，用适当形式填空。",
+   "stem": "In summer mornings, there are drops of ______ on the leaves.",
+   "ans": "dew",
+   "why": "不结冰的露水是 dew。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We had three hard ______ last winter. (frost)",
+   "ans": "frosts",
+   "why": "three 后接复数 frosts。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The cold night frosted the car windows, and the windows was white.",
+   "ans": "was → were",
+   "why": "主语 windows 复数，用 were。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The window glass was ______ last night.",
+   "opts": [
+    "frosted",
+    "frost",
+    "frosts",
+    "frosting"
+   ],
+   "why": "被霜覆盖，过去分词 frosted。",
+   "kd": "变形"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "湖面结了一层冰。",
+   "stem": "There is a layer of ______ on the lake.",
+   "ans": "ice",
+   "why": "冰 ice。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

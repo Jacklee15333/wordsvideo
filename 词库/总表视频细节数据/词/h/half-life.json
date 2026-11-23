@@ -1,0 +1,92 @@
+{
+ "单词": "half-life",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：科学家测量了什么？\n听：Scientists measured the half-life of the material.\nA. 物质的价格\nB. 物质的颜色\nC. 这种物质的半衰期\nD. 物质的大小",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：After one ______, half of the material is left.\nA. lifetime\nB. half-time\nC. half-life\nD. half-day",
+  "题目3": "【选词填空】从 half、half-life 中选一个，用适当形式填空。\n题干：I ate ______ of the cake.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The amount gets ______ and smaller. (small)\n考点：用法",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：After two half-lives, half of it is left.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：半衰期不是寿命的一半。\n题干：Half-life is not half of the ______.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Half of 100 is ______.\nA. fifteen\nB. five\nC. fifty\nD. five hundred\n考点：用法",
+  "答案": "【1】C（这种物质的半衰期）\n讲解：half-life 半衰期。\n【2】C（half-life）\n讲解：每过一个半衰期，剩下一半。\n【3】half\n讲解：“一半”用 half。\n【4】smaller\n讲解：“越来越小”用 smaller and smaller。\n【5】half → a quarter\n讲解：过两个半衰期，剩下一半的一半，也就是四分之一。\n【6】lifetime\n讲解：半衰期不是“寿命 lifetime 的一半”。\n【7】C（fifty）\n讲解：100 的一半是 50。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：科学家测量了什么？",
+   "listen": "Scientists measured the half-life of the material.",
+   "opts": [
+    "这种物质的半衰期",
+    "物质的价格",
+    "物质的颜色",
+    "物质的大小"
+   ],
+   "why": "half-life 半衰期。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "After one ______, half of the material is left.",
+   "opts": [
+    "half-life",
+    "lifetime",
+    "half-time",
+    "half-day"
+   ],
+   "why": "每过一个半衰期，剩下一半。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 half、half-life 中选一个，用适当形式填空。",
+   "stem": "I ate ______ of the cake.",
+   "ans": "half",
+   "why": "“一半”用 half。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The amount gets ______ and smaller. (small)",
+   "ans": "smaller",
+   "why": "“越来越小”用 smaller and smaller。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "After two half-lives, half of it is left.",
+   "ans": "half → a quarter",
+   "why": "过两个半衰期，剩下一半的一半，也就是四分之一。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "半衰期不是寿命的一半。",
+   "stem": "Half-life is not half of the ______.",
+   "ans": "lifetime",
+   "why": "半衰期不是“寿命 lifetime 的一半”。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Half of 100 is ______.",
+   "opts": [
+    "fifty",
+    "fifteen",
+    "five",
+    "five hundred"
+   ],
+   "why": "100 的一半是 50。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

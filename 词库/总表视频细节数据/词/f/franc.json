@@ -1,0 +1,92 @@
+{
+ "单词": "franc",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：以前法国用什么钱？\n听：France used the franc before the euro.\nA. 英镑\nB. 美元\nC. 日元\nD. 法郎",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The coin is a ______ from France.\nA. francs\nB. franc\nC. frank\nD. French",
+  "题目3": "【选词填空】从 franc、frank 中选一个，用适当形式填空。\n题干：Please be ______ with me and tell me the truth.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The bread cost two ______ in 1990. (franc)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Switzerland still uses the franc, and one franc are worth about one dollar.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Today France uses the ______.\nA. franc\nB. pound\nC. dollar\nD. euro\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这枚旧硬币值十法郎。\n题干：This old coin is worth ten ______.\n考点：变形",
+  "答案": "【1】D（法郎）\n讲解：franc 法郎。\n【2】B（franc）\n讲解：a 后接单数 franc。\n【3】frank\n讲解：坦率的 frank，和 franc 同音。\n【4】francs\n讲解：two 后接复数 francs。\n【5】are → is\n讲解：one franc 单数，用 is。\n【6】D（euro）\n讲解：法国现在用欧元 euro。\n【7】francs\n讲解：ten 后接复数 francs。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：以前法国用什么钱？",
+   "listen": "France used the franc before the euro.",
+   "opts": [
+    "法郎",
+    "英镑",
+    "美元",
+    "日元"
+   ],
+   "why": "franc 法郎。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The coin is a ______ from France.",
+   "opts": [
+    "franc",
+    "francs",
+    "frank",
+    "French"
+   ],
+   "why": "a 后接单数 franc。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 franc、frank 中选一个，用适当形式填空。",
+   "stem": "Please be ______ with me and tell me the truth.",
+   "ans": "frank",
+   "why": "坦率的 frank，和 franc 同音。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The bread cost two ______ in 1990. (franc)",
+   "ans": "francs",
+   "why": "two 后接复数 francs。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Switzerland still uses the franc, and one franc are worth about one dollar.",
+   "ans": "are → is",
+   "why": "one franc 单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Today France uses the ______.",
+   "opts": [
+    "euro",
+    "franc",
+    "pound",
+    "dollar"
+   ],
+   "why": "法国现在用欧元 euro。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这枚旧硬币值十法郎。",
+   "stem": "This old coin is worth ten ______.",
+   "ans": "francs",
+   "why": "ten 后接复数 francs。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

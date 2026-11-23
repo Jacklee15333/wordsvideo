@@ -1,0 +1,94 @@
+{
+ "单词": "novel",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在读什么？\n听：I'm reading a novel by Lu Xun.\nA. 鲁迅的诗\nB. 历史书\nC. 报纸\nD. 鲁迅的小说",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She has written three ______.\nA. novel\nB. novels\nC. novelist\nD. novelty",
+  "题目3": "【选词填空】从 novel、fiction 中选一个，用适当形式填空。\n题干：I like reading science ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：\"Harry Potter\" are a famous novel series.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：她是一位小说家。\n题干：She is a ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Novel\" can also be an adjective meaning \"______\".\nA. very long\nB. very old\nC. boring\nD. new and different\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A novel is a ______ story.\nA. short\nB. long\nC. true\nD. two-line\n考点：易混",
+  "答案": "【1】D（鲁迅的小说）\n讲解：novel 小说。\n【2】B（novels）\n讲解：three 后面用复数。\n【3】fiction\n讲解：科幻小说是 science fiction。\n【4】are → is\n讲解：主语是一套书名，用单数。\n【5】novelist\n讲解：写小说的人是 novelist。\n【6】D（new and different）\n讲解：novel 作形容词是“新颖的”。\n【7】B（long）\n讲解：novel 是长篇小说。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在读什么？",
+   "listen": "I'm reading a novel by Lu Xun.",
+   "opts": [
+    "鲁迅的小说",
+    "鲁迅的诗",
+    "历史书",
+    "报纸"
+   ],
+   "why": "novel 小说。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She has written three ______.",
+   "opts": [
+    "novels",
+    "novel",
+    "novelist",
+    "novelty"
+   ],
+   "why": "three 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 novel、fiction 中选一个，用适当形式填空。",
+   "stem": "I like reading science ______.",
+   "ans": "fiction",
+   "why": "科幻小说是 science fiction。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "\"Harry Potter\" are a famous novel series.",
+   "ans": "are → is",
+   "why": "主语是一套书名，用单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她是一位小说家。",
+   "stem": "She is a ______.",
+   "ans": "novelist",
+   "why": "写小说的人是 novelist。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Novel\" can also be an adjective meaning \"______\".",
+   "opts": [
+    "new and different",
+    "very long",
+    "very old",
+    "boring"
+   ],
+   "why": "novel 作形容词是“新颖的”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A novel is a ______ story.",
+   "opts": [
+    "long",
+    "short",
+    "true",
+    "two-line"
+   ],
+   "why": "novel 是长篇小说。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

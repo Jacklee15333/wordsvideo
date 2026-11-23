@@ -1,0 +1,94 @@
+{
+ "单词": "episode",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在看什么？\n听：I'm watching the last episode of the show.\nA. 最后一集\nB. 第一集\nC. 广告\nD. 新闻",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are ten ______ in this TV series.\nA. episodes\nB. episode\nC. episods\nD. episodees",
+  "题目3": "【选词填空】从 episode、incident 中选一个，用适当形式填空。\n题干：There was an ______ at the airport, and two people were hurt.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：This was an important episodes in my life.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这部电视剧有二十集。\n题干：This TV ______ has twenty episodes.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"An episode in my life\" means ______.\nA. my whole life\nB. my birthday\nC. one part or event of my life\nD. my job\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Did you watch the new ______ last night?\nA. episodes\nB. episode\nC. episodic\nD. episodical\n考点：用法",
+  "答案": "【1】A（最后一集）\n讲解：episode 一集。\n【2】A（episodes）\n讲解：ten 后面用复数。\n【3】incident\n讲解：有人受伤的“事件、事故”用 incident。\n【4】episodes → episode\n讲解：an 后面用单数。\n【5】series\n讲解：电视剧 TV series。\n【6】C（one part or event of my life）\n讲解：episode 自成一段的经历。\n【7】B（episode）\n讲解：the new 后面这里用单数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在看什么？",
+   "listen": "I'm watching the last episode of the show.",
+   "opts": [
+    "最后一集",
+    "第一集",
+    "广告",
+    "新闻"
+   ],
+   "why": "episode 一集。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are ten ______ in this TV series.",
+   "opts": [
+    "episodes",
+    "episode",
+    "episods",
+    "episodees"
+   ],
+   "why": "ten 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 episode、incident 中选一个，用适当形式填空。",
+   "stem": "There was an ______ at the airport, and two people were hurt.",
+   "ans": "incident",
+   "why": "有人受伤的“事件、事故”用 incident。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This was an important episodes in my life.",
+   "ans": "episodes → episode",
+   "why": "an 后面用单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这部电视剧有二十集。",
+   "stem": "This TV ______ has twenty episodes.",
+   "ans": "series",
+   "why": "电视剧 TV series。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"An episode in my life\" means ______.",
+   "opts": [
+    "one part or event of my life",
+    "my whole life",
+    "my birthday",
+    "my job"
+   ],
+   "why": "episode 自成一段的经历。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Did you watch the new ______ last night?",
+   "opts": [
+    "episode",
+    "episodes",
+    "episodic",
+    "episodical"
+   ],
+   "why": "the new 后面这里用单数。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

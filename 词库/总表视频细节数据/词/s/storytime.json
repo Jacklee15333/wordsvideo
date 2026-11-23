@@ -1,0 +1,92 @@
+{
+ "单词": "storytime",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：图书馆什么时候有故事会？\n听：Storytime at the library is on Saturday morning.\nA. 星期天下午\nB. 每天晚上\nC. 星期一\nD. 星期六上午",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：It's ______! Come and sit down, children.\nA. storyline\nB. storyteller\nC. story\nD. storytime",
+  "题目3": "【选词填空】从 storytime、storytelling 中选一个，用适当形式填空。\n题干：She is good at ______.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The library has two ______ every week. (storytime)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Storytime start at ten.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：妈妈每天晚上给我讲故事。\n题干：Mum ______ me a story every night.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Children ______ listening to stories at storytime.\nA. enjoys\nB. enjoying\nC. to enjoy\nD. enjoy\n考点：用法",
+  "答案": "【1】D（星期六上午）\n讲解：storytime 故事会、讲故事时间。\n【2】D（storytime）\n讲解：讲故事的时间到了，用 storytime。\n【3】storytelling\n讲解：擅长“讲故事”这件事用 storytelling。\n【4】storytimes\n讲解：two 后面用复数 storytimes。\n【5】start → starts\n讲解：主语单数，start 加 s。\n【6】tells\n讲解：主语单数，tell 加 s。\n【7】D（enjoy）\n讲解：主语 children 是复数，用 enjoy；enjoy doing。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：图书馆什么时候有故事会？",
+   "listen": "Storytime at the library is on Saturday morning.",
+   "opts": [
+    "星期六上午",
+    "星期天下午",
+    "每天晚上",
+    "星期一"
+   ],
+   "why": "storytime 故事会、讲故事时间。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It's ______! Come and sit down, children.",
+   "opts": [
+    "storytime",
+    "storyline",
+    "storyteller",
+    "story"
+   ],
+   "why": "讲故事的时间到了，用 storytime。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 storytime、storytelling 中选一个，用适当形式填空。",
+   "stem": "She is good at ______.",
+   "ans": "storytelling",
+   "why": "擅长“讲故事”这件事用 storytelling。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The library has two ______ every week. (storytime)",
+   "ans": "storytimes",
+   "why": "two 后面用复数 storytimes。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Storytime start at ten.",
+   "ans": "start → starts",
+   "why": "主语单数，start 加 s。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "妈妈每天晚上给我讲故事。",
+   "stem": "Mum ______ me a story every night.",
+   "ans": "tells",
+   "why": "主语单数，tell 加 s。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Children ______ listening to stories at storytime.",
+   "opts": [
+    "enjoy",
+    "enjoys",
+    "enjoying",
+    "to enjoy"
+   ],
+   "why": "主语 children 是复数，用 enjoy；enjoy doing。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

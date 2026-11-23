@@ -1,0 +1,93 @@
+{
+ "单词": "yesterday",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人昨天做了什么？\n听：I visited my grandma yesterday.\nA. 看望奶奶\nB. 去上学\nC. 去游泳\nD. 在家睡觉",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I saw him ______.\nA. yesterday\nB. on yesterday\nC. at yesterday\nD. in yesterday\n考点：用法",
+  "题目3": "【选词填空】从 yesterday、tomorrow 中选一个，用适当形式填空。\n题干：We will have a test ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Where ______ you yesterday? (be)\n考点：用法",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I go to the park yesterday.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：前天下雨了。\n题干：It rained the day ______ yesterday.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：All my ______ were happy days.\nA. yesterdays\nB. yesterday\nC. yesterdaies\nD. yesterday's\n考点：变形",
+  "答案": "【1】A（看望奶奶）\n讲解：yesterday 昨天。\n【2】A（yesterday）\n讲解：yesterday 前面不加介词。\n【3】tomorrow\n讲解：will 说将来的事，用 tomorrow。\n【4】were\n讲解：主语 you，讲过去用 were。\n【5】go → went\n讲解：yesterday 讲过去，用过去式 went。\n【6】before\n讲解：the day before yesterday 前天。\n【7】A（yesterdays）\n讲解：yesterday 作“过去的日子”可数，复数 yesterdays。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人昨天做了什么？",
+   "listen": "I visited my grandma yesterday.",
+   "opts": [
+    "看望奶奶",
+    "去上学",
+    "去游泳",
+    "在家睡觉"
+   ],
+   "why": "yesterday 昨天。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I saw him ______.",
+   "opts": [
+    "yesterday",
+    "on yesterday",
+    "at yesterday",
+    "in yesterday"
+   ],
+   "why": "yesterday 前面不加介词。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 yesterday、tomorrow 中选一个，用适当形式填空。",
+   "stem": "We will have a test ______.",
+   "ans": "tomorrow",
+   "why": "will 说将来的事，用 tomorrow。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Where ______ you yesterday? (be)",
+   "ans": "were",
+   "why": "主语 you，讲过去用 were。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I go to the park yesterday.",
+   "ans": "go → went",
+   "why": "yesterday 讲过去，用过去式 went。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "前天下雨了。",
+   "stem": "It rained the day ______ yesterday.",
+   "ans": "before",
+   "why": "the day before yesterday 前天。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "All my ______ were happy days.",
+   "opts": [
+    "yesterdays",
+    "yesterday",
+    "yesterdaies",
+    "yesterday's"
+   ],
+   "why": "yesterday 作“过去的日子”可数，复数 yesterdays。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "medicine",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：医生让说话人做什么？\n听：The doctor told me to take this medicine three times a day.\nA. 一天喝三杯水\nB. 一天吃三次药\nC. 一天睡三次\nD. 一天跑三次",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Remember to ______ your medicine after meals.\nA. make\nB. do\nC. take\nD. put\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：He wants to study ______ science at university. (medicine)",
+  "题目4": "【选词填空】从 medicine、drug 中选一个，用适当形式填空。\n题干：Never take ______; they can kill you.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This medicines tastes bitter.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Some herbs have ______ value.\nA. medical\nB. medicinal\nC. medicine\nD. medicines\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：她在大学学医。\n题干：She studies ______ at university.\n考点：用法",
+  "答案": "【1】B（一天吃三次药）\n讲解：take medicine 吃药。\n【2】C（take）\n讲解：吃药是 take medicine。\n【3】medical\n讲解：修饰 science 用形容词 medical（医学的）。\n【4】drugs\n讲解：会害死人的“毒品”用 drugs；medicine 是治病的药。\n【5】medicines → medicine\n讲解：this 后面用单数。\n【6】B（medicinal）\n讲解：药用的、有疗效的是 medicinal；medical 是医学的。\n【7】medicine\n讲解：medicine 也指“医学”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：医生让说话人做什么？",
+   "listen": "The doctor told me to take this medicine three times a day.",
+   "opts": [
+    "一天吃三次药",
+    "一天喝三杯水",
+    "一天睡三次",
+    "一天跑三次"
+   ],
+   "why": "take medicine 吃药。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Remember to ______ your medicine after meals.",
+   "opts": [
+    "take",
+    "make",
+    "do",
+    "put"
+   ],
+   "why": "吃药是 take medicine。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He wants to study ______ science at university. (medicine)",
+   "ans": "medical",
+   "why": "修饰 science 用形容词 medical（医学的）。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 medicine、drug 中选一个，用适当形式填空。",
+   "stem": "Never take ______; they can kill you.",
+   "ans": "drugs",
+   "why": "会害死人的“毒品”用 drugs；medicine 是治病的药。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This medicines tastes bitter.",
+   "ans": "medicines → medicine",
+   "why": "this 后面用单数。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Some herbs have ______ value.",
+   "opts": [
+    "medicinal",
+    "medical",
+    "medicine",
+    "medicines"
+   ],
+   "why": "药用的、有疗效的是 medicinal；medical 是医学的。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她在大学学医。",
+   "stem": "She studies ______ at university.",
+   "ans": "medicine",
+   "why": "medicine 也指“医学”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

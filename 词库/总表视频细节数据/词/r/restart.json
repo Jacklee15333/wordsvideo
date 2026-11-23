@@ -1,0 +1,93 @@
+{
+ "单词": "restart",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让对方做什么？\n听：Please restart your computer.\nA. 关掉电脑\nB. 买新电脑\nC. 修电脑\nD. 重启电脑",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The game will ______ after the rain stops.\nA. restarts\nB. restarted\nC. restarting\nD. restart",
+  "题目3": "【选词填空】从 restart、start over 中选一个，用适当形式填空。\n题干：I made too many mistakes, so I'll ______ from the beginning.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：They ______ the match after the rain last week. (restart)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：My phone is restart.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：电脑正在重新启动。\n题干：The computer is ______.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：After the break, the teacher ______ the lesson.\nA. continue\nB. continued\nC. continues\nD. continuing\n考点：易混",
+  "答案": "【1】D（重启电脑）\n讲解：restart 重新启动。\n【2】D（restart）\n讲解：will 后面用原形 restart。\n【3】start over\n讲解：推倒重来、从头再做用 start over。\n【4】restarted\n讲解：讲过去，用过去式 restarted。\n【5】restart → restarting\n讲解：is 后面用现在分词 restarting。\n【6】restarting\n讲解：is 后面用现在分词 restarting。\n【7】B（continued）\n讲解：讲过去，休息后“接着上课”用 continued。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让对方做什么？",
+   "listen": "Please restart your computer.",
+   "opts": [
+    "重启电脑",
+    "关掉电脑",
+    "买新电脑",
+    "修电脑"
+   ],
+   "why": "restart 重新启动。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The game will ______ after the rain stops.",
+   "opts": [
+    "restart",
+    "restarts",
+    "restarted",
+    "restarting"
+   ],
+   "why": "will 后面用原形 restart。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 restart、start over 中选一个，用适当形式填空。",
+   "stem": "I made too many mistakes, so I'll ______ from the beginning.",
+   "ans": "start over",
+   "why": "推倒重来、从头再做用 start over。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "They ______ the match after the rain last week. (restart)",
+   "ans": "restarted",
+   "why": "讲过去，用过去式 restarted。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My phone is restart.",
+   "ans": "restart → restarting",
+   "why": "is 后面用现在分词 restarting。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "电脑正在重新启动。",
+   "stem": "The computer is ______.",
+   "ans": "restarting",
+   "why": "is 后面用现在分词 restarting。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "After the break, the teacher ______ the lesson.",
+   "opts": [
+    "continued",
+    "continue",
+    "continues",
+    "continuing"
+   ],
+   "why": "讲过去，休息后“接着上课”用 continued。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "handout",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师发了什么？\n听：The teacher gave us a handout.\nA. 作业本\nB. 课本\nC. 讲义\nD. 试卷",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please read the ______ before class.\nA. hand out\nB. hands out\nC. handout\nD. handed out\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The teacher gave us three ______. (handout)\n考点：变形",
+  "题目4": "【选词填空】从 handout、hand out 中选一个，用适当形式填空。\n题干：Can you help me ______ these papers?\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The handout have a lot of new words.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A handout is a piece of paper with ______.\nA. information\nB. food\nC. money\nD. pictures only\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：请把这些书发下去。\n题干：Please hand ______ these books.\n考点：短语",
+  "答案": "【1】C（讲义）\n讲解：handout 讲义、资料。\n【2】C（handout）\n讲解：名词“讲义”是 handout（一个词）。\n【3】handouts\n讲解：three 后面用复数。\n【4】hand out\n讲解：动词“分发”用 hand out（两个词）。\n【5】have → has\n讲解：主语 handout 单数，谓语用 has。\n【6】A（information）\n讲解：讲义上是学习资料。\n【7】out\n讲解：hand out 分发。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师发了什么？",
+   "listen": "The teacher gave us a handout.",
+   "opts": [
+    "讲义",
+    "作业本",
+    "课本",
+    "试卷"
+   ],
+   "why": "handout 讲义、资料。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please read the ______ before class.",
+   "opts": [
+    "handout",
+    "hand out",
+    "hands out",
+    "handed out"
+   ],
+   "why": "名词“讲义”是 handout（一个词）。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The teacher gave us three ______. (handout)",
+   "ans": "handouts",
+   "why": "three 后面用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 handout、hand out 中选一个，用适当形式填空。",
+   "stem": "Can you help me ______ these papers?",
+   "ans": "hand out",
+   "why": "动词“分发”用 hand out（两个词）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The handout have a lot of new words.",
+   "ans": "have → has",
+   "why": "主语 handout 单数，谓语用 has。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A handout is a piece of paper with ______.",
+   "opts": [
+    "information",
+    "food",
+    "money",
+    "pictures only"
+   ],
+   "why": "讲义上是学习资料。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请把这些书发下去。",
+   "stem": "Please hand ______ these books.",
+   "ans": "out",
+   "why": "hand out 分发。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

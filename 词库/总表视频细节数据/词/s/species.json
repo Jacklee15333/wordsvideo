@@ -1,0 +1,98 @@
+{
+ "单词": "species",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这片森林里有多少种鸟？\n听：There are 200 species of birds in this forest.\nA. 二十种\nB. 两千种\nC. 十二种\nD. 两百种",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The panda is an endangered ______.\nA. specie\nB. spices\nC. special\nD. species\n考点：变形",
+  "题目3": "【选词填空】从 species、spices 中选一个，用适当形式填空。\n题干：Pepper and cinnamon are ______.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：This species of bird live in China.\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这种鸟已经灭绝了。\n题干：This kind of bird has died ______.\n考点：短语",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The singular and plural of species are ______.\nA. different\nB. the same\nC. shorter\nD. longer\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A species is a ______ of animal or plant.\nA. kind\nB. colour\nC. size\nD. home\n考点：用法",
+  "答案": "【1】D（两百种）\n讲解：species 物种、种类。\n【2】D（species）\n讲解：species 单复数同形，单数也是 species。\n【3】spices\n讲解：香料是 spices；species 是物种。\n【4】live → lives\n讲解：主语 this species 单数，谓语用 lives。\n【5】out\n讲解：die out 灭绝。\n【6】B（the same）\n讲解：species 单复数同形。\n【7】A（kind）\n讲解：species 是动植物的“种类”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这片森林里有多少种鸟？",
+   "listen": "There are 200 species of birds in this forest.",
+   "opts": [
+    "两百种",
+    "二十种",
+    "两千种",
+    "十二种"
+   ],
+   "why": "species 物种、种类。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The panda is an endangered ______.",
+   "opts": [
+    "species",
+    "specie",
+    "spices",
+    "special"
+   ],
+   "why": "species 单复数同形，单数也是 species。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 species、spices 中选一个，用适当形式填空。",
+   "stem": "Pepper and cinnamon are ______.",
+   "ans": "spices",
+   "why": "香料是 spices；species 是物种。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This species of bird live in China.",
+   "ans": "live → lives",
+   "why": "主语 this species 单数，谓语用 lives。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这种鸟已经灭绝了。",
+   "stem": "This kind of bird has died ______.",
+   "ans": "out",
+   "why": "die out 灭绝。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The singular and plural of species are ______.",
+   "opts": [
+    "the same",
+    "different",
+    "shorter",
+    "longer"
+   ],
+   "why": "species 单复数同形。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A species is a ______ of animal or plant.",
+   "opts": [
+    "kind",
+    "colour",
+    "size",
+    "home"
+   ],
+   "why": "species 是动植物的“种类”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

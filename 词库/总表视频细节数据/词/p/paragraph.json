@@ -1,0 +1,97 @@
+{
+ "单词": "paragraph",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让读哪一段？\n听：Please read the second paragraph.\nA. 第一段\nB. 第三段\nC. 第二段\nD. 最后一段",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are five ______ in this article.\nA. paragraph\nB. paragraphes\nC. paragraphs\nD. paragraph's\n考点：变形",
+  "题目3": "【选词填空】从 paragraph、passage 中选一个，用适当形式填空。\n题干：Read the ______ and answer the questions. It is from a long novel.\n考点：易混",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：请用一段话描述你的家乡。\n题干：Please describe your hometown in one ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The first paragraph are about his childhood.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A new paragraph usually starts on a new ______.\nA. page\nB. book\nC. line\nD. day\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which is the biggest?\nA. a paragraph\nB. a sentence\nC. a section\nD. a word\n考点：易混",
+  "答案": "【1】C（第二段）\n讲解：paragraph 段落。\n【2】C（paragraphs）\n讲解：five 后面接复数。\n【3】passage\n讲解：一段节选文字用 passage；paragraph 是“段”。\n【4】paragraph\n讲解：段落 paragraph。\n【5】are → is\n讲解：主语单数，用 is。\n【6】C（line）\n讲解：新的一段一般另起一行。\n【7】C（a section）\n讲解：section（节）> paragraph（段）> sentence > word。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让读哪一段？",
+   "listen": "Please read the second paragraph.",
+   "opts": [
+    "第二段",
+    "第一段",
+    "第三段",
+    "最后一段"
+   ],
+   "why": "paragraph 段落。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are five ______ in this article.",
+   "opts": [
+    "paragraphs",
+    "paragraph",
+    "paragraphes",
+    "paragraph's"
+   ],
+   "why": "five 后面接复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 paragraph、passage 中选一个，用适当形式填空。",
+   "stem": "Read the ______ and answer the questions. It is from a long novel.",
+   "ans": "passage",
+   "why": "一段节选文字用 passage；paragraph 是“段”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请用一段话描述你的家乡。",
+   "stem": "Please describe your hometown in one ______.",
+   "ans": "paragraph",
+   "why": "段落 paragraph。"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The first paragraph are about his childhood.",
+   "ans": "are → is",
+   "why": "主语单数，用 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A new paragraph usually starts on a new ______.",
+   "opts": [
+    "line",
+    "page",
+    "book",
+    "day"
+   ],
+   "why": "新的一段一般另起一行。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which is the biggest?",
+   "opts": [
+    "a section",
+    "a paragraph",
+    "a sentence",
+    "a word"
+   ],
+   "why": "section（节）> paragraph（段）> sentence > word。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

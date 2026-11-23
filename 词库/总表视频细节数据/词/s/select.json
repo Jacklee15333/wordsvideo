@@ -1,0 +1,94 @@
+{
+ "单词": "select",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让对方做什么？\n听：Please select one answer.\nA. 选一个答案\nB. 写答案\nC. 读答案\nD. 擦掉答案",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please ______ the right answer.\nA. selection\nB. select\nC. selective\nD. selected\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ a red dress yesterday. (select)\n考点：变形",
+  "题目4": "【选词填空】从 select、elect 中选一个，用适当形式填空。\n题干：We will ______ a new class monitor by voting.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He was select for the school team.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这家店的商品种类很多。\n题干：The shop has a good ______ of goods.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Select is close in meaning to ______.\nA. lose\nB. sell\nC. send\nD. choose\n考点：易混",
+  "答案": "【1】A（选一个答案）\n讲解：select 选择。\n【2】B（select）\n讲解：please 后面用动词原形 select。\n【3】selected\n讲解：yesterday 用过去式 selected。\n【4】elect\n讲解：投票选举用 elect；select 是一般的挑选。\n【5】select → selected\n讲解：被选中用被动语态 was selected。\n【6】selection\n讲解：名词“可供选择的品种”是 selection。\n【7】D（choose）\n讲解：select ≈ choose 选择。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让对方做什么？",
+   "listen": "Please select one answer.",
+   "opts": [
+    "选一个答案",
+    "写答案",
+    "读答案",
+    "擦掉答案"
+   ],
+   "why": "select 选择。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please ______ the right answer.",
+   "opts": [
+    "select",
+    "selection",
+    "selective",
+    "selected"
+   ],
+   "why": "please 后面用动词原形 select。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ a red dress yesterday. (select)",
+   "ans": "selected",
+   "why": "yesterday 用过去式 selected。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 select、elect 中选一个，用适当形式填空。",
+   "stem": "We will ______ a new class monitor by voting.",
+   "ans": "elect",
+   "why": "投票选举用 elect；select 是一般的挑选。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He was select for the school team.",
+   "ans": "select → selected",
+   "why": "被选中用被动语态 was selected。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这家店的商品种类很多。",
+   "stem": "The shop has a good ______ of goods.",
+   "ans": "selection",
+   "why": "名词“可供选择的品种”是 selection。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Select is close in meaning to ______.",
+   "opts": [
+    "choose",
+    "lose",
+    "sell",
+    "send"
+   ],
+   "why": "select ≈ choose 选择。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

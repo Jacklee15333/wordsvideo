@@ -1,0 +1,93 @@
+{
+ "单词": "jetpack",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：男孩想要什么？\n听：The boy wants a jetpack.\nA. 书包\nB. 自行车\nC. 风筝\nD. 喷气背包",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：In the film, he flew with a ______.\nA. jet\nB. backpack\nC. pack\nD. jetpack\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：They tested two ______. (jetpack)\n考点：变形",
+  "题目4": "【选词填空】从 jetpack、backpack 中选一个，用适当形式填空。\n题干：I carry my books in a ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The jetpack help him fly.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A jetpack is worn on your ______.\nA. head\nB. back\nC. feet\nD. hands\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他坐喷气式飞机去了美国。\n题干：He flew to the USA by ______.\n考点：词性转换",
+  "答案": "【1】D（喷气背包）\n讲解：jetpack 喷气背包。\n【2】D（jetpack）\n讲解：靠“喷气背包”飞用 jetpack。\n【3】jetpacks\n讲解：two 后面用复数 jetpacks。\n【4】backpack\n讲解：装书的是双肩包 backpack。\n【5】help → helps\n讲解：主语 jetpack 单数，谓语用 helps。\n【6】B（back）\n讲解：喷气背包背在背上。\n【7】jet\n讲解：by jet 乘喷气式飞机。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：男孩想要什么？",
+   "listen": "The boy wants a jetpack.",
+   "opts": [
+    "喷气背包",
+    "书包",
+    "自行车",
+    "风筝"
+   ],
+   "why": "jetpack 喷气背包。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In the film, he flew with a ______.",
+   "opts": [
+    "jetpack",
+    "jet",
+    "backpack",
+    "pack"
+   ],
+   "why": "靠“喷气背包”飞用 jetpack。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "They tested two ______. (jetpack)",
+   "ans": "jetpacks",
+   "why": "two 后面用复数 jetpacks。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 jetpack、backpack 中选一个，用适当形式填空。",
+   "stem": "I carry my books in a ______.",
+   "ans": "backpack",
+   "why": "装书的是双肩包 backpack。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The jetpack help him fly.",
+   "ans": "help → helps",
+   "why": "主语 jetpack 单数，谓语用 helps。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A jetpack is worn on your ______.",
+   "opts": [
+    "back",
+    "head",
+    "feet",
+    "hands"
+   ],
+   "why": "喷气背包背在背上。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他坐喷气式飞机去了美国。",
+   "stem": "He flew to the USA by ______.",
+   "ans": "jet",
+   "why": "by jet 乘喷气式飞机。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

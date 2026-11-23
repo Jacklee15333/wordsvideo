@@ -1,0 +1,96 @@
+{
+ "单词": "evaluation",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人得到了什么？\n听：I got a good evaluation from my boss.\nA. 好评\nB. 批评\nC. 奖金\nD. 假期",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The teacher gave each student an ______.\nA. evaluate\nB. evaluated\nC. evaluating\nD. evaluation",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We will ______ the results next week. (evaluation)\n考点：词性转换",
+  "题目4": "【选词填空】从 evaluation、evolution 中选一个，用适当形式填空。\n题干：Darwin wrote about the ______ of animals.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The evaluations was done by experts.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Teachers write ______ of students at the end of each term.\nA. evaluation\nB. evaluations\nC. evaluate\nD. evaluated\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The evaluation ______ the new program was positive.\nA. of\nB. to\nC. at\nD. with\n考点：用法",
+  "答案": "【1】A（好评）\n讲解：evaluation 评价。\n【2】D（evaluation）\n讲解：an 后面要名词 evaluation。\n【3】evaluate\n讲解：will 后要动词原形 evaluate。\n【4】evolution\n讲解：“进化”用 evolution。\n【5】was → were\n讲解：主语 evaluations 是复数，用 were。\n【6】B（evaluations）\n讲解：给每个学生都写评价，用复数 evaluations。\n【7】A（of）\n讲解：the evaluation of …的评估。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人得到了什么？",
+   "listen": "I got a good evaluation from my boss.",
+   "opts": [
+    "好评",
+    "批评",
+    "奖金",
+    "假期"
+   ],
+   "why": "evaluation 评价。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The teacher gave each student an ______.",
+   "opts": [
+    "evaluation",
+    "evaluate",
+    "evaluated",
+    "evaluating"
+   ],
+   "why": "an 后面要名词 evaluation。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We will ______ the results next week. (evaluation)",
+   "ans": "evaluate",
+   "why": "will 后要动词原形 evaluate。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 evaluation、evolution 中选一个，用适当形式填空。",
+   "stem": "Darwin wrote about the ______ of animals.",
+   "ans": "evolution",
+   "why": "“进化”用 evolution。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The evaluations was done by experts.",
+   "ans": "was → were",
+   "why": "主语 evaluations 是复数，用 were。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Teachers write ______ of students at the end of each term.",
+   "opts": [
+    "evaluations",
+    "evaluation",
+    "evaluate",
+    "evaluated"
+   ],
+   "why": "给每个学生都写评价，用复数 evaluations。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The evaluation ______ the new program was positive.",
+   "opts": [
+    "of",
+    "to",
+    "at",
+    "with"
+   ],
+   "why": "the evaluation of …的评估。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

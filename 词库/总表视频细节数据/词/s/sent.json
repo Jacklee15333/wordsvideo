@@ -1,0 +1,94 @@
+{
+ "单词": "sent",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她什么时候发的邮件？\n听：She sent the email this morning.\nA. 昨天晚上\nB. 中午\nC. 下午\nD. 今天早上",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I ______ you a message an hour ago.\nA. send\nB. sends\nC. sent\nD. sending\n考点：变形",
+  "题目3": "【选词填空】从 sent、cent 中选一个，用适当形式填空。\n题干：One dollar is one hundred ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He is ______ a text to his friend now. (send)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Have you send the photos to Lily?\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The ______ of roses filled the room.\nA. sent\nB. scent\nC. cent\nD. send\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这些包裹昨天被寄走了。\n题干：These parcels ______ ______ yesterday.\n考点：变形",
+  "答案": "【1】D（今天早上）\n讲解：sent 发送了。\n【2】C（sent）\n讲解：an hour ago 用过去式 sent。\n【3】cents\n讲解：同音词 cent 是“分”。\n【4】sending\n讲解：now 用现在进行时。\n【5】send → sent\n讲解：have 后面用过去分词 sent。\n【6】B（scent）\n讲解：同音词 scent 是“气味”。\n【7】were；sent\n讲解：被动语态 were sent。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她什么时候发的邮件？",
+   "listen": "She sent the email this morning.",
+   "opts": [
+    "今天早上",
+    "昨天晚上",
+    "中午",
+    "下午"
+   ],
+   "why": "sent 发送了。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I ______ you a message an hour ago.",
+   "opts": [
+    "sent",
+    "send",
+    "sends",
+    "sending"
+   ],
+   "why": "an hour ago 用过去式 sent。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 sent、cent 中选一个，用适当形式填空。",
+   "stem": "One dollar is one hundred ______.",
+   "ans": "cents",
+   "why": "同音词 cent 是“分”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He is ______ a text to his friend now. (send)",
+   "ans": "sending",
+   "why": "now 用现在进行时。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Have you send the photos to Lily?",
+   "ans": "send → sent",
+   "why": "have 后面用过去分词 sent。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of roses filled the room.",
+   "opts": [
+    "scent",
+    "sent",
+    "cent",
+    "send"
+   ],
+   "why": "同音词 scent 是“气味”。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这些包裹昨天被寄走了。",
+   "stem": "These parcels ______ ______ yesterday.",
+   "ans": "were；sent",
+   "why": "被动语态 were sent。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

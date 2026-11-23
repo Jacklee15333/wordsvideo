@@ -1,0 +1,94 @@
+{
+ "单词": "tired",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人怎么了？\n听：I'm too tired to walk any further.\nA. 太饿了\nB. 太冷了\nC. 太累了\nD. 太热了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I'm very ______ after the long trip.\nA. tired\nB. tiring\nC. tire\nD. tiredness",
+  "题目3": "【选词填空】从 tired、tiring 中选一个，用适当形式填空。\n题干：The long journey was really ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She is tired with hearing the same song.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他干活累了。\n题干：He was tired ______ work.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：She looks ______ today than yesterday.\nA. tireder\nB. more tired\nC. most tired\nD. tiredest\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"I'm sick and tired of it\" means I'm ______ it.\nA. very bored with\nB. very ill from\nC. very happy with\nD. very afraid of\n考点：短语",
+  "答案": "【1】C（太累了）\n讲解：too tired to … 累得不能……。\n【2】A（tired）\n讲解：说人感到累用 tired。\n【3】tiring\n讲解：说事物累人用 tiring。\n【4】with → of\n讲解：be tired of 厌倦。\n【5】from\n讲解：be tired from 因……而累。\n【6】B（more tired）\n讲解：tired 的比较级用 more tired。\n【7】A（very bored with）\n讲解：sick and tired of 烦透了。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人怎么了？",
+   "listen": "I'm too tired to walk any further.",
+   "opts": [
+    "太累了",
+    "太饿了",
+    "太冷了",
+    "太热了"
+   ],
+   "why": "too tired to … 累得不能……。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I'm very ______ after the long trip.",
+   "opts": [
+    "tired",
+    "tiring",
+    "tire",
+    "tiredness"
+   ],
+   "why": "说人感到累用 tired。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tired、tiring 中选一个，用适当形式填空。",
+   "stem": "The long journey was really ______.",
+   "ans": "tiring",
+   "why": "说事物累人用 tiring。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is tired with hearing the same song.",
+   "ans": "with → of",
+   "why": "be tired of 厌倦。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他干活累了。",
+   "stem": "He was tired ______ work.",
+   "ans": "from",
+   "why": "be tired from 因……而累。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She looks ______ today than yesterday.",
+   "opts": [
+    "more tired",
+    "tireder",
+    "most tired",
+    "tiredest"
+   ],
+   "why": "tired 的比较级用 more tired。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"I'm sick and tired of it\" means I'm ______ it.",
+   "opts": [
+    "very bored with",
+    "very ill from",
+    "very happy with",
+    "very afraid of"
+   ],
+   "why": "sick and tired of 烦透了。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

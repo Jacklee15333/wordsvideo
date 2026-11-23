@@ -1,0 +1,97 @@
+{
+ "单词": "dome",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这座建筑有什么特点？\n听：The building has a big golden dome.\nA. 很多窗户\nB. 很高的塔\nC. 金色的圆屋顶\nD. 一个花园",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Many old churches have ______ on top.\nA. dome\nB. domes\nC. domies\nD. dome's\n考点：变形",
+  "题目3": "【选词填空】从 dome、roof 中选一个，用适当形式填空。\n题干：There is a cat on the ______ of our house.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：We saw three blue dome in the city.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这座清真寺有一个白色的圆顶。\n题干：The mosque has a white ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A dome is shaped like half a ______.\nA. ball\nB. box\nC. stick\nD. triangle\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The roof is ______. It looks like half a ball.\nA. dome\nB. domes\nC. dome-shaped\nD. doming\n考点：词性转换",
+  "答案": "【1】C（金色的圆屋顶）\n讲解：dome 圆屋顶。\n【2】B（domes）\n讲解：泛指多座教堂，用复数。\n【3】roof\n讲解：普通房子的屋顶用 roof。\n【4】dome → domes\n讲解：three 后面用复数。\n【5】dome\n讲解：圆顶 dome。\n【6】A（ball）\n讲解：dome 是半球形的。\n【7】C（dome-shaped）\n讲解：be 后面用形容词 dome-shaped。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这座建筑有什么特点？",
+   "listen": "The building has a big golden dome.",
+   "opts": [
+    "金色的圆屋顶",
+    "很多窗户",
+    "很高的塔",
+    "一个花园"
+   ],
+   "why": "dome 圆屋顶。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Many old churches have ______ on top.",
+   "opts": [
+    "domes",
+    "dome",
+    "domies",
+    "dome's"
+   ],
+   "why": "泛指多座教堂，用复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 dome、roof 中选一个，用适当形式填空。",
+   "stem": "There is a cat on the ______ of our house.",
+   "ans": "roof",
+   "why": "普通房子的屋顶用 roof。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We saw three blue dome in the city.",
+   "ans": "dome → domes",
+   "why": "three 后面用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这座清真寺有一个白色的圆顶。",
+   "stem": "The mosque has a white ______.",
+   "ans": "dome",
+   "why": "圆顶 dome。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A dome is shaped like half a ______.",
+   "opts": [
+    "ball",
+    "box",
+    "stick",
+    "triangle"
+   ],
+   "why": "dome 是半球形的。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The roof is ______. It looks like half a ball.",
+   "opts": [
+    "dome-shaped",
+    "dome",
+    "domes",
+    "doming"
+   ],
+   "why": "be 后面用形容词 dome-shaped。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

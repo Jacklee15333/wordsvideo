@@ -1,0 +1,94 @@
+{
+ "单词": "document",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人找不到什么？\n听：I can't find the document I wrote yesterday.\nA. 昨天的报纸\nB. 昨天买的书\nC. 昨天拍的照片\nD. 昨天写的文件",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please sign these ______.\nA. documents\nB. document\nC. documentary\nD. documenting",
+  "题目3": "【选词填空】从 document、documentary 中选一个，用适当形式填空。\n题干：We watched a ______ about pandas.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The scientists documentted the changes.",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：He is ______ the history of his village now. (document)",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：An ID card is a kind of ______ that shows who you are.\nA. documentary\nB. folder\nC. poster\nD. document\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"The history of the town is well documented\" means it is well ______.\nA. hidden\nB. forgotten\nC. painted\nD. recorded\n考点：用法",
+  "答案": "【1】D（昨天写的文件）\n讲解：document 文件。\n【2】A（documents）\n讲解：these 后面用复数。\n【3】documentary\n讲解：纪录片是 documentary。\n【4】documentted → documented\n讲解：document 直接加 ed。\n【5】documenting\n讲解：now 用现在进行时。\n【6】D（document）\n讲解：身份证是证件 document。\n【7】D（recorded）\n讲解：documented 有记录的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人找不到什么？",
+   "listen": "I can't find the document I wrote yesterday.",
+   "opts": [
+    "昨天写的文件",
+    "昨天的报纸",
+    "昨天买的书",
+    "昨天拍的照片"
+   ],
+   "why": "document 文件。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please sign these ______.",
+   "opts": [
+    "documents",
+    "document",
+    "documentary",
+    "documenting"
+   ],
+   "why": "these 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 document、documentary 中选一个，用适当形式填空。",
+   "stem": "We watched a ______ about pandas.",
+   "ans": "documentary",
+   "why": "纪录片是 documentary。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The scientists documentted the changes.",
+   "ans": "documentted → documented",
+   "why": "document 直接加 ed。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He is ______ the history of his village now. (document)",
+   "ans": "documenting",
+   "why": "now 用现在进行时。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An ID card is a kind of ______ that shows who you are.",
+   "opts": [
+    "document",
+    "documentary",
+    "folder",
+    "poster"
+   ],
+   "why": "身份证是证件 document。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"The history of the town is well documented\" means it is well ______.",
+   "opts": [
+    "recorded",
+    "hidden",
+    "forgotten",
+    "painted"
+   ],
+   "why": "documented 有记录的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

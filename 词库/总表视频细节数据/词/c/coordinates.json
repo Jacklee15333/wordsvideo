@@ -1,0 +1,98 @@
+{
+ "单词": "coordinates",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人需要什么来找到那个村子？\n听：We need the coordinates of the village.\nA. 电话号码\nB. 名字\nC. 坐标\nD. 照片",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Put the ______ into the GPS to find the place.\nA. coordination\nB. coordinator\nC. coordinating\nD. coordinates\n考点：变形",
+  "题目3": "【选词填空】从 coordinates、coordinator 中选一个，用适当形式填空。\n题干：The event ______ is very busy today.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The ship's coordinates ______ sent to the police yesterday. (be)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The coordinates of the house is wrong.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Coordinates are numbers that show ______.\nA. how old it is\nB. where something is\nC. how much it costs\nD. when it happens\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：On a map, a place's coordinates usually have ______ numbers.\nA. one\nB. five\nC. ten\nD. two\n考点：用法",
+  "答案": "【1】C（坐标）\n讲解：coordinates 坐标。\n【2】D（coordinates）\n讲解：输入 GPS 的是坐标 coordinates。\n【3】coordinator\n讲解：活动“协调人”是 coordinator；coordinates 是坐标。\n【4】were\n讲解：coordinates 是复数，yesterday 用 were。\n【5】is → are\n讲解：coordinates 是复数，用 are。\n【6】B（where something is）\n讲解：坐标表示位置。\n【7】D（two）\n讲解：地图上的坐标一般是两个数（经度和纬度）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人需要什么来找到那个村子？",
+   "listen": "We need the coordinates of the village.",
+   "opts": [
+    "坐标",
+    "电话号码",
+    "名字",
+    "照片"
+   ],
+   "why": "coordinates 坐标。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Put the ______ into the GPS to find the place.",
+   "opts": [
+    "coordinates",
+    "coordination",
+    "coordinator",
+    "coordinating"
+   ],
+   "why": "输入 GPS 的是坐标 coordinates。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 coordinates、coordinator 中选一个，用适当形式填空。",
+   "stem": "The event ______ is very busy today.",
+   "ans": "coordinator",
+   "why": "活动“协调人”是 coordinator；coordinates 是坐标。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The ship's coordinates ______ sent to the police yesterday. (be)",
+   "ans": "were",
+   "why": "coordinates 是复数，yesterday 用 were。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The coordinates of the house is wrong.",
+   "ans": "is → are",
+   "why": "coordinates 是复数，用 are。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Coordinates are numbers that show ______.",
+   "opts": [
+    "where something is",
+    "how old it is",
+    "how much it costs",
+    "when it happens"
+   ],
+   "why": "坐标表示位置。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "On a map, a place's coordinates usually have ______ numbers.",
+   "opts": [
+    "two",
+    "one",
+    "five",
+    "ten"
+   ],
+   "why": "地图上的坐标一般是两个数（经度和纬度）。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

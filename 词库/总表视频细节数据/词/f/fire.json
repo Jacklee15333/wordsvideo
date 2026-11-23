@@ -1,0 +1,94 @@
+{
+ "单词": "fire",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：昨晚楼里发生了什么？\n听：There was a fire in the building last night.\nA. 地震\nB. 停电\nC. 抢劫\nD. 火灾",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The boss ______ two workers last week.\nA. fires\nB. firing\nC. fired\nD. fire",
+  "题目3": "【选词填空】从 fire、flame 中选一个，用适当形式填空。\n题干：The ______ of the candle moved in the wind.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：They made the fire to keep warm.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：消防员扑灭了大火。\n题干：The firefighters put out the ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Fire\" can also mean \"______\", as in \"fire a gun\".\nA. clean\nB. shoot\nC. buy\nD. hide\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Catch fire\" means ______.\nA. start to burn\nB. put out a fire\nC. run away\nD. get cold\n考点：短语",
+  "答案": "【1】D（火灾）\n讲解：fire 火灾。\n【2】C（fired）\n讲解：fire 解雇，last week 用过去式。\n【3】flame\n讲解：一道道火苗是 flame。\n【4】made the fire → made a fire\n讲解：生火是 make a fire。\n【5】fire\n讲解：火 fire。\n【6】B（shoot）\n讲解：fire 也有“开枪”的意思。\n【7】A（start to burn）\n讲解：catch fire 着火。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：昨晚楼里发生了什么？",
+   "listen": "There was a fire in the building last night.",
+   "opts": [
+    "火灾",
+    "地震",
+    "停电",
+    "抢劫"
+   ],
+   "why": "fire 火灾。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The boss ______ two workers last week.",
+   "opts": [
+    "fired",
+    "fires",
+    "firing",
+    "fire"
+   ],
+   "why": "fire 解雇，last week 用过去式。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 fire、flame 中选一个，用适当形式填空。",
+   "stem": "The ______ of the candle moved in the wind.",
+   "ans": "flame",
+   "why": "一道道火苗是 flame。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "They made the fire to keep warm.",
+   "ans": "made the fire → made a fire",
+   "why": "生火是 make a fire。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "消防员扑灭了大火。",
+   "stem": "The firefighters put out the ______.",
+   "ans": "fire",
+   "why": "火 fire。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Fire\" can also mean \"______\", as in \"fire a gun\".",
+   "opts": [
+    "shoot",
+    "clean",
+    "buy",
+    "hide"
+   ],
+   "why": "fire 也有“开枪”的意思。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Catch fire\" means ______.",
+   "opts": [
+    "start to burn",
+    "put out a fire",
+    "run away",
+    "get cold"
+   ],
+   "why": "catch fire 着火。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

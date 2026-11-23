@@ -1,0 +1,94 @@
+{
+ "单词": "backdrop",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：照片的背景是什么？\n听：The mountains made a beautiful backdrop for the photo.\nA. 大海\nB. 城市\nC. 森林\nD. 群山",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：They put up a new ______ for the school play.\nA. backdrops\nB. drop\nC. dropback\nD. backdrop",
+  "题目3": "【选词填空】从 backdrop、background 中选一个，用适当形式填空。\n题干：He comes from a poor ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The two backdrop were painted by students.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：演员们站在舞台上。\n题干：The actors stood on the ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Against the backdrop of\" means ______.\nA. in front of a door\nB. behind a car\nC. with something as the background\nD. under a tree\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Backdrop\" is made of \"back\" and \"______\".\nA. door\nB. drip\nC. dream\nD. drop\n考点：用法",
+  "答案": "【1】D（群山）\n讲解：backdrop 背景。\n【2】D（backdrop）\n讲解：舞台上的背景幕是 backdrop。\n【3】background\n讲解：出身背景是 background。\n【4】backdrop → backdrops\n讲解：two 后面用复数。\n【5】stage\n讲解：舞台 stage。\n【6】C（with something as the background）\n讲解：against the backdrop of 在……背景下。\n【7】D（drop）\n讲解：back + drop。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：照片的背景是什么？",
+   "listen": "The mountains made a beautiful backdrop for the photo.",
+   "opts": [
+    "群山",
+    "大海",
+    "城市",
+    "森林"
+   ],
+   "why": "backdrop 背景。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "They put up a new ______ for the school play.",
+   "opts": [
+    "backdrop",
+    "backdrops",
+    "drop",
+    "dropback"
+   ],
+   "why": "舞台上的背景幕是 backdrop。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 backdrop、background 中选一个，用适当形式填空。",
+   "stem": "He comes from a poor ______.",
+   "ans": "background",
+   "why": "出身背景是 background。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The two backdrop were painted by students.",
+   "ans": "backdrop → backdrops",
+   "why": "two 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "演员们站在舞台上。",
+   "stem": "The actors stood on the ______.",
+   "ans": "stage",
+   "why": "舞台 stage。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Against the backdrop of\" means ______.",
+   "opts": [
+    "with something as the background",
+    "in front of a door",
+    "behind a car",
+    "under a tree"
+   ],
+   "why": "against the backdrop of 在……背景下。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Backdrop\" is made of \"back\" and \"______\".",
+   "opts": [
+    "drop",
+    "door",
+    "drip",
+    "dream"
+   ],
+   "why": "back + drop。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

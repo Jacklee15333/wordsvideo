@@ -1,0 +1,98 @@
+{
+ "单词": "digit",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：密码有几位数字？\n听：The password has six digits.\nA. 四位\nB. 六位\nC. 八位\nD. 十位",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The number 2025 has four ______.\nA. digits\nB. digit\nC. digital\nD. digitally\n考点：变形",
+  "题目3": "【选词填空】从 digit、digital 中选一个，用适当形式填空。\n题干：I bought a ______ camera.\n考点：词性转换",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：7 是个一位数。\n题干：7 is a single-______ number.\n考点：用法",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：\"125\" is a three-digits number.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"15\" is one ______, but it has two digits.\nA. digit\nB. number\nC. digital\nD. finger\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Digit\" can also mean ______.\nA. a nose\nB. an ear\nC. a hair\nD. a finger or toe\n考点：用法",
+  "答案": "【1】B（六位）\n讲解：six digits 六位数字。\n【2】A（digits）\n讲解：four 后面接复数 digits。\n【3】digital\n讲解：名词前用形容词 digital。\n【4】digit\n讲解：single-digit number 一位数。\n【5】three-digits → three-digit\n讲解：复合形容词里的名词用单数。\n【6】B（number）\n讲解：“数”是 number；digit 是 0–9 这十个数码。\n【7】D（a finger or toe）\n讲解：digit 也指手指、脚趾。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：密码有几位数字？",
+   "listen": "The password has six digits.",
+   "opts": [
+    "六位",
+    "四位",
+    "八位",
+    "十位"
+   ],
+   "why": "six digits 六位数字。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The number 2025 has four ______.",
+   "opts": [
+    "digits",
+    "digit",
+    "digital",
+    "digitally"
+   ],
+   "why": "four 后面接复数 digits。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 digit、digital 中选一个，用适当形式填空。",
+   "stem": "I bought a ______ camera.",
+   "ans": "digital",
+   "why": "名词前用形容词 digital。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "7 是个一位数。",
+   "stem": "7 is a single-______ number.",
+   "ans": "digit",
+   "why": "single-digit number 一位数。",
+   "kd": "用法"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "\"125\" is a three-digits number.",
+   "ans": "three-digits → three-digit",
+   "why": "复合形容词里的名词用单数。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"15\" is one ______, but it has two digits.",
+   "opts": [
+    "number",
+    "digit",
+    "digital",
+    "finger"
+   ],
+   "why": "“数”是 number；digit 是 0–9 这十个数码。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Digit\" can also mean ______.",
+   "opts": [
+    "a finger or toe",
+    "a nose",
+    "an ear",
+    "a hair"
+   ],
+   "why": "digit 也指手指、脚趾。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

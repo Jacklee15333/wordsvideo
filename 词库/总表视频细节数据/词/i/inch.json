@@ -1,0 +1,94 @@
+{
+ "单词": "inch",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这条鱼有多长？\n听：The fish is about ten inches long.\nA. 大约十厘米\nB. 大约十米\nC. 大约十英寸\nD. 大约一英寸",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The snow is six ______ deep.\nA. inch\nB. inches\nC. inchs\nD. inched\n考点：变形",
+  "题目3": "【选词填空】从 inch、foot 中选一个，用适当形式填空。\n题干：There are twelve inches in a ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The plant grows one ______ every week. (inch)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The worm moved forward inch by inches.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他一点一点地往前挪。\n题干：He moved forward ______ by ______.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The box is twelve inches long, or one ______.\nA. feet\nB. foots\nC. inch\nD. foot\n考点：易混",
+  "答案": "【1】C（大约十英寸）\n讲解：inch 英寸。\n【2】B（inches）\n讲解：six 后面用复数 inches（加 es）。\n【3】foot\n讲解：一英尺等于十二英寸，foot。\n【4】inch\n讲解：one 后面用单数 inch。\n【5】inches → inch\n讲解：inch by inch 一点一点地，是固定说法。\n【6】inch；inch\n讲解：inch by inch 一点一点地。\n【7】D（foot）\n讲解：十二英寸就是一英尺，one 后面用单数 foot。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这条鱼有多长？",
+   "listen": "The fish is about ten inches long.",
+   "opts": [
+    "大约十英寸",
+    "大约十厘米",
+    "大约十米",
+    "大约一英寸"
+   ],
+   "why": "inch 英寸。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The snow is six ______ deep.",
+   "opts": [
+    "inches",
+    "inch",
+    "inchs",
+    "inched"
+   ],
+   "why": "six 后面用复数 inches（加 es）。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 inch、foot 中选一个，用适当形式填空。",
+   "stem": "There are twelve inches in a ______.",
+   "ans": "foot",
+   "why": "一英尺等于十二英寸，foot。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The plant grows one ______ every week. (inch)",
+   "ans": "inch",
+   "why": "one 后面用单数 inch。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The worm moved forward inch by inches.",
+   "ans": "inches → inch",
+   "why": "inch by inch 一点一点地，是固定说法。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他一点一点地往前挪。",
+   "stem": "He moved forward ______ by ______.",
+   "ans": "inch；inch",
+   "why": "inch by inch 一点一点地。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The box is twelve inches long, or one ______.",
+   "opts": [
+    "foot",
+    "feet",
+    "foots",
+    "inch"
+   ],
+   "why": "十二英寸就是一英尺，one 后面用单数 foot。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

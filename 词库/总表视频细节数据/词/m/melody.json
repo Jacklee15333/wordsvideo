@@ -1,0 +1,93 @@
+{
+ "单词": "melody",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人喜欢这首歌的什么？\n听：I love the melody of this song.\nA. 歌词\nB. 歌手\nC. 舞蹈\nD. 旋律",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The song has a sweet ______.\nA. melody\nB. melodies\nC. melodic\nD. melodious",
+  "题目3": "【选词填空】从 melody、rhythm 中选一个，用适当形式填空。\n题干：Clap your hands to the ______ of the music.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She can play many beautiful ______ on the piano. (melody)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The two singers sang in harmony, and the melodys were lovely.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：When several notes are played together nicely, we call it ______.\nA. melody\nB. rhythm\nC. harmony\nD. noise\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：她的声音很悦耳。\n题干：She has a ______ voice.\n考点：词性转换",
+  "答案": "【1】D（旋律）\n讲解：melody 旋律。\n【2】A（melody）\n讲解：a sweet 后接单数 melody。\n【3】rhythm\n讲解：拍手跟着的是节奏 rhythm。\n【4】melodies\n讲解：many 后接复数，y 变 i 加 es。\n【5】melodys → melodies\n讲解：melody 复数 y 变 i 加 es。\n【6】C（harmony）\n讲解：同时发声的几个音配成和声 harmony。\n【7】melodious\n讲解：“悦耳的”用 melodious。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人喜欢这首歌的什么？",
+   "listen": "I love the melody of this song.",
+   "opts": [
+    "旋律",
+    "歌词",
+    "歌手",
+    "舞蹈"
+   ],
+   "why": "melody 旋律。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The song has a sweet ______.",
+   "opts": [
+    "melody",
+    "melodies",
+    "melodic",
+    "melodious"
+   ],
+   "why": "a sweet 后接单数 melody。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 melody、rhythm 中选一个，用适当形式填空。",
+   "stem": "Clap your hands to the ______ of the music.",
+   "ans": "rhythm",
+   "why": "拍手跟着的是节奏 rhythm。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She can play many beautiful ______ on the piano. (melody)",
+   "ans": "melodies",
+   "why": "many 后接复数，y 变 i 加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The two singers sang in harmony, and the melodys were lovely.",
+   "ans": "melodys → melodies",
+   "why": "melody 复数 y 变 i 加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "When several notes are played together nicely, we call it ______.",
+   "opts": [
+    "harmony",
+    "melody",
+    "rhythm",
+    "noise"
+   ],
+   "why": "同时发声的几个音配成和声 harmony。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她的声音很悦耳。",
+   "stem": "She has a ______ voice.",
+   "ans": "melodious",
+   "why": "“悦耳的”用 melodious。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "twelve",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人几点吃午饭？\n听：I have lunch at twelve o'clock.\nA. 十二点\nB. 十一点\nC. 两点\nD. 一点",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are ______ months in a year.\nA. twelfth\nB. twelve\nC. twenty\nD. twelves\n考点：易混",
+  "题目3": "【选词填空】从 twelve、twenty 中选一个，用适当形式填空。\n题干：Ten plus ten is ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are twelve ______ in the box. (egg)\n考点：用法",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：It is the twelveth day of our trip.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：一打就是十二个。\n题干：A ______ is twelve.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：It's 12:00. It's ______ now.\nA. twelfth o'clock\nB. twelve clock\nC. the twelve\nD. twelve o'clock\n考点：用法",
+  "答案": "【1】A（十二点）\n讲解：twelve o'clock 十二点。\n【2】B（twelve）\n讲解：一年有十二个月，用基数词 twelve。\n【3】twenty\n讲解：10 加 10 等于 20，用 twenty；twelve 是 12。\n【4】eggs\n讲解：twelve 后面接可数名词复数 eggs。\n【5】twelveth → twelfth\n讲解：twelve 变序数词要 ve 变 f 再加 th：twelfth。\n【6】dozen\n讲解：一打 dozen 就是十二个。\n【7】D（twelve o'clock）\n讲解：整点说“基数词 + o'clock”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人几点吃午饭？",
+   "listen": "I have lunch at twelve o'clock.",
+   "opts": [
+    "十二点",
+    "十一点",
+    "两点",
+    "一点"
+   ],
+   "why": "twelve o'clock 十二点。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are ______ months in a year.",
+   "opts": [
+    "twelve",
+    "twelfth",
+    "twenty",
+    "twelves"
+   ],
+   "why": "一年有十二个月，用基数词 twelve。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 twelve、twenty 中选一个，用适当形式填空。",
+   "stem": "Ten plus ten is ______.",
+   "ans": "twenty",
+   "why": "10 加 10 等于 20，用 twenty；twelve 是 12。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are twelve ______ in the box. (egg)",
+   "ans": "eggs",
+   "why": "twelve 后面接可数名词复数 eggs。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "It is the twelveth day of our trip.",
+   "ans": "twelveth → twelfth",
+   "why": "twelve 变序数词要 ve 变 f 再加 th：twelfth。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "一打就是十二个。",
+   "stem": "A ______ is twelve.",
+   "ans": "dozen",
+   "why": "一打 dozen 就是十二个。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It's 12:00. It's ______ now.",
+   "opts": [
+    "twelve o'clock",
+    "twelfth o'clock",
+    "twelve clock",
+    "the twelve"
+   ],
+   "why": "整点说“基数词 + o'clock”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

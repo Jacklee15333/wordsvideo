@@ -1,0 +1,94 @@
+{
+ "单词": "black-and-white",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人看了什么电影？\n听：I watched an old black-and-white film.\nA. 彩色电影\nB. 动画片\nC. 黑白电影\nD. 纪录片",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We found some old ______ photos at Grandma's.\nA. black and whites\nB. white-and-black\nC. black-and-white\nD. black-white-and",
+  "题目3": "【选词填空】从 black-and-white、colour 中选一个，用适当形式填空。\n题干：Today most TVs show pictures in ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Pandas are black-and-white animals, and they eats bamboo.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这个问题不是非黑即白那么简单。\n题干：The problem is not ______ ______ ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：When it comes before a noun, we write \"black-and-white\" ______.\nA. without spaces\nB. with hyphens\nC. in capitals\nD. backwards\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In English we say \"black and white\", not \"______\".\nA. black or white\nB. white and black\nC. black with white\nD. dark and light\n考点：用法",
+  "答案": "【1】C（黑白电影）\n讲解：black-and-white 黑白的。\n【2】C（black-and-white）\n讲解：固定顺序 black-and-white，作定语加连字符。\n【3】colour\n讲解：“彩色的”用 in colour。\n【4】eats → eat\n讲解：主语 they 是复数。\n【5】black；and；white\n讲解：black and white 黑白分明，作表语不加连字符。\n【6】B（with hyphens）\n讲解：作前置定语时加连字符。\n【7】B（white and black）\n讲解：英语顺序固定是 black and white。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人看了什么电影？",
+   "listen": "I watched an old black-and-white film.",
+   "opts": [
+    "黑白电影",
+    "彩色电影",
+    "动画片",
+    "纪录片"
+   ],
+   "why": "black-and-white 黑白的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We found some old ______ photos at Grandma's.",
+   "opts": [
+    "black-and-white",
+    "black and whites",
+    "white-and-black",
+    "black-white-and"
+   ],
+   "why": "固定顺序 black-and-white，作定语加连字符。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 black-and-white、colour 中选一个，用适当形式填空。",
+   "stem": "Today most TVs show pictures in ______.",
+   "ans": "colour",
+   "why": "“彩色的”用 in colour。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Pandas are black-and-white animals, and they eats bamboo.",
+   "ans": "eats → eat",
+   "why": "主语 they 是复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个问题不是非黑即白那么简单。",
+   "stem": "The problem is not ______ ______ ______.",
+   "ans": "black；and；white",
+   "why": "black and white 黑白分明，作表语不加连字符。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "When it comes before a noun, we write \"black-and-white\" ______.",
+   "opts": [
+    "with hyphens",
+    "without spaces",
+    "in capitals",
+    "backwards"
+   ],
+   "why": "作前置定语时加连字符。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In English we say \"black and white\", not \"______\".",
+   "opts": [
+    "white and black",
+    "black or white",
+    "black with white",
+    "dark and light"
+   ],
+   "why": "英语顺序固定是 black and white。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

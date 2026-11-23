@@ -1,0 +1,94 @@
+{
+ "单词": "disease",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说什么很危险？\n听：This disease is very dangerous.\nA. 这种病\nB. 这种药\nC. 这只动物\nD. 这种食物",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Doctors are fighting many ______.\nA. disease\nB. diseased\nC. illness\nD. diseases",
+  "题目3": "【选词填空】从 disease、illness 中选一个，用适当形式填空。\n题干：He was away from school for a week because of ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Heart disease are common in old people.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这种病是脏水引起的。\n题干：This disease is caused ______ dirty water.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Disease\" usually has a name and a cause, but \"______\" is more about feeling unwell.\nA. health\nB. illness\nC. medicine\nD. doctor\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Dis-\" in \"disease\" means \"______\", so it first meant \"not at ease\".\nA. very\nB. not\nC. again\nD. under\n考点：用法",
+  "答案": "【1】A（这种病）\n讲解：disease 疾病。\n【2】D（diseases）\n讲解：many 后面用复数。\n【3】illness\n讲解：“生病”这种状态用 illness。\n【4】are → is\n讲解：heart disease 作主语，谓语用单数。\n【5】by\n讲解：被动语态用 by 引出原因。\n【6】B（illness）\n讲解：illness 偏“生病这种状态”。\n【7】B（not）\n讲解：dis- 表示“不”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说什么很危险？",
+   "listen": "This disease is very dangerous.",
+   "opts": [
+    "这种病",
+    "这种药",
+    "这只动物",
+    "这种食物"
+   ],
+   "why": "disease 疾病。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Doctors are fighting many ______.",
+   "opts": [
+    "diseases",
+    "disease",
+    "diseased",
+    "illness"
+   ],
+   "why": "many 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 disease、illness 中选一个，用适当形式填空。",
+   "stem": "He was away from school for a week because of ______.",
+   "ans": "illness",
+   "why": "“生病”这种状态用 illness。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Heart disease are common in old people.",
+   "ans": "are → is",
+   "why": "heart disease 作主语，谓语用单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这种病是脏水引起的。",
+   "stem": "This disease is caused ______ dirty water.",
+   "ans": "by",
+   "why": "被动语态用 by 引出原因。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Disease\" usually has a name and a cause, but \"______\" is more about feeling unwell.",
+   "opts": [
+    "illness",
+    "health",
+    "medicine",
+    "doctor"
+   ],
+   "why": "illness 偏“生病这种状态”。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Dis-\" in \"disease\" means \"______\", so it first meant \"not at ease\".",
+   "opts": [
+    "not",
+    "very",
+    "again",
+    "under"
+   ],
+   "why": "dis- 表示“不”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

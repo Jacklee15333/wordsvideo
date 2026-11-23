@@ -1,0 +1,91 @@
+{
+ "单词": "shopping",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人周末要做什么？\n听：I'm going shopping with my mum this weekend.\nA. 和妈妈购物\nB. 和妈妈做饭\nC. 去看病\nD. 去上学",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Let's go ______ after school.\nA. shopping\nB. shop\nC. shoping\nD. to shop",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many ______ in the new mall. (shop)",
+  "题目4": "【选词填空】从 shopping、shop 中选一个，用适当形式填空。\n题干：There is a new ______ near my home.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She put all her shoppings on the table.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这个购物中心很大。\n题干：This ______ ______ is very big.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There ______ a lot of shopping in the car.\nA. are\nB. were\nC. have\nD. is\n考点：变形",
+  "答案": "【1】A（和妈妈购物）\n讲解：go shopping 购物。\n【2】A（shopping）\n讲解：go shopping 去购物。\n【3】shops\n讲解：many 后接复数 shops。\n【4】shop\n讲解：一家店用可数名词 shop。\n【5】shoppings → shopping\n讲解：shopping 不可数，没有复数。\n【6】shopping；centre\n讲解：shopping centre 购物中心。\n【7】D（is）\n讲解：shopping 不可数，谓语用 is。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人周末要做什么？",
+   "listen": "I'm going shopping with my mum this weekend.",
+   "opts": [
+    "和妈妈购物",
+    "和妈妈做饭",
+    "去看病",
+    "去上学"
+   ],
+   "why": "go shopping 购物。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Let's go ______ after school.",
+   "opts": [
+    "shopping",
+    "shop",
+    "shoping",
+    "to shop"
+   ],
+   "why": "go shopping 去购物。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many ______ in the new mall. (shop)",
+   "ans": "shops",
+   "why": "many 后接复数 shops。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 shopping、shop 中选一个，用适当形式填空。",
+   "stem": "There is a new ______ near my home.",
+   "ans": "shop",
+   "why": "一家店用可数名词 shop。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She put all her shoppings on the table.",
+   "ans": "shoppings → shopping",
+   "why": "shopping 不可数，没有复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个购物中心很大。",
+   "stem": "This ______ ______ is very big.",
+   "ans": "shopping；centre",
+   "why": "shopping centre 购物中心。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There ______ a lot of shopping in the car.",
+   "opts": [
+    "is",
+    "are",
+    "were",
+    "have"
+   ],
+   "why": "shopping 不可数，谓语用 is。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

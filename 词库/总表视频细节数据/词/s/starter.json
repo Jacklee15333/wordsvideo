@@ -1,0 +1,93 @@
+{
+ "单词": "starter",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：谁开枪发令？\n听：The starter fired the gun and the race began.\nA. 发令员\nB. 运动员\nC. 观众\nD. 教练",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ raised his gun, and the runners got ready.\nA. start\nB. starting\nC. started\nD. starter",
+  "题目3": "【选词填空】从 start、starter 中选一个，用适当形式填空。\n题干：The race will ______ at nine.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are two ______ at the sports meeting. (starter)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：For starter, we need a plan.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：首先，我们需要更多钱。\n题干：For ______, we need more money.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The race started when the gun ______.\nA. went on\nB. went off\nC. went up\nD. went out\n考点：短语",
+  "答案": "【1】A（发令员）\n讲解：starter 发令员。\n【2】D（starter）\n讲解：发令员是 starter。\n【3】start\n讲解：will 后面用原形 start。\n【4】starters\n讲解：two 后面用复数 starters。\n【5】starter → starters\n讲解：for starters 首先，要用复数。\n【6】starters\n讲解：for starters（口语）首先。\n【7】B（went off）\n讲解：枪响了 the gun went off。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：谁开枪发令？",
+   "listen": "The starter fired the gun and the race began.",
+   "opts": [
+    "发令员",
+    "运动员",
+    "观众",
+    "教练"
+   ],
+   "why": "starter 发令员。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ raised his gun, and the runners got ready.",
+   "opts": [
+    "starter",
+    "start",
+    "starting",
+    "started"
+   ],
+   "why": "发令员是 starter。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 start、starter 中选一个，用适当形式填空。",
+   "stem": "The race will ______ at nine.",
+   "ans": "start",
+   "why": "will 后面用原形 start。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are two ______ at the sports meeting. (starter)",
+   "ans": "starters",
+   "why": "two 后面用复数 starters。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "For starter, we need a plan.",
+   "ans": "starter → starters",
+   "why": "for starters 首先，要用复数。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "首先，我们需要更多钱。",
+   "stem": "For ______, we need more money.",
+   "ans": "starters",
+   "why": "for starters（口语）首先。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The race started when the gun ______.",
+   "opts": [
+    "went off",
+    "went on",
+    "went up",
+    "went out"
+   ],
+   "why": "枪响了 the gun went off。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

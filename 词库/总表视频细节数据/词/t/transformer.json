@@ -1,0 +1,93 @@
+{
+ "单词": "transformer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个东西是做什么的？\n听：The transformer changes the power.\nA. 发光\nB. 加热\nC. 改变电压\nD. 制冷",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ changes the power for your computer.\nA. transform\nB. transformation\nC. transport\nD. transformer\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The city needs more ______. (transformer)\n考点：变形",
+  "题目4": "【选词填空】从 transformer、translator 中选一个，用适当形式填空。\n题干：The ______ helped the two leaders understand each other.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The transformer are broken.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A transformer changes ______.\nA. water\nB. electric power\nC. food\nD. clothes\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这个房间被彻底改造了。\n题干：The room was completely ______.\n考点：词性转换",
+  "答案": "【1】C（改变电压）\n讲解：transformer 变压器。\n【2】D（transformer）\n讲解：改变电压的是变压器 transformer。\n【3】transformers\n讲解：more 后面用复数 transformers。\n【4】translator\n讲解：帮人沟通的“翻译”是 translator。\n【5】are → is\n讲解：主语 transformer 单数，谓语用 is。\n【6】B（electric power）\n讲解：变压器改变电压。\n【7】transformed\n讲解：被动语态用过去分词 transformed。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个东西是做什么的？",
+   "listen": "The transformer changes the power.",
+   "opts": [
+    "改变电压",
+    "发光",
+    "加热",
+    "制冷"
+   ],
+   "why": "transformer 变压器。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ changes the power for your computer.",
+   "opts": [
+    "transformer",
+    "transform",
+    "transformation",
+    "transport"
+   ],
+   "why": "改变电压的是变压器 transformer。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The city needs more ______. (transformer)",
+   "ans": "transformers",
+   "why": "more 后面用复数 transformers。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 transformer、translator 中选一个，用适当形式填空。",
+   "stem": "The ______ helped the two leaders understand each other.",
+   "ans": "translator",
+   "why": "帮人沟通的“翻译”是 translator。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The transformer are broken.",
+   "ans": "are → is",
+   "why": "主语 transformer 单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A transformer changes ______.",
+   "opts": [
+    "electric power",
+    "water",
+    "food",
+    "clothes"
+   ],
+   "why": "变压器改变电压。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个房间被彻底改造了。",
+   "stem": "The room was completely ______.",
+   "ans": "transformed",
+   "why": "被动语态用过去分词 transformed。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

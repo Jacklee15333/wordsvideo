@@ -1,0 +1,94 @@
+{
+ "单词": "tile",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：屋顶上是什么？\n听：The roof is covered with red tiles.\nA. 雪\nB. 树叶\nC. 红瓦\nD. 太阳能板",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The roof is covered with red ______.\nA. tiles\nB. tile\nC. tiled\nD. tiling\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：They ______ the kitchen floor last year. (tile)\n考点：变形",
+  "题目4": "【选词填空】从 tiles、bricks 中选一个，用适当形式填空。\n题干：The old wall is made of red ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：A tile fell off the roof, so the roof was perfect.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Tiles are usually found on ______.\nA. trees\nB. clouds\nC. books\nD. floors and roofs\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：地上有一块大瓷砖。\n题干：There is a big ______ on the floor.\n考点：用法",
+  "答案": "【1】C（红瓦）\n讲解：tile 瓦。\n【2】A（tiles）\n讲解：covered with 后面用复数 tiles。\n【3】tiled\n讲解：last year 用过去式 tiled（铺瓷砖）。\n【4】bricks\n讲解：砌墙用砖 brick；tile 是瓦、瓷砖片。\n【5】perfect → broken\n讲解：掉了瓦，屋顶就坏了。\n【6】D（floors and roofs）\n讲解：瓷砖、瓦多在地上和屋顶上。\n【7】tile\n讲解：a big 后面用单数 tile。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：屋顶上是什么？",
+   "listen": "The roof is covered with red tiles.",
+   "opts": [
+    "红瓦",
+    "雪",
+    "树叶",
+    "太阳能板"
+   ],
+   "why": "tile 瓦。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The roof is covered with red ______.",
+   "opts": [
+    "tiles",
+    "tile",
+    "tiled",
+    "tiling"
+   ],
+   "why": "covered with 后面用复数 tiles。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "They ______ the kitchen floor last year. (tile)",
+   "ans": "tiled",
+   "why": "last year 用过去式 tiled（铺瓷砖）。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tiles、bricks 中选一个，用适当形式填空。",
+   "stem": "The old wall is made of red ______.",
+   "ans": "bricks",
+   "why": "砌墙用砖 brick；tile 是瓦、瓷砖片。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "A tile fell off the roof, so the roof was perfect.",
+   "ans": "perfect → broken",
+   "why": "掉了瓦，屋顶就坏了。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Tiles are usually found on ______.",
+   "opts": [
+    "floors and roofs",
+    "trees",
+    "clouds",
+    "books"
+   ],
+   "why": "瓷砖、瓦多在地上和屋顶上。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "地上有一块大瓷砖。",
+   "stem": "There is a big ______ on the floor.",
+   "ans": "tile",
+   "why": "a big 后面用单数 tile。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

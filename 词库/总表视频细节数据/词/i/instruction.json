@@ -1,0 +1,96 @@
+{
+ "单词": "instruction",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：用之前先做什么？\n听：Read the instructions before you use it.\nA. 洗手\nB. 充电\nC. 打电话\nD. 看说明书",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Follow the ______ on the box.\nA. instruct\nB. instructions\nC. instructor\nD. instructive\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The teacher will ______ us how to do it. (instruction)\n考点：词性转换",
+  "题目4": "【选词填空】从 instruction、introduction 中选一个，用适当形式填空。\n题干：Please write a short ______ about yourself.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He gave us clear instruction on how to cook it.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：We are ______ instructions to stay inside.\nA. in\nB. at\nC. on\nD. under\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：This is an ______ video for new teachers.\nA. instructional\nB. instruction\nC. instruct\nD. instructor\n考点：词性转换",
+  "答案": "【1】D（看说明书）\n讲解：instructions 用法说明。\n【2】B（instructions）\n讲解：盒子上的说明用复数 instructions。\n【3】instruct\n讲解：will 后面用动词原形 instruct。\n【4】introduction\n讲解：自我介绍是 introduction。\n【5】instruction → instructions\n讲解：作“指示”多用复数。\n【6】D（under）\n讲解：be under instructions to do 奉命做。\n【7】A（instructional）\n讲解：修饰 video 用形容词 instructional（教学的）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：用之前先做什么？",
+   "listen": "Read the instructions before you use it.",
+   "opts": [
+    "看说明书",
+    "洗手",
+    "充电",
+    "打电话"
+   ],
+   "why": "instructions 用法说明。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Follow the ______ on the box.",
+   "opts": [
+    "instructions",
+    "instruct",
+    "instructor",
+    "instructive"
+   ],
+   "why": "盒子上的说明用复数 instructions。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The teacher will ______ us how to do it. (instruction)",
+   "ans": "instruct",
+   "why": "will 后面用动词原形 instruct。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 instruction、introduction 中选一个，用适当形式填空。",
+   "stem": "Please write a short ______ about yourself.",
+   "ans": "introduction",
+   "why": "自我介绍是 introduction。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He gave us clear instruction on how to cook it.",
+   "ans": "instruction → instructions",
+   "why": "作“指示”多用复数。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We are ______ instructions to stay inside.",
+   "opts": [
+    "under",
+    "in",
+    "at",
+    "on"
+   ],
+   "why": "be under instructions to do 奉命做。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This is an ______ video for new teachers.",
+   "opts": [
+    "instructional",
+    "instruction",
+    "instruct",
+    "instructor"
+   ],
+   "why": "修饰 video 用形容词 instructional（教学的）。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

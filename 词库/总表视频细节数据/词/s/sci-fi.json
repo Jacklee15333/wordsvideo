@@ -1,0 +1,97 @@
+{
+ "单词": "sci-fi",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人今晚想看什么电影？\n听：Let's watch a sci-fi movie tonight.\nA. 爱情电影\nB. 动画片\nC. 纪录片\nD. 科幻电影",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My brother loves ______ movies.\nA. sci-fis\nB. sci-fies\nC. sci-fiing\nD. sci-fi\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：“Sci-fi” is short for “science ______”. (fiction)\n考点：用法",
+  "题目4": "【选词填空】从 sci-fi、science 中选一个，用适当形式填空。\n题干：We do experiments in ______ class.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The Three-Body Problem are a famous sci-fi novel.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：There ______ a lot of sci-fi on TV these days.\nA. are\nB. is\nC. be\nD. were\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Many fans prefer “science fiction” ______ “sci-fi”.\nA. than\nB. for\nC. to\nD. with\n考点：用法",
+  "答案": "【1】D（科幻电影）\n讲解：sci-fi 科幻。\n【2】D（sci-fi）\n讲解：作定语用 sci-fi，不加 s。\n【3】fiction\n讲解：sci-fi 是 science fiction 的简称。\n【4】science\n讲解：科学课是 science class。\n【5】are → is\n讲解：书名作主语是单数，用 is。\n【6】B（is）\n讲解：sci-fi 作总称不可数，谓语用单数。\n【7】C（to）\n讲解：prefer A to B 喜欢 A 胜过 B。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人今晚想看什么电影？",
+   "listen": "Let's watch a sci-fi movie tonight.",
+   "opts": [
+    "科幻电影",
+    "爱情电影",
+    "动画片",
+    "纪录片"
+   ],
+   "why": "sci-fi 科幻。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My brother loves ______ movies.",
+   "opts": [
+    "sci-fi",
+    "sci-fis",
+    "sci-fies",
+    "sci-fiing"
+   ],
+   "why": "作定语用 sci-fi，不加 s。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "“Sci-fi” is short for “science ______”. (fiction)",
+   "ans": "fiction",
+   "why": "sci-fi 是 science fiction 的简称。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 sci-fi、science 中选一个，用适当形式填空。",
+   "stem": "We do experiments in ______ class.",
+   "ans": "science",
+   "why": "科学课是 science class。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The Three-Body Problem are a famous sci-fi novel.",
+   "ans": "are → is",
+   "why": "书名作主语是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There ______ a lot of sci-fi on TV these days.",
+   "opts": [
+    "is",
+    "are",
+    "be",
+    "were"
+   ],
+   "why": "sci-fi 作总称不可数，谓语用单数。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Many fans prefer “science fiction” ______ “sci-fi”.",
+   "opts": [
+    "to",
+    "than",
+    "for",
+    "with"
+   ],
+   "why": "prefer A to B 喜欢 A 胜过 B。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

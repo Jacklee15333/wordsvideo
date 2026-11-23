@@ -1,0 +1,94 @@
+{
+ "单词": "easy",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：考试怎么样？\n听：The test was very easy.\nA. 很难\nB. 很长\nC. 很无聊\nD. 很容易",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This question is ______ than that one.\nA. easyer\nB. more easy\nC. easier\nD. easiest",
+  "题目3": "【选词填空】从 easy、easily 中选一个，用适当形式填空。\n题干：He passed the test ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：It's not easy learn English well.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：别着急，慢慢来。\n题干：______ it easy.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：English is not ______ for me.\nA. easily\nB. easy\nC. ease\nD. easiest\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Easy\" and \"simple\" both mean \"not ______\".\nA. difficult\nB. big\nC. cheap\nD. old\n考点：易混",
+  "答案": "【1】D（很容易）\n讲解：easy 容易的。\n【2】C（easier）\n讲解：y 变 i 加 er。\n【3】easily\n讲解：修饰动词 passed 用副词。\n【4】learn → to learn\n讲解：It's easy to do sth。\n【5】Take\n讲解：take it easy 别着急。\n【6】B（easy）\n讲解：be 后面用形容词原级。\n【7】A（difficult）\n讲解：easy 和 simple 都是“不难”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：考试怎么样？",
+   "listen": "The test was very easy.",
+   "opts": [
+    "很容易",
+    "很难",
+    "很长",
+    "很无聊"
+   ],
+   "why": "easy 容易的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This question is ______ than that one.",
+   "opts": [
+    "easier",
+    "easyer",
+    "more easy",
+    "easiest"
+   ],
+   "why": "y 变 i 加 er。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 easy、easily 中选一个，用适当形式填空。",
+   "stem": "He passed the test ______.",
+   "ans": "easily",
+   "why": "修饰动词 passed 用副词。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "It's not easy learn English well.",
+   "ans": "learn → to learn",
+   "why": "It's easy to do sth。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "别着急，慢慢来。",
+   "stem": "______ it easy.",
+   "ans": "Take",
+   "why": "take it easy 别着急。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "English is not ______ for me.",
+   "opts": [
+    "easy",
+    "easily",
+    "ease",
+    "easiest"
+   ],
+   "why": "be 后面用形容词原级。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Easy\" and \"simple\" both mean \"not ______\".",
+   "opts": [
+    "difficult",
+    "big",
+    "cheap",
+    "old"
+   ],
+   "why": "easy 和 simple 都是“不难”。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

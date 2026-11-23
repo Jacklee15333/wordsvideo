@@ -1,0 +1,94 @@
+{
+ "单词": "property",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：那座房子是谁的？\n听：That house is my uncle's property.\nA. 叔叔的\nB. 学校的\nC. 政府的\nD. 邻居的",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He owns several ______ in the city.\nA. property\nB. properties\nC. propertys\nD. proper",
+  "题目3": "【选词填空】从 property、wealth 中选一个，用适当形式填空。\n题干：He has great ______. He is one of the richest men in the country.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：These books are school properties.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这是他的私人财产。\n题干：This is his private ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Property\" can also mean ______, such as houses.\nA. cars\nB. pets\nC. books\nD. buildings and land\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Lost property\" is a place where you can find things that people have ______.\nA. lost\nB. bought\nC. sold\nD. made\n考点：短语",
+  "答案": "【1】A（叔叔的）\n讲解：property 财产。\n【2】B（properties）\n讲解：several 后面用复数，y 变 i 加 es。\n【3】wealth\n讲解：财富总量用 wealth。\n【4】properties → property\n讲解：“公物”泛指时不可数。\n【5】property\n讲解：私人财产 private property。\n【6】D（buildings and land）\n讲解：property 也指房地产。\n【7】A（lost）\n讲解：lost property 失物招领处。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：那座房子是谁的？",
+   "listen": "That house is my uncle's property.",
+   "opts": [
+    "叔叔的",
+    "学校的",
+    "政府的",
+    "邻居的"
+   ],
+   "why": "property 财产。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He owns several ______ in the city.",
+   "opts": [
+    "properties",
+    "property",
+    "propertys",
+    "proper"
+   ],
+   "why": "several 后面用复数，y 变 i 加 es。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 property、wealth 中选一个，用适当形式填空。",
+   "stem": "He has great ______. He is one of the richest men in the country.",
+   "ans": "wealth",
+   "why": "财富总量用 wealth。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "These books are school properties.",
+   "ans": "properties → property",
+   "why": "“公物”泛指时不可数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是他的私人财产。",
+   "stem": "This is his private ______.",
+   "ans": "property",
+   "why": "私人财产 private property。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Property\" can also mean ______, such as houses.",
+   "opts": [
+    "buildings and land",
+    "cars",
+    "pets",
+    "books"
+   ],
+   "why": "property 也指房地产。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Lost property\" is a place where you can find things that people have ______.",
+   "opts": [
+    "lost",
+    "bought",
+    "sold",
+    "made"
+   ],
+   "why": "lost property 失物招领处。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

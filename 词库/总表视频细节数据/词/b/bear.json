@@ -1,0 +1,94 @@
+{
+ "单词": "bear",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：动物园里有什么？\n听：There is a big brown bear in the zoo.\nA. 一只老虎\nB. 一头狮子\nC. 一只棕熊\nD. 一只熊猫",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I can't ______ the noise any longer.\nA. bear\nB. bare\nC. beer\nD. bore\n考点：易混",
+  "题目3": "【选词填空】从 bear、bare 中选一个，用适当形式填空。\n题干：The trees are ______ in winter; there are no leaves.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The pain was ______. I cried all night. (bear)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We saw two bear in the forest.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她生了一个女儿。\n题干：She ______ a daughter.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Polar ______ live in very cold places.\nA. bear\nB. beer\nC. bears\nD. bares\n考点：变形",
+  "答案": "【1】C（一只棕熊）\n讲解：bear 熊。\n【2】A（bear）\n讲解：“忍受”用动词 bear，can't bear 受不了。\n【3】bare\n讲解：“光秃秃的”用 bare，和 bear 读音一样。\n【4】unbearable\n讲解：难以忍受的 unbearable。\n【5】bear → bears\n讲解：two 后面用复数 bears。\n【6】bore\n讲解：bear 的过去式 bore（生）。\n【7】C（bears）\n讲解：北极熊泛指用复数 bears。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：动物园里有什么？",
+   "listen": "There is a big brown bear in the zoo.",
+   "opts": [
+    "一只棕熊",
+    "一只老虎",
+    "一头狮子",
+    "一只熊猫"
+   ],
+   "why": "bear 熊。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I can't ______ the noise any longer.",
+   "opts": [
+    "bear",
+    "bare",
+    "beer",
+    "bore"
+   ],
+   "why": "“忍受”用动词 bear，can't bear 受不了。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 bear、bare 中选一个，用适当形式填空。",
+   "stem": "The trees are ______ in winter; there are no leaves.",
+   "ans": "bare",
+   "why": "“光秃秃的”用 bare，和 bear 读音一样。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The pain was ______. I cried all night. (bear)",
+   "ans": "unbearable",
+   "why": "难以忍受的 unbearable。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We saw two bear in the forest.",
+   "ans": "bear → bears",
+   "why": "two 后面用复数 bears。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她生了一个女儿。",
+   "stem": "She ______ a daughter.",
+   "ans": "bore",
+   "why": "bear 的过去式 bore（生）。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Polar ______ live in very cold places.",
+   "opts": [
+    "bears",
+    "bear",
+    "beer",
+    "bares"
+   ],
+   "why": "北极熊泛指用复数 bears。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

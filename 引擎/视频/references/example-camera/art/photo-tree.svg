@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 236">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6EC3F0"/><stop offset="1" stop-color="#DDF2FC"/></linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8BD067"/><stop offset="1" stop-color="#4E9C38"/></linearGradient>
+    <radialGradient id="leaf" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#7BCB5A"/><stop offset="1" stop-color="#2F7D32"/></radialGradient>
+  </defs>
+  <rect x="8" y="10" width="288" height="222" rx="6" fill="#000" opacity=".18"/>
+  <rect x="2" y="2" width="288" height="222" rx="6" fill="#FFFFFF"/>
+  <rect x="16" y="16" width="260" height="194" fill="url(#sky)"/>
+  <circle cx="236" cy="54" r="18" fill="#FFD54F"/>
+  <path d="M16 158 Q90 132 160 150 Q220 166 276 146 L276 210 L16 210 Z" fill="url(#g)"/>
+  <rect x="104" y="104" width="12" height="62" fill="#7B4A26"/>
+  <circle cx="110" cy="90" r="34" fill="url(#leaf)"/><circle cx="86" cy="108" r="22" fill="url(#leaf)"/><circle cx="134" cy="108" r="22" fill="url(#leaf)"/>
+  <circle cx="100" cy="80" r="9" fill="#FFFFFF" opacity=".18"/>
+</svg>

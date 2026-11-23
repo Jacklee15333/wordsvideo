@@ -1,0 +1,94 @@
+{
+ "单词": "firewood",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：爷爷在做什么？\n听：Grandpa is chopping firewood.\nA. 做饭\nB. 种树\nC. 劈柴\nD. 修车",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We need some ______ for the fire.\nA. firewoods\nB. a firewood\nC. fire woods\nD. firewood",
+  "题目3": "【选词填空】从 firewood、fireworks 中选一个，用适当形式填空。\n题干：We watched the ______ in the night sky.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He bought three firewoods.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我们用木柴生火。\n题干：We made a fire ______ firewood.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：We say \"a ______ of firewood\".\nA. bowl\nB. piece\nC. cup\nD. bottle\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Firewood is wood used for ______.\nA. building\nB. writing\nC. burning\nD. eating\n考点：用法",
+  "答案": "【1】C（劈柴）\n讲解：firewood 柴火。\n【2】D（firewood）\n讲解：firewood 不可数。\n【3】fireworks\n讲解：夜空中看的是烟花。\n【4】three firewoods → three bundles of firewood\n讲解：firewood 不可数，要用量词。\n【5】with\n讲解：用……生火 with。\n【6】B（piece）\n讲解：firewood 不可数，“一块木柴”用 a piece of。\n【7】C（burning）\n讲解：柴火是用来烧的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：爷爷在做什么？",
+   "listen": "Grandpa is chopping firewood.",
+   "opts": [
+    "劈柴",
+    "做饭",
+    "种树",
+    "修车"
+   ],
+   "why": "firewood 柴火。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We need some ______ for the fire.",
+   "opts": [
+    "firewood",
+    "firewoods",
+    "a firewood",
+    "fire woods"
+   ],
+   "why": "firewood 不可数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 firewood、fireworks 中选一个，用适当形式填空。",
+   "stem": "We watched the ______ in the night sky.",
+   "ans": "fireworks",
+   "why": "夜空中看的是烟花。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He bought three firewoods.",
+   "ans": "three firewoods → three bundles of firewood",
+   "why": "firewood 不可数，要用量词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们用木柴生火。",
+   "stem": "We made a fire ______ firewood.",
+   "ans": "with",
+   "why": "用……生火 with。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We say \"a ______ of firewood\".",
+   "opts": [
+    "piece",
+    "bowl",
+    "cup",
+    "bottle"
+   ],
+   "why": "firewood 不可数，“一块木柴”用 a piece of。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Firewood is wood used for ______.",
+   "opts": [
+    "burning",
+    "building",
+    "writing",
+    "eating"
+   ],
+   "why": "柴火是用来烧的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

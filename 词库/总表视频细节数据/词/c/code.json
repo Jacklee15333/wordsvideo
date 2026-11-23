@@ -1,0 +1,92 @@
+{
+ "单词": "code",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：进门需要什么？\n听：You need a code to open the door.\nA. 一把钥匙\nB. 一张卡\nC. 一张票\nD. 一个密码",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The school has a dress ______.\nA. codes\nB. coded\nC. code\nD. coding",
+  "题目3": "【选词填空】从 code、password 中选一个，用适当形式填空。\n题干：Please type your ______ to log in to the email.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Scientists broke three secret ______ in the war. (code)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：What is your post code?",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：He likes ______; he writes programs every day.\nA. code\nB. coding\nC. codes\nD. coded\n考点：词性转换",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：士兵们破译了这个密码。\n题干：The soldiers ______ the code.\n考点：用法",
+  "答案": "【1】D（一个密码）\n讲解：code 密码。\n【2】C（code）\n讲解：dress code 着装规定。\n【3】password\n讲解：登录口令是 password。\n【4】codes\n讲解：three 后接复数 codes。\n【5】post code → postcode\n讲解：邮政编码 postcode 是一个词。\n【6】B（coding）\n讲解：like doing，写代码 coding。\n【7】broke\n讲解：break a code 破解密码，过去式 broke。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：进门需要什么？",
+   "listen": "You need a code to open the door.",
+   "opts": [
+    "一个密码",
+    "一把钥匙",
+    "一张卡",
+    "一张票"
+   ],
+   "why": "code 密码。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The school has a dress ______.",
+   "opts": [
+    "code",
+    "codes",
+    "coded",
+    "coding"
+   ],
+   "why": "dress code 着装规定。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 code、password 中选一个，用适当形式填空。",
+   "stem": "Please type your ______ to log in to the email.",
+   "ans": "password",
+   "why": "登录口令是 password。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Scientists broke three secret ______ in the war. (code)",
+   "ans": "codes",
+   "why": "three 后接复数 codes。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "What is your post code?",
+   "ans": "post code → postcode",
+   "why": "邮政编码 postcode 是一个词。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He likes ______; he writes programs every day.",
+   "opts": [
+    "coding",
+    "code",
+    "codes",
+    "coded"
+   ],
+   "why": "like doing，写代码 coding。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "士兵们破译了这个密码。",
+   "stem": "The soldiers ______ the code.",
+   "ans": "broke",
+   "why": "break a code 破解密码，过去式 broke。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

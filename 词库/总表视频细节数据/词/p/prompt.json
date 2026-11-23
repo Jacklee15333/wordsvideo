@@ -1,0 +1,98 @@
+{
+ "单词": "prompt",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人感谢对方什么？\n听：Thank you for your prompt reply.\nA. 好听的歌\nB. 礼物\nC. 帮忙\nD. 及时的回复",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Thanks for your ______ reply.\nA. promptly\nB. promise\nC. prompted\nD. prompt\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：He arrived ______ at nine. (prompt)\n考点：词性转换",
+  "题目4": "【选词填空】从 prompt、quick 中选一个，用适当形式填空。\n题干：He is a ______ runner.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Her words prompted me to work hard, so I stopped studying.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Prompt means ______.\nA. 承诺\nB. 及时的、迅速的\nC. 推广\nD. 晚的\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The comparative of prompt is ______.\nA. prompted\nB. promptly\nC. prompter\nD. most prompt\n考点：变形",
+  "答案": "【1】D（及时的回复）\n讲解：prompt 及时的、迅速的。\n【2】D（prompt）\n讲解：修饰名词 reply 用形容词 prompt（及时的）。\n【3】promptly\n讲解：修饰动词 arrived 用副词 promptly（准时地）。\n【4】quick\n讲解：“速度快的”用 quick；prompt 是及时、马上。\n【5】stopped studying → studied harder\n讲解：她的话促使我更努力。\n【6】B（及时的、迅速的）\n讲解：prompt 迅速的、及时的。\n【7】C（prompter）\n讲解：prompt 的比较级是 prompter。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人感谢对方什么？",
+   "listen": "Thank you for your prompt reply.",
+   "opts": [
+    "及时的回复",
+    "好听的歌",
+    "礼物",
+    "帮忙"
+   ],
+   "why": "prompt 及时的、迅速的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Thanks for your ______ reply.",
+   "opts": [
+    "prompt",
+    "promptly",
+    "promise",
+    "prompted"
+   ],
+   "why": "修饰名词 reply 用形容词 prompt（及时的）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He arrived ______ at nine. (prompt)",
+   "ans": "promptly",
+   "why": "修饰动词 arrived 用副词 promptly（准时地）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 prompt、quick 中选一个，用适当形式填空。",
+   "stem": "He is a ______ runner.",
+   "ans": "quick",
+   "why": "“速度快的”用 quick；prompt 是及时、马上。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Her words prompted me to work hard, so I stopped studying.",
+   "ans": "stopped studying → studied harder",
+   "why": "她的话促使我更努力。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Prompt means ______.",
+   "opts": [
+    "及时的、迅速的",
+    "承诺",
+    "推广",
+    "晚的"
+   ],
+   "why": "prompt 迅速的、及时的。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The comparative of prompt is ______.",
+   "opts": [
+    "prompter",
+    "prompted",
+    "promptly",
+    "most prompt"
+   ],
+   "why": "prompt 的比较级是 prompter。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "donation",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：学校收到了什么？\n听：The school got a large donation.\nA. 一大笔捐款\nB. 一张账单\nC. 一个包裹\nD. 一封信",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Thank you for your kind ______.\nA. donation\nB. donate\nC. donor\nD. donated\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Many people ______ money after the flood. (donation)\n考点：词性转换",
+  "题目4": "【选词填空】从 donation、gift 中选一个，用适当形式填空。\n题干：I bought my mum a birthday ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：They made a donation, so they gave nothing.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A blood donation means ______.\nA. 买血\nB. 验血\nC. 流血\nD. 献血\n考点：短语",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：她是一名献血者。\n题干：She is a blood ______.\n考点：词性转换",
+  "答案": "【1】A（一大笔捐款）\n讲解：donation 捐赠。\n【2】A（donation）\n讲解：your kind 后面要名词 donation。\n【3】donated\n讲解：洪水过后，讲过去的事用过去式 donated。\n【4】gift\n讲解：生日礼物用 gift；donation 多指给慈善、公益的捐赠。\n【5】gave nothing → gave money\n讲解：捐赠就是给出东西。\n【6】D（献血）\n讲解：blood donation 献血。\n【7】donor\n讲解：“捐献者”是 donor。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：学校收到了什么？",
+   "listen": "The school got a large donation.",
+   "opts": [
+    "一大笔捐款",
+    "一张账单",
+    "一个包裹",
+    "一封信"
+   ],
+   "why": "donation 捐赠。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Thank you for your kind ______.",
+   "opts": [
+    "donation",
+    "donate",
+    "donor",
+    "donated"
+   ],
+   "why": "your kind 后面要名词 donation。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Many people ______ money after the flood. (donation)",
+   "ans": "donated",
+   "why": "洪水过后，讲过去的事用过去式 donated。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 donation、gift 中选一个，用适当形式填空。",
+   "stem": "I bought my mum a birthday ______.",
+   "ans": "gift",
+   "why": "生日礼物用 gift；donation 多指给慈善、公益的捐赠。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "They made a donation, so they gave nothing.",
+   "ans": "gave nothing → gave money",
+   "why": "捐赠就是给出东西。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A blood donation means ______.",
+   "opts": [
+    "献血",
+    "买血",
+    "验血",
+    "流血"
+   ],
+   "why": "blood donation 献血。",
+   "kd": "短语"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她是一名献血者。",
+   "stem": "She is a blood ______.",
+   "ans": "donor",
+   "why": "“捐献者”是 donor。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

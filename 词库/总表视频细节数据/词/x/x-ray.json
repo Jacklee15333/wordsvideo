@@ -1,0 +1,93 @@
+{
+ "单词": "x-ray",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：医生让他做什么？\n听：The doctor asked him to have an X-ray.\nA. 拍 X 光\nB. 吃药\nC. 打针\nD. 回家",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The doctor looked at the ______ of my arm.\nA. X-rays\nB. X-rayed\nC. X-ray\nD. X-raying",
+  "题目3": "【选词填空】从 X-ray、ray 中选一个，用适当形式填空。\n题干：A ______ of sunlight came into the room.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Your bags will be ______ at the airport. (X-ray)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The doctor is X-ray his leg now.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The doctor took two ______ of my chest last week.\nA. X-ray\nB. X-rayed\nC. X-raying\nD. X-rays\n考点：变形",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这台机器给行李拍 X 光。\n题干：This machine ______ the bags.\n考点：变形",
+  "答案": "【1】A（拍 X 光）\n讲解：have an X-ray 拍 X 光片。\n【2】C（X-ray）\n讲解：the … of my arm 一张 X 光片，单数。\n【3】ray\n讲解：一缕阳光是 ray。\n【4】X-rayed\n讲解：被动语态 be 后接过去分词。\n【5】X-ray → X-raying\n讲解：is … now 进行时用 X-raying。\n【6】D（X-rays）\n讲解：two 后接复数 X-rays。\n【7】X-rays\n讲解：作动词，主语三单加 s。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：医生让他做什么？",
+   "listen": "The doctor asked him to have an X-ray.",
+   "opts": [
+    "拍 X 光",
+    "吃药",
+    "打针",
+    "回家"
+   ],
+   "why": "have an X-ray 拍 X 光片。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The doctor looked at the ______ of my arm.",
+   "opts": [
+    "X-ray",
+    "X-rays",
+    "X-rayed",
+    "X-raying"
+   ],
+   "why": "the … of my arm 一张 X 光片，单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 X-ray、ray 中选一个，用适当形式填空。",
+   "stem": "A ______ of sunlight came into the room.",
+   "ans": "ray",
+   "why": "一缕阳光是 ray。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Your bags will be ______ at the airport. (X-ray)",
+   "ans": "X-rayed",
+   "why": "被动语态 be 后接过去分词。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The doctor is X-ray his leg now.",
+   "ans": "X-ray → X-raying",
+   "why": "is … now 进行时用 X-raying。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The doctor took two ______ of my chest last week.",
+   "opts": [
+    "X-rays",
+    "X-ray",
+    "X-rayed",
+    "X-raying"
+   ],
+   "why": "two 后接复数 X-rays。",
+   "kd": "变形"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这台机器给行李拍 X 光。",
+   "stem": "This machine ______ the bags.",
+   "ans": "X-rays",
+   "why": "作动词，主语三单加 s。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "residential",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人住在什么地方？\n听：I live in a quiet residential area.\nA. 热闹的商业区\nB. 工厂区\nC. 安静的住宅区\nD. 农村",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：No factories are allowed in this ______ area.\nA. residence\nB. resident\nC. reside\nD. residential",
+  "题目3": "【选词填空】从 residential、commercial 中选一个，用适当形式填空。\n题干：There are many shops and offices in the ______ area.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The ______ of the area are friendly. (residential)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The residential area are very quiet.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：At a residential school, students ______ at school.\nA. play\nB. live\nC. cook\nD. shop\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这是一条住宅街道，没有商店。\n题干：This is a residential street with ______ shops.\n考点：用法",
+  "答案": "【1】C（安静的住宅区）\n讲解：residential area 住宅区。\n【2】D（residential）\n讲解：名词 area 前用形容词 residential。\n【3】commercial\n讲解：商店和办公楼多的是商业区 commercial area。\n【4】residents\n讲解：the … of 后、are 前要复数名词 residents。\n【5】are → is\n讲解：主语 area 是单数，用 is。\n【6】B（live）\n讲解：residential 也指“寄宿的”，学生住在学校。\n【7】no\n讲解：with no shops 没有商店。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人住在什么地方？",
+   "listen": "I live in a quiet residential area.",
+   "opts": [
+    "安静的住宅区",
+    "热闹的商业区",
+    "工厂区",
+    "农村"
+   ],
+   "why": "residential area 住宅区。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "No factories are allowed in this ______ area.",
+   "opts": [
+    "residential",
+    "residence",
+    "resident",
+    "reside"
+   ],
+   "why": "名词 area 前用形容词 residential。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 residential、commercial 中选一个，用适当形式填空。",
+   "stem": "There are many shops and offices in the ______ area.",
+   "ans": "commercial",
+   "why": "商店和办公楼多的是商业区 commercial area。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The ______ of the area are friendly. (residential)",
+   "ans": "residents",
+   "why": "the … of 后、are 前要复数名词 residents。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The residential area are very quiet.",
+   "ans": "are → is",
+   "why": "主语 area 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "At a residential school, students ______ at school.",
+   "opts": [
+    "live",
+    "play",
+    "cook",
+    "shop"
+   ],
+   "why": "residential 也指“寄宿的”，学生住在学校。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是一条住宅街道，没有商店。",
+   "stem": "This is a residential street with ______ shops.",
+   "ans": "no",
+   "why": "with no shops 没有商店。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "guess",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让对方猜什么？\n听：Can you guess my age?\nA. 名字\nB. 生日\nC. 年龄\nD. 电话号码",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ what! I won the first prize!\nA. Guess\nB. Guessed\nC. Guesses\nD. Guessing",
+  "题目3": "【选词填空】从 guess、guest 中选一个，用适当形式填空。\n题干：We have a ______ for dinner tonight.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ the answer correctly yesterday. (guess)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He always guess right.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她正在猜盒子里有什么。\n题干：She is ______ what is in the box.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：He made three wrong ______.\nA. guesses\nB. guess\nC. guessed\nD. guessing\n考点：变形",
+  "答案": "【1】C（年龄）\n讲解：guess 猜。\n【2】A（Guess）\n讲解：Guess what! 你猜怎么着！\n【3】guest\n讲解：客人是 guest；guess 是猜。\n【4】guessed\n讲解：讲过去，用过去式 guessed。\n【5】guess → guesses\n讲解：主语单数，以 ss 结尾加 es。\n【6】guessing\n讲解：is 后面用现在分词 guessing。\n【7】A（guesses）\n讲解：three 后面用复数 guesses（加 es）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让对方猜什么？",
+   "listen": "Can you guess my age?",
+   "opts": [
+    "年龄",
+    "名字",
+    "生日",
+    "电话号码"
+   ],
+   "why": "guess 猜。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ what! I won the first prize!",
+   "opts": [
+    "Guess",
+    "Guessed",
+    "Guesses",
+    "Guessing"
+   ],
+   "why": "Guess what! 你猜怎么着！"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 guess、guest 中选一个，用适当形式填空。",
+   "stem": "We have a ______ for dinner tonight.",
+   "ans": "guest",
+   "why": "客人是 guest；guess 是猜。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ the answer correctly yesterday. (guess)",
+   "ans": "guessed",
+   "why": "讲过去，用过去式 guessed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He always guess right.",
+   "ans": "guess → guesses",
+   "why": "主语单数，以 ss 结尾加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她正在猜盒子里有什么。",
+   "stem": "She is ______ what is in the box.",
+   "ans": "guessing",
+   "why": "is 后面用现在分词 guessing。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He made three wrong ______.",
+   "opts": [
+    "guesses",
+    "guess",
+    "guessed",
+    "guessing"
+   ],
+   "why": "three 后面用复数 guesses（加 es）。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

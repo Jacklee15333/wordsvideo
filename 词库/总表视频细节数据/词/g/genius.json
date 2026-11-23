@@ -1,0 +1,94 @@
+{
+ "单词": "genius",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：爱因斯坦是什么人？\n听：Einstein was a genius.\nA. 歌手\nB. 天才\nC. 画家\nD. 运动员",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Einstein was a ______.\nA. genus\nB. genie\nC. genius\nD. gentle\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are few ______ in the world. (genius)\n考点：变形",
+  "题目4": "【选词填空】从 genius、genie 中选一个，用适当形式填空。\n题干：The ______ came out of the lamp.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He is a genius, so he finds maths very hard.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Genius means ______.\nA. 天才\nB. 精灵\nC. 基因\nD. 温柔\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：她有音乐天赋。\n题干：She has a ______ for music.\n考点：易混",
+  "答案": "【1】B（天才）\n讲解：genius 天才。\n【2】C（genius）\n讲解：“天才”是 genius。\n【3】geniuses\n讲解：few 后面用复数，加 es。\n【4】genie\n讲解：神灯里的“精灵”是 genie。\n【5】very hard → very easy\n讲解：天才觉得数学很简单。\n【6】A（天才）\n讲解：genius 天才。\n【7】gift\n讲解：“天赋”常用 gift。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：爱因斯坦是什么人？",
+   "listen": "Einstein was a genius.",
+   "opts": [
+    "天才",
+    "歌手",
+    "画家",
+    "运动员"
+   ],
+   "why": "genius 天才。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Einstein was a ______.",
+   "opts": [
+    "genius",
+    "genus",
+    "genie",
+    "gentle"
+   ],
+   "why": "“天才”是 genius。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are few ______ in the world. (genius)",
+   "ans": "geniuses",
+   "why": "few 后面用复数，加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 genius、genie 中选一个，用适当形式填空。",
+   "stem": "The ______ came out of the lamp.",
+   "ans": "genie",
+   "why": "神灯里的“精灵”是 genie。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is a genius, so he finds maths very hard.",
+   "ans": "very hard → very easy",
+   "why": "天才觉得数学很简单。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Genius means ______.",
+   "opts": [
+    "天才",
+    "精灵",
+    "基因",
+    "温柔"
+   ],
+   "why": "genius 天才。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她有音乐天赋。",
+   "stem": "She has a ______ for music.",
+   "ans": "gift",
+   "why": "“天赋”常用 gift。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

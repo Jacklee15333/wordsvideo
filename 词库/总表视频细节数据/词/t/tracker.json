@@ -1,0 +1,92 @@
+{
+ "单词": "tracker",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人手上戴着什么？\n听：I wear a fitness tracker every day.\nA. 手表\nB. 健身手环\nC. 戒指\nD. 手套",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My fitness ______ tells me how far I walked.\nA. track\nB. tracker\nC. tracking\nD. trackers",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Both of my parents have fitness ______. (tracker)\n考点：变形",
+  "题目4": "【选词填空】从 tracker、tracking 中选一个，用适当形式填空。\n题干：The ______ of the post is free.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The trackers was very good at finding animals.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她给狗戴上了定位器。\n题干：She put a ______ ______ her dog.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Two ______ followed the bear's footprints.\nA. tracker\nB. tracking\nC. trackers\nD. tracks\n考点：变形",
+  "答案": "【1】B（健身手环）\n讲解：fitness tracker 健身手环。\n【2】B（tracker）\n讲解：my fitness 后面接单数名词 tracker。\n【3】trackers\n讲解：both 后接复数。\n【4】tracking\n讲解：“追踪”这件事用 tracking。\n【5】was → were\n讲解：主语 trackers 复数，用 were。\n【6】tracker；on\n讲解：put a tracker on 给……装上追踪器。\n【7】C（trackers）\n讲解：two 后接复数，跟踪足迹的人是 trackers。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人手上戴着什么？",
+   "listen": "I wear a fitness tracker every day.",
+   "opts": [
+    "健身手环",
+    "手表",
+    "戒指",
+    "手套"
+   ],
+   "why": "fitness tracker 健身手环。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My fitness ______ tells me how far I walked.",
+   "opts": [
+    "tracker",
+    "track",
+    "tracking",
+    "trackers"
+   ],
+   "why": "my fitness 后面接单数名词 tracker。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Both of my parents have fitness ______. (tracker)",
+   "ans": "trackers",
+   "why": "both 后接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tracker、tracking 中选一个，用适当形式填空。",
+   "stem": "The ______ of the post is free.",
+   "ans": "tracking",
+   "why": "“追踪”这件事用 tracking。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The trackers was very good at finding animals.",
+   "ans": "was → were",
+   "why": "主语 trackers 复数，用 were。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她给狗戴上了定位器。",
+   "stem": "She put a ______ ______ her dog.",
+   "ans": "tracker；on",
+   "why": "put a tracker on 给……装上追踪器。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Two ______ followed the bear's footprints.",
+   "opts": [
+    "trackers",
+    "tracker",
+    "tracking",
+    "tracks"
+   ],
+   "why": "two 后接复数，跟踪足迹的人是 trackers。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

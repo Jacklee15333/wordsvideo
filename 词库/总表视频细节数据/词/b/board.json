@@ -1,0 +1,95 @@
+{
+ "单词": "board",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：乘客们在做什么？\n听：The passengers are boarding the plane now.\nA. 下飞机\nB. 吃饭\nC. 登机\nD. 排队买票",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The teacher wrote the new words on the ______.\nA. boards\nB. board\nC. boarding\nD. boarded",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We ______ the train at 8 o'clock yesterday. (board)\n考点：变形",
+  "题目4": "【选词填空】从 board、broad 中选一个，用适当形式填空。\n题干：The river is very ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Please show your ticket before you boarded.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Please get your ______ pass ready.\nA. board\nB. boarded\nC. boarding\nD. boards\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：He is ______ the board of the company.\nA. on\nB. in\nC. at\nD. of\n考点：用法",
+  "答案": "【1】C（登机）\n讲解：board 登上。\n【2】B（board）\n讲解：写在黑板上用 on the board。\n【3】boarded\n讲解：yesterday 用过去式，加 ed。\n【4】broad\n讲解：河面宽用 broad。\n【5】boarded → board\n讲解：before 后面说将来的事用一般现在时 board。\n【6】C（boarding）\n讲解：登机牌是 boarding pass。\n【7】A（on）\n讲解：be on the board 是董事会成员。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：乘客们在做什么？",
+   "listen": "The passengers are boarding the plane now.",
+   "opts": [
+    "登机",
+    "下飞机",
+    "吃饭",
+    "排队买票"
+   ],
+   "why": "board 登上。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The teacher wrote the new words on the ______.",
+   "opts": [
+    "board",
+    "boards",
+    "boarding",
+    "boarded"
+   ],
+   "why": "写在黑板上用 on the board。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We ______ the train at 8 o'clock yesterday. (board)",
+   "ans": "boarded",
+   "why": "yesterday 用过去式，加 ed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 board、broad 中选一个，用适当形式填空。",
+   "stem": "The river is very ______.",
+   "ans": "broad",
+   "why": "河面宽用 broad。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please show your ticket before you boarded.",
+   "ans": "boarded → board",
+   "why": "before 后面说将来的事用一般现在时 board。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please get your ______ pass ready.",
+   "opts": [
+    "boarding",
+    "board",
+    "boarded",
+    "boards"
+   ],
+   "why": "登机牌是 boarding pass。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He is ______ the board of the company.",
+   "opts": [
+    "on",
+    "in",
+    "at",
+    "of"
+   ],
+   "why": "be on the board 是董事会成员。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

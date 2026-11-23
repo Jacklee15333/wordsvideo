@@ -1,0 +1,92 @@
+{
+ "单词": "seat",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说了什么？\n听：Please take a seat.\nA. 请坐\nB. 请站起来\nC. 请出去\nD. 请等一下",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Is this ______ free?\nA. sit\nB. sat\nC. seats\nD. seat",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are fifty ______ in the classroom. (seat)\n考点：变形",
+  "题目4": "【选词填空】从 seat、sit 中选一个，用适当形式填空。\n题干：Please ______ down and listen.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He gave his seat to a old lady.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Please ______ your seatbelts.\nA. fastens\nB. fastening\nC. fasten\nD. fastened\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：请大家就座。\n题干：Please be ______.\n考点：用法",
+  "答案": "【1】A（请坐）\n讲解：take a seat 请坐。\n【2】D（seat）\n讲解：this 后面用单数名词 seat。\n【3】seats\n讲解：fifty 后面用复数 seats。\n【4】sit\n讲解：“坐下”用动词 sit down；seat 多作名词。\n【5】a → an\n讲解：old 以元音音素开头，用 an。\n【6】C（fasten）\n讲解：please 后用原形，fasten your seatbelts 系好安全带。\n【7】seated\n讲解：be seated 请就座，是客气的说法。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说了什么？",
+   "listen": "Please take a seat.",
+   "opts": [
+    "请坐",
+    "请站起来",
+    "请出去",
+    "请等一下"
+   ],
+   "why": "take a seat 请坐。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Is this ______ free?",
+   "opts": [
+    "seat",
+    "sit",
+    "sat",
+    "seats"
+   ],
+   "why": "this 后面用单数名词 seat。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are fifty ______ in the classroom. (seat)",
+   "ans": "seats",
+   "why": "fifty 后面用复数 seats。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 seat、sit 中选一个，用适当形式填空。",
+   "stem": "Please ______ down and listen.",
+   "ans": "sit",
+   "why": "“坐下”用动词 sit down；seat 多作名词。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He gave his seat to a old lady.",
+   "ans": "a → an",
+   "why": "old 以元音音素开头，用 an。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please ______ your seatbelts.",
+   "opts": [
+    "fasten",
+    "fastens",
+    "fastening",
+    "fastened"
+   ],
+   "why": "please 后用原形，fasten your seatbelts 系好安全带。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请大家就座。",
+   "stem": "Please be ______.",
+   "ans": "seated",
+   "why": "be seated 请就座，是客气的说法。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

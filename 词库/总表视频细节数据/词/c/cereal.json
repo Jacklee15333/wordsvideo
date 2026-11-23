@@ -1,0 +1,97 @@
+{
+ "单词": "cereal",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人早餐吃什么？\n听：I eat cereal with milk for breakfast.\nA. 面包加果酱\nB. 麦片加牛奶\nC. 鸡蛋\nD. 面条",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Rice and wheat are ______.\nA. cereal\nB. serial\nC. cereals\nD. series\n考点：变形",
+  "题目3": "【选词填空】从 cereal、serial 中选一个，用适当形式填空。\n题干：I watched a TV ______ last night.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He eats two bowl of cereal every morning.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我早餐吃一碗麦片。\n题干：I have a bowl of ______ for breakfast.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Which is a cereal?\nA. wheat\nB. apple\nC. beef\nD. milk\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Cereal is close in meaning to ______.\nA. grain\nB. fruit\nC. meat\nD. drink\n考点：易混",
+  "答案": "【1】B（麦片加牛奶）\n讲解：cereal 谷物、麦片。\n【2】C（cereals）\n讲解：rice 和 wheat 是谷物，用复数 cereals。\n【3】serial\n讲解：电视连续剧是 serial；cereal 是谷物。\n【4】bowl → bowls\n讲解：two 后面用复数 bowls。\n【5】cereal\n讲解：cereal 麦片、谷物。\n【6】A（wheat）\n讲解：小麦是谷物。\n【7】A（grain）\n讲解：cereal 谷物，接近 grain。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人早餐吃什么？",
+   "listen": "I eat cereal with milk for breakfast.",
+   "opts": [
+    "麦片加牛奶",
+    "面包加果酱",
+    "鸡蛋",
+    "面条"
+   ],
+   "why": "cereal 谷物、麦片。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Rice and wheat are ______.",
+   "opts": [
+    "cereals",
+    "cereal",
+    "serial",
+    "series"
+   ],
+   "why": "rice 和 wheat 是谷物，用复数 cereals。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 cereal、serial 中选一个，用适当形式填空。",
+   "stem": "I watched a TV ______ last night.",
+   "ans": "serial",
+   "why": "电视连续剧是 serial；cereal 是谷物。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He eats two bowl of cereal every morning.",
+   "ans": "bowl → bowls",
+   "why": "two 后面用复数 bowls。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我早餐吃一碗麦片。",
+   "stem": "I have a bowl of ______ for breakfast.",
+   "ans": "cereal",
+   "why": "cereal 麦片、谷物。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which is a cereal?",
+   "opts": [
+    "wheat",
+    "apple",
+    "beef",
+    "milk"
+   ],
+   "why": "小麦是谷物。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Cereal is close in meaning to ______.",
+   "opts": [
+    "grain",
+    "fruit",
+    "meat",
+    "drink"
+   ],
+   "why": "cereal 谷物，接近 grain。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

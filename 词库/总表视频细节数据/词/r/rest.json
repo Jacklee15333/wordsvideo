@@ -1,0 +1,94 @@
+{
+ "单词": "rest",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：医生让说话人做什么？\n听：The doctor told me to have a good rest.\nA. 多运动\nB. 多吃饭\nC. 好好休息\nD. 去上学",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You look tired. Let's have a ______.\nA. relax\nB. rest\nC. restful\nD. resting\n考点：短语",
+  "题目3": "【选词填空】从 rested、relaxed 中选一个，用适当形式填空。\n题干：The soft music made me feel ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ for an hour after lunch yesterday. (rest)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I'll eat the rest cake tomorrow.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：其余的学生在操场上。\n题干：______ rest of the students are on the playground.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The rest of the money ______ in my bag.\nA. are\nB. be\nC. am\nD. is\n考点：用法",
+  "答案": "【1】C（好好休息）\n讲解：have a rest 休息一下。\n【2】B（rest）\n讲解：have a rest 休息一下，要名词 rest。\n【3】relaxed\n讲解：音乐让人身心“放松” relaxed；rested 是休息后恢复体力。\n【4】rested\n讲解：yesterday 用过去式 rested。\n【5】the rest cake → the rest of the cake\n讲解：the rest of … ……的剩余部分。\n【6】The\n讲解：the rest of 前面的 the 不能少。\n【7】D（is）\n讲解：the rest of + 不可数名词，谓语用单数 is。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：医生让说话人做什么？",
+   "listen": "The doctor told me to have a good rest.",
+   "opts": [
+    "好好休息",
+    "多运动",
+    "多吃饭",
+    "去上学"
+   ],
+   "why": "have a rest 休息一下。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You look tired. Let's have a ______.",
+   "opts": [
+    "rest",
+    "relax",
+    "restful",
+    "resting"
+   ],
+   "why": "have a rest 休息一下，要名词 rest。",
+   "kd": "短语"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 rested、relaxed 中选一个，用适当形式填空。",
+   "stem": "The soft music made me feel ______.",
+   "ans": "relaxed",
+   "why": "音乐让人身心“放松” relaxed；rested 是休息后恢复体力。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ for an hour after lunch yesterday. (rest)",
+   "ans": "rested",
+   "why": "yesterday 用过去式 rested。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I'll eat the rest cake tomorrow.",
+   "ans": "the rest cake → the rest of the cake",
+   "why": "the rest of … ……的剩余部分。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "其余的学生在操场上。",
+   "stem": "______ rest of the students are on the playground.",
+   "ans": "The",
+   "why": "the rest of 前面的 the 不能少。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The rest of the money ______ in my bag.",
+   "opts": [
+    "is",
+    "are",
+    "be",
+    "am"
+   ],
+   "why": "the rest of + 不可数名词，谓语用单数 is。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

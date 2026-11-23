@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5B6169"/><stop offset=".12" stop-color="#40454C"/><stop offset=".65" stop-color="#2B2F34"/><stop offset="1" stop-color="#17191C"/>
+    </linearGradient>
+    <linearGradient id="barrel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4E545B"/><stop offset=".25" stop-color="#2A2E33"/><stop offset=".7" stop-color="#151719"/><stop offset="1" stop-color="#0A0B0D"/>
+    </linearGradient>
+    <radialGradient id="glass" cx=".35" cy=".35" r=".75">
+      <stop offset="0" stop-color="#5A6FB0"/><stop offset=".35" stop-color="#1E2752"/><stop offset="1" stop-color="#03040A"/>
+    </radialGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7EC8F2"/><stop offset="1" stop-color="#CDEBFA"/></linearGradient>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#86CB5F"/><stop offset="1" stop-color="#4E9C38"/></linearGradient>
+    <linearGradient id="hand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2A2D31"/><stop offset="1" stop-color="#1A1C1F"/></linearGradient>
+  </defs>
+  <!-- 上面的提手和话筒 -->
+  <path d="M232 132 L232 92 Q232 70 254 70 L520 70 Q548 70 548 98 L548 132" fill="none" stroke="#2E3237" stroke-width="22" stroke-linejoin="round"/>
+  <path d="M244 82 L520 82" stroke="#6E757D" stroke-width="3" opacity=".6"/>
+  <rect x="150" y="58" width="96" height="30" rx="15" fill="#1E2125"/>
+  <rect x="150" y="58" width="22" height="30" rx="8" fill="#0E0F11"/>
+  <g stroke="#3A3F45" stroke-width="2"><line x1="182" y1="62" x2="182" y2="84"/><line x1="194" y1="62" x2="194" y2="84"/><line x1="206" y1="62" x2="206" y2="84"/><line x1="218" y1="62" x2="218" y2="84"/><line x1="230" y1="62" x2="230" y2="84"/></g>
+  <!-- 镜头筒（朝左） -->
+  <rect x="58" y="150" width="150" height="160" rx="22" fill="url(#barrel)"/>
+  <rect x="120" y="150" width="14" height="160" fill="#3A3F45" opacity=".8"/>
+  <rect x="150" y="150" width="8" height="160" fill="#C9CED4" opacity=".25"/>
+  <path d="M30 138 L72 150 L72 310 L30 322 Q22 230 30 138 Z" fill="#202327"/>
+  <ellipse cx="32" cy="230" rx="16" ry="88" fill="#0B0C0E"/>
+  <ellipse cx="34" cy="230" rx="11" ry="74" fill="url(#glass)"/>
+  <ellipse cx="30" cy="196" rx="4" ry="20" fill="#FFFFFF" opacity=".55"/>
+  <!-- 机身 -->
+  <rect x="190" y="128" width="400" height="202" rx="42" fill="url(#b)"/>
+  <rect x="210" y="134" width="360" height="6" rx="3" fill="#FFFFFF" opacity=".14"/>
+  <!-- 侧面的屏幕：正在拍的画面 -->
+  <rect x="300" y="152" width="230" height="160" rx="14" fill="#15171A"/>
+  <rect x="312" y="164" width="206" height="136" rx="6" fill="url(#sky)"/>
+  <rect x="312" y="246" width="206" height="54" fill="url(#grass)"/>
+  <rect x="312" y="246" width="206" height="54" rx="6" fill="url(#grass)"/>
+  <circle cx="492" cy="190" r="13" fill="#FFE07A"/>
+  <ellipse cx="420" cy="204" rx="22" ry="9" fill="#FFFFFF" opacity=".9"/><ellipse cx="436" cy="198" rx="14" ry="9" fill="#FFFFFF" opacity=".9"/>
+  <text x="352" y="187" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#E53935">REC</text>
+  <rect x="312" y="164" width="206" height="136" rx="6" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="2"/>
+  <rect x="300" y="152" width="230" height="160" rx="14" fill="none" stroke="#5B6168" stroke-width="2"/>
+  <!-- 后面的取景器 -->
+  <rect x="566" y="146" width="88" height="62" rx="16" fill="#202327"/>
+  <rect x="640" y="140" width="34" height="74" rx="14" fill="#0E0F11"/>
+  <!-- 右手绑带 -->
+  <path d="M548 170 Q612 176 612 238 Q612 300 548 312" fill="none" stroke="url(#hand)" stroke-width="26" stroke-linecap="round"/>
+  <!-- 录像键 -->
+  <circle cx="578" cy="290" r="13" fill="#2A2D31"/><circle cx="578" cy="290" r="8" fill="#D32F2F"/>
+</svg>

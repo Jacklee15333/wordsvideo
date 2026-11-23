@@ -1,0 +1,97 @@
+{
+ "单词": "dungeon",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：故事里的王子被关在哪里？\n听：The prince was locked in a dungeon.\nA. 塔顶\nB. 花园\nC. 地牢\nD. 宫殿",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The castle has three dark ______.\nA. dungeon\nB. dungeones\nC. dungeons\nD. dungeon's\n考点：变形",
+  "题目3": "【选词填空】从 dungeon、jail 中选一个，用适当形式填空。\n题干：The thief was sent to ______ for two years.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：They found a dungeons under the castle.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：城堡下面有一个阴暗潮湿的地牢。\n题干：There is a dark, wet ______ under the castle.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A dungeon is usually ______ a castle.\nA. under\nB. on top of\nC. next to\nD. far from\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A small room for one prisoner is a ______.\nA. dungeon\nB. castle\nC. hall\nD. cell\n考点：易混",
+  "答案": "【1】C（地牢）\n讲解：dungeon 地牢。\n【2】C（dungeons）\n讲解：three 后面用复数。\n【3】jail\n讲解：一般的监狱用 jail。\n【4】dungeons → dungeon\n讲解：a 后面用单数。\n【5】dungeon\n讲解：地牢 dungeon。\n【6】A（under）\n讲解：dungeon 在城堡下面。\n【7】D（cell）\n讲解：牢房是 cell。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：故事里的王子被关在哪里？",
+   "listen": "The prince was locked in a dungeon.",
+   "opts": [
+    "地牢",
+    "塔顶",
+    "花园",
+    "宫殿"
+   ],
+   "why": "dungeon 地牢。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The castle has three dark ______.",
+   "opts": [
+    "dungeons",
+    "dungeon",
+    "dungeones",
+    "dungeon's"
+   ],
+   "why": "three 后面用复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 dungeon、jail 中选一个，用适当形式填空。",
+   "stem": "The thief was sent to ______ for two years.",
+   "ans": "jail",
+   "why": "一般的监狱用 jail。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "They found a dungeons under the castle.",
+   "ans": "dungeons → dungeon",
+   "why": "a 后面用单数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "城堡下面有一个阴暗潮湿的地牢。",
+   "stem": "There is a dark, wet ______ under the castle.",
+   "ans": "dungeon",
+   "why": "地牢 dungeon。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A dungeon is usually ______ a castle.",
+   "opts": [
+    "under",
+    "on top of",
+    "next to",
+    "far from"
+   ],
+   "why": "dungeon 在城堡下面。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A small room for one prisoner is a ______.",
+   "opts": [
+    "cell",
+    "dungeon",
+    "castle",
+    "hall"
+   ],
+   "why": "牢房是 cell。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

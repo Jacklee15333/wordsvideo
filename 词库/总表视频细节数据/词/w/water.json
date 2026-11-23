@@ -1,0 +1,94 @@
+{
+ "单词": "water",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人想要什么？\n听：Can I have a glass of water, please?\nA. 一杯茶\nB. 一瓶牛奶\nC. 一杯果汁\nD. 一杯水",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is some ______ in the bottle.\nA. waters\nB. water\nC. a water\nD. watery\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Grandma ______ the flowers every morning. (water)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：I'd like two glass of water.\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：昨天我给花浇了水。\n题干：I ______ the flowers yesterday.\n考点：变形",
+  "题目6": "【选词填空】从 water、wash 中选一个，用适当形式填空。\n题干：Please ______ your hands before eating.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Look! Tom is ______ the plants in the garden.\nA. water\nB. watering\nC. waters\nD. watered\n考点：变形",
+  "答案": "【1】D（一杯水）\n讲解：a glass of water 一杯水。\n【2】B（water）\n讲解：water 不可数，some 后用 water。\n【3】waters\n讲解：every morning 一般现在时，主语三单用 waters（浇水）。\n【4】glass → glasses\n讲解：two 后面 glass 要用复数 glasses。\n【5】watered\n讲解：yesterday 用过去式 watered。\n【6】wash\n讲解：“洗手”用 wash。\n【7】B（watering）\n讲解：Look! 用现在进行时 watering。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想要什么？",
+   "listen": "Can I have a glass of water, please?",
+   "opts": [
+    "一杯水",
+    "一杯茶",
+    "一瓶牛奶",
+    "一杯果汁"
+   ],
+   "why": "a glass of water 一杯水。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is some ______ in the bottle.",
+   "opts": [
+    "water",
+    "waters",
+    "a water",
+    "watery"
+   ],
+   "why": "water 不可数，some 后用 water。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Grandma ______ the flowers every morning. (water)",
+   "ans": "waters",
+   "why": "every morning 一般现在时，主语三单用 waters（浇水）。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I'd like two glass of water.",
+   "ans": "glass → glasses",
+   "why": "two 后面 glass 要用复数 glasses。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "昨天我给花浇了水。",
+   "stem": "I ______ the flowers yesterday.",
+   "ans": "watered",
+   "why": "yesterday 用过去式 watered。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 water、wash 中选一个，用适当形式填空。",
+   "stem": "Please ______ your hands before eating.",
+   "ans": "wash",
+   "why": "“洗手”用 wash。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Look! Tom is ______ the plants in the garden.",
+   "opts": [
+    "watering",
+    "water",
+    "waters",
+    "watered"
+   ],
+   "why": "Look! 用现在进行时 watering。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

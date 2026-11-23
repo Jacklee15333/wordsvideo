@@ -1,0 +1,94 @@
+{
+ "单词": "page",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让翻到第几页？\n听：Please turn to page 20.\nA. 第十二页\nB. 第二页\nC. 第二百页\nD. 第二十页",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This book has 300 ______.\nA. page\nB. pagees\nC. pages\nD. pagess",
+  "题目3": "【选词填空】从 page、leaf 中选一个，用适当形式填空。\n题干：A ______ of a book has two pages, one on each side.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Please open your books at the page 10.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：请翻页。\n题干：Please turn the ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Turn the page\" can also mean ______.\nA. read slowly\nB. start something new\nC. lose a book\nD. sleep\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：On the Internet, a \"page\" is also called a \"______\".\nA. webpage\nB. website\nC. web\nD. letter\n考点：用法",
+  "答案": "【1】D（第二十页）\n讲解：page 20 第二十页。\n【2】C（pages）\n讲解：300 后面用复数。\n【3】leaf\n讲解：一张纸（两面）是 leaf，一面是 page。\n【4】the page 10 → page 10\n讲解：page + 数字前不加 the。\n【5】page\n讲解：翻页 turn the page。\n【6】B（start something new）\n讲解：turn the page 也比喻翻开新的一页。\n【7】A（webpage）\n讲解：网页 webpage。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让翻到第几页？",
+   "listen": "Please turn to page 20.",
+   "opts": [
+    "第二十页",
+    "第十二页",
+    "第二页",
+    "第二百页"
+   ],
+   "why": "page 20 第二十页。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This book has 300 ______.",
+   "opts": [
+    "pages",
+    "page",
+    "pagees",
+    "pagess"
+   ],
+   "why": "300 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 page、leaf 中选一个，用适当形式填空。",
+   "stem": "A ______ of a book has two pages, one on each side.",
+   "ans": "leaf",
+   "why": "一张纸（两面）是 leaf，一面是 page。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please open your books at the page 10.",
+   "ans": "the page 10 → page 10",
+   "why": "page + 数字前不加 the。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请翻页。",
+   "stem": "Please turn the ______.",
+   "ans": "page",
+   "why": "翻页 turn the page。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Turn the page\" can also mean ______.",
+   "opts": [
+    "start something new",
+    "read slowly",
+    "lose a book",
+    "sleep"
+   ],
+   "why": "turn the page 也比喻翻开新的一页。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "On the Internet, a \"page\" is also called a \"______\".",
+   "opts": [
+    "webpage",
+    "website",
+    "web",
+    "letter"
+   ],
+   "why": "网页 webpage。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

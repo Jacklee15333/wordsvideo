@@ -1,0 +1,94 @@
+{
+ "单词": "string",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人用什么捆盒子？\n听：I tied the box with a piece of string.\nA. 胶带\nB. 铁丝\nC. 细绳\nD. 粗绳",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you give me a piece of ______ to tie the box?\nA. strong\nB. strings\nC. spring\nD. string\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：My guitar has six ______. (string)\n考点：变形",
+  "题目4": "【选词填空】从 string、rope 中选一个，用适当形式填空。\n题干：The boat was tied to the tree with a thick ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He got the job by pulling string.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这份礼物不附带任何条件。\n题干：This gift comes with no ______ attached.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：He told me a string of lies. 这里 a string of 的意思是 ______。\nA. 一根\nB. 一连串\nC. 一点\nD. 一种\n考点：用法",
+  "答案": "【1】C（细绳）\n讲解：string 细绳。\n【2】D（string）\n讲解：a piece of string 一根细绳。\n【3】strings\n讲解：six 后面用复数 strings。\n【4】rope\n讲解：粗绳、缆绳用 rope；string 是细绳。\n【5】string → strings\n讲解：pull strings 走后门，用复数。\n【6】strings\n讲解：no strings attached 不附带条件。\n【7】B（一连串）\n讲解：a string of 一串、一系列。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人用什么捆盒子？",
+   "listen": "I tied the box with a piece of string.",
+   "opts": [
+    "细绳",
+    "胶带",
+    "铁丝",
+    "粗绳"
+   ],
+   "why": "string 细绳。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you give me a piece of ______ to tie the box?",
+   "opts": [
+    "string",
+    "strong",
+    "strings",
+    "spring"
+   ],
+   "why": "a piece of string 一根细绳。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "My guitar has six ______. (string)",
+   "ans": "strings",
+   "why": "six 后面用复数 strings。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 string、rope 中选一个，用适当形式填空。",
+   "stem": "The boat was tied to the tree with a thick ______.",
+   "ans": "rope",
+   "why": "粗绳、缆绳用 rope；string 是细绳。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He got the job by pulling string.",
+   "ans": "string → strings",
+   "why": "pull strings 走后门，用复数。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这份礼物不附带任何条件。",
+   "stem": "This gift comes with no ______ attached.",
+   "ans": "strings",
+   "why": "no strings attached 不附带条件。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He told me a string of lies. 这里 a string of 的意思是 ______。",
+   "opts": [
+    "一连串",
+    "一根",
+    "一点",
+    "一种"
+   ],
+   "why": "a string of 一串、一系列。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,97 @@
+{
+ "单词": "intent",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人怎么说他？\n听：He was intent on winning the race.\nA. 不想比赛\nB. 输了\nC. 一心想赢\nD. 受伤了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She was so ______ on her book that she didn't hear me.\nA. intention\nB. intense\nC. intent\nD. intensive\n考点：用法",
+  "题目3": "【选词填空】从 intent、intention 中选一个，用适当形式填空。\n题干：I have no ______ of going there again.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Their intent were clear.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：实际上，这就是一个新的开始。\n题干：To all ______ and purposes, it is a new start.\n考点：短语",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Was the mistake ______ or by accident?\nA. intentional\nB. intent\nC. intention\nD. intense\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Intent\" is often used in ______ language.\nA. baby\nB. legal\nC. cooking\nD. sports\n考点：用法",
+  "答案": "【1】C（一心想赢）\n讲解：be intent on 一心想、专注于。\n【2】C（intent）\n讲解：be intent on 专注于，这里要形容词 intent。\n【3】intention\n讲解：日常的“打算”用 intention。\n【4】were → was\n讲解：主语 intent 是单数，be 用 was。\n【5】intents\n讲解：to all intents and purposes 实际上，用复数 intents。\n【6】A（intentional）\n讲解：和 by accident 相对，“故意的”用形容词 intentional。\n【7】B（legal）\n讲解：intent 多用于法律、正式场合。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人怎么说他？",
+   "listen": "He was intent on winning the race.",
+   "opts": [
+    "一心想赢",
+    "不想比赛",
+    "输了",
+    "受伤了"
+   ],
+   "why": "be intent on 一心想、专注于。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She was so ______ on her book that she didn't hear me.",
+   "opts": [
+    "intent",
+    "intention",
+    "intense",
+    "intensive"
+   ],
+   "why": "be intent on 专注于，这里要形容词 intent。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 intent、intention 中选一个，用适当形式填空。",
+   "stem": "I have no ______ of going there again.",
+   "ans": "intention",
+   "why": "日常的“打算”用 intention。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Their intent were clear.",
+   "ans": "were → was",
+   "why": "主语 intent 是单数，be 用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "实际上，这就是一个新的开始。",
+   "stem": "To all ______ and purposes, it is a new start.",
+   "ans": "intents",
+   "why": "to all intents and purposes 实际上，用复数 intents。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Was the mistake ______ or by accident?",
+   "opts": [
+    "intentional",
+    "intent",
+    "intention",
+    "intense"
+   ],
+   "why": "和 by accident 相对，“故意的”用形容词 intentional。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Intent\" is often used in ______ language.",
+   "opts": [
+    "legal",
+    "baby",
+    "cooking",
+    "sports"
+   ],
+   "why": "intent 多用于法律、正式场合。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

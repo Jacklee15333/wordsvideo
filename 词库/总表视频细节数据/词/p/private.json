@@ -1,0 +1,94 @@
+{
+ "单词": "private",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说这是什么样的地方？\n听：Sorry, this is a private beach.\nA. 公共海滩\nB. 新开的海滩\nC. 私人海滩\nD. 免费海滩",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can I talk to you in ______?\nA. privacy\nB. privately\nC. private\nD. person\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Everyone needs some ______. (private)\n考点：词性转换",
+  "题目4": "【选词填空】从 private、public 中选一个，用适当形式填空。\n题干：Anyone can swim in the ______ pool.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He spoke to the teacher private after class.\n考点：词性转换",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：You can do a lot of things on a ______ computer.\nA. personal\nB. private\nC. privacy\nD. privately\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这件事是私人的，请保密。\n题干：This is private. Please keep it ______.\n考点：用法",
+  "答案": "【1】C（私人海滩）\n讲解：private 私人的。\n【2】C（private）\n讲解：in private 私下。\n【3】privacy\n讲解：some 后面接名词 privacy（隐私、清静）。\n【4】public\n讲解：任何人都能用的是 public（公共的）；private 是私人的。\n【5】private → privately\n讲解：修饰动词 spoke 用副词 privately。\n【6】A（personal）\n讲解：“个人电脑”固定说 personal computer。\n【7】secret\n讲解：keep it secret 保密。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说这是什么样的地方？",
+   "listen": "Sorry, this is a private beach.",
+   "opts": [
+    "私人海滩",
+    "公共海滩",
+    "新开的海滩",
+    "免费海滩"
+   ],
+   "why": "private 私人的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can I talk to you in ______?",
+   "opts": [
+    "private",
+    "privacy",
+    "privately",
+    "person"
+   ],
+   "why": "in private 私下。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Everyone needs some ______. (private)",
+   "ans": "privacy",
+   "why": "some 后面接名词 privacy（隐私、清静）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 private、public 中选一个，用适当形式填空。",
+   "stem": "Anyone can swim in the ______ pool.",
+   "ans": "public",
+   "why": "任何人都能用的是 public（公共的）；private 是私人的。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He spoke to the teacher private after class.",
+   "ans": "private → privately",
+   "why": "修饰动词 spoke 用副词 privately。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can do a lot of things on a ______ computer.",
+   "opts": [
+    "personal",
+    "private",
+    "privacy",
+    "privately"
+   ],
+   "why": "“个人电脑”固定说 personal computer。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这件事是私人的，请保密。",
+   "stem": "This is private. Please keep it ______.",
+   "ans": "secret",
+   "why": "keep it secret 保密。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

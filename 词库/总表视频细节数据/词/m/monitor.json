@@ -1,0 +1,92 @@
+{
+ "单词": "monitor",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：谁是班长？\n听：Tom is the monitor of our class.\nA. 杰克\nB. 露西\nC. 莉莉\nD. 汤姆",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Our class ______ helps the teacher every day.\nA. monitors\nB. monitored\nC. monitoring\nD. monitor",
+  "题目3": "【选词填空】从 monitor、supervise 中选一个，用适当形式填空。\n题干：The head teacher ______ the new teachers and gives them advice.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are two ______ in our class. (monitor)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The machine monitor the baby's breathing all the time.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A machine is ______ the baby's heart all night.\nA. monitor\nB. monitoring\nC. monitors\nD. monitored\n考点：变形",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这台监视器坏了。\n题干：This ______ is broken.\n考点：易混",
+  "答案": "【1】D（汤姆）\n讲解：monitor 班长。\n【2】D（monitor）\n讲解：class monitor 班长，单数。\n【3】supervises\n讲解：在上面管着、指导用 supervise，主语三单加 s。\n【4】monitors\n讲解：two 后接复数 monitors。\n【5】monitor → monitors\n讲解：主语 the machine 是三单，谓语用 monitors。\n【6】B（monitoring）\n讲解：is 后接现在分词 monitoring（持续监测）。\n【7】screen\n讲解：monitor 指显示器、监视器，也可说 screen。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：谁是班长？",
+   "listen": "Tom is the monitor of our class.",
+   "opts": [
+    "汤姆",
+    "杰克",
+    "露西",
+    "莉莉"
+   ],
+   "why": "monitor 班长。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Our class ______ helps the teacher every day.",
+   "opts": [
+    "monitor",
+    "monitors",
+    "monitored",
+    "monitoring"
+   ],
+   "why": "class monitor 班长，单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 monitor、supervise 中选一个，用适当形式填空。",
+   "stem": "The head teacher ______ the new teachers and gives them advice.",
+   "ans": "supervises",
+   "why": "在上面管着、指导用 supervise，主语三单加 s。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are two ______ in our class. (monitor)",
+   "ans": "monitors",
+   "why": "two 后接复数 monitors。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The machine monitor the baby's breathing all the time.",
+   "ans": "monitor → monitors",
+   "why": "主语 the machine 是三单，谓语用 monitors。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A machine is ______ the baby's heart all night.",
+   "opts": [
+    "monitoring",
+    "monitor",
+    "monitors",
+    "monitored"
+   ],
+   "why": "is 后接现在分词 monitoring（持续监测）。",
+   "kd": "变形"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这台监视器坏了。",
+   "stem": "This ______ is broken.",
+   "ans": "screen",
+   "why": "monitor 指显示器、监视器，也可说 screen。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "matcher",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个网站能帮学生做什么？\n听：This website is a good job matcher for students.\nA. 找到合适的工作\nB. 学英语\nC. 买书\nD. 交朋友",
+  "题目2": "【适当形式填空】用所给单词的适当形式填空。\n题干：The two ______ work for the same company. (matcher)\n考点：变形",
+  "题目3": "【单项选择】选出最恰当的一项。\n题干：Someone who matches people with jobs is a job ______.\nA. match\nB. matching\nC. matches\nD. matcher\n考点：词性转换",
+  "题目4": "【选词填空】从 match、matcher、matching 中选一个填空。\n题干：She wore a red hat with ______ gloves.\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The matcher help me find a part-time job last month.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这些匹配程序非常有用。\n题干：These ______ are very useful.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Does this tie ______ my shirt?\nA. matcher\nB. match\nC. matching\nD. matches\n考点：词性转换",
+  "答案": "【1】A（找到合适的工作）\n讲解：job matcher 把人和工作配对的工具。\n【2】matchers\n讲解：two 后面用复数 matchers。\n【3】D（matcher）\n讲解：做……的人用 -er：match → matcher。\n【4】matching\n讲解：修饰名词 gloves，用形容词 matching（配套的）。\n【5】help → helped\n讲解：last month 说过去的事，用过去式 helped。\n【6】matchers\n讲解：these 后面用复数 matchers。\n【7】B（match）\n讲解：Does 后面用动词原形 match（相配）；matcher 是名词。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个网站能帮学生做什么？",
+   "listen": "This website is a good job matcher for students.",
+   "opts": [
+    "找到合适的工作",
+    "学英语",
+    "买书",
+    "交朋友"
+   ],
+   "why": "job matcher 把人和工作配对的工具。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The two ______ work for the same company. (matcher)",
+   "ans": "matchers",
+   "why": "two 后面用复数 matchers。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Someone who matches people with jobs is a job ______.",
+   "opts": [
+    "matcher",
+    "match",
+    "matching",
+    "matches"
+   ],
+   "why": "做……的人用 -er：match → matcher。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 match、matcher、matching 中选一个填空。",
+   "stem": "She wore a red hat with ______ gloves.",
+   "ans": "matching",
+   "why": "修饰名词 gloves，用形容词 matching（配套的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The matcher help me find a part-time job last month.",
+   "ans": "help → helped",
+   "why": "last month 说过去的事，用过去式 helped。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "stem": "These ______ are very useful.",
+   "ans": "matchers",
+   "why": "these 后面用复数 matchers。",
+   "kd": "变形",
+   "zh": "这些匹配程序非常有用。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Does this tie ______ my shirt?",
+   "opts": [
+    "match",
+    "matcher",
+    "matching",
+    "matches"
+   ],
+   "why": "Does 后面用动词原形 match（相配）；matcher 是名词。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

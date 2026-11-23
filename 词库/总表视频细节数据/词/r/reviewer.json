@@ -1,0 +1,92 @@
+{
+ "单词": "reviewer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这位书评人说了什么？\n听：The reviewer said the book was excellent.\nA. 书很差\nB. 书太长\nC. 书太贵\nD. 书很棒",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ gave the film five stars.\nA. reviewer\nB. review\nC. reviewing\nD. reviewable",
+  "题目3": "【选词填空】从 reviewer、critic 中选一个，用适当形式填空。\n题干：She is a famous art ______; it's her job to judge art.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Most ______ liked the new play. (reviewer)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The reviewers was not happy with the ending.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我们应该在考试前复习。\n题干：We should ______ before the test.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：She wrote a ______ of the book for the school paper.\nA. reviewer\nB. reviewed\nC. reviewing\nD. review\n考点：词性转换",
+  "答案": "【1】D（书很棒）\n讲解：reviewer 评论者、书评人。\n【2】A（reviewer）\n讲解：给电影打分的评论者用 reviewer。\n【3】critic\n讲解：“评论家”这一身份用 critic。\n【4】reviewers\n讲解：most 后面用复数 reviewers。\n【5】was → were\n讲解：主语 the reviewers 是复数，用 were。\n【6】review\n讲解：复习 review。\n【7】D（review）\n讲解：写一篇书评 a review。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这位书评人说了什么？",
+   "listen": "The reviewer said the book was excellent.",
+   "opts": [
+    "书很棒",
+    "书很差",
+    "书太长",
+    "书太贵"
+   ],
+   "why": "reviewer 评论者、书评人。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ gave the film five stars.",
+   "opts": [
+    "reviewer",
+    "review",
+    "reviewing",
+    "reviewable"
+   ],
+   "why": "给电影打分的评论者用 reviewer。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 reviewer、critic 中选一个，用适当形式填空。",
+   "stem": "She is a famous art ______; it's her job to judge art.",
+   "ans": "critic",
+   "why": "“评论家”这一身份用 critic。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Most ______ liked the new play. (reviewer)",
+   "ans": "reviewers",
+   "why": "most 后面用复数 reviewers。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The reviewers was not happy with the ending.",
+   "ans": "was → were",
+   "why": "主语 the reviewers 是复数，用 were。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们应该在考试前复习。",
+   "stem": "We should ______ before the test.",
+   "ans": "review",
+   "why": "复习 review。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She wrote a ______ of the book for the school paper.",
+   "opts": [
+    "review",
+    "reviewer",
+    "reviewed",
+    "reviewing"
+   ],
+   "why": "写一篇书评 a review。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

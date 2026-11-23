@@ -1,0 +1,98 @@
+{
+ "单词": "mission",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：宇航员的任务是什么？\n听：The astronauts' mission is to land on the moon.\nA. 修理卫星\nB. 登月\nC. 种菜\nD. 拍照",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The spaceship came back after two ______.\nA. mission\nB. missions\nC. missiones\nD. mission's\n考点：变形",
+  "题目3": "【选词填空】从 mission、task 中选一个，用适当形式填空。\n题干：Washing the dishes is an easy ______.\n考点：易混",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：中国派了一个贸易代表团去法国。\n题干：China sent a trade ______ to France.\n考点：用法",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The mission were a great success.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Mission impossible\" means a ______.\nA. very easy job\nB. long holiday\nC. big party\nD. task that seems impossible\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which word means about the same as \"mission\"?\nA. holiday\nB. mistake\nC. assignment\nD. reward\n考点：易混",
+  "答案": "【1】B（登月）\n讲解：mission 任务、使命。\n【2】B（missions）\n讲解：two 后面接复数 missions。\n【3】task\n讲解：一般的活儿用 task；mission 是被派去完成的重要任务。\n【4】mission\n讲解：mission 也指代表团、使团。\n【5】were → was\n讲解：主语 the mission 是单数，用 was。\n【6】D（task that seems impossible）\n讲解：mission impossible 看起来不可能完成的任务。\n【7】C（assignment）\n讲解：mission ≈ assignment 任务。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：宇航员的任务是什么？",
+   "listen": "The astronauts' mission is to land on the moon.",
+   "opts": [
+    "登月",
+    "修理卫星",
+    "种菜",
+    "拍照"
+   ],
+   "why": "mission 任务、使命。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The spaceship came back after two ______.",
+   "opts": [
+    "missions",
+    "mission",
+    "missiones",
+    "mission's"
+   ],
+   "why": "two 后面接复数 missions。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 mission、task 中选一个，用适当形式填空。",
+   "stem": "Washing the dishes is an easy ______.",
+   "ans": "task",
+   "why": "一般的活儿用 task；mission 是被派去完成的重要任务。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "中国派了一个贸易代表团去法国。",
+   "stem": "China sent a trade ______ to France.",
+   "ans": "mission",
+   "why": "mission 也指代表团、使团。",
+   "kd": "用法"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The mission were a great success.",
+   "ans": "were → was",
+   "why": "主语 the mission 是单数，用 was。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Mission impossible\" means a ______.",
+   "opts": [
+    "task that seems impossible",
+    "very easy job",
+    "long holiday",
+    "big party"
+   ],
+   "why": "mission impossible 看起来不可能完成的任务。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which word means about the same as \"mission\"?",
+   "opts": [
+    "assignment",
+    "holiday",
+    "mistake",
+    "reward"
+   ],
+   "why": "mission ≈ assignment 任务。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

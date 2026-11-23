@@ -1,0 +1,93 @@
+{
+ "单词": "psychology",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她在大学学什么？\n听：She studies psychology at university.\nA. 心理学\nB. 物理\nC. 历史\nD. 数学",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He is interested in child ______.\nA. psychologist\nB. psychological\nC. physics\nD. psychology\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She is a famous ______. (psychology)\n考点：词性转换",
+  "题目4": "【选词填空】从 psychology、psychiatry 中选一个，用适当形式填空。\n题干：A doctor who gives medicine for mental illness works in ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Psychology are an interesting subject.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这是一个心理问题。\n题干：It is a ______ problem.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Psychology studies ______.\nA. the mind\nB. the stars\nC. rocks\nD. plants\n考点：用法",
+  "答案": "【1】A（心理学）\n讲解：psychology 心理学。\n【2】D（psychology）\n讲解：child psychology 儿童心理学。\n【3】psychologist\n讲解：a famous 后面要表示人的名词 psychologist。\n【4】psychiatry\n讲解：看精神病、开药的是 psychiatry。\n【5】are → is\n讲解：学科名作主语，谓语用 is。\n【6】psychological\n讲解：形容词“心理的”是 psychological。\n【7】A（the mind）\n讲解：心理学研究人的心理。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她在大学学什么？",
+   "listen": "She studies psychology at university.",
+   "opts": [
+    "心理学",
+    "物理",
+    "历史",
+    "数学"
+   ],
+   "why": "psychology 心理学。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He is interested in child ______.",
+   "opts": [
+    "psychology",
+    "psychologist",
+    "psychological",
+    "physics"
+   ],
+   "why": "child psychology 儿童心理学。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She is a famous ______. (psychology)",
+   "ans": "psychologist",
+   "why": "a famous 后面要表示人的名词 psychologist。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 psychology、psychiatry 中选一个，用适当形式填空。",
+   "stem": "A doctor who gives medicine for mental illness works in ______.",
+   "ans": "psychiatry",
+   "why": "看精神病、开药的是 psychiatry。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Psychology are an interesting subject.",
+   "ans": "are → is",
+   "why": "学科名作主语，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是一个心理问题。",
+   "stem": "It is a ______ problem.",
+   "ans": "psychological",
+   "why": "形容词“心理的”是 psychological。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Psychology studies ______.",
+   "opts": [
+    "the mind",
+    "the stars",
+    "rocks",
+    "plants"
+   ],
+   "why": "心理学研究人的心理。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

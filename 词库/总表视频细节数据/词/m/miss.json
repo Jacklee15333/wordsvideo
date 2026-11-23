@@ -1,0 +1,94 @@
+{
+ "单词": "miss",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人今天早上怎么了？\n听：I missed the bus this morning.\nA. 没赶上公交车\nB. 睡过头了\nC. 生病了\nD. 遇上大雨",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I'm sorry I ______ your call yesterday.\nA. miss\nB. missing\nC. misses\nD. missed",
+  "题目3": "【选词填空】从 miss、lose 中选一个，用适当形式填空。\n题干：I ______ my keys yesterday and couldn't get in.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She miss her family very much now.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：你走了以后我们一直很想你。\n题干：We have ______ you since you left.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：______ Brown is our new English teacher. She isn't married.\nA. Mrs\nB. Mr\nC. Miss\nD. Sir\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"I miss you\" means ______.\nA. I can't see you clearly\nB. I feel sad because you are not here\nC. I didn't hit you\nD. I lost you\n考点：用法",
+  "答案": "【1】A（没赶上公交车）\n讲解：miss the bus 没赶上公交车。\n【2】D（missed）\n讲解：yesterday 用过去式。\n【3】lost\n讲解：“丢了”钥匙用 lose，过去式 lost。\n【4】miss → misses\n讲解：主语三单，加 es。\n【5】missed\n讲解：现在完成时用过去分词 missed。\n【6】C（Miss）\n讲解：称呼未婚女士用 Miss。\n【7】B（I feel sad because you are not here）\n讲解：miss 想念：身边少了某人。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人今天早上怎么了？",
+   "listen": "I missed the bus this morning.",
+   "opts": [
+    "没赶上公交车",
+    "睡过头了",
+    "生病了",
+    "遇上大雨"
+   ],
+   "why": "miss the bus 没赶上公交车。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I'm sorry I ______ your call yesterday.",
+   "opts": [
+    "missed",
+    "miss",
+    "missing",
+    "misses"
+   ],
+   "why": "yesterday 用过去式。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 miss、lose 中选一个，用适当形式填空。",
+   "stem": "I ______ my keys yesterday and couldn't get in.",
+   "ans": "lost",
+   "why": "“丢了”钥匙用 lose，过去式 lost。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She miss her family very much now.",
+   "ans": "miss → misses",
+   "why": "主语三单，加 es。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你走了以后我们一直很想你。",
+   "stem": "We have ______ you since you left.",
+   "ans": "missed",
+   "why": "现在完成时用过去分词 missed。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ Brown is our new English teacher. She isn't married.",
+   "opts": [
+    "Miss",
+    "Mrs",
+    "Mr",
+    "Sir"
+   ],
+   "why": "称呼未婚女士用 Miss。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"I miss you\" means ______.",
+   "opts": [
+    "I feel sad because you are not here",
+    "I can't see you clearly",
+    "I didn't hit you",
+    "I lost you"
+   ],
+   "why": "miss 想念：身边少了某人。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

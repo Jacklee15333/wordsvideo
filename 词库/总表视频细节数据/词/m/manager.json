@@ -1,0 +1,94 @@
+{
+ "单词": "manager",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人想和谁谈？\n听：I'd like to speak to the manager, please.\nA. 服务员\nB. 经理\nC. 厨师\nD. 司机",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Our company has five ______.\nA. managers\nB. manager\nC. manage\nD. management",
+  "题目3": "【选词填空】从 manager、manage 中选一个，用适当形式填空。\n题干：Can you ______ the work by yourself?",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He is the manager of a big hotel, and he manage 100 workers.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他是这家商店的经理。\n题干：He is the ______ of this shop.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：This shop has a good ______ team.\nA. manager\nB. manage\nC. management\nD. manageable\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：An \"administrator\" mainly does ______ work.\nA. cooking\nB. driving\nC. office and planning\nD. teaching\n考点：易混",
+  "答案": "【1】B（经理）\n讲解：manager 经理。\n【2】A（managers）\n讲解：five 后面用复数。\n【3】manage\n讲解：can 后面用动词。\n【4】manage → manages\n讲解：主语三单。\n【5】manager\n讲解：经理 manager。\n【6】C（management）\n讲解：“管理团队”用 management。\n【7】C（office and planning）\n讲解：administrator 偏行政事务，manager 管业务运转。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想和谁谈？",
+   "listen": "I'd like to speak to the manager, please.",
+   "opts": [
+    "经理",
+    "服务员",
+    "厨师",
+    "司机"
+   ],
+   "why": "manager 经理。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Our company has five ______.",
+   "opts": [
+    "managers",
+    "manager",
+    "manage",
+    "management"
+   ],
+   "why": "five 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 manager、manage 中选一个，用适当形式填空。",
+   "stem": "Can you ______ the work by yourself?",
+   "ans": "manage",
+   "why": "can 后面用动词。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is the manager of a big hotel, and he manage 100 workers.",
+   "ans": "manage → manages",
+   "why": "主语三单。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是这家商店的经理。",
+   "stem": "He is the ______ of this shop.",
+   "ans": "manager",
+   "why": "经理 manager。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This shop has a good ______ team.",
+   "opts": [
+    "management",
+    "manager",
+    "manage",
+    "manageable"
+   ],
+   "why": "“管理团队”用 management。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An \"administrator\" mainly does ______ work.",
+   "opts": [
+    "office and planning",
+    "cooking",
+    "driving",
+    "teaching"
+   ],
+   "why": "administrator 偏行政事务，manager 管业务运转。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,97 @@
+{
+ "单词": "motor",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：船上有什么？\n听：The boat has a small motor.\nA. 一面帆\nB. 一个小马达\nC. 一张桌子\nD. 一盏灯",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The boat has a small ______.\nA. motive\nB. motion\nC. meter\nD. motor\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The factory makes electric ______. (motor)\n考点：变形",
+  "题目4": "【选词填空】从 motor、motorcycle 中选一个，用适当形式填空。\n题干：He rides a ______ to work.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The motor are very loud.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A motor makes things ______.\nA. move\nB. cold\nC. quiet\nD. soft\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A motor show means ______.\nA. 马达秀\nB. 摩托车赛\nC. 运动会\nD. 汽车展\n考点：短语",
+  "答案": "【1】B（一个小马达）\n讲解：motor 马达。\n【2】D（motor）\n讲解：“马达”是 motor。\n【3】motors\n讲解：泛指用复数 motors。\n【4】motorcycle\n讲解：骑的是摩托车 motorcycle。\n【5】are → is\n讲解：主语 motor 单数，谓语用 is。\n【6】A（move）\n讲解：马达让东西动起来。\n【7】D（汽车展）\n讲解：motor show 车展。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：船上有什么？",
+   "listen": "The boat has a small motor.",
+   "opts": [
+    "一个小马达",
+    "一面帆",
+    "一张桌子",
+    "一盏灯"
+   ],
+   "why": "motor 马达。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The boat has a small ______.",
+   "opts": [
+    "motor",
+    "motive",
+    "motion",
+    "meter"
+   ],
+   "why": "“马达”是 motor。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The factory makes electric ______. (motor)",
+   "ans": "motors",
+   "why": "泛指用复数 motors。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 motor、motorcycle 中选一个，用适当形式填空。",
+   "stem": "He rides a ______ to work.",
+   "ans": "motorcycle",
+   "why": "骑的是摩托车 motorcycle。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The motor are very loud.",
+   "ans": "are → is",
+   "why": "主语 motor 单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A motor makes things ______.",
+   "opts": [
+    "move",
+    "cold",
+    "quiet",
+    "soft"
+   ],
+   "why": "马达让东西动起来。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A motor show means ______.",
+   "opts": [
+    "汽车展",
+    "马达秀",
+    "摩托车赛",
+    "运动会"
+   ],
+   "why": "motor show 车展。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "understood",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人听懂了吗？\n听：Yes, I understood everything you said.\nA. 没听懂\nB. 听不见\nC. 不想听\nD. 都听懂了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Yesterday I ______ the story after reading it twice.\nA. understand\nB. understands\nC. understood\nD. understanding\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Is the question easy to ______? (understood)\n考点：词性转换",
+  "题目4": "【选词填空】从 understood、understanding 中选一个，用适当形式填空。\n题干：Thanks for your ______.\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The rules were understood by everyone, so nobody followed them.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：It is understood that we must be on time. 这里 understood 的意思是 ______。\nA. 不言而喻的\nB. 听懂的\nC. 误会的\nD. 站着的\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我误解了他的意思。\n题干：I ______ what he meant.\n考点：易混",
+  "答案": "【1】D（都听懂了）\n讲解：understood 是 understand 的过去式。\n【2】C（understood）\n讲解：Yesterday 表示过去，用过去式 understood。\n【3】understand\n讲解：to 后面用动词原形 understand。\n【4】understanding\n讲解：your 后面要名词 understanding。\n【5】so → but\n讲解：前后意思相反，用 but。\n【6】A（不言而喻的）\n讲解：it is understood that 大家都明白、不言而喻。\n【7】misunderstood\n讲解：“误解了”用 misunderstood。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人听懂了吗？",
+   "listen": "Yes, I understood everything you said.",
+   "opts": [
+    "都听懂了",
+    "没听懂",
+    "听不见",
+    "不想听"
+   ],
+   "why": "understood 是 understand 的过去式。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Yesterday I ______ the story after reading it twice.",
+   "opts": [
+    "understood",
+    "understand",
+    "understands",
+    "understanding"
+   ],
+   "why": "Yesterday 表示过去，用过去式 understood。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Is the question easy to ______? (understood)",
+   "ans": "understand",
+   "why": "to 后面用动词原形 understand。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 understood、understanding 中选一个，用适当形式填空。",
+   "stem": "Thanks for your ______.",
+   "ans": "understanding",
+   "why": "your 后面要名词 understanding。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The rules were understood by everyone, so nobody followed them.",
+   "ans": "so → but",
+   "why": "前后意思相反，用 but。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It is understood that we must be on time. 这里 understood 的意思是 ______。",
+   "opts": [
+    "不言而喻的",
+    "听懂的",
+    "误会的",
+    "站着的"
+   ],
+   "why": "it is understood that 大家都明白、不言而喻。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我误解了他的意思。",
+   "stem": "I ______ what he meant.",
+   "ans": "misunderstood",
+   "why": "“误解了”用 misunderstood。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

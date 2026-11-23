@@ -1,0 +1,94 @@
+{
+ "单词": "robot",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个机器人会做什么？\n听：This robot can clean the floor.\nA. 扫地\nB. 做饭\nC. 唱歌\nD. 开车",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Many factories use ______ now.\nA. robot\nB. robotic\nC. robotics\nD. robots",
+  "题目3": "【选词填空】从 robot、robotic 中选一个，用适当形式填空。\n题干：He spoke in a flat, ______ voice.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The robot can talks.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他在大学学机器人技术。\n题干：He studies ______ at university.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A robot that looks like a human is called an \"______\".\nA. android\nB. animal\nC. alien\nD. angel\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The ______ in the factory works 24 hours a day.\nA. robots\nB. robotic\nC. robotics\nD. robot\n考点：用法",
+  "答案": "【1】A（扫地）\n讲解：robot 机器人。\n【2】D（robots）\n讲解：many 后面用复数。\n【3】robotic\n讲解：像机器人一样的用形容词 robotic。\n【4】talks → talk\n讲解：can 后面用动词原形。\n【5】robotics\n讲解：机器人学 robotics。\n【6】A（android）\n讲解：长得像人的机器人叫 android。\n【7】D（robot）\n讲解：谓语 works 用单数主语。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个机器人会做什么？",
+   "listen": "This robot can clean the floor.",
+   "opts": [
+    "扫地",
+    "做饭",
+    "唱歌",
+    "开车"
+   ],
+   "why": "robot 机器人。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Many factories use ______ now.",
+   "opts": [
+    "robots",
+    "robot",
+    "robotic",
+    "robotics"
+   ],
+   "why": "many 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 robot、robotic 中选一个，用适当形式填空。",
+   "stem": "He spoke in a flat, ______ voice.",
+   "ans": "robotic",
+   "why": "像机器人一样的用形容词 robotic。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The robot can talks.",
+   "ans": "talks → talk",
+   "why": "can 后面用动词原形。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他在大学学机器人技术。",
+   "stem": "He studies ______ at university.",
+   "ans": "robotics",
+   "why": "机器人学 robotics。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A robot that looks like a human is called an \"______\".",
+   "opts": [
+    "android",
+    "animal",
+    "alien",
+    "angel"
+   ],
+   "why": "长得像人的机器人叫 android。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ in the factory works 24 hours a day.",
+   "opts": [
+    "robot",
+    "robots",
+    "robotic",
+    "robotics"
+   ],
+   "why": "谓语 works 用单数主语。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

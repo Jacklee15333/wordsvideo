@@ -1,0 +1,94 @@
+{
+ "单词": "drawer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：钥匙在哪儿？\n听：The keys are in the top drawer.\nA. 门后面\nB. 最上面的抽屉里\nC. 桌子上\nD. 口袋里",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My desk has three ______.\nA. drawer\nB. drawers\nC. draws\nD. drawings",
+  "题目3": "【选词填空】从 drawer、artist 中选一个，用适当形式填空。\n题干：Qi Baishi was a great Chinese ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She opened the drawer and take out a pen.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：抽屉里有什么？\n题干：What's in the ______?",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Drawer\" sounds almost the same as \"______\".\nA. drew\nB. door\nC. dress\nD. draw\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"The bottom drawer\" means the ______ drawer.\nA. lowest\nB. highest\nC. middle\nD. biggest\n考点：用法",
+  "答案": "【1】B（最上面的抽屉里）\n讲解：top drawer 最上面的抽屉。\n【2】B（drawers）\n讲解：three 后面用复数。\n【3】artist\n讲解：画家一般说 artist，drawer 指抽屉。\n【4】take → took\n讲解：和 opened 并列，用过去式。\n【5】drawer\n讲解：抽屉 drawer。\n【6】D（draw）\n讲解：drawer 和 draw 几乎同音。\n【7】A（lowest）\n讲解：bottom 最下面的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：钥匙在哪儿？",
+   "listen": "The keys are in the top drawer.",
+   "opts": [
+    "最上面的抽屉里",
+    "门后面",
+    "桌子上",
+    "口袋里"
+   ],
+   "why": "top drawer 最上面的抽屉。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My desk has three ______.",
+   "opts": [
+    "drawers",
+    "drawer",
+    "draws",
+    "drawings"
+   ],
+   "why": "three 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 drawer、artist 中选一个，用适当形式填空。",
+   "stem": "Qi Baishi was a great Chinese ______.",
+   "ans": "artist",
+   "why": "画家一般说 artist，drawer 指抽屉。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She opened the drawer and take out a pen.",
+   "ans": "take → took",
+   "why": "和 opened 并列，用过去式。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "抽屉里有什么？",
+   "stem": "What's in the ______?",
+   "ans": "drawer",
+   "why": "抽屉 drawer。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Drawer\" sounds almost the same as \"______\".",
+   "opts": [
+    "draw",
+    "drew",
+    "door",
+    "dress"
+   ],
+   "why": "drawer 和 draw 几乎同音。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"The bottom drawer\" means the ______ drawer.",
+   "opts": [
+    "lowest",
+    "highest",
+    "middle",
+    "biggest"
+   ],
+   "why": "bottom 最下面的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "ray",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：窗户里照进来什么？\n听：A ray of sunlight came in through the window.\nA. 一阵风\nB. 一只鸟\nC. 一片叶子\nD. 一缕阳光",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：A ______ of light came through the hole.\nA. rays\nB. beam\nC. beams\nD. ray",
+  "题目3": "【选词填空】从 ray、raise 中选一个，用适当形式填空。\n题干：Please ______ your hand if you know the answer.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The sun's ______ are very strong at noon. (ray)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The sun's rays is very hot at noon.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Too much sun is bad for your skin because of its ______.\nA. rays\nB. ray\nC. beams\nD. beam\n考点：变形",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：汽车灯射出一道强光。\n题干：The car's lights sent out a strong ______.\n考点：易混",
+  "答案": "【1】D（一缕阳光）\n讲解：a ray of sunlight 一缕阳光。\n【2】D（ray）\n讲解：a … of light 一道光，单数 ray。\n【3】raise\n讲解：举手 raise，和 ray 形近。\n【4】rays\n讲解：主语用复数 rays，谓语 are。\n【5】is → are\n讲解：主语 rays 是复数，谓语用 are。\n【6】A（rays）\n讲解：太阳的热多说它的 rays。\n【7】beam\n讲解：一束光用 beam，ray 是细细的一道光。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：窗户里照进来什么？",
+   "listen": "A ray of sunlight came in through the window.",
+   "opts": [
+    "一缕阳光",
+    "一阵风",
+    "一只鸟",
+    "一片叶子"
+   ],
+   "why": "a ray of sunlight 一缕阳光。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ of light came through the hole.",
+   "opts": [
+    "ray",
+    "rays",
+    "beam",
+    "beams"
+   ],
+   "why": "a … of light 一道光，单数 ray。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 ray、raise 中选一个，用适当形式填空。",
+   "stem": "Please ______ your hand if you know the answer.",
+   "ans": "raise",
+   "why": "举手 raise，和 ray 形近。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The sun's ______ are very strong at noon. (ray)",
+   "ans": "rays",
+   "why": "主语用复数 rays，谓语 are。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The sun's rays is very hot at noon.",
+   "ans": "is → are",
+   "why": "主语 rays 是复数，谓语用 are。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Too much sun is bad for your skin because of its ______.",
+   "opts": [
+    "rays",
+    "ray",
+    "beams",
+    "beam"
+   ],
+   "why": "太阳的热多说它的 rays。",
+   "kd": "变形"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "汽车灯射出一道强光。",
+   "stem": "The car's lights sent out a strong ______.",
+   "ans": "beam",
+   "why": "一束光用 beam，ray 是细细的一道光。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

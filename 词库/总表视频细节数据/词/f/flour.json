@@ -1,0 +1,98 @@
+{
+ "单词": "flour",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：包饺子需要什么？\n听：We need flour to make dumplings.\nA. 米\nB. 糖\nC. 盐\nD. 面粉",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：How much ______ do we need for the cake?\nA. flours\nB. flower\nC. flour\nD. flowers\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Yesterday she ______ the table before rolling the dough. (flour)\n考点：变形",
+  "题目4": "【选词填空】从 flour、flower 中选一个，用适当形式填空。\n题干：A rose is a beautiful ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Please buy two bags of flours.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Cornmeal is ______ than corn flour.\nA. finer\nB. sweeter\nC. whiter\nD. coarser\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There ______ some flour on the table.\nA. are\nB. is\nC. were\nD. be\n考点：用法",
+  "答案": "【1】D（面粉）\n讲解：flour 面粉。\n【2】C（flour）\n讲解：How much 后面接不可数名词 flour。\n【3】floured\n讲解：flour 作动词“撒面粉”，yesterday 用过去式。\n【4】flower\n讲解：玫瑰是花 flower。\n【5】flours → flour\n讲解：flour 不可数，不加 s。\n【6】D（coarser）\n讲解：meal 指较粗的谷物粉，flour 磨得很细。\n【7】B（is）\n讲解：flour 不可数，用 is。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：包饺子需要什么？",
+   "listen": "We need flour to make dumplings.",
+   "opts": [
+    "面粉",
+    "米",
+    "糖",
+    "盐"
+   ],
+   "why": "flour 面粉。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "How much ______ do we need for the cake?",
+   "opts": [
+    "flour",
+    "flours",
+    "flower",
+    "flowers"
+   ],
+   "why": "How much 后面接不可数名词 flour。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Yesterday she ______ the table before rolling the dough. (flour)",
+   "ans": "floured",
+   "why": "flour 作动词“撒面粉”，yesterday 用过去式。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 flour、flower 中选一个，用适当形式填空。",
+   "stem": "A rose is a beautiful ______.",
+   "ans": "flower",
+   "why": "玫瑰是花 flower。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please buy two bags of flours.",
+   "ans": "flours → flour",
+   "why": "flour 不可数，不加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Cornmeal is ______ than corn flour.",
+   "opts": [
+    "coarser",
+    "finer",
+    "sweeter",
+    "whiter"
+   ],
+   "why": "meal 指较粗的谷物粉，flour 磨得很细。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There ______ some flour on the table.",
+   "opts": [
+    "is",
+    "are",
+    "were",
+    "be"
+   ],
+   "why": "flour 不可数，用 is。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

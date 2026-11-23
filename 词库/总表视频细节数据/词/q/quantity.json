@@ -1,0 +1,94 @@
+{
+ "单词": "quantity",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人买了多少大米？\n听：We bought a large quantity of rice.\nA. 很少\nB. 一点没买\nC. 一袋\nD. 很多",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The shop has a large ______ of fresh fruit.\nA. quality\nB. qualify\nC. quantities\nD. quantity\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Large ______ of water are needed. (quantity)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：We need a large number of milk.\n考点：易混",
+  "题目5": "【选词填空】从 quantity、quality 中选一个，用适当形式填空。\n题干：We want ______, not just lots of cheap things.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这种水果大量生产。\n题干：This fruit is produced in large ______.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There are a large ______ of students in the hall.\nA. amount\nB. quantity\nC. number\nD. deal\n考点：易混",
+  "答案": "【1】D（很多）\n讲解：a large quantity of 大量的。\n【2】D（quantity）\n讲解：“大量的”是 a large quantity of；quality 是质量。\n【3】quantities\n讲解：谓语 are 是复数，用 quantities（y 变 i 加 es）。\n【4】number → quantity\n讲解：milk 不可数，不能用 a number of，可用 a large quantity of。\n【5】quality\n讲解：“不只要很多便宜货”，要的是质量 quality。\n【6】quantities\n讲解：in large quantities 大量地，用复数。\n【7】C（number）\n讲解：修饰可数的 students，常用 a large number of。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人买了多少大米？",
+   "listen": "We bought a large quantity of rice.",
+   "opts": [
+    "很多",
+    "很少",
+    "一点没买",
+    "一袋"
+   ],
+   "why": "a large quantity of 大量的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The shop has a large ______ of fresh fruit.",
+   "opts": [
+    "quantity",
+    "quality",
+    "qualify",
+    "quantities"
+   ],
+   "why": "“大量的”是 a large quantity of；quality 是质量。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Large ______ of water are needed. (quantity)",
+   "ans": "quantities",
+   "why": "谓语 are 是复数，用 quantities（y 变 i 加 es）。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We need a large number of milk.",
+   "ans": "number → quantity",
+   "why": "milk 不可数，不能用 a number of，可用 a large quantity of。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 quantity、quality 中选一个，用适当形式填空。",
+   "stem": "We want ______, not just lots of cheap things.",
+   "ans": "quality",
+   "why": "“不只要很多便宜货”，要的是质量 quality。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这种水果大量生产。",
+   "stem": "This fruit is produced in large ______.",
+   "ans": "quantities",
+   "why": "in large quantities 大量地，用复数。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are a large ______ of students in the hall.",
+   "opts": [
+    "number",
+    "amount",
+    "quantity",
+    "deal"
+   ],
+   "why": "修饰可数的 students，常用 a large number of。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

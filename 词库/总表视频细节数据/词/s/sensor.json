@@ -1,0 +1,96 @@
+{
+ "单词": "sensor",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这扇门上有什么？\n听：The door has a sensor.\nA. 锁\nB. 门铃\nC. 窗户\nD. 感应器",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The light turns on when the ______ feels movement.\nA. sensor\nB. censor\nC. sense\nD. senior",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Modern cars have many ______. (sensor)\n考点：变形",
+  "题目4": "【选词填空】从 sensor、detector 中选一个，用适当形式填空。\n题干：At the airport, they use a metal ______ to check bags.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The sensors in the phone works well.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The sensor turns light ______ electric signals.\nA. onto\nB. in\nC. into\nD. on\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Smart watches use sensors to ______ your heart rate.\nA. measures\nB. measured\nC. measure\nD. measuring\n考点：用法",
+  "答案": "【1】D（感应器）\n讲解：sensor 感应器。\n【2】A（sensor）\n讲解：感应到动作的是感应器 sensor。\n【3】sensors\n讲解：many 后面用复数 sensors。\n【4】detector\n讲解：“金属探测器”是 metal detector。\n【5】works → work\n讲解：主语 sensors 是复数，用 work。\n【6】C（into）\n讲解：turn A into B 把 A 变成 B。\n【7】C（measure）\n讲解：不定式 to 后用原形 measure。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这扇门上有什么？",
+   "listen": "The door has a sensor.",
+   "opts": [
+    "感应器",
+    "锁",
+    "门铃",
+    "窗户"
+   ],
+   "why": "sensor 感应器。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The light turns on when the ______ feels movement.",
+   "opts": [
+    "sensor",
+    "censor",
+    "sense",
+    "senior"
+   ],
+   "why": "感应到动作的是感应器 sensor。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Modern cars have many ______. (sensor)",
+   "ans": "sensors",
+   "why": "many 后面用复数 sensors。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 sensor、detector 中选一个，用适当形式填空。",
+   "stem": "At the airport, they use a metal ______ to check bags.",
+   "ans": "detector",
+   "why": "“金属探测器”是 metal detector。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The sensors in the phone works well.",
+   "ans": "works → work",
+   "why": "主语 sensors 是复数，用 work。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The sensor turns light ______ electric signals.",
+   "opts": [
+    "into",
+    "onto",
+    "in",
+    "on"
+   ],
+   "why": "turn A into B 把 A 变成 B。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Smart watches use sensors to ______ your heart rate.",
+   "opts": [
+    "measure",
+    "measures",
+    "measured",
+    "measuring"
+   ],
+   "why": "不定式 to 后用原形 measure。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

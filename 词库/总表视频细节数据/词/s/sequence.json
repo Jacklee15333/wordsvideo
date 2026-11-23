@@ -1,0 +1,96 @@
+{
+ "单词": "sequence",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让我们怎么摆图片？\n听：Put the pictures in the right sequence.\nA. 按颜色\nB. 按正确顺序\nC. 随便放\nD. 按大小",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The events are told in time ______.\nA. series\nB. sequence\nC. sequel\nD. sentence",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The film has some exciting action ______. (sequence)\n考点：变形",
+  "题目4": "【选词填空】从 sequence、series 中选一个，用适当形式填空。\n题干：This is the third book in the Harry Potter ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The sequence of the numbers are wrong.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Please put these words ______ the correct order.\nA. in\nB. on\nC. at\nD. with\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A sequence of bad luck ______ him sad last year.\nA. made\nB. makes\nC. make\nD. making\n考点：用法",
+  "答案": "【1】B（按正确顺序）\n讲解：sequence 顺序。\n【2】B（sequence）\n讲解：按时间“顺序”用 sequence。\n【3】sequences\n讲解：some 后面用复数 sequences（一连串镜头）。\n【4】series\n讲解：同类东西的“系列”用 series。\n【5】are → is\n讲解：主语是 the sequence（单数），用 is。\n【6】A（in）\n讲解：in order 按顺序。\n【7】A（made）\n讲解：last year 用过去式 made。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让我们怎么摆图片？",
+   "listen": "Put the pictures in the right sequence.",
+   "opts": [
+    "按正确顺序",
+    "按颜色",
+    "随便放",
+    "按大小"
+   ],
+   "why": "sequence 顺序。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The events are told in time ______.",
+   "opts": [
+    "sequence",
+    "series",
+    "sequel",
+    "sentence"
+   ],
+   "why": "按时间“顺序”用 sequence。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The film has some exciting action ______. (sequence)",
+   "ans": "sequences",
+   "why": "some 后面用复数 sequences（一连串镜头）。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 sequence、series 中选一个，用适当形式填空。",
+   "stem": "This is the third book in the Harry Potter ______.",
+   "ans": "series",
+   "why": "同类东西的“系列”用 series。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The sequence of the numbers are wrong.",
+   "ans": "are → is",
+   "why": "主语是 the sequence（单数），用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please put these words ______ the correct order.",
+   "opts": [
+    "in",
+    "on",
+    "at",
+    "with"
+   ],
+   "why": "in order 按顺序。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A sequence of bad luck ______ him sad last year.",
+   "opts": [
+    "made",
+    "makes",
+    "make",
+    "making"
+   ],
+   "why": "last year 用过去式 made。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

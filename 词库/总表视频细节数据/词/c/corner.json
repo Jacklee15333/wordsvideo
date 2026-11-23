@@ -1,0 +1,94 @@
+{
+ "单词": "corner",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：商店在哪里？\n听：The shop is at the corner of the street.\nA. 街中间\nB. 路尽头\nC. 桥下\nD. 街角",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is a desk ______ the corner of the room.\nA. in\nB. on\nC. under\nD. over",
+  "题目3": "【选词填空】从 corner、angle 中选一个，用适当形式填空。\n题干：The two lines meet at a 90-degree ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There are four corner in a room.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：转过街角就是银行。\n题干：The bank is just ______ the corner.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Cut corners\" means ______.\nA. turn quickly\nB. paint walls\nC. do something badly to save time or money\nD. clean rooms\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Our house is on the ______ of Park Road and Hill Street.\nA. corners\nB. cornerstone\nC. corner\nD. angle\n考点：用法",
+  "答案": "【1】D（街角）\n讲解：at the corner of the street 在街角。\n【2】A（in）\n讲解：房间里的内角用 in the corner。\n【3】angle\n讲解：角度是 angle。\n【4】corner → corners\n讲解：four 后面用复数。\n【5】around\n讲解：around the corner 在拐角处。\n【6】C（do something badly to save time or money）\n讲解：cut corners 偷工减料。\n【7】C（corner）\n讲解：街角用 on the corner。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：商店在哪里？",
+   "listen": "The shop is at the corner of the street.",
+   "opts": [
+    "街角",
+    "街中间",
+    "路尽头",
+    "桥下"
+   ],
+   "why": "at the corner of the street 在街角。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is a desk ______ the corner of the room.",
+   "opts": [
+    "in",
+    "on",
+    "under",
+    "over"
+   ],
+   "why": "房间里的内角用 in the corner。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 corner、angle 中选一个，用适当形式填空。",
+   "stem": "The two lines meet at a 90-degree ______.",
+   "ans": "angle",
+   "why": "角度是 angle。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are four corner in a room.",
+   "ans": "corner → corners",
+   "why": "four 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "转过街角就是银行。",
+   "stem": "The bank is just ______ the corner.",
+   "ans": "around",
+   "why": "around the corner 在拐角处。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Cut corners\" means ______.",
+   "opts": [
+    "do something badly to save time or money",
+    "turn quickly",
+    "paint walls",
+    "clean rooms"
+   ],
+   "why": "cut corners 偷工减料。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Our house is on the ______ of Park Road and Hill Street.",
+   "opts": [
+    "corner",
+    "corners",
+    "cornerstone",
+    "angle"
+   ],
+   "why": "街角用 on the corner。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

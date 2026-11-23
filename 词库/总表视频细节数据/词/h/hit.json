@@ -1,0 +1,94 @@
+{
+ "单词": "hit",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：球打中了什么？\n听：The ball hit the window.\nA. 门\nB. 窗户\nC. 树\nD. 人",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He ______ the ball very hard yesterday.\nA. hitted\nB. hit\nC. hits\nD. hitting",
+  "题目3": "【选词填空】从 hit、beat 中选一个，用适当形式填空。\n题干：The drummer kept ______ the drum all night.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The boy is hiting the nail.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他敲了好几下门。\n题干：He ______ on the door several times.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"The song is a big hit\" means it is ______.\nA. very loud\nB. very old\nC. very popular\nD. very bad\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Hit it off\" means ______.\nA. start a fight\nB. lose a game\nC. get on well at once\nD. leave quickly\n考点：短语",
+  "答案": "【1】B（窗户）\n讲解：hit 打中。\n【2】B（hit）\n讲解：hit 的过去式不变，还是 hit。\n【3】beating\n讲解：一下接一下地打用 beat，keep doing。\n【4】hiting → hitting\n讲解：双写 t 加 ing。\n【5】knocked\n讲解：敲门用 knock。\n【6】C（very popular）\n讲解：hit 作名词指“走红的事物”。\n【7】C（get on well at once）\n讲解：hit it off 一见如故。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：球打中了什么？",
+   "listen": "The ball hit the window.",
+   "opts": [
+    "窗户",
+    "门",
+    "树",
+    "人"
+   ],
+   "why": "hit 打中。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He ______ the ball very hard yesterday.",
+   "opts": [
+    "hit",
+    "hitted",
+    "hits",
+    "hitting"
+   ],
+   "why": "hit 的过去式不变，还是 hit。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 hit、beat 中选一个，用适当形式填空。",
+   "stem": "The drummer kept ______ the drum all night.",
+   "ans": "beating",
+   "why": "一下接一下地打用 beat，keep doing。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The boy is hiting the nail.",
+   "ans": "hiting → hitting",
+   "why": "双写 t 加 ing。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他敲了好几下门。",
+   "stem": "He ______ on the door several times.",
+   "ans": "knocked",
+   "why": "敲门用 knock。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"The song is a big hit\" means it is ______.",
+   "opts": [
+    "very popular",
+    "very loud",
+    "very old",
+    "very bad"
+   ],
+   "why": "hit 作名词指“走红的事物”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Hit it off\" means ______.",
+   "opts": [
+    "get on well at once",
+    "start a fight",
+    "lose a game",
+    "leave quickly"
+   ],
+   "why": "hit it off 一见如故。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,97 @@
+{
+ "单词": "heal",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说手指上的伤口怎么样了？\n听：The cut on my finger has healed.\nA. 长好了\nB. 更痛了\nC. 流血了\nD. 发炎了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The wound will ______ in a week.\nA. cure\nB. treat\nC. healthy\nD. heal\n考点：易混",
+  "题目3": "【选词填空】从 heal、cure 中选一个，用适当形式填空。\n题干：Doctors can now ______ this disease.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Time ______ all sadness. (heal)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：His broken leg healed quick.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Time heals all wounds\" means sadness ______ with time.\nA. becomes worse\nB. never changes\nC. becomes less\nD. comes back\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The cut is ______ well.\nA. heals\nB. healing\nC. heal\nD. health\n考点：变形",
+  "答案": "【1】A（长好了）\n讲解：has healed 长好了。\n【2】D（heal）\n讲解：伤口“长好、复原”用 heal。\n【3】cure\n讲解：把病治好用 cure。\n【4】heals\n讲解：说道理用一般现在时，主语 time 是三单，加 s。\n【5】quick → quickly\n讲解：修饰动词 healed 用副词。\n【6】C（becomes less）\n讲解：heal 也多用于心灵创伤。\n【7】B（healing）\n讲解：is 后面用现在分词 healing。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说手指上的伤口怎么样了？",
+   "listen": "The cut on my finger has healed.",
+   "opts": [
+    "长好了",
+    "更痛了",
+    "流血了",
+    "发炎了"
+   ],
+   "why": "has healed 长好了。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The wound will ______ in a week.",
+   "opts": [
+    "heal",
+    "cure",
+    "treat",
+    "healthy"
+   ],
+   "why": "伤口“长好、复原”用 heal。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 heal、cure 中选一个，用适当形式填空。",
+   "stem": "Doctors can now ______ this disease.",
+   "ans": "cure",
+   "why": "把病治好用 cure。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Time ______ all sadness. (heal)",
+   "ans": "heals",
+   "why": "说道理用一般现在时，主语 time 是三单，加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "His broken leg healed quick.",
+   "ans": "quick → quickly",
+   "why": "修饰动词 healed 用副词。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Time heals all wounds\" means sadness ______ with time.",
+   "opts": [
+    "becomes less",
+    "becomes worse",
+    "never changes",
+    "comes back"
+   ],
+   "why": "heal 也多用于心灵创伤。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The cut is ______ well.",
+   "opts": [
+    "healing",
+    "heals",
+    "heal",
+    "health"
+   ],
+   "why": "is 后面用现在分词 healing。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

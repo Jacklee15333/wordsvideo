@@ -1,0 +1,93 @@
+{
+ "单词": "entrance",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：我们在哪里见面？\n听：Let's meet at the school entrance.\nA. 教室里\nB. 操场上\nC. 食堂里\nD. 学校门口",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The building has three ______.\nA. entrance\nB. enter\nC. entry\nD. entrances\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Please ______ the room quietly. (entrance)\n考点：词性转换",
+  "题目4": "【选词填空】从 entrance、exit 中选一个，用适当形式填空。\n题干：In case of fire, go to the nearest ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The entrance to the park are on Green Street.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他通过了大学入学考试。\n题干：He passed the college ______ exam.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"No ______\" means you can't go in.\nA. Entrance\nB. Enter\nC. Entry\nD. Entering\n考点：易混",
+  "答案": "【1】D（学校门口）\n讲解：entrance 入口。\n【2】D（entrances）\n讲解：three 后面用复数 entrances。\n【3】enter\n讲解：Please 后面要动词原形 enter。\n【4】exit\n讲解：着火要往出口跑，用 exit。\n【5】are → is\n讲解：主语 entrance 是单数，用 is。\n【6】entrance\n讲解：entrance exam 入学考试。\n【7】C（Entry）\n讲解：告示牌“禁止进入”是 No Entry。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：我们在哪里见面？",
+   "listen": "Let's meet at the school entrance.",
+   "opts": [
+    "学校门口",
+    "教室里",
+    "操场上",
+    "食堂里"
+   ],
+   "why": "entrance 入口。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The building has three ______.",
+   "opts": [
+    "entrances",
+    "entrance",
+    "enter",
+    "entry"
+   ],
+   "why": "three 后面用复数 entrances。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Please ______ the room quietly. (entrance)",
+   "ans": "enter",
+   "why": "Please 后面要动词原形 enter。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 entrance、exit 中选一个，用适当形式填空。",
+   "stem": "In case of fire, go to the nearest ______.",
+   "ans": "exit",
+   "why": "着火要往出口跑，用 exit。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The entrance to the park are on Green Street.",
+   "ans": "are → is",
+   "why": "主语 entrance 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他通过了大学入学考试。",
+   "stem": "He passed the college ______ exam.",
+   "ans": "entrance",
+   "why": "entrance exam 入学考试。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"No ______\" means you can't go in.",
+   "opts": [
+    "Entry",
+    "Entrance",
+    "Enter",
+    "Entering"
+   ],
+   "why": "告示牌“禁止进入”是 No Entry。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

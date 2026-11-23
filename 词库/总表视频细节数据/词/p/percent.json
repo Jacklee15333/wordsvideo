@@ -1,0 +1,94 @@
+{
+ "单词": "percent",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：多少人喜欢这部电影？\n听：Ninety percent of people liked the film.\nA. 百分之十九\nB. 百分之九\nC. 百分之九十\nD. 百分之百",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：About 70 ______ of the Earth is covered by water.\nA. percents\nB. percent\nC. percentage\nD. per cents",
+  "题目3": "【选词填空】从 percent、percentage 中选一个，用适当形式填空。\n题干：The ______ of old people is growing.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Twenty percents of the students walk to school.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：五十美分是半美元。\n题干：Fifty ______ is half a dollar.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In British English, \"percent\" is often written as \"______\".\nA. per-cent\nB. pre cent\nC. percentage\nD. per cent\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Ten percent of the water ______ dirty.\nA. are\nB. were\nC. be\nD. is\n考点：用法",
+  "答案": "【1】C（百分之九十）\n讲解：ninety percent 百分之九十。\n【2】B（percent）\n讲解：数字后面的 percent 不加 s。\n【3】percentage\n讲解：the … of 用 percentage。\n【4】percents → percent\n讲解：percent 不加 s。\n【5】cents\n讲解：fifty 后面用复数。\n【6】D（per cent）\n讲解：英式常写成两个词 per cent。\n【7】D（is）\n讲解：percent of + 不可数名词，谓语用单数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：多少人喜欢这部电影？",
+   "listen": "Ninety percent of people liked the film.",
+   "opts": [
+    "百分之九十",
+    "百分之十九",
+    "百分之九",
+    "百分之百"
+   ],
+   "why": "ninety percent 百分之九十。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "About 70 ______ of the Earth is covered by water.",
+   "opts": [
+    "percent",
+    "percents",
+    "percentage",
+    "per cents"
+   ],
+   "why": "数字后面的 percent 不加 s。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 percent、percentage 中选一个，用适当形式填空。",
+   "stem": "The ______ of old people is growing.",
+   "ans": "percentage",
+   "why": "the … of 用 percentage。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Twenty percents of the students walk to school.",
+   "ans": "percents → percent",
+   "why": "percent 不加 s。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "五十美分是半美元。",
+   "stem": "Fifty ______ is half a dollar.",
+   "ans": "cents",
+   "why": "fifty 后面用复数。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In British English, \"percent\" is often written as \"______\".",
+   "opts": [
+    "per cent",
+    "per-cent",
+    "pre cent",
+    "percentage"
+   ],
+   "why": "英式常写成两个词 per cent。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Ten percent of the water ______ dirty.",
+   "opts": [
+    "is",
+    "are",
+    "were",
+    "be"
+   ],
+   "why": "percent of + 不可数名词，谓语用单数。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "generator",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：医院有什么设备？\n听：The hospital has a generator.\nA. 电梯\nB. 冰箱\nC. 空调\nD. 发电机",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The hospital has a ______ for when the power is off.\nA. generation\nB. generate\nC. general\nD. generator\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The factory has two ______. (generator)\n考点：变形",
+  "题目4": "【选词填空】从 generator、generation 中选一个，用适当形式填空。\n题干：My parents' ______ didn't have phones.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The generator make a lot of noise.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A generator makes ______.\nA. water\nB. food\nC. cloth\nD. electricity\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我们用太阳能发电。\n题干：We ______ power from the sun.\n考点：词性转换",
+  "答案": "【1】D（发电机）\n讲解：generator 发电机。\n【2】D（generator）\n讲解：a 后面要名词 generator（发电机）。\n【3】generators\n讲解：two 后面用复数 generators。\n【4】generation\n讲解：“一代人”用 generation。\n【5】make → makes\n讲解：主语单数，谓语用 makes。\n【6】D（electricity）\n讲解：发电机发电。\n【7】generate\n讲解：动词“产生”是 generate。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：医院有什么设备？",
+   "listen": "The hospital has a generator.",
+   "opts": [
+    "发电机",
+    "电梯",
+    "冰箱",
+    "空调"
+   ],
+   "why": "generator 发电机。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The hospital has a ______ for when the power is off.",
+   "opts": [
+    "generator",
+    "generation",
+    "generate",
+    "general"
+   ],
+   "why": "a 后面要名词 generator（发电机）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The factory has two ______. (generator)",
+   "ans": "generators",
+   "why": "two 后面用复数 generators。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 generator、generation 中选一个，用适当形式填空。",
+   "stem": "My parents' ______ didn't have phones.",
+   "ans": "generation",
+   "why": "“一代人”用 generation。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The generator make a lot of noise.",
+   "ans": "make → makes",
+   "why": "主语单数，谓语用 makes。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A generator makes ______.",
+   "opts": [
+    "electricity",
+    "water",
+    "food",
+    "cloth"
+   ],
+   "why": "发电机发电。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们用太阳能发电。",
+   "stem": "We ______ power from the sun.",
+   "ans": "generate",
+   "why": "动词“产生”是 generate。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

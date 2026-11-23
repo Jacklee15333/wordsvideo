@@ -1,0 +1,92 @@
+{
+ "单词": "completion",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这座楼什么时候完工？\n听：The building is near completion.\nA. 快完工了\nB. 刚开工\nC. 被拆了\nD. 卖掉了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ of the new road took a year.\nA. complete\nB. completely\nC. completed\nD. completion\n考点：词性转换",
+  "题目3": "【选词填空】从 complete、completion 中选一个，用适当形式填空。\n题干：We must ______ the work by Friday.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The workers ______ the bridge last week. (finish)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The completion of the project were celebrated.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Please check the ______ of the list; is anything missing?\nA. completion\nB. completeness\nC. complete\nD. completely\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：完成课程后你会拿到证书。\n题干：You will get a certificate ______ completion of the course.\n考点：用法",
+  "答案": "【1】A（快完工了）\n讲解：near completion 接近完成。\n【2】D（completion）\n讲解：the … of 之间要名词 completion。\n【3】complete\n讲解：must 后面用动词原形 complete。\n【4】finished\n讲解：last week 用过去式 finished。\n【5】were → was\n讲解：主语中心词 completion 是单数，用 was。\n【6】B（completeness）\n讲解：“齐全不齐全”这种状态用 completeness。\n【7】on\n讲解：on completion of 一完成……就……"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这座楼什么时候完工？",
+   "listen": "The building is near completion.",
+   "opts": [
+    "快完工了",
+    "刚开工",
+    "被拆了",
+    "卖掉了"
+   ],
+   "why": "near completion 接近完成。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of the new road took a year.",
+   "opts": [
+    "completion",
+    "complete",
+    "completely",
+    "completed"
+   ],
+   "why": "the … of 之间要名词 completion。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 complete、completion 中选一个，用适当形式填空。",
+   "stem": "We must ______ the work by Friday.",
+   "ans": "complete",
+   "why": "must 后面用动词原形 complete。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The workers ______ the bridge last week. (finish)",
+   "ans": "finished",
+   "why": "last week 用过去式 finished。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The completion of the project were celebrated.",
+   "ans": "were → was",
+   "why": "主语中心词 completion 是单数，用 was。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please check the ______ of the list; is anything missing?",
+   "opts": [
+    "completeness",
+    "completion",
+    "complete",
+    "completely"
+   ],
+   "why": "“齐全不齐全”这种状态用 completeness。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "完成课程后你会拿到证书。",
+   "stem": "You will get a certificate ______ completion of the course.",
+   "ans": "on",
+   "why": "on completion of 一完成……就……",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

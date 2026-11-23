@@ -1,0 +1,94 @@
+{
+ "单词": "item",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人买了几件东西？\n听：I bought five items at the shop.\nA. 四件\nB. 十件\nC. 五件\nD. 一件",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are ten ______ on the list.\nA. item\nB. items\nC. itemize\nD. itemes",
+  "题目3": "【选词填空】从 item、piece 中选一个，用适当形式填空。\n题干：Can I have a ______ of cake?",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Each items costs five yuan.",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：Please ______ your spending on this sheet. (item)",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Item\" can make an uncountable noun countable, as in \"an item of ______\".\nA. clothing\nB. apple\nC. chair\nD. book\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Items on the menu\" means ______ on the menu.\nA. prices only\nB. waiters\nC. tables\nD. dishes\n考点：用法",
+  "答案": "【1】C（五件）\n讲解：items 物品。\n【2】B（items）\n讲解：ten 后面用复数。\n【3】piece\n讲解：一块蛋糕是 a piece of cake。\n【4】items → item\n讲解：each 后面用单数。\n【5】itemize\n讲解：please 后面用动词“逐项列出”。\n【6】A（clothing）\n讲解：clothing 不可数，an item of clothing 一件衣服。\n【7】D（dishes）\n讲解：菜单上的项目就是菜。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人买了几件东西？",
+   "listen": "I bought five items at the shop.",
+   "opts": [
+    "五件",
+    "四件",
+    "十件",
+    "一件"
+   ],
+   "why": "items 物品。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are ten ______ on the list.",
+   "opts": [
+    "items",
+    "item",
+    "itemize",
+    "itemes"
+   ],
+   "why": "ten 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 item、piece 中选一个，用适当形式填空。",
+   "stem": "Can I have a ______ of cake?",
+   "ans": "piece",
+   "why": "一块蛋糕是 a piece of cake。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Each items costs five yuan.",
+   "ans": "items → item",
+   "why": "each 后面用单数。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Please ______ your spending on this sheet. (item)",
+   "ans": "itemize",
+   "why": "please 后面用动词“逐项列出”。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Item\" can make an uncountable noun countable, as in \"an item of ______\".",
+   "opts": [
+    "clothing",
+    "apple",
+    "chair",
+    "book"
+   ],
+   "why": "clothing 不可数，an item of clothing 一件衣服。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Items on the menu\" means ______ on the menu.",
+   "opts": [
+    "dishes",
+    "prices only",
+    "waiters",
+    "tables"
+   ],
+   "why": "菜单上的项目就是菜。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

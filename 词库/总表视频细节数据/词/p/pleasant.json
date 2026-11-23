@@ -1,0 +1,94 @@
+{
+ "单词": "pleasant",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：今天天气怎样？\n听：It's a pleasant day.\nA. 下雨\nB. 很冷\nC. 宜人\nD. 很热",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We had a ______ trip.\nA. pleased\nB. please\nC. pleasantly\nD. pleasant",
+  "题目3": "【选词填空】从 pleasant、pleased 中选一个，用适当形式填空。\n题干：I'm very ______ with my new phone.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The food smells pleasantly.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这是我的荣幸。\n题干：It's my ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The opposite of \"pleasant\" is \"______\".\nA. pleased\nB. unpleasant\nC. pleasure\nD. please\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Pleasant\" describes ______.\nA. how you feel\nB. an action\nC. things or people that make you feel good\nD. a number\n考点：易混",
+  "答案": "【1】C（宜人）\n讲解：pleasant 令人愉快的。\n【2】D（pleasant）\n讲解：说事物用 pleasant。\n【3】pleased\n讲解：人满意用 pleased。\n【4】pleasantly → pleasant\n讲解：smell 作系动词，后面用形容词。\n【5】pleasure\n讲解：my 后面要名词。\n【6】B（unpleasant）\n讲解：反义词是 unpleasant。\n【7】C（things or people that make you feel good）\n讲解：pleasant 说事物令人愉快，pleased 说人满意。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：今天天气怎样？",
+   "listen": "It's a pleasant day.",
+   "opts": [
+    "宜人",
+    "下雨",
+    "很冷",
+    "很热"
+   ],
+   "why": "pleasant 令人愉快的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We had a ______ trip.",
+   "opts": [
+    "pleasant",
+    "pleased",
+    "please",
+    "pleasantly"
+   ],
+   "why": "说事物用 pleasant。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 pleasant、pleased 中选一个，用适当形式填空。",
+   "stem": "I'm very ______ with my new phone.",
+   "ans": "pleased",
+   "why": "人满意用 pleased。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The food smells pleasantly.",
+   "ans": "pleasantly → pleasant",
+   "why": "smell 作系动词，后面用形容词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是我的荣幸。",
+   "stem": "It's my ______.",
+   "ans": "pleasure",
+   "why": "my 后面要名词。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The opposite of \"pleasant\" is \"______\".",
+   "opts": [
+    "unpleasant",
+    "pleased",
+    "pleasure",
+    "please"
+   ],
+   "why": "反义词是 unpleasant。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Pleasant\" describes ______.",
+   "opts": [
+    "things or people that make you feel good",
+    "how you feel",
+    "an action",
+    "a number"
+   ],
+   "why": "pleasant 说事物令人愉快，pleased 说人满意。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

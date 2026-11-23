@@ -1,0 +1,94 @@
+{
+ "单词": "crash",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：路上发生了什么？\n听：There was a car crash on the road this morning.\nA. 堵车\nB. 修路\nC. 车祸\nD. 游行",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The plane ______ into the sea last year.\nA. crashed\nB. crash\nC. crashes\nD. crashing\n考点：变形",
+  "题目3": "【选词填空】从 crash、accident 中选一个，用适当形式填空。\n题干：He broke his arm in an ______ at home when he fell off a chair.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There were two ______ on this road last week. (crash)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：My computer crashs again and again.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Some boys ______ the party without being invited.\nA. collided\nB. crashed\nC. crush\nD. crashes\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：两艘船在大雾中相撞了。\n题干：The two ships ______ in the fog.\n考点：易混",
+  "答案": "【1】C（车祸）\n讲解：car crash 车祸。\n【2】A（crashed）\n讲解：last year 用过去式 crashed。\n【3】accident\n讲解：只说“意外事故”、不管有没有撞用 accident。\n【4】crashes\n讲解：two 后接复数，sh 结尾加 es。\n【5】crashs → crashes\n讲解：sh 结尾，三单加 es。\n【6】B（crashed）\n讲解：crash a party 擅自闯入聚会。\n【7】collided\n讲解：书面的“两物相撞”用 collide。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：路上发生了什么？",
+   "listen": "There was a car crash on the road this morning.",
+   "opts": [
+    "车祸",
+    "堵车",
+    "修路",
+    "游行"
+   ],
+   "why": "car crash 车祸。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The plane ______ into the sea last year.",
+   "opts": [
+    "crashed",
+    "crash",
+    "crashes",
+    "crashing"
+   ],
+   "why": "last year 用过去式 crashed。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 crash、accident 中选一个，用适当形式填空。",
+   "stem": "He broke his arm in an ______ at home when he fell off a chair.",
+   "ans": "accident",
+   "why": "只说“意外事故”、不管有没有撞用 accident。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There were two ______ on this road last week. (crash)",
+   "ans": "crashes",
+   "why": "two 后接复数，sh 结尾加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My computer crashs again and again.",
+   "ans": "crashs → crashes",
+   "why": "sh 结尾，三单加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Some boys ______ the party without being invited.",
+   "opts": [
+    "crashed",
+    "collided",
+    "crush",
+    "crashes"
+   ],
+   "why": "crash a party 擅自闯入聚会。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "两艘船在大雾中相撞了。",
+   "stem": "The two ships ______ in the fog.",
+   "ans": "collided",
+   "why": "书面的“两物相撞”用 collide。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

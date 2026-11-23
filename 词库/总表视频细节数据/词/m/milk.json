@@ -1,0 +1,93 @@
+{
+ "单词": "milk",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人早餐喝什么？\n听：I drink a glass of milk every morning.\nA. 果汁\nB. 咖啡\nC. 茶\nD. 牛奶",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is some ______ in the fridge.\nA. milks\nB. milky\nC. milk\nD. a milk",
+  "题目3": "【选词填空】从 milk、milky 中选一个，用适当形式填空。\n题干：The water in the river looks ______.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Two ______ of milk, please. (glass)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：How many milk do you want?\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：小孩六岁左右开始掉乳牙。\n题干：Children start to lose their milk ______ at about six.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The farmer ______ the cows every morning.\nA. milks\nB. milk\nC. milky\nD. milking\n考点：词性转换",
+  "答案": "【1】D（牛奶）\n讲解：a glass of milk 一杯牛奶。\n【2】C（milk）\n讲解：milk 不可数，some milk。\n【3】milky\n讲解：look 后接形容词 milky（乳白色的）。\n【4】glasses\n讲解：milk 不可数，用量词 glass 的复数 glasses。\n【5】many → much\n讲解：milk 不可数，用 much。\n【6】teeth\n讲解：milk tooth 乳牙，复数 milk teeth。\n【7】A（milks）\n讲解：作动词“挤奶”，主语三单用 milks。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人早餐喝什么？",
+   "listen": "I drink a glass of milk every morning.",
+   "opts": [
+    "牛奶",
+    "果汁",
+    "咖啡",
+    "茶"
+   ],
+   "why": "a glass of milk 一杯牛奶。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is some ______ in the fridge.",
+   "opts": [
+    "milk",
+    "milks",
+    "milky",
+    "a milk"
+   ],
+   "why": "milk 不可数，some milk。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 milk、milky 中选一个，用适当形式填空。",
+   "stem": "The water in the river looks ______.",
+   "ans": "milky",
+   "why": "look 后接形容词 milky（乳白色的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Two ______ of milk, please. (glass)",
+   "ans": "glasses",
+   "why": "milk 不可数，用量词 glass 的复数 glasses。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "How many milk do you want?",
+   "ans": "many → much",
+   "why": "milk 不可数，用 much。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "小孩六岁左右开始掉乳牙。",
+   "stem": "Children start to lose their milk ______ at about six.",
+   "ans": "teeth",
+   "why": "milk tooth 乳牙，复数 milk teeth。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The farmer ______ the cows every morning.",
+   "opts": [
+    "milks",
+    "milk",
+    "milky",
+    "milking"
+   ],
+   "why": "作动词“挤奶”，主语三单用 milks。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

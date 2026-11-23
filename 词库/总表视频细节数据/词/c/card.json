@@ -1,0 +1,92 @@
+{
+ "单词": "card",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人收到了什么？\n听：I got a birthday card from my friend.\nA. 生日蛋糕\nB. 一本书\nC. 一束花\nD. 生日卡片",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Thanks for the ______!\nA. cards\nB. cart\nC. card\nD. car",
+  "题目3": "【选词填空】从 card、letter 中选一个，用适当形式填空。\n题干：She wrote a long ______ to her grandma and put it in an envelope.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Let's play ______ after dinner. (card)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Thank you for the card you send me last week.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：I sent my friend a ______ from Beijing; it had a picture of the Great Wall.\nA. card-post\nB. postcard\nC. postcards\nD. postman\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：她用电子贺卡祝我生日快乐。\n题干：She sent me an ______ for my birthday.\n考点：易混",
+  "答案": "【1】D（生日卡片）\n讲解：birthday card 生日卡。\n【2】C（card）\n讲解：单说 a card 常指贺卡；the 后接单数。\n【3】letter\n讲解：长长的信是 letter。\n【4】cards\n讲解：打牌 play cards，用复数。\n【5】send → sent\n讲解：last week 用过去式 sent。\n【6】B（postcard）\n讲解：有风景图、不装信封的是 postcard。\n【7】e-card\n讲解：电子贺卡 e-card。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人收到了什么？",
+   "listen": "I got a birthday card from my friend.",
+   "opts": [
+    "生日卡片",
+    "生日蛋糕",
+    "一本书",
+    "一束花"
+   ],
+   "why": "birthday card 生日卡。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Thanks for the ______!",
+   "opts": [
+    "card",
+    "cards",
+    "cart",
+    "car"
+   ],
+   "why": "单说 a card 常指贺卡；the 后接单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 card、letter 中选一个，用适当形式填空。",
+   "stem": "She wrote a long ______ to her grandma and put it in an envelope.",
+   "ans": "letter",
+   "why": "长长的信是 letter。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Let's play ______ after dinner. (card)",
+   "ans": "cards",
+   "why": "打牌 play cards，用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Thank you for the card you send me last week.",
+   "ans": "send → sent",
+   "why": "last week 用过去式 sent。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I sent my friend a ______ from Beijing; it had a picture of the Great Wall.",
+   "opts": [
+    "postcard",
+    "card-post",
+    "postcards",
+    "postman"
+   ],
+   "why": "有风景图、不装信封的是 postcard。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她用电子贺卡祝我生日快乐。",
+   "stem": "She sent me an ______ for my birthday.",
+   "ans": "e-card",
+   "why": "电子贺卡 e-card。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

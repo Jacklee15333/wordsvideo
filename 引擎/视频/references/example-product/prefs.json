@@ -1,0 +1,1173 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "产品、结果"
+ },
+ "partPics": {
+  "p1": {
+   "bg": "park",
+   "items": [
+    {
+     "svg": "art/duck.svg",
+     "x": 0.56,
+     "y": 0.53,
+     "s": 0.46,
+     "go": [
+      0.78,
+      0.53
+     ],
+     "dur": 16,
+     "wait": 0,
+     "anim": "ride",
+     "z": 3
+    },
+    {
+     "svg": "art/duckling.svg",
+     "x": 0.27480000000000004,
+     "y": 0.6542,
+     "s": 0.2116,
+     "go": [
+      0.4948,
+      0.6542
+     ],
+     "dur": 16,
+     "wait": 0,
+     "anim": "ride",
+     "delay": 0.15,
+     "z": 2
+    },
+    {
+     "svg": "art/duckling.svg",
+     "x": 0.06320000000000003,
+     "y": 0.6542,
+     "s": 0.2116,
+     "go": [
+      0.2832,
+      0.6542
+     ],
+     "dur": 16,
+     "wait": 0,
+     "anim": "ride",
+     "delay": 0.3,
+     "z": 2
+    },
+    {
+     "svg": "art/duckling.svg",
+     "x": -0.14839999999999998,
+     "y": 0.6542,
+     "s": 0.2116,
+     "go": [
+      0.07160000000000002,
+      0.6542
+     ],
+     "dur": 16,
+     "wait": 0,
+     "anim": "ride",
+     "delay": 0.44999999999999996,
+     "z": 2
+    },
+    {
+     "label": "领着走",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.1,
+     "when": "领着走",
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "ray": [
+      [
+       0.2,
+       0.26
+      ],
+      [
+       0.8,
+       0.26
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "when": "领着走",
+     "delay": 0.2,
+     "dur": 0.9
+    },
+    {
+     "label": "duck 鸭子",
+     "x": 0.72,
+     "y": 0.9,
+     "size": 0.085,
+     "when": "duck",
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p1": "🦆"
+ },
+ "comboPic": {
+  "bg": "sky",
+  "items": [
+   {
+    "svg": "art/factory.svg",
+    "x": 0.3,
+    "y": 0.5,
+    "s": 0.6,
+    "delay": 0
+   },
+   {
+    "svg": "art/belt.svg",
+    "x": 0.74,
+    "y": 0.845,
+    "s": 0.08,
+    "delay": 0
+   },
+   {
+    "svg": "art/box.svg",
+    "x": 0.5,
+    "y": 0.7,
+    "s": 0.22,
+    "go": [
+     0.86,
+     0.7
+    ],
+    "dur": 2.4,
+    "delay": 0.5,
+    "wait": 0,
+    "z": 2
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "产品",
+   "pos": "名词",
+   "diff": "工厂造出来拿去卖的东西",
+   "bg": "studio",
+   "tint": "blue",
+   "items": [
+    {
+     "svg": "art/box.svg",
+     "x": 0.44,
+     "y": 0.52,
+     "s": 0.68,
+     "shadow": true,
+     "delay": 0
+    },
+    {
+     "e": "🏷️",
+     "x": 0.82,
+     "y": 0.62,
+     "s": 0.24,
+     "delay": 0.6
+    },
+    {
+     "e": "✨",
+     "x": 0.8,
+     "y": 0.22,
+     "s": 0.16,
+     "delay": 0.9
+    }
+   ],
+   "ex": "This is our new product.",
+   "exzh": "这是我们的新产品。",
+   "exPic": {
+    "bg": "studio",
+    "tint": "blue",
+    "items": [
+     {
+      "shape": "ellipse",
+      "x": 0.5,
+      "y": 0.86,
+      "w": 0.5,
+      "h": 0.14,
+      "fill": [
+       "#FFFFFF",
+       "#D6E6F7"
+      ],
+      "stroke": "#9DB7D6",
+      "lw": 3,
+      "delay": 0
+     },
+     {
+      "svg": "art/box.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.62,
+      "shadow": true,
+      "when": "new product",
+      "pop": true
+     },
+     {
+      "e": "✨",
+      "x": 0.3,
+      "y": 0.26,
+      "s": 0.16,
+      "when": "new product",
+      "delay": 0.4
+     },
+     {
+      "e": "✨",
+      "x": 0.7,
+      "y": 0.2,
+      "s": 0.13,
+      "when": "new product",
+      "delay": 0.6
+     },
+     {
+      "label": "new product",
+      "x": 0.82,
+      "y": 0.5,
+      "size": 0.085,
+      "when": "new product",
+      "delay": 0.3,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "新产品",
+      "x": 0.82,
+      "y": 0.68,
+      "size": 0.085,
+      "when": "新产品",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "结果",
+   "pos": "名词",
+   "diff": "一番努力以后得到的",
+   "bg": "studio",
+   "tint": "warm",
+   "items": [
+    {
+     "svg": "art/trophy.svg",
+     "x": 0.55,
+     "y": 0.5,
+     "s": 0.74,
+     "shadow": true,
+     "delay": 0
+    },
+    {
+     "e": "📚",
+     "x": 0.18,
+     "y": 0.66,
+     "s": 0.26,
+     "delay": 0.5
+    }
+   ],
+   "ex": "Success is the product of hard work.",
+   "exzh": "成功是努力的结果。",
+   "exPic": {
+    "bg": "studio",
+    "tint": "warm",
+    "items": [
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.7,
+      "shadow": true,
+      "when": "Success",
+      "pop": true
+     },
+     {
+      "label": "Success 成功",
+      "x": 0.76,
+      "y": 0.1,
+      "size": 0.075,
+      "when": "Success",
+      "delay": 0.3,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "e": "📚",
+      "x": 0.18,
+      "y": 0.56,
+      "s": 0.34,
+      "when": "hard work"
+     },
+     {
+      "e": "✏️",
+      "x": 0.32,
+      "y": 0.6,
+      "s": 0.2,
+      "when": "hard work",
+      "delay": 0.2
+     },
+     {
+      "label": "hard work 努力",
+      "x": 0.24,
+      "y": 0.88,
+      "size": 0.075,
+      "when": "hard work",
+      "delay": 0.3,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "ray": [
+       [
+        0.42,
+        0.5
+       ],
+       [
+        0.62,
+        0.5
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "cue": 1,
+      "when": "努力",
+      "dur": 0.8
+     },
+     {
+      "label": "结果",
+      "x": 0.52,
+      "y": 0.36,
+      "size": 0.085,
+      "when": "结果",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "积",
+   "pos": "名词",
+   "diff": "两个数相乘得出的数",
+   "bg": "plain",
+   "tint": "green",
+   "items": [
+    {
+     "svg": "art/blackboard.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.86,
+     "delay": 0
+    },
+    {
+     "label": "3 × 4 =",
+     "x": 0.37,
+     "y": 0.44,
+     "size": 0.17,
+     "delay": 0.4,
+     "color": "#FFFFFF",
+     "bg": "rgba(0,0,0,0)",
+     "border": "rgba(0,0,0,0)"
+    },
+    {
+     "label": "12",
+     "x": 0.7,
+     "y": 0.44,
+     "size": 0.2,
+     "delay": 1.0,
+     "color": "#FFE27A",
+     "bg": "rgba(0,0,0,0)",
+     "border": "rgba(0,0,0,0)"
+    },
+    {
+     "shape": "ellipse",
+     "x": 0.7,
+     "y": 0.44,
+     "w": 0.19,
+     "h": 0.3,
+     "stroke": "#FFE27A",
+     "lw": 4,
+     "delay": 1.4
+    },
+    {
+     "label": "积",
+     "x": 0.7,
+     "y": 0.7,
+     "size": 0.12,
+     "delay": 1.6,
+     "color": "#FFE27A",
+     "bg": "rgba(0,0,0,0)",
+     "border": "rgba(0,0,0,0)"
+    }
+   ],
+   "ex": "The product of three and four is twelve.",
+   "exzh": "三和四的积是十二。",
+   "exPic": {
+    "bg": "plain",
+    "tint": "green",
+    "items": [
+     {
+      "svg": "art/blackboard.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.94,
+      "delay": 0
+     },
+     {
+      "label": "product = ?",
+      "x": 0.5,
+      "y": 0.26,
+      "size": 0.1,
+      "when": "product",
+      "hideWhen": "twelve",
+      "color": "#FFE27A",
+      "bg": "rgba(0,0,0,0)",
+      "border": "rgba(0,0,0,0)"
+     },
+     {
+      "label": "3 × 4",
+      "x": 0.4,
+      "y": 0.5,
+      "size": 0.2,
+      "when": "three and four",
+      "color": "#FFFFFF",
+      "bg": "rgba(0,0,0,0)",
+      "border": "rgba(0,0,0,0)"
+     },
+     {
+      "label": "=",
+      "x": 0.535,
+      "y": 0.5,
+      "size": 0.2,
+      "when": "twelve",
+      "color": "#FFFFFF",
+      "bg": "rgba(0,0,0,0)",
+      "border": "rgba(0,0,0,0)"
+     },
+     {
+      "label": "12",
+      "x": 0.61,
+      "y": 0.5,
+      "size": 0.2,
+      "when": "twelve",
+      "color": "#FFE27A",
+      "bg": "rgba(0,0,0,0)",
+      "border": "rgba(0,0,0,0)"
+     },
+     {
+      "shape": "ellipse",
+      "x": 0.61,
+      "y": 0.5,
+      "w": 0.085,
+      "h": 0.26,
+      "stroke": "#FFE27A",
+      "lw": 4,
+      "when": "积"
+     },
+     {
+      "label": "积",
+      "x": 0.61,
+      "y": 0.74,
+      "size": 0.12,
+      "when": "积",
+      "delay": 0.2,
+      "color": "#FFE27A",
+      "bg": "rgba(0,0,0,0)",
+      "border": "rgba(0,0,0,0)"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“造出来的东西”",
+   "fig": {
+    "bg": "sky",
+    "items": [
+     {
+      "svg": "art/factory.svg",
+      "x": 0.32,
+      "y": 0.5,
+      "s": 0.62,
+      "delay": 0
+     },
+     {
+      "svg": "art/belt.svg",
+      "x": 0.74,
+      "y": 0.845,
+      "s": 0.08,
+      "delay": 0
+     },
+     {
+      "svg": "art/box.svg",
+      "x": 0.5,
+      "y": 0.715,
+      "s": 0.2,
+      "go": [
+       0.9,
+       0.715
+      ],
+      "dur": 2.2,
+      "delay": 0.6,
+      "wait": 0,
+      "z": 2
+     },
+     {
+      "label": "被引出来、造出来的东西",
+      "x": 0.62,
+      "y": 0.14,
+      "size": 0.066,
+      "delay": 1.2,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "两个数相乘“造出来”的那个数",
+   "node": "③ 积",
+   "pos": "名词",
+   "pic": 2,
+   "say": [
+    "造出来的东西，最早说的是数学：两个数相乘，造出一个新的数。",
+    "这个数，英语就叫 product，中文叫积。它是一样东西，所以是名词。"
+   ],
+   "fig": {
+    "bg": "plain",
+    "tint": "green",
+    "items": [
+     {
+      "svg": "art/blackboard.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.92,
+      "delay": 0
+     },
+     {
+      "label": "3 × 4",
+      "x": 0.34,
+      "y": 0.46,
+      "size": 0.17,
+      "when": "两个数相乘",
+      "color": "#FFFFFF",
+      "bg": "rgba(0,0,0,0)",
+      "border": "rgba(0,0,0,0)"
+     },
+     {
+      "label": "=",
+      "x": 0.53,
+      "y": 0.46,
+      "size": 0.17,
+      "when": "新的数",
+      "color": "#FFFFFF",
+      "bg": "rgba(0,0,0,0)",
+      "border": "rgba(0,0,0,0)"
+     },
+     {
+      "label": "12",
+      "x": 0.66,
+      "y": 0.46,
+      "size": 0.17,
+      "when": "新的数",
+      "color": "#FFE27A",
+      "bg": "rgba(0,0,0,0)",
+      "border": "rgba(0,0,0,0)"
+     },
+     {
+      "shape": "ellipse",
+      "x": 0.66,
+      "y": 0.46,
+      "w": 0.15,
+      "h": 0.24,
+      "stroke": "#FFE27A",
+      "lw": 4,
+      "when": "product"
+     },
+     {
+      "label": "product 积",
+      "x": 0.66,
+      "y": 0.7,
+      "size": 0.09,
+      "when": "product",
+      "delay": 0.2,
+      "color": "#FFE27A",
+      "bg": "rgba(0,0,0,0)",
+      "border": "rgba(0,0,0,0)"
+     },
+     {
+      "label": "名词",
+      "x": 0.2,
+      "y": 0.2,
+      "size": 0.075,
+      "when": "名词",
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一切造出来、长出来的东西",
+   "node": "产物",
+   "from": 0,
+   "say": [
+    "后来，不管是做出来的，还是长出来的，一切造出来的东西，都叫 product，就是产物。"
+   ],
+   "fig": {
+    "bg": "studio",
+    "tint": "warm",
+    "items": [
+     {
+      "svg": "art/shelf.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "delay": 0
+     },
+     {
+      "e": "🍞",
+      "x": 0.26,
+      "y": 0.345,
+      "s": 0.2,
+      "when": "做出来的",
+      "z": 2
+     },
+     {
+      "e": "🪑",
+      "x": 0.5,
+      "y": 0.335,
+      "s": 0.22,
+      "when": "做出来的",
+      "delay": 0.3,
+      "z": 2
+     },
+     {
+      "e": "👕",
+      "x": 0.74,
+      "y": 0.345,
+      "s": 0.2,
+      "when": "做出来的",
+      "delay": 0.6,
+      "z": 2
+     },
+     {
+      "label": "做出来的",
+      "x": 0.5,
+      "y": 0.09,
+      "size": 0.066,
+      "when": "做出来的",
+      "delay": 0.2,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "e": "🍎",
+      "x": 0.26,
+      "y": 0.665,
+      "s": 0.2,
+      "when": "长出来的",
+      "z": 2
+     },
+     {
+      "e": "🌽",
+      "x": 0.5,
+      "y": 0.655,
+      "s": 0.22,
+      "when": "长出来的",
+      "delay": 0.3,
+      "z": 2
+     },
+     {
+      "e": "🥕",
+      "x": 0.74,
+      "y": 0.665,
+      "s": 0.2,
+      "when": "长出来的",
+      "delay": 0.6,
+      "z": 2
+     },
+     {
+      "label": "长出来的",
+      "x": 0.5,
+      "y": 0.925,
+      "size": 0.066,
+      "when": "长出来的",
+      "delay": 0.2,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "label": "product 产物",
+      "x": 0.5,
+      "y": 0.5,
+      "size": 0.09,
+      "when": "产物",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "越用越窄：专指工厂造出来卖的东西",
+   "node": "① 产品",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "一个词的意思越用越窄：从一大类专指其中一种",
+   "ruleEx": "product 一切造出来的东西 → 产品      meat 一切食物 → 肉",
+   "cap": "产物 → 产品",
+   "say": [
+    "英语里，一个词的意思，常常越用越窄：从一大类，专指其中一种。",
+    "meat 原来指一切食物，后来专指肉。",
+    "product 也一样：从一切造出来的东西，专指工厂造出来、拿去卖的东西，就是产品。"
+   ],
+   "fig": {
+    "bg": "studio",
+    "tint": "blue",
+    "items": [
+     {
+      "shape": "ellipse",
+      "x": 0.5,
+      "y": 0.52,
+      "w": 0.8,
+      "h": 0.66,
+      "fill": "rgba(255,255,255,.7)",
+      "stroke": "#7F8FA3",
+      "lw": 4,
+      "when": "一大类",
+      "hideCue": 1
+     },
+     {
+      "label": "一大类",
+      "x": 0.5,
+      "y": 0.26,
+      "size": 0.08,
+      "when": "一大类",
+      "delay": 0.2,
+      "hideCue": 1
+     },
+     {
+      "shape": "circle",
+      "x": 0.6,
+      "y": 0.6,
+      "r": 0.13,
+      "fill": "#FFE9A8",
+      "stroke": "#E0A800",
+      "lw": 4,
+      "when": "其中一种",
+      "hideCue": 1
+     },
+     {
+      "label": "其中一种",
+      "x": 0.6,
+      "y": 0.6,
+      "size": 0.062,
+      "when": "其中一种",
+      "delay": 0.2,
+      "hideCue": 1,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "越用越窄",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.085,
+      "when": "越用越窄",
+      "hideCue": 1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "label": "meat",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "when": "meat",
+      "hideCue": 2,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "e": "🍞",
+      "x": 0.14,
+      "y": 0.46,
+      "s": 0.2,
+      "when": "一切食物",
+      "hideWhen": "专指肉"
+     },
+     {
+      "e": "🍎",
+      "x": 0.34,
+      "y": 0.46,
+      "s": 0.2,
+      "when": "一切食物",
+      "delay": 0.15,
+      "hideWhen": "专指肉"
+     },
+     {
+      "e": "🥬",
+      "x": 0.86,
+      "y": 0.46,
+      "s": 0.2,
+      "when": "一切食物",
+      "delay": 0.45,
+      "hideWhen": "专指肉"
+     },
+     {
+      "e": "🍖",
+      "x": 0.62,
+      "y": 0.46,
+      "s": 0.22,
+      "s2": 0.42,
+      "when": "一切食物",
+      "delay": 0.3,
+      "growWhen": "专指肉",
+      "growDur": 0.8,
+      "go": [
+       0.5,
+       0.5
+      ],
+      "goWhen": "专指肉",
+      "dur": 0.8,
+      "hideCue": 2
+     },
+     {
+      "label": "一切食物",
+      "x": 0.5,
+      "y": 0.82,
+      "size": 0.07,
+      "when": "一切食物",
+      "delay": 0.3,
+      "hideWhen": "专指肉"
+     },
+     {
+      "label": "专指肉",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.085,
+      "when": "专指肉",
+      "delay": 0.4,
+      "hideCue": 2,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     },
+     {
+      "e": "🍞",
+      "x": 0.1,
+      "y": 0.3,
+      "s": 0.14,
+      "cue": 2,
+      "when": "一切造出来的东西",
+      "a": 0.75
+     },
+     {
+      "e": "🪑",
+      "x": 0.24,
+      "y": 0.3,
+      "s": 0.14,
+      "cue": 2,
+      "when": "一切造出来的东西",
+      "delay": 0.15,
+      "a": 0.75
+     },
+     {
+      "e": "🍎",
+      "x": 0.1,
+      "y": 0.56,
+      "s": 0.14,
+      "cue": 2,
+      "when": "一切造出来的东西",
+      "delay": 0.3,
+      "a": 0.75
+     },
+     {
+      "e": "🌽",
+      "x": 0.24,
+      "y": 0.56,
+      "s": 0.14,
+      "cue": 2,
+      "when": "一切造出来的东西",
+      "delay": 0.45,
+      "a": 0.75
+     },
+     {
+      "svg": "art/box.svg",
+      "x": 0.64,
+      "y": 0.5,
+      "s": 0.56,
+      "shadow": true,
+      "when": "工厂造出来"
+     },
+     {
+      "e": "🏷️",
+      "x": 0.9,
+      "y": 0.62,
+      "s": 0.2,
+      "when": "拿去卖"
+     },
+     {
+      "label": "product 产品",
+      "x": 0.64,
+      "y": 0.1,
+      "size": 0.085,
+      "when": "产品",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "从东西到看不见的事：一番努力“造出来”的",
+   "node": "② 结果",
+   "pos": "名词",
+   "pic": 1,
+   "rule": "具体的意思，慢慢用到看不见、摸不着的事上",
+   "ruleEx": "product 产品 → 结果      grasp 抓住 → 理解",
+   "cap": "产品 → 结果",
+   "say": [
+    "英语里，具体的意思，慢慢会用到看不见、摸不着的事上。",
+    "grasp 是用手抓住，后来也说脑子里抓住了，就是理解。",
+    "product 也一样：一番努力造出来的，不是东西，是成绩，这就是结果。"
+   ],
+   "fig": {
+    "bg": "studio",
+    "tint": "warm",
+    "items": [
+     {
+      "label": "具体的意思",
+      "x": 0.24,
+      "y": 0.45,
+      "size": 0.08,
+      "when": "具体的意思",
+      "hideCue": 1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "ray": [
+       [
+        0.42,
+        0.45
+       ],
+       [
+        0.56,
+        0.45
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "when": "慢慢会用到",
+      "dur": 0.6,
+      "hideCue": 1
+     },
+     {
+      "label": "看不见、摸不着",
+      "x": 0.77,
+      "y": 0.45,
+      "size": 0.07,
+      "when": "看不见",
+      "hideCue": 1,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "grasp",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.1,
+      "when": "grasp",
+      "hideCue": 2,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "e": "✊",
+      "x": 0.22,
+      "y": 0.5,
+      "s": 0.3,
+      "when": "用手抓住",
+      "hideCue": 2
+     },
+     {
+      "label": "用手抓住",
+      "x": 0.22,
+      "y": 0.82,
+      "size": 0.07,
+      "when": "用手抓住",
+      "delay": 0.2,
+      "hideCue": 2,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.5
+       ],
+       [
+        0.58,
+        0.5
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "when": "后来也说",
+      "dur": 0.6,
+      "hideCue": 2
+     },
+     {
+      "e": "🧠",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.3,
+      "when": "脑子里抓住了",
+      "hideCue": 2
+     },
+     {
+      "label": "理解",
+      "x": 0.76,
+      "y": 0.82,
+      "size": 0.08,
+      "when": "理解",
+      "hideCue": 2,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     },
+     {
+      "e": "📚",
+      "x": 0.16,
+      "y": 0.52,
+      "s": 0.26,
+      "cue": 2,
+      "when": "一番努力"
+     },
+     {
+      "e": "✏️",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.16,
+      "cue": 2,
+      "when": "一番努力",
+      "delay": 0.2
+     },
+     {
+      "label": "一番努力",
+      "x": 0.22,
+      "y": 0.84,
+      "size": 0.07,
+      "cue": 2,
+      "when": "一番努力",
+      "delay": 0.3,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.5
+       ],
+       [
+        0.54,
+        0.5
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "cue": 2,
+      "when": "造出来的",
+      "dur": 0.6
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.62,
+      "shadow": true,
+      "when": "成绩",
+      "pop": true
+     },
+     {
+      "label": "product 结果",
+      "x": 0.76,
+      "y": 0.1,
+      "size": 0.085,
+      "when": "结果",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "lexicon": {
+  "duce": "d ˈ u ː s",
+  "duc": "d ˈ ʌ k"
+ },
+ "extend": [
+  {
+   "w": "produce",
+   "m": "生产、制造",
+   "share": "pro"
+  },
+  {
+   "w": "conduct",
+   "m": "进行、实施",
+   "share": "duct"
+  },
+  {
+   "w": "reduction",
+   "m": "减少、降低",
+   "share": ""
+  },
+  {
+   "w": "introduction",
+   "m": "介绍",
+   "share": ""
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "produce": {
+    "bg": "park",
+    "items": [
+     {
+      "svg": "art/basket.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "shadow": true,
+      "delay": 0
+     },
+     {
+      "e": "🌽",
+      "x": 0.16,
+      "y": 0.66,
+      "s": 0.2,
+      "delay": 0.5
+     },
+     {
+      "e": "🥬",
+      "x": 0.85,
+      "y": 0.66,
+      "s": 0.2,
+      "delay": 0.8
+     }
+    ]
+   }
+  }
+ }
+}

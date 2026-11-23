@@ -1,0 +1,92 @@
+{
+ "单词": "pack",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在做什么？\n听：I'm packing my things for the trip.\nA. 打扫房间\nB. 收拾行李\nC. 做饭\nD. 写作业",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He bought a ______ of cards.\nA. pack\nB. packs\nC. packing\nD. packed",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ her bag and left yesterday. (pack)\n考点：变形",
+  "题目4": "【选词填空】从 pack、packet 中选一个，用适当形式填空。\n题干：I bought a small ______ of tea.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The bus was pack with people.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：快收拾你的东西吧！\n题干：Hurry up and ______ ______ your things!\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：He always ______ his bag the night before school.\nA. pack\nB. packing\nC. packs\nD. packed\n考点：变形",
+  "答案": "【1】B（收拾行李）\n讲解：packing 打包、收拾。\n【2】A（pack）\n讲解：a pack of cards 一副牌。\n【3】packed\n讲解：yesterday 是过去，用 packed。\n【4】packet\n讲解：小包、小袋用 packet。\n【5】pack → packed\n讲解：be packed with 挤满了。\n【6】pack；up\n讲解：pack up 收拾好。\n【7】C（packs）\n讲解：always 一般现在时，主语三单。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在做什么？",
+   "listen": "I'm packing my things for the trip.",
+   "opts": [
+    "收拾行李",
+    "打扫房间",
+    "做饭",
+    "写作业"
+   ],
+   "why": "packing 打包、收拾。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He bought a ______ of cards.",
+   "opts": [
+    "pack",
+    "packs",
+    "packing",
+    "packed"
+   ],
+   "why": "a pack of cards 一副牌。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ her bag and left yesterday. (pack)",
+   "ans": "packed",
+   "why": "yesterday 是过去，用 packed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 pack、packet 中选一个，用适当形式填空。",
+   "stem": "I bought a small ______ of tea.",
+   "ans": "packet",
+   "why": "小包、小袋用 packet。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The bus was pack with people.",
+   "ans": "pack → packed",
+   "why": "be packed with 挤满了。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "快收拾你的东西吧！",
+   "stem": "Hurry up and ______ ______ your things!",
+   "ans": "pack；up",
+   "why": "pack up 收拾好。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He always ______ his bag the night before school.",
+   "opts": [
+    "packs",
+    "pack",
+    "packing",
+    "packed"
+   ],
+   "why": "always 一般现在时，主语三单。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

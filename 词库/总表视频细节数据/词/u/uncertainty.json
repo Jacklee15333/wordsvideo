@@ -1,0 +1,94 @@
+{
+ "单词": "uncertainty",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人对什么还不确定？\n听：There is some uncertainty about the date of the trip.\nA. 旅行地点\nB. 旅费\nC. 旅行日期\nD. 同伴",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Life is full of ______.\nA. uncertain\nB. uncertainly\nC. certain\nD. uncertainty",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We face many ______ this year. (uncertainty)",
+  "题目4": "【选词填空】从 uncertainty、uncertain 中选一个，用适当形式填空。\n题干：The future is ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There are a lot of uncertainty about the plan.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Uncertainty\" is made of \"un-\" and \"______\".\nA. certain\nB. certainty\nC. certify\nD. certainly\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The opposite of \"uncertainty\" is \"______\".\nA. uncertain\nB. sure\nC. unsure\nD. certainty\n考点：易混",
+  "答案": "【1】C（旅行日期）\n讲解：uncertainty 不确定。\n【2】D（uncertainty）\n讲解：介词 of 后面要名词。\n【3】uncertainties\n讲解：many 后面用复数，y 变 i 加 es。\n【4】uncertain\n讲解：be 后面用形容词。\n【5】are → is\n讲解：uncertainty 作“不确定”不可数，谓语用 is。\n【6】B（certainty）\n讲解：uncertainty = un- + certainty。\n【7】D（certainty）\n讲解：反义名词是 certainty。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人对什么还不确定？",
+   "listen": "There is some uncertainty about the date of the trip.",
+   "opts": [
+    "旅行日期",
+    "旅行地点",
+    "旅费",
+    "同伴"
+   ],
+   "why": "uncertainty 不确定。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Life is full of ______.",
+   "opts": [
+    "uncertainty",
+    "uncertain",
+    "uncertainly",
+    "certain"
+   ],
+   "why": "介词 of 后面要名词。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We face many ______ this year. (uncertainty)",
+   "ans": "uncertainties",
+   "why": "many 后面用复数，y 变 i 加 es。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 uncertainty、uncertain 中选一个，用适当形式填空。",
+   "stem": "The future is ______.",
+   "ans": "uncertain",
+   "why": "be 后面用形容词。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are a lot of uncertainty about the plan.",
+   "ans": "are → is",
+   "why": "uncertainty 作“不确定”不可数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Uncertainty\" is made of \"un-\" and \"______\".",
+   "opts": [
+    "certainty",
+    "certain",
+    "certify",
+    "certainly"
+   ],
+   "why": "uncertainty = un- + certainty。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The opposite of \"uncertainty\" is \"______\".",
+   "opts": [
+    "certainty",
+    "uncertain",
+    "sure",
+    "unsure"
+   ],
+   "why": "反义名词是 certainty。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

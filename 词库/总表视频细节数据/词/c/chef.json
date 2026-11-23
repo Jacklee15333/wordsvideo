@@ -1,0 +1,97 @@
+{
+ "单词": "chef",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她爸爸是做什么的？\n听：Her father is a chef in a hotel.\nA. 酒店厨师\nB. 酒店经理\nC. 司机\nD. 服务员",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are three ______ in the restaurant kitchen.\nA. chef\nB. chefes\nC. cheves\nD. chefs\n考点：变形",
+  "题目3": "【选词填空】从 chef、cook 中选一个，用适当形式填空。\n题干：My mum is a good ______ at home.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He wants to be a chief in a big hotel.\n考点：易混",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：她是这家酒店的主厨。\n题干：She is the head ______ of this hotel.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A chef usually ______.\nA. works in a school\nB. drives a bus\nC. works in a restaurant\nD. teaches maths\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Two of the ______ came from France.\nA. chef\nB. chefs\nC. cheves\nD. chefes\n考点：变形",
+  "答案": "【1】A（酒店厨师）\n讲解：chef 厨师。\n【2】D（chefs）\n讲解：chef 复数直接加 s。\n【3】cook\n讲解：家里很会做饭的人用 cook。\n【4】chief → chef\n讲解：厨师是 chef，chief 是领导。\n【5】chef\n讲解：职业厨师 chef，主厨 head chef。\n【6】C（works in a restaurant）\n讲解：chef 是受过训练的职业厨师。\n【7】B（chefs）\n讲解：two of 后面用复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她爸爸是做什么的？",
+   "listen": "Her father is a chef in a hotel.",
+   "opts": [
+    "酒店厨师",
+    "酒店经理",
+    "司机",
+    "服务员"
+   ],
+   "why": "chef 厨师。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are three ______ in the restaurant kitchen.",
+   "opts": [
+    "chefs",
+    "chef",
+    "chefes",
+    "cheves"
+   ],
+   "why": "chef 复数直接加 s。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 chef、cook 中选一个，用适当形式填空。",
+   "stem": "My mum is a good ______ at home.",
+   "ans": "cook",
+   "why": "家里很会做饭的人用 cook。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He wants to be a chief in a big hotel.",
+   "ans": "chief → chef",
+   "why": "厨师是 chef，chief 是领导。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她是这家酒店的主厨。",
+   "stem": "She is the head ______ of this hotel.",
+   "ans": "chef",
+   "why": "职业厨师 chef，主厨 head chef。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A chef usually ______.",
+   "opts": [
+    "works in a restaurant",
+    "works in a school",
+    "drives a bus",
+    "teaches maths"
+   ],
+   "why": "chef 是受过训练的职业厨师。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Two of the ______ came from France.",
+   "opts": [
+    "chefs",
+    "chef",
+    "cheves",
+    "chefes"
+   ],
+   "why": "two of 后面用复数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

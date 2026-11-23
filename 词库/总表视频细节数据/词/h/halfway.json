@@ -1,0 +1,93 @@
+{
+ "单词": "halfway",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们到哪里了？\n听：We are halfway to the top of the mountain.\nA. 山顶\nB. 山脚\nC. 半山腰\nD. 山的另一边",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I stopped ______ through the book.\nA. half\nB. halfway\nC. middle\nD. midday",
+  "题目3": "【选词填空】从 half、halfway 中选一个，用适当形式填空。\n题干：I ate ______ of the pizza.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Two ______ make a whole. (half)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Let's meet half way.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：半小时就是三十分钟。\n题干：______ an hour is thirty minutes.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：We were in the ______ of the race when it rained.\nA. midway\nB. halfway\nC. half\nD. middle\n考点：易混",
+  "答案": "【1】C（半山腰）\n讲解：halfway 在中途、到一半。\n【2】B（halfway）\n讲解：“看到一半”用 halfway。\n【3】half\n讲解：“一半”用 half；halfway 是在中途。\n【4】halves\n讲解：half 的复数是 halves。\n【5】half way → halfway\n讲解：halfway 是一个词。\n【6】Half\n讲解：half an hour 半小时。\n【7】D（middle）\n讲解：in the middle of 在……中间。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们到哪里了？",
+   "listen": "We are halfway to the top of the mountain.",
+   "opts": [
+    "半山腰",
+    "山顶",
+    "山脚",
+    "山的另一边"
+   ],
+   "why": "halfway 在中途、到一半。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I stopped ______ through the book.",
+   "opts": [
+    "halfway",
+    "half",
+    "middle",
+    "midday"
+   ],
+   "why": "“看到一半”用 halfway。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 half、halfway 中选一个，用适当形式填空。",
+   "stem": "I ate ______ of the pizza.",
+   "ans": "half",
+   "why": "“一半”用 half；halfway 是在中途。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Two ______ make a whole. (half)",
+   "ans": "halves",
+   "why": "half 的复数是 halves。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Let's meet half way.",
+   "ans": "half way → halfway",
+   "why": "halfway 是一个词。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "半小时就是三十分钟。",
+   "stem": "______ an hour is thirty minutes.",
+   "ans": "Half",
+   "why": "half an hour 半小时。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We were in the ______ of the race when it rained.",
+   "opts": [
+    "middle",
+    "midway",
+    "halfway",
+    "half"
+   ],
+   "why": "in the middle of 在……中间。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

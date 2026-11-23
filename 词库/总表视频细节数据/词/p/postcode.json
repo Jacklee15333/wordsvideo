@@ -1,0 +1,92 @@
+{
+ "单词": "postcode",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人问的是什么？\n听：What's your postcode?\nA. 电话号码\nB. 邮编\nC. 地址\nD. 名字",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please write the ______ on the envelope.\nA. postcodes\nB. post\nC. postcode\nD. code",
+  "题目3": "【选词填空】从 postcode、ZIP code 中选一个，用适当形式填空。\n题干：In America, people say \"______\" instead of \"postcode\".\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The two towns have different ______. (postcode)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I forgot my postcode, so I can't wrote it.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In Canada, people usually say \"______ code\".\nA. postal\nB. post\nC. posting\nD. posted\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：请在信封上写上地址和邮编。\n题干：Write the ______ and postcode on the envelope.\n考点：用法",
+  "答案": "【1】B（邮编）\n讲解：postcode 邮政编码。\n【2】C（postcode）\n讲解：the 后接单数 postcode。\n【3】ZIP code\n讲解：美式叫 ZIP code。\n【4】postcodes\n讲解：different 后接复数 postcodes。\n【5】wrote → write\n讲解：can't 后接动词原形。\n【6】A（postal）\n讲解：加拿大多说 postal code。\n【7】address\n讲解：地址 address。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人问的是什么？",
+   "listen": "What's your postcode?",
+   "opts": [
+    "邮编",
+    "电话号码",
+    "地址",
+    "名字"
+   ],
+   "why": "postcode 邮政编码。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please write the ______ on the envelope.",
+   "opts": [
+    "postcode",
+    "postcodes",
+    "post",
+    "code"
+   ],
+   "why": "the 后接单数 postcode。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 postcode、ZIP code 中选一个，用适当形式填空。",
+   "stem": "In America, people say \"______\" instead of \"postcode\".",
+   "ans": "ZIP code",
+   "why": "美式叫 ZIP code。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The two towns have different ______. (postcode)",
+   "ans": "postcodes",
+   "why": "different 后接复数 postcodes。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I forgot my postcode, so I can't wrote it.",
+   "ans": "wrote → write",
+   "why": "can't 后接动词原形。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In Canada, people usually say \"______ code\".",
+   "opts": [
+    "postal",
+    "post",
+    "posting",
+    "posted"
+   ],
+   "why": "加拿大多说 postal code。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请在信封上写上地址和邮编。",
+   "stem": "Write the ______ and postcode on the envelope.",
+   "ans": "address",
+   "why": "地址 address。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,98 @@
+{
+ "单词": "floral",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她喜欢什么图案？\n听：She likes floral patterns.\nA. 动物图案\nB. 花卉图案\nC. 格子\nD. 条纹",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The tablecloth has a ______ design.\nA. flower\nB. floral\nC. flour\nD. flora\n考点：词性转换",
+  "题目3": "【选词填空】从 floral、flowery 中选一个，用适当形式填空。\n题干：The writer's style is too ______. Use plain words.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She sent me a beautiful flour card.\n考点：易混",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这件衬衫上有很多花。\n题干：There are many ______ on this shirt.\n考点：词性转换",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Floral\" comes from a Latin word meaning \"______\".\nA. tree\nB. grass\nC. fruit\nD. flower\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A floral shop sells ______.\nA. flowers\nB. flour\nC. clothes\nD. books\n考点：用法",
+  "答案": "【1】B（花卉图案）\n讲解：floral 花的。\n【2】B（floral）\n讲解：名词 design 前面用形容词 floral。\n【3】flowery\n讲解：嫌文风花哨用 flowery。\n【4】flour → floral\n讲解：面粉 flour 不对，印花的卡片用 floral。\n【5】flowers\n讲解：many 后面要名词复数。\n【6】D（flower）\n讲解：floral 来自表示“花”的拉丁词。\n【7】A（flowers）\n讲解：花店卖花。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她喜欢什么图案？",
+   "listen": "She likes floral patterns.",
+   "opts": [
+    "花卉图案",
+    "动物图案",
+    "格子",
+    "条纹"
+   ],
+   "why": "floral 花的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The tablecloth has a ______ design.",
+   "opts": [
+    "floral",
+    "flower",
+    "flour",
+    "flora"
+   ],
+   "why": "名词 design 前面用形容词 floral。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 floral、flowery 中选一个，用适当形式填空。",
+   "stem": "The writer's style is too ______. Use plain words.",
+   "ans": "flowery",
+   "why": "嫌文风花哨用 flowery。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She sent me a beautiful flour card.",
+   "ans": "flour → floral",
+   "why": "面粉 flour 不对，印花的卡片用 floral。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这件衬衫上有很多花。",
+   "stem": "There are many ______ on this shirt.",
+   "ans": "flowers",
+   "why": "many 后面要名词复数。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Floral\" comes from a Latin word meaning \"______\".",
+   "opts": [
+    "flower",
+    "tree",
+    "grass",
+    "fruit"
+   ],
+   "why": "floral 来自表示“花”的拉丁词。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A floral shop sells ______.",
+   "opts": [
+    "flowers",
+    "flour",
+    "clothes",
+    "books"
+   ],
+   "why": "花店卖花。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

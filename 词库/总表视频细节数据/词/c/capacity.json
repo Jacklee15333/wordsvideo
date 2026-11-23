@@ -1,0 +1,93 @@
+{
+ "单词": "capacity",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说这个体育场能容纳多少人？\n听：The stadium has a capacity of 50,000 people.\nA. 五万人\nB. 五千人\nC. 一万五千人\nD. 五十万人",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This bottle has a ______ of two litres.\nA. ability\nB. capacity\nC. capital\nD. capture\n考点：易混",
+  "题目3": "【选词填空】从 capacity、ability 中选一个，用适当形式填空。\n题干：Tom has the ______ to speak three languages.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：These two halls have different ______. (capacity)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The hall was full, so we can't get in yesterday.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这个房间能容纳 100 人。\n题干：The room has a ______ ______ 100 people.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"The bus was full to capacity\" means the bus was ______.\nA. completely full\nB. half empty\nC. very big\nD. quite small\n考点：短语",
+  "答案": "【1】A（五万人）\n讲解：a capacity of 50,000 能容纳五万人。\n【2】B（capacity）\n讲解：能装多少用 capacity（容量）。\n【3】ability\n讲解：会不会做用 ability。\n【4】capacities\n讲解：different 后面用复数，y 变 i 加 es。\n【5】can't → couldn't\n讲解：yesterday 用过去式 couldn't。\n【6】capacity；of\n讲解：have a capacity of … 能容纳……。\n【7】A（completely full）\n讲解：full to capacity 满员。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说这个体育场能容纳多少人？",
+   "listen": "The stadium has a capacity of 50,000 people.",
+   "opts": [
+    "五万人",
+    "五千人",
+    "一万五千人",
+    "五十万人"
+   ],
+   "why": "a capacity of 50,000 能容纳五万人。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This bottle has a ______ of two litres.",
+   "opts": [
+    "capacity",
+    "ability",
+    "capital",
+    "capture"
+   ],
+   "why": "能装多少用 capacity（容量）。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 capacity、ability 中选一个，用适当形式填空。",
+   "stem": "Tom has the ______ to speak three languages.",
+   "ans": "ability",
+   "why": "会不会做用 ability。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "These two halls have different ______. (capacity)",
+   "ans": "capacities",
+   "why": "different 后面用复数，y 变 i 加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The hall was full, so we can't get in yesterday.",
+   "ans": "can't → couldn't",
+   "why": "yesterday 用过去式 couldn't。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个房间能容纳 100 人。",
+   "stem": "The room has a ______ ______ 100 people.",
+   "ans": "capacity；of",
+   "why": "have a capacity of … 能容纳……。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"The bus was full to capacity\" means the bus was ______.",
+   "opts": [
+    "completely full",
+    "half empty",
+    "very big",
+    "quite small"
+   ],
+   "why": "full to capacity 满员。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

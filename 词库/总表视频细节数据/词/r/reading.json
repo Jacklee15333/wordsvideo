@@ -1,0 +1,96 @@
+{
+ "单词": "reading",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的爱好是什么？\n听：My hobby is reading.\nA. 跑步\nB. 唱歌\nC. 读书\nD. 画画",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ is good for your mind.\nA. Read\nB. Reads\nC. Reading\nD. Reader\n考点：词性转换",
+  "题目3": "【选词填空】从 reading、reader 中选一个，用适当形式填空。\n题干：She is a fast ______.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ for an hour every evening. (read)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Reading books make me happy.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The teacher gave us three ______ for homework.\nA. readings\nB. reading\nC. reads\nD. readers\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：What's your ______ of the poem?\nA. under\nB. understand\nC. understood\nD. understanding\n考点：易混",
+  "答案": "【1】C（读书）\n讲解：reading 阅读。\n【2】C（Reading）\n讲解：动名词 Reading 作主语。\n【3】reader\n讲解：a fast 后面要表示人的名词 reader。\n【4】reads\n讲解：every evening 说经常，主语三单用 reads。\n【5】make → makes\n讲解：动名词短语作主语，谓语用三单 makes。\n【6】A（readings）\n讲解：three 后面接复数 readings（阅读材料）。\n【7】D（understanding）\n讲解：对诗的“理解”用名词 understanding。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的爱好是什么？",
+   "listen": "My hobby is reading.",
+   "opts": [
+    "读书",
+    "跑步",
+    "唱歌",
+    "画画"
+   ],
+   "why": "reading 阅读。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ is good for your mind.",
+   "opts": [
+    "Reading",
+    "Read",
+    "Reads",
+    "Reader"
+   ],
+   "why": "动名词 Reading 作主语。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 reading、reader 中选一个，用适当形式填空。",
+   "stem": "She is a fast ______.",
+   "ans": "reader",
+   "why": "a fast 后面要表示人的名词 reader。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ for an hour every evening. (read)",
+   "ans": "reads",
+   "why": "every evening 说经常，主语三单用 reads。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Reading books make me happy.",
+   "ans": "make → makes",
+   "why": "动名词短语作主语，谓语用三单 makes。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The teacher gave us three ______ for homework.",
+   "opts": [
+    "readings",
+    "reading",
+    "reads",
+    "readers"
+   ],
+   "why": "three 后面接复数 readings（阅读材料）。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What's your ______ of the poem?",
+   "opts": [
+    "understanding",
+    "under",
+    "understand",
+    "understood"
+   ],
+   "why": "对诗的“理解”用名词 understanding。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

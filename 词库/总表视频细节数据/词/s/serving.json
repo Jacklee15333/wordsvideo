@@ -1,0 +1,94 @@
+{
+ "单词": "serving",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个食谱能做几份？\n听：This recipe makes four servings.\nA. 四份\nB. 四个菜\nC. 四分钟\nD. 四勺",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：One ______ of rice is about one bowl.\nA. servings\nB. server\nC. service\nD. serving",
+  "题目3": "【选词填空】从 serving、servant 中选一个，用适当形式填空。\n题干：The king called his ______ to bring wine.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：This box has six serving.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这个蛋糕够八个人吃。\n题干：This cake is enough for eight ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：You often see \"serving\" on food labels and in ______.\nA. novels\nB. recipes\nC. maps\nD. songs\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Portion\" is close to \"serving\" but ______.\nA. always bigger\nB. more general\nC. only for drinks\nD. never used\n考点：易混",
+  "答案": "【1】A（四份）\n讲解：serving 一份。\n【2】D（serving）\n讲解：one 后面用单数。\n【3】servant\n讲解：国王叫仆人 servant。\n【4】serving → servings\n讲解：six 后面用复数。\n【5】people\n讲解：人 people。\n【6】B（recipes）\n讲解：serving 多见于食谱、营养标签。\n【7】B（more general）\n讲解：portion 也指一份，用得更泛。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个食谱能做几份？",
+   "listen": "This recipe makes four servings.",
+   "opts": [
+    "四份",
+    "四个菜",
+    "四分钟",
+    "四勺"
+   ],
+   "why": "serving 一份。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "One ______ of rice is about one bowl.",
+   "opts": [
+    "serving",
+    "servings",
+    "server",
+    "service"
+   ],
+   "why": "one 后面用单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 serving、servant 中选一个，用适当形式填空。",
+   "stem": "The king called his ______ to bring wine.",
+   "ans": "servant",
+   "why": "国王叫仆人 servant。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This box has six serving.",
+   "ans": "serving → servings",
+   "why": "six 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个蛋糕够八个人吃。",
+   "stem": "This cake is enough for eight ______.",
+   "ans": "people",
+   "why": "人 people。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You often see \"serving\" on food labels and in ______.",
+   "opts": [
+    "recipes",
+    "novels",
+    "maps",
+    "songs"
+   ],
+   "why": "serving 多见于食谱、营养标签。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Portion\" is close to \"serving\" but ______.",
+   "opts": [
+    "more general",
+    "always bigger",
+    "only for drinks",
+    "never used"
+   ],
+   "why": "portion 也指一份，用得更泛。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

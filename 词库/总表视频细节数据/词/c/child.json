@@ -1,0 +1,93 @@
+{
+ "单词": "child",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人有几个孩子？\n听：I have two children, a boy and a girl.\nA. 两个\nB. 一个\nC. 三个\nD. 四个",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Every ______ in the class has a new book.\nA. children\nB. childs\nC. child\nD. childish",
+  "题目3": "【选词填空】从 kid、baby 中选一个，用适当形式填空。\n题干：The ______ is only three months old and can't walk yet.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Many ______ are playing in the park. (child)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There are three childs in the room.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：别这么幼稚！\n题干：Don't be so ______!\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：All the ______ toys are on the floor.\nA. childrens'\nB. child's\nC. children's\nD. childs'\n考点：变形",
+  "答案": "【1】A（两个）\n讲解：two children 两个孩子。\n【2】C（child）\n讲解：every 后接单数 child。\n【3】baby\n讲解：三个月大的婴儿是 baby。\n【4】children\n讲解：child 的复数不规则：children。\n【5】childs → children\n讲解：child 的复数是 children，不加 s。\n【6】childish\n讲解：child 加 ish 变形容词 childish（幼稚的）。\n【7】C（children's）\n讲解：children 的所有格加 's。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人有几个孩子？",
+   "listen": "I have two children, a boy and a girl.",
+   "opts": [
+    "两个",
+    "一个",
+    "三个",
+    "四个"
+   ],
+   "why": "two children 两个孩子。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Every ______ in the class has a new book.",
+   "opts": [
+    "child",
+    "children",
+    "childs",
+    "childish"
+   ],
+   "why": "every 后接单数 child。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 kid、baby 中选一个，用适当形式填空。",
+   "stem": "The ______ is only three months old and can't walk yet.",
+   "ans": "baby",
+   "why": "三个月大的婴儿是 baby。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Many ______ are playing in the park. (child)",
+   "ans": "children",
+   "why": "child 的复数不规则：children。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are three childs in the room.",
+   "ans": "childs → children",
+   "why": "child 的复数是 children，不加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "别这么幼稚！",
+   "stem": "Don't be so ______!",
+   "ans": "childish",
+   "why": "child 加 ish 变形容词 childish（幼稚的）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "All the ______ toys are on the floor.",
+   "opts": [
+    "children's",
+    "childrens'",
+    "child's",
+    "childs'"
+   ],
+   "why": "children 的所有格加 's。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

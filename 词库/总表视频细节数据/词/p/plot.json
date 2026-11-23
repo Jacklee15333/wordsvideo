@@ -1,0 +1,93 @@
+{
+ "单词": "plot",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人觉得这部电影怎么样？\n听：The film has a very interesting plot.\nA. 情节很有趣\nB. 演员很差\nC. 太长\nD. 太吵",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ of the story is easy to follow.\nA. plots\nB. plotted\nC. plotting\nD. plot",
+  "题目3": "【选词填空】从 plot、scheme 中选一个，用适当形式填空。\n题干：The city has a new ______ to help old people.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：They ______ to steal the jewels last year. (plot)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The bad men are ploting against the king.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Grandpa grows vegetables on a small plot of ______.\nA. lands\nB. grounds\nC. land\nD. earths\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这部小说除了主线还有两条副线。\n题干：The novel has two ______ besides the main plot.\n考点：词性转换",
+  "答案": "【1】A（情节很有趣）\n讲解：plot 情节。\n【2】D（plot）\n讲解：the … of 故事的情节，单数 plot。\n【3】scheme\n讲解：偏“计划、方案”用 scheme。\n【4】plotted\n讲解：双写 t 加 ed。\n【5】ploting → plotting\n讲解：plot 双写 t 加 ing。\n【6】C（land）\n讲解：a plot of land 一小块地，land 不可数。\n【7】subplots\n讲解：副线 subplot。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人觉得这部电影怎么样？",
+   "listen": "The film has a very interesting plot.",
+   "opts": [
+    "情节很有趣",
+    "演员很差",
+    "太长",
+    "太吵"
+   ],
+   "why": "plot 情节。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of the story is easy to follow.",
+   "opts": [
+    "plot",
+    "plots",
+    "plotted",
+    "plotting"
+   ],
+   "why": "the … of 故事的情节，单数 plot。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 plot、scheme 中选一个，用适当形式填空。",
+   "stem": "The city has a new ______ to help old people.",
+   "ans": "scheme",
+   "why": "偏“计划、方案”用 scheme。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "They ______ to steal the jewels last year. (plot)",
+   "ans": "plotted",
+   "why": "双写 t 加 ed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The bad men are ploting against the king.",
+   "ans": "ploting → plotting",
+   "why": "plot 双写 t 加 ing。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Grandpa grows vegetables on a small plot of ______.",
+   "opts": [
+    "land",
+    "lands",
+    "grounds",
+    "earths"
+   ],
+   "why": "a plot of land 一小块地，land 不可数。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这部小说除了主线还有两条副线。",
+   "stem": "The novel has two ______ besides the main plot.",
+   "ans": "subplots",
+   "why": "副线 subplot。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

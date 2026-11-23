@@ -1,0 +1,93 @@
+{
+ "单词": "Monday",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：学校星期几开学？\n听：School starts on Monday.\nA. 星期天\nB. 星期二\nC. 星期一\nD. 星期五",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The first school day of the week is ______.\nA. Sunday\nB. Saturday\nC. Monday\nD. Friday",
+  "题目3": "【选词填空】从 Monday、Sunday 中选一个，用适当形式填空。\n题干：We don't go to school on ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：I don't like ______; they are so busy. (Monday)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：See you on next Monday.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：星期一早上我们有升旗仪式。\n题干：We have a flag-raising ceremony ______ Monday morning.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The short form of “Monday” is “______”.\nA. Mo.\nB. Mon.\nC. Mnd.\nD. Mond.\n考点：易混",
+  "答案": "【1】C（星期一）\n讲解：Monday 星期一。\n【2】C（Monday）\n讲解：一周上学的第一天是星期一。\n【3】Sunday\n讲解：星期天不上学。\n【4】Mondays\n讲解：说每个星期一用复数 Mondays。\n【5】on next Monday → next Monday\n讲解：next Monday 前面不加 on。\n【6】on\n讲解：具体某天的上午用 on。\n【7】B（Mon.）\n讲解：Monday 的缩写是 Mon.。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：学校星期几开学？",
+   "listen": "School starts on Monday.",
+   "opts": [
+    "星期一",
+    "星期天",
+    "星期二",
+    "星期五"
+   ],
+   "why": "Monday 星期一。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The first school day of the week is ______.",
+   "opts": [
+    "Monday",
+    "Sunday",
+    "Saturday",
+    "Friday"
+   ],
+   "why": "一周上学的第一天是星期一。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 Monday、Sunday 中选一个，用适当形式填空。",
+   "stem": "We don't go to school on ______.",
+   "ans": "Sunday",
+   "why": "星期天不上学。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I don't like ______; they are so busy. (Monday)",
+   "ans": "Mondays",
+   "why": "说每个星期一用复数 Mondays。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "See you on next Monday.",
+   "ans": "on next Monday → next Monday",
+   "why": "next Monday 前面不加 on。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "星期一早上我们有升旗仪式。",
+   "stem": "We have a flag-raising ceremony ______ Monday morning.",
+   "ans": "on",
+   "why": "具体某天的上午用 on。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The short form of “Monday” is “______”.",
+   "opts": [
+    "Mon.",
+    "Mo.",
+    "Mnd.",
+    "Mond."
+   ],
+   "why": "Monday 的缩写是 Mon.。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

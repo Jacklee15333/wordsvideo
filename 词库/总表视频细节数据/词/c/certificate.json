@@ -1,0 +1,94 @@
+{
+ "单词": "certificate",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人拿到了什么？\n听：I got a certificate for finishing the course.\nA. 一张证书\nB. 一本书\nC. 一个奖杯\nD. 一封信",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She has three ______ on her wall.\nA. certificate\nB. certificates\nC. certification\nD. certify",
+  "题目3": "【选词填空】从 certificate、certification 中选一个，用适当形式填空。\n题干：You need a birth ______ to get a passport.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The doctor will certificate that he is ill.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：医生开了证明，说明他生病了。\n题干：The doctor ______ that he was ill.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A diploma usually shows you finished ______.\nA. a race\nB. a meal\nC. a trip\nD. school or college\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A \"certificate\" is a piece of ______.\nA. music\nB. paper\nC. wood\nD. cake\n考点：用法",
+  "答案": "【1】A（一张证书）\n讲解：certificate 证书。\n【2】B（certificates）\n讲解：three 后面用复数。\n【3】certificate\n讲解：出生证明是一张纸，用 certificate。\n【4】certificate → certify\n讲解：will 后面要动词 certify。\n【5】certified\n讲解：动词“证明”用 certify，过去式 certified。\n【6】D（school or college）\n讲解：diploma 偏学历文凭，certificate 是证明某事属实的文件。\n【7】B（paper）\n讲解：certificate 是证明文件。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人拿到了什么？",
+   "listen": "I got a certificate for finishing the course.",
+   "opts": [
+    "一张证书",
+    "一本书",
+    "一个奖杯",
+    "一封信"
+   ],
+   "why": "certificate 证书。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She has three ______ on her wall.",
+   "opts": [
+    "certificates",
+    "certificate",
+    "certification",
+    "certify"
+   ],
+   "why": "three 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 certificate、certification 中选一个，用适当形式填空。",
+   "stem": "You need a birth ______ to get a passport.",
+   "ans": "certificate",
+   "why": "出生证明是一张纸，用 certificate。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The doctor will certificate that he is ill.",
+   "ans": "certificate → certify",
+   "why": "will 后面要动词 certify。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "医生开了证明，说明他生病了。",
+   "stem": "The doctor ______ that he was ill.",
+   "ans": "certified",
+   "why": "动词“证明”用 certify，过去式 certified。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A diploma usually shows you finished ______.",
+   "opts": [
+    "school or college",
+    "a race",
+    "a meal",
+    "a trip"
+   ],
+   "why": "diploma 偏学历文凭，certificate 是证明某事属实的文件。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A \"certificate\" is a piece of ______.",
+   "opts": [
+    "paper",
+    "music",
+    "wood",
+    "cake"
+   ],
+   "why": "certificate 是证明文件。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "value",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这幅画怎么样？\n听：This painting has great value.\nA. 不值钱\nB. 很新\nC. 很有价值\nD. 很小",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This old coin is very ______.\nA. valuable\nB. value\nC. valued\nD. valuer\n考点：词性转换",
+  "题目3": "【选词填空】从 value、price 中选一个，用适当形式填空。\n题干：The ______ of this bag is 200 yuan — that's what you pay.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Family values is important to us.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我们应该珍惜时间。\n题干：We should ______ our time.\n考点：用法",
+  "题目6": "【适当形式填空】用所给单词的适当形式填空。\n题干：Our school teaches good ______ like honesty. (value)\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：This car is good value ______ money.\nA. for\nB. of\nC. to\nD. with\n考点：用法",
+  "答案": "【1】C（很有价值）\n讲解：value 价值。\n【2】A（valuable）\n讲解：be 后作表语用形容词 valuable。\n【3】price\n讲解：要付的钱是 price；value 是值多少、有多重要。\n【4】is → are\n讲解：主语 values 是复数，用 are。\n【5】value\n讲解：value 作动词“珍视”，should 后用原形。\n【6】values\n讲解：“价值观”用复数 values。\n【7】A（for）\n讲解：good value for money 物有所值。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这幅画怎么样？",
+   "listen": "This painting has great value.",
+   "opts": [
+    "很有价值",
+    "不值钱",
+    "很新",
+    "很小"
+   ],
+   "why": "value 价值。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This old coin is very ______.",
+   "opts": [
+    "valuable",
+    "value",
+    "valued",
+    "valuer"
+   ],
+   "why": "be 后作表语用形容词 valuable。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 value、price 中选一个，用适当形式填空。",
+   "stem": "The ______ of this bag is 200 yuan — that's what you pay.",
+   "ans": "price",
+   "why": "要付的钱是 price；value 是值多少、有多重要。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Family values is important to us.",
+   "ans": "is → are",
+   "why": "主语 values 是复数，用 are。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们应该珍惜时间。",
+   "stem": "We should ______ our time.",
+   "ans": "value",
+   "why": "value 作动词“珍视”，should 后用原形。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Our school teaches good ______ like honesty. (value)",
+   "ans": "values",
+   "why": "“价值观”用复数 values。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This car is good value ______ money.",
+   "opts": [
+    "for",
+    "of",
+    "to",
+    "with"
+   ],
+   "why": "good value for money 物有所值。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

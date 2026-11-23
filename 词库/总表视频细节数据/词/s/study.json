@@ -1,0 +1,94 @@
+{
+ "单词": "study",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人每晚在哪里学习？\n听：I study in my study every evening.\nA. 在客厅看电视\nB. 在卧室睡觉\nC. 在书房学习\nD. 在厨房做饭",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He ______ English every day.\nA. studies\nB. study\nC. studying\nD. studied\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ hard last term. (study)\n考点：变形",
+  "题目4": "【选词填空】从 study、learn 中选一个，用适当形式填空。\n题干：I want to ______ to swim.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He is studing in the library.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他是一名中学生。\n题干：He is a middle school ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：My dad is reading in his ______.\nA. study\nB. studio\nC. student\nD. studies\n考点：易混",
+  "答案": "【1】C（在书房学习）\n讲解：study 学习；书房。\n【2】A（studies）\n讲解：every day，主语三单用 studies（y 变 i 加 es）。\n【3】studied\n讲解：last term 用过去式 studied。\n【4】learn\n讲解：学会某项技能用 learn to do。\n【5】studing → studying\n讲解：study 加 ing 直接加，不去 y。\n【6】student\n讲解：“学生”用 student。\n【7】A（study）\n讲解：书房是 study。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人每晚在哪里学习？",
+   "listen": "I study in my study every evening.",
+   "opts": [
+    "在书房学习",
+    "在客厅看电视",
+    "在卧室睡觉",
+    "在厨房做饭"
+   ],
+   "why": "study 学习；书房。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He ______ English every day.",
+   "opts": [
+    "studies",
+    "study",
+    "studying",
+    "studied"
+   ],
+   "why": "every day，主语三单用 studies（y 变 i 加 es）。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ hard last term. (study)",
+   "ans": "studied",
+   "why": "last term 用过去式 studied。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 study、learn 中选一个，用适当形式填空。",
+   "stem": "I want to ______ to swim.",
+   "ans": "learn",
+   "why": "学会某项技能用 learn to do。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is studing in the library.",
+   "ans": "studing → studying",
+   "why": "study 加 ing 直接加，不去 y。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是一名中学生。",
+   "stem": "He is a middle school ______.",
+   "ans": "student",
+   "why": "“学生”用 student。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My dad is reading in his ______.",
+   "opts": [
+    "study",
+    "studio",
+    "student",
+    "studies"
+   ],
+   "why": "书房是 study。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

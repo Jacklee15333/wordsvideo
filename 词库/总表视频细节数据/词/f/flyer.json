@@ -1,0 +1,94 @@
+{
+ "单词": "flyer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：那个人在发什么？\n听：A man is giving out flyers.\nA. 传单\nB. 报纸\nC. 糖果\nD. 水",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：They put ______ on every car in the street.\nA. flyer\nB. flyeres\nC. flyer's\nD. flyers",
+  "题目3": "【选词填空】从 flyer、flight 中选一个，用适当形式填空。\n题干：Our ______ to Tokyo was delayed.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He handed me a flyers.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他们在街上发传单。\n题干：They gave ______ flyers in the street.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Flyer\" can also be spelled \"______\".\nA. flier\nB. flyar\nC. flire\nD. flyor\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A ______ is a small paper that tells people about an event.\nA. flight\nB. fly\nC. flew\nD. flyer\n考点：用法",
+  "答案": "【1】A（传单）\n讲解：flyers 传单。\n【2】D（flyers）\n讲解：put 很多张，用复数。\n【3】flight\n讲解：延误的是航班 flight。\n【4】flyers → flyer\n讲解：a 后面用单数。\n【5】out\n讲解：give out 分发。\n【6】A（flier）\n讲解：flyer 也写作 flier。\n【7】D（flyer）\n讲解：传单是 flyer。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：那个人在发什么？",
+   "listen": "A man is giving out flyers.",
+   "opts": [
+    "传单",
+    "报纸",
+    "糖果",
+    "水"
+   ],
+   "why": "flyers 传单。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "They put ______ on every car in the street.",
+   "opts": [
+    "flyers",
+    "flyer",
+    "flyeres",
+    "flyer's"
+   ],
+   "why": "put 很多张，用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 flyer、flight 中选一个，用适当形式填空。",
+   "stem": "Our ______ to Tokyo was delayed.",
+   "ans": "flight",
+   "why": "延误的是航班 flight。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He handed me a flyers.",
+   "ans": "flyers → flyer",
+   "why": "a 后面用单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他们在街上发传单。",
+   "stem": "They gave ______ flyers in the street.",
+   "ans": "out",
+   "why": "give out 分发。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Flyer\" can also be spelled \"______\".",
+   "opts": [
+    "flier",
+    "flyar",
+    "flire",
+    "flyor"
+   ],
+   "why": "flyer 也写作 flier。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ is a small paper that tells people about an event.",
+   "opts": [
+    "flyer",
+    "flight",
+    "fly",
+    "flew"
+   ],
+   "why": "传单是 flyer。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

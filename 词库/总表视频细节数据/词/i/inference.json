@@ -1,0 +1,92 @@
+{
+ "单词": "inference",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：从这些事实可以得出什么？\n听：We can make an inference from these facts.\nA. 一个问题\nB. 一个故事\nC. 一个推论\nD. 一个错误",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：What ______ can you draw from the data?\nA. infer\nB. inferred\nC. inference\nD. inferring",
+  "题目3": "【选词填空】从 infer、inference 中选一个，用适当形式填空。\n题干：Can you ______ his feelings from his face?\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We made several ______ from the story. (inference)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：His inference were wrong.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这只是一个猜测。\n题干：It's just a ______.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Yesterday we ______ that he was ill.\nA. inference\nB. infers\nC. inferred\nD. infer\n考点：变形",
+  "答案": "【1】C（一个推论）\n讲解：inference 推论。\n【2】C（inference）\n讲解：draw an inference 得出推论，用名词。\n【3】infer\n讲解：can 后面用动词原形 infer。\n【4】inferences\n讲解：several 后面用复数 inferences。\n【5】were → was\n讲解：主语 his inference 是单数，用 was。\n【6】guess\n讲解：名词“猜测”guess。\n【7】C（inferred）\n讲解：yesterday 讲过去，用过去式 inferred。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：从这些事实可以得出什么？",
+   "listen": "We can make an inference from these facts.",
+   "opts": [
+    "一个推论",
+    "一个问题",
+    "一个故事",
+    "一个错误"
+   ],
+   "why": "inference 推论。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What ______ can you draw from the data?",
+   "opts": [
+    "inference",
+    "infer",
+    "inferred",
+    "inferring"
+   ],
+   "why": "draw an inference 得出推论，用名词。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 infer、inference 中选一个，用适当形式填空。",
+   "stem": "Can you ______ his feelings from his face?",
+   "ans": "infer",
+   "why": "can 后面用动词原形 infer。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We made several ______ from the story. (inference)",
+   "ans": "inferences",
+   "why": "several 后面用复数 inferences。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "His inference were wrong.",
+   "ans": "were → was",
+   "why": "主语 his inference 是单数，用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这只是一个猜测。",
+   "stem": "It's just a ______.",
+   "ans": "guess",
+   "why": "名词“猜测”guess。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Yesterday we ______ that he was ill.",
+   "opts": [
+    "inferred",
+    "inference",
+    "infers",
+    "infer"
+   ],
+   "why": "yesterday 讲过去，用过去式 inferred。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

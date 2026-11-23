@@ -1,0 +1,92 @@
+{
+ "单词": "one-third",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说多少人来了？\n听：One-third of the students came to the party.\nA. 一半学生\nB. 三分之一的学生\nC. 所有学生\nD. 三个学生",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ of the water is polluted.\nA. One-thirds\nB. One-third\nC. One-three\nD. First-third\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Two ______ of the land is covered with trees. (third)\n考点：变形",
+  "题目4": "【选词填空】从 one-third、half 中选一个，用适当形式填空。\n题干：We cut the cake into two equal parts. Each part is ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：One-third of the students is girls.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这个城市三分之一的人骑自行车上班。\n题干：______ of the people in this city ______ to work by bike.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：One-third of the money ______ spent on books.\nA. were\nB. was\nC. are\nD. be\n考点：用法",
+  "答案": "【1】B（三分之一的学生）\n讲解：one-third 三分之一。\n【2】B（One-third）\n讲解：“三分之一”是 one-third，分子为一时分母用单数。\n【3】thirds\n讲解：分子大于一，分母序数词加 s。\n【4】half\n讲解：分成两等份，每份是一半 half。\n【5】is → are\n讲解：“分数 + of + 复数名词”作主语，谓语用复数。\n【6】One-third；go\n讲解：分数 + of + 复数名词，谓语用复数 go。\n【7】B（was）\n讲解：分数 + of + 不可数名词作主语，谓语用单数 was。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说多少人来了？",
+   "listen": "One-third of the students came to the party.",
+   "opts": [
+    "三分之一的学生",
+    "一半学生",
+    "所有学生",
+    "三个学生"
+   ],
+   "why": "one-third 三分之一。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ of the water is polluted.",
+   "opts": [
+    "One-third",
+    "One-thirds",
+    "One-three",
+    "First-third"
+   ],
+   "why": "“三分之一”是 one-third，分子为一时分母用单数。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Two ______ of the land is covered with trees. (third)",
+   "ans": "thirds",
+   "why": "分子大于一，分母序数词加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 one-third、half 中选一个，用适当形式填空。",
+   "stem": "We cut the cake into two equal parts. Each part is ______.",
+   "ans": "half",
+   "why": "分成两等份，每份是一半 half。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "One-third of the students is girls.",
+   "ans": "is → are",
+   "why": "“分数 + of + 复数名词”作主语，谓语用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个城市三分之一的人骑自行车上班。",
+   "stem": "______ of the people in this city ______ to work by bike.",
+   "ans": "One-third；go",
+   "why": "分数 + of + 复数名词，谓语用复数 go。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "One-third of the money ______ spent on books.",
+   "opts": [
+    "was",
+    "were",
+    "are",
+    "be"
+   ],
+   "why": "分数 + of + 不可数名词作主语，谓语用单数 was。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

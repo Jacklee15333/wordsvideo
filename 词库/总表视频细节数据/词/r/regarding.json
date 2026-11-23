@@ -1,0 +1,95 @@
+{
+ "单词": "regarding",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这封邮件是关于什么的？\n听：I'm writing regarding your order.\nA. 你的生日\nB. 你的作业\nC. 你的假期\nD. 你的订单",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I have a question ______ the homework.\nA. regard\nB. regards\nC. regarded\nD. regarding",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ him as her best friend. (regarding)\n考点：词性转换",
+  "题目4": "【选词填空】从 regarding、reading 中选一个，用适当形式填空。\n题干：I enjoy ______ books in bed.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We had a meeting regard the school trip.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Regarding\" means the same as \"______\".\nA. above\nB. across\nC. against\nD. about\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Regarding\" is more ______ than \"about\".\nA. informal\nB. funny\nC. short\nD. formal\n考点：用法",
+  "答案": "【1】D（你的订单）\n讲解：regarding 关于。\n【2】D（regarding）\n讲解：“关于”用介词 regarding。\n【3】regards\n讲解：主语 she 三单、说现在，用 regards。\n【4】reading\n讲解：enjoy reading 喜欢看书。\n【5】regard → regarding\n讲解：“关于”要用介词 regarding。\n【6】D（about）\n讲解：regarding 就是 about。\n【7】D（formal）\n讲解：regarding 偏书面，常用在邮件、公文开头。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这封邮件是关于什么的？",
+   "listen": "I'm writing regarding your order.",
+   "opts": [
+    "你的订单",
+    "你的生日",
+    "你的作业",
+    "你的假期"
+   ],
+   "why": "regarding 关于。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I have a question ______ the homework.",
+   "opts": [
+    "regarding",
+    "regard",
+    "regards",
+    "regarded"
+   ],
+   "why": "“关于”用介词 regarding。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ him as her best friend. (regarding)",
+   "ans": "regards",
+   "why": "主语 she 三单、说现在，用 regards。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 regarding、reading 中选一个，用适当形式填空。",
+   "stem": "I enjoy ______ books in bed.",
+   "ans": "reading",
+   "why": "enjoy reading 喜欢看书。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We had a meeting regard the school trip.",
+   "ans": "regard → regarding",
+   "why": "“关于”要用介词 regarding。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Regarding\" means the same as \"______\".",
+   "opts": [
+    "about",
+    "above",
+    "across",
+    "against"
+   ],
+   "why": "regarding 就是 about。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Regarding\" is more ______ than \"about\".",
+   "opts": [
+    "formal",
+    "informal",
+    "funny",
+    "short"
+   ],
+   "why": "regarding 偏书面，常用在邮件、公文开头。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

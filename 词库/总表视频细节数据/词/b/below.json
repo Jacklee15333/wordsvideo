@@ -1,0 +1,94 @@
+{
+ "单词": "below",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：气温是多少？\n听：It's five degrees below zero.\nA. 零上五度\nB. 十五度\nC. 零下五度\nD. 五十度",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The sun went down ______ the hills.\nA. below\nB. under\nC. above\nD. over",
+  "题目3": "【选词填空】从 below、under 中选一个，用适当形式填空。\n题干：The cat is sleeping ______ the table.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The temperature dropped to ten degrees below of zero.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：飞机在云层上方飞行。\n题干：The plane is flying ______ the clouds.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Below\" is the opposite of \"______\".\nA. under\nB. over\nC. above\nD. up\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"See below\" in a book means look at the part ______.\nA. further down\nB. at the top\nC. on the cover\nD. in another book\n考点：用法",
+  "答案": "【1】C（零下五度）\n讲解：below zero 零下。\n【2】A（below）\n讲解：太阳落到山的下方，用 below。\n【3】under\n讲解：在桌子正下方用 under。\n【4】below of → below\n讲解：below 后面直接接名词。\n【5】above\n讲解：上方 above，和 below 相对。\n【6】C（above）\n讲解：below 的反义词是 above。\n【7】A（further down）\n讲解：see below 见下文。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：气温是多少？",
+   "listen": "It's five degrees below zero.",
+   "opts": [
+    "零下五度",
+    "零上五度",
+    "十五度",
+    "五十度"
+   ],
+   "why": "below zero 零下。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The sun went down ______ the hills.",
+   "opts": [
+    "below",
+    "under",
+    "above",
+    "over"
+   ],
+   "why": "太阳落到山的下方，用 below。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 below、under 中选一个，用适当形式填空。",
+   "stem": "The cat is sleeping ______ the table.",
+   "ans": "under",
+   "why": "在桌子正下方用 under。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The temperature dropped to ten degrees below of zero.",
+   "ans": "below of → below",
+   "why": "below 后面直接接名词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "飞机在云层上方飞行。",
+   "stem": "The plane is flying ______ the clouds.",
+   "ans": "above",
+   "why": "上方 above，和 below 相对。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Below\" is the opposite of \"______\".",
+   "opts": [
+    "above",
+    "under",
+    "over",
+    "up"
+   ],
+   "why": "below 的反义词是 above。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"See below\" in a book means look at the part ______.",
+   "opts": [
+    "further down",
+    "at the top",
+    "on the cover",
+    "in another book"
+   ],
+   "why": "see below 见下文。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

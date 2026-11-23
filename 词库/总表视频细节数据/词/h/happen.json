@@ -1,0 +1,94 @@
+{
+ "单词": "happen",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在问什么？\n听：What happened to you?\nA. 你去哪了\nB. 你怎么了\nC. 你要什么\nD. 你是谁",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：What ______ to you yesterday?\nA. happens\nB. was happened\nC. happened\nD. happening\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：I ______ to see him in the street last week. (happen)\n考点：用法",
+  "题目4": "【选词填空】从 happen、take place 中选一个，用适当形式填空。\n题干：The sports meeting will ______ next Friday.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The accident was happened last night.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：谁也不知道将来会发生什么。\n题干：Nobody knows what will ______.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Something strange is ______ now.\nA. happening\nB. happen\nC. happened\nD. happens\n考点：变形",
+  "答案": "【1】B（你怎么了）\n讲解：What happened to sb? 某人怎么了？\n【2】C（happened）\n讲解：happen 没有被动，yesterday 用过去式 happened。\n【3】happened\n讲解：happen to do 碰巧做，last week 用过去式。\n【4】take place\n讲解：安排好的活动“举行”用 take place。\n【5】was happened → happened\n讲解：happen 不用被动语态。\n【6】happen\n讲解：will 后面用动词原形 happen。\n【7】A（happening）\n讲解：is 后面用现在分词 happening。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在问什么？",
+   "listen": "What happened to you?",
+   "opts": [
+    "你怎么了",
+    "你去哪了",
+    "你要什么",
+    "你是谁"
+   ],
+   "why": "What happened to sb? 某人怎么了？"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What ______ to you yesterday?",
+   "opts": [
+    "happened",
+    "happens",
+    "was happened",
+    "happening"
+   ],
+   "why": "happen 没有被动，yesterday 用过去式 happened。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I ______ to see him in the street last week. (happen)",
+   "ans": "happened",
+   "why": "happen to do 碰巧做，last week 用过去式。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 happen、take place 中选一个，用适当形式填空。",
+   "stem": "The sports meeting will ______ next Friday.",
+   "ans": "take place",
+   "why": "安排好的活动“举行”用 take place。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The accident was happened last night.",
+   "ans": "was happened → happened",
+   "why": "happen 不用被动语态。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "谁也不知道将来会发生什么。",
+   "stem": "Nobody knows what will ______.",
+   "ans": "happen",
+   "why": "will 后面用动词原形 happen。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Something strange is ______ now.",
+   "opts": [
+    "happening",
+    "happen",
+    "happened",
+    "happens"
+   ],
+   "why": "is 后面用现在分词 happening。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

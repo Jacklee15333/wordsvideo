@@ -1,0 +1,90 @@
+# -*- coding: utf-8 -*-
+"""记法里的“音变”：≈ 两边写法差得多的（fac ≈ do、dic ≈ teach、ped ≈ foot……），讲清是哪个音、哪个字母对哪个，为什么会不一样。
+写法：记：X ≈ Y（中文）：道理。音变：〈谁对谁〉：〈一句话讲清〉（老祖宗 *…；同 … 和 …）
+      经法语变来的写成一条链：音变：regula（拉丁语）→ reule（古法语）→ rule（英语）：〈哪个字母怎么了〉
+同源关系都对照过 etymonline（2026-11）；warm 词典说来源不完全确定，照写“一说”。
+键：关联词（light 两个意思分开写 (关联词, 中文)）；值：一句话，或 {这一部分的写法: 一句话, '*': 其余}"""
+SHIFT = {
+ # ---- 同一个老词根，拉丁语 / 希腊语一支、英语一支（辅音有规律地对应）
+ 'do': 'f 对 d：同一个老音 dh，拉丁语在词头念成 f，英语念成 d（老祖宗 *dhe-“放、做”，fac 后面的 c 是拉丁语加上去的；同 foreign 的 for- 和 door）',
+ 'teach': 'd 对 t、c 对 ch：老祖宗的 d，英语念成 t；c 的 k 音在古英语里软化成 ch（老祖宗 *deik-“指给人看”：拉丁语 dic-，古英语 tæcan，今天的 teach；同 du- 和 two、dec- 和 ten）',
+ 'foot': 'p 对 f、d 对 t：老祖宗的 p，英语念成 f；d 念成 t（老祖宗 *ped-“脚”；同 patr- 和 father、du- 和 two）',
+ 'tooth': 'd 对 t、t 对 th：老祖宗的 d，英语念成 t；t 念成 th，前面的 n 也掉了（老祖宗 *dent-“牙”，古英语 toth；同 du- 和 two、tri- 和 three）',
+ 'heart': 'c 对 h、d 对 t：老祖宗的 k 音，拉丁语写 c，英语念成 h；d 念成 t（老祖宗 *kerd-“心”；同 cent- 和 hundred、ped- 和 foot）',
+ 'head': 'c 对 h：老祖宗的 k 音，拉丁语写 c，英语念成 h；中间的 p 在古英语里成了 f（heafod），后来磨掉，只剩 head（老祖宗 *kaput-“头”；同 cord- 和 heart）',
+ 'hundred': 'c 对 h：老祖宗的 k 音，拉丁语写 c，英语念成 h，centum 就成了 hund；后面的 -red 是“数目”，后加的（老祖宗 *km-tom“一百”；同 cord- 和 heart）',
+ 'ten': 'd 对 t：老祖宗的 d，英语念成 t；中间的 c 先念成 h，后来掉了（老祖宗 *dekm-“十”，古英语 tien；同 du- 和 two、dent- 和 tooth）',
+ 'two': 'd 对 t：老祖宗的 d，英语念成 t，duo 就成了 two，w 现在不发音；bi- 是 dwi- 的 dw 在拉丁语里合成了 b（老祖宗 *dwo-“二”；同 dec- 和 ten）',
+ 'three': 't 对 th：老祖宗的 t，英语念成 th（老祖宗 *trei-“三”；同 patr- 和 father、dent- 和 tooth）',
+ 'eight': 'c 对 gh：老祖宗的 k 音，拉丁语写 c，英语念成 h、写作 gh，现在不发音（老祖宗 *okto“八”，古英语 eahta；同 luc- 和 light、rect- 和 right）',
+ 'bear': 'f 对 b：同一个老音 bh，拉丁语念成 f，英语念成 b（老祖宗 *bher-“扛、带”；同 frag- 和 break）',
+ 'break': 'f 对 b、g 对 k：同一个老音 bh，拉丁语念成 f，英语念成 b；g 在英语里念成 k（老祖宗 *bhreg-“打破”；同 fer- 和 bear、gno- 和 know）',
+ 'know': 'g 对 k：老祖宗的 g，英语念成 k，know 的 k 以前是要念出来的；拉丁语词头的 g 后来掉了，写成 not-，前面有前缀时还留着，如 cognit-（老祖宗 *gno-“知道”；同 erg- 和 work）',
+ 'come': 'v 对 c：老祖宗开头是 gw 两个音连着念；拉丁语只留下 w 音，写作 v；英语把 g 念成 k、写作 c，w 掉了（老祖宗 *gwem-“来、走”，古英语 cuman）',
+ 'way': 'v 对 w：拉丁语的 v 以前就念 w，via 和 way 开头是同一个音（老祖宗 *wegh-“走、用车运”；同 vin- 和 wine、volunt- 和 will）',
+ 'sit': 'd 对 t：老祖宗的 d，英语念成 t，sed 就成了 sit；sess 是“坐过了的”形式，d 碰上 t 变成了 ss（老祖宗 *sed-“坐”；同 ped- 和 foot）',
+ 'sun': 'l 对 n：同一个老词有两种词尾，带 l 的成了拉丁语 sol，带 n 的成了英语 sun（老祖宗 *sawel- / *swen-“太阳”）',
+ 'new': 'v 对 w：拉丁语的 v 以前就念 w，nov- 和 new 读音很近（老祖宗 *newo-“新”；同 vi- 和 way）',
+ 'warm': 'th 对 w：一说老祖宗开头是 gwh 三个音连着念；希腊语在 e 前念成 th，英语只留下 w（老祖宗 *gwher-“热”；词典说 warm 的来源不完全确定）',
+ 'water': 'd 对 t：老祖宗的 d，英语念成 t；希腊语开头的 w 掉了，换成送气的 h，写作 hy-（老祖宗 *wed-“水、湿”；同 ped- 和 foot）',
+ 'work': 'g 对 k：老祖宗的 g，英语念成 k；希腊语开头的 w 掉了，所以是 erg-（老祖宗 *werg-“做”；同 gno- 和 know）',
+ 'eye': '老祖宗是 kw 两个音连着念：希腊语念成 p，成了 op-；英语经古英语 eage 磨成了 eye（老祖宗 *okw-“看”；拉丁语的“眼睛”oculus 留着 c）',
+ ('light', '轻的'): 'v 对 gh：老祖宗是 gwh 三个音连着念；拉丁语只留下 w 音，写作 v；英语念成 h、写作 gh，现在不发音（老祖宗 *legwh-“轻”）',
+ ('light', '光'): 'c 对 gh：老祖宗的 k 音，拉丁语写 c，英语念成 h、写作 gh，现在不发音；lumin 是 luc 加 -men，c 掉了（老祖宗 *leuk-“光、亮”；同 oct- 和 eight、rect- 和 right）',
+ 'right': 'g 对 gh：老祖宗的 g 碰上 t，拉丁语写成 ct（rect-），英语念成 h、写作 gh，现在不发音（老祖宗 *reg-“走直线”；同 oct- 和 eight）',
+ 'full': 'p 对 f：老祖宗的 p，英语念成 f（老祖宗 *pele-“填满”；同 ped- 和 foot、patr- 和 father）',
+ 'flat': 'p 对 f：老祖宗的 p，英语念成 f（老祖宗 *plat-“摊开、平”；同 ped- 和 foot）',
+ 'food': 'p 对 f：老祖宗的 p，英语念成 f；pan 是面包，food 是吃的，都出自“喂养”（老祖宗 *pa-“喂养”；同 ped- 和 foot）',
+ 'father': 'p 对 f、t 对 th：老祖宗的 p，英语念成 f；t 念成 th（老祖宗 *pəter-“父亲”；同 ped- 和 foot、tri- 和 three）',
+ 'will': 'v 对 w：拉丁语的 v 以前就念 w，vol- 和 will 开头是同一个音（老祖宗 *wel-“想要”；同 vi- 和 way）',
+ 'same': 'i 对 a：老祖宗 *sem-“一、同一个”，拉丁语成了 sim-，英语成了 same；到了法语，simul- 又变成 sembl-，m 后面多出一个 b',
+ 'east': 'au 对 ea：austr 是日耳曼语的“东”写成拉丁语的样子（古高地德语 ostar），和英语 east 是同一个词（老祖宗 *aus-“发亮”：太阳升起的方向）',
+ 'name': 'n、m 没变：拉丁语是 nomen，希腊语前面多了一个 o（onoma、onym），英语是 name（老祖宗 *no-men-“名字”）',
+ 'one': 'n 没变：老祖宗 *oi-no-“一”，拉丁语成了 unus，英语成了 an、one，one 开头的 w 音是后来才有的',
+ 'star': {'stell': 's、t 没变：拉丁语 stella 是 ster 加 -la，r 被后面的 l 同化了（老祖宗 *ster-“星”）'},
+ # ---- 关联词是从这个词根经法语（或别的语言）变来的：一步步的链在关联词自己那一行，这里写一句
+ 'catch': 'p 对 tch：拉丁语 capere“抓”的加强说法是 captare，到法国北部的口语里 pt 合成了 ch 音（cachier），英语写成 catch',
+ 'close': 'd 对 s：拉丁语 claudere“关”的“关上了的”形式是 clausus，d 碰上 t 变成了 s；au 到法语里念成 o（clos），英语写成 close',
+ 'double': 'p 对 b：拉丁语 duplus“两层的”到法语里 p 变成了 b（doble），英语写成 double',
+ 'force': 't 对 c：拉丁语 fortis“强”造出名词 *fortia，t 后面跟着 i，到法语里念成 s 音，写作 force',
+ 'language': 'i 对 a：拉丁语 lingua“舌头、语言”到法语里 i 变成了 a（langue、langage），英语写成 language',
+ 'lesson': 'ct 对 ss：拉丁语 lectio“读”到法语里 ct 念成了 s 音（leçon），英语写成 lesson',
+ 'measure': 'ns 对 s：拉丁语 mensura“量”到法语里 n 掉了（mesure），英语写成 measure；希腊语的 metr- 是同一个老词根的另一支',
+ 'second': 'qu 对 c：拉丁语 sequi“跟”造出 secundus“跟在后面的”，qu 在 u 前写成 c，就是 second',
+ 'sense': 't 对 s：拉丁语 sentire“感觉”的“感觉到了的”形式是 sensus，t 碰上 t 变成了 s，就是 sense',
+ 'train': 'ct 掉了：tract 是拉丁语 trahere“拉”的“拉过了的”形式；到法语里中间的辅音磨掉，成了 trainer“拖着走”，英语写成 train',
+ 'jet': 'c 掉了：拉丁语 iactare“扔来扔去”到法语里 c 磨掉了（jeter），英语写成 jet',
+ 'machine': 'e 对 a：希腊语这个词有两种方言写法，mēkhanē 和 makhana；mechan 取前一种，machine 经拉丁语 machina 取后一种',
+ 'question': 'r 对 s：拉丁语 quaerere“问”的“问过了的”形式是 quaest-，r 换成了 s、再加 t；ae 到英语里写成 e，就是 question',
+ 'patient': {'pass': 't 对 ss：拉丁语 pati“忍受”的“忍受过了的”形式是 passus，t 碰上 t 变成了 ss；patient 用的是原来的 pat-'},
+ 'victory': {'vinc': 'nc 对 ct：拉丁语 vincere“征服”平时带鼻音 n；“征服了的”形式不带 n、后面加 t，就是 vict-，victory 用的是这个形式'},
+ 'part': 'o 对 a：拉丁语 portio“份额”和 pars“一份”是一家，只是元音不同',
+ 'city': 'civitatem（拉丁语）→ citatem（晚期拉丁语）→ cite（古法语）→ city（英语）：中间没有重音的 vi 被吞掉了',
+ 'clear': 'clarus（拉丁语）→ cler（古法语）→ clear（英语）：重读的 a 到法语里变成 e，英语写成 ea',
+ 'cross': 'crux（拉丁语）→ cros（古爱尔兰语）→ kross（北欧语）→ cross（英语）：u 念成了 o，x 只剩一个 s 音',
+ 'flower': 'florem（拉丁语）→ flor（古法语）→ flour（中古英语）→ flower（英语）：o 念成长音写成 ou，后来又写成 ower',
+ 'image': 'imaginem（拉丁语）→ imagene（古法语）→ image（古法语、英语）：词尾的 in 在法语里磨掉了',
+ 'letter': 'littera（拉丁语）→ letre（古法语）→ letter（英语）：i 到法语里念成了 e',
+ 'lion': 'leonem（拉丁语）→ lion（古法语、英语）：e 紧挨着 o，到法语里念成了 i',
+ 'nurse': 'nutrix（拉丁语）→ norrice（古法语）→ nurse（英语）：tr 里的 t 并进了 r，中间的 i 也被吞掉',
+ 'order': 'ordinem（拉丁语）→ ordene（古法语）→ ordre（古法语）→ order（英语）：中间的 i 被吞掉，n 变成了 r',
+ 'people': 'populus（拉丁语）→ pople（古法语）→ peuple（古法语）→ people（英语）：中间的 u 被吞掉，开头的 o 拉长写成 eu，英语写成 eo',
+ 'price': 'pretium（拉丁语）→ precium（晚期拉丁语）→ pris（古法语）→ price（英语）：e 和后面的 i 并成了 i',
+ 'prove': 'probare（拉丁语）→ prover（古法语）→ prove（英语）：夹在两个元音中间的 b 念轻，变成了 v',
+ 'round': 'rotundus（拉丁语）→ roont（古法语）→ round（英语）：夹在两个元音中间的 t 脱落了，o 写成 ou',
+ 'rule': 'regula（拉丁语）→ reule（古法语）→ rule（英语）：夹在两个元音中间的 g 越念越轻，脱落了',
+ 'save': 'salvare（晚期拉丁语）→ sauver（古法语）→ save（英语）：辅音前面的 l 念成了 u，后来并掉了',
+ 'sound': 'sonus（拉丁语）→ son（古法语）→ soun（中古英语）→ sound（英语）：o 写成 ou，n 后面又多念出一个 d',
+ 'term': 'terminus（拉丁语）→ terme（古法语）→ term（英语）：没有重音的 i 被吞掉，后面的 n 也掉了',
+ 'voice': 'vocem（拉丁语）→ voiz（古法语）→ voice（英语）：c 在 e 前面念软，成了 s 音',
+ 'waste': 'vastare（拉丁语）→ waster（北部古法语）→ waste（英语）：法国北部把开头的 v 念成了 w',
+ 'wine': 'vinum（拉丁语）→ win（古英语）→ wine（英语）：拉丁语的 v 当时念 w，英语很早照读音借来，就写成 w',
+}
+# 关联词和词根写法一样的（port）：把两个意思怎么连上讲清
+WHY = {
+ 'port': '港口是船把货运进运出的地方；拉丁语的港口 portus、城门 porta 和搬运 portare 是一家，都出自“穿过去、运过去”，所以词根 {c} 就是搬、运',
+}
+def note_for(anchor, zh, core):
+    v = SHIFT.get((anchor, zh)) or SHIFT.get(anchor)
+    if isinstance(v, dict): v = v.get(core) or v.get('*')
+    return v

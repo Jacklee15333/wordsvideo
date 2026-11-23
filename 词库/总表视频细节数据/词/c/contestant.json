@@ -1,0 +1,93 @@
+{
+ "单词": "contestant",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这次节目有多少名选手？\n听：There are ten contestants in the show.\nA. 两名\nB. 十名\nC. 五名\nD. 二十名",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Each ______ has two minutes to answer the questions.\nA. contest\nB. contestant\nC. contests\nD. contesting",
+  "题目3": "【选词填空】从 contestant、contest 中选一个，用适当形式填空。\n题干：The ______ will start at 9 a.m. tomorrow.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：All the ______ looked nervous before the final. (contestant)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The youngest contest was only eight years old.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The two runners are old ______ in the race.\nA. contests\nB. contest\nC. rivals\nD. contesting\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：每位参赛者都拿到了一个号码。\n题干：Every one of the ______ got a number.\n考点：变形",
+  "答案": "【1】B（十名）\n讲解：contestant 参赛者。\n【2】B（contestant）\n讲解：“参赛者”用 contestant。\n【3】contest\n讲解：会“开始”的是比赛 contest。\n【4】contestants\n讲解：All the 后接复数 contestants。\n【5】contest → competitor\n讲解：指人用 competitor / contestant。\n【6】C（rivals）\n讲解：赛场上的老对手是 rivals。\n【7】contestants\n讲解：every one of 后接复数 contestants。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这次节目有多少名选手？",
+   "listen": "There are ten contestants in the show.",
+   "opts": [
+    "十名",
+    "两名",
+    "五名",
+    "二十名"
+   ],
+   "why": "contestant 参赛者。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Each ______ has two minutes to answer the questions.",
+   "opts": [
+    "contestant",
+    "contest",
+    "contests",
+    "contesting"
+   ],
+   "why": "“参赛者”用 contestant。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 contestant、contest 中选一个，用适当形式填空。",
+   "stem": "The ______ will start at 9 a.m. tomorrow.",
+   "ans": "contest",
+   "why": "会“开始”的是比赛 contest。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "All the ______ looked nervous before the final. (contestant)",
+   "ans": "contestants",
+   "why": "All the 后接复数 contestants。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The youngest contest was only eight years old.",
+   "ans": "contest → competitor",
+   "why": "指人用 competitor / contestant。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The two runners are old ______ in the race.",
+   "opts": [
+    "rivals",
+    "contests",
+    "contest",
+    "contesting"
+   ],
+   "why": "赛场上的老对手是 rivals。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "每位参赛者都拿到了一个号码。",
+   "stem": "Every one of the ______ got a number.",
+   "ans": "contestants",
+   "why": "every one of 后接复数 contestants。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

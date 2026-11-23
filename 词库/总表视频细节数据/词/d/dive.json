@@ -1,0 +1,94 @@
+{
+ "单词": "dive",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人喜欢做什么？\n听：I like to dive into the pool.\nA. 坐在池边\nB. 在池里洗衣服\nC. 打扫水池\nD. 跳进水池",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He ______ into the river yesterday to save a boy.\nA. dives\nB. diving\nC. dived\nD. dive\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：______ is my favourite sport. (dive)\n考点：变形",
+  "题目4": "【选词填空】从 dive、dip 中选一个，用适当形式填空。\n题干：______ the bread in the milk and then eat it.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She dive into the sea every morning.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我们去潜水吧。\n题干：Let's go ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：You can't dive here because the water is too ______.\nA. shallow\nB. deep\nC. clean\nD. blue\n考点：用法",
+  "答案": "【1】D（跳进水池）\n讲解：dive 跳水、扎进水里。\n【2】C（dived）\n讲解：yesterday 用一般过去时，去 e 加 d。\n【3】Diving\n讲解：动名词作主语，去 e 加 ing，句首大写。\n【4】Dip\n讲解：浸一下就拿出来用 dip；dive 是整个人往深处扎。\n【5】dive → dives\n讲解：主语三单、every morning 用一般现在时 dives。\n【6】diving\n讲解：go diving 去潜水。\n【7】A（shallow）\n讲解：水太浅不能跳水。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人喜欢做什么？",
+   "listen": "I like to dive into the pool.",
+   "opts": [
+    "跳进水池",
+    "坐在池边",
+    "在池里洗衣服",
+    "打扫水池"
+   ],
+   "why": "dive 跳水、扎进水里。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He ______ into the river yesterday to save a boy.",
+   "opts": [
+    "dived",
+    "dives",
+    "diving",
+    "dive"
+   ],
+   "why": "yesterday 用一般过去时，去 e 加 d。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "______ is my favourite sport. (dive)",
+   "ans": "Diving",
+   "why": "动名词作主语，去 e 加 ing，句首大写。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 dive、dip 中选一个，用适当形式填空。",
+   "stem": "______ the bread in the milk and then eat it.",
+   "ans": "Dip",
+   "why": "浸一下就拿出来用 dip；dive 是整个人往深处扎。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She dive into the sea every morning.",
+   "ans": "dive → dives",
+   "why": "主语三单、every morning 用一般现在时 dives。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们去潜水吧。",
+   "stem": "Let's go ______.",
+   "ans": "diving",
+   "why": "go diving 去潜水。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can't dive here because the water is too ______.",
+   "opts": [
+    "shallow",
+    "deep",
+    "clean",
+    "blue"
+   ],
+   "why": "水太浅不能跳水。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

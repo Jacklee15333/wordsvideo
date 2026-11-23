@@ -1,0 +1,93 @@
+{
+ "单词": "o'clock",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：电影几点开始？\n听：The film starts at seven o'clock.\nA. 七点\nB. 六点\nC. 八点\nD. 九点",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I get up at six ______ every day.\nA. clock\nB. clocks\nC. o'clocks\nD. o'clock",
+  "题目3": "【选词填空】从 o'clock、half past 中选一个，用适当形式填空。\n题干：The class begins at ______ eight, not at eight.\n考点：用法",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are two ______ on the wall. (o'clock)\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I'll meet you at seven-thirty o'clock.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：We say \"eight o'clock\", but 8:15 is ______.\nA. eight fifteen o'clock\nB. a quarter past eight\nC. fifteen o'clock\nD. eight o'clock fifteen\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我们七点半出发。\n题干：We leave at ______ thirty.\n考点：用法",
+  "答案": "【1】A（七点）\n讲解：seven o'clock 七点整。\n【2】D（o'clock）\n讲解：整点后用 o'clock。\n【3】half past\n讲解：7:30、8:30 这类时间用 half past，不用 o'clock。\n【4】clocks\n讲解：墙上的钟是 clocks。\n【5】seven-thirty o'clock → half past seven\n讲解：o'clock 只用于整点。\n【6】B（a quarter past eight）\n讲解：o'clock 只用于整点，8:15 说 a quarter past eight。\n【7】seven\n讲解：7:30 可以说 seven thirty。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：电影几点开始？",
+   "listen": "The film starts at seven o'clock.",
+   "opts": [
+    "七点",
+    "六点",
+    "八点",
+    "九点"
+   ],
+   "why": "seven o'clock 七点整。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I get up at six ______ every day.",
+   "opts": [
+    "o'clock",
+    "clock",
+    "clocks",
+    "o'clocks"
+   ],
+   "why": "整点后用 o'clock。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 o'clock、half past 中选一个，用适当形式填空。",
+   "stem": "The class begins at ______ eight, not at eight.",
+   "ans": "half past",
+   "why": "7:30、8:30 这类时间用 half past，不用 o'clock。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are two ______ on the wall. (o'clock)",
+   "ans": "clocks",
+   "why": "墙上的钟是 clocks。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I'll meet you at seven-thirty o'clock.",
+   "ans": "seven-thirty o'clock → half past seven",
+   "why": "o'clock 只用于整点。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We say \"eight o'clock\", but 8:15 is ______.",
+   "opts": [
+    "a quarter past eight",
+    "eight fifteen o'clock",
+    "fifteen o'clock",
+    "eight o'clock fifteen"
+   ],
+   "why": "o'clock 只用于整点，8:15 说 a quarter past eight。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们七点半出发。",
+   "stem": "We leave at ______ thirty.",
+   "ans": "seven",
+   "why": "7:30 可以说 seven thirty。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

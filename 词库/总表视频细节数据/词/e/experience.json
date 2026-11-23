@@ -1,0 +1,94 @@
+{
+ "单词": "experience",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人缺少什么？\n听：I have no experience in teaching.\nA. 教学经验\nB. 时间\nC. 钱\nD. 学生",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She has a lot of ______ in teaching.\nA. experiences\nB. experienced\nC. experiment\nD. experience\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：I had many interesting ______ in Africa. (experience)\n考点：变形",
+  "题目4": "【选词填空】从 experience、experiment 中选一个，用适当形式填空。\n题干：We did an ______ in the science lab.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He is a experienced driver.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她是一位有经验的老师。\n题干：She is an ______ teacher.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Experience is the best ______.\nA. teacher\nB. book\nC. test\nD. road\n考点：用法",
+  "答案": "【1】A（教学经验）\n讲解：experience 经验。\n【2】D（experience）\n讲解：“经验”不可数，a lot of 后面用 experience。\n【3】experiences\n讲解：“经历”可数，many 后面用复数。\n【4】experiment\n讲解：实验室里做“实验”用 experiment。\n【5】a → an\n讲解：experienced 以元音音素开头，用 an。\n【6】experienced\n讲解：形容词“有经验的”是 experienced。\n【7】A（teacher）\n讲解：Experience is the best teacher. 经验是最好的老师。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人缺少什么？",
+   "listen": "I have no experience in teaching.",
+   "opts": [
+    "教学经验",
+    "时间",
+    "钱",
+    "学生"
+   ],
+   "why": "experience 经验。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She has a lot of ______ in teaching.",
+   "opts": [
+    "experience",
+    "experiences",
+    "experienced",
+    "experiment"
+   ],
+   "why": "“经验”不可数，a lot of 后面用 experience。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I had many interesting ______ in Africa. (experience)",
+   "ans": "experiences",
+   "why": "“经历”可数，many 后面用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 experience、experiment 中选一个，用适当形式填空。",
+   "stem": "We did an ______ in the science lab.",
+   "ans": "experiment",
+   "why": "实验室里做“实验”用 experiment。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is a experienced driver.",
+   "ans": "a → an",
+   "why": "experienced 以元音音素开头，用 an。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她是一位有经验的老师。",
+   "stem": "She is an ______ teacher.",
+   "ans": "experienced",
+   "why": "形容词“有经验的”是 experienced。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Experience is the best ______.",
+   "opts": [
+    "teacher",
+    "book",
+    "test",
+    "road"
+   ],
+   "why": "Experience is the best teacher. 经验是最好的老师。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

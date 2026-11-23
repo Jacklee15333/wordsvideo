@@ -1,0 +1,94 @@
+{
+ "单词": "documentary",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人昨晚看了什么？\n听：I watched a documentary about whales last night.\nA. 鲸鱼动画片\nB. 关于鲸鱼的纪录片\nC. 海洋小说\nD. 体育比赛",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many good ______ about nature on TV.\nA. documentarys\nB. documentary\nC. documents\nD. documentaries",
+  "题目3": "【选词填空】从 documentary、cartoon 中选一个，用适当形式填空。\n题干：Tom and Jerry is a famous ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：A documentary shows real people and real event.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：纪录片讲的是真人真事。\n题干：A documentary is about ______ people and events.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The police found ______ evidence, such as letters.\nA. document\nB. documentary\nC. documents\nD. documentaries\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A documentary is NOT ______.\nA. about real life\nB. a kind of film\nC. made up\nD. often on TV\n考点：用法",
+  "答案": "【1】B（关于鲸鱼的纪录片）\n讲解：documentary 纪录片。\n【2】D（documentaries）\n讲解：y 变 i 加 es。\n【3】cartoon\n讲解：《猫和老鼠》是动画片 cartoon。\n【4】event → events\n讲解：和 people 并列，用复数 events。\n【5】real\n讲解：纪录片讲真人真事。\n【6】B（documentary）\n讲解：名词 evidence 前用形容词 documentary（文件的）。\n【7】C（made up）\n讲解：纪录片讲真人真事，不是编的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人昨晚看了什么？",
+   "listen": "I watched a documentary about whales last night.",
+   "opts": [
+    "关于鲸鱼的纪录片",
+    "鲸鱼动画片",
+    "海洋小说",
+    "体育比赛"
+   ],
+   "why": "documentary 纪录片。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many good ______ about nature on TV.",
+   "opts": [
+    "documentaries",
+    "documentarys",
+    "documentary",
+    "documents"
+   ],
+   "why": "y 变 i 加 es。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 documentary、cartoon 中选一个，用适当形式填空。",
+   "stem": "Tom and Jerry is a famous ______.",
+   "ans": "cartoon",
+   "why": "《猫和老鼠》是动画片 cartoon。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "A documentary shows real people and real event.",
+   "ans": "event → events",
+   "why": "和 people 并列，用复数 events。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "纪录片讲的是真人真事。",
+   "stem": "A documentary is about ______ people and events.",
+   "ans": "real",
+   "why": "纪录片讲真人真事。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The police found ______ evidence, such as letters.",
+   "opts": [
+    "documentary",
+    "document",
+    "documents",
+    "documentaries"
+   ],
+   "why": "名词 evidence 前用形容词 documentary（文件的）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A documentary is NOT ______.",
+   "opts": [
+    "made up",
+    "about real life",
+    "a kind of film",
+    "often on TV"
+   ],
+   "why": "纪录片讲真人真事，不是编的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

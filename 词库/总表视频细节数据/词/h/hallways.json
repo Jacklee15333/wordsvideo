@@ -1,0 +1,94 @@
+{
+ "单词": "hallways",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：学生们在哪里等？\n听：The students are waiting in the hallways.\nA. 教室\nB. 操场\nC. 走廊\nD. 食堂",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The school ______ are very clean.\nA. hallway\nB. hallwaies\nC. hall way\nD. hallways",
+  "题目3": "【选词填空】从 hallways、hallway 中选一个，用适当形式填空。\n题干：There is a long ______ in my house.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The hallways is decorated for Christmas.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：走廊里有很多人。\n题干：There ______ many people in the hallways.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Hallways\" is the ______ of \"hallway\".\nA. past tense\nB. adjective\nC. plural\nD. verb\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Corridors\" are like hallways, but they are often in ______.\nA. homes only\nB. gardens\nC. schools and hospitals\nD. cars\n考点：易混",
+  "答案": "【1】C（走廊）\n讲解：hallways 走廊。\n【2】D（hallways）\n讲解：谓语 are 是复数。\n【3】hallway\n讲解：a 后面用单数。\n【4】is → are\n讲解：hallways 是复数。\n【5】are\n讲解：many people 是复数。\n【6】C（plural）\n讲解：hallways 是复数。\n【7】C（schools and hospitals）\n讲解：corridor 偏学校、医院、酒店。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：学生们在哪里等？",
+   "listen": "The students are waiting in the hallways.",
+   "opts": [
+    "走廊",
+    "教室",
+    "操场",
+    "食堂"
+   ],
+   "why": "hallways 走廊。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The school ______ are very clean.",
+   "opts": [
+    "hallways",
+    "hallway",
+    "hallwaies",
+    "hall way"
+   ],
+   "why": "谓语 are 是复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 hallways、hallway 中选一个，用适当形式填空。",
+   "stem": "There is a long ______ in my house.",
+   "ans": "hallway",
+   "why": "a 后面用单数。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The hallways is decorated for Christmas.",
+   "ans": "is → are",
+   "why": "hallways 是复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "走廊里有很多人。",
+   "stem": "There ______ many people in the hallways.",
+   "ans": "are",
+   "why": "many people 是复数。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Hallways\" is the ______ of \"hallway\".",
+   "opts": [
+    "plural",
+    "past tense",
+    "adjective",
+    "verb"
+   ],
+   "why": "hallways 是复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Corridors\" are like hallways, but they are often in ______.",
+   "opts": [
+    "schools and hospitals",
+    "homes only",
+    "gardens",
+    "cars"
+   ],
+   "why": "corridor 偏学校、医院、酒店。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

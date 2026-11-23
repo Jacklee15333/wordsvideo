@@ -1,0 +1,90 @@
+{
+ "单词": "town",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人住在哪里？\n听：I live in a small town near the sea.\nA. 大城市\nB. 海边的小镇\nC. 山村\nD. 国外",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：A ______ is bigger than a village but smaller than a city.\nA. town\nB. village\nC. country\nD. city\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many small ______ along the river. (town)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：My grandparents live in a town. It has only 50 people and a few farms.\n考点：易混",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他们在新房子上大手笔地花钱。\n题干：They really ______ ______ ______ on the new house.\n考点：短语",
+  "题目6": "【选词填空】从 town、downtown 中选一个，用适当形式填空。\n题干：Let's go ______ to buy some clothes. The big shops are there.\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：周末我们进城吧。\n题干：Let's go ______ ______ this weekend.\n考点：用法",
+  "答案": "【1】B（海边的小镇）\n讲解：small town 小镇。\n【2】A（town）\n讲解：比村大、比城市小的是 town。\n【3】towns\n讲解：many 后面用复数 towns。\n【4】town → village\n讲解：只有 50 人和几处农田，是村子 village。\n【5】went；to；town\n讲解：go to town 放开手脚大干、大肆铺张。\n【6】downtown\n讲解：去“市中心”用副词 downtown。\n【7】into；town\n讲解：go into town 进城。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人住在哪里？",
+   "listen": "I live in a small town near the sea.",
+   "opts": [
+    "海边的小镇",
+    "大城市",
+    "山村",
+    "国外"
+   ],
+   "why": "small town 小镇。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ is bigger than a village but smaller than a city.",
+   "opts": [
+    "town",
+    "village",
+    "country",
+    "city"
+   ],
+   "why": "比村大、比城市小的是 town。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many small ______ along the river. (town)",
+   "ans": "towns",
+   "why": "many 后面用复数 towns。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My grandparents live in a town. It has only 50 people and a few farms.",
+   "ans": "town → village",
+   "why": "只有 50 人和几处农田，是村子 village。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他们在新房子上大手笔地花钱。",
+   "stem": "They really ______ ______ ______ on the new house.",
+   "ans": "went；to；town",
+   "why": "go to town 放开手脚大干、大肆铺张。",
+   "kd": "短语"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 town、downtown 中选一个，用适当形式填空。",
+   "stem": "Let's go ______ to buy some clothes. The big shops are there.",
+   "ans": "downtown",
+   "why": "去“市中心”用副词 downtown。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "周末我们进城吧。",
+   "stem": "Let's go ______ ______ this weekend.",
+   "ans": "into；town",
+   "why": "go into town 进城。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

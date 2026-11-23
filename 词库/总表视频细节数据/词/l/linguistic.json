@@ -1,0 +1,98 @@
+{
+ "单词": "linguistic",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这本书讲的是什么？\n听：The book is about linguistic changes.\nA. 天气变化\nB. 价格变化\nC. 语言的变化\nD. 服装变化",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Children have amazing ______ skills.\nA. linguist\nB. language\nC. linguistic\nD. linguistics\n考点：词性转换",
+  "题目3": "【选词填空】从 linguist、linguistic 中选一个，用适当形式填空。\n题干：My uncle is a ______. He studies how languages change.\n考点：词性转换",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She is good at linguist research.\n考点：词性转换",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：学一门语言需要耐心。\n题干：Learning a ______ needs patience.\n考点：词性转换",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Lingual\" today often means \"of the ______\".\nA. eye\nB. hand\nC. ear\nD. tongue\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Linguistic\" can mean \"of language\" or \"of ______\".\nA. literature\nB. letters\nC. lines\nD. linguistics\n考点：用法",
+  "答案": "【1】C（语言的变化）\n讲解：linguistic 语言的。\n【2】C（linguistic）\n讲解：名词 skills 前面用形容词。\n【3】linguist\n讲解：a 后面指人用 linguist。\n【4】linguist → linguistic\n讲解：名词 research 前面用形容词。\n【5】language\n讲解：a 后面要名词 language。\n【6】D（tongue）\n讲解：lingual 今多指“舌的”。\n【7】D（linguistics）\n讲解：linguistic 兼指“语言学的”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这本书讲的是什么？",
+   "listen": "The book is about linguistic changes.",
+   "opts": [
+    "语言的变化",
+    "天气变化",
+    "价格变化",
+    "服装变化"
+   ],
+   "why": "linguistic 语言的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Children have amazing ______ skills.",
+   "opts": [
+    "linguistic",
+    "linguist",
+    "language",
+    "linguistics"
+   ],
+   "why": "名词 skills 前面用形容词。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 linguist、linguistic 中选一个，用适当形式填空。",
+   "stem": "My uncle is a ______. He studies how languages change.",
+   "ans": "linguist",
+   "why": "a 后面指人用 linguist。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is good at linguist research.",
+   "ans": "linguist → linguistic",
+   "why": "名词 research 前面用形容词。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "学一门语言需要耐心。",
+   "stem": "Learning a ______ needs patience.",
+   "ans": "language",
+   "why": "a 后面要名词 language。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Lingual\" today often means \"of the ______\".",
+   "opts": [
+    "tongue",
+    "eye",
+    "hand",
+    "ear"
+   ],
+   "why": "lingual 今多指“舌的”。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Linguistic\" can mean \"of language\" or \"of ______\".",
+   "opts": [
+    "linguistics",
+    "literature",
+    "letters",
+    "lines"
+   ],
+   "why": "linguistic 兼指“语言学的”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

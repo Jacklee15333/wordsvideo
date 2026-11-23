@@ -1,0 +1,94 @@
+{
+ "单词": "ours",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这辆车是谁的？\n听：This car is ours.\nA. 我们的\nB. 他们的\nC. 你的\nD. 他的",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Their house is big, but ______ is small.\nA. our\nB. us\nC. we\nD. ours",
+  "题目3": "【选词填空】从 our、ours 中选一个，用适当形式填空。\n题干：This is ______ teacher.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：That dog is our's.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：饭是我们自己做的。\n题干：We cooked the meal ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：After \"ours\", we ______ use a noun.\nA. always\nB. must\nC. don't\nD. often\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Ours\" is the ______ of \"we\".\nA. object pronoun\nB. possessive pronoun\nC. reflexive pronoun\nD. subject pronoun\n考点：变形",
+  "答案": "【1】A（我们的）\n讲解：ours 我们的。\n【2】D（ours）\n讲解：后面没有名词，用名词性物主代词 ours。\n【3】our\n讲解：名词前用 our。\n【4】our's → ours\n讲解：ours 没有撇号。\n【5】ourselves\n讲解：表示“自己”用反身代词。\n【6】C（don't）\n讲解：ours 独立使用，后面不接名词。\n【7】B（possessive pronoun）\n讲解：ours 是名词性物主代词。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这辆车是谁的？",
+   "listen": "This car is ours.",
+   "opts": [
+    "我们的",
+    "他们的",
+    "你的",
+    "他的"
+   ],
+   "why": "ours 我们的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Their house is big, but ______ is small.",
+   "opts": [
+    "ours",
+    "our",
+    "us",
+    "we"
+   ],
+   "why": "后面没有名词，用名词性物主代词 ours。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 our、ours 中选一个，用适当形式填空。",
+   "stem": "This is ______ teacher.",
+   "ans": "our",
+   "why": "名词前用 our。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "That dog is our's.",
+   "ans": "our's → ours",
+   "why": "ours 没有撇号。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "饭是我们自己做的。",
+   "stem": "We cooked the meal ______.",
+   "ans": "ourselves",
+   "why": "表示“自己”用反身代词。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "After \"ours\", we ______ use a noun.",
+   "opts": [
+    "don't",
+    "always",
+    "must",
+    "often"
+   ],
+   "why": "ours 独立使用，后面不接名词。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Ours\" is the ______ of \"we\".",
+   "opts": [
+    "possessive pronoun",
+    "object pronoun",
+    "reflexive pronoun",
+    "subject pronoun"
+   ],
+   "why": "ours 是名词性物主代词。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

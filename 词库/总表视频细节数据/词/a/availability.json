@@ -1,0 +1,96 @@
+{
+ "单词": "availability",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在查什么？\n听：I'm checking the availability of tickets.\nA. 票价\nB. 座位颜色\nC. 有没有票\nD. 演员",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ of fresh fruit is good in summer.\nA. availability\nB. available\nC. avail\nD. ability",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Are you ______ this afternoon? (availability)\n考点：词性转换",
+  "题目4": "【选词填空】从 availability、ability 中选一个，用适当形式填空。\n题干：She has the ______ to speak four languages.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The availability of tickets are limited.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Please check room availability ______ booking.\nA. after\nB. until\nC. before\nD. since\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Availability\" means whether something is ______ to get.\nA. possible\nB. impossible\nC. hard\nD. slow\n考点：用法",
+  "答案": "【1】C（有没有票）\n讲解：availability 可得到性。\n【2】A（availability）\n讲解：the … of 中间要名词 availability。\n【3】available\n讲解：be 后要形容词 available（有空的）。\n【4】ability\n讲解：“能力”用 ability。\n【5】are → is\n讲解：主语是 the availability（单数），用 is。\n【6】C（before）\n讲解：预订之前先查房。\n【7】A（possible）\n讲解：availability 指能不能得到。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在查什么？",
+   "listen": "I'm checking the availability of tickets.",
+   "opts": [
+    "有没有票",
+    "票价",
+    "座位颜色",
+    "演员"
+   ],
+   "why": "availability 可得到性。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of fresh fruit is good in summer.",
+   "opts": [
+    "availability",
+    "available",
+    "avail",
+    "ability"
+   ],
+   "why": "the … of 中间要名词 availability。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Are you ______ this afternoon? (availability)",
+   "ans": "available",
+   "why": "be 后要形容词 available（有空的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 availability、ability 中选一个，用适当形式填空。",
+   "stem": "She has the ______ to speak four languages.",
+   "ans": "ability",
+   "why": "“能力”用 ability。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The availability of tickets are limited.",
+   "ans": "are → is",
+   "why": "主语是 the availability（单数），用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please check room availability ______ booking.",
+   "opts": [
+    "before",
+    "after",
+    "until",
+    "since"
+   ],
+   "why": "预订之前先查房。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Availability\" means whether something is ______ to get.",
+   "opts": [
+    "possible",
+    "impossible",
+    "hard",
+    "slow"
+   ],
+   "why": "availability 指能不能得到。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

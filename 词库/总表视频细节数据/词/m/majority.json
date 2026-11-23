@@ -1,0 +1,93 @@
+{
+ "单词": "majority",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：大多数人怎么看这个计划？\n听：The majority of people agree with the plan.\nA. 反对这个计划\nB. 不知道\nC. 没有想法\nD. 同意这个计划",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ of the students are girls.\nA. major\nB. mayor\nC. most\nD. majority",
+  "题目3": "【选词填空】从 majority、most 中选一个，用适当形式填空。\n题干：______ people like music.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：They won ______ in both elections. (majority)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The majority of my friends likes football.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这是一个重大的决定。\n题干：It's a ______ decision.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Only a ______ of people are against it.\nA. majority\nB. major\nC. minority\nD. minor\n考点：易混",
+  "答案": "【1】D（同意这个计划）\n讲解：the majority of 大多数。\n【2】D（majority）\n讲解：the majority of 大多数。\n【3】Most\n讲解：“大多数人”直接说 most people；majority 要说 the majority of。\n【4】majorities\n讲解：两次选举各得多数，用复数 majorities（y 变 i 加 es）。\n【5】likes → like\n讲解：the majority of + 复数名词，谓语多用复数。\n【6】major\n讲解：“重大的”用形容词 major。\n【7】C（minority）\n讲解：只有少数人反对，用 minority（少数）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：大多数人怎么看这个计划？",
+   "listen": "The majority of people agree with the plan.",
+   "opts": [
+    "同意这个计划",
+    "反对这个计划",
+    "不知道",
+    "没有想法"
+   ],
+   "why": "the majority of 大多数。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of the students are girls.",
+   "opts": [
+    "majority",
+    "major",
+    "mayor",
+    "most"
+   ],
+   "why": "the majority of 大多数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 majority、most 中选一个，用适当形式填空。",
+   "stem": "______ people like music.",
+   "ans": "Most",
+   "why": "“大多数人”直接说 most people；majority 要说 the majority of。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "They won ______ in both elections. (majority)",
+   "ans": "majorities",
+   "why": "两次选举各得多数，用复数 majorities（y 变 i 加 es）。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The majority of my friends likes football.",
+   "ans": "likes → like",
+   "why": "the majority of + 复数名词，谓语多用复数。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是一个重大的决定。",
+   "stem": "It's a ______ decision.",
+   "ans": "major",
+   "why": "“重大的”用形容词 major。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Only a ______ of people are against it.",
+   "opts": [
+    "minority",
+    "majority",
+    "major",
+    "minor"
+   ],
+   "why": "只有少数人反对，用 minority（少数）。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

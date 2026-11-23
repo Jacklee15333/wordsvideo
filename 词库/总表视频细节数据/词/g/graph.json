@@ -1,0 +1,97 @@
+{
+ "单词": "graph",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这张图表显示了什么？\n听：This graph shows our test scores.\nA. 天气\nB. 身高\nC. 考试成绩\nD. 零花钱",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Draw a ______ to show the temperature.\nA. graphic\nB. graph\nC. grape\nD. graphs",
+  "题目3": "【选词填空】从 graph、chart 中选一个，用适当形式填空。\n题干：A pie ______ shows parts of a whole.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are two ______ in the report. (graph)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The graph show that sales went up.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A line graph uses ______ to show changes.\nA. pictures\nB. words\nC. lines\nD. sounds\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which is a graph?\nA. a bar chart with numbers\nB. a poem\nC. a song\nD. a photo of a cat\n考点：用法",
+  "答案": "【1】C（考试成绩）\n讲解：graph 图表。\n【2】B（graph）\n讲解：a 后面接单数名词 graph。\n【3】chart\n讲解：饼图叫 pie chart；graph 多指带坐标轴的曲线图、柱状图。\n【4】graphs\n讲解：two 后面接复数。\n【5】show → shows\n讲解：主语单数，用 shows。\n【6】C（lines）\n讲解：折线图用线表示变化。\n【7】A（a bar chart with numbers）\n讲解：柱状图是一种 graph。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这张图表显示了什么？",
+   "listen": "This graph shows our test scores.",
+   "opts": [
+    "考试成绩",
+    "天气",
+    "身高",
+    "零花钱"
+   ],
+   "why": "graph 图表。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Draw a ______ to show the temperature.",
+   "opts": [
+    "graph",
+    "graphic",
+    "grape",
+    "graphs"
+   ],
+   "why": "a 后面接单数名词 graph。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 graph、chart 中选一个，用适当形式填空。",
+   "stem": "A pie ______ shows parts of a whole.",
+   "ans": "chart",
+   "why": "饼图叫 pie chart；graph 多指带坐标轴的曲线图、柱状图。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are two ______ in the report. (graph)",
+   "ans": "graphs",
+   "why": "two 后面接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The graph show that sales went up.",
+   "ans": "show → shows",
+   "why": "主语单数，用 shows。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A line graph uses ______ to show changes.",
+   "opts": [
+    "lines",
+    "pictures",
+    "words",
+    "sounds"
+   ],
+   "why": "折线图用线表示变化。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which is a graph?",
+   "opts": [
+    "a bar chart with numbers",
+    "a poem",
+    "a song",
+    "a photo of a cat"
+   ],
+   "why": "柱状图是一种 graph。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "speed",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这辆车开得多快？\n听：The car was going at a speed of 100 km an hour.\nA. 每小时十公里\nB. 很慢\nC. 每小时一百公里\nD. 停着",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The train travels at high ______.\nA. speed\nB. speeds\nC. speedy\nD. sped",
+  "题目3": "【选词填空】从 speed、velocity 中选一个，用适当形式填空。\n题干：In physics, ______ has both speed and direction.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Please speed down near the school.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我们需要加快速度。\n题干：We need to ______ ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The car ______ past us a moment ago.\nA. speeds\nB. sped\nC. speeding\nD. speedy\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In English, we say \"at high speed\", not \"at ______ speed\".\nA. fast\nB. low\nC. top\nD. full\n考点：用法",
+  "答案": "【1】C（每小时一百公里）\n讲解：speed 速度。\n【2】A（speed）\n讲解：at high speed 高速。\n【3】velocity\n讲解：物理里带方向的速度是 velocity。\n【4】speed down → slow down\n讲解：“减速”是 slow down。\n【5】speed；up\n讲解：speed up 加快。\n【6】B（sped）\n讲解：speed 的过去式是 sped。\n【7】A（fast）\n讲解：速度快慢用 high / low，不说 fast speed。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这辆车开得多快？",
+   "listen": "The car was going at a speed of 100 km an hour.",
+   "opts": [
+    "每小时一百公里",
+    "每小时十公里",
+    "很慢",
+    "停着"
+   ],
+   "why": "speed 速度。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The train travels at high ______.",
+   "opts": [
+    "speed",
+    "speeds",
+    "speedy",
+    "sped"
+   ],
+   "why": "at high speed 高速。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 speed、velocity 中选一个，用适当形式填空。",
+   "stem": "In physics, ______ has both speed and direction.",
+   "ans": "velocity",
+   "why": "物理里带方向的速度是 velocity。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please speed down near the school.",
+   "ans": "speed down → slow down",
+   "why": "“减速”是 slow down。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们需要加快速度。",
+   "stem": "We need to ______ ______.",
+   "ans": "speed；up",
+   "why": "speed up 加快。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The car ______ past us a moment ago.",
+   "opts": [
+    "sped",
+    "speeds",
+    "speeding",
+    "speedy"
+   ],
+   "why": "speed 的过去式是 sped。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In English, we say \"at high speed\", not \"at ______ speed\".",
+   "opts": [
+    "fast",
+    "low",
+    "top",
+    "full"
+   ],
+   "why": "速度快慢用 high / low，不说 fast speed。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

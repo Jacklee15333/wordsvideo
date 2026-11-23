@@ -1,0 +1,94 @@
+{
+ "单词": "hallway",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人把鞋放在哪里？\n听：I left my shoes in the hallway.\nA. 卧室\nB. 厨房\nC. 门厅\nD. 车库",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are pictures on the walls of the ______.\nA. hall-way\nB. hallway\nC. hallwaies\nD. hallwayes",
+  "题目3": "【选词填空】从 hallway、corridor 中选一个，用适当形式填空。\n题干：The hospital has a long ______ with many rooms.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There are two hallway in our flat.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：楼梯在走廊尽头。\n题干：The stairs are at the ______ of the hallway.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Hallway\" is used more for ______.\nA. schools and hospitals only\nB. gardens\nC. cars\nD. homes and buildings\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Hallway\" is made of \"hall\" and \"______\".\nA. wall\nB. walk\nC. wait\nD. way\n考点：用法",
+  "答案": "【1】C（门厅）\n讲解：hallway 门厅、过道。\n【2】B（hallway）\n讲解：the 后面这里用单数。\n【3】corridor\n讲解：医院、学校里的长走廊多用 corridor。\n【4】hallway → hallways\n讲解：two 后面用复数。\n【5】end\n讲解：在……尽头 at the end of。\n【6】D（homes and buildings）\n讲解：hallway 偏住宅、楼里的过道。\n【7】D（way）\n讲解：hall + way。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人把鞋放在哪里？",
+   "listen": "I left my shoes in the hallway.",
+   "opts": [
+    "门厅",
+    "卧室",
+    "厨房",
+    "车库"
+   ],
+   "why": "hallway 门厅、过道。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are pictures on the walls of the ______.",
+   "opts": [
+    "hallway",
+    "hall-way",
+    "hallwaies",
+    "hallwayes"
+   ],
+   "why": "the 后面这里用单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 hallway、corridor 中选一个，用适当形式填空。",
+   "stem": "The hospital has a long ______ with many rooms.",
+   "ans": "corridor",
+   "why": "医院、学校里的长走廊多用 corridor。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are two hallway in our flat.",
+   "ans": "hallway → hallways",
+   "why": "two 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "楼梯在走廊尽头。",
+   "stem": "The stairs are at the ______ of the hallway.",
+   "ans": "end",
+   "why": "在……尽头 at the end of。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Hallway\" is used more for ______.",
+   "opts": [
+    "homes and buildings",
+    "schools and hospitals only",
+    "gardens",
+    "cars"
+   ],
+   "why": "hallway 偏住宅、楼里的过道。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Hallway\" is made of \"hall\" and \"______\".",
+   "opts": [
+    "way",
+    "wall",
+    "walk",
+    "wait"
+   ],
+   "why": "hall + way。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

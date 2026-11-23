@@ -1,0 +1,92 @@
+{
+ "单词": "chemistry",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人喜欢哪门课？\n听：I like chemistry because the experiments are fun.\nA. 物理\nB. 历史\nC. 地理\nD. 化学",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We have a ______ lesson every Tuesday.\nA. chemist\nB. chemical\nC. chemistries\nD. chemistry",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Don't touch the ______ in the lab. (chemistry)\n考点：词性转换",
+  "题目4": "【选词填空】从 chemistry、physics 中选一个，用适当形式填空。\n题干：We learn about light and sound in ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The chemistry are very interesting.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他们俩之间很合拍。\n题干：There is good ______ ______ them.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There ______ no chemistry test last week.\nA. were\nB. is\nC. are\nD. was\n考点：变形",
+  "答案": "【1】D（化学）\n讲解：like chemistry 喜欢化学。\n【2】D（chemistry）\n讲解：名词 chemistry 作定语，“化学课”。\n【3】chemicals\n讲解：实验室里的“化学品”，名词复数 chemicals。\n【4】physics\n讲解：光和声属于物理 physics。\n【5】are → is\n讲解：chemistry 不可数，谓语用 is。\n【6】chemistry；between\n讲解：chemistry between 两人之间的默契、来电。\n【7】D（was）\n讲解：chemistry test 单数，last week 是过去，用 was。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人喜欢哪门课？",
+   "listen": "I like chemistry because the experiments are fun.",
+   "opts": [
+    "化学",
+    "物理",
+    "历史",
+    "地理"
+   ],
+   "why": "like chemistry 喜欢化学。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We have a ______ lesson every Tuesday.",
+   "opts": [
+    "chemistry",
+    "chemist",
+    "chemical",
+    "chemistries"
+   ],
+   "why": "名词 chemistry 作定语，“化学课”。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Don't touch the ______ in the lab. (chemistry)",
+   "ans": "chemicals",
+   "why": "实验室里的“化学品”，名词复数 chemicals。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 chemistry、physics 中选一个，用适当形式填空。",
+   "stem": "We learn about light and sound in ______.",
+   "ans": "physics",
+   "why": "光和声属于物理 physics。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The chemistry are very interesting.",
+   "ans": "are → is",
+   "why": "chemistry 不可数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他们俩之间很合拍。",
+   "stem": "There is good ______ ______ them.",
+   "ans": "chemistry；between",
+   "why": "chemistry between 两人之间的默契、来电。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There ______ no chemistry test last week.",
+   "opts": [
+    "was",
+    "were",
+    "is",
+    "are"
+   ],
+   "why": "chemistry test 单数，last week 是过去，用 was。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

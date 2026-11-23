@@ -1,0 +1,94 @@
+{
+ "单词": "grounds",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们以什么理由拒绝？\n听：They refused on the grounds of safety.\nA. 价格原因\nB. 安全原因\nC. 时间原因\nD. 天气原因",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You have no ______ for saying that.\nA. ground\nB. grounds\nC. grounded\nD. grounding",
+  "题目3": "【选词填空】从 grounds、reason 中选一个，用适当形式填空。\n题干：What's the ______ for being late?",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There is good grounds to believe him.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他因病没来。\n题干：He didn't come because ______ his illness.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"On the grounds that ...\" means \"______ ...\".\nA. although\nB. unless\nC. before\nD. because\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Grounds for a decision are reasons that are ______.\nA. funny\nB. secret\nC. strong and fair\nD. wrong\n考点：易混",
+  "答案": "【1】B（安全原因）\n讲解：on the grounds of 以……为理由。\n【2】B（grounds）\n讲解：have grounds for 有……的根据，用复数。\n【3】reason\n讲解：一般的“原因”用 reason。\n【4】is → are\n讲解：grounds 是复数，谓语用 are。\n【5】of\n讲解：because of 后面接名词。\n【6】D（because）\n讲解：on the grounds that 以……为理由。\n【7】C（strong and fair）\n讲解：grounds 偏立得住的依据。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们以什么理由拒绝？",
+   "listen": "They refused on the grounds of safety.",
+   "opts": [
+    "安全原因",
+    "价格原因",
+    "时间原因",
+    "天气原因"
+   ],
+   "why": "on the grounds of 以……为理由。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You have no ______ for saying that.",
+   "opts": [
+    "grounds",
+    "ground",
+    "grounded",
+    "grounding"
+   ],
+   "why": "have grounds for 有……的根据，用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 grounds、reason 中选一个，用适当形式填空。",
+   "stem": "What's the ______ for being late?",
+   "ans": "reason",
+   "why": "一般的“原因”用 reason。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There is good grounds to believe him.",
+   "ans": "is → are",
+   "why": "grounds 是复数，谓语用 are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他因病没来。",
+   "stem": "He didn't come because ______ his illness.",
+   "ans": "of",
+   "why": "because of 后面接名词。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"On the grounds that ...\" means \"______ ...\".",
+   "opts": [
+    "because",
+    "although",
+    "unless",
+    "before"
+   ],
+   "why": "on the grounds that 以……为理由。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Grounds for a decision are reasons that are ______.",
+   "opts": [
+    "strong and fair",
+    "funny",
+    "secret",
+    "wrong"
+   ],
+   "why": "grounds 偏立得住的依据。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

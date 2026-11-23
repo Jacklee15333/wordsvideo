@@ -1,0 +1,94 @@
+{
+ "单词": "typewrite",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：爷爷以前怎么写信？\n听：My grandpa used to typewrite his letters.\nA. 用打字机打\nB. 用手写\nC. 用电脑\nD. 用手机",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：In the past, people had to ______ their letters on a machine.\nA. typewrite\nB. typewriter\nC. typewriting\nD. typewritten\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：He ______ the whole book on an old machine in 1950. (typewrite)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The letter was typewrited by my grandpa.\n考点：变形",
+  "题目5": "【选词填空】从 typewrite、type 中选一个，用适当形式填空。\n题干：I can ______ fast on a computer.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她需要一台打字机。\n题干：She needs a ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A person whose job is to typewrite is a ______.\nA. typewriter\nB. typing\nC. type\nD. typist\n考点：易混",
+  "答案": "【1】A（用打字机打）\n讲解：typewrite 用打字机打。\n【2】A（typewrite）\n讲解：had to 后面用动词原形 typewrite。\n【3】typewrote\n讲解：in 1950 用过去式，typewrite 和 write 一样不规则：typewrote。\n【4】typewrited → typewritten\n讲解：typewrite 的过去分词是 typewritten。\n【5】type\n讲解：在电脑上“打字”用 type。\n【6】typewriter\n讲解：“打字机”用 typewriter。\n【7】D（typist）\n讲解：打字员是 typist；typewriter 是机器。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：爷爷以前怎么写信？",
+   "listen": "My grandpa used to typewrite his letters.",
+   "opts": [
+    "用打字机打",
+    "用手写",
+    "用电脑",
+    "用手机"
+   ],
+   "why": "typewrite 用打字机打。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In the past, people had to ______ their letters on a machine.",
+   "opts": [
+    "typewrite",
+    "typewriter",
+    "typewriting",
+    "typewritten"
+   ],
+   "why": "had to 后面用动词原形 typewrite。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He ______ the whole book on an old machine in 1950. (typewrite)",
+   "ans": "typewrote",
+   "why": "in 1950 用过去式，typewrite 和 write 一样不规则：typewrote。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The letter was typewrited by my grandpa.",
+   "ans": "typewrited → typewritten",
+   "why": "typewrite 的过去分词是 typewritten。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 typewrite、type 中选一个，用适当形式填空。",
+   "stem": "I can ______ fast on a computer.",
+   "ans": "type",
+   "why": "在电脑上“打字”用 type。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她需要一台打字机。",
+   "stem": "She needs a ______.",
+   "ans": "typewriter",
+   "why": "“打字机”用 typewriter。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A person whose job is to typewrite is a ______.",
+   "opts": [
+    "typist",
+    "typewriter",
+    "typing",
+    "type"
+   ],
+   "why": "打字员是 typist；typewriter 是机器。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

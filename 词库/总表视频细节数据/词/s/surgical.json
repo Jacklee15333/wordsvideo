@@ -1,0 +1,93 @@
+{
+ "单词": "surgical",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：护士戴上了什么？\n听：The nurse put on a surgical mask.\nA. 外科口罩\nB. 墨镜\nC. 帽子\nD. 手套",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The doctor washed his hands before the ______ operation.\nA. surgery\nB. surgical\nC. surgeon\nD. sugar",
+  "题目3": "【选词填空】从 surgical、medical 中选一个，用适当形式填空。\n题干：You need a ______ check-up every year.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He is recovering after ______. (surgical)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Please wear a surgery mask here.\n考点：词性转换",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她是一名外科医生。\n题干：She is a ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Two ______ were done this morning.\nA. operations\nB. operation\nC. surgical\nD. surgeons\n考点：变形",
+  "答案": "【1】A（外科口罩）\n讲解：surgical mask 外科口罩。\n【2】B（surgical）\n讲解：修饰名词 operation 用形容词 surgical。\n【3】medical\n讲解：体检是 medical check-up；surgical 是“手术的”。\n【4】surgery\n讲解：after 后面要名词 surgery（手术）。\n【5】surgery → surgical\n讲解：修饰名词 mask 要用形容词 surgical。\n【6】surgeon\n讲解：外科医生是 surgeon。\n【7】A（operations）\n讲解：two 后面用复数 operations（手术）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：护士戴上了什么？",
+   "listen": "The nurse put on a surgical mask.",
+   "opts": [
+    "外科口罩",
+    "墨镜",
+    "帽子",
+    "手套"
+   ],
+   "why": "surgical mask 外科口罩。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The doctor washed his hands before the ______ operation.",
+   "opts": [
+    "surgical",
+    "surgery",
+    "surgeon",
+    "sugar"
+   ],
+   "why": "修饰名词 operation 用形容词 surgical。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 surgical、medical 中选一个，用适当形式填空。",
+   "stem": "You need a ______ check-up every year.",
+   "ans": "medical",
+   "why": "体检是 medical check-up；surgical 是“手术的”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He is recovering after ______. (surgical)",
+   "ans": "surgery",
+   "why": "after 后面要名词 surgery（手术）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please wear a surgery mask here.",
+   "ans": "surgery → surgical",
+   "why": "修饰名词 mask 要用形容词 surgical。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她是一名外科医生。",
+   "stem": "She is a ______.",
+   "ans": "surgeon",
+   "why": "外科医生是 surgeon。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Two ______ were done this morning.",
+   "opts": [
+    "operations",
+    "operation",
+    "surgical",
+    "surgeons"
+   ],
+   "why": "two 后面用复数 operations（手术）。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

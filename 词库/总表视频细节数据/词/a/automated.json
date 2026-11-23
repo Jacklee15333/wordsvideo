@@ -1,0 +1,92 @@
+{
+ "单词": "automated",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个车库是怎样的？\n听：The car park is fully automated.\nA. 完全自动化\nB. 很小\nC. 很旧\nD. 免费",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We now have an ______ system for borrowing books.\nA. automated\nB. automate\nC. automates\nD. automation",
+  "题目3": "【选词填空】从 automated、automatic 中选一个，用适当形式填空。\n题干：The supermarket has ______ doors that open by themselves.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：They plan to ______ the factory next year. (automated)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The ticket machine is automate now.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：______ has changed the way we work.\nA. Automation\nB. Automate\nC. Automated\nD. Automatic\n考点：词性转换",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：工厂里的很多工作现在都由机器完成了。\n题干：Many jobs in the factory are now done by ______.\n考点：用法",
+  "答案": "【1】A（完全自动化）\n讲解：automated 自动化的。\n【2】A（automated）\n讲解：名词前用过去分词作形容词 automated。\n【3】automatic\n讲解：东西“本身就自动”用 automatic。\n【4】automate\n讲解：plan to 后接动词原形 automate。\n【5】automate → automatic\n讲解：be 后要形容词，这里可用 automatic。\n【6】A（Automation）\n讲解：作主语用名词 automation。\n【7】machines\n讲解：由机器完成 done by machines。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个车库是怎样的？",
+   "listen": "The car park is fully automated.",
+   "opts": [
+    "完全自动化",
+    "很小",
+    "很旧",
+    "免费"
+   ],
+   "why": "automated 自动化的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We now have an ______ system for borrowing books.",
+   "opts": [
+    "automated",
+    "automate",
+    "automates",
+    "automation"
+   ],
+   "why": "名词前用过去分词作形容词 automated。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 automated、automatic 中选一个，用适当形式填空。",
+   "stem": "The supermarket has ______ doors that open by themselves.",
+   "ans": "automatic",
+   "why": "东西“本身就自动”用 automatic。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "They plan to ______ the factory next year. (automated)",
+   "ans": "automate",
+   "why": "plan to 后接动词原形 automate。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The ticket machine is automate now.",
+   "ans": "automate → automatic",
+   "why": "be 后要形容词，这里可用 automatic。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ has changed the way we work.",
+   "opts": [
+    "Automation",
+    "Automate",
+    "Automated",
+    "Automatic"
+   ],
+   "why": "作主语用名词 automation。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "工厂里的很多工作现在都由机器完成了。",
+   "stem": "Many jobs in the factory are now done by ______.",
+   "ans": "machines",
+   "why": "由机器完成 done by machines。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

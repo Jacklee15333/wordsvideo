@@ -1,0 +1,94 @@
+{
+ "单词": "exam",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们明天有什么？\n听：We have an English exam tomorrow.\nA. 英语课\nB. 英语比赛\nC. 英语考试\nD. 英语电影",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I passed the maths ______.\nA. examine\nB. exam\nC. examiner\nD. example\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We have three ______ next week. (exam)\n考点：变形",
+  "题目4": "【选词填空】从 exam、quiz 中选一个，用适当形式填空。\n题干：The teacher gave us a short ______ in class.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He failed the exam because he studied hard.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：医生给我做了检查。\n题干：The doctor ______ me.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Exam is short for ______.\nA. example\nB. exercise\nC. exit\nD. examination\n考点：变形",
+  "答案": "【1】C（英语考试）\n讲解：exam 考试。\n【2】B（exam）\n讲解：pass the exam 通过考试。\n【3】exams\n讲解：three 后面用复数 exams。\n【4】quiz\n讲解：课堂“小测验”用 quiz。\n【5】studied hard → didn't study\n讲解：没好好学才没考过。\n【6】examined\n讲解：examine 检查，过去式 examined。\n【7】D（examination）\n讲解：exam 是 examination 的缩写。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们明天有什么？",
+   "listen": "We have an English exam tomorrow.",
+   "opts": [
+    "英语考试",
+    "英语课",
+    "英语比赛",
+    "英语电影"
+   ],
+   "why": "exam 考试。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I passed the maths ______.",
+   "opts": [
+    "exam",
+    "examine",
+    "examiner",
+    "example"
+   ],
+   "why": "pass the exam 通过考试。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We have three ______ next week. (exam)",
+   "ans": "exams",
+   "why": "three 后面用复数 exams。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 exam、quiz 中选一个，用适当形式填空。",
+   "stem": "The teacher gave us a short ______ in class.",
+   "ans": "quiz",
+   "why": "课堂“小测验”用 quiz。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He failed the exam because he studied hard.",
+   "ans": "studied hard → didn't study",
+   "why": "没好好学才没考过。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "医生给我做了检查。",
+   "stem": "The doctor ______ me.",
+   "ans": "examined",
+   "why": "examine 检查，过去式 examined。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Exam is short for ______.",
+   "opts": [
+    "examination",
+    "example",
+    "exercise",
+    "exit"
+   ],
+   "why": "exam 是 examination 的缩写。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

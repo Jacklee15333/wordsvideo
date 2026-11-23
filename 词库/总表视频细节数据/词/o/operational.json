@@ -1,0 +1,92 @@
+{
+ "单词": "operational",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个机场怎么样了？\n听：The new airport is now operational.\nA. 可以使用了\nB. 还在建\nC. 关闭了\nD. 被拆了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The lift is not ______ today.\nA. operation\nB. operational\nC. operate\nD. operator",
+  "题目3": "【选词填空】从 operational、operative 中选一个，用适当形式填空。\n题干：The new law will become ______ next month.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He had a knee ______ last week. (operational)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The machines is fully operational.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Who can ______ this machine?\nA. operational\nB. operation\nC. operator\nD. operate\n考点：词性转换",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这台机器坏了，不能用了。\n题干：The machine is broken and doesn't ______.\n考点：用法",
+  "答案": "【1】A（可以使用了）\n讲解：operational 可投入使用的。\n【2】B（operational）\n讲解：be 后用形容词 operational。\n【3】operative\n讲解：法规“有效的”多用 operative。\n【4】operation\n讲解：a knee 后接名词 operation。\n【5】is → are\n讲解：主语 machines 复数，用 are。\n【6】D（operate）\n讲解：can 后接动词 operate。\n【7】work\n讲解：机器“运转、能用”用 work。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个机场怎么样了？",
+   "listen": "The new airport is now operational.",
+   "opts": [
+    "可以使用了",
+    "还在建",
+    "关闭了",
+    "被拆了"
+   ],
+   "why": "operational 可投入使用的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The lift is not ______ today.",
+   "opts": [
+    "operational",
+    "operation",
+    "operate",
+    "operator"
+   ],
+   "why": "be 后用形容词 operational。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 operational、operative 中选一个，用适当形式填空。",
+   "stem": "The new law will become ______ next month.",
+   "ans": "operative",
+   "why": "法规“有效的”多用 operative。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He had a knee ______ last week. (operational)",
+   "ans": "operation",
+   "why": "a knee 后接名词 operation。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The machines is fully operational.",
+   "ans": "is → are",
+   "why": "主语 machines 复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Who can ______ this machine?",
+   "opts": [
+    "operate",
+    "operational",
+    "operation",
+    "operator"
+   ],
+   "why": "can 后接动词 operate。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这台机器坏了，不能用了。",
+   "stem": "The machine is broken and doesn't ______.",
+   "ans": "work",
+   "why": "机器“运转、能用”用 work。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

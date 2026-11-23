@@ -1,0 +1,92 @@
+{
+ "单词": "adult",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：门票多少钱？\n听：Tickets are fifty yuan for adults and free for children.\nA. 儿童五十元\nB. 都免费\nC. 成人五十元\nD. 都五十元",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Children under 12 must go with a ______.\nA. grown-up\nB. grow-up\nC. growing\nD. grown",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Two ______ and one child, please. (adult)\n考点：变形",
+  "题目4": "【选词填空】从 adult、adolescent 中选一个，用适当形式填空。\n题干：A thirteen-year-old is an ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This film is only for adult.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：He spent most of his ______ in Shanghai.\nA. adult\nB. adulthood\nC. adults\nD. adolescent\n考点：词性转换",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：她十八岁了，现在是成年人了。\n题干：She is eighteen and is an ______ now.\n考点：用法",
+  "答案": "【1】C（成人五十元）\n讲解：adult 成年人。\n【2】A（grown-up）\n讲解：成年人也说 grown-up，和 adult 意思一样。\n【3】adults\n讲解：two 后面用复数，加 s。\n【4】adolescent\n讲解：十三岁是青少年 adolescent。\n【5】adult → adults\n讲解：泛指成年人用复数 adults。\n【6】B（adulthood）\n讲解：his 后面说一段人生时期用 adulthood（成年期）。\n【7】adult\n讲解：成年人是 adult，前面用 an。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：门票多少钱？",
+   "listen": "Tickets are fifty yuan for adults and free for children.",
+   "opts": [
+    "成人五十元",
+    "儿童五十元",
+    "都免费",
+    "都五十元"
+   ],
+   "why": "adult 成年人。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Children under 12 must go with a ______.",
+   "opts": [
+    "grown-up",
+    "grow-up",
+    "growing",
+    "grown"
+   ],
+   "why": "成年人也说 grown-up，和 adult 意思一样。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Two ______ and one child, please. (adult)",
+   "ans": "adults",
+   "why": "two 后面用复数，加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 adult、adolescent 中选一个，用适当形式填空。",
+   "stem": "A thirteen-year-old is an ______.",
+   "ans": "adolescent",
+   "why": "十三岁是青少年 adolescent。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This film is only for adult.",
+   "ans": "adult → adults",
+   "why": "泛指成年人用复数 adults。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He spent most of his ______ in Shanghai.",
+   "opts": [
+    "adulthood",
+    "adult",
+    "adults",
+    "adolescent"
+   ],
+   "why": "his 后面说一段人生时期用 adulthood（成年期）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她十八岁了，现在是成年人了。",
+   "stem": "She is eighteen and is an ______ now.",
+   "ans": "adult",
+   "why": "成年人是 adult，前面用 an。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

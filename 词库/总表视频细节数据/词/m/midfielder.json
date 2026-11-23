@@ -1,0 +1,94 @@
+{
+ "单词": "midfielder",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人想当什么球员？\n听：I want to be a midfielder like my hero.\nA. 守门员\nB. 教练\nC. 中场球员\nD. 裁判",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Our team has four ______.\nA. midfielder\nB. midfield\nC. midfielders\nD. midfields",
+  "题目3": "【选词填空】从 midfielder、goalkeeper 中选一个，用适当形式填空。\n题干：The ______ stopped the ball with his hands.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He plays as a midfield for China.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他踢中场。\n题干：He plays in ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A player who mainly scores goals is a ______.\nA. midfielder\nB. defender\nC. goalkeeper\nD. striker\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A good midfielder ______ the ball to the strikers.\nA. pass\nB. passing\nC. to pass\nD. passes\n考点：用法",
+  "答案": "【1】C（中场球员）\n讲解：midfielder 中场球员。\n【2】C（midfielders）\n讲解：four 后面用复数。\n【3】goalkeeper\n讲解：能用手接球的是守门员。\n【4】midfield → midfielder\n讲解：指人用 midfielder。\n【5】midfield\n讲解：play in midfield 踢中场。\n【6】D（striker）\n讲解：主要负责进球的是前锋 striker。\n【7】D（passes）\n讲解：主语单数，一般现在时用三单。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想当什么球员？",
+   "listen": "I want to be a midfielder like my hero.",
+   "opts": [
+    "中场球员",
+    "守门员",
+    "教练",
+    "裁判"
+   ],
+   "why": "midfielder 中场球员。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Our team has four ______.",
+   "opts": [
+    "midfielders",
+    "midfielder",
+    "midfield",
+    "midfields"
+   ],
+   "why": "four 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 midfielder、goalkeeper 中选一个，用适当形式填空。",
+   "stem": "The ______ stopped the ball with his hands.",
+   "ans": "goalkeeper",
+   "why": "能用手接球的是守门员。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He plays as a midfield for China.",
+   "ans": "midfield → midfielder",
+   "why": "指人用 midfielder。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他踢中场。",
+   "stem": "He plays in ______.",
+   "ans": "midfield",
+   "why": "play in midfield 踢中场。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A player who mainly scores goals is a ______.",
+   "opts": [
+    "striker",
+    "midfielder",
+    "defender",
+    "goalkeeper"
+   ],
+   "why": "主要负责进球的是前锋 striker。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A good midfielder ______ the ball to the strikers.",
+   "opts": [
+    "passes",
+    "pass",
+    "passing",
+    "to pass"
+   ],
+   "why": "主语单数，一般现在时用三单。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

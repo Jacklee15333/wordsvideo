@@ -1,0 +1,94 @@
+{
+ "单词": "unknown",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这首歌是谁写的？\n听：The writer of the song is unknown.\nA. 不知道\nB. 一位老师\nC. 一个学生\nD. 一个歌手",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The cause of the fire is still ______.\nA. known\nB. knowing\nC. knew\nD. unknown\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The singer is well ______ in China. (unknown)\n考点：词性转换",
+  "题目4": "【选词填空】从 unknown、unknowing 中选一个，用适当形式填空。\n题干：He was an ______ helper of the thief. He didn't know what was happening.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The writer is unknown, so everybody knows him.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Unknown means ______.\nA. 有名的\nB. 未知的、无名的\nC. 知道的\nD. 新的\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他是一个有名的作家。\n题干：He is a ______ writer.\n考点：易混",
+  "答案": "【1】A（不知道）\n讲解：unknown 未知的、不为人知的。\n【2】D（unknown）\n讲解：原因还“不知道”，用 unknown。\n【3】known\n讲解：well known 有名的，去掉 un-。\n【4】unknowing\n讲解：自己“蒙在鼓里”用 unknowing；unknown 是不为人知。\n【5】everybody knows → nobody knows\n讲解：无名的作家没人知道。\n【6】B（未知的、无名的）\n讲解：unknown 未知的、不为人知的。\n【7】well-known\n讲解：“有名的”用 well-known。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这首歌是谁写的？",
+   "listen": "The writer of the song is unknown.",
+   "opts": [
+    "不知道",
+    "一位老师",
+    "一个学生",
+    "一个歌手"
+   ],
+   "why": "unknown 未知的、不为人知的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The cause of the fire is still ______.",
+   "opts": [
+    "unknown",
+    "known",
+    "knowing",
+    "knew"
+   ],
+   "why": "原因还“不知道”，用 unknown。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The singer is well ______ in China. (unknown)",
+   "ans": "known",
+   "why": "well known 有名的，去掉 un-。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 unknown、unknowing 中选一个，用适当形式填空。",
+   "stem": "He was an ______ helper of the thief. He didn't know what was happening.",
+   "ans": "unknowing",
+   "why": "自己“蒙在鼓里”用 unknowing；unknown 是不为人知。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The writer is unknown, so everybody knows him.",
+   "ans": "everybody knows → nobody knows",
+   "why": "无名的作家没人知道。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Unknown means ______.",
+   "opts": [
+    "未知的、无名的",
+    "有名的",
+    "知道的",
+    "新的"
+   ],
+   "why": "unknown 未知的、不为人知的。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是一个有名的作家。",
+   "stem": "He is a ______ writer.",
+   "ans": "well-known",
+   "why": "“有名的”用 well-known。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

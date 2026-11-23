@@ -1,0 +1,94 @@
+{
+ "单词": "expected",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们预计什么时候到？\n听：They are expected to arrive at noon.\nA. 早上\nB. 晚上\nC. 中午\nD. 明天",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The plane is ______ to land at 5 p.m.\nA. expecting\nB. expect\nC. expects\nD. expected\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Do you ______ him to come? (expected)\n考点：变形",
+  "题目4": "【选词填空】从 expected、unexpected 中选一个，用适当形式填空。\n题干：We had an ______ visitor. Nobody knew he would come.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The result was expected, so everyone was surprised.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我们的期望很高。\n题干：Our ______ are high.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The expected time is the time ______.\nA. it really happened\nB. nobody knows\nC. people think it will happen\nD. it was late\n考点：用法",
+  "答案": "【1】C（中午）\n讲解：be expected to 预计。\n【2】D（expected）\n讲解：be expected to do 预计会做。\n【3】expect\n讲解：do 后面用动词原形 expect。\n【4】unexpected\n讲解：没人知道他会来，是“意外的”。\n【5】surprised → not surprised\n讲解：结果在预料之中，大家不惊讶。\n【6】expectations\n讲解：名词“期望”是 expectation，are 前用复数。\n【7】C（people think it will happen）\n讲解：expected 预期的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们预计什么时候到？",
+   "listen": "They are expected to arrive at noon.",
+   "opts": [
+    "中午",
+    "早上",
+    "晚上",
+    "明天"
+   ],
+   "why": "be expected to 预计。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The plane is ______ to land at 5 p.m.",
+   "opts": [
+    "expected",
+    "expecting",
+    "expect",
+    "expects"
+   ],
+   "why": "be expected to do 预计会做。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Do you ______ him to come? (expected)",
+   "ans": "expect",
+   "why": "do 后面用动词原形 expect。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 expected、unexpected 中选一个，用适当形式填空。",
+   "stem": "We had an ______ visitor. Nobody knew he would come.",
+   "ans": "unexpected",
+   "why": "没人知道他会来，是“意外的”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The result was expected, so everyone was surprised.",
+   "ans": "surprised → not surprised",
+   "why": "结果在预料之中，大家不惊讶。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们的期望很高。",
+   "stem": "Our ______ are high.",
+   "ans": "expectations",
+   "why": "名词“期望”是 expectation，are 前用复数。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The expected time is the time ______.",
+   "opts": [
+    "people think it will happen",
+    "it really happened",
+    "nobody knows",
+    "it was late"
+   ],
+   "why": "expected 预期的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

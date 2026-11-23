@@ -1,0 +1,93 @@
+{
+ "单词": "connection",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说今天网络怎么样？\n听：The internet connection is very slow today.\nA. 很快\nB. 很慢\nC. 没有网\nD. 很稳定",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is a close ______ between health and exercise.\nA. connection\nB. connect\nC. connected\nD. connective\n考点：词性转换",
+  "题目3": "【选词填空】从 connect、connection 中选一个，用适当形式填空。\n题干：Can you ______ the printer to my laptop?\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He has many ______ in the film industry. (connection)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The connections is bad here.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：警察就这起事故询问了他。\n题干：The police asked him questions ______ connection ______ the accident.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：This phone has good ______; it can get online almost anywhere.\nA. connection\nB. connectivity\nC. connect\nD. connected\n考点：易混",
+  "答案": "【1】B（很慢）\n讲解：internet connection 网络连接。\n【2】A（connection）\n讲解：a close 后面要名词 connection（联系）。\n【3】connect\n讲解：can 后面用动词原形 connect。\n【4】connections\n讲解：many 后面接复数 connections。\n【5】is → are\n讲解：主语 connections 是复数，用 are。\n【6】in；with\n讲解：in connection with 关于、与……有关。\n【7】B（connectivity）\n讲解：“能不能连上、连得多好”的整体性能用 connectivity。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说今天网络怎么样？",
+   "listen": "The internet connection is very slow today.",
+   "opts": [
+    "很慢",
+    "很快",
+    "没有网",
+    "很稳定"
+   ],
+   "why": "internet connection 网络连接。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is a close ______ between health and exercise.",
+   "opts": [
+    "connection",
+    "connect",
+    "connected",
+    "connective"
+   ],
+   "why": "a close 后面要名词 connection（联系）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 connect、connection 中选一个，用适当形式填空。",
+   "stem": "Can you ______ the printer to my laptop?",
+   "ans": "connect",
+   "why": "can 后面用动词原形 connect。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He has many ______ in the film industry. (connection)",
+   "ans": "connections",
+   "why": "many 后面接复数 connections。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The connections is bad here.",
+   "ans": "is → are",
+   "why": "主语 connections 是复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "警察就这起事故询问了他。",
+   "stem": "The police asked him questions ______ connection ______ the accident.",
+   "ans": "in；with",
+   "why": "in connection with 关于、与……有关。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This phone has good ______; it can get online almost anywhere.",
+   "opts": [
+    "connectivity",
+    "connection",
+    "connect",
+    "connected"
+   ],
+   "why": "“能不能连上、连得多好”的整体性能用 connectivity。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "passport",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：出国别忘了带什么？\n听：Don't forget your passport when you go abroad.\nA. 身份证\nB. 护照\nC. 学生证\nD. 银行卡",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You need a ______ to travel to other countries.\nA. password\nB. passport\nC. port\nD. pass",
+  "题目3": "【选词填空】从 passport、password 中选一个，用适当形式填空。\n题干：Please enter your ______ to log in.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：They showed their ______ at the airport. (passport)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I lost my passport, so I could travel.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：出国前要办签证。\n题干：You need a ______ before you go abroad.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The passport ______ in my bag.\nA. are\nB. is\nC. be\nD. am\n考点：用法",
+  "答案": "【1】B（护照）\n讲解：passport 护照。\n【2】B（passport）\n讲解：出国需要护照 passport。\n【3】password\n讲解：登录要输入密码 password。\n【4】passports\n讲解：他们每人一本，用复数 passports。\n【5】could → couldn't\n讲解：丢了护照就不能出国。\n【6】visa\n讲解：签证 visa。\n【7】B（is）\n讲解：主语单数，用 is。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：出国别忘了带什么？",
+   "listen": "Don't forget your passport when you go abroad.",
+   "opts": [
+    "护照",
+    "身份证",
+    "学生证",
+    "银行卡"
+   ],
+   "why": "passport 护照。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You need a ______ to travel to other countries.",
+   "opts": [
+    "passport",
+    "password",
+    "port",
+    "pass"
+   ],
+   "why": "出国需要护照 passport。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 passport、password 中选一个，用适当形式填空。",
+   "stem": "Please enter your ______ to log in.",
+   "ans": "password",
+   "why": "登录要输入密码 password。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "They showed their ______ at the airport. (passport)",
+   "ans": "passports",
+   "why": "他们每人一本，用复数 passports。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I lost my passport, so I could travel.",
+   "ans": "could → couldn't",
+   "why": "丢了护照就不能出国。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "出国前要办签证。",
+   "stem": "You need a ______ before you go abroad.",
+   "ans": "visa",
+   "why": "签证 visa。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The passport ______ in my bag.",
+   "opts": [
+    "is",
+    "are",
+    "be",
+    "am"
+   ],
+   "why": "主语单数，用 is。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

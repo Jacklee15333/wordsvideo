@@ -1,0 +1,93 @@
+{
+ "单词": "these",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这些是什么？\n听：These are my photos.\nA. 我的书\nB. 我的照片\nC. 我的衣服\nD. 我的玩具",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ apples are very sweet.\nA. This\nB. That\nC. Them\nD. These\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：______ pen is red. (these)\n考点：变形",
+  "题目4": "【选词填空】从 these days、in those days 中选一个，用适当形式填空。\n题干：People use phones everywhere ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：These is my friends.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：那些是你的书吗？\n题干：Are ______ your books?\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The singular of these is ______.\nA. that\nB. those\nC. thes\nD. this\n考点：变形",
+  "答案": "【1】B（我的照片）\n讲解：these 这些。\n【2】D（These）\n讲解：apples 复数、近指，用 These。\n【3】This\n讲解：pen 单数，these 变成 this。\n【4】these days\n讲解：“如今”用 these days；in those days 是“那时候”。\n【5】is → are\n讲解：these 作主语，谓语用 are。\n【6】those\n讲解：远指复数用 those。\n【7】D（this）\n讲解：these 的单数是 this。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这些是什么？",
+   "listen": "These are my photos.",
+   "opts": [
+    "我的照片",
+    "我的书",
+    "我的衣服",
+    "我的玩具"
+   ],
+   "why": "these 这些。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ apples are very sweet.",
+   "opts": [
+    "These",
+    "This",
+    "That",
+    "Them"
+   ],
+   "why": "apples 复数、近指，用 These。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "______ pen is red. (these)",
+   "ans": "This",
+   "why": "pen 单数，these 变成 this。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 these days、in those days 中选一个，用适当形式填空。",
+   "stem": "People use phones everywhere ______.",
+   "ans": "these days",
+   "why": "“如今”用 these days；in those days 是“那时候”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "These is my friends.",
+   "ans": "is → are",
+   "why": "these 作主语，谓语用 are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "那些是你的书吗？",
+   "stem": "Are ______ your books?",
+   "ans": "those",
+   "why": "远指复数用 those。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The singular of these is ______.",
+   "opts": [
+    "this",
+    "that",
+    "those",
+    "thes"
+   ],
+   "why": "these 的单数是 this。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

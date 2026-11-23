@@ -1,0 +1,98 @@
+{
+ "单词": "precipitation",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：天气预报说明天怎样？\n听：There will be heavy precipitation tomorrow.\nA. 大风\nB. 晴天\nC. 高温\nD. 大量降水",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Rain and snow are both kinds of ______.\nA. precipitation\nB. precipitate\nC. precipitations\nD. rain\n考点：易混",
+  "题目3": "【选词填空】从 precipitation、rain 中选一个，用适当形式填空。\n题干：Take an umbrella. It's going to ______.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The precipitations in this area is low.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：今年的降水比去年多。\n题干：There is ______ precipitation this year than last year.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Precipitation\" is often used in ______ reports.\nA. sports\nB. weather\nC. music\nD. fashion\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which is NOT precipitation?\nA. rain\nB. snow\nC. wind\nD. hail\n考点：用法",
+  "答案": "【1】D（大量降水）\n讲解：precipitation 降水。\n【2】A（precipitation）\n讲解：雨和雪都属于降水 precipitation。\n【3】rain\n讲解：“下雨”用动词 rain。\n【4】precipitations → precipitation\n讲解：precipitation 一般不可数。\n【5】more\n讲解：不可数名词比较用 more。\n【6】B（weather）\n讲解：precipitation 是气象术语。\n【7】C（wind）\n讲解：从天上落下的水才算降水，风不算。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：天气预报说明天怎样？",
+   "listen": "There will be heavy precipitation tomorrow.",
+   "opts": [
+    "大量降水",
+    "大风",
+    "晴天",
+    "高温"
+   ],
+   "why": "precipitation 降水。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Rain and snow are both kinds of ______.",
+   "opts": [
+    "precipitation",
+    "precipitate",
+    "precipitations",
+    "rain"
+   ],
+   "why": "雨和雪都属于降水 precipitation。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 precipitation、rain 中选一个，用适当形式填空。",
+   "stem": "Take an umbrella. It's going to ______.",
+   "ans": "rain",
+   "why": "“下雨”用动词 rain。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The precipitations in this area is low.",
+   "ans": "precipitations → precipitation",
+   "why": "precipitation 一般不可数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "今年的降水比去年多。",
+   "stem": "There is ______ precipitation this year than last year.",
+   "ans": "more",
+   "why": "不可数名词比较用 more。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Precipitation\" is often used in ______ reports.",
+   "opts": [
+    "weather",
+    "sports",
+    "music",
+    "fashion"
+   ],
+   "why": "precipitation 是气象术语。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which is NOT precipitation?",
+   "opts": [
+    "wind",
+    "rain",
+    "snow",
+    "hail"
+   ],
+   "why": "从天上落下的水才算降水，风不算。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "time",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们在聚会上过得怎么样？\n听：We had a good time at the party.\nA. 很无聊\nB. 玩得很开心\nC. 很累\nD. 很早就走了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We arrived just in ______ to catch the train.\nA. times\nB. timely\nC. timer\nD. time\n考点：易混",
+  "题目3": "【选词填空】从 in time、on time 中选一个，用适当形式填空。\n题干：The train left ______ at 8:00, not a minute late.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：I have been to Beijing three ______. (time)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I don't have many time to play games.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我们同时到达了。\n题干：We arrived at the ______ ______.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：He watches TV ______ time to time.\nA. at\nB. from\nC. in\nD. on\n考点：短语",
+  "答案": "【1】B（玩得很开心）\n讲解：have a good time 玩得愉快。\n【2】D（time）\n讲解：in time 及时，赶上了火车。\n【3】on time\n讲解：准时、不早不晚用 on time；in time 是及时、来得及。\n【4】times\n讲解：表示“次数”可数，three times。\n【5】many → much\n讲解：“时间”不可数，用 much。\n【6】same；time\n讲解：at the same time 同时。\n【7】B（from）\n讲解：from time to time 不时、有时。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们在聚会上过得怎么样？",
+   "listen": "We had a good time at the party.",
+   "opts": [
+    "玩得很开心",
+    "很无聊",
+    "很累",
+    "很早就走了"
+   ],
+   "why": "have a good time 玩得愉快。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We arrived just in ______ to catch the train.",
+   "opts": [
+    "time",
+    "times",
+    "timely",
+    "timer"
+   ],
+   "why": "in time 及时，赶上了火车。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 in time、on time 中选一个，用适当形式填空。",
+   "stem": "The train left ______ at 8:00, not a minute late.",
+   "ans": "on time",
+   "why": "准时、不早不晚用 on time；in time 是及时、来得及。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I have been to Beijing three ______. (time)",
+   "ans": "times",
+   "why": "表示“次数”可数，three times。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I don't have many time to play games.",
+   "ans": "many → much",
+   "why": "“时间”不可数，用 much。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们同时到达了。",
+   "stem": "We arrived at the ______ ______.",
+   "ans": "same；time",
+   "why": "at the same time 同时。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He watches TV ______ time to time.",
+   "opts": [
+    "from",
+    "at",
+    "in",
+    "on"
+   ],
+   "why": "from time to time 不时、有时。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,96 @@
+{
+ "单词": "under",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：猫在哪里睡觉？\n听：The cat is sleeping under the table.\nA. 桌子下面\nB. 桌子上面\nC. 椅子上\nD. 门后面",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ball is ______ the bed.\nA. over\nB. on\nC. under\nD. above\n考点：易混",
+  "题目3": "【选词填空】从 under、below 中选一个，用适当形式填空。\n题干：The temperature is five degrees ______ zero.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Children under six ______ tickets. (not need)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The shoes is under the bed.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Children under 12 can't go in. Here under means ______.\nA. 多于\nB. 等于\nC. 大约\nD. 少于\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The opposite of under is ______.\nA. below\nB. beneath\nC. over\nD. down\n考点：易混",
+  "答案": "【1】A（桌子下面）\n讲解：under the table 在桌子下面。\n【2】C（under）\n讲解：在床下面用 under。\n【3】below\n讲解：“零下”说 below zero；below 指数值较低。\n【4】don't need\n讲解：主语 children 是复数，用 don't need。\n【5】is → are\n讲解：主语 shoes 是复数，用 are。\n【6】D（少于）\n讲解：under 也表示“少于、不到”。\n【7】C（over）\n讲解：under 的反义是 over。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：猫在哪里睡觉？",
+   "listen": "The cat is sleeping under the table.",
+   "opts": [
+    "桌子下面",
+    "桌子上面",
+    "椅子上",
+    "门后面"
+   ],
+   "why": "under the table 在桌子下面。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ball is ______ the bed.",
+   "opts": [
+    "under",
+    "over",
+    "on",
+    "above"
+   ],
+   "why": "在床下面用 under。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 under、below 中选一个，用适当形式填空。",
+   "stem": "The temperature is five degrees ______ zero.",
+   "ans": "below",
+   "why": "“零下”说 below zero；below 指数值较低。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Children under six ______ tickets. (not need)",
+   "ans": "don't need",
+   "why": "主语 children 是复数，用 don't need。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The shoes is under the bed.",
+   "ans": "is → are",
+   "why": "主语 shoes 是复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Children under 12 can't go in. Here under means ______.",
+   "opts": [
+    "少于",
+    "多于",
+    "等于",
+    "大约"
+   ],
+   "why": "under 也表示“少于、不到”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The opposite of under is ______.",
+   "opts": [
+    "over",
+    "below",
+    "beneath",
+    "down"
+   ],
+   "why": "under 的反义是 over。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

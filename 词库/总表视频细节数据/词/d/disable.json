@@ -1,0 +1,94 @@
+{
+ "单词": "disable",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人对电脑做了什么？\n听：I disabled the camera on my computer.\nA. 关掉了摄像头\nB. 买了摄像头\nC. 修好了摄像头\nD. 弄丢了摄像头",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You can ______ this function in the settings.\nA. disabled\nB. disability\nC. unable\nD. disable\n考点：变形",
+  "题目3": "【选词填空】从 disable、enable 中选一个，用适当形式填空。\n题干：Please ______ the Wi-Fi so we can get online.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The accident ______ him for life. (disable)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The fire alarm was disable by mistake.\n考点：变形",
+  "题目6": "【适当形式填空】用所给单词的适当形式填空。\n题干：He doesn't let his ______ stop him. (disable)\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The prefix dis- in disable means ______.\nA. again\nB. not\nC. before\nD. very\n考点：用法",
+  "答案": "【1】A（关掉了摄像头）\n讲解：disable 禁用。\n【2】D（disable）\n讲解：can 后面用原形 disable（禁用）。\n【3】enable\n讲解：要上网就要“启用” Wi-Fi，用 enable。\n【4】disabled\n讲解：说过去的事，用过去式 disabled。\n【5】disable → disabled\n讲解：被动语态 was 后面用过去分词 disabled。\n【6】disability\n讲解：his 后面要名词 disability（残疾）。\n【7】B（not）\n讲解：dis- 表示否定、相反：disable 使不能。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人对电脑做了什么？",
+   "listen": "I disabled the camera on my computer.",
+   "opts": [
+    "关掉了摄像头",
+    "买了摄像头",
+    "修好了摄像头",
+    "弄丢了摄像头"
+   ],
+   "why": "disable 禁用。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can ______ this function in the settings.",
+   "opts": [
+    "disable",
+    "disabled",
+    "disability",
+    "unable"
+   ],
+   "why": "can 后面用原形 disable（禁用）。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 disable、enable 中选一个，用适当形式填空。",
+   "stem": "Please ______ the Wi-Fi so we can get online.",
+   "ans": "enable",
+   "why": "要上网就要“启用” Wi-Fi，用 enable。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The accident ______ him for life. (disable)",
+   "ans": "disabled",
+   "why": "说过去的事，用过去式 disabled。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The fire alarm was disable by mistake.",
+   "ans": "disable → disabled",
+   "why": "被动语态 was 后面用过去分词 disabled。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He doesn't let his ______ stop him. (disable)",
+   "ans": "disability",
+   "why": "his 后面要名词 disability（残疾）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The prefix dis- in disable means ______.",
+   "opts": [
+    "not",
+    "again",
+    "before",
+    "very"
+   ],
+   "why": "dis- 表示否定、相反：disable 使不能。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

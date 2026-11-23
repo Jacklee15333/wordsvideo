@@ -1,0 +1,97 @@
+{
+ "单词": "incomplete",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师说作业怎么样？\n听：Your homework is incomplete.\nA. 全对了\nB. 很整齐\nC. 没做完\nD. 交晚了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This list is ______; some names are missing.\nA. complete\nB. uncomplete\nC. incomplete\nD. incompletely\n考点：易混",
+  "题目3": "【选词填空】从 complete、incomplete 中选一个，用适当形式填空。\n题干：I have finished every question; my test is ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He ______ the puzzle in ten minutes. (incomplete)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The report are incomplete.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The opposite of incomplete is ______.\nA. uncomplete\nB. unfinished\nC. empty\nD. complete\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which word is NOT right?\nA. incomplete\nB. unhappy\nC. impossible\nD. uncomplete\n考点：用法",
+  "答案": "【1】C（没做完）\n讲解：incomplete 不完整的。\n【2】C（incomplete）\n讲解：缺了名字，“不完整的”用 incomplete。\n【3】complete\n讲解：每道题都做完了，是 complete。\n【4】completed\n讲解：说过去的事，用动词过去式 completed。\n【5】are → is\n讲解：主语 report 是单数，用 is。\n【6】D（complete）\n讲解：in- 是否定前缀，去掉就是 complete。\n【7】D（uncomplete）\n讲解：“不完整的”是 incomplete，没有 uncomplete。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师说作业怎么样？",
+   "listen": "Your homework is incomplete.",
+   "opts": [
+    "没做完",
+    "全对了",
+    "很整齐",
+    "交晚了"
+   ],
+   "why": "incomplete 不完整的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This list is ______; some names are missing.",
+   "opts": [
+    "incomplete",
+    "complete",
+    "uncomplete",
+    "incompletely"
+   ],
+   "why": "缺了名字，“不完整的”用 incomplete。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 complete、incomplete 中选一个，用适当形式填空。",
+   "stem": "I have finished every question; my test is ______.",
+   "ans": "complete",
+   "why": "每道题都做完了，是 complete。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He ______ the puzzle in ten minutes. (incomplete)",
+   "ans": "completed",
+   "why": "说过去的事，用动词过去式 completed。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The report are incomplete.",
+   "ans": "are → is",
+   "why": "主语 report 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The opposite of incomplete is ______.",
+   "opts": [
+    "complete",
+    "uncomplete",
+    "unfinished",
+    "empty"
+   ],
+   "why": "in- 是否定前缀，去掉就是 complete。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which word is NOT right?",
+   "opts": [
+    "uncomplete",
+    "incomplete",
+    "unhappy",
+    "impossible"
+   ],
+   "why": "“不完整的”是 incomplete，没有 uncomplete。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

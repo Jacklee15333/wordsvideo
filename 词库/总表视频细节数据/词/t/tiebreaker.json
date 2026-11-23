@@ -1,0 +1,95 @@
+{
+ "单词": "tiebreaker",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：比赛是怎么决出胜负的？\n听：The match was decided by a tiebreaker.\nA. 通过抽签\nB. 第一局\nC. 没决出\nD. 通过加赛",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The score was 6-6, so they played a ______.\nA. tie\nB. necktie\nC. breaker\nD. tiebreaker",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There were two ______ in the tennis match. (tiebreaker)\n考点：变形",
+  "题目4": "【选词填空】从 tiebreaker、breakfast 中选一个，用适当形式填空。\n题干：We have ______ at seven every morning.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The tiebreaker were very exciting.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A tiebreaker is needed when the score is ______.\nA. equal\nB. high\nC. low\nD. zero\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In \"tiebreaker\", \"tie\" means ______, not \"necktie\".\nA. a draw\nB. a rope\nC. a knot\nD. a scarf\n考点：易混",
+  "答案": "【1】D（通过加赛）\n讲解：tiebreaker 决胜局。\n【2】D（tiebreaker）\n讲解：打平后加赛决胜是 tiebreaker。\n【3】tiebreakers\n讲解：two 后面用复数，加 s。\n【4】breakfast\n讲解：早饭是 breakfast。\n【5】were → was\n讲解：主语 the tiebreaker 是单数，用 was。\n【6】A（equal）\n讲解：比分相同（平局）才要决胜局。\n【7】A（a draw）\n讲解：这里的 tie 是“平局”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：比赛是怎么决出胜负的？",
+   "listen": "The match was decided by a tiebreaker.",
+   "opts": [
+    "通过加赛",
+    "通过抽签",
+    "第一局",
+    "没决出"
+   ],
+   "why": "tiebreaker 决胜局。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The score was 6-6, so they played a ______.",
+   "opts": [
+    "tiebreaker",
+    "tie",
+    "necktie",
+    "breaker"
+   ],
+   "why": "打平后加赛决胜是 tiebreaker。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There were two ______ in the tennis match. (tiebreaker)",
+   "ans": "tiebreakers",
+   "why": "two 后面用复数，加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tiebreaker、breakfast 中选一个，用适当形式填空。",
+   "stem": "We have ______ at seven every morning.",
+   "ans": "breakfast",
+   "why": "早饭是 breakfast。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The tiebreaker were very exciting.",
+   "ans": "were → was",
+   "why": "主语 the tiebreaker 是单数，用 was。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A tiebreaker is needed when the score is ______.",
+   "opts": [
+    "equal",
+    "high",
+    "low",
+    "zero"
+   ],
+   "why": "比分相同（平局）才要决胜局。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In \"tiebreaker\", \"tie\" means ______, not \"necktie\".",
+   "opts": [
+    "a draw",
+    "a rope",
+    "a knot",
+    "a scarf"
+   ],
+   "why": "这里的 tie 是“平局”。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

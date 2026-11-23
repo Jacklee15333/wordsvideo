@@ -1,0 +1,94 @@
+{
+ "单词": "drain",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：水怎么样了？\n听：The water drained away slowly.\nA. 结冰了\nB. 变热了\nC. 慢慢流走了\nD. 溢出来了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She ______ the pasta and added the sauce.\nA. drained\nB. drains\nC. draining\nD. drainage",
+  "题目3": "【选词填空】从 drain、exhausted 中选一个，用适当形式填空。\n题干：After the long race, I felt ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：All my hard work went down a drain.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这个城市的排水系统很好。\n题干：This city has a good ______ system.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Brain drain\" means ______.\nA. losing your memory\nB. a headache\nC. clever people leaving a country\nD. studying too hard\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Don't pour oil down the ______.\nA. drain\nB. drainage\nC. drained\nD. draining\n考点：用法",
+  "答案": "【1】C（慢慢流走了）\n讲解：drain away 流走。\n【2】A（drained）\n讲解：和 added 并列，用过去式。\n【3】exhausted\n讲解：“累垮了”用 exhausted。\n【4】a → the\n讲解：down the drain 白费。\n【5】drainage\n讲解：排水是 drainage。\n【6】C（clever people leaving a country）\n讲解：brain drain 人才外流。\n【7】A（drain）\n讲解：下水道是 drain。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：水怎么样了？",
+   "listen": "The water drained away slowly.",
+   "opts": [
+    "慢慢流走了",
+    "结冰了",
+    "变热了",
+    "溢出来了"
+   ],
+   "why": "drain away 流走。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She ______ the pasta and added the sauce.",
+   "opts": [
+    "drained",
+    "drains",
+    "draining",
+    "drainage"
+   ],
+   "why": "和 added 并列，用过去式。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 drain、exhausted 中选一个，用适当形式填空。",
+   "stem": "After the long race, I felt ______.",
+   "ans": "exhausted",
+   "why": "“累垮了”用 exhausted。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "All my hard work went down a drain.",
+   "ans": "a → the",
+   "why": "down the drain 白费。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个城市的排水系统很好。",
+   "stem": "This city has a good ______ system.",
+   "ans": "drainage",
+   "why": "排水是 drainage。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Brain drain\" means ______.",
+   "opts": [
+    "clever people leaving a country",
+    "losing your memory",
+    "a headache",
+    "studying too hard"
+   ],
+   "why": "brain drain 人才外流。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Don't pour oil down the ______.",
+   "opts": [
+    "drain",
+    "drainage",
+    "drained",
+    "draining"
+   ],
+   "why": "下水道是 drain。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

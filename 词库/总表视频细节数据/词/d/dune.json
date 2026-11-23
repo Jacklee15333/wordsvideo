@@ -1,0 +1,94 @@
+{
+ "单词": "dune",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在沙漠里看到了什么？\n听：We saw huge sand dunes in the desert.\nA. 很多骆驼\nB. 一条河\nC. 巨大的沙丘\nD. 一座城",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The wind made a big ______ of sand.\nA. done\nB. dune\nC. tune\nD. dawn\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many sand ______ along the beach. (dune)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：We climbed up a sand dune in the forest.\n考点：用法",
+  "题目5": "【选词填空】从 dune、hill 中选一个，用适当形式填空。\n题干：We walked up the green ______ behind the village.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：孩子们从沙丘上滑下来。\n题干：The kids slid ______ the sand ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Dunes are made by ______.\nA. rain\nB. people\nC. snow\nD. wind\n考点：用法",
+  "答案": "【1】C（巨大的沙丘）\n讲解：sand dunes 沙丘。\n【2】B（dune）\n讲解：风吹积成的“沙丘”用 dune。\n【3】dunes\n讲解：many 后面用复数 dunes。\n【4】forest → desert\n讲解：沙丘在沙漠里。\n【5】hill\n讲解：长满绿草的“小山”用 hill。\n【6】down；dune\n讲解：slide down 滑下；sand dune 沙丘。\n【7】D（wind）\n讲解：沙丘是风吹积成的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在沙漠里看到了什么？",
+   "listen": "We saw huge sand dunes in the desert.",
+   "opts": [
+    "巨大的沙丘",
+    "很多骆驼",
+    "一条河",
+    "一座城"
+   ],
+   "why": "sand dunes 沙丘。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The wind made a big ______ of sand.",
+   "opts": [
+    "dune",
+    "done",
+    "tune",
+    "dawn"
+   ],
+   "why": "风吹积成的“沙丘”用 dune。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many sand ______ along the beach. (dune)",
+   "ans": "dunes",
+   "why": "many 后面用复数 dunes。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We climbed up a sand dune in the forest.",
+   "ans": "forest → desert",
+   "why": "沙丘在沙漠里。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 dune、hill 中选一个，用适当形式填空。",
+   "stem": "We walked up the green ______ behind the village.",
+   "ans": "hill",
+   "why": "长满绿草的“小山”用 hill。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "孩子们从沙丘上滑下来。",
+   "stem": "The kids slid ______ the sand ______.",
+   "ans": "down；dune",
+   "why": "slide down 滑下；sand dune 沙丘。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Dunes are made by ______.",
+   "opts": [
+    "wind",
+    "rain",
+    "people",
+    "snow"
+   ],
+   "why": "沙丘是风吹积成的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "hollow",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这棵老树怎么样？\n听：The old tree is hollow inside.\nA. 很高\nB. 很粗\nC. 里面是空的\nD. 结果了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ball is ______ inside.\nA. hollows\nB. hole\nC. hollowly\nD. hollow",
+  "题目3": "【选词填空】从 hollow、empty 中选一个，用适当形式填空。\n题干：The box is ______. There is nothing in it.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The village is in a hollows between two hills.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：墙上有个洞。\n题干：There is a ______ in the wall.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Hollow words\" are words that are ______.\nA. very loud\nB. not sincere\nC. kind\nD. true\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：This tree is ______ than that one.\nA. more hollower\nB. hollower\nC. hollowest\nD. hollowly\n考点：变形",
+  "答案": "【1】C（里面是空的）\n讲解：hollow 空心的。\n【2】D（hollow）\n讲解：be 后面用形容词“空心的”。\n【3】empty\n讲解：里面没装东西用 empty。\n【4】hollows → hollow\n讲解：a 后面用单数。\n【5】hole\n讲解：洞 hole。\n【6】B（not sincere）\n讲解：hollow 也指空洞的、不真诚的。\n【7】B（hollower）\n讲解：比较级 hollower。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这棵老树怎么样？",
+   "listen": "The old tree is hollow inside.",
+   "opts": [
+    "里面是空的",
+    "很高",
+    "很粗",
+    "结果了"
+   ],
+   "why": "hollow 空心的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ball is ______ inside.",
+   "opts": [
+    "hollow",
+    "hollows",
+    "hole",
+    "hollowly"
+   ],
+   "why": "be 后面用形容词“空心的”。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 hollow、empty 中选一个，用适当形式填空。",
+   "stem": "The box is ______. There is nothing in it.",
+   "ans": "empty",
+   "why": "里面没装东西用 empty。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The village is in a hollows between two hills.",
+   "ans": "hollows → hollow",
+   "why": "a 后面用单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "墙上有个洞。",
+   "stem": "There is a ______ in the wall.",
+   "ans": "hole",
+   "why": "洞 hole。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Hollow words\" are words that are ______.",
+   "opts": [
+    "not sincere",
+    "very loud",
+    "kind",
+    "true"
+   ],
+   "why": "hollow 也指空洞的、不真诚的。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This tree is ______ than that one.",
+   "opts": [
+    "hollower",
+    "more hollower",
+    "hollowest",
+    "hollowly"
+   ],
+   "why": "比较级 hollower。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

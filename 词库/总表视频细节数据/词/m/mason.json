@@ -1,0 +1,92 @@
+{
+ "单词": "mason",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：石匠做了什么？\n听：The mason built a stone wall around the garden.\nA. 砌了一道石墙\nB. 种了一些花\nC. 修了一辆车\nD. 画了一幅画",
+  "题目2": "【适当形式填空】用所给单词的适当形式填空。\n题干：Three ______ are building the bridge now. (mason)\n考点：变形",
+  "题目3": "【单项选择】选出最恰当的一项。\n题干：A ______ works with stones and bricks.\nA. mason\nB. doctor\nC. farmer\nD. pilot",
+  "题目4": "【选词填空】从 mason、maker、matcher 中选一个，用适当形式填空。\n题干：This old stone house was built by local ______.\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The masons was tired after work.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：那些石匠来自同一个村子。\n题干：Those ______ come from the same village.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：These are the ______ tools.\nA. masons\nB. mason\nC. mason's\nD. masoned\n考点：变形",
+  "答案": "【1】A（砌了一道石墙）\n讲解：mason 石匠，built a stone wall 砌了一道石墙。\n【2】masons\n讲解：three 后面用复数 masons。\n【3】A（mason）\n讲解：和石头、砖打交道的工人是 mason（石匠）。\n【4】masons\n讲解：盖石头房子的是石匠，by local 后面用复数 masons。\n【5】was → were\n讲解：主语 the masons 是复数，用 were。\n【6】masons\n讲解：those 后面用复数 masons。\n【7】C（mason's）\n讲解：表示“石匠的”用名词所有格 mason's。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：石匠做了什么？",
+   "listen": "The mason built a stone wall around the garden.",
+   "opts": [
+    "砌了一道石墙",
+    "种了一些花",
+    "修了一辆车",
+    "画了一幅画"
+   ],
+   "why": "mason 石匠，built a stone wall 砌了一道石墙。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Three ______ are building the bridge now. (mason)",
+   "ans": "masons",
+   "why": "three 后面用复数 masons。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ works with stones and bricks.",
+   "opts": [
+    "mason",
+    "doctor",
+    "farmer",
+    "pilot"
+   ],
+   "why": "和石头、砖打交道的工人是 mason（石匠）。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 mason、maker、matcher 中选一个，用适当形式填空。",
+   "stem": "This old stone house was built by local ______.",
+   "ans": "masons",
+   "why": "盖石头房子的是石匠，by local 后面用复数 masons。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The masons was tired after work.",
+   "ans": "was → were",
+   "why": "主语 the masons 是复数，用 were。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "stem": "Those ______ come from the same village.",
+   "ans": "masons",
+   "why": "those 后面用复数 masons。",
+   "kd": "变形",
+   "zh": "那些石匠来自同一个村子。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "These are the ______ tools.",
+   "opts": [
+    "mason's",
+    "masons",
+    "mason",
+    "masoned"
+   ],
+   "why": "表示“石匠的”用名词所有格 mason's。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

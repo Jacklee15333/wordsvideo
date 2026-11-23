@@ -1,0 +1,92 @@
+{
+ "单词": "architect",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的爸爸是做什么的？\n听：My dad is an architect.\nA. 工人\nB. 司机\nC. 建筑师\nD. 医生",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ designed this beautiful bridge.\nA. architecture\nB. architects\nC. architect\nD. architectural",
+  "题目3": "【选词填空】从 architect、engineer 中选一个，用适当形式填空。\n题干：The ______ checked whether the building was strong enough.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Many ______ came to see the new museum. (architect)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He wants to be a architect.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：I want to study ______ and design houses.\nA. architect\nB. architectural\nC. architecture\nD. architects\n考点：词性转换",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这些工人在建这座房子。\n题干：These ______ are building the house.\n考点：易混",
+  "答案": "【1】C（建筑师）\n讲解：architect 建筑师。\n【2】C（architect）\n讲解：设计桥的人 architect，单数。\n【3】engineer\n讲解：负责结构计算的是工程师 engineer。\n【4】architects\n讲解：many 后接复数 architects。\n【5】a → an\n讲解：architect 以元音音素开头，用 an。\n【6】C（architecture）\n讲解：study 后接学科名词 architecture。\n【7】builders\n讲解：施工的人是 builder。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的爸爸是做什么的？",
+   "listen": "My dad is an architect.",
+   "opts": [
+    "建筑师",
+    "工人",
+    "司机",
+    "医生"
+   ],
+   "why": "architect 建筑师。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ designed this beautiful bridge.",
+   "opts": [
+    "architect",
+    "architecture",
+    "architects",
+    "architectural"
+   ],
+   "why": "设计桥的人 architect，单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 architect、engineer 中选一个，用适当形式填空。",
+   "stem": "The ______ checked whether the building was strong enough.",
+   "ans": "engineer",
+   "why": "负责结构计算的是工程师 engineer。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Many ______ came to see the new museum. (architect)",
+   "ans": "architects",
+   "why": "many 后接复数 architects。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He wants to be a architect.",
+   "ans": "a → an",
+   "why": "architect 以元音音素开头，用 an。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I want to study ______ and design houses.",
+   "opts": [
+    "architecture",
+    "architect",
+    "architectural",
+    "architects"
+   ],
+   "why": "study 后接学科名词 architecture。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这些工人在建这座房子。",
+   "stem": "These ______ are building the house.",
+   "ans": "builders",
+   "why": "施工的人是 builder。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

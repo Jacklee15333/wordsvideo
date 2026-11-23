@@ -1,0 +1,98 @@
+{
+ "单词": "audiobook",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人开车时听什么？\n听：I listen to audiobooks when I drive.\nA. 音乐\nB. 新闻\nC. 有声书\nD. 广播剧",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My grandpa can't see well, so he listens to ______.\nA. audiobook\nB. audio\nC. audiobooks\nD. audience\n考点：变形",
+  "题目3": "【选词填空】从 audiobook、podcast 中选一个，用适当形式填空。\n题干：I listen to a weekly ______ about science.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She is listening to a audiobook.\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：你可以边跑步边听书。\n题干：You can ______ to books while running.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：An audiobook is a book that you ______.\nA. write\nB. draw\nC. listen to\nD. cook\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：audio- in audiobook means ______.\nA. picture\nB. book\nC. sound\nD. story\n考点：用法",
+  "答案": "【1】C（有声书）\n讲解：audiobook 有声书。\n【2】C（audiobooks）\n讲解：泛指“有声书”用复数 audiobooks。\n【3】podcast\n讲解：按期更新的节目是 podcast。\n【4】a → an\n讲解：audiobook 以元音音素开头，前面用 an。\n【5】listen\n讲解：listen to 听。\n【6】C（listen to）\n讲解：有声书是用耳朵听的书。\n【7】C（sound）\n讲解：audio- 表示“声音”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人开车时听什么？",
+   "listen": "I listen to audiobooks when I drive.",
+   "opts": [
+    "有声书",
+    "音乐",
+    "新闻",
+    "广播剧"
+   ],
+   "why": "audiobook 有声书。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My grandpa can't see well, so he listens to ______.",
+   "opts": [
+    "audiobooks",
+    "audiobook",
+    "audio",
+    "audience"
+   ],
+   "why": "泛指“有声书”用复数 audiobooks。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 audiobook、podcast 中选一个，用适当形式填空。",
+   "stem": "I listen to a weekly ______ about science.",
+   "ans": "podcast",
+   "why": "按期更新的节目是 podcast。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is listening to a audiobook.",
+   "ans": "a → an",
+   "why": "audiobook 以元音音素开头，前面用 an。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你可以边跑步边听书。",
+   "stem": "You can ______ to books while running.",
+   "ans": "listen",
+   "why": "listen to 听。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An audiobook is a book that you ______.",
+   "opts": [
+    "listen to",
+    "write",
+    "draw",
+    "cook"
+   ],
+   "why": "有声书是用耳朵听的书。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "audio- in audiobook means ______.",
+   "opts": [
+    "sound",
+    "picture",
+    "book",
+    "story"
+   ],
+   "why": "audio- 表示“声音”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "fault",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说是谁的错？\n听：It's not your fault.\nA. 不是你的错\nB. 是你的错\nC. 是我的错\nD. 是他的错",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：It was my ______ that we were late.\nA. faults\nB. false\nC. fault\nD. failure",
+  "题目3": "【选词填空】从 fault、flaw 中选一个，用适当形式填空。\n题干：There is a small ______ in this diamond.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Everyone has their own fault.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这台机器出毛病了。\n题干：There is something ______ with this machine.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Find fault with\" means ______.\nA. praise\nB. help\nC. fix\nD. complain about\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"At fault\" means ______.\nA. very happy\nB. at home\nC. responsible for a mistake\nD. in danger\n考点：短语",
+  "答案": "【1】A（不是你的错）\n讲解：fault 过错。\n【2】C（fault）\n讲解：my fault 我的过错。\n【3】flaw\n讲解：破坏完美的小瑕疵用 flaw。\n【4】fault → faults\n讲解：指各种缺点，用复数。\n【5】wrong\n讲解：something wrong with … ……出毛病了。\n【6】D（complain about）\n讲解：find fault with 挑剔。\n【7】C（responsible for a mistake）\n讲解：at fault 有过错。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说是谁的错？",
+   "listen": "It's not your fault.",
+   "opts": [
+    "不是你的错",
+    "是你的错",
+    "是我的错",
+    "是他的错"
+   ],
+   "why": "fault 过错。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It was my ______ that we were late.",
+   "opts": [
+    "fault",
+    "faults",
+    "false",
+    "failure"
+   ],
+   "why": "my fault 我的过错。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 fault、flaw 中选一个，用适当形式填空。",
+   "stem": "There is a small ______ in this diamond.",
+   "ans": "flaw",
+   "why": "破坏完美的小瑕疵用 flaw。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Everyone has their own fault.",
+   "ans": "fault → faults",
+   "why": "指各种缺点，用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这台机器出毛病了。",
+   "stem": "There is something ______ with this machine.",
+   "ans": "wrong",
+   "why": "something wrong with … ……出毛病了。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Find fault with\" means ______.",
+   "opts": [
+    "complain about",
+    "praise",
+    "help",
+    "fix"
+   ],
+   "why": "find fault with 挑剔。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"At fault\" means ______.",
+   "opts": [
+    "responsible for a mistake",
+    "very happy",
+    "at home",
+    "in danger"
+   ],
+   "why": "at fault 有过错。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

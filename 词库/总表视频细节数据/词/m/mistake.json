@@ -1,0 +1,94 @@
+{
+ "单词": "mistake",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师说他怎么了？\n听：You made a mistake in your homework.\nA. 作业做得很好\nB. 作业里有个错误\nC. 没交作业\nD. 作业太少",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I took your umbrella by ______. Sorry!\nA. mistakes\nB. mistake\nC. mistaken\nD. mistook\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are three ______ in this sentence. (mistake)\n考点：变形",
+  "题目4": "【选词填空】从 mistake、error 中选一个，用适当形式填空。\n题干：There was a computer ______; the system stopped.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I always mistake him to his brother.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我把她错认成了她妹妹。\n题干：I ______ her for her sister.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Don't ______ the same mistake again.\nA. do\nB. take\nC. make\nD. have\n考点：短语",
+  "答案": "【1】B（作业里有个错误）\n讲解：make a mistake 犯错误。\n【2】B（mistake）\n讲解：by mistake 错误地、无意中。\n【3】mistakes\n讲解：three 后面用复数 mistakes。\n【4】error\n讲解：电脑、系统出错常用 error；mistake 多是人在判断、选择上的错。\n【5】to → for\n讲解：mistake A for B 把 A 错当成 B。\n【6】mistook\n讲解：讲过去，mistake 的过去式不规则：mistook。\n【7】C（make）\n讲解：make a mistake 犯错误。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师说他怎么了？",
+   "listen": "You made a mistake in your homework.",
+   "opts": [
+    "作业里有个错误",
+    "作业做得很好",
+    "没交作业",
+    "作业太少"
+   ],
+   "why": "make a mistake 犯错误。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I took your umbrella by ______. Sorry!",
+   "opts": [
+    "mistake",
+    "mistakes",
+    "mistaken",
+    "mistook"
+   ],
+   "why": "by mistake 错误地、无意中。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are three ______ in this sentence. (mistake)",
+   "ans": "mistakes",
+   "why": "three 后面用复数 mistakes。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 mistake、error 中选一个，用适当形式填空。",
+   "stem": "There was a computer ______; the system stopped.",
+   "ans": "error",
+   "why": "电脑、系统出错常用 error；mistake 多是人在判断、选择上的错。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I always mistake him to his brother.",
+   "ans": "to → for",
+   "why": "mistake A for B 把 A 错当成 B。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我把她错认成了她妹妹。",
+   "stem": "I ______ her for her sister.",
+   "ans": "mistook",
+   "why": "讲过去，mistake 的过去式不规则：mistook。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Don't ______ the same mistake again.",
+   "opts": [
+    "make",
+    "do",
+    "take",
+    "have"
+   ],
+   "why": "make a mistake 犯错误。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

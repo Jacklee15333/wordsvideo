@@ -1,0 +1,97 @@
+{
+ "单词": "predictive",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在做什么模型？\n听：We are building a predictive model.\nA. 汽车模型\nB. 飞机模型\nC. 预测模型\nD. 房屋模型",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This ______ app guesses what word you will type next.\nA. predict\nB. predicts\nC. predictive\nD. predicted\n考点：词性转换",
+  "题目3": "【选词填空】从 predictive、predictable 中选一个，用适当形式填空。\n题干：The story was so ______ that I fell asleep.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Can you ______ the result? (predictive)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Predictive text help me type faster.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A predictive model is one that can ______.\nA. be easily guessed\nB. be broken\nC. be sold\nD. make predictions\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Predictive means able to ______.\nA. protect\nB. produce\nC. prevent\nD. predict\n考点：词性转换",
+  "答案": "【1】C（预测模型）\n讲解：predictive model 预测模型。\n【2】C（predictive）\n讲解：名词 app 前要形容词 predictive（有预测作用的）。\n【3】predictable\n讲解：情节俗套、太好猜用 predictable。\n【4】predict\n讲解：can 后面用动词原形 predict。\n【5】help → helps\n讲解：主语 text 不可数，用 helps。\n【6】D（make predictions）\n讲解：predictive 能做预测的；predictable 才是“容易猜的”。\n【7】D（predict）\n讲解：predictive 是 predict 的形容词。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在做什么模型？",
+   "listen": "We are building a predictive model.",
+   "opts": [
+    "预测模型",
+    "汽车模型",
+    "飞机模型",
+    "房屋模型"
+   ],
+   "why": "predictive model 预测模型。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This ______ app guesses what word you will type next.",
+   "opts": [
+    "predictive",
+    "predict",
+    "predicts",
+    "predicted"
+   ],
+   "why": "名词 app 前要形容词 predictive（有预测作用的）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 predictive、predictable 中选一个，用适当形式填空。",
+   "stem": "The story was so ______ that I fell asleep.",
+   "ans": "predictable",
+   "why": "情节俗套、太好猜用 predictable。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Can you ______ the result? (predictive)",
+   "ans": "predict",
+   "why": "can 后面用动词原形 predict。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Predictive text help me type faster.",
+   "ans": "help → helps",
+   "why": "主语 text 不可数，用 helps。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A predictive model is one that can ______.",
+   "opts": [
+    "make predictions",
+    "be easily guessed",
+    "be broken",
+    "be sold"
+   ],
+   "why": "predictive 能做预测的；predictable 才是“容易猜的”。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Predictive means able to ______.",
+   "opts": [
+    "predict",
+    "protect",
+    "produce",
+    "prevent"
+   ],
+   "why": "predictive 是 predict 的形容词。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,97 @@
+{
+ "单词": "version",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人下载了什么？\n听：I downloaded the new version of the app.\nA. 旧版应用\nB. 新版应用\nC. 游戏\nD. 电影",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Have you read the English ______ of this Chinese novel?\nA. version\nB. vision\nC. verse\nD. virus",
+  "题目3": "【选词填空】从 version、edition 中选一个，用适当形式填空。\n题干：The second ______ of this dictionary came out in 2020.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are two ______ of the story. (version)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This is the old version, isn't this?\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Tell me your version of what happened\" means tell me ______.\nA. a song\nB. a lie\nC. how you saw it\nD. a new story\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Eagles have very good ______; they can see small animals from far away.\nA. version\nB. visit\nC. vision\nD. verse\n考点：易混",
+  "答案": "【1】B（新版应用）\n讲解：new version 新版本。\n【2】A（version）\n讲解：英文“译本”用 version。\n【3】edition\n讲解：出版物的“版次”用 edition。\n【4】versions\n讲解：two 后面用复数 versions。\n【5】isn't this → isn't it\n讲解：反意疑问句里 this 换成 it。\n【6】C（how you saw it）\n讲解：version 也指“（某人的）说法”。\n【7】C（vision）\n讲解：“视力”是 vision，和 version 形近。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人下载了什么？",
+   "listen": "I downloaded the new version of the app.",
+   "opts": [
+    "新版应用",
+    "旧版应用",
+    "游戏",
+    "电影"
+   ],
+   "why": "new version 新版本。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Have you read the English ______ of this Chinese novel?",
+   "opts": [
+    "version",
+    "vision",
+    "verse",
+    "virus"
+   ],
+   "why": "英文“译本”用 version。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 version、edition 中选一个，用适当形式填空。",
+   "stem": "The second ______ of this dictionary came out in 2020.",
+   "ans": "edition",
+   "why": "出版物的“版次”用 edition。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are two ______ of the story. (version)",
+   "ans": "versions",
+   "why": "two 后面用复数 versions。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This is the old version, isn't this?",
+   "ans": "isn't this → isn't it",
+   "why": "反意疑问句里 this 换成 it。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Tell me your version of what happened\" means tell me ______.",
+   "opts": [
+    "how you saw it",
+    "a song",
+    "a lie",
+    "a new story"
+   ],
+   "why": "version 也指“（某人的）说法”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Eagles have very good ______; they can see small animals from far away.",
+   "opts": [
+    "vision",
+    "version",
+    "visit",
+    "verse"
+   ],
+   "why": "“视力”是 vision，和 version 形近。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

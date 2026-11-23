@@ -1,0 +1,94 @@
+{
+ "单词": "piano",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人会做什么？\n听：I can play the piano.\nA. 拉小提琴\nB. 弹吉他\nC. 打鼓\nD. 弹钢琴",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He plays the ______ very well.\nA. pianist\nB. piano\nC. pianos\nD. play\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The music shop sells many ______. (piano)\n考点：变形",
+  "题目4": "【选词填空】从 piano、pianist 中选一个，用适当形式填空。\n题干：Lang Lang is a famous ______.\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：My sister is learning to play piano.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：弹钢琴是我的爱好。\n题干：______ the piano is my hobby.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The pianos in the shop ______ very expensive.\nA. is\nB. are\nC. be\nD. was\n考点：变形",
+  "答案": "【1】D（弹钢琴）\n讲解：play the piano 弹钢琴。\n【2】B（piano）\n讲解：play the piano 弹钢琴，the 后面接单数 piano。\n【3】pianos\n讲解：piano 的复数只加 s。\n【4】pianist\n讲解：郎朗是钢琴家 pianist；piano 是钢琴。\n【5】play piano → play the piano\n讲解：弹奏乐器，乐器前加 the。\n【6】Playing\n讲解：动名词 Playing 作主语。\n【7】B（are）\n讲解：主语 pianos 复数，谓语用 are。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人会做什么？",
+   "listen": "I can play the piano.",
+   "opts": [
+    "弹钢琴",
+    "拉小提琴",
+    "弹吉他",
+    "打鼓"
+   ],
+   "why": "play the piano 弹钢琴。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He plays the ______ very well.",
+   "opts": [
+    "piano",
+    "pianist",
+    "pianos",
+    "play"
+   ],
+   "why": "play the piano 弹钢琴，the 后面接单数 piano。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The music shop sells many ______. (piano)",
+   "ans": "pianos",
+   "why": "piano 的复数只加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 piano、pianist 中选一个，用适当形式填空。",
+   "stem": "Lang Lang is a famous ______.",
+   "ans": "pianist",
+   "why": "郎朗是钢琴家 pianist；piano 是钢琴。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My sister is learning to play piano.",
+   "ans": "play piano → play the piano",
+   "why": "弹奏乐器，乐器前加 the。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "弹钢琴是我的爱好。",
+   "stem": "______ the piano is my hobby.",
+   "ans": "Playing",
+   "why": "动名词 Playing 作主语。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The pianos in the shop ______ very expensive.",
+   "opts": [
+    "are",
+    "is",
+    "be",
+    "was"
+   ],
+   "why": "主语 pianos 复数，谓语用 are。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

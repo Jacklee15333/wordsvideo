@@ -1,0 +1,96 @@
+{
+ "单词": "explorer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他是什么人？\n听：He is a famous explorer.\nA. 科学家\nB. 探险家\nC. 作家\nD. 演员",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Zheng He was a great Chinese ______.\nA. explore\nB. exploration\nC. explorer\nD. explosion",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Many ______ have tried to reach the North Pole. (explorer)\n考点：变形",
+  "题目4": "【选词填空】从 explorer、exploration 中选一个，用适当形式填空。\n题干：Space ______ costs a lot of money.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The explorer were lost in the jungle.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：An explorer travels to places that are ______.\nA. unknown\nB. famous\nC. crowded\nD. busy\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The explorers ______ a new river last year.\nA. discover\nB. discovered\nC. discovers\nD. discovering\n考点：用法",
+  "答案": "【1】B（探险家）\n讲解：explorer 探险家。\n【2】C（explorer）\n讲解：郑和是伟大的航海探险家 explorer。\n【3】explorers\n讲解：many 后面用复数 explorers。\n【4】exploration\n讲解：“太空探索”是这件事，用 exploration。\n【5】were → was\n讲解：主语 explorer 是单数，用 was。\n【6】A（unknown）\n讲解：探险家去人们不了解的地方。\n【7】B（discovered）\n讲解：last year 用过去式 discovered。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他是什么人？",
+   "listen": "He is a famous explorer.",
+   "opts": [
+    "探险家",
+    "科学家",
+    "作家",
+    "演员"
+   ],
+   "why": "explorer 探险家。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Zheng He was a great Chinese ______.",
+   "opts": [
+    "explorer",
+    "explore",
+    "exploration",
+    "explosion"
+   ],
+   "why": "郑和是伟大的航海探险家 explorer。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Many ______ have tried to reach the North Pole. (explorer)",
+   "ans": "explorers",
+   "why": "many 后面用复数 explorers。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 explorer、exploration 中选一个，用适当形式填空。",
+   "stem": "Space ______ costs a lot of money.",
+   "ans": "exploration",
+   "why": "“太空探索”是这件事，用 exploration。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The explorer were lost in the jungle.",
+   "ans": "were → was",
+   "why": "主语 explorer 是单数，用 was。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An explorer travels to places that are ______.",
+   "opts": [
+    "unknown",
+    "famous",
+    "crowded",
+    "busy"
+   ],
+   "why": "探险家去人们不了解的地方。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The explorers ______ a new river last year.",
+   "opts": [
+    "discovered",
+    "discover",
+    "discovers",
+    "discovering"
+   ],
+   "why": "last year 用过去式 discovered。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

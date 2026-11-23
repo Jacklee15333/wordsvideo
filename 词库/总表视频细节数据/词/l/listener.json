@@ -1,0 +1,94 @@
+{
+ "单词": "listener",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：主持人感谢了谁？\n听：The host thanked all the listeners for calling in.\nA. 所有歌手\nB. 所有老师\nC. 所有听众\nD. 所有观众",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She is a good ______. She always hears me out.\nA. listen\nB. listening\nC. listener\nD. listened\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The radio show has millions of ______. (listener)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Please listen me carefully.\n考点：短语",
+  "题目5": "【选词填空】从 listener、audience 中选一个，用适当形式填空。\n题干：The ______ in the hall clapped loudly.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他是一个很好的倾听者。\n题干：He is a very ______ ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A listener is a person who ______.\nA. speaks\nB. writes\nC. listens\nD. sings\n考点：词性转换",
+  "答案": "【1】C（所有听众）\n讲解：listeners 听众。\n【2】C（listener）\n讲解：a good 后面要名词 listener（倾听者）。\n【3】listeners\n讲解：millions of 后面用复数 listeners。\n【4】listen me → listen to me\n讲解：listen 带宾语要加 to。\n【5】audience\n讲解：一屋子“听众”整体说 audience。\n【6】good；listener\n讲解：a good listener 很好的倾听者。\n【7】C（listens）\n讲解：listener 听的人。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：主持人感谢了谁？",
+   "listen": "The host thanked all the listeners for calling in.",
+   "opts": [
+    "所有听众",
+    "所有歌手",
+    "所有老师",
+    "所有观众"
+   ],
+   "why": "listeners 听众。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She is a good ______. She always hears me out.",
+   "opts": [
+    "listener",
+    "listen",
+    "listening",
+    "listened"
+   ],
+   "why": "a good 后面要名词 listener（倾听者）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The radio show has millions of ______. (listener)",
+   "ans": "listeners",
+   "why": "millions of 后面用复数 listeners。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please listen me carefully.",
+   "ans": "listen me → listen to me",
+   "why": "listen 带宾语要加 to。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 listener、audience 中选一个，用适当形式填空。",
+   "stem": "The ______ in the hall clapped loudly.",
+   "ans": "audience",
+   "why": "一屋子“听众”整体说 audience。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是一个很好的倾听者。",
+   "stem": "He is a very ______ ______.",
+   "ans": "good；listener",
+   "why": "a good listener 很好的倾听者。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A listener is a person who ______.",
+   "opts": [
+    "listens",
+    "speaks",
+    "writes",
+    "sings"
+   ],
+   "why": "listener 听的人。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

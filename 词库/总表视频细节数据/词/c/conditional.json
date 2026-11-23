@@ -1,0 +1,97 @@
+{
+ "单词": "conditional",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这份工作的录用怎么样？\n听：The job offer is conditional on my health check.\nA. 已经确定\nB. 被取消了\nC. 不需要条件\nD. 要看体检结果",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The loan is ______ on your income.\nA. conditional\nB. condition\nC. conditions\nD. conditioned\n考点：短语",
+  "题目3": "【选词填空】从 conditional、unconditional 中选一个，用适当形式填空。\n题干：A mother's love is ______; she loves you no matter what.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are some ______ to this offer. (conditional)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The plan are conditional on the weather.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A conditional sentence often begins with ______.\nA. because\nB. and\nC. if\nD. but\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The opposite of conditional is ______.\nA. unconditional\nB. disconditional\nC. inconditional\nD. nonconditional\n考点：易混",
+  "答案": "【1】D（要看体检结果）\n讲解：conditional on 以……为条件。\n【2】A（conditional）\n讲解：be conditional on 以……为条件。\n【3】unconditional\n讲解：不管怎样都爱，是“无条件的”。\n【4】conditions\n讲解：some 后面接名词复数 conditions。\n【5】are → is\n讲解：主语 plan 是单数，用 is。\n【6】C（if）\n讲解：条件句常以 if 开头。\n【7】A（unconditional）\n讲解：conditional 的反义是 unconditional。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这份工作的录用怎么样？",
+   "listen": "The job offer is conditional on my health check.",
+   "opts": [
+    "要看体检结果",
+    "已经确定",
+    "被取消了",
+    "不需要条件"
+   ],
+   "why": "conditional on 以……为条件。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The loan is ______ on your income.",
+   "opts": [
+    "conditional",
+    "condition",
+    "conditions",
+    "conditioned"
+   ],
+   "why": "be conditional on 以……为条件。",
+   "kd": "短语"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 conditional、unconditional 中选一个，用适当形式填空。",
+   "stem": "A mother's love is ______; she loves you no matter what.",
+   "ans": "unconditional",
+   "why": "不管怎样都爱，是“无条件的”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are some ______ to this offer. (conditional)",
+   "ans": "conditions",
+   "why": "some 后面接名词复数 conditions。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The plan are conditional on the weather.",
+   "ans": "are → is",
+   "why": "主语 plan 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A conditional sentence often begins with ______.",
+   "opts": [
+    "if",
+    "because",
+    "and",
+    "but"
+   ],
+   "why": "条件句常以 if 开头。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The opposite of conditional is ______.",
+   "opts": [
+    "unconditional",
+    "disconditional",
+    "inconditional",
+    "nonconditional"
+   ],
+   "why": "conditional 的反义是 unconditional。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

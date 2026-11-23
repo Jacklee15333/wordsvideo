@@ -1,0 +1,92 @@
+{
+ "单词": "cup",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人想要什么？\n听：Can I have a cup of tea, please?\nA. 一杯咖啡\nB. 一杯茶\nC. 一杯水\nD. 一杯果汁",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I'd like two ______ of coffee.\nA. cup\nB. cups\nC. cupful\nD. cupes\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Our team won the ______ last year. (cup)",
+  "题目4": "【选词填空】从 cup、glass 中选一个，用适当形式填空。\n题干：He drank a ______ of cold water.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Would you like a cup coffee?",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这不是我喜欢的东西。\n题干：It's not my ______ ______ tea.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There are three ______ on the table.\nA. cup\nB. cups\nC. cupes\nD. a cup\n考点：变形",
+  "答案": "【1】B（一杯茶）\n讲解：a cup of tea 一杯茶。\n【2】B（cups）\n讲解：two 后接复数。\n【3】cup\n讲解：win the cup 赢得奖杯。\n【4】glass\n讲解：喝冷水常用玻璃杯 glass。\n【5】cup coffee → cup of coffee\n讲解：a cup of 一杯……，不能少 of。\n【6】cup；of\n讲解：not my cup of tea 不是我喜欢的。\n【7】B（cups）\n讲解：three 后接复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想要什么？",
+   "listen": "Can I have a cup of tea, please?",
+   "opts": [
+    "一杯茶",
+    "一杯咖啡",
+    "一杯水",
+    "一杯果汁"
+   ],
+   "why": "a cup of tea 一杯茶。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I'd like two ______ of coffee.",
+   "opts": [
+    "cups",
+    "cup",
+    "cupful",
+    "cupes"
+   ],
+   "why": "two 后接复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Our team won the ______ last year. (cup)",
+   "ans": "cup",
+   "why": "win the cup 赢得奖杯。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 cup、glass 中选一个，用适当形式填空。",
+   "stem": "He drank a ______ of cold water.",
+   "ans": "glass",
+   "why": "喝冷水常用玻璃杯 glass。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Would you like a cup coffee?",
+   "ans": "cup coffee → cup of coffee",
+   "why": "a cup of 一杯……，不能少 of。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这不是我喜欢的东西。",
+   "stem": "It's not my ______ ______ tea.",
+   "ans": "cup；of",
+   "why": "not my cup of tea 不是我喜欢的。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are three ______ on the table.",
+   "opts": [
+    "cups",
+    "cup",
+    "cupes",
+    "a cup"
+   ],
+   "why": "three 后接复数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

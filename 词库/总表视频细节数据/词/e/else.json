@@ -1,0 +1,94 @@
+{
+ "单词": "else",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人问什么？\n听：What else do you want?\nA. 不要了\nB. 还要别的吗\nC. 要两个\nD. 要水",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Is there anything ______ you need?\nA. else\nB. other\nC. others\nD. another",
+  "题目3": "【选词填空】从 else、other 中选一个，用适当形式填空。\n题干：Do you have any ______ questions?",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：I want something other.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：别的地方都关门了。\n题干：Everything is closed ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Or else\" means \"______\".\nA. also\nB. again\nC. too\nD. otherwise\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Else\" has no comparative form. We don't say \"______\".\nA. anything else\nB. something else\nC. elser\nD. what else\n考点：变形",
+  "答案": "【1】B（还要别的吗）\n讲解：what else 别的什么。\n【2】A（else）\n讲解：不定代词后面用 else。\n【3】other\n讲解：名词前面用 other。\n【4】other → else\n讲解：不定代词后面用 else。\n【5】elsewhere\n讲解：在别处 elsewhere。\n【6】D（otherwise）\n讲解：or else 否则。\n【7】C（elser）\n讲解：else 没有比较级。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人问什么？",
+   "listen": "What else do you want?",
+   "opts": [
+    "还要别的吗",
+    "不要了",
+    "要两个",
+    "要水"
+   ],
+   "why": "what else 别的什么。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Is there anything ______ you need?",
+   "opts": [
+    "else",
+    "other",
+    "others",
+    "another"
+   ],
+   "why": "不定代词后面用 else。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 else、other 中选一个，用适当形式填空。",
+   "stem": "Do you have any ______ questions?",
+   "ans": "other",
+   "why": "名词前面用 other。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I want something other.",
+   "ans": "other → else",
+   "why": "不定代词后面用 else。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "别的地方都关门了。",
+   "stem": "Everything is closed ______.",
+   "ans": "elsewhere",
+   "why": "在别处 elsewhere。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Or else\" means \"______\".",
+   "opts": [
+    "otherwise",
+    "also",
+    "again",
+    "too"
+   ],
+   "why": "or else 否则。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Else\" has no comparative form. We don't say \"______\".",
+   "opts": [
+    "elser",
+    "anything else",
+    "something else",
+    "what else"
+   ],
+   "why": "else 没有比较级。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

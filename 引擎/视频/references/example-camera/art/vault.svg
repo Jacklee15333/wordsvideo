@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720">
+  <defs>
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9DABF"/><stop offset="1" stop-color="#C9B28C"/></linearGradient>
+    <linearGradient id="ceil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A4632"/><stop offset=".55" stop-color="#7A6347"/><stop offset="1" stop-color="#8E7656"/></linearGradient>
+    <linearGradient id="back" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C8AE84"/><stop offset="1" stop-color="#A88E66"/></linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A7458"/><stop offset="1" stop-color="#A88F6C"/></linearGradient>
+    <radialGradient id="win" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF7D6"/><stop offset="1" stop-color="#FFE7A0"/></radialGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFE9A8" stop-opacity=".55"/><stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="500" cy="694" rx="440" ry="20" fill="#000" opacity=".14"/>
+  <path d="M120 682 L120 400 A380 380 0 0 1 880 400 L880 682 Z" fill="url(#stone)"/>
+  <path d="M210 682 L210 400 A290 290 0 0 1 790 400 L790 682 Z" fill="url(#ceil)"/>
+  <path d="M210 400 L360 452 L360 640 L210 682 Z" fill="#6E5940" opacity=".9"/>
+  <path d="M790 400 L640 452 L640 640 L790 682 Z" fill="#6E5940" opacity=".9"/>
+  <path d="M250 412 A250 250 0 0 1 750 412" fill="none" stroke="#4B3A28" stroke-width="5" opacity=".45"/>
+  <path d="M288 424 A212 212 0 0 1 712 424" fill="none" stroke="#4B3A28" stroke-width="4" opacity=".45"/>
+  <path d="M324 436 A176 176 0 0 1 676 436" fill="none" stroke="#4B3A28" stroke-width="3" opacity=".45"/>
+  <path d="M360 640 L360 452 A140 140 0 0 1 640 452 L640 640 Z" fill="url(#back)"/>
+  <path d="M210 682 L790 682 L640 640 L360 640 Z" fill="url(#floor)"/>
+  <g stroke="#6E5A40" stroke-width="2" opacity=".5"><line x1="400" y1="640" x2="330" y2="682"/><line x1="460" y1="640" x2="440" y2="682"/><line x1="540" y1="640" x2="560" y2="682"/><line x1="600" y1="640" x2="670" y2="682"/><line x1="290" y1="660" x2="710" y2="660"/></g>
+  <circle cx="500" cy="540" r="70" fill="url(#glow)"/>
+  <path d="M478 590 L478 540 A22 22 0 0 1 522 540 L522 590 Z" fill="url(#win)" stroke="#8E7656" stroke-width="4"/>
+  <line x1="500" y1="520" x2="500" y2="590" stroke="#8E7656" stroke-width="3"/>
+  <path d="M210.0 400.0 L120.0 400.0 A380 380 0 0 1 128.3 321.0 L216.3 339.7 A290 290 0 0 0 210.0 400.0 Z" fill="#DCC9A6" stroke="#A48B66" stroke-width="3"/>
+  <path d="M216.3 339.7 L128.3 321.0 A380 380 0 0 1 152.9 245.4 L235.1 282.0 A290 290 0 0 0 216.3 339.7 Z" fill="#EADBBF" stroke="#A48B66" stroke-width="3"/>
+  <path d="M235.1 282.0 L152.9 245.4 A380 380 0 0 1 192.6 176.6 L265.4 229.5 A290 290 0 0 0 235.1 282.0 Z" fill="#DCC9A6" stroke="#A48B66" stroke-width="3"/>
+  <path d="M265.4 229.5 L192.6 176.6 A380 380 0 0 1 245.7 117.6 L306.0 184.5 A290 290 0 0 0 265.4 229.5 Z" fill="#EADBBF" stroke="#A48B66" stroke-width="3"/>
+  <path d="M306.0 184.5 L245.7 117.6 A380 380 0 0 1 310.0 70.9 L355.0 148.9 A290 290 0 0 0 306.0 184.5 Z" fill="#DCC9A6" stroke="#A48B66" stroke-width="3"/>
+  <path d="M355.0 148.9 L310.0 70.9 A380 380 0 0 1 382.6 38.6 L410.4 124.2 A290 290 0 0 0 355.0 148.9 Z" fill="#EADBBF" stroke="#A48B66" stroke-width="3"/>
+  <path d="M410.4 124.2 L382.6 38.6 A380 380 0 0 1 460.3 22.1 L469.7 111.6 A290 290 0 0 0 410.4 124.2 Z" fill="#DCC9A6" stroke="#A48B66" stroke-width="3"/>
+  <path d="M469.7 111.6 L460.3 22.1 A380 380 0 0 1 539.7 22.1 L530.3 111.6 A290 290 0 0 0 469.7 111.6 Z" fill="#F2E4C8" stroke="#A48B66" stroke-width="3"/>
+  <path d="M530.3 111.6 L539.7 22.1 A380 380 0 0 1 617.4 38.6 L589.6 124.2 A290 290 0 0 0 530.3 111.6 Z" fill="#DCC9A6" stroke="#A48B66" stroke-width="3"/>
+  <path d="M589.6 124.2 L617.4 38.6 A380 380 0 0 1 690.0 70.9 L645.0 148.9 A290 290 0 0 0 589.6 124.2 Z" fill="#EADBBF" stroke="#A48B66" stroke-width="3"/>
+  <path d="M645.0 148.9 L690.0 70.9 A380 380 0 0 1 754.3 117.6 L694.0 184.5 A290 290 0 0 0 645.0 148.9 Z" fill="#DCC9A6" stroke="#A48B66" stroke-width="3"/>
+  <path d="M694.0 184.5 L754.3 117.6 A380 380 0 0 1 807.4 176.6 L734.6 229.5 A290 290 0 0 0 694.0 184.5 Z" fill="#EADBBF" stroke="#A48B66" stroke-width="3"/>
+  <path d="M734.6 229.5 L807.4 176.6 A380 380 0 0 1 847.1 245.4 L764.9 282.0 A290 290 0 0 0 734.6 229.5 Z" fill="#DCC9A6" stroke="#A48B66" stroke-width="3"/>
+  <path d="M764.9 282.0 L847.1 245.4 A380 380 0 0 1 871.7 321.0 L783.7 339.7 A290 290 0 0 0 764.9 282.0 Z" fill="#EADBBF" stroke="#A48B66" stroke-width="3"/>
+  <path d="M783.7 339.7 L871.7 321.0 A380 380 0 0 1 880.0 400.0 L790.0 400.0 A290 290 0 0 0 783.7 339.7 Z" fill="#DCC9A6" stroke="#A48B66" stroke-width="3"/>
+  <line x1="120" y1="452" x2="210" y2="452" stroke="#A48B66" stroke-width="3"/>
+  <line x1="790" y1="452" x2="880" y2="452" stroke="#A48B66" stroke-width="3"/>
+  <line x1="120" y1="504" x2="210" y2="504" stroke="#A48B66" stroke-width="3"/>
+  <line x1="790" y1="504" x2="880" y2="504" stroke="#A48B66" stroke-width="3"/>
+  <line x1="120" y1="556" x2="210" y2="556" stroke="#A48B66" stroke-width="3"/>
+  <line x1="790" y1="556" x2="880" y2="556" stroke="#A48B66" stroke-width="3"/>
+  <line x1="120" y1="608" x2="210" y2="608" stroke="#A48B66" stroke-width="3"/>
+  <line x1="790" y1="608" x2="880" y2="608" stroke="#A48B66" stroke-width="3"/>
+  <line x1="120" y1="660" x2="210" y2="660" stroke="#A48B66" stroke-width="3"/>
+  <line x1="790" y1="660" x2="880" y2="660" stroke="#A48B66" stroke-width="3"/>
+  <line x1="142" y1="400" x2="142" y2="452" stroke="#A48B66" stroke-width="3"/>
+  <line x1="812" y1="400" x2="812" y2="452" stroke="#A48B66" stroke-width="3"/>
+  <line x1="187" y1="452" x2="187" y2="504" stroke="#A48B66" stroke-width="3"/>
+  <line x1="857" y1="452" x2="857" y2="504" stroke="#A48B66" stroke-width="3"/>
+  <line x1="142" y1="504" x2="142" y2="556" stroke="#A48B66" stroke-width="3"/>
+  <line x1="812" y1="504" x2="812" y2="556" stroke="#A48B66" stroke-width="3"/>
+  <line x1="187" y1="556" x2="187" y2="608" stroke="#A48B66" stroke-width="3"/>
+  <line x1="857" y1="556" x2="857" y2="608" stroke="#A48B66" stroke-width="3"/>
+  <line x1="142" y1="608" x2="142" y2="660" stroke="#A48B66" stroke-width="3"/>
+  <line x1="812" y1="608" x2="812" y2="660" stroke="#A48B66" stroke-width="3"/>
+  <line x1="187" y1="660" x2="187" y2="680" stroke="#A48B66" stroke-width="3"/>
+  <line x1="857" y1="660" x2="857" y2="680" stroke="#A48B66" stroke-width="3"/>
+  <path d="M120 682 L120 400 A380 380 0 0 1 880 400 L880 682" fill="none" stroke="#9C8462" stroke-width="5"/>
+  <line x1="90" y1="682" x2="910" y2="682" stroke="#9C8462" stroke-width="6"/>
+</svg>

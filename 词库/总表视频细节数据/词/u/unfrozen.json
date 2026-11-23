@@ -1,0 +1,92 @@
+{
+ "单词": "unfrozen",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：鸡肉怎么样了？\n听：The chicken is now unfrozen.\nA. 坏了\nB. 化冻了\nC. 烧焦了\nD. 被吃了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Use only ______ meat for this dish.\nA. frozen\nB. freeze\nC. unfrozen\nD. unfreeze",
+  "题目3": "【选词填空】从 thaw、freeze 中选一个，用适当形式填空。\n题干：Leave the meat out to ______ before cooking.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The lake ______ last night. (freeze)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Please defrost the chicken before you cooks it.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Please ______ the chicken before cooking.\nA. defrost\nB. unfrozen\nC. frozen\nD. froze\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：湖面还冻着。\n题干：The lake is still ______.\n考点：词性转换",
+  "答案": "【1】B（化冻了）\n讲解：unfrozen 未冻结的。\n【2】C（unfrozen）\n讲解：没有冻着的肉 unfrozen meat。\n【3】thaw\n讲解：化冻 thaw。\n【4】froze\n讲解：last night 用过去式 froze。\n【5】cooks → cook\n讲解：主语 you，用 cook。\n【6】A（defrost）\n讲解：“化冻”也可用 defrost。\n【7】frozen\n讲解：还冻着 frozen，和 unfrozen 相反。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：鸡肉怎么样了？",
+   "listen": "The chicken is now unfrozen.",
+   "opts": [
+    "化冻了",
+    "坏了",
+    "烧焦了",
+    "被吃了"
+   ],
+   "why": "unfrozen 未冻结的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Use only ______ meat for this dish.",
+   "opts": [
+    "unfrozen",
+    "frozen",
+    "freeze",
+    "unfreeze"
+   ],
+   "why": "没有冻着的肉 unfrozen meat。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 thaw、freeze 中选一个，用适当形式填空。",
+   "stem": "Leave the meat out to ______ before cooking.",
+   "ans": "thaw",
+   "why": "化冻 thaw。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The lake ______ last night. (freeze)",
+   "ans": "froze",
+   "why": "last night 用过去式 froze。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please defrost the chicken before you cooks it.",
+   "ans": "cooks → cook",
+   "why": "主语 you，用 cook。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please ______ the chicken before cooking.",
+   "opts": [
+    "defrost",
+    "unfrozen",
+    "frozen",
+    "froze"
+   ],
+   "why": "“化冻”也可用 defrost。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "湖面还冻着。",
+   "stem": "The lake is still ______.",
+   "ans": "frozen",
+   "why": "还冻着 frozen，和 unfrozen 相反。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

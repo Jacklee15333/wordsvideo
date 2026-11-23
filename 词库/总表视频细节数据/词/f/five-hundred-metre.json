@@ -1,0 +1,92 @@
+{
+ "单词": "five-hundred-metre",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他参加了什么比赛？\n听：He took part in the five-hundred-metre race.\nA. 五千米赛跑\nB. 五百米赛跑\nC. 跳远\nD. 游泳",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She won the ______ race.\nA. five-hundred-metres\nB. five-hundreds-metre\nC. five-hundred metres\nD. five-hundred-metre",
+  "题目3": "【选词填空】从 metre、metres 中选一个，用适当形式填空。\n题干：He ran five hundred ______ in 80 seconds.\n考点：变形",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The race is five hundred ______ long. (metre)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He win the five-hundred-metre race yesterday.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A \"ten-______ walk\" means a walk of ten minutes.\nA. minute\nB. minutes\nC. minuted\nD. minuting\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他跑了五百米。\n题干：He ran five hundred ______.\n考点：变形",
+  "答案": "【1】B（五百米赛跑）\n讲解：five-hundred-metre 五百米的。\n【2】D（five-hundred-metre）\n讲解：作定语的复合形容词，名词 metre 用单数。\n【3】metres\n讲解：作名词时 five hundred 后接复数 metres。\n【4】metres\n讲解：作名词时用复数 metres。\n【5】win → won\n讲解：yesterday 用过去式 won。\n【6】A（minute）\n讲解：同样的构词：复合形容词里的名词用单数。\n【7】metres\n讲解：作名词用复数 metres。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他参加了什么比赛？",
+   "listen": "He took part in the five-hundred-metre race.",
+   "opts": [
+    "五百米赛跑",
+    "五千米赛跑",
+    "跳远",
+    "游泳"
+   ],
+   "why": "five-hundred-metre 五百米的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She won the ______ race.",
+   "opts": [
+    "five-hundred-metre",
+    "five-hundred-metres",
+    "five-hundreds-metre",
+    "five-hundred metres"
+   ],
+   "why": "作定语的复合形容词，名词 metre 用单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 metre、metres 中选一个，用适当形式填空。",
+   "stem": "He ran five hundred ______ in 80 seconds.",
+   "ans": "metres",
+   "why": "作名词时 five hundred 后接复数 metres。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The race is five hundred ______ long. (metre)",
+   "ans": "metres",
+   "why": "作名词时用复数 metres。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He win the five-hundred-metre race yesterday.",
+   "ans": "win → won",
+   "why": "yesterday 用过去式 won。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A \"ten-______ walk\" means a walk of ten minutes.",
+   "opts": [
+    "minute",
+    "minutes",
+    "minuted",
+    "minuting"
+   ],
+   "why": "同样的构词：复合形容词里的名词用单数。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他跑了五百米。",
+   "stem": "He ran five hundred ______.",
+   "ans": "metres",
+   "why": "作名词用复数 metres。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

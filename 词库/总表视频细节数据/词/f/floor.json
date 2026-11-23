@@ -1,0 +1,93 @@
+{
+ "单词": "floor",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人住在几楼？\n听：I live on the fifth floor.\nA. 四楼\nB. 五楼\nC. 三楼\nD. 一楼",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The book fell onto the ______ of the classroom.\nA. floor\nB. ground\nC. land\nD. earth\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：This building has twenty ______. (floor)\n考点：变形",
+  "题目4": "【选词填空】从 floor、ground 中选一个，用适当形式填空。\n题干：The children are playing on the ______ in the park.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：My classroom is in the third floor.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他家住在十层。\n题干：His home is ______ the tenth ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：How many ______ are there in your school building?\nA. floor\nB. floorings\nC. ground\nD. floors\n考点：变形",
+  "答案": "【1】B（五楼）\n讲解：the fifth floor 五楼。\n【2】A（floor）\n讲解：屋里的地板用 floor。\n【3】floors\n讲解：twenty 后接复数。\n【4】ground\n讲解：户外的地面用 ground。\n【5】in → on\n讲解：在某层楼用 on。\n【6】on；floor\n讲解：on the … floor 在……层。\n【7】D（floors）\n讲解：how many 后接复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人住在几楼？",
+   "listen": "I live on the fifth floor.",
+   "opts": [
+    "五楼",
+    "四楼",
+    "三楼",
+    "一楼"
+   ],
+   "why": "the fifth floor 五楼。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The book fell onto the ______ of the classroom.",
+   "opts": [
+    "floor",
+    "ground",
+    "land",
+    "earth"
+   ],
+   "why": "屋里的地板用 floor。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "This building has twenty ______. (floor)",
+   "ans": "floors",
+   "why": "twenty 后接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 floor、ground 中选一个，用适当形式填空。",
+   "stem": "The children are playing on the ______ in the park.",
+   "ans": "ground",
+   "why": "户外的地面用 ground。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My classroom is in the third floor.",
+   "ans": "in → on",
+   "why": "在某层楼用 on。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他家住在十层。",
+   "stem": "His home is ______ the tenth ______.",
+   "ans": "on；floor",
+   "why": "on the … floor 在……层。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "How many ______ are there in your school building?",
+   "opts": [
+    "floors",
+    "floor",
+    "floorings",
+    "ground"
+   ],
+   "why": "how many 后接复数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

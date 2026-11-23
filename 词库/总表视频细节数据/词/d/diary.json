@@ -1,0 +1,92 @@
+{
+ "单词": "diary",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人每天晚上做什么？\n听：I keep a diary every night.\nA. 记日记\nB. 看电视\nC. 写作业\nD. 读书",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She writes in her ______ before bed.\nA. dairy\nB. daily\nC. diary\nD. dial",
+  "题目3": "【选词填空】从 diary、dairy 中选一个，用适当形式填空。\n题干：Milk and cheese are ______ products.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：I have kept three ______ since 2020. (diary)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He keeps a diary since he was ten.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：你有记日记的习惯吗？\n题干：Do you ______ ______ ______?\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In British English, \"I'll check my diary\" can mean I'll check my ______.\nA. milk\nB. phone\nC. schedule\nD. dictionary\n考点：用法",
+  "答案": "【1】A（记日记）\n讲解：keep a diary 记日记。\n【2】C（diary）\n讲解：日记是 diary。\n【3】dairy\n讲解：乳制品是 dairy，和 diary 只差字母位置。\n【4】diaries\n讲解：three 后面用复数，y 变 i 加 es。\n【5】keeps → has kept\n讲解：since 表示从过去到现在，用现在完成时。\n【6】keep；a；diary\n讲解：keep a diary 记日记。\n【7】C（schedule）\n讲解：英式 diary 也指记安排的日程本。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人每天晚上做什么？",
+   "listen": "I keep a diary every night.",
+   "opts": [
+    "记日记",
+    "看电视",
+    "写作业",
+    "读书"
+   ],
+   "why": "keep a diary 记日记。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She writes in her ______ before bed.",
+   "opts": [
+    "diary",
+    "dairy",
+    "daily",
+    "dial"
+   ],
+   "why": "日记是 diary。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 diary、dairy 中选一个，用适当形式填空。",
+   "stem": "Milk and cheese are ______ products.",
+   "ans": "dairy",
+   "why": "乳制品是 dairy，和 diary 只差字母位置。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I have kept three ______ since 2020. (diary)",
+   "ans": "diaries",
+   "why": "three 后面用复数，y 变 i 加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He keeps a diary since he was ten.",
+   "ans": "keeps → has kept",
+   "why": "since 表示从过去到现在，用现在完成时。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你有记日记的习惯吗？",
+   "stem": "Do you ______ ______ ______?",
+   "ans": "keep；a；diary",
+   "why": "keep a diary 记日记。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In British English, \"I'll check my diary\" can mean I'll check my ______.",
+   "opts": [
+    "schedule",
+    "milk",
+    "phone",
+    "dictionary"
+   ],
+   "why": "英式 diary 也指记安排的日程本。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

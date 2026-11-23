@@ -1,0 +1,94 @@
+{
+ "单词": "other",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人问对方还有没有什么？\n听：Do you have any other questions?\nA. 同样的问题\nB. 别的问题\nC. 很难的问题\nD. 很多问题",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I have two sisters. One is a doctor; the ______ is a teacher.\nA. another\nB. others\nC. else\nD. other\n考点：易混",
+  "题目3": "【选词填空】从 other、others 中选一个，用适当形式填空。\n题干：Some students like music; ______ like sports.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Can I have ______ cup of tea? (other)\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He is taller than any others boy in his class.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：学生们一个接一个走进了教室。\n题干：The students came in one after ______.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：I don't like this one. Show me ______ one.\nA. other\nB. others\nC. the others\nD. another\n考点：易混",
+  "答案": "【1】B（别的问题）\n讲解：other questions 别的问题。\n【2】D（other）\n讲解：两个中的另一个用 the other。\n【3】others\n讲解：代词“别的人”单独用 others。\n【4】another\n讲解：再要一杯，用 another + 单数名词。\n【5】others → other\n讲解：other 作形容词，后面接名词，不加 s。\n【6】another\n讲解：one after another 一个接一个。\n【7】D（another）\n讲解：三个以上中的“另一个”用 another。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人问对方还有没有什么？",
+   "listen": "Do you have any other questions?",
+   "opts": [
+    "别的问题",
+    "同样的问题",
+    "很难的问题",
+    "很多问题"
+   ],
+   "why": "other questions 别的问题。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I have two sisters. One is a doctor; the ______ is a teacher.",
+   "opts": [
+    "other",
+    "another",
+    "others",
+    "else"
+   ],
+   "why": "两个中的另一个用 the other。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 other、others 中选一个，用适当形式填空。",
+   "stem": "Some students like music; ______ like sports.",
+   "ans": "others",
+   "why": "代词“别的人”单独用 others。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Can I have ______ cup of tea? (other)",
+   "ans": "another",
+   "why": "再要一杯，用 another + 单数名词。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is taller than any others boy in his class.",
+   "ans": "others → other",
+   "why": "other 作形容词，后面接名词，不加 s。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "学生们一个接一个走进了教室。",
+   "stem": "The students came in one after ______.",
+   "ans": "another",
+   "why": "one after another 一个接一个。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I don't like this one. Show me ______ one.",
+   "opts": [
+    "another",
+    "other",
+    "others",
+    "the others"
+   ],
+   "why": "三个以上中的“另一个”用 another。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

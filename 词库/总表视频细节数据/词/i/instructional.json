@@ -1,0 +1,95 @@
+{
+ "单词": "instructional",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这是什么视频？\n听：This is an instructional video about cooking.\nA. 广告\nB. 教学视频\nC. 电影\nD. 新闻",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The company makes ______ videos for schools.\nA. instruct\nB. instructional\nC. instruction\nD. instructor",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Follow the ______ carefully. (instructional)\n考点：词性转换",
+  "题目4": "【选词填空】从 instructional、international 中选一个，用适当形式填空。\n题干：English is an ______ language.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：These instructional book are useful.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Instructional\" is close in meaning to \"______\".\nA. emotional\nB. exceptional\nC. national\nD. educational\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Instructional videos show you ______ to do things.\nA. what\nB. which\nC. who\nD. how\n考点：用法",
+  "答案": "【1】B（教学视频）\n讲解：instructional 教学的。\n【2】B（instructional）\n讲解：修饰 videos 用形容词 instructional。\n【3】instructions\n讲解：the 后面要名词，说明用复数 instructions。\n【4】international\n讲解：国际语言用 international。\n【5】book → books\n讲解：these 后面用复数。\n【6】D（educational）\n讲解：instructional 和 educational 都是“教育的”。\n【7】D（how）\n讲解：how to do 怎样做。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这是什么视频？",
+   "listen": "This is an instructional video about cooking.",
+   "opts": [
+    "教学视频",
+    "广告",
+    "电影",
+    "新闻"
+   ],
+   "why": "instructional 教学的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The company makes ______ videos for schools.",
+   "opts": [
+    "instructional",
+    "instruct",
+    "instruction",
+    "instructor"
+   ],
+   "why": "修饰 videos 用形容词 instructional。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Follow the ______ carefully. (instructional)",
+   "ans": "instructions",
+   "why": "the 后面要名词，说明用复数 instructions。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 instructional、international 中选一个，用适当形式填空。",
+   "stem": "English is an ______ language.",
+   "ans": "international",
+   "why": "国际语言用 international。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "These instructional book are useful.",
+   "ans": "book → books",
+   "why": "these 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Instructional\" is close in meaning to \"______\".",
+   "opts": [
+    "educational",
+    "emotional",
+    "exceptional",
+    "national"
+   ],
+   "why": "instructional 和 educational 都是“教育的”。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Instructional videos show you ______ to do things.",
+   "opts": [
+    "how",
+    "what",
+    "which",
+    "who"
+   ],
+   "why": "how to do 怎样做。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

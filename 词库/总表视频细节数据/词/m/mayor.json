@@ -1,0 +1,92 @@
+{
+ "单词": "mayor",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：谁来给新图书馆开馆？\n听：The mayor came to open the new library.\nA. 校长\nB. 市长\nC. 作家\nD. 医生",
+  "题目2": "【适当形式填空】用所给单词的适当形式填空。\n题干：The two ______ met in Beijing. (mayor)\n考点：变形",
+  "题目3": "【单项选择】选出最恰当的一项。\n题干：The ______ is the head of a city.\nA. major\nB. master\nC. mayor\nD. majority",
+  "题目4": "【选词填空】从 mayor、governor 中选一个，用适当形式填空。\n题干：The head of a state in America is the ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The mayor are visiting our school today.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：几位市长开了个会。\n题干：The ______ had a meeting.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The mayor made a ______ decision for the city.\nA. mayor\nB. majority\nC. master\nD. major\n考点：易混",
+  "答案": "【1】B（市长）\n讲解：mayor 市长。\n【2】mayors\n讲解：two 后面用复数 mayors。\n【3】C（mayor）\n讲解：城市的首长是市长 mayor。\n【4】governor\n讲解：美国的州长是 governor；mayor 是市长。\n【5】are → is\n讲解：主语 the mayor 是单数，用 is。\n【6】mayors\n讲解：几位市长用复数 mayors。\n【7】D（major）\n讲解：“重大的”决定用 major；mayor 是市长。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：谁来给新图书馆开馆？",
+   "listen": "The mayor came to open the new library.",
+   "opts": [
+    "市长",
+    "校长",
+    "作家",
+    "医生"
+   ],
+   "why": "mayor 市长。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The two ______ met in Beijing. (mayor)",
+   "ans": "mayors",
+   "why": "two 后面用复数 mayors。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ is the head of a city.",
+   "opts": [
+    "mayor",
+    "major",
+    "master",
+    "majority"
+   ],
+   "why": "城市的首长是市长 mayor。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 mayor、governor 中选一个，用适当形式填空。",
+   "stem": "The head of a state in America is the ______.",
+   "ans": "governor",
+   "why": "美国的州长是 governor；mayor 是市长。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The mayor are visiting our school today.",
+   "ans": "are → is",
+   "why": "主语 the mayor 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "几位市长开了个会。",
+   "stem": "The ______ had a meeting.",
+   "ans": "mayors",
+   "why": "几位市长用复数 mayors。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The mayor made a ______ decision for the city.",
+   "opts": [
+    "major",
+    "mayor",
+    "majority",
+    "master"
+   ],
+   "why": "“重大的”决定用 major；mayor 是市长。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

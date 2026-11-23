@@ -1,0 +1,92 @@
+{
+ "单词": "limit",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这条路限速多少？\n听：The speed limit here is 40 kilometres per hour.\nA. 六十公里\nB. 八十公里\nC. 四十公里\nD. 一百公里",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is a ______ to how much we can carry.\nA. limit\nB. limits\nC. limited\nD. limitation",
+  "题目3": "【选词填空】从 limit、restrict 中选一个，用适当形式填空。\n题干：Visitors are ______ to the ground floor.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We have ______ time, so let's hurry. (limit)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：You should limit you screen time.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The teacher ______ our speech to three minutes yesterday.\nA. limit\nB. limits\nC. limited\nD. limiting\n考点：变形",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：她知道自己的能力有限。\n题干：She knows her ______.\n考点：易混",
+  "答案": "【1】C（四十公里）\n讲解：speed limit 限速。\n【2】A（limit）\n讲解：a 后接单数 limit（限度）。\n【3】restricted\n讲解：“把……约束在范围里”用 restrict，被动 restricted。\n【4】limited\n讲解：名词前用形容词 limited（有限的）。\n【5】you → your\n讲解：名词前用形容词性物主代词 your。\n【6】C（limited）\n讲解：yesterday 用过去式 limited。\n【7】limitations\n讲解：能力上的“局限”用 limitations。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这条路限速多少？",
+   "listen": "The speed limit here is 40 kilometres per hour.",
+   "opts": [
+    "四十公里",
+    "六十公里",
+    "八十公里",
+    "一百公里"
+   ],
+   "why": "speed limit 限速。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is a ______ to how much we can carry.",
+   "opts": [
+    "limit",
+    "limits",
+    "limited",
+    "limitation"
+   ],
+   "why": "a 后接单数 limit（限度）。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 limit、restrict 中选一个，用适当形式填空。",
+   "stem": "Visitors are ______ to the ground floor.",
+   "ans": "restricted",
+   "why": "“把……约束在范围里”用 restrict，被动 restricted。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We have ______ time, so let's hurry. (limit)",
+   "ans": "limited",
+   "why": "名词前用形容词 limited（有限的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "You should limit you screen time.",
+   "ans": "you → your",
+   "why": "名词前用形容词性物主代词 your。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The teacher ______ our speech to three minutes yesterday.",
+   "opts": [
+    "limited",
+    "limit",
+    "limits",
+    "limiting"
+   ],
+   "why": "yesterday 用过去式 limited。",
+   "kd": "变形"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她知道自己的能力有限。",
+   "stem": "She knows her ______.",
+   "ans": "limitations",
+   "why": "能力上的“局限”用 limitations。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

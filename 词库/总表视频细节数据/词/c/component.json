@@ -1,0 +1,94 @@
+{
+ "单词": "component",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的电脑怎么了？\n听：One component of my computer is broken.\nA. 屏幕碎了\nB. 没有电\nC. 太旧了\nD. 一个部件坏了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：A car has thousands of ______.\nA. component\nB. compose\nC. composer\nD. components",
+  "题目3": "【选词填空】从 component、ingredient 中选一个，用适当形式填空。\n题干：Flour is the main ______ in bread.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Trust is an important components of friendship.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：面包是用面粉做的。\n题干：Bread is made ______ flour.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Exercise is a key ______ of a healthy life.\nA. composer\nB. compost\nC. compound\nD. component\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Component\" is close in meaning to \"______\".\nA. whole\nB. machine\nC. part\nD. price\n考点：用法",
+  "答案": "【1】D（一个部件坏了）\n讲解：component 组成部分、部件。\n【2】D（components）\n讲解：thousands of 后面用复数。\n【3】ingredient\n讲解：配方里的原料用 ingredient。\n【4】components → component\n讲解：an 后面用单数。\n【5】from\n讲解：看不出原料用 be made from。\n【6】D（component）\n讲解：“组成部分”用 component。\n【7】C（part）\n讲解：component 组成部分。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的电脑怎么了？",
+   "listen": "One component of my computer is broken.",
+   "opts": [
+    "一个部件坏了",
+    "屏幕碎了",
+    "没有电",
+    "太旧了"
+   ],
+   "why": "component 组成部分、部件。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A car has thousands of ______.",
+   "opts": [
+    "components",
+    "component",
+    "compose",
+    "composer"
+   ],
+   "why": "thousands of 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 component、ingredient 中选一个，用适当形式填空。",
+   "stem": "Flour is the main ______ in bread.",
+   "ans": "ingredient",
+   "why": "配方里的原料用 ingredient。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Trust is an important components of friendship.",
+   "ans": "components → component",
+   "why": "an 后面用单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "面包是用面粉做的。",
+   "stem": "Bread is made ______ flour.",
+   "ans": "from",
+   "why": "看不出原料用 be made from。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Exercise is a key ______ of a healthy life.",
+   "opts": [
+    "component",
+    "composer",
+    "compost",
+    "compound"
+   ],
+   "why": "“组成部分”用 component。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Component\" is close in meaning to \"______\".",
+   "opts": [
+    "part",
+    "whole",
+    "machine",
+    "price"
+   ],
+   "why": "component 组成部分。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

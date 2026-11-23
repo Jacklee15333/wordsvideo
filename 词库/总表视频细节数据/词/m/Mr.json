@@ -1,0 +1,91 @@
+{
+ "单词": "Mr",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：谁教他们英语？\n听：Mr Wang teaches us English.\nA. 王太太\nB. 王先生\nC. 王女士\nD. 王同学",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ Smith is our new teacher. He is from London.\nA. Mr\nB. Mrs\nC. Ms\nD. Miss",
+  "题目3": "【选词填空】从 Mr、sir 中选一个，用适当形式填空。\n题干：Excuse me, ______. Can you help me?\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Mr Li ______ in Shanghai. (live)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Mr Brown and his wife is from Canada.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：格林先生和格林太太都是医生。\n题干：Mr and ______ Green are both doctors.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：“Thank you, ______,” said the boy to the old man.\nA. Mr\nB. Ms\nC. Mrs\nD. sir\n考点：用法",
+  "答案": "【1】B（王先生）\n讲解：Mr 用在男子的姓前，“王先生”。\n【2】A（Mr）\n讲解：后面说 He，是男子，用 Mr。\n【3】sir\n讲解：单独称呼男子用 sir；Mr 后面要接姓。\n【4】lives\n讲解：主语 Mr Li 是单数，live 加 s。\n【5】is → are\n讲解：主语是布朗先生和他妻子两个人，用 are。\n【6】Mrs\n讲解：已婚女子用 Mrs。\n【7】D（sir）\n讲解：单独称呼男子用 sir；Mr 不能单独用。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：谁教他们英语？",
+   "listen": "Mr Wang teaches us English.",
+   "opts": [
+    "王先生",
+    "王太太",
+    "王女士",
+    "王同学"
+   ],
+   "why": "Mr 用在男子的姓前，“王先生”。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ Smith is our new teacher. He is from London.",
+   "opts": [
+    "Mr",
+    "Mrs",
+    "Ms",
+    "Miss"
+   ],
+   "why": "后面说 He，是男子，用 Mr。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 Mr、sir 中选一个，用适当形式填空。",
+   "stem": "Excuse me, ______. Can you help me?",
+   "ans": "sir",
+   "why": "单独称呼男子用 sir；Mr 后面要接姓。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Mr Li ______ in Shanghai. (live)",
+   "ans": "lives",
+   "why": "主语 Mr Li 是单数，live 加 s。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Mr Brown and his wife is from Canada.",
+   "ans": "is → are",
+   "why": "主语是布朗先生和他妻子两个人，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "格林先生和格林太太都是医生。",
+   "stem": "Mr and ______ Green are both doctors.",
+   "ans": "Mrs",
+   "why": "已婚女子用 Mrs。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "“Thank you, ______,” said the boy to the old man.",
+   "opts": [
+    "sir",
+    "Mr",
+    "Ms",
+    "Mrs"
+   ],
+   "why": "单独称呼男子用 sir；Mr 不能单独用。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

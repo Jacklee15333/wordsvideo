@@ -1,0 +1,93 @@
+{
+ "单词": "import",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个国家进口什么？\n听：The country imports a lot of oil.\nA. 大米\nB. 汽车\nC. 石油\nD. 衣服",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We ______ bananas from other countries.\nA. export\nB. imports\nC. important\nD. import",
+  "题目3": "【选词填空】从 import、export 中选一个，用适当形式填空。\n题干：China ______ many products to the world.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：These cars were ______ from Germany. (import)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The country import a lot of wheat every year.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这件事很重要。\n题干：This is very ______.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：These ______ goods are from Japan.\nA. import\nB. imported\nC. imports\nD. importing\n考点：变形",
+  "答案": "【1】C（石油）\n讲解：import 进口。\n【2】D（import）\n讲解：从国外买进用 import。\n【3】exports\n讲解：卖到国外用 export，主语单数加 s。\n【4】imported\n讲解：were 加过去分词 imported。\n【5】import → imports\n讲解：主语单数，动词加 s。\n【6】important\n讲解：be 后面用形容词 important。\n【7】B（imported）\n讲解：修饰名词 goods“进口的”用过去分词 imported。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个国家进口什么？",
+   "listen": "The country imports a lot of oil.",
+   "opts": [
+    "石油",
+    "大米",
+    "汽车",
+    "衣服"
+   ],
+   "why": "import 进口。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We ______ bananas from other countries.",
+   "opts": [
+    "import",
+    "export",
+    "imports",
+    "important"
+   ],
+   "why": "从国外买进用 import。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 import、export 中选一个，用适当形式填空。",
+   "stem": "China ______ many products to the world.",
+   "ans": "exports",
+   "why": "卖到国外用 export，主语单数加 s。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "These cars were ______ from Germany. (import)",
+   "ans": "imported",
+   "why": "were 加过去分词 imported。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The country import a lot of wheat every year.",
+   "ans": "import → imports",
+   "why": "主语单数，动词加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这件事很重要。",
+   "stem": "This is very ______.",
+   "ans": "important",
+   "why": "be 后面用形容词 important。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "These ______ goods are from Japan.",
+   "opts": [
+    "imported",
+    "import",
+    "imports",
+    "importing"
+   ],
+   "why": "修饰名词 goods“进口的”用过去分词 imported。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

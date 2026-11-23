@@ -1,0 +1,97 @@
+{
+ "单词": "neural",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：科学家在研究什么？\n听：Scientists are studying neural networks in the brain.\nA. 心脏\nB. 大脑里的神经网络\nC. 肺\nD. 骨骼",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The brain has a huge ______ network.\nA. neurally\nB. neural\nC. neuron\nD. neutral",
+  "题目3": "【选词填空】从 neural、neutral 中选一个，用适当形式填空。\n题干：Switzerland stayed ______ in the war.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The brain sends messages through ______. (nerve)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He studies neurals science.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Neural\" is a ______ word.\nA. spoken\nB. funny\nC. rude\nD. technical\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In daily English, “神经紧张的” is \"______\", not \"neural\".\nA. nervous\nB. neural\nC. nerve\nD. neuron\n考点：易混",
+  "答案": "【1】B（大脑里的神经网络）\n讲解：neural 神经的。\n【2】B（neural）\n讲解：名词 network 前用形容词 neural。\n【3】neutral\n讲解：“中立的”用 neutral，别和 neural 弄混。\n【4】nerves\n讲解：通过神经传信息，用复数 nerves。\n【5】neurals → neural\n讲解：形容词不加 s。\n【6】D（technical）\n讲解：neural 是技术用语。\n【7】A（nervous）\n讲解：日常说紧张用 nervous。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：科学家在研究什么？",
+   "listen": "Scientists are studying neural networks in the brain.",
+   "opts": [
+    "大脑里的神经网络",
+    "心脏",
+    "肺",
+    "骨骼"
+   ],
+   "why": "neural 神经的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The brain has a huge ______ network.",
+   "opts": [
+    "neural",
+    "neurally",
+    "neuron",
+    "neutral"
+   ],
+   "why": "名词 network 前用形容词 neural。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 neural、neutral 中选一个，用适当形式填空。",
+   "stem": "Switzerland stayed ______ in the war.",
+   "ans": "neutral",
+   "why": "“中立的”用 neutral，别和 neural 弄混。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The brain sends messages through ______. (nerve)",
+   "ans": "nerves",
+   "why": "通过神经传信息，用复数 nerves。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He studies neurals science.",
+   "ans": "neurals → neural",
+   "why": "形容词不加 s。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Neural\" is a ______ word.",
+   "opts": [
+    "technical",
+    "spoken",
+    "funny",
+    "rude"
+   ],
+   "why": "neural 是技术用语。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In daily English, “神经紧张的” is \"______\", not \"neural\".",
+   "opts": [
+    "nervous",
+    "neural",
+    "nerve",
+    "neuron"
+   ],
+   "why": "日常说紧张用 nervous。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "birth",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她什么时候生的孩子？\n听：She gave birth to a baby girl last week.\nA. 昨天\nB. 上个月\nC. 去年\nD. 上周",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：What's your date of ______?\nA. born\nB. birthday\nC. birth\nD. bear",
+  "题目3": "【选词填空】从 birth、birthday 中选一个，用适当形式填空。\n题干：Happy ______ to you!\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The number of ______ is falling. (birth)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She gave birth a son.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他在北京出生。\n题干：He ______ born in Beijing.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：She is French ______ birth.\nA. at\nB. in\nC. by\nD. on\n考点：短语",
+  "答案": "【1】D（上周）\n讲解：give birth to 生孩子。\n【2】C（birth）\n讲解：出生日期 date of birth。\n【3】birthday\n讲解：生日快乐 Happy birthday。\n【4】births\n讲解：出生人数用复数 births。\n【5】birth a son → birth to a son\n讲解：give birth to 生下。\n【6】was\n讲解：be born 出生，讲过去用 was。\n【7】C（by）\n讲解：by birth 生来是、按出身。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她什么时候生的孩子？",
+   "listen": "She gave birth to a baby girl last week.",
+   "opts": [
+    "上周",
+    "昨天",
+    "上个月",
+    "去年"
+   ],
+   "why": "give birth to 生孩子。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What's your date of ______?",
+   "opts": [
+    "birth",
+    "born",
+    "birthday",
+    "bear"
+   ],
+   "why": "出生日期 date of birth。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 birth、birthday 中选一个，用适当形式填空。",
+   "stem": "Happy ______ to you!",
+   "ans": "birthday",
+   "why": "生日快乐 Happy birthday。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The number of ______ is falling. (birth)",
+   "ans": "births",
+   "why": "出生人数用复数 births。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She gave birth a son.",
+   "ans": "birth a son → birth to a son",
+   "why": "give birth to 生下。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他在北京出生。",
+   "stem": "He ______ born in Beijing.",
+   "ans": "was",
+   "why": "be born 出生，讲过去用 was。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She is French ______ birth.",
+   "opts": [
+    "by",
+    "at",
+    "in",
+    "on"
+   ],
+   "why": "by birth 生来是、按出身。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

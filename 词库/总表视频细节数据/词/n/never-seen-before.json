@@ -1,0 +1,92 @@
+{
+ "单词": "never-seen-before",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：科学家发现了什么？\n听：Scientists found a never-seen-before fish.\nA. 一种常见的鱼\nB. 一种前所未见的鱼\nC. 一条大鲸鱼\nD. 一条小鱼",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The museum shows ______ photos of the city.\nA. never-see-before\nB. never-saw-before\nC. never-seen-before\nD. never-seeing-before",
+  "题目3": "【选词填空】从 seen、saw 中选一个，用适当形式填空。\n题干：I have never ______ such a thing before.\n考点：变形",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We ______ a strange bird yesterday. (see)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：It was a never-seen-before animals.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我以前从来没见过这个。\n题干：I have ______ seen this before.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：It was a ______ experience; nobody had done it before.\nA. old\nB. usual\nC. common\nD. new\n考点：易混",
+  "答案": "【1】B（一种前所未见的鱼）\n讲解：never-seen-before 前所未见的。\n【2】C（never-seen-before）\n讲解：前所未见的照片用 never-seen-before。\n【3】seen\n讲解：have 加过去分词 seen。\n【4】saw\n讲解：讲过去用 saw。\n【5】animals → animal\n讲解：a 后面用单数 animal。\n【6】never\n讲解：“从来没有”用 never。\n【7】D（new）\n讲解：前所未有的经历，用 new。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：科学家发现了什么？",
+   "listen": "Scientists found a never-seen-before fish.",
+   "opts": [
+    "一种前所未见的鱼",
+    "一种常见的鱼",
+    "一条大鲸鱼",
+    "一条小鱼"
+   ],
+   "why": "never-seen-before 前所未见的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The museum shows ______ photos of the city.",
+   "opts": [
+    "never-seen-before",
+    "never-see-before",
+    "never-saw-before",
+    "never-seeing-before"
+   ],
+   "why": "前所未见的照片用 never-seen-before。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 seen、saw 中选一个，用适当形式填空。",
+   "stem": "I have never ______ such a thing before.",
+   "ans": "seen",
+   "why": "have 加过去分词 seen。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We ______ a strange bird yesterday. (see)",
+   "ans": "saw",
+   "why": "讲过去用 saw。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "It was a never-seen-before animals.",
+   "ans": "animals → animal",
+   "why": "a 后面用单数 animal。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我以前从来没见过这个。",
+   "stem": "I have ______ seen this before.",
+   "ans": "never",
+   "why": "“从来没有”用 never。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It was a ______ experience; nobody had done it before.",
+   "opts": [
+    "new",
+    "old",
+    "usual",
+    "common"
+   ],
+   "why": "前所未有的经历，用 new。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "concussion",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：医生说孩子怎么了？\n听：The child has a mild concussion.\nA. 感冒发烧\nB. 牙疼\nC. 胃疼\nD. 轻微脑震荡",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He got a ______ after falling off his bike.\nA. concuss\nB. concussed\nC. concussion\nD. concussing",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The team doctor has seen three ______ this season. (concussion)\n考点：变形",
+  "题目4": "【选词填空】从 concussion、percussion 中选一个，用适当形式填空。\n题干：The drum is a ______ instrument.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She was sent to hospital because she has a concussion.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A concussion is an injury to the ______.\nA. brain\nB. leg\nC. hand\nD. back\n考点：用法",
+  "题目7": "【选词填空】从 concussion、vibration 中选一个，用适当形式填空。\n题干：The ______ of the train shook the windows.\n考点：易混",
+  "答案": "【1】D（轻微脑震荡）\n讲解：concussion 脑震荡。\n【2】C（concussion）\n讲解：冠词 a 后面要名词 concussion。\n【3】concussions\n讲解：three 后面用复数 concussions。\n【4】percussion\n讲解：打击乐器用 percussion；concussion 是脑震荡。\n【5】has → had\n讲解：前面是过去时，这里也用 had。\n【6】A（brain）\n讲解：脑震荡伤的是大脑。\n【7】vibration\n讲解：一般的震动用 vibration；concussion 多指脑震荡。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：医生说孩子怎么了？",
+   "listen": "The child has a mild concussion.",
+   "opts": [
+    "轻微脑震荡",
+    "感冒发烧",
+    "牙疼",
+    "胃疼"
+   ],
+   "why": "concussion 脑震荡。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He got a ______ after falling off his bike.",
+   "opts": [
+    "concussion",
+    "concuss",
+    "concussed",
+    "concussing"
+   ],
+   "why": "冠词 a 后面要名词 concussion。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The team doctor has seen three ______ this season. (concussion)",
+   "ans": "concussions",
+   "why": "three 后面用复数 concussions。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 concussion、percussion 中选一个，用适当形式填空。",
+   "stem": "The drum is a ______ instrument.",
+   "ans": "percussion",
+   "why": "打击乐器用 percussion；concussion 是脑震荡。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She was sent to hospital because she has a concussion.",
+   "ans": "has → had",
+   "why": "前面是过去时，这里也用 had。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A concussion is an injury to the ______.",
+   "opts": [
+    "brain",
+    "leg",
+    "hand",
+    "back"
+   ],
+   "why": "脑震荡伤的是大脑。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 concussion、vibration 中选一个，用适当形式填空。",
+   "stem": "The ______ of the train shook the windows.",
+   "ans": "vibration",
+   "why": "一般的震动用 vibration；concussion 多指脑震荡。",
+   "kd": "易混",
+   "zh": ""
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

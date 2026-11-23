@@ -1,0 +1,94 @@
+{
+ "单词": "century",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这座房子是什么时候建的？\n听：This house was built in the 18th century.\nA. 十八年前\nB. 十八世纪\nC. 八十年前\nD. 十九世纪",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Many great changes happened in the last two ______.\nA. century\nB. centuries\nC. centurys\nD. centuryes",
+  "题目3": "【选词填空】从 century、decade 中选一个，用适当形式填空。\n题干：A ______ is ten years.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He was born in 20th century.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这座桥有一百年历史了。\n题干：The bridge is a hundred ______ old.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：We are living in the 21st ______.\nA. centuries\nB. cent\nC. centurial\nD. century\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Century\" comes from a Latin word for \"a group of ______\".\nA. ten\nB. a thousand\nC. a hundred\nD. two\n考点：用法",
+  "答案": "【1】B（十八世纪）\n讲解：the 18th century 十八世纪。\n【2】B（centuries）\n讲解：two 后面用复数，y 变 i 加 es。\n【3】decade\n讲解：十年是 decade，一百年是 century。\n【4】in 20th → in the 20th\n讲解：序数词前要加 the。\n【5】years\n讲解：a hundred years old 一百岁。\n【6】D（century）\n讲解：the 21st 后面用单数。\n【7】C（a hundred）\n讲解：century 和“一百”有关。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这座房子是什么时候建的？",
+   "listen": "This house was built in the 18th century.",
+   "opts": [
+    "十八世纪",
+    "十八年前",
+    "八十年前",
+    "十九世纪"
+   ],
+   "why": "the 18th century 十八世纪。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Many great changes happened in the last two ______.",
+   "opts": [
+    "centuries",
+    "century",
+    "centurys",
+    "centuryes"
+   ],
+   "why": "two 后面用复数，y 变 i 加 es。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 century、decade 中选一个，用适当形式填空。",
+   "stem": "A ______ is ten years.",
+   "ans": "decade",
+   "why": "十年是 decade，一百年是 century。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He was born in 20th century.",
+   "ans": "in 20th → in the 20th",
+   "why": "序数词前要加 the。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这座桥有一百年历史了。",
+   "stem": "The bridge is a hundred ______ old.",
+   "ans": "years",
+   "why": "a hundred years old 一百岁。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We are living in the 21st ______.",
+   "opts": [
+    "century",
+    "centuries",
+    "cent",
+    "centurial"
+   ],
+   "why": "the 21st 后面用单数。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Century\" comes from a Latin word for \"a group of ______\".",
+   "opts": [
+    "a hundred",
+    "ten",
+    "a thousand",
+    "two"
+   ],
+   "why": "century 和“一百”有关。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

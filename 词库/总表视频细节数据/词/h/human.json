@@ -1,0 +1,97 @@
+{
+ "单词": "human",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个机器人能做什么？\n听：This robot can talk like a human.\nA. 像狗一样叫\nB. 飞\nC. 游泳\nD. 像人一样说话",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Dogs can hear sounds that ______ can't hear.\nA. human\nB. humans\nC. humen\nD. humanity\n考点：变形",
+  "题目3": "【选词填空】从 human、humane 中选一个，用适当形式填空。\n题干：We must be ______ to animals and not hurt them.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：War is a crime against ______. (human)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The human body have 206 bones.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The ______ brain is amazing.\nA. humane\nB. humans\nC. human\nD. humanity\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：When human means 人, it is close in meaning to ______.\nA. animal\nB. person\nC. machine\nD. plant\n考点：易混",
+  "答案": "【1】D（像人一样说话）\n讲解：like a human 像人一样。\n【2】B（humans）\n讲解：泛指人类用复数 humans，不是 humen。\n【3】humane\n讲解：“人道的、仁慈的”用 humane。\n【4】humanity\n讲解：against 后面要名词 humanity（人类）。\n【5】have → has\n讲解：主语 body 是单数，用 has。\n【6】C（human）\n讲解：名词 brain 前用形容词 human（人的）。\n【7】B（person）\n讲解：human 人，和 person 意思相近。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个机器人能做什么？",
+   "listen": "This robot can talk like a human.",
+   "opts": [
+    "像人一样说话",
+    "像狗一样叫",
+    "飞",
+    "游泳"
+   ],
+   "why": "like a human 像人一样。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Dogs can hear sounds that ______ can't hear.",
+   "opts": [
+    "humans",
+    "human",
+    "humen",
+    "humanity"
+   ],
+   "why": "泛指人类用复数 humans，不是 humen。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 human、humane 中选一个，用适当形式填空。",
+   "stem": "We must be ______ to animals and not hurt them.",
+   "ans": "humane",
+   "why": "“人道的、仁慈的”用 humane。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "War is a crime against ______. (human)",
+   "ans": "humanity",
+   "why": "against 后面要名词 humanity（人类）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The human body have 206 bones.",
+   "ans": "have → has",
+   "why": "主语 body 是单数，用 has。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ brain is amazing.",
+   "opts": [
+    "human",
+    "humane",
+    "humans",
+    "humanity"
+   ],
+   "why": "名词 brain 前用形容词 human（人的）。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "When human means 人, it is close in meaning to ______.",
+   "opts": [
+    "person",
+    "animal",
+    "machine",
+    "plant"
+   ],
+   "why": "human 人，和 person 意思相近。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

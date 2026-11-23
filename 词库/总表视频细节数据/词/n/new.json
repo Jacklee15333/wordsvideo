@@ -1,0 +1,94 @@
+{
+ "单词": "new",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人昨天买了什么？\n听：I bought a new bike yesterday.\nA. 旧自行车\nB. 新手机\nC. 新自行车\nD. 新书包",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This phone is ______ than mine.\nA. new\nB. newest\nC. newer\nD. more new",
+  "题目3": "【选词填空】从 new、fresh 中选一个，用适当形式填空。\n题干：These eggs are very ______. The hens laid them this morning.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：This is the most new building in our city.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我刚来这座城市，对这里不熟。\n题干：I'm ______ ______ this city.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Happy ______ Year!\nA. Newly\nB. News\nC. New\nD. Newer\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"I'm new here\" means I ______.\nA. have lived here long\nB. am leaving\nC. just came here\nD. am very young\n考点：用法",
+  "答案": "【1】C（新自行车）\n讲解：new bike 新自行车。\n【2】C（newer）\n讲解：than 前面用比较级。\n【3】fresh\n讲解：食物“新鲜”用 fresh。\n【4】most new → newest\n讲解：new 的最高级是 newest。\n【5】new；to\n讲解：be new to … 对……陌生、刚到。\n【6】C（New）\n讲解：新年是 New Year。\n【7】C（just came here）\n讲解：new 初来乍到的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人昨天买了什么？",
+   "listen": "I bought a new bike yesterday.",
+   "opts": [
+    "新自行车",
+    "旧自行车",
+    "新手机",
+    "新书包"
+   ],
+   "why": "new bike 新自行车。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This phone is ______ than mine.",
+   "opts": [
+    "newer",
+    "new",
+    "newest",
+    "more new"
+   ],
+   "why": "than 前面用比较级。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 new、fresh 中选一个，用适当形式填空。",
+   "stem": "These eggs are very ______. The hens laid them this morning.",
+   "ans": "fresh",
+   "why": "食物“新鲜”用 fresh。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This is the most new building in our city.",
+   "ans": "most new → newest",
+   "why": "new 的最高级是 newest。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我刚来这座城市，对这里不熟。",
+   "stem": "I'm ______ ______ this city.",
+   "ans": "new；to",
+   "why": "be new to … 对……陌生、刚到。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Happy ______ Year!",
+   "opts": [
+    "New",
+    "Newly",
+    "News",
+    "Newer"
+   ],
+   "why": "新年是 New Year。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"I'm new here\" means I ______.",
+   "opts": [
+    "just came here",
+    "have lived here long",
+    "am leaving",
+    "am very young"
+   ],
+   "why": "new 初来乍到的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

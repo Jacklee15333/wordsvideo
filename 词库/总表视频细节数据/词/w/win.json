@@ -1,0 +1,94 @@
+{
+ "单词": "win",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说谁赢了比赛？\n听：Our class won the football match.\nA. 他们班\nB. 我们班\nC. 老师队\nD. 没人赢",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We ______ Class 3 in the basketball game yesterday.\nA. won\nB. beat\nC. win\nD. wins\n考点：易混",
+  "题目3": "【选词填空】从 win、earn 中选一个，用适当形式填空。\n题干：He works hard to ______ money for his family.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Our team is ______ now! (win)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Who winned the first prize last year?\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：获胜者将得到一本书。\n题干：The ______ will get a book.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：I hope our team will ______ the game.\nA. beat\nB. win\nC. won\nD. winning\n考点：用法",
+  "答案": "【1】B（我们班）\n讲解：won the match 赢了比赛。\n【2】B（beat）\n讲解：后面是对手 Class 3，“打败”用 beat，过去式还是 beat。\n【3】earn\n讲解：靠付出挣钱用 earn。\n【4】winning\n讲解：is 后面用现在分词，双写 n 加 ing。\n【5】winned → won\n讲解：win 的过去式不规则：won。\n【6】winner\n讲解：“获胜者”是 winner，双写 n 加 er。\n【7】B（win）\n讲解：后面是比赛 the game，用 win；will 后面用原形。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说谁赢了比赛？",
+   "listen": "Our class won the football match.",
+   "opts": [
+    "我们班",
+    "他们班",
+    "老师队",
+    "没人赢"
+   ],
+   "why": "won the match 赢了比赛。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We ______ Class 3 in the basketball game yesterday.",
+   "opts": [
+    "beat",
+    "won",
+    "win",
+    "wins"
+   ],
+   "why": "后面是对手 Class 3，“打败”用 beat，过去式还是 beat。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 win、earn 中选一个，用适当形式填空。",
+   "stem": "He works hard to ______ money for his family.",
+   "ans": "earn",
+   "why": "靠付出挣钱用 earn。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Our team is ______ now! (win)",
+   "ans": "winning",
+   "why": "is 后面用现在分词，双写 n 加 ing。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Who winned the first prize last year?",
+   "ans": "winned → won",
+   "why": "win 的过去式不规则：won。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "获胜者将得到一本书。",
+   "stem": "The ______ will get a book.",
+   "ans": "winner",
+   "why": "“获胜者”是 winner，双写 n 加 er。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I hope our team will ______ the game.",
+   "opts": [
+    "win",
+    "beat",
+    "won",
+    "winning"
+   ],
+   "why": "后面是比赛 the game，用 win；will 后面用原形。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

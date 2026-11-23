@@ -1,0 +1,97 @@
+{
+ "单词": "checkout",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：在哪里付钱？\n听：Please pay at the checkout.\nA. 门口\nB. 收银台\nC. 停车场\nD. 电梯",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is a long line at the ______.\nA. check\nB. checking\nC. checkout\nD. check-up\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The supermarket has six ______. (checkout)\n考点：变形",
+  "题目4": "【选词填空】从 checkout、check out 中选一个，用适当形式填空。\n题干：We must ______ of the hotel by noon.\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The checkout are closed now.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Checkout time at a hotel means ______.\nA. 退房时间\nB. 吃饭时间\nC. 入住时间\nD. 起床时间\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：At the checkout, you ______.\nA. sleep\nB. pay\nC. swim\nD. cook\n考点：用法",
+  "答案": "【1】B（收银台）\n讲解：checkout 收银台。\n【2】C（checkout）\n讲解：超市“收银台”用 checkout。\n【3】checkouts\n讲解：six 后面用复数 checkouts。\n【4】check out\n讲解：动词“退房”用 check out（两个词）。\n【5】are → is\n讲解：主语 checkout 单数，谓语用 is。\n【6】A（退房时间）\n讲解：checkout 退房。\n【7】B（pay）\n讲解：在收银台付钱。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：在哪里付钱？",
+   "listen": "Please pay at the checkout.",
+   "opts": [
+    "收银台",
+    "门口",
+    "停车场",
+    "电梯"
+   ],
+   "why": "checkout 收银台。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is a long line at the ______.",
+   "opts": [
+    "checkout",
+    "check",
+    "checking",
+    "check-up"
+   ],
+   "why": "超市“收银台”用 checkout。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The supermarket has six ______. (checkout)",
+   "ans": "checkouts",
+   "why": "six 后面用复数 checkouts。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 checkout、check out 中选一个，用适当形式填空。",
+   "stem": "We must ______ of the hotel by noon.",
+   "ans": "check out",
+   "why": "动词“退房”用 check out（两个词）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The checkout are closed now.",
+   "ans": "are → is",
+   "why": "主语 checkout 单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Checkout time at a hotel means ______.",
+   "opts": [
+    "退房时间",
+    "吃饭时间",
+    "入住时间",
+    "起床时间"
+   ],
+   "why": "checkout 退房。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "At the checkout, you ______.",
+   "opts": [
+    "pay",
+    "sleep",
+    "swim",
+    "cook"
+   ],
+   "why": "在收银台付钱。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

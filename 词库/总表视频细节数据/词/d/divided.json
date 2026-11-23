@@ -1,0 +1,94 @@
+{
+ "单词": "divided",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：大家对新计划看法怎样？\n听：People are divided on the new plan.\nA. 都同意\nB. 意见不一\nC. 都反对\nD. 不关心",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The class was ______ over where to go for the trip.\nA. divided\nB. divide\nC. division\nD. dividing",
+  "题目3": "【选词填空】从 divided、separate 中选一个，用适当形式填空。\n题干：My sister and I sleep in ______ rooms.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The cake was divided between all the children.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这条河把城市分成两部分。\n题干：The river ______ the city into two parts.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"A house divided\" means a family or group that ______.\nA. is very big\nB. has no doors\nC. cannot agree\nD. is moving\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Divided by\" in maths means ______.\nA. ×\nB. +\nC. ÷\nD. -\n考点：用法",
+  "答案": "【1】B（意见不一）\n讲解：be divided on 意见有分歧。\n【2】A（divided）\n讲解：be divided over 意见分歧。\n【3】separate\n讲解：各自分开的房间用 separate。\n【4】between → among\n讲解：三者以上用 among。\n【5】divides\n讲解：主语三单，加 s。\n【6】C（cannot agree）\n讲解：divided 分裂的。\n【7】C（÷）\n讲解：divided by 除以。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：大家对新计划看法怎样？",
+   "listen": "People are divided on the new plan.",
+   "opts": [
+    "意见不一",
+    "都同意",
+    "都反对",
+    "不关心"
+   ],
+   "why": "be divided on 意见有分歧。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The class was ______ over where to go for the trip.",
+   "opts": [
+    "divided",
+    "divide",
+    "division",
+    "dividing"
+   ],
+   "why": "be divided over 意见分歧。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 divided、separate 中选一个，用适当形式填空。",
+   "stem": "My sister and I sleep in ______ rooms.",
+   "ans": "separate",
+   "why": "各自分开的房间用 separate。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The cake was divided between all the children.",
+   "ans": "between → among",
+   "why": "三者以上用 among。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这条河把城市分成两部分。",
+   "stem": "The river ______ the city into two parts.",
+   "ans": "divides",
+   "why": "主语三单，加 s。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"A house divided\" means a family or group that ______.",
+   "opts": [
+    "cannot agree",
+    "is very big",
+    "has no doors",
+    "is moving"
+   ],
+   "why": "divided 分裂的。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Divided by\" in maths means ______.",
+   "opts": [
+    "÷",
+    "×",
+    "+",
+    "-"
+   ],
+   "why": "divided by 除以。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

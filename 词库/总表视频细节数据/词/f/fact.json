@@ -1,0 +1,94 @@
+{
+ "单词": "fact",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说这是什么？\n听：It's a fact that the earth is round.\nA. 谣言\nB. 故事\nC. 事实\nD. 猜想",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ fact, I don't like coffee at all.\nA. On\nB. In\nC. At\nD. By\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The book is ______, not a made-up story. (fact)\n考点：词性转换",
+  "题目4": "【选词填空】从 fact、truth 中选一个，用适当形式填空。\n题干：Please tell me the ______; don't lie.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There are many interesting fact about animals.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：事实上，他是我哥哥。\n题干：In ______, he is my brother.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A fact is something that is ______ true.\nA. not\nB. never\nC. hardly\nD. known to be\n考点：用法",
+  "答案": "【1】C（事实）\n讲解：fact 事实。\n【2】B（In）\n讲解：in fact 事实上。\n【3】factual\n讲解：be 后要形容词 factual（基于事实的）。\n【4】truth\n讲解：“说实话”是 tell the truth。\n【5】fact → facts\n讲解：many 后面用复数 facts。\n【6】fact\n讲解：in fact 事实上。\n【7】D（known to be）\n讲解：事实是已知为真的事。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说这是什么？",
+   "listen": "It's a fact that the earth is round.",
+   "opts": [
+    "事实",
+    "谣言",
+    "故事",
+    "猜想"
+   ],
+   "why": "fact 事实。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ fact, I don't like coffee at all.",
+   "opts": [
+    "In",
+    "On",
+    "At",
+    "By"
+   ],
+   "why": "in fact 事实上。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The book is ______, not a made-up story. (fact)",
+   "ans": "factual",
+   "why": "be 后要形容词 factual（基于事实的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 fact、truth 中选一个，用适当形式填空。",
+   "stem": "Please tell me the ______; don't lie.",
+   "ans": "truth",
+   "why": "“说实话”是 tell the truth。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are many interesting fact about animals.",
+   "ans": "fact → facts",
+   "why": "many 后面用复数 facts。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "事实上，他是我哥哥。",
+   "stem": "In ______, he is my brother.",
+   "ans": "fact",
+   "why": "in fact 事实上。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A fact is something that is ______ true.",
+   "opts": [
+    "known to be",
+    "not",
+    "never",
+    "hardly"
+   ],
+   "why": "事实是已知为真的事。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

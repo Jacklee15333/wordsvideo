@@ -1,0 +1,94 @@
+{
+ "单词": "leaf",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：什么落在说话人头上？\n听：A leaf fell on my head.\nA. 一本书\nB. 一只鸟\nC. 一片叶子\nD. 一滴雨",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：In autumn, the ______ turn yellow.\nA. leafs\nB. leaves\nC. leaf\nD. leafes",
+  "题目3": "【选词填空】从 leaf、page 中选一个，用适当形式填空。\n题干：Turn to ______ 10 of your book.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There are many leafs on the ground.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他决定改过自新。\n题干：He decided to turn over a new ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Leaf through a book\" means ______.\nA. turn the pages quickly\nB. tear it\nC. write in it\nD. buy it\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Gold leaf\" is gold that is ______.\nA. shaped like a tree\nB. green\nC. heavy\nD. beaten very thin\n考点：用法",
+  "答案": "【1】C（一片叶子）\n讲解：leaf 叶子。\n【2】B（leaves）\n讲解：leaf 的复数是 leaves。\n【3】page\n讲解：“第几页”用 page。\n【4】leafs → leaves\n讲解：f 变 v 加 es。\n【5】leaf\n讲解：turn over a new leaf 翻开新的一页。\n【6】A（turn the pages quickly）\n讲解：leaf through 快速翻阅。\n【7】D（beaten very thin）\n讲解：leaf 也指金属箔。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：什么落在说话人头上？",
+   "listen": "A leaf fell on my head.",
+   "opts": [
+    "一片叶子",
+    "一本书",
+    "一只鸟",
+    "一滴雨"
+   ],
+   "why": "leaf 叶子。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In autumn, the ______ turn yellow.",
+   "opts": [
+    "leaves",
+    "leafs",
+    "leaf",
+    "leafes"
+   ],
+   "why": "leaf 的复数是 leaves。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 leaf、page 中选一个，用适当形式填空。",
+   "stem": "Turn to ______ 10 of your book.",
+   "ans": "page",
+   "why": "“第几页”用 page。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are many leafs on the ground.",
+   "ans": "leafs → leaves",
+   "why": "f 变 v 加 es。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他决定改过自新。",
+   "stem": "He decided to turn over a new ______.",
+   "ans": "leaf",
+   "why": "turn over a new leaf 翻开新的一页。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Leaf through a book\" means ______.",
+   "opts": [
+    "turn the pages quickly",
+    "tear it",
+    "write in it",
+    "buy it"
+   ],
+   "why": "leaf through 快速翻阅。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Gold leaf\" is gold that is ______.",
+   "opts": [
+    "beaten very thin",
+    "shaped like a tree",
+    "green",
+    "heavy"
+   ],
+   "why": "leaf 也指金属箔。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

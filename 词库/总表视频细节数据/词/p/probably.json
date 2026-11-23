@@ -1,0 +1,94 @@
+{
+ "单词": "probably",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：明天天气会怎样？\n听：It will probably rain tomorrow.\nA. 很可能下雨\nB. 一定晴天\nC. 不会下雨\nD. 可能下雪",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He is ______ at home now. His car is outside.\nA. probably\nB. probable\nC. probability\nD. possible",
+  "题目3": "【选词填空】从 probable、probably 中选一个，用适当形式填空。\n题干：It's ______ that he will win.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She probable forgot the meeting.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：十有八九他会来。\n题干：In all ______, he will come.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Probably\" is ______ than \"maybe\".\nA. less sure\nB. shorter\nC. funnier\nD. more sure\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Probably\" usually goes ______ \"will\", as in \"will probably\".\nA. after\nB. before\nC. instead of\nD. without\n考点：用法",
+  "答案": "【1】A（很可能下雨）\n讲解：probably 很可能。\n【2】A（probably）\n讲解：修饰谓语用副词。\n【3】probable\n讲解：It's + 形容词 + that。\n【4】probable → probably\n讲解：修饰动词用副词。\n【5】probability\n讲解：in all probability 十有八九。\n【6】D（more sure）\n讲解：probably 是“多半会”，比 maybe 肯定。\n【7】A（after）\n讲解：probably 常放在 will 后面。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：明天天气会怎样？",
+   "listen": "It will probably rain tomorrow.",
+   "opts": [
+    "很可能下雨",
+    "一定晴天",
+    "不会下雨",
+    "可能下雪"
+   ],
+   "why": "probably 很可能。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He is ______ at home now. His car is outside.",
+   "opts": [
+    "probably",
+    "probable",
+    "probability",
+    "possible"
+   ],
+   "why": "修饰谓语用副词。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 probable、probably 中选一个，用适当形式填空。",
+   "stem": "It's ______ that he will win.",
+   "ans": "probable",
+   "why": "It's + 形容词 + that。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She probable forgot the meeting.",
+   "ans": "probable → probably",
+   "why": "修饰动词用副词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "十有八九他会来。",
+   "stem": "In all ______, he will come.",
+   "ans": "probability",
+   "why": "in all probability 十有八九。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Probably\" is ______ than \"maybe\".",
+   "opts": [
+    "more sure",
+    "less sure",
+    "shorter",
+    "funnier"
+   ],
+   "why": "probably 是“多半会”，比 maybe 肯定。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Probably\" usually goes ______ \"will\", as in \"will probably\".",
+   "opts": [
+    "after",
+    "before",
+    "instead of",
+    "without"
+   ],
+   "why": "probably 常放在 will 后面。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

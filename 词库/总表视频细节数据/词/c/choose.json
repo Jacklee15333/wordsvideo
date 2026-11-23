@@ -1,0 +1,98 @@
+{
+ "单词": "choose",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让对方做什么？\n听：Choose one book you like.\nA. 买一本书\nB. 读一本书\nC. 选一本书\nD. 写一本书",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You can ______ any colour you like.\nA. chose\nB. chosen\nC. choice\nD. choose\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ the red dress yesterday. (choose)\n考点：变形",
+  "题目4": "【选词填空】从 choose、choice 中选一个，用适当形式填空。\n题干：You made a good ______.\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He has chose a new bike.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：I chose to stay at home. 这里 chose to 的意思是 ______。\nA. 被迫\nB. 选择、决定\nC. 忘了\nD. 害怕\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Choose is close in meaning to ______.\nA. lose\nB. select\nC. refuse\nD. forget\n考点：易混",
+  "答案": "【1】C（选一本书）\n讲解：choose 选择。\n【2】D（choose）\n讲解：can 后面用动词原形 choose。\n【3】chose\n讲解：yesterday 用过去式 chose（不规则）。\n【4】choice\n讲解：make a choice 作出选择，用名词 choice。\n【5】chose → chosen\n讲解：has 后面用过去分词 chosen。\n【6】B（选择、决定）\n讲解：choose to do 选择做某事。\n【7】B（select）\n讲解：choose ≈ select。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让对方做什么？",
+   "listen": "Choose one book you like.",
+   "opts": [
+    "选一本书",
+    "买一本书",
+    "读一本书",
+    "写一本书"
+   ],
+   "why": "choose 选择。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can ______ any colour you like.",
+   "opts": [
+    "choose",
+    "chose",
+    "chosen",
+    "choice"
+   ],
+   "why": "can 后面用动词原形 choose。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ the red dress yesterday. (choose)",
+   "ans": "chose",
+   "why": "yesterday 用过去式 chose（不规则）。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 choose、choice 中选一个，用适当形式填空。",
+   "stem": "You made a good ______.",
+   "ans": "choice",
+   "why": "make a choice 作出选择，用名词 choice。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He has chose a new bike.",
+   "ans": "chose → chosen",
+   "why": "has 后面用过去分词 chosen。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I chose to stay at home. 这里 chose to 的意思是 ______。",
+   "opts": [
+    "选择、决定",
+    "被迫",
+    "忘了",
+    "害怕"
+   ],
+   "why": "choose to do 选择做某事。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Choose is close in meaning to ______.",
+   "opts": [
+    "select",
+    "lose",
+    "refuse",
+    "forget"
+   ],
+   "why": "choose ≈ select。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

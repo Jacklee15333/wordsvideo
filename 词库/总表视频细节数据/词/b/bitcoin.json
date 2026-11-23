@@ -1,0 +1,92 @@
+{
+ "单词": "bitcoin",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：新闻里讲的是什么？\n听：The news is about bitcoin prices.\nA. 房价\nB. 油价\nC. 菜价\nD. 比特币价格",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He bought some ______ last year.\nA. bitcoins-es\nB. bitcoining\nC. bitcoin\nD. bit-coin-s",
+  "题目3": "【选词填空】从 bitcoin、coin 中选一个，用适当形式填空。\n题干：I dropped a one-yuan ______ on the floor.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He has three ______. (bitcoin)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The price of bitcoin go up and down a lot.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Bitcoin is a kind of ______ money; you can't hold it in your hand.\nA. digital\nB. digit\nC. digits\nD. digitally\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：比特币的价格昨天上涨了。\n题干：The price of bitcoin ______ yesterday.\n考点：用法",
+  "答案": "【1】D（比特币价格）\n讲解：bitcoin 比特币。\n【2】C（bitcoin）\n讲解：bitcoin 作货币统称可不加 s。\n【3】coin\n讲解：硬币 coin。\n【4】bitcoins\n讲解：three 后接复数 bitcoins。\n【5】go → goes\n讲解：主语 the price 单数，用 goes。\n【6】A（digital）\n讲解：数字货币 digital money。\n【7】rose\n讲解：yesterday 用过去式 rose。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：新闻里讲的是什么？",
+   "listen": "The news is about bitcoin prices.",
+   "opts": [
+    "比特币价格",
+    "房价",
+    "油价",
+    "菜价"
+   ],
+   "why": "bitcoin 比特币。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He bought some ______ last year.",
+   "opts": [
+    "bitcoin",
+    "bitcoins-es",
+    "bitcoining",
+    "bit-coin-s"
+   ],
+   "why": "bitcoin 作货币统称可不加 s。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 bitcoin、coin 中选一个，用适当形式填空。",
+   "stem": "I dropped a one-yuan ______ on the floor.",
+   "ans": "coin",
+   "why": "硬币 coin。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He has three ______. (bitcoin)",
+   "ans": "bitcoins",
+   "why": "three 后接复数 bitcoins。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The price of bitcoin go up and down a lot.",
+   "ans": "go → goes",
+   "why": "主语 the price 单数，用 goes。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Bitcoin is a kind of ______ money; you can't hold it in your hand.",
+   "opts": [
+    "digital",
+    "digit",
+    "digits",
+    "digitally"
+   ],
+   "why": "数字货币 digital money。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "比特币的价格昨天上涨了。",
+   "stem": "The price of bitcoin ______ yesterday.",
+   "ans": "rose",
+   "why": "yesterday 用过去式 rose。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

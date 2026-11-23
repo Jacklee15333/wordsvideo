@@ -1,0 +1,94 @@
+{
+ "单词": "librarian",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：谁帮说话人找到了书？\n听：The librarian helped me find the book.\nA. 老师\nB. 同学\nC. 店员\nD. 图书管理员",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Two ______ work in our school library.\nA. librarian\nB. libraries\nC. library\nD. librarians",
+  "题目3": "【选词填空】从 librarian、library 中选一个，用适当形式填空。\n题干：Our school ______ has 10,000 books.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The librarian are very helpful.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：她是一名图书管理员。\n题干：She is a ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A librarian is a person who ______ a library.\nA. just reads in\nB. builds\nC. sells\nD. works in and runs\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In \"librarian\", the \"y\" of \"library\" is changed to \"______\".\nA. e\nB. a\nC. o\nD. i\n考点：词性转换",
+  "答案": "【1】D（图书管理员）\n讲解：librarian 图书管理员。\n【2】D（librarians）\n讲解：two 后面用复数。\n【3】library\n讲解：有一万本书的是图书馆。\n【4】are → is\n讲解：主语单数。\n【5】librarian\n讲解：图书管理员 librarian。\n【6】D（works in and runs）\n讲解：librarian 是管理图书馆的人。\n【7】D（i）\n讲解：library 的 y 变 i 加 an。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：谁帮说话人找到了书？",
+   "listen": "The librarian helped me find the book.",
+   "opts": [
+    "图书管理员",
+    "老师",
+    "同学",
+    "店员"
+   ],
+   "why": "librarian 图书管理员。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Two ______ work in our school library.",
+   "opts": [
+    "librarians",
+    "librarian",
+    "libraries",
+    "library"
+   ],
+   "why": "two 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 librarian、library 中选一个，用适当形式填空。",
+   "stem": "Our school ______ has 10,000 books.",
+   "ans": "library",
+   "why": "有一万本书的是图书馆。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The librarian are very helpful.",
+   "ans": "are → is",
+   "why": "主语单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她是一名图书管理员。",
+   "stem": "She is a ______.",
+   "ans": "librarian",
+   "why": "图书管理员 librarian。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A librarian is a person who ______ a library.",
+   "opts": [
+    "works in and runs",
+    "just reads in",
+    "builds",
+    "sells"
+   ],
+   "why": "librarian 是管理图书馆的人。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In \"librarian\", the \"y\" of \"library\" is changed to \"______\".",
+   "opts": [
+    "i",
+    "e",
+    "a",
+    "o"
+   ],
+   "why": "library 的 y 变 i 加 an。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

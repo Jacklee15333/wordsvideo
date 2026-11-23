@@ -1,0 +1,94 @@
+{
+ "单词": "path",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们沿着什么走？\n听：We walked along a narrow path in the woods.\nA. 大马路\nB. 林中小路\nC. 河边\nD. 桥上",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many ______ in the park.\nA. paths\nB. path\nC. pathes\nD. pathss",
+  "题目3": "【选词填空】从 path、road 中选一个，用适当形式填空。\n题干：Cars and buses drive on the ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He walked along the path quick.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这条路通到哪里？\n题干：Where does this road ______ to?",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The storm destroyed everything in its ______.\nA. pass\nB. past\nC. pat\nD. path\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Path\" can also mean a way to reach a ______.\nA. meal\nB. bed\nC. goal\nD. shop\n考点：用法",
+  "答案": "【1】B（林中小路）\n讲解：path 小路。\n【2】A（paths）\n讲解：many 后面用复数。\n【3】road\n讲解：走车的路是 road。\n【4】quick → quickly\n讲解：修饰动词 walked 用副词。\n【5】lead\n讲解：lead to 通向。\n【6】D（path）\n讲解：in its path 在它经过的路线上。\n【7】C（goal）\n讲解：path 也指途径。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们沿着什么走？",
+   "listen": "We walked along a narrow path in the woods.",
+   "opts": [
+    "林中小路",
+    "大马路",
+    "河边",
+    "桥上"
+   ],
+   "why": "path 小路。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ in the park.",
+   "opts": [
+    "paths",
+    "path",
+    "pathes",
+    "pathss"
+   ],
+   "why": "many 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 path、road 中选一个，用适当形式填空。",
+   "stem": "Cars and buses drive on the ______.",
+   "ans": "road",
+   "why": "走车的路是 road。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He walked along the path quick.",
+   "ans": "quick → quickly",
+   "why": "修饰动词 walked 用副词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这条路通到哪里？",
+   "stem": "Where does this road ______ to?",
+   "ans": "lead",
+   "why": "lead to 通向。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The storm destroyed everything in its ______.",
+   "opts": [
+    "path",
+    "pass",
+    "past",
+    "pat"
+   ],
+   "why": "in its path 在它经过的路线上。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Path\" can also mean a way to reach a ______.",
+   "opts": [
+    "goal",
+    "meal",
+    "bed",
+    "shop"
+   ],
+   "why": "path 也指途径。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

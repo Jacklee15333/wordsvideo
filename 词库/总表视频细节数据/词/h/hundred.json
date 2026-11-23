@@ -1,0 +1,94 @@
+{
+ "单词": "hundred",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：礼堂能坐多少人？\n听：The hall can hold five hundred people.\nA. 五十人\nB. 五千人\nC. 一百五十人\nD. 五百人",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are three ______ students in our school.\nA. hundreds\nB. hundreds of\nC. hundred of\nD. hundred",
+  "题目3": "【选词填空】从 hundred、hundreds 中选一个，用适当形式填空。\n题干：______ of birds flew over the lake.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Two hundreds people came to the concert.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这台电视一千元。\n题干：This TV costs one ______ yuan.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"One hundred percent\" means \"______\".\nA. half\nB. completely\nC. a little\nD. not at all\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In British English, \"105\" is read as \"one hundred ______ five\".\nA. or\nB. and\nC. with\nD. plus\n考点：用法",
+  "答案": "【1】D（五百人）\n讲解：five hundred 五百。\n【2】D（hundred）\n讲解：前面有具体数字，hundred 不加 s。\n【3】Hundreds\n讲解：hundreds of 好几百。\n【4】hundreds → hundred\n讲解：数字后面不加 s。\n【5】thousand\n讲解：一千是 thousand。\n【6】B（completely）\n讲解：百分之百，完全。\n【7】B（and）\n讲解：英式读作 one hundred and five。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：礼堂能坐多少人？",
+   "listen": "The hall can hold five hundred people.",
+   "opts": [
+    "五百人",
+    "五十人",
+    "五千人",
+    "一百五十人"
+   ],
+   "why": "five hundred 五百。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are three ______ students in our school.",
+   "opts": [
+    "hundred",
+    "hundreds",
+    "hundreds of",
+    "hundred of"
+   ],
+   "why": "前面有具体数字，hundred 不加 s。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 hundred、hundreds 中选一个，用适当形式填空。",
+   "stem": "______ of birds flew over the lake.",
+   "ans": "Hundreds",
+   "why": "hundreds of 好几百。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Two hundreds people came to the concert.",
+   "ans": "hundreds → hundred",
+   "why": "数字后面不加 s。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这台电视一千元。",
+   "stem": "This TV costs one ______ yuan.",
+   "ans": "thousand",
+   "why": "一千是 thousand。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"One hundred percent\" means \"______\".",
+   "opts": [
+    "completely",
+    "half",
+    "a little",
+    "not at all"
+   ],
+   "why": "百分之百，完全。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In British English, \"105\" is read as \"one hundred ______ five\".",
+   "opts": [
+    "and",
+    "or",
+    "with",
+    "plus"
+   ],
+   "why": "英式读作 one hundred and five。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "database",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：图书馆有什么？\n听：The library has an online database.\nA. 在线数据库\nB. 咖啡厅\nC. 电影院\nD. 礼品店",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The library has a big online ______.\nA. databases\nB. database\nC. data\nD. date\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The company has two ______. (database)\n考点：变形",
+  "题目4": "【选词填空】从 database、data 中选一个，用适当形式填空。\n题干：We collected a lot of ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The database are very large.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A database is ______.\nA. a date\nB. a game\nC. a book\nD. a large set of information on a computer\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这些名字存在电脑里。\n题干：The names are kept in the ______.\n考点：用法",
+  "答案": "【1】A（在线数据库）\n讲解：database 数据库。\n【2】B（database）\n讲解：a big online 后面接单数 database。\n【3】databases\n讲解：two 后面用复数 databases。\n【4】data\n讲解：“数据”本身是 data。\n【5】are → is\n讲解：主语 database 单数，谓语用 is。\n【6】D（a large set of information on a computer）\n讲解：数据库是电脑里的大量信息。\n【7】computer\n讲解：“电脑”是 computer。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：图书馆有什么？",
+   "listen": "The library has an online database.",
+   "opts": [
+    "在线数据库",
+    "咖啡厅",
+    "电影院",
+    "礼品店"
+   ],
+   "why": "database 数据库。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The library has a big online ______.",
+   "opts": [
+    "database",
+    "databases",
+    "data",
+    "date"
+   ],
+   "why": "a big online 后面接单数 database。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The company has two ______. (database)",
+   "ans": "databases",
+   "why": "two 后面用复数 databases。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 database、data 中选一个，用适当形式填空。",
+   "stem": "We collected a lot of ______.",
+   "ans": "data",
+   "why": "“数据”本身是 data。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The database are very large.",
+   "ans": "are → is",
+   "why": "主语 database 单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A database is ______.",
+   "opts": [
+    "a large set of information on a computer",
+    "a date",
+    "a game",
+    "a book"
+   ],
+   "why": "数据库是电脑里的大量信息。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这些名字存在电脑里。",
+   "stem": "The names are kept in the ______.",
+   "ans": "computer",
+   "why": "“电脑”是 computer。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

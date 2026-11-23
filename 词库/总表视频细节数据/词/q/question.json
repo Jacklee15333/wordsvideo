@@ -1,0 +1,94 @@
+{
+ "单词": "question",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人想做什么？\n听：Can I ask you a question?\nA. 问一个问题\nB. 借一本书\nC. 回答问题\nD. 请对方帮忙",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you answer my ______?\nA. problem\nB. question\nC. trouble\nD. matter\n考点：易混",
+  "题目3": "【选词填空】从 question、problem 中选一个，用适当形式填空。\n题干：We must solve this ______ quickly.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The teacher asked us three ______. (question)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Something is wrong. I have a question with my bike.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这个说法值得怀疑。\n题干：This idea is ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Do you have ______ questions?\nA. any\nB. some\nC. much\nD. a\n考点：用法",
+  "答案": "【1】A（问一个问题）\n讲解：ask a question 问问题。\n【2】B（question）\n讲解：answer a question 回答问题；problem 要 solve。\n【3】problem\n讲解：solve a problem 解决问题；question 要 answer。\n【4】questions\n讲解：three 后面用复数 questions。\n【5】question → problem\n讲解：东西出毛病是 problem；question 是要回答的问题。\n【6】questionable\n讲解：“可疑的、有问题的”用 questionable。\n【7】A（any）\n讲解：疑问句中用 any；question 可数，不用 much。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想做什么？",
+   "listen": "Can I ask you a question?",
+   "opts": [
+    "问一个问题",
+    "借一本书",
+    "回答问题",
+    "请对方帮忙"
+   ],
+   "why": "ask a question 问问题。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you answer my ______?",
+   "opts": [
+    "question",
+    "problem",
+    "trouble",
+    "matter"
+   ],
+   "why": "answer a question 回答问题；problem 要 solve。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 question、problem 中选一个，用适当形式填空。",
+   "stem": "We must solve this ______ quickly.",
+   "ans": "problem",
+   "why": "solve a problem 解决问题；question 要 answer。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The teacher asked us three ______. (question)",
+   "ans": "questions",
+   "why": "three 后面用复数 questions。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Something is wrong. I have a question with my bike.",
+   "ans": "question → problem",
+   "why": "东西出毛病是 problem；question 是要回答的问题。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个说法值得怀疑。",
+   "stem": "This idea is ______.",
+   "ans": "questionable",
+   "why": "“可疑的、有问题的”用 questionable。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Do you have ______ questions?",
+   "opts": [
+    "any",
+    "some",
+    "much",
+    "a"
+   ],
+   "why": "疑问句中用 any；question 可数，不用 much。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

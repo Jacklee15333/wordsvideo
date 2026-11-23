@@ -1,0 +1,95 @@
+{
+ "单词": "feed",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人每天早上做什么？\n听：I feed my cat every morning.\nA. 喂猫\nB. 遛狗\nC. 浇花\nD. 做早饭",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please don't ______ the animals in the zoo.\nA. fed\nB. feeds\nC. feeding\nD. feed",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ the ducks by the lake yesterday. (feed)\n考点：变形",
+  "题目4": "【选词填空】从 feed、food 中选一个，用适当形式填空。\n题干：We should not waste ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The farmer is feed his cows now.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Cows feed ______ grass.\nA. at\nB. in\nC. on\nD. with\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：She feeds the baby ______ a spoon.\nA. with\nB. by\nC. on\nD. of\n考点：用法",
+  "答案": "【1】A（喂猫）\n讲解：feed 喂。\n【2】D（feed）\n讲解：don't 后面用动词原形 feed。\n【3】fed\n讲解：yesterday 用过去式；feed 的过去式不规则，是 fed。\n【4】food\n讲解：浪费的是食物 food（名词）。\n【5】feed → feeding\n讲解：is 和 now 表示正在进行，用 feeding。\n【6】C（on）\n讲解：feed on 以……为食。\n【7】A（with）\n讲解：用勺子喂用 with。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人每天早上做什么？",
+   "listen": "I feed my cat every morning.",
+   "opts": [
+    "喂猫",
+    "遛狗",
+    "浇花",
+    "做早饭"
+   ],
+   "why": "feed 喂。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please don't ______ the animals in the zoo.",
+   "opts": [
+    "feed",
+    "fed",
+    "feeds",
+    "feeding"
+   ],
+   "why": "don't 后面用动词原形 feed。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ the ducks by the lake yesterday. (feed)",
+   "ans": "fed",
+   "why": "yesterday 用过去式；feed 的过去式不规则，是 fed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 feed、food 中选一个，用适当形式填空。",
+   "stem": "We should not waste ______.",
+   "ans": "food",
+   "why": "浪费的是食物 food（名词）。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The farmer is feed his cows now.",
+   "ans": "feed → feeding",
+   "why": "is 和 now 表示正在进行，用 feeding。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Cows feed ______ grass.",
+   "opts": [
+    "on",
+    "at",
+    "in",
+    "with"
+   ],
+   "why": "feed on 以……为食。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She feeds the baby ______ a spoon.",
+   "opts": [
+    "with",
+    "by",
+    "on",
+    "of"
+   ],
+   "why": "用勺子喂用 with。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "write",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人昨晚做了什么？\n听：I wrote a letter to my pen pal last night.\nA. 给笔友打电话\nB. 给笔友写信\nC. 读了一本书\nD. 看了电影",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please ______ your name on the paper.\nA. wrote\nB. written\nC. writing\nD. write\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：This book was ______ by Lu Xun. (write)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：I'm good at writting stories.\n考点：变形",
+  "题目5": "【选词填空】从 write、copy 中选一个，用适当形式填空。\n题干：Don't ______ your friend's homework. Do it yourself.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她想成为一名作家。\n题干：She wants to be a ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：He ______ a poem for his mother yesterday.\nA. write\nB. written\nC. writes\nD. wrote\n考点：变形",
+  "答案": "【1】B（给笔友写信）\n讲解：wrote 写了。\n【2】D（write）\n讲解：祈使句用动词原形 write。\n【3】written\n讲解：被动语态 was + 过去分词 written（双写 t）。\n【4】writting → writing\n讲解：writing 只有一个 t。\n【5】copy\n讲解：“照着抄”用 copy。\n【6】writer\n讲解：“作家”用 writer。\n【7】D（wrote）\n讲解：yesterday 用过去式 wrote。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人昨晚做了什么？",
+   "listen": "I wrote a letter to my pen pal last night.",
+   "opts": [
+    "给笔友写信",
+    "给笔友打电话",
+    "读了一本书",
+    "看了电影"
+   ],
+   "why": "wrote 写了。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please ______ your name on the paper.",
+   "opts": [
+    "write",
+    "wrote",
+    "written",
+    "writing"
+   ],
+   "why": "祈使句用动词原形 write。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "This book was ______ by Lu Xun. (write)",
+   "ans": "written",
+   "why": "被动语态 was + 过去分词 written（双写 t）。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I'm good at writting stories.",
+   "ans": "writting → writing",
+   "why": "writing 只有一个 t。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 write、copy 中选一个，用适当形式填空。",
+   "stem": "Don't ______ your friend's homework. Do it yourself.",
+   "ans": "copy",
+   "why": "“照着抄”用 copy。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她想成为一名作家。",
+   "stem": "She wants to be a ______.",
+   "ans": "writer",
+   "why": "“作家”用 writer。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He ______ a poem for his mother yesterday.",
+   "opts": [
+    "wrote",
+    "write",
+    "written",
+    "writes"
+   ],
+   "why": "yesterday 用过去式 wrote。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

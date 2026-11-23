@@ -1,0 +1,94 @@
+{
+ "单词": "capital",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：中国的首都是哪里？\n听：Beijing is the capital of China.\nA. 北京\nB. 上海\nC. 西安\nD. 南京",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：London is the ______ of the UK.\nA. captain\nB. capture\nC. chapter\nD. capital\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Paris and Rome are both ______. (capital)\n考点：变形",
+  "题目4": "【选词填空】从 capital、city 中选一个，用适当形式填空。\n题干：Shanghai is a big ______ in China.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Please write your name in capital letter.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Capital\" also means \"______\", as in \"capital letters\".\nA. small\nB. big\nC. red\nD. thin\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：东京是日本的首都。\n题干：Tokyo is ______ ______ of Japan.\n考点：用法",
+  "答案": "【1】A（北京）\n讲解：capital 首都。\n【2】D（capital）\n讲解：首都 capital，别和形近词混。\n【3】capitals\n讲解：both 说明是复数。\n【4】city\n讲解：上海不是首都，用 city。\n【5】letter → letters\n讲解：in capital letters 用大写字母。\n【6】B（big）\n讲解：capital letters 大写字母。\n【7】the；capital\n讲解：the capital of 某国的首都。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：中国的首都是哪里？",
+   "listen": "Beijing is the capital of China.",
+   "opts": [
+    "北京",
+    "上海",
+    "西安",
+    "南京"
+   ],
+   "why": "capital 首都。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "London is the ______ of the UK.",
+   "opts": [
+    "capital",
+    "captain",
+    "capture",
+    "chapter"
+   ],
+   "why": "首都 capital，别和形近词混。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Paris and Rome are both ______. (capital)",
+   "ans": "capitals",
+   "why": "both 说明是复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 capital、city 中选一个，用适当形式填空。",
+   "stem": "Shanghai is a big ______ in China.",
+   "ans": "city",
+   "why": "上海不是首都，用 city。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please write your name in capital letter.",
+   "ans": "letter → letters",
+   "why": "in capital letters 用大写字母。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Capital\" also means \"______\", as in \"capital letters\".",
+   "opts": [
+    "big",
+    "small",
+    "red",
+    "thin"
+   ],
+   "why": "capital letters 大写字母。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "东京是日本的首都。",
+   "stem": "Tokyo is ______ ______ of Japan.",
+   "ans": "the；capital",
+   "why": "the capital of 某国的首都。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

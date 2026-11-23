@@ -1,0 +1,93 @@
+{
+ "单词": "landing",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说飞机怎么样了？\n听：The plane made a safe landing.\nA. 安全降落了\nB. 起飞了\nC. 晚点了\nD. 坏了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The pilot made a perfect ______ in the bad weather.\nA. landing\nB. land\nC. landed\nD. lands",
+  "题目3": "【选词填空】从 landing、landfall 中选一个，用适当形式填空。\n题干：The typhoon will make ______ tomorrow night.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The plane ______ at the airport at 9 p.m. yesterday. (landing)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There were two landing on the moon in 1969.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"The landing\" in a house is ______.\nA. the kitchen\nB. the roof\nC. the flat area at the top of the stairs\nD. the garden\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：宇航员登上了月球。\n题干：The astronauts ______ on the moon.\n考点：词性转换",
+  "答案": "【1】A（安全降落了）\n讲解：made a safe landing 安全降落。\n【2】A（landing）\n讲解：a perfect 后面要名词 landing。\n【3】landfall\n讲解：“台风登陆”说 make landfall。\n【4】landed\n讲解：yesterday 用动词 land 的过去式 landed。\n【5】landing → landings\n讲解：two 后面用复数 landings。\n【6】C（the flat area at the top of the stairs）\n讲解：landing 还指楼梯平台。\n【7】landed\n讲解：“登上、降落”用动词 land 的过去式 landed。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说飞机怎么样了？",
+   "listen": "The plane made a safe landing.",
+   "opts": [
+    "安全降落了",
+    "起飞了",
+    "晚点了",
+    "坏了"
+   ],
+   "why": "made a safe landing 安全降落。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The pilot made a perfect ______ in the bad weather.",
+   "opts": [
+    "landing",
+    "land",
+    "landed",
+    "lands"
+   ],
+   "why": "a perfect 后面要名词 landing。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 landing、landfall 中选一个，用适当形式填空。",
+   "stem": "The typhoon will make ______ tomorrow night.",
+   "ans": "landfall",
+   "why": "“台风登陆”说 make landfall。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The plane ______ at the airport at 9 p.m. yesterday. (landing)",
+   "ans": "landed",
+   "why": "yesterday 用动词 land 的过去式 landed。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There were two landing on the moon in 1969.",
+   "ans": "landing → landings",
+   "why": "two 后面用复数 landings。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"The landing\" in a house is ______.",
+   "opts": [
+    "the flat area at the top of the stairs",
+    "the kitchen",
+    "the roof",
+    "the garden"
+   ],
+   "why": "landing 还指楼梯平台。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "宇航员登上了月球。",
+   "stem": "The astronauts ______ on the moon.",
+   "ans": "landed",
+   "why": "“登上、降落”用动词 land 的过去式 landed。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

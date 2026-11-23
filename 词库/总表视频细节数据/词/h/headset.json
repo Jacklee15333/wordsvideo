@@ -1,0 +1,97 @@
+{
+ "单词": "headset",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他戴着什么？\n听：He is wearing a headset.\nA. 帽子\nB. 眼镜\nC. 耳机\nD. 口罩",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The workers in the call centre all wear ______.\nA. headset\nB. headsets\nC. headsetes\nD. head sets\n考点：变形",
+  "题目3": "【选词填空】从 headset、headphones 中选一个，用适当形式填空。\n题干：These ______ have no microphone. They are only for music.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She bought a new headsets yesterday.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：打游戏时我戴着带麦克风的耳机。\n题干：I wear a ______ with a microphone when I play games.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A headset usually has a ______ so you can talk.\nA. camera\nB. screen\nC. keyboard\nD. microphone\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Customer service workers use headsets to ______.\nA. cook\nB. sleep\nC. drive\nD. talk with customers\n考点：用法",
+  "答案": "【1】C（耳机）\n讲解：headset 头戴设备、耳机。\n【2】B（headsets）\n讲解：all 说明是复数。\n【3】headphones\n讲解：只用来听、没有麦克风的是 headphones。\n【4】headsets → headset\n讲解：a 后面用单数。\n【5】headset\n讲解：带麦克风的耳机是 headset。\n【6】D（microphone）\n讲解：headset 常带麦克风，能说话。\n【7】D（talk with customers）\n讲解：客服戴 headset 和顾客通话。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他戴着什么？",
+   "listen": "He is wearing a headset.",
+   "opts": [
+    "耳机",
+    "帽子",
+    "眼镜",
+    "口罩"
+   ],
+   "why": "headset 头戴设备、耳机。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The workers in the call centre all wear ______.",
+   "opts": [
+    "headsets",
+    "headset",
+    "headsetes",
+    "head sets"
+   ],
+   "why": "all 说明是复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 headset、headphones 中选一个，用适当形式填空。",
+   "stem": "These ______ have no microphone. They are only for music.",
+   "ans": "headphones",
+   "why": "只用来听、没有麦克风的是 headphones。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She bought a new headsets yesterday.",
+   "ans": "headsets → headset",
+   "why": "a 后面用单数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "打游戏时我戴着带麦克风的耳机。",
+   "stem": "I wear a ______ with a microphone when I play games.",
+   "ans": "headset",
+   "why": "带麦克风的耳机是 headset。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A headset usually has a ______ so you can talk.",
+   "opts": [
+    "microphone",
+    "camera",
+    "screen",
+    "keyboard"
+   ],
+   "why": "headset 常带麦克风，能说话。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Customer service workers use headsets to ______.",
+   "opts": [
+    "talk with customers",
+    "cook",
+    "sleep",
+    "drive"
+   ],
+   "why": "客服戴 headset 和顾客通话。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

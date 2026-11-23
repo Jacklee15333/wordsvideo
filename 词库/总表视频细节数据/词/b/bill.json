@@ -1,0 +1,92 @@
+{
+ "单词": "bill",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人要什么？\n听：Can I have the bill, please?\nA. 账单\nB. 菜单\nC. 水\nD. 纸巾",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Waiter, the ______, please.\nA. bills\nB. billed\nC. bell\nD. bill",
+  "题目3": "【选词填空】从 bill、check 中选一个，用适当形式填空。\n题干：In America, people ask for the ______ at a restaurant.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：I have to pay three ______ this month. (bill)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He paid the bills for the meal yesterday, and it were expensive.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：He paid the bill ______ cash.\nA. by\nB. with\nC. in\nD. on\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这个议案已经变成了法律。\n题干：The bill has become a ______.\n考点：易混",
+  "答案": "【1】A（账单）\n讲解：the bill 账单。\n【2】D（bill）\n讲解：饭馆结账说 the bill。\n【3】check\n讲解：美式结账多说 the check。\n【4】bills\n讲解：three 后接复数 bills。\n【5】were → was\n讲解：主语 it 单数，用 was。\n【6】C（in）\n讲解：用现金付款 in cash。\n【7】law\n讲解：议案通过后才是 law。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人要什么？",
+   "listen": "Can I have the bill, please?",
+   "opts": [
+    "账单",
+    "菜单",
+    "水",
+    "纸巾"
+   ],
+   "why": "the bill 账单。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Waiter, the ______, please.",
+   "opts": [
+    "bill",
+    "bills",
+    "billed",
+    "bell"
+   ],
+   "why": "饭馆结账说 the bill。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 bill、check 中选一个，用适当形式填空。",
+   "stem": "In America, people ask for the ______ at a restaurant.",
+   "ans": "check",
+   "why": "美式结账多说 the check。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I have to pay three ______ this month. (bill)",
+   "ans": "bills",
+   "why": "three 后接复数 bills。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He paid the bills for the meal yesterday, and it were expensive.",
+   "ans": "were → was",
+   "why": "主语 it 单数，用 was。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He paid the bill ______ cash.",
+   "opts": [
+    "in",
+    "by",
+    "with",
+    "on"
+   ],
+   "why": "用现金付款 in cash。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个议案已经变成了法律。",
+   "stem": "The bill has become a ______.",
+   "ans": "law",
+   "why": "议案通过后才是 law。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

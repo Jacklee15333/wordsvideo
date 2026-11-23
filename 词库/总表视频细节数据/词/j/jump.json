@@ -1,0 +1,91 @@
+{
+ "单词": "jump",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：那只猫做了什么？\n听：The cat jumped onto the table.\nA. 跳下了床\nB. 跑出门\nC. 跳上了桌子\nD. 睡着了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you ______ over that wall?\nA. jumps\nB. jump\nC. jumped\nD. jumping",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The children are ______ rope now. (jump)\n考点：变形",
+  "题目4": "【选词填空】从 jump、jumper 中选一个，用适当形式填空。\n题干：It's cold. Put on your ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He jumped highly than me.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Don't jump the ______! Wait in line.\nA. queue\nB. quick\nC. quite\nD. quiet\n考点：短语",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：不要急着下结论。\n题干：Don't jump to ______.\n考点：短语",
+  "答案": "【1】C（跳上了桌子）\n讲解：jump 跳。\n【2】B（jump）\n讲解：can 后面用动词原形 jump。\n【3】jumping\n讲解：are 和 now 表示正在进行，加 ing。\n【4】jumper\n讲解：英式 jumper 是毛衣。\n【5】highly → higher\n讲解：than 前用比较级 higher（跳得高）。\n【6】A（queue）\n讲解：jump the queue 插队。\n【7】conclusions\n讲解：jump to conclusions 仓促下结论。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：那只猫做了什么？",
+   "listen": "The cat jumped onto the table.",
+   "opts": [
+    "跳上了桌子",
+    "跳下了床",
+    "跑出门",
+    "睡着了"
+   ],
+   "why": "jump 跳。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you ______ over that wall?",
+   "opts": [
+    "jump",
+    "jumps",
+    "jumped",
+    "jumping"
+   ],
+   "why": "can 后面用动词原形 jump。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The children are ______ rope now. (jump)",
+   "ans": "jumping",
+   "why": "are 和 now 表示正在进行，加 ing。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 jump、jumper 中选一个，用适当形式填空。",
+   "stem": "It's cold. Put on your ______.",
+   "ans": "jumper",
+   "why": "英式 jumper 是毛衣。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He jumped highly than me.",
+   "ans": "highly → higher",
+   "why": "than 前用比较级 higher（跳得高）。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Don't jump the ______! Wait in line.",
+   "opts": [
+    "queue",
+    "quick",
+    "quite",
+    "quiet"
+   ],
+   "why": "jump the queue 插队。",
+   "kd": "短语"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "不要急着下结论。",
+   "stem": "Don't jump to ______.",
+   "ans": "conclusions",
+   "why": "jump to conclusions 仓促下结论。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

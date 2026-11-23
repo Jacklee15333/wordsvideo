@@ -1,0 +1,94 @@
+{
+ "单词": "horn",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人听到了什么？\n听：I heard a car horn outside.\nA. 狗叫\nB. 门铃\nC. 汽车喇叭\nD. 下雨",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The bull has two sharp ______.\nA. horn\nB. horns\nC. hornes\nD. corns",
+  "题目3": "【选词填空】从 horn、antler 中选一个，用适当形式填空。\n题干：A deer's ______ looks like a tree branch.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He plays the horns in the school band.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：那头牛长着角。\n题干：The cow has ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Take the bull by the horns\" means ______.\nA. deal with a problem bravely\nB. catch an animal\nC. run away\nD. play music\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A ______ is also an instrument you blow into.\nA. drum\nB. piano\nC. horn\nD. violin\n考点：用法",
+  "答案": "【1】C（汽车喇叭）\n讲解：car horn 汽车喇叭。\n【2】B（horns）\n讲解：two 后面用复数。\n【3】antler\n讲解：鹿角叫 antler。\n【4】horns → horn\n讲解：演奏一种乐器用 the horn。\n【5】horns\n讲解：牛有两只角，用复数。\n【6】A（deal with a problem bravely）\n讲解：勇敢面对困难。\n【7】C（horn）\n讲解：horn 也指号、管乐器。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人听到了什么？",
+   "listen": "I heard a car horn outside.",
+   "opts": [
+    "汽车喇叭",
+    "狗叫",
+    "门铃",
+    "下雨"
+   ],
+   "why": "car horn 汽车喇叭。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The bull has two sharp ______.",
+   "opts": [
+    "horns",
+    "horn",
+    "hornes",
+    "corns"
+   ],
+   "why": "two 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 horn、antler 中选一个，用适当形式填空。",
+   "stem": "A deer's ______ looks like a tree branch.",
+   "ans": "antler",
+   "why": "鹿角叫 antler。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He plays the horns in the school band.",
+   "ans": "horns → horn",
+   "why": "演奏一种乐器用 the horn。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "那头牛长着角。",
+   "stem": "The cow has ______.",
+   "ans": "horns",
+   "why": "牛有两只角，用复数。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Take the bull by the horns\" means ______.",
+   "opts": [
+    "deal with a problem bravely",
+    "catch an animal",
+    "run away",
+    "play music"
+   ],
+   "why": "勇敢面对困难。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ is also an instrument you blow into.",
+   "opts": [
+    "horn",
+    "drum",
+    "piano",
+    "violin"
+   ],
+   "why": "horn 也指号、管乐器。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

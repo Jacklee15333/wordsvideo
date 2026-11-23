@@ -1,0 +1,95 @@
+{
+ "单词": "self-check-out",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在超市是怎么付钱的？\n听：I paid at the self-check-out.\nA. 找收银员付\nB. 在自助结账机付\nC. 网上付\nD. 没付钱",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You can scan your things at the ______ machine.\nA. check-in\nB. self-check-out\nC. checking\nD. checked",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are six ______ in the supermarket. (self-check-out)\n考点：变形",
+  "题目4": "【选词填空】从 self-check-out、check-in 中选一个，用适当形式填空。\n题干：Please go to the hotel ______ desk.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The self-check-out are easy to use.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Self-check-out\" is more often written \"______\".\nA. selfcheckout\nB. checkout-self\nC. self-checkout\nD. self-checks\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：At the self-check-out, you scan things ______.\nA. himself\nB. itself\nC. yourself\nD. themselves\n考点：用法",
+  "答案": "【1】B（在自助结账机付）\n讲解：self-check-out 自助结账。\n【2】B（self-check-out）\n讲解：自助结账机是 self-check-out machine。\n【3】self-check-outs\n讲解：six 后面用复数，加 s。\n【4】check-in\n讲解：酒店登记处是 check-in desk。\n【5】are → is\n讲解：主语是单数，用 is。\n【6】C（self-checkout）\n讲解：self-check-out 和 self-checkout 只是写法不同，后者更常见。\n【7】C（yourself）\n讲解：主语是 you，反身代词用 yourself。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在超市是怎么付钱的？",
+   "listen": "I paid at the self-check-out.",
+   "opts": [
+    "在自助结账机付",
+    "找收银员付",
+    "网上付",
+    "没付钱"
+   ],
+   "why": "self-check-out 自助结账。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can scan your things at the ______ machine.",
+   "opts": [
+    "self-check-out",
+    "check-in",
+    "checking",
+    "checked"
+   ],
+   "why": "自助结账机是 self-check-out machine。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are six ______ in the supermarket. (self-check-out)",
+   "ans": "self-check-outs",
+   "why": "six 后面用复数，加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 self-check-out、check-in 中选一个，用适当形式填空。",
+   "stem": "Please go to the hotel ______ desk.",
+   "ans": "check-in",
+   "why": "酒店登记处是 check-in desk。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The self-check-out are easy to use.",
+   "ans": "are → is",
+   "why": "主语是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Self-check-out\" is more often written \"______\".",
+   "opts": [
+    "self-checkout",
+    "selfcheckout",
+    "checkout-self",
+    "self-checks"
+   ],
+   "why": "self-check-out 和 self-checkout 只是写法不同，后者更常见。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "At the self-check-out, you scan things ______.",
+   "opts": [
+    "yourself",
+    "himself",
+    "itself",
+    "themselves"
+   ],
+   "why": "主语是 you，反身代词用 yourself。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

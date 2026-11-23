@@ -1,0 +1,94 @@
+{
+ "单词": "workbench",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：工具放在哪里？\n听：The tools are on the workbench.\nA. 书桌上\nB. 床上\nC. 地上\nD. 工作台上",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My dad made a ______ in the garage.\nA. workbenches\nB. work-bench's\nC. workbenchs\nD. workbench",
+  "题目3": "【选词填空】从 workbench、desk 中选一个，用适当形式填空。\n题干：I do my homework at my ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There are two workbench in the room.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：木匠用锤子钉钉子。\n题干：The carpenter uses a ______ to hit nails.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A workbench is a strong table for working with your ______.\nA. computer\nB. phone\nC. books\nD. hands\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Workbench\" is made of \"work\" and \"______\".\nA. beach\nB. branch\nC. bunch\nD. bench\n考点：用法",
+  "答案": "【1】D（工作台上）\n讲解：workbench 工作台。\n【2】D（workbench）\n讲解：a 后面用单数。\n【3】desk\n讲解：写作业用书桌 desk。\n【4】workbench → workbenches\n讲解：ch 结尾加 es。\n【5】hammer\n讲解：锤子 hammer。\n【6】D（hands）\n讲解：workbench 是手工干活的台子。\n【7】D（bench）\n讲解：work + bench。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：工具放在哪里？",
+   "listen": "The tools are on the workbench.",
+   "opts": [
+    "工作台上",
+    "书桌上",
+    "床上",
+    "地上"
+   ],
+   "why": "workbench 工作台。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My dad made a ______ in the garage.",
+   "opts": [
+    "workbench",
+    "workbenches",
+    "work-bench's",
+    "workbenchs"
+   ],
+   "why": "a 后面用单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 workbench、desk 中选一个，用适当形式填空。",
+   "stem": "I do my homework at my ______.",
+   "ans": "desk",
+   "why": "写作业用书桌 desk。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are two workbench in the room.",
+   "ans": "workbench → workbenches",
+   "why": "ch 结尾加 es。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "木匠用锤子钉钉子。",
+   "stem": "The carpenter uses a ______ to hit nails.",
+   "ans": "hammer",
+   "why": "锤子 hammer。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A workbench is a strong table for working with your ______.",
+   "opts": [
+    "hands",
+    "computer",
+    "phone",
+    "books"
+   ],
+   "why": "workbench 是手工干活的台子。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Workbench\" is made of \"work\" and \"______\".",
+   "opts": [
+    "bench",
+    "beach",
+    "branch",
+    "bunch"
+   ],
+   "why": "work + bench。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

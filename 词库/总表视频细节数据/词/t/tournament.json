@@ -1,0 +1,93 @@
+{
+ "单词": "tournament",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的球队怎么样了？\n听：Our team won the tennis tournament.\nA. 输了网球赛\nB. 没参加比赛\nC. 赢了网球锦标赛\nD. 换了队员",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Thirty teams took part in the football ______.\nA. game\nB. match\nC. tournament\nD. tour\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She has won three ______ this year. (tournament)\n考点：变形",
+  "题目4": "【选词填空】从 tournament、game 中选一个，用适当形式填空。\n题干：Let's play a ______ of chess.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The tournament were held in May.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她参加了这次锦标赛。\n题干：She took ______ in the tournament.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A tournament is made up of many ______.\nA. tours\nB. tickets\nC. parks\nD. games\n考点：易混",
+  "答案": "【1】C（赢了网球锦标赛）\n讲解：tournament 锦标赛。\n【2】C（tournament）\n讲解：多支队伍、最后决出冠军的赛事是 tournament。\n【3】tournaments\n讲解：three 后面用复数 tournaments。\n【4】game\n讲解：“下一盘棋”用 a game of chess。\n【5】were → was\n讲解：主语 tournament 单数，谓语用 was。\n【6】part\n讲解：take part in 参加。\n【7】D（games）\n讲解：锦标赛由一场场比赛 games 组成。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的球队怎么样了？",
+   "listen": "Our team won the tennis tournament.",
+   "opts": [
+    "赢了网球锦标赛",
+    "输了网球赛",
+    "没参加比赛",
+    "换了队员"
+   ],
+   "why": "tournament 锦标赛。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Thirty teams took part in the football ______.",
+   "opts": [
+    "tournament",
+    "game",
+    "match",
+    "tour"
+   ],
+   "why": "多支队伍、最后决出冠军的赛事是 tournament。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She has won three ______ this year. (tournament)",
+   "ans": "tournaments",
+   "why": "three 后面用复数 tournaments。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tournament、game 中选一个，用适当形式填空。",
+   "stem": "Let's play a ______ of chess.",
+   "ans": "game",
+   "why": "“下一盘棋”用 a game of chess。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The tournament were held in May.",
+   "ans": "were → was",
+   "why": "主语 tournament 单数，谓语用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她参加了这次锦标赛。",
+   "stem": "She took ______ in the tournament.",
+   "ans": "part",
+   "why": "take part in 参加。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A tournament is made up of many ______.",
+   "opts": [
+    "games",
+    "tours",
+    "tickets",
+    "parks"
+   ],
+   "why": "锦标赛由一场场比赛 games 组成。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

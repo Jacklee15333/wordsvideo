@@ -1,0 +1,92 @@
+{
+ "单词": "Christian",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：那个女孩信什么教？\n听：The girl is a Christian.\nA. 佛教\nB. 基督教\nC. 伊斯兰教\nD. 不信教",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She is a ______ and goes to church every week.\nA. Christ\nB. Christian\nC. Christmas\nD. Christians",
+  "题目3": "【选词填空】从 Christian、Protestant 中选一个，用适当形式填空。\n题干：Martin Luther started the ______ church.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Many ______ go to church at Christmas. (Christian)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He is a Christian and go to church every Sunday.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Christians celebrate the birth of Jesus at ______.\nA. Easter\nB. Christmas\nC. Christ\nD. Christian\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：圣诞节是基督教的节日。\n题干：Christmas is a ______ holiday.\n考点：易混",
+  "答案": "【1】B（基督教）\n讲解：Christian 基督徒。\n【2】B（Christian）\n讲解：a 后接单数 Christian。\n【3】Protestant\n讲解：新教 Protestant。\n【4】Christians\n讲解：many 后接复数 Christians，首字母大写。\n【5】go → goes\n讲解：主语 he 三单，用 goes。\n【6】B（Christmas）\n讲解：圣诞节庆祝耶稣诞生。\n【7】religious\n讲解：宗教的 religious。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：那个女孩信什么教？",
+   "listen": "The girl is a Christian.",
+   "opts": [
+    "基督教",
+    "佛教",
+    "伊斯兰教",
+    "不信教"
+   ],
+   "why": "Christian 基督徒。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She is a ______ and goes to church every week.",
+   "opts": [
+    "Christian",
+    "Christ",
+    "Christmas",
+    "Christians"
+   ],
+   "why": "a 后接单数 Christian。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 Christian、Protestant 中选一个，用适当形式填空。",
+   "stem": "Martin Luther started the ______ church.",
+   "ans": "Protestant",
+   "why": "新教 Protestant。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Many ______ go to church at Christmas. (Christian)",
+   "ans": "Christians",
+   "why": "many 后接复数 Christians，首字母大写。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is a Christian and go to church every Sunday.",
+   "ans": "go → goes",
+   "why": "主语 he 三单，用 goes。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Christians celebrate the birth of Jesus at ______.",
+   "opts": [
+    "Christmas",
+    "Easter",
+    "Christ",
+    "Christian"
+   ],
+   "why": "圣诞节庆祝耶稣诞生。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "圣诞节是基督教的节日。",
+   "stem": "Christmas is a ______ holiday.",
+   "ans": "religious",
+   "why": "宗教的 religious。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

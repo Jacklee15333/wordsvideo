@@ -1,0 +1,94 @@
+{
+ "单词": "compose",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他为妈妈做了什么？\n听：He composed a song for his mother.\nA. 唱了一首歌\nB. 买了一首歌\nC. 写了一首歌\nD. 删了一首歌",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Mozart ______ his first music at the age of five.\nA. composes\nB. composed\nC. composing\nD. composition",
+  "题目3": "【选词填空】从 compose、composition 中选一个，用适当形式填空。\n题干：His ______ won first prize.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Water is composed by hydrogen and oxygen.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：她父亲是一位作曲家。\n题干：Her father is a ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Take a deep breath and ______ yourself before the speech.\nA. composer\nB. composition\nC. composed\nD. compose\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Compose a letter\" means ______ a letter carefully.\nA. read\nB. post\nC. open\nD. write\n考点：用法",
+  "答案": "【1】C（写了一首歌）\n讲解：compose 作曲。\n【2】B（composed）\n讲解：过去的事，去 e 加 d。\n【3】composition\n讲解：his 后面要名词“作品”。\n【4】by → of\n讲解：be composed of 由……组成。\n【5】composer\n讲解：作曲的人是 composer。\n【6】D（compose）\n讲解：compose oneself 使自己镇定。\n【7】D（write）\n讲解：compose 也有“写”的意思。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他为妈妈做了什么？",
+   "listen": "He composed a song for his mother.",
+   "opts": [
+    "写了一首歌",
+    "唱了一首歌",
+    "买了一首歌",
+    "删了一首歌"
+   ],
+   "why": "compose 作曲。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Mozart ______ his first music at the age of five.",
+   "opts": [
+    "composed",
+    "composes",
+    "composing",
+    "composition"
+   ],
+   "why": "过去的事，去 e 加 d。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 compose、composition 中选一个，用适当形式填空。",
+   "stem": "His ______ won first prize.",
+   "ans": "composition",
+   "why": "his 后面要名词“作品”。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Water is composed by hydrogen and oxygen.",
+   "ans": "by → of",
+   "why": "be composed of 由……组成。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她父亲是一位作曲家。",
+   "stem": "Her father is a ______.",
+   "ans": "composer",
+   "why": "作曲的人是 composer。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Take a deep breath and ______ yourself before the speech.",
+   "opts": [
+    "compose",
+    "composer",
+    "composition",
+    "composed"
+   ],
+   "why": "compose oneself 使自己镇定。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Compose a letter\" means ______ a letter carefully.",
+   "opts": [
+    "write",
+    "read",
+    "post",
+    "open"
+   ],
+   "why": "compose 也有“写”的意思。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "major",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这座城市的主要问题是什么？\n听：Traffic is a major problem in this city.\nA. 交通\nB. 空气\nC. 天气\nD. 噪音",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：English is one of the ______ languages in the world.\nA. majority\nB. mayor\nC. major\nD. more",
+  "题目3": "【选词填空】从 major、minor 中选一个，用适当形式填空。\n题干：It's only a ______ problem; don't worry.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The ______ of students walk to school. (major)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This is a more major problem than that one.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：大多数学生同意这个计划。\n题干：The ______ of students agree with the plan.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The ______ of our city opened the new park.\nA. major\nB. majority\nC. mayor\nD. master\n考点：易混",
+  "答案": "【1】A（交通）\n讲解：major problem 主要问题。\n【2】C（major）\n讲解：修饰名词 languages 用形容词 major（主要的）。\n【3】minor\n讲解：“不要紧的小问题”用 minor，是 major 的反义词。\n【4】majority\n讲解：the majority of 大多数，用名词 majority。\n【5】more major → bigger\n讲解：major 不说 more major，可以改用 bigger。\n【6】majority\n讲解：the majority of 大多数。\n【7】C（mayor）\n讲解：市长是 mayor，和 major 拼写很像。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这座城市的主要问题是什么？",
+   "listen": "Traffic is a major problem in this city.",
+   "opts": [
+    "交通",
+    "空气",
+    "天气",
+    "噪音"
+   ],
+   "why": "major problem 主要问题。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "English is one of the ______ languages in the world.",
+   "opts": [
+    "major",
+    "majority",
+    "mayor",
+    "more"
+   ],
+   "why": "修饰名词 languages 用形容词 major（主要的）。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 major、minor 中选一个，用适当形式填空。",
+   "stem": "It's only a ______ problem; don't worry.",
+   "ans": "minor",
+   "why": "“不要紧的小问题”用 minor，是 major 的反义词。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The ______ of students walk to school. (major)",
+   "ans": "majority",
+   "why": "the majority of 大多数，用名词 majority。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This is a more major problem than that one.",
+   "ans": "more major → bigger",
+   "why": "major 不说 more major，可以改用 bigger。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "大多数学生同意这个计划。",
+   "stem": "The ______ of students agree with the plan.",
+   "ans": "majority",
+   "why": "the majority of 大多数。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of our city opened the new park.",
+   "opts": [
+    "mayor",
+    "major",
+    "majority",
+    "master"
+   ],
+   "why": "市长是 mayor，和 major 拼写很像。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "maximum",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这辆车最多能坐几个人？\n听：The car can carry a maximum of five people.\nA. 四个人\nB. 五个人\nC. 六个人\nD. 七个人",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ speed here is 60 km/h.\nA. minimum\nB. maximum\nC. maximize\nD. most",
+  "题目3": "【选词填空】从 maximum、minimum 中选一个，用适当形式填空。\n题干：You must be at least 18. That's the ______ age.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The two machines have different ______. (maximum)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The temperature reached it's maximum.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我们要充分利用时间。\n题干：We should make the ______ of our time.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：We want to ______ the use of the room.\nA. maximum\nB. most\nC. maximize\nD. more\n考点：词性转换",
+  "答案": "【1】B（五个人）\n讲解：a maximum of 最多……。\n【2】B（maximum）\n讲解：限速是“最高速度”maximum speed。\n【3】minimum\n讲解：“至少”是最低限度 minimum；maximum 是最大量。\n【4】maximums\n讲解：two 后面用复数 maximums。\n【5】it's → its\n讲解：“它的”是 its；it's 是 it is。\n【6】most\n讲解：make the most of 充分利用。\n【7】C（maximize）\n讲解：to 后面用动词 maximize（使最大化）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这辆车最多能坐几个人？",
+   "listen": "The car can carry a maximum of five people.",
+   "opts": [
+    "五个人",
+    "四个人",
+    "六个人",
+    "七个人"
+   ],
+   "why": "a maximum of 最多……。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ speed here is 60 km/h.",
+   "opts": [
+    "maximum",
+    "minimum",
+    "maximize",
+    "most"
+   ],
+   "why": "限速是“最高速度”maximum speed。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 maximum、minimum 中选一个，用适当形式填空。",
+   "stem": "You must be at least 18. That's the ______ age.",
+   "ans": "minimum",
+   "why": "“至少”是最低限度 minimum；maximum 是最大量。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The two machines have different ______. (maximum)",
+   "ans": "maximums",
+   "why": "two 后面用复数 maximums。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The temperature reached it's maximum.",
+   "ans": "it's → its",
+   "why": "“它的”是 its；it's 是 it is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们要充分利用时间。",
+   "stem": "We should make the ______ of our time.",
+   "ans": "most",
+   "why": "make the most of 充分利用。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We want to ______ the use of the room.",
+   "opts": [
+    "maximize",
+    "maximum",
+    "most",
+    "more"
+   ],
+   "why": "to 后面用动词 maximize（使最大化）。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

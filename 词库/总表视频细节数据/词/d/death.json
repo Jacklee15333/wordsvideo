@@ -1,0 +1,91 @@
+{
+ "单词": "death",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这本书讲的是什么？\n听：The book is about life and death.\nA. 爱情\nB. 生与死\nC. 战争\nD. 旅行",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ of his dog made him very sad.\nA. dead\nB. die\nC. died\nD. death",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The bird has been ______ for days. (death)\n考点：词性转换",
+  "题目4": "【选词填空】从 death、depth 中选一个，用适当形式填空。\n题干：The ______ of the lake is 30 meters.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He was frightened to dead.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：There were fewer road ______ this year.\nA. death\nB. deaths\nC. dead\nD. died\n考点：变形",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他在 1990 年去世。\n题干：He ______ in 1990.\n考点：易混",
+  "答案": "【1】B（生与死）\n讲解：death 死亡。\n【2】D（death）\n讲解：the … of 中间要名词 death。\n【3】dead\n讲解：has been 后面用形容词 dead。\n【4】depth\n讲解：湖的深度是 depth。\n【5】dead → death\n讲解：be frightened to death 吓得要死。\n【6】B（deaths）\n讲解：fewer 后面用可数名词复数 deaths。\n【7】died\n讲解：death 是名词，不能作谓语；作谓语用 died。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这本书讲的是什么？",
+   "listen": "The book is about life and death.",
+   "opts": [
+    "生与死",
+    "爱情",
+    "战争",
+    "旅行"
+   ],
+   "why": "death 死亡。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of his dog made him very sad.",
+   "opts": [
+    "death",
+    "dead",
+    "die",
+    "died"
+   ],
+   "why": "the … of 中间要名词 death。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The bird has been ______ for days. (death)",
+   "ans": "dead",
+   "why": "has been 后面用形容词 dead。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 death、depth 中选一个，用适当形式填空。",
+   "stem": "The ______ of the lake is 30 meters.",
+   "ans": "depth",
+   "why": "湖的深度是 depth。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He was frightened to dead.",
+   "ans": "dead → death",
+   "why": "be frightened to death 吓得要死。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There were fewer road ______ this year.",
+   "opts": [
+    "deaths",
+    "death",
+    "dead",
+    "died"
+   ],
+   "why": "fewer 后面用可数名词复数 deaths。",
+   "kd": "变形"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他在 1990 年去世。",
+   "stem": "He ______ in 1990.",
+   "ans": "died",
+   "why": "death 是名词，不能作谓语；作谓语用 died。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "event",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人参加了什么项目？\n听：I took part in the 100-meter event yesterday.\nA. 跳远\nB. 跳高\nC. 游泳\nD. 100 米跑",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Which ______ will you take part in, the high jump or the long jump?\nA. incident\nB. event\nC. accident\nD. invention\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The sports meeting has twenty ______ this year. (event)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：In the event of rain, the party will be held outside.\n考点：短语",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：那是多事的一周。\n题干：It was an ______ week.\n考点：词性转换",
+  "题目6": "【选词填空】从 event、incident 中选一个，用适当形式填空。\n题干：Nobody was hurt in the small ______ on the bus.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"In the event of fire\" means \"______ there is a fire\".\nA. because\nB. if\nC. after\nD. before\n考点：短语",
+  "答案": "【1】D（100 米跑）\n讲解：100-meter event 百米项目。\n【2】B（event）\n讲解：比赛项目用 event。\n【3】events\n讲解：twenty 后用复数 events。\n【4】outside → inside\n讲解：in the event of 万一，下雨就在室内办。\n【5】eventful\n讲解：“多事的”用形容词 eventful。\n【6】incident\n讲解：公交车上的小插曲用 incident；event 是有分量的事。\n【7】B（if）\n讲解：in the event of = 万一、如果发生。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人参加了什么项目？",
+   "listen": "I took part in the 100-meter event yesterday.",
+   "opts": [
+    "100 米跑",
+    "跳远",
+    "跳高",
+    "游泳"
+   ],
+   "why": "100-meter event 百米项目。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which ______ will you take part in, the high jump or the long jump?",
+   "opts": [
+    "event",
+    "incident",
+    "accident",
+    "invention"
+   ],
+   "why": "比赛项目用 event。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The sports meeting has twenty ______ this year. (event)",
+   "ans": "events",
+   "why": "twenty 后用复数 events。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "In the event of rain, the party will be held outside.",
+   "ans": "outside → inside",
+   "why": "in the event of 万一，下雨就在室内办。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "那是多事的一周。",
+   "stem": "It was an ______ week.",
+   "ans": "eventful",
+   "why": "“多事的”用形容词 eventful。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 event、incident 中选一个，用适当形式填空。",
+   "stem": "Nobody was hurt in the small ______ on the bus.",
+   "ans": "incident",
+   "why": "公交车上的小插曲用 incident；event 是有分量的事。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"In the event of fire\" means \"______ there is a fire\".",
+   "opts": [
+    "if",
+    "because",
+    "after",
+    "before"
+   ],
+   "why": "in the event of = 万一、如果发生。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "daily",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人多久锻炼一次？\n听：I do daily exercise in the park.\nA. 每周一次\nB. 每天\nC. 每月一次\nD. 从不",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She reads the ______ news every morning.\nA. day\nB. days\nC. dairy\nD. daily\n考点：词性转换",
+  "题目3": "【选词填空】从 daily、everyday 中选一个，用适当形式填空。\n题干：Jeans are my ______ clothes.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are two ______ in this city. (daily)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I take a walk every days.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我每天都练钢琴。\n题干：I practise the piano ______ ______.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There are seven ______ in a week.\nA. daily\nB. day\nC. dailies\nD. days\n考点：词性转换",
+  "答案": "【1】B（每天）\n讲解：daily 每日的。\n【2】D（daily）\n讲解：修饰名词 news 用形容词 daily。\n【3】everyday\n讲解：“日常的（衣服）”用形容词 everyday；daily 多指每天一次的事。\n【4】dailies\n讲解：“日报”复数 y 变 i 加 es：dailies。\n【5】days → day\n讲解：every 后面用单数 day。\n【6】every；day\n讲解：every day 每天（两个词）。\n【7】D（days）\n讲解：seven 后面用复数 days。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人多久锻炼一次？",
+   "listen": "I do daily exercise in the park.",
+   "opts": [
+    "每天",
+    "每周一次",
+    "每月一次",
+    "从不"
+   ],
+   "why": "daily 每日的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She reads the ______ news every morning.",
+   "opts": [
+    "daily",
+    "day",
+    "days",
+    "dairy"
+   ],
+   "why": "修饰名词 news 用形容词 daily。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 daily、everyday 中选一个，用适当形式填空。",
+   "stem": "Jeans are my ______ clothes.",
+   "ans": "everyday",
+   "why": "“日常的（衣服）”用形容词 everyday；daily 多指每天一次的事。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are two ______ in this city. (daily)",
+   "ans": "dailies",
+   "why": "“日报”复数 y 变 i 加 es：dailies。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I take a walk every days.",
+   "ans": "days → day",
+   "why": "every 后面用单数 day。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我每天都练钢琴。",
+   "stem": "I practise the piano ______ ______.",
+   "ans": "every；day",
+   "why": "every day 每天（两个词）。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are seven ______ in a week.",
+   "opts": [
+    "days",
+    "daily",
+    "day",
+    "dailies"
+   ],
+   "why": "seven 后面用复数 days。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

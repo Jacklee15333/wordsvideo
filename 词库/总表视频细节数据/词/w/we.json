@@ -1,0 +1,94 @@
+{
+ "单词": "we",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们要去哪里？\n听：We are going to the zoo.\nA. 公园\nB. 学校\nC. 动物园\nD. 博物馆",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My friend and I ______ good at maths.\nA. are\nB. is\nC. am\nD. be",
+  "题目3": "【选词填空】从 we、us 中选一个，用适当形式填空。\n题干：Can you help ______?",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Our are classmates.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这是我们的教室。\n题干：This is ______ classroom.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：We should help ______.\nA. ourself\nB. us\nC. ourselves\nD. ours\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"We\" can include the listener, as in \"______ can do it together.\"\nA. We\nB. Us\nC. Our\nD. Ours\n考点：用法",
+  "答案": "【1】C（动物园）\n讲解：we 我们。\n【2】A（are）\n讲解：my friend and I 等于 we，用 are。\n【3】us\n讲解：作宾语用宾格 us。\n【4】Our → We\n讲解：作主语用主格 we。\n【5】our\n讲解：名词前用形容词性物主代词 our。\n【6】C（ourselves）\n讲解：主语宾语是同一些人，用反身代词。\n【7】A（We）\n讲解：作主语用 we。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们要去哪里？",
+   "listen": "We are going to the zoo.",
+   "opts": [
+    "动物园",
+    "公园",
+    "学校",
+    "博物馆"
+   ],
+   "why": "we 我们。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My friend and I ______ good at maths.",
+   "opts": [
+    "are",
+    "is",
+    "am",
+    "be"
+   ],
+   "why": "my friend and I 等于 we，用 are。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 we、us 中选一个，用适当形式填空。",
+   "stem": "Can you help ______?",
+   "ans": "us",
+   "why": "作宾语用宾格 us。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Our are classmates.",
+   "ans": "Our → We",
+   "why": "作主语用主格 we。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是我们的教室。",
+   "stem": "This is ______ classroom.",
+   "ans": "our",
+   "why": "名词前用形容词性物主代词 our。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We should help ______.",
+   "opts": [
+    "ourselves",
+    "ourself",
+    "us",
+    "ours"
+   ],
+   "why": "主语宾语是同一些人，用反身代词。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"We\" can include the listener, as in \"______ can do it together.\"",
+   "opts": [
+    "We",
+    "Us",
+    "Our",
+    "Ours"
+   ],
+   "why": "作主语用 we。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

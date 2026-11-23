@@ -1,0 +1,94 @@
+{
+ "单词": "disk",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：电脑的什么满了？\n听：My computer's hard disk is full.\nA. 硬盘\nB. 屏幕\nC. 键盘\nD. 电池",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Save the file to the ______.\nA. disks\nB. desk\nC. dish\nD. disk",
+  "题目3": "【选词填空】从 disk、desk 中选一个，用适当形式填空。\n题干：Put your books on the ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：I have two hard disk in my computer.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：硬盘坏了，我丢了所有文件。\n题干：The hard disk broke and I ______ all my files.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Hard disk\" is spelled with \"k\" in ______.\nA. British English only\nB. American English only\nC. both British and American English\nD. neither\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：For music CDs, people often write \"______\".\nA. disk\nB. disc\nC. dish\nD. desk\n考点：用法",
+  "答案": "【1】A（硬盘）\n讲解：hard disk 硬盘。\n【2】D（disk）\n讲解：the 后面这里用单数。\n【3】desk\n讲解：放书的是书桌 desk。\n【4】disk → disks\n讲解：two 后面用复数。\n【5】lost\n讲解：lose 过去式 lost。\n【6】C（both British and American English）\n讲解：hard disk 英美都写 k。\n【7】B（disc）\n讲解：音乐、影像光盘多写 disc。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：电脑的什么满了？",
+   "listen": "My computer's hard disk is full.",
+   "opts": [
+    "硬盘",
+    "屏幕",
+    "键盘",
+    "电池"
+   ],
+   "why": "hard disk 硬盘。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Save the file to the ______.",
+   "opts": [
+    "disk",
+    "disks",
+    "desk",
+    "dish"
+   ],
+   "why": "the 后面这里用单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 disk、desk 中选一个，用适当形式填空。",
+   "stem": "Put your books on the ______.",
+   "ans": "desk",
+   "why": "放书的是书桌 desk。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I have two hard disk in my computer.",
+   "ans": "disk → disks",
+   "why": "two 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "硬盘坏了，我丢了所有文件。",
+   "stem": "The hard disk broke and I ______ all my files.",
+   "ans": "lost",
+   "why": "lose 过去式 lost。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Hard disk\" is spelled with \"k\" in ______.",
+   "opts": [
+    "both British and American English",
+    "British English only",
+    "American English only",
+    "neither"
+   ],
+   "why": "hard disk 英美都写 k。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "For music CDs, people often write \"______\".",
+   "opts": [
+    "disc",
+    "disk",
+    "dish",
+    "desk"
+   ],
+   "why": "音乐、影像光盘多写 disc。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

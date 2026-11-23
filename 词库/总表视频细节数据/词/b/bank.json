@@ -1,0 +1,94 @@
+{
+ "单词": "bank",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人要去哪里？\n听：I'm going to the bank to get some money.\nA. 商店\nB. 邮局\nC. 银行\nD. 学校",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are three ______ on this street.\nA. bank\nB. banks\nC. banking\nD. banknote",
+  "题目3": "【选词填空】从 bank、banking 中选一个，用适当形式填空。\n题干：My uncle works in ______. He likes working with money.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She went to bank this morning.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我在银行有一个账户。\n题干：I have a ______ account.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Bank\" can also mean the land beside a ______.\nA. river\nB. road\nC. house\nD. shop\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A person who works at the counter of a bank is a ______.\nA. banker\nB. doctor\nC. farmer\nD. teller\n考点：易混",
+  "答案": "【1】C（银行）\n讲解：bank 银行。\n【2】B（banks）\n讲解：three 后面用复数。\n【3】banking\n讲解：“银行业”不可数，用 banking。\n【4】to bank → to the bank\n讲解：去银行说 go to the bank。\n【5】bank\n讲解：银行账户 bank account。\n【6】A（river）\n讲解：bank 也指河岸。\n【7】D（teller）\n讲解：柜台职员是 teller，不是 banker。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人要去哪里？",
+   "listen": "I'm going to the bank to get some money.",
+   "opts": [
+    "银行",
+    "商店",
+    "邮局",
+    "学校"
+   ],
+   "why": "bank 银行。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are three ______ on this street.",
+   "opts": [
+    "banks",
+    "bank",
+    "banking",
+    "banknote"
+   ],
+   "why": "three 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 bank、banking 中选一个，用适当形式填空。",
+   "stem": "My uncle works in ______. He likes working with money.",
+   "ans": "banking",
+   "why": "“银行业”不可数，用 banking。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She went to bank this morning.",
+   "ans": "to bank → to the bank",
+   "why": "去银行说 go to the bank。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我在银行有一个账户。",
+   "stem": "I have a ______ account.",
+   "ans": "bank",
+   "why": "银行账户 bank account。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Bank\" can also mean the land beside a ______.",
+   "opts": [
+    "river",
+    "road",
+    "house",
+    "shop"
+   ],
+   "why": "bank 也指河岸。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A person who works at the counter of a bank is a ______.",
+   "opts": [
+    "teller",
+    "banker",
+    "doctor",
+    "farmer"
+   ],
+   "why": "柜台职员是 teller，不是 banker。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

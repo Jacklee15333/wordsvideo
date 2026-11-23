@@ -1,0 +1,96 @@
+{
+ "单词": "second",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人比赛得了第几？\n听：I came second in the race.\nA. 第一名\nB. 第三名\nC. 第二名\nD. 最后一名",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：February is the ______ month of the year.\nA. two\nB. secondly\nC. seconds\nD. second",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are sixty ______ in a minute. (second)\n考点：变形",
+  "题目4": "【选词填空】从 second、two 中选一个，用适当形式填空。\n题干：I have ______ brothers.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He lives on the two floor.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：English is my second ______; Chinese is my first.\nA. languages\nB. language\nC. lesson\nD. letter\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：She was the second ______ to arrive.\nA. people\nB. person\nC. persons\nD. man's\n考点：用法",
+  "答案": "【1】C（第二名）\n讲解：second 第二。\n【2】D（second）\n讲解：the + 序数词 second。\n【3】seconds\n讲解：second 还指“秒”，sixty 后用复数。\n【4】two\n讲解：说“几个”用基数词 two。\n【5】two → second\n讲解：楼层要用序数词 second。\n【6】B（language）\n讲解：my second 后面用单数 language。\n【7】B（person）\n讲解：the second + 单数名词 person。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人比赛得了第几？",
+   "listen": "I came second in the race.",
+   "opts": [
+    "第二名",
+    "第一名",
+    "第三名",
+    "最后一名"
+   ],
+   "why": "second 第二。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "February is the ______ month of the year.",
+   "opts": [
+    "second",
+    "two",
+    "secondly",
+    "seconds"
+   ],
+   "why": "the + 序数词 second。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are sixty ______ in a minute. (second)",
+   "ans": "seconds",
+   "why": "second 还指“秒”，sixty 后用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 second、two 中选一个，用适当形式填空。",
+   "stem": "I have ______ brothers.",
+   "ans": "two",
+   "why": "说“几个”用基数词 two。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He lives on the two floor.",
+   "ans": "two → second",
+   "why": "楼层要用序数词 second。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "English is my second ______; Chinese is my first.",
+   "opts": [
+    "language",
+    "languages",
+    "lesson",
+    "letter"
+   ],
+   "why": "my second 后面用单数 language。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She was the second ______ to arrive.",
+   "opts": [
+    "person",
+    "people",
+    "persons",
+    "man's"
+   ],
+   "why": "the second + 单数名词 person。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

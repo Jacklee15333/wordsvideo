@@ -1,0 +1,93 @@
+{
+ "单词": "freeze",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：水在零度会怎样？\n听：Water freezes at 0℃.\nA. 沸腾\nB. 变热\nC. 消失\nD. 结冰",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Water will ______ when it gets very cold.\nA. freeze\nB. freezes\nC. froze\nD. frozen",
+  "题目3": "【选词填空】从 freeze、chill 中选一个，用适当形式填空。\n题干：Please ______ the drinks in the fridge, but don't let them turn to ice.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The lake ______ last night. (freeze)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The river has froze.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：It's ______ outside! Put on your coat.\nA. freeze\nB. froze\nC. freezing\nD. frozen\n考点：变形",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这些冷冻食品要放进冰柜。\n题干：Put the frozen food in the ______.\n考点：词性转换",
+  "答案": "【1】D（结冰）\n讲解：freeze 结冰。\n【2】A（freeze）\n讲解：will 后接动词原形 freeze。\n【3】chill\n讲解：冷藏、使变凉（不结冰）用 chill。\n【4】froze\n讲解：last night 用过去式 froze。\n【5】froze → frozen\n讲解：has 后接过去分词 frozen。\n【6】C（freezing）\n讲解：口语“冷死了”用 freezing。\n【7】freezer\n讲解：冰柜 freezer。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：水在零度会怎样？",
+   "listen": "Water freezes at 0℃.",
+   "opts": [
+    "结冰",
+    "沸腾",
+    "变热",
+    "消失"
+   ],
+   "why": "freeze 结冰。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Water will ______ when it gets very cold.",
+   "opts": [
+    "freeze",
+    "freezes",
+    "froze",
+    "frozen"
+   ],
+   "why": "will 后接动词原形 freeze。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 freeze、chill 中选一个，用适当形式填空。",
+   "stem": "Please ______ the drinks in the fridge, but don't let them turn to ice.",
+   "ans": "chill",
+   "why": "冷藏、使变凉（不结冰）用 chill。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The lake ______ last night. (freeze)",
+   "ans": "froze",
+   "why": "last night 用过去式 froze。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The river has froze.",
+   "ans": "froze → frozen",
+   "why": "has 后接过去分词 frozen。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It's ______ outside! Put on your coat.",
+   "opts": [
+    "freezing",
+    "freeze",
+    "froze",
+    "frozen"
+   ],
+   "why": "口语“冷死了”用 freezing。",
+   "kd": "变形"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这些冷冻食品要放进冰柜。",
+   "stem": "Put the frozen food in the ______.",
+   "ans": "freezer",
+   "why": "冰柜 freezer。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

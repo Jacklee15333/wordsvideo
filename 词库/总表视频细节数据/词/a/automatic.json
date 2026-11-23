@@ -1,0 +1,92 @@
+{
+ "单词": "automatic",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这扇门怎么开？\n听：The door is automatic.\nA. 用钥匙开\nB. 用手推\nC. 打不开\nD. 自动开",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We have an ______ washing machine at home.\nA. automatically\nB. auto\nC. automation\nD. automatic",
+  "题目3": "【选词填空】从 automatic、instinctive 中选一个，用适当形式填空。\n题干：Pulling your hand away from fire is ______; you don't think about it.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The lights turn on ______ at night. (automatic)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The door open automatically.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The doors close ______ when the train starts.\nA. automatic\nB. auto\nC. automation\nD. automatically\n考点：词性转换",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这辆车是手动挡的，不是自动挡的。\n题干：This car is ______, not automatic.\n考点：易混",
+  "答案": "【1】D（自动开）\n讲解：automatic 自动的。\n【2】D（automatic）\n讲解：an 后、名词前用形容词 automatic。\n【3】instinctive\n讲解：本能的反应用 instinctive。\n【4】automatically\n讲解：修饰动词 turn on 用副词 automatically。\n【5】open → opens\n讲解：主语 the door 三单，用 opens。\n【6】D（automatically）\n讲解：修饰动词 close 用副词。\n【7】manual\n讲解：手动的 manual。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这扇门怎么开？",
+   "listen": "The door is automatic.",
+   "opts": [
+    "自动开",
+    "用钥匙开",
+    "用手推",
+    "打不开"
+   ],
+   "why": "automatic 自动的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We have an ______ washing machine at home.",
+   "opts": [
+    "automatic",
+    "automatically",
+    "auto",
+    "automation"
+   ],
+   "why": "an 后、名词前用形容词 automatic。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 automatic、instinctive 中选一个，用适当形式填空。",
+   "stem": "Pulling your hand away from fire is ______; you don't think about it.",
+   "ans": "instinctive",
+   "why": "本能的反应用 instinctive。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The lights turn on ______ at night. (automatic)",
+   "ans": "automatically",
+   "why": "修饰动词 turn on 用副词 automatically。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The door open automatically.",
+   "ans": "open → opens",
+   "why": "主语 the door 三单，用 opens。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The doors close ______ when the train starts.",
+   "opts": [
+    "automatically",
+    "automatic",
+    "auto",
+    "automation"
+   ],
+   "why": "修饰动词 close 用副词。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这辆车是手动挡的，不是自动挡的。",
+   "stem": "This car is ______, not automatic.",
+   "ans": "manual",
+   "why": "手动的 manual。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

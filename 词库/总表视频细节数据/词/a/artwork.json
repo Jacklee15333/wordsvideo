@@ -1,0 +1,89 @@
+{
+ "单词": "artwork",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：墙上挂的是什么？\n听：The artwork on the wall was made by my son.\nA. 儿子的艺术作品\nB. 一张地图\nC. 一张照片\nD. 一面镜子",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The museum has many famous ______.\nA. artwork\nB. artwork's\nC. artist\nD. artworks\n考点：变形",
+  "题目3": "【选词填空】从 artwork、artist 中选一个，用适当形式填空。\n题干：The ______ who drew this picture is only ten.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The artworks ______ in the hall last month. (show)\n考点：用法",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This artwork were made by a famous painter.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这件艺术品很漂亮。\n题干：This ______ is beautiful.\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：同义句：This is a great artwork.\n题干：This is a great ______ ______ ______.\n考点：易混",
+  "答案": "【1】A（儿子的艺术作品）\n讲解：artwork 艺术品。\n【2】D（artworks）\n讲解：many 后面接复数 artworks。\n【3】artist\n讲解：画画的“人”是 artist；artwork 是作品。\n【4】were shown\n讲解：作品是被展出的，last month 用 were shown。\n【5】were → was\n讲解：主语 artwork 是单数，用 was。\n【6】artwork\n讲解：艺术品是 artwork。\n【7】work；of；art\n讲解：artwork 也可以说 a work of art。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：墙上挂的是什么？",
+   "listen": "The artwork on the wall was made by my son.",
+   "opts": [
+    "儿子的艺术作品",
+    "一张地图",
+    "一张照片",
+    "一面镜子"
+   ],
+   "why": "artwork 艺术品。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The museum has many famous ______.",
+   "opts": [
+    "artworks",
+    "artwork",
+    "artwork's",
+    "artist"
+   ],
+   "why": "many 后面接复数 artworks。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 artwork、artist 中选一个，用适当形式填空。",
+   "stem": "The ______ who drew this picture is only ten.",
+   "ans": "artist",
+   "why": "画画的“人”是 artist；artwork 是作品。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The artworks ______ in the hall last month. (show)",
+   "ans": "were shown",
+   "why": "作品是被展出的，last month 用 were shown。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This artwork were made by a famous painter.",
+   "ans": "were → was",
+   "why": "主语 artwork 是单数，用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这件艺术品很漂亮。",
+   "stem": "This ______ is beautiful.",
+   "ans": "artwork",
+   "why": "艺术品是 artwork。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "同义句：This is a great artwork.",
+   "stem": "This is a great ______ ______ ______.",
+   "ans": "work；of；art",
+   "why": "artwork 也可以说 a work of art。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

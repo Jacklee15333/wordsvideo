@@ -1,0 +1,93 @@
+{
+ "单词": "prediction",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说谁的预测对了？\n听：My prediction was right; we won!\nA. 他朋友\nB. 他老师\nC. 他自己\nD. 没有人",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：His ______ about the match was wrong.\nA. predict\nB. predictable\nC. prediction\nD. predicted\n考点：词性转换",
+  "题目3": "【选词填空】从 predict、prediction 中选一个，用适当形式填空。\n题干：Can you ______ who will win?\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Scientists made many ______. (prediction)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Her predictions was correct.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Prediction is close in meaning to ______.\nA. foreign\nB. forget\nC. forest\nD. forecast\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：你能预测一下比分吗？\n题干：Can you ______ a prediction about the score?\n考点：用法",
+  "答案": "【1】C（他自己）\n讲解：prediction 预测。\n【2】C（prediction）\n讲解：his 后面要名词 prediction。\n【3】predict\n讲解：can 后面用动词原形 predict。\n【4】predictions\n讲解：many 后面接复数 predictions。\n【5】was → were\n讲解：主语 predictions 是复数，用 were。\n【6】D（forecast）\n讲解：prediction 预测，和 forecast 意思相近。\n【7】make\n讲解：make a prediction 做出预测。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说谁的预测对了？",
+   "listen": "My prediction was right; we won!",
+   "opts": [
+    "他自己",
+    "他朋友",
+    "他老师",
+    "没有人"
+   ],
+   "why": "prediction 预测。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "His ______ about the match was wrong.",
+   "opts": [
+    "prediction",
+    "predict",
+    "predictable",
+    "predicted"
+   ],
+   "why": "his 后面要名词 prediction。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 predict、prediction 中选一个，用适当形式填空。",
+   "stem": "Can you ______ who will win?",
+   "ans": "predict",
+   "why": "can 后面用动词原形 predict。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Scientists made many ______. (prediction)",
+   "ans": "predictions",
+   "why": "many 后面接复数 predictions。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Her predictions was correct.",
+   "ans": "was → were",
+   "why": "主语 predictions 是复数，用 were。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Prediction is close in meaning to ______.",
+   "opts": [
+    "forecast",
+    "foreign",
+    "forget",
+    "forest"
+   ],
+   "why": "prediction 预测，和 forecast 意思相近。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你能预测一下比分吗？",
+   "stem": "Can you ______ a prediction about the score?",
+   "ans": "make",
+   "why": "make a prediction 做出预测。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

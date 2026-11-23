@@ -1,0 +1,94 @@
+{
+ "单词": "folk",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这是什么歌？\n听：This is a folk song.\nA. 流行歌\nB. 民歌\nC. 摇滚\nD. 儿歌",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We enjoyed the ______ music.\nA. folk\nB. folks\nC. folky\nD. folker",
+  "题目3": "【选词填空】从 folk、people 中选一个，用适当形式填空。\n题干：Many ______ around the world speak English.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：My folks lives in the countryside.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：她喜欢民间传说。\n题干：She likes ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In spoken English, \"my folks\" can mean my ______.\nA. teachers\nB. pets\nC. friends\nD. parents\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Townsfolk\" means the ______ of a town.\nA. buildings\nB. people\nC. roads\nD. shops\n考点：词性转换",
+  "答案": "【1】B（民歌）\n讲解：folk 民间的。\n【2】A（folk）\n讲解：作定语用 folk。\n【3】people\n讲解：中性、通用的“人们”用 people。\n【4】lives → live\n讲解：folks 是复数。\n【5】folklore\n讲解：民间传说 folklore。\n【6】D（parents）\n讲解：口语 my folks 指父母家人。\n【7】B（people）\n讲解：townsfolk 镇上的人。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这是什么歌？",
+   "listen": "This is a folk song.",
+   "opts": [
+    "民歌",
+    "流行歌",
+    "摇滚",
+    "儿歌"
+   ],
+   "why": "folk 民间的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We enjoyed the ______ music.",
+   "opts": [
+    "folk",
+    "folks",
+    "folky",
+    "folker"
+   ],
+   "why": "作定语用 folk。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 folk、people 中选一个，用适当形式填空。",
+   "stem": "Many ______ around the world speak English.",
+   "ans": "people",
+   "why": "中性、通用的“人们”用 people。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My folks lives in the countryside.",
+   "ans": "lives → live",
+   "why": "folks 是复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她喜欢民间传说。",
+   "stem": "She likes ______.",
+   "ans": "folklore",
+   "why": "民间传说 folklore。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In spoken English, \"my folks\" can mean my ______.",
+   "opts": [
+    "parents",
+    "teachers",
+    "pets",
+    "friends"
+   ],
+   "why": "口语 my folks 指父母家人。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Townsfolk\" means the ______ of a town.",
+   "opts": [
+    "people",
+    "buildings",
+    "roads",
+    "shops"
+   ],
+   "why": "townsfolk 镇上的人。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

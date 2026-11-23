@@ -1,0 +1,94 @@
+{
+ "单词": "work",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：爸爸现在在哪里？\n听：My father is at work now.\nA. 在家睡觉\nB. 在旅行\nC. 在医院\nD. 在上班",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My phone doesn't ______. Can you fix it?\nA. works\nB. working\nC. work\nD. worked\n考点：用法",
+  "题目3": "【选词填空】从 job、work 中选一个，用适当形式填空。\n题干：He found a new ______ last week.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ in a hospital. (work)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I have a lot of works to do today.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：你能算出这道题的答案吗？\n题干：Can you ______ ______ the answer?\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The ______ are building a new road.\nA. workers\nB. works\nC. working\nD. worked\n考点：词性转换",
+  "答案": "【1】D（在上班）\n讲解：at work 在工作、在上班。\n【2】C（work）\n讲解：doesn't 后面用动词原形 work（运转）。\n【3】job\n讲解：“一份工作”可数，用 a job；work 作“工作”不可数。\n【4】works\n讲解：主语 she 单数，work 加 s。\n【5】works → work\n讲解：work 作“工作”不可数，不加 s。\n【6】work；out\n讲解：work out 算出、解决。\n【7】A（workers）\n讲解：干活的人是工人 workers。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：爸爸现在在哪里？",
+   "listen": "My father is at work now.",
+   "opts": [
+    "在上班",
+    "在家睡觉",
+    "在旅行",
+    "在医院"
+   ],
+   "why": "at work 在工作、在上班。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My phone doesn't ______. Can you fix it?",
+   "opts": [
+    "work",
+    "works",
+    "working",
+    "worked"
+   ],
+   "why": "doesn't 后面用动词原形 work（运转）。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 job、work 中选一个，用适当形式填空。",
+   "stem": "He found a new ______ last week.",
+   "ans": "job",
+   "why": "“一份工作”可数，用 a job；work 作“工作”不可数。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ in a hospital. (work)",
+   "ans": "works",
+   "why": "主语 she 单数，work 加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I have a lot of works to do today.",
+   "ans": "works → work",
+   "why": "work 作“工作”不可数，不加 s。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你能算出这道题的答案吗？",
+   "stem": "Can you ______ ______ the answer?",
+   "ans": "work；out",
+   "why": "work out 算出、解决。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ are building a new road.",
+   "opts": [
+    "workers",
+    "works",
+    "working",
+    "worked"
+   ],
+   "why": "干活的人是工人 workers。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

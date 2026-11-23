@@ -1,0 +1,94 @@
+{
+ "单词": "sunglasses",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人买了什么？\n听：I bought a new pair of sunglasses.\nA. 一副手套\nB. 一双鞋\nC. 一副太阳镜\nD. 一顶帽子",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Don't forget your ______. It's very sunny.\nA. sunglass\nB. sunglasses\nC. sun-glass\nD. sunglasss",
+  "题目3": "【选词填空】从 sunglasses、glasses 中选一个，用适当形式填空。\n题干：He can't see well without his ______. He's short-sighted.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：These sunglasses is too big for me.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我需要一副新太阳镜。\n题干：I need a new ______ ______ sunglasses.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Sunglasses\" is always ______.\nA. singular\nB. a verb\nC. uncountable\nD. plural\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：People wear sunglasses to protect their eyes from strong ______.\nA. wind\nB. noise\nC. light\nD. smell\n考点：用法",
+  "答案": "【1】C（一副太阳镜）\n讲解：sunglasses 太阳镜。\n【2】B（sunglasses）\n讲解：太阳镜用复数形式。\n【3】glasses\n讲解：近视戴的是眼镜 glasses。\n【4】is → are\n讲解：sunglasses 是复数。\n【5】pair；of\n讲解：一副 a pair of。\n【6】D（plural）\n讲解：sunglasses 总是复数形式。\n【7】C（light）\n讲解：太阳镜挡强光。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人买了什么？",
+   "listen": "I bought a new pair of sunglasses.",
+   "opts": [
+    "一副太阳镜",
+    "一副手套",
+    "一双鞋",
+    "一顶帽子"
+   ],
+   "why": "sunglasses 太阳镜。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Don't forget your ______. It's very sunny.",
+   "opts": [
+    "sunglasses",
+    "sunglass",
+    "sun-glass",
+    "sunglasss"
+   ],
+   "why": "太阳镜用复数形式。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 sunglasses、glasses 中选一个，用适当形式填空。",
+   "stem": "He can't see well without his ______. He's short-sighted.",
+   "ans": "glasses",
+   "why": "近视戴的是眼镜 glasses。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "These sunglasses is too big for me.",
+   "ans": "is → are",
+   "why": "sunglasses 是复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我需要一副新太阳镜。",
+   "stem": "I need a new ______ ______ sunglasses.",
+   "ans": "pair；of",
+   "why": "一副 a pair of。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Sunglasses\" is always ______.",
+   "opts": [
+    "plural",
+    "singular",
+    "a verb",
+    "uncountable"
+   ],
+   "why": "sunglasses 总是复数形式。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "People wear sunglasses to protect their eyes from strong ______.",
+   "opts": [
+    "light",
+    "wind",
+    "noise",
+    "smell"
+   ],
+   "why": "太阳镜挡强光。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

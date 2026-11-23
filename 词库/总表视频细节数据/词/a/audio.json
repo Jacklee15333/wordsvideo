@@ -1,0 +1,94 @@
+{
+ "单词": "audio",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这本书附带什么？\n听：This book comes with free audio.\nA. 免费视频\nB. 免费音频\nC. 免费笔\nD. 免费地图",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You can download the ______ files from our website.\nA. audience\nB. audit\nC. auditory\nD. audio",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The new speaker makes music sound ______. (wonder)",
+  "题目4": "【选词填空】从 audio、video 中选一个，用适当形式填空。\n题干：We watched a funny ______ online.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The audio of this video are bad.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In everyday life, we hear many ______, like birds singing.\nA. sounds\nB. audios\nC. audio\nD. audits\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Audio\" is about sound, and \"video\" is about ______.\nA. smells\nB. tastes\nC. words\nD. pictures\n考点：用法",
+  "答案": "【1】B（免费音频）\n讲解：audio 音频。\n【2】D（audio）\n讲解：音频文件是 audio files。\n【3】wonderful\n讲解：sound 后面用形容词 wonderful。\n【4】video\n讲解：看的是视频 video。\n【5】are → is\n讲解：主语 the audio 是单数，用 is。\n【6】A（sounds）\n讲解：一般的声音用 sound；audio 偏技术上的声音信号。\n【7】D（pictures）\n讲解：audio 是声音，video 是画面。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这本书附带什么？",
+   "listen": "This book comes with free audio.",
+   "opts": [
+    "免费音频",
+    "免费视频",
+    "免费笔",
+    "免费地图"
+   ],
+   "why": "audio 音频。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can download the ______ files from our website.",
+   "opts": [
+    "audio",
+    "audience",
+    "audit",
+    "auditory"
+   ],
+   "why": "音频文件是 audio files。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The new speaker makes music sound ______. (wonder)",
+   "ans": "wonderful",
+   "why": "sound 后面用形容词 wonderful。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 audio、video 中选一个，用适当形式填空。",
+   "stem": "We watched a funny ______ online.",
+   "ans": "video",
+   "why": "看的是视频 video。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The audio of this video are bad.",
+   "ans": "are → is",
+   "why": "主语 the audio 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In everyday life, we hear many ______, like birds singing.",
+   "opts": [
+    "sounds",
+    "audios",
+    "audio",
+    "audits"
+   ],
+   "why": "一般的声音用 sound；audio 偏技术上的声音信号。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Audio\" is about sound, and \"video\" is about ______.",
+   "opts": [
+    "pictures",
+    "smells",
+    "tastes",
+    "words"
+   ],
+   "why": "audio 是声音，video 是画面。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

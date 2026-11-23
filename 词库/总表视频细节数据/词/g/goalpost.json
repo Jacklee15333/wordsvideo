@@ -1,0 +1,94 @@
+{
+ "单词": "goalpost",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：球打中了什么？\n听：The ball hit the goalpost.\nA. 球网\nB. 观众\nC. 门柱\nD. 裁判",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are two ______ on each goal.\nA. goalpost\nB. goalpostes\nC. goalpots\nD. goalposts",
+  "题目3": "【选词填空】从 goalpost、goalkeeper 中选一个，用适当形式填空。\n题干：The ______ jumped and caught the ball.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The ball hit the goalpost and go out.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：球擦着门柱飞出去了。\n题干：The ball just missed the ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Move the goalposts\" means ______.\nA. build a goal\nB. play better\nC. change the rules unfairly\nD. win the game\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Goalpost\" is made of \"goal\" and \"______\".\nA. pass\nB. past\nC. post\nD. port\n考点：用法",
+  "答案": "【1】C（门柱）\n讲解：goalpost 球门柱。\n【2】D（goalposts）\n讲解：two 后面用复数。\n【3】goalkeeper\n讲解：接球的是守门员。\n【4】go → went\n讲解：和 hit 并列，用过去式。\n【5】goalpost\n讲解：门柱 goalpost。\n【6】C（change the rules unfairly）\n讲解：move the goalposts 中途改规则。\n【7】C（post）\n讲解：goal + post。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：球打中了什么？",
+   "listen": "The ball hit the goalpost.",
+   "opts": [
+    "门柱",
+    "球网",
+    "观众",
+    "裁判"
+   ],
+   "why": "goalpost 球门柱。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are two ______ on each goal.",
+   "opts": [
+    "goalposts",
+    "goalpost",
+    "goalpostes",
+    "goalpots"
+   ],
+   "why": "two 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 goalpost、goalkeeper 中选一个，用适当形式填空。",
+   "stem": "The ______ jumped and caught the ball.",
+   "ans": "goalkeeper",
+   "why": "接球的是守门员。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The ball hit the goalpost and go out.",
+   "ans": "go → went",
+   "why": "和 hit 并列，用过去式。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "球擦着门柱飞出去了。",
+   "stem": "The ball just missed the ______.",
+   "ans": "goalpost",
+   "why": "门柱 goalpost。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Move the goalposts\" means ______.",
+   "opts": [
+    "change the rules unfairly",
+    "build a goal",
+    "play better",
+    "win the game"
+   ],
+   "why": "move the goalposts 中途改规则。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Goalpost\" is made of \"goal\" and \"______\".",
+   "opts": [
+    "post",
+    "pass",
+    "past",
+    "port"
+   ],
+   "why": "goal + post。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,95 @@
+{
+ "单词": "second-longest",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：黄河是中国第几长的河？\n听：The Yellow River is the second-longest river in China.\nA. 最长\nB. 最短\nC. 第二长\nD. 第三长",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The Yellow River is the ______ river in China.\nA. second-long\nB. second-longer\nC. second-longest\nD. two-longest",
+  "题目3": "【选词填空】从 second-longest、longest 中选一个，用适当形式填空。\n题干：The Yangtze is the ______ river in China.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The Yellow River is the second-longest river in China and flow into the sea.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：长江是中国最长的河。\n题干：The Yangtze is ______ longest river in China.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Second-longest\" means only ______ thing is longer.\nA. two\nB. no\nC. every\nD. one\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：This is the second-______ building in the city — only one building is taller.\nA. taller\nB. tall\nC. most tall\nD. tallest\n考点：用法",
+  "答案": "【1】C（第二长）\n讲解：second-longest 第二长的。\n【2】C（second-longest）\n讲解：“第二长的”是 the second + 最高级。\n【3】longest\n讲解：长江是中国最长的河。\n【4】flow → flows\n讲解：主语 river 是单数，用 flows。\n【5】the\n讲解：最高级前加 the。\n【6】D（one）\n讲解：第二长，只有一个比它长。\n【7】D（tallest）\n讲解：the second + 最高级 tallest。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：黄河是中国第几长的河？",
+   "listen": "The Yellow River is the second-longest river in China.",
+   "opts": [
+    "第二长",
+    "最长",
+    "最短",
+    "第三长"
+   ],
+   "why": "second-longest 第二长的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The Yellow River is the ______ river in China.",
+   "opts": [
+    "second-longest",
+    "second-long",
+    "second-longer",
+    "two-longest"
+   ],
+   "why": "“第二长的”是 the second + 最高级。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 second-longest、longest 中选一个，用适当形式填空。",
+   "stem": "The Yangtze is the ______ river in China.",
+   "ans": "longest",
+   "why": "长江是中国最长的河。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The Yellow River is the second-longest river in China and flow into the sea.",
+   "ans": "flow → flows",
+   "why": "主语 river 是单数，用 flows。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "长江是中国最长的河。",
+   "stem": "The Yangtze is ______ longest river in China.",
+   "ans": "the",
+   "why": "最高级前加 the。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Second-longest\" means only ______ thing is longer.",
+   "opts": [
+    "one",
+    "two",
+    "no",
+    "every"
+   ],
+   "why": "第二长，只有一个比它长。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This is the second-______ building in the city — only one building is taller.",
+   "opts": [
+    "tallest",
+    "taller",
+    "tall",
+    "most tall"
+   ],
+   "why": "the second + 最高级 tallest。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

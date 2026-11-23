@@ -1,0 +1,94 @@
+{
+ "单词": "fail",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他数学考得怎样？\n听：He failed the maths test.\nA. 没及格\nB. 考了满分\nC. 没参加\nD. 刚好及格",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She worked hard so she wouldn't ______.\nA. failed\nB. failure\nC. failing\nD. fail",
+  "题目3": "【选词填空】从 fail、failure 中选一个，用适当形式填空。\n题干：The plan was a complete ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He failed passing the driving test.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：务必五点前到这里。\n题干：Be here by five ______ ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"I failed to find the key\" means I ______ the key.\nA. found\nB. lost\nC. couldn't find\nD. made\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Last year two students ______ the exam.\nA. fail\nB. failed\nC. fails\nD. failure\n考点：变形",
+  "答案": "【1】A（没及格）\n讲解：fail 不及格。\n【2】D（fail）\n讲解：would 后面用动词原形。\n【3】failure\n讲解：a complete 后面要名词。\n【4】passing → to pass\n讲解：fail to do 没能做成。\n【5】without；fail\n讲解：without fail 务必。\n【6】C（couldn't find）\n讲解：fail to do 常常只是“没能”。\n【7】B（failed）\n讲解：last year 用过去式。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他数学考得怎样？",
+   "listen": "He failed the maths test.",
+   "opts": [
+    "没及格",
+    "考了满分",
+    "没参加",
+    "刚好及格"
+   ],
+   "why": "fail 不及格。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She worked hard so she wouldn't ______.",
+   "opts": [
+    "fail",
+    "failed",
+    "failure",
+    "failing"
+   ],
+   "why": "would 后面用动词原形。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 fail、failure 中选一个，用适当形式填空。",
+   "stem": "The plan was a complete ______.",
+   "ans": "failure",
+   "why": "a complete 后面要名词。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He failed passing the driving test.",
+   "ans": "passing → to pass",
+   "why": "fail to do 没能做成。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "务必五点前到这里。",
+   "stem": "Be here by five ______ ______.",
+   "ans": "without；fail",
+   "why": "without fail 务必。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"I failed to find the key\" means I ______ the key.",
+   "opts": [
+    "couldn't find",
+    "found",
+    "lost",
+    "made"
+   ],
+   "why": "fail to do 常常只是“没能”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Last year two students ______ the exam.",
+   "opts": [
+    "failed",
+    "fail",
+    "fails",
+    "failure"
+   ],
+   "why": "last year 用过去式。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

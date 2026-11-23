@@ -1,0 +1,96 @@
+{
+ "单词": "soccer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人喜欢什么运动？\n听：I love playing soccer.\nA. 篮球\nB. 网球\nC. 足球\nD. 排球",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：In the USA, people call football \"______\".\nA. rugby\nB. basketball\nC. baseball\nD. soccer",
+  "题目3": "【选词填空】从 soccer、football 中选一个，用适当形式填空。\n题干：In Britain, people usually say \"______\".\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Soccer are popular all over the world.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我们放学后踢足球。\n题干：We ______ soccer after school.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：He is a soccer ______; he plays for a big team.\nA. play\nB. player\nC. played\nD. playing\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In American football, players carry the ball; in soccer, they ______ it.\nA. throw\nB. kick\nC. hold\nD. carry\n考点：用法",
+  "答案": "【1】C（足球）\n讲解：soccer 足球。\n【2】D（soccer）\n讲解：美国人把英式足球叫 soccer。\n【3】football\n讲解：英国人直接叫 football。\n【4】are → is\n讲解：soccer 不可数，谓语用 is。\n【5】play\n讲解：play soccer 踢足球，球类前不加 the。\n【6】B（player）\n讲解：a soccer 后面指人，用 player。\n【7】B（kick）\n讲解：足球是用脚踢的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人喜欢什么运动？",
+   "listen": "I love playing soccer.",
+   "opts": [
+    "足球",
+    "篮球",
+    "网球",
+    "排球"
+   ],
+   "why": "soccer 足球。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In the USA, people call football \"______\".",
+   "opts": [
+    "soccer",
+    "rugby",
+    "basketball",
+    "baseball"
+   ],
+   "why": "美国人把英式足球叫 soccer。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 soccer、football 中选一个，用适当形式填空。",
+   "stem": "In Britain, people usually say \"______\".",
+   "ans": "football",
+   "why": "英国人直接叫 football。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Soccer are popular all over the world.",
+   "ans": "are → is",
+   "why": "soccer 不可数，谓语用 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们放学后踢足球。",
+   "stem": "We ______ soccer after school.",
+   "ans": "play",
+   "why": "play soccer 踢足球，球类前不加 the。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He is a soccer ______; he plays for a big team.",
+   "opts": [
+    "player",
+    "play",
+    "played",
+    "playing"
+   ],
+   "why": "a soccer 后面指人，用 player。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In American football, players carry the ball; in soccer, they ______ it.",
+   "opts": [
+    "kick",
+    "throw",
+    "hold",
+    "carry"
+   ],
+   "why": "足球是用脚踢的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

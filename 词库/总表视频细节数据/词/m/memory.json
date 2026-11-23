@@ -1,0 +1,98 @@
+{
+ "单词": "memory",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说自己记性怎么样？\n听：I have a good memory.\nA. 记性差\nB. 记性好\nC. 很聪明\nD. 很健忘",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My grandpa has a poor ______. He forgets things.\nA. memorize\nB. memorial\nC. memory\nD. memorable\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：I have many happy ______ of my childhood. (memory)\n考点：变形",
+  "题目4": "【选词填空】从 memory、memorial 中选一个，用适当形式填空。\n题干：They built a ______ to the soldiers.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He has a good memory, so he forgets things easily.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In memory of means ______.\nA. 为了纪念\nB. 在记忆里\nC. 忘记\nD. 背诵\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which word means “难忘的”?\nA. memorable\nB. memory\nC. memorize\nD. memorial\n考点：词性转换",
+  "答案": "【1】B（记性好）\n讲解：memory 记忆力。\n【2】C（memory）\n讲解：a poor 后面要名词 memory（记忆力）。\n【3】memories\n讲解：many 后面用复数，y 变 i 加 es。\n【4】memorial\n讲解：为纪念而建的“纪念碑”用 memorial。\n【5】forgets → remembers\n讲解：记性好就记得住。\n【6】A（为了纪念）\n讲解：in memory of 为了纪念。\n【7】A（memorable）\n讲解：memorable 难忘的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说自己记性怎么样？",
+   "listen": "I have a good memory.",
+   "opts": [
+    "记性好",
+    "记性差",
+    "很聪明",
+    "很健忘"
+   ],
+   "why": "memory 记忆力。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My grandpa has a poor ______. He forgets things.",
+   "opts": [
+    "memory",
+    "memorize",
+    "memorial",
+    "memorable"
+   ],
+   "why": "a poor 后面要名词 memory（记忆力）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I have many happy ______ of my childhood. (memory)",
+   "ans": "memories",
+   "why": "many 后面用复数，y 变 i 加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 memory、memorial 中选一个，用适当形式填空。",
+   "stem": "They built a ______ to the soldiers.",
+   "ans": "memorial",
+   "why": "为纪念而建的“纪念碑”用 memorial。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He has a good memory, so he forgets things easily.",
+   "ans": "forgets → remembers",
+   "why": "记性好就记得住。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In memory of means ______.",
+   "opts": [
+    "为了纪念",
+    "在记忆里",
+    "忘记",
+    "背诵"
+   ],
+   "why": "in memory of 为了纪念。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which word means “难忘的”?",
+   "opts": [
+    "memorable",
+    "memory",
+    "memorize",
+    "memorial"
+   ],
+   "why": "memorable 难忘的。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

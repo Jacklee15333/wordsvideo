@@ -1,0 +1,92 @@
+{
+ "单词": "vehicle",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这条路上不允许什么？\n听：No vehicles are allowed on this road.\nA. 行人\nB. 车辆\nC. 自行车铃\nD. 宠物",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：A bus is a large ______.\nA. village\nB. vehicle\nC. volume\nD. voice",
+  "题目3": "【选词填空】从 vehicle、car 中选一个，用适当形式填空。\n题干：My father drives a small red ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many ______ on the road. (vehicle)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The vehicle were parked outside.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：骑车出行很环保。\n题干：Cycling is a green way to ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Cars, buses and trucks are all ______.\nA. vehicle\nB. vehicular\nC. vehicles\nD. vehicled\n考点：变形",
+  "答案": "【1】B（车辆）\n讲解：vehicle 车辆、交通工具。\n【2】B（vehicle）\n讲解：公交车是一种车辆 vehicle。\n【3】car\n讲解：小汽车用 car；vehicle 是车辆的统称。\n【4】vehicles\n讲解：many 后面用复数 vehicles。\n【5】were → was\n讲解：主语 the vehicle 是单数，用 was。\n【6】travel\n讲解：travel 出行、旅行。\n【7】C（vehicles）\n讲解：都是车辆，用复数 vehicles。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这条路上不允许什么？",
+   "listen": "No vehicles are allowed on this road.",
+   "opts": [
+    "车辆",
+    "行人",
+    "自行车铃",
+    "宠物"
+   ],
+   "why": "vehicle 车辆、交通工具。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A bus is a large ______.",
+   "opts": [
+    "vehicle",
+    "village",
+    "volume",
+    "voice"
+   ],
+   "why": "公交车是一种车辆 vehicle。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 vehicle、car 中选一个，用适当形式填空。",
+   "stem": "My father drives a small red ______.",
+   "ans": "car",
+   "why": "小汽车用 car；vehicle 是车辆的统称。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many ______ on the road. (vehicle)",
+   "ans": "vehicles",
+   "why": "many 后面用复数 vehicles。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The vehicle were parked outside.",
+   "ans": "were → was",
+   "why": "主语 the vehicle 是单数，用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "骑车出行很环保。",
+   "stem": "Cycling is a green way to ______.",
+   "ans": "travel",
+   "why": "travel 出行、旅行。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Cars, buses and trucks are all ______.",
+   "opts": [
+    "vehicles",
+    "vehicle",
+    "vehicular",
+    "vehicled"
+   ],
+   "why": "都是车辆，用复数 vehicles。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

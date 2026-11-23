@@ -1,0 +1,98 @@
+{
+ "单词": "test",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人明天有什么？\n听：We have a math test tomorrow.\nA. 英语测验\nB. 运动会\nC. 数学测验\nD. 春游",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We had two ______ last week.\nA. test\nB. tests\nC. testing\nD. tested\n考点：变形",
+  "题目3": "【选词填空】从 test、taste 中选一个，用适当形式填空。\n题干：This soup ______ good.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The new medicine is being ______ now. (test)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The teacher tests our English yesterday.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Let's ______ the new computer before we buy it.\nA. test\nB. taste\nC. text\nD. tent\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which word means a big, important exam?\nA. quiz\nB. homework\nC. lesson\nD. examination\n考点：易混",
+  "答案": "【1】C（数学测验）\n讲解：test 测验。\n【2】B（tests）\n讲解：two 后面接复数 tests。\n【3】tastes\n讲解：“尝起来”用 taste，主语单数加 s；别和 test 弄混。\n【4】tested\n讲解：is being + 过去分词，正在被测试。\n【5】tests → tested\n讲解：yesterday 用过去式。\n【6】A（test）\n讲解：买之前先检验一下用 test。\n【7】D（examination）\n讲解：test 多指小测验，正式的大考是 exam(ination)。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人明天有什么？",
+   "listen": "We have a math test tomorrow.",
+   "opts": [
+    "数学测验",
+    "英语测验",
+    "运动会",
+    "春游"
+   ],
+   "why": "test 测验。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We had two ______ last week.",
+   "opts": [
+    "tests",
+    "test",
+    "testing",
+    "tested"
+   ],
+   "why": "two 后面接复数 tests。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 test、taste 中选一个，用适当形式填空。",
+   "stem": "This soup ______ good.",
+   "ans": "tastes",
+   "why": "“尝起来”用 taste，主语单数加 s；别和 test 弄混。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The new medicine is being ______ now. (test)",
+   "ans": "tested",
+   "why": "is being + 过去分词，正在被测试。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The teacher tests our English yesterday.",
+   "ans": "tests → tested",
+   "why": "yesterday 用过去式。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Let's ______ the new computer before we buy it.",
+   "opts": [
+    "test",
+    "taste",
+    "text",
+    "tent"
+   ],
+   "why": "买之前先检验一下用 test。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which word means a big, important exam?",
+   "opts": [
+    "examination",
+    "quiz",
+    "homework",
+    "lesson"
+   ],
+   "why": "test 多指小测验，正式的大考是 exam(ination)。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

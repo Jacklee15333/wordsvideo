@@ -1,0 +1,94 @@
+{
+ "单词": "accidentally",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人做了什么？\n听：I accidentally broke my mum's favourite cup.\nA. 故意摔了杯子\nB. 不小心打碎了杯子\nC. 买了新杯子\nD. 洗了杯子",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He ______ stepped on my foot and said sorry.\nA. accidentally\nB. accidental\nC. accident\nD. accidents\n考点：词性转换",
+  "题目3": "【选词填空】从 accidentally、on purpose 中选一个，用适当形式填空。\n题干：She broke the window ______ because she was angry.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：It was an ______ meeting; we didn't plan it. (accidentally)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I met him accident in the street.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这是一场意外。\n题干：It was an ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"I lost it accidentally\" means \"I lost it ______\".\nA. by accident\nB. on purpose\nC. at last\nD. in time\n考点：用法",
+  "答案": "【1】B（不小心打碎了杯子）\n讲解：accidentally 不小心。\n【2】A（accidentally）\n讲解：修饰动词 stepped 用副词 accidentally。\n【3】on purpose\n讲解：生气了故意打破，用 on purpose。\n【4】accidental\n讲解：修饰名词 meeting 用形容词 accidental。\n【5】accident → by accident\n讲解：“偶然、无意中”用 by accident。\n【6】accident\n讲解：an 后面要名词 accident。\n【7】A（by accident）\n讲解：accidentally 和 by accident 意思一样。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人做了什么？",
+   "listen": "I accidentally broke my mum's favourite cup.",
+   "opts": [
+    "不小心打碎了杯子",
+    "故意摔了杯子",
+    "买了新杯子",
+    "洗了杯子"
+   ],
+   "why": "accidentally 不小心。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He ______ stepped on my foot and said sorry.",
+   "opts": [
+    "accidentally",
+    "accidental",
+    "accident",
+    "accidents"
+   ],
+   "why": "修饰动词 stepped 用副词 accidentally。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 accidentally、on purpose 中选一个，用适当形式填空。",
+   "stem": "She broke the window ______ because she was angry.",
+   "ans": "on purpose",
+   "why": "生气了故意打破，用 on purpose。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "It was an ______ meeting; we didn't plan it. (accidentally)",
+   "ans": "accidental",
+   "why": "修饰名词 meeting 用形容词 accidental。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I met him accident in the street.",
+   "ans": "accident → by accident",
+   "why": "“偶然、无意中”用 by accident。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是一场意外。",
+   "stem": "It was an ______.",
+   "ans": "accident",
+   "why": "an 后面要名词 accident。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"I lost it accidentally\" means \"I lost it ______\".",
+   "opts": [
+    "by accident",
+    "on purpose",
+    "at last",
+    "in time"
+   ],
+   "why": "accidentally 和 by accident 意思一样。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

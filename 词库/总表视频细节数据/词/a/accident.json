@@ -1,0 +1,89 @@
+{
+ "单词": "accident",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说昨天学校附近发生了什么？\n听：There was a car accident near our school yesterday.\nA. 火灾\nB. 地震\nC. 比赛\nD. 车祸",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I broke the cup by ______, not on purpose.\nA. accident\nB. accidental\nC. accidentally\nD. incident\n考点：短语",
+  "题目3": "【选词填空】从 accident、accidental 中选一个，用适当形式填空。\n题干：The fire was ______; nobody started it on purpose.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There were three traffic ______ on this road last month. (accident)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He had an accident and hurt his leg, doesn't he?",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我无意中删了你的照片。\n题干：I deleted your photo ______.\n考点：词性转换",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他是故意那么做的。\n题干：He did it ______ ______.\n考点：易混",
+  "答案": "【1】D（车祸）\n讲解：car accident 车祸。\n【2】A（accident）\n讲解：by accident 无意中。\n【3】accidental\n讲解：be 后面要形容词 accidental（意外的）。\n【4】accidents\n讲解：three 后面用复数 accidents。\n【5】doesn't → didn't\n讲解：前面是过去式 had，反意疑问句用 didn't。\n【6】accidentally\n讲解：修饰动词用副词 accidentally。\n【7】on；purpose\n讲解：by accident 的反义是 on purpose（故意）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说昨天学校附近发生了什么？",
+   "listen": "There was a car accident near our school yesterday.",
+   "opts": [
+    "车祸",
+    "火灾",
+    "地震",
+    "比赛"
+   ],
+   "why": "car accident 车祸。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I broke the cup by ______, not on purpose.",
+   "opts": [
+    "accident",
+    "accidental",
+    "accidentally",
+    "incident"
+   ],
+   "why": "by accident 无意中。",
+   "kd": "短语"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 accident、accidental 中选一个，用适当形式填空。",
+   "stem": "The fire was ______; nobody started it on purpose.",
+   "ans": "accidental",
+   "why": "be 后面要形容词 accidental（意外的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There were three traffic ______ on this road last month. (accident)",
+   "ans": "accidents",
+   "why": "three 后面用复数 accidents。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He had an accident and hurt his leg, doesn't he?",
+   "ans": "doesn't → didn't",
+   "why": "前面是过去式 had，反意疑问句用 didn't。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我无意中删了你的照片。",
+   "stem": "I deleted your photo ______.",
+   "ans": "accidentally",
+   "why": "修饰动词用副词 accidentally。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是故意那么做的。",
+   "stem": "He did it ______ ______.",
+   "ans": "on；purpose",
+   "why": "by accident 的反义是 on purpose（故意）。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "100-foot-tall",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说那棵树怎么样？\n听：We saw a 100-foot-tall tree in the forest.\nA. 有一百年历史\nB. 被砍倒了\nC. 有一百英尺高\nD. 刚种下",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is a ______ tower near our school.\nA. 100-feet-tall\nB. 100 feet tall\nC. 100-foot-taller\nD. 100-foot-tall\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：That tower is 100 ______ tall. (foot)\n考点：变形",
+  "题目4": "【选词填空】从 tall、high 中选一个，用适当形式填空。\n题干：The kite is flying very ______ in the sky now.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The 100-foot-tall tree are older than my grandfather.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这棵树有一百英尺高。\n题干：This tree is one hundred ______ ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which is ______, the 100-foot-tall tree or the house?\nA. tall\nB. taller\nC. tallest\nD. more tall\n考点：变形",
+  "答案": "【1】C（有一百英尺高）\n讲解：100-foot-tall 一百英尺高的。\n【2】D（100-foot-tall）\n讲解：连字符形容词放在名词前作定语，中间的 foot 用单数。\n【3】feet\n讲解：不用连字符、放在 be 后面时，100 后面用复数 feet。\n【4】high\n讲解：离地面的高度用 high；tall 说物体本身从底到顶高。\n【5】are → is\n讲解：主语 the tree 是单数，谓语用 is。\n【6】feet；tall\n讲解：说高度用“数字 + feet + tall”。\n【7】B（taller）\n讲解：两者比较用比较级 taller。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说那棵树怎么样？",
+   "listen": "We saw a 100-foot-tall tree in the forest.",
+   "opts": [
+    "有一百英尺高",
+    "有一百年历史",
+    "被砍倒了",
+    "刚种下"
+   ],
+   "why": "100-foot-tall 一百英尺高的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is a ______ tower near our school.",
+   "opts": [
+    "100-foot-tall",
+    "100-feet-tall",
+    "100 feet tall",
+    "100-foot-taller"
+   ],
+   "why": "连字符形容词放在名词前作定语，中间的 foot 用单数。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "That tower is 100 ______ tall. (foot)",
+   "ans": "feet",
+   "why": "不用连字符、放在 be 后面时，100 后面用复数 feet。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tall、high 中选一个，用适当形式填空。",
+   "stem": "The kite is flying very ______ in the sky now.",
+   "ans": "high",
+   "why": "离地面的高度用 high；tall 说物体本身从底到顶高。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The 100-foot-tall tree are older than my grandfather.",
+   "ans": "are → is",
+   "why": "主语 the tree 是单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这棵树有一百英尺高。",
+   "stem": "This tree is one hundred ______ ______.",
+   "ans": "feet；tall",
+   "why": "说高度用“数字 + feet + tall”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which is ______, the 100-foot-tall tree or the house?",
+   "opts": [
+    "taller",
+    "tall",
+    "tallest",
+    "more tall"
+   ],
+   "why": "两者比较用比较级 taller。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

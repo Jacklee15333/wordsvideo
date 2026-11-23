@@ -1,0 +1,98 @@
+{
+ "单词": "multiple",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这是什么题型？\n听：This is a multiple-choice question.\nA. 填空题\nB. 问答题\nC. 作文题\nD. 选择题",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He had ______ injuries after the accident.\nA. multiply\nB. multiplied\nC. multiplying\nD. multiple\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：You can ______ 4 by 3. (multiple)\n考点：词性转换",
+  "题目4": "【选词填空】从 multiple、multiply 中选一个，用适当形式填空。\n题干：Can you ______ 6 by 7?\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He tried multiple time before he passed.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Multiple means ______.\nA. 一个的\nB. 唯一的\nC. 多个的、多种的\nD. 简单的\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A multiple-choice question gives you ______.\nA. no answers\nB. only one answer\nC. several answers to choose from\nD. a picture\n考点：短语",
+  "答案": "【1】D（选择题）\n讲解：multiple-choice 多项选择的。\n【2】D（multiple）\n讲解：multiple + 复数名词，多处的。\n【3】multiply\n讲解：can 后面用动词原形 multiply（乘）。\n【4】multiply\n讲解：“乘”是动词 multiply；multiple 是形容词、名词。\n【5】time → times\n讲解：multiple 后面接复数名词。\n【6】C（多个的、多种的）\n讲解：multiple 多个的、多种的。\n【7】C（several answers to choose from）\n讲解：multiple-choice 多项选择的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这是什么题型？",
+   "listen": "This is a multiple-choice question.",
+   "opts": [
+    "选择题",
+    "填空题",
+    "问答题",
+    "作文题"
+   ],
+   "why": "multiple-choice 多项选择的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He had ______ injuries after the accident.",
+   "opts": [
+    "multiple",
+    "multiply",
+    "multiplied",
+    "multiplying"
+   ],
+   "why": "multiple + 复数名词，多处的。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "You can ______ 4 by 3. (multiple)",
+   "ans": "multiply",
+   "why": "can 后面用动词原形 multiply（乘）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 multiple、multiply 中选一个，用适当形式填空。",
+   "stem": "Can you ______ 6 by 7?",
+   "ans": "multiply",
+   "why": "“乘”是动词 multiply；multiple 是形容词、名词。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He tried multiple time before he passed.",
+   "ans": "time → times",
+   "why": "multiple 后面接复数名词。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Multiple means ______.",
+   "opts": [
+    "多个的、多种的",
+    "一个的",
+    "唯一的",
+    "简单的"
+   ],
+   "why": "multiple 多个的、多种的。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A multiple-choice question gives you ______.",
+   "opts": [
+    "several answers to choose from",
+    "no answers",
+    "only one answer",
+    "a picture"
+   ],
+   "why": "multiple-choice 多项选择的。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

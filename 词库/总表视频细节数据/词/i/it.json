@@ -1,0 +1,92 @@
+{
+ "单词": "it",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：那只狗在做什么？\n听：The dog is wagging its tail.\nA. 吃饭\nB. 睡觉\nC. 叫\nD. 摇尾巴",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The cat is cleaning ______ face.\nA. it's\nB. its\nC. it\nD. itself\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The machine can turn ______ off. (it)",
+  "题目4": "【选词填空】从 its、it's 中选一个，用适当形式填空。\n题干：______ raining outside. Take an umbrella.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The tree lost all it's leaves.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：______ is important for us to drink enough water.\nA. This\nB. That\nC. There\nD. It\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：学好英语很难。\n题干：It's hard ______ learn English well.\n考点：用法",
+  "答案": "【1】D（摇尾巴）\n讲解：its 它的。\n【2】B（its）\n讲解：名词 face 前用物主代词 its。\n【3】itself\n讲解：自己关掉，用反身代词 itself。\n【4】It's\n讲解：it is 的缩写是 it's；its 是“它的”。\n【5】it's → its\n讲解：“它的”用 its，没有撇号。\n【6】D（It）\n讲解：It 作形式主语：It's + 形容词 + for sb to do。\n【7】to\n讲解：It's + 形容词 + to do。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：那只狗在做什么？",
+   "listen": "The dog is wagging its tail.",
+   "opts": [
+    "摇尾巴",
+    "吃饭",
+    "睡觉",
+    "叫"
+   ],
+   "why": "its 它的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The cat is cleaning ______ face.",
+   "opts": [
+    "its",
+    "it's",
+    "it",
+    "itself"
+   ],
+   "why": "名词 face 前用物主代词 its。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The machine can turn ______ off. (it)",
+   "ans": "itself",
+   "why": "自己关掉，用反身代词 itself。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 its、it's 中选一个，用适当形式填空。",
+   "stem": "______ raining outside. Take an umbrella.",
+   "ans": "It's",
+   "why": "it is 的缩写是 it's；its 是“它的”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The tree lost all it's leaves.",
+   "ans": "it's → its",
+   "why": "“它的”用 its，没有撇号。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ is important for us to drink enough water.",
+   "opts": [
+    "It",
+    "This",
+    "That",
+    "There"
+   ],
+   "why": "It 作形式主语：It's + 形容词 + for sb to do。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "学好英语很难。",
+   "stem": "It's hard ______ learn English well.",
+   "ans": "to",
+   "why": "It's + 形容词 + to do。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

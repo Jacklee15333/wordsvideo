@@ -1,0 +1,94 @@
+{
+ "单词": "multi-device",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个软件有什么特点？\n听：The app has multi-device support.\nA. 很便宜\nB. 很老\nC. 只能用一次\nD. 能在多个设备上用",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This ______ app works on phones, tablets and computers.\nA. multi-devices\nB. many-device\nC. multi-device\nD. multiple-devise",
+  "题目3": "【选词填空】从 device、devices 中选一个，用适当形式填空。\n题干：I have three ______ at home.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Many families uses more than one device.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：平板电脑是一种电子设备。\n题干：A tablet is an electronic ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Multi-\" in \"multi-device\" means \"______\".\nA. one\nB. no\nC. half\nD. many\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Multi-device\" is usually used ______ a noun.\nA. after\nB. instead of\nC. before\nD. without\n考点：用法",
+  "答案": "【1】D（能在多个设备上用）\n讲解：multi-device 多设备的。\n【2】C（multi-device）\n讲解：作定语用 multi-device。\n【3】devices\n讲解：three 后面用复数。\n【4】uses → use\n讲解：主语复数，谓语用原形。\n【5】device\n讲解：设备是 device。\n【6】D（many）\n讲解：multi- 表示“多”。\n【7】C（before）\n讲解：multi-device 作定语。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个软件有什么特点？",
+   "listen": "The app has multi-device support.",
+   "opts": [
+    "能在多个设备上用",
+    "很便宜",
+    "很老",
+    "只能用一次"
+   ],
+   "why": "multi-device 多设备的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This ______ app works on phones, tablets and computers.",
+   "opts": [
+    "multi-device",
+    "multi-devices",
+    "many-device",
+    "multiple-devise"
+   ],
+   "why": "作定语用 multi-device。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 device、devices 中选一个，用适当形式填空。",
+   "stem": "I have three ______ at home.",
+   "ans": "devices",
+   "why": "three 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Many families uses more than one device.",
+   "ans": "uses → use",
+   "why": "主语复数，谓语用原形。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "平板电脑是一种电子设备。",
+   "stem": "A tablet is an electronic ______.",
+   "ans": "device",
+   "why": "设备是 device。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Multi-\" in \"multi-device\" means \"______\".",
+   "opts": [
+    "many",
+    "one",
+    "no",
+    "half"
+   ],
+   "why": "multi- 表示“多”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Multi-device\" is usually used ______ a noun.",
+   "opts": [
+    "before",
+    "after",
+    "instead of",
+    "without"
+   ],
+   "why": "multi-device 作定语。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,95 @@
+{
+ "单词": "hotline",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：有问题可以怎么办？\n听：Call our hotline if you have any questions.\nA. 打热线电话\nB. 写信\nC. 来办公室\nD. 发邮件",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You can call the ______ 24 hours a day.\nA. hotel\nB. hot-dog\nC. headline\nD. hotline",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The company has two ______. (hotline)\n考点：变形",
+  "题目4": "【选词填空】从 hotline、headline 中选一个，用适当形式填空。\n题干：I read the ______ on the front page.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The hotline number are 12345.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Call the hotline ______ help.\nA. to\nB. for\nC. at\nD. with\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The hotline is free ______ charge.\nA. for\nB. of\nC. at\nD. with\n考点：用法",
+  "答案": "【1】A（打热线电话）\n讲解：hotline 热线电话。\n【2】D（hotline）\n讲解：24 小时可打的是热线 hotline。\n【3】hotlines\n讲解：two 后面用复数，加 s。\n【4】headline\n讲解：头版标题是 headline。\n【5】are → is\n讲解：主语 the number 是单数，用 is。\n【6】B（for）\n讲解：为了求助用 for help。\n【7】B（of）\n讲解：free of charge 免费。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：有问题可以怎么办？",
+   "listen": "Call our hotline if you have any questions.",
+   "opts": [
+    "打热线电话",
+    "写信",
+    "来办公室",
+    "发邮件"
+   ],
+   "why": "hotline 热线电话。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can call the ______ 24 hours a day.",
+   "opts": [
+    "hotline",
+    "hotel",
+    "hot-dog",
+    "headline"
+   ],
+   "why": "24 小时可打的是热线 hotline。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The company has two ______. (hotline)",
+   "ans": "hotlines",
+   "why": "two 后面用复数，加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 hotline、headline 中选一个，用适当形式填空。",
+   "stem": "I read the ______ on the front page.",
+   "ans": "headline",
+   "why": "头版标题是 headline。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The hotline number are 12345.",
+   "ans": "are → is",
+   "why": "主语 the number 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Call the hotline ______ help.",
+   "opts": [
+    "for",
+    "to",
+    "at",
+    "with"
+   ],
+   "why": "为了求助用 for help。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The hotline is free ______ charge.",
+   "opts": [
+    "of",
+    "for",
+    "at",
+    "with"
+   ],
+   "why": "free of charge 免费。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

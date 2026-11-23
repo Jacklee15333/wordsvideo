@@ -1,0 +1,98 @@
+{
+ "单词": "lesson",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：今天下午有几节课？\n听：We have three lessons this afternoon.\nA. 两节\nB. 三节\nC. 四节\nD. 一节",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I learned a ______ from my mistake.\nA. lessons\nB. lesson\nC. class\nD. lecture\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She has piano ______ every Sunday. (lesson)\n考点：变形",
+  "题目4": "【选词填空】从 lesson、lecture 中选一个，用适当形式填空。\n题干：The professor gave a ______ to 300 students.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Let's read the lesson five.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Lesson can also mean ______.\nA. 课桌\nB. 老师\nC. 考试\nD. 教训\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：When it means “一节课”, lesson is close to ______.\nA. class\nB. book\nC. test\nD. break\n考点：易混",
+  "答案": "【1】B（三节）\n讲解：lesson 课。\n【2】B（lesson）\n讲解：learn a lesson 吸取教训。\n【3】lessons\n讲解：泛指每周的钢琴课，用复数 lessons。\n【4】lecture\n讲解：大学教授的“讲座、讲课”用 lecture。\n【5】the lesson five → Lesson Five\n讲解：“第五课”说 Lesson Five，不加 the。\n【6】D（教训）\n讲解：lesson 也指“教训”。\n【7】A（class）\n讲解：lesson ≈ class 一节课。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：今天下午有几节课？",
+   "listen": "We have three lessons this afternoon.",
+   "opts": [
+    "三节",
+    "两节",
+    "四节",
+    "一节"
+   ],
+   "why": "lesson 课。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I learned a ______ from my mistake.",
+   "opts": [
+    "lesson",
+    "lessons",
+    "class",
+    "lecture"
+   ],
+   "why": "learn a lesson 吸取教训。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She has piano ______ every Sunday. (lesson)",
+   "ans": "lessons",
+   "why": "泛指每周的钢琴课，用复数 lessons。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 lesson、lecture 中选一个，用适当形式填空。",
+   "stem": "The professor gave a ______ to 300 students.",
+   "ans": "lecture",
+   "why": "大学教授的“讲座、讲课”用 lecture。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Let's read the lesson five.",
+   "ans": "the lesson five → Lesson Five",
+   "why": "“第五课”说 Lesson Five，不加 the。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Lesson can also mean ______.",
+   "opts": [
+    "教训",
+    "课桌",
+    "老师",
+    "考试"
+   ],
+   "why": "lesson 也指“教训”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "When it means “一节课”, lesson is close to ______.",
+   "opts": [
+    "class",
+    "book",
+    "test",
+    "break"
+   ],
+   "why": "lesson ≈ class 一节课。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

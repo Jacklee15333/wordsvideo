@@ -1,0 +1,93 @@
+{
+ "单词": "operation",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：那个男孩怎么了？\n听：The boy had an operation on his leg.\nA. 摔倒了\nB. 赢了比赛\nC. 迷路了\nD. 腿部手术",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She is in hospital for an ______.\nA. operate\nB. operator\nC. operational\nD. operation",
+  "题目3": "【选词填空】从 operation、surgery 中选一个，用适当形式填空。\n题干：He studies ______ at a medical school; he wants to be a doctor who operates.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The doctors ______ on him last night. (operation)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He had two operation last year.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The new airport will ______ into operation next year.\nA. comes\nB. coming\nC. came\nD. come\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这台机器还能用。\n题干：The machine is still ______.\n考点：词性转换",
+  "答案": "【1】D（腿部手术）\n讲解：operation 手术。\n【2】D（operation）\n讲解：an 后接名词 operation。\n【3】surgery\n讲解：“外科学、外科手术”用 surgery。\n【4】operated\n讲解：作谓语用动词 operate，讲过去用 operated。\n【5】operation → operations\n讲解：two 后接复数。\n【6】D（come）\n讲解：come into operation 投入运行；will 后接原形。\n【7】operational\n讲解：能用、在运转 operational。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：那个男孩怎么了？",
+   "listen": "The boy had an operation on his leg.",
+   "opts": [
+    "腿部手术",
+    "摔倒了",
+    "赢了比赛",
+    "迷路了"
+   ],
+   "why": "operation 手术。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She is in hospital for an ______.",
+   "opts": [
+    "operation",
+    "operate",
+    "operator",
+    "operational"
+   ],
+   "why": "an 后接名词 operation。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 operation、surgery 中选一个，用适当形式填空。",
+   "stem": "He studies ______ at a medical school; he wants to be a doctor who operates.",
+   "ans": "surgery",
+   "why": "“外科学、外科手术”用 surgery。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The doctors ______ on him last night. (operation)",
+   "ans": "operated",
+   "why": "作谓语用动词 operate，讲过去用 operated。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He had two operation last year.",
+   "ans": "operation → operations",
+   "why": "two 后接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The new airport will ______ into operation next year.",
+   "opts": [
+    "come",
+    "comes",
+    "coming",
+    "came"
+   ],
+   "why": "come into operation 投入运行；will 后接原形。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这台机器还能用。",
+   "stem": "The machine is still ______.",
+   "ans": "operational",
+   "why": "能用、在运转 operational。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

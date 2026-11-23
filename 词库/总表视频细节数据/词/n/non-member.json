@@ -1,0 +1,97 @@
+{
+ "单词": "non-member",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：非会员要付多少钱？\n听：Non-members pay 20 yuan to get in.\nA. 二十元\nB. 十元\nC. 免费\nD. 五十元",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The pool is open to members and ______.\nA. non-member\nB. members\nC. membership\nD. non-members\n考点：变形",
+  "题目3": "【选词填空】从 member、non-member 中选一个，用适当形式填空。\n题干：Only a ______ can use this room; you need a club card.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：______ of the club get free coffee. (non-member)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Non-members has to pay more.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A non-member is someone who ______ the club.\nA. owns\nB. doesn't belong to\nC. works for\nD. built\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：As a ______, I can't vote at the club meeting.\nA. non-member\nB. non-members\nC. member\nD. membership\n考点：用法",
+  "答案": "【1】A（二十元）\n讲解：non-members pay 20 yuan。\n【2】D（non-members）\n讲解：和 members 并列，用复数 non-members。\n【3】member\n讲解：要会员卡，只有会员能用。\n【4】Members\n讲解：免费咖啡给会员，去掉 non-。\n【5】has → have\n讲解：主语 non-members 是复数，用 have。\n【6】B（doesn't belong to）\n讲解：non-member 非会员。\n【7】A（non-member）\n讲解：as a 后面用单数 non-member。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：非会员要付多少钱？",
+   "listen": "Non-members pay 20 yuan to get in.",
+   "opts": [
+    "二十元",
+    "十元",
+    "免费",
+    "五十元"
+   ],
+   "why": "non-members pay 20 yuan。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The pool is open to members and ______.",
+   "opts": [
+    "non-members",
+    "non-member",
+    "members",
+    "membership"
+   ],
+   "why": "和 members 并列，用复数 non-members。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 member、non-member 中选一个，用适当形式填空。",
+   "stem": "Only a ______ can use this room; you need a club card.",
+   "ans": "member",
+   "why": "要会员卡，只有会员能用。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "______ of the club get free coffee. (non-member)",
+   "ans": "Members",
+   "why": "免费咖啡给会员，去掉 non-。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Non-members has to pay more.",
+   "ans": "has → have",
+   "why": "主语 non-members 是复数，用 have。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A non-member is someone who ______ the club.",
+   "opts": [
+    "doesn't belong to",
+    "owns",
+    "works for",
+    "built"
+   ],
+   "why": "non-member 非会员。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "As a ______, I can't vote at the club meeting.",
+   "opts": [
+    "non-member",
+    "non-members",
+    "member",
+    "membership"
+   ],
+   "why": "as a 后面用单数 non-member。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,97 @@
+{
+ "单词": "diagram",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让学生看哪里？\n听：Look at the diagram on page 10.\nA. 第十页的课文\nB. 第十页的单词\nC. 第十页的图解\nD. 第十页的照片",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The teacher drew two ______ on the blackboard.\nA. diagram\nB. diagrams\nC. diagramme\nD. diagrames\n考点：变形",
+  "题目3": "【选词填空】从 diagram、graph 中选一个，用适当形式填空。\n题干：The ______ shows how the temperature changed every day.\n考点：易混",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：这张示意图展示了心脏怎样工作。\n题干：This ______ shows how the heart works.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Can you draw me a diagrams?\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The storybook has beautiful ______.\nA. diagrams\nB. graphs\nC. charts\nD. illustrations\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A diagram is a simple drawing that ______.\nA. tells a funny story\nB. shows a person's face\nC. is a photo\nD. explains how something works\n考点：用法",
+  "答案": "【1】C（第十页的图解）\n讲解：diagram 图解。\n【2】B（diagrams）\n讲解：two 后面接复数。\n【3】graph\n讲解：带坐标的曲线图用 graph；diagram 是示意结构、原理的图解。\n【4】diagram\n讲解：示意图 diagram。\n【5】diagrams → diagram\n讲解：a 后面接单数。\n【6】D（illustrations）\n讲解：书里配合文字的插图是 illustration。\n【7】D（explains how something works）\n讲解：diagram 示意结构、原理。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让学生看哪里？",
+   "listen": "Look at the diagram on page 10.",
+   "opts": [
+    "第十页的图解",
+    "第十页的课文",
+    "第十页的单词",
+    "第十页的照片"
+   ],
+   "why": "diagram 图解。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The teacher drew two ______ on the blackboard.",
+   "opts": [
+    "diagrams",
+    "diagram",
+    "diagramme",
+    "diagrames"
+   ],
+   "why": "two 后面接复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 diagram、graph 中选一个，用适当形式填空。",
+   "stem": "The ______ shows how the temperature changed every day.",
+   "ans": "graph",
+   "why": "带坐标的曲线图用 graph；diagram 是示意结构、原理的图解。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这张示意图展示了心脏怎样工作。",
+   "stem": "This ______ shows how the heart works.",
+   "ans": "diagram",
+   "why": "示意图 diagram。"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Can you draw me a diagrams?",
+   "ans": "diagrams → diagram",
+   "why": "a 后面接单数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The storybook has beautiful ______.",
+   "opts": [
+    "illustrations",
+    "diagrams",
+    "graphs",
+    "charts"
+   ],
+   "why": "书里配合文字的插图是 illustration。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A diagram is a simple drawing that ______.",
+   "opts": [
+    "explains how something works",
+    "tells a funny story",
+    "shows a person's face",
+    "is a photo"
+   ],
+   "why": "diagram 示意结构、原理。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

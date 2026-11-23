@@ -1,0 +1,94 @@
+{
+ "单词": "trillion",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个数字有多大？\n听：The number is over one trillion.\nA. 一亿\nB. 十亿\nC. 一百万\nD. 一万亿",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The country's debt is three ______ dollars.\nA. trillions\nB. trillion of\nC. trillions of\nD. trillion",
+  "题目3": "【选词填空】从 trillion、trillions 中选一个，用适当形式填空。\n题干：There are ______ of cells in your body.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The universe has trillion of stars.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：一百万是个很大的数字。\n题干：One ______ is a big number.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In American English, a trillion is ______.\nA. a thousand million\nB. a million\nC. a million million\nD. a billion billion\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Trillions of\" can also mean \"______\".\nA. a few\nB. none\nC. countless\nD. two\n考点：用法",
+  "答案": "【1】D（一万亿）\n讲解：trillion 万亿。\n【2】D（trillion）\n讲解：具体数字后面不加 s。\n【3】trillions\n讲解：trillions of 无数。\n【4】trillion of → trillions of\n讲解：表示“无数”用 trillions of。\n【5】million\n讲解：一百万是 million。\n【6】C（a million million）\n讲解：美式 trillion 是 10¹²。\n【7】C（countless）\n讲解：trillions of 也指无数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个数字有多大？",
+   "listen": "The number is over one trillion.",
+   "opts": [
+    "一万亿",
+    "一亿",
+    "十亿",
+    "一百万"
+   ],
+   "why": "trillion 万亿。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The country's debt is three ______ dollars.",
+   "opts": [
+    "trillion",
+    "trillions",
+    "trillion of",
+    "trillions of"
+   ],
+   "why": "具体数字后面不加 s。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 trillion、trillions 中选一个，用适当形式填空。",
+   "stem": "There are ______ of cells in your body.",
+   "ans": "trillions",
+   "why": "trillions of 无数。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The universe has trillion of stars.",
+   "ans": "trillion of → trillions of",
+   "why": "表示“无数”用 trillions of。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "一百万是个很大的数字。",
+   "stem": "One ______ is a big number.",
+   "ans": "million",
+   "why": "一百万是 million。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In American English, a trillion is ______.",
+   "opts": [
+    "a million million",
+    "a thousand million",
+    "a million",
+    "a billion billion"
+   ],
+   "why": "美式 trillion 是 10¹²。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Trillions of\" can also mean \"______\".",
+   "opts": [
+    "countless",
+    "a few",
+    "none",
+    "two"
+   ],
+   "why": "trillions of 也指无数。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

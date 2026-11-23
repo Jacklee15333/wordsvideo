@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 680 450">
+<defs>
+  <linearGradient id="flare" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f3f5f8" /><stop offset="0.45" stop-color="#cfd5dd" /><stop offset="1" stop-color="#7487A0" />
+  </linearGradient>
+  <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ffffff" /><stop offset="1" stop-color="#A2B4CD" />
+  </linearGradient>
+  <radialGradient id="mouth" cx="0.65" cy="0.5" r="0.7">
+    <stop offset="0" stop-color="#19202A" /><stop offset="0.6" stop-color="#384457" /><stop offset="1" stop-color="#8294AC" />
+  </radialGradient>
+  <linearGradient id="drv" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#e6e9ee" /><stop offset="0.5" stop-color="#9FB1CA" /><stop offset="1" stop-color="#57677E" />
+  </linearGradient>
+  <linearGradient id="pole" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#64758A" /><stop offset="0.35" stop-color="#d9dee5" /><stop offset="1" stop-color="#536277" />
+  </linearGradient>
+  <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#b7bec8" /><stop offset="1" stop-color="#56657A" />
+  </linearGradient>
+</defs>
+<rect x="306" y="140" width="28" height="320" fill="url(#pole)" stroke="#1B1A1F" stroke-width="8.46" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="300" y="132" width="40" height="14" rx="5" fill="url(#bar)" stroke="#1B1A1F" stroke-width="9.14" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="302" y="210" width="36" height="10" rx="3" fill="url(#bar)" stroke="#1B1A1F" stroke-width="10.77" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="302" y="330" width="36" height="10" rx="3" fill="url(#bar)" stroke="#1B1A1F" stroke-width="7.28" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M272 168 C290 200 300 210 314 222" fill="none" stroke="#1B1A1F" stroke-width="4" />
+<path d="M368 168 C350 200 340 210 326 222" fill="none" stroke="#1B1A1F" stroke-width="4" />
+<path d="M318 222 L318 460" stroke="#1B1A1F" stroke-width="4" />
+<rect x="262" y="156" width="116" height="14" rx="4" fill="url(#bar)" stroke="#1B1A1F" stroke-width="7.52" stroke-linejoin="round" stroke-linecap="round" />
+
+  <g transform="rotate(10 268 150)">
+    <path d="M246 137 C200 135 150 112 100 76 L100 224 C150 188 200 165 246 163 Z" fill="url(#flare)" stroke="#1B1A1F" stroke-width="6.52" stroke-linejoin="round" stroke-linecap="round" />
+    <path d="M246 137 C200 135 150 112 100 76" fill="none" stroke="#ffffff" stroke-opacity="0.75" stroke-width="3" />
+    <ellipse cx="100" cy="150" rx="24" ry="75" fill="url(#rim)" stroke="#1B1A1F" stroke-width="6.97" stroke-linejoin="round" stroke-linecap="round" />
+    <ellipse cx="104" cy="150" rx="18" ry="66" fill="url(#mouth)" stroke="#1B1A1F" stroke-width="6.42" stroke-linejoin="round" stroke-linecap="round" />
+    <rect x="240" y="128" width="52" height="44" rx="12" fill="url(#drv)" stroke="#1B1A1F" stroke-width="7.17" stroke-linejoin="round" stroke-linecap="round" />
+    <ellipse cx="292" cy="150" rx="7" ry="22" fill="#66758B" stroke="#1B1A1F" stroke-width="8.99" stroke-linejoin="round" stroke-linecap="round" />
+    <g fill="none" stroke="#2f7fe0" stroke-width="7" stroke-linecap="round">
+      <path d="M70 108 Q52 150 70 192" opacity="0.95" />
+      <path d="M46 88 Q20 150 46 212" opacity="0.7" />
+      <path d="M22 68 Q-12 150 22 232" opacity="0.45" />
+    </g>
+  </g>
+<g transform="translate(640 0) scale(-1 1)">
+  <g transform="rotate(10 268 150)">
+    <path d="M246 137 C200 135 150 112 100 76 L100 224 C150 188 200 165 246 163 Z" fill="url(#flare)" stroke="#1B1A1F" stroke-width="11.42" stroke-linejoin="round" stroke-linecap="round" />
+    <path d="M246 137 C200 135 150 112 100 76" fill="none" stroke="#ffffff" stroke-opacity="0.75" stroke-width="3" />
+    <ellipse cx="100" cy="150" rx="24" ry="75" fill="url(#rim)" stroke="#1B1A1F" stroke-width="9.91" stroke-linejoin="round" stroke-linecap="round" />
+    <ellipse cx="104" cy="150" rx="18" ry="66" fill="url(#mouth)" stroke="#1B1A1F" stroke-width="8.30" stroke-linejoin="round" stroke-linecap="round" />
+    <rect x="240" y="128" width="52" height="44" rx="12" fill="url(#drv)" stroke="#1B1A1F" stroke-width="8.44" stroke-linejoin="round" stroke-linecap="round" />
+    <ellipse cx="292" cy="150" rx="7" ry="22" fill="#66758B" stroke="#1B1A1F" stroke-width="9.90" stroke-linejoin="round" stroke-linecap="round" />
+    <g fill="none" stroke="#2f7fe0" stroke-width="7" stroke-linecap="round">
+      <path d="M70 108 Q52 150 70 192" opacity="0.95" />
+      <path d="M46 88 Q20 150 46 212" opacity="0.7" />
+      <path d="M22 68 Q-12 150 22 232" opacity="0.45" />
+    </g>
+  </g></g>
+</svg>

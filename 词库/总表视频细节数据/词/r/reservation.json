@@ -1,0 +1,96 @@
+{
+ "单词": "reservation",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：服务员问了什么？\n听：Do you have a reservation?\nA. 想吃什么\nB. 几个人\nC. 要不要水\nD. 有没有预订",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I'd like to make a ______ for dinner.\nA. reserve\nB. reservation\nC. reserved\nD. reserving",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Can I ______ a room for tonight? (reservation)\n考点：词性转换",
+  "题目4": "【选词填空】从 reservation、reservoir 中选一个，用适当形式填空。\n题干：The city gets its water from a ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I have two reservation at the hotel.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In British English, a reservation is often called a \"______\".\nA. bookshop\nB. bookcase\nC. bookmark\nD. booking\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：I made a reservation ______ a table for four.\nA. for\nB. to\nC. at\nD. of\n考点：用法",
+  "答案": "【1】D（有没有预订）\n讲解：reservation 预订。\n【2】B（reservation）\n讲解：make a reservation 预订。\n【3】reserve\n讲解：can 后面用动词原形 reserve。\n【4】reservoir\n讲解：城市的水来自水库 reservoir。\n【5】reservation → reservations\n讲解：two 后面用复数。\n【6】D（booking）\n讲解：英式“预订”常说 booking。\n【7】A（for）\n讲解：为……预订用 for。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：服务员问了什么？",
+   "listen": "Do you have a reservation?",
+   "opts": [
+    "有没有预订",
+    "想吃什么",
+    "几个人",
+    "要不要水"
+   ],
+   "why": "reservation 预订。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I'd like to make a ______ for dinner.",
+   "opts": [
+    "reservation",
+    "reserve",
+    "reserved",
+    "reserving"
+   ],
+   "why": "make a reservation 预订。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Can I ______ a room for tonight? (reservation)",
+   "ans": "reserve",
+   "why": "can 后面用动词原形 reserve。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 reservation、reservoir 中选一个，用适当形式填空。",
+   "stem": "The city gets its water from a ______.",
+   "ans": "reservoir",
+   "why": "城市的水来自水库 reservoir。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I have two reservation at the hotel.",
+   "ans": "reservation → reservations",
+   "why": "two 后面用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In British English, a reservation is often called a \"______\".",
+   "opts": [
+    "booking",
+    "bookshop",
+    "bookcase",
+    "bookmark"
+   ],
+   "why": "英式“预订”常说 booking。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I made a reservation ______ a table for four.",
+   "opts": [
+    "for",
+    "to",
+    "at",
+    "of"
+   ],
+   "why": "为……预订用 for。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

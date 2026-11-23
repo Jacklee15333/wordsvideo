@@ -1,0 +1,93 @@
+{
+ "单词": "king",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：故事里住在宫殿的是谁？\n听：The king and the queen lived in a palace.\nA. 农民\nB. 国王和王后\nC. 士兵\nD. 商人",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ and the queen lived in a palace.\nA. king\nB. kingdom\nC. kind\nD. kings\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There were three ______ in the story. (king)\n考点：变形",
+  "题目4": "【选词填空】从 king、kingdom 中选一个，用适当形式填空。\n题干：The king ruled a small ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The king live in a big palace.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The king of animals is the ______.\nA. cat\nB. dog\nC. mouse\nD. lion\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：她是女王。\n题干：She is the ______.\n考点：易混",
+  "答案": "【1】B（国王和王后）\n讲解：king 国王。\n【2】A（king）\n讲解：和 queen 对应的是 king。\n【3】kings\n讲解：three 后面用复数 kings。\n【4】kingdom\n讲解：国王统治的“王国”是 kingdom。\n【5】live → lives\n讲解：主语 king 单数，谓语用 lives。\n【6】D（lion）\n讲解：百兽之王是狮子。\n【7】queen\n讲解：女王是 queen。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：故事里住在宫殿的是谁？",
+   "listen": "The king and the queen lived in a palace.",
+   "opts": [
+    "国王和王后",
+    "农民",
+    "士兵",
+    "商人"
+   ],
+   "why": "king 国王。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ and the queen lived in a palace.",
+   "opts": [
+    "king",
+    "kingdom",
+    "kind",
+    "kings"
+   ],
+   "why": "和 queen 对应的是 king。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There were three ______ in the story. (king)",
+   "ans": "kings",
+   "why": "three 后面用复数 kings。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 king、kingdom 中选一个，用适当形式填空。",
+   "stem": "The king ruled a small ______.",
+   "ans": "kingdom",
+   "why": "国王统治的“王国”是 kingdom。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The king live in a big palace.",
+   "ans": "live → lives",
+   "why": "主语 king 单数，谓语用 lives。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The king of animals is the ______.",
+   "opts": [
+    "lion",
+    "cat",
+    "dog",
+    "mouse"
+   ],
+   "why": "百兽之王是狮子。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她是女王。",
+   "stem": "She is the ______.",
+   "ans": "queen",
+   "why": "女王是 queen。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

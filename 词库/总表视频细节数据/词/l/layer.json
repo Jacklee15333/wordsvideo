@@ -1,0 +1,94 @@
+{
+ "单词": "layer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：蛋糕有几层？\n听：The cake has three layers.\nA. 两层\nB. 四层\nC. 一层\nD. 三层",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Put on an extra ______ of clothes. It's cold.\nA. layers\nB. layer\nC. level\nD. laid",
+  "题目3": "【选词填空】从 layer、level 中选一个，用适当形式填空。\n题干：The water ______ in the river is very high now.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The ozone layer protect us from the sun.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：母鸡下了一个蛋。\n题干：The hen ______ an egg.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Dress in ______ when you go hiking in the mountains.\nA. layer\nB. level\nC. layers\nD. tier\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Tier\" is used for layers that are ______.\nA. on a surface only\nB. one above another in rows\nC. of paint\nD. of dust\n考点：易混",
+  "答案": "【1】D（三层）\n讲解：layers 层。\n【2】B（layer）\n讲解：an extra 后面用单数。\n【3】level\n讲解：水位是 water level。\n【4】protect → protects\n讲解：主语单数。\n【5】laid\n讲解：lay 的过去式是 laid。\n【6】C（layers）\n讲解：dress in layers 穿好几层衣服。\n【7】B（one above another in rows）\n讲解：tier 强调上下叠放、高低排列。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：蛋糕有几层？",
+   "listen": "The cake has three layers.",
+   "opts": [
+    "三层",
+    "两层",
+    "四层",
+    "一层"
+   ],
+   "why": "layers 层。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Put on an extra ______ of clothes. It's cold.",
+   "opts": [
+    "layer",
+    "layers",
+    "level",
+    "laid"
+   ],
+   "why": "an extra 后面用单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 layer、level 中选一个，用适当形式填空。",
+   "stem": "The water ______ in the river is very high now.",
+   "ans": "level",
+   "why": "水位是 water level。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The ozone layer protect us from the sun.",
+   "ans": "protect → protects",
+   "why": "主语单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "母鸡下了一个蛋。",
+   "stem": "The hen ______ an egg.",
+   "ans": "laid",
+   "why": "lay 的过去式是 laid。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Dress in ______ when you go hiking in the mountains.",
+   "opts": [
+    "layers",
+    "layer",
+    "level",
+    "tier"
+   ],
+   "why": "dress in layers 穿好几层衣服。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Tier\" is used for layers that are ______.",
+   "opts": [
+    "one above another in rows",
+    "on a surface only",
+    "of paint",
+    "of dust"
+   ],
+   "why": "tier 强调上下叠放、高低排列。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

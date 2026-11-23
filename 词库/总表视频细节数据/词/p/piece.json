@@ -1,0 +1,97 @@
+{
+ "单词": "piece",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人想要什么？\n听：Can I have a piece of cake?\nA. 一杯茶\nB. 一个苹果\nC. 一瓶水\nD. 一块蛋糕",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He gave me two ______ of advice.\nA. piece\nB. pieceses\nC. pieces\nD. part\n考点：变形",
+  "题目3": "【选词填空】从 piece、part 中选一个，用适当形式填空。\n题干：The best ______ of the film is the ending.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Can I have a ______ of paper? (piece)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She gave me a useful advice.\n考点：短语",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Scientists found small ______ of an old pot.\nA. parts\nB. areas\nC. sections\nD. fragments\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"A piece of music\" means ______.\nA. 一张唱片\nB. 一首乐曲\nC. 一个音符\nD. 一场音乐会\n考点：用法",
+  "答案": "【1】D（一块蛋糕）\n讲解：a piece of cake 一块蛋糕。\n【2】C（pieces）\n讲解：two 后面用复数 pieces。\n【3】part\n讲解：整体的“一部分”用 part。\n【4】piece\n讲解：a 后面用单数 piece。\n【5】a useful advice → a useful piece of advice\n讲解：advice 不可数，用 a piece of 计数。\n【6】D（fragments）\n讲解：摔碎后的“碎片”用 fragment。\n【7】B（一首乐曲）\n讲解：piece 也指“作品”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想要什么？",
+   "listen": "Can I have a piece of cake?",
+   "opts": [
+    "一块蛋糕",
+    "一杯茶",
+    "一个苹果",
+    "一瓶水"
+   ],
+   "why": "a piece of cake 一块蛋糕。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He gave me two ______ of advice.",
+   "opts": [
+    "pieces",
+    "piece",
+    "pieceses",
+    "part"
+   ],
+   "why": "two 后面用复数 pieces。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 piece、part 中选一个，用适当形式填空。",
+   "stem": "The best ______ of the film is the ending.",
+   "ans": "part",
+   "why": "整体的“一部分”用 part。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Can I have a ______ of paper? (piece)",
+   "ans": "piece",
+   "why": "a 后面用单数 piece。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She gave me a useful advice.",
+   "ans": "a useful advice → a useful piece of advice",
+   "why": "advice 不可数，用 a piece of 计数。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Scientists found small ______ of an old pot.",
+   "opts": [
+    "fragments",
+    "parts",
+    "areas",
+    "sections"
+   ],
+   "why": "摔碎后的“碎片”用 fragment。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"A piece of music\" means ______.",
+   "opts": [
+    "一首乐曲",
+    "一张唱片",
+    "一个音符",
+    "一场音乐会"
+   ],
+   "why": "piece 也指“作品”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

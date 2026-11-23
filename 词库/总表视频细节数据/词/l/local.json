@@ -1,0 +1,94 @@
+{
+ "单词": "local",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她在哪里买菜？\n听：She buys vegetables at the local market.\nA. 外国超市\nB. 当地市场\nC. 网上\nD. 学校",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She buys vegetables at the ______ market.\nA. locally\nB. location\nC. locate\nD. local\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We buy food ______. (local)\n考点：词性转换",
+  "题目4": "【选词填空】从 local、national 中选一个，用适当形式填空。\n题干：The ______ team plays for the whole country.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He is a local, so he doesn't know the town at all.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A local can mean ______.\nA. 外地人\nB. 本地人\nC. 游客\nD. 地图\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这家店位于市中心。\n题干：The shop is ______ in the city centre.\n考点：词性转换",
+  "答案": "【1】B（当地市场）\n讲解：local 当地的。\n【2】D（local）\n讲解：修饰名词 market 用形容词 local。\n【3】locally\n讲解：修饰动词 buy 用副词 locally。\n【4】national\n讲解：代表全国的是 national。\n【5】doesn't know the town at all → knows the town well\n讲解：本地人很熟悉这里。\n【6】B（本地人）\n讲解：local 作名词指本地人。\n【7】located\n讲解：be located in 位于。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她在哪里买菜？",
+   "listen": "She buys vegetables at the local market.",
+   "opts": [
+    "当地市场",
+    "外国超市",
+    "网上",
+    "学校"
+   ],
+   "why": "local 当地的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She buys vegetables at the ______ market.",
+   "opts": [
+    "local",
+    "locally",
+    "location",
+    "locate"
+   ],
+   "why": "修饰名词 market 用形容词 local。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We buy food ______. (local)",
+   "ans": "locally",
+   "why": "修饰动词 buy 用副词 locally。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 local、national 中选一个，用适当形式填空。",
+   "stem": "The ______ team plays for the whole country.",
+   "ans": "national",
+   "why": "代表全国的是 national。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is a local, so he doesn't know the town at all.",
+   "ans": "doesn't know the town at all → knows the town well",
+   "why": "本地人很熟悉这里。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A local can mean ______.",
+   "opts": [
+    "本地人",
+    "外地人",
+    "游客",
+    "地图"
+   ],
+   "why": "local 作名词指本地人。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这家店位于市中心。",
+   "stem": "The shop is ______ in the city centre.",
+   "ans": "located",
+   "why": "be located in 位于。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

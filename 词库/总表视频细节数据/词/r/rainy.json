@@ -1,0 +1,93 @@
+{
+ "单词": "rainy",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说明天天气怎么样？\n听：It will be rainy tomorrow.\nA. 晴天\nB. 下雨\nC. 下雪\nD. 刮风",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：It's a ______ day. Take an umbrella.\nA. rain\nB. raining\nC. rains\nD. rainy\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：July is the ______ month of the year here. (rainy)\n考点：变形",
+  "题目4": "【选词填空】从 rainy、rain 中选一个，用适当形式填空。\n题干：We don't have much ______ in winter.\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：It was rainy yesterday, so we stay at home.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：It is ______ today than yesterday.\nA. rainier\nB. rainy\nC. rainiest\nD. more rainy\n考点：变形",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这里夏天常常下雨。\n题干：It often ______ here in summer.\n考点：词性转换",
+  "答案": "【1】B（下雨）\n讲解：rainy 有雨的。\n【2】D（rainy）\n讲解：名词 day 前面用形容词 rainy。\n【3】rainiest\n讲解：最高级：y 变 i 加 est。\n【4】rain\n讲解：much 后面接不可数名词 rain。\n【5】stay → stayed\n讲解：yesterday 用过去时。\n【6】A（rainier）\n讲解：than 前面用比较级 rainier。\n【7】rains\n讲解：动词 rain，主语 it，一般现在时加 s。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说明天天气怎么样？",
+   "listen": "It will be rainy tomorrow.",
+   "opts": [
+    "下雨",
+    "晴天",
+    "下雪",
+    "刮风"
+   ],
+   "why": "rainy 有雨的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It's a ______ day. Take an umbrella.",
+   "opts": [
+    "rainy",
+    "rain",
+    "raining",
+    "rains"
+   ],
+   "why": "名词 day 前面用形容词 rainy。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "July is the ______ month of the year here. (rainy)",
+   "ans": "rainiest",
+   "why": "最高级：y 变 i 加 est。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 rainy、rain 中选一个，用适当形式填空。",
+   "stem": "We don't have much ______ in winter.",
+   "ans": "rain",
+   "why": "much 后面接不可数名词 rain。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "It was rainy yesterday, so we stay at home.",
+   "ans": "stay → stayed",
+   "why": "yesterday 用过去时。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It is ______ today than yesterday.",
+   "opts": [
+    "rainier",
+    "rainy",
+    "rainiest",
+    "more rainy"
+   ],
+   "why": "than 前面用比较级 rainier。",
+   "kd": "变形"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这里夏天常常下雨。",
+   "stem": "It often ______ here in summer.",
+   "ans": "rains",
+   "why": "动词 rain，主语 it，一般现在时加 s。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

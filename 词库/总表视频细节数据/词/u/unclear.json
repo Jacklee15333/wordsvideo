@@ -1,0 +1,92 @@
+{
+ "单词": "unclear",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人觉得什么不清楚？\n听：The rules of the game are unclear to me.\nA. 游戏时间\nB. 游戏地点\nC. 游戏规则\nD. 游戏奖品",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Nobody knows the answer yet; it's ______.\nA. clear\nB. unclear\nC. clearly\nD. clarify",
+  "题目3": "【选词填空】从 unclear、clear 中选一个，用适当形式填空。\n题干：The water is so ______ that we can see the fish.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Please ______ the table after dinner. (unclear)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：His answer was unclear, so everyone understood it.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我不清楚他为什么离开。\n题干：It's unclear to me ______ he left.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：This sentence is unclear. Can you ______ it?\nA. explains\nB. explaining\nC. explained\nD. explain\n考点：用法",
+  "答案": "【1】C（游戏规则）\n讲解：unclear 不清楚的。\n【2】B（unclear）\n讲解：没人知道答案，所以是“不清楚的”。\n【3】clear\n讲解：能看见鱼，说明水是清的。\n【4】clear\n讲解：please 后面要动词原形，clear 清理。\n【5】everyone → nobody\n讲解：回答不清楚，所以没人听懂。\n【6】why\n讲解：问原因用 why 引导从句。\n【7】D（explain）\n讲解：can 后用原形；不清楚就请人解释。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人觉得什么不清楚？",
+   "listen": "The rules of the game are unclear to me.",
+   "opts": [
+    "游戏规则",
+    "游戏时间",
+    "游戏地点",
+    "游戏奖品"
+   ],
+   "why": "unclear 不清楚的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Nobody knows the answer yet; it's ______.",
+   "opts": [
+    "unclear",
+    "clear",
+    "clearly",
+    "clarify"
+   ],
+   "why": "没人知道答案，所以是“不清楚的”。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 unclear、clear 中选一个，用适当形式填空。",
+   "stem": "The water is so ______ that we can see the fish.",
+   "ans": "clear",
+   "why": "能看见鱼，说明水是清的。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Please ______ the table after dinner. (unclear)",
+   "ans": "clear",
+   "why": "please 后面要动词原形，clear 清理。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "His answer was unclear, so everyone understood it.",
+   "ans": "everyone → nobody",
+   "why": "回答不清楚，所以没人听懂。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我不清楚他为什么离开。",
+   "stem": "It's unclear to me ______ he left.",
+   "ans": "why",
+   "why": "问原因用 why 引导从句。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This sentence is unclear. Can you ______ it?",
+   "opts": [
+    "explain",
+    "explains",
+    "explaining",
+    "explained"
+   ],
+   "why": "can 后用原形；不清楚就请人解释。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

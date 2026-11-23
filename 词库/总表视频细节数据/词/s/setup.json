@@ -1,0 +1,92 @@
+{
+ "单词": "setup",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说新电脑怎么样？\n听：The setup of the new computer was easy.\nA. 安装很难\nB. 电脑坏了\nC. 电脑很贵\nD. 安装很简单",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ of the new TV took only ten minutes.\nA. set\nB. setup\nC. setback\nD. sets",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We tried several ______ before we found the best one. (setup)\n考点：变形",
+  "题目4": "【选词填空】从 setup、set up 中选一个，用适当形式填空。\n题干：Let's ______ a tent here.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The setup are very simple.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他们正在安装新电脑。\n题干：They are ______ ______ a new computer.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：After the setup, the computer ______ ready to use now.\nA. are\nB. is\nC. was\nD. were\n考点：用法",
+  "答案": "【1】D（安装很简单）\n讲解：setup 安装、设置。\n【2】B（setup）\n讲解：the … of 中间要名词“安装” setup。\n【3】setups\n讲解：several 后面用复数 setups。\n【4】set up\n讲解：动词短语分开写 set up；setup 是名词。\n【5】are → is\n讲解：主语 setup 是单数，用 is。\n【6】setting；up\n讲解：are 后用现在分词，set up 安装。\n【7】B（is）\n讲解：now 用一般现在时，主语单数用 is。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说新电脑怎么样？",
+   "listen": "The setup of the new computer was easy.",
+   "opts": [
+    "安装很简单",
+    "安装很难",
+    "电脑坏了",
+    "电脑很贵"
+   ],
+   "why": "setup 安装、设置。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of the new TV took only ten minutes.",
+   "opts": [
+    "setup",
+    "set",
+    "setback",
+    "sets"
+   ],
+   "why": "the … of 中间要名词“安装” setup。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We tried several ______ before we found the best one. (setup)",
+   "ans": "setups",
+   "why": "several 后面用复数 setups。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 setup、set up 中选一个，用适当形式填空。",
+   "stem": "Let's ______ a tent here.",
+   "ans": "set up",
+   "why": "动词短语分开写 set up；setup 是名词。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The setup are very simple.",
+   "ans": "are → is",
+   "why": "主语 setup 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他们正在安装新电脑。",
+   "stem": "They are ______ ______ a new computer.",
+   "ans": "setting；up",
+   "why": "are 后用现在分词，set up 安装。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "After the setup, the computer ______ ready to use now.",
+   "opts": [
+    "is",
+    "are",
+    "was",
+    "were"
+   ],
+   "why": "now 用一般现在时，主语单数用 is。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

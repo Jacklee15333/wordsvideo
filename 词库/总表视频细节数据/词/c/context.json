@@ -1,0 +1,94 @@
+{
+ "单词": "context",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让大家怎么猜词义？\n听：Try to guess the word from the context.\nA. 查字典\nB. 问同学\nC. 看图片\nD. 根据上下文",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You can guess the meaning of a new word ______ the context.\nA. at\nB. to\nC. with\nD. from\n考点：用法",
+  "题目3": "【选词填空】从 context、contest 中选一个，用适当形式填空。\n题干：She won first prize in the singing ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The word has different meanings in different ______. (context)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：You should learn new words in contest, not one by one.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：My friend comes from a poor family ______.\nA. context\nB. background\nC. contest\nD. content\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：在这个语境里，cool 的意思是“很棒”。\n题干：______ this context, the word cool means great.\n考点：用法",
+  "答案": "【1】D（根据上下文）\n讲解：from the context 根据上下文。\n【2】D（from）\n讲解：from the context 根据上下文。\n【3】contest\n讲解：“比赛”是 contest；context 是“上下文”。\n【4】contexts\n讲解：different 后面接可数名词复数 contexts。\n【5】contest → context\n讲解：“结合上下文”是 in context；contest 是“比赛”。\n【6】B（background）\n讲解：个人的家庭出身用 background（背景）。\n【7】In\n讲解：in this context 在这个语境里，介词用 in。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让大家怎么猜词义？",
+   "listen": "Try to guess the word from the context.",
+   "opts": [
+    "根据上下文",
+    "查字典",
+    "问同学",
+    "看图片"
+   ],
+   "why": "from the context 根据上下文。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can guess the meaning of a new word ______ the context.",
+   "opts": [
+    "from",
+    "at",
+    "to",
+    "with"
+   ],
+   "why": "from the context 根据上下文。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 context、contest 中选一个，用适当形式填空。",
+   "stem": "She won first prize in the singing ______.",
+   "ans": "contest",
+   "why": "“比赛”是 contest；context 是“上下文”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The word has different meanings in different ______. (context)",
+   "ans": "contexts",
+   "why": "different 后面接可数名词复数 contexts。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "You should learn new words in contest, not one by one.",
+   "ans": "contest → context",
+   "why": "“结合上下文”是 in context；contest 是“比赛”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My friend comes from a poor family ______.",
+   "opts": [
+    "background",
+    "context",
+    "contest",
+    "content"
+   ],
+   "why": "个人的家庭出身用 background（背景）。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "在这个语境里，cool 的意思是“很棒”。",
+   "stem": "______ this context, the word cool means great.",
+   "ans": "In",
+   "why": "in this context 在这个语境里，介词用 in。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

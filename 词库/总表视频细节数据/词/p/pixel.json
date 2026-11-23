@@ -1,0 +1,97 @@
+{
+ "单词": "pixel",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这张照片为什么不清楚？\n听：The photo has too few pixels, so it's not clear.\nA. 太大\nB. 颜色太多\nC. 像素太少\nD. 太暗",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The screen has millions of ______.\nA. pixels\nB. pixel\nC. pixies\nD. pixeles\n考点：变形",
+  "题目3": "【选词填空】从 pixel、resolution 中选一个，用适当形式填空。\n题干：This camera has high ______, so photos are very clear.\n考点：易混",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：屏幕上每个小点叫一个像素。\n题干：Each tiny dot on a screen is called a ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：A pixels is a tiny dot.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：More pixels usually means a ______ picture.\nA. darker\nB. clearer\nC. smaller\nD. older\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A pixel is ______.\nA. a single dot on a screen\nB. a kind of camera\nC. a colour\nD. a photo\n考点：用法",
+  "答案": "【1】C（像素太少）\n讲解：pixel 像素。\n【2】A（pixels）\n讲解：millions of 后面接复数。\n【3】resolution\n讲解：“分辨率”用 resolution；pixel 是单个像素点。\n【4】pixel\n讲解：像素 pixel。\n【5】pixels → pixel\n讲解：a 后面接单数。\n【6】B（clearer）\n讲解：像素多，图片更清楚。\n【7】A（a single dot on a screen）\n讲解：pixel 指单个点。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这张照片为什么不清楚？",
+   "listen": "The photo has too few pixels, so it's not clear.",
+   "opts": [
+    "像素太少",
+    "太大",
+    "颜色太多",
+    "太暗"
+   ],
+   "why": "pixel 像素。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The screen has millions of ______.",
+   "opts": [
+    "pixels",
+    "pixel",
+    "pixies",
+    "pixeles"
+   ],
+   "why": "millions of 后面接复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 pixel、resolution 中选一个，用适当形式填空。",
+   "stem": "This camera has high ______, so photos are very clear.",
+   "ans": "resolution",
+   "why": "“分辨率”用 resolution；pixel 是单个像素点。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "屏幕上每个小点叫一个像素。",
+   "stem": "Each tiny dot on a screen is called a ______.",
+   "ans": "pixel",
+   "why": "像素 pixel。"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "A pixels is a tiny dot.",
+   "ans": "pixels → pixel",
+   "why": "a 后面接单数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "More pixels usually means a ______ picture.",
+   "opts": [
+    "clearer",
+    "darker",
+    "smaller",
+    "older"
+   ],
+   "why": "像素多，图片更清楚。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A pixel is ______.",
+   "opts": [
+    "a single dot on a screen",
+    "a kind of camera",
+    "a colour",
+    "a photo"
+   ],
+   "why": "pixel 指单个点。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

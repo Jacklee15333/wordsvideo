@@ -1,0 +1,97 @@
+{
+ "单词": "exact",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人想知道什么？\n听：What's the exact time now?\nA. 地点\nB. 天气\nC. 价格\nD. 准确时间",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you tell me the ______ date?\nA. exactly\nB. exact\nC. exam\nD. exit\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：That's ______ what I wanted. (exact)\n考点：词性转换",
+  "题目4": "【选词填空】从 exact、exit 中选一个，用适当形式填空。\n题干：Please leave by the ______ door.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The exact number of students are 45.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：To be exact means ______.\nA. 准时\nB. 考试\nC. 确切地说\nD. 出去\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Exact is close in meaning to ______.\nA. rough\nB. precise\nC. easy\nD. wrong\n考点：易混",
+  "答案": "【1】D（准确时间）\n讲解：exact 准确的。\n【2】B（exact）\n讲解：修饰名词 date 用形容词 exact。\n【3】exactly\n讲解：修饰 what I wanted 用副词 exactly（正是）。\n【4】exit\n讲解：出口是 exit。\n【5】are → is\n讲解：主语 number 单数，谓语用 is。\n【6】C（确切地说）\n讲解：to be exact 确切地说。\n【7】B（precise）\n讲解：exact ≈ precise 精确的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想知道什么？",
+   "listen": "What's the exact time now?",
+   "opts": [
+    "准确时间",
+    "地点",
+    "天气",
+    "价格"
+   ],
+   "why": "exact 准确的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you tell me the ______ date?",
+   "opts": [
+    "exact",
+    "exactly",
+    "exam",
+    "exit"
+   ],
+   "why": "修饰名词 date 用形容词 exact。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "That's ______ what I wanted. (exact)",
+   "ans": "exactly",
+   "why": "修饰 what I wanted 用副词 exactly（正是）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 exact、exit 中选一个，用适当形式填空。",
+   "stem": "Please leave by the ______ door.",
+   "ans": "exit",
+   "why": "出口是 exit。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The exact number of students are 45.",
+   "ans": "are → is",
+   "why": "主语 number 单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "To be exact means ______.",
+   "opts": [
+    "确切地说",
+    "准时",
+    "考试",
+    "出去"
+   ],
+   "why": "to be exact 确切地说。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Exact is close in meaning to ______.",
+   "opts": [
+    "precise",
+    "rough",
+    "easy",
+    "wrong"
+   ],
+   "why": "exact ≈ precise 精确的。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

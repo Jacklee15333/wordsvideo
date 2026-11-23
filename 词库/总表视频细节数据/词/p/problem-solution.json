@@ -1,0 +1,91 @@
+{
+ "单词": "problem-solution",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让大家写什么样的作文？\n听：Please write a problem-solution essay.\nA. 记叙文\nB. 先提问题再给办法的作文\nC. 诗歌\nD. 日记",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：In a ______ essay, you first describe a problem and then give answers to it.\nA. cause-effect\nB. compare-contrast\nC. story\nD. problem-solution",
+  "题目3": "【选词填空】从 problem-solution、cause-effect 中选一个，用适当形式填空。\n题干：An essay about why the river got dirty and what happened next is a ______ essay.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：A problem-solution essay always end with a solution.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：首先，描述问题。\n题干：First, ______ the problem.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In a problem-solution essay, the ______ part usually comes last.\nA. problem\nB. title\nC. solution\nD. name\n考点：用法",
+  "题目7": "【选词填空】从 problem-solution、compare-contrast 中选一个，用适当形式填空。\n题干：An essay about how cats and dogs are alike and different is a ______ essay.\n考点：易混",
+  "答案": "【1】B（先提问题再给办法的作文）\n讲解：problem-solution 问题—解决式的。\n【2】D（problem-solution）\n讲解：先讲问题再给办法，是 problem-solution 式。\n【3】cause-effect\n讲解：讲原因和结果的是因果式 cause-effect。\n【4】end → ends\n讲解：主语 essay 是单数，用 ends。\n【5】describe\n讲解：祈使句用动词原形 describe。\n【6】C（solution）\n讲解：先提问题，最后给出解决办法。\n【7】compare-contrast\n讲解：讲相同和不同的是比较对照式 compare-contrast。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让大家写什么样的作文？",
+   "listen": "Please write a problem-solution essay.",
+   "opts": [
+    "先提问题再给办法的作文",
+    "记叙文",
+    "诗歌",
+    "日记"
+   ],
+   "why": "problem-solution 问题—解决式的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In a ______ essay, you first describe a problem and then give answers to it.",
+   "opts": [
+    "problem-solution",
+    "cause-effect",
+    "compare-contrast",
+    "story"
+   ],
+   "why": "先讲问题再给办法，是 problem-solution 式。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 problem-solution、cause-effect 中选一个，用适当形式填空。",
+   "stem": "An essay about why the river got dirty and what happened next is a ______ essay.",
+   "ans": "cause-effect",
+   "why": "讲原因和结果的是因果式 cause-effect。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "A problem-solution essay always end with a solution.",
+   "ans": "end → ends",
+   "why": "主语 essay 是单数，用 ends。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "首先，描述问题。",
+   "stem": "First, ______ the problem.",
+   "ans": "describe",
+   "why": "祈使句用动词原形 describe。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In a problem-solution essay, the ______ part usually comes last.",
+   "opts": [
+    "solution",
+    "problem",
+    "title",
+    "name"
+   ],
+   "why": "先提问题，最后给出解决办法。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 problem-solution、compare-contrast 中选一个，用适当形式填空。",
+   "stem": "An essay about how cats and dogs are alike and different is a ______ essay.",
+   "ans": "compare-contrast",
+   "why": "讲相同和不同的是比较对照式 compare-contrast。",
+   "kd": "易混",
+   "zh": ""
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

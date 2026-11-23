@@ -1,0 +1,94 @@
+{
+ "单词": "maintenance",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：电梯为什么停用？\n听：The lift is closed for maintenance.\nA. 停电\nB. 维修\nC. 放假\nD. 失火",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The car needs regular ______.\nA. maintain\nB. maintains\nC. maintenance\nD. maintenances",
+  "题目3": "【选词填空】从 maintenance、maintain 中选一个，用适当形式填空。\n题干：It's hard to ______ a big garden.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Maintenance of these machines are expensive.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这辆车需要定期保养一次。\n题干：This car needs a regular ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Maintenance is ______, so we don't say \"maintenances\".\nA. uncountable\nB. countable\nC. a verb\nD. an adjective\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Maintenance\" is the noun of \"______\".\nA. main\nB. mention\nC. maintain\nD. remain\n考点：词性转换",
+  "答案": "【1】B（维修）\n讲解：closed for maintenance 因维修关闭。\n【2】C（maintenance）\n讲解：不可数名词，不加 s。\n【3】maintain\n讲解：to 后面用动词原形。\n【4】are → is\n讲解：maintenance 不可数，谓语用 is。\n【5】service\n讲解：可数的“一次保养”用 service。\n【6】A（uncountable）\n讲解：maintenance 不可数。\n【7】C（maintain）\n讲解：maintain 变名词是 maintenance。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：电梯为什么停用？",
+   "listen": "The lift is closed for maintenance.",
+   "opts": [
+    "维修",
+    "停电",
+    "放假",
+    "失火"
+   ],
+   "why": "closed for maintenance 因维修关闭。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The car needs regular ______.",
+   "opts": [
+    "maintenance",
+    "maintain",
+    "maintains",
+    "maintenances"
+   ],
+   "why": "不可数名词，不加 s。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 maintenance、maintain 中选一个，用适当形式填空。",
+   "stem": "It's hard to ______ a big garden.",
+   "ans": "maintain",
+   "why": "to 后面用动词原形。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Maintenance of these machines are expensive.",
+   "ans": "are → is",
+   "why": "maintenance 不可数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这辆车需要定期保养一次。",
+   "stem": "This car needs a regular ______.",
+   "ans": "service",
+   "why": "可数的“一次保养”用 service。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Maintenance is ______, so we don't say \"maintenances\".",
+   "opts": [
+    "uncountable",
+    "countable",
+    "a verb",
+    "an adjective"
+   ],
+   "why": "maintenance 不可数。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Maintenance\" is the noun of \"______\".",
+   "opts": [
+    "maintain",
+    "main",
+    "mention",
+    "remain"
+   ],
+   "why": "maintain 变名词是 maintenance。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "guest",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：今晚谁要来？\n听：We have some guests coming tonight.\nA. 老师\nB. 医生\nC. 修理工\nD. 客人",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There were 100 ______ at the wedding.\nA. guest\nB. guests\nC. guess\nD. guesses",
+  "题目3": "【选词填空】从 guest、client 中选一个，用适当形式填空。\n题干：The lawyer has a meeting with a new ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He is a guests of our school.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：“我能用一下你的电话吗？”“请便。”\n题干：\"Can I use your phone?\" \"Be my ______.\"",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Visitor\" is ______ than \"guest\".\nA. more formal\nB. older\nC. smaller\nD. more general\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A \"guesthouse\" is a small ______ for travellers.\nA. shop\nB. place to stay\nC. restaurant\nD. school\n考点：词性转换",
+  "答案": "【1】D（客人）\n讲解：guests 客人。\n【2】B（guests）\n讲解：100 后面用复数。\n【3】client\n讲解：律师的客户用 client。\n【4】guests → guest\n讲解：a 后面用单数。\n【5】guest\n讲解：Be my guest. 请便。\n【6】D（more general）\n讲解：visitor 泛指来访者，guest 是被邀请、被招待的人。\n【7】B（place to stay）\n讲解：guesthouse 民宿。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：今晚谁要来？",
+   "listen": "We have some guests coming tonight.",
+   "opts": [
+    "客人",
+    "老师",
+    "医生",
+    "修理工"
+   ],
+   "why": "guests 客人。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There were 100 ______ at the wedding.",
+   "opts": [
+    "guests",
+    "guest",
+    "guess",
+    "guesses"
+   ],
+   "why": "100 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 guest、client 中选一个，用适当形式填空。",
+   "stem": "The lawyer has a meeting with a new ______.",
+   "ans": "client",
+   "why": "律师的客户用 client。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is a guests of our school.",
+   "ans": "guests → guest",
+   "why": "a 后面用单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "“我能用一下你的电话吗？”“请便。”",
+   "stem": "\"Can I use your phone?\" \"Be my ______.\"",
+   "ans": "guest",
+   "why": "Be my guest. 请便。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Visitor\" is ______ than \"guest\".",
+   "opts": [
+    "more general",
+    "more formal",
+    "older",
+    "smaller"
+   ],
+   "why": "visitor 泛指来访者，guest 是被邀请、被招待的人。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A \"guesthouse\" is a small ______ for travellers.",
+   "opts": [
+    "place to stay",
+    "shop",
+    "restaurant",
+    "school"
+   ],
+   "why": "guesthouse 民宿。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

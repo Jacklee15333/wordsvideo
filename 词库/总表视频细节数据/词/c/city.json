@@ -1,0 +1,94 @@
+{
+ "单词": "city",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人住在哪里？\n听：I live in a big city.\nA. 小村庄\nB. 大城市\nC. 小镇\nD. 农场",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Shanghai is a big ______.\nA. city\nB. cities\nC. citizen\nD. civil\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many big ______ in China. (city)\n考点：变形",
+  "题目4": "【选词填空】从 city、town 中选一个，用适当形式填空。\n题干：A ______ is smaller than a city.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He lives in city of Beijing.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他是中国公民。\n题干：He is a Chinese ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A city is usually ______ than a town.\nA. smaller\nB. older\nC. bigger\nD. quieter\n考点：易混",
+  "答案": "【1】B（大城市）\n讲解：city 城市。\n【2】A（city）\n讲解：a big 后接单数 city。\n【3】cities\n讲解：city 复数 y 变 i 加 es。\n【4】town\n讲解：town 比 city 小。\n【5】in city → in the city\n讲解：the city of Beijing 北京市，前面加 the。\n【6】citizen\n讲解：“公民”是 citizen。\n【7】C（bigger）\n讲解：city 一般比 town 大。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人住在哪里？",
+   "listen": "I live in a big city.",
+   "opts": [
+    "大城市",
+    "小村庄",
+    "小镇",
+    "农场"
+   ],
+   "why": "city 城市。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Shanghai is a big ______.",
+   "opts": [
+    "city",
+    "cities",
+    "citizen",
+    "civil"
+   ],
+   "why": "a big 后接单数 city。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many big ______ in China. (city)",
+   "ans": "cities",
+   "why": "city 复数 y 变 i 加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 city、town 中选一个，用适当形式填空。",
+   "stem": "A ______ is smaller than a city.",
+   "ans": "town",
+   "why": "town 比 city 小。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He lives in city of Beijing.",
+   "ans": "in city → in the city",
+   "why": "the city of Beijing 北京市，前面加 the。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是中国公民。",
+   "stem": "He is a Chinese ______.",
+   "ans": "citizen",
+   "why": "“公民”是 citizen。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A city is usually ______ than a town.",
+   "opts": [
+    "bigger",
+    "smaller",
+    "older",
+    "quieter"
+   ],
+   "why": "city 一般比 town 大。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

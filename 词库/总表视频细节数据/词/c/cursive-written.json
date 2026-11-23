@@ -1,0 +1,96 @@
+{
+ "单词": "cursive-written",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这封信是怎么写的？\n听：The letter is cursive-written and hard to read.\nA. 打印的\nB. 大写的\nC. 连笔写的\nD. 铅笔写的",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I can't read this ______ note.\nA. cursive-write\nB. cursive-writing\nC. cursive-written\nD. cursive-wrote\n考点：变形",
+  "题目3": "【选词填空】从 written、writing 中选一个，用适当形式填空。\n题干：Her ______ is beautiful.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The old letter ______ in cursive. (write)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This cursive-written notes is from my grandpa.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A cursive-written word has letters that are ______.\nA. joined together\nB. far apart\nC. all capital\nD. printed\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The opposite of a cursive-written letter is a ______ one.\nA. beautiful\nB. printed\nC. long\nD. short\n考点：易混",
+  "答案": "【1】C（连笔写的）\n讲解：cursive-written 连笔书写的。\n【2】C（cursive-written）\n讲解：“连笔书写的”是 cursive-written，用过去分词。\n【3】writing\n讲解：her 后面要名词 writing（字迹）。\n【4】was written\n讲解：信是被写的，说过去用 was written。\n【5】notes → note\n讲解：this 后面接单数 note。\n【6】A（joined together）\n讲解：连笔字的字母连在一起。\n【7】B（printed）\n讲解：和连笔手写相对的是印刷体 printed。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这封信是怎么写的？",
+   "listen": "The letter is cursive-written and hard to read.",
+   "opts": [
+    "连笔写的",
+    "打印的",
+    "大写的",
+    "铅笔写的"
+   ],
+   "why": "cursive-written 连笔书写的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I can't read this ______ note.",
+   "opts": [
+    "cursive-written",
+    "cursive-write",
+    "cursive-writing",
+    "cursive-wrote"
+   ],
+   "why": "“连笔书写的”是 cursive-written，用过去分词。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 written、writing 中选一个，用适当形式填空。",
+   "stem": "Her ______ is beautiful.",
+   "ans": "writing",
+   "why": "her 后面要名词 writing（字迹）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The old letter ______ in cursive. (write)",
+   "ans": "was written",
+   "why": "信是被写的，说过去用 was written。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This cursive-written notes is from my grandpa.",
+   "ans": "notes → note",
+   "why": "this 后面接单数 note。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A cursive-written word has letters that are ______.",
+   "opts": [
+    "joined together",
+    "far apart",
+    "all capital",
+    "printed"
+   ],
+   "why": "连笔字的字母连在一起。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The opposite of a cursive-written letter is a ______ one.",
+   "opts": [
+    "printed",
+    "beautiful",
+    "long",
+    "short"
+   ],
+   "why": "和连笔手写相对的是印刷体 printed。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

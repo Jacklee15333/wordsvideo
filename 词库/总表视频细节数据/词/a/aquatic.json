@@ -1,0 +1,95 @@
+{
+ "单词": "aquatic",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说这些是什么植物？\n听：These are aquatic plants; they grow in water.\nA. 沙漠植物\nB. 水生植物\nC. 高山植物\nD. 室内植物",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Fish and frogs are ______ animals.\nA. marine\nB. aquatic\nC. desert\nD. flying",
+  "题目3": "【选词填空】从 aquatic、marine 中选一个，用适当形式填空。\n题干：Sharks and whales are ______ animals; they live in the sea.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Aquatic animals can't live without ______. (aquatic)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Aquatic plants needs a lot of water.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Aqua\" in \"aquatic\" means ______.\nA. air\nB. land\nC. fire\nD. water\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which animal is NOT aquatic?\nA. a fish\nB. a crab\nC. a camel\nD. a whale\n考点：用法",
+  "答案": "【1】B（水生植物）\n讲解：aquatic 水生的，长在水里。\n【2】B（aquatic）\n讲解：鱼和青蛙都生活在水里，用 aquatic；marine 专指海里的，青蛙不是。\n【3】marine\n讲解：专指“海里的”用 marine。\n【4】water\n讲解：aquatic 来自拉丁 aqua“水”，水生动物离不开水 water。\n【5】needs → need\n讲解：主语 plants 是复数，动词不加 s。\n【6】D（water）\n讲解：aquatic 里的 aqua 是“水”。\n【7】C（a camel）\n讲解：骆驼生活在沙漠里，不是水生的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说这些是什么植物？",
+   "listen": "These are aquatic plants; they grow in water.",
+   "opts": [
+    "水生植物",
+    "沙漠植物",
+    "高山植物",
+    "室内植物"
+   ],
+   "why": "aquatic 水生的，长在水里。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Fish and frogs are ______ animals.",
+   "opts": [
+    "aquatic",
+    "marine",
+    "desert",
+    "flying"
+   ],
+   "why": "鱼和青蛙都生活在水里，用 aquatic；marine 专指海里的，青蛙不是。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 aquatic、marine 中选一个，用适当形式填空。",
+   "stem": "Sharks and whales are ______ animals; they live in the sea.",
+   "ans": "marine",
+   "why": "专指“海里的”用 marine。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Aquatic animals can't live without ______. (aquatic)",
+   "ans": "water",
+   "why": "aquatic 来自拉丁 aqua“水”，水生动物离不开水 water。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Aquatic plants needs a lot of water.",
+   "ans": "needs → need",
+   "why": "主语 plants 是复数，动词不加 s。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Aqua\" in \"aquatic\" means ______.",
+   "opts": [
+    "water",
+    "air",
+    "land",
+    "fire"
+   ],
+   "why": "aquatic 里的 aqua 是“水”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which animal is NOT aquatic?",
+   "opts": [
+    "a camel",
+    "a fish",
+    "a crab",
+    "a whale"
+   ],
+   "why": "骆驼生活在沙漠里，不是水生的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

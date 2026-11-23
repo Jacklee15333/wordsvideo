@@ -1,0 +1,92 @@
+{
+ "单词": "ID",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人忘带什么了？\n听：I forgot to bring my ID card today.\nA. 雨伞\nB. 午饭\nC. 作业\nD. 身份证",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You need to show your ______ before you get on the plane.\nA. IDs\nB. identify\nC. ID\nD. identified",
+  "题目3": "【选词填空】从 ID、username 中选一个，用适当形式填空。\n题干：Please type your ______ and password to log in to the website.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：All the passengers showed their ______ at the gate. (ID)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He forgot his ID yesterday, so he can't get on the plane.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：To check who you are, the hotel will ask for your ______.\nA. identify\nB. identical\nC. idea\nD. identification\n考点：词性转换",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：请出示你的身份证件。\n题干：Please show me your ______ card.\n考点：词性转换",
+  "答案": "【1】D（身份证）\n讲解：ID card 身份证。\n【2】C（ID）\n讲解：your 后接单数名词 ID。\n【3】username\n讲解：网站登录的“用户名”英语说 username。\n【4】IDs\n讲解：their 指多人，用复数 IDs。\n【5】can't → couldn't\n讲解：yesterday 是过去，couldn't 和前面时态一致。\n【6】D（identification）\n讲解：ID 是 identification 的缩写，身份证明。\n【7】identity\n讲解：ID card 全称 identity card。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人忘带什么了？",
+   "listen": "I forgot to bring my ID card today.",
+   "opts": [
+    "身份证",
+    "雨伞",
+    "午饭",
+    "作业"
+   ],
+   "why": "ID card 身份证。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You need to show your ______ before you get on the plane.",
+   "opts": [
+    "ID",
+    "IDs",
+    "identify",
+    "identified"
+   ],
+   "why": "your 后接单数名词 ID。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 ID、username 中选一个，用适当形式填空。",
+   "stem": "Please type your ______ and password to log in to the website.",
+   "ans": "username",
+   "why": "网站登录的“用户名”英语说 username。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "All the passengers showed their ______ at the gate. (ID)",
+   "ans": "IDs",
+   "why": "their 指多人，用复数 IDs。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He forgot his ID yesterday, so he can't get on the plane.",
+   "ans": "can't → couldn't",
+   "why": "yesterday 是过去，couldn't 和前面时态一致。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "To check who you are, the hotel will ask for your ______.",
+   "opts": [
+    "identification",
+    "identify",
+    "identical",
+    "idea"
+   ],
+   "why": "ID 是 identification 的缩写，身份证明。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请出示你的身份证件。",
+   "stem": "Please show me your ______ card.",
+   "ans": "identity",
+   "why": "ID card 全称 identity card。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

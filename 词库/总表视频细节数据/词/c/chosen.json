@@ -1,0 +1,93 @@
+{
+ "单词": "chosen",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他被选为什么？\n听：He was chosen as captain.\nA. 班长\nB. 队长\nC. 老师\nD. 校长",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She was ______ to sing at the party.\nA. chose\nB. chosen\nC. choose\nD. choosing\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Who did you ______? (chosen)\n考点：变形",
+  "题目4": "【选词填空】从 chosen、frozen 中选一个，用适当形式填空。\n题干：The lake is ______ in winter.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The chosen students was very happy.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她做了一个好的选择。\n题干：She made a good ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The chosen few means ______.\nA. 少数被选中的人\nB. 选择很少\nC. 很少的人选\nD. 没人被选\n考点：短语",
+  "答案": "【1】B（队长）\n讲解：chosen 被选中的。\n【2】B（chosen）\n讲解：被动语态 was 后面用过去分词 chosen。\n【3】choose\n讲解：did 后面用动词原形 choose。\n【4】frozen\n讲解：湖冻住了用 frozen。\n【5】was → were\n讲解：主语 students 复数，谓语用 were。\n【6】choice\n讲解：名词“选择”是 choice。\n【7】A（少数被选中的人）\n讲解：the chosen few 少数被挑中的人。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他被选为什么？",
+   "listen": "He was chosen as captain.",
+   "opts": [
+    "队长",
+    "班长",
+    "老师",
+    "校长"
+   ],
+   "why": "chosen 被选中的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She was ______ to sing at the party.",
+   "opts": [
+    "chosen",
+    "chose",
+    "choose",
+    "choosing"
+   ],
+   "why": "被动语态 was 后面用过去分词 chosen。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Who did you ______? (chosen)",
+   "ans": "choose",
+   "why": "did 后面用动词原形 choose。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 chosen、frozen 中选一个，用适当形式填空。",
+   "stem": "The lake is ______ in winter.",
+   "ans": "frozen",
+   "why": "湖冻住了用 frozen。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The chosen students was very happy.",
+   "ans": "was → were",
+   "why": "主语 students 复数，谓语用 were。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她做了一个好的选择。",
+   "stem": "She made a good ______.",
+   "ans": "choice",
+   "why": "名词“选择”是 choice。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The chosen few means ______.",
+   "opts": [
+    "少数被选中的人",
+    "选择很少",
+    "很少的人选",
+    "没人被选"
+   ],
+   "why": "the chosen few 少数被挑中的人。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

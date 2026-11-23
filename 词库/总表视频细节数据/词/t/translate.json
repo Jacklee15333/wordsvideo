@@ -1,0 +1,93 @@
+{
+ "单词": "translate",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让学生做什么？\n听：Translate this sentence into English.\nA. 读句子\nB. 抄句子\nC. 背句子\nD. 把句子译成英语",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you ______ this letter into Chinese?\nA. translation\nB. translator\nC. translated\nD. translate",
+  "题目3": "【选词填空】从 translate、interpret 中选一个，用适当形式填空。\n题干：He is ______ for the president at the meeting.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：This book was ______ into many languages. (translate)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Please translate it to Chinese.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她正在翻译一本英文小说。\n题干：She is ______ an English novel.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：This ______ is very good; it reads like the original.\nA. translate\nB. translator\nC. translating\nD. translation\n考点：词性转换",
+  "答案": "【1】D（把句子译成英语）\n讲解：translate … into 把……翻译成。\n【2】D（translate）\n讲解：can 后面用原形 translate。\n【3】interpreting\n讲解：会议上当口译用 interpret；translate 多指笔译。\n【4】translated\n讲解：was 加过去分词 translated。\n【5】to → into\n讲解：translate … into 译成。\n【6】translating\n讲解：is 后面用现在分词，translate 去 e 加 ing。\n【7】D（translation）\n讲解：this 后面要名词 translation（译文）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让学生做什么？",
+   "listen": "Translate this sentence into English.",
+   "opts": [
+    "把句子译成英语",
+    "读句子",
+    "抄句子",
+    "背句子"
+   ],
+   "why": "translate … into 把……翻译成。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you ______ this letter into Chinese?",
+   "opts": [
+    "translate",
+    "translation",
+    "translator",
+    "translated"
+   ],
+   "why": "can 后面用原形 translate。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 translate、interpret 中选一个，用适当形式填空。",
+   "stem": "He is ______ for the president at the meeting.",
+   "ans": "interpreting",
+   "why": "会议上当口译用 interpret；translate 多指笔译。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "This book was ______ into many languages. (translate)",
+   "ans": "translated",
+   "why": "was 加过去分词 translated。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please translate it to Chinese.",
+   "ans": "to → into",
+   "why": "translate … into 译成。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她正在翻译一本英文小说。",
+   "stem": "She is ______ an English novel.",
+   "ans": "translating",
+   "why": "is 后面用现在分词，translate 去 e 加 ing。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This ______ is very good; it reads like the original.",
+   "opts": [
+    "translation",
+    "translate",
+    "translator",
+    "translating"
+   ],
+   "why": "this 后面要名词 translation（译文）。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

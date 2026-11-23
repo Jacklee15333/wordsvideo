@@ -1,0 +1,94 @@
+{
+ "单词": "term",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：新学期什么时候开始？\n听：The new term starts in September.\nA. 九月\nB. 三月\nC. 六月\nD. 十二月",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are two ______ in a school year in China.\nA. term\nB. termes\nC. termed\nD. terms",
+  "题目3": "【选词填空】从 term、terminal 中选一个，用适当形式填空。\n题干：Our plane leaves from ______ 2.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：We have exams in the end of the term.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他们俩关系很好。\n题干：They are on good ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：What does this medical ______ mean?\nA. terms\nB. turn\nC. term\nD. team\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In English, \"term\" can mean “学期”, “术语” and “______”.\nA. 颜色\nB. 条款\nC. 动物\nD. 天气\n考点：用法",
+  "答案": "【1】A（九月）\n讲解：term 学期。\n【2】D（terms）\n讲解：two 后面用复数。\n【3】Terminal\n讲解：航站楼是 terminal。\n【4】in → at\n讲解：at the end of 在……末。\n【5】terms\n讲解：be on good terms 关系好。\n【6】C（term）\n讲解：this 后面用单数，“术语”是 term。\n【7】B（条款）\n讲解：term 也指条款。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：新学期什么时候开始？",
+   "listen": "The new term starts in September.",
+   "opts": [
+    "九月",
+    "三月",
+    "六月",
+    "十二月"
+   ],
+   "why": "term 学期。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are two ______ in a school year in China.",
+   "opts": [
+    "terms",
+    "term",
+    "termes",
+    "termed"
+   ],
+   "why": "two 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 term、terminal 中选一个，用适当形式填空。",
+   "stem": "Our plane leaves from ______ 2.",
+   "ans": "Terminal",
+   "why": "航站楼是 terminal。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We have exams in the end of the term.",
+   "ans": "in → at",
+   "why": "at the end of 在……末。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他们俩关系很好。",
+   "stem": "They are on good ______.",
+   "ans": "terms",
+   "why": "be on good terms 关系好。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What does this medical ______ mean?",
+   "opts": [
+    "term",
+    "terms",
+    "turn",
+    "team"
+   ],
+   "why": "this 后面用单数，“术语”是 term。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In English, \"term\" can mean “学期”, “术语” and “______”.",
+   "opts": [
+    "条款",
+    "颜色",
+    "动物",
+    "天气"
+   ],
+   "why": "term 也指条款。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "drift",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：小船怎样了？\n听：The boat drifted out to sea.\nA. 沉了\nB. 靠岸了\nC. 漂向大海\nD. 被拖走了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The leaves ______ slowly down the river yesterday.\nA. drifts\nB. drifted\nC. drifting\nD. drift",
+  "题目3": "【选词填空】从 drift、float 中选一个，用适当形式填空。\n题干：Wood can ______ on water.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The clouds are drift across the sky.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：海滩上有很多浮木。\n题干：There is a lot of ______ on the beach.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Do you get my drift?\" means \"Do you understand my ______?\"\nA. boat\nB. car\nC. main idea\nD. friend\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Drift\" means moving because ______ is pushing you.\nA. water or wind\nB. your legs\nC. an engine\nD. a horse\n考点：易混",
+  "答案": "【1】C（漂向大海）\n讲解：drift 漂流。\n【2】B（drifted）\n讲解：yesterday 用过去式。\n【3】float\n讲解：浮着不沉用 float。\n【4】drift → drifting\n讲解：are + 现在分词。\n【5】driftwood\n讲解：浮木 driftwood，不可数。\n【6】C（main idea）\n讲解：drift 也指大意。\n【7】A（water or wind）\n讲解：drift 是不使劲、被外力带着走。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：小船怎样了？",
+   "listen": "The boat drifted out to sea.",
+   "opts": [
+    "漂向大海",
+    "沉了",
+    "靠岸了",
+    "被拖走了"
+   ],
+   "why": "drift 漂流。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The leaves ______ slowly down the river yesterday.",
+   "opts": [
+    "drifted",
+    "drifts",
+    "drifting",
+    "drift"
+   ],
+   "why": "yesterday 用过去式。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 drift、float 中选一个，用适当形式填空。",
+   "stem": "Wood can ______ on water.",
+   "ans": "float",
+   "why": "浮着不沉用 float。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The clouds are drift across the sky.",
+   "ans": "drift → drifting",
+   "why": "are + 现在分词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "海滩上有很多浮木。",
+   "stem": "There is a lot of ______ on the beach.",
+   "ans": "driftwood",
+   "why": "浮木 driftwood，不可数。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Do you get my drift?\" means \"Do you understand my ______?\"",
+   "opts": [
+    "main idea",
+    "boat",
+    "car",
+    "friend"
+   ],
+   "why": "drift 也指大意。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Drift\" means moving because ______ is pushing you.",
+   "opts": [
+    "water or wind",
+    "your legs",
+    "an engine",
+    "a horse"
+   ],
+   "why": "drift 是不使劲、被外力带着走。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

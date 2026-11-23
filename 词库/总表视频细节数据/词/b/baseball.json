@@ -1,0 +1,94 @@
+{
+ "单词": "baseball",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人上周末看了什么比赛？\n听：I watched a baseball game with my dad last weekend.\nA. 篮球比赛\nB. 棒球比赛\nC. 足球比赛\nD. 排球比赛",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：In ______, you hit the ball with a bat.\nA. basketball\nB. volleyball\nC. baseball\nD. football\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The coach bought ten new ______ for the team. (baseball)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Do you like playing the baseball?\n考点：用法",
+  "题目5": "【选词填空】从 baseball、basement 中选一个，用适当形式填空。\n题干：We keep our bikes in the ______.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他戴着一顶棒球帽。\n题干：He is wearing a ______ ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A baseball player uses a ______ to hit the ball.\nA. racket\nB. bat\nC. net\nD. glove\n考点：用法",
+  "答案": "【1】B（棒球比赛）\n讲解：baseball game 棒球比赛。\n【2】C（baseball）\n讲解：用球棒击球的是棒球 baseball。\n【3】baseballs\n讲解：ten 后面用复数 baseballs（指棒球这种球）。\n【4】the baseball → baseball\n讲解：play + 球类运动，不加 the。\n【5】basement\n讲解：放自行车的“地下室”用 basement。\n【6】baseball；cap\n讲解：baseball cap 棒球帽。\n【7】B（bat）\n讲解：打棒球用球棒 bat。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人上周末看了什么比赛？",
+   "listen": "I watched a baseball game with my dad last weekend.",
+   "opts": [
+    "棒球比赛",
+    "篮球比赛",
+    "足球比赛",
+    "排球比赛"
+   ],
+   "why": "baseball game 棒球比赛。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In ______, you hit the ball with a bat.",
+   "opts": [
+    "baseball",
+    "basketball",
+    "volleyball",
+    "football"
+   ],
+   "why": "用球棒击球的是棒球 baseball。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The coach bought ten new ______ for the team. (baseball)",
+   "ans": "baseballs",
+   "why": "ten 后面用复数 baseballs（指棒球这种球）。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Do you like playing the baseball?",
+   "ans": "the baseball → baseball",
+   "why": "play + 球类运动，不加 the。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 baseball、basement 中选一个，用适当形式填空。",
+   "stem": "We keep our bikes in the ______.",
+   "ans": "basement",
+   "why": "放自行车的“地下室”用 basement。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他戴着一顶棒球帽。",
+   "stem": "He is wearing a ______ ______.",
+   "ans": "baseball；cap",
+   "why": "baseball cap 棒球帽。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A baseball player uses a ______ to hit the ball.",
+   "opts": [
+    "bat",
+    "racket",
+    "net",
+    "glove"
+   ],
+   "why": "打棒球用球棒 bat。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

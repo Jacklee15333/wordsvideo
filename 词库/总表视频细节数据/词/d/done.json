@@ -1,0 +1,97 @@
+{
+ "单词": "done",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师说了什么？\n听：Well done!\nA. 再来一次\nB. 干得好\nC. 快点\nD. 安静",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Have you ______ your work yet?\nA. done\nB. did\nC. do\nD. doing\n考点：变形",
+  "题目3": "【选词填空】从 done、did 中选一个，用适当形式填空。\n题干：I ______ my homework yesterday.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：I am done with my homework, so I can't play now.",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ the dishes every day. (done)\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Well done\" can mean \"Good job!\" or that meat is ______ cooked.\nA. not\nB. half\nC. never\nD. fully\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"I'm done with this book\" means I have ______ it.\nA. bought\nB. finished\nC. lost\nD. started\n考点：用法",
+  "答案": "【1】B（干得好）\n讲解：Well done! 干得好！\n【2】A（done）\n讲解：have + 过去分词 done。\n【3】did\n讲解：yesterday 用过去式 did；done 是过去分词。\n【4】can't → can\n讲解：作业做完了就可以玩了。\n【5】does\n讲解：主语三单、every day 用一般现在时 does。\n【6】D（fully）\n讲解：well-done 牛排是全熟的。\n【7】B（finished）\n讲解：be done with sth 是做完某事。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师说了什么？",
+   "listen": "Well done!",
+   "opts": [
+    "干得好",
+    "再来一次",
+    "快点",
+    "安静"
+   ],
+   "why": "Well done! 干得好！"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Have you ______ your work yet?",
+   "opts": [
+    "done",
+    "did",
+    "do",
+    "doing"
+   ],
+   "why": "have + 过去分词 done。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 done、did 中选一个，用适当形式填空。",
+   "stem": "I ______ my homework yesterday.",
+   "ans": "did",
+   "why": "yesterday 用过去式 did；done 是过去分词。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I am done with my homework, so I can't play now.",
+   "ans": "can't → can",
+   "why": "作业做完了就可以玩了。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ the dishes every day. (done)",
+   "ans": "does",
+   "why": "主语三单、every day 用一般现在时 does。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Well done\" can mean \"Good job!\" or that meat is ______ cooked.",
+   "opts": [
+    "fully",
+    "not",
+    "half",
+    "never"
+   ],
+   "why": "well-done 牛排是全熟的。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"I'm done with this book\" means I have ______ it.",
+   "opts": [
+    "finished",
+    "bought",
+    "lost",
+    "started"
+   ],
+   "why": "be done with sth 是做完某事。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

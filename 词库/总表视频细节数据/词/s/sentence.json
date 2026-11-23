@@ -1,0 +1,96 @@
+{
+ "单词": "sentence",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让大家做什么？\n听：Please make a sentence with this word.\nA. 读这个词\nB. 写这个词\nC. 背这个词\nD. 用这个词造句",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please read the first ______ aloud.\nA. sentence\nB. sentences\nC. sense\nD. senses",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Write five ______ about your family. (sentence)\n考点：变形",
+  "题目4": "【选词填空】从 sentence、clause 中选一个，用适当形式填空。\n题干：\"Because I was ill\" is a ______, not a full sentence.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This sentence have a mistake.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The thief was ______ to two years in prison.\nA. sentence\nB. sentences\nC. sentenced\nD. sentencing\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A sentence usually begins with a ______ letter.\nA. small\nB. short\nC. long\nD. capital\n考点：用法",
+  "答案": "【1】D（用这个词造句）\n讲解：make a sentence 造句。\n【2】A（sentence）\n讲解：the first 后面用单数 sentence。\n【3】sentences\n讲解：five 后面用复数 sentences。\n【4】clause\n讲解：不完整的从句用 clause；sentence 是完整的句子。\n【5】have → has\n讲解：主语 sentence 是单数，用 has。\n【6】C（sentenced）\n讲解：sentence 作动词“判刑”，被动 was sentenced。\n【7】D（capital）\n讲解：句子以大写字母开头。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让大家做什么？",
+   "listen": "Please make a sentence with this word.",
+   "opts": [
+    "用这个词造句",
+    "读这个词",
+    "写这个词",
+    "背这个词"
+   ],
+   "why": "make a sentence 造句。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please read the first ______ aloud.",
+   "opts": [
+    "sentence",
+    "sentences",
+    "sense",
+    "senses"
+   ],
+   "why": "the first 后面用单数 sentence。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Write five ______ about your family. (sentence)",
+   "ans": "sentences",
+   "why": "five 后面用复数 sentences。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 sentence、clause 中选一个，用适当形式填空。",
+   "stem": "\"Because I was ill\" is a ______, not a full sentence.",
+   "ans": "clause",
+   "why": "不完整的从句用 clause；sentence 是完整的句子。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This sentence have a mistake.",
+   "ans": "have → has",
+   "why": "主语 sentence 是单数，用 has。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The thief was ______ to two years in prison.",
+   "opts": [
+    "sentenced",
+    "sentence",
+    "sentences",
+    "sentencing"
+   ],
+   "why": "sentence 作动词“判刑”，被动 was sentenced。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A sentence usually begins with a ______ letter.",
+   "opts": [
+    "capital",
+    "small",
+    "short",
+    "long"
+   ],
+   "why": "句子以大写字母开头。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

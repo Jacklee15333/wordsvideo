@@ -1,0 +1,94 @@
+{
+ "单词": "spring",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人最喜欢哪个季节？\n听：Spring is my favourite season.\nA. 春天\nB. 夏天\nC. 秋天\nD. 冬天",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Flowers come out ______ spring.\nA. on\nB. in\nC. at\nD. by",
+  "题目3": "【选词填空】从 spring、summer 中选一个，用适当形式填空。\n题干：It's very hot in ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There are two hot spring near the hotel.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我们在温泉里泡了澡。\n题干：We bathed in a hot ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Spring\" can also mean \"______\".\nA. sleep\nB. sit\nC. cry\nD. jump suddenly\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The ______ in this old bed are broken.\nA. spring\nB. sprung\nC. springing\nD. springs\n考点：变形",
+  "答案": "【1】A（春天）\n讲解：spring 春天。\n【2】B（in）\n讲解：季节前面用 in。\n【3】summer\n讲解：很热的是夏天 summer。\n【4】spring → springs\n讲解：two 后面用复数。\n【5】spring\n讲解：温泉是 hot spring。\n【6】D（jump suddenly）\n讲解：spring 也有“跳”的意思。\n【7】D（springs）\n讲解：弹簧有很多个，用复数 springs。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人最喜欢哪个季节？",
+   "listen": "Spring is my favourite season.",
+   "opts": [
+    "春天",
+    "夏天",
+    "秋天",
+    "冬天"
+   ],
+   "why": "spring 春天。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Flowers come out ______ spring.",
+   "opts": [
+    "in",
+    "on",
+    "at",
+    "by"
+   ],
+   "why": "季节前面用 in。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 spring、summer 中选一个，用适当形式填空。",
+   "stem": "It's very hot in ______.",
+   "ans": "summer",
+   "why": "很热的是夏天 summer。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are two hot spring near the hotel.",
+   "ans": "spring → springs",
+   "why": "two 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们在温泉里泡了澡。",
+   "stem": "We bathed in a hot ______.",
+   "ans": "spring",
+   "why": "温泉是 hot spring。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Spring\" can also mean \"______\".",
+   "opts": [
+    "jump suddenly",
+    "sleep",
+    "sit",
+    "cry"
+   ],
+   "why": "spring 也有“跳”的意思。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ in this old bed are broken.",
+   "opts": [
+    "springs",
+    "spring",
+    "sprung",
+    "springing"
+   ],
+   "why": "弹簧有很多个，用复数 springs。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

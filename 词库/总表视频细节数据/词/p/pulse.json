@@ -1,0 +1,96 @@
+{
+ "单词": "pulse",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：医生在做什么？\n听：The doctor is checking my pulse.\nA. 量体温\nB. 看喉咙\nC. 量脉搏\nD. 打针",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Put your fingers on your wrist and you can feel your ______.\nA. pulse\nB. heartbeat\nC. breath\nD. voice\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Her pulse is ______ than mine. (fast)",
+  "题目4": "【选词填空】从 pulse、heartbeat 中选一个，用适当形式填空。\n题干：Put your ear on his chest and you can hear his ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Your pulse are too fast. You should rest.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The doctor said both ______ were normal.\nA. pulse\nB. pulses\nC. pulsing\nD. pulsed\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Running makes your pulse ______.\nA. go up\nB. go down\nC. go out\nD. go away\n考点：用法",
+  "答案": "【1】C（量脉搏）\n讲解：check one's pulse 量脉搏。\n【2】A（pulse）\n讲解：手腕上摸到的是脉搏 pulse。\n【3】faster\n讲解：than 前用比较级 faster。\n【4】heartbeat\n讲解：贴着胸口听到的是心跳 heartbeat。\n【5】are → is\n讲解：pulse 是单数，用 is。\n【6】B（pulses）\n讲解：both 后面用复数 pulses。\n【7】A（go up）\n讲解：跑步让脉搏变快，用 go up。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：医生在做什么？",
+   "listen": "The doctor is checking my pulse.",
+   "opts": [
+    "量脉搏",
+    "量体温",
+    "看喉咙",
+    "打针"
+   ],
+   "why": "check one's pulse 量脉搏。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Put your fingers on your wrist and you can feel your ______.",
+   "opts": [
+    "pulse",
+    "heartbeat",
+    "breath",
+    "voice"
+   ],
+   "why": "手腕上摸到的是脉搏 pulse。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Her pulse is ______ than mine. (fast)",
+   "ans": "faster",
+   "why": "than 前用比较级 faster。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 pulse、heartbeat 中选一个，用适当形式填空。",
+   "stem": "Put your ear on his chest and you can hear his ______.",
+   "ans": "heartbeat",
+   "why": "贴着胸口听到的是心跳 heartbeat。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Your pulse are too fast. You should rest.",
+   "ans": "are → is",
+   "why": "pulse 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The doctor said both ______ were normal.",
+   "opts": [
+    "pulses",
+    "pulse",
+    "pulsing",
+    "pulsed"
+   ],
+   "why": "both 后面用复数 pulses。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Running makes your pulse ______.",
+   "opts": [
+    "go up",
+    "go down",
+    "go out",
+    "go away"
+   ],
+   "why": "跑步让脉搏变快，用 go up。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

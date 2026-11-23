@@ -1,0 +1,94 @@
+{
+ "单词": "fallen",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：地上有什么？\n听：There are many fallen leaves on the ground.\nA. 很多花\nB. 很多落叶\nC. 很多石头\nD. 很多苹果",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The children are playing with ______ leaves under the tree.\nA. falling\nB. fallen\nC. fell\nD. fall\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Look! The leaves are ______ in the wind. (fall)\n考点：变形",
+  "题目4": "【选词填空】从 fall、fell 中选一个，用适当形式填空。\n题干：Leaves ______ from the trees every autumn.\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Prices have fell this month.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The snow ______ all night, and now the ground is white.\nA. fallen\nB. falls\nC. fall\nD. fell\n考点：变形",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：她十点前就睡着了。\n题干：She had ______ ______ before ten.\n考点：短语",
+  "答案": "【1】B（很多落叶）\n讲解：fallen leaves 落叶。\n【2】B（fallen）\n讲解：已经落在地上的叶子用 fallen。\n【3】falling\n讲解：Look! 用现在进行时。\n【4】fall\n讲解：every autumn 用一般现在时，主语复数用 fall。\n【5】fell → fallen\n讲解：have 后面用过去分词 fallen。\n【6】D（fell）\n讲解：说昨夜的事，用过去式 fell。\n【7】fallen；asleep\n讲解：fall asleep 入睡，had 后面用过去分词。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：地上有什么？",
+   "listen": "There are many fallen leaves on the ground.",
+   "opts": [
+    "很多落叶",
+    "很多花",
+    "很多石头",
+    "很多苹果"
+   ],
+   "why": "fallen leaves 落叶。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The children are playing with ______ leaves under the tree.",
+   "opts": [
+    "fallen",
+    "falling",
+    "fell",
+    "fall"
+   ],
+   "why": "已经落在地上的叶子用 fallen。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Look! The leaves are ______ in the wind. (fall)",
+   "ans": "falling",
+   "why": "Look! 用现在进行时。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 fall、fell 中选一个，用适当形式填空。",
+   "stem": "Leaves ______ from the trees every autumn.",
+   "ans": "fall",
+   "why": "every autumn 用一般现在时，主语复数用 fall。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Prices have fell this month.",
+   "ans": "fell → fallen",
+   "why": "have 后面用过去分词 fallen。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The snow ______ all night, and now the ground is white.",
+   "opts": [
+    "fell",
+    "fallen",
+    "falls",
+    "fall"
+   ],
+   "why": "说昨夜的事，用过去式 fell。",
+   "kd": "变形"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她十点前就睡着了。",
+   "stem": "She had ______ ______ before ten.",
+   "ans": "fallen；asleep",
+   "why": "fall asleep 入睡，had 后面用过去分词。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

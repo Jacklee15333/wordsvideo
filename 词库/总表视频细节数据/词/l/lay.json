@@ -1,0 +1,94 @@
+{
+ "单词": "lay",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：母鸡今天做了什么？\n听：The hen laid three eggs today.\nA. 吃了三条虫\nB. 跑了三圈\nC. 下了三个蛋\nD. 睡了三小时",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please help me ______ the table for dinner.\nA. lie\nB. laid\nC. lay\nD. lying",
+  "题目3": "【选词填空】从 lay、lie 中选一个，用适当形式填空。\n题干：I'm tired. I want to ______ down.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She has layed the baby in bed.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他正在铺地毯。\n题干：He is ______ the carpet.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Lay\" always needs an ______ after it.\nA. adverb\nB. adjective\nC. object\nD. question\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Yesterday the hen ______ two eggs.\nA. layed\nB. lay\nC. laid\nD. lain\n考点：变形",
+  "答案": "【1】C（下了三个蛋）\n讲解：lay eggs 下蛋。\n【2】C（lay）\n讲解：lay the table 摆好餐具。\n【3】lie\n讲解：“躺下”是不及物的 lie down。\n【4】layed → laid\n讲解：lay 的过去分词是 laid。\n【5】laying\n讲解：is + 现在分词，lay 加 ing。\n【6】C（object）\n讲解：lay 是及物动词，后面要有宾语。\n【7】C（laid）\n讲解：lay 的过去式是 laid。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：母鸡今天做了什么？",
+   "listen": "The hen laid three eggs today.",
+   "opts": [
+    "下了三个蛋",
+    "吃了三条虫",
+    "跑了三圈",
+    "睡了三小时"
+   ],
+   "why": "lay eggs 下蛋。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please help me ______ the table for dinner.",
+   "opts": [
+    "lay",
+    "lie",
+    "laid",
+    "lying"
+   ],
+   "why": "lay the table 摆好餐具。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 lay、lie 中选一个，用适当形式填空。",
+   "stem": "I'm tired. I want to ______ down.",
+   "ans": "lie",
+   "why": "“躺下”是不及物的 lie down。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She has layed the baby in bed.",
+   "ans": "layed → laid",
+   "why": "lay 的过去分词是 laid。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他正在铺地毯。",
+   "stem": "He is ______ the carpet.",
+   "ans": "laying",
+   "why": "is + 现在分词，lay 加 ing。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Lay\" always needs an ______ after it.",
+   "opts": [
+    "object",
+    "adverb",
+    "adjective",
+    "question"
+   ],
+   "why": "lay 是及物动词，后面要有宾语。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Yesterday the hen ______ two eggs.",
+   "opts": [
+    "laid",
+    "layed",
+    "lay",
+    "lain"
+   ],
+   "why": "lay 的过去式是 laid。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

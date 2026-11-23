@@ -1,0 +1,94 @@
+{
+ "单词": "patience",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：学钢琴需要什么？\n听：Learning to play the piano takes patience.\nA. 耐心\nB. 金钱\nC. 运气\nD. 力气",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Thank you for your ______.\nA. patient\nB. patience\nC. patiently\nD. patients",
+  "题目3": "【选词填空】从 patience、tolerance 中选一个，用适当形式填空。\n题干：We should show ______ for people with different ideas.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He has no patiences with children.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：她对孩子很有耐心。\n题干：She is very ______ with children.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"I've run out of patience\" means I ______.\nA. have lots of time\nB. feel very happy\nC. fell asleep\nD. can't wait any longer\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Patience\" is ______, so we don't say \"a patience\".\nA. uncountable\nB. countable\nC. a verb\nD. plural\n考点：变形",
+  "答案": "【1】A（耐心）\n讲解：takes patience 需要耐心。\n【2】B（patience）\n讲解：your 后面要名词“耐心”。\n【3】tolerance\n讲解：容得下不同的东西用 tolerance。\n【4】patiences → patience\n讲解：patience 不可数。\n【5】patient\n讲解：be patient with 对……有耐心。\n【6】D（can't wait any longer）\n讲解：run out of patience 失去耐心。\n【7】A（uncountable）\n讲解：patience 不可数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：学钢琴需要什么？",
+   "listen": "Learning to play the piano takes patience.",
+   "opts": [
+    "耐心",
+    "金钱",
+    "运气",
+    "力气"
+   ],
+   "why": "takes patience 需要耐心。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Thank you for your ______.",
+   "opts": [
+    "patience",
+    "patient",
+    "patiently",
+    "patients"
+   ],
+   "why": "your 后面要名词“耐心”。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 patience、tolerance 中选一个，用适当形式填空。",
+   "stem": "We should show ______ for people with different ideas.",
+   "ans": "tolerance",
+   "why": "容得下不同的东西用 tolerance。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He has no patiences with children.",
+   "ans": "patiences → patience",
+   "why": "patience 不可数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她对孩子很有耐心。",
+   "stem": "She is very ______ with children.",
+   "ans": "patient",
+   "why": "be patient with 对……有耐心。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"I've run out of patience\" means I ______.",
+   "opts": [
+    "can't wait any longer",
+    "have lots of time",
+    "feel very happy",
+    "fell asleep"
+   ],
+   "why": "run out of patience 失去耐心。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Patience\" is ______, so we don't say \"a patience\".",
+   "opts": [
+    "uncountable",
+    "countable",
+    "a verb",
+    "plural"
+   ],
+   "why": "patience 不可数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,89 @@
+{
+ "单词": "verbal",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师给了他什么警告？\n听：The teacher gave him a verbal warning, not a written one.\nA. 书面警告\nB. 口头警告\nC. 电话警告\nD. 没有警告",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He didn't sign anything. It was only a ______ promise.\nA. verb\nB. verbal\nC. visual\nD. signed",
+  "题目3": "【选词填空】从 verb、verbal 中选一个，用适当形式填空。\n题干：\"Jump\" is a ______. It shows an action.\n考点：词性转换",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He speaks well. His verb skills are good.\n考点：词性转换",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：肢体语言是一种非语言交流。\n题干：Body language is a kind of ______ communication.\n考点：易混",
+  "题目6": "【选词填空】从 verbal、oral 中选一个，用适当形式填空。\n题干：We have an ______ English test today. We only speak.\n考点：易混",
+  "题目7": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are three ______ in \"I run, jump and swim\". (verb)\n考点：词性转换",
+  "答案": "【1】B（口头警告）\n讲解：verbal warning 是口头警告。\n【2】B（verbal）\n讲解：没签字，只是“口头的”承诺，用 verbal。\n【3】verb\n讲解：表示动作的词是动词 verb；verbal 是形容词。\n【4】verb → verbal\n讲解：修饰名词 skills 用形容词 verbal（言语的）。\n【5】non-verbal\n讲解：不用说话的交流是 non-verbal。\n【6】oral\n讲解：只说不写的口语考试用 oral。\n【7】verbs\n讲解：three 后面用复数 verbs。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师给了他什么警告？",
+   "listen": "The teacher gave him a verbal warning, not a written one.",
+   "opts": [
+    "口头警告",
+    "书面警告",
+    "电话警告",
+    "没有警告"
+   ],
+   "why": "verbal warning 是口头警告。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He didn't sign anything. It was only a ______ promise.",
+   "opts": [
+    "verbal",
+    "verb",
+    "visual",
+    "signed"
+   ],
+   "why": "没签字，只是“口头的”承诺，用 verbal。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 verb、verbal 中选一个，用适当形式填空。",
+   "stem": "\"Jump\" is a ______. It shows an action.",
+   "ans": "verb",
+   "why": "表示动作的词是动词 verb；verbal 是形容词。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He speaks well. His verb skills are good.",
+   "ans": "verb → verbal",
+   "why": "修饰名词 skills 用形容词 verbal（言语的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "肢体语言是一种非语言交流。",
+   "stem": "Body language is a kind of ______ communication.",
+   "ans": "non-verbal",
+   "why": "不用说话的交流是 non-verbal。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 verbal、oral 中选一个，用适当形式填空。",
+   "stem": "We have an ______ English test today. We only speak.",
+   "ans": "oral",
+   "why": "只说不写的口语考试用 oral。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are three ______ in \"I run, jump and swim\". (verb)",
+   "ans": "verbs",
+   "why": "three 后面用复数 verbs。",
+   "kd": "词性转换",
+   "zh": ""
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

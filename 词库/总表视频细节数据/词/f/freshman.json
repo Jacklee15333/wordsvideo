@@ -1,0 +1,98 @@
+{
+ "单词": "freshman",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他是几年级的学生？\n听：He is a freshman at college.\nA. 大四学生\nB. 老师\nC. 研究生\nD. 大一新生",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are 500 ______ in our university this year.\nA. freshman\nB. freshmans\nC. freshmens\nD. freshmen\n考点：变形",
+  "题目3": "【选词填空】从 freshman、beginner 中选一个，用适当形式填空。\n题干：My sister is a ______ at swimming. She can't swim well yet.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She is a freshmen at Peking University.\n考点：变形",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：Most ______ live in the school dorm. (freshman)\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In British universities, people often say \"______ students\" instead.\nA. first-class\nB. first-hand\nC. first-year\nD. first-aid\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A ______ is new to a school or a job.\nA. senior\nB. teacher\nC. freshman\nD. boss\n考点：用法",
+  "答案": "【1】D（大一新生）\n讲解：freshman 一年级新生、新手。\n【2】D（freshmen）\n讲解：复数 man 变 men。\n【3】beginner\n讲解：学某项技能的初学者用 beginner。\n【4】freshmen → freshman\n讲解：a 后面用单数 freshman。\n【5】freshmen\n讲解：most 后面用复数，man 变 men。\n【6】C（first-year）\n讲解：英国大学多说 first-year students。\n【7】C（freshman）\n讲解：freshman 是刚来的新生、新手。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他是几年级的学生？",
+   "listen": "He is a freshman at college.",
+   "opts": [
+    "大一新生",
+    "大四学生",
+    "老师",
+    "研究生"
+   ],
+   "why": "freshman 一年级新生、新手。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are 500 ______ in our university this year.",
+   "opts": [
+    "freshmen",
+    "freshman",
+    "freshmans",
+    "freshmens"
+   ],
+   "why": "复数 man 变 men。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 freshman、beginner 中选一个，用适当形式填空。",
+   "stem": "My sister is a ______ at swimming. She can't swim well yet.",
+   "ans": "beginner",
+   "why": "学某项技能的初学者用 beginner。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is a freshmen at Peking University.",
+   "ans": "freshmen → freshman",
+   "why": "a 后面用单数 freshman。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Most ______ live in the school dorm. (freshman)",
+   "ans": "freshmen",
+   "why": "most 后面用复数，man 变 men。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In British universities, people often say \"______ students\" instead.",
+   "opts": [
+    "first-year",
+    "first-class",
+    "first-hand",
+    "first-aid"
+   ],
+   "why": "英国大学多说 first-year students。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ is new to a school or a job.",
+   "opts": [
+    "freshman",
+    "senior",
+    "teacher",
+    "boss"
+   ],
+   "why": "freshman 是刚来的新生、新手。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,98 @@
+{
+ "单词": "no",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人要不要糖？\n听：No sugar, thanks.\nA. 要两勺糖\nB. 不要糖\nC. 要很多糖\nD. 要一点糖",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：“Is there any milk?” “No, there's ______.”\nA. no\nB. nothing\nC. nobody\nD. none\n考点：易混",
+  "题目3": "【选词填空】从 no、not 中选一个，用适当形式填空。\n题干：I am ______ a teacher.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There are not books on the desk.\n考点：易混",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：“你不喜欢它吗？”“对，不喜欢。”\n题干：“Don't you like it?” “______, I don't.”\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：______ of the students was late.\nA. No\nB. None\nC. Not\nD. Nothing\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：There is ______ milk left in the bottle.\nA. few\nB. many\nC. a lot\nD. little\n考点：用法",
+  "答案": "【1】B（不要糖）\n讲解：no 不、没有。\n【2】D（none）\n讲解：名词省略时用 none（一点也没有）。\n【3】not\n讲解：否定 be 动词用 not；no 放在名词前。\n【4】not → no\n讲解：“没有（书）”放名词前用 no（或 not any）。\n【5】No\n讲解：按事实回答，不喜欢就说 No。\n【6】B（None）\n讲解：none of + 名词，表示“一个也没有”。\n【7】D（little）\n讲解：milk 不可数，“几乎没有”用 little。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人要不要糖？",
+   "listen": "No sugar, thanks.",
+   "opts": [
+    "不要糖",
+    "要两勺糖",
+    "要很多糖",
+    "要一点糖"
+   ],
+   "why": "no 不、没有。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "“Is there any milk?” “No, there's ______.”",
+   "opts": [
+    "none",
+    "no",
+    "nothing",
+    "nobody"
+   ],
+   "why": "名词省略时用 none（一点也没有）。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 no、not 中选一个，用适当形式填空。",
+   "stem": "I am ______ a teacher.",
+   "ans": "not",
+   "why": "否定 be 动词用 not；no 放在名词前。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are not books on the desk.",
+   "ans": "not → no",
+   "why": "“没有（书）”放名词前用 no（或 not any）。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "“你不喜欢它吗？”“对，不喜欢。”",
+   "stem": "“Don't you like it?” “______, I don't.”",
+   "ans": "No",
+   "why": "按事实回答，不喜欢就说 No。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ of the students was late.",
+   "opts": [
+    "None",
+    "No",
+    "Not",
+    "Nothing"
+   ],
+   "why": "none of + 名词，表示“一个也没有”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is ______ milk left in the bottle.",
+   "opts": [
+    "little",
+    "few",
+    "many",
+    "a lot"
+   ],
+   "why": "milk 不可数，“几乎没有”用 little。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

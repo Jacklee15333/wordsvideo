@@ -1,0 +1,93 @@
+{
+ "单词": "dear",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：信的开头怎么写？\n听：Dear Tom, how are you?\nA. 再见汤姆\nB. 谢谢汤姆\nC. 亲爱的汤姆\nD. 对不起汤姆",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ Sir, I am writing to ask about the job.\nA. Deer\nB. Dear\nC. Dearly\nD. Dearer",
+  "题目3": "【选词填空】从 dear、deer 中选一个，用适当形式填空。\n题干：We saw a ______ in the forest.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Food here is getting ______ every year. (dear)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Food here are getting dearer.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Food is very ______ here; one apple costs ten yuan.\nA. expensive\nB. cheap\nC. dearly\nD. dears\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这是我最亲爱的朋友。\n题干：This is my ______ friend.\n考点：变形",
+  "答案": "【1】C（亲爱的汤姆）\n讲解：Dear … 亲爱的……（信头）。\n【2】B（Dear）\n讲解：信头 Dear Sir。\n【3】deer\n讲解：鹿是 deer，和 dear 同音。\n【4】dearer\n讲解：越来越贵，比较级 dearer。\n【5】are → is\n讲解：food 不可数，用 is。\n【6】A（expensive）\n讲解：dear 有“贵的”意思，即 expensive。\n【7】dearest\n讲解：最高级 dearest。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：信的开头怎么写？",
+   "listen": "Dear Tom, how are you?",
+   "opts": [
+    "亲爱的汤姆",
+    "再见汤姆",
+    "谢谢汤姆",
+    "对不起汤姆"
+   ],
+   "why": "Dear … 亲爱的……（信头）。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ Sir, I am writing to ask about the job.",
+   "opts": [
+    "Dear",
+    "Deer",
+    "Dearly",
+    "Dearer"
+   ],
+   "why": "信头 Dear Sir。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 dear、deer 中选一个，用适当形式填空。",
+   "stem": "We saw a ______ in the forest.",
+   "ans": "deer",
+   "why": "鹿是 deer，和 dear 同音。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Food here is getting ______ every year. (dear)",
+   "ans": "dearer",
+   "why": "越来越贵，比较级 dearer。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Food here are getting dearer.",
+   "ans": "are → is",
+   "why": "food 不可数，用 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Food is very ______ here; one apple costs ten yuan.",
+   "opts": [
+    "expensive",
+    "cheap",
+    "dearly",
+    "dears"
+   ],
+   "why": "dear 有“贵的”意思，即 expensive。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是我最亲爱的朋友。",
+   "stem": "This is my ______ friend.",
+   "ans": "dearest",
+   "why": "最高级 dearest。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

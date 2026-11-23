@@ -1,0 +1,92 @@
+{
+ "单词": "maths",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的数学怎么样？\n听：I'm good at maths.\nA. 不擅长\nB. 擅长\nC. 很讨厌\nD. 刚开始学",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Maths ______ my favourite subject.\nA. are\nB. be\nC. were\nD. is\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Hua Luogeng was a famous Chinese ______. (maths)\n考点：词性转换",
+  "题目4": "【选词填空】从 maths、months 中选一个，用适当形式填空。\n题干：There are twelve ______ in a year.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We have two maths class every week.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我们今天有数学考试。\n题干：We have a ______ test today.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Maths\" is the short form of \"______\".\nA. mathematician\nB. mathematical\nC. mathematically\nD. mathematics\n考点：易混",
+  "答案": "【1】B（擅长）\n讲解：be good at maths 擅长数学。\n【2】D（is）\n讲解：maths 虽然带 s，仍作单数，用 is。\n【3】mathematician\n讲解：a famous Chinese 后面要指人的名词 mathematician。\n【4】months\n讲解：一年十二个月是 months。\n【5】class → classes\n讲解：two 后面用复数 classes。\n【6】maths\n讲解：英式说数学用 maths，作定语也带 s。\n【7】D（mathematics）\n讲解：maths 是 mathematics 的简称。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的数学怎么样？",
+   "listen": "I'm good at maths.",
+   "opts": [
+    "擅长",
+    "不擅长",
+    "很讨厌",
+    "刚开始学"
+   ],
+   "why": "be good at maths 擅长数学。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Maths ______ my favourite subject.",
+   "opts": [
+    "is",
+    "are",
+    "be",
+    "were"
+   ],
+   "why": "maths 虽然带 s，仍作单数，用 is。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Hua Luogeng was a famous Chinese ______. (maths)",
+   "ans": "mathematician",
+   "why": "a famous Chinese 后面要指人的名词 mathematician。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 maths、months 中选一个，用适当形式填空。",
+   "stem": "There are twelve ______ in a year.",
+   "ans": "months",
+   "why": "一年十二个月是 months。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We have two maths class every week.",
+   "ans": "class → classes",
+   "why": "two 后面用复数 classes。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们今天有数学考试。",
+   "stem": "We have a ______ test today.",
+   "ans": "maths",
+   "why": "英式说数学用 maths，作定语也带 s。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Maths\" is the short form of \"______\".",
+   "opts": [
+    "mathematics",
+    "mathematician",
+    "mathematical",
+    "mathematically"
+   ],
+   "why": "maths 是 mathematics 的简称。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

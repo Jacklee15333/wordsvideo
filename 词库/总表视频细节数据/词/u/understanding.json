@@ -1,0 +1,94 @@
+{
+ "单词": "understanding",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：汤姆的数学怎么样？\n听：Tom has a good understanding of maths.\nA. 不喜欢数学\nB. 理解得很好\nC. 考砸了\nD. 在教数学",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Thank you for your ______.\nA. understand\nB. understood\nC. understanding\nD. understands\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：I can't ______ what he said. (understanding)\n考点：词性转换",
+  "题目4": "【选词填空】从 understanding、misunderstanding 中选一个，用适当形式填空。\n题干：There was a ______ between them, so they had a fight.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She has a deep understanding about Chinese culture.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：老师讲了两遍，我终于听懂了。\n题干：The teacher explained it twice, and I finally ______.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Understanding means ______.\nA. 理解、了解\nB. 站在下面\nC. 误会\nD. 站立\n考点：用法",
+  "答案": "【1】B（理解得很好）\n讲解：understanding 理解、了解。\n【2】C（understanding）\n讲解：your 后面要名词 understanding（理解、谅解）。\n【3】understand\n讲解：can't 后面要动词原形 understand。\n【4】misunderstanding\n讲解：有误会才吵架，用 misunderstanding。\n【5】about → of\n讲解：understanding of 对……的理解。\n【6】understood\n讲解：understand 的过去式是不规则的 understood。\n【7】A（理解、了解）\n讲解：understanding 理解、了解。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：汤姆的数学怎么样？",
+   "listen": "Tom has a good understanding of maths.",
+   "opts": [
+    "理解得很好",
+    "不喜欢数学",
+    "考砸了",
+    "在教数学"
+   ],
+   "why": "understanding 理解、了解。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Thank you for your ______.",
+   "opts": [
+    "understanding",
+    "understand",
+    "understood",
+    "understands"
+   ],
+   "why": "your 后面要名词 understanding（理解、谅解）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I can't ______ what he said. (understanding)",
+   "ans": "understand",
+   "why": "can't 后面要动词原形 understand。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 understanding、misunderstanding 中选一个，用适当形式填空。",
+   "stem": "There was a ______ between them, so they had a fight.",
+   "ans": "misunderstanding",
+   "why": "有误会才吵架，用 misunderstanding。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She has a deep understanding about Chinese culture.",
+   "ans": "about → of",
+   "why": "understanding of 对……的理解。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "老师讲了两遍，我终于听懂了。",
+   "stem": "The teacher explained it twice, and I finally ______.",
+   "ans": "understood",
+   "why": "understand 的过去式是不规则的 understood。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Understanding means ______.",
+   "opts": [
+    "理解、了解",
+    "站在下面",
+    "误会",
+    "站立"
+   ],
+   "why": "understanding 理解、了解。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

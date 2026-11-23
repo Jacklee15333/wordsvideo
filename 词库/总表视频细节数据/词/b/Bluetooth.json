@@ -1,0 +1,92 @@
+{
+ "单词": "Bluetooth",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人怎么连接耳机？\n听：I connect my headphones by Bluetooth.\nA. 用数据线\nB. 用网线\nC. 用电线\nD. 用蓝牙",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Turn on ______ on your phone.\nA. Bluetooths\nB. Blue-tooth\nC. a Bluetooth\nD. Bluetooth",
+  "题目3": "【选词填空】从 Bluetooth、Wi-Fi 中选一个，用适当形式填空。\n题干：We can use the ______ to get online in the café.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：My speaker ______ to my phone by Bluetooth yesterday. (connect)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Bluetooth are very useful.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The word \"Bluetooth\" has nothing to do with colours or ______.\nA. music\nB. phones\nC. headphones\nD. teeth\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：打开蓝牙才能连上耳机。\n题干：Turn ______ Bluetooth to connect the headphones.\n考点：用法",
+  "答案": "【1】D（用蓝牙）\n讲解：Bluetooth 蓝牙。\n【2】D（Bluetooth）\n讲解：商标名首字母大写 Bluetooth，一般不可数。\n【3】Wi-Fi\n讲解：上网用 Wi-Fi。\n【4】connected\n讲解：yesterday 用过去式 connected。\n【5】are → is\n讲解：Bluetooth 一般不可数，用 is。\n【6】D（teeth）\n讲解：Bluetooth 是商标名，和颜色、牙齿都没关系。\n【7】on\n讲解：turn on 打开。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人怎么连接耳机？",
+   "listen": "I connect my headphones by Bluetooth.",
+   "opts": [
+    "用蓝牙",
+    "用数据线",
+    "用网线",
+    "用电线"
+   ],
+   "why": "Bluetooth 蓝牙。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Turn on ______ on your phone.",
+   "opts": [
+    "Bluetooth",
+    "Bluetooths",
+    "Blue-tooth",
+    "a Bluetooth"
+   ],
+   "why": "商标名首字母大写 Bluetooth，一般不可数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 Bluetooth、Wi-Fi 中选一个，用适当形式填空。",
+   "stem": "We can use the ______ to get online in the café.",
+   "ans": "Wi-Fi",
+   "why": "上网用 Wi-Fi。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "My speaker ______ to my phone by Bluetooth yesterday. (connect)",
+   "ans": "connected",
+   "why": "yesterday 用过去式 connected。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Bluetooth are very useful.",
+   "ans": "are → is",
+   "why": "Bluetooth 一般不可数，用 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The word \"Bluetooth\" has nothing to do with colours or ______.",
+   "opts": [
+    "teeth",
+    "music",
+    "phones",
+    "headphones"
+   ],
+   "why": "Bluetooth 是商标名，和颜色、牙齿都没关系。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "打开蓝牙才能连上耳机。",
+   "stem": "Turn ______ Bluetooth to connect the headphones.",
+   "ans": "on",
+   "why": "turn on 打开。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

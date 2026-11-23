@@ -1,0 +1,93 @@
+{
+ "单词": "kilometer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这条河有多长？\n听：The river is 500 kilometers long.\nA. 五十公里\nB. 五千公里\nC. 五公里\nD. 五百公里",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：It's about one ______ to the station.\nA. kilometers\nB. meter\nC. mile\nD. kilometer",
+  "题目3": "【选词填空】从 kilometer、kilometre 中选一个，用适当形式填空。\n题干：In British English, it is spelled \"______\".\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He drives 50 ______ to work every day. (kilometer)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The village is ten kilometer away.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：One kilometer is about 0.62 ______.\nA. mile\nB. meters\nC. meter\nD. miles\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我每天跑五公里。\n题干：I run five ______ every day.\n考点：变形",
+  "答案": "【1】D（五百公里）\n讲解：kilometer 千米（美式）。\n【2】D（kilometer）\n讲解：one 后接单数 kilometer。\n【3】kilometre\n讲解：英式拼写 kilometre。\n【4】kilometers\n讲解：50 后接复数。\n【5】kilometer → kilometers\n讲解：ten 后接复数。\n【6】D（miles）\n讲解：0.62 后接复数 miles。\n【7】kilometers\n讲解：five 后接复数 kilometers。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这条河有多长？",
+   "listen": "The river is 500 kilometers long.",
+   "opts": [
+    "五百公里",
+    "五十公里",
+    "五千公里",
+    "五公里"
+   ],
+   "why": "kilometer 千米（美式）。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It's about one ______ to the station.",
+   "opts": [
+    "kilometer",
+    "kilometers",
+    "meter",
+    "mile"
+   ],
+   "why": "one 后接单数 kilometer。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 kilometer、kilometre 中选一个，用适当形式填空。",
+   "stem": "In British English, it is spelled \"______\".",
+   "ans": "kilometre",
+   "why": "英式拼写 kilometre。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He drives 50 ______ to work every day. (kilometer)",
+   "ans": "kilometers",
+   "why": "50 后接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The village is ten kilometer away.",
+   "ans": "kilometer → kilometers",
+   "why": "ten 后接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "One kilometer is about 0.62 ______.",
+   "opts": [
+    "miles",
+    "mile",
+    "meters",
+    "meter"
+   ],
+   "why": "0.62 后接复数 miles。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我每天跑五公里。",
+   "stem": "I run five ______ every day.",
+   "ans": "kilometers",
+   "why": "five 后接复数 kilometers。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

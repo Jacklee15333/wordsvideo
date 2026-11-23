@@ -1,0 +1,94 @@
+{
+ "单词": "beetle",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在花园里发现了什么？\n听：I found a beetle in the garden.\nA. 甲虫\nB. 蝴蝶\nC. 蜜蜂\nD. 蚂蚁",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many kinds of ______ in the world.\nA. beetle\nB. beetles\nC. beatles\nD. beetls",
+  "题目3": "【选词填空】从 beetle、bug 中选一个，用适当形式填空。\n题干：In American English, people call all kinds of small insects \"______\".",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：A beetle have a hard shell.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：甲虫是一种昆虫。\n题干：A beetle is a kind of ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A beetle has a hard ______.\nA. fur\nB. tail\nC. beak\nD. shell\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Black beetle\" was an old name for a ______.\nA. ladybird\nB. butterfly\nC. bee\nD. cockroach\n考点：短语",
+  "答案": "【1】A（甲虫）\n讲解：beetle 甲虫。\n【2】B（beetles）\n讲解：many kinds of 后面用复数。\n【3】bugs\n讲解：美式口语 bug 泛指各种小虫。\n【4】have → has\n讲解：主语单数。\n【5】insect\n讲解：昆虫 insect。\n【6】D（shell）\n讲解：beetle 有硬壳。\n【7】D（cockroach）\n讲解：black beetle 旧时指蟑螂。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在花园里发现了什么？",
+   "listen": "I found a beetle in the garden.",
+   "opts": [
+    "甲虫",
+    "蝴蝶",
+    "蜜蜂",
+    "蚂蚁"
+   ],
+   "why": "beetle 甲虫。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many kinds of ______ in the world.",
+   "opts": [
+    "beetles",
+    "beetle",
+    "beatles",
+    "beetls"
+   ],
+   "why": "many kinds of 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 beetle、bug 中选一个，用适当形式填空。",
+   "stem": "In American English, people call all kinds of small insects \"______\".",
+   "ans": "bugs",
+   "why": "美式口语 bug 泛指各种小虫。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "A beetle have a hard shell.",
+   "ans": "have → has",
+   "why": "主语单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "甲虫是一种昆虫。",
+   "stem": "A beetle is a kind of ______.",
+   "ans": "insect",
+   "why": "昆虫 insect。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A beetle has a hard ______.",
+   "opts": [
+    "shell",
+    "fur",
+    "tail",
+    "beak"
+   ],
+   "why": "beetle 有硬壳。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Black beetle\" was an old name for a ______.",
+   "opts": [
+    "cockroach",
+    "ladybird",
+    "butterfly",
+    "bee"
+   ],
+   "why": "black beetle 旧时指蟑螂。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

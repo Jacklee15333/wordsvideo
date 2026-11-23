@@ -1,0 +1,94 @@
+{
+ "单词": "wait",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让对方在哪里等？\n听：Please wait for me at the gate.\nA. 门口\nB. 教室\nC. 家里\nD. 车站",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I'm ______ for the bus.\nA. wait\nB. waited\nC. waits\nD. waiting\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We ______ for an hour yesterday. (wait)\n考点：变形",
+  "题目4": "【选词填空】从 wait、await 中选一个，用适当形式填空。\n题干：We ______ your reply.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Please wait me here.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我迫不及待想见你。\n题干：I can't ______ to see you.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The man who serves food in a restaurant is a ______.\nA. waitress\nB. waiter\nC. writer\nD. worker\n考点：词性转换",
+  "答案": "【1】A（门口）\n讲解：wait for 等候。\n【2】D（waiting）\n讲解：am 后面用现在分词 waiting。\n【3】waited\n讲解：yesterday 用过去式 waited。\n【4】await\n讲解：await 及物，直接接宾语；wait 要加 for。\n【5】wait me → wait for me\n讲解：wait 不及物，等人要说 wait for。\n【6】wait\n讲解：can't wait to do 迫不及待做某事。\n【7】B（waiter）\n讲解：男服务员是 waiter。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让对方在哪里等？",
+   "listen": "Please wait for me at the gate.",
+   "opts": [
+    "门口",
+    "教室",
+    "家里",
+    "车站"
+   ],
+   "why": "wait for 等候。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I'm ______ for the bus.",
+   "opts": [
+    "waiting",
+    "wait",
+    "waited",
+    "waits"
+   ],
+   "why": "am 后面用现在分词 waiting。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We ______ for an hour yesterday. (wait)",
+   "ans": "waited",
+   "why": "yesterday 用过去式 waited。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 wait、await 中选一个，用适当形式填空。",
+   "stem": "We ______ your reply.",
+   "ans": "await",
+   "why": "await 及物，直接接宾语；wait 要加 for。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please wait me here.",
+   "ans": "wait me → wait for me",
+   "why": "wait 不及物，等人要说 wait for。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我迫不及待想见你。",
+   "stem": "I can't ______ to see you.",
+   "ans": "wait",
+   "why": "can't wait to do 迫不及待做某事。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The man who serves food in a restaurant is a ______.",
+   "opts": [
+    "waiter",
+    "waitress",
+    "writer",
+    "worker"
+   ],
+   "why": "男服务员是 waiter。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

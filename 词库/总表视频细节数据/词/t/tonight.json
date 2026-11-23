@@ -1,0 +1,92 @@
+{
+ "单词": "tonight",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们今晚做什么？\n听：We are going to the cinema tonight.\nA. 去游泳\nB. 去看电影\nC. 去吃饭\nD. 在家",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：What are you doing ______?\nA. tonight\nB. on tonight\nC. at tonight\nD. in tonight",
+  "题目3": "【选词填空】从 tonight、last night 中选一个，用适当形式填空。\n题干：I watched a great film ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：______ weather will be cold. (tonight)\n考点：用法",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：What are you do tonight?",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Tonight ______ a full moon.\nA. there was\nB. there were\nC. there will be\nD. there has been\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：明天晚上我要去看电影。\n题干：I'm going to the cinema ______ evening.\n考点：易混",
+  "答案": "【1】B（去看电影）\n讲解：tonight 今晚。\n【2】A（tonight）\n讲解：tonight 前不加介词。\n【3】last night\n讲解：watched 是过去式，用 last night。\n【4】Tonight's\n讲解：今晚的天气 tonight's weather，用所有格。\n【5】do → doing\n讲解：现在进行时 are + doing。\n【6】C（there will be）\n讲解：tonight 指今晚还没到，用将来时。\n【7】tomorrow\n讲解：明天晚上 tomorrow evening。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们今晚做什么？",
+   "listen": "We are going to the cinema tonight.",
+   "opts": [
+    "去看电影",
+    "去游泳",
+    "去吃饭",
+    "在家"
+   ],
+   "why": "tonight 今晚。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What are you doing ______?",
+   "opts": [
+    "tonight",
+    "on tonight",
+    "at tonight",
+    "in tonight"
+   ],
+   "why": "tonight 前不加介词。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tonight、last night 中选一个，用适当形式填空。",
+   "stem": "I watched a great film ______.",
+   "ans": "last night",
+   "why": "watched 是过去式，用 last night。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "______ weather will be cold. (tonight)",
+   "ans": "Tonight's",
+   "why": "今晚的天气 tonight's weather，用所有格。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "What are you do tonight?",
+   "ans": "do → doing",
+   "why": "现在进行时 are + doing。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Tonight ______ a full moon.",
+   "opts": [
+    "there will be",
+    "there was",
+    "there were",
+    "there has been"
+   ],
+   "why": "tonight 指今晚还没到，用将来时。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "明天晚上我要去看电影。",
+   "stem": "I'm going to the cinema ______ evening.",
+   "ans": "tomorrow",
+   "why": "明天晚上 tomorrow evening。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,90 @@
+{
+ "单词": "expression",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他脸上是什么表情？\n听：He had a happy expression on his face.\nA. 难过\nB. 生气\nC. 害怕\nD. 高兴",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：\"See you later\" is a common English ______.\nA. express\nB. expressive\nC. expression\nD. expressed",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We learned many useful ______ in class today. (expression)",
+  "题目4": "【选词填空】从 express、expression 中选一个，用适当形式填空。\n题干：Music can ______ feelings that words cannot.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She wrote an article about free express of ideas.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Which is NOT a facial expression?\nA. a jump\nB. a smile\nC. a frown\nD. a laugh\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这是我表达谢意的方式。\n题干：This is my way of ______ thanks.\n考点：词性转换",
+  "答案": "【1】D（高兴）\n讲解：happy expression 高兴的表情。\n【2】C（expression）\n讲解：common English 后面要名词，“说法”是 expression。\n【3】expressions\n讲解：many 后面用复数。\n【4】express\n讲解：情态动词 can 后面用动词原形 express。\n【5】express → expression\n讲解：free 后面要名词 expression。\n【6】A（a jump）\n讲解：跳不是脸上的表情。\n【7】expressing\n讲解：介词 of 后面用动名词 expressing。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他脸上是什么表情？",
+   "listen": "He had a happy expression on his face.",
+   "opts": [
+    "高兴",
+    "难过",
+    "生气",
+    "害怕"
+   ],
+   "why": "happy expression 高兴的表情。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"See you later\" is a common English ______.",
+   "opts": [
+    "expression",
+    "express",
+    "expressive",
+    "expressed"
+   ],
+   "why": "common English 后面要名词，“说法”是 expression。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We learned many useful ______ in class today. (expression)",
+   "ans": "expressions",
+   "why": "many 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 express、expression 中选一个，用适当形式填空。",
+   "stem": "Music can ______ feelings that words cannot.",
+   "ans": "express",
+   "why": "情态动词 can 后面用动词原形 express。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She wrote an article about free express of ideas.",
+   "ans": "express → expression",
+   "why": "free 后面要名词 expression。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which is NOT a facial expression?",
+   "opts": [
+    "a jump",
+    "a smile",
+    "a frown",
+    "a laugh"
+   ],
+   "why": "跳不是脸上的表情。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是我表达谢意的方式。",
+   "stem": "This is my way of ______ thanks.",
+   "ans": "expressing",
+   "why": "介词 of 后面用动名词 expressing。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,98 @@
+{
+ "单词": "detail",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人想知道什么？\n听：Please tell me more details about the trip.\nA. 旅行的价格\nB. 天气\nC. 旅行的细节\nD. 车票",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you describe the man in ______?\nA. details\nB. detailed\nC. detail\nD. detailing\n考点：短语",
+  "题目3": "【选词填空】从 detail、detailed 中选一个，用适当形式填空。\n题干：She gave a ______ report.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We need to discuss the ______ of the plan. (detail)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Every details is important.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Don't worry about small ______.\nA. details\nB. detailed\nC. detailing\nD. detail's\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Particulars\" means about the same as ______.\nA. pictures\nB. details\nC. parts\nD. partners\n考点：易混",
+  "答案": "【1】C（旅行的细节）\n讲解：details 细节。\n【2】C（detail）\n讲解：in detail 详细地。\n【3】detailed\n讲解：名词前用形容词 detailed。\n【4】details\n讲解：计划的各项细节，用复数。\n【5】details → detail\n讲解：every 后面接单数。\n【6】A（details）\n讲解：small 后面接名词复数 details。\n【7】B（details）\n讲解：particulars 具体事项、详细资料。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想知道什么？",
+   "listen": "Please tell me more details about the trip.",
+   "opts": [
+    "旅行的细节",
+    "旅行的价格",
+    "天气",
+    "车票"
+   ],
+   "why": "details 细节。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you describe the man in ______?",
+   "opts": [
+    "detail",
+    "details",
+    "detailed",
+    "detailing"
+   ],
+   "why": "in detail 详细地。",
+   "kd": "短语"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 detail、detailed 中选一个，用适当形式填空。",
+   "stem": "She gave a ______ report.",
+   "ans": "detailed",
+   "why": "名词前用形容词 detailed。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We need to discuss the ______ of the plan. (detail)",
+   "ans": "details",
+   "why": "计划的各项细节，用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Every details is important.",
+   "ans": "details → detail",
+   "why": "every 后面接单数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Don't worry about small ______.",
+   "opts": [
+    "details",
+    "detailed",
+    "detailing",
+    "detail's"
+   ],
+   "why": "small 后面接名词复数 details。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Particulars\" means about the same as ______.",
+   "opts": [
+    "details",
+    "pictures",
+    "parts",
+    "partners"
+   ],
+   "why": "particulars 具体事项、详细资料。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

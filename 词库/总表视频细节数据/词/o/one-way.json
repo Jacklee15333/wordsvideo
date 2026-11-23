@@ -1,0 +1,97 @@
+{
+ "单词": "one-way",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他买了什么票？\n听：I bought a one-way ticket to Beijing.\nA. 往返票\nB. 月票\nC. 学生票\nD. 单程票",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You can't drive this way. It's a ______ street.\nA. two-way\nB. one way\nC. one-way\nD. one-ways",
+  "题目3": "【选词填空】从 one-way、round-trip 中选一个，用适当形式填空。\n题干：I'll come back, so I need a ______ ticket.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：This is a one-ways street.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：在英国，单程票叫 single。\n题干：In Britain, a one-way ticket is called a ______.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A ______ street lets cars go both ways.\nA. two-way\nB. one-way\nC. one way\nD. two way\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A return ticket is the same as a ______ ticket.\nA. round-trip\nB. one-way\nC. single\nD. day\n考点：易混",
+  "答案": "【1】D（单程票）\n讲解：one-way ticket 单程票。\n【2】C（one-way）\n讲解：只能单向行驶的街是 one-way street。\n【3】round-trip\n讲解：要回来，买往返票 round-trip ticket；one-way 是单程。\n【4】one-ways → one-way\n讲解：连字符形容词不加 s。\n【5】single\n讲解：英式“单程票”说 single。\n【6】A（two-way）\n讲解：车辆可以双向行驶的街是 two-way street。\n【7】A（round-trip）\n讲解：往返票 return ticket 就是 round-trip ticket。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他买了什么票？",
+   "listen": "I bought a one-way ticket to Beijing.",
+   "opts": [
+    "单程票",
+    "往返票",
+    "月票",
+    "学生票"
+   ],
+   "why": "one-way ticket 单程票。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can't drive this way. It's a ______ street.",
+   "opts": [
+    "one-way",
+    "two-way",
+    "one way",
+    "one-ways"
+   ],
+   "why": "只能单向行驶的街是 one-way street。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 one-way、round-trip 中选一个，用适当形式填空。",
+   "stem": "I'll come back, so I need a ______ ticket.",
+   "ans": "round-trip",
+   "why": "要回来，买往返票 round-trip ticket；one-way 是单程。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This is a one-ways street.",
+   "ans": "one-ways → one-way",
+   "why": "连字符形容词不加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "在英国，单程票叫 single。",
+   "stem": "In Britain, a one-way ticket is called a ______.",
+   "ans": "single",
+   "why": "英式“单程票”说 single。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ street lets cars go both ways.",
+   "opts": [
+    "two-way",
+    "one-way",
+    "one way",
+    "two way"
+   ],
+   "why": "车辆可以双向行驶的街是 two-way street。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A return ticket is the same as a ______ ticket.",
+   "opts": [
+    "round-trip",
+    "one-way",
+    "single",
+    "day"
+   ],
+   "why": "往返票 return ticket 就是 round-trip ticket。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "shoe",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人昨天买了什么？\n听：I bought a new pair of running shoes yesterday.\nA. 一双袜子\nB. 一件运动衫\nC. 一双跑鞋\nD. 一个书包",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This pair of shoes ______ too small for me.\nA. is\nB. are\nC. be\nD. am\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Please take off your ______ before you come in. (shoe)\n考点：变形",
+  "题目4": "【选词填空】从 shoes、boots 中选一个填空。\n题干：It's snowing. Put on your ______ to keep your legs warm.\n考点：易混",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：如果我处在你的位置，我会道歉。\n题干：If I were in your ______, I would say sorry.\n考点：短语",
+  "题目6": "【改错】句子里有一处错误，找出来并改正。\n题干：He has three pair of shoes.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Where's my left ______? I can only find the right one.\nA. shoes\nB. boots\nC. shoe\nD. socks\n考点：变形",
+  "答案": "【1】C（一双跑鞋）\n讲解：running shoes 跑鞋。\n【2】A（is）\n讲解：this pair of shoes 作主语，谓语看 pair，用单数 is。\n【3】shoes\n讲解：两只脚的鞋，用复数 shoes。\n【4】boots\n讲解：包住小腿、能保暖的是靴子 boots；shoes 一般不过脚踝。\n【5】shoes\n讲解：in sb's shoes 站在某人的处境上。\n【6】pair → pairs\n讲解：three 后面 pair 要用复数 pairs。\n【7】C（shoe）\n讲解：只找左边那一只，用单数 shoe。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人昨天买了什么？",
+   "listen": "I bought a new pair of running shoes yesterday.",
+   "opts": [
+    "一双跑鞋",
+    "一双袜子",
+    "一件运动衫",
+    "一个书包"
+   ],
+   "why": "running shoes 跑鞋。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This pair of shoes ______ too small for me.",
+   "opts": [
+    "is",
+    "are",
+    "be",
+    "am"
+   ],
+   "why": "this pair of shoes 作主语，谓语看 pair，用单数 is。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Please take off your ______ before you come in. (shoe)",
+   "ans": "shoes",
+   "why": "两只脚的鞋，用复数 shoes。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 shoes、boots 中选一个填空。",
+   "stem": "It's snowing. Put on your ______ to keep your legs warm.",
+   "ans": "boots",
+   "why": "包住小腿、能保暖的是靴子 boots；shoes 一般不过脚踝。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "stem": "If I were in your ______, I would say sorry.",
+   "ans": "shoes",
+   "why": "in sb's shoes 站在某人的处境上。",
+   "kd": "短语",
+   "zh": "如果我处在你的位置，我会道歉。"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He has three pair of shoes.",
+   "ans": "pair → pairs",
+   "why": "three 后面 pair 要用复数 pairs。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Where's my left ______? I can only find the right one.",
+   "opts": [
+    "shoe",
+    "shoes",
+    "boots",
+    "socks"
+   ],
+   "why": "只找左边那一只，用单数 shoe。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,90 @@
+{
+ "单词": "functional",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个旧收音机怎么样？\n听：This old radio is still functional after fifty years.\nA. 已经坏了\nB. 还能正常使用\nC. 太贵了\nD. 太重了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The new kitchen is small but very ______.\nA. function\nB. functional\nC. functions\nD. functioning",
+  "题目3": "【选词填空】从 functional、function 中选一个，用适当形式填空。\n题干：Each button has its own ______ on this machine.",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Every part has an important ______ in the body. (functional)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We should check the machine's functional first.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Her advice is always ______; we can really use it.\nA. functional\nB. function\nC. practical\nD. practice\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这台机器有很多功能。\n题干：This machine has many useful ______.\n考点：变形",
+  "答案": "【1】B（还能正常使用）\n讲解：still functional 指“仍然能正常使用”。\n【2】B（functional）\n讲解：but 后面与 small 并列，要用形容词 functional（实用的、好用的）。\n【3】function\n讲解：its own 后面要名词 function（功能）；functional 是形容词。\n【4】function\n讲解：an important 后面要名词 function（作用）。\n【5】functional → function\n讲解：所有格 machine's 后面要用名词 function。\n【6】C（practical）\n讲解：真正可行、能派上用场的用 practical；functional 指“与功能有关的、能运转的”。\n【7】functions\n讲解：many 后面接可数名词复数 functions。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个旧收音机怎么样？",
+   "listen": "This old radio is still functional after fifty years.",
+   "opts": [
+    "还能正常使用",
+    "已经坏了",
+    "太贵了",
+    "太重了"
+   ],
+   "why": "still functional 指“仍然能正常使用”。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The new kitchen is small but very ______.",
+   "opts": [
+    "functional",
+    "function",
+    "functions",
+    "functioning"
+   ],
+   "why": "but 后面与 small 并列，要用形容词 functional（实用的、好用的）。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 functional、function 中选一个，用适当形式填空。",
+   "stem": "Each button has its own ______ on this machine.",
+   "ans": "function",
+   "why": "its own 后面要名词 function（功能）；functional 是形容词。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Every part has an important ______ in the body. (functional)",
+   "ans": "function",
+   "why": "an important 后面要名词 function（作用）。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We should check the machine's functional first.",
+   "ans": "functional → function",
+   "why": "所有格 machine's 后面要用名词 function。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Her advice is always ______; we can really use it.",
+   "opts": [
+    "practical",
+    "functional",
+    "function",
+    "practice"
+   ],
+   "why": "真正可行、能派上用场的用 practical；functional 指“与功能有关的、能运转的”。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这台机器有很多功能。",
+   "stem": "This machine has many useful ______.",
+   "ans": "functions",
+   "why": "many 后面接可数名词复数 functions。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-21 DeepSeek（本地接力）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

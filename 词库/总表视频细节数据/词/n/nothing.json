@@ -1,0 +1,97 @@
+{
+ "单词": "nothing",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：盒子里有什么？\n听：There is nothing in the box.\nA. 什么也没有\nB. 一个苹果\nC. 一些糖\nD. 一本书",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：“What's in your hand?” “______. It's empty.”\nA. Something\nB. Anything\nC. Everything\nD. Nothing",
+  "题目3": "【选词填空】从 nothing、anything 中选一个，用适当形式填空。\n题干：I didn't eat ______ this morning.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There is serious nothing.\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他什么都没说就走了。\n题干：He left without saying ______.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：It's nothing ______ a game.\nA. and\nB. but\nC. or\nD. so\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Nothing ______ wrong with it.\nA. are\nB. is\nC. be\nD. were\n考点：用法",
+  "答案": "【1】A（什么也没有）\n讲解：nothing 没有东西。\n【2】D（Nothing）\n讲解：手是空的，用 Nothing。\n【3】anything\n讲解：didn't 否定句用 anything。\n【4】serious nothing → nothing serious\n讲解：形容词放在 nothing 后面。\n【5】anything\n讲解：without 后面用 anything。\n【6】B（but）\n讲解：nothing but 只是、仅仅。\n【7】B（is）\n讲解：nothing 作主语，谓语用单数 is。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：盒子里有什么？",
+   "listen": "There is nothing in the box.",
+   "opts": [
+    "什么也没有",
+    "一个苹果",
+    "一些糖",
+    "一本书"
+   ],
+   "why": "nothing 没有东西。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "“What's in your hand?” “______. It's empty.”",
+   "opts": [
+    "Nothing",
+    "Something",
+    "Anything",
+    "Everything"
+   ],
+   "why": "手是空的，用 Nothing。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 nothing、anything 中选一个，用适当形式填空。",
+   "stem": "I didn't eat ______ this morning.",
+   "ans": "anything",
+   "why": "didn't 否定句用 anything。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There is serious nothing.",
+   "ans": "serious nothing → nothing serious",
+   "why": "形容词放在 nothing 后面。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他什么都没说就走了。",
+   "stem": "He left without saying ______.",
+   "ans": "anything",
+   "why": "without 后面用 anything。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It's nothing ______ a game.",
+   "opts": [
+    "but",
+    "and",
+    "or",
+    "so"
+   ],
+   "why": "nothing but 只是、仅仅。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Nothing ______ wrong with it.",
+   "opts": [
+    "is",
+    "are",
+    "be",
+    "were"
+   ],
+   "why": "nothing 作主语，谓语用单数 is。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

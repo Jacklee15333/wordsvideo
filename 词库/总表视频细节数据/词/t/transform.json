@@ -1,0 +1,94 @@
+{
+ "单词": "transform",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：新公园会带来什么？\n听：The new park will transform the city.\nA. 让城市变脏\nB. 彻底改变城市\nC. 让城市变小\nD. 没影响",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The new park will ______ the city.\nA. transformation\nB. transform\nC. transformer\nD. transforms\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The old factory ______ into a museum last year. (transform)\n考点：变形",
+  "题目4": "【选词填空】从 transform、translate 中选一个，用适当形式填空。\n题干：Please ______ this sentence into English.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The haircut transformed her, so she looked the same.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这座城市经历了巨大的转变。\n题干：The city has gone through a great ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Transform is close in meaning to ______.\nA. stay\nB. change completely\nC. keep\nD. stop\n考点：易混",
+  "答案": "【1】B（彻底改变城市）\n讲解：transform 彻底改变。\n【2】B（transform）\n讲解：will 后面用动词原形 transform。\n【3】was transformed\n讲解：工厂“被改造”用被动语态 was transformed。\n【4】translate\n讲解：“翻译”用 translate。\n【5】looked the same → looked totally different\n讲解：彻底改变后看起来完全不同。\n【6】transformation\n讲解：名词“转变”是 transformation。\n【7】B（change completely）\n讲解：transform 彻底改变。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：新公园会带来什么？",
+   "listen": "The new park will transform the city.",
+   "opts": [
+    "彻底改变城市",
+    "让城市变脏",
+    "让城市变小",
+    "没影响"
+   ],
+   "why": "transform 彻底改变。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The new park will ______ the city.",
+   "opts": [
+    "transform",
+    "transformation",
+    "transformer",
+    "transforms"
+   ],
+   "why": "will 后面用动词原形 transform。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The old factory ______ into a museum last year. (transform)",
+   "ans": "was transformed",
+   "why": "工厂“被改造”用被动语态 was transformed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 transform、translate 中选一个，用适当形式填空。",
+   "stem": "Please ______ this sentence into English.",
+   "ans": "translate",
+   "why": "“翻译”用 translate。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The haircut transformed her, so she looked the same.",
+   "ans": "looked the same → looked totally different",
+   "why": "彻底改变后看起来完全不同。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这座城市经历了巨大的转变。",
+   "stem": "The city has gone through a great ______.",
+   "ans": "transformation",
+   "why": "名词“转变”是 transformation。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Transform is close in meaning to ______.",
+   "opts": [
+    "change completely",
+    "stay",
+    "keep",
+    "stop"
+   ],
+   "why": "transform 彻底改变。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

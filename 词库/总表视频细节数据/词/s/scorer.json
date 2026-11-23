@@ -1,0 +1,94 @@
+{
+ "单词": "scorer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说梅西是什么？\n听：Messi is a great goal scorer.\nA. 守门员\nB. 教练\nC. 裁判\nD. 进球高手",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He is the top ______ of our team this year.\nA. scorer\nB. score\nC. scored\nD. scoring\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She ______ 20 points in the game last night. (scorer)\n考点：词性转换",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The two best scorer of the team are both from Spain.\n考点：变形",
+  "题目5": "【选词填空】从 scorer、scoreboard 中选一个，用适当形式填空。\n题干：Look at the ______. We are winning 3 to 1.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In \"the scorer sat by the field and wrote down the points\", scorer means ______.\nA. 进球的人\nB. 教练\nC. 记分员\nD. 观众\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他是队里最好的得分手之一。\n题干：He is one of the best ______ on the team.\n考点：变形",
+  "答案": "【1】D（进球高手）\n讲解：scorer 得分者、进球者。\n【2】A（scorer）\n讲解：the top 后面要名词“得分者” scorer。\n【3】scored\n讲解：last night 用过去式，score 加 d。\n【4】scorer → scorers\n讲解：two 后面接复数。\n【5】scoreboard\n讲解：看比分要看“记分牌” scoreboard。\n【6】C（记分员）\n讲解：scorer 一个词两种人：得分的人、记分的人，看上下文。\n【7】scorers\n讲解：one of 后面接复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说梅西是什么？",
+   "listen": "Messi is a great goal scorer.",
+   "opts": [
+    "进球高手",
+    "守门员",
+    "教练",
+    "裁判"
+   ],
+   "why": "scorer 得分者、进球者。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He is the top ______ of our team this year.",
+   "opts": [
+    "scorer",
+    "score",
+    "scored",
+    "scoring"
+   ],
+   "why": "the top 后面要名词“得分者” scorer。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She ______ 20 points in the game last night. (scorer)",
+   "ans": "scored",
+   "why": "last night 用过去式，score 加 d。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The two best scorer of the team are both from Spain.",
+   "ans": "scorer → scorers",
+   "why": "two 后面接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 scorer、scoreboard 中选一个，用适当形式填空。",
+   "stem": "Look at the ______. We are winning 3 to 1.",
+   "ans": "scoreboard",
+   "why": "看比分要看“记分牌” scoreboard。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In \"the scorer sat by the field and wrote down the points\", scorer means ______.",
+   "opts": [
+    "记分员",
+    "进球的人",
+    "教练",
+    "观众"
+   ],
+   "why": "scorer 一个词两种人：得分的人、记分的人，看上下文。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是队里最好的得分手之一。",
+   "stem": "He is one of the best ______ on the team.",
+   "ans": "scorers",
+   "why": "one of 后面接复数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "generate",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：风能做什么？\n听：Wind can generate electricity.\nA. 发电\nB. 下雨\nC. 降温\nD. 造船",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Wind can ______ electricity.\nA. generate\nB. generation\nC. generator\nD. general\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The plan ______ a lot of interest last year. (generate)\n考点：变形",
+  "题目4": "【选词填空】从 generate、generous 中选一个，用适当形式填空。\n题干：He is very ______. He always shares.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Solar panels are generateing power.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这台机器是发电机。\n题干：This machine is a ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Generate is close in meaning to ______.\nA. produce\nB. stop\nC. break\nD. lose\n考点：易混",
+  "答案": "【1】A（发电）\n讲解：generate 产生。\n【2】A（generate）\n讲解：can 后面用动词原形 generate。\n【3】generated\n讲解：last year 用过去式 generated。\n【4】generous\n讲解：“慷慨的”是 generous。\n【5】generateing → generating\n讲解：generate 加 ing 要去 e。\n【6】generator\n讲解：“发电机”是 generator。\n【7】A（produce）\n讲解：generate ≈ produce 产生。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：风能做什么？",
+   "listen": "Wind can generate electricity.",
+   "opts": [
+    "发电",
+    "下雨",
+    "降温",
+    "造船"
+   ],
+   "why": "generate 产生。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Wind can ______ electricity.",
+   "opts": [
+    "generate",
+    "generation",
+    "generator",
+    "general"
+   ],
+   "why": "can 后面用动词原形 generate。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The plan ______ a lot of interest last year. (generate)",
+   "ans": "generated",
+   "why": "last year 用过去式 generated。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 generate、generous 中选一个，用适当形式填空。",
+   "stem": "He is very ______. He always shares.",
+   "ans": "generous",
+   "why": "“慷慨的”是 generous。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Solar panels are generateing power.",
+   "ans": "generateing → generating",
+   "why": "generate 加 ing 要去 e。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这台机器是发电机。",
+   "stem": "This machine is a ______.",
+   "ans": "generator",
+   "why": "“发电机”是 generator。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Generate is close in meaning to ______.",
+   "opts": [
+    "produce",
+    "stop",
+    "break",
+    "lose"
+   ],
+   "why": "generate ≈ produce 产生。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

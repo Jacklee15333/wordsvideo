@@ -1,0 +1,94 @@
+{
+ "单词": "rise",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：物价怎样了？\n听：Prices are rising every year.\nA. 下降\nB. 不变\nC. 上涨\nD. 很低",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The sun ______ at six this morning.\nA. raised\nB. rose\nC. rised\nD. rises",
+  "题目3": "【选词填空】从 rise、raise 中选一个，用适当形式填空。\n题干：Please ______ your hand.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Prices have rose a lot.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：吸烟会引起很多问题。\n题干：Smoking can give ______ ______ many problems.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The river will ______ after the heavy rain.\nA. rise\nB. raise\nC. rose\nD. risen\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Rise\" takes no object, but \"raise\" ______.\nA. never has an object\nB. is a noun\nC. is an adjective\nD. needs an object\n考点：易混",
+  "答案": "【1】C（上涨）\n讲解：rise 上升。\n【2】B（rose）\n讲解：rise 的过去式不规则：rose。\n【3】raise\n讲解：举手要带宾语，用 raise。\n【4】rose → risen\n讲解：现在完成时用过去分词 risen。\n【5】rise；to\n讲解：give rise to 引起。\n【6】A（rise）\n讲解：will 后面用原形；河水自己上涨。\n【7】D（needs an object）\n讲解：rise 不及物，raise 及物。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：物价怎样了？",
+   "listen": "Prices are rising every year.",
+   "opts": [
+    "上涨",
+    "下降",
+    "不变",
+    "很低"
+   ],
+   "why": "rise 上升。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The sun ______ at six this morning.",
+   "opts": [
+    "rose",
+    "raised",
+    "rised",
+    "rises"
+   ],
+   "why": "rise 的过去式不规则：rose。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 rise、raise 中选一个，用适当形式填空。",
+   "stem": "Please ______ your hand.",
+   "ans": "raise",
+   "why": "举手要带宾语，用 raise。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Prices have rose a lot.",
+   "ans": "rose → risen",
+   "why": "现在完成时用过去分词 risen。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "吸烟会引起很多问题。",
+   "stem": "Smoking can give ______ ______ many problems.",
+   "ans": "rise；to",
+   "why": "give rise to 引起。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The river will ______ after the heavy rain.",
+   "opts": [
+    "rise",
+    "raise",
+    "rose",
+    "risen"
+   ],
+   "why": "will 后面用原形；河水自己上涨。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Rise\" takes no object, but \"raise\" ______.",
+   "opts": [
+    "needs an object",
+    "never has an object",
+    "is a noun",
+    "is an adjective"
+   ],
+   "why": "rise 不及物，raise 及物。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

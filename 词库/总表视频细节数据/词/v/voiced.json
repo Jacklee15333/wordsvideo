@@ -1,0 +1,95 @@
+{
+ "单词": "voiced",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师说 /b/ 是什么音？\n听：/b/ is a voiced sound.\nA. 清音\nB. 元音\nC. 浊音\nD. 鼻音",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：/d/ and /g/ are ______ sounds.\nA. voiceless\nB. voice\nC. voiced\nD. voices",
+  "题目3": "【选词填空】从 voiced、voiceless 中选一个，用适当形式填空。\n题干：/p/ and /t/ are ______ sounds.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Voiced sounds makes your throat shake.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：/b/ 是浊音，/p/ 是清音。\n题干：/b/ is voiced, and /p/ is ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：When you make a voiced sound, your vocal cords ______.\nA. shake\nB. sleep\nC. close\nD. stop\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Which sound is voiced?\nA. /s/\nB. /z/\nC. /k/\nD. /t/\n考点：用法",
+  "答案": "【1】C（浊音）\n讲解：voiced 浊音的。\n【2】C（voiced）\n讲解：发 /d/、/g/ 时声带振动，是浊音。\n【3】voiceless\n讲解：发 /p/、/t/ 时声带不振动，是清音。\n【4】makes → make\n讲解：主语 sounds 是复数，用 make。\n【5】voiceless\n讲解：和 voiced 相对的是 voiceless。\n【6】A（shake）\n讲解：发浊音时声带振动。\n【7】B（/z/）\n讲解：/z/ 是浊音，其余是清音。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师说 /b/ 是什么音？",
+   "listen": "/b/ is a voiced sound.",
+   "opts": [
+    "浊音",
+    "清音",
+    "元音",
+    "鼻音"
+   ],
+   "why": "voiced 浊音的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "/d/ and /g/ are ______ sounds.",
+   "opts": [
+    "voiced",
+    "voiceless",
+    "voice",
+    "voices"
+   ],
+   "why": "发 /d/、/g/ 时声带振动，是浊音。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 voiced、voiceless 中选一个，用适当形式填空。",
+   "stem": "/p/ and /t/ are ______ sounds.",
+   "ans": "voiceless",
+   "why": "发 /p/、/t/ 时声带不振动，是清音。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Voiced sounds makes your throat shake.",
+   "ans": "makes → make",
+   "why": "主语 sounds 是复数，用 make。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "/b/ 是浊音，/p/ 是清音。",
+   "stem": "/b/ is voiced, and /p/ is ______.",
+   "ans": "voiceless",
+   "why": "和 voiced 相对的是 voiceless。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "When you make a voiced sound, your vocal cords ______.",
+   "opts": [
+    "shake",
+    "sleep",
+    "close",
+    "stop"
+   ],
+   "why": "发浊音时声带振动。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which sound is voiced?",
+   "opts": [
+    "/z/",
+    "/s/",
+    "/k/",
+    "/t/"
+   ],
+   "why": "/z/ 是浊音，其余是清音。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

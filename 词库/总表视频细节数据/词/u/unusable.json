@@ -1,0 +1,93 @@
+{
+ "单词": "unusable",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：电梯怎么了？\n听：The lift is unusable because it's broken.\nA. 正在使用\nB. 坏了不能用\nC. 刚修好\nD. 很新",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：After the flood, the road was ______.\nA. usable\nB. unusable\nC. useful\nD. user\n考点：词性转换",
+  "题目3": "【选词填空】从 unusable、useless 中选一个，用适当形式填空。\n题干：The machine still works, but it's ______ for us.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Is the old computer still ______? (unusable)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The broken cup are unusable.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这张地图太旧了，用不了了。\n题干：The map is too old to ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：My old phone still works. It's ______.\nA. usable\nB. unusable\nC. useless\nD. used\n考点：易混",
+  "答案": "【1】B（坏了不能用）\n讲解：unusable 无法使用的。\n【2】B（unusable）\n讲解：发大水后路没法走，用 unusable。\n【3】useless\n讲解：能用但对我们没用处，是 useless；unusable 是用不了。\n【4】usable\n讲解：问“还能用吗”，用 usable。\n【5】are → is\n讲解：主语 the broken cup 是单数，用 is。\n【6】use\n讲解：too … to do 太……而不能。\n【7】A（usable）\n讲解：还能用，用 usable；unusable 是用不了。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：电梯怎么了？",
+   "listen": "The lift is unusable because it's broken.",
+   "opts": [
+    "坏了不能用",
+    "正在使用",
+    "刚修好",
+    "很新"
+   ],
+   "why": "unusable 无法使用的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "After the flood, the road was ______.",
+   "opts": [
+    "unusable",
+    "usable",
+    "useful",
+    "user"
+   ],
+   "why": "发大水后路没法走，用 unusable。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 unusable、useless 中选一个，用适当形式填空。",
+   "stem": "The machine still works, but it's ______ for us.",
+   "ans": "useless",
+   "why": "能用但对我们没用处，是 useless；unusable 是用不了。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Is the old computer still ______? (unusable)",
+   "ans": "usable",
+   "why": "问“还能用吗”，用 usable。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The broken cup are unusable.",
+   "ans": "are → is",
+   "why": "主语 the broken cup 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这张地图太旧了，用不了了。",
+   "stem": "The map is too old to ______.",
+   "ans": "use",
+   "why": "too … to do 太……而不能。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My old phone still works. It's ______.",
+   "opts": [
+    "usable",
+    "unusable",
+    "useless",
+    "used"
+   ],
+   "why": "还能用，用 usable；unusable 是用不了。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

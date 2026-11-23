@@ -1,0 +1,95 @@
+{
+ "单词": "offline",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的电脑怎么了？\n听：My computer is offline.\nA. 没联网\nB. 坏了\nC. 没电了\nD. 很快",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You can read these books ______ — no Internet is needed.\nA. online\nB. outline\nC. inline\nD. offline",
+  "题目3": "【选词填空】从 offline、online 中选一个，用适当形式填空。\n题干：I bought these shoes ______ — on a website.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The website are offline now.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这个游戏不联网也能玩。\n题干：You can play this game ______ the Internet.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Let's take it offline\" means let's talk about it ______ later.\nA. loudly\nB. privately\nC. online\nD. never\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：When you are offline, you can't ______ new emails.\nA. write\nB. receive\nC. delete\nD. print\n考点：用法",
+  "答案": "【1】A（没联网）\n讲解：offline 离线的。\n【2】D（offline）\n讲解：不需要网络，就是离线 offline。\n【3】online\n讲解：在网站上买，是 online。\n【4】are → is\n讲解：主语 website 是单数，用 is。\n【5】without\n讲解：without 没有。\n【6】B（privately）\n讲解：职场口语 take it offline 是“私下再谈”。\n【7】B（receive）\n讲解：离线时收不到新邮件。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的电脑怎么了？",
+   "listen": "My computer is offline.",
+   "opts": [
+    "没联网",
+    "坏了",
+    "没电了",
+    "很快"
+   ],
+   "why": "offline 离线的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can read these books ______ — no Internet is needed.",
+   "opts": [
+    "offline",
+    "online",
+    "outline",
+    "inline"
+   ],
+   "why": "不需要网络，就是离线 offline。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 offline、online 中选一个，用适当形式填空。",
+   "stem": "I bought these shoes ______ — on a website.",
+   "ans": "online",
+   "why": "在网站上买，是 online。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The website are offline now.",
+   "ans": "are → is",
+   "why": "主语 website 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个游戏不联网也能玩。",
+   "stem": "You can play this game ______ the Internet.",
+   "ans": "without",
+   "why": "without 没有。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Let's take it offline\" means let's talk about it ______ later.",
+   "opts": [
+    "privately",
+    "loudly",
+    "online",
+    "never"
+   ],
+   "why": "职场口语 take it offline 是“私下再谈”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "When you are offline, you can't ______ new emails.",
+   "opts": [
+    "receive",
+    "write",
+    "delete",
+    "print"
+   ],
+   "why": "离线时收不到新邮件。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

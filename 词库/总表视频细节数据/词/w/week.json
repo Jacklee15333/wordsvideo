@@ -1,0 +1,94 @@
+{
+ "单词": "week",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人什么时候考试？\n听：We'll have a test next week.\nA. 这周\nB. 下个月\nC. 明天\nD. 下周",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are seven days in a ______.\nA. weekend\nB. weekly\nC. week\nD. weeks\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：I'll be away for two ______. (week)\n考点：变形",
+  "题目4": "【选词填空】从 week、weak 中选一个，用适当形式填空。\n题干：He was ill and felt very ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We have a meeting the week after the next.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这是一份周刊。\n题干：This is a ______ magazine.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：What day of the week is it today?\nA. It's Monday.\nB. It's May 1st.\nC. It's sunny.\nD. It's 8 o'clock.\n考点：用法",
+  "答案": "【1】D（下周）\n讲解：next week 下周。\n【2】C（week）\n讲解：一周有七天，a 后面用单数 week。\n【3】weeks\n讲解：two 后面用复数 weeks。\n【4】weak\n讲解：“虚弱的”用 weak；week 是星期。\n【5】the week after the next → the week after next\n讲解：“下下周”是 the week after next，next 前不加 the。\n【6】weekly\n讲解：形容词“每周的”是 weekly。\n【7】A（It's Monday.）\n讲解：问星期几，用 It's Monday. 回答。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人什么时候考试？",
+   "listen": "We'll have a test next week.",
+   "opts": [
+    "下周",
+    "这周",
+    "下个月",
+    "明天"
+   ],
+   "why": "next week 下周。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are seven days in a ______.",
+   "opts": [
+    "week",
+    "weekend",
+    "weekly",
+    "weeks"
+   ],
+   "why": "一周有七天，a 后面用单数 week。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I'll be away for two ______. (week)",
+   "ans": "weeks",
+   "why": "two 后面用复数 weeks。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 week、weak 中选一个，用适当形式填空。",
+   "stem": "He was ill and felt very ______.",
+   "ans": "weak",
+   "why": "“虚弱的”用 weak；week 是星期。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We have a meeting the week after the next.",
+   "ans": "the week after the next → the week after next",
+   "why": "“下下周”是 the week after next，next 前不加 the。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是一份周刊。",
+   "stem": "This is a ______ magazine.",
+   "ans": "weekly",
+   "why": "形容词“每周的”是 weekly。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What day of the week is it today?",
+   "opts": [
+    "It's Monday.",
+    "It's May 1st.",
+    "It's sunny.",
+    "It's 8 o'clock."
+   ],
+   "why": "问星期几，用 It's Monday. 回答。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

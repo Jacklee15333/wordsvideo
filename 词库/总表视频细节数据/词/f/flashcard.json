@@ -1,0 +1,92 @@
+{
+ "单词": "flashcard",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师用什么教单词？\n听：The teacher uses flashcards to teach new words.\nA. 课本\nB. 单词卡\nC. 电影\nD. 歌曲",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I write a new word on each ______.\nA. flashcards\nB. flashcard\nC. flash\nD. card-flash",
+  "题目3": "【选词填空】从 flash、flashcard 中选一个，用适当形式填空。\n题干：Please don't use the ______ when you take photos in the museum.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She made fifty ______ for the test. (flashcard)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Flashcards is useful for learning words.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Using flashcards is a good way ______ new words.\nA. learn\nB. to learn\nC. learned\nD. learns\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我们可以用卡片来记单词。\n题干：We can use ______ to remember words.\n考点：变形",
+  "答案": "【1】B（单词卡）\n讲解：flashcard 单词卡。\n【2】B（flashcard）\n讲解：each 后接单数 flashcard。\n【3】flash\n讲解：闪光灯是 flash。\n【4】flashcards\n讲解：fifty 后接复数 flashcards。\n【5】is → are\n讲解：主语复数，用 are。\n【6】B（to learn）\n讲解：a good way to do 做某事的好方法。\n【7】flashcards\n讲解：use 后接复数 flashcards。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师用什么教单词？",
+   "listen": "The teacher uses flashcards to teach new words.",
+   "opts": [
+    "单词卡",
+    "课本",
+    "电影",
+    "歌曲"
+   ],
+   "why": "flashcard 单词卡。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I write a new word on each ______.",
+   "opts": [
+    "flashcard",
+    "flashcards",
+    "flash",
+    "card-flash"
+   ],
+   "why": "each 后接单数 flashcard。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 flash、flashcard 中选一个，用适当形式填空。",
+   "stem": "Please don't use the ______ when you take photos in the museum.",
+   "ans": "flash",
+   "why": "闪光灯是 flash。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She made fifty ______ for the test. (flashcard)",
+   "ans": "flashcards",
+   "why": "fifty 后接复数 flashcards。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Flashcards is useful for learning words.",
+   "ans": "is → are",
+   "why": "主语复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Using flashcards is a good way ______ new words.",
+   "opts": [
+    "to learn",
+    "learn",
+    "learned",
+    "learns"
+   ],
+   "why": "a good way to do 做某事的好方法。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们可以用卡片来记单词。",
+   "stem": "We can use ______ to remember words.",
+   "ans": "flashcards",
+   "why": "use 后接复数 flashcards。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,98 @@
+{
+ "单词": "anything",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人问要不要从商店带什么？\n听：Do you need anything from the shop?\nA. 商店几点关门\nB. 商店在哪里\nC. 想不想去商店\nD. 要不要从商店带东西",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I didn't buy ______ in the shop.\nA. anything\nB. something\nC. nothing\nD. everything\n考点：易混",
+  "题目3": "【选词填空】从 anything、nothing 中选一个，用适当形式填空。\n题干：There is ______ in the box. It's empty.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：I have new anything to tell you.\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：你想喝点什么吗？\n题干：Would you like ______ to drink?\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：He is anything ______ stupid; he is very clever.\nA. and\nB. or\nC. but\nD. so\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：She ate nothing ______ an apple.\nA. and\nB. or\nC. so\nD. but\n考点：短语",
+  "答案": "【1】D（要不要从商店带东西）\n讲解：anything 任何东西。\n【2】A（anything）\n讲解：否定句用 anything。\n【3】nothing\n讲解：盒子是空的，用 nothing。\n【4】new anything → anything new\n讲解：形容词放在 anything 后面。\n【5】something\n讲解：表示请求的疑问句用 something。\n【6】C（but）\n讲解：anything but 绝不是。\n【7】D（but）\n讲解：nothing but 只是、仅仅。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人问要不要从商店带什么？",
+   "listen": "Do you need anything from the shop?",
+   "opts": [
+    "要不要从商店带东西",
+    "商店几点关门",
+    "商店在哪里",
+    "想不想去商店"
+   ],
+   "why": "anything 任何东西。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I didn't buy ______ in the shop.",
+   "opts": [
+    "anything",
+    "something",
+    "nothing",
+    "everything"
+   ],
+   "why": "否定句用 anything。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 anything、nothing 中选一个，用适当形式填空。",
+   "stem": "There is ______ in the box. It's empty.",
+   "ans": "nothing",
+   "why": "盒子是空的，用 nothing。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I have new anything to tell you.",
+   "ans": "new anything → anything new",
+   "why": "形容词放在 anything 后面。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你想喝点什么吗？",
+   "stem": "Would you like ______ to drink?",
+   "ans": "something",
+   "why": "表示请求的疑问句用 something。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He is anything ______ stupid; he is very clever.",
+   "opts": [
+    "but",
+    "and",
+    "or",
+    "so"
+   ],
+   "why": "anything but 绝不是。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She ate nothing ______ an apple.",
+   "opts": [
+    "but",
+    "and",
+    "or",
+    "so"
+   ],
+   "why": "nothing but 只是、仅仅。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

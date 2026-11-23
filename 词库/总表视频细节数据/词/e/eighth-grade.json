@@ -1,0 +1,97 @@
+{
+ "单词": "eighth-grade",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她在读什么书？\n听：She is reading an eighth-grade science book.\nA. 小说\nB. 八年级的科学书\nC. 漫画\nD. 词典",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This is an ______ maths test.\nA. eighth-grade\nB. eighth-grader\nC. eighth-graders\nD. eight-grade\n考点：词性转换",
+  "题目3": "【选词填空】从 eighth-grade、eighth-grader 中选一个，用适当形式填空。\n题干：My brother is an ______.\n考点：词性转换",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She can read at an eight-grade level.\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这些单词是八年级水平的。\n题干：These words are at an ______ ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：We say \"an eighth-grade book\" because \"eighth\" starts with a ______ sound.\nA. consonant\nB. silent\nC. vowel\nD. long\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：An eighth-grade student is in Grade ______.\nA. 8\nB. 7\nC. 9\nD. 18\n考点：用法",
+  "答案": "【1】B（八年级的科学书）\n讲解：eighth-grade 八年级的。\n【2】A（eighth-grade）\n讲解：名词 test 前面作定语用 eighth-grade。\n【3】eighth-grader\n讲解：指人用 eighth-grader。\n【4】eight-grade → eighth-grade\n讲解：年级要用序数词 eighth。\n【5】eighth-grade；level\n讲解：八年级水平 eighth-grade level。\n【6】C（vowel）\n讲解：eighth 以元音开头，前面用 an。\n【7】A（8）\n讲解：eighth 是第八。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她在读什么书？",
+   "listen": "She is reading an eighth-grade science book.",
+   "opts": [
+    "八年级的科学书",
+    "小说",
+    "漫画",
+    "词典"
+   ],
+   "why": "eighth-grade 八年级的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This is an ______ maths test.",
+   "opts": [
+    "eighth-grade",
+    "eighth-grader",
+    "eighth-graders",
+    "eight-grade"
+   ],
+   "why": "名词 test 前面作定语用 eighth-grade。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 eighth-grade、eighth-grader 中选一个，用适当形式填空。",
+   "stem": "My brother is an ______.",
+   "ans": "eighth-grader",
+   "why": "指人用 eighth-grader。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She can read at an eight-grade level.",
+   "ans": "eight-grade → eighth-grade",
+   "why": "年级要用序数词 eighth。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这些单词是八年级水平的。",
+   "stem": "These words are at an ______ ______.",
+   "ans": "eighth-grade；level",
+   "why": "八年级水平 eighth-grade level。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We say \"an eighth-grade book\" because \"eighth\" starts with a ______ sound.",
+   "opts": [
+    "vowel",
+    "consonant",
+    "silent",
+    "long"
+   ],
+   "why": "eighth 以元音开头，前面用 an。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An eighth-grade student is in Grade ______.",
+   "opts": [
+    "8",
+    "7",
+    "9",
+    "18"
+   ],
+   "why": "eighth 是第八。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

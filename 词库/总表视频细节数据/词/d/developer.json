@@ -1,0 +1,94 @@
+{
+ "单词": "developer",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的哥哥做什么工作？\n听：My brother is a software developer.\nA. 医生\nB. 司机\nC. 软件开发人员\nD. 老师",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many ______ in this company.\nA. developer\nB. development\nC. developers\nD. develop\n考点：变形",
+  "题目3": "【选词填空】从 developer、development 中选一个，用适当形式填空。\n题干：The city's ______ is very fast.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：They want to ______ a new game. (developer)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She is a game development.\n考点：词性转换",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In English, a \"developer\" can be ______.\nA. a kind of fruit\nB. a school subject\nC. a person who writes computer programs\nD. a sport\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这家开发商建了很多新房子。\n题干：The ______ built many new houses.\n考点：用法",
+  "答案": "【1】C（软件开发人员）\n讲解：software developer 软件开发人员。\n【2】C（developers）\n讲解：many 后面接复数 developers。\n【3】development\n讲解：城市的“发展”用 development；developer 是开发者。\n【4】develop\n讲解：want to 后面接动词原形 develop。\n【5】development → developer\n讲解：a … 指人用 developer。\n【6】C（a person who writes computer programs）\n讲解：developer 也常指程序员、软件开发者。\n【7】developer\n讲解：开发商 developer。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的哥哥做什么工作？",
+   "listen": "My brother is a software developer.",
+   "opts": [
+    "软件开发人员",
+    "医生",
+    "司机",
+    "老师"
+   ],
+   "why": "software developer 软件开发人员。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ in this company.",
+   "opts": [
+    "developers",
+    "developer",
+    "development",
+    "develop"
+   ],
+   "why": "many 后面接复数 developers。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 developer、development 中选一个，用适当形式填空。",
+   "stem": "The city's ______ is very fast.",
+   "ans": "development",
+   "why": "城市的“发展”用 development；developer 是开发者。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "They want to ______ a new game. (developer)",
+   "ans": "develop",
+   "why": "want to 后面接动词原形 develop。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is a game development.",
+   "ans": "development → developer",
+   "why": "a … 指人用 developer。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In English, a \"developer\" can be ______.",
+   "opts": [
+    "a person who writes computer programs",
+    "a kind of fruit",
+    "a school subject",
+    "a sport"
+   ],
+   "why": "developer 也常指程序员、软件开发者。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这家开发商建了很多新房子。",
+   "stem": "The ______ built many new houses.",
+   "ans": "developer",
+   "why": "开发商 developer。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

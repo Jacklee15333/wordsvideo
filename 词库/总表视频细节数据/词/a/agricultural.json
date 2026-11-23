@@ -1,0 +1,96 @@
+{
+ "单词": "agricultural",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在哪里上学？\n听：I study at an agricultural college.\nA. 医学院\nB. 艺术学院\nC. 农业大学\nD. 体育学院",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：China is a big ______ country.\nA. agriculture\nB. agricultural\nC. agriculturally\nD. agricultures\n考点：词性转换",
+  "题目3": "【选词填空】从 agriculture、agricultural 中选一个，用适当形式填空。\n题干：Modern ______ uses many machines.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The farm ______ a lot of rice last year. (produce)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Agricultural products is sold here.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Rice, corn and wheat are ______ products.\nA. factory\nB. office\nC. sea\nD. farm\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Agricultural comes from the noun ______.\nA. agree\nB. agriculture\nC. culture\nD. argue\n考点：词性转换",
+  "答案": "【1】C（农业大学）\n讲解：agricultural 农业的。\n【2】B（agricultural）\n讲解：名词 country 前要形容词 agricultural。\n【3】agriculture\n讲解：作主语要名词 agriculture。\n【4】produced\n讲解：last year 用过去式 produced。\n【5】is → are\n讲解：主语 products 是复数，用 are。\n【6】D（farm）\n讲解：农产品也叫 farm products。\n【7】B（agriculture）\n讲解：agricultural 是 agriculture 的形容词。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在哪里上学？",
+   "listen": "I study at an agricultural college.",
+   "opts": [
+    "农业大学",
+    "医学院",
+    "艺术学院",
+    "体育学院"
+   ],
+   "why": "agricultural 农业的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "China is a big ______ country.",
+   "opts": [
+    "agricultural",
+    "agriculture",
+    "agriculturally",
+    "agricultures"
+   ],
+   "why": "名词 country 前要形容词 agricultural。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 agriculture、agricultural 中选一个，用适当形式填空。",
+   "stem": "Modern ______ uses many machines.",
+   "ans": "agriculture",
+   "why": "作主语要名词 agriculture。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The farm ______ a lot of rice last year. (produce)",
+   "ans": "produced",
+   "why": "last year 用过去式 produced。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Agricultural products is sold here.",
+   "ans": "is → are",
+   "why": "主语 products 是复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Rice, corn and wheat are ______ products.",
+   "opts": [
+    "farm",
+    "factory",
+    "office",
+    "sea"
+   ],
+   "why": "农产品也叫 farm products。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Agricultural comes from the noun ______.",
+   "opts": [
+    "agriculture",
+    "agree",
+    "culture",
+    "argue"
+   ],
+   "why": "agricultural 是 agriculture 的形容词。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

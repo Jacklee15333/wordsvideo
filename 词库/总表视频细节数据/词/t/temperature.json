@@ -1,0 +1,97 @@
+{
+ "单词": "temperature",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的儿子今天怎么了？\n听：My son has a temperature today.\nA. 发烧了\nB. 感冒好了\nC. 很开心\nD. 不想上学",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ is very high today. It's 38℃.\nA. weather\nB. temperature\nC. temper\nD. temple",
+  "题目3": "【选词填空】从 temperature、weather 中选一个，用适当形式填空。\n题干：What's the ______ like today? Sunny or rainy?\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The ______ in winter and summer are very different. (temperature)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The temperature today is very hot.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"I have a temperature\" means I ______.\nA. feel cold\nB. am fine\nC. am hungry\nD. have a fever\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：At night the temperature can ______ to -10℃.\nA. rise\nB. drop\nC. heat\nD. warm\n考点：用法",
+  "答案": "【1】A（发烧了）\n讲解：have a temperature 发烧。\n【2】B（temperature）\n讲解：说多少度、高不高，用 temperature。\n【3】weather\n讲解：问晴天还是雨天，问的是天气 weather。\n【4】temperatures\n讲解：are 说明主语是复数 temperatures。\n【5】hot → high\n讲解：温度说 high / low，不说 hot。\n【6】D（have a fever）\n讲解：have a temperature 是“发烧”，不是“有体温”。\n【7】B（drop）\n讲解：夜里温度下降用 drop。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的儿子今天怎么了？",
+   "listen": "My son has a temperature today.",
+   "opts": [
+    "发烧了",
+    "感冒好了",
+    "很开心",
+    "不想上学"
+   ],
+   "why": "have a temperature 发烧。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ is very high today. It's 38℃.",
+   "opts": [
+    "temperature",
+    "weather",
+    "temper",
+    "temple"
+   ],
+   "why": "说多少度、高不高，用 temperature。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 temperature、weather 中选一个，用适当形式填空。",
+   "stem": "What's the ______ like today? Sunny or rainy?",
+   "ans": "weather",
+   "why": "问晴天还是雨天，问的是天气 weather。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The ______ in winter and summer are very different. (temperature)",
+   "ans": "temperatures",
+   "why": "are 说明主语是复数 temperatures。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The temperature today is very hot.",
+   "ans": "hot → high",
+   "why": "温度说 high / low，不说 hot。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"I have a temperature\" means I ______.",
+   "opts": [
+    "have a fever",
+    "feel cold",
+    "am fine",
+    "am hungry"
+   ],
+   "why": "have a temperature 是“发烧”，不是“有体温”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "At night the temperature can ______ to -10℃.",
+   "opts": [
+    "drop",
+    "rise",
+    "heat",
+    "warm"
+   ],
+   "why": "夜里温度下降用 drop。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

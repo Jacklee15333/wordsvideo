@@ -1,0 +1,90 @@
+{
+ "单词": "yet",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人做完作业了吗？\n听：I haven't finished my homework yet.\nA. 已经做完\nB. 还没做完\nC. 刚开始做\nD. 不打算做",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Have you seen the new film ______?\nA. already\nB. yet\nC. still\nD. ago",
+  "题目3": "【选词填空】从 already、yet 中选一个，用适当形式填空。\n题干：I have ______ cleaned my room. Come and see.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She hasn't come back already.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这件事他还没告诉任何人。\n题干：He ______ told anyone about it yet.",
+  "题目6": "【适当形式填空】用所给单词的适当形式填空。\n题干：Have they ______ at the station yet? (arrive)\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Not yet\" is a short answer meaning \"______\".\nA. never\nB. not now, but maybe later\nC. already done\nD. long ago\n考点：用法",
+  "答案": "【1】B（还没做完）\n讲解：haven't … yet 还没有。\n【2】B（yet）\n讲解：疑问句里问“已经……了吗”用 yet。\n【3】already\n讲解：肯定句里“已经”用 already。\n【4】already → yet\n讲解：否定句里“还没”用 yet。\n【5】hasn't\n讲解：主语 he，现在完成时否定用 hasn't + 过去分词。\n【6】arrived\n讲解：yet 常和现在完成时连用，have + 过去分词 arrived。\n【7】B（not now, but maybe later）\n讲解：not yet 还没有（以后可能会）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人做完作业了吗？",
+   "listen": "I haven't finished my homework yet.",
+   "opts": [
+    "还没做完",
+    "已经做完",
+    "刚开始做",
+    "不打算做"
+   ],
+   "why": "haven't … yet 还没有。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Have you seen the new film ______?",
+   "opts": [
+    "yet",
+    "already",
+    "still",
+    "ago"
+   ],
+   "why": "疑问句里问“已经……了吗”用 yet。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 already、yet 中选一个，用适当形式填空。",
+   "stem": "I have ______ cleaned my room. Come and see.",
+   "ans": "already",
+   "why": "肯定句里“已经”用 already。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She hasn't come back already.",
+   "ans": "already → yet",
+   "why": "否定句里“还没”用 yet。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这件事他还没告诉任何人。",
+   "stem": "He ______ told anyone about it yet.",
+   "ans": "hasn't",
+   "why": "主语 he，现在完成时否定用 hasn't + 过去分词。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Have they ______ at the station yet? (arrive)",
+   "ans": "arrived",
+   "why": "yet 常和现在完成时连用，have + 过去分词 arrived。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Not yet\" is a short answer meaning \"______\".",
+   "opts": [
+    "not now, but maybe later",
+    "never",
+    "already done",
+    "long ago"
+   ],
+   "why": "not yet 还没有（以后可能会）。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

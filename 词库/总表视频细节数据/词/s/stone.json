@@ -1,0 +1,94 @@
+{
+ "单词": "stone",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：墙是用什么建的？\n听：The wall is made of stone.\nA. 木头\nB. 砖\nC. 玻璃\nD. 石头",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The boy threw some ______ into the river.\nA. stone\nB. stones\nC. stony\nD. stonees",
+  "题目3": "【选词填空】从 stone、rock 中选一个，用适当形式填空。\n题干：The ship hit a huge ______ under the sea.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The house is built of stones.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：一石二鸟。\n题干：Kill two birds with one ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Stony\" means ______.\nA. made of glass\nB. very soft\nC. full of stones\nD. very wet\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In \"a precious stone\", \"stone\" means a ______.\nA. rock\nB. gem\nC. building\nD. brick\n考点：用法",
+  "答案": "【1】D（石头）\n讲解：stone 石头。\n【2】B（stones）\n讲解：some 后面可数名词用复数。\n【3】rock\n讲解：大块岩石用 rock。\n【4】stones → stone\n讲解：作建筑材料不可数。\n【5】stone\n讲解：kill two birds with one stone 一石二鸟。\n【6】C（full of stones）\n讲解：stony 多石的。\n【7】B（gem）\n讲解：stone 也指宝石。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：墙是用什么建的？",
+   "listen": "The wall is made of stone.",
+   "opts": [
+    "石头",
+    "木头",
+    "砖",
+    "玻璃"
+   ],
+   "why": "stone 石头。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The boy threw some ______ into the river.",
+   "opts": [
+    "stones",
+    "stone",
+    "stony",
+    "stonees"
+   ],
+   "why": "some 后面可数名词用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 stone、rock 中选一个，用适当形式填空。",
+   "stem": "The ship hit a huge ______ under the sea.",
+   "ans": "rock",
+   "why": "大块岩石用 rock。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The house is built of stones.",
+   "ans": "stones → stone",
+   "why": "作建筑材料不可数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "一石二鸟。",
+   "stem": "Kill two birds with one ______.",
+   "ans": "stone",
+   "why": "kill two birds with one stone 一石二鸟。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Stony\" means ______.",
+   "opts": [
+    "full of stones",
+    "made of glass",
+    "very soft",
+    "very wet"
+   ],
+   "why": "stony 多石的。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In \"a precious stone\", \"stone\" means a ______.",
+   "opts": [
+    "gem",
+    "rock",
+    "building",
+    "brick"
+   ],
+   "why": "stone 也指宝石。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

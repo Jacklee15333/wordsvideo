@@ -1,0 +1,93 @@
+{
+ "单词": "user",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个应用有多少用户？\n听：This app has over one million users.\nA. 一万多\nB. 一千多\nC. 一百多\nD. 一百多万",
+  "题目2": "【适当形式填空】用所给单词的适当形式填空。\n题干：All ______ must log in first. (user)\n考点：变形",
+  "题目3": "【单项选择】选出最恰当的一项。\n题干：A person who uses a computer is a computer ______.\nA. user\nB. use\nC. useful\nD. used\n考点：词性转换",
+  "题目4": "【选词填空】从 user、customer 中选一个，用适当形式填空。\n题干：The shop gave every ______ a free bag.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The users of this website is mostly students.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他们是这个软件的新用户。\n题干：They are new ______ of this software.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：How many ______ does the website have?\nA. user\nB. using\nC. uses\nD. users\n考点：变形",
+  "答案": "【1】D（一百多万）\n讲解：one million users 一百万用户。\n【2】users\n讲解：all 后面用复数 users。\n【3】A（user）\n讲解：使用的人用 -er：use → user。\n【4】customer\n讲解：某家店的顾客用 customer；user 是使用者。\n【5】is → are\n讲解：主语 the users 是复数，用 are。\n【6】users\n讲解：they 是复数，用 users。\n【7】D（users）\n讲解：How many 后面用复数 users。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个应用有多少用户？",
+   "listen": "This app has over one million users.",
+   "opts": [
+    "一百多万",
+    "一万多",
+    "一千多",
+    "一百多"
+   ],
+   "why": "one million users 一百万用户。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "All ______ must log in first. (user)",
+   "ans": "users",
+   "why": "all 后面用复数 users。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A person who uses a computer is a computer ______.",
+   "opts": [
+    "user",
+    "use",
+    "useful",
+    "used"
+   ],
+   "why": "使用的人用 -er：use → user。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 user、customer 中选一个，用适当形式填空。",
+   "stem": "The shop gave every ______ a free bag.",
+   "ans": "customer",
+   "why": "某家店的顾客用 customer；user 是使用者。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The users of this website is mostly students.",
+   "ans": "is → are",
+   "why": "主语 the users 是复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他们是这个软件的新用户。",
+   "stem": "They are new ______ of this software.",
+   "ans": "users",
+   "why": "they 是复数，用 users。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "How many ______ does the website have?",
+   "opts": [
+    "users",
+    "user",
+    "using",
+    "uses"
+   ],
+   "why": "How many 后面用复数 users。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

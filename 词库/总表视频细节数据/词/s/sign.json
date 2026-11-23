@@ -1,0 +1,93 @@
+{
+ "单词": "sign",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让对方做什么？\n听：Please sign your name here.\nA. 签名\nB. 写日期\nC. 画画\nD. 打勾",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please ______ your name here.\nA. signs\nB. signed\nC. sign\nD. signature\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：He ______ the letter yesterday. (sign)\n考点：变形",
+  "题目4": "【选词填空】从 sign、symbol 中选一个，用适当形式填空。\n题干：The dove is a ______ of peace.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The signs on the road is clear.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：请在这里签上你的名字。\n题干：Please put your ______ here.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Sign language means ______.\nA. 手语\nB. 签名\nC. 路标\nD. 星座\n考点：短语",
+  "答案": "【1】A（签名）\n讲解：sign 签名。\n【2】C（sign）\n讲解：please 后面用动词原形 sign。\n【3】signed\n讲解：yesterday 用过去式 signed。\n【4】symbol\n讲解：“象征”用 symbol；sign 是标志、迹象。\n【5】is → are\n讲解：主语 signs 复数，谓语用 are。\n【6】signature\n讲解：名词“签名”是 signature。\n【7】A（手语）\n讲解：sign language 手语。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让对方做什么？",
+   "listen": "Please sign your name here.",
+   "opts": [
+    "签名",
+    "写日期",
+    "画画",
+    "打勾"
+   ],
+   "why": "sign 签名。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please ______ your name here.",
+   "opts": [
+    "sign",
+    "signs",
+    "signed",
+    "signature"
+   ],
+   "why": "please 后面用动词原形 sign。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He ______ the letter yesterday. (sign)",
+   "ans": "signed",
+   "why": "yesterday 用过去式 signed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 sign、symbol 中选一个，用适当形式填空。",
+   "stem": "The dove is a ______ of peace.",
+   "ans": "symbol",
+   "why": "“象征”用 symbol；sign 是标志、迹象。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The signs on the road is clear.",
+   "ans": "is → are",
+   "why": "主语 signs 复数，谓语用 are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请在这里签上你的名字。",
+   "stem": "Please put your ______ here.",
+   "ans": "signature",
+   "why": "名词“签名”是 signature。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Sign language means ______.",
+   "opts": [
+    "手语",
+    "签名",
+    "路标",
+    "星座"
+   ],
+   "why": "sign language 手语。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

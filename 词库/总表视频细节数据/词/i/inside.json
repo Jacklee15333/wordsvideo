@@ -1,0 +1,87 @@
+{
+ "单词": "inside",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：猫在哪里？\n听：The cat is inside the box.\nA. 在盒子里\nB. 在盒子上\nC. 在盒子旁边\nD. 在门外",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：It's cold outside. Let's go ______.\nA. outside\nB. inside\nC. out\nD. away",
+  "题目3": "【选词填空】从 inside、outside 中选一个，用适当形式填空。\n题干：The children are playing ______ in the sun.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The inside of the house were very clean.",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：He opened the box ______. (careful)",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他把毛衣穿反了。\n题干：He wore his sweater inside ______.\n考点：用法",
+  "题目7": "【选词填空】从 inside、insider 中选一个，用适当形式填空。\n题干：An ______ told the reporter the secret.\n考点：易混",
+  "答案": "【1】A（在盒子里）\n讲解：inside 在……里面。\n【2】B（inside）\n讲解：外面冷，进屋去，用 inside。\n【3】outside\n讲解：在阳光下玩是在外面 outside。\n【4】were → was\n讲解：主语 the inside 是单数，用 was。\n【5】carefully\n讲解：修饰动词 opened 用副词 carefully。\n【6】out\n讲解：inside out 里朝外、穿反了。\n【7】insider\n讲解：“内部人士”是人，用 insider。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：猫在哪里？",
+   "listen": "The cat is inside the box.",
+   "opts": [
+    "在盒子里",
+    "在盒子上",
+    "在盒子旁边",
+    "在门外"
+   ],
+   "why": "inside 在……里面。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It's cold outside. Let's go ______.",
+   "opts": [
+    "inside",
+    "outside",
+    "out",
+    "away"
+   ],
+   "why": "外面冷，进屋去，用 inside。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 inside、outside 中选一个，用适当形式填空。",
+   "stem": "The children are playing ______ in the sun.",
+   "ans": "outside",
+   "why": "在阳光下玩是在外面 outside。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The inside of the house were very clean.",
+   "ans": "were → was",
+   "why": "主语 the inside 是单数，用 was。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He opened the box ______. (careful)",
+   "ans": "carefully",
+   "why": "修饰动词 opened 用副词 carefully。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他把毛衣穿反了。",
+   "stem": "He wore his sweater inside ______.",
+   "ans": "out",
+   "why": "inside out 里朝外、穿反了。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 inside、insider 中选一个，用适当形式填空。",
+   "stem": "An ______ told the reporter the secret.",
+   "ans": "insider",
+   "why": "“内部人士”是人，用 insider。",
+   "kd": "易混",
+   "zh": ""
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

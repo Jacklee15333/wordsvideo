@@ -1,0 +1,94 @@
+{
+ "单词": "which",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在问什么？\n听：Which bag is yours, the red one or the blue one?\nA. 包是谁买的\nB. 哪个包是你的\nC. 包多少钱\nD. 包在哪里",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：—______ season do you like better, spring or autumn?\n题干：—Autumn.\nA. What\nB. Who\nC. How\nD. Which\n考点：易混",
+  "题目3": "【选词填空】从 who、which 中选一个，用适当形式填空。\n题干：The girl ______ is singing is my cousin.\n考点：用法",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：This is the book who I bought yesterday.\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：你想要哪一本书？\n题干：______ ______ do you want?\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：______ is your favorite food?\nA. What\nB. Which\nC. Who\nD. Whose\n考点：易混",
+  "题目7": "【适当形式填空】用所给单词的适当形式填空。\n题干：Which of the two ______ is heavier? (box)\n考点：用法",
+  "答案": "【1】B（哪个包是你的）\n讲解：which 哪一个，在红、蓝两个里挑。\n【2】D（Which）\n讲解：在给定的两样里挑，用 which。\n【3】who\n讲解：先行词 the girl 是人，用 who；which 指物。\n【4】who → which\n讲解：先行词 the book 是物，用 which（也可用 that）。\n【5】Which；book\n讲解：“哪一本书”用 which + 名词。\n【6】A（What）\n讲解：开放范围随便说，用 what；which 在给定的几个里挑。\n【7】boxes\n讲解：which of 后面接复数名词，box 加 es。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在问什么？",
+   "listen": "Which bag is yours, the red one or the blue one?",
+   "opts": [
+    "哪个包是你的",
+    "包是谁买的",
+    "包多少钱",
+    "包在哪里"
+   ],
+   "why": "which 哪一个，在红、蓝两个里挑。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "—______ season do you like better, spring or autumn?\n—Autumn.",
+   "opts": [
+    "Which",
+    "What",
+    "Who",
+    "How"
+   ],
+   "why": "在给定的两样里挑，用 which。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 who、which 中选一个，用适当形式填空。",
+   "stem": "The girl ______ is singing is my cousin.",
+   "ans": "who",
+   "why": "先行词 the girl 是人，用 who；which 指物。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This is the book who I bought yesterday.",
+   "ans": "who → which",
+   "why": "先行词 the book 是物，用 which（也可用 that）。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你想要哪一本书？",
+   "stem": "______ ______ do you want?",
+   "ans": "Which；book",
+   "why": "“哪一本书”用 which + 名词。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ is your favorite food?",
+   "opts": [
+    "What",
+    "Which",
+    "Who",
+    "Whose"
+   ],
+   "why": "开放范围随便说，用 what；which 在给定的几个里挑。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Which of the two ______ is heavier? (box)",
+   "ans": "boxes",
+   "why": "which of 后面接复数名词，box 加 es。",
+   "kd": "用法",
+   "zh": ""
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

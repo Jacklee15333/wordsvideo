@@ -1,0 +1,93 @@
+{
+ "单词": "tissue",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人需要什么？\n听：Can I have a tissue? I have a cold.\nA. 一杯水\nB. 一片药\nC. 一张纸巾\nD. 一件外套",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are only two ______ left in the box.\nA. tissue\nB. tissuees\nC. a tissue\nD. tissues\n考点：变形",
+  "题目3": "【选词填空】从 tissue、napkin 中选一个，用适当形式填空。\n题干：The waiter put a ______ next to each plate.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She took a tissue and ______ her tears. (wipe)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Here is some tissues for you.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他的故事纯属一派谎言。\n题干：His story is a ______ of lies.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Mum bought a ______ of tissues.\nA. bottle\nB. box\nC. bowl\nD. cup\n考点：用法",
+  "答案": "【1】C（一张纸巾）\n讲解：a tissue 一张纸巾。\n【2】D（tissues）\n讲解：two 后面要复数 tissues。\n【3】napkin\n讲解：餐桌上放在盘子旁的是餐巾 napkin；tissue 是擦脸、擤鼻涕的面巾纸。\n【4】wiped\n讲解：和 took 一样说过去，用过去式 wiped。\n【5】is → are\n讲解：tissues 是复数，用 are。\n【6】tissue\n讲解：a tissue of lies 一派谎言。\n【7】B（box）\n讲解：“一盒纸巾”是 a box of tissues。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人需要什么？",
+   "listen": "Can I have a tissue? I have a cold.",
+   "opts": [
+    "一张纸巾",
+    "一杯水",
+    "一片药",
+    "一件外套"
+   ],
+   "why": "a tissue 一张纸巾。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are only two ______ left in the box.",
+   "opts": [
+    "tissues",
+    "tissue",
+    "tissuees",
+    "a tissue"
+   ],
+   "why": "two 后面要复数 tissues。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tissue、napkin 中选一个，用适当形式填空。",
+   "stem": "The waiter put a ______ next to each plate.",
+   "ans": "napkin",
+   "why": "餐桌上放在盘子旁的是餐巾 napkin；tissue 是擦脸、擤鼻涕的面巾纸。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She took a tissue and ______ her tears. (wipe)",
+   "ans": "wiped",
+   "why": "和 took 一样说过去，用过去式 wiped。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Here is some tissues for you.",
+   "ans": "is → are",
+   "why": "tissues 是复数，用 are。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他的故事纯属一派谎言。",
+   "stem": "His story is a ______ of lies.",
+   "ans": "tissue",
+   "why": "a tissue of lies 一派谎言。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Mum bought a ______ of tissues.",
+   "opts": [
+    "box",
+    "bottle",
+    "bowl",
+    "cup"
+   ],
+   "why": "“一盒纸巾”是 a box of tissues。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

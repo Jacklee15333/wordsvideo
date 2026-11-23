@@ -1,0 +1,92 @@
+{
+ "单词": "science-music",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说这是什么样的节目？\n听：This is a science-music show for kids.\nA. 科学课\nB. 科学和音乐结合的节目\nC. 音乐会\nD. 体育比赛",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：In this ______ class, we learn how sound travels by playing drums.\nA. scientist\nB. musician\nC. science-music\nD. museum",
+  "题目3": "【选词填空】从 science、scientist 中选一个，用适当形式填空。\n题干：My dream is to be a ______.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We made ______ instruments in the science-music lesson. (music)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The science-music show were very popular last week.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A science-music project is about ______.\nA. only sports\nB. only maths\nC. cooking\nD. both science and music\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这位音乐家也喜欢科学。\n题干：The ______ also likes science.\n考点：词性转换",
+  "答案": "【1】B（科学和音乐结合的节目）\n讲解：science-music 科学与音乐结合的。\n【2】C（science-music）\n讲解：既学声音的科学道理又玩鼓，是科学和音乐结合的课。\n【3】scientist\n讲解：be a 后面要指人的名词 scientist。\n【4】musical\n讲解：修饰名词 instruments 用形容词 musical。\n【5】were → was\n讲解：主语 show 是单数，be 用 was。\n【6】D（both science and music）\n讲解：science-music 是科学和音乐跨界的。\n【7】musician\n讲解：“音乐家”是 musician。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说这是什么样的节目？",
+   "listen": "This is a science-music show for kids.",
+   "opts": [
+    "科学和音乐结合的节目",
+    "科学课",
+    "音乐会",
+    "体育比赛"
+   ],
+   "why": "science-music 科学与音乐结合的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In this ______ class, we learn how sound travels by playing drums.",
+   "opts": [
+    "science-music",
+    "scientist",
+    "musician",
+    "museum"
+   ],
+   "why": "既学声音的科学道理又玩鼓，是科学和音乐结合的课。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 science、scientist 中选一个，用适当形式填空。",
+   "stem": "My dream is to be a ______.",
+   "ans": "scientist",
+   "why": "be a 后面要指人的名词 scientist。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We made ______ instruments in the science-music lesson. (music)",
+   "ans": "musical",
+   "why": "修饰名词 instruments 用形容词 musical。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The science-music show were very popular last week.",
+   "ans": "were → was",
+   "why": "主语 show 是单数，be 用 was。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A science-music project is about ______.",
+   "opts": [
+    "both science and music",
+    "only sports",
+    "only maths",
+    "cooking"
+   ],
+   "why": "science-music 是科学和音乐跨界的。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这位音乐家也喜欢科学。",
+   "stem": "The ______ also likes science.",
+   "ans": "musician",
+   "why": "“音乐家”是 musician。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

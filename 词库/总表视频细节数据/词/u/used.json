@@ -1,0 +1,94 @@
+{
+ "单词": "used",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他上周买了什么？\n听：He bought a used car last week.\nA. 一辆新车\nB. 一辆二手车\nC. 一辆自行车\nD. 一辆公交车",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My grandfather used to ______ a teacher.\nA. being\nB. was\nC. been\nD. be\n考点：用法",
+  "题目3": "【选词填空】从 used、unused 中选一个，用适当形式填空。\n题干：The room is ______; nobody has lived there for years.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：I'm used to ______ in the city now. (live)\n考点：用法",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Wood is used make paper.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这家店卖二手书。\n题干：This shop sells ______ books.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Did you ______ to play basketball?\nA. used\nB. use\nC. using\nD. uses\n考点：用法",
+  "答案": "【1】B（一辆二手车）\n讲解：used car 二手车。\n【2】D（be）\n讲解：used to do 后面用动词原形 be。\n【3】unused\n讲解：多年没人住，是闲置的 unused。\n【4】living\n讲解：be used to doing 习惯于做某事。\n【5】make → to make\n讲解：be used to do 被用来做某事，要带 to。\n【6】used\n讲解：used books 二手书。\n【7】B（use）\n讲解：Did 后面用动词原形，Did you use to …?"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他上周买了什么？",
+   "listen": "He bought a used car last week.",
+   "opts": [
+    "一辆二手车",
+    "一辆新车",
+    "一辆自行车",
+    "一辆公交车"
+   ],
+   "why": "used car 二手车。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My grandfather used to ______ a teacher.",
+   "opts": [
+    "be",
+    "being",
+    "was",
+    "been"
+   ],
+   "why": "used to do 后面用动词原形 be。",
+   "kd": "用法"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 used、unused 中选一个，用适当形式填空。",
+   "stem": "The room is ______; nobody has lived there for years.",
+   "ans": "unused",
+   "why": "多年没人住，是闲置的 unused。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I'm used to ______ in the city now. (live)",
+   "ans": "living",
+   "why": "be used to doing 习惯于做某事。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Wood is used make paper.",
+   "ans": "make → to make",
+   "why": "be used to do 被用来做某事，要带 to。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这家店卖二手书。",
+   "stem": "This shop sells ______ books.",
+   "ans": "used",
+   "why": "used books 二手书。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Did you ______ to play basketball?",
+   "opts": [
+    "use",
+    "used",
+    "using",
+    "uses"
+   ],
+   "why": "Did 后面用动词原形，Did you use to …?",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

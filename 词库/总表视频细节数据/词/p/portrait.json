@@ -1,0 +1,97 @@
+{
+ "单词": "portrait",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：墙上挂着什么？\n听：There is a portrait of my grandfather on the wall.\nA. 风景画\nB. 地图\nC. 爷爷的画像\nD. 镜子",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The artist painted three ______ of the queen.\nA. portrait\nB. portray\nC. portrayal\nD. portraits\n考点：变形",
+  "题目3": "【选词填空】从 portrait、portray 中选一个，用适当形式填空。\n题干：The film ______ him as a hero.\n考点：词性转换",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：她画了一幅自画像。\n题干：She drew a self-______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This portrait were painted in 1900.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A painting of mountains and rivers is a ______.\nA. portrait\nB. landscape\nC. poster\nD. map\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A painting of yourself by yourself is a ______.\nA. portraiture\nB. self-picture\nC. self-portrait\nD. myself-portrait\n考点：用法",
+  "答案": "【1】C（爷爷的画像）\n讲解：portrait 肖像。\n【2】D（portraits）\n讲解：three 后面接复数。\n【3】portrays\n讲解：动词“描绘”用 portray，主语单数加 s。\n【4】portrait\n讲解：自画像 self-portrait。\n【5】were → was\n讲解：主语单数，用 was。\n【6】B（landscape）\n讲解：画山水的是风景画 landscape；portrait 是人物肖像。\n【7】C（self-portrait）\n讲解：自画像 self-portrait。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：墙上挂着什么？",
+   "listen": "There is a portrait of my grandfather on the wall.",
+   "opts": [
+    "爷爷的画像",
+    "风景画",
+    "地图",
+    "镜子"
+   ],
+   "why": "portrait 肖像。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The artist painted three ______ of the queen.",
+   "opts": [
+    "portraits",
+    "portrait",
+    "portray",
+    "portrayal"
+   ],
+   "why": "three 后面接复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 portrait、portray 中选一个，用适当形式填空。",
+   "stem": "The film ______ him as a hero.",
+   "ans": "portrays",
+   "why": "动词“描绘”用 portray，主语单数加 s。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她画了一幅自画像。",
+   "stem": "She drew a self-______.",
+   "ans": "portrait",
+   "why": "自画像 self-portrait。"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This portrait were painted in 1900.",
+   "ans": "were → was",
+   "why": "主语单数，用 was。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A painting of mountains and rivers is a ______.",
+   "opts": [
+    "landscape",
+    "portrait",
+    "poster",
+    "map"
+   ],
+   "why": "画山水的是风景画 landscape；portrait 是人物肖像。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A painting of yourself by yourself is a ______.",
+   "opts": [
+    "self-portrait",
+    "portraiture",
+    "self-picture",
+    "myself-portrait"
+   ],
+   "why": "自画像 self-portrait。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

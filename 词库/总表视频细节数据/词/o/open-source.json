@@ -1,0 +1,98 @@
+{
+ "单词": "open-source",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这是什么软件？\n听：This is open-source software.\nA. 付费软件\nB. 开源软件\nC. 游戏\nD. 杀毒软件",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Anyone can change ______ software.\nA. open-sourced\nB. open source's\nC. opened-source\nD. open-source\n考点：变形",
+  "题目3": "【选词填空】从 open-source、free 中选一个，用适当形式填空。\n题干：This app costs nothing. It's ______.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：It is open-source software, so nobody can see its code.\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他们公开了源代码。\n题干：They made the source ______ public.\n考点：短语",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Open-source software lets people ______.\nA. pay a lot\nB. see and change its code\nC. never use it\nD. break it\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Open-source is close in meaning to ______.\nA. secret\nB. closed\nC. public\nD. private\n考点：易混",
+  "答案": "【1】B（开源软件）\n讲解：open-source 开源的。\n【2】D（open-source）\n讲解：“开源的”是 open-source。\n【3】free\n讲解：“免费的”用 free；open-source 强调源代码公开。\n【4】nobody → anybody\n讲解：开源软件的代码人人可看。\n【5】code\n讲解：源代码 source code。\n【6】B（see and change its code）\n讲解：开源软件的代码可以查看、修改。\n【7】C（public）\n讲解：open-source 公开的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这是什么软件？",
+   "listen": "This is open-source software.",
+   "opts": [
+    "开源软件",
+    "付费软件",
+    "游戏",
+    "杀毒软件"
+   ],
+   "why": "open-source 开源的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Anyone can change ______ software.",
+   "opts": [
+    "open-source",
+    "open-sourced",
+    "open source's",
+    "opened-source"
+   ],
+   "why": "“开源的”是 open-source。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 open-source、free 中选一个，用适当形式填空。",
+   "stem": "This app costs nothing. It's ______.",
+   "ans": "free",
+   "why": "“免费的”用 free；open-source 强调源代码公开。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "It is open-source software, so nobody can see its code.",
+   "ans": "nobody → anybody",
+   "why": "开源软件的代码人人可看。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他们公开了源代码。",
+   "stem": "They made the source ______ public.",
+   "ans": "code",
+   "why": "源代码 source code。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Open-source software lets people ______.",
+   "opts": [
+    "see and change its code",
+    "pay a lot",
+    "never use it",
+    "break it"
+   ],
+   "why": "开源软件的代码可以查看、修改。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Open-source is close in meaning to ______.",
+   "opts": [
+    "public",
+    "secret",
+    "closed",
+    "private"
+   ],
+   "why": "open-source 公开的。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

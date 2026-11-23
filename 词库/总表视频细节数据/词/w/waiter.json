@@ -1,0 +1,93 @@
+{
+ "单词": "waiter",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：服务员拿来了什么？\n听：The waiter brought us the menu.\nA. 账单\nB. 水\nC. 菜单\nD. 甜点",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ took our order.\nA. wait\nB. waiting\nC. waiter\nD. waits\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are five ______ in the restaurant. (waiter)\n考点：变形",
+  "题目4": "【选词填空】从 waiter、shop assistant 中选一个，用适当形式填空。\n题干：The ______ helped me find a dress in the shop.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The waiter are very busy at lunchtime.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：女服务员给我们倒了水。\n题干：The ______ poured us some water.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：We usually meet a waiter in a ______.\nA. hospital\nB. restaurant\nC. library\nD. bank\n考点：用法",
+  "答案": "【1】C（菜单）\n讲解：waiter 服务员（男）。\n【2】C（waiter）\n讲解：the 后面要名词 waiter（服务员）。\n【3】waiters\n讲解：five 后面用复数 waiters。\n【4】shop assistant\n讲解：商店店员是 shop assistant；waiter 只在餐厅服务。\n【5】are → is\n讲解：主语 waiter 单数，谓语用 is。\n【6】waitress\n讲解：女服务员是 waitress。\n【7】B（restaurant）\n讲解：waiter 在餐厅工作。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：服务员拿来了什么？",
+   "listen": "The waiter brought us the menu.",
+   "opts": [
+    "菜单",
+    "账单",
+    "水",
+    "甜点"
+   ],
+   "why": "waiter 服务员（男）。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ took our order.",
+   "opts": [
+    "waiter",
+    "wait",
+    "waiting",
+    "waits"
+   ],
+   "why": "the 后面要名词 waiter（服务员）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are five ______ in the restaurant. (waiter)",
+   "ans": "waiters",
+   "why": "five 后面用复数 waiters。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 waiter、shop assistant 中选一个，用适当形式填空。",
+   "stem": "The ______ helped me find a dress in the shop.",
+   "ans": "shop assistant",
+   "why": "商店店员是 shop assistant；waiter 只在餐厅服务。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The waiter are very busy at lunchtime.",
+   "ans": "are → is",
+   "why": "主语 waiter 单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "女服务员给我们倒了水。",
+   "stem": "The ______ poured us some water.",
+   "ans": "waitress",
+   "why": "女服务员是 waitress。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We usually meet a waiter in a ______.",
+   "opts": [
+    "restaurant",
+    "hospital",
+    "library",
+    "bank"
+   ],
+   "why": "waiter 在餐厅工作。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

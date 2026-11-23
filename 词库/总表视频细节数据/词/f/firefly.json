@@ -1,0 +1,94 @@
+{
+ "单词": "firefly",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：晚上花园里有什么？\n听：We saw fireflies in the garden at night.\nA. 蝴蝶\nB. 蜜蜂\nC. 蚊子\nD. 萤火虫",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many ______ by the river in summer.\nA. fireflys\nB. firefly\nC. fireflyes\nD. fireflies",
+  "题目3": "【选词填空】从 firefly、butterfly 中选一个，用适当形式填空。\n题干：A ______ has big colourful wings and flies in the daytime.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The firefly light up the night.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这种小虫能发出光。\n题干：This little insect can give ______ light.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A firefly is really a kind of ______, not a fly.\nA. bird\nB. beetle\nC. fish\nD. spider\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In Britain, people also call a firefly a \"______\".\nA. fire-bug\nB. glow-worm\nC. light-fly\nD. star-bug\n考点：用法",
+  "答案": "【1】D（萤火虫）\n讲解：fireflies 萤火虫。\n【2】D（fireflies）\n讲解：y 变 i 加 es。\n【3】butterfly\n讲解：白天飞的彩色大翅膀的是蝴蝶。\n【4】light → lights\n讲解：主语单数，谓语用三单。\n【5】off\n讲解：give off 发出（光、气味）。\n【6】B（beetle）\n讲解：萤火虫其实是甲虫。\n【7】B（glow-worm）\n讲解：英国也常说 glow-worm。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：晚上花园里有什么？",
+   "listen": "We saw fireflies in the garden at night.",
+   "opts": [
+    "萤火虫",
+    "蝴蝶",
+    "蜜蜂",
+    "蚊子"
+   ],
+   "why": "fireflies 萤火虫。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ by the river in summer.",
+   "opts": [
+    "fireflies",
+    "fireflys",
+    "firefly",
+    "fireflyes"
+   ],
+   "why": "y 变 i 加 es。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 firefly、butterfly 中选一个，用适当形式填空。",
+   "stem": "A ______ has big colourful wings and flies in the daytime.",
+   "ans": "butterfly",
+   "why": "白天飞的彩色大翅膀的是蝴蝶。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The firefly light up the night.",
+   "ans": "light → lights",
+   "why": "主语单数，谓语用三单。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这种小虫能发出光。",
+   "stem": "This little insect can give ______ light.",
+   "ans": "off",
+   "why": "give off 发出（光、气味）。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A firefly is really a kind of ______, not a fly.",
+   "opts": [
+    "beetle",
+    "bird",
+    "fish",
+    "spider"
+   ],
+   "why": "萤火虫其实是甲虫。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In Britain, people also call a firefly a \"______\".",
+   "opts": [
+    "glow-worm",
+    "fire-bug",
+    "light-fly",
+    "star-bug"
+   ],
+   "why": "英国也常说 glow-worm。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

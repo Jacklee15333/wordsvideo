@@ -1,0 +1,93 @@
+{
+ "单词": "translation",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在看什么？\n听：I'm reading a Chinese translation of the book.\nA. 原版书\nB. 这本书的中译本\nC. 一本杂志\nD. 一份报纸",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Her ______ is better than mine.\nA. translate\nB. translator\nC. translation\nD. translated",
+  "题目3": "【选词填空】从 translation、translator 中选一个，用适当形式填空。\n题干：She works as a ______ for a big company.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are several ______ of this poem. (translation)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He translationed the story into English.\n考点：词性转换",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：请把这段话翻译成中文。\n题干：Please ______ this passage into Chinese.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Something is often lost ______ translation.\nA. on\nB. at\nC. in\nD. by\n考点：短语",
+  "答案": "【1】B（这本书的中译本）\n讲解：translation 翻译、译本。\n【2】C（translation）\n讲解：her 后面要名词 translation。\n【3】translator\n讲解：做翻译工作的人是 translator。\n【4】translations\n讲解：several 后面用复数 translations。\n【5】translationed → translated\n讲解：动词“翻译”是 translate，过去式 translated。\n【6】translate\n讲解：please 后面用原形 translate。\n【7】C（in）\n讲解：lost in translation 在翻译中丢失。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在看什么？",
+   "listen": "I'm reading a Chinese translation of the book.",
+   "opts": [
+    "这本书的中译本",
+    "原版书",
+    "一本杂志",
+    "一份报纸"
+   ],
+   "why": "translation 翻译、译本。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Her ______ is better than mine.",
+   "opts": [
+    "translation",
+    "translate",
+    "translator",
+    "translated"
+   ],
+   "why": "her 后面要名词 translation。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 translation、translator 中选一个，用适当形式填空。",
+   "stem": "She works as a ______ for a big company.",
+   "ans": "translator",
+   "why": "做翻译工作的人是 translator。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are several ______ of this poem. (translation)",
+   "ans": "translations",
+   "why": "several 后面用复数 translations。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He translationed the story into English.",
+   "ans": "translationed → translated",
+   "why": "动词“翻译”是 translate，过去式 translated。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请把这段话翻译成中文。",
+   "stem": "Please ______ this passage into Chinese.",
+   "ans": "translate",
+   "why": "please 后面用原形 translate。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Something is often lost ______ translation.",
+   "opts": [
+    "in",
+    "on",
+    "at",
+    "by"
+   ],
+   "why": "lost in translation 在翻译中丢失。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

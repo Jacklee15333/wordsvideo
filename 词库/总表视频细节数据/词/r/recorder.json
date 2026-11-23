@@ -1,0 +1,97 @@
+{
+ "单词": "recorder",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在音乐课上学什么？\n听：We learn to play the recorder in music class.\nA. 弹钢琴\nB. 打鼓\nC. 拉小提琴\nD. 吹竖笛",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Turn on the ______ and say something.\nA. record\nB. recording\nC. recorded\nD. recorder\n考点：词性转换",
+  "题目3": "【选词填空】从 recorder、recording 中选一个，用适当形式填空。\n题干：Let's listen to the ______ of the class.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are two ______ on the desk. (recorder)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The recorder are broken.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In music class, a recorder is a kind of ______.\nA. machine\nB. book\nC. instrument\nD. chair\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A flight recorder on a plane is also called a ______ box.\nA. red\nB. white\nC. black\nD. blue\n考点：用法",
+  "答案": "【1】D（吹竖笛）\n讲解：recorder 竖笛。\n【2】D（recorder）\n讲解：打开录音机用 recorder。\n【3】recording\n讲解：听的是“录音”，用 recording。\n【4】recorders\n讲解：two 后面接复数 recorders。\n【5】are → is\n讲解：主语 recorder 是单数，用 is。\n【6】C（instrument）\n讲解：音乐课上的 recorder 是竖笛，一种乐器。\n【7】C（black）\n讲解：飞行记录仪俗称“黑匣子”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在音乐课上学什么？",
+   "listen": "We learn to play the recorder in music class.",
+   "opts": [
+    "吹竖笛",
+    "弹钢琴",
+    "打鼓",
+    "拉小提琴"
+   ],
+   "why": "recorder 竖笛。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Turn on the ______ and say something.",
+   "opts": [
+    "recorder",
+    "record",
+    "recording",
+    "recorded"
+   ],
+   "why": "打开录音机用 recorder。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 recorder、recording 中选一个，用适当形式填空。",
+   "stem": "Let's listen to the ______ of the class.",
+   "ans": "recording",
+   "why": "听的是“录音”，用 recording。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are two ______ on the desk. (recorder)",
+   "ans": "recorders",
+   "why": "two 后面接复数 recorders。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The recorder are broken.",
+   "ans": "are → is",
+   "why": "主语 recorder 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In music class, a recorder is a kind of ______.",
+   "opts": [
+    "instrument",
+    "machine",
+    "book",
+    "chair"
+   ],
+   "why": "音乐课上的 recorder 是竖笛，一种乐器。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A flight recorder on a plane is also called a ______ box.",
+   "opts": [
+    "black",
+    "red",
+    "white",
+    "blue"
+   ],
+   "why": "飞行记录仪俗称“黑匣子”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

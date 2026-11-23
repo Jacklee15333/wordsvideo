@@ -1,0 +1,91 @@
+{
+ "单词": "upstream",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：鱼往哪里游？\n听：The fish are swimming upstream.\nA. 向下游\nB. 原地不动\nC. 向岸边\nD. 向上游",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Salmon swim ______ to lay their eggs.\nA. upstream\nB. downstream\nC. stream\nD. streams",
+  "题目3": "【选词填空】从 upstream、downstream 中选一个，用适当形式填空。\n题干：The boat floated ______ with the water.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The boat ______ slowly against the water. (move)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Salmon swims upstream every year.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：It's hard to row upstream ______ the water.\nA. with\nB. along\nC. against\nD. by\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这条河从上游流向下游。\n题干：The river flows from upstream to ______.\n考点：易混",
+  "答案": "【1】D（向上游）\n讲解：upstream 向上游。\n【2】A（upstream）\n讲解：鲑鱼逆流而上产卵，用 upstream。\n【3】downstream\n讲解：顺水漂用 downstream。\n【4】moved\n讲解：讲过去的事用 moved。\n【5】swims → swim\n讲解：salmon 这里指一群鲑鱼，复数，用 swim。\n【6】C（against）\n讲解：逆水 against the water。\n【7】downstream\n讲解：上游 upstream，下游 downstream。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：鱼往哪里游？",
+   "listen": "The fish are swimming upstream.",
+   "opts": [
+    "向上游",
+    "向下游",
+    "原地不动",
+    "向岸边"
+   ],
+   "why": "upstream 向上游。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Salmon swim ______ to lay their eggs.",
+   "opts": [
+    "upstream",
+    "downstream",
+    "stream",
+    "streams"
+   ],
+   "why": "鲑鱼逆流而上产卵，用 upstream。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 upstream、downstream 中选一个，用适当形式填空。",
+   "stem": "The boat floated ______ with the water.",
+   "ans": "downstream",
+   "why": "顺水漂用 downstream。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The boat ______ slowly against the water. (move)",
+   "ans": "moved",
+   "why": "讲过去的事用 moved。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Salmon swims upstream every year.",
+   "ans": "swims → swim",
+   "why": "salmon 这里指一群鲑鱼，复数，用 swim。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "It's hard to row upstream ______ the water.",
+   "opts": [
+    "against",
+    "with",
+    "along",
+    "by"
+   ],
+   "why": "逆水 against the water。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这条河从上游流向下游。",
+   "stem": "The river flows from upstream to ______.",
+   "ans": "downstream",
+   "why": "上游 upstream，下游 downstream。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "breakfast",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人早餐吃了什么？\n听：I had eggs for breakfast.\nA. 面包\nB. 面条\nC. 鸡蛋\nD. 粥",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I usually have ______ at seven.\nA. a breakfast\nB. the breakfast\nC. breakfast\nD. breakfasts\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We had two big ______ at the hotel. (breakfast)\n考点：变形",
+  "题目4": "【选词填空】从 breakfast、lunch 中选一个，用适当形式填空。\n题干：We eat ______ at noon.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He read the newspaper on breakfast.\n考点：短语",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：你早餐吃了什么？\n题干：What did you have ______ breakfast?\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Breakfast\" breaks the fast of the ______.\nA. day\nB. week\nC. night\nD. year\n考点：用法",
+  "答案": "【1】C（鸡蛋）\n讲解：for breakfast 早餐吃。\n【2】C（breakfast）\n讲解：have breakfast 吃早餐，不加冠词。\n【3】breakfasts\n讲解：two 后面用复数 breakfasts。\n【4】lunch\n讲解：中午吃的是午饭 lunch。\n【5】on → at\n讲解：at breakfast 早餐时。\n【6】for\n讲解：for breakfast 早餐吃……。\n【7】C（night）\n讲解：早餐打破了一夜的空腹，所以叫 break + fast。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人早餐吃了什么？",
+   "listen": "I had eggs for breakfast.",
+   "opts": [
+    "鸡蛋",
+    "面包",
+    "面条",
+    "粥"
+   ],
+   "why": "for breakfast 早餐吃。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I usually have ______ at seven.",
+   "opts": [
+    "breakfast",
+    "a breakfast",
+    "the breakfast",
+    "breakfasts"
+   ],
+   "why": "have breakfast 吃早餐，不加冠词。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We had two big ______ at the hotel. (breakfast)",
+   "ans": "breakfasts",
+   "why": "two 后面用复数 breakfasts。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 breakfast、lunch 中选一个，用适当形式填空。",
+   "stem": "We eat ______ at noon.",
+   "ans": "lunch",
+   "why": "中午吃的是午饭 lunch。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He read the newspaper on breakfast.",
+   "ans": "on → at",
+   "why": "at breakfast 早餐时。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你早餐吃了什么？",
+   "stem": "What did you have ______ breakfast?",
+   "ans": "for",
+   "why": "for breakfast 早餐吃……。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Breakfast\" breaks the fast of the ______.",
+   "opts": [
+    "night",
+    "day",
+    "week",
+    "year"
+   ],
+   "why": "早餐打破了一夜的空腹，所以叫 break + fast。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

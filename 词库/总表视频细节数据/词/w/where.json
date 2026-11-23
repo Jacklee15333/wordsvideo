@@ -1,0 +1,93 @@
+{
+ "单词": "where",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说了什么？\n听：I don't know where my keys are.\nA. 不知道钥匙是谁的\nB. 不知道什么时候丢的\nC. 不知道为什么丢了\nD. 不知道钥匙在哪",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：—______ did you buy the bike?\n题干：—In a shop near my home.\nA. When\nB. Where\nC. How\nD. Why",
+  "题目3": "【选词填空】从 where、which 中选一个，用适当形式填空。\n题干：This is the park ______ we visited last week.\n考点：用法",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Can you tell me where is the post office?\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我不知道该去哪里。\n题干：I don't know ______ ______ go.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Please ______ your coat. It's cold outside.\nA. where\nB. were\nC. we're\nD. wear\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：你是哪里人？\n题干：Where are you from? = Where do you ______ ______?\n考点：短语",
+  "答案": "【1】D（不知道钥匙在哪）\n讲解：where 在哪里，说话人不知道钥匙在哪儿。\n【2】B（Where）\n讲解：答语 In a shop… 说的是地点，问地点用 where。\n【3】which\n讲解：visited 后面缺宾语，先行词 the park 作宾语用 which；作地点状语才用 where。\n【4】is the post office → the post office is\n讲解：where 引导宾语从句，要用陈述语序。\n【5】where；to\n讲解：“疑问词 + 不定式”：where to go 去哪里。\n【6】D（wear）\n讲解：“穿”是 wear，和 where 读音相近、拼写不同。\n【7】come；from\n讲解：be from = come from 来自。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说了什么？",
+   "listen": "I don't know where my keys are.",
+   "opts": [
+    "不知道钥匙在哪",
+    "不知道钥匙是谁的",
+    "不知道什么时候丢的",
+    "不知道为什么丢了"
+   ],
+   "why": "where 在哪里，说话人不知道钥匙在哪儿。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "—______ did you buy the bike?\n—In a shop near my home.",
+   "opts": [
+    "Where",
+    "When",
+    "How",
+    "Why"
+   ],
+   "why": "答语 In a shop… 说的是地点，问地点用 where。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 where、which 中选一个，用适当形式填空。",
+   "stem": "This is the park ______ we visited last week.",
+   "ans": "which",
+   "why": "visited 后面缺宾语，先行词 the park 作宾语用 which；作地点状语才用 where。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Can you tell me where is the post office?",
+   "ans": "is the post office → the post office is",
+   "why": "where 引导宾语从句，要用陈述语序。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我不知道该去哪里。",
+   "stem": "I don't know ______ ______ go.",
+   "ans": "where；to",
+   "why": "“疑问词 + 不定式”：where to go 去哪里。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please ______ your coat. It's cold outside.",
+   "opts": [
+    "wear",
+    "where",
+    "were",
+    "we're"
+   ],
+   "why": "“穿”是 wear，和 where 读音相近、拼写不同。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你是哪里人？",
+   "stem": "Where are you from? = Where do you ______ ______?",
+   "ans": "come；from",
+   "why": "be from = come from 来自。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

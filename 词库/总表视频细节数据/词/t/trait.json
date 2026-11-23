@@ -1,0 +1,97 @@
+{
+ "单词": "trait",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说他最好的品质是什么？\n听：Honesty is his best trait.\nA. 勇敢\nB. 勤奋\nC. 诚实\nD. 幽默",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Kindness and patience are good ______.\nA. trait\nB. traits\nC. train\nD. trail\n考点：变形",
+  "题目3": "【选词填空】从 trait、feature 中选一个，用适当形式填空。\n题干：Big eyes are her best ______.\n考点：易混",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：勇敢是她最大的特点。\n题干：Bravery is her biggest ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Laziness is a bad trail.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Which word means about the same as \"trait\"?\nA. mistake\nB. story\nC. characteristic\nD. job\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Some traits are passed down from ______.\nA. parents\nB. teachers\nC. friends\nD. neighbours\n考点：用法",
+  "答案": "【1】C（诚实）\n讲解：trait 特点、品质。\n【2】B（traits）\n讲解：两样品质，用复数 traits。\n【3】feature\n讲解：外貌五官用 feature；trait 多说性格特点。\n【4】trait\n讲解：性格特点 trait。\n【5】trail → trait\n讲解：“特点”是 trait；trail 是小路。\n【6】C（characteristic）\n讲解：trait ≈ characteristic 特征。\n【7】A（parents）\n讲解：有些特征是父母遗传的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说他最好的品质是什么？",
+   "listen": "Honesty is his best trait.",
+   "opts": [
+    "诚实",
+    "勇敢",
+    "勤奋",
+    "幽默"
+   ],
+   "why": "trait 特点、品质。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Kindness and patience are good ______.",
+   "opts": [
+    "traits",
+    "trait",
+    "train",
+    "trail"
+   ],
+   "why": "两样品质，用复数 traits。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 trait、feature 中选一个，用适当形式填空。",
+   "stem": "Big eyes are her best ______.",
+   "ans": "feature",
+   "why": "外貌五官用 feature；trait 多说性格特点。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "勇敢是她最大的特点。",
+   "stem": "Bravery is her biggest ______.",
+   "ans": "trait",
+   "why": "性格特点 trait。"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Laziness is a bad trail.",
+   "ans": "trail → trait",
+   "why": "“特点”是 trait；trail 是小路。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Which word means about the same as \"trait\"?",
+   "opts": [
+    "characteristic",
+    "mistake",
+    "story",
+    "job"
+   ],
+   "why": "trait ≈ characteristic 特征。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Some traits are passed down from ______.",
+   "opts": [
+    "parents",
+    "teachers",
+    "friends",
+    "neighbours"
+   ],
+   "why": "有些特征是父母遗传的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,97 @@
+{
+ "单词": "date",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人问什么？\n听：What's the date today?\nA. 今天星期几\nB. 今天天气\nC. 今天几号\nD. 现在几点",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：What's the ______ today?\nA. day\nB. date\nC. data\nD. dated\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：These two events have different ______. (date)\n考点：变形",
+  "题目4": "【选词填空】从 date、day 中选一个，用适当形式填空。\n题干：What ______ is it today? —It's Monday.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The date of the meeting are May 1st.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Out of date means ______.\nA. 过时的\nB. 准时的\nC. 很久的约会\nD. 新的\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Go on a date means ______.\nA. 查日期\nB. 吃枣子\nC. 记日记\nD. 去约会\n考点：短语",
+  "答案": "【1】C（今天几号）\n讲解：date 日期。\n【2】B（date）\n讲解：问“几月几号”用 date。\n【3】dates\n讲解：different 后面用复数 dates。\n【4】day\n讲解：问星期几用 day。\n【5】are → is\n讲解：主语 date 单数，谓语用 is。\n【6】A（过时的）\n讲解：out of date 过时的。\n【7】D（去约会）\n讲解：go on a date 去约会。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人问什么？",
+   "listen": "What's the date today?",
+   "opts": [
+    "今天几号",
+    "今天星期几",
+    "今天天气",
+    "现在几点"
+   ],
+   "why": "date 日期。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What's the ______ today?",
+   "opts": [
+    "date",
+    "day",
+    "data",
+    "dated"
+   ],
+   "why": "问“几月几号”用 date。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "These two events have different ______. (date)",
+   "ans": "dates",
+   "why": "different 后面用复数 dates。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 date、day 中选一个，用适当形式填空。",
+   "stem": "What ______ is it today? —It's Monday.",
+   "ans": "day",
+   "why": "问星期几用 day。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The date of the meeting are May 1st.",
+   "ans": "are → is",
+   "why": "主语 date 单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Out of date means ______.",
+   "opts": [
+    "过时的",
+    "准时的",
+    "很久的约会",
+    "新的"
+   ],
+   "why": "out of date 过时的。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Go on a date means ______.",
+   "opts": [
+    "去约会",
+    "查日期",
+    "吃枣子",
+    "记日记"
+   ],
+   "why": "go on a date 去约会。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

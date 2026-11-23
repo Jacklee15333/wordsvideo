@@ -1,0 +1,94 @@
+{
+ "单词": "renew",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人这个月要做什么？\n听：I have to renew my passport this month.\nA. 给护照续期\nB. 申请签证\nC. 买机票\nD. 换钱",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She ______ her magazine order last week.\nA. renews\nB. renewing\nC. renewal\nD. renewed",
+  "题目3": "【选词填空】从 renew、update 中选一个，用适当形式填空。\n题干：Please ______ the app to get the new features.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：You must renewal your card every year.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：太阳能是可再生能源。\n题干：Solar energy is ______ energy.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：I want to ______ my library books.\nA. renew\nB. renewal\nC. renewable\nD. new\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Renew\" can also mean \"______\", as in \"renew a friendship\".\nA. end\nB. forget\nC. start again\nD. buy\n考点：用法",
+  "答案": "【1】A（给护照续期）\n讲解：renew 续期。\n【2】D（renewed）\n讲解：last week 用过去式。\n【3】update\n讲解：软件“更新”用 update。\n【4】renewal → renew\n讲解：must 后面用动词原形。\n【5】renewable\n讲解：名词前面用形容词 renewable。\n【6】A（renew）\n讲解：want to 后面用动词原形。\n【7】C（start again）\n讲解：renew 重新开始。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人这个月要做什么？",
+   "listen": "I have to renew my passport this month.",
+   "opts": [
+    "给护照续期",
+    "申请签证",
+    "买机票",
+    "换钱"
+   ],
+   "why": "renew 续期。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She ______ her magazine order last week.",
+   "opts": [
+    "renewed",
+    "renews",
+    "renewing",
+    "renewal"
+   ],
+   "why": "last week 用过去式。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 renew、update 中选一个，用适当形式填空。",
+   "stem": "Please ______ the app to get the new features.",
+   "ans": "update",
+   "why": "软件“更新”用 update。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "You must renewal your card every year.",
+   "ans": "renewal → renew",
+   "why": "must 后面用动词原形。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "太阳能是可再生能源。",
+   "stem": "Solar energy is ______ energy.",
+   "ans": "renewable",
+   "why": "名词前面用形容词 renewable。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I want to ______ my library books.",
+   "opts": [
+    "renew",
+    "renewal",
+    "renewable",
+    "new"
+   ],
+   "why": "want to 后面用动词原形。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Renew\" can also mean \"______\", as in \"renew a friendship\".",
+   "opts": [
+    "start again",
+    "end",
+    "forget",
+    "buy"
+   ],
+   "why": "renew 重新开始。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "factory",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的爸爸在哪里工作？\n听：My father works in a car factory.\nA. 学校\nB. 汽车厂\nC. 医院\nD. 银行",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many ______ in this city.\nA. factory\nB. factories\nC. factorys\nD. factor\n考点：变形",
+  "题目3": "【选词填空】从 factory、plant 中选一个，用适当形式填空。\n题干：A nuclear power ______ makes electricity.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The ______ in the factory work hard. (work)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The factory make shoes.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这家工厂生产玩具。\n题干：This ______ produces toys.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Many factories ______ in this area ten years ago.\nA. built\nB. build\nC. were built\nD. builds\n考点：用法",
+  "答案": "【1】B（汽车厂）\n讲解：factory 工厂。\n【2】B（factories）\n讲解：many 后面用复数，y 变 i 加 es。\n【3】plant\n讲解：大型工业设施（如电厂）用 plant。\n【4】workers\n讲解：工厂里干活的人是 workers。\n【5】make → makes\n讲解：主语 factory 是单数，用 makes。\n【6】factory\n讲解：This 后面用单数 factory。\n【7】C（were built）\n讲解：工厂是“被建造”的，ten years ago 用过去时的被动。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的爸爸在哪里工作？",
+   "listen": "My father works in a car factory.",
+   "opts": [
+    "汽车厂",
+    "学校",
+    "医院",
+    "银行"
+   ],
+   "why": "factory 工厂。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ in this city.",
+   "opts": [
+    "factories",
+    "factory",
+    "factorys",
+    "factor"
+   ],
+   "why": "many 后面用复数，y 变 i 加 es。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 factory、plant 中选一个，用适当形式填空。",
+   "stem": "A nuclear power ______ makes electricity.",
+   "ans": "plant",
+   "why": "大型工业设施（如电厂）用 plant。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The ______ in the factory work hard. (work)",
+   "ans": "workers",
+   "why": "工厂里干活的人是 workers。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The factory make shoes.",
+   "ans": "make → makes",
+   "why": "主语 factory 是单数，用 makes。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这家工厂生产玩具。",
+   "stem": "This ______ produces toys.",
+   "ans": "factory",
+   "why": "This 后面用单数 factory。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Many factories ______ in this area ten years ago.",
+   "opts": [
+    "were built",
+    "built",
+    "build",
+    "builds"
+   ],
+   "why": "工厂是“被建造”的，ten years ago 用过去时的被动。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "learning",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人觉得什么很有趣？\n听：Learning a new language is fun.\nA. 做运动\nB. 学一门新语言\nC. 看电影\nD. 旅行",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ English is not easy, but it's fun.\nA. Learn\nB. Learnt\nC. Learning\nD. Learner\n考点：词性转换",
+  "题目3": "【选词填空】从 learning、knowledge 中选一个，用适当形式填空。\n题干：Books give us ______ about the world.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She is a fast ______. (learning)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There are many learnings in this book.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：学习永远不嫌晚。\n题干：It's never too late to ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：I ______ a lot at the camp last summer.\nA. learn\nB. learnt\nC. learning\nD. learns\n考点：变形",
+  "答案": "【1】B（学一门新语言）\n讲解：learning 学习。\n【2】C（Learning）\n讲解：作主语用动名词 learning。\n【3】knowledge\n讲解：“知识”通称用 knowledge；learning 偏“学问、学习”。\n【4】learner\n讲解：a fast learner 学得快的人，用名词 learner。\n【5】learnings → learning\n讲解：learning 作“学问”不可数，不加 s。\n【6】learn\n讲解：to 后面用动词原形 learn。\n【7】B（learnt）\n讲解：last summer 讲过去，用过去式 learnt。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人觉得什么很有趣？",
+   "listen": "Learning a new language is fun.",
+   "opts": [
+    "学一门新语言",
+    "做运动",
+    "看电影",
+    "旅行"
+   ],
+   "why": "learning 学习。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ English is not easy, but it's fun.",
+   "opts": [
+    "Learning",
+    "Learn",
+    "Learnt",
+    "Learner"
+   ],
+   "why": "作主语用动名词 learning。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 learning、knowledge 中选一个，用适当形式填空。",
+   "stem": "Books give us ______ about the world.",
+   "ans": "knowledge",
+   "why": "“知识”通称用 knowledge；learning 偏“学问、学习”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She is a fast ______. (learning)",
+   "ans": "learner",
+   "why": "a fast learner 学得快的人，用名词 learner。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are many learnings in this book.",
+   "ans": "learnings → learning",
+   "why": "learning 作“学问”不可数，不加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "学习永远不嫌晚。",
+   "stem": "It's never too late to ______.",
+   "ans": "learn",
+   "why": "to 后面用动词原形 learn。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I ______ a lot at the camp last summer.",
+   "opts": [
+    "learnt",
+    "learn",
+    "learning",
+    "learns"
+   ],
+   "why": "last summer 讲过去，用过去式 learnt。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

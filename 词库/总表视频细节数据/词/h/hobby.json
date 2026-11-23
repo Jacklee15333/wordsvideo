@@ -1,0 +1,93 @@
+{
+ "单词": "hobby",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的爱好是什么？\n听：My hobby is collecting stamps.\nA. 画画\nB. 唱歌\nC. 游泳\nD. 集邮",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：What are your ______?\nA. hobbys\nB. hobbies\nC. hobby\nD. a hobby\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Playing chess is one of my ______. (hobby)\n考点：变形",
+  "题目4": "【选词填空】从 hobby、interest 中选一个，用适当形式填空。\n题干：I have a great ______ in history, but I don't study it often.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：My hobby are reading and swimming.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：她把大部分时间花在爱好上。\n题干：She spends most of her time ______ her ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Gardening is a popular ______ among old people.\nA. hobbies\nB. hobby\nC. hobbyist\nD. interest\n考点：用法",
+  "答案": "【1】D（集邮）\n讲解：collecting stamps 集邮。\n【2】B（hobbies）\n讲解：hobby 以辅音加 y 结尾，复数 y 变 i 加 es。\n【3】hobbies\n讲解：one of + 复数。\n【4】interest\n讲解：只是“感兴趣”用 interest。\n【5】hobby are → hobbies are\n讲解：有两个爱好，主语用复数 hobbies。\n【6】on；hobbies\n讲解：spend time on sth. 在……上花时间。\n【7】B（hobby）\n讲解：a popular 后面接单数名词 hobby。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的爱好是什么？",
+   "listen": "My hobby is collecting stamps.",
+   "opts": [
+    "集邮",
+    "画画",
+    "唱歌",
+    "游泳"
+   ],
+   "why": "collecting stamps 集邮。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What are your ______?",
+   "opts": [
+    "hobbies",
+    "hobbys",
+    "hobby",
+    "a hobby"
+   ],
+   "why": "hobby 以辅音加 y 结尾，复数 y 变 i 加 es。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Playing chess is one of my ______. (hobby)",
+   "ans": "hobbies",
+   "why": "one of + 复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 hobby、interest 中选一个，用适当形式填空。",
+   "stem": "I have a great ______ in history, but I don't study it often.",
+   "ans": "interest",
+   "why": "只是“感兴趣”用 interest。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My hobby are reading and swimming.",
+   "ans": "hobby are → hobbies are",
+   "why": "有两个爱好，主语用复数 hobbies。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她把大部分时间花在爱好上。",
+   "stem": "She spends most of her time ______ her ______.",
+   "ans": "on；hobbies",
+   "why": "spend time on sth. 在……上花时间。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Gardening is a popular ______ among old people.",
+   "opts": [
+    "hobby",
+    "hobbies",
+    "hobbyist",
+    "interest"
+   ],
+   "why": "a popular 后面接单数名词 hobby。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

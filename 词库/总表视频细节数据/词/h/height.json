@@ -1,0 +1,90 @@
+{
+ "单词": "height",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的身高是多少？\n听：My height is 1.6 metres.\nA. 1.5 米\nB. 1.7 米\nC. 1.6 米\nD. 1.8 米",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The tree is 20 metres ______.\nA. height\nB. highly\nC. high\nD. heighten\n考点：词性转换",
+  "题目3": "【选词填空】从 height、altitude 中选一个，用适当形式填空。\n题干：The plane is flying at an ______ of 10,000 metres.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：This hill is not ______ than that one. (high)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He is afraid of height, so he never climbs mountains.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这两个男孩一样高。\n题干：The two boys are the same ______.\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这座楼有一百米高。\n题干：The building is 100 metres ______ height.\n考点：用法",
+  "答案": "【1】C（1.6 米）\n讲解：my height 我的身高。\n【2】C（high）\n讲解：“数字 + 单位 + high”表示有多高，用形容词 high。\n【3】altitude\n讲解：an 后面要元音开头的词；飞机飞行的“海拔高度”用 altitude。\n【4】higher\n讲解：than 前用比较级 higher。\n【5】height → heights\n讲解：“恐高”是 be afraid of heights，用复数。\n【6】height\n讲解：the same height 同样高，要名词 height。\n【7】in\n讲解：in height 在高度上。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的身高是多少？",
+   "listen": "My height is 1.6 metres.",
+   "opts": [
+    "1.6 米",
+    "1.5 米",
+    "1.7 米",
+    "1.8 米"
+   ],
+   "why": "my height 我的身高。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The tree is 20 metres ______.",
+   "opts": [
+    "high",
+    "height",
+    "highly",
+    "heighten"
+   ],
+   "why": "“数字 + 单位 + high”表示有多高，用形容词 high。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 height、altitude 中选一个，用适当形式填空。",
+   "stem": "The plane is flying at an ______ of 10,000 metres.",
+   "ans": "altitude",
+   "why": "an 后面要元音开头的词；飞机飞行的“海拔高度”用 altitude。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "This hill is not ______ than that one. (high)",
+   "ans": "higher",
+   "why": "than 前用比较级 higher。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is afraid of height, so he never climbs mountains.",
+   "ans": "height → heights",
+   "why": "“恐高”是 be afraid of heights，用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这两个男孩一样高。",
+   "stem": "The two boys are the same ______.",
+   "ans": "height",
+   "why": "the same height 同样高，要名词 height。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这座楼有一百米高。",
+   "stem": "The building is 100 metres ______ height.",
+   "ans": "in",
+   "why": "in height 在高度上。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

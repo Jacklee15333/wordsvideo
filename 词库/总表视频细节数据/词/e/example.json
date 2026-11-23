@@ -1,0 +1,98 @@
+{
+ "单词": "example",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人请对方做什么？\n听：Can you give me an example?\nA. 给个礼物\nB. 举个例子\nC. 帮个忙\nD. 打个电话",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you give me an ______?\nA. example\nB. examples\nC. sample\nD. exam\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：He gave us two ______. (example)\n考点：变形",
+  "题目4": "【选词填空】从 example、sample 中选一个，用适当形式填空。\n题干：The shop gave me a free ______ of tea.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She sets a good example for us, so we never learn from her.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Set a good example means ______.\nA. 举个例子\nB. 做练习\nC. 树立好榜样\nD. 考试\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：For example = for ______.\nA. instant\nB. sample\nC. instance\nD. exam\n考点：易混",
+  "答案": "【1】B（举个例子）\n讲解：example 例子。\n【2】A（example）\n讲解：an 后面接单数 example。\n【3】examples\n讲解：two 后面用复数 examples。\n【4】sample\n讲解：供试用的“样品”用 sample；example 是例子。\n【5】never → often\n讲解：好榜样值得我们学习。\n【6】C（树立好榜样）\n讲解：set a good example 树立好榜样。\n【7】C（instance）\n讲解：for example = for instance 例如。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人请对方做什么？",
+   "listen": "Can you give me an example?",
+   "opts": [
+    "举个例子",
+    "给个礼物",
+    "帮个忙",
+    "打个电话"
+   ],
+   "why": "example 例子。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you give me an ______?",
+   "opts": [
+    "example",
+    "examples",
+    "sample",
+    "exam"
+   ],
+   "why": "an 后面接单数 example。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He gave us two ______. (example)",
+   "ans": "examples",
+   "why": "two 后面用复数 examples。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 example、sample 中选一个，用适当形式填空。",
+   "stem": "The shop gave me a free ______ of tea.",
+   "ans": "sample",
+   "why": "供试用的“样品”用 sample；example 是例子。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She sets a good example for us, so we never learn from her.",
+   "ans": "never → often",
+   "why": "好榜样值得我们学习。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Set a good example means ______.",
+   "opts": [
+    "树立好榜样",
+    "举个例子",
+    "做练习",
+    "考试"
+   ],
+   "why": "set a good example 树立好榜样。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "For example = for ______.",
+   "opts": [
+    "instance",
+    "instant",
+    "sample",
+    "exam"
+   ],
+   "why": "for example = for instance 例如。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

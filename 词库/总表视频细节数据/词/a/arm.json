@@ -1,0 +1,93 @@
+{
+ "单词": "arm",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人哪里受伤了？\n听：I hurt my arm when I fell off my bike.\nA. 腿\nB. 头\nC. 背\nD. 胳膊",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She carried the baby in her ______.\nA. arm\nB. army\nC. armed\nD. arms\n考点：变形",
+  "题目3": "【选词填空】从 arm、hand 中选一个，用适当形式填空。\n题干：Please raise your ______ if you know the answer.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He is sitting in an ______ by the window. (arm)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：My arms is tired after swimming.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他们手挽着手走在街上。\n题干：They walked ______ ______ ______ down the street.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In some countries, people can carry arms. Here arms means ______.\nA. hands\nB. legs\nC. bags\nD. weapons\n考点：用法",
+  "答案": "【1】D（胳膊）\n讲解：arm 手臂。\n【2】D（arms）\n讲解：in one's arms 抱在怀里，用复数 arms。\n【3】hand\n讲解：“举手”用 raise your hand；arm 是从肩到腕。\n【4】armchair\n讲解：an 后面要名词 armchair（扶手椅）。\n【5】is → are\n讲解：主语 arms 是复数，用 are。\n【6】arm；in；arm\n讲解：arm in arm 手挽手。\n【7】D（weapons）\n讲解：arms 用复数还可以指“武器”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人哪里受伤了？",
+   "listen": "I hurt my arm when I fell off my bike.",
+   "opts": [
+    "胳膊",
+    "腿",
+    "头",
+    "背"
+   ],
+   "why": "arm 手臂。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She carried the baby in her ______.",
+   "opts": [
+    "arms",
+    "arm",
+    "army",
+    "armed"
+   ],
+   "why": "in one's arms 抱在怀里，用复数 arms。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 arm、hand 中选一个，用适当形式填空。",
+   "stem": "Please raise your ______ if you know the answer.",
+   "ans": "hand",
+   "why": "“举手”用 raise your hand；arm 是从肩到腕。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He is sitting in an ______ by the window. (arm)",
+   "ans": "armchair",
+   "why": "an 后面要名词 armchair（扶手椅）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My arms is tired after swimming.",
+   "ans": "is → are",
+   "why": "主语 arms 是复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他们手挽着手走在街上。",
+   "stem": "They walked ______ ______ ______ down the street.",
+   "ans": "arm；in；arm",
+   "why": "arm in arm 手挽手。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In some countries, people can carry arms. Here arms means ______.",
+   "opts": [
+    "weapons",
+    "hands",
+    "legs",
+    "bags"
+   ],
+   "why": "arms 用复数还可以指“武器”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

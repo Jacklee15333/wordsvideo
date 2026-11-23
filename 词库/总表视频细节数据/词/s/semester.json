@@ -1,0 +1,92 @@
+{
+ "单词": "semester",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：新学期什么时候开始？\n听：The new semester starts in September.\nA. 三月\nB. 九月\nC. 七月\nD. 一月",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We have five subjects this ______.\nA. semesters\nB. term-s\nC. semester\nD. semest",
+  "题目3": "【选词填空】从 semester、term 中选一个，用适当形式填空。\n题干：In Britain, a school year has three ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：I've studied here for four ______. (semester)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The semester begin next Monday.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A ______ is one of three parts of a school year.\nA. semester\nB. trimester\nC. semesters\nD. term-s\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这学期我们有很多活动。\n题干：We have many activities this ______.\n考点：易混",
+  "答案": "【1】B（九月）\n讲解：semester 学期。\n【2】C（semester）\n讲解：this 后接单数 semester。\n【3】terms\n讲解：英国传统上一年分三个 term。\n【4】semesters\n讲解：four 后接复数。\n【5】begin → begins\n讲解：主语单数，用 begins。\n【6】B（trimester）\n讲解：一年三学期制中的一个学期 trimester。\n【7】term\n讲解：学期也可说 term。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：新学期什么时候开始？",
+   "listen": "The new semester starts in September.",
+   "opts": [
+    "九月",
+    "三月",
+    "七月",
+    "一月"
+   ],
+   "why": "semester 学期。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We have five subjects this ______.",
+   "opts": [
+    "semester",
+    "semesters",
+    "term-s",
+    "semest"
+   ],
+   "why": "this 后接单数 semester。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 semester、term 中选一个，用适当形式填空。",
+   "stem": "In Britain, a school year has three ______.",
+   "ans": "terms",
+   "why": "英国传统上一年分三个 term。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I've studied here for four ______. (semester)",
+   "ans": "semesters",
+   "why": "four 后接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The semester begin next Monday.",
+   "ans": "begin → begins",
+   "why": "主语单数，用 begins。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ is one of three parts of a school year.",
+   "opts": [
+    "trimester",
+    "semester",
+    "semesters",
+    "term-s"
+   ],
+   "why": "一年三学期制中的一个学期 trimester。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这学期我们有很多活动。",
+   "stem": "We have many activities this ______.",
+   "ans": "term",
+   "why": "学期也可说 term。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

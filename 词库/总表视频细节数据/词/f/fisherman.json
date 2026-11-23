@@ -1,0 +1,94 @@
+{
+ "单词": "fisherman",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的爷爷以前是做什么的？\n听：My grandpa was a fisherman.\nA. 农民\nB. 工人\nC. 渔夫\nD. 老师",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Three ______ were on the boat.\nA. fishermans\nB. fisherman\nC. fishermen\nD. fishmen",
+  "题目3": "【选词填空】从 fisherman、farmer 中选一个，用适当形式填空。\n题干：A ______ grows rice in the fields.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The fisherman go to sea every day.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这位老渔夫正在钓鱼。\n题干：The old ______ is fishing.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A word for this job that fits everyone is \"______\".\nA. fishing\nB. fishnet\nC. fisher\nD. fishery\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Fisherman\" comes from the verb \"______\".\nA. fist\nB. fit\nC. fish\nD. find\n考点：词性转换",
+  "答案": "【1】C（渔夫）\n讲解：fisherman 渔夫。\n【2】C（fishermen）\n讲解：man 变 men。\n【3】farmer\n讲解：种稻子的是农民 farmer。\n【4】go → goes\n讲解：主语单数，谓语用三单。\n【5】fisherman\n讲解：渔夫 fisherman。\n【6】C（fisher）\n讲解：不分性别也可以说 fisher。\n【7】C（fish）\n讲解：fish + er + man。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的爷爷以前是做什么的？",
+   "listen": "My grandpa was a fisherman.",
+   "opts": [
+    "渔夫",
+    "农民",
+    "工人",
+    "老师"
+   ],
+   "why": "fisherman 渔夫。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Three ______ were on the boat.",
+   "opts": [
+    "fishermen",
+    "fishermans",
+    "fisherman",
+    "fishmen"
+   ],
+   "why": "man 变 men。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 fisherman、farmer 中选一个，用适当形式填空。",
+   "stem": "A ______ grows rice in the fields.",
+   "ans": "farmer",
+   "why": "种稻子的是农民 farmer。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The fisherman go to sea every day.",
+   "ans": "go → goes",
+   "why": "主语单数，谓语用三单。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这位老渔夫正在钓鱼。",
+   "stem": "The old ______ is fishing.",
+   "ans": "fisherman",
+   "why": "渔夫 fisherman。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A word for this job that fits everyone is \"______\".",
+   "opts": [
+    "fisher",
+    "fishing",
+    "fishnet",
+    "fishery"
+   ],
+   "why": "不分性别也可以说 fisher。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Fisherman\" comes from the verb \"______\".",
+   "opts": [
+    "fish",
+    "fist",
+    "fit",
+    "find"
+   ],
+   "why": "fish + er + man。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

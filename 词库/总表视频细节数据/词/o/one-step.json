@@ -1,0 +1,98 @@
+{
+ "单词": "one-step",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个方法怎么样？\n听：It's a one-step method.\nA. 很多步\nB. 很慢\nC. 很难\nD. 一步完成",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This is a ______ solution.\nA. one-step\nB. one-steps\nC. one-stepped\nD. one step's\n考点：变形",
+  "题目3": "【选词填空】从 one-step、step-by-step 中选一个，用适当形式填空。\n题干：Follow the ______ guide to build the model.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：It is a one-step process, so it needs ten steps.\n考点：用法",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：一次只走一步。\n题干：Take one ______ at a time.\n考点：词性转换",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：One-step means ______.\nA. 一级台阶\nB. 第一步\nC. 很多步\nD. 一步完成的\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A one-step process is ______.\nA. long\nB. hard\nC. slow\nD. quick and simple\n考点：用法",
+  "答案": "【1】D（一步完成）\n讲解：one-step 一步完成的。\n【2】A（one-step）\n讲解：“一步完成的”是 one-step。\n【3】step-by-step\n讲解：分步骤的指南用 step-by-step。\n【4】ten steps → only one step\n讲解：一步完成就只要一步。\n【5】step\n讲解：take one step 走一步。\n【6】D（一步完成的）\n讲解：one-step 一步完成的。\n【7】D（quick and simple）\n讲解：一步完成的过程又快又简单。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个方法怎么样？",
+   "listen": "It's a one-step method.",
+   "opts": [
+    "一步完成",
+    "很多步",
+    "很慢",
+    "很难"
+   ],
+   "why": "one-step 一步完成的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This is a ______ solution.",
+   "opts": [
+    "one-step",
+    "one-steps",
+    "one-stepped",
+    "one step's"
+   ],
+   "why": "“一步完成的”是 one-step。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 one-step、step-by-step 中选一个，用适当形式填空。",
+   "stem": "Follow the ______ guide to build the model.",
+   "ans": "step-by-step",
+   "why": "分步骤的指南用 step-by-step。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "It is a one-step process, so it needs ten steps.",
+   "ans": "ten steps → only one step",
+   "why": "一步完成就只要一步。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "一次只走一步。",
+   "stem": "Take one ______ at a time.",
+   "ans": "step",
+   "why": "take one step 走一步。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "One-step means ______.",
+   "opts": [
+    "一步完成的",
+    "一级台阶",
+    "第一步",
+    "很多步"
+   ],
+   "why": "one-step 一步完成的。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A one-step process is ______.",
+   "opts": [
+    "quick and simple",
+    "long",
+    "hard",
+    "slow"
+   ],
+   "why": "一步完成的过程又快又简单。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

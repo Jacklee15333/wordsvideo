@@ -1,0 +1,93 @@
+{
+ "单词": "row",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：学生们坐在哪里？\n听：The students are sitting in the front row.\nA. 后排\nB. 中间\nC. 窗边\nD. 前排",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We sat in the third ______.\nA. rows\nB. rowed\nC. rowing\nD. row",
+  "题目3": "【选词填空】从 row、paddle 中选一个，用适当形式填空。\n题干：In a canoe, you ______ with one paddle.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：They ______ the boat across the lake yesterday. (row)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He won three games in row.\n考点：短语",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：You row a boat with ______.\nA. oars\nB. ores\nC. ours\nD. hours\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我们周末去划船吧。\n题干：Let's go ______ at the weekend.\n考点：变形",
+  "答案": "【1】D（前排）\n讲解：front row 前排。\n【2】D（row）\n讲解：the third 后接单数 row。\n【3】paddle\n讲解：手握单桨划用 paddle。\n【4】rowed\n讲解：yesterday 用过去式 rowed。\n【5】in row → in a row\n讲解：in a row 连续。\n【6】A（oars）\n讲解：划船用桨 oars。\n【7】rowing\n讲解：go rowing 去划船。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：学生们坐在哪里？",
+   "listen": "The students are sitting in the front row.",
+   "opts": [
+    "前排",
+    "后排",
+    "中间",
+    "窗边"
+   ],
+   "why": "front row 前排。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We sat in the third ______.",
+   "opts": [
+    "row",
+    "rows",
+    "rowed",
+    "rowing"
+   ],
+   "why": "the third 后接单数 row。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 row、paddle 中选一个，用适当形式填空。",
+   "stem": "In a canoe, you ______ with one paddle.",
+   "ans": "paddle",
+   "why": "手握单桨划用 paddle。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "They ______ the boat across the lake yesterday. (row)",
+   "ans": "rowed",
+   "why": "yesterday 用过去式 rowed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He won three games in row.",
+   "ans": "in row → in a row",
+   "why": "in a row 连续。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You row a boat with ______.",
+   "opts": [
+    "oars",
+    "ores",
+    "ours",
+    "hours"
+   ],
+   "why": "划船用桨 oars。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们周末去划船吧。",
+   "stem": "Let's go ______ at the weekend.",
+   "ans": "rowing",
+   "why": "go rowing 去划船。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "unused",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这些本子怎么样？\n听：These notebooks are unused.\nA. 已经写满了\nB. 被弄丢了\nC. 很旧了\nD. 还没用过",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ tickets can be returned.\nA. unused\nB. used\nC. using\nD. user\n考点：词性转换",
+  "题目3": "【选词填空】从 unused、useless 中选一个，用适当形式填空。\n题干：The broken radio is ______; it can't help us.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：I bought a ______ car. It's cheaper than a new one. (unused)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The room was unused for years, so it was very clean.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这些盘子还没人用过。\n题干：Nobody has ______ these plates yet.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：I'm not ______ to the cold weather here.\nA. using\nB. use\nC. used\nD. user\n考点：用法",
+  "答案": "【1】D（还没用过）\n讲解：unused 没用过的。\n【2】A（unused）\n讲解：没用过的票可以退，用 unused。\n【3】useless\n讲解：对我们没用处是 useless；unused 是没用过的。\n【4】used\n讲解：比新车便宜的是二手车 used car。\n【5】clean → dirty\n讲解：多年没人用，应该很脏 dirty。\n【6】used\n讲解：has 加过去分词 used。\n【7】C（used）\n讲解：be used to 习惯于，否定是 not used to。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这些本子怎么样？",
+   "listen": "These notebooks are unused.",
+   "opts": [
+    "还没用过",
+    "已经写满了",
+    "被弄丢了",
+    "很旧了"
+   ],
+   "why": "unused 没用过的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ tickets can be returned.",
+   "opts": [
+    "unused",
+    "used",
+    "using",
+    "user"
+   ],
+   "why": "没用过的票可以退，用 unused。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 unused、useless 中选一个，用适当形式填空。",
+   "stem": "The broken radio is ______; it can't help us.",
+   "ans": "useless",
+   "why": "对我们没用处是 useless；unused 是没用过的。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I bought a ______ car. It's cheaper than a new one. (unused)",
+   "ans": "used",
+   "why": "比新车便宜的是二手车 used car。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The room was unused for years, so it was very clean.",
+   "ans": "clean → dirty",
+   "why": "多年没人用，应该很脏 dirty。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这些盘子还没人用过。",
+   "stem": "Nobody has ______ these plates yet.",
+   "ans": "used",
+   "why": "has 加过去分词 used。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I'm not ______ to the cold weather here.",
+   "opts": [
+    "used",
+    "using",
+    "use",
+    "user"
+   ],
+   "why": "be used to 习惯于，否定是 not used to。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

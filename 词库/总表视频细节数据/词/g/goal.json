@@ -1,0 +1,94 @@
+{
+ "单词": "goal",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的目标是什么？\n听：My goal is to become a doctor.\nA. 当老师\nB. 当医生\nC. 出国\nD. 赚钱",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He scored two ______ in the match.\nA. goals\nB. goal\nC. goaled\nD. goalie",
+  "题目3": "【选词填空】从 goal、aim 中选一个，用适当形式填空。\n题干：Take ______ before you shoot the ball.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Our team kicked the ball in the goal.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：守门员接住了球。\n题干：The ______ caught the ball.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：What is your ______ for this year?\nA. goals\nB. goalie\nC. gold\nD. goal\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A goal is the ______ you work towards for a long time.\nA. reason\nB. plan\nC. end point\nD. problem\n考点：易混",
+  "答案": "【1】B（当医生）\n讲解：goal 目标。\n【2】A（goals）\n讲解：two 后面用复数。\n【3】aim\n讲解：take aim 瞄准。\n【4】in → into\n讲解：踢进球门用 into。\n【5】goalkeeper\n讲解：守门员是 goalkeeper。\n【6】D（goal）\n讲解：your … for this year，单数“目标”。\n【7】C（end point）\n讲解：goal 是长期努力要到达的终点。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的目标是什么？",
+   "listen": "My goal is to become a doctor.",
+   "opts": [
+    "当医生",
+    "当老师",
+    "出国",
+    "赚钱"
+   ],
+   "why": "goal 目标。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He scored two ______ in the match.",
+   "opts": [
+    "goals",
+    "goal",
+    "goaled",
+    "goalie"
+   ],
+   "why": "two 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 goal、aim 中选一个，用适当形式填空。",
+   "stem": "Take ______ before you shoot the ball.",
+   "ans": "aim",
+   "why": "take aim 瞄准。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Our team kicked the ball in the goal.",
+   "ans": "in → into",
+   "why": "踢进球门用 into。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "守门员接住了球。",
+   "stem": "The ______ caught the ball.",
+   "ans": "goalkeeper",
+   "why": "守门员是 goalkeeper。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What is your ______ for this year?",
+   "opts": [
+    "goal",
+    "goals",
+    "goalie",
+    "gold"
+   ],
+   "why": "your … for this year，单数“目标”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A goal is the ______ you work towards for a long time.",
+   "opts": [
+    "end point",
+    "reason",
+    "plan",
+    "problem"
+   ],
+   "why": "goal 是长期努力要到达的终点。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

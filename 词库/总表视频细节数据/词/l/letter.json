@@ -1,0 +1,94 @@
+{
+ "单词": "letter",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她在写什么？\n听：She is writing a letter to her grandma.\nA. 给奶奶写信\nB. 写作业\nC. 写日记\nD. 写诗",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are 26 ______ in English.\nA. letters\nB. letter\nC. words\nD. characters\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：I received two ______ yesterday. (letter)\n考点：变形",
+  "题目4": "【选词填空】从 letter、character 中选一个，用适当形式填空。\n题干：\"人\" is a Chinese ______.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Please write your name in capital letter.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：请给你的笔友写一封信。\n题干：Please write a ______ to your pen pal.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Follow the rules to the letter\" means follow them ______.\nA. quickly\nB. later\nC. never\nD. exactly\n考点：短语",
+  "答案": "【1】A（给奶奶写信）\n讲解：letter 信。\n【2】A（letters）\n讲解：英语的字母是 letter，26 个用复数。\n【3】letters\n讲解：two 后面用复数。\n【4】character\n讲解：汉字用 character。\n【5】letter → letters\n讲解：in capital letters 用大写字母。\n【6】letter\n讲解：一封信 a letter。\n【7】D（exactly）\n讲解：to the letter 不折不扣地。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她在写什么？",
+   "listen": "She is writing a letter to her grandma.",
+   "opts": [
+    "给奶奶写信",
+    "写作业",
+    "写日记",
+    "写诗"
+   ],
+   "why": "letter 信。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are 26 ______ in English.",
+   "opts": [
+    "letters",
+    "letter",
+    "words",
+    "characters"
+   ],
+   "why": "英语的字母是 letter，26 个用复数。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I received two ______ yesterday. (letter)",
+   "ans": "letters",
+   "why": "two 后面用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 letter、character 中选一个，用适当形式填空。",
+   "stem": "\"人\" is a Chinese ______.",
+   "ans": "character",
+   "why": "汉字用 character。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Please write your name in capital letter.",
+   "ans": "letter → letters",
+   "why": "in capital letters 用大写字母。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请给你的笔友写一封信。",
+   "stem": "Please write a ______ to your pen pal.",
+   "ans": "letter",
+   "why": "一封信 a letter。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Follow the rules to the letter\" means follow them ______.",
+   "opts": [
+    "exactly",
+    "quickly",
+    "later",
+    "never"
+   ],
+   "why": "to the letter 不折不扣地。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

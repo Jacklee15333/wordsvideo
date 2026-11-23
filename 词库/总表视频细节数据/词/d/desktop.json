@@ -1,0 +1,94 @@
+{
+ "单词": "desktop",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在家用什么电脑？\n听：I use a desktop at home.\nA. 笔记本\nB. 平板\nC. 手机\nD. 台式电脑",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ of my computer is full of files.\nA. desktops\nB. laptop\nC. desktop\nD. desk",
+  "题目3": "【选词填空】从 desktop、laptop 中选一个，用适当形式填空。\n题干：I carry my ______ to school every day.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：There are three desktop in the office.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我把书放在书桌上。\n题干：I put the book on the ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Lap\" in \"laptop\" means the top part of your ______ when you sit.\nA. legs\nB. head\nC. arms\nD. back\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A desktop computer is too big to ______.\nA. carry around easily\nB. use at home\nC. turn on\nD. buy\n考点：用法",
+  "答案": "【1】D（台式电脑）\n讲解：desktop 台式电脑。\n【2】C（desktop）\n讲解：电脑“桌面”是 desktop。\n【3】laptop\n讲解：随身带的是笔记本电脑 laptop。\n【4】desktop → desktops\n讲解：three 后面用复数。\n【5】desk\n讲解：书桌 desk。\n【6】A（legs）\n讲解：lap 是坐着时大腿上面那块。\n【7】A（carry around easily）\n讲解：台式电脑不方便随身带。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在家用什么电脑？",
+   "listen": "I use a desktop at home.",
+   "opts": [
+    "台式电脑",
+    "笔记本",
+    "平板",
+    "手机"
+   ],
+   "why": "desktop 台式电脑。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of my computer is full of files.",
+   "opts": [
+    "desktop",
+    "desktops",
+    "laptop",
+    "desk"
+   ],
+   "why": "电脑“桌面”是 desktop。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 desktop、laptop 中选一个，用适当形式填空。",
+   "stem": "I carry my ______ to school every day.",
+   "ans": "laptop",
+   "why": "随身带的是笔记本电脑 laptop。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There are three desktop in the office.",
+   "ans": "desktop → desktops",
+   "why": "three 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我把书放在书桌上。",
+   "stem": "I put the book on the ______.",
+   "ans": "desk",
+   "why": "书桌 desk。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Lap\" in \"laptop\" means the top part of your ______ when you sit.",
+   "opts": [
+    "legs",
+    "head",
+    "arms",
+    "back"
+   ],
+   "why": "lap 是坐着时大腿上面那块。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A desktop computer is too big to ______.",
+   "opts": [
+    "carry around easily",
+    "use at home",
+    "turn on",
+    "buy"
+   ],
+   "why": "台式电脑不方便随身带。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

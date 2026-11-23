@@ -1,0 +1,94 @@
+{
+ "单词": "mathematical",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：她在哪方面很有天赋？\n听：She has great mathematical ability.\nA. 音乐\nB. 体育\nC. 数学\nD. 画画",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This is a ______ problem, so we need to do some sums.\nA. mathematics\nB. mathematical\nC. mathematically\nD. mathematician",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Euler was a great ______. (mathematical)",
+  "题目4": "【选词填空】从 mathematical、magical 中选一个，用适当形式填空。\n题干：The fairy tale is full of ______ creatures.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This is a very hard mathematics question.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The problem can be solved ______.\nA. mathematical\nB. mathematics\nC. mathematically\nD. mathematician\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Mathematical ______ like + and − are easy to learn.\nA. symbol\nB. symbols\nC. symbolic\nD. symbolize\n考点：用法",
+  "答案": "【1】C（数学）\n讲解：mathematical 数学的。\n【2】B（mathematical）\n讲解：修饰名词 problem 用形容词 mathematical。\n【3】mathematician\n讲解：a great 后面要指人的名词 mathematician。\n【4】magical\n讲解：童话里魔法般的是 magical。\n【5】mathematics → mathematical\n讲解：修饰名词 question 用形容词 mathematical。\n【6】C（mathematically）\n讲解：修饰动词 solved 用副词 mathematically。\n【7】B（symbols）\n讲解：谓语 are 是复数，用 symbols（符号）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：她在哪方面很有天赋？",
+   "listen": "She has great mathematical ability.",
+   "opts": [
+    "数学",
+    "音乐",
+    "体育",
+    "画画"
+   ],
+   "why": "mathematical 数学的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This is a ______ problem, so we need to do some sums.",
+   "opts": [
+    "mathematical",
+    "mathematics",
+    "mathematically",
+    "mathematician"
+   ],
+   "why": "修饰名词 problem 用形容词 mathematical。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Euler was a great ______. (mathematical)",
+   "ans": "mathematician",
+   "why": "a great 后面要指人的名词 mathematician。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 mathematical、magical 中选一个，用适当形式填空。",
+   "stem": "The fairy tale is full of ______ creatures.",
+   "ans": "magical",
+   "why": "童话里魔法般的是 magical。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This is a very hard mathematics question.",
+   "ans": "mathematics → mathematical",
+   "why": "修饰名词 question 用形容词 mathematical。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The problem can be solved ______.",
+   "opts": [
+    "mathematically",
+    "mathematical",
+    "mathematics",
+    "mathematician"
+   ],
+   "why": "修饰动词 solved 用副词 mathematically。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Mathematical ______ like + and − are easy to learn.",
+   "opts": [
+    "symbols",
+    "symbol",
+    "symbolic",
+    "symbolize"
+   ],
+   "why": "谓语 are 是复数，用 symbols（符号）。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

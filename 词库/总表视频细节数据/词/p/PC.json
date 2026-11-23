@@ -1,0 +1,96 @@
+{
+ "单词": "PC",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人买了什么？\n听：I bought a new PC.\nA. 手机\nB. 电视\nC. 相机\nD. 个人电脑",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are five ______ in our office.\nA. PC\nB. PCes\nC. PCs\nD. PC's\n考点：变形",
+  "题目3": "【选词填空】从 PC、Mac 中选一个，用适当形式填空。\n题干：Apple computers are often called ______.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：My PC are very slow.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：PC 是个人电脑的缩写。\n题干：PC is short for \"personal ______\".",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In American English, \"PC\" often means a Windows computer, not a ______.\nA. TV\nB. phone\nC. desk\nD. Mac\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Turn ______ your PC when you finish.\nA. of\nB. off\nC. out\nD. over\n考点：用法",
+  "答案": "【1】D（个人电脑）\n讲解：PC 个人电脑。\n【2】C（PCs）\n讲解：PC 的复数直接加小写 s：PCs。\n【3】Macs\n讲解：苹果电脑常叫 Mac，这里用复数 Macs。\n【4】are → is\n讲解：主语 PC 是单数，用 is。\n【5】computer\n讲解：PC = personal computer。\n【6】D（Mac）\n讲解：美国口语里 PC 常专指 Windows 电脑，与 Mac 相对。\n【7】B（off）\n讲解：用完关电脑，turn off。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人买了什么？",
+   "listen": "I bought a new PC.",
+   "opts": [
+    "个人电脑",
+    "手机",
+    "电视",
+    "相机"
+   ],
+   "why": "PC 个人电脑。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are five ______ in our office.",
+   "opts": [
+    "PCs",
+    "PC",
+    "PCes",
+    "PC's"
+   ],
+   "why": "PC 的复数直接加小写 s：PCs。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 PC、Mac 中选一个，用适当形式填空。",
+   "stem": "Apple computers are often called ______.",
+   "ans": "Macs",
+   "why": "苹果电脑常叫 Mac，这里用复数 Macs。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My PC are very slow.",
+   "ans": "are → is",
+   "why": "主语 PC 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "PC 是个人电脑的缩写。",
+   "stem": "PC is short for \"personal ______\".",
+   "ans": "computer",
+   "why": "PC = personal computer。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In American English, \"PC\" often means a Windows computer, not a ______.",
+   "opts": [
+    "Mac",
+    "TV",
+    "phone",
+    "desk"
+   ],
+   "why": "美国口语里 PC 常专指 Windows 电脑，与 Mac 相对。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Turn ______ your PC when you finish.",
+   "opts": [
+    "off",
+    "of",
+    "out",
+    "over"
+   ],
+   "why": "用完关电脑，turn off。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

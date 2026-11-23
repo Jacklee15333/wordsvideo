@@ -1,0 +1,98 @@
+{
+ "单词": "gender",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：表格上要填什么？\n听：Please write your gender here.\nA. 性别\nB. 年龄\nC. 名字\nD. 地址",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please write your name, age and ______.\nA. gender\nB. genre\nC. general\nD. genus\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The form lists two ______: male and female. (gender)\n考点：变形",
+  "题目4": "【选词填空】从 gender、genre 中选一个，用适当形式填空。\n题干：My favourite film ______ is comedy.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Boys and girls should be treated differently because of their gender.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Gender equality means ______.\nA. 性别不同\nB. 年龄相同\nC. 性别平等\nD. 体裁一样\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Gender is about ______.\nA. age\nB. height\nC. weight\nD. being male or female\n考点：用法",
+  "答案": "【1】A（性别）\n讲解：gender 性别。\n【2】A（gender）\n讲解：“性别”是 gender。\n【3】genders\n讲解：two 后面用复数 genders。\n【4】genre\n讲解：电影的“类型”是 genre。\n【5】differently → equally\n讲解：男女应该平等对待。\n【6】C（性别平等）\n讲解：gender equality 性别平等。\n【7】D（being male or female）\n讲解：gender 指男女性别。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：表格上要填什么？",
+   "listen": "Please write your gender here.",
+   "opts": [
+    "性别",
+    "年龄",
+    "名字",
+    "地址"
+   ],
+   "why": "gender 性别。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please write your name, age and ______.",
+   "opts": [
+    "gender",
+    "genre",
+    "general",
+    "genus"
+   ],
+   "why": "“性别”是 gender。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The form lists two ______: male and female. (gender)",
+   "ans": "genders",
+   "why": "two 后面用复数 genders。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 gender、genre 中选一个，用适当形式填空。",
+   "stem": "My favourite film ______ is comedy.",
+   "ans": "genre",
+   "why": "电影的“类型”是 genre。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Boys and girls should be treated differently because of their gender.",
+   "ans": "differently → equally",
+   "why": "男女应该平等对待。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Gender equality means ______.",
+   "opts": [
+    "性别平等",
+    "性别不同",
+    "年龄相同",
+    "体裁一样"
+   ],
+   "why": "gender equality 性别平等。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Gender is about ______.",
+   "opts": [
+    "being male or female",
+    "age",
+    "height",
+    "weight"
+   ],
+   "why": "gender 指男女性别。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,89 @@
+{
+ "单词": "text",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人刚刚收到了什么？\n听：I just got a text from my mum.\nA. 妈妈的礼物\nB. 妈妈的短信\nC. 妈妈的电话\nD. 妈妈的信",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please read the ______ on page 20 aloud.\nA. text\nB. textile\nC. texture\nD. textual",
+  "题目3": "【选词填空】从 text、test 中选一个，用适当形式填空。\n题干：We have a math ______ tomorrow, so I must study tonight.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：I sent him three ______ yesterday. (text)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：My mum sent me a text massage this morning.\n考点：短语",
+  "题目6": "【适当形式填空】用所给单词的适当形式填空。\n题干：Stop ______ your friends in class! (text)\n考点：词性转换",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：昨晚他给我发短信说他病了。\n题干：He ______ me last night and said he was ill.\n考点：用法",
+  "答案": "【1】B（妈妈的短信）\n讲解：a text 一条短信。\n【2】A（text）\n讲解：大声读的是第 20 页的课文 text。\n【3】test\n讲解：“数学考试”是 test；text 是课文、短信。\n【4】texts\n讲解：three 后面要复数 texts。\n【5】massage → message\n讲解：“短信”是 text message；massage 是“按摩”。\n【6】texting\n讲解：stop doing 停止做某事，text 作动词加 ing。\n【7】texted\n讲解：text 也可作动词“发短信”，last night 用过去式 texted。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人刚刚收到了什么？",
+   "listen": "I just got a text from my mum.",
+   "opts": [
+    "妈妈的短信",
+    "妈妈的礼物",
+    "妈妈的电话",
+    "妈妈的信"
+   ],
+   "why": "a text 一条短信。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please read the ______ on page 20 aloud.",
+   "opts": [
+    "text",
+    "textile",
+    "texture",
+    "textual"
+   ],
+   "why": "大声读的是第 20 页的课文 text。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 text、test 中选一个，用适当形式填空。",
+   "stem": "We have a math ______ tomorrow, so I must study tonight.",
+   "ans": "test",
+   "why": "“数学考试”是 test；text 是课文、短信。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "I sent him three ______ yesterday. (text)",
+   "ans": "texts",
+   "why": "three 后面要复数 texts。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My mum sent me a text massage this morning.",
+   "ans": "massage → message",
+   "why": "“短信”是 text message；massage 是“按摩”。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Stop ______ your friends in class! (text)",
+   "ans": "texting",
+   "why": "stop doing 停止做某事，text 作动词加 ing。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "昨晚他给我发短信说他病了。",
+   "stem": "He ______ me last night and said he was ill.",
+   "ans": "texted",
+   "why": "text 也可作动词“发短信”，last night 用过去式 texted。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "division",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：今天数学课学了什么？\n听：We learned division in maths today.\nA. 加法\nB. 乘法\nC. 减法\nD. 除法",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are five ______ in the company.\nA. divisions\nB. division\nC. divide\nD. divided",
+  "题目3": "【选词填空】从 division、department 中选一个，用适当形式填空。\n题干：She works in the English ______ of our school.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The division of work were fair.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：老师把我们分成了小组。\n题干：The teacher ______ us into small groups.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Division\" is the noun of \"______\".\nA. divine\nB. device\nC. decide\nD. divide\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A ______ of the money is unfair if one person gets most of it.\nA. divide\nB. divided\nC. divisible\nD. division\n考点：用法",
+  "答案": "【1】D（除法）\n讲解：division 除法。\n【2】A（divisions）\n讲解：five 后面用复数。\n【3】department\n讲解：学校里按分工分的“部门”用 department。\n【4】were → was\n讲解：主语单数。\n【5】divided\n讲解：过去式 divided。\n【6】D（divide）\n讲解：divide 变名词是 division。\n【7】D（division）\n讲解：名词“分配”用 division。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：今天数学课学了什么？",
+   "listen": "We learned division in maths today.",
+   "opts": [
+    "除法",
+    "加法",
+    "乘法",
+    "减法"
+   ],
+   "why": "division 除法。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are five ______ in the company.",
+   "opts": [
+    "divisions",
+    "division",
+    "divide",
+    "divided"
+   ],
+   "why": "five 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 division、department 中选一个，用适当形式填空。",
+   "stem": "She works in the English ______ of our school.",
+   "ans": "department",
+   "why": "学校里按分工分的“部门”用 department。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The division of work were fair.",
+   "ans": "were → was",
+   "why": "主语单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "老师把我们分成了小组。",
+   "stem": "The teacher ______ us into small groups.",
+   "ans": "divided",
+   "why": "过去式 divided。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Division\" is the noun of \"______\".",
+   "opts": [
+    "divide",
+    "divine",
+    "device",
+    "decide"
+   ],
+   "why": "divide 变名词是 division。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ of the money is unfair if one person gets most of it.",
+   "opts": [
+    "division",
+    "divide",
+    "divided",
+    "divisible"
+   ],
+   "why": "名词“分配”用 division。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

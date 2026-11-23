@@ -1,0 +1,94 @@
+{
+ "单词": "spell",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在问什么？\n听：How do you spell your name?\nA. 名字怎么读\nB. 名字什么意思\nC. 名字谁起的\nD. 名字怎么拼",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you ______ the word \"beautiful\"?\nA. spelling\nB. spell\nC. spells\nD. spelt\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Your ______ is very good. You made no mistakes. (spell)\n考点：词性转换",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She spell the word wrong yesterday.\n考点：变形",
+  "题目5": "【选词填空】从 spell、say 中选一个，用适当形式填空。\n题干：How do you ______ it in English? —\"Apple\".\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这个词怎么拼写？\n题干：How ______ you ______ this word?\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In stories, \"spell\" can also mean ______.\nA. a big stone\nB. magic words\nC. a long road\nD. a cake\n考点：用法",
+  "答案": "【1】D（名字怎么拼）\n讲解：spell 拼写。\n【2】B（spell）\n讲解：can 后面用动词原形 spell。\n【3】spelling\n讲解：Your 后面要名词 spelling（拼写）。\n【4】spell → spelled\n讲解：yesterday 用过去式 spelled（也可写 spelt）。\n【5】say\n讲解：问“用英语怎么说”用 say。\n【6】do；spell\n讲解：How do you spell…? 怎么拼写？\n【7】B（magic words）\n讲解：spell 作名词是“咒语、魔法”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在问什么？",
+   "listen": "How do you spell your name?",
+   "opts": [
+    "名字怎么拼",
+    "名字怎么读",
+    "名字什么意思",
+    "名字谁起的"
+   ],
+   "why": "spell 拼写。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you ______ the word \"beautiful\"?",
+   "opts": [
+    "spell",
+    "spelling",
+    "spells",
+    "spelt"
+   ],
+   "why": "can 后面用动词原形 spell。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Your ______ is very good. You made no mistakes. (spell)",
+   "ans": "spelling",
+   "why": "Your 后面要名词 spelling（拼写）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She spell the word wrong yesterday.",
+   "ans": "spell → spelled",
+   "why": "yesterday 用过去式 spelled（也可写 spelt）。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 spell、say 中选一个，用适当形式填空。",
+   "stem": "How do you ______ it in English? —\"Apple\".",
+   "ans": "say",
+   "why": "问“用英语怎么说”用 say。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个词怎么拼写？",
+   "stem": "How ______ you ______ this word?",
+   "ans": "do；spell",
+   "why": "How do you spell…? 怎么拼写？",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In stories, \"spell\" can also mean ______.",
+   "opts": [
+    "magic words",
+    "a big stone",
+    "a long road",
+    "a cake"
+   ],
+   "why": "spell 作名词是“咒语、魔法”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 380">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A6068"/><stop offset=".12" stop-color="#3D4249"/><stop offset=".65" stop-color="#2A2E33"/><stop offset="1" stop-color="#17191C"/></linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#565C64"/><stop offset=".3" stop-color="#2B2F34"/><stop offset=".75" stop-color="#16181B"/><stop offset="1" stop-color="#0B0C0E"/></linearGradient>
+    <radialGradient id="glass" cx=".35" cy=".35" r=".8"><stop offset="0" stop-color="#5A6FB0"/><stop offset=".4" stop-color="#1E2752"/><stop offset="1" stop-color="#03040A"/></radialGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4F6F8"/><stop offset="1" stop-color="#8E959D"/></linearGradient>
+    <pattern id="leather" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#24272C"/><circle cx="1.8" cy="1.8" r="1.1" fill="#2E3238"/><circle cx="5.2" cy="5.2" r="1.1" fill="#1B1D21"/></pattern>
+  </defs>
+  <!-- 取景器、快门 -->
+  <path d="M286 124 L304 70 Q308 60 320 60 L394 60 Q406 60 410 70 L428 124 Z" fill="#3A3F46"/>
+  <rect x="444" y="104" width="44" height="20" rx="6" fill="#3A3F46"/>
+  <ellipse cx="466" cy="102" rx="20" ry="7" fill="url(#silver)"/>
+  <!-- 机身（侧面）+ 握把 -->
+  <rect x="214" y="122" width="290" height="216" rx="30" fill="url(#b)"/>
+  <rect x="226" y="176" width="200" height="146" rx="12" fill="url(#leather)"/>
+  <path d="M440 128 Q520 132 520 214 L520 312 Q520 340 488 340 L440 340 Z" fill="#141619"/>
+  <rect x="230" y="128" width="260" height="6" rx="3" fill="#FFFFFF" opacity=".14"/>
+  <!-- 镜头（朝左） -->
+  <rect x="96" y="150" width="128" height="160" rx="10" fill="url(#lens)"/>
+  <g fill="none" stroke="#3E444B" stroke-width="5"><line x1="120" y1="152" x2="120" y2="308"/><line x1="132" y1="152" x2="132" y2="308"/><line x1="144" y1="152" x2="144" y2="308"/><line x1="156" y1="152" x2="156" y2="308"/></g>
+  <rect x="176" y="150" width="10" height="160" fill="#C9CED4" opacity=".3"/>
+  <path d="M58 136 L104 150 L104 310 L58 324 Z" fill="#1C1F23"/>
+  <ellipse cx="60" cy="230" rx="14" ry="94" fill="#0B0C0E"/>
+  <ellipse cx="62" cy="230" rx="9" ry="80" fill="url(#glass)"/>
+  <ellipse cx="58" cy="194" rx="3.5" ry="20" fill="#FFFFFF" opacity=".55"/>
+  <!-- 背带扣 -->
+  <rect x="300" y="112" width="26" height="12" rx="4" fill="url(#silver)"/>
+</svg>

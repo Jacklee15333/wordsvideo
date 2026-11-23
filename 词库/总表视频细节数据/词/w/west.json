@@ -1,0 +1,93 @@
+{
+ "单词": "west",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：太阳从哪儿落下？\n听：The sun sets in the west.\nA. 东边\nB. 南边\nC. 西边\nD. 北边",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Many ______ countries are in Europe.\nA. west\nB. Western\nC. wests\nD. westly\n考点：词性转换",
+  "题目3": "【选词填空】从 west、east 中选一个，用适当形式填空。\n题干：Japan is to the ______ of China.",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Go ______ along this road and you will see the park. (west)\n考点：用法",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：My house faces to west.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"The West\" with a capital W means ______.\nA. the Western world\nB. the west side of a room\nC. the west wind\nD. the west gate\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：西方文化和中国文化很不一样。\n题干：______ culture is very different from Chinese culture.\n考点：词性转换",
+  "答案": "【1】C（西边）\n讲解：in the west 在西边。\n【2】B（Western）\n讲解：“西方的”国家用形容词 Western。\n【3】east\n讲解：日本在中国东边，用 east。\n【4】west\n讲解：west 能直接作副词：go west。\n【5】faces to west → faces west\n讲解：west 作副词：face west，不加 to。\n【6】A（the Western world）\n讲解：大写 the West 指西方世界，小写 the west 只是西部。\n【7】Western\n讲解：“西方文化的”只用 Western。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：太阳从哪儿落下？",
+   "listen": "The sun sets in the west.",
+   "opts": [
+    "西边",
+    "东边",
+    "南边",
+    "北边"
+   ],
+   "why": "in the west 在西边。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Many ______ countries are in Europe.",
+   "opts": [
+    "Western",
+    "west",
+    "wests",
+    "westly"
+   ],
+   "why": "“西方的”国家用形容词 Western。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 west、east 中选一个，用适当形式填空。",
+   "stem": "Japan is to the ______ of China.",
+   "ans": "east",
+   "why": "日本在中国东边，用 east。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Go ______ along this road and you will see the park. (west)",
+   "ans": "west",
+   "why": "west 能直接作副词：go west。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My house faces to west.",
+   "ans": "faces to west → faces west",
+   "why": "west 作副词：face west，不加 to。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"The West\" with a capital W means ______.",
+   "opts": [
+    "the Western world",
+    "the west side of a room",
+    "the west wind",
+    "the west gate"
+   ],
+   "why": "大写 the West 指西方世界，小写 the west 只是西部。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "西方文化和中国文化很不一样。",
+   "stem": "______ culture is very different from Chinese culture.",
+   "ans": "Western",
+   "why": "“西方文化的”只用 Western。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

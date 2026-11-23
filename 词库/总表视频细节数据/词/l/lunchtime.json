@@ -1,0 +1,94 @@
+{
+ "单词": "lunchtime",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们什么时候见面？\n听：Let's meet at lunchtime.\nA. 早上\nB. 午饭时间\nC. 晚上\nD. 周末",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I'm hungry. Is it ______ yet?\nA. lunchbox\nB. lunchtime\nC. lunches\nD. a lunchtime",
+  "题目3": "【选词填空】从 lunchtime、bedtime 中选一个，用适当形式填空。\n题干：Brush your teeth before ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：I usually read in lunchtime.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：午饭吃什么？\n题干：What's for ______?",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Lunch hour\" usually means ______.\nA. an hour after lunch\nB. the hour for lunch\nC. a very long lunch\nD. breakfast time\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Lunchtime\" is made of \"lunch\" and \"______\".\nA. tame\nB. time\nC. team\nD. timer\n考点：用法",
+  "答案": "【1】B（午饭时间）\n讲解：at lunchtime 午饭时间。\n【2】B（lunchtime）\n讲解：“到午饭时间了吗”用 lunchtime，不加冠词。\n【3】bedtime\n讲解：“睡前”是 before bedtime。\n【4】in → at\n讲解：“在午饭时间”用 at lunchtime。\n【5】lunch\n讲解：“午饭”是 lunch。\n【6】B（the hour for lunch）\n讲解：lunch hour 多指午休那一个钟头。\n【7】B（time）\n讲解：lunchtime = lunch + time。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们什么时候见面？",
+   "listen": "Let's meet at lunchtime.",
+   "opts": [
+    "午饭时间",
+    "早上",
+    "晚上",
+    "周末"
+   ],
+   "why": "at lunchtime 午饭时间。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I'm hungry. Is it ______ yet?",
+   "opts": [
+    "lunchtime",
+    "lunchbox",
+    "lunches",
+    "a lunchtime"
+   ],
+   "why": "“到午饭时间了吗”用 lunchtime，不加冠词。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 lunchtime、bedtime 中选一个，用适当形式填空。",
+   "stem": "Brush your teeth before ______.",
+   "ans": "bedtime",
+   "why": "“睡前”是 before bedtime。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I usually read in lunchtime.",
+   "ans": "in → at",
+   "why": "“在午饭时间”用 at lunchtime。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "午饭吃什么？",
+   "stem": "What's for ______?",
+   "ans": "lunch",
+   "why": "“午饭”是 lunch。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Lunch hour\" usually means ______.",
+   "opts": [
+    "the hour for lunch",
+    "an hour after lunch",
+    "a very long lunch",
+    "breakfast time"
+   ],
+   "why": "lunch hour 多指午休那一个钟头。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Lunchtime\" is made of \"lunch\" and \"______\".",
+   "opts": [
+    "time",
+    "tame",
+    "team",
+    "timer"
+   ],
+   "why": "lunchtime = lunch + time。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

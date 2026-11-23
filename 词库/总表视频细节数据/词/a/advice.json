@@ -1,0 +1,94 @@
+{
+ "单词": "advice",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师给了他什么？\n听：The teacher gave him a piece of advice.\nA. 一本书\nB. 一支笔\nC. 一张卡片\nD. 一条建议",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you give me some ______?\nA. advices\nB. advise\nC. an advice\nD. advice\n考点：变形",
+  "题目3": "【选词填空】从 advice、suggestion 中选一个，用适当形式填空。\n题干：She made three ______ at the meeting.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：My mum always ______ me to go to bed early. (advice)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He gave me an advice.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：你应该听从老师的建议。\n题干：You should ______ your teacher's advice.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Here is a ______ of advice for you.\nA. pieces\nB. bit of\nC. piece\nD. few\n考点：变形",
+  "答案": "【1】D（一条建议）\n讲解：a piece of advice 一条建议。\n【2】D（advice）\n讲解：advice 不可数，不加 s。\n【3】suggestions\n讲解：suggestion 可数，three 后面用复数；advice 不可数。\n【4】advises\n讲解：主语单数、一般现在时，用动词 advises。\n【5】an advice → a piece of advice\n讲解：advice 不可数，不说 an advice。\n【6】take\n讲解：take one's advice 听从某人劝告。\n【7】C（piece）\n讲解：a piece of advice 一条建议。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师给了他什么？",
+   "listen": "The teacher gave him a piece of advice.",
+   "opts": [
+    "一条建议",
+    "一本书",
+    "一支笔",
+    "一张卡片"
+   ],
+   "why": "a piece of advice 一条建议。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you give me some ______?",
+   "opts": [
+    "advice",
+    "advices",
+    "advise",
+    "an advice"
+   ],
+   "why": "advice 不可数，不加 s。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 advice、suggestion 中选一个，用适当形式填空。",
+   "stem": "She made three ______ at the meeting.",
+   "ans": "suggestions",
+   "why": "suggestion 可数，three 后面用复数；advice 不可数。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "My mum always ______ me to go to bed early. (advice)",
+   "ans": "advises",
+   "why": "主语单数、一般现在时，用动词 advises。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He gave me an advice.",
+   "ans": "an advice → a piece of advice",
+   "why": "advice 不可数，不说 an advice。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "你应该听从老师的建议。",
+   "stem": "You should ______ your teacher's advice.",
+   "ans": "take",
+   "why": "take one's advice 听从某人劝告。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Here is a ______ of advice for you.",
+   "opts": [
+    "piece",
+    "pieces",
+    "bit of",
+    "few"
+   ],
+   "why": "a piece of advice 一条建议。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

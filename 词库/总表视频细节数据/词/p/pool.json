@@ -1,0 +1,93 @@
+{
+ "单词": "pool",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：孩子们在哪里玩？\n听：The children are playing in the swimming pool.\nA. 公园\nB. 教室\nC. 沙滩\nD. 游泳池",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is a small ______ of water on the floor.\nA. pools\nB. pond\nC. pool\nD. ponds",
+  "题目3": "【选词填空】从 pool、pond 中选一个，用适当形式填空。\n题干：There are fish and water plants in the ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Our school has two swimming ______. (pool)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：After the rain, there were many puddle on the road.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Let's go ______ this afternoon.\nA. swim\nB. swimming\nC. swims\nD. swam\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：雨后路上有个水洼。\n题干：There is a ______ on the road after the rain.\n考点：易混",
+  "答案": "【1】D（游泳池）\n讲解：swimming pool 游泳池。\n【2】C（pool）\n讲解：a small … of water 一小滩水，单数 pool。\n【3】pond\n讲解：有水草和鱼的池塘是 pond。\n【4】pools\n讲解：two 后接复数 pools。\n【5】puddle → puddles\n讲解：many 后接复数 puddles（水洼）。\n【6】B（swimming）\n讲解：go swimming 去游泳。\n【7】puddle\n讲解：雨后路上的水洼是 puddle。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：孩子们在哪里玩？",
+   "listen": "The children are playing in the swimming pool.",
+   "opts": [
+    "游泳池",
+    "公园",
+    "教室",
+    "沙滩"
+   ],
+   "why": "swimming pool 游泳池。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is a small ______ of water on the floor.",
+   "opts": [
+    "pool",
+    "pools",
+    "pond",
+    "ponds"
+   ],
+   "why": "a small … of water 一小滩水，单数 pool。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 pool、pond 中选一个，用适当形式填空。",
+   "stem": "There are fish and water plants in the ______.",
+   "ans": "pond",
+   "why": "有水草和鱼的池塘是 pond。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Our school has two swimming ______. (pool)",
+   "ans": "pools",
+   "why": "two 后接复数 pools。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "After the rain, there were many puddle on the road.",
+   "ans": "puddle → puddles",
+   "why": "many 后接复数 puddles（水洼）。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Let's go ______ this afternoon.",
+   "opts": [
+    "swimming",
+    "swim",
+    "swims",
+    "swam"
+   ],
+   "why": "go swimming 去游泳。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "雨后路上有个水洼。",
+   "stem": "There is a ______ on the road after the rain.",
+   "ans": "puddle",
+   "why": "雨后路上的水洼是 puddle。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "leopard",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：那只动物身上有什么？\n听：The leopard has spots on its body.\nA. 斑点\nB. 条纹\nC. 羽毛\nD. 鳞片",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：A ______ can climb trees very well.\nA. leopards\nB. lion\nC. lioness\nD. leopard",
+  "题目3": "【选词填空】从 leopard、cheetah 中选一个，用适当形式填空。\n题干：The ______ is the fastest animal on land.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Two ______ are resting under the tree. (leopard)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：A leopard have spots all over its body.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A black leopard is often called a ______.\nA. tiger\nB. panther\nC. lion\nD. cheetah\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：老虎身上是条纹，不是斑点。\n题干：A ______ has stripes, not spots.\n考点：易混",
+  "答案": "【1】A（斑点）\n讲解：leopard 豹，身上有斑点。\n【2】D（leopard）\n讲解：a 后接单数 leopard。\n【3】cheetah\n讲解：陆地上跑得最快的是猎豹 cheetah。\n【4】leopards\n讲解：two 后接复数 leopards。\n【5】have → has\n讲解：主语三单用 has。\n【6】B（panther）\n讲解：黑豹常叫 panther。\n【7】tiger\n讲解：有条纹的是虎 tiger。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：那只动物身上有什么？",
+   "listen": "The leopard has spots on its body.",
+   "opts": [
+    "斑点",
+    "条纹",
+    "羽毛",
+    "鳞片"
+   ],
+   "why": "leopard 豹，身上有斑点。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ can climb trees very well.",
+   "opts": [
+    "leopard",
+    "leopards",
+    "lion",
+    "lioness"
+   ],
+   "why": "a 后接单数 leopard。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 leopard、cheetah 中选一个，用适当形式填空。",
+   "stem": "The ______ is the fastest animal on land.",
+   "ans": "cheetah",
+   "why": "陆地上跑得最快的是猎豹 cheetah。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Two ______ are resting under the tree. (leopard)",
+   "ans": "leopards",
+   "why": "two 后接复数 leopards。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "A leopard have spots all over its body.",
+   "ans": "have → has",
+   "why": "主语三单用 has。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A black leopard is often called a ______.",
+   "opts": [
+    "panther",
+    "tiger",
+    "lion",
+    "cheetah"
+   ],
+   "why": "黑豹常叫 panther。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "老虎身上是条纹，不是斑点。",
+   "stem": "A ______ has stripes, not spots.",
+   "ans": "tiger",
+   "why": "有条纹的是虎 tiger。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

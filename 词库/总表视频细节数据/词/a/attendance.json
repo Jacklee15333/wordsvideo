@@ -1,0 +1,92 @@
+{
+ "单词": "attendance",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师在做什么？\n听：The teacher is taking attendance.\nA. 上课\nB. 改作业\nC. 开会\nD. 点名",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Her ______ at school is perfect; she has never missed a day.\nA. attention\nB. attend\nC. attendance\nD. attendant",
+  "题目3": "【选词填空】从 attendance、attention 中选一个，用适当形式填空。\n题干：Please pay ______ to the instructions.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：How many people will ______ the concert? (attendance)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There were a large attendance at the match.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Doctors were in attendance\" means doctors were ______.\nA. there\nB. absent\nC. sick\nD. late\n考点：短语",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：那位乘务员给了我一杯水。\n题干：The flight ______ gave me a glass of water.\n考点：词性转换",
+  "答案": "【1】D（点名）\n讲解：take attendance 点名。\n【2】C（attendance）\n讲解：从不缺课说的是出勤 attendance。\n【3】attention\n讲解：pay attention to 注意。\n【4】attend\n讲解：will 后面用动词 attend。\n【5】were → was\n讲解：a large attendance 是单数，be 用 was。\n【6】A（there）\n讲解：in attendance 在场、出席。\n【7】attendant\n讲解：“服务员、乘务员”是 attendant。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师在做什么？",
+   "listen": "The teacher is taking attendance.",
+   "opts": [
+    "点名",
+    "上课",
+    "改作业",
+    "开会"
+   ],
+   "why": "take attendance 点名。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Her ______ at school is perfect; she has never missed a day.",
+   "opts": [
+    "attendance",
+    "attention",
+    "attend",
+    "attendant"
+   ],
+   "why": "从不缺课说的是出勤 attendance。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 attendance、attention 中选一个，用适当形式填空。",
+   "stem": "Please pay ______ to the instructions.",
+   "ans": "attention",
+   "why": "pay attention to 注意。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "How many people will ______ the concert? (attendance)",
+   "ans": "attend",
+   "why": "will 后面用动词 attend。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There were a large attendance at the match.",
+   "ans": "were → was",
+   "why": "a large attendance 是单数，be 用 was。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Doctors were in attendance\" means doctors were ______.",
+   "opts": [
+    "there",
+    "absent",
+    "sick",
+    "late"
+   ],
+   "why": "in attendance 在场、出席。",
+   "kd": "短语"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "那位乘务员给了我一杯水。",
+   "stem": "The flight ______ gave me a glass of water.",
+   "ans": "attendant",
+   "why": "“服务员、乘务员”是 attendant。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

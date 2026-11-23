@@ -1,0 +1,96 @@
+{
+ "单词": "curriculum",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：学校今年在课程里加了什么？\n听：Our school added coding to the curriculum.\nA. 足球\nB. 书法\nC. 烹饪\nD. 编程",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Music is part of the school ______.\nA. current\nB. currency\nC. curly\nD. curriculum\n考点：易混",
+  "题目3": "【选词填空】从 curriculum、course 中选一个，用适当形式填空。\n题干：I'm taking an English ______ this summer.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The new curriculum ______ next year. (start)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The curriculum have many subjects.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：CV is short for curriculum ______.\nA. vitae\nB. vision\nC. visit\nD. voice\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A school curriculum includes ______ subjects.\nA. all the\nB. only one\nC. no\nD. half a\n考点：易混",
+  "答案": "【1】D（编程）\n讲解：curriculum 课程设置。\n【2】D（curriculum）\n讲解：学校开设的全部课程是 curriculum。\n【3】course\n讲解：一门课是 course；curriculum 是全部课程。\n【4】will start\n讲解：next year 用将来时 will start。\n【5】have → has\n讲解：主语 curriculum 是单数，用 has。\n【6】A（vitae）\n讲解：CV = curriculum vitae（简历）。\n【7】A（all the）\n讲解：curriculum 是学校开设的全部课程。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：学校今年在课程里加了什么？",
+   "listen": "Our school added coding to the curriculum.",
+   "opts": [
+    "编程",
+    "足球",
+    "书法",
+    "烹饪"
+   ],
+   "why": "curriculum 课程设置。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Music is part of the school ______.",
+   "opts": [
+    "curriculum",
+    "current",
+    "currency",
+    "curly"
+   ],
+   "why": "学校开设的全部课程是 curriculum。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 curriculum、course 中选一个，用适当形式填空。",
+   "stem": "I'm taking an English ______ this summer.",
+   "ans": "course",
+   "why": "一门课是 course；curriculum 是全部课程。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The new curriculum ______ next year. (start)",
+   "ans": "will start",
+   "why": "next year 用将来时 will start。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The curriculum have many subjects.",
+   "ans": "have → has",
+   "why": "主语 curriculum 是单数，用 has。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "CV is short for curriculum ______.",
+   "opts": [
+    "vitae",
+    "vision",
+    "visit",
+    "voice"
+   ],
+   "why": "CV = curriculum vitae（简历）。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A school curriculum includes ______ subjects.",
+   "opts": [
+    "all the",
+    "only one",
+    "no",
+    "half a"
+   ],
+   "why": "curriculum 是学校开设的全部课程。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

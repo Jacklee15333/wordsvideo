@@ -1,0 +1,94 @@
+{
+ "单词": "hotel",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他们住在哪里？\n听：We stayed at a hotel near the beach.\nA. 朋友家\nB. 帐篷\nC. 青年旅舍\nD. 海边酒店",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many ______ in the city centre.\nA. hotel\nB. hotels\nC. hotelles\nD. hotells",
+  "题目3": "【选词填空】从 hotel、hostel 中选一个，用适当形式填空。\n题干：Students often stay in a cheap ______ with shared rooms.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：They stayed in hotel for three nights.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我们在一家酒店订了房间。\n题干：We booked a room at a ______.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A ______ is a hotel for people travelling by car.\nA. hostel\nB. inn\nC. motel\nD. house\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：An \"inn\" is usually a small place to stay in the ______.\nA. city centre\nB. countryside\nC. airport\nD. station\n考点：用法",
+  "答案": "【1】D（海边酒店）\n讲解：hotel 酒店。\n【2】B（hotels）\n讲解：many 后面用复数。\n【3】hostel\n讲解：便宜、多人间的是青年旅舍 hostel。\n【4】in hotel → in a hotel\n讲解：hotel 是可数名词，前面要加冠词。\n【5】hotel\n讲解：酒店 hotel。\n【6】C（motel）\n讲解：汽车旅馆是 motel。\n【7】B（countryside）\n讲解：inn 多指乡间小客栈。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他们住在哪里？",
+   "listen": "We stayed at a hotel near the beach.",
+   "opts": [
+    "海边酒店",
+    "朋友家",
+    "帐篷",
+    "青年旅舍"
+   ],
+   "why": "hotel 酒店。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ in the city centre.",
+   "opts": [
+    "hotels",
+    "hotel",
+    "hotelles",
+    "hotells"
+   ],
+   "why": "many 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 hotel、hostel 中选一个，用适当形式填空。",
+   "stem": "Students often stay in a cheap ______ with shared rooms.",
+   "ans": "hostel",
+   "why": "便宜、多人间的是青年旅舍 hostel。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "They stayed in hotel for three nights.",
+   "ans": "in hotel → in a hotel",
+   "why": "hotel 是可数名词，前面要加冠词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们在一家酒店订了房间。",
+   "stem": "We booked a room at a ______.",
+   "ans": "hotel",
+   "why": "酒店 hotel。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A ______ is a hotel for people travelling by car.",
+   "opts": [
+    "motel",
+    "hostel",
+    "inn",
+    "house"
+   ],
+   "why": "汽车旅馆是 motel。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An \"inn\" is usually a small place to stay in the ______.",
+   "opts": [
+    "countryside",
+    "city centre",
+    "airport",
+    "station"
+   ],
+   "why": "inn 多指乡间小客栈。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

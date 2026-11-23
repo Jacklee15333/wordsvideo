@@ -1,0 +1,94 @@
+{
+ "单词": "word",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让大家做什么？\n听：Please learn these new words by heart.\nA. 把生词背下来\nB. 把句子写下来\nC. 把书合上\nD. 把作业交上来",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ other words, he is the best student.\nA. On\nB. With\nC. At\nD. In\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：How many ______ are there in this sentence? (word)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：I want to have a word to you.\n考点：短语",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他总是守信用。\n题干：He always keeps his ______.\n考点：短语",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：There are many countries in the ______.\nA. word\nB. work\nC. world\nD. wood\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：请用几句话说说你的周末。\n题干：Please talk about your weekend in a few ______.\n考点：变形",
+  "答案": "【1】A（把生词背下来）\n讲解：word 单词。\n【2】D（In）\n讲解：in other words 换句话说。\n【3】words\n讲解：how many 后面接复数，加 s。\n【4】to → with\n讲解：have a word with sb. 和某人说几句话。\n【5】word\n讲解：keep one's word 遵守诺言。\n【6】C（world）\n讲解：“世界”是 world，和 word 只差一个 l。\n【7】words\n讲解：a few 后面接复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让大家做什么？",
+   "listen": "Please learn these new words by heart.",
+   "opts": [
+    "把生词背下来",
+    "把句子写下来",
+    "把书合上",
+    "把作业交上来"
+   ],
+   "why": "word 单词。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ other words, he is the best student.",
+   "opts": [
+    "In",
+    "On",
+    "With",
+    "At"
+   ],
+   "why": "in other words 换句话说。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "How many ______ are there in this sentence? (word)",
+   "ans": "words",
+   "why": "how many 后面接复数，加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I want to have a word to you.",
+   "ans": "to → with",
+   "why": "have a word with sb. 和某人说几句话。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他总是守信用。",
+   "stem": "He always keeps his ______.",
+   "ans": "word",
+   "why": "keep one's word 遵守诺言。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many countries in the ______.",
+   "opts": [
+    "world",
+    "word",
+    "work",
+    "wood"
+   ],
+   "why": "“世界”是 world，和 word 只差一个 l。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请用几句话说说你的周末。",
+   "stem": "Please talk about your weekend in a few ______.",
+   "ans": "words",
+   "why": "a few 后面接复数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

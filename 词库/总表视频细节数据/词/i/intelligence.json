@@ -1,0 +1,98 @@
+{
+ "单词": "intelligence",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这只狗怎么样？\n听：The dog shows great intelligence.\nA. 很懒\nB. 很胖\nC. 很聪明\nD. 很凶",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The test measures a child's ______.\nA. intelligent\nB. intelligence\nC. intelligently\nD. intellectual\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：She is very ______. (intelligence)\n考点：词性转换",
+  "题目4": "【选词填空】从 intelligence、intellect 中选一个，用适当形式填空。\n题干：He is a man of great ______ who loves big ideas.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：His intelligences are high.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Intelligence can also mean ______.\nA. 知识分子\nB. 智力题\nC. 聪明的人\nD. 情报\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：AI is short for ______.\nA. art and ideas\nB. artificial intelligence\nC. all information\nD. animal intelligence\n考点：短语",
+  "答案": "【1】C（很聪明）\n讲解：intelligence 智力。\n【2】B（intelligence）\n讲解：a child's 后面要名词 intelligence（智力）。\n【3】intelligent\n讲解：be very 后面用形容词 intelligent。\n【4】intellect\n讲解：偏抽象思考、推理的才智用 intellect。\n【5】intelligences are → intelligence is\n讲解：intelligence 不可数。\n【6】D（情报）\n讲解：intelligence 也指“情报、情报机构”。\n【7】B（artificial intelligence）\n讲解：AI 是 artificial intelligence 的缩写。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这只狗怎么样？",
+   "listen": "The dog shows great intelligence.",
+   "opts": [
+    "很聪明",
+    "很懒",
+    "很胖",
+    "很凶"
+   ],
+   "why": "intelligence 智力。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The test measures a child's ______.",
+   "opts": [
+    "intelligence",
+    "intelligent",
+    "intelligently",
+    "intellectual"
+   ],
+   "why": "a child's 后面要名词 intelligence（智力）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She is very ______. (intelligence)",
+   "ans": "intelligent",
+   "why": "be very 后面用形容词 intelligent。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 intelligence、intellect 中选一个，用适当形式填空。",
+   "stem": "He is a man of great ______ who loves big ideas.",
+   "ans": "intellect",
+   "why": "偏抽象思考、推理的才智用 intellect。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "His intelligences are high.",
+   "ans": "intelligences are → intelligence is",
+   "why": "intelligence 不可数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Intelligence can also mean ______.",
+   "opts": [
+    "情报",
+    "知识分子",
+    "智力题",
+    "聪明的人"
+   ],
+   "why": "intelligence 也指“情报、情报机构”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "AI is short for ______.",
+   "opts": [
+    "artificial intelligence",
+    "art and ideas",
+    "all information",
+    "animal intelligence"
+   ],
+   "why": "AI 是 artificial intelligence 的缩写。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

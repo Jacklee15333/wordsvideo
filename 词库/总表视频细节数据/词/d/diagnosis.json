@@ -1,0 +1,93 @@
+{
+ "单词": "diagnosis",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：医生的诊断是什么？\n听：The diagnosis was a broken arm.\nA. 感冒\nB. 发烧\nC. 手臂骨折\nD. 头痛",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The doctor made a quick ______.\nA. diagnose\nB. diagnosed\nC. diagnosis\nD. diagnoses\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The doctors made two different ______. (diagnosis)\n考点：变形",
+  "题目4": "【选词填空】从 diagnosis、prognosis 中选一个，用适当形式填空。\n题干：The ______ tells what will happen to the patient later.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The diagnosis were wrong.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：医生诊断出他得了流感。\n题干：The doctor ______ him with flu.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A diagnosis tells you ______.\nA. how much to pay\nB. where to go\nC. what illness you have\nD. when to eat\n考点：用法",
+  "答案": "【1】C（手臂骨折）\n讲解：diagnosis 诊断。\n【2】C（diagnosis）\n讲解：make a diagnosis 作出诊断。\n【3】diagnoses\n讲解：diagnosis 复数是不规则的 diagnoses。\n【4】prognosis\n讲解：预测“将来会怎样”的是 prognosis。\n【5】were → was\n讲解：主语 diagnosis 单数，谓语用 was。\n【6】diagnosed\n讲解：动词 diagnose 诊断，过去式 diagnosed。\n【7】C（what illness you have）\n讲解：diagnosis 判断是什么病。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：医生的诊断是什么？",
+   "listen": "The diagnosis was a broken arm.",
+   "opts": [
+    "手臂骨折",
+    "感冒",
+    "发烧",
+    "头痛"
+   ],
+   "why": "diagnosis 诊断。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The doctor made a quick ______.",
+   "opts": [
+    "diagnosis",
+    "diagnose",
+    "diagnosed",
+    "diagnoses"
+   ],
+   "why": "make a diagnosis 作出诊断。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The doctors made two different ______. (diagnosis)",
+   "ans": "diagnoses",
+   "why": "diagnosis 复数是不规则的 diagnoses。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 diagnosis、prognosis 中选一个，用适当形式填空。",
+   "stem": "The ______ tells what will happen to the patient later.",
+   "ans": "prognosis",
+   "why": "预测“将来会怎样”的是 prognosis。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The diagnosis were wrong.",
+   "ans": "were → was",
+   "why": "主语 diagnosis 单数，谓语用 was。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "医生诊断出他得了流感。",
+   "stem": "The doctor ______ him with flu.",
+   "ans": "diagnosed",
+   "why": "动词 diagnose 诊断，过去式 diagnosed。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A diagnosis tells you ______.",
+   "opts": [
+    "what illness you have",
+    "how much to pay",
+    "where to go",
+    "when to eat"
+   ],
+   "why": "diagnosis 判断是什么病。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

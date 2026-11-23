@@ -1,0 +1,96 @@
+{
+ "单词": "cursive",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：奶奶写的是什么字？\n听：My grandma writes in beautiful cursive.\nA. 印刷体\nB. 漂亮的连笔字\nC. 大写字母\nD. 中文",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Children learn to write in ______ after printing.\nA. curse\nB. cursive\nC. cursor\nD. course\n考点：易混",
+  "题目3": "【选词填空】从 cursive、italic 中选一个，用适当形式填空。\n题干：Book titles are often printed in ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Her ______ is hard to read. (handwrite)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He write in cursive very fast.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Chinese cursive script is called ______ in Chinese.\nA. 楷书\nB. 隶书\nC. 篆书\nD. 草书\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：She writes ______ cursive.\nA. on\nB. at\nC. in\nD. with\n考点：用法",
+  "答案": "【1】B（漂亮的连笔字）\n讲解：cursive 连笔字。\n【2】B（cursive）\n讲解：连笔书写是 cursive。\n【3】italic\n讲解：印刷的斜体是 italic；cursive 是手写连笔体。\n【4】handwriting\n讲解：her 后面要名词 handwriting（笔迹）。\n【5】write → writes\n讲解：主语 he 三单，用 writes。\n【6】D（草书）\n讲解：中文草书英文常叫 cursive script。\n【7】C（in）\n讲解：用某种字体写用 in。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：奶奶写的是什么字？",
+   "listen": "My grandma writes in beautiful cursive.",
+   "opts": [
+    "漂亮的连笔字",
+    "印刷体",
+    "大写字母",
+    "中文"
+   ],
+   "why": "cursive 连笔字。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Children learn to write in ______ after printing.",
+   "opts": [
+    "cursive",
+    "curse",
+    "cursor",
+    "course"
+   ],
+   "why": "连笔书写是 cursive。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 cursive、italic 中选一个，用适当形式填空。",
+   "stem": "Book titles are often printed in ______.",
+   "ans": "italic",
+   "why": "印刷的斜体是 italic；cursive 是手写连笔体。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Her ______ is hard to read. (handwrite)",
+   "ans": "handwriting",
+   "why": "her 后面要名词 handwriting（笔迹）。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He write in cursive very fast.",
+   "ans": "write → writes",
+   "why": "主语 he 三单，用 writes。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Chinese cursive script is called ______ in Chinese.",
+   "opts": [
+    "草书",
+    "楷书",
+    "隶书",
+    "篆书"
+   ],
+   "why": "中文草书英文常叫 cursive script。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She writes ______ cursive.",
+   "opts": [
+    "in",
+    "on",
+    "at",
+    "with"
+   ],
+   "why": "用某种字体写用 in。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

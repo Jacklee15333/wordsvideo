@@ -1,0 +1,96 @@
+{
+ "单词": "intensive",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人去年夏天上了什么课？\n听：I took an intensive French course last summer.\nA. 法语兴趣课\nB. 法国旅行\nC. 法语强化课\nD. 法国菜",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My grandpa is in the ______ care unit at the hospital.\nA. intense\nB. intent\nC. intensive\nD. tense",
+  "题目3": "【选词填空】从 intense、intensive 中选一个，用适当形式填空。\n题干：The ______ heat made everyone tired.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We need to study more ______ before the exam. (intensive)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We had an intensive training and everyone were tired.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Farming large areas of land with little work is called ______ farming.\nA. intensive\nB. intense\nC. extensive\nD. expensive\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：An intensive course is one that ______.\nA. lasts many years\nB. is very easy\nC. teaches a lot in a short time\nD. is free\n考点：用法",
+  "答案": "【1】C（法语强化课）\n讲解：intensive course 强化课程。\n【2】C（intensive）\n讲解：重症监护室是 intensive care unit。\n【3】intense\n讲解：热的程度极强用 intense。\n【4】intensively\n讲解：修饰动词 study 用副词 intensively。\n【5】were → was\n讲解：everyone 作主语用单数 was。\n【6】C（extensive）\n讲解：大片地、少投入的粗放农业是 extensive farming，和 intensive 相对。\n【7】C（teaches a lot in a short time）\n讲解：intensive 集中的、密集的。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人去年夏天上了什么课？",
+   "listen": "I took an intensive French course last summer.",
+   "opts": [
+    "法语强化课",
+    "法语兴趣课",
+    "法国旅行",
+    "法国菜"
+   ],
+   "why": "intensive course 强化课程。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My grandpa is in the ______ care unit at the hospital.",
+   "opts": [
+    "intensive",
+    "intense",
+    "intent",
+    "tense"
+   ],
+   "why": "重症监护室是 intensive care unit。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 intense、intensive 中选一个，用适当形式填空。",
+   "stem": "The ______ heat made everyone tired.",
+   "ans": "intense",
+   "why": "热的程度极强用 intense。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We need to study more ______ before the exam. (intensive)",
+   "ans": "intensively",
+   "why": "修饰动词 study 用副词 intensively。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We had an intensive training and everyone were tired.",
+   "ans": "were → was",
+   "why": "everyone 作主语用单数 was。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Farming large areas of land with little work is called ______ farming.",
+   "opts": [
+    "extensive",
+    "intensive",
+    "intense",
+    "expensive"
+   ],
+   "why": "大片地、少投入的粗放农业是 extensive farming，和 intensive 相对。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An intensive course is one that ______.",
+   "opts": [
+    "teaches a lot in a short time",
+    "lasts many years",
+    "is very easy",
+    "is free"
+   ],
+   "why": "intensive 集中的、密集的。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

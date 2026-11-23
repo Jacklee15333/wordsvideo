@@ -1,0 +1,94 @@
+{
+ "单词": "near",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人住在哪里？\n听：I live near the school, so I walk there.\nA. 离学校很远\nB. 学校里\nC. 学校附近\nD. 公园旁边",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Is there a bank ______ here?\nA. nearly\nB. near\nC. next\nD. nearby to\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Which is ______, the park or the zoo? (near)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：It's near ten o'clock. Let's go home.\n考点：易混",
+  "题目5": "【选词填空】从 near、nearest 中选一个，用适当形式填空。\n题干：Where is the ______ hospital?\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我差点儿错过公交车。\n题干：I n______ missed the bus.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Near\" and \"______\" can both mean 近的.\nA. far\nB. long\nC. deep\nD. close\n考点：易混",
+  "答案": "【1】C（学校附近）\n讲解：near 在附近。\n【2】B（near）\n讲解：near here 在这附近。\n【3】nearer\n讲解：两者比较用比较级 nearer。\n【4】near → nearly\n讲解：“将近”十点用 nearly。\n【5】nearest\n讲解：问“最近的”医院用最高级 nearest。\n【6】nearly\n讲解：“差点儿”用 nearly。\n【7】D（close）\n讲解：近的：near、close。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人住在哪里？",
+   "listen": "I live near the school, so I walk there.",
+   "opts": [
+    "学校附近",
+    "离学校很远",
+    "学校里",
+    "公园旁边"
+   ],
+   "why": "near 在附近。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Is there a bank ______ here?",
+   "opts": [
+    "near",
+    "nearly",
+    "next",
+    "nearby to"
+   ],
+   "why": "near here 在这附近。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Which is ______, the park or the zoo? (near)",
+   "ans": "nearer",
+   "why": "两者比较用比较级 nearer。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "It's near ten o'clock. Let's go home.",
+   "ans": "near → nearly",
+   "why": "“将近”十点用 nearly。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 near、nearest 中选一个，用适当形式填空。",
+   "stem": "Where is the ______ hospital?",
+   "ans": "nearest",
+   "why": "问“最近的”医院用最高级 nearest。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我差点儿错过公交车。",
+   "stem": "I n______ missed the bus.",
+   "ans": "nearly",
+   "why": "“差点儿”用 nearly。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Near\" and \"______\" can both mean 近的.",
+   "opts": [
+    "close",
+    "far",
+    "long",
+    "deep"
+   ],
+   "why": "近的：near、close。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

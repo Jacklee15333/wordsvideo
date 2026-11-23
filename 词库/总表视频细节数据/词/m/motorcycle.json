@@ -1,0 +1,93 @@
+{
+ "单词": "motorcycle",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他骑什么上班？\n听：He rides a motorcycle to work.\nA. 自行车\nB. 马\nC. 摩托车\nD. 滑板",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：He rides a ______ to work.\nA. motor\nB. motorcycle\nC. motorcyclist\nD. motorcycles\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many ______ in the street. (motorcycle)\n考点：变形",
+  "题目4": "【选词填空】从 motorcycle、bicycle 中选一个，用适当形式填空。\n题干：My ______ has no engine. I pedal it.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The motorcycle are fast.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In spoken English, a motorcycle is often called a ______.\nA. bus\nB. train\nC. plane\nD. motorbike\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他是一名摩托车手。\n题干：He is a ______.\n考点：词性转换",
+  "答案": "【1】C（摩托车）\n讲解：motorcycle 摩托车。\n【2】B（motorcycle）\n讲解：a 后面接单数 motorcycle。\n【3】motorcycles\n讲解：many 后面用复数 motorcycles。\n【4】bicycle\n讲解：没有发动机、要蹬的是自行车 bicycle。\n【5】are → is\n讲解：主语 motorcycle 单数，谓语用 is。\n【6】D（motorbike）\n讲解：口语常说 motorbike。\n【7】motorcyclist\n讲解：“摩托车手”是 motorcyclist。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他骑什么上班？",
+   "listen": "He rides a motorcycle to work.",
+   "opts": [
+    "摩托车",
+    "自行车",
+    "马",
+    "滑板"
+   ],
+   "why": "motorcycle 摩托车。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "He rides a ______ to work.",
+   "opts": [
+    "motorcycle",
+    "motor",
+    "motorcyclist",
+    "motorcycles"
+   ],
+   "why": "a 后面接单数 motorcycle。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many ______ in the street. (motorcycle)",
+   "ans": "motorcycles",
+   "why": "many 后面用复数 motorcycles。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 motorcycle、bicycle 中选一个，用适当形式填空。",
+   "stem": "My ______ has no engine. I pedal it.",
+   "ans": "bicycle",
+   "why": "没有发动机、要蹬的是自行车 bicycle。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The motorcycle are fast.",
+   "ans": "are → is",
+   "why": "主语 motorcycle 单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In spoken English, a motorcycle is often called a ______.",
+   "opts": [
+    "motorbike",
+    "bus",
+    "train",
+    "plane"
+   ],
+   "why": "口语常说 motorbike。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是一名摩托车手。",
+   "stem": "He is a ______.",
+   "ans": "motorcyclist",
+   "why": "“摩托车手”是 motorcyclist。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

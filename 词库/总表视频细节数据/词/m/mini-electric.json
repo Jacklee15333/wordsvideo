@@ -1,0 +1,91 @@
+{
+ "单词": "mini-electric",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人买了什么车？\n听：My grandma has a mini-electric car.\nA. 大卡车\nB. 小型电动车\nC. 公共汽车\nD. 自行车",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many ______ cars in our town.\nA. mini-electricity\nB. mini-electrics\nC. mini-electric\nD. mini-electrician",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：These cars need ______ to run. (mini-electric)\n考点：词性转换",
+  "题目4": "【选词填空】从 small、huge 中选一个，用适当形式填空。\n题干：A mini-electric car is very ______ and easy to park.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She drives a mini-electric car to work every day, doesn't it?",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这辆小型电动车很省钱。\n题干：The mini-electric car ______ a lot of ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：______ mini-electric car is parked outside.\nA. A\nB. An\nC. The many\nD. Some many\n考点：用法",
+  "答案": "【1】B（小型电动车）\n讲解：mini-electric 小型电动的。\n【2】C（mini-electric）\n讲解：修饰名词 cars 用形容词 mini-electric，形容词不加 s。\n【3】electricity\n讲解：need 后面要名词 electricity（电）。\n【4】small\n讲解：mini 表示“小型的”，好停车，用 small。\n【5】it → she\n讲解：反意疑问句的主语和陈述部分 she 一致。\n【6】saves；money\n讲解：save money 省钱。\n【7】A（A）\n讲解：mini 以辅音音素开头，用 a。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人买了什么车？",
+   "listen": "My grandma has a mini-electric car.",
+   "opts": [
+    "小型电动车",
+    "大卡车",
+    "公共汽车",
+    "自行车"
+   ],
+   "why": "mini-electric 小型电动的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ cars in our town.",
+   "opts": [
+    "mini-electric",
+    "mini-electricity",
+    "mini-electrics",
+    "mini-electrician"
+   ],
+   "why": "修饰名词 cars 用形容词 mini-electric，形容词不加 s。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "These cars need ______ to run. (mini-electric)",
+   "ans": "electricity",
+   "why": "need 后面要名词 electricity（电）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 small、huge 中选一个，用适当形式填空。",
+   "stem": "A mini-electric car is very ______ and easy to park.",
+   "ans": "small",
+   "why": "mini 表示“小型的”，好停车，用 small。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She drives a mini-electric car to work every day, doesn't it?",
+   "ans": "it → she",
+   "why": "反意疑问句的主语和陈述部分 she 一致。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这辆小型电动车很省钱。",
+   "stem": "The mini-electric car ______ a lot of ______.",
+   "ans": "saves；money",
+   "why": "save money 省钱。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ mini-electric car is parked outside.",
+   "opts": [
+    "A",
+    "An",
+    "The many",
+    "Some many"
+   ],
+   "why": "mini 以辅音音素开头，用 a。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

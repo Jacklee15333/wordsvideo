@@ -1,0 +1,94 @@
+{
+ "单词": "midterm",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在准备什么？\n听：I'm preparing for the midterm exam.\nA. 期中考试\nB. 期末考试\nC. 入学考试\nD. 体育考试",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We have ______ exams next week.\nA. midterms\nB. middle\nC. mid\nD. midterm",
+  "题目3": "【选词填空】从 midterm、final 中选一个，用适当形式填空。\n题干：The ______ exam is at the end of the term.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：I did well in both my midterm.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：考试前要好好复习。\n题干：Review your lessons well ______ the exam.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In politics, \"midterm\" can mean the middle of a ______'s time in office.\nA. student\nB. president\nC. teacher\nD. doctor\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Midterms\" often means ______.\nA. long holidays\nB. midterm exams\nC. new terms\nD. school clubs\n考点：变形",
+  "答案": "【1】A（期中考试）\n讲解：midterm exam 期中考试。\n【2】D（midterm）\n讲解：作定语用 midterm，不加 s。\n【3】final\n讲解：期末考试是 final exam。\n【4】midterm → midterms\n讲解：both 后面用复数。\n【5】before\n讲解：在……之前 before。\n【6】B（president）\n讲解：政治上 term 指总统任期。\n【7】B（midterm exams）\n讲解：作名词复数常指期中考试。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在准备什么？",
+   "listen": "I'm preparing for the midterm exam.",
+   "opts": [
+    "期中考试",
+    "期末考试",
+    "入学考试",
+    "体育考试"
+   ],
+   "why": "midterm exam 期中考试。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We have ______ exams next week.",
+   "opts": [
+    "midterm",
+    "midterms",
+    "middle",
+    "mid"
+   ],
+   "why": "作定语用 midterm，不加 s。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 midterm、final 中选一个，用适当形式填空。",
+   "stem": "The ______ exam is at the end of the term.",
+   "ans": "final",
+   "why": "期末考试是 final exam。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I did well in both my midterm.",
+   "ans": "midterm → midterms",
+   "why": "both 后面用复数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "考试前要好好复习。",
+   "stem": "Review your lessons well ______ the exam.",
+   "ans": "before",
+   "why": "在……之前 before。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In politics, \"midterm\" can mean the middle of a ______'s time in office.",
+   "opts": [
+    "president",
+    "student",
+    "teacher",
+    "doctor"
+   ],
+   "why": "政治上 term 指总统任期。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Midterms\" often means ______.",
+   "opts": [
+    "midterm exams",
+    "long holidays",
+    "new terms",
+    "school clubs"
+   ],
+   "why": "作名词复数常指期中考试。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

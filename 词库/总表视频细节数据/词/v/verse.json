@@ -1,0 +1,97 @@
+{
+ "单词": "verse",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让学生背什么？\n听：Learn the first verse of the poem by heart.\nA. 整首诗\nB. 诗的第一节\nC. 一篇课文\nD. 歌名",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Shakespeare wrote many plays in ______.\nA. verse\nB. version\nC. poem\nD. poet",
+  "题目3": "【选词填空】从 verse、poem 中选一个，用适当形式填空。\n题干：Li Bai wrote a beautiful ______ about the moon.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The song has three ______. (verse)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This story is written in verse, not in poem.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"______\" means poems in general.\nA. Poet\nB. Poetry\nC. Poem\nD. Poems\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：This is the English ______ of the film.\nA. verse\nB. vision\nC. visit\nD. version\n考点：易混",
+  "答案": "【1】B（诗的第一节）\n讲解：the first verse 第一节。\n【2】A（verse）\n讲解：用韵文写，in verse。\n【3】poem\n讲解：“一首诗”用 poem。\n【4】verses\n讲解：three 后面用复数 verses。\n【5】poem → prose\n讲解：与 verse（韵文）相对的是 prose（散文）。\n【6】B（Poetry）\n讲解：诗的总称是 poetry。\n【7】D（version）\n讲解：英文“版本”是 version。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让学生背什么？",
+   "listen": "Learn the first verse of the poem by heart.",
+   "opts": [
+    "诗的第一节",
+    "整首诗",
+    "一篇课文",
+    "歌名"
+   ],
+   "why": "the first verse 第一节。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Shakespeare wrote many plays in ______.",
+   "opts": [
+    "verse",
+    "version",
+    "poem",
+    "poet"
+   ],
+   "why": "用韵文写，in verse。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 verse、poem 中选一个，用适当形式填空。",
+   "stem": "Li Bai wrote a beautiful ______ about the moon.",
+   "ans": "poem",
+   "why": "“一首诗”用 poem。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The song has three ______. (verse)",
+   "ans": "verses",
+   "why": "three 后面用复数 verses。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This story is written in verse, not in poem.",
+   "ans": "poem → prose",
+   "why": "与 verse（韵文）相对的是 prose（散文）。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"______\" means poems in general.",
+   "opts": [
+    "Poetry",
+    "Poet",
+    "Poem",
+    "Poems"
+   ],
+   "why": "诗的总称是 poetry。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This is the English ______ of the film.",
+   "opts": [
+    "version",
+    "verse",
+    "vision",
+    "visit"
+   ],
+   "why": "英文“版本”是 version。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

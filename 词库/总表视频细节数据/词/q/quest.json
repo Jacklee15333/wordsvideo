@@ -1,0 +1,94 @@
+{
+ "单词": "quest",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个故事讲的是什么？\n听：The story is about a quest for gold.\nA. 发现石油\nB. 偷金子\nC. 卖黄金\nD. 寻找黄金",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：They went on a long ______ to find the lost city.\nA. question\nB. quest\nC. request\nD. query\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The hero finished three ______ in the game. (quest)\n考点：变形",
+  "题目4": "【选词填空】从 quest、question 中选一个，用适当形式填空。\n题干：May I ask you a ______?\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Their quest of happiness never ended.\n考点：短语",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A quest is a long ______ for something.\nA. sleep\nB. rest\nC. meal\nD. search\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他向老师提出了一个请求。\n题干：He made a ______ to the teacher.\n考点：易混",
+  "答案": "【1】D（寻找黄金）\n讲解：quest for 追寻、寻找。\n【2】B（quest）\n讲解：quest 追寻、探寻。\n【3】quests\n讲解：three 后面用复数 quests。\n【4】question\n讲解：ask a question 问问题；quest 是追寻。\n【5】of → for\n讲解：quest for sth 寻求某物。\n【6】D（search）\n讲解：quest 是长期的“寻找、追求”。\n【7】request\n讲解：“请求”是 request；quest 是追寻。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个故事讲的是什么？",
+   "listen": "The story is about a quest for gold.",
+   "opts": [
+    "寻找黄金",
+    "发现石油",
+    "偷金子",
+    "卖黄金"
+   ],
+   "why": "quest for 追寻、寻找。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "They went on a long ______ to find the lost city.",
+   "opts": [
+    "quest",
+    "question",
+    "request",
+    "query"
+   ],
+   "why": "quest 追寻、探寻。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The hero finished three ______ in the game. (quest)",
+   "ans": "quests",
+   "why": "three 后面用复数 quests。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 quest、question 中选一个，用适当形式填空。",
+   "stem": "May I ask you a ______?",
+   "ans": "question",
+   "why": "ask a question 问问题；quest 是追寻。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Their quest of happiness never ended.",
+   "ans": "of → for",
+   "why": "quest for sth 寻求某物。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A quest is a long ______ for something.",
+   "opts": [
+    "search",
+    "sleep",
+    "rest",
+    "meal"
+   ],
+   "why": "quest 是长期的“寻找、追求”。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他向老师提出了一个请求。",
+   "stem": "He made a ______ to the teacher.",
+   "ans": "request",
+   "why": "“请求”是 request；quest 是追寻。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

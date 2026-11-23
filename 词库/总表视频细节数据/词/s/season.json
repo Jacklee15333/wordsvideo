@@ -1,0 +1,92 @@
+{
+ "单词": "season",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人最喜欢哪个季节？\n听：My favorite season is autumn.\nA. 春天\nB. 夏天\nC. 冬天\nD. 秋天",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are four ______ in a year.\nA. season\nB. seasonal\nC. seasoned\nD. seasons\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Some fruits are ______; you can buy them only in summer. (season)\n考点：词性转换",
+  "题目4": "【选词填空】从 season、reason 中选一个，用适当形式填空。\n题干：What's the ______ for being late?",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Spring is my favourite seasons.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Strawberries are ______ season now; they're cheap.\nA. on\nB. in\nC. at\nD. by\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：雨季来了。\n题干：The rainy ______ has come.\n考点：用法",
+  "答案": "【1】D（秋天）\n讲解：season 季节。\n【2】D（seasons）\n讲解：four 后面用复数，加 s。\n【3】seasonal\n讲解：be 后面用形容词 seasonal（季节性的）。\n【4】reason\n讲解：迟到的原因是 reason。\n【5】seasons → season\n讲解：主语 spring 是单数，表语用单数。\n【6】B（in）\n讲解：in season 当季。\n【7】season\n讲解：雨季是 the rainy season。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人最喜欢哪个季节？",
+   "listen": "My favorite season is autumn.",
+   "opts": [
+    "秋天",
+    "春天",
+    "夏天",
+    "冬天"
+   ],
+   "why": "season 季节。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are four ______ in a year.",
+   "opts": [
+    "seasons",
+    "season",
+    "seasonal",
+    "seasoned"
+   ],
+   "why": "four 后面用复数，加 s。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Some fruits are ______; you can buy them only in summer. (season)",
+   "ans": "seasonal",
+   "why": "be 后面用形容词 seasonal（季节性的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 season、reason 中选一个，用适当形式填空。",
+   "stem": "What's the ______ for being late?",
+   "ans": "reason",
+   "why": "迟到的原因是 reason。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Spring is my favourite seasons.",
+   "ans": "seasons → season",
+   "why": "主语 spring 是单数，表语用单数。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Strawberries are ______ season now; they're cheap.",
+   "opts": [
+    "in",
+    "on",
+    "at",
+    "by"
+   ],
+   "why": "in season 当季。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "雨季来了。",
+   "stem": "The rainy ______ has come.",
+   "ans": "season",
+   "why": "雨季是 the rainy season。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

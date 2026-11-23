@@ -1,0 +1,93 @@
+{
+ "单词": "encoding",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个文件为什么打不开？\n听：The file has the wrong encoding.\nA. 太大了\nB. 被删了\nC. 编码不对\nD. 没有名字",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Check the ______ of the text file.\nA. encode\nB. encodes\nC. encoded\nD. encoding",
+  "题目3": "【选词填空】从 encode、encoding 中选一个，用适当形式填空。\n题干：Please ______ the file before you send it.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The message ______ by the computer yesterday. (encoding)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Encoding are important in computers.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Encoding puts information into a code; ______ takes it out.\nA. decode\nB. decoding\nC. decoded\nD. encoding\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：我们需要把这条信息解码。\n题干：We need to ______ the message.\n考点：易混",
+  "答案": "【1】C（编码不对）\n讲解：encoding 编码。\n【2】D（encoding）\n讲解：the … of 中间要名词 encoding。\n【3】encode\n讲解：please 后接动词原形 encode。\n【4】was encoded\n讲解：yesterday，被动语态 was encoded。\n【5】are → is\n讲解：encoding 不可数，谓语用 is。\n【6】B（decoding）\n讲解：encode ↔ decode，名词 decoding。\n【7】decode\n讲解：解码 decode。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个文件为什么打不开？",
+   "listen": "The file has the wrong encoding.",
+   "opts": [
+    "编码不对",
+    "太大了",
+    "被删了",
+    "没有名字"
+   ],
+   "why": "encoding 编码。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Check the ______ of the text file.",
+   "opts": [
+    "encoding",
+    "encode",
+    "encodes",
+    "encoded"
+   ],
+   "why": "the … of 中间要名词 encoding。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 encode、encoding 中选一个，用适当形式填空。",
+   "stem": "Please ______ the file before you send it.",
+   "ans": "encode",
+   "why": "please 后接动词原形 encode。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The message ______ by the computer yesterday. (encoding)",
+   "ans": "was encoded",
+   "why": "yesterday，被动语态 was encoded。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Encoding are important in computers.",
+   "ans": "are → is",
+   "why": "encoding 不可数，谓语用 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Encoding puts information into a code; ______ takes it out.",
+   "opts": [
+    "decoding",
+    "decode",
+    "decoded",
+    "encoding"
+   ],
+   "why": "encode ↔ decode，名词 decoding。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们需要把这条信息解码。",
+   "stem": "We need to ______ the message.",
+   "ans": "decode",
+   "why": "解码 decode。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

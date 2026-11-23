@@ -1,0 +1,93 @@
+{
+ "单词": "movement",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：舞者的动作怎么样？\n听：The dancer's movements are beautiful.\nA. 很慢\nB. 很美\nC. 很怪\nD. 很快",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Watch every ______ of the cat.\nA. moving\nB. moved\nC. movement\nD. movie\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Don't ______! (movement)\n考点：词性转换",
+  "题目4": "【选词填空】从 movement、moment 中选一个，用适当形式填空。\n题干：Wait a ______, please.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The dancer's movements was graceful.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Movement can also mean ______.\nA. 乐章；运动\nB. 电影\nC. 片刻\nD. 搬家\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：别动。\n题干：Don't ______.\n考点：词性转换",
+  "答案": "【1】B（很美）\n讲解：movement 动作。\n【2】C（movement）\n讲解：every 后面接单数名词 movement。\n【3】move\n讲解：don't 后面用动词原形 move。\n【4】moment\n讲解：“片刻”用 moment。\n【5】was → were\n讲解：主语 movements 复数，谓语用 were。\n【6】A（乐章；运动）\n讲解：movement 也指“乐章”或社会“运动”。\n【7】move\n讲解：动词“动”是 move。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：舞者的动作怎么样？",
+   "listen": "The dancer's movements are beautiful.",
+   "opts": [
+    "很美",
+    "很慢",
+    "很怪",
+    "很快"
+   ],
+   "why": "movement 动作。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Watch every ______ of the cat.",
+   "opts": [
+    "movement",
+    "moving",
+    "moved",
+    "movie"
+   ],
+   "why": "every 后面接单数名词 movement。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Don't ______! (movement)",
+   "ans": "move",
+   "why": "don't 后面用动词原形 move。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 movement、moment 中选一个，用适当形式填空。",
+   "stem": "Wait a ______, please.",
+   "ans": "moment",
+   "why": "“片刻”用 moment。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The dancer's movements was graceful.",
+   "ans": "was → were",
+   "why": "主语 movements 复数，谓语用 were。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Movement can also mean ______.",
+   "opts": [
+    "乐章；运动",
+    "电影",
+    "片刻",
+    "搬家"
+   ],
+   "why": "movement 也指“乐章”或社会“运动”。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "别动。",
+   "stem": "Don't ______.",
+   "ans": "move",
+   "why": "动词“动”是 move。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

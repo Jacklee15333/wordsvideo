@@ -1,0 +1,92 @@
+{
+ "单词": "seminar",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：姐姐下午有什么课？\n听：My sister has a seminar this afternoon.\nA. 体育课\nB. 音乐课\nC. 研讨课\nD. 考试",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are only ten students in the ______.\nA. seminars\nB. lecture\nC. seminar\nD. lectures",
+  "题目3": "【选词填空】从 seminar、lecture 中选一个，用适当形式填空。\n题干：Three hundred students listened to the professor's ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The university holds many ______ every term. (seminar)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We had a seminar on history yesterday, and everyone talk a lot.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：In the cooking ______, we made bread with our own hands.\nA. workshop\nB. lecture\nC. seminars\nD. speech\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：很多国家的科学家来参加这次大会。\n题干：Scientists from many countries came to the ______.\n考点：易混",
+  "答案": "【1】C（研讨课）\n讲解：seminar 研讨课。\n【2】C（seminar）\n讲解：小班讨论课 seminar，the 后接单数。\n【3】lecture\n讲解：老师讲、学生听的大课是 lecture。\n【4】seminars\n讲解：many 后接复数 seminars。\n【5】talk → talked\n讲解：讲过去的事用 talked。\n【6】A（workshop）\n讲解：动手实践的工作坊是 workshop。\n【7】conference\n讲解：大型会议是 conference。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：姐姐下午有什么课？",
+   "listen": "My sister has a seminar this afternoon.",
+   "opts": [
+    "研讨课",
+    "体育课",
+    "音乐课",
+    "考试"
+   ],
+   "why": "seminar 研讨课。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are only ten students in the ______.",
+   "opts": [
+    "seminar",
+    "seminars",
+    "lecture",
+    "lectures"
+   ],
+   "why": "小班讨论课 seminar，the 后接单数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 seminar、lecture 中选一个，用适当形式填空。",
+   "stem": "Three hundred students listened to the professor's ______.",
+   "ans": "lecture",
+   "why": "老师讲、学生听的大课是 lecture。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The university holds many ______ every term. (seminar)",
+   "ans": "seminars",
+   "why": "many 后接复数 seminars。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We had a seminar on history yesterday, and everyone talk a lot.",
+   "ans": "talk → talked",
+   "why": "讲过去的事用 talked。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In the cooking ______, we made bread with our own hands.",
+   "opts": [
+    "workshop",
+    "lecture",
+    "seminars",
+    "speech"
+   ],
+   "why": "动手实践的工作坊是 workshop。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "很多国家的科学家来参加这次大会。",
+   "stem": "Scientists from many countries came to the ______.",
+   "ans": "conference",
+   "why": "大型会议是 conference。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

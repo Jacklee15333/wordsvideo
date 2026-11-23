@@ -1,0 +1,94 @@
+{
+ "单词": "tester",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人做什么工作？\n听：My job is a game tester.\nA. 游戏设计师\nB. 老师\nC. 游戏测试员\nD. 医生",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The company needs three new ______.\nA. tester\nB. testing\nC. tests\nD. testers\n考点：变形",
+  "题目3": "【选词填空】从 tester、testee 中选一个，用适当形式填空。\n题干：The ______ is the person who takes the test.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：They ______ the new phone for a week last month. (tester)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She works as a test in a software company.\n考点：词性转换",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A tester can also be ______ used for testing.\nA. a test paper\nB. a tool\nC. a teacher\nD. a school\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他是一名软件测试员。\n题干：He is a software ______.\n考点：用法",
+  "答案": "【1】C（游戏测试员）\n讲解：tester 测试员。\n【2】D（testers）\n讲解：three 后面接复数 testers。\n【3】testee\n讲解：受测的人是 testee；tester 是做测试的人。\n【4】tested\n讲解：last month 用过去式 tested。\n【5】test → tester\n讲解：作为“测试员”用指人的 tester。\n【6】B（a tool）\n讲解：tester 也可以指测试用的工具。\n【7】tester\n讲解：测试员 tester。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人做什么工作？",
+   "listen": "My job is a game tester.",
+   "opts": [
+    "游戏测试员",
+    "游戏设计师",
+    "老师",
+    "医生"
+   ],
+   "why": "tester 测试员。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The company needs three new ______.",
+   "opts": [
+    "testers",
+    "tester",
+    "testing",
+    "tests"
+   ],
+   "why": "three 后面接复数 testers。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tester、testee 中选一个，用适当形式填空。",
+   "stem": "The ______ is the person who takes the test.",
+   "ans": "testee",
+   "why": "受测的人是 testee；tester 是做测试的人。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "They ______ the new phone for a week last month. (tester)",
+   "ans": "tested",
+   "why": "last month 用过去式 tested。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She works as a test in a software company.",
+   "ans": "test → tester",
+   "why": "作为“测试员”用指人的 tester。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A tester can also be ______ used for testing.",
+   "opts": [
+    "a tool",
+    "a test paper",
+    "a teacher",
+    "a school"
+   ],
+   "why": "tester 也可以指测试用的工具。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他是一名软件测试员。",
+   "stem": "He is a software ______.",
+   "ans": "tester",
+   "why": "测试员 tester。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

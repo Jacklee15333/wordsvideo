@@ -1,0 +1,94 @@
+{
+ "单词": "magic",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：魔术师表演了什么？\n听：The magician did some magic tricks.\nA. 魔术\nB. 唱歌\nC. 跳舞\nD. 讲笑话",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Do you believe in ______?\nA. magics\nB. magical\nC. magic\nD. magician",
+  "题目3": "【选词填空】从 magic、magician 中选一个，用适当形式填空。\n题干：The ______ pulled a rabbit out of his hat.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He showed us some magics.",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：The castle looked ______ in the snow. (magic)",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：For children, \"the magic word\" is \"______\".\nA. please\nB. no\nC. hello\nD. bye\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A \"magic trick\" is something a magician ______.\nA. buys\nB. eats\nC. does to surprise people\nD. writes\n考点：用法",
+  "答案": "【1】A（魔术）\n讲解：magic 魔术。\n【2】C（magic）\n讲解：magic 不可数。\n【3】magician\n讲解：变魔术的人是 magician。\n【4】magics → magic\n讲解：magic 不可数。\n【5】magical\n讲解：look 后面用形容词“奇妙的”。\n【6】A（please）\n讲解：the magic word 指 please。\n【7】C（does to surprise people）\n讲解：magic trick 戏法。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：魔术师表演了什么？",
+   "listen": "The magician did some magic tricks.",
+   "opts": [
+    "魔术",
+    "唱歌",
+    "跳舞",
+    "讲笑话"
+   ],
+   "why": "magic 魔术。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Do you believe in ______?",
+   "opts": [
+    "magic",
+    "magics",
+    "magical",
+    "magician"
+   ],
+   "why": "magic 不可数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 magic、magician 中选一个，用适当形式填空。",
+   "stem": "The ______ pulled a rabbit out of his hat.",
+   "ans": "magician",
+   "why": "变魔术的人是 magician。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He showed us some magics.",
+   "ans": "magics → magic",
+   "why": "magic 不可数。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The castle looked ______ in the snow. (magic)",
+   "ans": "magical",
+   "why": "look 后面用形容词“奇妙的”。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "For children, \"the magic word\" is \"______\".",
+   "opts": [
+    "please",
+    "no",
+    "hello",
+    "bye"
+   ],
+   "why": "the magic word 指 please。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A \"magic trick\" is something a magician ______.",
+   "opts": [
+    "does to surprise people",
+    "buys",
+    "eats",
+    "writes"
+   ],
+   "why": "magic trick 戏法。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,92 @@
+{
+ "单词": "fraction",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：今天学什么？\n听：Today we will learn about fractions.\nA. 小数\nB. 分数\nC. 加法\nD. 图形",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：One half is a ______.\nA. friction\nB. faction\nC. fraction\nD. fiction",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Add these two ______. (fraction)\n考点：变形",
+  "题目4": "【选词填空】从 fraction、score 中选一个，用适当形式填空。\n题干：I got a high ______ in the test.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The fractions is easy to learn.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：价格只有原来的一小部分。\n题干：The price is only a ______ ______ the old one.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：1/4 is read as \"one ______\".\nA. half\nB. quarter\nC. third\nD. fifth\n考点：用法",
+  "答案": "【1】B（分数）\n讲解：fraction 分数。\n【2】C（fraction）\n讲解：二分之一是一个分数。\n【3】fractions\n讲解：two 后面用复数 fractions。\n【4】score\n讲解：考试“得分”用 score；fraction 是数学里的分数。\n【5】is → are\n讲解：主语 fractions 是复数，用 are。\n【6】fraction；of\n讲解：a fraction of 一小部分。\n【7】B（quarter）\n讲解：四分之一读作 one quarter。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：今天学什么？",
+   "listen": "Today we will learn about fractions.",
+   "opts": [
+    "分数",
+    "小数",
+    "加法",
+    "图形"
+   ],
+   "why": "fraction 分数。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "One half is a ______.",
+   "opts": [
+    "fraction",
+    "friction",
+    "faction",
+    "fiction"
+   ],
+   "why": "二分之一是一个分数。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Add these two ______. (fraction)",
+   "ans": "fractions",
+   "why": "two 后面用复数 fractions。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 fraction、score 中选一个，用适当形式填空。",
+   "stem": "I got a high ______ in the test.",
+   "ans": "score",
+   "why": "考试“得分”用 score；fraction 是数学里的分数。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The fractions is easy to learn.",
+   "ans": "is → are",
+   "why": "主语 fractions 是复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "价格只有原来的一小部分。",
+   "stem": "The price is only a ______ ______ the old one.",
+   "ans": "fraction；of",
+   "why": "a fraction of 一小部分。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "1/4 is read as \"one ______\".",
+   "opts": [
+    "quarter",
+    "half",
+    "third",
+    "fifth"
+   ],
+   "why": "四分之一读作 one quarter。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

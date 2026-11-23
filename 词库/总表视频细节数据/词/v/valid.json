@@ -1,0 +1,92 @@
+{
+ "单词": "valid",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的护照怎么样？\n听：My passport is still valid.\nA. 过期了\nB. 还有效\nC. 丢了\nD. 新办的",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This ticket is ______ for two days.\nA. validity\nB. validate\nC. value\nD. valid",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：You need to ______ your ticket before getting on. (valid)\n考点：词性转换",
+  "题目4": "【选词填空】从 valid、effective 中选一个，用适当形式填空。\n题干：This medicine is very ______ — my headache went away.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Your card are no longer valid.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A valid reason is a reason that is ______.\nA. funny\nB. reasonable\nC. silly\nD. short\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这张票一年内有效。\n题干：This ticket is valid ______ one year.\n考点：用法",
+  "答案": "【1】B（还有效）\n讲解：valid 有效的。\n【2】D（valid）\n讲解：be 后要形容词 valid。\n【3】validate\n讲解：need to 后要动词原形 validate。\n【4】effective\n讲解：药“管用”用 effective；valid 是按规则算数。\n【5】are → is\n讲解：主语 card 是单数，用 is。\n【6】B（reasonable）\n讲解：valid 也指“有根据的、合理的”。\n【7】for\n讲解：be valid for + 一段时间。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的护照怎么样？",
+   "listen": "My passport is still valid.",
+   "opts": [
+    "还有效",
+    "过期了",
+    "丢了",
+    "新办的"
+   ],
+   "why": "valid 有效的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This ticket is ______ for two days.",
+   "opts": [
+    "valid",
+    "validity",
+    "validate",
+    "value"
+   ],
+   "why": "be 后要形容词 valid。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "You need to ______ your ticket before getting on. (valid)",
+   "ans": "validate",
+   "why": "need to 后要动词原形 validate。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 valid、effective 中选一个，用适当形式填空。",
+   "stem": "This medicine is very ______ — my headache went away.",
+   "ans": "effective",
+   "why": "药“管用”用 effective；valid 是按规则算数。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Your card are no longer valid.",
+   "ans": "are → is",
+   "why": "主语 card 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A valid reason is a reason that is ______.",
+   "opts": [
+    "reasonable",
+    "funny",
+    "silly",
+    "short"
+   ],
+   "why": "valid 也指“有根据的、合理的”。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这张票一年内有效。",
+   "stem": "This ticket is valid ______ one year.",
+   "ans": "for",
+   "why": "be valid for + 一段时间。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,93 @@
+{
+ "单词": "ladder",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人用什么上屋顶？\n听：He climbed the ladder to the roof.\nA. 楼梯\nB. 电梯\nC. 绳子\nD. 梯子",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Hold the ______ for me while I change the light.\nA. ladder\nB. staircase\nC. lift\nD. stair\n考点：易混",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are two ______ in the garage. (ladder)\n考点：变形",
+  "题目4": "【选词填空】从 ladder、staircase 中选一个，用适当形式填空。\n题干：The old house has a wide wooden ______ inside.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He fell off the ladder yesterday, but he are fine now.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他爬上梯子去摘苹果。\n题干：He ______ ______ the ladder to pick apples.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The workers carried two long ______ into the hall.\nA. ladder\nB. staircases\nC. ladders\nD. stairs\n考点：变形",
+  "答案": "【1】D（梯子）\n讲解：climbed the ladder 爬梯子。\n【2】A（ladder）\n讲解：可以搬动、扶着的是梯子 ladder。\n【3】ladders\n讲解：two 后接复数。\n【4】staircase\n讲解：建筑里固定的楼梯用 staircase。\n【5】are → is\n讲解：主语 he 是单数，用 is。\n【6】climbed；up\n讲解：climb up 爬上去。\n【7】C（ladders）\n讲解：two 后面接复数 ladders，能搬动的是梯子。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人用什么上屋顶？",
+   "listen": "He climbed the ladder to the roof.",
+   "opts": [
+    "梯子",
+    "楼梯",
+    "电梯",
+    "绳子"
+   ],
+   "why": "climbed the ladder 爬梯子。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Hold the ______ for me while I change the light.",
+   "opts": [
+    "ladder",
+    "staircase",
+    "lift",
+    "stair"
+   ],
+   "why": "可以搬动、扶着的是梯子 ladder。",
+   "kd": "易混"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are two ______ in the garage. (ladder)",
+   "ans": "ladders",
+   "why": "two 后接复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 ladder、staircase 中选一个，用适当形式填空。",
+   "stem": "The old house has a wide wooden ______ inside.",
+   "ans": "staircase",
+   "why": "建筑里固定的楼梯用 staircase。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He fell off the ladder yesterday, but he are fine now.",
+   "ans": "are → is",
+   "why": "主语 he 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他爬上梯子去摘苹果。",
+   "stem": "He ______ ______ the ladder to pick apples.",
+   "ans": "climbed；up",
+   "why": "climb up 爬上去。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The workers carried two long ______ into the hall.",
+   "opts": [
+    "ladders",
+    "ladder",
+    "staircases",
+    "stairs"
+   ],
+   "why": "two 后面接复数 ladders，能搬动的是梯子。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

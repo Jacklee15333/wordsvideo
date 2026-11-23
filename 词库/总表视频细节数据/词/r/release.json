@@ -1,0 +1,93 @@
+{
+ "单词": "release",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说这部电影什么时候上映？\n听：The film will be released next month.\nA. 已经停映\nB. 下个月上映\nC. 明天上映\nD. 去年上映",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：They ______ the bird after its wing got better yesterday.\nA. released\nB. release\nC. releases\nD. releasing\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The singer is ______ a new album this week. (release)\n考点：变形",
+  "题目4": "【选词填空】从 release、publish 中选一个，用适当形式填空。\n题干：The writer will ______ her new novel next year.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The police release the man last night.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这些鱼被放回了河里。\n题干：The fish ______ ______ back into the river.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Every year the zoo ______ some animals back into the wild.\nA. release\nB. released\nC. releases\nD. releasing\n考点：变形",
+  "答案": "【1】B（下个月上映）\n讲解：be released 发行、上映。\n【2】A（released）\n讲解：yesterday 是过去，用 released。\n【3】releasing\n讲解：is + 现在分词，去 e 加 ing。\n【4】publish\n讲解：出版书籍常用 publish。\n【5】release → released\n讲解：last night 是过去，用 released。\n【6】were；released\n讲解：被动语态 were released。\n【7】C（releases）\n讲解：every year 一般现在时，主语三单。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说这部电影什么时候上映？",
+   "listen": "The film will be released next month.",
+   "opts": [
+    "下个月上映",
+    "已经停映",
+    "明天上映",
+    "去年上映"
+   ],
+   "why": "be released 发行、上映。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "They ______ the bird after its wing got better yesterday.",
+   "opts": [
+    "released",
+    "release",
+    "releases",
+    "releasing"
+   ],
+   "why": "yesterday 是过去，用 released。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The singer is ______ a new album this week. (release)",
+   "ans": "releasing",
+   "why": "is + 现在分词，去 e 加 ing。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 release、publish 中选一个，用适当形式填空。",
+   "stem": "The writer will ______ her new novel next year.",
+   "ans": "publish",
+   "why": "出版书籍常用 publish。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The police release the man last night.",
+   "ans": "release → released",
+   "why": "last night 是过去，用 released。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这些鱼被放回了河里。",
+   "stem": "The fish ______ ______ back into the river.",
+   "ans": "were；released",
+   "why": "被动语态 were released。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Every year the zoo ______ some animals back into the wild.",
+   "opts": [
+    "releases",
+    "release",
+    "released",
+    "releasing"
+   ],
+   "why": "every year 一般现在时，主语三单。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

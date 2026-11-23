@@ -1,0 +1,94 @@
+{
+ "单词": "person",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说老师怎么样？\n听：My teacher is a very kind person.\nA. 老师很严厉\nB. 老师很忙\nC. 老师是个好心人\nD. 老师很高",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She is the first ______ to arrive at school.\nA. people\nB. personal\nC. personally\nD. person\n考点：变形",
+  "题目3": "【选词填空】从 person、people 中选一个，用适当形式填空。\n题干：There are fifty ______ in the hall.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：This is just my ______ opinion. (person)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I'll give the letter to her personal.\n考点：词性转换",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他性格很好。\n题干：He has a nice ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Only 50 ______ can enter the room at a time,\" says the notice.\nA. person\nB. persons\nC. personal\nD. personality\n考点：变形",
+  "答案": "【1】C（老师是个好心人）\n讲解：a kind person 好心人。\n【2】D（person）\n讲解：the first 后面用单数可数名词 person。\n【3】people\n讲解：fifty 后面表示“人”通常用 people。\n【4】personal\n讲解：名词 opinion 前用形容词 personal（个人的）。\n【5】personal → personally\n讲解：修饰动词短语用副词 personally（亲自）。\n【6】personality\n讲解：have a nice personality 性格好，person 的名词形式 personality。\n【7】B（persons）\n讲解：50 后面要复数；正式通知里 person 的复数可用 persons。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说老师怎么样？",
+   "listen": "My teacher is a very kind person.",
+   "opts": [
+    "老师是个好心人",
+    "老师很严厉",
+    "老师很忙",
+    "老师很高"
+   ],
+   "why": "a kind person 好心人。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She is the first ______ to arrive at school.",
+   "opts": [
+    "person",
+    "people",
+    "personal",
+    "personally"
+   ],
+   "why": "the first 后面用单数可数名词 person。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 person、people 中选一个，用适当形式填空。",
+   "stem": "There are fifty ______ in the hall.",
+   "ans": "people",
+   "why": "fifty 后面表示“人”通常用 people。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "This is just my ______ opinion. (person)",
+   "ans": "personal",
+   "why": "名词 opinion 前用形容词 personal（个人的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I'll give the letter to her personal.",
+   "ans": "personal → personally",
+   "why": "修饰动词短语用副词 personally（亲自）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他性格很好。",
+   "stem": "He has a nice ______.",
+   "ans": "personality",
+   "why": "have a nice personality 性格好，person 的名词形式 personality。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Only 50 ______ can enter the room at a time,\" says the notice.",
+   "opts": [
+    "persons",
+    "person",
+    "personal",
+    "personality"
+   ],
+   "why": "50 后面要复数；正式通知里 person 的复数可用 persons。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

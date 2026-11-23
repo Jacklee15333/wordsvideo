@@ -1,0 +1,94 @@
+{
+ "单词": "mile",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人每天跑多远？\n听：I run three miles every day.\nA. 三公里\nB. 三英里\nC. 三米\nD. 三里",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The town is ten ______ away.\nA. miles\nB. mile\nC. mile's\nD. miless",
+  "题目3": "【选词填空】从 mile、kilometre 中选一个，用适当形式填空。\n题干：A ______ is 1,000 metres.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：It's a five-miles walk to school.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这条路一英里长。\n题干：The road is one ______ long.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Go the extra mile\" means ______.\nA. walk more\nB. run fast\nC. get lost\nD. try harder than expected\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：One mile is about ______.\nA. 1 kilometre\nB. 500 metres\nC. 1.6 kilometres\nD. 10 kilometres\n考点：易混",
+  "答案": "【1】B（三英里）\n讲解：miles 英里。\n【2】A（miles）\n讲解：ten 后面用复数。\n【3】kilometre\n讲解：一千米是一公里 kilometre。\n【4】five-miles → five-mile\n讲解：带连字符作定语时名词不加 s。\n【5】mile\n讲解：one 后面用单数。\n【6】D（try harder than expected）\n讲解：go the extra mile 格外努力。\n【7】C（1.6 kilometres）\n讲解：一英里约 1.6 公里，汉语的“里”是 500 米。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人每天跑多远？",
+   "listen": "I run three miles every day.",
+   "opts": [
+    "三英里",
+    "三公里",
+    "三米",
+    "三里"
+   ],
+   "why": "miles 英里。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The town is ten ______ away.",
+   "opts": [
+    "miles",
+    "mile",
+    "mile's",
+    "miless"
+   ],
+   "why": "ten 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 mile、kilometre 中选一个，用适当形式填空。",
+   "stem": "A ______ is 1,000 metres.",
+   "ans": "kilometre",
+   "why": "一千米是一公里 kilometre。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "It's a five-miles walk to school.",
+   "ans": "five-miles → five-mile",
+   "why": "带连字符作定语时名词不加 s。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这条路一英里长。",
+   "stem": "The road is one ______ long.",
+   "ans": "mile",
+   "why": "one 后面用单数。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Go the extra mile\" means ______.",
+   "opts": [
+    "try harder than expected",
+    "walk more",
+    "run fast",
+    "get lost"
+   ],
+   "why": "go the extra mile 格外努力。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "One mile is about ______.",
+   "opts": [
+    "1.6 kilometres",
+    "1 kilometre",
+    "500 metres",
+    "10 kilometres"
+   ],
+   "why": "一英里约 1.6 公里，汉语的“里”是 500 米。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

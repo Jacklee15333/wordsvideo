@@ -1,0 +1,98 @@
+{
+ "单词": "void",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说这张票怎么了？\n听：This ticket is void because it's out of date.\nA. 很贵\nB. 作废了\nC. 丢了\nD. 是新的",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The old ticket is no longer ______. You can't use it.\nA. valid\nB. void\nC. avoid\nD. vacant\n考点：易混",
+  "题目3": "【选词填空】从 void、avoid 中选一个，用适当形式填空。\n题干：Try to ______ walking alone at night.\n考点：易混",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：这份合同现在无效了。\n题干：The contract is now null and ______.\n考点：短语",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The ticket became avoid after May 1st.\n考点：易混",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The seat is ______. You can sit here.\nA. void\nB. avoid\nC. devoid\nD. vacant\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In \"a void space\", \"void\" means ______.\nA. full\nB. bright\nC. empty\nD. small\n考点：用法",
+  "答案": "【1】B（作废了）\n讲解：void 无效的。\n【2】A（valid）\n讲解：不能用了，说明不再“有效”，用 valid；void 是“无效的”。\n【3】avoid\n讲解：动词“避免”是 avoid；void 是形容词“无效的”。\n【4】void\n讲解：null and void 无效的。\n【5】avoid → void\n讲解：become 后面接形容词 void（无效的）；avoid 是动词。\n【6】D（vacant）\n讲解：座位“空着的”用 vacant。\n【7】C（empty）\n讲解：void 也有“空的”意思，a void space 空的地方。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说这张票怎么了？",
+   "listen": "This ticket is void because it's out of date.",
+   "opts": [
+    "作废了",
+    "很贵",
+    "丢了",
+    "是新的"
+   ],
+   "why": "void 无效的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The old ticket is no longer ______. You can't use it.",
+   "opts": [
+    "valid",
+    "void",
+    "avoid",
+    "vacant"
+   ],
+   "why": "不能用了，说明不再“有效”，用 valid；void 是“无效的”。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 void、avoid 中选一个，用适当形式填空。",
+   "stem": "Try to ______ walking alone at night.",
+   "ans": "avoid",
+   "why": "动词“避免”是 avoid；void 是形容词“无效的”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这份合同现在无效了。",
+   "stem": "The contract is now null and ______.",
+   "ans": "void",
+   "why": "null and void 无效的。",
+   "kd": "短语"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The ticket became avoid after May 1st.",
+   "ans": "avoid → void",
+   "why": "become 后面接形容词 void（无效的）；avoid 是动词。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The seat is ______. You can sit here.",
+   "opts": [
+    "vacant",
+    "void",
+    "avoid",
+    "devoid"
+   ],
+   "why": "座位“空着的”用 vacant。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In \"a void space\", \"void\" means ______.",
+   "opts": [
+    "empty",
+    "full",
+    "bright",
+    "small"
+   ],
+   "why": "void 也有“空的”意思，a void space 空的地方。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

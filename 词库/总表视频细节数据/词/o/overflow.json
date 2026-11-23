@@ -1,0 +1,94 @@
+{
+ "单词": "overflow",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：浴缸怎么了？\n听：The bath is overflowing.\nA. 漏水了\nB. 空了\nC. 坏了\nD. 水溢出来了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The river ______ after the heavy rain yesterday.\nA. overflowed\nB. overflows\nC. overflowing\nD. overflow",
+  "题目3": "【选词填空】从 overflow、flood 中选一个，用适当形式填空。\n题干：The heavy rain caused a ______ in the town.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The cup is overflow with tea.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：水流得很慢。\n题干：The water ______ slowly.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"The hall was overflowing with people\" means the hall was ______.\nA. empty\nB. dark\nC. quiet\nD. very crowded\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Overflow\" stresses that there is ______.\nA. too little water\nB. no water\nC. a hole\nD. not enough room\n考点：易混",
+  "答案": "【1】D（水溢出来了）\n讲解：overflow 溢出。\n【2】A（overflowed）\n讲解：yesterday 用过去式。\n【3】flood\n讲解：大水淹没一片地方是 flood。\n【4】overflow → overflowing\n讲解：is + 现在分词。\n【5】flows\n讲解：flow 流，主语三单。\n【6】D（very crowded）\n讲解：overflow 也指挤满。\n【7】D（not enough room）\n讲解：overflow 强调装不下、往外漫。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：浴缸怎么了？",
+   "listen": "The bath is overflowing.",
+   "opts": [
+    "水溢出来了",
+    "漏水了",
+    "空了",
+    "坏了"
+   ],
+   "why": "overflow 溢出。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The river ______ after the heavy rain yesterday.",
+   "opts": [
+    "overflowed",
+    "overflows",
+    "overflowing",
+    "overflow"
+   ],
+   "why": "yesterday 用过去式。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 overflow、flood 中选一个，用适当形式填空。",
+   "stem": "The heavy rain caused a ______ in the town.",
+   "ans": "flood",
+   "why": "大水淹没一片地方是 flood。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The cup is overflow with tea.",
+   "ans": "overflow → overflowing",
+   "why": "is + 现在分词。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "水流得很慢。",
+   "stem": "The water ______ slowly.",
+   "ans": "flows",
+   "why": "flow 流，主语三单。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"The hall was overflowing with people\" means the hall was ______.",
+   "opts": [
+    "very crowded",
+    "empty",
+    "dark",
+    "quiet"
+   ],
+   "why": "overflow 也指挤满。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Overflow\" stresses that there is ______.",
+   "opts": [
+    "not enough room",
+    "too little water",
+    "no water",
+    "a hole"
+   ],
+   "why": "overflow 强调装不下、往外漫。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

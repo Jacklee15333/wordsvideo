@@ -1,0 +1,93 @@
+{
+ "单词": "symphony",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：乐队演奏了什么？\n听：The orchestra played a symphony.\nA. 流行歌\nB. 儿歌\nC. 交响曲\nD. 国歌",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Beethoven wrote nine ______.\nA. symphony\nB. symphonic\nC. sympathy\nD. symphonies\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We listened to ______ music. (symphony)\n考点：词性转换",
+  "题目4": "【选词填空】从 symphony、orchestra 中选一个，用适当形式填空。\n题干：The ______ has 80 musicians.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The symphony are very long.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A symphony is a long piece of music for ______.\nA. one singer\nB. an orchestra\nC. a drum only\nD. children\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他的第五交响曲很有名。\n题干：His Fifth ______ is very famous.\n考点：用法",
+  "答案": "【1】C（交响曲）\n讲解：symphony 交响曲。\n【2】D（symphonies）\n讲解：nine 后面用复数，y 变 i 加 es。\n【3】symphonic\n讲解：修饰名词 music 用形容词 symphonic。\n【4】orchestra\n讲解：演奏的“管弦乐队”是 orchestra。\n【5】are → is\n讲解：主语 symphony 单数，谓语用 is。\n【6】B（an orchestra）\n讲解：交响曲由管弦乐队演奏。\n【7】Symphony\n讲解：Fifth Symphony 第五交响曲。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：乐队演奏了什么？",
+   "listen": "The orchestra played a symphony.",
+   "opts": [
+    "交响曲",
+    "流行歌",
+    "儿歌",
+    "国歌"
+   ],
+   "why": "symphony 交响曲。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Beethoven wrote nine ______.",
+   "opts": [
+    "symphonies",
+    "symphony",
+    "symphonic",
+    "sympathy"
+   ],
+   "why": "nine 后面用复数，y 变 i 加 es。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We listened to ______ music. (symphony)",
+   "ans": "symphonic",
+   "why": "修饰名词 music 用形容词 symphonic。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 symphony、orchestra 中选一个，用适当形式填空。",
+   "stem": "The ______ has 80 musicians.",
+   "ans": "orchestra",
+   "why": "演奏的“管弦乐队”是 orchestra。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The symphony are very long.",
+   "ans": "are → is",
+   "why": "主语 symphony 单数，谓语用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A symphony is a long piece of music for ______.",
+   "opts": [
+    "an orchestra",
+    "one singer",
+    "a drum only",
+    "children"
+   ],
+   "why": "交响曲由管弦乐队演奏。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他的第五交响曲很有名。",
+   "stem": "His Fifth ______ is very famous.",
+   "ans": "Symphony",
+   "why": "Fifth Symphony 第五交响曲。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

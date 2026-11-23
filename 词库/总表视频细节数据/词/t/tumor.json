@@ -1,0 +1,97 @@
+{
+ "单词": "tumor",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这篇文章讲的是什么？\n听：This article is about brain tumors.\nA. 脑科学\nB. 脑肿瘤\nC. 学习方法\nD. 头疼",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Doctors found three small ______.\nA. tumors\nB. tumor\nC. tumores\nD. tumoros\n考点：变形",
+  "题目3": "【选词填空】从 tumor、humor 中选一个，用适当形式填空。\n题干：He has a good sense of ______.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Many tumor are not cancer.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这个肿瘤长得很慢。\n题干：The ______ grows slowly.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Tumor\" is the American spelling, like \"______\".\nA. colour\nB. color\nC. honour\nD. favour\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：In British English, people write \"______\".\nA. tumer\nB. tumore\nC. tumoor\nD. tumour\n考点：用法",
+  "答案": "【1】B（脑肿瘤）\n讲解：tumor 肿瘤。\n【2】A（tumors）\n讲解：three 后面用复数。\n【3】humor\n讲解：形近词 humor 是“幽默”。\n【4】tumor → tumors\n讲解：many 后面用复数。\n【5】tumor\n讲解：肿瘤 tumor（美式拼写）。\n【6】B（color）\n讲解：美式拼写 -or，和 color 一样。\n【7】D（tumour）\n讲解：英式拼写是 tumour。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这篇文章讲的是什么？",
+   "listen": "This article is about brain tumors.",
+   "opts": [
+    "脑肿瘤",
+    "脑科学",
+    "学习方法",
+    "头疼"
+   ],
+   "why": "tumor 肿瘤。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Doctors found three small ______.",
+   "opts": [
+    "tumors",
+    "tumor",
+    "tumores",
+    "tumoros"
+   ],
+   "why": "three 后面用复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 tumor、humor 中选一个，用适当形式填空。",
+   "stem": "He has a good sense of ______.",
+   "ans": "humor",
+   "why": "形近词 humor 是“幽默”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Many tumor are not cancer.",
+   "ans": "tumor → tumors",
+   "why": "many 后面用复数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个肿瘤长得很慢。",
+   "stem": "The ______ grows slowly.",
+   "ans": "tumor",
+   "why": "肿瘤 tumor（美式拼写）。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Tumor\" is the American spelling, like \"______\".",
+   "opts": [
+    "color",
+    "colour",
+    "honour",
+    "favour"
+   ],
+   "why": "美式拼写 -or，和 color 一样。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "In British English, people write \"______\".",
+   "opts": [
+    "tumour",
+    "tumer",
+    "tumore",
+    "tumoor"
+   ],
+   "why": "英式拼写是 tumour。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

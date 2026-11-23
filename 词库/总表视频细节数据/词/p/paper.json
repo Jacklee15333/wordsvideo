@@ -1,0 +1,93 @@
+{
+ "单词": "paper",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人需要什么？\n听：I need a piece of paper.\nA. 一张纸\nB. 一支笔\nC. 一本书\nD. 一份报纸",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Can you give me two ______ of paper?\nA. piece\nB. papers\nC. pieceses\nD. pieces\n考点：变形",
+  "题目3": "【选词填空】从 paper、papers 中选一个，用适当形式填空。\n题干：The teacher is marking our exam ______.\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Paper are made from wood.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这个盒子是纸做的。\n题干：This box is made ______ paper.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：We should save ______ to protect trees.\nA. paper\nB. papers\nC. a paper\nD. the papers\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：请把答案写在答题纸上。\n题干：Please write your answers on the answer ______.\n考点：用法",
+  "答案": "【1】A（一张纸）\n讲解：a piece of paper 一张纸。\n【2】D（pieces）\n讲解：“纸”不可数，几张纸用 two pieces of paper。\n【3】papers\n讲解：“考卷”可数，our exam 后用复数 papers。\n【4】are → is\n讲解：“纸”不可数，谓语用 is。\n【5】of\n讲解：be made of 看得出原材料。\n【6】A（paper）\n讲解：“纸张”不可数，不加冠词、不加 s。\n【7】sheet\n讲解：answer sheet 答题纸。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人需要什么？",
+   "listen": "I need a piece of paper.",
+   "opts": [
+    "一张纸",
+    "一支笔",
+    "一本书",
+    "一份报纸"
+   ],
+   "why": "a piece of paper 一张纸。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you give me two ______ of paper?",
+   "opts": [
+    "pieces",
+    "piece",
+    "papers",
+    "pieceses"
+   ],
+   "why": "“纸”不可数，几张纸用 two pieces of paper。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 paper、papers 中选一个，用适当形式填空。",
+   "stem": "The teacher is marking our exam ______.",
+   "ans": "papers",
+   "why": "“考卷”可数，our exam 后用复数 papers。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Paper are made from wood.",
+   "ans": "are → is",
+   "why": "“纸”不可数，谓语用 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个盒子是纸做的。",
+   "stem": "This box is made ______ paper.",
+   "ans": "of",
+   "why": "be made of 看得出原材料。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We should save ______ to protect trees.",
+   "opts": [
+    "paper",
+    "papers",
+    "a paper",
+    "the papers"
+   ],
+   "why": "“纸张”不可数，不加冠词、不加 s。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请把答案写在答题纸上。",
+   "stem": "Please write your answers on the answer ______.",
+   "ans": "sheet",
+   "why": "answer sheet 答题纸。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

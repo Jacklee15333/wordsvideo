@@ -1,0 +1,94 @@
+{
+ "单词": "mechanics",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：他在大学学什么？\n听：He studies mechanics at university.\nA. 历史\nB. 音乐\nC. 力学\nD. 法律",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Mechanics ______ a branch of physics.\nA. are\nB. be\nC. is\nD. were\n考点：变形",
+  "题目3": "【选词填空】从 mechanics、mechanic 中选一个，用适当形式填空。\n题干：My uncle is a ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The robot has a simple ______ design. (mechanics)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Mechanics are my favourite subject.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他喜欢研究机器的构造。\n题干：He likes studying the ______ of machines.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Someone who studies mechanics may become an ______.\nA. artist\nB. singer\nC. engineer\nD. actor\n考点：用法",
+  "答案": "【1】C（力学）\n讲解：mechanics 力学。\n【2】C（is）\n讲解：作“力学”时谓语用单数。\n【3】mechanic\n讲解：a 后面指“一个修理工”用 mechanic。\n【4】mechanical\n讲解：名词前面用形容词 mechanical。\n【5】are → is\n讲解：学科名“力学”作主语用单数。\n【6】mechanics\n讲解：机械原理、构造 mechanics。\n【7】C（engineer）\n讲解：学力学的人可能当工程师。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：他在大学学什么？",
+   "listen": "He studies mechanics at university.",
+   "opts": [
+    "力学",
+    "历史",
+    "音乐",
+    "法律"
+   ],
+   "why": "mechanics 力学。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Mechanics ______ a branch of physics.",
+   "opts": [
+    "is",
+    "are",
+    "be",
+    "were"
+   ],
+   "why": "作“力学”时谓语用单数。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 mechanics、mechanic 中选一个，用适当形式填空。",
+   "stem": "My uncle is a ______.",
+   "ans": "mechanic",
+   "why": "a 后面指“一个修理工”用 mechanic。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The robot has a simple ______ design. (mechanics)",
+   "ans": "mechanical",
+   "why": "名词前面用形容词 mechanical。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Mechanics are my favourite subject.",
+   "ans": "are → is",
+   "why": "学科名“力学”作主语用单数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他喜欢研究机器的构造。",
+   "stem": "He likes studying the ______ of machines.",
+   "ans": "mechanics",
+   "why": "机械原理、构造 mechanics。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Someone who studies mechanics may become an ______.",
+   "opts": [
+    "engineer",
+    "artist",
+    "singer",
+    "actor"
+   ],
+   "why": "学力学的人可能当工程师。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

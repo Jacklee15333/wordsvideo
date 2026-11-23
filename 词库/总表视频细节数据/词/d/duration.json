@@ -1,0 +1,92 @@
+{
+ "单词": "duration",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：会议开了多长时间？\n听：The duration of the meeting was two hours.\nA. 一个小时\nB. 三个小时\nC. 半个小时\nD. 两个小时",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The ______ of the film is about 90 minutes.\nA. duration\nB. during\nC. durable\nD. endure",
+  "题目3": "【选词填空】从 duration、during 中选一个，用适当形式填空。\n题干：It rained ______ the night.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The two courses have different ______. (duration)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The duration of the class are 45 minutes.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这节课上了多久？\n题干：How ______ did the lesson last?\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：You can stay here ______ the summer.\nA. since\nB. at\nC. on\nD. for\n考点：用法",
+  "答案": "【1】D（两个小时）\n讲解：duration 持续时间。\n【2】A（duration）\n讲解：“持续时间、时长”用名词 duration。\n【3】during\n讲解：during + 名词 在……期间；duration 是持续的时长。\n【4】durations\n讲解：different 后面用复数 durations。\n【5】are → is\n讲解：主语 the duration 是单数，用 is。\n【6】long\n讲解：问时长用 How long。\n【7】D（for）\n讲解：for the summer 整个夏天。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：会议开了多长时间？",
+   "listen": "The duration of the meeting was two hours.",
+   "opts": [
+    "两个小时",
+    "一个小时",
+    "三个小时",
+    "半个小时"
+   ],
+   "why": "duration 持续时间。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The ______ of the film is about 90 minutes.",
+   "opts": [
+    "duration",
+    "during",
+    "durable",
+    "endure"
+   ],
+   "why": "“持续时间、时长”用名词 duration。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 duration、during 中选一个，用适当形式填空。",
+   "stem": "It rained ______ the night.",
+   "ans": "during",
+   "why": "during + 名词 在……期间；duration 是持续的时长。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The two courses have different ______. (duration)",
+   "ans": "durations",
+   "why": "different 后面用复数 durations。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The duration of the class are 45 minutes.",
+   "ans": "are → is",
+   "why": "主语 the duration 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这节课上了多久？",
+   "stem": "How ______ did the lesson last?",
+   "ans": "long",
+   "why": "问时长用 How long。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You can stay here ______ the summer.",
+   "opts": [
+    "for",
+    "since",
+    "at",
+    "on"
+   ],
+   "why": "for the summer 整个夏天。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

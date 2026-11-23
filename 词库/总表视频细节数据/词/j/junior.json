@@ -1,0 +1,92 @@
+{
+ "单词": "junior",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在哪里上学？\n听：I'm a student at a junior high school.\nA. 小学\nB. 初中\nC. 高中\nD. 大学",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：My brother is in ______ high school.\nA. senior\nB. juniors\nC. junior\nD. juniority",
+  "题目3": "【选词填空】从 junior、senior 中选一个，用适当形式填空。\n题干：My sister is in ______ high school; she will go to university next year.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He is two years ______ than me. (young)\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：She is a junior worker and works here for only one month.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Junior\" and \"senior\" are about age and ______.\nA. position\nB. colour\nC. size\nD. weight\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：他比我大，是我的前辈。\n题干：He is my ______ at work.\n考点：易混",
+  "答案": "【1】B（初中）\n讲解：junior high school 初中。\n【2】C（junior）\n讲解：初中 junior high school。\n【3】senior\n讲解：高中 senior high school。\n【4】younger\n讲解：than 前用比较级 younger。\n【5】works → has worked\n讲解：for only one month 用现在完成时。\n【6】A（position）\n讲解：senior / junior 说的是资历、地位，不只是年龄。\n【7】senior\n讲解：资历高的前辈是 senior。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在哪里上学？",
+   "listen": "I'm a student at a junior high school.",
+   "opts": [
+    "初中",
+    "小学",
+    "高中",
+    "大学"
+   ],
+   "why": "junior high school 初中。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My brother is in ______ high school.",
+   "opts": [
+    "junior",
+    "senior",
+    "juniors",
+    "juniority"
+   ],
+   "why": "初中 junior high school。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 junior、senior 中选一个，用适当形式填空。",
+   "stem": "My sister is in ______ high school; she will go to university next year.",
+   "ans": "senior",
+   "why": "高中 senior high school。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He is two years ______ than me. (young)",
+   "ans": "younger",
+   "why": "than 前用比较级 younger。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She is a junior worker and works here for only one month.",
+   "ans": "works → has worked",
+   "why": "for only one month 用现在完成时。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Junior\" and \"senior\" are about age and ______.",
+   "opts": [
+    "position",
+    "colour",
+    "size",
+    "weight"
+   ],
+   "why": "senior / junior 说的是资历、地位，不只是年龄。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他比我大，是我的前辈。",
+   "stem": "He is my ______ at work.",
+   "ans": "senior",
+   "why": "资历高的前辈是 senior。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

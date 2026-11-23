@@ -1,0 +1,97 @@
+{
+ "单词": "input",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人感谢对方什么？\n听：Thank you for your input.\nA. 意见、建议\nB. 礼物\nC. 时间\nD. 钱",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We need your ______ on the plan.\nA. output\nB. import\nC. input\nD. impute\n考点：用法",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：He is ______ the data now. (input)\n考点：变形",
+  "题目4": "【选词填空】从 input、output 中选一个，用适当形式填空。\n题干：The factory's ______ rose by 10% last year.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Your inputs is very useful.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Input can mean ______.\nA. 产量\nB. 进口\nC. 出口\nD. 输入；意见\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The opposite of input is ______.\nA. import\nB. outside\nC. output\nD. insert\n考点：易混",
+  "答案": "【1】A（意见、建议）\n讲解：input 意见、建议。\n【2】C（input）\n讲解：对计划的“意见”用 input。\n【3】inputting\n讲解：is 后面用现在分词，双写 t 加 ing。\n【4】output\n讲解：工厂的“产量”用 output。\n【5】is → are\n讲解：主语 inputs 复数，谓语用 are。\n【6】D（输入；意见）\n讲解：input 输入；意见、建议。\n【7】C（output）\n讲解：input 的反义词是 output。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人感谢对方什么？",
+   "listen": "Thank you for your input.",
+   "opts": [
+    "意见、建议",
+    "礼物",
+    "时间",
+    "钱"
+   ],
+   "why": "input 意见、建议。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We need your ______ on the plan.",
+   "opts": [
+    "input",
+    "output",
+    "import",
+    "impute"
+   ],
+   "why": "对计划的“意见”用 input。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He is ______ the data now. (input)",
+   "ans": "inputting",
+   "why": "is 后面用现在分词，双写 t 加 ing。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 input、output 中选一个，用适当形式填空。",
+   "stem": "The factory's ______ rose by 10% last year.",
+   "ans": "output",
+   "why": "工厂的“产量”用 output。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Your inputs is very useful.",
+   "ans": "is → are",
+   "why": "主语 inputs 复数，谓语用 are。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Input can mean ______.",
+   "opts": [
+    "输入；意见",
+    "产量",
+    "进口",
+    "出口"
+   ],
+   "why": "input 输入；意见、建议。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The opposite of input is ______.",
+   "opts": [
+    "output",
+    "import",
+    "outside",
+    "insert"
+   ],
+   "why": "input 的反义词是 output。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

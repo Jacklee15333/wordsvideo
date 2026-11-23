@@ -1,0 +1,94 @@
+{
+ "单词": "list",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人让对方做什么？\n听：Please make a shopping list.\nA. 去购物\nB. 列购物清单\nC. 做饭\nD. 打扫",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Let's make a ______ of things to buy.\nA. list\nB. lists\nC. listed\nD. listing\n考点：短语",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The teacher ______ the rules on the board yesterday. (list)\n考点：变形",
+  "题目4": "【选词填空】从 list、catalogue 中选一个，用适当形式填空。\n题干：Look at the shop's ______ to see its products with pictures.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：My name is on the top of the list.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：这家餐厅在最佳餐厅名单上。\n题干：The restaurant is ______ the list of best restaurants.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A shopping list tells you ______.\nA. where to go\nB. when to sleep\nC. what to buy\nD. how to cook\n考点：用法",
+  "答案": "【1】B（列购物清单）\n讲解：make a list 列清单。\n【2】A（list）\n讲解：make a list 列清单。\n【3】listed\n讲解：yesterday 用过去式 listed。\n【4】catalogue\n讲解：带说明和图片的“目录”是 catalogue；list 是一条条的单子。\n【5】on → at\n讲解：at the top of 在……的顶部。\n【6】on\n讲解：on the list 在名单上。\n【7】C（what to buy）\n讲解：购物清单写着要买什么。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人让对方做什么？",
+   "listen": "Please make a shopping list.",
+   "opts": [
+    "列购物清单",
+    "去购物",
+    "做饭",
+    "打扫"
+   ],
+   "why": "make a list 列清单。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Let's make a ______ of things to buy.",
+   "opts": [
+    "list",
+    "lists",
+    "listed",
+    "listing"
+   ],
+   "why": "make a list 列清单。",
+   "kd": "短语"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The teacher ______ the rules on the board yesterday. (list)",
+   "ans": "listed",
+   "why": "yesterday 用过去式 listed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 list、catalogue 中选一个，用适当形式填空。",
+   "stem": "Look at the shop's ______ to see its products with pictures.",
+   "ans": "catalogue",
+   "why": "带说明和图片的“目录”是 catalogue；list 是一条条的单子。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "My name is on the top of the list.",
+   "ans": "on → at",
+   "why": "at the top of 在……的顶部。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这家餐厅在最佳餐厅名单上。",
+   "stem": "The restaurant is ______ the list of best restaurants.",
+   "ans": "on",
+   "why": "on the list 在名单上。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A shopping list tells you ______.",
+   "opts": [
+    "what to buy",
+    "where to go",
+    "when to sleep",
+    "how to cook"
+   ],
+   "why": "购物清单写着要买什么。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

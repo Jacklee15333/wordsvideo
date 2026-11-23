@@ -1,0 +1,96 @@
+{
+ "单词": "registration",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：什么时候开始？\n听：Registration starts at 8 a.m.\nA. 考试\nB. 上课\nC. 报名\nD. 放学",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：______ for the summer camp ends on Friday.\nA. Registration\nB. Register\nC. Registered\nD. Registers",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Did you ______ for the class? (registration)\n考点：词性转换",
+  "题目4": "【选词填空】从 registration、enrollment 中选一个，用适当形式填空。\n题干：The school's ______ this year is 2,000 students.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The registration are free.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Please fill ______ the registration form.\nA. on\nB. at\nC. in\nD. with\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The hotel had 200 ______ last week.\nA. registrations\nB. registration\nC. register\nD. registers\n考点：变形",
+  "答案": "【1】C（报名）\n讲解：registration 登记。\n【2】A（Registration）\n讲解：作主语要名词 registration。\n【3】register\n讲解：did 后面要动词原形 register。\n【4】enrollment\n讲解：“注册人数”用 enrollment；registration 是登记手续。\n【5】are → is\n讲解：主语 registration 是单数，用 is。\n【6】C（in）\n讲解：fill in 填写。\n【7】A（registrations）\n讲解：200 后面用复数 registrations。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：什么时候开始？",
+   "listen": "Registration starts at 8 a.m.",
+   "opts": [
+    "报名",
+    "考试",
+    "上课",
+    "放学"
+   ],
+   "why": "registration 登记。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "______ for the summer camp ends on Friday.",
+   "opts": [
+    "Registration",
+    "Register",
+    "Registered",
+    "Registers"
+   ],
+   "why": "作主语要名词 registration。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Did you ______ for the class? (registration)",
+   "ans": "register",
+   "why": "did 后面要动词原形 register。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 registration、enrollment 中选一个，用适当形式填空。",
+   "stem": "The school's ______ this year is 2,000 students.",
+   "ans": "enrollment",
+   "why": "“注册人数”用 enrollment；registration 是登记手续。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The registration are free.",
+   "ans": "are → is",
+   "why": "主语 registration 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please fill ______ the registration form.",
+   "opts": [
+    "in",
+    "on",
+    "at",
+    "with"
+   ],
+   "why": "fill in 填写。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The hotel had 200 ______ last week.",
+   "opts": [
+    "registrations",
+    "registration",
+    "register",
+    "registers"
+   ],
+   "why": "200 后面用复数 registrations。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

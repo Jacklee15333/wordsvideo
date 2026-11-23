@@ -1,0 +1,94 @@
+{
+ "单词": "any",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人问冰箱里有没有什么？\n听：Is there any milk in the fridge?\nA. 牛奶多少钱\nB. 买了几瓶牛奶\nC. 牛奶是谁的\nD. 有没有牛奶",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I don't have ______ money with me.\nA. some\nB. many\nC. a\nD. any\n考点：易混",
+  "题目3": "【选词填空】从 some、any 中选一个，用适当形式填空。\n题干：Would you like ______ tea?\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He doesn't live here ______. (long)\n考点：短语",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：There isn't some water in the bottle.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我买了一些苹果。\n题干：I bought ______ apples.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：I can't find my keys ______.\nA. somewhere\nB. nowhere\nC. everywhere\nD. anywhere\n考点：易混",
+  "答案": "【1】D（有没有牛奶）\n讲解：any 用于疑问句。\n【2】D（any）\n讲解：否定句用 any。\n【3】some\n讲解：表示请求、建议的疑问句用 some。\n【4】any longer\n讲解：not … any longer 不再。\n【5】some → any\n讲解：否定句用 any。\n【6】some\n讲解：肯定句用 some。\n【7】D（anywhere）\n讲解：否定句里“任何地方”用 anywhere。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人问冰箱里有没有什么？",
+   "listen": "Is there any milk in the fridge?",
+   "opts": [
+    "有没有牛奶",
+    "牛奶多少钱",
+    "买了几瓶牛奶",
+    "牛奶是谁的"
+   ],
+   "why": "any 用于疑问句。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I don't have ______ money with me.",
+   "opts": [
+    "any",
+    "some",
+    "many",
+    "a"
+   ],
+   "why": "否定句用 any。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 some、any 中选一个，用适当形式填空。",
+   "stem": "Would you like ______ tea?",
+   "ans": "some",
+   "why": "表示请求、建议的疑问句用 some。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He doesn't live here ______. (long)",
+   "ans": "any longer",
+   "why": "not … any longer 不再。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "There isn't some water in the bottle.",
+   "ans": "some → any",
+   "why": "否定句用 any。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我买了一些苹果。",
+   "stem": "I bought ______ apples.",
+   "ans": "some",
+   "why": "肯定句用 some。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I can't find my keys ______.",
+   "opts": [
+    "anywhere",
+    "somewhere",
+    "nowhere",
+    "everywhere"
+   ],
+   "why": "否定句里“任何地方”用 anywhere。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

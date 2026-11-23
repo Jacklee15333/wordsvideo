@@ -1,0 +1,94 @@
+{
+ "单词": "low",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：飞机飞得怎样？\n听：The plane is flying very low.\nA. 很高\nB. 很快\nC. 很低\nD. 很慢",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please speak in a ______ voice in the library.\nA. lower\nB. lowly\nC. low\nD. lowest",
+  "题目3": "【选词填空】从 low、short 中选一个，用适当形式填空。\n题干：He is a ______ man, only 1.5 metres tall.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：This price is more low than that one.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这条河的水位比去年低。\n题干：The river is ______ than last year.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：This is the ______ price in town.\nA. lowerest\nB. most low\nC. lowest\nD. lower\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Low\" describes things that are close to the ______ or small in number.\nA. sky\nB. sea\nC. ground\nD. sun\n考点：用法",
+  "答案": "【1】C（很低）\n讲解：low 低。\n【2】C（low）\n讲解：a … voice，用形容词原级。\n【3】short\n讲解：人个子矮用 short。\n【4】more low → lower\n讲解：low 的比较级是 lower。\n【5】lower\n讲解：than 前面用比较级。\n【6】C（lowest）\n讲解：最高级 lowest。\n【7】C（ground）\n讲解：low 说离地面近、数值小。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：飞机飞得怎样？",
+   "listen": "The plane is flying very low.",
+   "opts": [
+    "很低",
+    "很高",
+    "很快",
+    "很慢"
+   ],
+   "why": "low 低。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please speak in a ______ voice in the library.",
+   "opts": [
+    "low",
+    "lower",
+    "lowly",
+    "lowest"
+   ],
+   "why": "a … voice，用形容词原级。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 low、short 中选一个，用适当形式填空。",
+   "stem": "He is a ______ man, only 1.5 metres tall.",
+   "ans": "short",
+   "why": "人个子矮用 short。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This price is more low than that one.",
+   "ans": "more low → lower",
+   "why": "low 的比较级是 lower。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这条河的水位比去年低。",
+   "stem": "The river is ______ than last year.",
+   "ans": "lower",
+   "why": "than 前面用比较级。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This is the ______ price in town.",
+   "opts": [
+    "lowest",
+    "lowerest",
+    "most low",
+    "lower"
+   ],
+   "why": "最高级 lowest。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Low\" describes things that are close to the ______ or small in number.",
+   "opts": [
+    "ground",
+    "sky",
+    "sea",
+    "sun"
+   ],
+   "why": "low 说离地面近、数值小。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

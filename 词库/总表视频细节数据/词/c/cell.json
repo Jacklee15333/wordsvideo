@@ -1,0 +1,94 @@
+{
+ "单词": "cell",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：科学家在研究什么？\n听：Scientists are studying blood cells.\nA. 骨头\nB. 血细胞\nC. 心脏\nD. 皮肤",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Our bodies are made up of millions of ______.\nA. cell\nB. sells\nC. celles\nD. cells",
+  "题目3": "【选词填空】从 cell、sell 中选一个，用适当形式填空。\n题干：They ______ fruit at the market.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The prisoner stayed in a cells for ten years.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：这个电池没电了。\n题干：The ______ is dead.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Cell phone\" comes from \"cellular phone\", because an area is divided into small ______.\nA. rooms\nB. boxes\nC. circles\nD. cells\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The prisoner was locked in a small ______.\nA. sell\nB. cell\nC. call\nD. shell\n考点：用法",
+  "答案": "【1】B（血细胞）\n讲解：cell 细胞。\n【2】D（cells）\n讲解：millions of 后面用复数。\n【3】sell\n讲解：“卖”是 sell。\n【4】cells → cell\n讲解：a 后面用单数。\n【5】battery\n讲解：电池 battery。\n【6】D（cells）\n讲解：移动网络把地区分成一个个小区 cells。\n【7】B（cell）\n讲解：cell 也指牢房。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：科学家在研究什么？",
+   "listen": "Scientists are studying blood cells.",
+   "opts": [
+    "血细胞",
+    "骨头",
+    "心脏",
+    "皮肤"
+   ],
+   "why": "cell 细胞。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Our bodies are made up of millions of ______.",
+   "opts": [
+    "cells",
+    "cell",
+    "sells",
+    "celles"
+   ],
+   "why": "millions of 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 cell、sell 中选一个，用适当形式填空。",
+   "stem": "They ______ fruit at the market.",
+   "ans": "sell",
+   "why": "“卖”是 sell。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The prisoner stayed in a cells for ten years.",
+   "ans": "cells → cell",
+   "why": "a 后面用单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这个电池没电了。",
+   "stem": "The ______ is dead.",
+   "ans": "battery",
+   "why": "电池 battery。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Cell phone\" comes from \"cellular phone\", because an area is divided into small ______.",
+   "opts": [
+    "cells",
+    "rooms",
+    "boxes",
+    "circles"
+   ],
+   "why": "移动网络把地区分成一个个小区 cells。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The prisoner was locked in a small ______.",
+   "opts": [
+    "cell",
+    "sell",
+    "call",
+    "shell"
+   ],
+   "why": "cell 也指牢房。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

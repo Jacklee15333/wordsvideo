@@ -1,0 +1,94 @@
+{
+ "单词": "music",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人最喜欢哪种音乐？\n听：I like pop music best.\nA. 古典音乐\nB. 摇滚乐\nC. 民歌\nD. 流行音乐",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Listening to ______ makes me relaxed.\nA. musics\nB. music\nC. musical\nD. musician\n考点：变形",
+  "题目3": "【选词填空】从 music、musician 中选一个，用适当形式填空。\n题干：My uncle is a ______. He plays the piano in a band.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She has great ______ talent. (music)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：This is a beautiful music.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我们一起听一首曲子吧。\n题干：Let's listen to a ______ ______ music.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：She is ______ gifted; she can play five instruments.\nA. musical\nB. musically\nC. music\nD. musician\n考点：词性转换",
+  "答案": "【1】D（流行音乐）\n讲解：pop music 流行音乐。\n【2】B（music）\n讲解：music 不可数，没有复数。\n【3】musician\n讲解：a 后面要指人的名词 musician。\n【4】musical\n讲解：修饰名词 talent 用形容词 musical。\n【5】a beautiful music → a beautiful piece of music\n讲解：music 不可数，“一首曲子”说 a piece of music。\n【6】piece；of\n讲解：music 不可数，“一首”用 a piece of。\n【7】B（musically）\n讲解：修饰形容词 gifted 用副词 musically。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人最喜欢哪种音乐？",
+   "listen": "I like pop music best.",
+   "opts": [
+    "流行音乐",
+    "古典音乐",
+    "摇滚乐",
+    "民歌"
+   ],
+   "why": "pop music 流行音乐。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Listening to ______ makes me relaxed.",
+   "opts": [
+    "music",
+    "musics",
+    "musical",
+    "musician"
+   ],
+   "why": "music 不可数，没有复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 music、musician 中选一个，用适当形式填空。",
+   "stem": "My uncle is a ______. He plays the piano in a band.",
+   "ans": "musician",
+   "why": "a 后面要指人的名词 musician。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She has great ______ talent. (music)",
+   "ans": "musical",
+   "why": "修饰名词 talent 用形容词 musical。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "This is a beautiful music.",
+   "ans": "a beautiful music → a beautiful piece of music",
+   "why": "music 不可数，“一首曲子”说 a piece of music。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们一起听一首曲子吧。",
+   "stem": "Let's listen to a ______ ______ music.",
+   "ans": "piece；of",
+   "why": "music 不可数，“一首”用 a piece of。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She is ______ gifted; she can play five instruments.",
+   "opts": [
+    "musically",
+    "musical",
+    "music",
+    "musician"
+   ],
+   "why": "修饰形容词 gifted 用副词 musically。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

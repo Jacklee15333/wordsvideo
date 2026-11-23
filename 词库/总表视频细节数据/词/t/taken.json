@@ -1,0 +1,93 @@
+{
+ "单词": "taken",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这个座位怎么样？\n听：Sorry, this seat is taken.\nA. 是空的\nB. 有人了\nC. 坏了\nD. 太脏了",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Is this seat ______?\nA. taken\nB. take\nC. took\nD. taking",
+  "题目3": "【选词填空】从 took、taken 中选一个，用适当形式填空。\n题干：He ______ my book by mistake yesterday.\n考点：变形",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：She is ______ a shower now. (taken)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I have took a lot of photos.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：做完它要花多长时间？\n题干：How long will it ______ to finish it?\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The boy was taken ______ by the news.\nA. back\nB. away\nC. off\nD. aback\n考点：短语",
+  "答案": "【1】B（有人了）\n讲解：taken 有人的、被占的。\n【2】A（taken）\n讲解：座位“有人了”用 taken。\n【3】took\n讲解：yesterday 讲过去，用过去式 took。\n【4】taking\n讲解：is 后面用现在分词 taking。\n【5】took → taken\n讲解：have 加过去分词 taken。\n【6】take\n讲解：will 后面用原形 take。\n【7】D（aback）\n讲解：be taken aback 吃了一惊。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这个座位怎么样？",
+   "listen": "Sorry, this seat is taken.",
+   "opts": [
+    "有人了",
+    "是空的",
+    "坏了",
+    "太脏了"
+   ],
+   "why": "taken 有人的、被占的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Is this seat ______?",
+   "opts": [
+    "taken",
+    "take",
+    "took",
+    "taking"
+   ],
+   "why": "座位“有人了”用 taken。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 took、taken 中选一个，用适当形式填空。",
+   "stem": "He ______ my book by mistake yesterday.",
+   "ans": "took",
+   "why": "yesterday 讲过去，用过去式 took。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She is ______ a shower now. (taken)",
+   "ans": "taking",
+   "why": "is 后面用现在分词 taking。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I have took a lot of photos.",
+   "ans": "took → taken",
+   "why": "have 加过去分词 taken。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "做完它要花多长时间？",
+   "stem": "How long will it ______ to finish it?",
+   "ans": "take",
+   "why": "will 后面用原形 take。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The boy was taken ______ by the news.",
+   "opts": [
+    "aback",
+    "back",
+    "away",
+    "off"
+   ],
+   "why": "be taken aback 吃了一惊。",
+   "kd": "短语"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

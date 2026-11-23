@@ -1,0 +1,94 @@
+{
+ "单词": "ingredient",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：做蛋糕需要什么？\n听：Eggs are an important ingredient in cakes.\nA. 牛奶\nB. 盐\nC. 米饭\nD. 鸡蛋",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You need five ______ to make this dish.\nA. ingredient\nB. ingredientes\nC. ingredients\nD. ingredient's\n考点：变形",
+  "题目3": "【选词填空】从 ingredient、component 中选一个，用适当形式填空。\n题干：This machine has more than 100 ______.\n考点：易混",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：Sugar is the main ingredients of candy.\n考点：变形",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：做这道菜你需要哪些原料？\n题干：What ______ do you need for this dish?\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：An ingredient is something you ______ when cooking.\nA. put in\nB. take out\nC. throw away\nD. wash up\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：盐是这道汤的主要原料吗？\n题干：Is salt the main ______ of this soup?\n考点：用法",
+  "答案": "【1】D（鸡蛋）\n讲解：ingredient 原料、成分。\n【2】C（ingredients）\n讲解：five 后面用复数。\n【3】components\n讲解：机器的“部件”用 component。\n【4】ingredients → ingredient\n讲解：the main 后面用单数。\n【5】ingredients\n讲解：问哪些原料，用复数。\n【6】A（put in）\n讲解：ingredient 是放进去的原料。\n【7】ingredient\n讲解：the main 后面用单数 ingredient。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：做蛋糕需要什么？",
+   "listen": "Eggs are an important ingredient in cakes.",
+   "opts": [
+    "鸡蛋",
+    "牛奶",
+    "盐",
+    "米饭"
+   ],
+   "why": "ingredient 原料、成分。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You need five ______ to make this dish.",
+   "opts": [
+    "ingredients",
+    "ingredient",
+    "ingredientes",
+    "ingredient's"
+   ],
+   "why": "five 后面用复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 ingredient、component 中选一个，用适当形式填空。",
+   "stem": "This machine has more than 100 ______.",
+   "ans": "components",
+   "why": "机器的“部件”用 component。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Sugar is the main ingredients of candy.",
+   "ans": "ingredients → ingredient",
+   "why": "the main 后面用单数。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "做这道菜你需要哪些原料？",
+   "stem": "What ______ do you need for this dish?",
+   "ans": "ingredients",
+   "why": "问哪些原料，用复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An ingredient is something you ______ when cooking.",
+   "opts": [
+    "put in",
+    "take out",
+    "throw away",
+    "wash up"
+   ],
+   "why": "ingredient 是放进去的原料。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "盐是这道汤的主要原料吗？",
+   "stem": "Is salt the main ______ of this soup?",
+   "ans": "ingredient",
+   "why": "the main 后面用单数 ingredient。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

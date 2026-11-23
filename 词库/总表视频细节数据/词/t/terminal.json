@@ -1,0 +1,94 @@
+{
+ "单词": "terminal",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：飞机从哪里起飞？\n听：Our plane leaves from Terminal 2.\nA. 二号航站楼\nB. 二号站台\nC. 二号登机口\nD. 二号车站",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are three ______ at this airport.\nA. terminals\nB. terminal\nC. terminales\nD. terms",
+  "题目3": "【选词填空】从 terminal、gate 中选一个，用适当形式填空。\n题干：Please go to ______ 15 to get on the plane.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The bus terminal are very crowded.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：他得了绝症。\n题干：He has a ______ illness.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Terminal\" can also mean a computer ______.\nA. game\nB. mouse\nC. battery\nD. screen and keyboard linked to a main system\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Term\" in \"terminal\" first meant \"______\".\nA. end\nB. study\nC. word\nD. time\n考点：用法",
+  "答案": "【1】A（二号航站楼）\n讲解：terminal 航站楼。\n【2】A（terminals）\n讲解：three 后面用复数。\n【3】Gate\n讲解：登机口是 gate。\n【4】are → is\n讲解：主语单数。\n【5】terminal\n讲解：terminal illness 绝症。\n【6】D（screen and keyboard linked to a main system）\n讲解：terminal 也指终端。\n【7】A（end）\n讲解：词根 term 表示“终点、界限”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：飞机从哪里起飞？",
+   "listen": "Our plane leaves from Terminal 2.",
+   "opts": [
+    "二号航站楼",
+    "二号站台",
+    "二号登机口",
+    "二号车站"
+   ],
+   "why": "terminal 航站楼。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are three ______ at this airport.",
+   "opts": [
+    "terminals",
+    "terminal",
+    "terminales",
+    "terms"
+   ],
+   "why": "three 后面用复数。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 terminal、gate 中选一个，用适当形式填空。",
+   "stem": "Please go to ______ 15 to get on the plane.",
+   "ans": "Gate",
+   "why": "登机口是 gate。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The bus terminal are very crowded.",
+   "ans": "are → is",
+   "why": "主语单数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他得了绝症。",
+   "stem": "He has a ______ illness.",
+   "ans": "terminal",
+   "why": "terminal illness 绝症。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Terminal\" can also mean a computer ______.",
+   "opts": [
+    "screen and keyboard linked to a main system",
+    "game",
+    "mouse",
+    "battery"
+   ],
+   "why": "terminal 也指终端。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Term\" in \"terminal\" first meant \"______\".",
+   "opts": [
+    "end",
+    "study",
+    "word",
+    "time"
+   ],
+   "why": "词根 term 表示“终点、界限”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

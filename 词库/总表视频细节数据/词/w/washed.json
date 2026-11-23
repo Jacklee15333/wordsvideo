@@ -1,0 +1,94 @@
+{
+ "单词": "washed",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人把什么放在桌上了？\n听：I put the washed apples on the table.\nA. 没洗的苹果\nB. 洗过的苹果\nC. 苹果汁\nD. 苹果派",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Put the ______ clothes in the sun.\nA. wash\nB. washed\nC. washes\nD. washing\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Don't eat ______ fruit. Wash it first. (washed)\n考点：词性转换",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：She has wash all the dishes.\n考点：变形",
+  "题目5": "【选词填空】从 washed、washing 中选一个，用适当形式填空。\n题干：Put the dirty clothes in the ______ machine.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我已经洗过手了。\n题干：I have already ______ my ______.\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"The washed cups\" are cups that ______.\nA. are clean now\nB. are dirty\nC. are broken\nD. are new\n考点：用法",
+  "答案": "【1】B（洗过的苹果）\n讲解：washed 洗过的。\n【2】B（washed）\n讲解：修饰名词 clothes 用 washed（洗过的）。\n【3】unwashed\n讲解：“没洗过的”水果用 unwashed。\n【4】wash → washed\n讲解：has 后面用过去分词 washed。\n【5】washing\n讲解：“洗衣机”是 washing machine。\n【6】washed；hands\n讲解：have + 过去分词 washed。\n【7】A（are clean now）\n讲解：washed 洗过的，所以干净了。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人把什么放在桌上了？",
+   "listen": "I put the washed apples on the table.",
+   "opts": [
+    "洗过的苹果",
+    "没洗的苹果",
+    "苹果汁",
+    "苹果派"
+   ],
+   "why": "washed 洗过的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Put the ______ clothes in the sun.",
+   "opts": [
+    "washed",
+    "wash",
+    "washes",
+    "washing"
+   ],
+   "why": "修饰名词 clothes 用 washed（洗过的）。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Don't eat ______ fruit. Wash it first. (washed)",
+   "ans": "unwashed",
+   "why": "“没洗过的”水果用 unwashed。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "She has wash all the dishes.",
+   "ans": "wash → washed",
+   "why": "has 后面用过去分词 washed。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 washed、washing 中选一个，用适当形式填空。",
+   "stem": "Put the dirty clothes in the ______ machine.",
+   "ans": "washing",
+   "why": "“洗衣机”是 washing machine。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我已经洗过手了。",
+   "stem": "I have already ______ my ______.",
+   "ans": "washed；hands",
+   "why": "have + 过去分词 washed。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"The washed cups\" are cups that ______.",
+   "opts": [
+    "are clean now",
+    "are dirty",
+    "are broken",
+    "are new"
+   ],
+   "why": "washed 洗过的，所以干净了。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

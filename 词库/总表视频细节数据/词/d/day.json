@@ -1,0 +1,94 @@
+{
+ "单词": "day",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第七十九版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人每天几点起床？\n听：I get up at six every day.\nA. 七点\nB. 五点\nC. 八点\nD. 六点",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are seven ______ in a week.\nA. day\nB. daily\nC. dayes\nD. days\n考点：变形",
+  "题目3": "【选词填空】从 day、daily 中选一个，用适当形式填空。\n题干：I read the ______ newspaper every morning.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Some ______ I will visit Paris. (day)\n考点：短语",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：I go to school five day a week.\n考点：变形",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：我们每天都锻炼。\n题干：We exercise ______.\n考点：词性转换",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：What's the ______ today? It's May 1st.\nA. day\nB. time\nC. week\nD. date\n考点：易混",
+  "答案": "【1】D（六点）\n讲解：every day 每天。\n【2】D（days）\n讲解：seven 后面用复数 days。\n【3】daily\n讲解：修饰名词 newspaper 用形容词 daily（每日的）。\n【4】day\n讲解：some day 将来有一天。\n【5】day → days\n讲解：five 后面用复数 days。\n【6】daily\n讲解：daily 也可以作副词“每天”。\n【7】D（date）\n讲解：问日期用 date；问星期几用 day。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人每天几点起床？",
+   "listen": "I get up at six every day.",
+   "opts": [
+    "六点",
+    "七点",
+    "五点",
+    "八点"
+   ],
+   "why": "every day 每天。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are seven ______ in a week.",
+   "opts": [
+    "days",
+    "day",
+    "daily",
+    "dayes"
+   ],
+   "why": "seven 后面用复数 days。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 day、daily 中选一个，用适当形式填空。",
+   "stem": "I read the ______ newspaper every morning.",
+   "ans": "daily",
+   "why": "修饰名词 newspaper 用形容词 daily（每日的）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Some ______ I will visit Paris. (day)",
+   "ans": "day",
+   "why": "some day 将来有一天。",
+   "kd": "短语",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I go to school five day a week.",
+   "ans": "day → days",
+   "why": "five 后面用复数 days。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我们每天都锻炼。",
+   "stem": "We exercise ______.",
+   "ans": "daily",
+   "why": "daily 也可以作副词“每天”。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "What's the ______ today? It's May 1st.",
+   "opts": [
+    "date",
+    "day",
+    "time",
+    "week"
+   ],
+   "why": "问日期用 date；问星期几用 day。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "dictionary",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人想借什么？\n听：Can I borrow your English dictionary?\nA. 英语课本\nB. 英语词典\nC. 小说\nD. 笔记本",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Look up the new word in the ______.\nA. dictionary\nB. dictation\nC. diary\nD. directory\n考点：易混",
+  "题目3": "【选词填空】从 dictionary、vocabulary 中选一个，用适当形式填空。\n题干：He has a large English ______; he knows many words.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：We have two English ______ at home. (dictionary)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Look up the word on the dictionary.\n考点：用法",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：在词典里查一下这个词。\n题干：______ ______ the word in the dictionary.\n考点：短语",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：I write in my ______ every night.\nA. dictionary\nB. diary\nC. dairy\nD. daily\n考点：易混",
+  "答案": "【1】B（英语词典）\n讲解：dictionary 词典。\n【2】A（dictionary）\n讲解：查生词用词典 dictionary。\n【3】vocabulary\n讲解：一个人掌握的“词汇量”是 vocabulary。\n【4】dictionaries\n讲解：two 后面接复数，y 变 i 加 es。\n【5】on → in\n讲解：在词典里查用 in。\n【6】Look；up\n讲解：look up 查阅。\n【7】B（diary）\n讲解：写日记是 diary。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人想借什么？",
+   "listen": "Can I borrow your English dictionary?",
+   "opts": [
+    "英语词典",
+    "英语课本",
+    "小说",
+    "笔记本"
+   ],
+   "why": "dictionary 词典。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Look up the new word in the ______.",
+   "opts": [
+    "dictionary",
+    "dictation",
+    "diary",
+    "directory"
+   ],
+   "why": "查生词用词典 dictionary。",
+   "kd": "易混"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 dictionary、vocabulary 中选一个，用适当形式填空。",
+   "stem": "He has a large English ______; he knows many words.",
+   "ans": "vocabulary",
+   "why": "一个人掌握的“词汇量”是 vocabulary。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We have two English ______ at home. (dictionary)",
+   "ans": "dictionaries",
+   "why": "two 后面接复数，y 变 i 加 es。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Look up the word on the dictionary.",
+   "ans": "on → in",
+   "why": "在词典里查用 in。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "在词典里查一下这个词。",
+   "stem": "______ ______ the word in the dictionary.",
+   "ans": "Look；up",
+   "why": "look up 查阅。",
+   "kd": "短语"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I write in my ______ every night.",
+   "opts": [
+    "diary",
+    "dictionary",
+    "dairy",
+    "daily"
+   ],
+   "why": "写日记是 diary。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

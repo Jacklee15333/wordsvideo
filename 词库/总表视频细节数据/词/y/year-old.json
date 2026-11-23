@@ -1,0 +1,94 @@
+{
+ "单词": "year-old",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的猫多大？\n听：My cat is a two-year-old.\nA. 两个月\nB. 二十岁\nC. 十二岁\nD. 两岁",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She has a ten-______ son.\nA. years-old\nB. year-olds\nC. years old\nD. year-old",
+  "题目3": "【选词填空】从 years old、year-old 中选一个，用适当形式填空。\n题干：My brother is twelve ______.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：He is a six-years-old boy.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：她今年十岁。\n题干：She is ten ______ ______ this year.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"A three-year-old\" can be a noun meaning a three-year-old ______.\nA. house\nB. tree\nC. child\nD. birthday\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Two ______ are playing in the sand.\nA. five-year-old\nB. five-years-old\nC. five-year-olds\nD. five years olds\n考点：变形",
+  "答案": "【1】D（两岁）\n讲解：two-year-old 两岁的（动物）。\n【2】D（year-old）\n讲解：连字符定语里 year 不加 s。\n【3】years old\n讲解：作表语说 X years old，不加连字符。\n【4】six-years-old → six-year-old\n讲解：连字符定语里 year 不加 s。\n【5】years；old\n讲解：作表语 ten years old。\n【6】C（child）\n讲解：单用作名词，指“三岁的孩子”。\n【7】C（five-year-olds）\n讲解：作名词时复数 s 加在最后。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的猫多大？",
+   "listen": "My cat is a two-year-old.",
+   "opts": [
+    "两岁",
+    "两个月",
+    "二十岁",
+    "十二岁"
+   ],
+   "why": "two-year-old 两岁的（动物）。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She has a ten-______ son.",
+   "opts": [
+    "year-old",
+    "years-old",
+    "year-olds",
+    "years old"
+   ],
+   "why": "连字符定语里 year 不加 s。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 years old、year-old 中选一个，用适当形式填空。",
+   "stem": "My brother is twelve ______.",
+   "ans": "years old",
+   "why": "作表语说 X years old，不加连字符。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He is a six-years-old boy.",
+   "ans": "six-years-old → six-year-old",
+   "why": "连字符定语里 year 不加 s。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "她今年十岁。",
+   "stem": "She is ten ______ ______ this year.",
+   "ans": "years；old",
+   "why": "作表语 ten years old。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"A three-year-old\" can be a noun meaning a three-year-old ______.",
+   "opts": [
+    "child",
+    "house",
+    "tree",
+    "birthday"
+   ],
+   "why": "单用作名词，指“三岁的孩子”。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Two ______ are playing in the sand.",
+   "opts": [
+    "five-year-olds",
+    "five-year-old",
+    "five-years-old",
+    "five years olds"
+   ],
+   "why": "作名词时复数 s 加在最后。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

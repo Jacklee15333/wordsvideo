@@ -1,0 +1,92 @@
+{
+ "单词": "identity",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：警察想知道什么？\n听：The police want to find out the identity of the man.\nA. 那人的年龄\nB. 那人的爱好\nC. 那人的住址\nD. 那人的身份",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Nobody knows the real ______ of the hero.\nA. identity\nB. identify\nC. identical\nD. identified",
+  "题目3": "【选词填空】从 identity、status 中选一个，用适当形式填空。\n题干：In the old days, a big house showed a person's high ______.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The police finally ______ the man. (identity)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The police are trying to identity the thief.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The two brothers look ______; I can't tell them apart.\nA. identity\nB. identify\nC. ideal\nD. identical\n考点：易混",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：很多人在网上隐藏自己的真实身份。\n题干：Many people hide their real ______ online.\n考点：变形",
+  "答案": "【1】D（那人的身份）\n讲解：identity 身份。\n【2】A（identity）\n讲解：the real … of 中间用名词 identity。\n【3】status\n讲解：“地位”用 status，identity 是“你是谁”。\n【4】identified\n讲解：主语后要谓语动词，identify 过去式 identified。\n【5】identity → identify\n讲解：to 后接动词原形 identify，identity 是名词。\n【6】D（identical）\n讲解：“一模一样的”是 identical，别和 identity 混。\n【7】identities\n讲解：their 指多人，复数 identities（y 变 i 加 es）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：警察想知道什么？",
+   "listen": "The police want to find out the identity of the man.",
+   "opts": [
+    "那人的身份",
+    "那人的年龄",
+    "那人的爱好",
+    "那人的住址"
+   ],
+   "why": "identity 身份。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Nobody knows the real ______ of the hero.",
+   "opts": [
+    "identity",
+    "identify",
+    "identical",
+    "identified"
+   ],
+   "why": "the real … of 中间用名词 identity。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 identity、status 中选一个，用适当形式填空。",
+   "stem": "In the old days, a big house showed a person's high ______.",
+   "ans": "status",
+   "why": "“地位”用 status，identity 是“你是谁”。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The police finally ______ the man. (identity)",
+   "ans": "identified",
+   "why": "主语后要谓语动词，identify 过去式 identified。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The police are trying to identity the thief.",
+   "ans": "identity → identify",
+   "why": "to 后接动词原形 identify，identity 是名词。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The two brothers look ______; I can't tell them apart.",
+   "opts": [
+    "identical",
+    "identity",
+    "identify",
+    "ideal"
+   ],
+   "why": "“一模一样的”是 identical，别和 identity 混。",
+   "kd": "易混"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "很多人在网上隐藏自己的真实身份。",
+   "stem": "Many people hide their real ______ online.",
+   "ans": "identities",
+   "why": "their 指多人，复数 identities（y 变 i 加 es）。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

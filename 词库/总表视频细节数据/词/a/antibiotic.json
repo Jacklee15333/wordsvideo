@@ -1,0 +1,92 @@
+{
+ "单词": "antibiotic",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说医生给了什么？\n听：The doctor gave me some antibiotics.\nA. 抗生素\nB. 维生素\nC. 糖果\nD. 眼镜",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：You need to take ______ for three days.\nA. antibiotic\nB. anti-biotic\nC. antibiotical\nD. antibiotics\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Doctors usually give an ______ for this illness. (antibiotics)",
+  "题目4": "【选词填空】从 antibiotic、antiviral 中选一个，用适当形式填空。\n题干：An ______ is used to fight viruses.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Antibiotics can cures a cold.",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：抗生素对病毒没有效果。\n题干：Antibiotics don't ______ ______ viruses.\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Don't take too many ______.\nA. antibiotic\nB. antibiotics\nC. antibiotical\nD. antibio\n考点：变形",
+  "答案": "【1】A（抗生素）\n讲解：antibiotics 抗生素。\n【2】D（antibiotics）\n讲解：take antibiotics 吃抗生素，常用复数。\n【3】antibiotic\n讲解：an 后面接单数。\n【4】antiviral\n讲解：对付病毒用 antiviral；antibiotic 只对细菌有效。\n【5】cures → cure\n讲解：can 后接动词原形；而且抗生素治不了感冒病毒。\n【6】work；on\n讲解：work on 对……有效。\n【7】B（antibiotics）\n讲解：too many 后接复数。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说医生给了什么？",
+   "listen": "The doctor gave me some antibiotics.",
+   "opts": [
+    "抗生素",
+    "维生素",
+    "糖果",
+    "眼镜"
+   ],
+   "why": "antibiotics 抗生素。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "You need to take ______ for three days.",
+   "opts": [
+    "antibiotics",
+    "antibiotic",
+    "anti-biotic",
+    "antibiotical"
+   ],
+   "why": "take antibiotics 吃抗生素，常用复数。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Doctors usually give an ______ for this illness. (antibiotics)",
+   "ans": "antibiotic",
+   "why": "an 后面接单数。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 antibiotic、antiviral 中选一个，用适当形式填空。",
+   "stem": "An ______ is used to fight viruses.",
+   "ans": "antiviral",
+   "why": "对付病毒用 antiviral；antibiotic 只对细菌有效。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Antibiotics can cures a cold.",
+   "ans": "cures → cure",
+   "why": "can 后接动词原形；而且抗生素治不了感冒病毒。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "抗生素对病毒没有效果。",
+   "stem": "Antibiotics don't ______ ______ viruses.",
+   "ans": "work；on",
+   "why": "work on 对……有效。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Don't take too many ______.",
+   "opts": [
+    "antibiotics",
+    "antibiotic",
+    "antibiotical",
+    "antibio"
+   ],
+   "why": "too many 后接复数。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

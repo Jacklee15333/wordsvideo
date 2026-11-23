@@ -1,0 +1,91 @@
+{
+ "单词": "off-key",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人说他唱得怎么样？\n听：He sang off-key all the time.\nA. 唱得很好\nB. 唱得很大声\nC. 一直走调\nD. 没唱完",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Her singing was so ______ that we covered our ears.\nA. key\nB. off-key\nC. keyed\nD. on-key",
+  "题目3": "【选词填空】从 off-key、key 中选一个，用适当形式填空。\n题干：What ______ is this song in? C major.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：He ______ off-key at the party last night. (sing)",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：They all laughed because he sing off-key yesterday.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"His words were a bit off-key\" means his words were ______.\nA. very kind\nB. very loud\nC. easy to understand\nD. not right for the time\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：这把吉他走音了。\n题干：This guitar is ______ ______ ______.\n考点：易混",
+  "答案": "【1】C（一直走调）\n讲解：off-key 走调。\n【2】B（off-key）\n讲解：捂住耳朵，说明唱走调了。\n【3】key\n讲解：“调”是 key，回答是 C 大调。\n【4】sang\n讲解：last night 用过去式 sang。\n【5】sing → sang\n讲解：yesterday 用过去式 sang。\n【6】D（not right for the time）\n讲解：off-key 还能比喻话说得不得体、不合时宜。\n【7】out；of；tune\n讲解：乐器没调准常说 out of tune。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人说他唱得怎么样？",
+   "listen": "He sang off-key all the time.",
+   "opts": [
+    "一直走调",
+    "唱得很好",
+    "唱得很大声",
+    "没唱完"
+   ],
+   "why": "off-key 走调。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Her singing was so ______ that we covered our ears.",
+   "opts": [
+    "off-key",
+    "key",
+    "keyed",
+    "on-key"
+   ],
+   "why": "捂住耳朵，说明唱走调了。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 off-key、key 中选一个，用适当形式填空。",
+   "stem": "What ______ is this song in? C major.",
+   "ans": "key",
+   "why": "“调”是 key，回答是 C 大调。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "He ______ off-key at the party last night. (sing)",
+   "ans": "sang",
+   "why": "last night 用过去式 sang。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "They all laughed because he sing off-key yesterday.",
+   "ans": "sing → sang",
+   "why": "yesterday 用过去式 sang。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"His words were a bit off-key\" means his words were ______.",
+   "opts": [
+    "not right for the time",
+    "very kind",
+    "very loud",
+    "easy to understand"
+   ],
+   "why": "off-key 还能比喻话说得不得体、不合时宜。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这把吉他走音了。",
+   "stem": "This guitar is ______ ______ ______.",
+   "ans": "out；of；tune",
+   "why": "乐器没调准常说 out of tune。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

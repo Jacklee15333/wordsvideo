@@ -1,0 +1,94 @@
+{
+ "单词": "itemize",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：会计做了什么？\n听：The accountant itemized all the costs.\nA. 删掉费用\nB. 付了费用\nC. 逐项列出费用\nD. 算错费用",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Please ______ your expenses.\nA. item\nB. itemize\nC. items\nD. itemized",
+  "题目3": "【选词填空】从 itemize、list 中选一个，用适当形式填空。\n题干：Can you ______ the names of your classmates?",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：The bill was itemize clearly.",
+  "题目5": "【适当形式填空】用所给单词的适当形式填空。\n题干：She is ______ the bill now. (itemize)",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"Itemize\" stresses listing things ______.\nA. quickly\nB. secretly\nC. loudly\nD. one by one\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Itemize\" comes from the noun \"______\".\nA. it\nB. time\nC. team\nD. item\n考点：词性转换",
+  "答案": "【1】C（逐项列出费用）\n讲解：itemize 逐项列出。\n【2】B（itemize）\n讲解：please 后面用动词原形。\n【3】list\n讲解：一般的“列出来”用 list。\n【4】itemize → itemized\n讲解：被动语态用过去分词。\n【5】itemizing\n讲解：is + 现在分词，去 e 加 ing。\n【6】D（one by one）\n讲解：itemize 强调分条列明。\n【7】D（item）\n讲解：item + ize。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：会计做了什么？",
+   "listen": "The accountant itemized all the costs.",
+   "opts": [
+    "逐项列出费用",
+    "删掉费用",
+    "付了费用",
+    "算错费用"
+   ],
+   "why": "itemize 逐项列出。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Please ______ your expenses.",
+   "opts": [
+    "itemize",
+    "item",
+    "items",
+    "itemized"
+   ],
+   "why": "please 后面用动词原形。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 itemize、list 中选一个，用适当形式填空。",
+   "stem": "Can you ______ the names of your classmates?",
+   "ans": "list",
+   "why": "一般的“列出来”用 list。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The bill was itemize clearly.",
+   "ans": "itemize → itemized",
+   "why": "被动语态用过去分词。",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "She is ______ the bill now. (itemize)",
+   "ans": "itemizing",
+   "why": "is + 现在分词，去 e 加 ing。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Itemize\" stresses listing things ______.",
+   "opts": [
+    "one by one",
+    "quickly",
+    "secretly",
+    "loudly"
+   ],
+   "why": "itemize 强调分条列明。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Itemize\" comes from the noun \"______\".",
+   "opts": [
+    "item",
+    "it",
+    "time",
+    "team"
+   ],
+   "why": "item + ize。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

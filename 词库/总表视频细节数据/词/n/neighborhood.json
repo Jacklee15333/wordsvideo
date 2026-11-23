@@ -1,0 +1,94 @@
+{
+ "单词": "neighborhood",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的街区里有什么？\n听：There is a big park in my neighborhood.\nA. 一家医院\nB. 一座图书馆\nC. 一所学校\nD. 一个大公园",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Is this ______ safe at night?\nA. neighbor\nB. neighborhood\nC. neighboring\nD. neighbors\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：We visited three different ______ in New York. (neighborhood)\n考点：变形",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：All my neighbor in the neighborhood are nice.\n考点：用法",
+  "题目5": "【选词填空】从 neighborhood、block 中选一个，用适当形式填空。\n题干：Walk two ______ and turn left.\n考点：易混",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：他在我们小区长大。\n题干：He grew ______ in our ______.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Neighborhood\" is the American spelling of \"______\".\nA. neighbourly\nB. neighbouring\nC. neighbourhood\nD. neighbour\n考点：用法",
+  "答案": "【1】D（一个大公园）\n讲解：neighborhood 街区。\n【2】B（neighborhood）\n讲解：this + 单数名词 neighborhood。\n【3】neighborhoods\n讲解：three 后面用复数 neighborhoods。\n【4】neighbor → neighbors\n讲解：All my 后面用复数 neighbors。\n【5】blocks\n讲解：“走过两个街区”用 blocks。\n【6】up；neighborhood\n讲解：grow up 长大；neighborhood 街区、小区。\n【7】C（neighbourhood）\n讲解：英式拼写 neighbourhood。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的街区里有什么？",
+   "listen": "There is a big park in my neighborhood.",
+   "opts": [
+    "一个大公园",
+    "一家医院",
+    "一座图书馆",
+    "一所学校"
+   ],
+   "why": "neighborhood 街区。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Is this ______ safe at night?",
+   "opts": [
+    "neighborhood",
+    "neighbor",
+    "neighboring",
+    "neighbors"
+   ],
+   "why": "this + 单数名词 neighborhood。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "We visited three different ______ in New York. (neighborhood)",
+   "ans": "neighborhoods",
+   "why": "three 后面用复数 neighborhoods。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "All my neighbor in the neighborhood are nice.",
+   "ans": "neighbor → neighbors",
+   "why": "All my 后面用复数 neighbors。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 neighborhood、block 中选一个，用适当形式填空。",
+   "stem": "Walk two ______ and turn left.",
+   "ans": "blocks",
+   "why": "“走过两个街区”用 blocks。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "他在我们小区长大。",
+   "stem": "He grew ______ in our ______.",
+   "ans": "up；neighborhood",
+   "why": "grow up 长大；neighborhood 街区、小区。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Neighborhood\" is the American spelling of \"______\".",
+   "opts": [
+    "neighbourhood",
+    "neighbourly",
+    "neighbouring",
+    "neighbour"
+   ],
+   "why": "英式拼写 neighbourhood。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

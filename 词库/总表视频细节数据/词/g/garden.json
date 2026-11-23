@@ -1,0 +1,92 @@
+{
+ "单词": "garden",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：奶奶在哪里？\n听：Grandma is in the garden.\nA. 厨房\nB. 卧室\nC. 花园\nD. 公园",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：We grow vegetables in our ______.\nA. park\nB. guard\nC. gardener\nD. garden",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many beautiful ______ in Suzhou. (garden)\n考点：变形",
+  "题目4": "【选词填空】从 garden、yard 中选一个，用适当形式填空。\n题干：In American English, the grass area behind a house is often called a \"______\".\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The garden are full of flowers.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：My grandpa works in the garden ______ the morning.\nA. on\nB. in\nC. at\nD. by\n考点：用法",
+  "题目7": "【适当形式填空】用所给单词的适当形式填空。\n题干：My uncle is a ______. He looks after gardens. (garden)\n考点：用法",
+  "答案": "【1】C（花园）\n讲解：garden 花园。\n【2】D（garden）\n讲解：自家种菜的地方是 garden。\n【3】gardens\n讲解：many 后面用复数 gardens。\n【4】yard\n讲解：美国人多把房后的院子叫 yard。\n【5】are → is\n讲解：主语 garden 是单数，用 is。\n【6】B（in）\n讲解：in the morning 在早上。\n【7】gardener\n讲解：a 后面指人，用 gardener（园丁）。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：奶奶在哪里？",
+   "listen": "Grandma is in the garden.",
+   "opts": [
+    "花园",
+    "厨房",
+    "卧室",
+    "公园"
+   ],
+   "why": "garden 花园。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We grow vegetables in our ______.",
+   "opts": [
+    "garden",
+    "park",
+    "guard",
+    "gardener"
+   ],
+   "why": "自家种菜的地方是 garden。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many beautiful ______ in Suzhou. (garden)",
+   "ans": "gardens",
+   "why": "many 后面用复数 gardens。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 garden、yard 中选一个，用适当形式填空。",
+   "stem": "In American English, the grass area behind a house is often called a \"______\".",
+   "ans": "yard",
+   "why": "美国人多把房后的院子叫 yard。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The garden are full of flowers.",
+   "ans": "are → is",
+   "why": "主语 garden 是单数，用 is。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "My grandpa works in the garden ______ the morning.",
+   "opts": [
+    "in",
+    "on",
+    "at",
+    "by"
+   ],
+   "why": "in the morning 在早上。",
+   "kd": "用法"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "My uncle is a ______. He looks after gardens. (garden)",
+   "ans": "gardener",
+   "why": "a 后面指人，用 gardener（园丁）。",
+   "kd": "用法",
+   "zh": ""
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

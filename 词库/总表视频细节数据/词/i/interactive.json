@@ -1,0 +1,94 @@
+{
+ "单词": "interactive",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：这是一节什么样的课？\n听：It is an interactive lesson.\nA. 网课\nB. 考试课\nC. 互动课\nD. 体育课",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The museum has many ______ games for kids.\nA. interact\nB. interaction\nC. interactively\nD. interactive\n考点：词性转换",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Students ______ with each other in groups. (interactive)\n考点：词性转换",
+  "题目4": "【选词填空】从 interactive、mutual 中选一个，用适当形式填空。\n题干：They are good friends with ______ respect.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The lesson was interactive, so students only listened.\n考点：用法",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：An interactive website ______.\nA. never changes\nB. responds to what you do\nC. is printed\nD. is a book\n考点：用法",
+  "题目7": "【完成句子】根据中文完成句子，每空一词。\n中文：孩子们和机器人互动。\n题干：The kids ______ with the robot.\n考点：词性转换",
+  "答案": "【1】C（互动课）\n讲解：interactive 互动的。\n【2】D（interactive）\n讲解：修饰名词 games 用形容词 interactive。\n【3】interact\n讲解：主语复数，用动词 interact。\n【4】mutual\n讲解：“相互的”尊重用 mutual。\n【5】only listened → asked and answered questions\n讲解：互动课学生会参与问答。\n【6】B（responds to what you do）\n讲解：互动网站会回应你的操作。\n【7】interact\n讲解：interact with 与……互动。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：这是一节什么样的课？",
+   "listen": "It is an interactive lesson.",
+   "opts": [
+    "互动课",
+    "网课",
+    "考试课",
+    "体育课"
+   ],
+   "why": "interactive 互动的。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The museum has many ______ games for kids.",
+   "opts": [
+    "interactive",
+    "interact",
+    "interaction",
+    "interactively"
+   ],
+   "why": "修饰名词 games 用形容词 interactive。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Students ______ with each other in groups. (interactive)",
+   "ans": "interact",
+   "why": "主语复数，用动词 interact。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 interactive、mutual 中选一个，用适当形式填空。",
+   "stem": "They are good friends with ______ respect.",
+   "ans": "mutual",
+   "why": "“相互的”尊重用 mutual。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The lesson was interactive, so students only listened.",
+   "ans": "only listened → asked and answered questions",
+   "why": "互动课学生会参与问答。",
+   "kd": "用法",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An interactive website ______.",
+   "opts": [
+    "responds to what you do",
+    "never changes",
+    "is printed",
+    "is a book"
+   ],
+   "why": "互动网站会回应你的操作。",
+   "kd": "用法"
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "孩子们和机器人互动。",
+   "stem": "The kids ______ with the robot.",
+   "ans": "interact",
+   "why": "interact with 与……互动。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-19 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

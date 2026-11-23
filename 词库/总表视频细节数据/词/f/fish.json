@@ -1,0 +1,94 @@
+{
+ "单词": "fish",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人昨天钓到了什么？\n听：I caught three fish yesterday.\nA. 一条鱼\nB. 三条鱼\nC. 三只虾\nD. 什么也没有",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There are many ______ in the river.\nA. fish\nB. fishs\nC. fishing\nD. fisher",
+  "题目3": "【选词填空】从 fish、fishes 中选一个，用适当形式填空。\n题干：There are many different ______ in the ocean, like sharks and tuna.",
+  "题目4": "【改错】句子里有一处错误，找出来并改正。\n题干：I'd like some fishes for dinner.",
+  "题目5": "【完成句子】根据中文完成句子，每空一词。\n中文：我爸爸周末常去钓鱼。\n题干：My dad often goes ______ at weekends.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The old man ______ in the lake every morning.\nA. fish\nB. fishing\nC. fishs\nD. fishes\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A man who catches fish for a living is a ______.\nA. fish\nB. fishing\nC. fisherman\nD. fishnet\n考点：词性转换",
+  "答案": "【1】B（三条鱼）\n讲解：three fish 三条鱼。\n【2】A（fish）\n讲解：鱼的复数一般还是 fish。\n【3】fishes\n讲解：强调不同种类时用 fishes。\n【4】fishes → fish\n讲解：作“鱼肉”讲不可数。\n【5】fishing\n讲解：go fishing 去钓鱼。\n【6】D（fishes）\n讲解：动词 fish 三单加 es。\n【7】C（fisherman）\n讲解：渔夫是 fisherman。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人昨天钓到了什么？",
+   "listen": "I caught three fish yesterday.",
+   "opts": [
+    "三条鱼",
+    "一条鱼",
+    "三只虾",
+    "什么也没有"
+   ],
+   "why": "three fish 三条鱼。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There are many ______ in the river.",
+   "opts": [
+    "fish",
+    "fishs",
+    "fishing",
+    "fisher"
+   ],
+   "why": "鱼的复数一般还是 fish。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 fish、fishes 中选一个，用适当形式填空。",
+   "stem": "There are many different ______ in the ocean, like sharks and tuna.",
+   "ans": "fishes",
+   "why": "强调不同种类时用 fishes。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "I'd like some fishes for dinner.",
+   "ans": "fishes → fish",
+   "why": "作“鱼肉”讲不可数。",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "我爸爸周末常去钓鱼。",
+   "stem": "My dad often goes ______ at weekends.",
+   "ans": "fishing",
+   "why": "go fishing 去钓鱼。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The old man ______ in the lake every morning.",
+   "opts": [
+    "fishes",
+    "fish",
+    "fishing",
+    "fishs"
+   ],
+   "why": "动词 fish 三单加 es。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A man who catches fish for a living is a ______.",
+   "opts": [
+    "fisherman",
+    "fish",
+    "fishing",
+    "fishnet"
+   ],
+   "why": "渔夫是 fisherman。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

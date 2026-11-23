@@ -1,0 +1,94 @@
+{
+ "单词": "food",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人喜欢什么菜？\n听：I like Chinese food very much.\nA. 西餐\nB. 日本菜\nC. 快餐\nD. 中国菜",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：There is a lot of ______ on the table.\nA. foods\nB. feed\nC. food\nD. fed",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The food here is ______. (taste)",
+  "题目4": "【选词填空】从 food、feed 中选一个，用适当形式填空。\n题干：Don't forget to ______ the fish.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We need to buy some foods for the picnic.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：This shop sells many health ______.\nA. food\nB. foods\nC. feed\nD. feeds\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Food ______ important to everyone.\nA. are\nB. were\nC. be\nD. is\n考点：变形",
+  "答案": "【1】D（中国菜）\n讲解：Chinese food 中国菜。\n【2】C（food）\n讲解：food 一般不可数，用 food。\n【3】tasty\n讲解：be 后面用形容词 tasty（好吃的）。\n【4】feed\n讲解：喂鱼是 feed（动词）。\n【5】foods → food\n讲解：food 总称不可数，不加 s。\n【6】B（foods）\n讲解：说不同种类时 food 可数，health foods 健康食品。\n【7】D（is）\n讲解：food 不可数，谓语用 is。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人喜欢什么菜？",
+   "listen": "I like Chinese food very much.",
+   "opts": [
+    "中国菜",
+    "西餐",
+    "日本菜",
+    "快餐"
+   ],
+   "why": "Chinese food 中国菜。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "There is a lot of ______ on the table.",
+   "opts": [
+    "food",
+    "foods",
+    "feed",
+    "fed"
+   ],
+   "why": "food 一般不可数，用 food。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The food here is ______. (taste)",
+   "ans": "tasty",
+   "why": "be 后面用形容词 tasty（好吃的）。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 food、feed 中选一个，用适当形式填空。",
+   "stem": "Don't forget to ______ the fish.",
+   "ans": "feed",
+   "why": "喂鱼是 feed（动词）。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We need to buy some foods for the picnic.",
+   "ans": "foods → food",
+   "why": "food 总称不可数，不加 s。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This shop sells many health ______.",
+   "opts": [
+    "foods",
+    "food",
+    "feed",
+    "feeds"
+   ],
+   "why": "说不同种类时 food 可数，health foods 健康食品。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Food ______ important to everyone.",
+   "opts": [
+    "is",
+    "are",
+    "were",
+    "be"
+   ],
+   "why": "food 不可数，谓语用 is。",
+   "kd": "变形"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

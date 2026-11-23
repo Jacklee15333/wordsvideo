@@ -1,0 +1,97 @@
+{
+ "单词": "beginner",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在哪个班？\n听：I'm in the beginners' class.\nA. 高级班\nB. 初学者班\nC. 中级班\nD. 比赛班",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：This book is for ______ who know little English.\nA. beginner\nB. beginning\nC. beginners\nD. begins\n考点：变形",
+  "题目3": "【选词填空】从 beginner、beginning 中选一个，用适当形式填空。\n题干：He is a ______ at skating.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：The ______ of the game is easy. (beginner)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The beginners is learning slowly.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Beginner is close in meaning to ______.\nA. expert\nB. novice\nC. master\nD. teacher\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The opposite of a beginner is an ______.\nA. adult\nB. expert\nC. actor\nD. artist\n考点：易混",
+  "答案": "【1】B（初学者班）\n讲解：beginner 初学者。\n【2】C（beginners）\n讲解：for 后面接复数名词 beginners。\n【3】beginner\n讲解：a 后面要表示人的名词 beginner。\n【4】beginning\n讲解：the … of 之间要名词 beginning（开头）。\n【5】is → are\n讲解：主语 beginners 是复数，用 are。\n【6】B（novice）\n讲解：beginner 初学者，和 novice 意思相近。\n【7】B（expert）\n讲解：“初学者”的反义是“专家” expert。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在哪个班？",
+   "listen": "I'm in the beginners' class.",
+   "opts": [
+    "初学者班",
+    "高级班",
+    "中级班",
+    "比赛班"
+   ],
+   "why": "beginner 初学者。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "This book is for ______ who know little English.",
+   "opts": [
+    "beginners",
+    "beginner",
+    "beginning",
+    "begins"
+   ],
+   "why": "for 后面接复数名词 beginners。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 beginner、beginning 中选一个，用适当形式填空。",
+   "stem": "He is a ______ at skating.",
+   "ans": "beginner",
+   "why": "a 后面要表示人的名词 beginner。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The ______ of the game is easy. (beginner)",
+   "ans": "beginning",
+   "why": "the … of 之间要名词 beginning（开头）。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The beginners is learning slowly.",
+   "ans": "is → are",
+   "why": "主语 beginners 是复数，用 are。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Beginner is close in meaning to ______.",
+   "opts": [
+    "novice",
+    "expert",
+    "master",
+    "teacher"
+   ],
+   "why": "beginner 初学者，和 novice 意思相近。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The opposite of a beginner is an ______.",
+   "opts": [
+    "expert",
+    "adult",
+    "actor",
+    "artist"
+   ],
+   "why": "“初学者”的反义是“专家” expert。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

@@ -1,0 +1,94 @@
+{
+ "单词": "circle",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师让我们做什么？\n听：Please draw a circle on your paper.\nA. 画一条线\nB. 写名字\nC. 画方块\nD. 画一个圆",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The eagle ______ over the hill yesterday.\nA. circles\nB. circling\nC. circle\nD. circled\n考点：变形",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：Look! The plane is ______ above the airport. (circle)\n考点：变形",
+  "题目4": "【选词填空】从 circle、ball 中选一个，用适当形式填空。\n题干：Let's play with the ______ on the grass.\n考点：易混",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The children sat in a circular.\n考点：词性转换",
+  "题目6": "【完成句子】根据中文完成句子，每空一词。\n中文：请圈出正确答案。\n题干：Please ______ the right answers.\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：The table is ______. It has no corners.\nA. circle\nB. circled\nC. circular\nD. circles\n考点：词性转换",
+  "答案": "【1】D（画一个圆）\n讲解：circle 圆。\n【2】D（circled）\n讲解：yesterday 用过去式，去 e 加 d。\n【3】circling\n讲解：现在进行时，去 e 加 ing。\n【4】ball\n讲解：立体的球用 ball，circle 是平面的圆。\n【5】circular → circle\n讲解：in a circle 坐成一圈，要用名词。\n【6】circle\n讲解：Please 后面用动词原形 circle（圈出）。\n【7】C（circular）\n讲解：be 后面要形容词 circular。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师让我们做什么？",
+   "listen": "Please draw a circle on your paper.",
+   "opts": [
+    "画一个圆",
+    "画一条线",
+    "写名字",
+    "画方块"
+   ],
+   "why": "circle 圆。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The eagle ______ over the hill yesterday.",
+   "opts": [
+    "circled",
+    "circles",
+    "circling",
+    "circle"
+   ],
+   "why": "yesterday 用过去式，去 e 加 d。",
+   "kd": "变形"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Look! The plane is ______ above the airport. (circle)",
+   "ans": "circling",
+   "why": "现在进行时，去 e 加 ing。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 circle、ball 中选一个，用适当形式填空。",
+   "stem": "Let's play with the ______ on the grass.",
+   "ans": "ball",
+   "why": "立体的球用 ball，circle 是平面的圆。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The children sat in a circular.",
+   "ans": "circular → circle",
+   "why": "in a circle 坐成一圈，要用名词。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "请圈出正确答案。",
+   "stem": "Please ______ the right answers.",
+   "ans": "circle",
+   "why": "Please 后面用动词原形 circle（圈出）。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The table is ______. It has no corners.",
+   "opts": [
+    "circular",
+    "circle",
+    "circled",
+    "circles"
+   ],
+   "why": "be 后面要形容词 circular。",
+   "kd": "词性转换"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

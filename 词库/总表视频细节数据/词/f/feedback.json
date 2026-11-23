@@ -1,0 +1,95 @@
+{
+ "单词": "feedback",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：老师给了说话人什么？\n听：My teacher gave me useful feedback on my essay.\nA. 新书\nB. 奖品\nC. 反馈意见\nD. 作业",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：Thank you for your ______. We'll do better next time.\nA. feedbacks\nB. feed\nC. fed\nD. feedback",
+  "题目3": "【适当形式填空】用所给单词的适当形式填空。\n题干：The teacher ______ us feedback every week. (give)",
+  "题目4": "【选词填空】从 feedback、background 中选一个，用适当形式填空。\n题干：Tell me about your family ______.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：We got many feedbacks from our customers.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：Can you give me some feedback ______ my speech?\nA. at\nB. on\nC. in\nD. to\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：A piece of feedback is like a ______.\nA. command\nB. comma\nC. comment\nD. company\n考点：易混",
+  "答案": "【1】C（反馈意见）\n讲解：feedback 反馈。\n【2】D（feedback）\n讲解：feedback 不可数，不加 s。\n【3】gives\n讲解：every week 一般现在时，三单 gives。\n【4】background\n讲解：家庭背景是 background。\n【5】many feedbacks → much feedback\n讲解：feedback 不可数，用 much，不加 s。\n【6】B（on）\n讲解：对……的反馈用 feedback on。\n【7】C（comment）\n讲解：一条反馈就是一条意见 comment。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：老师给了说话人什么？",
+   "listen": "My teacher gave me useful feedback on my essay.",
+   "opts": [
+    "反馈意见",
+    "新书",
+    "奖品",
+    "作业"
+   ],
+   "why": "feedback 反馈。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Thank you for your ______. We'll do better next time.",
+   "opts": [
+    "feedback",
+    "feedbacks",
+    "feed",
+    "fed"
+   ],
+   "why": "feedback 不可数，不加 s。"
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "The teacher ______ us feedback every week. (give)",
+   "ans": "gives",
+   "why": "every week 一般现在时，三单 gives。",
+   "zh": ""
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 feedback、background 中选一个，用适当形式填空。",
+   "stem": "Tell me about your family ______.",
+   "ans": "background",
+   "why": "家庭背景是 background。",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "We got many feedbacks from our customers.",
+   "ans": "many feedbacks → much feedback",
+   "why": "feedback 不可数，用 much，不加 s。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Can you give me some feedback ______ my speech?",
+   "opts": [
+    "on",
+    "at",
+    "in",
+    "to"
+   ],
+   "why": "对……的反馈用 feedback on。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A piece of feedback is like a ______.",
+   "opts": [
+    "comment",
+    "command",
+    "comma",
+    "company"
+   ],
+   "why": "一条反馈就是一条意见 comment。",
+   "kd": "易混"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

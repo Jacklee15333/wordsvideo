@@ -1,0 +1,98 @@
+{
+ "单词": "science",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人最喜欢什么科目？\n听：My favourite subject is science.\nA. 数学\nB. 科学\nC. 英语\nD. 美术",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：I want to be a ______ teacher when I grow up.\nA. science\nB. scientist\nC. scientific\nD. sciences\n考点：词性转换",
+  "题目3": "【选词填空】从 science、scientist 中选一个，用适当形式填空。\n题干：Einstein was a great ______.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：This is a ______ way to study. (science)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Science are very interesting.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：We learn ______ science at school.\nA. many\nB. a few\nC. a lot of\nD. several\n考点：变形",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Physics, chemistry and biology are natural ______.\nA. arts\nB. languages\nC. sciences\nD. sports\n考点：用法",
+  "答案": "【1】B（科学）\n讲解：science 科学。\n【2】A（science）\n讲解：教科学的老师是 science teacher。\n【3】scientist\n讲解：a great 后面要表示人的名词 scientist。\n【4】scientific\n讲解：名词 way 前要形容词 scientific。\n【5】are → is\n讲解：science 不可数，用 is。\n【6】C（a lot of）\n讲解：science 作“科学”讲不可数，用 a lot of。\n【7】C（sciences）\n讲解：物理、化学、生物都是自然科学。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人最喜欢什么科目？",
+   "listen": "My favourite subject is science.",
+   "opts": [
+    "科学",
+    "数学",
+    "英语",
+    "美术"
+   ],
+   "why": "science 科学。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "I want to be a ______ teacher when I grow up.",
+   "opts": [
+    "science",
+    "scientist",
+    "scientific",
+    "sciences"
+   ],
+   "why": "教科学的老师是 science teacher。",
+   "kd": "词性转换"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 science、scientist 中选一个，用适当形式填空。",
+   "stem": "Einstein was a great ______.",
+   "ans": "scientist",
+   "why": "a great 后面要表示人的名词 scientist。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "This is a ______ way to study. (science)",
+   "ans": "scientific",
+   "why": "名词 way 前要形容词 scientific。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Science are very interesting.",
+   "ans": "are → is",
+   "why": "science 不可数，用 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "We learn ______ science at school.",
+   "opts": [
+    "a lot of",
+    "many",
+    "a few",
+    "several"
+   ],
+   "why": "science 作“科学”讲不可数，用 a lot of。",
+   "kd": "变形"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Physics, chemistry and biology are natural ______.",
+   "opts": [
+    "sciences",
+    "arts",
+    "languages",
+    "sports"
+   ],
+   "why": "物理、化学、生物都是自然科学。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

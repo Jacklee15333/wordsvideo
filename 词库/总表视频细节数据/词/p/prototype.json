@@ -1,0 +1,97 @@
+{
+ "单词": "prototype",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人介绍的是什么？\n听：This is the prototype of our new robot.\nA. 旧机器人\nB. 新机器人的样机\nC. 机器人的图片\nD. 说明书",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：The engineers built two ______ last year.\nA. prototype\nB. prototypes\nC. prototyped\nD. protypes\n考点：变形",
+  "题目3": "【选词填空】从 prototype、model 中选一个，用适当形式填空。\n题干：He built a small ______ of the Eiffel Tower.\n考点：易混",
+  "题目4": "【完成句子】根据中文完成句子，每空一词。\n中文：这是那辆新车的原型车。\n题干：This is the ______ of the new car.",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：The prototype are still being tested.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：A prototype is ______.\nA. the final product\nB. the first version that will be changed later\nC. a broken machine\nD. an old toy\n考点：用法",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：\"Proto-\" in \"prototype\" means ______.\nA. last\nB. first\nC. small\nD. big\n考点：用法",
+  "答案": "【1】B（新机器人的样机）\n讲解：prototype 原型、样机。\n【2】B（prototypes）\n讲解：two 后面接复数 prototypes。\n【3】model\n讲解：缩小的模型用 model；prototype 是第一个试制品。\n【4】prototype\n讲解：原型 prototype。\n【5】are → is\n讲解：主语单数，用 is。\n【6】B（the first version that will be changed later）\n讲解：prototype 是第一个试制品，后面还要改。\n【7】B（first）\n讲解：proto- 表示“最初的”。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人介绍的是什么？",
+   "listen": "This is the prototype of our new robot.",
+   "opts": [
+    "新机器人的样机",
+    "旧机器人",
+    "机器人的图片",
+    "说明书"
+   ],
+   "why": "prototype 原型、样机。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The engineers built two ______ last year.",
+   "opts": [
+    "prototypes",
+    "prototype",
+    "prototyped",
+    "protypes"
+   ],
+   "why": "two 后面接复数 prototypes。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 prototype、model 中选一个，用适当形式填空。",
+   "stem": "He built a small ______ of the Eiffel Tower.",
+   "ans": "model",
+   "why": "缩小的模型用 model；prototype 是第一个试制品。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "完成句子",
+   "ask": "根据中文完成句子，每空一词。",
+   "zh": "这是那辆新车的原型车。",
+   "stem": "This is the ______ of the new car.",
+   "ans": "prototype",
+   "why": "原型 prototype。"
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "The prototype are still being tested.",
+   "ans": "are → is",
+   "why": "主语单数，用 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "A prototype is ______.",
+   "opts": [
+    "the first version that will be changed later",
+    "the final product",
+    "a broken machine",
+    "an old toy"
+   ],
+   "why": "prototype 是第一个试制品，后面还要改。",
+   "kd": "用法"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"Proto-\" in \"prototype\" means ______.",
+   "opts": [
+    "first",
+    "last",
+    "small",
+    "big"
+   ],
+   "why": "proto- 表示“最初的”。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

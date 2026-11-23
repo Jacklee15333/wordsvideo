@@ -1,0 +1,97 @@
+{
+ "单词": "programming",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人在学什么？\n听：I am learning computer programming.\nA. 编程\nB. 打字\nC. 画画\nD. 弹琴",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：She is good at ______.\nA. programme\nB. programmer\nC. programming\nD. programmed",
+  "题目3": "【选词填空】从 programming、programmer 中选一个，用适当形式填空。\n题干：My dad is a ______ at a big company.\n考点：词性转换",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：There are many ______ in this company. (programming)\n考点：词性转换",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：Programming are fun.\n考点：变形",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：\"______\" is more about writing the code itself.\nA. Coding\nB. Programming\nC. Programmer\nD. Program\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：Programming is the job of ______.\nA. cooking\nB. writing computer programs\nC. teaching\nD. driving\n考点：用法",
+  "答案": "【1】A（编程）\n讲解：programming 编程。\n【2】C（programming）\n讲解：be good at 后面接名词 programming。\n【3】programmer\n讲解：指人用 programmer。\n【4】programmers\n讲解：many 后面要指人的名词复数。\n【5】are → is\n讲解：programming 不可数，谓语用 is。\n【6】A（Coding）\n讲解：coding 偏“写代码”这件具体的活；programming 范围更大。\n【7】B（writing computer programs）\n讲解：编程就是写计算机程序。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人在学什么？",
+   "listen": "I am learning computer programming.",
+   "opts": [
+    "编程",
+    "打字",
+    "画画",
+    "弹琴"
+   ],
+   "why": "programming 编程。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "She is good at ______.",
+   "opts": [
+    "programming",
+    "programme",
+    "programmer",
+    "programmed"
+   ],
+   "why": "be good at 后面接名词 programming。"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 programming、programmer 中选一个，用适当形式填空。",
+   "stem": "My dad is a ______ at a big company.",
+   "ans": "programmer",
+   "why": "指人用 programmer。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "There are many ______ in this company. (programming)",
+   "ans": "programmers",
+   "why": "many 后面要指人的名词复数。",
+   "kd": "词性转换",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "Programming are fun.",
+   "ans": "are → is",
+   "why": "programming 不可数，谓语用 is。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "\"______\" is more about writing the code itself.",
+   "opts": [
+    "Coding",
+    "Programming",
+    "Programmer",
+    "Program"
+   ],
+   "why": "coding 偏“写代码”这件具体的活；programming 范围更大。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "Programming is the job of ______.",
+   "opts": [
+    "writing computer programs",
+    "cooking",
+    "teaching",
+    "driving"
+   ],
+   "why": "编程就是写计算机程序。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}

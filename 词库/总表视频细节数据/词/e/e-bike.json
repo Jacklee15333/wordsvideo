@@ -1,0 +1,97 @@
+{
+ "单词": "e-bike",
+ "画面": null,
+ "插图": [],
+ "总表版本": "第八十五版",
+ "题目": {
+  "题目1": "【听力】听录音，回答问题：说话人的爸爸上周买了什么？\n听：My dad bought an e-bike last week.\nA. 汽车\nB. 摩托车\nC. 电动自行车\nD. 普通自行车",
+  "题目2": "【单项选择】选出最恰当的一项。\n题干：An ______ is a bike with a battery.\nA. e-bikes\nB. ebiked\nC. e-bike\nD. e-biking\n考点：变形",
+  "题目3": "【选词填空】从 e-bike、e-book 中选一个，用适当形式填空。\n题干：I read an ______ on my phone.\n考点：易混",
+  "题目4": "【适当形式填空】用所给单词的适当形式填空。\n题干：Many people ride ______ to work. (e-bike)\n考点：变形",
+  "题目5": "【改错】句子里有一处错误，找出来并改正。\n题干：He rides a e-bike to school.",
+  "题目6": "【单项选择】选出最恰当的一项。\n题干：The e in e-bike stands for ______.\nA. electric\nB. electronic\nC. easy\nD. energy\n考点：易混",
+  "题目7": "【单项选择】选出最恰当的一项。\n题干：An e-bike needs to be ______ every few days.\nA. washed\nB. charged\nC. painted\nD. sold\n考点：用法",
+  "答案": "【1】C（电动自行车）\n讲解：e-bike 电动自行车。\n【2】C（e-bike）\n讲解：An 后面接单数 e-bike。\n【3】e-book\n讲解：在手机上读的是电子书 e-book。\n【4】e-bikes\n讲解：many 后面接复数 e-bikes。\n【5】a → an\n讲解：e-bike 以元音音素开头，用 an。\n【6】A（electric）\n讲解：e-bike 的 e 是 electric（电动的）。\n【7】B（charged）\n讲解：电动车要定期充电。"
+ },
+ "题目原稿": [
+  {
+   "type": "听力",
+   "ask": "听录音，回答问题：说话人的爸爸上周买了什么？",
+   "listen": "My dad bought an e-bike last week.",
+   "opts": [
+    "电动自行车",
+    "汽车",
+    "摩托车",
+    "普通自行车"
+   ],
+   "why": "e-bike 电动自行车。"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An ______ is a bike with a battery.",
+   "opts": [
+    "e-bike",
+    "e-bikes",
+    "ebiked",
+    "e-biking"
+   ],
+   "why": "An 后面接单数 e-bike。",
+   "kd": "变形"
+  },
+  {
+   "type": "选词填空",
+   "ask": "从 e-bike、e-book 中选一个，用适当形式填空。",
+   "stem": "I read an ______ on my phone.",
+   "ans": "e-book",
+   "why": "在手机上读的是电子书 e-book。",
+   "kd": "易混",
+   "zh": ""
+  },
+  {
+   "type": "适当形式填空",
+   "ask": "用所给单词的适当形式填空。",
+   "stem": "Many people ride ______ to work. (e-bike)",
+   "ans": "e-bikes",
+   "why": "many 后面接复数 e-bikes。",
+   "kd": "变形",
+   "zh": ""
+  },
+  {
+   "type": "改错",
+   "ask": "句子里有一处错误，找出来并改正。",
+   "stem": "He rides a e-bike to school.",
+   "ans": "a → an",
+   "why": "e-bike 以元音音素开头，用 an。",
+   "zh": ""
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "The e in e-bike stands for ______.",
+   "opts": [
+    "electric",
+    "electronic",
+    "easy",
+    "energy"
+   ],
+   "why": "e-bike 的 e 是 electric（电动的）。",
+   "kd": "易混"
+  },
+  {
+   "type": "单项选择",
+   "ask": "选出最恰当的一项。",
+   "stem": "An e-bike needs to be ______ every few days.",
+   "opts": [
+    "charged",
+    "washed",
+    "painted",
+    "sold"
+   ],
+   "why": "电动车要定期充电。",
+   "kd": "用法"
+  }
+ ],
+ "题目生成": "2026-11-20 Claude（云端）",
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+}
