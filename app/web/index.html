@@ -27,7 +27,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 nav{width:188px;flex:none;background:var(--ink);color:#DCE3EE;display:flex;flex-direction:column;padding:18px 0}
 nav h1{font:600 17px/1.3 var(--ui);margin:0 20px 22px;color:#fff;letter-spacing:.5px}
 nav h1 .logo{width:34px;height:34px;float:left;margin:0 10px 0 0}
-nav h1 small{display:block;font:400 12px var(--en);color:#9FB0C8;font-style:italic;letter-spacing:0;margin-top:2px}
+nav h1 small{white-space:nowrap;font-size:11px;display:block;font:400 12px var(--en);color:#9FB0C8;font-style:italic;letter-spacing:0;margin-top:2px}
 nav a{display:flex;justify-content:space-between;padding:9px 20px;color:#C9D3E2;text-decoration:none;cursor:pointer;border-left:3px solid transparent}
 nav a:hover{background:#28365A;color:#fff}
 nav a.on{background:#2C3B62;color:#fff;border-left-color:var(--base)}
@@ -132,6 +132,19 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 #modal .bd{overflow:auto;padding:14px 18px}
 #modal pre{white-space:pre-wrap;font:12.5px/1.6 var(--en);margin:0}
 #toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;padding:8px 16px;border-radius:4px;display:none;z-index:30;max-width:460px}
+.acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.acts .box{margin-top:0}
+.act h3{margin:0 0 4px}
+.act .btn{margin-top:10px}
+.line{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap}
+.tk{display:flex;gap:14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule2)}
+.tk:last-child{border-bottom:0}
+.tk .t1{flex:1;min-width:0}
+.tk .bar{width:180px;margin:4px 0 0}
+.steps{counter-reset:s;padding-left:0;list-style:none}
+.steps li{counter-increment:s;position:relative;padding:6px 0 6px 34px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:6px;width:22px;height:22px;border-radius:11px;background:var(--ink);color:#fff;font-size:12px;text-align:center;line-height:22px}
+@media (max-width:900px){.acts{grid-template-columns:1fr}}
 .days label{margin-right:8px;font-size:13px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (max-width:820px){body{flex-direction:column}nav{width:auto;flex-direction:row;flex-wrap:wrap;padding:6px}nav h1,nav .foot{display:none}main{padding:16px}}
@@ -146,8 +159,7 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
   <a data-p="video">视频</a>
   <a data-p="manual">待人工<span class="n" id="nManual" hidden></span></a>
   <a data-p="history">记录</a>
-  <a data-p="soft">软件<span class="n" id="nSoft" hidden>新</span></a>
-  <a data-p="settings">设置</a>
+  <a data-p="settings">设置<span class="n" id="nSoft" hidden>新</span></a>
   <div class="foot" id="foot">正在连接…</div>
 </nav>
 <main>
@@ -191,29 +203,38 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 </section>
 
 <section id="p-tasks">
-  <h2>任务</h2>
-  <div class="box">
-    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-      <select id="tKind"><option value="chuti">出题（按总表顺序）</option><option value="redo">重做待人工的词</option>
-        <option value="push">上传到 GitHub</option><option value="sync">同步仓库</option></select>
-      <span id="tCountWrap"><input type="number" id="tCount" value="100" min="0" style="width:84px"> 个词</span>
-      <span class="muted">开始时间</span><input type="datetime-local" id="tAt">
-      <button class="btn" id="tAdd">加入队列</button>
-      <span class="faint small">不填开始时间＝排到就做</span>
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px"><h2 style="margin:0">任务</h2>
+    <button class="btn sm" id="tHelp">怎么用？看操作步骤</button></div>
+  <div class="acts">
+    <div class="box act">
+      <h3>出题</h3><p class="muted small">给还缺题目的词出 7 道题，按总表顺序往下做。</p>
+      <div class="line">出 <input type="number" id="tCount" value="100" min="0" style="width:80px"> 个词 <span class="faint small">（填 0＝全部做完）</span></div>
+      <div class="line"><label><input type="radio" name="tWhen" value="now" checked> 现在开始</label>
+        <label><input type="radio" name="tWhen" value="at"> 定个时间：</label><input type="datetime-local" id="tAt"></div>
+      <button class="btn" id="tAdd">开始出题</button>
+    </div>
+    <div class="box act">
+      <h3>重做待人工的词</h3><p class="muted small">AI 改了几次还没过的词，再交给 AI 试一次。</p>
+      <div class="line" id="tManN" class="muted">—</div>
+      <button class="btn ghost" id="tRedo">全部再试一次</button>
+    </div>
+    <div class="box act">
+      <h3>上传到 GitHub</h3><p class="muted small">平时每组做完会自动上传。只有你手动改了题、或者上次没传成功时才用。</p>
+      <div class="line" id="tPend">—</div>
+      <button class="btn ghost" id="tPush">现在上传</button>
     </div>
   </div>
-  <div class="box"><table id="tTable"></table></div>
-  <h3>每天定时</h3>
+  <h3>正在做和排队的</h3>
+  <div class="box" id="tNow"></div>
+  <h3>每天自动出题</h3>
   <div class="box">
-    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-      <input type="text" id="sName" placeholder="名字，比如 夜里出题" style="width:150px">
-      每天 <input type="time" id="sAt" value="23:00"> 出题 <input type="number" id="sCount" value="300" min="0" style="width:80px"> 个词
-      <span class="days" id="sDays"></span>
-      <button class="btn" id="sAdd">添加定时</button>
-    </div>
-    <table id="sTable" style="margin-top:10px"></table>
-    <p class="faint small" style="margin:10px 0 0">到点时软件要开着（可以放进“启动”文件夹开机自启）。只在某个时间段干活，去「设置 → 时间窗口」。</p>
+    <div class="line" style="flex-wrap:wrap">每天 <input type="time" id="sAt" value="23:00"> 自动出 <input type="number" id="sCount" value="300" min="0" style="width:80px"> 个词，
+      <span class="days" id="sDays"></span><button class="btn" id="sAdd">添加</button></div>
+    <div id="sList" style="margin-top:8px"></div>
+    <p class="faint small" style="margin:8px 0 0">到点时软件要开着。</p>
   </div>
+  <h3>做完的 <button class="btn ghost sm" id="tClear">清掉做完的记录</button></h3>
+  <div class="box" id="tDone"></div>
 </section>
 
 <section id="p-words">
@@ -306,30 +327,7 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 </section>
 
 
-<section id="p-soft">
-  <h2>软件</h2>
-  <div class="row">
-  <div class="col">
-    <div class="box">
-      <h3 style="margin-top:0">版本</h3>
-      <div id="sVer" class="muted">—</div>
-      <div style="display:flex;gap:8px;margin-top:10px"><button class="btn ghost" id="sCheck">检查更新</button><button class="btn" id="sUpd" hidden>更新到新版本</button></div>
-      <p class="small faint" style="margin:10px 0 0">每发布一个新版本，旧版本整个 app 文件夹先备份到仓库的「版本备份/v版本号」，更新记录写在仓库的 CHANGELOG.md。</p>
-    </div>
-    <div class="box">
-      <h3 style="margin-top:0">让 AI 改软件</h3>
-      <p class="small muted" style="margin:0 0 8px">写清楚要改什么（哪一页、哪个按钮、想变成什么样）。网页 AI 先挑要看的文件，再写改动；程序检查语法，没问题的改动放在下面等你看。你点「应用并发布」才会真的改：先备份旧版本、版本号加一、记进更新记录、上传到仓库，重开软件生效。</p>
-      <textarea id="sReq" rows="5" style="font-family:var(--ui)" placeholder="比如：单词页的列表多显示一列“批次”；或者：总览页最上面加一句今天出了多少个词"></textarea>
-      <div style="margin-top:8px;display:flex;gap:8px;align-items:center"><button class="btn" id="sGo">交给 AI 改</button><span class="small faint">改的时候在「任务」里排队，和出题共用网页 AI</span></div>
-    </div>
-    <div class="box"><h3 style="margin-top:0">改动</h3><table id="sChanges"></table></div>
-  </div>
-  <div class="col">
-    <div class="box"><h3 style="margin-top:0">版本备份</h3><div id="sBk" class="small"></div></div>
-    <div class="box"><h3 style="margin-top:0">更新记录</h3><pre id="sLog" class="small" style="white-space:pre-wrap;max-height:520px;overflow:auto;margin:0;font-family:var(--ui)"></pre></div>
-  </div>
-  </div>
-</section>
+
 
 <section id="p-settings">
   <h2>设置</h2>
@@ -399,6 +397,29 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
   <div style="margin-top:14px"><button class="btn" id="saveSet">保存设置</button> <span class="muted small" id="saveMsg"></span></div>
   </div>
   </div>
+  <h2 style="margin-top:34px" id="softHead">软件版本、更新和改写</h2>
+  <div class="row">
+  <div class="col">
+    <div class="box">
+      <h3 style="margin-top:0">版本</h3>
+      <div id="sVer" class="muted">—</div>
+      <div style="display:flex;gap:8px;margin-top:10px"><button class="btn ghost" id="sCheck">检查更新</button><button class="btn" id="sUpd" hidden>更新到新版本</button></div>
+      <p class="small faint" style="margin:10px 0 0">每发布一个新版本，旧版本整个 app 文件夹先备份到仓库的「版本备份/v版本号」，更新记录写在仓库的 CHANGELOG.md。</p>
+    </div>
+    <div class="box">
+      <h3 style="margin-top:0">让 AI 改软件</h3>
+      <p class="small muted" style="margin:0 0 8px">写清楚要改什么（哪一页、哪个按钮、想变成什么样）。网页 AI 先挑要看的文件，再写改动；程序检查语法，没问题的改动放在下面等你看。你点「应用并发布」才会真的改：先备份旧版本、版本号加一、记进更新记录、上传到仓库，重开软件生效。</p>
+      <textarea id="sReq" rows="5" style="font-family:var(--ui)" placeholder="比如：单词页的列表多显示一列“批次”；或者：总览页最上面加一句今天出了多少个词"></textarea>
+      <div style="margin-top:8px;display:flex;gap:8px;align-items:center"><button class="btn" id="sGo">交给 AI 改</button><span class="small faint">改的时候在「任务」里排队，和出题共用网页 AI</span></div>
+    </div>
+    <div class="box"><h3 style="margin-top:0">改动</h3><table id="sChanges"></table></div>
+  </div>
+  <div class="col">
+    <div class="box"><h3 style="margin-top:0">版本备份</h3><div id="sBk" class="small"></div></div>
+    <div class="box"><h3 style="margin-top:0">更新记录</h3><pre id="sLog" class="small" style="white-space:pre-wrap;max-height:520px;overflow:auto;margin:0;font-family:var(--ui)"></pre></div>
+  </div>
+  </div>
+
 </section>
 </main>
 
@@ -417,7 +438,7 @@ function closeModal(){$('#modal').style.display='none'}
 $('#modal').onclick=e=>{if(e.target.id==='modal')closeModal()};
 let page='home';
 function go(p){page=p;$$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===p));$$('main section').forEach(s=>s.classList.toggle('on',s.id==='p-'+p));
-  ({soft:loadSoft,video:loadVideo,tasks:loadTasks,words:loadWords,manual:loadManual,history:loadHistory,settings:loadSettings,home:loadMap}[p]||(()=>{}))()}
+  ({video:loadVideo,tasks:loadTasks,words:loadWords,manual:loadManual,history:loadHistory,settings:loadSettings,home:loadMap}[p]||(()=>{}))()}
 $$('nav a').forEach(a=>a.onclick=()=>go(a.dataset.p));
 
 /* ───── 状态轮询 ───── */
@@ -426,7 +447,7 @@ async function poll(){
   try{ST=await api('/api/status')}catch(e){$('#foot').textContent='连不上本机服务：'+e.message;return}
   const r=ST.repo||{}, s=ST.stats||{};
   $('#nSoft').hidden=!ST.newer;
-  $('#foot').innerHTML=`<b>v${esc(ST.version||'')}</b>${ST.newer?` <a href="#" onclick="go('soft');return false" style="color:#9FE3BE">有新版本 v${esc(ST.newer)}</a>`:''}<br>仓库 <b>${esc(r.repo)}</b><br>总表 ${esc(r.version||'—')}<br>版本 ${esc(r.head||'—')}${ST.pending?`<br>${ST.pending} 处修改未上传`:''}<br>AI：${{web:'网页镜像',api:'接口',mock:'模拟'}[ST.provider]||''}`;
+  $('#foot').innerHTML=`版本 <b>v${esc(ST.version||'')}</b>${ST.newer?` <a href="#" onclick="go('settings');setTimeout(()=>$('#softHead').scrollIntoView(),300);return false" style="color:#9FE3BE">有新版本 v${esc(ST.newer)}</a>`:''}<br>仓库 <b>${esc(r.repo)}</b><br>总表 ${esc(r.version||'—')}${ST.pending?`<br>${ST.pending} 处修改还没上传`:''}${ST.provider==='mock'?'<br>正在用模拟 AI':''}`;
   if(r.offline) $('#foot').innerHTML+=`<br><span style="color:#F3D19B">没连上 GitHub，先用本机的词库（${esc(r.offline)}）</span>`;
   if(r.repoError) $('#foot').innerHTML+=`<br><span style="color:#F3B2AB">${esc(r.repoError).slice(0,140)}</span>`;
   $('#nManual').hidden=!s.manual; $('#nManual').textContent=s.manual||'';
@@ -493,32 +514,52 @@ $('#map').onclick=e=>{const i=mapIdx(e);if(i>=0)openWord(MAP.words[i])};
 
 /* ───── 任务 ───── */
 const DAYN=['一','二','三','四','五','六','日'];
-$('#sDays').innerHTML=DAYN.map((d,i)=>`<label><input type="checkbox" value="${i+1}" checked>${d}</label>`).join('');
-$('#tKind').onchange=()=>$('#tCountWrap').style.display=$('#tKind').value==='chuti'?'':'none';
-$('#tAdd').onclick=async()=>{const k=$('#tKind').value;
-  await api('/api/task',{kind:k,params:k==='chuti'?{count:+$('#tCount').value||0}:{},runAt:$('#tAt').value||''});toast('加进队列了');loadTasks()};
-$('#sAdd').onclick=async()=>{const days=$$('#sDays input:checked').map(i=>i.value).join('');
-  await api('/api/schedule',{name:$('#sName').value,at:$('#sAt').value,days,kind:'chuti',params:{count:+$('#sCount').value||0}});loadTasks()};
+$('#sDays').innerHTML='星期 '+DAYN.map((d,i)=>`<label><input type="checkbox" value="${i+1}" checked>${d}</label>`).join('');
+const ST_WORD={'运行中':'正在做','排队':'排队中','已暂停':'暂停了','已完成':'做完了','失败':'没做成','已取消':'取消了'};
+$('#tAdd').onclick=async()=>{const at=document.querySelector('input[name=tWhen]:checked').value==='at'?$('#tAt').value:'';
+  if(document.querySelector('input[name=tWhen]:checked').value==='at'&&!at)return toast('先选个开始时间');
+  await api('/api/task',{kind:'chuti',params:{count:+$('#tCount').value||0},runAt:at});toast(at?'定好了，到点开始':'开始了');loadTasks();poll()};
+$('#tRedo').onclick=async()=>{await api('/api/task',{kind:'redo',params:{}});toast('交给 AI 了');loadTasks()};
+$('#tPush').onclick=async()=>{await api('/api/task',{kind:'push',params:{}});toast('在后台上传');loadTasks()};
+$('#tHelp').onclick=()=>modal('任务怎么用',`<ol class="steps">
+  <li><b>第一次用先到「设置」</b>：填好镜像站账号密码、GitHub 令牌，点「保存设置」。左下角显示“仓库 就绪”才能开始。</li>
+  <li><b>出题</b>：在「出题」里填要出几个词（比如 100），点「开始出题」。软件会按总表顺序，一次拿 10 个词交给网页 AI 写题、自动检查，过了就存，每 25 个词上传一次。</li>
+  <li><b>看进度</b>：「正在做和排队的」里有进度条；「总览」页右边的“动态”能看到每一步在做什么。</li>
+  <li><b>想停一下</b>：点「暂停」，做完手上这一小批就停；点「继续」接着做。点「取消」就不做了，已经存好的题不会丢。</li>
+  <li><b>夜里自动做</b>：在「每天自动出题」里设个时间和数量，点「添加」。到点软件要开着。只想在夜里干活，再去「设置 → 时间窗口」勾上。</li>
+  <li><b>没过的词</b>：AI 改了 3 次还不对的词会进「待人工」，自动出题会跳过它们。你可以点进去自己改，或者在这里点「全部再试一次」。</li>
+  <li><b>上传</b>：平时自动上传，不用管。只有你手动改了题，或者网络断过、左下角提示有没上传的，才点「现在上传」。</li></ol>`);
 async function taskOp(id,op){await api('/api/task/op',{id,op});setTimeout(()=>{poll();if(page==='tasks')loadTasks()},300)}
 async function loadTasks(){
   const d=await api('/api/tasks');
-  $('#tTable').innerHTML='<tr><th>#</th><th>任务</th><th>状态</th><th>进度</th><th>加入 / 开始</th><th></th></tr>'+(d.tasks.map(t=>{
-    const p=JSON.parse(t.progress||'{}'), at=t.run_after>0?new Date(t.run_after*1000).toLocaleString():'';
-    const ops=[]; if(t.status==='运行中')ops.push(['pause','暂停'],['cancel','停止']);
-    if(t.status==='排队')ops.push(['pause','暂停'],['cancel','取消']);
+  const live=d.tasks.filter(t=>['运行中','排队','已暂停'].includes(t.status)), done=d.tasks.filter(t=>!['运行中','排队','已暂停'].includes(t.status)).slice(0,30);
+  const row=t=>{const p=JSON.parse(t.progress||'{}'), at=t.run_after>0&&t.status==='排队'?new Date(t.run_after*1000).toLocaleString():'';
+    const ops=[]; if(t.status==='运行中')ops.push(['pause','暂停'],['cancel','取消']);
+    if(t.status==='排队')ops.push(['cancel','取消']);
     if(['已暂停','失败','已取消'].includes(t.status))ops.push(['resume','继续']);
-    if(t.status!=='运行中')ops.push(['delete','删除']);
-    return `<tr><td>${t.id}</td><td><a href="#" onclick="taskLog(${t.id});return false">${esc(t.title)}</a>${t.error?`<div class="small" style="color:var(--red)">${esc(t.error.split('\n')[0]).slice(0,200)}</div>`:''}</td>
-      <td><span class="tag t-${t.status}">${t.status}</span></td><td class="small">${p.processed!=null?`${p.processed}${p.total?' / '+p.total:''} 个词`:''}</td>
-      <td class="small muted">${esc(t.created||'')}${at?`<br>定在 ${esc(at)}`:''}${t.started?`<br>开始 ${esc(t.started)}`:''}</td>
-      <td>${ops.map(([o,n])=>`<button class="btn ghost sm" onclick="taskOp(${t.id},'${o}')">${n}</button>`).join(' ')}</td></tr>`}).join('')||'<tr><td colspan=6 class="muted">还没有任务。</td></tr>');
-  $('#sTable').innerHTML=d.schedules.length?'<tr><th>名字</th><th>时间</th><th>星期</th><th>做什么</th><th></th></tr>'+d.schedules.map(s=>{
-    const p=JSON.parse(s.params||'{}');return `<tr><td>${esc(s.name||'—')}</td><td>${s.at}</td><td>${[...(s.days||'')].map(i=>DAYN[i-1]).join('')}</td>
-    <td>出题 ${p.count||'全部剩下的'} 个词${s.last_date?`<span class="faint small">（上次 ${s.last_date}）</span>`:''}</td>
-    <td><button class="btn ghost sm" onclick="sched(${s.id},'toggle')">${s.enabled?'停用':'启用'}</button> <button class="btn ghost sm" onclick="sched(${s.id},'delete')">删除</button></td></tr>`}).join(''):'<tr><td class="muted">还没有定时。</td></tr>';
+    if(!['运行中','排队'].includes(t.status))ops.push(['delete','删掉']);
+    const pct=p.total?Math.min(100,100*(p.processed||0)/p.total):0;
+    return `<div class="tk"><div class="t1"><b>${esc(t.title)}</b> <span class="tag t-${t.status}">${ST_WORD[t.status]||t.status}</span>
+      <div class="small muted">${at?`定在 ${esc(at)} 开始`:t.status==='运行中'?esc(ST.runner&&ST.runner.stage||''):esc((t.finished||t.started||t.created||'').slice(5,16))}
+      ${p.processed!=null?` · 已处理 ${p.processed}${p.total?' / '+p.total:''} 个词`:''}</div>
+      ${t.status==='运行中'&&p.total?`<div class="bar"><i style="width:${pct}%"></i></div>`:''}
+      ${t.error?`<div class="small" style="color:var(--red)">${esc(t.error.split('\n')[0]).slice(0,200)}</div>`:''}</div>
+      <div>${ops.map(([o,n])=>`<button class="btn ghost sm" onclick="taskOp(${t.id},'${o}')">${n}</button>`).join(' ')}
+        <button class="btn ghost sm" onclick="taskLog(${t.id})">详情</button></div></div>`};
+  $('#tNow').innerHTML=live.map(row).join('')||'<p class="muted" style="margin:0">现在没有在做的事。在上面点「开始出题」就开始了。</p>';
+  $('#tDone').innerHTML=done.map(row).join('')||'<p class="muted" style="margin:0">还没有。</p>';
+  const s=ST.stats||{};$('#tManN').textContent=s.manual?`现在有 ${s.manual} 个待人工的词`:'现在没有待人工的词';$('#tRedo').disabled=!s.manual;
+  $('#tPend').textContent=ST.pending?`有 ${ST.pending} 处修改还没上传`:'没有要上传的';
+  $('#sList').innerHTML=d.schedules.map(x=>{const p=JSON.parse(x.params||'{}');
+    return `<div class="tk"><div class="t1">每天 <b>${x.at}</b> 自动出 <b>${p.count||'全部剩下的'}</b> 个词（星期${[...(x.days||'')].map(i=>DAYN[i-1]).join('、')}）
+      ${x.enabled?'':'<span class="tag t-已取消">停用了</span>'}${x.last_date?`<span class="faint small"> 上次 ${x.last_date}</span>`:''}</div>
+      <div><button class="btn ghost sm" onclick="sched(${x.id},'toggle')">${x.enabled?'停用':'启用'}</button> <button class="btn ghost sm" onclick="sched(${x.id},'delete')">删掉</button></div></div>`}).join('')||'<p class="faint small" style="margin:0">还没设。</p>';
 }
+$('#sAdd').onclick=async()=>{const days=$$('#sDays input:checked').map(i=>i.value).join('');if(!days)return toast('至少勾一天');
+  await api('/api/schedule',{name:'',at:$('#sAt').value,days,kind:'chuti',params:{count:+$('#sCount').value||0}});toast('加好了');loadTasks()};
+$('#tClear').onclick=async()=>{const d=await api('/api/tasks');for(const t of d.tasks.filter(t=>['已完成','已取消','失败'].includes(t.status)))await api('/api/task/op',{id:t.id,op:'delete'});loadTasks()};
 async function sched(id,op){await api('/api/schedule',{id,op});loadTasks()}
-async function taskLog(id){const d=await api('/api/logs?task='+id);modal('任务 #'+id+' 的记录','<pre>'+d.logs.reverse().map(l=>esc(l.ts+'  '+l.msg)).join('\n')+'</pre>')}
+async function taskLog(id){const d=await api('/api/logs?task='+id);modal('这个任务做了什么','<pre>'+d.logs.reverse().map(l=>esc(l.ts.slice(5)+'  '+l.msg)).join('\n')+'</pre>')}
 
 /* ───── 单词 ───── */
 let wPage=1,wTimer,wReady='',SEL=new Set();
@@ -702,7 +743,7 @@ async function showCall(id){const d=await api('/api/call?id='+id);
 
 /* ───── 设置 ───── */
 let SET={};
-async function loadSettings(){SET=await api('/api/settings');const c=SET.cfg,w=SET.web||{};
+async function loadSettings(){loadSoft();SET=await api('/api/settings');const c=SET.cfg,w=SET.web||{};
   for(const el of $$('[id^=c_]')){const k=el.id.slice(2);let v=k.startsWith('window_')?c.window[k.slice(7)]:c[k];
     if(el.type==='checkbox')el.checked=!!v;else el.value=v??''}
   for(const el of $$('[id^=w_]')){const v=w[el.id.slice(2)];if(el.type==='checkbox')el.checked=!!v;else el.value=v??(el.tagName==='SELECT'?'auto':'')}
