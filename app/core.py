@@ -187,6 +187,9 @@ def git(*args, auth=False, check=True, cwd=None, timeout=900, proxy=None):
     cmd += ["-c", "user.name=" + cfg["gitName"], "-c", "user.email=" + cfg["gitEmail"]]
     cmd += list(args)
     env = dict(os.environ, GIT_TERMINAL_PROMPT="0", GCM_INTERACTIVE="never")
+    if cwd is None:
+        # 只在 data\repo 里找仓库：副本坏了也绝不往上找到软件所在的那个仓库（你 GitHub Desktop 克隆的那个）
+        env["GIT_CEILING_DIRECTORIES"] = str(DATA)
     r = subprocess.run(cmd, cwd=str(cwd or REPO), capture_output=True, text=True, encoding="utf-8",
                        errors="replace", timeout=timeout, env=env, creationflags=NOWIN)
     if check and r.returncode:
@@ -317,14 +320,36 @@ def rmtree(path):
 STATE = {"repo": "未准备", "version": "", "xlsx": "", "repoError": "", "aligned": None}
 
 
-def ensure_repo():
+def _repo_ok():
+    """data\repo 是不是一个完整的、自己的仓库（不是半截、也不是借了上一层的仓库）。"""
+    if not (REPO / ".git" / "HEAD").exists():
+        return False
+    r = git("rev-parse", "--show-toplevel", check=False)
+    return r.returncode == 0 and Path(r.stdout.strip()).resolve() == REPO.resolve()
+
+
+def _fix_root_sparse():
+    """以前的版本副本坏了时，可能把“只放一部分文件”的设置写进了软件所在的仓库：发现了就关掉。"""
+    if not (ROOT / ".git").exists():
+        return
+    r = git("config", "--get", "core.sparseCheckout", cwd=ROOT, check=False)
+    if r.stdout.strip() == "true":
+        git("sparse-checkout", "disable", cwd=ROOT, check=False)
+        git("config", "--unset", "core.sparseCheckout", cwd=ROOT, check=False)
+        log("软件所在的仓库被误设成了只放一部分文件，已经改回来（文件会全部回来）")
+
+
+def ensure_repo(_again=True):
     """第一次：克隆稀疏副本（只要「总表视频细节数据」和最新总表）。之后：同步到 GitHub 最新。"""
     with REPO_LOCK:
         cfg = load_cfg()
         ok_mark = DATA / "repo_ok"
         if (REPO / ".git").exists() and not ok_mark.exists() and (REPO / D / "索引.tsv").exists():
             ok_mark.write_text(now(), encoding="utf-8")
-        if (REPO / ".git").exists() and not ok_mark.exists():      # 上次克隆到一半就断了：重来
+        _fix_root_sparse()
+        if REPO.exists() and (not ok_mark.exists() or not _repo_ok()):   # 半截的、坏的副本：删掉重来
+            log("本机的仓库副本不完整，删掉重新克隆")
+            ok_mark.unlink(missing_ok=True) if ok_mark.exists() else None
             rmtree(REPO)
         if not (REPO / ".git").exists():
             STATE["repo"] = "正在克隆仓库（第一次要一两分钟）"
@@ -341,7 +366,15 @@ def ensure_repo():
             _sparse(xlsx)
             git("checkout", "-f", cfg["branch"])
             ok_mark.write_text(now(), encoding="utf-8")
-        sync()
+        try:
+            sync()
+        except Fatal as e:
+            if _again and "共 0 个文件" in str(e):
+                log("本机的仓库副本是空的，删掉重新克隆")
+                ok_mark.unlink(missing_ok=True)
+                rmtree(REPO)
+                return ensure_repo(_again=False)
+            raise
 
 
 def pending_changes():
