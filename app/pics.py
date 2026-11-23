@@ -8,7 +8,7 @@
 过了就存进：
   词库/画面设置/words/<词>.json + <词>.py（出片流水线读它）、art/<词>/*.svg、<词>ai_art.py（把插图拷进画图文件夹）、清单.tsv；
   词库/总表视频细节数据/词/<首字母>/<词>.json 的「画面」「插图」，索引.tsv 的「画面」列改成“细节数据有”。"""
-import json, re, time, xml.etree.ElementTree as ET
+import json, os, re, time, xml.etree.ElementTree as ET
 from pathlib import Path
 import core as C
 import video as V
@@ -38,13 +38,84 @@ def _sections(md, keep):
     return "\n".join(p for p in parts if any(p.startswith("## " + k) for k in keep))
 
 
+SKILL = "引擎/视频/SKILL.md"
+KIT = "引擎/视频/references/kit-7A-U4"
+EXAMPLE_WORD = "stranger"        # kit 里第八十五版刚补好、过了起草检查的词；画面设置的写法最全（partPics、icons、comboPic、distinguish、互动）
+# SKILL.md「用户定下的规矩」里和画面有关的（配音、渲染、交付的不放）
+PIC_RULES = {3, 4, 6, 13, 14, 15, 16, 17, 18, 21, 24, 28, 29, 34, 44, 46, 47, 48, 50, 51, 56, 57}
+
+
+def skill_version():
+    """视频技能的版本，比如 ("6.41.0", "第八十五版")。"""
+    try:
+        m = re.search(r"(?m)^当前 (\S+?)（(第[^）]+版)）", _p(SKILL).read_text(encoding="utf-8"))
+        return (m.group(1), m.group(2)) if m else ("", "")
+    except Exception:
+        return ("", "")
+
+
+def pic_rules():
+    t = _p(SKILL).read_text(encoding="utf-8")
+    a = t.find("## 用户定下的规矩")
+    b = t.find("\n## ", a + 10)
+    sec = t[a:b] if a >= 0 else ""
+    items = re.split(r"(?m)^(?=\d+\. \*\*)", sec)
+    keep = [x.strip() for x in items if re.match(r"(\d+)\. \*\*", x) and int(re.match(r"(\d+)", x).group(1)) in PIC_RULES]
+    return "\n\n".join(keep)
+
+
+_EX = {"key": None, "text": ""}
+STUB = r"""import importlib.util, os
+_s = importlib.util.spec_from_file_location("_real", os.path.join(os.environ["REALKIT"], "prefkit.py"))
+_real = importlib.util.module_from_spec(_s); _s.loader.exec_module(_real)
+for _k in dir(_real):
+    if not _k.startswith("_"):
+        globals()[_k] = getattr(_real, _k)
+def actor(name, **kw):
+    d = {"actor": name}; d.update(kw); return d
+def walker(name, y, s, x0, x1, offset=0.0, z=3):
+    return {"actor": name, "x": x0, "y": y - 0.47 * s, "s": s, "z": z, "walk": {"from": [x0, y - 0.47 * s], "to": [x1, y - 0.47 * s], "offset": offset}}
+_real.actor = actor; _real.walker = walker
+"""
+
+
+def kit_example():
+    """范例：视频技能 kit 里过了起草检查的一个词，跑一遍它的画面设置程序，人物换回 {"actor": 动作名} 的写法（和 AI 要交的一样）。
+    技能更新了范例也跟着新。跑不出来就用 references/example-product（老一点，也有 partPics、icons、辨析）。"""
+    import subprocess, sys as _sys, tempfile
+    src = _p(KIT + "/words/%s.py" % EXAMPLE_WORD)
+    key = (src.stat().st_mtime if src.exists() else 0)
+    if _EX["key"] == key and _EX["text"]:
+        return _EX["text"]
+    text = ""
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            Path(d, "prefkit.py").write_text(STUB, encoding="utf-8")
+            code = src.read_text(encoding="utf-8").replace("os.path.expanduser('~/kit')", repr(d))
+            Path(d, "w.py").write_text(code, encoding="utf-8")
+            os.makedirs(os.path.join(d, "art"), exist_ok=True)
+            env = dict(os.environ, REALKIT=str(_p(KIT)), WART=os.path.join(d, "art"), PYTHONIOENCODING="utf-8")
+            out = os.path.join(d, "out.json")
+            r = subprocess.run([_sys.executable, os.path.join(d, "w.py"), out], env=env, capture_output=True, timeout=60,
+                               creationflags=C.NOWIN)
+            if r.returncode == 0 and os.path.exists(out):
+                P = next(iter(json.loads(Path(out).read_text(encoding="utf-8")).values()))
+                P = json.loads(json.dumps(P), parse_float=lambda f: round(float(f), 3))
+                text = json.dumps(P, ensure_ascii=False, separators=(",", ":"))
+    except Exception:
+        text = ""
+    if not text:
+        ex = json.loads(_p(VR + "/example-product/prefs.json").read_text(encoding="utf-8"))
+        text = json.dumps(ex, ensure_ascii=False, separators=(",", ":"))[:16000]
+    _EX.update(key=key, text=text)
+    return text
+
+
 def docs():
-    df = _p(VR + "/data-format.md").read_text(encoding="utf-8")[:26000]
+    """给 AI 的视频技能材料（按仓库里最新的视频技能）：和画面有关的规矩、pictures.md 全文、kit 里过了检查的范例。"""
     pm = _p(VR + "/pictures.md").read_text(encoding="utf-8")
-    pm = _sections(pm, ["一、", "三、", "四、", "五、", "六、", "七、", "九、", "十二、", "十五、", "十八、", "十九、", "二十、"])[:20000]
-    ex = json.loads(_p(VR + "/example-camera/prefs.json").read_text(encoding="utf-8"))
-    ex = json.dumps(ex, ensure_ascii=False, separators=(",", ":"))[:9000]
-    return df, pm, ex
+    pm = re.sub(r"(?ms)^## 二十一、.*?(?=^## |\Z)", "", pm)          # 每 5 个视频换画风：出片时程序自己转，不用写进画面设置
+    return pic_rules(), pm, kit_example()
 
 
 OUT = """【输出格式（程序按这个格式自动读，请严格照做）】
@@ -60,15 +131,16 @@ OUT = """【输出格式（程序按这个格式自动读，请严格照做）�
 
 
 def build_prompt(word, fix=None, todo=""):
-    df, pm, ex = docs()
+    rules, pm, ex = docs()
+    ver, ed = skill_version()
     rows = C.TABLE["words"].get(word) or [{}]
     mat = C.material(word) + ("\n  拆分：" + rows[0].get("拆分", "") if rows[0].get("拆分") else "") + \
         ("\n  意思怎么变过来（总表）：" + rows[0].get("组合 → 现在的含义", "")[:600].replace("\n", " / ") if rows[0].get("组合 → 现在的含义") else "")
-    parts = ["【做画面】你在帮一位中学英语老师给单词 %s 做构词动画视频的“画面设置”。视频的讲解稿由程序从总表生成，你只管画面：每个意思一幅生活场景、例句和例句动画、意思怎么一步步变过来的示意图。" % word,
+    parts = ["【做画面】你在帮一位中学英语老师给单词 %s 做构词动画视频的“画面设置”。视频的讲解稿由程序从总表生成，你只管画面：每个意思一幅生活场景、例句和例句动画、各部分卡片的画（partPics）和小图标（icons）、拼起来那一格的画（comboPic）、同义词辨析、意思怎么一步步变过来的示意图。练习题不用写，程序会把出好的 7 道题放进去。" % word,
              "【这个词的总表材料】\n" + mat,
-             "【画面设置的格式（视频技能 data-format.md）】\n" + df,
-             "【画面怎么画（视频技能 pictures.md 摘要）】\n" + pm,
-             "【范例：camera 的画面设置（JSON）】\n" + ex,
+             "【视频技能 %s（%s）里和画面有关的规矩：每一条都要做到】\n" % (ver, ed) + rules,
+             "【画面怎么画、画面设置怎么写（视频技能 %s 的 pictures.md 全文）】\n" % ver + pm,
+             "【范例：%s 的画面设置（视频技能 %s kit 里过了起草检查的，写法和你要交的一样；里面的 art/… 插图是那个词自己画的）】\n" % (EXAMPLE_WORD, ed) + ex,
              OUT % ("、".join(motions()), "、".join("art/" + s for s in scenes()), END)]
     if todo and not fix:
         items = [x.strip() for x in re.split(r"[；;]", todo.split("：", 1)[-1]) if x.strip()]
@@ -289,6 +361,7 @@ T="${TABLE:-}"; [ -f "$T" ] || T=@TABLE@
 SY=""; [ -f "${SYL:-}" ] && SY="$SYL"
 S=~/skills/word-construction-video; W=~/wordfilm-work; A="$W/@F@/art"; WK=/tmp/wv-draft-@F@; LOG=/tmp/wv-draft-@F@.log
 say() { echo "WVRESULT:$*"; }
+echo "WVVER:$(grep -m1 '^当前' "$S/SKILL.md" 2>/dev/null | sed 's/（.*//; s/^当前 *//')"
 [ -f "$S/scripts/run.py" ] || { say "检查没跑成：WSL 里没有视频技能（$S），先在「视频」页同步引擎"; exit 0; }
 [ -f "$T" ] || { say "检查没跑成：找不到总表（$T）"; exit 0; }
 mkdir -p "$W" ~/kit-extra
@@ -328,6 +401,11 @@ def wsl_draft(word, pre=False):
                  ("@SAFE@", re.sub(r'[\\/:*?"<>|\s]+', "_", word).strip("._") or "word")):
         sh = sh.replace(k, v)
     rc, t = V.wsl(sh, 900)
+    wv = next((l.split("WVVER:", 1)[1].strip() for l in t.splitlines() if "WVVER:" in l), "")
+    rv = skill_version()[0]
+    if wv and rv and wv != rv and not _ENV.get("warned"):
+        _ENV["warned"] = True
+        C.log("⚠ WSL 里的视频技能是 %s，仓库里是 %s：起草检查按的是旧版。到「视频」页点同步引擎（没在出片时点）" % (wv, rv))
     if rc == 124:
         return "env", "起草检查超时了"
     res = [l.split("WVRESULT:", 1)[1].strip() for l in t.splitlines() if "WVRESULT:" in l]
@@ -461,7 +539,9 @@ def do_pics(R, tid, p):
     if only:
         C.x("DELETE FROM picfail WHERE word IN (%s)" % ",".join("?" * len(only)), list(only))
     _DONE.clear()
-    _ENV["t"] = 0.0
+    _ENV.update(t=0.0, warned=False)
+    ver, ed = skill_version()
+    C.log("画面按视频技能 %s（%s）做：和画面有关的规矩、pictures.md 全文、kit 里 %s 的画面设置当范例" % (ver, ed, EXAMPLE_WORD), tid)
     done = 0
     batch = []
     rounds = int(C.load_cfg().get("fixRounds", 3))

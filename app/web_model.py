@@ -1265,6 +1265,71 @@ class _WebWorker:
             return false;
         }"""), False))
 
+    def _find_login_button(self):
+        """登录按钮：先找字正好是“登录”的按钮（不会点到“其他登录方式”“立即注册”），再放宽到 role=button、提交按钮、可点的 div/span。"""
+        exact = re.compile(r"^\s*(用户)?登\s*录\s*$|^\s*(log\s*in|sign\s*in)\s*$", re.I)
+        for sel in ("button", "[role=button]", "input[type=submit]", "a", "div", "span"):
+            try:
+                for b in self._page.locator(sel).all()[:200]:
+                    try:
+                        if not b.is_visible():
+                            continue
+                        t = (b.inner_text(timeout=500) or b.get_attribute("value") or "").strip()
+                        if exact.match(t):
+                            return b
+                    except Exception:
+                        pass
+            except Exception:
+                pass
+        return self._find_button_by_text("用户登录", "登录", "登 录", "Login", "Sign in")
+
+    def _wait_left_login(self, secs):
+        end = time.time() + secs
+        while time.time() < end:
+            _check_cancel()
+            time.sleep(1)
+            st = self._page_status()
+            if not st.get("isLoginPage"):
+                self._landing_url = st.get("url", "")
+                self._log("✓ 登录成功，落地页 " + self._landing_url)
+                self._dismiss_popups(2.0)
+                return True
+        return False
+
+    def _submit_login_other_ways(self, pwd):
+        """点了登录还停在登录页、页面上也没报错：换几种提交方法再试（回车、表单提交、用脚本点按钮）。"""
+        ways = [("在密码框按回车", lambda: pwd.press("Enter")),
+                ("提交登录表单", lambda: self._page.evaluate(
+                    "() => { const f = document.querySelector('input[type=password]').closest('form');"
+                    " if (f) { f.requestSubmit ? f.requestSubmit() : f.submit(); return true } return false }")),
+                ("用脚本点登录按钮", lambda: self._page.evaluate(r"""() => {
+                    const els = [...document.querySelectorAll('button,[role=button],input[type=submit],a,div,span')]
+                      .filter(e => /^\s*(用户)?登\s*录\s*$/.test(e.innerText || e.value || '') && e.getBoundingClientRect().width > 0);
+                    if (!els.length) return false; els[els.length - 1].click(); return true }"""))]
+        for name, fn in ways:
+            self._log("登录：%s" % name)
+            self._safe(fn)
+            if self._wait_left_login(6):
+                return True
+            if self._login_error_text():
+                return False
+        return False
+
+    def _manual_login(self, hint, wait=300):
+        """自动登录没成功（密码不对、要人机验证、页面改版……）：把浏览器拿到屏幕上，等你自己登录一次（最多 5 分钟）。
+        登录好了照常接着做，登录信息存下来，7 天内不用再登。"""
+        self._log("⚠ 自动登录没成功（%s）：浏览器已经拿到屏幕上，请你在里面登录一次（要验证就完成验证），"
+                  "软件看到登录成功就接着做" % (hint or "点了登录还停在登录页"))
+        _live_set(stage="等你在弹出的浏览器里登录 sorryios（最多等 5 分钟）", stage_at=time.time())
+        self._safe(lambda: self._set_window_visible(True))
+        ok = self._wait_left_login(wait)
+        if ok:
+            self._log("✓ 你登录好了，接着做")
+            self._ready_deadline = time.time() + _READY_LIMIT
+            if load_config().get("browserHidden", True):
+                self._safe(lambda: self._set_window_visible(False))
+        return ok
+
     def _login_error_text(self):
         return self._safe(lambda: self._page.evaluate(r"""() => {
             const out = [];
@@ -1272,6 +1337,14 @@ class _WebWorker:
                 const r = el.getBoundingClientRect();
                 const t = (el.innerText || '').trim();
                 if (r.width > 0 && r.height > 0 && t && t.length < 120 && !out.includes(t)) out.push(t);
+            }
+            const bad = /错误|不正确|失败|不存在|已过期|过期|锁定|冻结|频繁|验证码|人机|请先|禁止|incorrect|invalid|failed/i;
+            for (const el of document.querySelectorAll('body *')) {
+                if (out.length >= 3) break;
+                const t = (el.innerText || '').trim();
+                if (!t || t.length > 60 || el.children.length > 2 || !bad.test(t) || out.includes(t)) continue;
+                const r = el.getBoundingClientRect(), cs = getComputedStyle(el);
+                if (r.width > 0 && r.height > 0 && cs.visibility !== 'hidden' && cs.display !== 'none') out.push(t);
             }
             return out.slice(0, 3).join(' / ');
         }"""), "") or ""
@@ -1324,12 +1397,13 @@ class _WebWorker:
         self._ensure_agreement_checked()
         time.sleep(0.3)
 
-        btn = self._find_button_by_text("用户登录", "登录", "登 录", "Login", "Sign in")
+        btn = self._find_login_button()
         if btn:
-            btn.click()
+            self._safe(lambda: btn.click(timeout=5000))
+            self._log("已点击登录")
         else:
             pwd.press("Enter")
-        self._log("已点击登录")
+            self._log("没找到登录按钮，在密码框里按了回车")
 
         deadline = time.time() + 20
         nudged = False
@@ -1353,8 +1427,13 @@ class _WebWorker:
                         self._safe(lambda: btn.click())
         else:
             hint = self._login_error_text()
-            raise RuntimeError("登录失败，仍停留在登录页" +
-                               ("：" + hint if hint else "（账号密码错误，或页面又改版了）"))
+            ok = (not hint) and self._submit_login_other_ways(pwd)
+            if not ok:
+                ok = self._manual_login(hint)
+            if not ok:
+                raise RuntimeError("登录失败，仍停留在登录页" +
+                                   ("：" + hint if hint else "（账号密码错误，或页面又改版了）") +
+                                   "；你也没在弹出的浏览器里登录")
 
         time.sleep(1.5)
         if not self._goto_carlist():
