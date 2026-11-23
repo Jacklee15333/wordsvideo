@@ -452,7 +452,9 @@ def open_window(url):
               r"C:\Program Files\Microsoft\Edge\Application\msedge.exe"):
         if os.path.exists(p):
             import subprocess
-            subprocess.Popen([p, "--app=" + url, "--window-size=1360,900"])
+            # 用单独的浏览器资料夹：不和平时的 Edge 混在一起、不用 Edge 缓存的旧图标，任务栏上单独一个图标
+            subprocess.Popen([p, "--app=" + url, "--window-size=1360,900", "--user-data-dir=" + str(C.DATA / "edge-app"),
+                              "--no-first-run", "--no-default-browser-check"])
             return
     webbrowser.open(url)
 
