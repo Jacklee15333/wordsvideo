@@ -369,6 +369,28 @@ def api_self_post(b):
     return {"ok": ok, "msg": C.mask(msg)}
 
 
+def api_live(qs):
+    """任务页的实时画面：现在在做哪个任务、哪一步、AI 正在写什么、浏览器画面、步骤记录。"""
+    r = C.RUNNER
+    t = r.task
+    out = {"running": bool(t), "provider": C.provider_name(), "pv": C.load_cfg().get("provider"), "stage": r.stage,
+           "state": r.state, "ai": {k: v for k, v in C.AI_LIVE.items()}, "web": None, "logs": []}
+    if t:
+        out["task"] = C.q("SELECT id,title,kind,progress,started FROM tasks WHERE id=?", (t["id"],), one=True)
+        out["logs"] = [l for l in C.live_logs(300) if l.get("task") == t["id"]][-60:]
+    out["ai"]["reply"] = (out["ai"].get("reply") or "")[-6000:]
+    if out["pv"] == "web":
+        m = wm()
+        if m:
+            try:
+                d = m.live_state(watch=qs.get("watch") == "1")
+                d.pop("log", None)
+                out["web"] = d
+            except Exception as e:
+                out["web"] = {"error": str(e)}
+    return out
+
+
 GET = {
     "/api/status": api_status, "/api/settings": api_settings_get, "/api/tasks": api_tasks, "/api/logs": api_logs,
     "/api/word": api_word, "/api/ai/live": api_ai_live,
@@ -384,6 +406,7 @@ GET = {
                                "mine": [r["text"] for r in C.q("SELECT text FROM issues")]},
     "/api/video": api_video_get,
     "/api/self": api_self_get,
+    "/api/live": api_live,
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }

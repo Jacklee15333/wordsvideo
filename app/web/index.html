@@ -134,6 +134,25 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 #toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;padding:8px 16px;border-radius:4px;display:none;z-index:30;max-width:460px}
 .acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .acts .box{margin-top:0;position:relative}
+.who{margin:0 0 14px;font-size:13px}
+.pv label{display:block;border:1px solid var(--rule);border-radius:6px;padding:8px 12px;margin:6px 0;cursor:pointer}
+.pv label:has(input:checked){border-color:var(--blue);background:#F3F7FD}
+.who{background:#EEF3FB;border:1px solid #D3E0F3;border-radius:6px;padding:6px 12px;display:inline-block}
+.who b{color:var(--blue)}
+.live{border-color:#B9CCE8;background:#FBFCFE}
+.lhead{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:10px}
+.dot{width:9px;height:9px;border-radius:5px;background:var(--pass);display:inline-block;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}}
+.lgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.lleft img{width:100%;border:1px solid var(--rule);border-radius:4px;display:block;min-height:120px;background:#eef1f4}
+.lnoshot{border:1px dashed var(--gap);border-radius:4px;padding:30px 16px;color:var(--muted);font-size:13px;text-align:center}
+.ltabs{display:flex;gap:14px;margin-bottom:6px;font-size:13px}
+.ltabs a{color:var(--muted);text-decoration:none;padding-bottom:2px}
+.ltabs a.on{color:var(--ink);border-bottom:2px solid var(--base)}
+#lReply{white-space:pre-wrap;font:12.5px/1.6 var(--en);height:360px;overflow:auto;margin:0;background:#fff;border:1px solid var(--rule2);padding:8px}
+#lLog{height:360px;overflow:auto;font-size:12.5px;background:#fff;border:1px solid var(--rule2);padding:8px}
+@media (max-width:1000px){.lgrid{grid-template-columns:1fr}}
 .stepno{position:absolute;right:16px;top:12px;font:600 34px/1 var(--en);color:var(--rule)}
 .big{font:600 22px var(--en);margin-top:6px}
 .big small{font:13px var(--ui);color:var(--muted);margin-left:4px}
@@ -209,7 +228,8 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><h2 style="margin:0">任务</h2>
     <button class="btn sm" id="tHelp">怎么用？看操作步骤</button>
     <button class="btn ghost sm" id="tGear" title="这里用到的设置">⚙ 设置</button></div>
-  <p class="muted" style="margin:0 0 14px">一个词变成视频要三步，按顺序点下面的按钮就行。每一步都是 AI 自动做、程序自动检查，过了才存。</p>
+  <p class="muted" style="margin:0 0 6px">一个词变成视频要三步，按顺序点下面的按钮就行。每一步都是 AI 自动做、程序自动检查，过了才存。</p>
+  <div class="who" id="tWho">出题、做画面用的 AI：<b>—</b> <a href="#" onclick="gearOpen();return false">换一个</a></div>
   <div class="acts">
     <div class="box act">
       <div class="stepno">1</div><h3>出题</h3><p class="muted small">给每个词出 7 道练习题（视频最后的练习和答案）。</p>
@@ -240,6 +260,21 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
     <span id="tPend" class="small">—</span><button class="btn ghost sm" id="tPush">现在上传</button>
   </div>
   <h3>正在做和排队的</h3>
+  <div class="box live" id="tLive" hidden>
+    <div class="lhead"><span class="dot"></span><b id="lTitle">—</b><span id="lStage" class="muted small"></span><span id="lTime" class="faint small"></span></div>
+    <div class="lgrid">
+      <div class="lleft">
+        <div class="ltabs"><span class="faint small" id="lWho"></span></div>
+        <div id="lShotWrap"><img id="lShot" alt="网页 AI 的浏览器画面"><div id="lShotAge" class="small faint"></div></div>
+        <div id="lNoShot" class="lnoshot" hidden></div>
+        <div style="display:flex;gap:8px;margin-top:8px" id="lBtns"><button class="btn ghost sm" data-ai="show">把浏览器拿到屏幕上</button><button class="btn ghost sm" data-ai="hide">藏起浏览器</button></div>
+      </div>
+      <div class="lright">
+        <div class="ltabs"><a href="#" class="on" data-lt="reply">AI 正在写（实时）</a><a href="#" data-lt="log">步骤记录</a></div>
+        <pre id="lReply"></pre><div id="lLog" hidden></div>
+      </div>
+    </div>
+  </div>
   <div class="box" id="tNow"></div>
   <h3>每天自动出题</h3>
   <div class="box">
@@ -540,16 +575,30 @@ $('#tPicRedo').onclick=async()=>{const d=await api('/api/picfail');if(!d.items.l
 $('#tGear').onclick=gearOpen;
 async function gearOpen(){const S=await api('/api/settings'),c=S.cfg,w=S.web||{};
   modal('任务用到的设置',`<p class="small muted" style="margin-top:0">这里只放出题、做画面要用的设置。其他的（GitHub 令牌、代理、出视频）在左边「设置」里。</p>
+  <div class="pv">
+    <label><input type="radio" name="g_pv" value="web" ${c.provider==='web'?'checked':''}> <b>网页镜像 ChatGPT（sorryios）</b><br><span class="small muted">质量最好（会切到最高级模型、思考拉满），慢一些，一次几分钟；软件会自己打开浏览器操作，实时画面里能看到</span></label>
+    <label><input type="radio" name="g_pv" value="api" ${c.provider==='api'?'checked':''}> <b>接口 AI（DeepSeek 等）</b><br><span class="small muted">快、便宜，不用浏览器；质量比网页 ChatGPT 差一些（以前 DeepSeek 接力没过的词多）</span></label>
+    <label><input type="radio" name="g_pv" value="mock" ${c.provider==='mock'?'checked':''}> <b>模拟</b><br><span class="small muted">不连 AI，只试流程，存进去的是假题，别用来真出题</span></label>
+  </div>
+  <div id="g_web">
   <label class="f"><span>镜像站账号</span><input type="text" id="g_user" value="${esc(w.aiUsername||'')}"></label>
   <label class="f"><span>镜像站密码</span><input type="password" id="g_pass" placeholder="${w.aiPassword?'（已填，不改就空着）':''}"></label>
-  <div class="tip">就是 sorryios 的账号密码，和超能小助里登录用的一样</div>
+  <div class="tip">就是 sorryios 的账号密码，和超能小助里登录用的一样</div></div>
+  <div id="g_api">
+  <label class="f"><span>接口地址</span><input type="text" id="g_base" value="${esc(c.api.baseUrl||'')}"></label>
+  <label class="f"><span>密钥</span><input type="password" id="g_key" placeholder="${c.api.key?'（已填，不改就空着）':'sk-…'}"></label>
+  <label class="f"><span>模型名</span><input type="text" id="g_model" value="${esc(c.api.model||'')}"></label>
+  <div class="tip">DeepSeek：地址 https://api.deepseek.com，模型 deepseek-chat（快）或 deepseek-reasoner（会思考、更好）</div></div>
   <label class="f"><span>一次发给 AI</span><span><input type="number" id="g_chunk" value="${c.chunkSize}" style="width:70px"> 个词出题</span></label>
   <label class="f"><span>没过最多改</span><span><input type="number" id="g_fix" value="${c.fixRounds}" style="width:70px"> 次，还不过就放一边</span></label>
   <label class="f"><span></span><span><input type="checkbox" id="g_win" ${c.window.enabled?'checked':''}> 只在 <input type="time" id="g_ws" value="${c.window.start}"> 到 <input type="time" id="g_we" value="${c.window.end}"> 干活</span></label>
   <div style="margin:12px 0 0 138px;display:flex;gap:8px"><button class="btn" id="g_save">保存</button><button class="btn ghost" id="g_test">测登录</button></div>
   <p id="g_msg" class="small muted" style="margin-left:138px"></p>`);
+  const pvVis=()=>{const v=document.querySelector('input[name=g_pv]:checked').value;$('#g_web').hidden=v!=='web';$('#g_api').hidden=v!=='api';$('#g_test').hidden=v!=='web'};
+  $$('input[name=g_pv]').forEach(x=>x.onchange=pvVis);pvVis();
   $('#g_save').onclick=async()=>{const web={aiUsername:$('#g_user').value};if($('#g_pass').value)web.aiPassword=$('#g_pass').value;
-    await api('/api/settings',{cfg:{chunkSize:+$('#g_chunk').value,fixRounds:+$('#g_fix').value,window:{enabled:$('#g_win').checked,start:$('#g_ws').value,end:$('#g_we').value}},web});
+    const apiC={baseUrl:$('#g_base').value,model:$('#g_model').value};if($('#g_key').value)apiC.key=$('#g_key').value;
+    await api('/api/settings',{cfg:{provider:document.querySelector('input[name=g_pv]:checked').value,api:apiC,chunkSize:+$('#g_chunk').value,fixRounds:+$('#g_fix').value,window:{enabled:$('#g_win').checked,start:$('#g_ws').value,end:$('#g_we').value}},web});
     $('#g_msg').textContent='保存好了';poll()};
   $('#g_test').onclick=async()=>{$('#g_msg').textContent='正在打开浏览器登录，要等一两分钟…';const d=await api('/api/ai',{op:'test'});$('#g_msg').textContent=(d.ok?'✓ ':'✗ ')+(d.msg||'')}}
 $('#tPush').onclick=async()=>{await api('/api/task',{kind:'push',params:{}});toast('在后台上传');loadTasks()};
@@ -564,6 +613,7 @@ $('#tHelp').onclick=()=>modal('任务怎么用',`<ol class="steps">
   <li><b>没过的词</b>：AI 改了几次还不对的，会放在“其他”那一行，点「再交给 AI 试一次」。</li></ol>`);
 async function taskOp(id,op){await api('/api/task/op',{id,op});setTimeout(()=>{poll();if(page==='tasks')loadTasks()},300)}
 async function loadTasks(){
+  liveTick();
   const d=await api('/api/tasks');
   const live=d.tasks.filter(t=>['运行中','排队','已暂停'].includes(t.status)), done=d.tasks.filter(t=>!['运行中','排队','已暂停'].includes(t.status)).slice(0,30);
   const row=t=>{const p=JSON.parse(t.progress||'{}'), at=t.run_after>0&&t.status==='排队'?new Date(t.run_after*1000).toLocaleString():'';
@@ -598,6 +648,35 @@ $('#sAdd').onclick=async()=>{const days=$$('#sDays input:checked').map(i=>i.valu
 $('#tClear').onclick=async()=>{const d=await api('/api/tasks');for(const t of d.tasks.filter(t=>['已完成','已取消','失败'].includes(t.status)))await api('/api/task/op',{id:t.id,op:'delete'});loadTasks()};
 async function sched(id,op){await api('/api/schedule',{id,op});loadTasks()}
 async function taskLog(id){const d=await api('/api/logs?task='+id);modal('这个任务做了什么','<pre>'+d.logs.reverse().map(l=>esc(l.ts.slice(5)+'  '+l.msg)).join('\n')+'</pre>')}
+
+
+/* ───── 任务实时画面 ───── */
+let LT='reply',lastShot=0;
+$$('[data-lt]').forEach(a=>a.onclick=e=>{e.preventDefault();LT=a.dataset.lt;$$('[data-lt]').forEach(x=>x.classList.toggle('on',x===a));
+  $('#lReply').hidden=LT!=='reply';$('#lLog').hidden=LT!=='log'});
+const secs=t=>{t=Math.max(0,Math.round(t));return t<60?t+' 秒':Math.floor(t/60)+' 分 '+(t%60)+' 秒'};
+async function liveTick(){
+  if(page!=='tasks')return;
+  let d;try{d=await api('/api/live?watch=1')}catch(e){return}
+  $('#tWho').querySelector('b').textContent=d.provider;
+  $('#tLive').hidden=!d.running;if(!d.running)return;
+  const t=d.task||{},ai=d.ai||{};
+  $('#lTitle').textContent='正在做：'+(t.title||'');
+  $('#lStage').textContent=d.stage||'';
+  $('#lTime').textContent=ai.started&&!ai.done?'这一次已经等了 '+secs(Date.now()/1000-ai.started):'';
+  $('#lWho').textContent='用的是：'+d.provider;
+  const web=d.pv==='web';
+  $('#lShotWrap').hidden=!web;$('#lBtns').style.display=web?'flex':'none';$('#lNoShot').hidden=web;
+  if(web){const w=d.web||{};
+    if(w.has_shot&&Date.now()-lastShot>1800){lastShot=Date.now();$('#lShot').src='/api/ai/shot?'+Date.now()}
+    $('#lShotAge').textContent=w.has_shot?'浏览器画面，每两秒更新':'浏览器还没打开，或者正在打开…（'+(w.stage||'')+'）'}
+  else $('#lNoShot').innerHTML=d.pv==='api'?'接口 AI 没有浏览器画面。<br>右边能看到它一个字一个字写出来的回复。':'模拟 AI 只测流程，没有画面。';
+  const rep=(web&&d.web&&d.web.reply_tail)?d.web.reply_tail:(ai.reply||'');
+  const box=$('#lReply'),stick=box.scrollTop+box.clientHeight>=box.scrollHeight-30;
+  box.textContent=rep||(ai.started?'等 AI 开始写…':'还没开始问 AI');if(stick)box.scrollTop=1e9;
+  $('#lLog').innerHTML=(d.logs||[]).slice().reverse().map(l=>`<div><span class="faint">${esc(l.ts.slice(11))}</span> ${esc(l.msg)}</div>`).join('')||'<span class="muted">还没有。</span>';
+}
+setInterval(liveTick,2000);
 
 /* ───── 单词 ───── */
 let wPage=1,wTimer,wReady='',SEL=new Set();

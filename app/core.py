@@ -399,7 +399,8 @@ def sync():
     with REPO_LOCK:
         cfg = load_cfg()
         br = cfg["branch"]
-        STATE["repo"] = "正在同步"
+        if STATE.get("repo") != "就绪":       # 已经就绪的，同步时界面照常能用
+            STATE["repo"] = "正在同步"
         if pending_changes():
             commit_pending("词库：人工修改、视频登记（单词工作台）")
         try:
@@ -968,22 +969,59 @@ def _web():
     return web_model
 
 
+AI_LIVE = {"reply": "", "provider": "", "kind": "", "words": [], "started": 0.0, "done": 0.0, "secs": 0}
+
+
+def provider_name(cfg=None):
+    cfg = cfg or load_cfg()
+    pv = cfg.get("provider", "web")
+    if pv == "api":
+        return "接口 AI：%s（%s）" % (cfg["api"].get("model") or "?", re.sub(r"^https?://", "", cfg["api"].get("baseUrl", "")).split("/")[0])
+    if pv == "mock":
+        return "模拟 AI（只测流程，存的是假题）"
+    return "网页镜像 ChatGPT（sorryios）"
+
+
 def ai_complete(prompt, words, on_progress=None):
     cfg = load_cfg()
     pv = cfg.get("provider", "web")
     if pv == "mock":
-        return mock_reply(prompt, words)
+        r = mock_reply(prompt, words)
+        dl = float(os.environ.get("CHUTI_MOCK_DELAY", "0"))      # 测实时画面用：模拟一边写一边出来
+        for k in range(1, 11):
+            AI_LIVE["reply"] = r[:len(r) * k // 10]
+            time.sleep(dl / 10)
+        return r
     if pv == "api":
         a = cfg["api"]
+        if not a.get("key"):
+            raise Fatal("用的是接口 AI，可还没填密钥：任务页「⚙ 设置」里填")
         url = a["baseUrl"].rstrip("/")
         url = url + ("/chat/completions" if not url.endswith("/chat/completions") else "")
-        body = json.dumps({"model": a["model"], "messages": [{"role": "user", "content": prompt}],
+        body = json.dumps({"model": a["model"], "messages": [{"role": "user", "content": prompt}], "stream": True,
                            "temperature": a.get("temperature", 0.3), "max_tokens": a.get("maxTokens", 8000)}).encode()
         req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json",
                                                                "Authorization": "Bearer " + a.get("key", "")})
-        with urllib.request.urlopen(req, timeout=a.get("timeout", 600)) as r:
-            d = json.loads(r.read().decode("utf-8"))
-        return d["choices"][0]["message"]["content"]
+        out = []
+        with urllib.request.urlopen(req, timeout=a.get("timeout", 600)) as r:      # 一边写一边收，实时画面看得到
+            for raw in r:
+                line = raw.decode("utf-8", "replace").strip()
+                if not line.startswith("data:"):
+                    continue
+                data = line[5:].strip()
+                if data == "[DONE]":
+                    break
+                try:
+                    dl = json.loads(data)["choices"][0].get("delta") or {}
+                except Exception:
+                    continue
+                piece = dl.get("content") or ""
+                if piece:
+                    out.append(piece)
+                    AI_LIVE["reply"] = "".join(out)
+                if on_progress and len(out) % 40 == 1:
+                    on_progress("接收回复中…（%d 字）" % len(AI_LIVE["reply"]))
+        return "".join(out)
     wm = _web()
     if not wm.is_available():
         raise Fatal("没装 Playwright：在命令行运行  python -m pip install playwright")
@@ -1229,8 +1267,10 @@ class Runner:
             self.check_stop()
             t0 = time.time()
             self.stage = "%s：%s … %s（%d 个词）等 AI 回复" % (kind, words[0], words[-1], len(words))
+            AI_LIVE.update(reply="", provider=provider_name(), kind=kind, words=list(words), started=t0, done=0.0, prompt_len=len(prompt))
             try:
                 rep = ai_complete(prompt, words, on_progress=lambda m: setattr(self, "stage", "%s：%s" % (kind, m)))
+                AI_LIVE.update(reply=rep or AI_LIVE.get("reply", ""), done=time.time())
                 x("INSERT INTO calls(task_id,ts,kind,words,prompt,reply,secs,ok,provider) VALUES(?,?,?,?,?,?,?,1,?)",
                   (tid, now(), kind, "、".join(words), prompt, rep, round(time.time() - t0, 1), pv))
                 return rep
@@ -1251,7 +1291,8 @@ class Runner:
         b, g = next_group_label()
         label = "题目第 %d 批第 %d 组" % (b, g)
         ver = STATE["version"]
-        attr = cfg.get("attribution") if cfg.get("provider") != "mock" else "模拟 AI（测试）"
+        attr = {"mock": "模拟 AI（测试）", "api": "%s（接口·单词工作台）" % cfg["api"].get("model", "接口 AI")}.get(
+            cfg.get("provider"), cfg.get("attribution"))
         log("%s：%s … %s（%d 个词）" % (label, words[0], words[-1], len(words)), tid)
         saved, fixed, issues = [], [], []
         bad = {}                       # word -> (lines, errors)
