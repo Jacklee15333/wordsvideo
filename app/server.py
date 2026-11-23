@@ -12,10 +12,11 @@ except Exception:
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core as C
 import video as V
+import selfup as SU
 
 WEB = Path(__file__).resolve().parent / "web"
 MIME = {".html": "text/html; charset=utf-8", ".js": "application/javascript; charset=utf-8",
-        ".css": "text/css; charset=utf-8", ".png": "image/png", ".svg": "image/svg+xml"}
+        ".css": "text/css; charset=utf-8", ".png": "image/png", ".svg": "image/svg+xml", ".ico": "image/x-icon"}
 
 
 def wm():
@@ -54,7 +55,8 @@ def api_status(qs):
     return {"repo": C.STATE, "stats": s, "runner": {"state": r.state, "stage": r.stage, "task": cur},
             "pending": C.pending_changes() if C.STATE.get("repo") == "就绪" else 0,
             "provider": cfg.get("provider"), "window": cfg.get("window"), "inWindow": C.in_window(cfg),
-            "logs": C.live_logs(60), "now": C.now()}
+            "logs": C.live_logs(60), "now": C.now(), "version": SU.version(),
+            "newer": (UPD["info"] or {}).get("remote") if (UPD["info"] or {}).get("newer") else ""}
 
 
 def api_settings_get(qs):
@@ -306,6 +308,56 @@ def video_file(handler, qs):
     return handler._send(200, p.read_bytes(), ct)
 
 
+# ═══════════════════════ 软件：版本、更新、改写 ═══════════════════════
+UPD = {"info": None, "at": 0}
+
+
+def check_update_bg():
+    try:
+        UPD["info"], UPD["at"] = SU.check_update(), time.time()
+        if UPD["info"].get("newer"):
+            C.log("有新版本 v%s（现在 v%s）：到「软件」页点「更新」" % (UPD["info"]["remote"], UPD["info"]["local"]))
+    except Exception as e:
+        C.log("检查更新出错：%s" % e)
+
+
+def api_self_get(qs):
+    if qs.get("check"):
+        check_update_bg()
+    p = SU.ROOT / "CHANGELOG.md"
+    return {"version": SU.version(), "clone": SU.is_clone(), "update": UPD["info"], "backups": SU.backups(),
+            "changelog": p.read_text(encoding="utf-8")[:20000] if p.exists() else "",
+            "changes": C.q("SELECT id,request,status,files,notes,error,ts,task_id FROM changes ORDER BY id DESC LIMIT 50"),
+            "files": SU.app_files()}
+
+
+def api_self_post(b):
+    op = b.get("op")
+    if op == "request":
+        text = (b.get("text") or "").strip()
+        if len(text) < 4:
+            return {"ok": False, "msg": "先写清楚要改什么"}
+        cid = C.x("INSERT INTO changes(request,status,ts) VALUES(?,?,?)", (text, "排队", C.now()))
+        tid = C.add_task("selfedit", {"change": cid, "files": b.get("files") or []}, title="改软件：" + text.split("\n")[0][:30])
+        C.x("UPDATE changes SET task_id=? WHERE id=?", (tid, cid))
+        C.RUNNER.wake.set()
+        return {"ok": True, "msg": "交给 AI 了（任务 #%d），改好会出现在下面，等你确认" % tid}
+    if op == "apply":
+        ok, msg = SU.apply_change(int(b["id"]))
+    elif op == "discard":
+        C.x("UPDATE changes SET status='放弃了' WHERE id=?", (int(b["id"]),))
+        ok, msg = True, "放弃了"
+    elif op == "update":
+        ok, msg = SU.update()
+    elif op == "rollback":
+        ok, msg = SU.rollback(b.get("name", ""))
+    else:
+        return {"ok": False, "msg": "不认识的操作"}
+    if ok:
+        threading.Thread(target=check_update_bg, daemon=True).start()
+    return {"ok": ok, "msg": C.mask(msg)}
+
+
 GET = {
     "/api/status": api_status, "/api/settings": api_settings_get, "/api/tasks": api_tasks, "/api/logs": api_logs,
     "/api/word": api_word, "/api/ai/live": api_ai_live,
@@ -319,12 +371,15 @@ GET = {
     "/api/issues": lambda qs: {"readme": C.readme_issues(),
                                "mine": [r["text"] for r in C.q("SELECT text FROM issues")]},
     "/api/video": api_video_get,
+    "/api/self": api_self_get,
+    "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
 NEED_REPO = {"/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
 POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/task/op": api_task_op,
         "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
         "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,
+        "/api/self": api_self_post,
         "/api/prepare": lambda b: C.prepare(b.get("words") or [])}
 
 
@@ -404,6 +459,7 @@ def main():
         m.set_logger(lambda s: print(s, flush=True))
     threading.Thread(target=prepare_repo, daemon=True).start()
     C.RUNNER.start()
+    threading.Timer(20, check_update_bg).start()
     url = "http://127.0.0.1:%d" % port
     print("单词工作台已启动：%s （关掉这个窗口就退出）" % url, flush=True)
     threading.Timer(1.0, open_window, args=(url,)).start()

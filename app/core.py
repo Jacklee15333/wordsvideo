@@ -116,6 +116,8 @@ def db():
         CREATE TABLE IF NOT EXISTS manual(word TEXT PRIMARY KEY, errors TEXT, draft TEXT, attempts INTEGER, ts TEXT, source TEXT);
         CREATE TABLE IF NOT EXISTS groups(id INTEGER PRIMARY KEY, task_id INTEGER, label TEXT, words TEXT, saved TEXT,
             failed TEXT, fixed TEXT, commit_id TEXT, pushed INTEGER, ts TEXT, provider TEXT);
+        CREATE TABLE IF NOT EXISTS changes(id INTEGER PRIMARY KEY, request TEXT, status TEXT, files TEXT, notes TEXT,
+            diff TEXT, edits TEXT, error TEXT, ts TEXT, task_id INTEGER);
         CREATE TABLE IF NOT EXISTS issues(id INTEGER PRIMARY KEY, word TEXT, text TEXT, ts TEXT, task_id INTEGER);
         """)
         _DB.commit()
@@ -900,6 +902,12 @@ def ai_complete(prompt, words, on_progress=None):
 def mock_reply(prompt, words):
     """模拟 AI（试用和自测用）：写出格式对的稿；第一次故意让一部分词漏写考点，测“退回重写”。"""
     time.sleep(0.3)
+    if "【改软件】" in prompt:                 # 模拟改软件：挑 core.py，改它开头那句说明
+        if "全文 =====" not in prompt:
+            return "FILES: app/core.py\n" + END
+        old = "单词工作台 · " + "核心"            # 拼起来写，免得这句原文在本文件里出现两次
+        return ("```text\n<<<FILE app/core.py\n<<<FIND\n" + old + "\n>>>REPLACE\n" + old + "（模拟改写测试）\n>>>END\n```\n"
+                "说明：\n- 模拟：改了 core.py 开头的说明\n" + END)
     fix = "没通过程序体检" in prompt
     out = ["```text"]
     for i, w in enumerate(words):
@@ -917,7 +925,7 @@ def mock_reply(prompt, words):
 
 
 # ═══════════════════════ 任务 ═══════════════════════
-KIND_NAMES = {"chuti": "出题", "redo": "重做待人工的词", "push": "上传到 GitHub", "sync": "同步仓库"}
+KIND_NAMES = {"selfedit": "改软件", "chuti": "出题", "redo": "重做待人工的词", "push": "上传到 GitHub", "sync": "同步仓库"}
 
 
 def add_task(kind, params=None, run_after=0, title=""):
@@ -1026,6 +1034,9 @@ class Runner:
                 self.do_chuti(tid, p)
             elif t["kind"] == "redo":
                 self.do_redo(tid, p)
+            elif t["kind"] == "selfedit":
+                import selfup
+                selfup.do_selfedit(tid, p)
             elif t["kind"] == "push":
                 log(push(), tid)
             elif t["kind"] == "sync":

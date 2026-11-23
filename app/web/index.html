@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>单词工作台</title>
+<link rel="icon" type="image/svg+xml" href="/logo.svg">
 <style>
 :root{
   --paper:#F6F8F9; --sheet:#FFFFFF; --ink:#1F2A44; --muted:#5E6878; --faint:#8A93A3;
@@ -21,6 +22,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 nav{width:188px;flex:none;background:var(--ink);color:#DCE3EE;display:flex;flex-direction:column;padding:18px 0}
 nav h1{font:600 17px/1.3 var(--ui);margin:0 20px 22px;color:#fff;letter-spacing:.5px}
+nav h1 .logo{width:34px;height:34px;float:left;margin:0 10px 0 0}
 nav h1 small{display:block;font:400 12px var(--en);color:#9FB0C8;font-style:italic;letter-spacing:0;margin-top:2px}
 nav a{display:flex;justify-content:space-between;padding:9px 20px;color:#C9D3E2;text-decoration:none;cursor:pointer;border-left:3px solid transparent}
 nav a:hover{background:#28365A;color:#fff}
@@ -133,13 +135,14 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 </head>
 <body>
 <nav>
-  <h1>单词工作台<small>etymon · 7 questions a word</small></h1>
+  <h1><img src="/logo.svg" alt="" class="logo">单词工作台<small>words · questions · films</small></h1>
   <a data-p="home" class="on">总览</a>
   <a data-p="tasks">任务<span class="n" id="nTasks" hidden></span></a>
   <a data-p="words">单词</a>
   <a data-p="video">视频</a>
   <a data-p="manual">待人工<span class="n" id="nManual" hidden></span></a>
   <a data-p="history">记录</a>
+  <a data-p="soft">软件<span class="n" id="nSoft" hidden>新</span></a>
   <a data-p="settings">设置</a>
   <div class="foot" id="foot">正在连接…</div>
 </nav>
@@ -298,6 +301,32 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
   <div class="box"><div id="iList" class="small"></div></div>
 </section>
 
+
+<section id="p-soft">
+  <h2>软件</h2>
+  <div class="row">
+  <div class="col">
+    <div class="box">
+      <h3 style="margin-top:0">版本</h3>
+      <div id="sVer" class="muted">—</div>
+      <div style="display:flex;gap:8px;margin-top:10px"><button class="btn ghost" id="sCheck">检查更新</button><button class="btn" id="sUpd" hidden>更新到新版本</button></div>
+      <p class="small faint" style="margin:10px 0 0">每发布一个新版本，旧版本整个 app 文件夹先备份到仓库的「版本备份/v版本号」，更新记录写在仓库的 CHANGELOG.md。</p>
+    </div>
+    <div class="box">
+      <h3 style="margin-top:0">让 AI 改软件</h3>
+      <p class="small muted" style="margin:0 0 8px">写清楚要改什么（哪一页、哪个按钮、想变成什么样）。网页 AI 先挑要看的文件，再写改动；程序检查语法，没问题的改动放在下面等你看。你点「应用并发布」才会真的改：先备份旧版本、版本号加一、记进更新记录、上传到仓库，重开软件生效。</p>
+      <textarea id="sReq" rows="5" style="font-family:var(--ui)" placeholder="比如：单词页的列表多显示一列“批次”；或者：总览页最上面加一句今天出了多少个词"></textarea>
+      <div style="margin-top:8px;display:flex;gap:8px;align-items:center"><button class="btn" id="sGo">交给 AI 改</button><span class="small faint">改的时候在「任务」里排队，和出题共用网页 AI</span></div>
+    </div>
+    <div class="box"><h3 style="margin-top:0">改动</h3><table id="sChanges"></table></div>
+  </div>
+  <div class="col">
+    <div class="box"><h3 style="margin-top:0">版本备份</h3><div id="sBk" class="small"></div></div>
+    <div class="box"><h3 style="margin-top:0">更新记录</h3><pre id="sLog" class="small" style="white-space:pre-wrap;max-height:520px;overflow:auto;margin:0;font-family:var(--ui)"></pre></div>
+  </div>
+  </div>
+</section>
+
 <section id="p-settings">
   <h2>设置</h2>
   <div class="row">
@@ -384,7 +413,7 @@ function closeModal(){$('#modal').style.display='none'}
 $('#modal').onclick=e=>{if(e.target.id==='modal')closeModal()};
 let page='home';
 function go(p){page=p;$$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===p));$$('main section').forEach(s=>s.classList.toggle('on',s.id==='p-'+p));
-  ({video:loadVideo,tasks:loadTasks,words:loadWords,manual:loadManual,history:loadHistory,settings:loadSettings,home:loadMap}[p]||(()=>{}))()}
+  ({soft:loadSoft,video:loadVideo,tasks:loadTasks,words:loadWords,manual:loadManual,history:loadHistory,settings:loadSettings,home:loadMap}[p]||(()=>{}))()}
 $$('nav a').forEach(a=>a.onclick=()=>go(a.dataset.p));
 
 /* ───── 状态轮询 ───── */
@@ -392,7 +421,8 @@ let ST={};
 async function poll(){
   try{ST=await api('/api/status')}catch(e){$('#foot').textContent='连不上本机服务：'+e.message;return}
   const r=ST.repo||{}, s=ST.stats||{};
-  $('#foot').innerHTML=`仓库 <b>${esc(r.repo)}</b><br>总表 ${esc(r.version||'—')}<br>版本 ${esc(r.head||'—')}${ST.pending?`<br>${ST.pending} 处修改未上传`:''}<br>AI：${{web:'网页镜像',api:'接口',mock:'模拟'}[ST.provider]||''}`;
+  $('#nSoft').hidden=!ST.newer;
+  $('#foot').innerHTML=`<b>v${esc(ST.version||'')}</b>${ST.newer?` <a href="#" onclick="go('soft');return false" style="color:#9FE3BE">有新版本 v${esc(ST.newer)}</a>`:''}<br>仓库 <b>${esc(r.repo)}</b><br>总表 ${esc(r.version||'—')}<br>版本 ${esc(r.head||'—')}${ST.pending?`<br>${ST.pending} 处修改未上传`:''}<br>AI：${{web:'网页镜像',api:'接口',mock:'模拟'}[ST.provider]||''}`;
   if(r.repoError) $('#foot').innerHTML+=`<br><span style="color:#F3B2AB">${esc(r.repoError).slice(0,140)}</span>`;
   $('#nManual').hidden=!s.manual; $('#nManual').textContent=s.manual||'';
   const t=ST.runner.task;
@@ -610,6 +640,33 @@ async function bOp(action){if(!VB)return toast('先点一个批次');
   await vPost({op:'batch',name:VB,action,word:$('#vWord').value.trim(),stage:$('#vStage').value},'#vBOut');if(['start','stop'].includes(action))setTimeout(loadVideo,2000)}
 $$('[data-bw]').forEach(x=>x.onclick=()=>{if(!$('#vWord').value.trim())return toast('先写词的文件夹名');bOp(x.dataset.bw)});
 
+
+/* ───── 软件 ───── */
+async function loadSoft(check){
+  const d=await api('/api/self'+(check?'?check=1':''));const u=d.update||{};
+  $('#sVer').innerHTML=`现在是 <b style="font:600 18px var(--en);color:var(--ink)">v${esc(d.version)}</b>　`+(!d.clone?'<span style="color:var(--amber)">软件文件夹不是从 GitHub 克隆的，检查不了更新、发布不了改动</span>':
+    u.error?`<span style="color:var(--red)">${esc(u.error)}</span>`:u.remote?(u.newer?`<b style="color:var(--pass)">GitHub 上有新版本 v${esc(u.remote)}</b>`:`已经是最新（GitHub 上是 v${esc(u.remote)}）`):'还没检查');
+  $('#sUpd').hidden=!u.newer;
+  $('#sLog').textContent=(u.newer&&u.log)?u.log:(d.changelog||'还没有更新记录');
+  $('#sBk').innerHTML=d.backups.length?d.backups.map(b=>`<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--rule2)"><span style="font-family:var(--en)">${esc(b)}</span><button class="btn ghost sm" onclick="rollback('${esc(b)}')">回退到这个版本</button></div>`).join(''):'<span class="muted">还没有备份（发布第一个新版本时会自动备份旧的）</span>';
+  $('#sChanges').innerHTML=d.changes.length?'<tr><th>要改什么</th><th>状态</th><th></th></tr>'+d.changes.map(c=>`<tr><td>${esc(c.request).slice(0,80)}<div class="small faint">${esc(c.ts||'')}${c.error?` · <span style="color:var(--red)">${esc(c.error).slice(0,160)}</span>`:''}</div></td>
+    <td><span class="tag ${c.status==='已发布'?'t-done':c.status==='待确认'?'t-已暂停':c.status==='没改成'?'t-manual':'t-missing'}">${esc(c.status)}</span></td>
+    <td style="white-space:nowrap">${c.status==='待确认'||c.status==='已发布'?`<button class="btn ghost sm" onclick="showChange(${c.id})">看改动</button>`:''}
+    ${c.status==='待确认'?` <button class="btn sm" onclick="selfOp('apply',${c.id})">应用并发布</button> <button class="btn ghost sm" onclick="selfOp('discard',${c.id})">放弃</button>`:''}</td></tr>`).join(''):'<tr><td class="muted">还没有。</td></tr>';
+}
+async function selfOp(op,id,name){
+  if(op==='apply'&&!confirm('应用这个改动并发布新版本？会先备份现在的版本，再上传到仓库。'))return;
+  if(op==='update'&&!confirm('更新到 GitHub 上的新版本？'))return;
+  toast('正在做…',8000);
+  try{const d=await api('/api/self',{op,id,name});modal(d.ok?'好了':'没成功',`<p>${esc(d.msg)}</p>`)}catch(e){modal('出错了',`<p>${esc(e.message)}</p>`)}loadSoft()}
+function rollback(name){if(confirm(`回退到 ${name}？现在的版本会先备份，回退也算一个新版本。`))selfOp('rollback',0,name)}
+async function showChange(id){const c=await api('/api/self/change?id='+id);
+  const lines=(c.diff||'').split('\n').map(l=>`<span style="color:${l.startsWith('+')&&!l.startsWith('+++')?'var(--pass)':l.startsWith('-')&&!l.startsWith('---')?'var(--red)':'inherit'}">${esc(l)}</span>`).join('\n');
+  modal('改动：'+c.request.slice(0,40),`<p class="small">${JSON.parse(c.notes||'[]').map(esc).join('<br>')}</p><pre>${lines||'（没有改动）'}</pre>`)}
+$('#sGo').onclick=async()=>{const d=await api('/api/self',{op:'request',text:$('#sReq').value});toast(d.msg,6000);if(d.ok){$('#sReq').value='';loadSoft()}};
+$('#sCheck').onclick=async()=>{$('#sVer').textContent='正在查 GitHub…';await loadSoft(true)};
+$('#sUpd').onclick=()=>selfOp('update');
+
 /* ───── 待人工 ───── */
 async function loadManual(){const d=await api('/api/manual');
   $('#mTable').innerHTML='<tr><th><input type="checkbox" id="mAll"></th><th>单词</th><th>为什么没过</th><th>来自</th><th>试了</th></tr>'+(d.items.map(m=>
@@ -650,14 +707,16 @@ async function loadSettings(){SET=await api('/api/settings');const c=SET.cfg,w=S
 }
 function provVis(){const p=$('#c_provider').value;$('#webSet').style.display=p==='web'?'':'none';$('#apiSet').style.display=p==='api'?'':'none'}
 $('#c_provider').onchange=provVis;
-$('#saveSet').onclick=async()=>{const cfg={window:{}},web={},a={};
+async function saveSettings(){const cfg={window:{}},web={},a={};
   for(const el of $$('[id^=c_]')){const k=el.id.slice(2),v=el.type==='checkbox'?el.checked:(el.type==='number'?+el.value:el.value);
     if(k.startsWith('window_'))cfg.window[k.slice(7)]=v;else cfg[k]=v}
   for(const el of $$('[id^=w_]'))web[el.id.slice(2)]=el.type==='checkbox'?el.checked:el.value;
   for(const el of $$('[id^=a_]'))a[el.id.slice(2)]=el.value; cfg.api=a;
   if(!cfg.githubToken)delete cfg.githubToken; if(!a.key)delete a.key; if(!web.aiPassword)delete web.aiPassword;
-  await api('/api/settings',{cfg,web});$('#saveMsg').textContent='保存好了 '+new Date().toLocaleTimeString();poll()};
+  await api('/api/settings',{cfg,web});$('#saveMsg').textContent='保存好了 '+new Date().toLocaleTimeString();poll()}
+$('#saveSet').onclick=saveSettings;
 $$('[data-repo]').forEach(b=>b.onclick=async()=>{const op=b.dataset.repo;
+  if(op==='token')await saveSettings();
   if(op==='reclone'&&!confirm('删掉本机的仓库副本重新克隆？没上传的修改会丢。'))return;
   b.disabled=true;try{const d=await api('/api/repo',{op});toast(op==='token'?((d.ok?'✓ ':'✗ ')+d.msg):(d.msg||'好的，在后台做，看「动态」'),6000)}catch(e){toast('✗ '+e.message)}b.disabled=false});
 $('#pPrev').onclick=async()=>{const d=await api('/api/prompt-preview?n=3');modal('发给 AI 的提示词（用下一批 3 个词举例）','<pre>'+esc(d.text)+'</pre>')};
