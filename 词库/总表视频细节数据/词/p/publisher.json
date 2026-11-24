@@ -1,7 +1,355 @@
 {
  "单词": "publisher",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/press.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.6,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/newspaper.svg",
+      "x": 0.86,
+      "y": 0.74,
+      "s": 0.24,
+      "go": [
+       0.86,
+       0.6
+      ],
+      "dur": 1.2,
+      "loop": true,
+      "z": 4
+     },
+     {
+      "label": "出版",
+      "x": 0.2,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.42,
+      "y": 0.56,
+      "s": 0.92,
+      "z": 3
+     },
+     {
+      "label": "做…的人或机构",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.78,
+      "y": 0.72,
+      "s": 0.3,
+      "z": 5,
+      "pop": true,
+      "delay": 0.5
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-newspaper.svg",
+   "p1": "art/ic-person.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-clerk-happy",
+     "x": 0.26,
+     "y": 0.58,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "svg": "art/press.svg",
+     "x": 0.5,
+     "y": 0.54,
+     "s": 0.6,
+     "anim": "shake"
+    },
+    {
+     "label": "出版的人或机构",
+     "x": 0.6,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.26,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.7,
+      "y": 0.6,
+      "s": 0.46
+     },
+     {
+      "svg": "art/press.svg",
+      "x": 0.8,
+      "y": 0.86,
+      "s": 0.22,
+      "z": 5
+     }
+    ],
+    "text": "出版商、出版社",
+    "pos": "名词",
+    "diff": "负责出版发行",
+    "ex": "The publisher printed five thousand copies.",
+    "exzh": "出版社印了五千本。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.22,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "publisher"
+      },
+      {
+       "svg": "art/press.svg",
+       "x": 0.62,
+       "y": 0.54,
+       "s": 0.5,
+       "when": "printed",
+       "anim": "shake"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.86,
+       "y": 0.72,
+       "s": 0.3,
+       "when": "five thousand copies",
+       "pop": true
+      },
+      {
+       "label": "publisher",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "publisher"
+      },
+      {
+       "label": "五千本",
+       "x": 0.86,
+       "y": 0.4,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "五千本"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/newspaper.svg",
+      "x": 0.72,
+      "y": 0.5,
+      "s": 0.46
+     }
+    ],
+    "text": "（报刊的）发行人",
+    "pos": "名词",
+    "diff": "办报纸、杂志的人",
+    "ex": "He is the publisher of the local newspaper.",
+    "exzh": "他是本地报纸的发行人。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-present",
+       "x": 0.28,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "He"
+      },
+      {
+       "svg": "art/newspaper.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.46,
+       "when": "newspaper",
+       "pop": true
+      },
+      {
+       "label": "publisher",
+       "x": 0.72,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "publisher"
+      },
+      {
+       "label": "发行人",
+       "x": 0.72,
+       "y": 0.86,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "发行人"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“出版的人或机构”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.26,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3
+      },
+      {
+       "svg": "art/press.svg",
+       "x": 0.7,
+       "y": 0.54,
+       "s": 0.5
+      },
+      {
+       "label": "publish + er",
+       "x": 0.7,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "当众宣布的人 → 出版的人",
+    "node": "出版商、出版社；发行人",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "最早是当众宣布消息的人，后来是出书、办报刊的人或机构，就是出版商、发行人。",
+     "editor 是编辑，author 是作者。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/loudspeaker.svg",
+       "x": 0.2,
+       "y": 0.24,
+       "s": 0.24,
+       "when": "当众宣布",
+       "hideCue": 1
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.26,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "出书"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.44,
+       "when": "出书"
+      },
+      {
+       "svg": "art/newspaper.svg",
+       "x": 0.86,
+       "y": 0.3,
+       "s": 0.26,
+       "when": "报刊"
+      },
+      {
+       "label": "出版商",
+       "x": 0.6,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "出版商"
+      },
+      {
+       "label": "editor 编辑 / author 作者",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "editor"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "publisherai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：出版商想做什么？\n听：The publisher wants to print more copies of the book.\nA. 停印这本书\nB. 多印一些这本书\nC. 写一本新书\nD. 开一家书店",
@@ -88,5 +436,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

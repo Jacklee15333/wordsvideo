@@ -1,7 +1,546 @@
 {
  "单词": "publicize",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-speech",
+      "x": 0.36,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9
+     },
+     {
+      "label": "公开的",
+      "x": 0.78,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/poster.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.56,
+      "shadow": true
+     },
+     {
+      "label": "使…化",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-crowd.svg",
+   "p1": "art/ic-star.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/poster.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.56,
+     "pop": true
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.05,
+     "y": 0.62,
+     "s": 0.56,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.05,
+       0.62
+      ],
+      "to": [
+       0.95,
+       0.62
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.9,
+     "y": 0.66,
+     "s": 0.5,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.9,
+       0.66
+      ],
+      "to": [
+       0.1,
+       0.66
+      ],
+      "offset": 0.4
+     }
+    },
+    {
+     "label": "使公开",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/poster.svg",
+      "x": 0.4,
+      "y": 0.48,
+      "s": 0.56
+     },
+     {
+      "actor": "west-man-point",
+      "x": 0.74,
+      "y": 0.6,
+      "s": 0.84,
+      "z": 3
+     },
+     {
+      "svg": "art/loudspeaker.svg",
+      "x": 0.14,
+      "y": 0.24,
+      "s": 0.24
+     },
+     {
+      "waves": true,
+      "x": 0.22,
+      "y": 0.24,
+      "dir": 0,
+      "spread": 50,
+      "n": 3
+     }
+    ],
+    "text": "宣传、推广",
+    "pos": "动词",
+    "diff": "让一件事传到公众那里",
+    "ex": "We put up posters to publicize the show.",
+    "exzh": "我们贴海报宣传这场演出。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.2,
+       "y": 0.62,
+       "s": 0.72,
+       "z": 3,
+       "when": "We"
+      },
+      {
+       "svg": "art/poster.svg",
+       "x": 0.52,
+       "y": 0.48,
+       "s": 0.56,
+       "when": "posters",
+       "pop": true
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 1.0,
+       "y": 0.66,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.0,
+         0.66
+        ],
+        "to": [
+         0.7,
+         0.66
+        ],
+        "offset": 0
+       },
+       "goWhen": "publicize"
+      },
+      {
+       "label": "publicize",
+       "x": 0.84,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "publicize"
+      },
+      {
+       "label": "宣传",
+       "x": 0.84,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "宣传"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "svg": "art/loudspeaker.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.4
+     },
+     {
+      "waves": true,
+      "x": 0.62,
+      "y": 0.3,
+      "dir": 0,
+      "spread": 50,
+      "n": 3
+     },
+     {
+      "waves": true,
+      "x": 0.38,
+      "y": 0.3,
+      "dir": 180,
+      "spread": 50,
+      "n": 3
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     }
+    ],
+    "text": "公布、使广为人知",
+    "pos": "动词",
+    "diff": "把消息告诉大家",
+    "ex": "The school publicized the results.",
+    "exzh": "学校公布了结果。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/newspaper.svg",
+       "x": 0.5,
+       "y": 0.46,
+       "s": 0.5,
+       "when": "results",
+       "pop": true
+      },
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.16,
+       "y": 0.6,
+       "s": 0.78,
+       "z": 3,
+       "when": "The school"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.86,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 3,
+       "when": "results"
+      },
+      {
+       "label": "publicized",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "publicized"
+      },
+      {
+       "label": "公布",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "公布"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“使公开”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/poster.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.56
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "label": "public 公开的 + ize 使…",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.066,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "让一件事传到公众那里",
+    "node": "宣传、推广；公布",
+    "pos": "动词",
+    "pic": 0,
+    "say": [
+     "让一件事传到公众那里，就是宣传、推广，也是公布、使广为人知。",
+     "这个词 1902 年才出现，比 publicity 宣传晚得多。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/poster.svg",
+       "x": 0.4,
+       "y": 0.48,
+       "s": 0.56,
+       "when": "一件事"
+      },
+      {
+       "svg": "art/loudspeaker.svg",
+       "x": 0.14,
+       "y": 0.24,
+       "s": 0.24,
+       "when": "传到"
+      },
+      {
+       "waves": true,
+       "x": 0.22,
+       "y": 0.24,
+       "dir": 0,
+       "spread": 50,
+       "n": 3,
+       "when": "传到"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "label": "宣传、推广",
+       "x": 0.8,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "宣传"
+      },
+      {
+       "label": "1902",
+       "x": 0.8,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "1902"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "advertise": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/tag.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6
+      },
+      {
+       "svg": "art/shopbag.svg",
+       "x": 0.8,
+       "y": 0.55,
+       "s": 0.6
+      }
+     ]
+    },
+    "publish": {
+     "bg": "studio",
+     "tint": "gray",
+     "items": [
+      {
+       "svg": "art/press.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8
+      }
+     ]
+    },
+    "popularise": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/lightbulb.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "publicizeai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他们贴海报是为了什么？\n听：We put up posters to publicize the school concert.\nA. 宣传学校音乐会\nB. 卖音乐会门票\nC. 装饰教室\nD. 通知考试",
@@ -90,5 +629,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

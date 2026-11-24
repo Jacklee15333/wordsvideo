@@ -1,0 +1,418 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/press.svg",
+     "x": 0.5,
+     "y": 0.54,
+     "s": 0.6,
+     "anim": "shake"
+    },
+    {
+     "svg": "art/newspaper.svg",
+     "x": 0.86,
+     "y": 0.74,
+     "s": 0.24,
+     "go": [
+      0.86,
+      0.6
+     ],
+     "dur": 1.2,
+     "loop": true,
+     "z": 4
+    },
+    {
+     "label": "出版",
+     "x": 0.2,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/books.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "label": "…这件事、这一行",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-newspaper.svg",
+  "p1": "art/ic-book-open.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/press.svg",
+    "x": 0.5,
+    "y": 0.54,
+    "s": 0.6,
+    "anim": "shake"
+   },
+   {
+    "svg": "art/newspaper.svg",
+    "x": 0.86,
+    "y": 0.74,
+    "s": 0.24,
+    "go": [
+     0.86,
+     0.6
+    ],
+    "dur": 1.2,
+    "loop": true,
+    "z": 4
+   },
+   {
+    "actor": "west-clerk-happy",
+    "x": 0.16,
+    "y": 0.6,
+    "s": 0.74,
+    "z": 3
+   },
+   {
+    "label": "出版这一行",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-clerk-think",
+     "x": 0.2,
+     "y": 0.6,
+     "s": 0.8,
+     "z": 3
+    },
+    {
+     "svg": "art/press.svg",
+     "x": 0.5,
+     "y": 0.54,
+     "s": 0.6,
+     "anim": "shake"
+    },
+    {
+     "svg": "art/newspaper.svg",
+     "x": 0.86,
+     "y": 0.74,
+     "s": 0.24,
+     "go": [
+      0.86,
+      0.6
+     ],
+     "dur": 1.2,
+     "loop": true,
+     "z": 4
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.5,
+     "y": 0.88,
+     "s": 0.2,
+     "z": 5
+    }
+   ],
+   "text": "出版（业）",
+   "pos": "名词",
+   "diff": "出版这件事、这一行",
+   "ex": "She works in publishing.",
+   "exzh": "她在出版业工作。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.24,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3,
+      "when": "She"
+     },
+     {
+      "svg": "art/press.svg",
+      "x": 0.66,
+      "y": 0.54,
+      "s": 0.56,
+      "when": "publishing",
+      "anim": "shake"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.66,
+      "y": 0.9,
+      "s": 0.2,
+      "z": 5,
+      "when": "publishing"
+     },
+     {
+      "label": "publishing",
+      "x": 0.66,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "publishing"
+     },
+     {
+      "label": "出版业",
+      "x": 0.66,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "出版业"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“出版这件事、这一行”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/press.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.6,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/newspaper.svg",
+      "x": 0.86,
+      "y": 0.74,
+      "s": 0.24,
+      "go": [
+       0.86,
+       0.6
+      ],
+      "dur": 1.2,
+      "loop": true,
+      "z": 4
+     },
+     {
+      "label": "publish + ing",
+      "x": 0.3,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "出版这件事、这一行",
+   "node": "出版（业）",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "出版这件事、这一行，就是出版业。",
+    "用电脑排版出书，叫 desktop publishing，桌面排版。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/press.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.6,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/newspaper.svg",
+      "x": 0.86,
+      "y": 0.74,
+      "s": 0.24,
+      "go": [
+       0.86,
+       0.6
+      ],
+      "dur": 1.2,
+      "loop": true,
+      "z": 4
+     },
+     {
+      "label": "出版业",
+      "x": 0.3,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "出版业"
+     },
+     {
+      "svg": "art/computer.svg",
+      "x": 0.18,
+      "y": 0.7,
+      "s": 0.3,
+      "cue": 1,
+      "when": "电脑"
+     },
+     {
+      "label": "desktop publishing",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "desktop publishing"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "publication": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/magazine.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：阿姨在哪一行工作？",
+    "listen": "My aunt works in publishing in Beijing.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "医疗业",
+     "餐饮业",
+     "出版业",
+     "旅游业"
+    ],
+    "ans": "C",
+    "why": "work in publishing 在出版业工作。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Publishing ______ changed a lot in recent years.",
+    "opts": [
+     "have",
+     "has",
+     "are",
+     "were"
+    ],
+    "ans": "B",
+    "why": "publishing 不可数，谓语用单数 has。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 publish、publisher、publishing 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He wants a job in ______ after college.",
+    "opts": [],
+    "ans": "publishing",
+    "why": "a job in publishing 在出版业工作，in 后面用名词。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The book was ______ in 2020. (publishing)",
+    "opts": [],
+    "ans": "published",
+    "why": "was 加过去分词 published 表示被出版。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "She works for a famous publishings company.",
+    "opts": [],
+    "ans": "publishings → publishing",
+    "why": "publishing 不可数，作定语也不加 s。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这家出版社出版了很多好书。",
+    "stem": "This ______ has published many good books.",
+    "opts": [],
+    "ans": "publisher",
+    "why": "出版社是做出版的公司，用 publisher。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "My father ______ in publishing for ten years.",
+    "opts": [
+     "works",
+     "is working",
+     "has worked",
+     "work"
+    ],
+    "ans": "C",
+    "why": "for ten years 表示持续到现在，用现在完成时 has worked。",
+    "kd": "用法"
+   }
+  ]
+ }
+}

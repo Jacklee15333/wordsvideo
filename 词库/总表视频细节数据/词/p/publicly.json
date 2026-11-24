@@ -1,7 +1,464 @@
 {
  "单词": "publicly",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-speech",
+      "x": 0.36,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9
+     },
+     {
+      "label": "公开的",
+      "x": 0.78,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.25,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.25,
+        0.7
+       ],
+       "to": [
+        1.0,
+        0.7
+       ],
+       "offset": 0.7
+      }
+     },
+     {
+      "label": "以…的方式",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-crowd.svg",
+   "p1": "art/ic-road.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-explain",
+     "x": 0.36,
+     "y": 0.58,
+     "s": 0.9,
+     "z": 3,
+     "id": "m",
+     "seq": "talk"
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 6,
+     "crowd": 9,
+     "nodWith": "m"
+    },
+    {
+     "label": "公开地",
+     "x": 0.78,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.36,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3,
+      "id": "m",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9,
+      "nodWith": "m"
+     },
+     {
+      "svg": "art/mic.svg",
+      "x": 0.56,
+      "y": 0.64,
+      "s": 0.3,
+      "z": 4
+     }
+    ],
+    "text": "公开地、当众",
+    "pos": "副词",
+    "diff": "当着众人的面",
+    "ex": "She thanked her teacher publicly.",
+    "exzh": "她当众感谢了她的老师。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.26,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "She",
+       "seq": "talk"
+      },
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.74,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "her teacher"
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.5,
+       "y": 0.26,
+       "s": 0.18,
+       "when": "thanked",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.94,
+       "s": 0.26,
+       "z": 6,
+       "crowd": 9,
+       "when": "publicly"
+      },
+      {
+       "label": "publicly",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "publicly"
+      },
+      {
+       "label": "当众",
+       "x": 0.5,
+       "y": 0.46,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "当众"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.56
+     },
+     {
+      "svg": "art/tag.svg",
+      "x": 0.84,
+      "y": 0.3,
+      "s": 0.2
+     }
+    ],
+    "text": "由公共资金",
+    "pos": "副词",
+    "diff": "用公众的钱",
+    "ex": "The library is publicly funded.",
+    "exzh": "这个图书馆由公共资金资助。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.4,
+       "y": 0.54,
+       "s": 0.6,
+       "when": "library"
+      },
+      {
+       "svg": "art/tag.svg",
+       "x": 0.8,
+       "y": 0.4,
+       "s": 0.26,
+       "when": "funded",
+       "pop": true
+      },
+      {
+       "label": "publicly funded",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "publicly funded"
+      },
+      {
+       "label": "公共资金",
+       "x": 0.8,
+       "y": 0.76,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "公共资金"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“公开地”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.36,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.3,
+       "z": 6,
+       "crowd": 9
+      },
+      {
+       "label": "public + ly",
+       "x": 0.78,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "当着众人的面",
+    "node": "① 公开地、当众",
+    "pos": "副词",
+    "pic": 0,
+    "say": [
+     "当着众人的面，就是公开地、当众。",
+     "注意拼写：publicly，不写 publically。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.36,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "众人",
+       "seq": "talk"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.3,
+       "z": 6,
+       "crowd": 9,
+       "when": "众人"
+      },
+      {
+       "label": "当众",
+       "x": 0.78,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "当众"
+      },
+      {
+       "label": "publicly ✓",
+       "x": 0.78,
+       "y": 0.4,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "publicly"
+      }
+     ]
+    }
+   },
+   {
+    "via": "用公众的钱",
+    "node": "② 由公共资金",
+    "pos": "副词",
+    "pic": 1,
+    "from": 0,
+    "say": [
+     "用公众的钱来办，就是由公共资金资助。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.4,
+       "y": 0.54,
+       "s": 0.56,
+       "when": "来办"
+      },
+      {
+       "svg": "art/tag.svg",
+       "x": 0.8,
+       "y": 0.4,
+       "s": 0.26,
+       "when": "公众的钱"
+      },
+      {
+       "label": "由公共资金",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "公共资金"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "openly": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-hello",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3
+      }
+     ]
+    },
+    "frankly": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-think",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "publiclyai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他在会上做了什么？\n听：He publicly thanked his teachers at the meeting.\nA. 当众感谢了老师\nB. 私下批评了老师\nC. 给老师写了信\nD. 送老师礼物",
@@ -90,5 +547,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
