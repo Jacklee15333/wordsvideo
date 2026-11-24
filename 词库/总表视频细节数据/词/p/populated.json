@@ -1,7 +1,549 @@
 {
  "单词": "populated",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.46
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.0,
+      "y": 0.72,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.0,
+        0.72
+       ],
+       "to": [
+        0.6,
+        0.72
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "使有人住",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "shadow": true
+     },
+     {
+      "label": "被…了的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-house-new.svg",
+   "p1": "art/ic-check.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/house-new.svg",
+     "x": 0.3,
+     "y": 0.56,
+     "s": 0.44
+    },
+    {
+     "svg": "art/house-new.svg",
+     "x": 0.7,
+     "y": 0.56,
+     "s": 0.44
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.05,
+     "y": 0.62,
+     "s": 0.56,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.05,
+       0.62
+      ],
+      "to": [
+       0.95,
+       0.62
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.9,
+     "y": 0.66,
+     "s": 0.5,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.9,
+       0.66
+      ],
+      "to": [
+       0.1,
+       0.66
+      ],
+      "offset": 0.4
+     }
+    },
+    {
+     "label": "有人住着的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.25,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.25,
+        0.7
+       ],
+       "to": [
+        1.0,
+        0.7
+       ],
+       "offset": 0.7
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 1.0,
+      "y": 0.6,
+      "s": 0.54,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.0,
+        0.6
+       ],
+       "to": [
+        0.0,
+        0.6
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.0,
+      "y": 0.68,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.0,
+        0.68
+       ],
+       "to": [
+        1.0,
+        0.68
+       ],
+       "offset": 0.55
+      }
+     }
+    ],
+    "text": "有人居住的；人口…的",
+    "pos": "形容词",
+    "diff": "常和 densely、sparsely 连用",
+    "ex": "This is a densely populated city.",
+    "exzh": "这是一座人口稠密的城市。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 1.0,
+       "y": 0.6,
+       "s": 0.54,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.0,
+         0.6
+        ],
+        "to": [
+         0.0,
+         0.6
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.0,
+       "y": 0.68,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.0,
+         0.68
+        ],
+        "to": [
+         1.0,
+         0.68
+        ],
+        "offset": 0.55
+       }
+      },
+      {
+       "label": "densely populated",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "densely populated"
+      },
+      {
+       "label": "人口稠密",
+       "x": 0.5,
+       "y": 0.24,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "人口稠密"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“有人住着的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "label": "populate + ed",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "有人住着",
+    "node": "有人居住的；人口…的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "有人住着的，就是有人居住的。",
+     "人多就说 densely populated，人少就说 sparsely populated。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 1.0,
+       "y": 0.6,
+       "s": 0.54,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.0,
+         0.6
+        ],
+        "to": [
+         0.0,
+         0.6
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "label": "有人居住的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "有人居住的"
+      },
+      {
+       "label": "densely 人多",
+       "x": 0.25,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "densely"
+      },
+      {
+       "label": "sparsely 人少",
+       "x": 0.75,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "sparsely"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "populatedai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：这座城市有什么特点？\n听：This is the most populated city in the country.\nA. 面积最大\nB. 人口最多\nC. 历史最长\nD. 最干净",
@@ -88,5 +630,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

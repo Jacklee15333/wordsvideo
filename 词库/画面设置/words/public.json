@@ -1,0 +1,843 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/station-bg.svg",
+   "items": [
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.1,
+     "y": 0.62,
+     "s": 0.55,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.1,
+       0.62
+      ],
+      "to": [
+       0.9,
+       0.62
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.85,
+     "y": 0.66,
+     "s": 0.5,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.85,
+       0.66
+      ],
+      "to": [
+       0.1,
+       0.66
+      ],
+      "offset": 0.4
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.3,
+     "y": 0.7,
+     "s": 0.58,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.3,
+       0.7
+      ],
+      "to": [
+       1.0,
+       0.7
+      ],
+      "offset": 0.7
+     }
+    },
+    {
+     "label": "公众、人民",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/star.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.4,
+     "shadow": true
+    },
+    {
+     "label": "…的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-crowd.svg",
+  "p1": "art/ic-star.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/park-bg.svg",
+  "items": [
+   {
+    "actor": "walk-west-woman-case",
+    "x": 0.05,
+    "y": 0.62,
+    "s": 0.56,
+    "z": 2,
+    "walk": {
+     "from": [
+      0.05,
+      0.62
+     ],
+     "to": [
+      0.95,
+      0.62
+     ],
+     "offset": 0
+    }
+   },
+   {
+    "actor": "walk-cn-boy-pack",
+    "x": 0.9,
+    "y": 0.66,
+    "s": 0.5,
+    "z": 2,
+    "walk": {
+     "from": [
+      0.9,
+      0.66
+     ],
+     "to": [
+      0.1,
+      0.66
+     ],
+     "offset": 0.4
+    }
+   },
+   {
+    "actor": "walk-cn-girl",
+    "x": 0.25,
+    "y": 0.7,
+    "s": 0.6,
+    "z": 2,
+    "walk": {
+     "from": [
+      0.25,
+      0.7
+     ],
+     "to": [
+      1.0,
+      0.7
+     ],
+     "offset": 0.7
+    }
+   },
+   {
+    "label": "属于人民的",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/bus.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.46,
+     "go": [
+      0.3,
+      0.56
+     ],
+     "dur": 4,
+     "loop": true
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.05,
+     "y": 0.62,
+     "s": 0.56,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.05,
+       0.62
+      ],
+      "to": [
+       0.95,
+       0.62
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.9,
+     "y": 0.66,
+     "s": 0.5,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.9,
+       0.66
+      ],
+      "to": [
+       0.1,
+       0.66
+      ],
+      "offset": 0.4
+     }
+    }
+   ],
+   "text": "公众的、公共的",
+   "pos": "形容词",
+   "diff": "属于全体民众的",
+   "ex": "Don't smoke in public places.",
+   "exzh": "不要在公共场所吸烟。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.25,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.25,
+        0.7
+       ],
+       "to": [
+        1.0,
+        0.7
+       ],
+       "offset": 0.7
+      }
+     },
+     {
+      "label": "public places",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "public places"
+     },
+     {
+      "label": "公共场所",
+      "x": 0.5,
+      "y": 0.24,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "公共场所"
+     },
+     {
+      "label": "No smoking",
+      "x": 0.84,
+      "y": 0.88,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "smoke"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-speech",
+     "x": 0.36,
+     "y": 0.58,
+     "s": 0.9,
+     "z": 3,
+     "id": "m",
+     "seq": "talk"
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 6,
+     "crowd": 9,
+     "nodWith": "m"
+    }
+   ],
+   "text": "公开的",
+   "pos": "形容词",
+   "diff": "人人都能看见、都能知道",
+   "ex": "The meeting is open to the public.",
+   "exzh": "会议对公众开放。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3,
+      "when": "meeting"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9,
+      "when": "the public"
+     },
+     {
+      "label": "the public",
+      "x": 0.76,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "the public"
+     },
+     {
+      "label": "公众",
+      "x": 0.76,
+      "y": 0.28,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "公众"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.24,
+     "y": 0.58,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.6,
+     "y": 0.9,
+     "s": 0.3,
+     "z": 5
+    },
+    {
+     "svg": "art/flag.svg",
+     "x": 0.86,
+     "y": 0.3,
+     "s": 0.3
+    }
+   ],
+   "text": "公立的、政府的",
+   "pos": "形容词",
+   "diff": "由国家为大家办的",
+   "ex": "My brother goes to a public school.",
+   "exzh": "我弟弟上公立学校。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.3,
+      "y": 0.62,
+      "s": 0.74,
+      "z": 3,
+      "when": "My brother"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.36,
+      "y": 0.92,
+      "s": 0.26,
+      "z": 5
+     },
+     {
+      "svg": "art/flag.svg",
+      "x": 0.8,
+      "y": 0.3,
+      "s": 0.3,
+      "when": "public school"
+     },
+     {
+      "label": "public school",
+      "x": 0.7,
+      "y": 0.66,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "public school"
+     },
+     {
+      "label": "公立学校",
+      "x": 0.7,
+      "y": 0.82,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "公立学校"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“属于人民的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.25,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.25,
+        0.7
+       ],
+       "to": [
+        1.0,
+        0.7
+       ],
+       "offset": 0.7
+      }
+     },
+     {
+      "label": "publ 人民 + ic …的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "属于全体民众的",
+   "node": "① 公众的、公共的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "属于全体民众的，就是公众的、公共的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/bus.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.46,
+      "when": "全体民众"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "label": "公共的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "公共的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "人人都能看见、知道",
+   "node": "② 公开的",
+   "pos": "形容词",
+   "pic": 1,
+   "from": 0,
+   "say": [
+    "人人都能看见、都能知道的，就是公开的；in public 就是当众。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-speech",
+      "x": 0.36,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3,
+      "when": "看见",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9,
+      "when": "人人"
+     },
+     {
+      "label": "公开的",
+      "x": 0.78,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "公开的"
+     },
+     {
+      "label": "in public 当众",
+      "x": 0.78,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "in public"
+     }
+    ]
+   }
+  },
+  {
+   "via": "由国家为大家办的",
+   "node": "③ 公立的、政府的",
+   "pos": "形容词",
+   "pic": 2,
+   "from": 0,
+   "say": [
+    "由国家为大家办的，就是公立的、政府的；名词 the public 是公众。",
+    "英国的 public school 却是收费的私立名校。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/flag.svg",
+      "x": 0.8,
+      "y": 0.3,
+      "s": 0.3,
+      "when": "国家"
+     },
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.26,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3,
+      "when": "为大家"
+     },
+     {
+      "label": "公立的",
+      "x": 0.6,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "公立的"
+     },
+     {
+      "label": "the public 公众",
+      "x": 0.6,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "the public"
+     },
+     {
+      "label": "英国：私立名校",
+      "x": 0.6,
+      "y": 0.28,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "私立名校"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "open": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7
+     }
+    ]
+   },
+   "governmental": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/flag.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：在公共场所不要做什么？",
+    "listen": "Please don't make noise in public places.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "排队",
+     "大声吵闹",
+     "拍照",
+     "看书"
+    ],
+    "ans": "B",
+    "why": "make noise in public places 在公共场所吵闹。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Don't shout in ______; it's rude.",
+    "opts": [
+     "publicly",
+     "public",
+     "publish",
+     "publisher"
+    ],
+    "ans": "B",
+    "why": "in public 当众，是固定搭配。",
+    "kd": "短语"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 public、publicly 中选一个填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The singer ______ said sorry to her fans.",
+    "opts": [],
+    "ans": "publicly",
+    "why": "修饰动词 said 用副词 publicly（公开地）。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这座图书馆向公众开放。",
+    "stem": "The library is ______ to the public.",
+    "opts": [],
+    "ans": "open",
+    "why": "be open to the public 向公众开放。",
+    "kd": "短语"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Everyone is welcome to visits the public park.",
+    "opts": [],
+    "ans": "visits → visit",
+    "why": "to 后面用动词原形 visit。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 public、popular 中选一个填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Pizza is ______ with kids; they love it.",
+    "opts": [],
+    "ans": "popular",
+    "why": "孩子们都喜欢，是“受欢迎”popular；public 是“公共的”。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The new rules were ______ announced on TV.",
+    "opts": [
+     "publicly",
+     "public",
+     "publish",
+     "publicity"
+    ],
+    "ans": "A",
+    "why": "修饰动词 announced 用副词 publicly。",
+    "kd": "词性转换"
+   }
+  ]
+ }
+}

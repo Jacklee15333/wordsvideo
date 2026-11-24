@@ -1,0 +1,614 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/station-bg.svg",
+   "items": [
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.1,
+     "y": 0.62,
+     "s": 0.55,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.1,
+       0.62
+      ],
+      "to": [
+       0.9,
+       0.62
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.85,
+     "y": 0.66,
+     "s": 0.5,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.85,
+       0.66
+      ],
+      "to": [
+       0.1,
+       0.66
+      ],
+      "offset": 0.4
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.3,
+     "y": 0.7,
+     "s": 0.58,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.3,
+       0.7
+      ],
+      "to": [
+       1.0,
+       0.7
+      ],
+      "offset": 0.7
+     }
+    },
+    {
+     "label": "人民、人",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/house-new.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "label": "使…",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-crowd.svg",
+  "p1": "art/ic-house-new.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/street-bg.svg",
+  "items": [
+   {
+    "svg": "art/house-new.svg",
+    "x": 0.3,
+    "y": 0.56,
+    "s": 0.44
+   },
+   {
+    "svg": "art/house-new.svg",
+    "x": 0.7,
+    "y": 0.56,
+    "s": 0.44,
+    "delay": 0.8,
+    "pop": true
+   },
+   {
+    "actor": "walk-cn-girl",
+    "x": 0.0,
+    "y": 0.72,
+    "s": 0.5,
+    "z": 2,
+    "walk": {
+     "from": [
+      0.0,
+      0.72
+     ],
+     "to": [
+      0.6,
+      0.72
+     ],
+     "offset": 0
+    }
+   },
+   {
+    "label": "使有人住",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/house-new.svg",
+     "x": 0.3,
+     "y": 0.56,
+     "s": 0.44
+    },
+    {
+     "svg": "art/house-new.svg",
+     "x": 0.7,
+     "y": 0.56,
+     "s": 0.44
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.0,
+     "y": 0.74,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.0,
+       0.74
+      ],
+      "to": [
+       1.0,
+       0.74
+      ],
+      "offset": 0
+     }
+    }
+   ],
+   "text": "居住于、构成…的人口",
+   "pos": "动词",
+   "diff": "住在某地",
+   "ex": "Many farmers populate this valley.",
+   "exzh": "这个山谷里住着很多农民。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.24,
+      "y": 0.5,
+      "s": 0.4,
+      "when": "valley"
+     },
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.4,
+      "when": "valley",
+      "delay": 0.2
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.44,
+      "y": 0.64,
+      "s": 0.6,
+      "z": 3,
+      "when": "farmers"
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.58,
+      "y": 0.64,
+      "s": 0.6,
+      "z": 3,
+      "when": "farmers"
+     },
+     {
+      "label": "populate",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "populate"
+     },
+     {
+      "label": "住着",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "住着"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/computer.svg",
+     "x": 0.5,
+     "y": 0.54,
+     "s": 0.62,
+     "shadow": true
+    },
+    {
+     "actor": "west-clerk-think",
+     "x": 0.86,
+     "y": 0.62,
+     "s": 0.6,
+     "z": 3
+    }
+   ],
+   "text": "往表格里填入数据",
+   "pos": "动词",
+   "diff": "（计算机）把空格一格格填满",
+   "ex": "The program will populate the table with names.",
+   "exzh": "程序会把名字填进表格。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/computer.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.62,
+      "when": "program"
+     },
+     {
+      "label": "Tom",
+      "x": 0.5,
+      "y": 0.36,
+      "size": 0.06,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "names"
+     },
+     {
+      "label": "Lily",
+      "x": 0.5,
+      "y": 0.46,
+      "size": 0.06,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "names",
+      "delay": 0.3
+     },
+     {
+      "label": "Wang Fang",
+      "x": 0.5,
+      "y": 0.56,
+      "size": 0.06,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "names",
+      "delay": 0.6
+     },
+     {
+      "label": "populate",
+      "x": 0.16,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "populate"
+     },
+     {
+      "label": "填进表格",
+      "x": 0.84,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "填进表格"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“使有人”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.46
+     },
+     {
+      "label": "popul 人 + ate 使…",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "人家一户户住了进来",
+   "node": "① 居住于；使有人居住",
+   "pos": "动词",
+   "pic": 0,
+   "say": [
+    "一片空地上，人家一户户住了进来，就是居住于、使有人居住。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.24,
+      "y": 0.5,
+      "s": 0.4,
+      "when": "一户户",
+      "pop": true
+     },
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.36,
+      "when": "一户户",
+      "delay": 0.4,
+      "pop": true
+     },
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.4,
+      "when": "一户户",
+      "delay": 0.8,
+      "pop": true
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.0,
+      "y": 0.76,
+      "s": 0.42,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.0,
+        0.76
+       ],
+       "to": [
+        1.0,
+        0.76
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "居住于",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "居住于"
+     }
+    ]
+   }
+  },
+  {
+   "via": "把空着的表格一格格住满",
+   "node": "② 往表格、数据库里填入数据",
+   "pos": "动词",
+   "pic": 1,
+   "rule": "作用、做法像什么，就借它的名字来叫",
+   "ruleEx": "populate 住满人 → 填入数据      virus 病毒 → 电脑病毒",
+   "say": [
+    "作用、做法像什么，就借它的名字来叫。",
+    "virus 是病毒，电脑里的坏程序也叫 virus。",
+    "把空表格一格格填满，就像住满人，所以也叫 populate，就是填入数据。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "借名字",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "借它的名字",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/computer.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.6,
+      "cue": 1,
+      "when": "电脑"
+     },
+     {
+      "label": "virus 病毒",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "virus",
+      "hideCue": 2
+     },
+     {
+      "label": "Tom",
+      "x": 0.5,
+      "y": 0.36,
+      "size": 0.06,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "cue": 2,
+      "when": "一格格"
+     },
+     {
+      "label": "Lily",
+      "x": 0.5,
+      "y": 0.46,
+      "size": 0.06,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "cue": 2,
+      "when": "一格格",
+      "delay": 0.3
+     },
+     {
+      "label": "填入数据",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "填入数据"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "inhabit": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：谁住在这个岛上？",
+    "listen": "This island is populated by fishermen.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "渔民",
+     "农民",
+     "士兵",
+     "游客"
+    ],
+    "ans": "A",
+    "why": "be populated by 有……居住。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The north of the country is thinly ______. (populate)",
+    "opts": [],
+    "ans": "populated",
+    "why": "be populated 有人居住，用过去分词 populated（去 e 加 d）。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The ______ of this town is about 5,000.",
+    "opts": [
+     "populate",
+     "population",
+     "popular",
+     "people"
+    ],
+    "ans": "B",
+    "why": "the … of this town 要名词“人口”population（populate 去 e 加 ion）。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 populate、population、popular 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Few people ______ this cold area.",
+    "opts": [],
+    "ans": "populate",
+    "why": "few people 是复数主语，用动词原形 populate（居住于）。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Wild birds populates the small lake.",
+    "opts": [],
+    "ans": "populates → populate",
+    "why": "主语 wild birds 是复数，动词不加 s。",
+    "kd": "变形"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Farmers are ______ the new land. (populate)",
+    "opts": [],
+    "ans": "populating",
+    "why": "are 后面用现在分词，populate 去 e 加 ing。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Mice ______ the old house after the family left.",
+    "opts": [
+     "populated",
+     "populates",
+     "population",
+     "popular"
+    ],
+    "ans": "A",
+    "why": "讲过去的事，主语 mice 是复数，用过去式 populated。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
