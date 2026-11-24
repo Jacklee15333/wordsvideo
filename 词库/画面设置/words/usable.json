@@ -11,7 +11,8 @@
      "x": 0.36,
      "y": 0.6,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/wrench.svg",
@@ -39,7 +40,16 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.5,
-     "shadow": true
+     "shadow": true,
+     "anim": "bob"
+    },
+    {
+     "waves": true,
+     "x": 0.66,
+     "y": 0.48,
+     "dir": 0,
+     "spread": 50,
+     "n": 3
     },
     {
      "svg": "art/star.svg",
@@ -49,7 +59,7 @@
      "anim": "pulse"
     },
     {
-     "label": "能…的、值得…的",
+     "label": "able",
      "x": 0.5,
      "y": 0.1,
      "size": 0.09,
@@ -73,7 +83,16 @@
     "svg": "art/smartphone.svg",
     "x": 0.6,
     "y": 0.52,
-    "s": 0.5
+    "s": 0.5,
+    "anim": "bob"
+   },
+   {
+    "waves": true,
+    "x": 0.76,
+    "y": 0.44,
+    "dir": 0,
+    "spread": 50,
+    "n": 3
    },
    {
     "label": "能被使用的",
@@ -102,7 +121,8 @@
      "x": 0.26,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/smartphone.svg",
@@ -111,10 +131,19 @@
      "s": 0.5
     },
     {
+     "waves": true,
+     "x": 0.74,
+     "y": 0.44,
+     "dir": 0,
+     "spread": 50,
+     "n": 3
+    },
+    {
      "svg": "art/rotary-phone.svg",
      "x": 0.86,
      "y": 0.72,
-     "s": 0.24
+     "s": 0.24,
+     "anim": "shake"
     }
    ],
    "text": "能用的、可用的",
@@ -127,18 +156,30 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "actor": "west-man-smile",
+      "actor": "cn-teacher-laugh",
       "x": 0.24,
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "My"
+      "when": "My",
+      "seq": "pingpong",
+      "fps": 2
      },
      {
       "svg": "art/smartphone.svg",
       "x": 0.62,
       "y": 0.52,
       "s": 0.5,
+      "when": "old phone",
+      "anim": "bob"
+     },
+     {
+      "waves": true,
+      "x": 0.76,
+      "y": 0.44,
+      "dir": 0,
+      "spread": 50,
+      "n": 3,
       "when": "old phone"
      },
      {
@@ -175,7 +216,16 @@
       "svg": "art/smartphone.svg",
       "x": 0.6,
       "y": 0.52,
-      "s": 0.5
+      "s": 0.5,
+      "anim": "bob"
+     },
+     {
+      "waves": true,
+      "x": 0.74,
+      "y": 0.44,
+      "dir": 0,
+      "spread": 50,
+      "n": 3
      },
      {
       "label": "use + able",
@@ -206,6 +256,16 @@
       "x": 0.6,
       "y": 0.52,
       "s": 0.5,
+      "when": "东西还能用",
+      "anim": "bob"
+     },
+     {
+      "waves": true,
+      "x": 0.74,
+      "y": 0.44,
+      "dir": 0,
+      "spread": 50,
+      "n": 3,
       "when": "东西还能用"
      },
      {
@@ -231,16 +291,153 @@
   }
  ],
  "distinguish": {
-  "pics": {
-   "available": {
+  "key": "可用的",
+  "items": [
+   {
+    "w": "usable",
+    "gloss": "能用的、可以使用的",
+    "note": "use 用 + able 能被…的：东西没坏、还能拿来用（The old phone is still usable）。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.66,
+       "y": 0.42,
+       "dir": 0,
+       "spread": 50,
+       "n": 3
+      }
+     ]
+    }
+   },
+   {
+    "w": "available",
+    "gloss": "现成的、拿得到的；有空的",
+    "note": "avail 有用 + able：现成摆在那儿、买得到、拿得到，还能说人有空（Are you available?）。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/rack.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.72
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.8,
+       "y": 0.24,
+       "s": 0.14,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "逻辑不同：usable 说东西本身还能不能用；available 说东西能不能拿到、买到，人有没有空。",
+  "tip": "一句话记法：旧手机还能用 usable，商店里有货 available。"
+ },
+ "demo": {
+  "active": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.1,
+      "y": 0.74,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.74
+       ],
+       "to": [
+        0.98,
+        0.74
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.9,
+      "y": 0.7,
+      "s": 0.52,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.98,
+        0.7
+       ],
+       "to": [
+        0.02,
+        0.7
+       ],
+       "offset": 0.3
+      }
+     }
+    ]
+   }
+  },
+  "usable": {
+   "pic": {
     "bg": "blank",
     "img": "art/room-bg.svg",
     "items": [
      {
-      "svg": "art/rack.svg",
+      "svg": "art/smartphone.svg",
       "x": 0.5,
-      "y": 0.55,
-      "s": 0.8
+      "y": 0.52,
+      "s": 0.56,
+      "anim": "bob"
+     },
+     {
+      "waves": true,
+      "x": 0.64,
+      "y": 0.42,
+      "dir": 0,
+      "spread": 50,
+      "n": 3
+     }
+    ]
+   }
+  },
+  "interesting": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/fishtank.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.66
+     },
+     {
+      "svg": "art/fish2.svg",
+      "x": 0.6,
+      "y": 0.6,
+      "s": 0.12,
+      "go": [
+       0.38,
+       0.6
+      ],
+      "dur": 3,
+      "loop": true,
+      "z": 3
      }
     ]
    }

@@ -1,6 +1,12 @@
 {
  "style": "core",
  "board": true,
+ "sylIpa": [
+  "riː",
+  "juː",
+  "zə",
+  "blz"
+ ],
  "partPics": {
   "p0": {
    "bg": "blank",
@@ -11,7 +17,8 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.5,
-     "shadow": true
+     "shadow": true,
+     "anim": "sway"
     },
     {
      "ray": [
@@ -60,14 +67,16 @@
      "svg": "art/bottle.svg",
      "x": 0.3,
      "y": 0.56,
-     "s": 0.44
+     "s": 0.44,
+     "anim": "bob"
     },
     {
      "svg": "art/shopbag.svg",
      "x": 0.66,
      "y": 0.58,
      "s": 0.44,
-     "delay": 0.4
+     "delay": 0.4,
+     "anim": "sway"
     },
     {
      "label": "复数",
@@ -93,19 +102,22 @@
     "svg": "art/shopbag.svg",
     "x": 0.3,
     "y": 0.58,
-    "s": 0.46
+    "s": 0.46,
+    "anim": "sway"
    },
    {
     "svg": "art/bottle.svg",
     "x": 0.56,
     "y": 0.58,
-    "s": 0.46
+    "s": 0.46,
+    "anim": "bob"
    },
    {
     "svg": "art/mug.svg",
     "x": 0.8,
     "y": 0.66,
-    "s": 0.3
+    "s": 0.3,
+    "anim": "bob"
    },
    {
     "label": "可重复使用的东西",
@@ -114,6 +126,42 @@
     "size": 0.075,
     "color": "#2B8A3E",
     "border": "#2B8A3E"
+   },
+   {
+    "actor": "walk-west-man-case",
+    "x": 0.96,
+    "y": 0.86,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.98,
+      0.86
+     ],
+     "to": [
+      0.02,
+      0.86
+     ],
+     "offset": 0.1
+    }
+   },
+   {
+    "actor": "walk-cn-girl",
+    "x": 0.04,
+    "y": 0.88,
+    "s": 0.38,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.02,
+      0.88
+     ],
+     "to": [
+      0.98,
+      0.88
+     ],
+     "offset": 0.6
+    }
    }
   ]
  },
@@ -126,7 +174,8 @@
      "svg": "art/shopbag.svg",
      "x": 0.3,
      "y": 0.58,
-     "s": 0.46
+     "s": 0.46,
+     "anim": "sway"
     },
     {
      "svg": "art/bottle.svg",
@@ -145,7 +194,45 @@
      "x": 0.12,
      "y": 0.64,
      "s": 0.6,
-     "z": 3
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ],
    "text": "可重复使用的物品",
@@ -158,12 +245,13 @@
     "img": "art/park-bg.svg",
     "items": [
      {
-      "actor": "west-girl-raise",
+      "actor": "cn-boy-raise",
       "x": 0.18,
       "y": 0.62,
       "s": 0.76,
       "z": 3,
-      "when": "Bring"
+      "when": "Bring",
+      "seq": "blink"
      },
      {
       "svg": "art/shopbag.svg",
@@ -171,7 +259,8 @@
       "y": 0.6,
       "s": 0.4,
       "when": "reusables",
-      "pop": true
+      "pop": true,
+      "anim": "sway"
      },
      {
       "svg": "art/bottle.svg",
@@ -209,6 +298,42 @@
       "color": "#2F6FB3",
       "border": "#2F6FB3",
       "when": "野餐"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -225,13 +350,15 @@
       "svg": "art/shopbag.svg",
       "x": 0.3,
       "y": 0.58,
-      "s": 0.46
+      "s": 0.46,
+      "anim": "sway"
      },
      {
       "svg": "art/bottle.svg",
       "x": 0.56,
       "y": 0.58,
-      "s": 0.46
+      "s": 0.46,
+      "anim": "bob"
      },
      {
       "label": "reusable + s",
@@ -240,6 +367,42 @@
       "size": 0.075,
       "color": "#7048E8",
       "border": "#7048E8"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -287,7 +450,8 @@
       "y": 0.56,
       "s": 0.4,
       "when": "recyclables",
-      "hideCue": 2
+      "hideCue": 2,
+      "anim": "shake"
      },
      {
       "svg": "art/shopbag.svg",
@@ -295,7 +459,8 @@
       "y": 0.58,
       "s": 0.44,
       "cue": 2,
-      "when": "reusables"
+      "when": "reusables",
+      "anim": "sway"
      },
      {
       "svg": "art/bottle.svg",
@@ -303,7 +468,8 @@
       "y": 0.58,
       "s": 0.44,
       "cue": 2,
-      "when": "reusables"
+      "when": "reusables",
+      "anim": "bob"
      },
      {
       "label": "可重复使用的物品",

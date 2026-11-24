@@ -12,7 +12,8 @@
       "svg": "art/car.svg",
       "x": 0.5,
       "y": 0.55,
-      "s": 0.4
+      "s": 0.4,
+      "anim": "shake"
      },
      {
       "shape": "circle",
@@ -27,12 +28,12 @@
      {
       "ray": [
        [
-        0.29000000000000004,
-        0.22000000000000003
+        0.29,
+        0.22
        ],
        [
         0.71,
-        0.8800000000000001
+        0.88
        ]
       ],
       "color": "#E2453C",
@@ -48,6 +49,42 @@
       "color": "#C92A2A",
       "border": "#C92A2A",
       "delay": 1.0
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    },
@@ -60,7 +97,8 @@
       "x": 0.5,
       "y": 0.56,
       "s": 0.4,
-      "shadow": true
+      "shadow": true,
+      "anim": "ride"
      },
      {
       "label": "用过的；习惯的",
@@ -71,6 +109,42 @@
       "bg": "#FFF6D8",
       "border": "#E0A800",
       "delay": 0.6
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -87,13 +161,15 @@
      "svg": "art/bottle.svg",
      "x": 0.5,
      "y": 0.56,
-     "s": 0.5
+     "s": 0.5,
+     "anim": "bob"
     },
     {
      "svg": "art/tag.svg",
      "x": 0.8,
      "y": 0.3,
-     "s": 0.2
+     "s": 0.2,
+     "anim": "swing"
     },
     {
      "label": "没用过的",
@@ -127,6 +203,17 @@
       "x": 0.16,
       "y": 0.56,
       "s": 0.4
+     },
+     {
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "svg": "art/clock_f0.svg",
+      "x": 0.86,
+      "y": 0.4,
+      "s": 0.2,
+      "fps": 1
      }
     ],
     "text": "没用过的、闲置的",
@@ -150,6 +237,18 @@
        "x": 0.16,
        "y": 0.56,
        "s": 0.4,
+       "when": "room"
+      },
+      {
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "svg": "art/clock_f0.svg",
+       "x": 0.86,
+       "y": 0.4,
+       "s": 0.2,
+       "fps": 1,
        "when": "room"
       },
       {
@@ -183,13 +282,57 @@
       "x": 0.36,
       "y": 0.6,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
-      "svg": "art/thermometer.svg",
+      "frames": [
+       "art/thermometer_f0.svg",
+       "art/thermometer_f1.svg",
+       "art/thermometer_f2.svg",
+       "art/thermometer_f3.svg"
+      ],
+      "svg": "art/thermometer_f0.svg",
       "x": 0.76,
       "y": 0.5,
-      "s": 0.4
+      "s": 0.4,
+      "fps": 2
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ],
     "text": "不习惯于…",
@@ -202,12 +345,13 @@
      "img": "art/street-bg.svg",
      "items": [
       {
-       "actor": "west-girl-surprised",
+       "actor": "west-clerk-think",
        "x": 0.32,
        "y": 0.6,
        "s": 0.9,
        "z": 3,
-       "when": "I'm"
+       "when": "I'm",
+       "seq": "blink"
       },
       {
        "frames": [
@@ -241,6 +385,42 @@
        "color": "#2B8A3E",
        "border": "#2B8A3E",
        "when": "不习惯"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -257,7 +437,8 @@
        "svg": "art/bottle.svg",
        "x": 0.5,
        "y": 0.56,
-       "s": 0.5
+       "s": 0.5,
+       "anim": "bob"
       },
       {
        "label": "un 不 + used 用过的；习惯的",
@@ -288,6 +469,17 @@
        "y": 0.66,
        "s": 0.56,
        "when": "没被用过"
+      },
+      {
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "svg": "art/clock_f0.svg",
+       "x": 0.86,
+       "y": 0.36,
+       "s": 0.2,
+       "fps": 1
       },
       {
        "label": "闲置的",
@@ -325,18 +517,26 @@
      "img": "art/street-bg.svg",
      "items": [
       {
-       "actor": "west-girl-surprised",
+       "actor": "cn-teacher-listen",
        "x": 0.32,
        "y": 0.6,
        "s": 0.9,
        "z": 3,
-       "when": "不习惯的"
+       "when": "不习惯的",
+       "seq": "blink"
       },
       {
-       "svg": "art/thermometer.svg",
+       "frames": [
+        "art/thermometer_f0.svg",
+        "art/thermometer_f1.svg",
+        "art/thermometer_f2.svg",
+        "art/thermometer_f3.svg"
+       ],
+       "svg": "art/thermometer_f0.svg",
        "x": 0.76,
        "y": 0.5,
        "s": 0.4,
+       "fps": 2,
        "when": "不习惯的"
       },
       {
@@ -357,22 +557,261 @@
        "bg": "#FFF6D8",
        "border": "#E0A800",
        "when": "/ʌnˈjuːst/"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
    }
   ],
   "distinguish": {
-   "pics": {
-    "idle": {
+   "key": "闲置的",
+   "items": [
+    {
+     "w": "unused",
+     "gloss": "没用过的、闲置的",
+     "note": "un 不 + used 用过的：从来没被用过，或者一直空着没人用（an unused room）。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/bedroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/bed.svg",
+        "x": 0.5,
+        "y": 0.62,
+        "s": 0.6
+       },
+       {
+        "frames": [
+         "art/clock_f0.svg",
+         "art/clock_f1.svg"
+        ],
+        "svg": "art/clock_f0.svg",
+        "x": 0.84,
+        "y": 0.36,
+        "s": 0.22,
+        "fps": 1
+       }
+      ]
+     }
+    },
+    {
+     "w": "idle",
+     "gloss": "闲着的、空转的",
+     "note": "本义是“空的、没事做”，说人闲着，机器开着却不干活（an idle car 停着空转的车）。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/car.svg",
+        "x": 0.5,
+        "y": 0.6,
+        "s": 0.5,
+        "anim": "shake"
+       },
+       {
+        "actor": "walk-west-woman-case",
+        "x": 0.05,
+        "y": 0.62,
+        "s": 0.56,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.05,
+          0.62
+         ],
+         "to": [
+          0.95,
+          0.62
+         ],
+         "offset": 0
+        }
+       },
+       {
+        "actor": "walk-cn-boy-pack",
+        "x": 0.9,
+        "y": 0.66,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.9,
+          0.66
+         ],
+         "to": [
+          0.1,
+          0.66
+         ],
+         "offset": 0.4
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：unused 从“用”来，说东西没被用过；idle 本义“空着没事做”，说人、机器闲着不干活。",
+   "tip": "一句话记法：没拆封、没住过的用 unused，人闲着、机器空转用 idle。"
+  },
+  "demo": {
+   "unhappy": {
+    "pic": {
      "bg": "blank",
-     "img": "art/street-bg.svg",
+     "img": "art/bedroom-bg.svg",
      "items": [
       {
-       "svg": "art/car.svg",
+       "frames": [
+        "art/cat-sit_f0.svg",
+        "art/cat-sit_f1.svg",
+        "art/cat-sit_f2.svg"
+       ],
+       "svg": "art/cat-sit_f0.svg",
        "x": 0.5,
        "y": 0.6,
-       "s": 0.6
+       "s": 0.6,
+       "fps": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.05,
+       "s": 0.05,
+       "to": [
+        0,
+        0.5
+       ],
+       "every": 0.25
+      }
+     ]
+    }
+   },
+   "unlock": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/padlock.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "hide": 1.2,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/padlock-open.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "delay": 1.2,
+       "pop": true,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   "incorrect": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.5,
+       "anim": "shake"
+      },
+      {
+       "shape": "circle",
+       "x": 0.5,
+       "y": 0.56,
+       "r": 0.3,
+       "stroke": "#E2453C",
+       "lw": 8,
+       "fill": "rgba(0,0,0,0)",
+       "delay": 0.8
+      },
+      {
+       "ray": [
+        [
+         0.29,
+         0.23
+        ],
+        [
+         0.71,
+         0.89
+        ]
+       ],
+       "color": "#E2453C",
+       "lw": 0.02,
+       "dur": 0.4,
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   "disagree": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "x": 0.72,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "turn": [
+        1,
+        2
+       ]
       }
      ]
     }
@@ -471,5 +910,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

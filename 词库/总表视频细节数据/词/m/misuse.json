@@ -12,14 +12,16 @@
       "svg": "art/sock-red.svg",
       "x": 0.36,
       "y": 0.56,
-      "s": 0.5
+      "s": 0.5,
+      "anim": "swing"
      },
      {
       "svg": "art/sock-blue.svg",
       "x": 0.64,
       "y": 0.56,
       "s": 0.5,
-      "delay": 0.6
+      "delay": 0.6,
+      "anim": "swing"
      },
      {
       "ray": [
@@ -73,7 +75,8 @@
       "x": 0.36,
       "y": 0.6,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/wrench.svg",
@@ -106,13 +109,15 @@
      "x": 0.4,
      "y": 0.5,
      "s": 0.5,
-     "rot": 180
+     "rot": 180,
+     "anim": "shake"
     },
     {
      "svg": "art/mug.svg",
      "x": 0.72,
      "y": 0.66,
-     "s": 0.26
+     "s": 0.26,
+     "anim": "bob"
     },
     {
      "label": "用错",
@@ -134,7 +139,8 @@
       "x": 0.3,
       "y": 0.6,
       "s": 0.86,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "svg": "art/hammer.svg",
@@ -173,13 +179,24 @@
        "y": 0.62,
        "s": 0.76,
        "z": 3,
-       "when": "phones"
+       "when": "phones",
+       "seq": "blink"
       },
       {
        "svg": "art/smartphone.svg",
        "x": 0.56,
        "y": 0.46,
        "s": 0.24,
+       "when": "phones",
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.64,
+       "y": 0.42,
+       "dir": 0,
+       "spread": 50,
+       "n": 3,
        "when": "phones"
       },
       {
@@ -187,7 +204,8 @@
        "x": 0.84,
        "y": 0.26,
        "s": 0.24,
-       "when": "misuse"
+       "when": "misuse",
+       "anim": "shake"
       },
       {
        "label": "misuse",
@@ -223,7 +241,8 @@
        "x": 0.4,
        "y": 0.5,
        "s": 0.5,
-       "rot": 180
+       "rot": 180,
+       "anim": "shake"
       },
       {
        "label": "mis 错 + use 用",
@@ -291,6 +310,27 @@
   ],
   "distinguish": {
    "pics": {
+    "misuse": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/hammer.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.6,
+       "rot": 180,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.74,
+       "y": 0.62,
+       "s": 0.36,
+       "anim": "bob"
+      }
+     ]
+    },
     "abuse": {
      "bg": "blank",
      "img": "art/room-bg.svg",
@@ -312,13 +352,152 @@
        "svg": "art/smartphone.svg",
        "x": 0.5,
        "y": 0.5,
-       "s": 0.6
+       "s": 0.6,
+       "anim": "bob"
       },
       {
-       "svg": "art/clock.svg",
-       "x": 0.8,
+       "waves": true,
+       "x": 0.66,
+       "y": 0.42,
+       "dir": 0,
+       "spread": 50,
+       "n": 3
+      },
+      {
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "svg": "art/clock_f0.svg",
+       "x": 0.82,
        "y": 0.4,
-       "s": 0.5
+       "s": 0.46,
+       "fps": 4
+      }
+     ]
+    }
+   },
+   "logic": "逻辑不同：misuse 是 mis 错 + use 用，用法不对、用歪了；abuse 是 ab 离开 + use，离开正道地用，程度重，常带恶意（滥用职权、虐待）；overuse 是 over 过 + use，用得太多。",
+   "tip": "一句话记法：用错了 misuse，恶意乱用 abuse，用太多 overuse。"
+  },
+  "demo": {
+   "unhappy": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "frames": [
+        "art/cat-sit_f0.svg",
+        "art/cat-sit_f1.svg",
+        "art/cat-sit_f2.svg"
+       ],
+       "svg": "art/cat-sit_f0.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.6,
+       "fps": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.05,
+       "s": 0.05,
+       "to": [
+        0,
+        0.5
+       ],
+       "every": 0.25
+      }
+     ]
+    }
+   },
+   "unlock": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/padlock.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "hide": 1.2,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/padlock-open.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "delay": 1.2,
+       "pop": true,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   "incorrect": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.5,
+       "anim": "shake"
+      },
+      {
+       "shape": "circle",
+       "x": 0.5,
+       "y": 0.56,
+       "r": 0.3,
+       "stroke": "#E2453C",
+       "lw": 8,
+       "fill": "rgba(0,0,0,0)",
+       "delay": 0.8
+      },
+      {
+       "ray": [
+        [
+         0.29,
+         0.23
+        ],
+        [
+         0.71,
+         0.89
+        ]
+       ],
+       "color": "#E2453C",
+       "lw": 0.02,
+       "dur": 0.4,
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   "misunderstand": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-think",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.78,
+       "y": 0.7,
+       "s": 0.3,
+       "anim": "shake"
       }
      ]
     }
@@ -418,5 +597,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

@@ -10,7 +10,16 @@
      "svg": "art/smartphone.svg",
      "x": 0.5,
      "y": 0.55,
-     "s": 0.5
+     "s": 0.5,
+     "anim": "shake"
+    },
+    {
+     "waves": true,
+     "x": 0.66,
+     "y": 0.46,
+     "dir": 0,
+     "spread": 50,
+     "n": 3
     },
     {
      "shape": "circle",
@@ -25,12 +34,12 @@
     {
      "ray": [
       [
-       0.29000000000000004,
-       0.22000000000000003
+       0.29,
+       0.22
       ],
       [
        0.71,
-       0.8800000000000001
+       0.88
       ]
      ],
      "color": "#E2453C",
@@ -58,7 +67,16 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.5,
-     "shadow": true
+     "shadow": true,
+     "anim": "bob"
+    },
+    {
+     "waves": true,
+     "x": 0.66,
+     "y": 0.48,
+     "dir": 0,
+     "spread": 50,
+     "n": 3
     },
     {
      "svg": "art/star.svg",
@@ -68,7 +86,7 @@
      "anim": "pulse"
     },
     {
-     "label": "能…的、值得…的",
+     "label": "able",
      "x": 0.5,
      "y": 0.1,
      "size": 0.09,
@@ -92,7 +110,8 @@
     "svg": "art/umbrella-broken.svg",
     "x": 0.5,
     "y": 0.56,
-    "s": 0.56
+    "s": 0.56,
+    "anim": "shake"
    },
    {
     "shape": "circle",
@@ -112,7 +131,7 @@
      ],
      [
       0.696,
-      0.8680000000000001
+      0.868
      ]
     ],
     "color": "#E2453C",
@@ -139,20 +158,59 @@
      "svg": "art/umbrella-broken.svg",
      "x": 0.5,
      "y": 0.56,
-     "s": 0.56
+     "s": 0.56,
+     "anim": "shake"
     },
     {
      "svg": "art/raincloud.svg",
      "x": 0.5,
      "y": 0.16,
-     "s": 0.28
+     "s": 0.28,
+     "anim": "bob"
     },
     {
      "actor": "cn-teacher-listen",
      "x": 0.84,
      "y": 0.62,
      "s": 0.66,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ],
    "text": "无法使用的",
@@ -169,22 +227,25 @@
       "x": 0.5,
       "y": 0.16,
       "s": 0.28,
-      "when": "umbrella"
+      "when": "umbrella",
+      "anim": "bob"
      },
      {
       "svg": "art/umbrella-broken.svg",
       "x": 0.46,
       "y": 0.56,
       "s": 0.56,
-      "when": "broken umbrella"
+      "when": "broken umbrella",
+      "anim": "shake"
      },
      {
-      "actor": "cn-teacher-listen",
+      "actor": "west-girl-surprised",
       "x": 0.84,
       "y": 0.62,
       "s": 0.66,
       "z": 3,
-      "when": "unusable"
+      "when": "unusable",
+      "seq": "blink"
      },
      {
       "label": "unusable",
@@ -203,6 +264,42 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "用不了"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -219,7 +316,8 @@
       "svg": "art/umbrella-broken.svg",
       "x": 0.5,
       "y": 0.56,
-      "s": 0.56
+      "s": 0.56,
+      "anim": "shake"
      },
      {
       "label": "un 不 + usable 能用的",
@@ -250,7 +348,8 @@
       "x": 0.5,
       "y": 0.56,
       "s": 0.56,
-      "when": "坏了"
+      "when": "坏了",
+      "anim": "shake"
      },
      {
       "label": "无法使用的",
@@ -269,6 +368,42 @@
       "color": "#2F6FB3",
       "border": "#2F6FB3",
       "when": "useless"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -276,6 +411,45 @@
  ],
  "distinguish": {
   "pics": {
+   "unusable": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/umbrella-broken.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.66,
+      "anim": "shake"
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.55,
+      "r": 0.32,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "delay": 0.6
+     },
+     {
+      "ray": [
+       [
+        0.276,
+        0.198
+       ],
+       [
+        0.724,
+        0.902
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 0.6
+     }
+    ]
+   },
    "useless": {
     "bg": "blank",
     "img": "art/street-bg.svg",
@@ -284,7 +458,176 @@
       "svg": "art/papercup.svg",
       "x": 0.5,
       "y": 0.55,
-      "s": 0.6
+      "s": 0.6,
+      "anim": "sway"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     }
+    ]
+   }
+  },
+  "logic": "逻辑不同：unusable 是 un 不 + usable 能用的，坏了、根本用不了；useless 是 use 用处 + less 没有…的，能用，但派不上用场。",
+  "tip": "一句话记法：坏了用不了 unusable，能用但没用 useless。"
+ },
+ "demo": {
+  "unhappy": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "frames": [
+       "art/cat-sit_f0.svg",
+       "art/cat-sit_f1.svg",
+       "art/cat-sit_f2.svg"
+      ],
+      "svg": "art/cat-sit_f0.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.6,
+      "fps": 2
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.5,
+      "y": 0.05,
+      "s": 0.05,
+      "to": [
+       0,
+       0.5
+      ],
+      "every": 0.25
+     }
+    ]
+   }
+  },
+  "unlock": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/padlock.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "hide": 1.2,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/padlock-open.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "delay": 1.2,
+      "pop": true,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "incorrect": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "shake"
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.56,
+      "r": 0.3,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "delay": 0.8
+     },
+     {
+      "ray": [
+       [
+        0.29,
+        0.23
+       ],
+       [
+        0.71,
+        0.89
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "disagree": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ]
      }
     ]
    }
