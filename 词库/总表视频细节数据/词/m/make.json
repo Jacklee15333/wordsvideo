@@ -1,7 +1,1123 @@
 {
  "单词": "make",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "originPic": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.88,
+     "s": 0.3,
+     "z": 2
+    },
+    {
+     "svg": "art/clay-hands.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "anim": "shake",
+     "z": 3,
+     "hide": 3.2
+    },
+    {
+     "svg": "art/clay-bowl.svg",
+     "x": 0.5,
+     "y": 0.58,
+     "s": 0.46,
+     "delay": 3.2,
+     "fade": 0.6,
+     "z": 3,
+     "shadow": true,
+     "anim": "pulse"
+    },
+    {
+     "label": "古英语 macian：揉捏、使成形",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.075,
+     "delay": 0.4,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800"
+    },
+    {
+     "label": "一团泥",
+     "x": 0.2,
+     "y": 0.5,
+     "size": 0.07,
+     "delay": 0.8,
+     "to": [
+      0.42,
+      0.6
+     ],
+     "hide": 3.2,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3"
+    },
+    {
+     "label": "想要的样子",
+     "x": 0.8,
+     "y": 0.5,
+     "size": 0.07,
+     "delay": 3.6,
+     "to": [
+      0.62,
+      0.58
+     ],
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/factory-bg.svg",
+    "items": [
+     {
+      "svg": "art/robot-arm.svg",
+      "x": 0.34,
+      "y": 0.5,
+      "s": 0.62,
+      "anim": "swing",
+      "z": 3
+     },
+     {
+      "svg": "art/gear.svg",
+      "x": 0.13,
+      "y": 0.3,
+      "s": 0.2,
+      "anim": "spin",
+      "z": 2
+     },
+     {
+      "svg": "art/conveyor.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.16,
+      "z": 3
+     },
+     {
+      "emit": true,
+      "svg": "art/toycar.svg",
+      "x": 0.2,
+      "y": 0.78,
+      "every": 1.3,
+      "life": 3.6,
+      "to": [
+       0.62,
+       0
+      ],
+      "s": 0.15,
+      "z": 4
+     },
+     {
+      "actor": "west-man-point",
+      "x": 0.82,
+      "y": 0.62,
+      "s": 0.78,
+      "z": 5
+     }
+    ],
+    "text": "制造",
+    "pos": "动词",
+    "diff": "用机器、材料大批地造出东西",
+    "ex": "This factory makes toy cars.",
+    "exzh": "这家工厂制造玩具汽车。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/factory-bg.svg",
+     "items": [
+      {
+       "svg": "art/conveyor.svg",
+       "x": 0.48,
+       "y": 0.86,
+       "s": 0.16,
+       "z": 3,
+       "when": "factory"
+      },
+      {
+       "svg": "art/robot-arm.svg",
+       "x": 0.2,
+       "y": 0.52,
+       "s": 0.62,
+       "anim": "swing",
+       "z": 3,
+       "when": "makes"
+      },
+      {
+       "emit": true,
+       "svg": "art/toycar.svg",
+       "x": 0.2,
+       "y": 0.77,
+       "every": 1.3,
+       "life": 3.6,
+       "to": [
+        0.62,
+        0
+       ],
+       "s": 0.17,
+       "z": 4,
+       "when": "toy cars"
+      },
+      {
+       "svg": "art/toycar.svg",
+       "x": 0.6,
+       "y": 0.5,
+       "s": 0.3,
+       "when": "toy cars",
+       "pop": true,
+       "anim": "bob",
+       "z": 4
+      },
+      {
+       "label": "factory 工厂",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "when": "factory",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "toy cars 玩具汽车",
+       "x": 0.6,
+       "y": 0.26,
+       "size": 0.075,
+       "when": "玩具汽车",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "actor": "west-man-point",
+       "x": 0.86,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 5,
+       "when": "factory"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-laugh",
+      "id": "t",
+      "x": 0.24,
+      "y": 0.56,
+      "s": 0.78,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ]
+     },
+     {
+      "actor": "west-girl-explain",
+      "id": "g",
+      "x": 0.76,
+      "y": 0.58,
+      "s": 0.74,
+      "z": 3,
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "waves": true,
+      "on": "g",
+      "x": 452,
+      "y": 186,
+      "dir": 180,
+      "with": "g",
+      "z": 4
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.32,
+      "z": 6
+     },
+     {
+      "svg": "art/cake.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.42,
+      "shadow": true,
+      "z": 7,
+      "anim": "pulse"
+     }
+    ],
+    "text": "做",
+    "pos": "动词",
+    "diff": "做出一样东西或一个结果",
+    "ex": "We made a cake for our teacher.",
+    "exzh": "我们给老师做了一个蛋糕。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "id": "g",
+       "x": 0.2,
+       "y": 0.58,
+       "s": 0.76,
+       "z": 3,
+       "when": "We"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.36,
+       "y": 0.6,
+       "s": 0.7,
+       "z": 3,
+       "when": "We",
+       "nodWith": "g"
+      },
+      {
+       "waves": true,
+       "on": "g",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "g",
+       "z": 4
+      },
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.82,
+       "y": 0.56,
+       "s": 0.8,
+       "z": 3,
+       "when": "teacher"
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.3,
+       "z": 6
+      },
+      {
+       "svg": "art/cake.svg",
+       "x": 0.56,
+       "y": 0.6,
+       "s": 0.5,
+       "shadow": true,
+       "z": 7,
+       "when": "cake",
+       "pop": true
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.56,
+       "y": 0.38,
+       "every": 0.8,
+       "life": 2,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.06,
+       "when": "cake",
+       "z": 8
+      },
+      {
+       "label": "made 做了",
+       "x": 0.56,
+       "y": 0.12,
+       "size": 0.08,
+       "when": "made",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "蛋糕",
+       "x": 0.7,
+       "y": 0.3,
+       "size": 0.075,
+       "when": "蛋糕",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "揉捏、使成形",
+    "say": [
+     "make 最早的意思，是把一团东西揉一揉、捏一捏，弄成想要的样子。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.88,
+       "s": 0.3,
+       "z": 2
+      },
+      {
+       "svg": "art/clay-hands.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.5,
+       "anim": "shake",
+       "z": 3,
+       "when": "一团东西",
+       "hideWhen": "想要的样子"
+      },
+      {
+       "label": "揉一揉、捏一捏",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.075,
+       "when": "揉一揉",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "svg": "art/clay-bowl.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.48,
+       "when": "想要的样子",
+       "fade": 0.5,
+       "z": 3,
+       "shadow": true,
+       "anim": "pulse"
+      },
+      {
+       "label": "想要的样子",
+       "x": 0.8,
+       "y": 0.4,
+       "size": 0.075,
+       "when": "想要的样子",
+       "delay": 0.2,
+       "to": [
+        0.64,
+        0.56
+       ],
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ],
+     "diagram": true
+    }
+   },
+   {
+    "via": "把材料弄成一件东西",
+    "node": "① 制造",
+    "pos": "动词",
+    "pic": 0,
+    "say": [
+     "把材料揉捏成一件东西，就是做、造。",
+     "工厂里用机器一件件地造，就是制造。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/factory-bg.svg",
+     "items": [
+      {
+       "svg": "art/clay-hands.svg",
+       "x": 0.3,
+       "y": 0.55,
+       "s": 0.4,
+       "when": "材料",
+       "hideCue": 1,
+       "anim": "shake",
+       "z": 3
+      },
+      {
+       "ray": [
+        [
+         0.46,
+         0.55
+        ],
+        [
+         0.6,
+         0.55
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "when": "一件东西",
+       "dur": 0.6,
+       "hideCue": 1
+      },
+      {
+       "svg": "art/clay-bowl.svg",
+       "x": 0.74,
+       "y": 0.56,
+       "s": 0.36,
+       "when": "一件东西",
+       "pop": true,
+       "hideCue": 1,
+       "z": 3
+      },
+      {
+       "label": "做、造",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.09,
+       "when": "做、造",
+       "hideCue": 1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "svg": "art/robot-arm.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "swing",
+       "cue": 1,
+       "when": "机器",
+       "z": 3
+      },
+      {
+       "svg": "art/conveyor.svg",
+       "x": 0.55,
+       "y": 0.86,
+       "s": 0.16,
+       "cue": 1,
+       "when": "工厂",
+       "z": 3
+      },
+      {
+       "emit": true,
+       "svg": "art/toycar.svg",
+       "x": 0.2,
+       "y": 0.78,
+       "every": 1.3,
+       "life": 3.6,
+       "to": [
+        0.62,
+        0
+       ],
+       "s": 0.15,
+       "z": 4,
+       "cue": 1,
+       "when": "一件件"
+      },
+      {
+       "actor": "west-man-point",
+       "x": 0.85,
+       "y": 0.62,
+       "s": 0.7,
+       "cue": 1,
+       "when": "工厂",
+       "z": 5
+      },
+      {
+       "label": "制造",
+       "x": 0.56,
+       "y": 0.14,
+       "size": 0.1,
+       "when": "制造",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "不光造东西，也“造出”一个结果",
+    "node": "② 做",
+    "pos": "动词",
+    "pic": 1,
+    "say": [
+     "不光能造出东西，也能“造出”一个结果。",
+     "make a cake 做蛋糕，make a mistake 犯错误，make a decision 作出决定，都是做出了点什么。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.3,
+       "z": 6
+      },
+      {
+       "svg": "art/cake.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.46,
+       "shadow": true,
+       "z": 7,
+       "when": "造出东西",
+       "pop": true
+      },
+      {
+       "label": "一个结果",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.08,
+       "when": "一个结果",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "make a cake 做蛋糕",
+       "x": 0.5,
+       "y": 0.28,
+       "size": 0.07,
+       "cue": 1,
+       "when": "make a cake",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.18,
+       "y": 0.58,
+       "s": 0.7,
+       "z": 5,
+       "cue": 1,
+       "when": "make a mistake"
+      },
+      {
+       "label": "make a mistake 犯错误",
+       "x": 0.2,
+       "y": 0.18,
+       "size": 0.065,
+       "cue": 1,
+       "when": "make a mistake",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "actor": "west-clerk-think",
+       "x": 0.84,
+       "y": 0.58,
+       "s": 0.7,
+       "z": 5,
+       "cue": 1,
+       "when": "make a decision"
+      },
+      {
+       "label": "make a decision 作出决定",
+       "x": 0.8,
+       "y": 0.18,
+       "size": 0.065,
+       "cue": 1,
+       "when": "make a decision",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
+   },
+   {
+    "via": "把一个人“弄成”某种样子",
+    "node": "使、让",
+    "pos": "动词",
+    "say": [
+     "把一个人“弄成”某种样子，就是使、让。",
+     "make him happy，让他高兴。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "id": "m",
+       "x": 0.66,
+       "y": 0.6,
+       "s": 0.82,
+       "z": 4,
+       "when": "一个人"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.24,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 4,
+       "when": "弄成"
+      },
+      {
+       "svg": "art/cake.svg",
+       "x": 0.4,
+       "y": 0.78,
+       "s": 0.26,
+       "z": 5,
+       "when": "弄成",
+       "pop": true
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.66,
+       "y": 0.3,
+       "every": 0.7,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.18
+       ],
+       "s": 0.06,
+       "cue": 1,
+       "when": "happy",
+       "z": 6
+      },
+      {
+       "label": "使、让",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "when": "使、让",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "label": "make him happy 让他高兴",
+       "x": 0.66,
+       "y": 0.92,
+       "size": 0.07,
+       "cue": 1,
+       "when": "make him happy",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      }
+     ],
+     "diagram": true
+    }
+   },
+   {
+    "via": "几样东西合起来，做成一个整体",
+    "node": "构成、等于",
+    "pos": "动词",
+    "say": [
+     "几样东西合起来，做成一个整体，就是构成、等于。",
+     "Two and three make five，二加三等于五。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.18,
+       "y": 0.6,
+       "s": 0.24,
+       "when": "几样东西",
+       "z": 3
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.34,
+       "y": 0.6,
+       "s": 0.24,
+       "when": "几样东西",
+       "delay": 0.2,
+       "z": 3
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.26,
+       "y": 0.6,
+       "s": 0.24,
+       "when": "合起来",
+       "go": [
+        0.7,
+        0.62
+       ],
+       "goWhen": "一个整体",
+       "dur": 0.8,
+       "s2": 0.4,
+       "z": 4
+      },
+      {
+       "label": "构成、等于",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.09,
+       "when": "构成",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "label": "2 + 3 = 5",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.16,
+       "cue": 1,
+       "when": "Two and three",
+       "color": "#FFFFFF",
+       "bg": "rgba(0,0,0,0)",
+       "border": "rgba(0,0,0,0)"
+      },
+      {
+       "label": "make 等于",
+       "x": 0.74,
+       "y": 0.46,
+       "size": 0.07,
+       "cue": 1,
+       "when": "等于",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.86,
+       "y": 0.62,
+       "s": 0.72,
+       "cue": 1,
+       "when": "Two and three",
+       "z": 5
+      }
+     ],
+     "diagram": true
+    }
+   },
+   {
+    "via": "用劳动“做”出钱来",
+    "node": "挣得",
+    "pos": "动词",
+    "say": [
+     "用劳动“做”出钱来，就是挣得。",
+     "make money，挣钱。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.86,
+       "s": 0.3,
+       "z": 5
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.36,
+       "y": 0.56,
+       "s": 0.78,
+       "z": 4,
+       "when": "劳动"
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.62,
+       "y": 0.62,
+       "s": 0.28,
+       "z": 6,
+       "when": "劳动"
+      },
+      {
+       "svg": "art/coins.svg",
+       "x": 0.84,
+       "y": 0.6,
+       "s": 0.34,
+       "z": 6,
+       "when": "钱",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "label": "挣得",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "when": "挣得",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "label": "make money 挣钱",
+       "x": 0.82,
+       "y": 0.3,
+       "size": 0.07,
+       "cue": 1,
+       "when": "make money",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      }
+     ],
+     "diagram": true
+    }
+   },
+   {
+    "via": "原是水手的说法：一路赶到目的地",
+    "node": "到达、赶上（make it）",
+    "pos": "动词",
+    "say": [
+     "后来水手也这样说：船一路开，赶到了目的地。",
+     "今天说 make it，就是赶上了、办成了。"
+    ],
+    "fig": {
+     "bg": "sea",
+     "items": [
+      {
+       "svg": "art/ship.svg",
+       "x": 0.2,
+       "y": 0.55,
+       "s": 0.5,
+       "when": "船",
+       "go": [
+        0.66,
+        0.55
+       ],
+       "goWhen": "一路开",
+       "dur": 2.4,
+       "anim": "ride",
+       "hideCue": 1,
+       "z": 3
+      },
+      {
+       "svg": "art/flag.svg",
+       "x": 0.86,
+       "y": 0.55,
+       "s": 0.42,
+       "when": "目的地",
+       "hideCue": 1,
+       "z": 3
+      },
+      {
+       "label": "目的地",
+       "x": 0.86,
+       "y": 0.16,
+       "size": 0.075,
+       "when": "目的地",
+       "hideCue": 1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "label": "水手的说法",
+       "x": 0.3,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "水手",
+       "hideCue": 1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "svg": "art/station-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1,
+       "cue": 1,
+       "when": "make it",
+       "z": 1
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.2,
+       "y": 0.66,
+       "s": 0.6,
+       "cue": 1,
+       "when": "make it",
+       "walk": {
+        "from": [
+         0.1,
+         0.66
+        ],
+        "to": [
+         0.7,
+         0.66
+        ]
+       },
+       "z": 4
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.82,
+       "y": 0.36,
+       "s": 0.28,
+       "cue": 1,
+       "when": "赶上了",
+       "z": 4
+      },
+      {
+       "label": "make it 赶上了、办成了",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.08,
+       "cue": 1,
+       "when": "办成了",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      }
+     ],
+     "diagram": true
+    }
+   }
+  ],
+  "distinguish": {
+   "items": [
+    {
+     "w": "make",
+     "m": "做（做出东西、产生结果）",
+     "say": "make 重在做出东西、产生结果：make a cake 做蛋糕，make a mistake 犯错误，make a decision 作出决定。"
+    },
+    {
+     "w": "do",
+     "m": "做（从事一项活动）",
+     "say": "do 重在从事一项活动：do homework 做作业，do the dishes 洗碗。"
+    }
+   ],
+   "pics": {
+    "make": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 2.4,
+       "z": -5
+      },
+      {
+       "actor": "west-girl-explain",
+       "id": "g",
+       "x": 0.24,
+       "y": 0.62,
+       "s": 1.1,
+       "z": 3
+      },
+      {
+       "waves": true,
+       "on": "g",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "g",
+       "z": 4
+      },
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.8,
+       "y": 0.62,
+       "s": 1.1,
+       "z": 3,
+       "nodWith": "g"
+      },
+      {
+       "svg": "art/cake.svg",
+       "x": 0.52,
+       "y": 0.6,
+       "s": 0.72,
+       "shadow": true,
+       "z": 6,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.52,
+       "y": 0.2,
+       "every": 0.8,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.2
+       ],
+       "s": 0.1,
+       "z": 7
+      }
+     ]
+    },
+    "do": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.34,
+       "s": 2.3,
+       "z": -5
+      },
+      {
+       "actor": "cn-boy-raise",
+       "id": "b",
+       "x": 0.3,
+       "y": 0.66,
+       "s": 1.15,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.96,
+       "s": 0.5,
+       "z": 5
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.6,
+       "y": 0.68,
+       "s": 0.34,
+       "z": 6
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.75,
+       "y": 0.7,
+       "s": 0.28,
+       "z": 6
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.88,
+       "y": 0.3,
+       "s": 0.38,
+       "z": 4
+      },
+      {
+       "label": "do homework",
+       "x": 0.62,
+       "y": 0.14,
+       "size": 0.12,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
+   },
+   "logic": "逻辑不同：make 做完手里多出一样东西或一个结果（蛋糕、错误、决定）；do 只说干了这件事，不一定造出什么。",
+   "tip": "一句话记法：做出了东西或结果用 make，只是干活、干事用 do。"
+  }
+ },
+ "插图": [
+  "makeai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：妈妈做了什么？\n听：My mother made a cake for my birthday.\nA. 买了一个生日蛋糕\nB. 订了一个生日蛋糕\nC. 画了一个生日蛋糕\nD. 做了一个生日蛋糕",
@@ -90,5 +1206,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
