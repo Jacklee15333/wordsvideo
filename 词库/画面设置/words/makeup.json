@@ -143,7 +143,7 @@
     "stroke": "#1B1A1F",
     "lw": 3,
     "go": [
-     0.22499999999999998,
+     0.225,
      0.38
     ],
     "dur": 1.2,
@@ -175,7 +175,7 @@
     "stroke": "#1B1A1F",
     "lw": 3,
     "go": [
-     0.22499999999999998,
+     0.225,
      0.62
     ],
     "dur": 1.2,
@@ -226,7 +226,8 @@
      "x": 0.3,
      "y": 0.58,
      "s": 0.92,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/mirror.svg",
@@ -239,7 +240,8 @@
      "x": 0.76,
      "y": 0.84,
      "s": 0.24,
-     "z": 5
+     "z": 5,
+     "anim": "bob"
     },
     {
      "svg": "art/desk.svg",
@@ -264,7 +266,9 @@
       "y": 0.58,
       "s": 0.92,
       "z": 3,
-      "when": "She"
+      "when": "She",
+      "seq": "pingpong",
+      "fps": 2
      },
      {
       "svg": "art/makeupkit.svg",
@@ -304,7 +308,42 @@
      "x": 0.5,
      "y": 0.52,
      "s": 0.66,
-     "shadow": true
+     "shadow": true,
+     "anim": "pulse"
+    },
+    {
+     "shape": "rect",
+     "x": 0.08,
+     "y": 0.2,
+     "w": 0.1,
+     "h": 0.16,
+     "fill": "#E2453C",
+     "stroke": "#1B1A1F",
+     "lw": 3,
+     "go": [
+      0.3,
+      0.36
+     ],
+     "dur": 1.4,
+     "wait": 0.4,
+     "loop": true
+    },
+    {
+     "shape": "rect",
+     "x": 0.92,
+     "y": 0.82,
+     "w": 0.1,
+     "h": 0.16,
+     "fill": "#59B95A",
+     "stroke": "#1B1A1F",
+     "lw": 3,
+     "go": [
+      0.7,
+      0.66
+     ],
+     "dur": 1.4,
+     "wait": 0.8,
+     "loop": true
     }
    ],
    "text": "构成",
@@ -318,11 +357,13 @@
     "items": [
      {
       "actor": "cn-teacher-point",
+      "id": "t",
       "x": 0.2,
       "y": 0.58,
       "s": 0.86,
       "z": 3,
-      "when": "Look"
+      "when": "Look",
+      "seq": "talk"
      },
      {
       "actor": "cn-boy-raise",
@@ -330,7 +371,8 @@
       "y": 0.66,
       "s": 0.6,
       "z": 3,
-      "when": "our class"
+      "when": "our class",
+      "nodWith": "t"
      },
      {
       "actor": "west-girl-raise",
@@ -339,7 +381,8 @@
       "s": 0.6,
       "z": 3,
       "when": "our class",
-      "delay": 0.3
+      "delay": 0.3,
+      "nodWith": "t"
      },
      {
       "svg": "art/class-desks.svg",
@@ -379,7 +422,8 @@
      "x": 0.4,
      "y": 0.58,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/heart.svg",
@@ -392,7 +436,8 @@
      "svg": "art/star.svg",
      "x": 0.8,
      "y": 0.7,
-     "s": 0.18
+     "s": 0.18,
+     "anim": "pulse"
     }
    ],
    "text": "性格、素质",
@@ -410,7 +455,8 @@
       "y": 0.58,
       "s": 0.92,
       "z": 3,
-      "when": "brave"
+      "when": "brave",
+      "seq": "blink"
      },
      {
       "svg": "art/star.svg",
@@ -545,14 +591,16 @@
       "y": 0.58,
       "s": 0.9,
       "z": 3,
-      "when": "一个人的脸"
+      "when": "一个人的脸",
+      "seq": "blink"
      },
      {
       "svg": "art/makeupkit.svg",
       "x": 0.74,
       "y": 0.7,
       "s": 0.3,
-      "when": "化妆品"
+      "when": "化妆品",
+      "anim": "bob"
      },
      {
       "label": "化妆品、妆容",
@@ -625,7 +673,7 @@
        0.62
       ],
       "dur": 1.2,
-      "wait": 0.6000000000000001
+      "wait": 0.6
      },
      {
       "shape": "rect",
@@ -675,14 +723,16 @@
       "y": 0.58,
       "s": 0.9,
       "z": 3,
-      "when": "一个人"
+      "when": "一个人",
+      "seq": "blink"
      },
      {
       "svg": "art/heart.svg",
       "x": 0.74,
       "y": 0.3,
       "s": 0.2,
-      "when": "各种特点"
+      "when": "各种特点",
+      "anim": "pulse"
      },
      {
       "svg": "art/star.svg",
@@ -690,7 +740,8 @@
       "y": 0.62,
       "s": 0.18,
       "when": "各种特点",
-      "delay": 0.3
+      "delay": 0.3,
+      "anim": "pulse"
      },
      {
       "label": "性格、素质",
@@ -716,53 +767,91 @@
   }
  ],
  "distinguish": {
-  "pics": {
-   "composition": {
-    "bg": "studio",
-    "tint": "blue",
-    "items": [
-     {
-      "svg": "art/puzzle.svg",
-      "x": 0.5,
-      "y": 0.5,
-      "s": 0.8,
-      "shadow": true
-     }
-    ]
+  "key": "构成",
+  "items": [
+   {
+    "w": "makeup",
+    "gloss": "构成（口语）",
+    "note": "来自短语 make up“把零散的部分凑成一个整体”：一个整体由哪些部分拼成，常说一群人、一个人的构成（the makeup of our class 班里的人员构成）。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "shape": "rect",
+       "x": 0.1,
+       "y": 0.3,
+       "w": 0.12,
+       "h": 0.3,
+       "fill": "#E2453C",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.44,
+        0.5
+       ],
+       "dur": 1.2,
+       "wait": 0.3,
+       "loop": true
+      },
+      {
+       "shape": "rect",
+       "x": 0.9,
+       "y": 0.7,
+       "w": 0.12,
+       "h": 0.3,
+       "fill": "#3FA7D6",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.56,
+        0.5
+       ],
+       "dur": 1.2,
+       "wait": 0.5,
+       "loop": true
+      },
+      {
+       "label": "make up 凑起来",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.12,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      }
+     ]
+    }
    },
-   "character": {
-    "bg": "blank",
-    "img": "art/room-bg.svg",
-    "items": [
-     {
-      "actor": "west-man-smile",
-      "x": 0.4,
-      "y": 0.6,
-      "s": 0.9,
-      "z": 3
-     },
-     {
-      "svg": "art/heart.svg",
-      "x": 0.75,
-      "y": 0.4,
-      "s": 0.4
-     }
-    ]
-   },
-   "quality": {
-    "bg": "studio",
-    "tint": "warm",
-    "items": [
-     {
-      "svg": "art/trophy.svg",
-      "x": 0.5,
-      "y": 0.5,
-      "s": 0.8,
-      "shadow": true
-     }
-    ]
+   {
+    "w": "composition",
+    "gloss": "构成、成分（正式）",
+    "note": "com 一起 + pos 放 + ition：把各种东西放在一起，说法正式，多说物质的成分、文章、乐曲的组成（the composition of water 水的成分）。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/puzzle.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "shadow": true,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.84,
+       "y": 0.6,
+       "s": 0.5,
+       "anim": "bob"
+      }
+     ]
+    }
    }
-  }
+  ],
+  "logic": "逻辑不同：makeup 是动词短语 make up“凑起来”整个变成名词，口语；composition 是拉丁来的“放在一起”，正式、偏科学。",
+  "tip": "一句话记法：说人、说班级用 makeup；说成分、文章、乐曲用 composition。"
  },
  "lianxi": {
   "qs": [

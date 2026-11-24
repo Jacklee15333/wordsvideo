@@ -12,14 +12,16 @@
       "svg": "art/sock-red.svg",
       "x": 0.36,
       "y": 0.56,
-      "s": 0.5
+      "s": 0.5,
+      "anim": "swing"
      },
      {
       "svg": "art/sock-blue.svg",
       "x": 0.64,
       "y": 0.56,
       "s": 0.5,
-      "delay": 0.6
+      "delay": 0.6,
+      "anim": "swing"
      },
      {
       "ray": [
@@ -112,16 +114,26 @@
    "items": [
     {
      "svg": "art/sock-red.svg",
-     "x": 0.36,
+     "x": 0.2,
      "y": 0.56,
-     "s": 0.5
+     "s": 0.5,
+     "go": [
+      0.38,
+      0.56
+     ],
+     "dur": 1.2
     },
     {
      "svg": "art/sock-blue.svg",
-     "x": 0.64,
+     "x": 0.8,
      "y": 0.56,
      "s": 0.5,
-     "delay": 0.6
+     "go": [
+      0.62,
+      0.56
+     ],
+     "dur": 1.2,
+     "anim": "swing"
     },
     {
      "ray": [
@@ -156,7 +168,7 @@
      "delay": 1.7
     },
     {
-     "label": "错",
+     "label": "配错了",
      "x": 0.5,
      "y": 0.1,
      "size": 0.1,
@@ -175,13 +187,15 @@
       "svg": "art/sock-red.svg",
       "x": 0.36,
       "y": 0.56,
-      "s": 0.52
+      "s": 0.52,
+      "anim": "swing"
      },
      {
       "svg": "art/sock-blue.svg",
       "x": 0.64,
       "y": 0.56,
-      "s": 0.52
+      "s": 0.52,
+      "anim": "swing"
      },
      {
       "shape": "circle",
@@ -197,11 +211,11 @@
       "ray": [
        [
         0.332,
-        0.29600000000000004
+        0.296
        ],
        [
-        0.6679999999999999,
-        0.8240000000000001
+        0.668,
+        0.824
        ]
       ],
       "color": "#E2453C",
@@ -221,14 +235,15 @@
      "items": [
       {
        "svg": "art/photo.svg",
-       "x": 0.34,
+       "x": 0.3,
        "y": 0.5,
        "s": 0.5,
-       "when": "photo"
+       "when": "photo",
+       "anim": "swing"
       },
       {
-       "label": "Tom",
-       "x": 0.7,
+       "label": "name",
+       "x": 0.6,
        "y": 0.5,
        "size": 0.12,
        "color": "#2F6FB3",
@@ -236,8 +251,17 @@
        "when": "name"
       },
       {
+       "actor": "west-clerk-think",
+       "x": 0.86,
+       "y": 0.62,
+       "s": 0.72,
+       "z": 3,
+       "seq": "blink",
+       "when": "photo"
+      },
+      {
        "label": "mismatch",
-       "x": 0.5,
+       "x": 0.45,
        "y": 0.12,
        "size": 0.075,
        "color": "#7A3E00",
@@ -247,7 +271,7 @@
       },
       {
        "shape": "circle",
-       "x": 0.5,
+       "x": 0.45,
        "y": 0.5,
        "r": 0.2,
        "stroke": "#E2453C",
@@ -258,17 +282,26 @@
       {
        "ray": [
         [
-         0.36,
-         0.27999999999999997
+         0.31,
+         0.28
         ],
         [
-         0.64,
+         0.59,
          0.72
         ]
        ],
        "color": "#E2453C",
        "lw": 0.02,
        "dur": 0.4,
+       "when": "对不上"
+      },
+      {
+       "label": "对不上",
+       "x": 0.45,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
        "when": "对不上"
       }
      ]
@@ -279,24 +312,60 @@
     "img": "art/park-bg.svg",
     "items": [
      {
-      "actor": "west-man-smile",
+      "actor": "west-man-present",
+      "id": "w",
       "x": 0.28,
       "y": 0.56,
       "s": 0.96,
-      "z": 3
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
      },
      {
       "actor": "cn-boy-raise",
+      "id": "b",
       "x": 0.72,
       "y": 0.68,
       "s": 0.6,
-      "z": 3
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ]
      },
      {
       "svg": "art/ball.svg",
-      "x": 0.5,
+      "x": 0.46,
       "y": 0.86,
-      "s": 0.12
+      "s": 0.12,
+      "go": [
+       0.56,
+       0.86
+      ],
+      "dur": 1.2,
+      "loop": true,
+      "anim": "bob"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.05,
+      "y": 0.8,
+      "s": 0.4,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.8
+       ],
+       "to": [
+        0.98,
+        0.8
+       ],
+       "offset": 0
+      }
      },
      {
       "label": "10 : 0",
@@ -336,20 +405,41 @@
        "loop": true
       },
       {
-       "actor": "west-man-smile",
+       "actor": "west-man-point",
+       "id": "p",
        "x": 0.16,
        "y": 0.56,
        "s": 0.9,
        "z": 3,
-       "when": "game"
+       "when": "game",
+       "seq": "talk"
       },
       {
-       "actor": "cn-boy-raise",
+       "actor": "cn-teacher-listen",
        "x": 0.86,
-       "y": 0.7,
-       "s": 0.56,
+       "y": 0.66,
+       "s": 0.62,
        "z": 3,
-       "when": "game"
+       "when": "game",
+       "nodWith": "p"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.1,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.3
+       }
       },
       {
        "label": "10 : 0",
@@ -384,14 +474,16 @@
        "svg": "art/sock-red.svg",
        "x": 0.36,
        "y": 0.56,
-       "s": 0.5
+       "s": 0.5,
+       "anim": "swing"
       },
       {
        "svg": "art/sock-blue.svg",
        "x": 0.64,
        "y": 0.56,
        "s": 0.5,
-       "delay": 0.6
+       "delay": 0.6,
+       "anim": "swing"
       },
       {
        "ray": [
@@ -426,12 +518,12 @@
        "delay": 1.7
       },
       {
-       "label": "错",
+       "label": "mis 错 + match 相配",
        "x": 0.5,
        "y": 0.1,
-       "size": 0.1,
-       "color": "#C92A2A",
-       "border": "#C92A2A",
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8",
        "delay": 1.4
       }
      ]
@@ -451,18 +543,29 @@
      "items": [
       {
        "svg": "art/sock-red.svg",
-       "x": 0.36,
-       "y": 0.56,
-       "s": 0.52,
-       "when": "两样东西"
-      },
-      {
-       "svg": "art/sock-blue.svg",
-       "x": 0.64,
+       "x": 0.2,
        "y": 0.56,
        "s": 0.52,
        "when": "两样东西",
-       "delay": 0.2
+       "go": [
+        0.36,
+        0.56
+       ],
+       "dur": 1
+      },
+      {
+       "svg": "art/sock-blue.svg",
+       "x": 0.8,
+       "y": 0.56,
+       "s": 0.52,
+       "when": "两样东西",
+       "delay": 0.2,
+       "go": [
+        0.64,
+        0.56
+       ],
+       "dur": 1,
+       "anim": "swing"
       },
       {
        "shape": "circle",
@@ -478,11 +581,11 @@
        "ray": [
         [
          0.332,
-         0.29600000000000004
+         0.296
         ],
         [
-         0.6679999999999999,
-         0.8240000000000001
+         0.668,
+         0.824
         ]
        ],
        "color": "#E2453C",
@@ -516,20 +619,23 @@
      "img": "art/park-bg.svg",
      "items": [
       {
-       "actor": "west-man-smile",
-       "x": 0.28,
+       "actor": "west-man-hello",
+       "id": "h",
+       "x": 0.26,
        "y": 0.56,
        "s": 0.96,
        "z": 3,
-       "when": "两边"
+       "when": "两边",
+       "seq": "talk"
       },
       {
-       "actor": "cn-boy-raise",
+       "actor": "west-girl-surprised",
        "x": 0.72,
-       "y": 0.7,
-       "s": 0.56,
+       "y": 0.68,
+       "s": 0.58,
        "z": 3,
-       "when": "两边"
+       "when": "两边",
+       "nodWith": "h"
       },
       {
        "svg": "art/scales.svg",
@@ -537,7 +643,26 @@
        "y": 0.24,
        "s": 0.26,
        "when": "配不上",
-       "rot": -12
+       "rot": -12,
+       "anim": "swing"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.9,
+       "y": 0.82,
+       "s": 0.38,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.82
+        ],
+        "to": [
+         0.02,
+         0.82
+        ],
+        "offset": 0.2
+       }
       },
       {
        "label": "实力悬殊",
@@ -570,6 +695,160 @@
        "y": 0.3,
        "s": 0.2,
        "anim": "pulse"
+      }
+     ]
+    }
+   }
+  },
+  "demo": {
+   "unhappy": {
+    "icons": [
+     "art/ic-xx.svg",
+     "art/star.svg"
+    ],
+    "lit": "不高兴的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-listen",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.12,
+       "s": 0.06,
+       "to": [
+        0,
+        0.3
+       ],
+       "every": 0.6
+      }
+     ]
+    }
+   },
+   "unlock": {
+    "icons": [
+     "art/ic-xx.svg",
+     "art/lock.svg"
+    ],
+    "lit": "把锁打开",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/lock.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "shake",
+       "hide": 1.2
+      },
+      {
+       "svg": "art/lock-open.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "delay": 1.2,
+       "pop": true
+      }
+     ]
+    }
+   },
+   "incorrect": {
+    "icons": [
+     "art/ic-xx.svg",
+     "art/star.svg"
+    ],
+    "lit": "不正确的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.56
+      },
+      {
+       "ray": [
+        [
+         0.36,
+         0.36
+        ],
+        [
+         0.64,
+         0.8
+        ]
+       ],
+       "color": "#E2453C",
+       "lw": 0.02,
+       "dur": 0.4,
+       "delay": 0.6
+      },
+      {
+       "ray": [
+        [
+         0.64,
+         0.36
+        ],
+        [
+         0.36,
+         0.8
+        ]
+       ],
+       "color": "#E2453C",
+       "lw": 0.02,
+       "dur": 0.4,
+       "delay": 0.9
+      }
+     ]
+    }
+   },
+   "misunderstand": {
+    "icons": [
+     "art/ic-xx.svg",
+     "art/icon-speak.svg"
+    ],
+    "lit": "理解错了",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "id": "e",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.74,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "nodWith": "e"
+      },
+      {
+       "label": "?",
+       "x": 0.74,
+       "y": 0.14,
+       "size": 0.12,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "delay": 1
       }
      ]
     }
@@ -667,5 +946,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

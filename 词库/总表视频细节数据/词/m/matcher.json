@@ -46,11 +46,12 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "actor": "west-clerk-think",
+      "actor": "west-man-present",
       "x": 0.42,
       "y": 0.56,
       "s": 0.92,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "label": "做…的人或东西",
@@ -86,7 +87,8 @@
      "x": 0.3,
      "y": 0.58,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/sock-red.svg",
@@ -130,19 +132,22 @@
       "x": 0.3,
       "y": 0.58,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/sock-red.svg",
       "x": 0.64,
       "y": 0.62,
-      "s": 0.3
+      "s": 0.3,
+      "anim": "swing"
      },
      {
       "svg": "art/sock-red.svg",
       "x": 0.8,
       "y": 0.62,
-      "s": 0.3
+      "s": 0.3,
+      "anim": "swing"
      },
      {
       "svg": "art/sock-blue.svg",
@@ -161,12 +166,13 @@
      "img": "art/bedroom-bg.svg",
      "items": [
       {
-       "actor": "west-clerk-think",
+       "actor": "west-man-smile",
        "x": 0.26,
        "y": 0.58,
        "s": 0.9,
        "z": 3,
-       "when": "He"
+       "when": "He",
+       "seq": "blink"
       },
       {
        "svg": "art/sock-red.svg",
@@ -235,11 +241,29 @@
       "border": "#2F6FB3"
      },
      {
+      "ray": [
+       [
+        0.24,
+        0.4
+       ],
+       [
+        0.36,
+        0.48
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.6
+     },
+     {
       "actor": "west-girl-listen",
       "x": 0.86,
       "y": 0.62,
       "s": 0.6,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      }
     ],
     "text": "匹配器、匹配程序",
@@ -264,7 +288,8 @@
        "y": 0.6,
        "s": 0.66,
        "z": 3,
-       "when": "job"
+       "when": "job",
+       "seq": "talk"
       },
       {
        "label": "job",
@@ -323,11 +348,12 @@
      "img": "art/room-bg.svg",
      "items": [
       {
-       "actor": "west-clerk-think",
+       "actor": "cn-teacher-point",
        "x": 0.3,
        "y": 0.58,
        "s": 0.9,
-       "z": 3
+       "z": 3,
+       "seq": "talk"
       },
       {
        "svg": "art/sock-red.svg",
@@ -366,6 +392,7 @@
     "via": "做配对的人",
     "node": "① 匹配者",
     "pos": "名词",
+    "pic": 0,
     "say": [
      "做配对的人，就是匹配者。"
     ],
@@ -374,26 +401,38 @@
      "img": "art/bedroom-bg.svg",
      "items": [
       {
-       "actor": "west-clerk-happy",
+       "actor": "cn-teacher-laugh",
        "x": 0.3,
        "y": 0.58,
        "s": 0.9,
        "z": 3,
-       "when": "做配对的人"
+       "when": "做配对的人",
+       "seq": "pingpong",
+       "fps": 2
       },
       {
        "svg": "art/sock-red.svg",
-       "x": 0.66,
-       "y": 0.6,
+       "x": 0.56,
+       "y": 0.4,
        "s": 0.3,
-       "when": "配对"
+       "when": "配对",
+       "go": [
+        0.66,
+        0.6
+       ],
+       "dur": 1
       },
       {
        "svg": "art/sock-red.svg",
-       "x": 0.82,
-       "y": 0.6,
+       "x": 0.92,
+       "y": 0.4,
        "s": 0.3,
-       "when": "配对"
+       "when": "配对",
+       "go": [
+        0.82,
+        0.6
+       ],
+       "dur": 1
       },
       {
        "label": "匹配者",
@@ -427,6 +466,30 @@
        "when": "电脑"
       },
       {
+       "svg": "art/sock-red.svg",
+       "x": 0.16,
+       "y": 0.4,
+       "s": 0.18,
+       "when": "做配对",
+       "go": [
+        0.42,
+        0.46
+       ],
+       "dur": 1
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.84,
+       "y": 0.4,
+       "s": 0.18,
+       "when": "做配对",
+       "go": [
+        0.58,
+        0.46
+       ],
+       "dur": 1
+      },
+      {
        "label": "匹配程序",
        "x": 0.5,
        "y": 0.1,
@@ -439,7 +502,85 @@
     }
    }
   ],
-  "distinguish": false
+  "distinguish": false,
+  "demo": {
+   "driver": {
+    "icons": [
+     "art/car.svg",
+     "art/ic-person.svg"
+    ],
+    "lit": "开车的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/car.svg",
+       "x": 0.15,
+       "y": 0.78,
+       "s": 0.46,
+       "go": [
+        0.85,
+        0.78
+       ],
+       "dur": 3,
+       "wait": 0,
+       "loop": true,
+       "anim": "ride",
+       "z": 3
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.4,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.66
+        ],
+        "to": [
+         0.02,
+         0.66
+        ],
+        "offset": 0.3
+       }
+      }
+     ]
+    }
+   },
+   "artist": {
+    "icons": [
+     "art/easel.svg",
+     "art/ic-person.svg"
+    ],
+    "lit": "搞艺术的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/easel.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.82,
+       "shadow": true,
+       "reveal": "up",
+       "rdur": 2
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.82,
+       "y": 0.2,
+       "s": 0.16,
+       "anim": "pulse",
+       "delay": 2
+      }
+     ]
+    }
+   }
+  }
  },
  "插图": [
   "matcherai"

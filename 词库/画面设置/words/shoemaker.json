@@ -11,7 +11,8 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.5,
-     "shadow": true
+     "shadow": true,
+     "anim": "swing"
     },
     {
      "label": "鞋",
@@ -29,11 +30,12 @@
    "img": "art/room-bg.svg",
    "items": [
     {
-     "actor": "west-clerk-happy",
+     "actor": "west-man-present",
      "x": 0.42,
      "y": 0.56,
      "s": 0.92,
-     "z": 3
+     "z": 3,
+     "seq": "talk"
     },
     {
      "label": "做东西的人",
@@ -51,7 +53,8 @@
      "s": 0.3,
      "z": 5,
      "pop": true,
-     "delay": 0.5
+     "delay": 0.5,
+     "anim": "shake"
     }
    ]
   }
@@ -69,7 +72,8 @@
     "x": 0.36,
     "y": 0.56,
     "s": 0.92,
-    "z": 3
+    "z": 3,
+    "seq": "blink"
    },
    {
     "svg": "art/workbench.svg",
@@ -117,11 +121,12 @@
    "img": "art/room-bg.svg",
    "items": [
     {
-     "actor": "west-clerk-happy",
+     "actor": "west-clerk-think",
      "x": 0.36,
      "y": 0.56,
      "s": 0.92,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/workbench.svg",
@@ -164,12 +169,14 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "actor": "west-clerk-happy",
+      "actor": "west-man-point",
+      "id": "s",
       "x": 0.26,
       "y": 0.56,
       "s": 0.92,
       "z": 3,
-      "when": "shoemaker"
+      "when": "shoemaker",
+      "seq": "talk"
      },
      {
       "svg": "art/workbench.svg",
@@ -194,7 +201,13 @@
       "s": 0.26,
       "z": 6,
       "when": "a pair of shoes",
-      "pop": true
+      "pop": true,
+      "go": [
+       0.66,
+       0.7
+      ],
+      "goWhen": "for me",
+      "dur": 0.8
      },
      {
       "actor": "cn-boy-raise",
@@ -202,7 +215,8 @@
       "y": 0.62,
       "s": 0.72,
       "z": 3,
-      "when": "for me"
+      "when": "for me",
+      "nodWith": "s"
      },
      {
       "label": "shoemaker",
@@ -235,11 +249,12 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "actor": "west-clerk-happy",
+      "actor": "cn-teacher-point",
       "x": 0.36,
       "y": 0.56,
       "s": 0.92,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "svg": "art/workbench.svg",
@@ -343,7 +358,8 @@
       "s": 0.6,
       "cue": 1,
       "when": "make films",
-      "hideCue": 2
+      "hideCue": 2,
+      "blink": 1
      },
      {
       "label": "filmmaker",
@@ -357,13 +373,14 @@
       "hideCue": 2
      },
      {
-      "actor": "west-clerk-happy",
+      "actor": "west-man-smile",
       "x": 0.36,
       "y": 0.56,
       "s": 0.92,
       "z": 3,
       "cue": 2,
-      "when": "做鞋"
+      "when": "做鞋",
+      "seq": "blink"
      },
      {
       "svg": "art/workbench.svg",
@@ -373,6 +390,16 @@
       "z": 5,
       "cue": 2,
       "when": "做鞋"
+     },
+     {
+      "svg": "art/hammer.svg",
+      "x": 0.2,
+      "y": 0.7,
+      "s": 0.15,
+      "z": 6,
+      "cue": 2,
+      "when": "做鞋",
+      "anim": "shake"
      },
      {
       "svg": "art/shoe.svg",
@@ -416,6 +443,24 @@
       "y": 0.4,
       "s": 0.4,
       "anim": "shake"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.1,
+      "y": 0.72,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.72
+       ],
+       "to": [
+        0.98,
+        0.72
+       ],
+       "offset": 0
+      }
      },
      {
       "label": "修鞋",
