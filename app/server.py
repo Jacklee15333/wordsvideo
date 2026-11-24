@@ -426,6 +426,13 @@ def api_relay_get(qs):
     r["uploads"] = list(C.INBOX_LAST.get("uploads") or [])
     r["pollSec"] = max(5, int(C.inbox_cfg().get("pollSec") or 15))
     r["now"] = time.time()
+    try:                                       # 这个任务一共几个词（黄框写“第几个 / 共几个”）
+        tp = json.loads((t or {}).get("params") or "{}")
+        r["total"] = len(tp.get("words") or []) or int(tp.get("count") or 0)
+    except Exception:
+        r["total"] = 0
+    if r.get("doneTid") != (t or {}).get("id"):
+        r["done"] = []
     if qs.get("full") != "1":
         r["promptLen"] = len(r.get("prompt") or "")
         r["prompt"] = (r.get("prompt") or "")[:600]

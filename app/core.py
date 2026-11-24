@@ -1082,7 +1082,13 @@ def relay_result(ok, detail=""):
             return
         RELAY_HIST[-1].update(res="ok" if ok else "fail", detail=mask(str(detail))[:400], t1=time.time())
         RELAY["phase"], RELAY["stage"] = ("ok" if ok else "fail"), ""
-        RELAY["last"] = {"words": list(RELAY_HIST[-1]["words"]), "ok": bool(ok), "detail": mask(str(detail))[:200], "t": time.time()}
+        h = RELAY_HIST[-1]
+        RELAY["last"] = {"words": list(h["words"]), "ok": bool(ok), "detail": mask(str(detail))[:200], "t": time.time(),
+                         "got": h.get("got", 0.0), "glen": h.get("glen", 0), "t0": h.get("t0", 0.0)}
+        if RELAY.get("doneTid") != h.get("tid"):       # 这个任务做完的词（一个一个列着，能点开看）
+            RELAY["done"], RELAY["doneTid"] = [], h.get("tid")
+        RELAY.setdefault("done", []).append(dict(RELAY["last"]))
+        del RELAY["done"][:-200]
         n = len(RELAY_HIST)
         _hist_save()
     _say("手动接力 第 %d 轮：%s%s" % (n, "✓ 检查过了" if ok else "✗ 没过", ("：" + str(detail)[:160]) if detail else ""))

@@ -294,6 +294,23 @@ tr.wdim td.w{color:var(--faint)}
 .rres.bad{background:#FDECEA;color:#9B2C22;border:1px solid #F0B9B3}
 .rres small{font-weight:400;color:var(--muted);margin-left:6px}
 .rmore{margin:8px 0 4px}
+/* v1.10.7：做完的词一张卡片（4 步都打勾）、能点开看；现在是第几个词 */
+.rprog{font-size:12.5px;color:var(--muted);margin:-2px 0 6px}
+.rprog b{color:var(--ink)}
+.rdone{border-radius:6px;padding:8px 12px;margin:4px 0 10px;font-size:13px;line-height:1.7}
+.rdone.ok{background:var(--pass-bg);border:1px solid #BFDCCB}
+.rdone.bad{background:#FDECEA;border:1px solid #F0B9B3}
+.rdone .hd{font-size:14px;font-weight:600}
+.rdone.ok .hd{color:var(--pass)} .rdone.bad .hd{color:#9B2C22}
+.rdone .chain{color:var(--muted);font-size:12.5px}
+.rdone .chain i{font-style:normal;color:var(--pass);font-weight:700}
+.rdone .chain i.x{color:var(--red)}
+.rnow{font-size:13.5px;font-weight:600;margin:2px 0 6px}
+.rdlist{margin:4px 0 8px}
+.rdlist summary{font-size:12.5px;color:var(--muted);cursor:pointer}
+.rdlist ul{margin:4px 0 0;padding-left:18px;font-size:12.5px;max-height:180px;overflow:auto}
+.rdlist li{margin:2px 0}
+details.res.flash{box-shadow:0 0 0 3px #F3C969;transition:box-shadow .4s}
 .rmore summary{font-size:12.5px;color:var(--muted);cursor:pointer}
 .rnew{background:#FDECEA;border:1px solid #F0B9B3;border-radius:6px;padding:8px 12px;margin:6px 0 8px;font-size:13px;line-height:1.7;color:#7A1F17}
 .rnew code{font-size:11.5px;background:#fff;padding:0 4px;border-radius:3px}
@@ -494,12 +511,16 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
         <div id="lNoShot" class="lnoshot" hidden></div>
   <div class="relay" id="rBox" hidden>
     <h3 style="margin:0 0 4px" id="rTitle">要你操作：把提示词交给网页 AI <span id="rWords" class="small muted"></span></h3>
-    <div id="rRes" class="rres" hidden></div>
+    <div class="rprog" id="rProg"></div>
+    <div id="rRes" class="rdone" hidden></div>
+    <details class="rdlist" id="rDoneBox" hidden><summary id="rDoneN"></summary><ul id="rDoneList"></ul></details>
+    <div class="rnow" id="rNow"></div>
     <div id="rAuto">
     <ol class="steps rsteps">
       <li id="rS1"><b>提示词复制好了</b> <span class="small muted" id="rLen"></span> <button class="btn ghost sm" id="rCopy">再复制一次</button><div class="rs"></div></li>
       <li id="rS2"><button class="btn sm" id="rOpen">打开网页 AI ↗</button> 粘贴、发送 <span class="small faint">（最好开一个新对话）</span><div class="rs"></div></li>
       <li id="rStep3"><span id="rT3">等网页 AI 写完、自己传回来</span><div class="rs"></div></li>
+      <li id="rStep4"><span>存好，这个词完成</span><div class="rs"></div></li>
     </ol>
     <div id="rHint" class="small" style="color:var(--amber)"></div>
     </div>
@@ -1131,10 +1152,10 @@ function qCheckRender(){const pk=picked(),box=$('#qCheck');if(!pk.length){box.hi
 function qPickRender(){const pk=picked();qCheckRender();
   $('#qPickN').textContent=pk.length?`（选上的 ${pk.length} 个）`:'';
   $('#qPick').innerHTML=pk.length?'<table><tr><th>单词</th><th>意思</th><th>题目</th><th>这次</th></tr>'+pk.map(i=>{
-      const doing=i.st==='doing',will=!i.q&&!doing;
+      const doing=i.st==='doing'&&!i.q,will=!i.q&&!doing,fin=i.st==='doing'&&i.q;
       const now=i.q?'<span class="ck-y">有</span>':i.manual?'<span class="ck-bad">上次没过</span>':'<span class="ck-n">没有</span>';
       return `<tr class="${will||doing?'':'dim'}"><td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,32)}</td><td>${now}</td>
-        <td>${doing?'<span class="pst pst-doing">正在做</span>':will?'<span class="pst pst-will">能出</span>':'<span class="small faint">不用出（有了）</span>'}</td></tr>`}).join('')+'</table>'
+        <td>${fin?'<span class="ck-y">✓ 做好了</span>':doing?'<span class="pst pst-doing">正在做</span>':will?'<span class="pst pst-will">能出</span>':'<span class="small faint">不用出（有了）</span>'}</td></tr>`}).join('')+'</table>'
     :'<div class="pempty">还没有选上的词。到第 3 步「选词」勾上要出题的词。</div>';
   $('#tAdd').textContent=PQ.length?`给这 ${PQ.length} 个词出题 ▶`:'给要出的词出题 ▶';$('#tAdd').disabled=!PQ.length;
   const allQ=pk.length&&!PQ.length&&pk.every(i=>i.q);$('#qNext').hidden=!allQ;
@@ -1174,9 +1195,9 @@ async function loadPic(){await poolNeed();picPickRender();picRes();stepTasks('pi
 function picPickRender(){const pk=picked();picCheckRender();
   $('#picPickN').textContent=pk.length?`（选上的 ${pk.length} 个）`:'';
   $('#picPick').innerHTML=pk.length?'<table><tr><th>单词</th><th>意思</th><th>题目</th><th>画面</th><th>这次</th></tr>'+pk.map(i=>{
-      const doing=i.st==='doing',will=i.q&&!i.pic&&!doing;
+      const doing=i.st==='doing'&&!i.pic,will=i.q&&!i.pic&&!doing,fin=i.st==='doing'&&i.pic;
       const now=i.pic?'<span class="ck-y">有</span>':i.picfail?'<span class="ck-bad">上次没做成</span>':'<span class="ck-n">没有</span>';
-      const act=doing?'<span class="pst pst-doing">正在做</span>':will?'<span class="pst pst-will">能做</span>':i.pic?'<span class="small faint">不用做（有了）</span>':'<span class="small" style="color:var(--amber)">不能做：先出题</span>';
+      const act=fin?'<span class="ck-y">✓ 做好了</span>':doing?'<span class="pst pst-doing">正在做</span>':will?'<span class="pst pst-will">能做</span>':i.pic?'<span class="small faint">不用做（有了）</span>':'<span class="small" style="color:var(--amber)">不能做：先出题</span>';
       return `<tr class="${will||doing?'':'dim'}"><td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,30)}</td><td>${i.q?'<span class="ck-y">有</span>':'<span class="ck-n">没有</span>'}</td><td>${now}</td><td>${act}</td></tr>`}).join('')+'</table>'
     :'<div class="pempty">还没有选上的词。到第 3 步「选词」勾上要做画面的词。</div>';
   $('#tPics').textContent=PP.length?`给这 ${PP.length} 个词做画面 ▶`:'给要做的词做画面 ▶';$('#tPics').disabled=!PP.length;
@@ -1494,6 +1515,16 @@ $('#pClearDone').onclick=async()=>{const n=(PL.counts||{}).done||0;if(!n)return 
 let RL={};
 function rStep(id,st,detail,cls){const li=$('#'+id);li.dataset.st=st;const d=li.querySelector('.rs');d.innerHTML=detail||'';d.className='rs'+(cls?' '+cls:'')}
 const hm=t=>t?new Date(t*1000).toTimeString().slice(0,8):'';
+/* 「查看详情」：在这一页下面的“结果”里把这个词打开 */
+async function showRes(w){const st=stepOf((ST.runner||{}).task)||page,isQ=st==='q';
+  if(page!==(isQ?'q':'pic'))go(isQ?'q':'pic');
+  await poolNeed();if(isQ){qPickRender();await qRes()}else{picPickRender();await picRes()}
+  const box=$(isQ?'#qRes':'#picRes'),d=[...box.querySelectorAll('details.res')].find(x=>(x.querySelector('summary .w')||{}).textContent===w);
+  if(!d){const n=[...box.querySelectorAll('.rnone')].find(x=>(x.querySelector('b')||{}).textContent===w);
+    if(n){n.scrollIntoView({behavior:'smooth',block:'center'});return}
+    return toast(`「${w}」不在下面的结果里（不是选上的词）`)}
+  d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});d.classList.add('flash');setTimeout(()=>d.classList.remove('flash'),2200)}
+let RLLAST=null;
 async function relayTick(){
   let d;try{d=await api('/api/relay')}catch(e){return}
   const on=d.status==='等你操作';
@@ -1501,31 +1532,45 @@ async function relayTick(){
   RL.status=d.status;navBadges();
   if(on&&d.id!==RL.id){$('#rReply').value='';$('#rMsg').textContent='';const rs=stepOf((ST.runner||{}).task);if(page!==rs)toast('有一个词等你交给网页 AI：在左边「'+(STEPNAME[rs]||'')+'」那一步',8000);else setTimeout(()=>$('#tLive').scrollIntoView({behavior:'smooth',block:'start'}),300)}
   RL=d;
+  // 一个词做完了：这一页的表和结果马上刷新（画面那一列变“有”）
+  const L=d.last;
+  const lt=(L&&L.t)||0;
+  if(RLLAST===null)RLLAST=lt;                       // 打开页面时先记下现在的，之后有词做完就刷新
+  else if(lt!==RLLAST){RLLAST=lt;await poolNeed();if(page==='pic'){picPickRender();picRes()}else if(page==='q'){qPickRender();qRes()}}
   if(!d.show)return;
-  const ph=d.phase,H=d.hist||[],cur=H[H.length-1]||{},n=H.length,ws=d.words||[],sent=ph!=='send';
+  const ph=d.phase,H=d.hist||[],n=H.length,ws=d.words||[],sent=ph!=='send',done=d.done||[];
   const wn=ws.length>1?`${ws[0]} … ${ws[ws.length-1]}（${ws.length} 个词）`:(ws[0]||'');
-  const fixr=n>1||/改/.test(d.kind||'');
-  // 标题：现在要不要你动手
-  $('#rTitle').firstChild.textContent={send:'要你操作：把提示词交给网页 AI ',checking:'收到了，软件在看能不能用 ',ok:'做好了 ',fail:'没做成 '}[ph]||'';
-  $('#rWords').textContent=wn+(fixr&&ph==='send'?'（改错：提示词换了，要重新粘贴）':'');
-  // 一行结果：这一个（或者上一个）做好了没有
-  const L=d.last,showL=L&&(ph==='ok'||ph==='fail'||(ph==='send'&&JSON.stringify(L.words)!==JSON.stringify(ws))||(ph==='send'&&n>1));
+  const okN=done.filter(x=>x.ok).length,badN=done.length-okN,cnt=done.reduce((a,x)=>a+(x.words||[]).length,0);
+  $('#rTitle').firstChild.textContent={send:'要你操作：把提示词交给网页 AI ',checking:'收到了，软件在存 ',ok:'这个词完成了 ',fail:'这个词没做成 '}[ph]||'';
+  $('#rWords').textContent='';
+  $('#rProg').innerHTML=d.total?`这一批 ${d.total} 个词：现在是第 <b>${Math.min(d.total,cnt+1)}</b> 个 · 做好了 <b>${okN}</b> 个${badN?` · 没做成 <b>${badN}</b> 个`:''}`:'';
+  // 刚做完的那个词：一张卡片，4 步都打勾，能点开看
+  const nm=x=>(x.words||[]).length>1?`${x.words[0]} 等 ${x.words.length} 个`:(x.words||[])[0];
+  const showL=L&&L.t&&done.length&&(sent||ph==='send');
   $('#rRes').hidden=!showL;
-  if(showL){const nm=(L.words||[]).length>1?`${L.words[0]} 等 ${L.words.length} 个`:(L.words||[])[0];
-    $('#rRes').className='rres '+(L.ok?'ok':'bad');
-    $('#rRes').innerHTML=(ph==='send'?'<small style="margin:0 6px 0 0">上一个：</small>':'')+(L.ok?`✓ ${esc(nm)} 做好了`:`✗ ${esc(nm)} 没做成：`)+`<small>${esc(L.ok?(L.detail||'').replace(/^做好了/,''):(L.detail||''))}</small>`}
+  if(showL){const w=(L.words||[])[0];$('#rRes').className='rdone '+(L.ok?'ok':'bad');
+    $('#rRes').innerHTML=`<div class="hd">${L.ok?'✓':'✗'} ${esc(nm(L))} ${L.ok?'完成了':'没做成'} <button class="btn ghost sm" onclick="showRes('${esc(w)}')">查看详情</button></div>
+      <div class="chain">① 提示词 <i>✓</i> → ② 粘贴发送 <i>✓</i> → ③ ${L.got?hm(L.got).slice(0,5)+' ':''}传回来了 <i>✓</i>${L.glen?`（${L.glen.toLocaleString()} 字）`:''} → ④ ${L.ok?'存好了 <i>✓</i>':'没法用 <i class="x">✗</i>'}</div>
+      ${L.detail&&L.detail!=='做好了'?`<div class="small" style="color:${L.ok?'var(--muted)':'#9B2C22'}">${esc(L.ok?L.detail.replace(/^做好了/,'').replace(/^（|）$/g,''):L.detail)}</div>`:''}`}
+  // 这次做完的词：一个一个列着
+  $('#rDoneBox').hidden=done.length<2;
+  if(done.length>1){$('#rDoneN').textContent=`这次做完的 ${done.length} 个（点词看详情）`;
+    $('#rDoneList').innerHTML=done.slice().reverse().map(x=>`<li>${x.ok?'<span class="ck-y">✓</span>':'<span class="ck-bad">✗</span>'} <a href="#" onclick="showRes('${esc((x.words||[])[0])}');return false"><b style="font-family:var(--en)">${esc(nm(x))}</b></a> <span class="muted">${hm(x.t).slice(0,5)}${x.ok?'':' · '+esc((x.detail||'').slice(0,40))}</span></li>`).join('')}
+  // 现在这个词
+  $('#rNow').innerHTML=ph==='send'?`现在：<span style="font-family:var(--en)">${esc(wn)}</span>${done.length?' <span class="small" style="color:var(--amber);font-weight:400">——换了一个新词，提示词也换了，要再粘贴一次</span>':''}${n>1?' <span class="small" style="color:var(--amber);font-weight:400">（改错：要重新粘贴）</span>':''}`:`现在：<span style="font-family:var(--en)">${esc(wn)}</span>`;
   $('#rLen').textContent=`${(d.promptLen||0).toLocaleString()} 字`;
   $('#rHint').textContent=sent?'':(d.hint||'');
+  const cur=H[n-1]||{};
   rStep('rS1',d.copied||sent?'done':'you',d.copied||sent?'':'没复制上：点「再复制一次」');
   rStep('rS2',sent?'done':'you',sent?'':`等你粘贴、发送（已经 ${secs(Date.now()/1000-d.ts)}）`);
-  rStep('rStep3',ph==='send'?'run':ph==='checking'?'run':'done',
-    ph==='send'?(d.inbox?'软件每 '+d.pollSec+' 秒看一次，还没传回来':'它写完，点它回复下面的「复制」'):ph==='checking'?esc(d.stage||'收到了，在看能不能用…'):'收到了');
-  // 详细情况（收着）：前几轮、中转仓库
+  rStep('rStep3',ph==='send'?'run':'done',ph==='send'?(d.inbox?'软件每 '+d.pollSec+' 秒看一次，还没传回来':'它写完，点它回复下面的「复制」'):`收到了 ${hm(cur.got)}${cur.glen?`（${cur.glen.toLocaleString()} 字）`:''}`,ph==='send'?'':'ok');
+  rStep('rStep4',ph==='send'?'wait':ph==='checking'?'run':ph==='ok'?'done':'bad',ph==='send'?'':ph==='checking'?esc(d.stage||'在看能不能用、存下…'):ph==='ok'?'完成了':'没法用：'+esc((cur.detail||'').slice(0,60)),ph==='ok'?'ok':ph==='fail'?'bad':'');
+  // 详细情况（收着）
   const ups=d.uploads||[],up=ups[0],base=x=>(x||'').replace(/\.(xlsx|txt)$/,'');
-  $('#rHist').innerHTML=H.length>1?`<div class="rhist"><b>这一批前几轮</b><ul>${H.slice(0,-1).map((h,k)=>`<li>${h.res==='ok'?'<span class="ck-y">✓</span>':h.res==='fail'?'<span class="ck-bad">✗</span>':'<span class="ck-n">–</span>'}
+  $('#rHist').innerHTML=n>1?`<div class="rhist"><b>这个词前几轮</b><ul>${H.slice(0,-1).map((h,k)=>`<li>${h.res==='ok'?'<span class="ck-y">✓</span>':h.res==='fail'?'<span class="ck-bad">✗</span>':'<span class="ck-n">–</span>'}
     第 ${k+1} 轮 ${hm(h.t0).slice(0,5)}${h.got?` 收到 ${(h.glen||0).toLocaleString()} 字`:''}${h.res==='fail'?'：'+esc((h.detail||'').slice(0,120)):h.res==='gone'?'：软件重开了，没等到':''}</li>`).join('')}</ul></div>`:'';
-  $('#rMoreInfo').innerHTML=d.inbox?`这一轮要的文件：<code>${esc(d.inbox)}</code>　看了 ${d.polls||0} 次${d.lastPoll?`（上次 ${hm(d.lastPoll)}）`:''}<br>inbox/ 里现在：${(d.inboxNow||[]).length?(d.inboxNow||[]).map(esc).join('、'):'空的'}<br>`+
-    (up?`网页 AI 最近一次上传：${hm(up.ts)} <code>${esc(up.path.split('/').pop())}</code>${base(up.path)===base(d.inbox)?'（就是这一轮的）':'（不是这一轮的）'}`:'网页 AI 还没上传过'):'';
+  $('#rMoreInfo').innerHTML=d.inbox?`这个词要的文件：<code>${esc(d.inbox)}</code>　看了 ${d.polls||0} 次${d.lastPoll?`（上次 ${hm(d.lastPoll)}）`:''}<br>inbox/ 里现在：${(d.inboxNow||[]).length?(d.inboxNow||[]).map(esc).join('、'):'空的'}<br>`+
+    (up?`网页 AI 最近一次上传：${hm(up.ts)} <code>${esc(up.path.split('/').pop())}</code>${base(up.path)===base(d.inbox)?'（就是这个词的）':'（是上一个词的，已经收下了）'}`:'网页 AI 还没上传过'):'';
   $('#rNew').hidden=true;
   $('#rManual').hidden=sent;$('#rSkip').hidden=sent;
 }
