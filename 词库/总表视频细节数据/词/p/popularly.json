@@ -1,7 +1,951 @@
 {
  "单词": "popularly",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/icecream.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6
+     },
+     {
+      "label": "大众的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.25,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.25,
+        0.7
+       ],
+       "to": [
+        1.0,
+        0.7
+       ],
+       "offset": 0.7
+      }
+     },
+     {
+      "label": "以…的方式",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-crowd.svg",
+   "p1": "art/ic-road.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/station-bg.svg",
+   "items": [
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.05,
+     "y": 0.62,
+     "s": 0.56,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.05,
+       0.62
+      ],
+      "to": [
+       0.95,
+       0.62
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.9,
+     "y": 0.66,
+     "s": 0.5,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.9,
+       0.66
+      ],
+      "to": [
+       0.1,
+       0.66
+      ],
+      "offset": 0.4
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.25,
+     "y": 0.7,
+     "s": 0.6,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.25,
+       0.7
+      ],
+      "to": [
+       1.0,
+       0.7
+      ],
+      "offset": 0.7
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 1.0,
+     "y": 0.6,
+     "s": 0.54,
+     "z": 2,
+     "walk": {
+      "from": [
+       1.0,
+       0.6
+      ],
+      "to": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "label": "在大众当中",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.25,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.25,
+        0.7
+       ],
+       "to": [
+        1.0,
+        0.7
+       ],
+       "offset": 0.7
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 1.0,
+      "y": 0.6,
+      "s": 0.54,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.0,
+        0.6
+       ],
+       "to": [
+        0.0,
+        0.6
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "svg": "art/lightbulb.svg",
+      "x": 0.5,
+      "y": 0.28,
+      "s": 0.24,
+      "anim": "pulse"
+     }
+    ],
+    "text": "普遍地",
+    "pos": "副词",
+    "diff": "大众普遍地",
+    "ex": "This idea is popularly believed.",
+    "exzh": "这种想法被普遍相信。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 1.0,
+       "y": 0.6,
+       "s": 0.54,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.0,
+         0.6
+        ],
+        "to": [
+         0.0,
+         0.6
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "svg": "art/lightbulb.svg",
+       "x": 0.5,
+       "y": 0.28,
+       "s": 0.24,
+       "when": "idea",
+       "anim": "pulse"
+      },
+      {
+       "label": "popularly",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "popularly"
+      },
+      {
+       "label": "普遍",
+       "x": 0.84,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "普遍"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/map.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.6
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.82,
+      "y": 0.3,
+      "s": 0.24
+     }
+    ],
+    "text": "俗称",
+    "pos": "副词",
+    "diff": "大众嘴里怎么叫",
+    "ex": "New York is popularly called the Big Apple.",
+    "exzh": "纽约俗称“大苹果”。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/map.svg",
+       "x": 0.4,
+       "y": 0.46,
+       "s": 0.6,
+       "when": "New York"
+      },
+      {
+       "svg": "art/apple.svg",
+       "x": 0.8,
+       "y": 0.46,
+       "s": 0.4,
+       "when": "the Big Apple",
+       "pop": true
+      },
+      {
+       "label": "the Big Apple",
+       "x": 0.8,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "the Big Apple"
+      },
+      {
+       "label": "俗称",
+       "x": 0.4,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "俗称"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/ballot.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.18,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.82,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3
+     }
+    ],
+    "text": "由民众（选出）",
+    "pos": "副词",
+    "diff": "由大众投票",
+    "ex": "The mayor is popularly elected.",
+    "exzh": "市长由民众选出。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/ballot.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.5,
+       "when": "elected"
+      },
+      {
+       "actor": "west-man-hello",
+       "x": 0.16,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "when": "mayor"
+      },
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.72,
+       "z": 3,
+       "when": "popularly"
+      },
+      {
+       "label": "popularly elected",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "popularly elected"
+      },
+      {
+       "label": "由民众选出",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "由民众选出"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“在大众当中”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 1.0,
+       "y": 0.6,
+       "s": 0.54,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.0,
+         0.6
+        ],
+        "to": [
+         0.0,
+         0.6
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "label": "popular + ly …地",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "大众普遍地",
+    "node": "① 普遍地",
+    "pos": "副词",
+    "pic": 0,
+    "say": [
+     "大众普遍地这样想、这样做，就是普遍地。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 1.0,
+       "y": 0.6,
+       "s": 0.54,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.0,
+         0.6
+        ],
+        "to": [
+         0.0,
+         0.6
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "label": "普遍地",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "普遍地"
+      }
+     ]
+    }
+   },
+   {
+    "via": "大众嘴里怎么叫",
+    "node": "② 俗称",
+    "pos": "副词",
+    "pic": 1,
+    "from": 0,
+    "say": [
+     "大众嘴里怎么叫它，就是俗称。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "svg": "art/apple.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.3,
+       "when": "怎么叫"
+      },
+      {
+       "label": "俗称",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "俗称"
+      }
+     ]
+    }
+   },
+   {
+    "via": "由大众投票",
+    "node": "③ 由民众（选出）",
+    "pos": "副词",
+    "pic": 2,
+    "from": 0,
+    "say": [
+     "由大众投票选出来，就是由民众选出。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/ballot.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "投票"
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.18,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 3,
+       "when": "大众"
+      },
+      {
+       "label": "由民众选出",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "由民众选出"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "generally": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      }
+     ]
+    },
+    "commonly": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "popularlyai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：这种植物俗称什么？\n听：This plant is popularly called the money tree.\nA. 苹果树\nB. 发财树\nC. 圣诞树\nD. 老榕树",
@@ -89,5 +1033,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

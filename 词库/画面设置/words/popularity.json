@@ -1,0 +1,671 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/icecream.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.6
+    },
+    {
+     "label": "受欢迎的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/scales.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "label": "…的程度",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-star.svg",
+  "p1": "art/ic-scales.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/stage-bg.svg",
+  "items": [
+   {
+    "actor": "west-man-speech",
+    "x": 0.3,
+    "y": 0.6,
+    "s": 0.9,
+    "z": 3
+   },
+   {
+    "svg": "art/audience-wide.svg",
+    "x": 0.5,
+    "y": 0.92,
+    "s": 0.3,
+    "z": 6,
+    "crowd": 9
+   },
+   {
+    "label": "受欢迎的程度",
+    "x": 0.72,
+    "y": 0.14,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-speech",
+     "x": 0.36,
+     "y": 0.58,
+     "s": 0.9,
+     "z": 3,
+     "id": "m",
+     "seq": "talk"
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 6,
+     "crowd": 9,
+     "nodWith": "m"
+    },
+    {
+     "svg": "art/star.svg",
+     "x": 0.8,
+     "y": 0.24,
+     "s": 0.16,
+     "anim": "pulse"
+    }
+   ],
+   "text": "受欢迎（的程度）、名气",
+   "pos": "名词",
+   "diff": "有多少人喜欢",
+   "ex": "The singer's popularity is growing.",
+   "exzh": "这位歌手的人气越来越旺。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-music",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3,
+      "when": "singer"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 6,
+      "crowd": 9,
+      "when": "popularity"
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.12,
+      "s2": 0.36,
+      "when": "growing",
+      "grow": [
+       0,
+       2
+      ]
+     },
+     {
+      "label": "popularity",
+      "x": 0.76,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "popularity"
+     },
+     {
+      "label": "人气",
+      "x": 0.76,
+      "y": 0.8,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "人气"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/station-bg.svg",
+   "items": [
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.05,
+     "y": 0.62,
+     "s": 0.56,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.05,
+       0.62
+      ],
+      "to": [
+       0.95,
+       0.62
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.9,
+     "y": 0.66,
+     "s": 0.5,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.9,
+       0.66
+      ],
+      "to": [
+       0.1,
+       0.66
+      ],
+      "offset": 0.4
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.25,
+     "y": 0.7,
+     "s": 0.6,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.25,
+       0.7
+      ],
+      "to": [
+       1.0,
+       0.7
+      ],
+      "offset": 0.7
+     }
+    },
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.5,
+     "y": 0.3,
+     "s": 0.3
+    }
+   ],
+   "text": "普及、流行",
+   "pos": "名词",
+   "diff": "一样东西在大众中流传开",
+   "ex": "Smartphones have gained popularity.",
+   "exzh": "智能手机已经普及了。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.25,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.25,
+        0.7
+       ],
+       "to": [
+        1.0,
+        0.7
+       ],
+       "offset": 0.7
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 1.0,
+      "y": 0.6,
+      "s": 0.54,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.0,
+        0.6
+       ],
+       "to": [
+        0.0,
+        0.6
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.32,
+      "when": "Smartphones",
+      "pop": true
+     },
+     {
+      "label": "popularity",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "popularity"
+     },
+     {
+      "label": "普及",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "普及"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“受欢迎的程度”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-speech",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9
+     },
+     {
+      "label": "popular + ity 程度",
+      "x": 0.7,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "有多受欢迎",
+   "node": "① 受欢迎（的程度）、名气",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "一个人有多受欢迎，就是他的受欢迎程度、名气。",
+    "popularity contest 是人气比拼，常讽刺只比谁讨人喜欢。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-speech",
+      "x": 0.34,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3,
+      "when": "一个人",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.76,
+      "y": 0.4,
+      "s": 0.12,
+      "s2": 0.34,
+      "when": "有多受欢迎",
+      "grow": [
+       0,
+       2
+      ]
+     },
+     {
+      "label": "名气",
+      "x": 0.76,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "名气"
+     },
+     {
+      "label": "popularity contest",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "popularity contest"
+     }
+    ]
+   }
+  },
+  {
+   "via": "在大众中流传开",
+   "node": "② 普及、流行",
+   "pos": "名词",
+   "pic": 1,
+   "from": 0,
+   "say": [
+    "一样东西在大众中流传开，就是普及、流行。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.25,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.25,
+        0.7
+       ],
+       "to": [
+        1.0,
+        0.7
+       ],
+       "offset": 0.7
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 1.0,
+      "y": 0.6,
+      "s": 0.54,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.0,
+        0.6
+       ],
+       "to": [
+        0.0,
+        0.6
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.32,
+      "when": "一样东西"
+     },
+     {
+      "label": "普及、流行",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "普及"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "fashion": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/shopbag.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.7
+     }
+    ]
+   },
+   "currency": {
+    "bg": "studio",
+    "tint": "green",
+    "items": [
+     {
+      "svg": "art/tag.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：什么在不断增长？",
+    "listen": "The popularity of online shopping keeps growing.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "商店的数量",
+     "网购受欢迎的程度",
+     "商品的价格",
+     "快递员的工资"
+    ],
+    "ans": "B",
+    "why": "popularity 受欢迎的程度。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The singer's popularity ______ growing quickly.",
+    "opts": [
+     "is",
+     "are",
+     "were",
+     "be"
+    ],
+    "ans": "A",
+    "why": "popularity 不可数，谓语用单数 is。",
+    "kd": "变形"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "This app is very ______ with students. (popularity)",
+    "opts": [],
+    "ans": "popular",
+    "why": "be 后面要形容词，popularity → popular。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 popular、popularity、popularly 中选一个填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Table tennis enjoys great ______ in China.",
+    "opts": [],
+    "ans": "popularity",
+    "why": "enjoy great popularity 广受欢迎，enjoy 后面要名词。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The game lost a lot of its popularities.",
+    "opts": [],
+    "ans": "popularities → popularity",
+    "why": "popularity 一般不可数，不加 s。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这本书在孩子们中间越来越受欢迎。",
+    "stem": "The book is ______ more and more ______ among children.",
+    "opts": [],
+    "ans": [
+     "becoming",
+     "popular"
+    ],
+    "why": "become popular 变得受欢迎，“越来越”用正在进行的 is becoming。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Football is ______ called soccer in America.",
+    "opts": [
+     "popular",
+     "popularly",
+     "popularity",
+     "populate"
+    ],
+    "ans": "B",
+    "why": "修饰动词 called 用副词 popularly（俗称）。",
+    "kd": "词性转换"
+   }
+  ]
+ }
+}

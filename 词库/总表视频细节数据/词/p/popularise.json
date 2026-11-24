@@ -1,7 +1,563 @@
 {
  "单词": "popularise",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/icecream.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6
+     },
+     {
+      "label": "大众的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/lightbulb.svg",
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.4
+     },
+     {
+      "ray": [
+       [
+        0.45,
+        0.5
+       ],
+       [
+        0.6,
+        0.5
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.5
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.78,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3,
+      "delay": 0.8
+     },
+     {
+      "label": "使…化",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-crowd.svg",
+   "p1": "art/ic-lightbulb.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.22,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "svg": "art/lightbulb.svg",
+     "x": 0.5,
+     "y": 0.3,
+     "s": 0.24,
+     "anim": "pulse"
+    },
+    {
+     "actor": "west-girl-raise",
+     "x": 0.62,
+     "y": 0.64,
+     "s": 0.62,
+     "z": 3
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.82,
+     "y": 0.64,
+     "s": 0.62,
+     "z": 3
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.72,
+     "y": 0.92,
+     "s": 0.24,
+     "z": 5
+    },
+    {
+     "label": "使大众化",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.25,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.25,
+        0.7
+       ],
+       "to": [
+        1.0,
+        0.7
+       ],
+       "offset": 0.7
+      }
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.5,
+      "y": 0.32,
+      "s": 0.22,
+      "anim": "bob"
+     }
+    ],
+    "text": "普及、推广",
+    "pos": "动词",
+    "diff": "让大家都接受、都喜欢",
+    "ex": "He helped popularise football in the town.",
+    "exzh": "他帮着在镇上推广足球。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "x": 0.22,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "He"
+      },
+      {
+       "svg": "art/ball.svg",
+       "x": 0.46,
+       "y": 0.8,
+       "s": 0.14,
+       "when": "football",
+       "anim": "bob"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.66,
+       "y": 0.64,
+       "s": 0.62,
+       "z": 3,
+       "when": "town"
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.86,
+       "y": 0.64,
+       "s": 0.62,
+       "z": 3,
+       "when": "town",
+       "delay": 0.3
+      },
+      {
+       "label": "popularise",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "popularise"
+      },
+      {
+       "label": "推广",
+       "x": 0.84,
+       "y": 0.24,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "推广"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.24,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/book-open.svg",
+      "x": 0.64,
+      "y": 0.5,
+      "s": 0.36
+     },
+     {
+      "svg": "art/lightbulb.svg",
+      "x": 0.86,
+      "y": 0.3,
+      "s": 0.24,
+      "anim": "pulse"
+     }
+    ],
+    "text": "使通俗化",
+    "pos": "动词",
+    "diff": "把深奥的东西讲得普通人也懂",
+    "ex": "The teacher popularised science for us.",
+    "exzh": "老师把科学讲得通俗易懂。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-present",
+       "x": 0.24,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "The teacher",
+       "id": "m",
+       "seq": "talk"
+      },
+      {
+       "svg": "art/lightbulb.svg",
+       "x": 0.56,
+       "y": 0.3,
+       "s": 0.26,
+       "when": "science",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.6,
+       "y": 0.92,
+       "s": 0.28,
+       "z": 6,
+       "crowd": 9,
+       "nodWith": "m",
+       "when": "science"
+      },
+      {
+       "label": "popularised",
+       "x": 0.8,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "popularised"
+      },
+      {
+       "label": "通俗易懂",
+       "x": 0.8,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "通俗易懂"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“使大众化”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.22,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3
+      },
+      {
+       "svg": "art/lightbulb.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.24,
+       "anim": "pulse"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.78,
+       "y": 0.64,
+       "s": 0.62,
+       "z": 3
+      },
+      {
+       "label": "popular 大众的 + ise 使…化",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.066,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "让大家都接受、都喜欢",
+    "node": "① 普及、推广",
+    "pos": "动词",
+    "pic": 0,
+    "say": [
+     "让一样东西大家都接受、都喜欢，就是普及、推广。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "svg": "art/ball.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.22,
+       "when": "一样东西",
+       "anim": "bob"
+      },
+      {
+       "label": "普及、推广",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "普及"
+      }
+     ]
+    }
+   },
+   {
+    "via": "讲得普通人也懂",
+    "node": "② 使通俗化",
+    "pos": "动词",
+    "pic": 1,
+    "from": 0,
+    "say": [
+     "把深奥的东西讲得普通人也懂，就是使通俗化。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/book-open.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.36,
+       "when": "深奥的东西"
+      },
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.56,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "讲得"
+      },
+      {
+       "svg": "art/lightbulb.svg",
+       "x": 0.84,
+       "y": 0.3,
+       "s": 0.24,
+       "when": "普通人也懂",
+       "anim": "pulse"
+      },
+      {
+       "label": "使通俗化",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "使通俗化"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "publicize": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/poster.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8
+      }
+     ]
+    },
+    "promote": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/tag.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6
+      }
+     ]
+    },
+    "push": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/loudspeaker.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "populariseai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：她想做什么？\n听：She wants to popularise science among children.\nA. 当一名科学家\nB. 给孩子上数学课\nC. 在孩子中普及科学\nD. 写一本小说",
@@ -90,5 +646,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
