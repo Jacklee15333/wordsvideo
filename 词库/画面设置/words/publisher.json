@@ -41,11 +41,13 @@
    "img": "art/room-bg.svg",
    "items": [
     {
-     "actor": "west-clerk-happy",
+     "actor": "cn-teacher-laugh",
      "x": 0.42,
      "y": 0.56,
      "s": 0.92,
-     "z": 3
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2
     },
     {
      "label": "做…的人或机构",
@@ -77,11 +79,12 @@
   "img": "art/room-bg.svg",
   "items": [
    {
-    "actor": "west-clerk-happy",
+    "actor": "cn-teacher-point",
     "x": 0.26,
     "y": 0.58,
     "s": 0.9,
-    "z": 3
+    "z": 3,
+    "seq": "talk"
    },
    {
     "svg": "art/press.svg",
@@ -110,7 +113,8 @@
      "x": 0.26,
      "y": 0.58,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/books.svg",
@@ -123,7 +127,8 @@
      "x": 0.8,
      "y": 0.86,
      "s": 0.22,
-     "z": 5
+     "z": 5,
+     "anim": "shake"
     }
    ],
    "text": "出版商、出版社",
@@ -136,12 +141,13 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "actor": "west-clerk-happy",
+      "actor": "west-man-smile",
       "x": 0.22,
       "y": 0.58,
       "s": 0.9,
       "z": 3,
-      "when": "publisher"
+      "when": "publisher",
+      "seq": "blink"
      },
      {
       "svg": "art/press.svg",
@@ -190,13 +196,51 @@
      "x": 0.3,
      "y": 0.58,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "seq": "talk"
     },
     {
      "svg": "art/newspaper.svg",
      "x": 0.72,
      "y": 0.5,
-     "s": 0.46
+     "s": 0.46,
+     "anim": "sway"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ],
    "text": "（报刊的）发行人",
@@ -214,7 +258,8 @@
       "y": 0.58,
       "s": 0.9,
       "z": 3,
-      "when": "He"
+      "when": "He",
+      "seq": "talk"
      },
      {
       "svg": "art/newspaper.svg",
@@ -222,7 +267,8 @@
       "y": 0.5,
       "s": 0.46,
       "when": "newspaper",
-      "pop": true
+      "pop": true,
+      "anim": "sway"
      },
      {
       "label": "publisher",
@@ -242,6 +288,42 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "发行人"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -255,17 +337,19 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "actor": "west-clerk-happy",
+      "actor": "west-clerk-think",
       "x": 0.26,
       "y": 0.58,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/press.svg",
       "x": 0.7,
       "y": 0.54,
-      "s": 0.5
+      "s": 0.5,
+      "anim": "shake"
      },
      {
       "label": "publish + er",
@@ -300,12 +384,24 @@
       "hideCue": 1
      },
      {
-      "actor": "west-clerk-happy",
+      "waves": true,
+      "x": 0.3,
+      "y": 0.24,
+      "dir": 0,
+      "spread": 50,
+      "n": 3,
+      "when": "当众宣布",
+      "hideCue": 1
+     },
+     {
+      "actor": "west-man-hello",
       "x": 0.26,
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "出书"
+      "when": "出书",
+      "seq": "pingpong",
+      "fps": 2
      },
      {
       "svg": "art/books.svg",
@@ -319,7 +415,8 @@
       "x": 0.86,
       "y": 0.3,
       "s": 0.26,
-      "when": "报刊"
+      "when": "报刊",
+      "anim": "sway"
      },
      {
       "label": "出版商",
@@ -344,6 +441,127 @@
   }
  ],
  "distinguish": false,
+ "demo": {
+  "driver": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/demo-car.svg",
+      "x": 0.2,
+      "y": 0.74,
+      "s": 0.4,
+      "go": [
+       0.85,
+       0.74
+      ],
+      "dur": 3,
+      "wait": 0,
+      "loop": true,
+      "anim": "ride",
+      "z": 3
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
+     }
+    ]
+   }
+  },
+  "actor": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "beam": true,
+      "x": 0.3,
+      "y": 0.0,
+      "len": 0.9,
+      "width": 0.18,
+      "swing": 12,
+      "period": 4
+     },
+     {
+      "actor": "west-man-speech",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3,
+      "id": "a",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.24,
+      "z": 6,
+      "crowd": 7,
+      "nodWith": "a"
+     }
+    ]
+   }
+  },
+  "artist": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/demo-easel.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.82,
+      "shadow": true,
+      "reveal": "up",
+      "rdur": 2
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.82,
+      "y": 0.2,
+      "s": 0.16,
+      "anim": "pulse",
+      "delay": 2
+     }
+    ]
+   }
+  }
+ },
  "lianxi": {
   "qs": [
    {

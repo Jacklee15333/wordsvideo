@@ -11,7 +11,8 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.5,
-     "shadow": true
+     "shadow": true,
+     "anim": "bob"
     },
     {
      "label": "事",
@@ -22,6 +23,42 @@
      "bg": "#FFF6D8",
      "border": "#E0A800",
      "delay": 0.6
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ]
   },
@@ -106,7 +143,8 @@
     "svg": "art/ballot.svg",
     "x": 0.5,
     "y": 0.56,
-    "s": 0.46
+    "s": 0.46,
+    "anim": "bob"
    },
    {
     "actor": "walk-west-woman-case",
@@ -169,14 +207,52 @@
      "svg": "art/flag.svg",
      "x": 0.84,
      "y": 0.3,
-     "s": 0.34
+     "s": 0.34,
+     "anim": "swing"
     },
     {
      "actor": "west-girl-raise",
      "x": 0.18,
      "y": 0.62,
      "s": 0.7,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ],
    "text": "共和国",
@@ -193,7 +269,8 @@
       "x": 0.3,
       "y": 0.42,
       "s": 0.56,
-      "when": "France"
+      "when": "France",
+      "anim": "swing"
      },
      {
       "svg": "art/crown.svg",
@@ -220,7 +297,7 @@
        ],
        [
         0.866,
-        0.5980000000000001
+        0.598
        ]
       ],
       "color": "#E2453C",
@@ -246,6 +323,42 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "共和国"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -259,21 +372,28 @@
      "x": 0.2,
      "y": 0.6,
      "s": 0.8,
-     "z": 3
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2,
+     "id": "s0"
     },
     {
      "actor": "west-girl-raise",
      "x": 0.5,
      "y": 0.64,
      "s": 0.68,
-     "z": 3
+     "z": 3,
+     "seq": "blink",
+     "nodWith": "s0"
     },
     {
      "actor": "cn-boy-raise",
      "x": 0.78,
      "y": 0.64,
      "s": 0.68,
-     "z": 3
+     "z": 3,
+     "seq": "blink",
+     "nodWith": "s0"
     },
     {
      "svg": "art/class-desks.svg",
@@ -293,28 +413,35 @@
     "img": "art/classroom-bg.svg",
     "items": [
      {
-      "actor": "cn-teacher-laugh",
+      "actor": "cn-teacher-point",
       "x": 0.18,
       "y": 0.6,
       "s": 0.8,
       "z": 3,
-      "when": "Our class"
+      "when": "Our class",
+      "seq": "talk",
+      "id": "s0"
      },
      {
-      "actor": "west-girl-raise",
+      "actor": "west-girl-listen",
       "x": 0.48,
       "y": 0.64,
       "s": 0.68,
       "z": 3,
-      "when": "Our class"
+      "when": "Our class",
+      "seq": "blink",
+      "nodWith": "s0"
      },
      {
-      "actor": "cn-boy-raise",
+      "actor": "west-man-hello",
       "x": 0.76,
       "y": 0.64,
       "s": 0.68,
       "z": 3,
-      "when": "Our class"
+      "when": "Our class",
+      "seq": "pingpong",
+      "fps": 2,
+      "nodWith": "s0"
      },
      {
       "svg": "art/class-desks.svg",
@@ -357,7 +484,8 @@
       "svg": "art/ballot.svg",
       "x": 0.5,
       "y": 0.56,
-      "s": 0.46
+      "s": 0.46,
+      "anim": "bob"
      },
      {
       "actor": "walk-west-woman-case",
@@ -448,7 +576,8 @@
       "y": 0.4,
       "s": 0.3,
       "cue": 1,
-      "when": "国王"
+      "when": "国王",
+      "anim": "shake"
      },
      {
       "shape": "circle",
@@ -464,12 +593,12 @@
      {
       "ray": [
        [
-        0.12000000000000002,
+        0.12,
         0.18
        ],
        [
         0.4,
-        0.6200000000000001
+        0.62
        ]
       ],
       "color": "#E2453C",
@@ -484,7 +613,8 @@
       "y": 0.56,
       "s": 0.44,
       "cue": 1,
-      "when": "全体公民"
+      "when": "全体公民",
+      "anim": "bob"
      },
      {
       "label": "共和国",
@@ -494,6 +624,42 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "共和国"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -511,20 +677,24 @@
     "img": "art/classroom-bg.svg",
     "items": [
      {
-      "actor": "cn-teacher-laugh",
+      "actor": "west-clerk-happy",
       "x": 0.2,
       "y": 0.6,
       "s": 0.8,
       "z": 3,
-      "when": "一群人"
+      "when": "一群人",
+      "seq": "blink",
+      "nodWith": "s0"
      },
      {
-      "actor": "west-girl-raise",
+      "actor": "west-girl-explain",
       "x": 0.5,
       "y": 0.64,
       "s": 0.68,
       "z": 3,
-      "when": "一群人"
+      "when": "一群人",
+      "seq": "talk",
+      "id": "s0"
      },
      {
       "actor": "cn-boy-raise",
@@ -532,7 +702,9 @@
       "y": 0.64,
       "s": 0.68,
       "z": 3,
-      "when": "一群人"
+      "when": "一群人",
+      "seq": "blink",
+      "nodWith": "s0"
      },
      {
       "label": "共同体",
@@ -557,14 +729,53 @@
       "svg": "art/ballot.svg",
       "x": 0.5,
       "y": 0.55,
-      "s": 0.7
+      "s": 0.7,
+      "anim": "bob"
      },
      {
-      "actor": "west-girl-raise",
+      "actor": "west-girl-music",
       "x": 0.2,
       "y": 0.6,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }

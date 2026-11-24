@@ -81,7 +81,8 @@
       "x": 0.5,
       "y": 0.56,
       "s": 0.5,
-      "shadow": true
+      "shadow": true,
+      "anim": "shake"
      },
      {
       "label": "动词词尾",
@@ -109,7 +110,8 @@
      "x": 0.5,
      "y": 0.5,
      "s": 0.5,
-     "pop": true
+     "pop": true,
+     "anim": "sway"
     },
     {
      "actor": "walk-west-woman-case",
@@ -247,14 +249,16 @@
       "svg": "art/newspaper.svg",
       "x": 0.5,
       "y": 0.46,
-      "s": 0.5
+      "s": 0.5,
+      "anim": "sway"
      },
      {
       "actor": "cn-teacher-point",
       "x": 0.16,
       "y": 0.6,
       "s": 0.78,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      }
     ],
     "text": "发表；公布",
@@ -272,7 +276,8 @@
        "y": 0.58,
        "s": 0.9,
        "z": 3,
-       "when": "She"
+       "when": "She",
+       "seq": "talk"
       },
       {
        "svg": "art/magazine.svg",
@@ -316,7 +321,8 @@
        "svg": "art/newspaper.svg",
        "x": 0.5,
        "y": 0.5,
-       "s": 0.5
+       "s": 0.5,
+       "anim": "sway"
       },
       {
        "actor": "walk-west-woman-case",
@@ -504,8 +510,20 @@
        "x": 0.5,
        "y": 0.55,
        "s": 0.7
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "x": 0.66,
+       "y": 0.36,
+       "s": 0.1,
+       "to": [
+        0.2,
+        -0.3
+       ]
       }
-     ]
+     ],
+     "beat": 100
     },
     "deliver": {
      "bg": "blank",
@@ -516,7 +534,8 @@
        "x": 0.5,
        "y": 0.6,
        "s": 0.9,
-       "z": 3
+       "z": 3,
+       "seq": "talk"
       }
      ]
     },
@@ -528,7 +547,10 @@
        "svg": "art/poster.svg",
        "x": 0.5,
        "y": 0.5,
-       "s": 0.8
+       "s": 0.8,
+       "reveal": "down",
+       "rdur": 2,
+       "anim": "sway"
       }
      ]
     },
@@ -540,11 +562,50 @@
        "svg": "art/poster.svg",
        "x": 0.5,
        "y": 0.5,
-       "s": 0.8
+       "s": 0.8,
+       "anim": "sway"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
       }
      ]
     }
-   }
+   },
+   "logic": "逻辑不同：publish 从“公众”来，是“使公之于众”——出版、正式发表；print 只是印刷；release 多说唱片、电影、产品发布；deliver 说发表演讲；unveil 是揭幕、首次公布。",
+   "tip": "一句话记法：出书、发文章用 publish，出歌、出电影用 release，发表演讲用 deliver a speech。"
   }
  },
  "插图": [
@@ -640,5 +701,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
