@@ -1,7 +1,257 @@
 {
  "单词": "usable",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/wrench.svg",
+      "x": 0.66,
+      "y": 0.5,
+      "s": 0.3,
+      "anim": "shake"
+     },
+     {
+      "label": "用",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "shadow": true
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.8,
+      "y": 0.3,
+      "s": 0.14,
+      "anim": "pulse"
+     },
+     {
+      "label": "能…的、值得…的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-wrench.svg",
+   "p1": "art/ic-check.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.6,
+     "y": 0.52,
+     "s": 0.5
+    },
+    {
+     "label": "能被使用的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "svg": "art/star.svg",
+     "x": 0.84,
+     "y": 0.3,
+     "s": 0.14,
+     "anim": "pulse"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-smile",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.6,
+      "y": 0.52,
+      "s": 0.5
+     },
+     {
+      "svg": "art/rotary-phone.svg",
+      "x": 0.86,
+      "y": 0.72,
+      "s": 0.24
+     }
+    ],
+    "text": "能用的、可用的",
+    "pos": "形容词",
+    "diff": "东西还能用（不一定多有用）",
+    "ex": "My old phone is still usable.",
+    "exzh": "我的旧手机还能用。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.24,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "My"
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.62,
+       "y": 0.52,
+       "s": 0.5,
+       "when": "old phone"
+      },
+      {
+       "label": "still usable",
+       "x": 0.62,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "usable"
+      },
+      {
+       "label": "还能用",
+       "x": 0.86,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "还能用"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“能被使用的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.6,
+       "y": 0.52,
+       "s": 0.5
+      },
+      {
+       "label": "use + able",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "还能用",
+    "node": "能用的、可用的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "东西还能用、可以拿来用，就是能用的、可用的。",
+     "useful 是有用处；usable 只是能用。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.6,
+       "y": 0.52,
+       "s": 0.5,
+       "when": "东西还能用"
+      },
+      {
+       "label": "能用的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "能用的"
+      },
+      {
+       "label": "useful 有用处",
+       "x": 0.2,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "useful"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "available": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/rack.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "usableai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：那台旧电视怎么样？\n听：The old TV is still usable.\nA. 还能用\nB. 已经坏了\nC. 被卖掉了\nD. 很新",
@@ -89,5 +339,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

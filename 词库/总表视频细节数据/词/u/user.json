@@ -1,7 +1,432 @@
 {
  "单词": "user",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/wrench.svg",
+      "x": 0.66,
+      "y": 0.5,
+      "s": 0.3,
+      "anim": "shake"
+     },
+     {
+      "label": "用",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-think",
+      "x": 0.42,
+      "y": 0.56,
+      "s": 0.92,
+      "z": 3
+     },
+     {
+      "label": "…的人",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.78,
+      "y": 0.72,
+      "s": 0.3,
+      "z": 5,
+      "pop": true,
+      "delay": 0.5
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-wrench.svg",
+   "p1": "art/ic-person.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-explain",
+     "x": 0.34,
+     "y": 0.6,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.72,
+     "y": 0.5,
+     "s": 0.36
+    },
+    {
+     "label": "使用的人",
+     "x": 0.72,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.66,
+      "y": 0.5,
+      "s": 0.3
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 1.0,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.0,
+        0.66
+       ],
+       "to": [
+        0.6,
+        0.66
+       ],
+       "offset": 0
+      }
+     }
+    ],
+    "text": "用户、使用者",
+    "pos": "名词",
+    "diff": "用某样东西的人",
+    "ex": "This app has millions of users.",
+    "exzh": "这个应用有几百万用户。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.34,
+       "when": "app",
+       "pop": true
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.0,
+       "y": 0.68,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.0,
+         0.68
+        ],
+        "to": [
+         1.0,
+         0.68
+        ],
+        "offset": 0
+       },
+       "when": "users"
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 1.0,
+       "y": 0.7,
+       "s": 0.48,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.0,
+         0.7
+        ],
+        "to": [
+         0.0,
+         0.7
+        ],
+        "offset": 0.4
+       },
+       "when": "users"
+      },
+      {
+       "label": "users",
+       "x": 0.84,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "users"
+      },
+      {
+       "label": "用户",
+       "x": 0.84,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "用户"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/poster.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.56
+     },
+     {
+      "label": "Say no to drugs",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A"
+     }
+    ],
+    "text": "（毒品的）吸食者",
+    "pos": "名词",
+    "diff": "使用毒品的人",
+    "ex": "Drug users need help from doctors.",
+    "exzh": "吸毒者需要医生的帮助。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/poster.svg",
+       "x": 0.3,
+       "y": 0.48,
+       "s": 0.56,
+       "when": "Drug users"
+      },
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.72,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "doctors"
+      },
+      {
+       "label": "Drug users",
+       "x": 0.3,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "Drug users"
+      },
+      {
+       "label": "帮助",
+       "x": 0.72,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "帮助"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“使用的人”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.34,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.36
+      },
+      {
+       "label": "use + er",
+       "x": 0.72,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "使用的人",
+    "node": "① 用户、使用者",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "使用某样东西的人，就是用户、使用者。",
+     "好用的东西，叫 user-friendly。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.34,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "when": "使用某样东西"
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.36,
+       "when": "使用某样东西"
+      },
+      {
+       "label": "用户",
+       "x": 0.72,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "用户"
+      },
+      {
+       "label": "user-friendly",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "user-friendly"
+      }
+     ]
+    }
+   },
+   {
+    "via": "使用毒品的人",
+    "node": "② （毒品的）吸食者",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "使用毒品的人，也叫 user，就是吸食者。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/poster.svg",
+       "x": 0.5,
+       "y": 0.46,
+       "s": 0.56,
+       "when": "毒品"
+      },
+      {
+       "label": "吸食者",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "吸食者"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "consumer": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/shopbag.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7
+      }
+     ]
+    },
+    "customer": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/tag.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "userai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：这个应用有多少用户？\n听：This app has over one million users.\nA. 一万多\nB. 一千多\nC. 一百多\nD. 一百多万",
@@ -89,5 +514,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

@@ -1,7 +1,419 @@
 {
  "单词": "useless",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/wrench.svg",
+      "x": 0.66,
+      "y": 0.5,
+      "s": 0.3,
+      "anim": "shake"
+     },
+     {
+      "label": "用",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/mug.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.56,
+      "r": 0.26,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "delay": 0.8
+     },
+     {
+      "ray": [
+       [
+        0.318,
+        0.274
+       ],
+       [
+        0.6819999999999999,
+        0.8460000000000001
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 0.8
+     },
+     {
+      "label": "没有…的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-wrench.svg",
+   "p1": "art/ic-cupempty.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/umbrella-broken.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.56
+    },
+    {
+     "label": "没有用处的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#C92A2A",
+     "border": "#C92A2A"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/umbrella-broken.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.56
+     },
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.5,
+      "y": 0.18,
+      "s": 0.3
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.66,
+      "z": 3
+     }
+    ],
+    "text": "无用的、徒劳的",
+    "pos": "形容词",
+    "diff": "派不上用场",
+    "ex": "This broken umbrella is useless.",
+    "exzh": "这把破伞没用了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/raincloud.svg",
+       "x": 0.5,
+       "y": 0.18,
+       "s": 0.3,
+       "when": "umbrella"
+      },
+      {
+       "svg": "art/umbrella-broken.svg",
+       "x": 0.46,
+       "y": 0.58,
+       "s": 0.56,
+       "when": "broken umbrella"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.66,
+       "z": 3,
+       "when": "useless"
+      },
+      {
+       "label": "useless",
+       "x": 0.16,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "useless"
+      },
+      {
+       "label": "没用",
+       "x": 0.16,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "没用"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/bread.svg",
+      "x": 0.72,
+      "y": 0.66,
+      "s": 0.3,
+      "rot": 20
+     }
+    ],
+    "text": "不中用的",
+    "pos": "形容词",
+    "diff": "（口语）人派不上用场",
+    "ex": "I'm useless at cooking.",
+    "exzh": "我做饭一点都不行。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "I'm"
+      },
+      {
+       "svg": "art/bread.svg",
+       "x": 0.72,
+       "y": 0.66,
+       "s": 0.32,
+       "when": "cooking",
+       "rot": 20
+      },
+      {
+       "label": "useless at cooking",
+       "x": 0.6,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "useless"
+      },
+      {
+       "label": "不行",
+       "x": 0.72,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "不行"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“没有用处的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/umbrella-broken.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.56
+      },
+      {
+       "label": "use 用处 + less 没有…的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "没有用处",
+    "node": "① 无用的、徒劳的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "没有用处、派不上用场的，就是无用的、徒劳的。",
+     "unused 是没用过的，别混。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/umbrella-broken.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.56,
+       "when": "派不上用场"
+      },
+      {
+       "label": "无用的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "无用的"
+      },
+      {
+       "label": "unused 没用过的",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "unused"
+      }
+     ]
+    }
+   },
+   {
+    "via": "人派不上用场",
+    "node": "② 不中用的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "人派不上用场，口语里就是不中用的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "人派不上用场"
+      },
+      {
+       "label": "不中用的",
+       "x": 0.7,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "不中用的"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "pointless": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/ball.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.4
+      },
+      {
+       "shape": "circle",
+       "x": 0.5,
+       "y": 0.6,
+       "r": 0.3,
+       "stroke": "#E2453C",
+       "lw": 8,
+       "fill": "rgba(0,0,0,0)"
+      },
+      {
+       "ray": [
+        [
+         0.29000000000000004,
+         0.26999999999999996
+        ],
+        [
+         0.71,
+         0.9299999999999999
+        ]
+       ],
+       "color": "#E2453C",
+       "lw": 0.02,
+       "dur": 0.4
+      }
+     ]
+    },
+    "vain": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/raincloud.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6
+      }
+     ]
+    },
+    "waste": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/recyclebin.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "uselessai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人怎么评价这把旧伞？\n听：This old umbrella is useless now.\nA. 很漂亮\nB. 很贵\nC. 很新\nD. 没用了",
@@ -89,5 +501,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

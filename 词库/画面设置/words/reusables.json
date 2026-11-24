@@ -1,0 +1,418 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/shopbag.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "ray": [
+      [
+       0.25,
+       0.7
+      ],
+      [
+       0.18,
+       0.3
+      ],
+      [
+       0.5,
+       0.14
+      ],
+      [
+       0.82,
+       0.3
+      ],
+      [
+       0.75,
+       0.7
+      ]
+     ],
+     "color": "#3FA7D6",
+     "lw": 0.016,
+     "arrow": true,
+     "dur": 1.6
+    },
+    {
+     "label": "可重复使用的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bottle.svg",
+     "x": 0.3,
+     "y": 0.56,
+     "s": 0.44
+    },
+    {
+     "svg": "art/shopbag.svg",
+     "x": 0.66,
+     "y": 0.58,
+     "s": 0.44,
+     "delay": 0.4
+    },
+    {
+     "label": "复数",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-loop.svg",
+  "p1": "art/ic-star.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/park-bg.svg",
+  "items": [
+   {
+    "svg": "art/shopbag.svg",
+    "x": 0.3,
+    "y": 0.58,
+    "s": 0.46
+   },
+   {
+    "svg": "art/bottle.svg",
+    "x": 0.56,
+    "y": 0.58,
+    "s": 0.46
+   },
+   {
+    "svg": "art/mug.svg",
+    "x": 0.8,
+    "y": 0.66,
+    "s": 0.3
+   },
+   {
+    "label": "可重复使用的东西",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/shopbag.svg",
+     "x": 0.3,
+     "y": 0.58,
+     "s": 0.46
+    },
+    {
+     "svg": "art/bottle.svg",
+     "x": 0.56,
+     "y": 0.58,
+     "s": 0.46
+    },
+    {
+     "svg": "art/mug.svg",
+     "x": 0.8,
+     "y": 0.66,
+     "s": 0.3
+    },
+    {
+     "actor": "west-girl-music",
+     "x": 0.12,
+     "y": 0.64,
+     "s": 0.6,
+     "z": 3
+    }
+   ],
+   "text": "可重复使用的物品",
+   "pos": "名词",
+   "diff": "购物袋、水杯、餐具等",
+   "ex": "Bring your reusables to the picnic.",
+   "exzh": "去野餐带上你的可重复使用的物品。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "x": 0.18,
+      "y": 0.62,
+      "s": 0.76,
+      "z": 3,
+      "when": "Bring"
+     },
+     {
+      "svg": "art/shopbag.svg",
+      "x": 0.44,
+      "y": 0.6,
+      "s": 0.4,
+      "when": "reusables",
+      "pop": true
+     },
+     {
+      "svg": "art/bottle.svg",
+      "x": 0.64,
+      "y": 0.6,
+      "s": 0.4,
+      "when": "reusables",
+      "delay": 0.3,
+      "pop": true
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.82,
+      "y": 0.68,
+      "s": 0.26,
+      "when": "reusables",
+      "delay": 0.6,
+      "pop": true
+     },
+     {
+      "label": "reusables",
+      "x": 0.6,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "reusables"
+     },
+     {
+      "label": "野餐",
+      "x": 0.86,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "野餐"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“可重复使用的东西”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/shopbag.svg",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.46
+     },
+     {
+      "svg": "art/bottle.svg",
+      "x": 0.56,
+      "y": 0.58,
+      "s": 0.46
+     },
+     {
+      "label": "reusable + s",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "形容词转名词，再加 s",
+   "node": "可重复使用的物品",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "形容词当名词用，可以加 -s",
+   "ruleEx": "reusables 可重复使用的物品      valuables 贵重物品",
+   "say": [
+    "形容词当名词用以后，可以加 s。",
+    "valuables 是贵重物品，recyclables 是可回收物。",
+    "reusables 就是可重复使用的物品。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "形容词 → 名词 + s",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "可以加 s",
+      "hideCue": 1
+     },
+     {
+      "label": "valuables",
+      "x": 0.3,
+      "y": 0.4,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "valuables",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/recyclebin.svg",
+      "x": 0.72,
+      "y": 0.56,
+      "s": 0.4,
+      "when": "recyclables",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/shopbag.svg",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.44,
+      "cue": 2,
+      "when": "reusables"
+     },
+     {
+      "svg": "art/bottle.svg",
+      "x": 0.6,
+      "y": 0.58,
+      "s": 0.44,
+      "cue": 2,
+      "when": "reusables"
+     },
+     {
+      "label": "可重复使用的物品",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "可重复使用的物品"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：商店现在卖什么？",
+    "listen": "The shop now sells reusables like cloth bags.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "一次性用品",
+     "二手车",
+     "玩具",
+     "可重复使用的东西"
+    ],
+    "ans": "D",
+    "why": "reusables 可重复使用的物品。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Cloth bags and glass jars are good ______.",
+    "opts": [
+     "reuse",
+     "reusable",
+     "reusing",
+     "reusables"
+    ],
+    "ans": "D",
+    "why": "复数主语，表语用名词复数 reusables。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 reuse、reusable 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "This bottle is ______; don't throw it away.",
+    "opts": [],
+    "ans": "reusable",
+    "why": "be 后面要形容词 reusable。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "We ______ these jars again and again. (reusables)",
+    "opts": [],
+    "ans": "reuse",
+    "why": "主语 we，用动词原形 reuse。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "These reusables is cheap.",
+    "opts": [],
+    "ans": "is → are",
+    "why": "主语 these reusables 是复数，用 are。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "用可重复使用的杯子代替纸杯。",
+    "stem": "Use a reusable cup ______ of a paper cup.",
+    "opts": [],
+    "ans": "instead",
+    "why": "instead of 代替。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Which of these is a reusable thing?",
+    "opts": [
+     "a paper cup",
+     "a plastic straw",
+     "a tissue",
+     "a cloth bag"
+    ],
+    "ans": "D",
+    "why": "布袋可以一次次用；纸杯、吸管、纸巾都是一次性的。",
+    "kd": "用法"
+   }
+  ]
+ }
+}
