@@ -1,7 +1,715 @@
 {
  "单词": "made-up",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/book-open.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.56,
+      "shadow": true
+     },
+     {
+      "svg": "art/hammer.svg",
+      "x": 0.8,
+      "y": 0.3,
+      "s": 0.2,
+      "anim": "shake"
+     },
+     {
+      "label": "被做出来的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.6
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.34,
+      "z": 1
+     },
+     {
+      "shape": "rect",
+      "x": 0.12,
+      "y": 0.2,
+      "w": 0.15,
+      "h": 0.24,
+      "fill": "#E2453C",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.425,
+       0.38
+      ],
+      "dur": 1.2,
+      "wait": 0.5
+     },
+     {
+      "shape": "rect",
+      "x": 0.88,
+      "y": 0.2,
+      "w": 0.15,
+      "h": 0.24,
+      "fill": "#3FA7D6",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.575,
+       0.38
+      ],
+      "dur": 1.2,
+      "wait": 0.7
+     },
+     {
+      "shape": "rect",
+      "x": 0.12,
+      "y": 0.85,
+      "w": 0.15,
+      "h": 0.24,
+      "fill": "#F2C14E",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.425,
+       0.62
+      ],
+      "dur": 1.2,
+      "wait": 0.9
+     },
+     {
+      "shape": "rect",
+      "x": 0.88,
+      "y": 0.85,
+      "w": 0.15,
+      "h": 0.24,
+      "fill": "#59B95A",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.575,
+       0.62
+      ],
+      "dur": 1.2,
+      "wait": 1.1
+     },
+     {
+      "label": "凑齐、拼成",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 2
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-book-open.svg",
+   "p1": "art/ic-up.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "shape": "rect",
+     "x": 0.12,
+     "y": 0.2,
+     "w": 0.15,
+     "h": 0.24,
+     "fill": "#E2453C",
+     "stroke": "#1B1A1F",
+     "lw": 3,
+     "go": [
+      0.22499999999999998,
+      0.38
+     ],
+     "dur": 1.2,
+     "wait": 0.5
+    },
+    {
+     "shape": "rect",
+     "x": 0.88,
+     "y": 0.2,
+     "w": 0.15,
+     "h": 0.24,
+     "fill": "#3FA7D6",
+     "stroke": "#1B1A1F",
+     "lw": 3,
+     "go": [
+      0.375,
+      0.38
+     ],
+     "dur": 1.2,
+     "wait": 0.7
+    },
+    {
+     "shape": "rect",
+     "x": 0.12,
+     "y": 0.85,
+     "w": 0.15,
+     "h": 0.24,
+     "fill": "#F2C14E",
+     "stroke": "#1B1A1F",
+     "lw": 3,
+     "go": [
+      0.22499999999999998,
+      0.62
+     ],
+     "dur": 1.2,
+     "wait": 0.9
+    },
+    {
+     "shape": "rect",
+     "x": 0.88,
+     "y": 0.85,
+     "w": 0.15,
+     "h": 0.24,
+     "fill": "#59B95A",
+     "stroke": "#1B1A1F",
+     "lw": 3,
+     "go": [
+      0.375,
+      0.62
+     ],
+     "dur": 1.2,
+     "wait": 1.1
+    },
+    {
+     "ray": [
+      [
+       0.48,
+       0.5
+      ],
+      [
+       0.56,
+       0.5
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 0.8,
+     "delay": 2
+    },
+    {
+     "svg": "art/book-open.svg",
+     "x": 0.76,
+     "y": 0.52,
+     "s": 0.44,
+     "delay": 2.4,
+     "pop": true
+    },
+    {
+     "label": "东拼西凑做出来的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 2.4
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-speech",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/book-open.svg",
+      "x": 0.74,
+      "y": 0.6,
+      "s": 0.42
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.8,
+      "y": 0.22,
+      "s": 0.12,
+      "anim": "pulse"
+     }
+    ],
+    "text": "编造的、虚构的",
+    "pos": "形容词",
+    "diff": "凭空拼出来的，不是真的",
+    "ex": "It's a made-up story.",
+    "exzh": "那是个编出来的故事。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.24,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "story"
+      },
+      {
+       "svg": "art/book-open.svg",
+       "x": 0.56,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "story"
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.82,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "when": "story",
+       "nodWith": "t"
+      },
+      {
+       "label": "made-up story",
+       "x": 0.56,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "made-up"
+      },
+      {
+       "label": "编出来的",
+       "x": 0.56,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "编出来的"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.36,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/makeupkit.svg",
+      "x": 0.76,
+      "y": 0.8,
+      "s": 0.26
+     }
+    ],
+    "text": "化了妆的",
+    "pos": "形容词",
+    "diff": "脸被打扮过",
+    "ex": "The made-up actor walked onto the stage.",
+    "exzh": "化了妆的演员走上了舞台。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.1,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.1,
+         0.62
+        ],
+        "to": [
+         0.6,
+         0.62
+        ],
+        "offset": 0
+       },
+       "goWhen": "walked"
+      },
+      {
+       "svg": "art/makeupkit.svg",
+       "x": 0.84,
+       "y": 0.82,
+       "s": 0.22,
+       "when": "made-up"
+      },
+      {
+       "label": "made-up actor",
+       "x": 0.8,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "made-up"
+      },
+      {
+       "label": "化了妆的",
+       "x": 0.8,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "化了妆的"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“东拼西凑做出来的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "shape": "rect",
+       "x": 0.12,
+       "y": 0.2,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#E2453C",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.22499999999999998,
+        0.38
+       ],
+       "dur": 1.2,
+       "wait": 0.5
+      },
+      {
+       "shape": "rect",
+       "x": 0.88,
+       "y": 0.2,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#3FA7D6",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.375,
+        0.38
+       ],
+       "dur": 1.2,
+       "wait": 0.7
+      },
+      {
+       "shape": "rect",
+       "x": 0.12,
+       "y": 0.85,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#F2C14E",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.22499999999999998,
+        0.62
+       ],
+       "dur": 1.2,
+       "wait": 0.9
+      },
+      {
+       "shape": "rect",
+       "x": 0.88,
+       "y": 0.85,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#59B95A",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.375,
+        0.62
+       ],
+       "dur": 1.2,
+       "wait": 1.1
+      },
+      {
+       "svg": "art/book-open.svg",
+       "x": 0.76,
+       "y": 0.52,
+       "s": 0.44,
+       "delay": 2.4,
+       "pop": true
+      },
+      {
+       "label": "made 被做出来的 + up 拼成",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.066,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "拼出来的故事",
+    "node": "① 编造的、虚构的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "把东一点、西一点的材料拼成一个故事。",
+     "它不是真发生过的，而是拼出来的，就是编造的、虚构的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "shape": "rect",
+       "x": 0.12,
+       "y": 0.2,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#E2453C",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.22499999999999998,
+        0.38
+       ],
+       "dur": 1.2,
+       "wait": 0.2
+      },
+      {
+       "shape": "rect",
+       "x": 0.88,
+       "y": 0.2,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#3FA7D6",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.375,
+        0.38
+       ],
+       "dur": 1.2,
+       "wait": 0.4
+      },
+      {
+       "shape": "rect",
+       "x": 0.12,
+       "y": 0.85,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#F2C14E",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.22499999999999998,
+        0.62
+       ],
+       "dur": 1.2,
+       "wait": 0.6000000000000001
+      },
+      {
+       "shape": "rect",
+       "x": 0.88,
+       "y": 0.85,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#59B95A",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.375,
+        0.62
+       ],
+       "dur": 1.2,
+       "wait": 0.8
+      },
+      {
+       "svg": "art/book-open.svg",
+       "x": 0.74,
+       "y": 0.52,
+       "s": 0.44,
+       "when": "故事",
+       "pop": true
+      },
+      {
+       "label": "不是真发生过的",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "不是真发生过的"
+      },
+      {
+       "label": "编造的、虚构的",
+       "x": 0.74,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "编造的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "脸被拼装、打扮过",
+    "node": "② 化了妆的",
+    "pos": "形容词",
+    "pic": 1,
+    "from": 0,
+    "say": [
+     "脸被拼装、打扮过，就是化了妆的，和 make-up 化妆是一回事。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.3,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "脸"
+      },
+      {
+       "svg": "art/makeupkit.svg",
+       "x": 0.72,
+       "y": 0.74,
+       "s": 0.3,
+       "when": "打扮"
+      },
+      {
+       "label": "化了妆的",
+       "x": 0.72,
+       "y": 0.16,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "化了妆的"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "imaginary": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bed.svg",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.6
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.7,
+       "y": 0.3,
+       "s": 0.3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "fictional": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "shadow": true
+      }
+     ]
+    },
+    "mythical": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/crown.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5
+      }
+     ]
+    },
+    "fake": {
+     "bg": "studio",
+     "tint": "gray",
+     "items": [
+      {
+       "svg": "art/tag.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6
+      },
+      {
+       "shape": "circle",
+       "x": 0.5,
+       "y": 0.5,
+       "r": 0.3,
+       "stroke": "#E2453C",
+       "lw": 8,
+       "fill": "rgba(0,0,0,0)"
+      },
+      {
+       "ray": [
+        [
+         0.29000000000000004,
+         0.16999999999999998
+        ],
+        [
+         0.71,
+         0.8300000000000001
+        ]
+       ],
+       "color": "#E2453C",
+       "lw": 0.02,
+       "dur": 0.4
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "made-upai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人觉得那个故事怎么样？\n听：That's a made-up story, not a true one.\nA. 是真实的\nB. 很有趣\nC. 是编出来的\nD. 很长",
@@ -88,5 +796,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

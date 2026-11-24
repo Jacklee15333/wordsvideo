@@ -1,7 +1,583 @@
 {
  "单词": "maker",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/workbench.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.42,
+      "shadow": true
+     },
+     {
+      "svg": "art/chair.svg",
+      "x": 0.5,
+      "y": 0.44,
+      "s": 0.42,
+      "reveal": "up",
+      "rdur": 2.2
+     },
+     {
+      "svg": "art/hammer.svg",
+      "x": 0.76,
+      "y": 0.4,
+      "s": 0.2,
+      "anim": "shake"
+     },
+     {
+      "label": "做",
+      "x": 0.18,
+      "y": 0.14,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "x": 0.42,
+      "y": 0.56,
+      "s": 0.92,
+      "z": 3
+     },
+     {
+      "label": "…的人",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "svg": "art/chair.svg",
+      "x": 0.78,
+      "y": 0.72,
+      "s": 0.3,
+      "z": 5,
+      "pop": true,
+      "delay": 0.5
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-hammer.svg",
+   "p1": "art/ic-person.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-clerk-happy",
+     "x": 0.42,
+     "y": 0.56,
+     "s": 0.92,
+     "z": 3,
+     "id": "m"
+    },
+    {
+     "svg": "art/workbench.svg",
+     "x": 0.5,
+     "y": 0.86,
+     "s": 0.34,
+     "z": 5
+    },
+    {
+     "svg": "art/chair.svg",
+     "x": 0.74,
+     "y": 0.6,
+     "s": 0.36,
+     "z": 4,
+     "pop": true,
+     "delay": 0.4
+    },
+    {
+     "svg": "art/hammer.svg",
+     "x": 0.28,
+     "y": 0.66,
+     "s": 0.16,
+     "z": 6,
+     "anim": "shake"
+    },
+    {
+     "label": "做东西的人",
+     "x": 0.8,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/factory.svg",
+      "x": 0.38,
+      "y": 0.5,
+      "s": 0.66
+     },
+     {
+      "svg": "art/car.svg",
+      "x": 0.72,
+      "y": 0.84,
+      "s": 0.22,
+      "go": [
+       1.15,
+       0.84
+      ],
+      "dur": 4,
+      "wait": 1,
+      "loop": true,
+      "z": 3
+     },
+     {
+      "label": "制造商",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 1
+     }
+    ],
+    "text": "制造者、制造商",
+    "pos": "名词",
+    "diff": "做出东西的人或公司",
+    "ex": "This company is a famous car maker.",
+    "exzh": "这家公司是一家有名的汽车制造商。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/factory.svg",
+       "x": 0.3,
+       "y": 0.48,
+       "s": 0.7,
+       "when": "company"
+      },
+      {
+       "svg": "art/car.svg",
+       "x": 0.36,
+       "y": 0.84,
+       "s": 0.24,
+       "when": "car maker",
+       "go": [
+        0.86,
+        0.84
+       ],
+       "dur": 2.5,
+       "z": 3
+      },
+      {
+       "label": "car maker",
+       "x": 0.74,
+       "y": 0.16,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "car maker"
+      },
+      {
+       "label": "汽车制造商",
+       "x": 0.74,
+       "y": 0.34,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "汽车制造商"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.42,
+      "y": 0.56,
+      "s": 0.92,
+      "z": 3,
+      "id": "m"
+     },
+     {
+      "svg": "art/workbench.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.34,
+      "z": 5
+     },
+     {
+      "svg": "art/chair.svg",
+      "x": 0.74,
+      "y": 0.6,
+      "s": 0.36,
+      "z": 4,
+      "pop": true,
+      "delay": 0.4
+     },
+     {
+      "svg": "art/hammer.svg",
+      "x": 0.28,
+      "y": 0.66,
+      "s": 0.16,
+      "z": 6,
+      "anim": "shake"
+     },
+     {
+      "label": "chair maker",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.8
+     }
+    ],
+    "text": "…制造者",
+    "pos": "名词",
+    "diff": "放在别的词后面：做某种东西的人",
+    "ex": "My grandpa is a chair maker.",
+    "exzh": "我爷爷是做椅子的手艺人。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.36,
+       "y": 0.56,
+       "s": 0.92,
+       "z": 3,
+       "when": "grandpa"
+      },
+      {
+       "svg": "art/workbench.svg",
+       "x": 0.4,
+       "y": 0.88,
+       "s": 0.3,
+       "z": 5
+      },
+      {
+       "svg": "art/hammer.svg",
+       "x": 0.22,
+       "y": 0.7,
+       "s": 0.14,
+       "z": 6,
+       "anim": "shake",
+       "when": "grandpa"
+      },
+      {
+       "svg": "art/chair.svg",
+       "x": 0.76,
+       "y": 0.6,
+       "s": 0.42,
+       "when": "chair maker",
+       "pop": true
+      },
+      {
+       "label": "chair maker",
+       "x": 0.76,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "chair maker"
+      },
+      {
+       "label": "做椅子的",
+       "x": 0.76,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "做椅子的"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“做东西的人”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.42,
+       "y": 0.56,
+       "s": 0.92,
+       "z": 3,
+       "id": "m"
+      },
+      {
+       "svg": "art/workbench.svg",
+       "x": 0.5,
+       "y": 0.86,
+       "s": 0.34,
+       "z": 5
+      },
+      {
+       "svg": "art/chair.svg",
+       "x": 0.74,
+       "y": 0.6,
+       "s": 0.36,
+       "z": 4,
+       "pop": true,
+       "delay": 0.4
+      },
+      {
+       "svg": "art/hammer.svg",
+       "x": 0.28,
+       "y": 0.66,
+       "s": 0.16,
+       "z": 6,
+       "anim": "shake"
+      },
+      {
+       "label": "make 做 + er …的人",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.07,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "delay": 0.5
+      }
+     ]
+    }
+   },
+   {
+    "via": "做出东西的人或公司",
+    "node": "① 制造者、制造商",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "做东西的，可以是一个手艺人，也可以是一家大工厂。",
+     "所以 maker 就是制造者、制造商。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.24,
+       "y": 0.6,
+       "s": 0.78,
+       "z": 3,
+       "when": "手艺人"
+      },
+      {
+       "svg": "art/chair.svg",
+       "x": 0.4,
+       "y": 0.76,
+       "s": 0.26,
+       "when": "手艺人",
+       "delay": 0.3,
+       "z": 4
+      },
+      {
+       "label": "手艺人",
+       "x": 0.24,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "手艺人"
+      },
+      {
+       "svg": "art/factory.svg",
+       "x": 0.72,
+       "y": 0.52,
+       "s": 0.6,
+       "when": "大工厂"
+      },
+      {
+       "label": "大工厂",
+       "x": 0.72,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "大工厂"
+      },
+      {
+       "label": "maker 制造商",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "制造商"
+      }
+     ]
+    }
+   },
+   {
+    "via": "放在别的词后面，说做哪种东西",
+    "node": "② …制造者",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "maker 常常放在别的词后面，说做哪种东西的人。",
+     "做椅子的，就是 chair maker；做电影的，就是 filmmaker。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "放在别的词后面",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "放在别的词后面"
+      },
+      {
+       "svg": "art/chair.svg",
+       "x": 0.26,
+       "y": 0.52,
+       "s": 0.5,
+       "when": "chair maker"
+      },
+      {
+       "label": "chair maker",
+       "x": 0.26,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "chair maker"
+      },
+      {
+       "svg": "art/tripod-cam.svg",
+       "x": 0.7,
+       "y": 0.52,
+       "s": 0.6,
+       "when": "filmmaker"
+      },
+      {
+       "label": "filmmaker",
+       "x": 0.7,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "filmmaker"
+      }
+     ]
+    }
+   },
+   {
+    "via": "做出天地万物的那一位",
+    "node": "（the Maker）造物主",
+    "from": 0,
+    "say": [
+     "做出天地万物的那一位，英语叫 the Maker，就是造物主。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/star.svg",
+       "x": 0.2,
+       "y": 0.2,
+       "s": 0.14,
+       "when": "天地万物",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.8,
+       "y": 0.16,
+       "s": 0.12,
+       "when": "天地万物",
+       "delay": 0.3,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.6,
+       "y": 0.3,
+       "s": 0.1,
+       "when": "天地万物",
+       "delay": 0.6,
+       "anim": "pulse"
+      },
+      {
+       "label": "the Maker 造物主",
+       "x": 0.5,
+       "y": 0.52,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "造物主"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "manufacturer": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/factory.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.9
+      },
+      {
+       "svg": "art/car.svg",
+       "x": 0.85,
+       "y": 0.8,
+       "s": 0.3,
+       "go": [
+        1.1,
+        0.8
+       ],
+       "dur": 3,
+       "loop": true
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "makerai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：叔叔在哪里工作？\n听：My uncle works for a famous car maker.\nA. 一家汽车修理店\nB. 一家出租车公司\nC. 一家汽车制造商\nD. 一个停车场",
@@ -90,5 +666,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

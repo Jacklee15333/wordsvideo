@@ -1,7 +1,522 @@
 {
  "单词": "makeover",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/workbench.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.42,
+      "shadow": true
+     },
+     {
+      "svg": "art/chair.svg",
+      "x": 0.5,
+      "y": 0.44,
+      "s": 0.42,
+      "reveal": "up",
+      "rdur": 2.2
+     },
+     {
+      "svg": "art/hammer.svg",
+      "x": 0.76,
+      "y": 0.4,
+      "s": 0.2,
+      "anim": "shake"
+     },
+     {
+      "label": "做",
+      "x": 0.18,
+      "y": 0.14,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/house-old.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.62,
+      "hide": 2.4
+     },
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.62,
+      "delay": 2.4,
+      "fade": 0.6
+     },
+     {
+      "ray": [
+       [
+        0.15,
+        0.3
+       ],
+       [
+        0.5,
+        0.14
+       ],
+       [
+        0.85,
+        0.3
+       ]
+      ],
+      "color": "#3FA7D6",
+      "lw": 0.016,
+      "arrow": true,
+      "dur": 1.6,
+      "delay": 0.5
+     },
+     {
+      "label": "从头到尾重做",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 1
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-hammer.svg",
+   "p1": "art/ic-over.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/house-old.svg",
+     "x": 0.5,
+     "y": 0.58,
+     "s": 0.62,
+     "hide": 2.4
+    },
+    {
+     "svg": "art/house-new.svg",
+     "x": 0.5,
+     "y": 0.58,
+     "s": 0.62,
+     "delay": 2.4,
+     "fade": 0.6
+    },
+    {
+     "ray": [
+      [
+       0.15,
+       0.3
+      ],
+      [
+       0.5,
+       0.14
+      ],
+      [
+       0.85,
+       0.3
+      ]
+     ],
+     "color": "#3FA7D6",
+     "lw": 0.016,
+     "arrow": true,
+     "dur": 1.6,
+     "delay": 0.5
+    },
+    {
+     "label": "从头到尾重做",
+     "x": 0.5,
+     "y": 0.92,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.32,
+      "y": 0.58,
+      "s": 0.92,
+      "z": 3
+     },
+     {
+      "svg": "art/mirror.svg",
+      "x": 0.7,
+      "y": 0.42,
+      "s": 0.56
+     },
+     {
+      "svg": "art/makeupkit.svg",
+      "x": 0.76,
+      "y": 0.84,
+      "s": 0.24,
+      "z": 5
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.6,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 4
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.2,
+      "s": 0.12,
+      "anim": "pulse"
+     }
+    ],
+    "text": "改头换面、大变身",
+    "pos": "名词",
+    "diff": "用在人身上：发型、妆容、衣着全换",
+    "ex": "She got a makeover for the party.",
+    "exzh": "为了参加聚会，她来了个大变身。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-listen",
+       "x": 0.3,
+       "y": 0.58,
+       "s": 0.92,
+       "z": 3,
+       "when": "She",
+       "hideWhen": "makeover"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.3,
+       "y": 0.58,
+       "s": 0.92,
+       "z": 3,
+       "when": "makeover"
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.46,
+       "y": 0.2,
+       "s": 0.12,
+       "when": "makeover",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/mirror.svg",
+       "x": 0.7,
+       "y": 0.42,
+       "s": 0.56,
+       "when": "She"
+      },
+      {
+       "svg": "art/makeupkit.svg",
+       "x": 0.76,
+       "y": 0.84,
+       "s": 0.24,
+       "z": 5,
+       "when": "makeover"
+      },
+      {
+       "label": "makeover",
+       "x": 0.86,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "makeover"
+      },
+      {
+       "label": "大变身",
+       "x": 0.86,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "大变身"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/house-old.svg",
+      "x": 0.3,
+      "y": 0.56,
+      "s": 0.58
+     },
+     {
+      "ray": [
+       [
+        0.47,
+        0.56
+       ],
+       [
+        0.55,
+        0.56
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.6
+     },
+     {
+      "svg": "art/house-new.svg",
+      "x": 0.72,
+      "y": 0.56,
+      "s": 0.58,
+      "delay": 1,
+      "pop": true
+     }
+    ],
+    "text": "翻新改造",
+    "pos": "名词",
+    "diff": "用在房子、品牌上：整个翻新",
+    "ex": "Our classroom got a makeover this summer.",
+    "exzh": "今年夏天我们的教室翻新了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/plant.svg",
+       "x": 0.18,
+       "y": 0.66,
+       "s": 0.4,
+       "when": "makeover",
+       "pop": true
+      },
+      {
+       "svg": "art/lamp.svg",
+       "x": 0.82,
+       "y": 0.62,
+       "s": 0.42,
+       "when": "makeover",
+       "delay": 0.3,
+       "pop": true
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.88,
+       "s": 0.3,
+       "z": 5,
+       "when": "classroom"
+      },
+      {
+       "label": "makeover",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "makeover"
+      },
+      {
+       "label": "翻新",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "翻新"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“从头到尾重做一遍”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/house-old.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.62,
+       "hide": 2.4
+      },
+      {
+       "svg": "art/house-new.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.62,
+       "delay": 2.4,
+       "fade": 0.6
+      },
+      {
+       "ray": [
+        [
+         0.15,
+         0.3
+        ],
+        [
+         0.5,
+         0.14
+        ],
+        [
+         0.85,
+         0.3
+        ]
+       ],
+       "color": "#3FA7D6",
+       "lw": 0.016,
+       "arrow": true,
+       "dur": 1.6,
+       "delay": 0.5
+      },
+      {
+       "label": "从头到尾重做",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 1
+      }
+     ]
+    }
+   },
+   {
+    "via": "用在人身上",
+    "node": "① 改头换面、大变身",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "用在人身上，就是发型、妆容、衣着从头到脚全换一遍，改头换面，来个大变身。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-listen",
+       "x": 0.3,
+       "y": 0.58,
+       "s": 0.92,
+       "z": 3,
+       "when": "人身上",
+       "hideWhen": "大变身"
+      },
+      {
+       "svg": "art/makeupkit.svg",
+       "x": 0.74,
+       "y": 0.8,
+       "s": 0.26,
+       "when": "妆容"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.3,
+       "y": 0.58,
+       "s": 0.92,
+       "z": 3,
+       "when": "大变身"
+      },
+      {
+       "label": "大变身",
+       "x": 0.74,
+       "y": 0.2,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "大变身"
+      }
+     ]
+    }
+   },
+   {
+    "via": "用在房子、品牌上",
+    "node": "② 翻新改造",
+    "pos": "名词",
+    "pic": 1,
+    "from": 0,
+    "say": [
+     "用在房子上，就是整个翻新改造。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/house-old.svg",
+       "x": 0.28,
+       "y": 0.56,
+       "s": 0.56,
+       "when": "房子"
+      },
+      {
+       "ray": [
+        [
+         0.46,
+         0.56
+        ],
+        [
+         0.54,
+         0.56
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "when": "翻新"
+      },
+      {
+       "svg": "art/house-new.svg",
+       "x": 0.72,
+       "y": 0.56,
+       "s": 0.56,
+       "when": "翻新",
+       "pop": true
+      },
+      {
+       "label": "翻新改造",
+       "x": 0.72,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "翻新改造"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "makeoverai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：教室怎么了？\n听：Our classroom got a makeover this summer.\nA. 被拆掉了\nB. 换了老师\nC. 关门了\nD. 翻新改造了",
@@ -89,5 +604,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

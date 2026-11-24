@@ -1,7 +1,851 @@
 {
  "单词": "make-up",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/workbench.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.42,
+      "shadow": true
+     },
+     {
+      "svg": "art/chair.svg",
+      "x": 0.5,
+      "y": 0.44,
+      "s": 0.42,
+      "reveal": "up",
+      "rdur": 2.2
+     },
+     {
+      "svg": "art/hammer.svg",
+      "x": 0.76,
+      "y": 0.4,
+      "s": 0.2,
+      "anim": "shake"
+     },
+     {
+      "label": "做",
+      "x": 0.18,
+      "y": 0.14,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.34,
+      "z": 1
+     },
+     {
+      "shape": "rect",
+      "x": 0.12,
+      "y": 0.2,
+      "w": 0.15,
+      "h": 0.24,
+      "fill": "#E2453C",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.425,
+       0.38
+      ],
+      "dur": 1.2,
+      "wait": 0.5
+     },
+     {
+      "shape": "rect",
+      "x": 0.88,
+      "y": 0.2,
+      "w": 0.15,
+      "h": 0.24,
+      "fill": "#3FA7D6",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.575,
+       0.38
+      ],
+      "dur": 1.2,
+      "wait": 0.7
+     },
+     {
+      "shape": "rect",
+      "x": 0.12,
+      "y": 0.85,
+      "w": 0.15,
+      "h": 0.24,
+      "fill": "#F2C14E",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.425,
+       0.62
+      ],
+      "dur": 1.2,
+      "wait": 0.9
+     },
+     {
+      "shape": "rect",
+      "x": 0.88,
+      "y": 0.85,
+      "w": 0.15,
+      "h": 0.24,
+      "fill": "#59B95A",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.575,
+       0.62
+      ],
+      "dur": 1.2,
+      "wait": 1.1
+     },
+     {
+      "label": "凑齐、拼成",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 2
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-hammer.svg",
+   "p1": "art/ic-up.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "shape": "rect",
+     "x": 0.12,
+     "y": 0.2,
+     "w": 0.15,
+     "h": 0.24,
+     "fill": "#E2453C",
+     "stroke": "#1B1A1F",
+     "lw": 3,
+     "go": [
+      0.425,
+      0.4
+     ],
+     "dur": 1.2,
+     "wait": 0.5
+    },
+    {
+     "shape": "rect",
+     "x": 0.88,
+     "y": 0.2,
+     "w": 0.15,
+     "h": 0.24,
+     "fill": "#3FA7D6",
+     "stroke": "#1B1A1F",
+     "lw": 3,
+     "go": [
+      0.575,
+      0.4
+     ],
+     "dur": 1.2,
+     "wait": 0.7
+    },
+    {
+     "shape": "rect",
+     "x": 0.12,
+     "y": 0.85,
+     "w": 0.15,
+     "h": 0.24,
+     "fill": "#F2C14E",
+     "stroke": "#1B1A1F",
+     "lw": 3,
+     "go": [
+      0.425,
+      0.64
+     ],
+     "dur": 1.2,
+     "wait": 0.9
+    },
+    {
+     "shape": "rect",
+     "x": 0.88,
+     "y": 0.85,
+     "w": 0.15,
+     "h": 0.24,
+     "fill": "#59B95A",
+     "stroke": "#1B1A1F",
+     "lw": 3,
+     "go": [
+      0.575,
+      0.64
+     ],
+     "dur": 1.2,
+     "wait": 1.1
+    },
+    {
+     "label": "拼成一个整体",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 2
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/puzzle.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66,
+      "shadow": true
+     },
+     {
+      "label": "整体",
+      "x": 0.84,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ],
+    "text": "构成、组成",
+    "pos": "名词",
+    "diff": "一个整体由哪些部分拼成",
+    "ex": "The make-up of the team is six boys and five girls.",
+    "exzh": "这支队由六个男生和五个女生组成。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/ball.svg",
+       "x": 0.5,
+       "y": 0.84,
+       "s": 0.16,
+       "when": "team",
+       "anim": "bob"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.24,
+       "y": 0.56,
+       "s": 0.8,
+       "z": 3,
+       "when": "six boys"
+      },
+      {
+       "label": "six boys",
+       "x": 0.24,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "six boys"
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.76,
+       "y": 0.56,
+       "s": 0.8,
+       "z": 3,
+       "when": "five girls"
+      },
+      {
+       "label": "five girls",
+       "x": 0.76,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "five girls"
+      },
+      {
+       "label": "组成",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "组成"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/mirror.svg",
+      "x": 0.7,
+      "y": 0.42,
+      "s": 0.56
+     },
+     {
+      "svg": "art/makeupkit.svg",
+      "x": 0.76,
+      "y": 0.84,
+      "s": 0.24,
+      "z": 5
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.6,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 4
+     }
+    ],
+    "text": "化妆品、妆容",
+    "pos": "名词",
+    "diff": "脸上用的东西、化出来的样子",
+    "ex": "She put on make-up before the show.",
+    "exzh": "演出前她化了妆。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.28,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "She"
+      },
+      {
+       "svg": "art/mirror.svg",
+       "x": 0.66,
+       "y": 0.42,
+       "s": 0.56,
+       "when": "make-up"
+      },
+      {
+       "svg": "art/makeupkit.svg",
+       "x": 0.74,
+       "y": 0.84,
+       "s": 0.26,
+       "z": 5,
+       "when": "make-up",
+       "pop": true
+      },
+      {
+       "label": "make-up",
+       "x": 0.88,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "make-up"
+      },
+      {
+       "label": "化了妆",
+       "x": 0.88,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "化了妆"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-smile",
+      "x": 0.4,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/heart.svg",
+      "x": 0.78,
+      "y": 0.3,
+      "s": 0.22,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.8,
+      "y": 0.7,
+      "s": 0.18,
+      "delay": 0.5
+     }
+    ],
+    "text": "性格、素质",
+    "pos": "名词",
+    "diff": "一个人身上各种特点拼在一起",
+    "ex": "Kindness is part of his make-up.",
+    "exzh": "善良是他性格的一部分。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-hello",
+       "x": 0.36,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "his"
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.74,
+       "y": 0.4,
+       "s": 0.34,
+       "when": "Kindness",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "label": "Kindness 善良",
+       "x": 0.74,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "Kindness"
+      },
+      {
+       "label": "性格",
+       "x": 0.74,
+       "y": 0.76,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "性格"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“凑齐拼成的样子”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "shape": "rect",
+       "x": 0.12,
+       "y": 0.2,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#E2453C",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.425,
+        0.4
+       ],
+       "dur": 1.2,
+       "wait": 0.5
+      },
+      {
+       "shape": "rect",
+       "x": 0.88,
+       "y": 0.2,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#3FA7D6",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.575,
+        0.4
+       ],
+       "dur": 1.2,
+       "wait": 0.7
+      },
+      {
+       "shape": "rect",
+       "x": 0.12,
+       "y": 0.85,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#F2C14E",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.425,
+        0.64
+       ],
+       "dur": 1.2,
+       "wait": 0.9
+      },
+      {
+       "shape": "rect",
+       "x": 0.88,
+       "y": 0.85,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#59B95A",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.575,
+        0.64
+       ],
+       "dur": 1.2,
+       "wait": 1.1
+      },
+      {
+       "label": "make up 凑齐、拼成",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.07,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "delay": 1.5
+      }
+     ]
+    }
+   },
+   {
+    "via": "一个整体由哪些部分拼成",
+    "node": "① 构成、组成",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "把零散的部分凑齐，就拼成一个整体。",
+     "一个整体由哪些部分拼成，就是它的构成、组成。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "shape": "rect",
+       "x": 0.12,
+       "y": 0.2,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#E2453C",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.425,
+        0.38
+       ],
+       "dur": 1.2,
+       "wait": 0.3
+      },
+      {
+       "shape": "rect",
+       "x": 0.88,
+       "y": 0.2,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#3FA7D6",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.575,
+        0.38
+       ],
+       "dur": 1.2,
+       "wait": 0.5
+      },
+      {
+       "shape": "rect",
+       "x": 0.12,
+       "y": 0.85,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#F2C14E",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.425,
+        0.62
+       ],
+       "dur": 1.2,
+       "wait": 0.7
+      },
+      {
+       "shape": "rect",
+       "x": 0.88,
+       "y": 0.85,
+       "w": 0.15,
+       "h": 0.24,
+       "fill": "#59B95A",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "go": [
+        0.575,
+        0.62
+       ],
+       "dur": 1.2,
+       "wait": 0.9000000000000001
+      },
+      {
+       "label": "零散的部分",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "零散的部分"
+      },
+      {
+       "label": "整体",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "整体"
+      },
+      {
+       "label": "构成、组成",
+       "x": 0.82,
+       "y": 0.5,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "构成"
+      }
+     ]
+    }
+   },
+   {
+    "via": "把脸和衣着拼装成角色的样子",
+    "node": "② 化妆品、妆容",
+    "pos": "名词",
+    "pic": 1,
+    "rule": "一个词的意思越用越窄：从一大类专指其中一种",
+    "ruleEx": "make-up 扮相 → 化妆品      meat 一切食物 → 肉",
+    "cap": "扮相 → 化妆品、妆容",
+    "say": [
+     "以前，演员上台前，把脸和衣着拼装成角色的样子，叫 make-up，就是扮相。",
+     "英语里，一个词的意思常常越用越窄：从一大类专指其中一种。",
+     "meat 原来指一切食物，后来专指肉。",
+     "make-up 也一样：从整个扮相，专指脸上用的化妆品、妆容。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-speech",
+       "x": 0.3,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "演员",
+       "hideCue": 1
+      },
+      {
+       "label": "扮相",
+       "x": 0.66,
+       "y": 0.2,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "扮相",
+       "hideCue": 1
+      },
+      {
+       "label": "越用越窄",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "cue": 1,
+       "when": "越用越窄",
+       "hideCue": 2
+      },
+      {
+       "label": "一大类 → 其中一种",
+       "x": 0.5,
+       "y": 0.5,
+       "size": 0.08,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "其中一种",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/bread.svg",
+       "x": 0.2,
+       "y": 0.5,
+       "s": 0.2,
+       "when": "一切食物",
+       "hideCue": 3
+      },
+      {
+       "svg": "art/apple.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.2,
+       "when": "一切食物",
+       "delay": 0.2,
+       "hideCue": 3
+      },
+      {
+       "svg": "art/meat.svg",
+       "x": 0.7,
+       "y": 0.5,
+       "s": 0.36,
+       "when": "专指肉",
+       "hideCue": 3
+      },
+      {
+       "label": "meat 肉",
+       "x": 0.7,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "专指肉",
+       "hideCue": 3
+      },
+      {
+       "svg": "art/makeupkit.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "化妆品",
+       "pop": true
+      },
+      {
+       "label": "make-up 化妆品、妆容",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "化妆品"
+      }
+     ]
+    }
+   },
+   {
+    "via": "一个人身上的特点拼在一起",
+    "node": "③ 性格、素质",
+    "pos": "名词",
+    "pic": 2,
+    "from": 0,
+    "say": [
+     "一个人身上的各种特点拼在一起，就是他的性格、素质。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.36,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "一个人"
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.76,
+       "y": 0.3,
+       "s": 0.2,
+       "when": "各种特点",
+       "pop": true
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.76,
+       "y": 0.62,
+       "s": 0.18,
+       "when": "各种特点",
+       "delay": 0.3,
+       "pop": true
+      },
+      {
+       "label": "性格、素质",
+       "x": 0.76,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "性格"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "composition": {
+     "bg": "studio",
+     "tint": "blue",
+     "items": [
+      {
+       "svg": "art/puzzle.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "shadow": true
+      },
+      {
+       "svg": "art/ball.svg",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.3
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.82,
+       "y": 0.4,
+       "s": 0.3
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "make-upai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：她在学校不做什么？\n听：She doesn't wear make-up at school.\nA. 戴帽子\nB. 化妆\nC. 穿裙子\nD. 吃零食",
@@ -94,5 +938,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

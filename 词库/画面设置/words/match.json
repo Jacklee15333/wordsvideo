@@ -1,0 +1,695 @@
+{
+ "style": "core",
+ "board": true,
+ "originPic": {
+  "bg": "blank",
+  "img": "art/bedroom-bg.svg",
+  "items": [
+   {
+    "svg": "art/sock-red.svg",
+    "x": 0.2,
+    "y": 0.56,
+    "s": 0.48,
+    "go": [
+     0.4,
+     0.56
+    ],
+    "dur": 1.2
+   },
+   {
+    "svg": "art/sock-red.svg",
+    "x": 0.8,
+    "y": 0.56,
+    "s": 0.48,
+    "go": [
+     0.6,
+     0.56
+    ],
+    "dur": 1.2
+   },
+   {
+    "label": "match ≈ make：使合适、配成一对",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.07,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 1.4
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/goal.svg",
+     "x": 0.5,
+     "y": 0.42,
+     "s": 0.46
+    },
+    {
+     "svg": "art/ball.svg",
+     "x": 0.5,
+     "y": 0.78,
+     "s": 0.14,
+     "go": [
+      0.5,
+      0.42
+     ],
+     "dur": 1,
+     "wait": 1.5,
+     "loop": true
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.18,
+     "y": 0.6,
+     "s": 0.72,
+     "z": 3
+    },
+    {
+     "actor": "west-girl-raise",
+     "x": 0.84,
+     "y": 0.6,
+     "s": 0.72,
+     "z": 3
+    }
+   ],
+   "text": "比赛",
+   "pos": "名词",
+   "diff": "两个对手一较高下",
+   "ex": "We watched a football match yesterday.",
+   "exzh": "昨天我们看了一场足球比赛。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/goal.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.46
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.5,
+      "y": 0.78,
+      "s": 0.14,
+      "go": [
+       0.5,
+       0.42
+      ],
+      "dur": 1,
+      "wait": 1.5,
+      "loop": true
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.14,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3,
+      "when": "watched"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.86,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3,
+      "when": "watched"
+     },
+     {
+      "label": "football match",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "football match"
+     },
+     {
+      "label": "足球比赛",
+      "x": 0.5,
+      "y": 0.24,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "足球比赛"
+     },
+     {
+      "sound": "say:Goal!",
+      "when": "match",
+      "gap": true
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-point",
+     "x": 0.28,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "actor": "cn-teacher-laugh",
+     "x": 0.72,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "svg": "art/ball.svg",
+     "x": 0.5,
+     "y": 0.86,
+     "s": 0.12
+    }
+   ],
+   "text": "对手",
+   "pos": "名词",
+   "diff": "和你旗鼓相当的人",
+   "ex": "I'm no match for my big brother.",
+   "exzh": "我根本不是我哥哥的对手。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.24,
+      "y": 0.66,
+      "s": 0.66,
+      "z": 3,
+      "when": "I'm"
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.7,
+      "y": 0.56,
+      "s": 0.92,
+      "z": 3,
+      "when": "big brother"
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.9,
+      "y": 0.78,
+      "s": 0.24,
+      "when": "big brother"
+     },
+     {
+      "label": "no match",
+      "x": 0.24,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "no match"
+     },
+     {
+      "label": "对手",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "对手"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/sock-red.svg",
+     "x": 0.36,
+     "y": 0.56,
+     "s": 0.52
+    },
+    {
+     "svg": "art/sock-red.svg",
+     "x": 0.64,
+     "y": 0.56,
+     "s": 0.52
+    }
+   ],
+   "text": "相配、匹配",
+   "pos": "动词",
+   "diff": "颜色、款式协调一致",
+   "ex": "Your socks don't match.",
+   "exzh": "你的袜子不配对。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.36,
+      "y": 0.56,
+      "s": 0.56,
+      "when": "socks"
+     },
+     {
+      "svg": "art/sock-blue.svg",
+      "x": 0.64,
+      "y": 0.56,
+      "s": 0.56,
+      "when": "socks",
+      "delay": 0.3
+     },
+     {
+      "label": "don't match",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "match"
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.56,
+      "r": 0.24,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "when": "不配对"
+     },
+     {
+      "ray": [
+       [
+        0.332,
+        0.29600000000000004
+       ],
+       [
+        0.6679999999999999,
+        0.8240000000000001
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "when": "不配对"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“使合适、拼成一对”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.2,
+      "y": 0.56,
+      "s": 0.48,
+      "go": [
+       0.4,
+       0.56
+      ],
+      "dur": 1.2
+     },
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.8,
+      "y": 0.56,
+      "s": 0.48,
+      "go": [
+       0.6,
+       0.56
+      ],
+      "dur": 1.2
+     },
+     {
+      "label": "严丝合缝，拼成一对",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 1.4
+     }
+    ]
+   }
+  },
+  {
+   "via": "配成一对的另一半",
+   "node": "③ 相配的人或物；相配",
+   "pos": "名词、动词",
+   "pic": 2,
+   "say": [
+    "两个半边严丝合缝，配成一对，另一半就是相配的人或物。",
+    "当动词，就是相配、匹配。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.22,
+      "y": 0.56,
+      "s": 0.46,
+      "when": "两个半边",
+      "go": [
+       0.4,
+       0.56
+      ],
+      "goWhen": "配成一对",
+      "dur": 1
+     },
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.78,
+      "y": 0.56,
+      "s": 0.46,
+      "when": "两个半边",
+      "go": [
+       0.6,
+       0.56
+      ],
+      "goWhen": "配成一对",
+      "dur": 1
+     },
+     {
+      "label": "相配的人或物",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "相配的人或物"
+     },
+     {
+      "label": "动词：相配、匹配",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "动词"
+     }
+    ]
+   }
+  },
+  {
+   "via": "和你旗鼓相当的人",
+   "node": "② 对手",
+   "pos": "名词",
+   "pic": 1,
+   "from": 0,
+   "say": [
+    "和你旗鼓相当、配得上做你对手的人，也叫 match，就是对手。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "when": "旗鼓相当"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.74,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "when": "旗鼓相当"
+     },
+     {
+      "svg": "art/scales.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.3,
+      "when": "旗鼓相当"
+     },
+     {
+      "label": "对手",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "就是对手"
+     }
+    ]
+   }
+  },
+  {
+   "via": "两个对手一较高下",
+   "node": "① 比赛",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "两个对手一较高下，就是比赛。",
+    "火柴的 match 是另一个词，和这里无关。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/goal.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.46
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.5,
+      "y": 0.78,
+      "s": 0.14,
+      "go": [
+       0.5,
+       0.42
+      ],
+      "dur": 1,
+      "wait": 1.5,
+      "loop": true
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.16,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3,
+      "when": "两个对手"
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3,
+      "when": "两个对手"
+     },
+     {
+      "label": "比赛",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "比赛"
+     },
+     {
+      "label": "火柴：另一个词",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "火柴"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "game": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/goal.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.46
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.5,
+      "y": 0.78,
+      "s": 0.14,
+      "go": [
+       0.5,
+       0.42
+      ],
+      "dur": 1,
+      "wait": 1.5,
+      "loop": true
+     }
+    ]
+   },
+   "rival": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.7,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     }
+    ]
+   },
+   "fit": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/shoe.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.5,
+      "shadow": true
+     },
+     {
+      "label": "尺寸合身",
+      "x": 0.5,
+      "y": 0.15,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：他们昨晚做了什么？",
+    "listen": "We watched an exciting football match last night.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "踢了一场足球",
+     "买了一个足球",
+     "看了一部电影",
+     "看了一场足球比赛"
+    ],
+    "ans": "D",
+    "why": "football match 足球比赛。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 match、fit 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "These shoes don't ______ me. They're too small.",
+    "opts": [],
+    "ans": "fit",
+    "why": "尺寸合不合身用 fit；颜色、款式相配用 match。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Her bag ______ her red dress well. (match)",
+    "opts": [],
+    "ans": "matches",
+    "why": "主语 her bag 是第三人称单数，match 以 ch 结尾加 es。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Our class won the basketball ______ yesterday.",
+    "opts": [
+     "player",
+     "ball",
+     "match",
+     "rule"
+    ],
+    "ans": "C",
+    "why": "won 赢得，赢的是比赛 match。",
+    "kd": ""
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "We have two matchs this week.",
+    "opts": [],
+    "ans": "matchs → matches",
+    "why": "match 以 ch 结尾，复数加 es。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这顶帽子和你的外套很配。",
+    "stem": "This hat ______ your coat very well.",
+    "opts": [],
+    "ans": "matches",
+    "why": "颜色、款式相配用 match，主语 this hat 是单数，加 es。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She bought a ______ hat and scarf.",
+    "opts": [
+     "matched",
+     "matching",
+     "match",
+     "matches"
+    ],
+    "ans": "B",
+    "why": "修饰名词 hat and scarf，用形容词 matching（配套的）。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
