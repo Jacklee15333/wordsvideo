@@ -10,7 +10,8 @@
      "svg": "art/heart.svg",
      "x": 0.5,
      "y": 0.55,
-     "s": 0.5
+     "s": 0.5,
+     "anim": "pulse"
     },
     {
      "shape": "circle",
@@ -25,12 +26,12 @@
     {
      "ray": [
       [
-       0.29000000000000004,
-       0.22000000000000003
+       0.29,
+       0.22
       ],
       [
        0.71,
-       0.8800000000000001
+       0.88
       ]
      ],
      "color": "#E2453C",
@@ -58,7 +59,8 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.5,
-     "shadow": true
+     "shadow": true,
+     "anim": "pulse"
     },
     {
      "label": "喜欢",
@@ -85,7 +87,8 @@
     "svg": "art/heart.svg",
     "x": 0.5,
     "y": 0.5,
-    "s": 0.4
+    "s": 0.4,
+    "anim": "shake"
    },
    {
     "shape": "circle",
@@ -104,7 +107,7 @@
       0.236
      ],
      [
-      0.6679999999999999,
+      0.668,
       0.764
      ]
     ],
@@ -150,7 +153,8 @@
      "x": 0.24,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     }
    ],
    "text": "不喜欢、厌恶",
@@ -182,12 +186,22 @@
       "when": "early"
      },
      {
+      "waves": true,
+      "x": 0.94,
+      "y": 0.36,
+      "dir": 0,
+      "spread": 50,
+      "n": 3,
+      "when": "early"
+     },
+     {
       "actor": "cn-boy-raise",
       "x": 0.22,
       "y": 0.62,
       "s": 0.8,
       "z": 3,
-      "when": "I"
+      "when": "I",
+      "seq": "blink"
      },
      {
       "label": "dislike",
@@ -222,11 +236,12 @@
      "anim": "bob"
     },
     {
-     "actor": "west-girl-surprised",
+     "actor": "west-clerk-think",
      "x": 0.3,
      "y": 0.6,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     }
    ],
    "text": "反感",
@@ -244,7 +259,8 @@
       "y": 0.6,
       "s": 0.9,
       "z": 3,
-      "when": "She"
+      "when": "She",
+      "seq": "blink"
      },
      {
       "svg": "art/spider.svg",
@@ -287,7 +303,8 @@
       "svg": "art/heart.svg",
       "x": 0.5,
       "y": 0.5,
-      "s": 0.4
+      "s": 0.4,
+      "anim": "shake"
      },
      {
       "shape": "circle",
@@ -306,7 +323,7 @@
         0.236
        ],
        [
-        0.6679999999999999,
+        0.668,
         0.764
        ]
       ],
@@ -364,7 +381,7 @@
        ],
        [
         0.426,
-        0.5980000000000001
+        0.598
        ]
       ],
       "color": "#E2453C",
@@ -405,6 +422,45 @@
  ],
  "distinguish": {
   "pics": {
+   "dislike": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/mug.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "anim": "shake"
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.56,
+      "r": 0.3,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "delay": 0.6
+     },
+     {
+      "ray": [
+       [
+        0.29,
+        0.23
+       ],
+       [
+        0.71,
+        0.89
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 0.6
+     }
+    ]
+   },
    "hate": {
     "bg": "blank",
     "img": "art/room-bg.svg",
@@ -413,7 +469,140 @@
       "svg": "art/spider.svg",
       "x": 0.5,
       "y": 0.5,
-      "s": 0.7
+      "s": 0.7,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "logic": "逻辑不同：dislike 是 dis 相反 + like 喜欢，“和喜欢相反”，程度轻，就是不喜欢；hate 本身就是强烈的讨厌、恨。",
+  "tip": "一句话记法：不太喜欢用 dislike（后接 doing），很讨厌、恨用 hate。"
+ },
+ "demo": {
+  "unhappy": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "frames": [
+       "art/cat-sit_f0.svg",
+       "art/cat-sit_f1.svg",
+       "art/cat-sit_f2.svg"
+      ],
+      "svg": "art/cat-sit_f0.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.6,
+      "fps": 2
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.5,
+      "y": 0.05,
+      "s": 0.05,
+      "to": [
+       0,
+       0.5
+      ],
+      "every": 0.25
+     }
+    ]
+   }
+  },
+  "unlock": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/padlock.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "hide": 1.2,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/padlock-open.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "delay": 1.2,
+      "pop": true,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "incorrect": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "shake"
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.56,
+      "r": 0.3,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "delay": 0.8
+     },
+     {
+      "ray": [
+       [
+        0.29,
+        0.23
+       ],
+       [
+        0.71,
+        0.89
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "disagree": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ]
      }
     ]
    }

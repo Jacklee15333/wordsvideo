@@ -13,7 +13,8 @@
       "x": 0.5,
       "y": 0.56,
       "s": 0.5,
-      "shadow": true
+      "shadow": true,
+      "anim": "pulse"
      },
      {
       "label": "喜欢",
@@ -35,7 +36,8 @@
       "x": 0.5,
       "y": 0.56,
       "s": 0.5,
-      "shadow": true
+      "shadow": true,
+      "anim": "bob"
      },
      {
       "svg": "art/star.svg",
@@ -70,7 +72,8 @@
      "x": 0.36,
      "y": 0.62,
      "s": 0.8,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/heart.svg",
@@ -95,18 +98,23 @@
     "img": "art/classroom-bg.svg",
     "items": [
      {
-      "actor": "cn-boy-raise",
+      "actor": "west-man-hello",
       "x": 0.36,
       "y": 0.62,
       "s": 0.8,
-      "z": 3
+      "z": 3,
+      "id": "b",
+      "seq": "pingpong",
+      "fps": 2
      },
      {
       "actor": "west-girl-raise",
       "x": 0.76,
       "y": 0.62,
       "s": 0.74,
-      "z": 3
+      "z": 3,
+      "nodWith": "b",
+      "seq": "blink"
      },
      {
       "svg": "art/heart.svg",
@@ -131,7 +139,9 @@
        "y": 0.6,
        "s": 0.86,
        "z": 3,
-       "when": "Tom"
+       "when": "Tom",
+       "id": "t",
+       "seq": "blink"
       },
       {
        "svg": "art/heart.svg",
@@ -142,13 +152,16 @@
        "when": "likeable"
       },
       {
-       "actor": "west-girl-raise",
+       "actor": "cn-teacher-laugh",
        "x": 0.82,
        "y": 0.62,
        "s": 0.72,
        "z": 3,
        "when": "likeable",
-       "delay": 0.3
+       "delay": 0.3,
+       "nodWith": "t",
+       "seq": "pingpong",
+       "fps": 2
       },
       {
        "label": "likeable",
@@ -185,7 +198,8 @@
        "x": 0.36,
        "y": 0.62,
        "s": 0.8,
-       "z": 3
+       "z": 3,
+       "seq": "blink"
       },
       {
        "svg": "art/heart.svg",
@@ -219,12 +233,14 @@
      "img": "art/classroom-bg.svg",
      "items": [
       {
-       "actor": "cn-boy-raise",
+       "actor": "west-girl-music",
        "x": 0.36,
        "y": 0.62,
        "s": 0.8,
        "z": 3,
-       "when": "值得被喜欢"
+       "when": "值得被喜欢",
+       "seq": "pingpong",
+       "fps": 2
       },
       {
        "svg": "art/heart.svg",
@@ -258,16 +274,149 @@
    }
   ],
   "distinguish": {
-   "pics": {
-    "engaging": {
+   "key": "讨人喜欢的",
+   "items": [
+    {
+     "w": "likeable",
+     "gloss": "讨人喜欢的",
+     "note": "like 喜欢 + able 值得…的：值得被喜欢，说人性格好、招人喜爱。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/heart.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.6,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "engaging",
+     "gloss": "迷人的、吸引人的",
+     "note": "engage 吸引住 + ing：能把人的注意力抓住，多说笑容、讲话、故事很吸引人。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "actor": "west-man-speech",
+        "x": 0.5,
+        "y": 0.56,
+        "s": 0.86,
+        "z": 3,
+        "id": "m",
+        "seq": "talk"
+       },
+       {
+        "svg": "art/audience-wide.svg",
+        "x": 0.5,
+        "y": 0.92,
+        "s": 0.28,
+        "z": 6,
+        "crowd": 9,
+        "nodWith": "m"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：likeable 从“喜欢”来，说这个人值得喜欢；engaging 从“吸引住”来，说一下子抓住你的注意力。",
+   "tip": "一句话记法：人好相处、招人喜欢用 likeable，笑容、讲话很吸引人用 engaging。"
+  },
+  "demo": {
+   "active": {
+    "pic": {
      "bg": "blank",
-     "img": "art/stage-bg.svg",
+     "img": "art/park-bg.svg",
      "items": [
       {
-       "actor": "west-man-speech",
+       "actor": "walk-cn-girl",
+       "x": 0.1,
+       "y": 0.74,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.74
+        ],
+        "to": [
+         0.98,
+         0.74
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.9,
+       "y": 0.7,
+       "s": 0.52,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.7
+        ],
+        "to": [
+         0.02,
+         0.7
+        ],
+        "offset": 0.3
+       }
+      }
+     ]
+    }
+   },
+   "usable": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
        "x": 0.5,
+       "y": 0.52,
+       "s": 0.56,
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.64,
+       "y": 0.42,
+       "dir": 0,
+       "spread": 50,
+       "n": 3
+      }
+     ]
+    }
+   },
+   "interesting": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/fishtank.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.66
+      },
+      {
+       "svg": "art/fish2.svg",
+       "x": 0.6,
        "y": 0.6,
-       "s": 0.9,
+       "s": 0.12,
+       "go": [
+        0.38,
+        0.6
+       ],
+       "dur": 3,
+       "loop": true,
        "z": 3
       }
      ]
@@ -367,5 +516,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

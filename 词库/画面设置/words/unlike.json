@@ -10,7 +10,8 @@
      "svg": "art/twin-cups.svg",
      "x": 0.5,
      "y": 0.55,
-     "s": 0.5
+     "s": 0.5,
+     "anim": "bob"
     },
     {
      "shape": "circle",
@@ -25,12 +26,12 @@
     {
      "ray": [
       [
-       0.29000000000000004,
-       0.22000000000000003
+       0.29,
+       0.22
       ],
       [
        0.71,
-       0.8800000000000001
+       0.88
       ]
      ],
      "color": "#E2453C",
@@ -58,7 +59,8 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.5,
-     "shadow": true
+     "shadow": true,
+     "anim": "sway"
     },
     {
      "label": "像",
@@ -85,7 +87,8 @@
     "svg": "art/twin-cups.svg",
     "x": 0.5,
     "y": 0.56,
-    "s": 0.5
+    "s": 0.5,
+    "anim": "shake"
    },
    {
     "shape": "circle",
@@ -101,11 +104,11 @@
     "ray": [
      [
       0.332,
-      0.29600000000000004
+      0.296
      ],
      [
-      0.6679999999999999,
-      0.8240000000000001
+      0.668,
+      0.824
      ]
     ],
     "color": "#E2453C",
@@ -134,14 +137,53 @@
      "y": 0.6,
      "s": 0.9,
      "z": 3,
-     "seq": "talk"
+     "seq": "talk",
+     "id": "s0"
     },
     {
      "actor": "cn-boy-raise",
      "x": 0.7,
      "y": 0.62,
      "s": 0.8,
-     "z": 3
+     "z": 3,
+     "seq": "blink",
+     "nodWith": "s0"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ],
    "text": "不像…、与…不同",
@@ -154,13 +196,14 @@
     "img": "art/park-bg.svg",
     "items": [
      {
-      "actor": "west-girl-explain",
+      "actor": "west-girl-raise",
       "x": 0.26,
       "y": 0.6,
       "s": 0.9,
       "z": 3,
       "when": "his sister",
-      "seq": "talk"
+      "seq": "talk",
+      "id": "s0"
      },
      {
       "actor": "west-clerk-think",
@@ -168,7 +211,9 @@
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "quiet"
+      "when": "quiet",
+      "seq": "blink",
+      "nodWith": "s0"
      },
      {
       "label": "Unlike",
@@ -188,6 +233,42 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "不同"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -197,17 +278,23 @@
    "img": "art/classroom-bg.svg",
    "items": [
     {
-     "svg": "art/clock.svg",
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "svg": "art/clock_f0.svg",
      "x": 0.8,
      "y": 0.26,
-     "s": 0.3
+     "s": 0.3,
+     "fps": 2
     },
     {
      "actor": "cn-teacher-listen",
      "x": 0.3,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     }
    ],
    "text": "不像…的作风",
@@ -280,7 +367,8 @@
       "svg": "art/twin-cups.svg",
       "x": 0.5,
       "y": 0.56,
-      "s": 0.5
+      "s": 0.5,
+      "anim": "shake"
      },
      {
       "shape": "circle",
@@ -296,11 +384,11 @@
       "ray": [
        [
         0.332,
-        0.29600000000000004
+        0.296
        ],
        [
-        0.6679999999999999,
-        0.8240000000000001
+        0.668,
+        0.824
        ]
       ],
       "color": "#E2453C",
@@ -338,15 +426,24 @@
       "y": 0.6,
       "s": 0.9,
       "z": 3,
-      "when": "不一样"
+      "when": "不一样",
+      "id": "e",
+      "turn": [
+       0,
+       2
+      ]
      },
      {
-      "actor": "cn-boy-raise",
+      "actor": "west-man-hello",
       "x": 0.7,
       "y": 0.62,
       "s": 0.8,
       "z": 3,
-      "when": "不一样"
+      "when": "不一样",
+      "turn": [
+       1,
+       2
+      ]
      },
      {
       "label": "与…不同",
@@ -365,6 +462,42 @@
       "color": "#C92A2A",
       "border": "#C92A2A",
       "when": "dislike"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -422,34 +555,257 @@
   }
  ],
  "distinguish": {
-  "pics": {
-   "different": {
+  "key": "不同的",
+  "items": [
+   {
+    "w": "unlike",
+    "gloss": "不像…、与…不同（多作介词）",
+    "note": "un 不 + like 像：后面直接接名词，拿两个人、两样东西对比（Unlike his sister, he is quiet）。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/twin-cups.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "shake"
+      },
+      {
+       "shape": "circle",
+       "x": 0.5,
+       "y": 0.55,
+       "r": 0.36,
+       "stroke": "#E2453C",
+       "lw": 8,
+       "fill": "rgba(0,0,0,0)",
+       "delay": 0.6
+      },
+      {
+       "ray": [
+        [
+         0.248,
+         0.154
+        ],
+        [
+         0.752,
+         0.946
+        ]
+       ],
+       "color": "#E2453C",
+       "lw": 0.02,
+       "dur": 0.4,
+       "delay": 0.6
+      }
+     ]
+    }
+   },
+   {
+    "w": "different",
+    "gloss": "不同的",
+    "note": "最常用的形容词，只说“不一样”：A is different from B。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.35,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "swing"
+      },
+      {
+       "svg": "art/sock-blue.svg",
+       "x": 0.65,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "swing"
+      }
+     ]
+    }
+   },
+   {
+    "w": "various",
+    "gloss": "各种各样的",
+    "note": "说种类多、五花八门：various books，重在“好多种”。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "separate",
+    "gloss": "分开的、各自的",
+    "note": "se 分开 + par 准备：本来在一起、被分开了，重在“分开、独立”。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.48,
+       "y": 0.55,
+       "s": 0.6,
+       "go": [
+        0.25,
+        0.55
+       ],
+       "dur": 1.5
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.52,
+       "y": 0.55,
+       "s": 0.6,
+       "go": [
+        0.75,
+        0.55
+       ],
+       "dur": 1.5
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "逻辑不同：unlike 否定“像”，拿两样东西作对比；different 只说不一样；various 说种类多；separate 说被分开、各自独立。",
+  "tip": "一句话记法：不像谁用 unlike，不一样用 different，各种各样用 various，分开的用 separate。"
+ },
+ "demo": {
+  "unhappy": {
+   "pic": {
     "bg": "blank",
     "img": "art/bedroom-bg.svg",
     "items": [
      {
-      "svg": "art/sock-red.svg",
-      "x": 0.35,
-      "y": 0.55,
-      "s": 0.7
+      "frames": [
+       "art/cat-sit_f0.svg",
+       "art/cat-sit_f1.svg",
+       "art/cat-sit_f2.svg"
+      ],
+      "svg": "art/cat-sit_f0.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.6,
+      "fps": 2
      },
      {
-      "svg": "art/sock-blue.svg",
-      "x": 0.65,
-      "y": 0.55,
-      "s": 0.7
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.5,
+      "y": 0.05,
+      "s": 0.05,
+      "to": [
+       0,
+       0.5
+      ],
+      "every": 0.25
      }
     ]
-   },
-   "various": {
+   }
+  },
+  "unlock": {
+   "pic": {
     "bg": "blank",
     "img": "art/room-bg.svg",
     "items": [
      {
-      "svg": "art/books.svg",
+      "svg": "art/padlock.svg",
       "x": 0.5,
-      "y": 0.55,
-      "s": 0.7
+      "y": 0.5,
+      "s": 0.6,
+      "hide": 1.2,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/padlock-open.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "delay": 1.2,
+      "pop": true,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "incorrect": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "shake"
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.56,
+      "r": 0.3,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "delay": 0.8
+     },
+     {
+      "ray": [
+       [
+        0.29,
+        0.23
+       ],
+       [
+        0.71,
+        0.89
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "disagree": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ]
      }
     ]
    }

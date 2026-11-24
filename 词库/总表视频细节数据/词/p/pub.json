@@ -11,7 +11,8 @@
      "svg": "art/house-new.svg",
      "x": 0.5,
      "y": 0.56,
-     "s": 0.6
+     "s": 0.6,
+     "anim": "bob"
     },
     {
      "label": "public house → pub",
@@ -20,6 +21,42 @@
      "size": 0.075,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ]
   },
@@ -40,14 +77,23 @@
       "x": 0.56,
       "y": 0.6,
       "s": 0.84,
-      "z": 3
+      "z": 3,
+      "id": "a",
+      "turn": [
+       0,
+       2
+      ]
      },
      {
       "actor": "cn-teacher-laugh",
       "x": 0.82,
       "y": 0.62,
       "s": 0.76,
-      "z": 3
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ]
      },
      {
       "svg": "art/mug.svg",
@@ -55,6 +101,42 @@
       "y": 0.86,
       "s": 0.14,
       "z": 5
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ],
     "text": "（英）酒馆、酒吧",
@@ -75,20 +157,29 @@
        "when": "village pub"
       },
       {
-       "actor": "west-man-hello",
+       "actor": "west-man-smile",
        "x": 0.5,
        "y": 0.6,
        "s": 0.84,
        "z": 3,
-       "when": "We"
+       "when": "We",
+       "id": "a",
+       "turn": [
+        0,
+        2
+       ]
       },
       {
-       "actor": "cn-teacher-laugh",
+       "actor": "west-girl-music",
        "x": 0.78,
        "y": 0.62,
        "s": 0.76,
        "z": 3,
-       "when": "We"
+       "when": "We",
+       "turn": [
+        1,
+        2
+       ]
       },
       {
        "svg": "art/mug.svg",
@@ -116,6 +207,42 @@
        "color": "#2B8A3E",
        "border": "#2B8A3E",
        "when": "酒馆"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -132,7 +259,8 @@
        "svg": "art/house-new.svg",
        "x": 0.5,
        "y": 0.56,
-       "s": 0.6
+       "s": 0.6,
+       "anim": "bob"
       },
       {
        "label": "public house",
@@ -141,6 +269,42 @@
        "size": 0.075,
        "color": "#7048E8",
        "border": "#7048E8"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -179,6 +343,42 @@
        "color": "#2B8A3E",
        "border": "#2B8A3E",
        "when": "酒馆"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -224,18 +424,27 @@
        "anim": "swing"
       },
       {
-       "actor": "west-man-hello",
+       "actor": "west-man-point",
        "x": 0.56,
        "y": 0.6,
        "s": 0.84,
-       "z": 3
+       "z": 3,
+       "id": "a",
+       "turn": [
+        0,
+        2
+       ]
       },
       {
-       "actor": "cn-teacher-laugh",
+       "actor": "cn-teacher-listen",
        "x": 0.82,
        "y": 0.62,
        "s": 0.76,
-       "z": 3
+       "z": 3,
+       "turn": [
+        1,
+        2
+       ]
       },
       {
        "svg": "art/mug.svg",
@@ -253,6 +462,42 @@
        "bg": "#FFF6D8",
        "border": "#E0A800",
        "when": "pub crawl"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -260,6 +505,61 @@
   ],
   "distinguish": {
    "pics": {
+    "pub": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/pubsign.svg",
+       "x": 0.4,
+       "y": 0.4,
+       "s": 0.6,
+       "anim": "swing"
+      },
+      {
+       "svg": "art/house-new.svg",
+       "x": 0.74,
+       "y": 0.56,
+       "s": 0.6
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      }
+     ]
+    },
     "bar": {
      "bg": "blank",
      "img": "art/room-bg.svg",
@@ -268,17 +568,32 @@
        "svg": "art/mug.svg",
        "x": 0.4,
        "y": 0.55,
-       "s": 0.5
+       "s": 0.5,
+       "anim": "bob"
       },
       {
        "svg": "art/rack.svg",
        "x": 0.75,
        "y": 0.5,
        "s": 0.8
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.4,
+       "y": 0.3,
+       "s": 0.05,
+       "to": [
+        0,
+        -0.2
+       ],
+       "every": 0.6
       }
      ]
     }
-   }
+   },
+   "logic": "逻辑不同：pub 是 public house 一步步截短来的，“对公众开放的房子”——英式街坊酒馆，常兼卖饭菜；bar 本义是“横木”，指吧台，美式也指酒吧。",
+   "tip": "一句话记法：英国街坊吃饭聊天去 pub，站在吧台前喝一杯是 bar。"
   }
  },
  "插图": [
@@ -372,5 +687,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
