@@ -1,7 +1,245 @@
 {
  "单词": "uselessly",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/umbrella-broken.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.56
+     },
+     {
+      "label": "没用的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#C92A2A",
+      "border": "#C92A2A"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.1,
+      "y": 0.64,
+      "s": 0.7,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.1,
+        0.64
+       ],
+       "to": [
+        0.9,
+        0.64
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "…地",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-cupempty.svg",
+   "p1": "art/ic-road.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/umbrella-broken.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.56,
+     "anim": "shake"
+    },
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.84,
+     "y": 0.62,
+     "s": 0.66,
+     "z": 3
+    },
+    {
+     "label": "没用地",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.5,
+      "y": 0.16,
+      "s": 0.3
+     },
+     {
+      "svg": "art/umbrella-broken.svg",
+      "x": 0.46,
+      "y": 0.56,
+      "s": 0.56,
+      "anim": "shake"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.66,
+      "z": 3
+     }
+    ],
+    "text": "无用地、徒劳地",
+    "pos": "副词",
+    "diff": "做了也没用",
+    "ex": "He waved the broken umbrella uselessly.",
+    "exzh": "他徒劳地挥着那把破伞。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/raincloud.svg",
+       "x": 0.5,
+       "y": 0.16,
+       "s": 0.3,
+       "when": "umbrella"
+      },
+      {
+       "actor": "west-man-point",
+       "x": 0.24,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "He"
+      },
+      {
+       "svg": "art/umbrella-broken.svg",
+       "x": 0.56,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "broken umbrella",
+       "anim": "shake"
+      },
+      {
+       "label": "uselessly",
+       "x": 0.84,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "uselessly"
+      },
+      {
+       "label": "徒劳地",
+       "x": 0.84,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "徒劳地"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“没用地”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/umbrella-broken.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.56
+      },
+      {
+       "label": "useless + ly …地",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "做了也没用",
+    "node": "无用地、徒劳地",
+    "pos": "副词",
+    "pic": 0,
+    "say": [
+     "做了也没用，就是无用地、徒劳地。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/raincloud.svg",
+       "x": 0.5,
+       "y": 0.16,
+       "s": 0.3,
+       "when": "做了"
+      },
+      {
+       "svg": "art/umbrella-broken.svg",
+       "x": 0.46,
+       "y": 0.56,
+       "s": 0.56,
+       "anim": "shake",
+       "when": "没用"
+      },
+      {
+       "label": "徒劳地",
+       "x": 0.84,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "徒劳地"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "uselesslyai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他是怎么等的？\n听：He waited uselessly for the bus that never came.\nA. 很快等到了\nB. 白等了\nC. 没有等\nD. 等到了朋友",
@@ -90,5 +328,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

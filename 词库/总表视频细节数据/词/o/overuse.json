@@ -1,7 +1,306 @@
 {
  "单词": "overuse",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/mug.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.4
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.06,
+      "to": [
+       0.1,
+       0.4
+      ],
+      "every": 0.5
+     },
+     {
+      "ray": [
+       [
+        0.1,
+        0.42
+       ],
+       [
+        0.9,
+        0.42
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.01,
+      "dur": 0.8
+     },
+     {
+      "label": "越过该停的线",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/wrench.svg",
+      "x": 0.66,
+      "y": 0.5,
+      "s": 0.3,
+      "anim": "shake"
+     },
+     {
+      "label": "用",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-over.svg",
+   "p1": "art/ic-wrench.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.4,
+     "y": 0.5,
+     "s": 0.4
+    },
+    {
+     "svg": "art/clock.svg",
+     "x": 0.76,
+     "y": 0.3,
+     "s": 0.26,
+     "anim": "shake"
+    },
+    {
+     "label": "用得越过了界限",
+     "x": 0.5,
+     "y": 0.9,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.3,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.56,
+      "y": 0.44,
+      "s": 0.22
+     },
+     {
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "svg": "art/clock_f0.svg",
+      "x": 0.82,
+      "y": 0.3,
+      "s": 0.26,
+      "fps": 4
+     }
+    ],
+    "text": "过度使用、用得太多",
+    "pos": "动词、名词",
+    "diff": "量太多",
+    "ex": "Don't overuse your phone.",
+    "exzh": "别过度使用手机。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.28,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "when": "your phone"
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.54,
+       "y": 0.44,
+       "s": 0.22,
+       "when": "your phone"
+      },
+      {
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "svg": "art/clock_f0.svg",
+       "x": 0.82,
+       "y": 0.3,
+       "s": 0.26,
+       "fps": 4,
+       "when": "overuse"
+      },
+      {
+       "label": "overuse",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "overuse"
+      },
+      {
+       "label": "过度使用",
+       "x": 0.82,
+       "y": 0.66,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "过度使用"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“用得越过了界限”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.4
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.76,
+       "y": 0.3,
+       "s": 0.26
+      },
+      {
+       "label": "over 越过 + use 用",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "用得太多",
+    "node": "过度使用",
+    "pos": "动词、名词",
+    "pic": 0,
+    "say": [
+     "用得越过了该停的那条线，就是用得太多、过度使用。",
+     "overuse 说量太多；misuse 说用法不对。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.4,
+       "when": "用得"
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.76,
+       "y": 0.3,
+       "s": 0.26,
+       "anim": "shake",
+       "when": "该停的那条线"
+      },
+      {
+       "label": "过度使用",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "过度使用"
+      },
+      {
+       "label": "misuse 用法不对",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "misuse"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "misuse": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/hammer.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7,
+       "rot": 180
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "overuseai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：医生提醒不要做什么？\n听：Don't overuse your eyes. Have a rest.\nA. 吃太多糖\nB. 熬夜\nC. 不运动\nD. 过度用眼",
@@ -90,5 +389,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

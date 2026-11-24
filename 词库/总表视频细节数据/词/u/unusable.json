@@ -1,7 +1,301 @@
 {
  "单词": "unusable",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.5
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.55,
+      "r": 0.3,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "delay": 1.0
+     },
+     {
+      "ray": [
+       [
+        0.29000000000000004,
+        0.22000000000000003
+       ],
+       [
+        0.71,
+        0.8800000000000001
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 1.0
+     },
+     {
+      "label": "不",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "delay": 1.0
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "shadow": true
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.8,
+      "y": 0.3,
+      "s": 0.14,
+      "anim": "pulse"
+     },
+     {
+      "label": "能…的、值得…的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-xx.svg",
+   "p1": "art/ic-check.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/umbrella-broken.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.56
+    },
+    {
+     "shape": "circle",
+     "x": 0.5,
+     "y": 0.56,
+     "r": 0.28,
+     "stroke": "#E2453C",
+     "lw": 8,
+     "fill": "rgba(0,0,0,0)",
+     "delay": 0.8
+    },
+    {
+     "ray": [
+      [
+       0.304,
+       0.252
+      ],
+      [
+       0.696,
+       0.8680000000000001
+      ]
+     ],
+     "color": "#E2453C",
+     "lw": 0.02,
+     "dur": 0.4,
+     "delay": 0.8
+    },
+    {
+     "label": "不能用的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#C92A2A",
+     "border": "#C92A2A"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/umbrella-broken.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.56
+     },
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.5,
+      "y": 0.16,
+      "s": 0.28
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.66,
+      "z": 3
+     }
+    ],
+    "text": "无法使用的",
+    "pos": "形容词",
+    "diff": "坏了、用不了",
+    "ex": "The broken umbrella is unusable.",
+    "exzh": "这把破伞用不了了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/raincloud.svg",
+       "x": 0.5,
+       "y": 0.16,
+       "s": 0.28,
+       "when": "umbrella"
+      },
+      {
+       "svg": "art/umbrella-broken.svg",
+       "x": 0.46,
+       "y": 0.56,
+       "s": 0.56,
+       "when": "broken umbrella"
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.66,
+       "z": 3,
+       "when": "unusable"
+      },
+      {
+       "label": "unusable",
+       "x": 0.16,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "unusable"
+      },
+      {
+       "label": "用不了",
+       "x": 0.16,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "用不了"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“不能用的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/umbrella-broken.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.56
+      },
+      {
+       "label": "un 不 + usable 能用的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "用不了",
+    "node": "无法使用的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "坏了、用不了，就是无法使用的。",
+     "useless 是能用但没用处。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/umbrella-broken.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.56,
+       "when": "坏了"
+      },
+      {
+       "label": "无法使用的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "无法使用的"
+      },
+      {
+       "label": "useless 没用处",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "useless"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "useless": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/papercup.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.6
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "unusableai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：电梯怎么了？\n听：The lift is unusable because it's broken.\nA. 正在使用\nB. 坏了不能用\nC. 刚修好\nD. 很新",
@@ -89,5 +383,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
