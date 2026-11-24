@@ -61,6 +61,14 @@ def start(what="all"):
     return {"ok": True, "msg": "开始检测：%s" % "、".join(NAMES[k] for k in new)}
 
 
+def reset(k):
+    """换了用哪个 AI：上一种 AI 的检测结果不算数了，回到“还没检测”（正在测的不动）。"""
+    with _LOCK:
+        it = CHECK[k]
+        if it["state"] != "running":
+            it.update(state="idle", summary="", fix="", steps=[], started=0.0, finished=0.0, run=it["run"] + 1)
+
+
 def snapshot(watch=False):
     """给界面：三样各自的状态和每一步；用网页镜像时带上浏览器的实时状态（watch＝详情开着，接下来几秒要截图）。"""
     now = time.time()

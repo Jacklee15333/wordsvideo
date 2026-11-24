@@ -14,6 +14,7 @@ import core as C
 import video as V
 import selfup as SU
 import check as CK
+import pool as PL
 
 WEB = Path(__file__).resolve().parent / "web"
 MIME = {".html": "text/html; charset=utf-8", ".js": "application/javascript; charset=utf-8",
@@ -95,7 +96,10 @@ def api_settings_post(b):
         cfg["api"].pop("key")
     if isinstance(cfg.get("relayInbox"), dict) and cfg["relayInbox"].get("token") in ("（已填）", None):
         cfg["relayInbox"].pop("token", None)
+    old_pv = C.load_cfg().get("provider")
     C.save_cfg(cfg)
+    if cfg.get("provider") and C.load_cfg().get("provider") != old_pv:
+        CK.reset("ai")                      # 换了用哪个 AI：开始页 ① 回到“还没检测”
     web = b.get("web") or {}
     m = wm()
     if m and web:
@@ -455,6 +459,11 @@ def api_prep(b):
         if not ws:
             return {"ok": False, "msg": "总表里的词都准备好了"}
         return api_words_task({"text": ",".join(ws), "steps": ["chuti", "pics"]})
+    if b.get("mode") == "pool":                     # 从备选单词里勾的
+        ws = [w for w in (b.get("words") or []) if w]
+        if not ws:
+            return {"ok": False, "msg": "先在备选单词里勾要做的词（「全选这些」能一下勾上）"}
+        return api_words_task({"text": "\n".join(ws), "steps": ["chuti", "pics"]})
     return api_words_task({"text": b.get("text") or "", "steps": ["chuti", "pics"]})
 
 
@@ -503,9 +512,10 @@ GET = {
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
     "/api/next": lambda qs: {"words": next_unready(int(qs.get("n", 5)))},
     "/api/check": lambda qs: CK.snapshot(watch=qs.get("watch") == "1"),
+    "/api/pool": lambda qs: PL.summary() if qs.get("brief") else PL.items(),
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
-NEED_REPO = {"/api/next", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
+NEED_REPO = {"/api/next", "/api/pool", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
 POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/task/op": api_task_op,
         "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
         "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,
@@ -515,6 +525,8 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/words-task": api_words_task,
         "/api/prep": api_prep,
         "/api/check": lambda b: CK.start(b.get("what") or "all"),
+        "/api/pool": lambda b: PL.op(b) if C.STATE.get("repo") in ("就绪", "索引和总表对不上") else {
+            "ok": False, "msg": "词库还没准备好（%s），等左下角显示“仓库 就绪”再导入" % C.STATE.get("repo")},
         "/api/prepare": lambda b: C.prepare(b.get("words") or [])}
 
 
