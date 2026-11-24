@@ -309,6 +309,7 @@ tr.wdim td.w{color:var(--faint)}
 .rsize,.rpoll{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;font-size:12.5px;background:#fff;border:1px solid #F0D9B0;border-radius:4px;padding:6px 10px;margin:0 0 8px}
 .rsize input{width:58px;padding:3px 6px}
 .rsize .rsn{color:var(--muted)}
+.rsize .btn:disabled{background:#C9CFD6;border-color:#C9CFD6;color:#fff;cursor:default}
 .rpoll{margin:6px 0 4px}
 .rpoll .pk{color:var(--muted)}
 .rpoll .pr{font-weight:600}
@@ -645,7 +646,7 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
     <h3 style="margin:0 0 4px" id="rTitle">要你操作：把提示词交给网页 AI <span id="rWords" class="small muted"></span></h3>
     <div class="rprog" id="rProg"></div>
     <div class="rsize" id="rSize" hidden><b>每批</b> <input type="number" id="rSzChunk" min="1" max="1000"> 个词 <span class="faint">·</span> <b>每写完</b> <input type="number" id="rSzRound" min="1" max="1000"> 个传一次
-      <button class="btn sm" id="rSzSave">保存</button> <span class="rsn" id="rSzMsg">改了从下一批起按新的来</span></div>
+      <button class="btn sm" id="rSzSave" disabled>已保存</button> <span class="rsn" id="rSzMsg"></span></div>
     <div id="rBatchDone" class="rdone ok" hidden></div>
     <div id="rRes" class="rdone" hidden></div>
     <details class="rdlist" id="rDoneBox" hidden><summary id="rDoneN"></summary><ul id="rDoneList"></ul></details>
@@ -1707,7 +1708,7 @@ async function relayTick(){
     $('#rDoneList').innerHTML=done.slice().reverse().map(x=>`<li>${x.ok?'<span class="ck-y">✓</span>':'<span class="ck-bad">✗</span>'} <a href="#" onclick="showRes('${esc((x.words||[])[0])}');return false"><b style="font-family:var(--en)">${esc(nm(x))}</b></a> <span class="muted">${hm(x.t).slice(0,5)}${x.ok?'':' · '+esc((x.detail||'').slice(0,40))}</span></li>`).join('')}
   // 现在这个词
   $('#rNow').innerHTML=ph==='send'?`现在：<span style="font-family:var(--en)">${esc(wn)}</span>${done.length?' <span class="small" style="color:var(--amber);font-weight:400">——换了一个新词，提示词也换了，要再粘贴一次</span>':''}${n>1?' <span class="small" style="color:var(--amber);font-weight:400">（改错：要重新粘贴）</span>':''}`:`现在：<span style="font-family:var(--en)">${esc(wn)}</span>`;
-  $('#rLen').textContent=`${(d.promptLen||0).toLocaleString()} 字`;
+  $('#rLen').innerHTML=`${(d.promptLen||0).toLocaleString()} 字`+((d.promptLen||0)>300000?' <span style="color:var(--amber)">（很长，网页 AI 可能贴不进去；贴不进去就把“每批”改小）</span>':'');
   $('#rHint').textContent=sent?'':(d.hint||'');
   const cur=H[n-1]||{};
   rStep('rS1',d.copied||sent?'done':'you',d.copied||sent?'':'没复制上：点「再复制一次」');
@@ -1759,12 +1760,14 @@ function pollInfo(){const d=RL;if(!d||!d.inbox||$('#rPoll').hidden)return;const 
   $('#rPollInfo').innerHTML=(d.lastPoll?`上次看 ${hm(d.lastPoll)}（第 ${d.polls||0} 次${d.pollBy==='you'?'，你点的':''}）`:'还没看过')+
     ` · ${PWAIT?'正在看…':d.nextPoll?(nx?`${nx} 秒后自动再看`:'马上自动再看'):`每 ${d.pollSec||15} 秒自动看一次`} · inbox/ 里：${fs.length?fs.length+' 个文件':'空的'}`}
 setInterval(pollInfo,1000);
-$('#rSzChunk').oninput=$('#rSzRound').oninput=()=>{SZDIRTY=true;$('#rSzMsg').textContent='改了还没保存';$('#rSzMsg').style.color='var(--amber)'};
+$('#rSzChunk').oninput=$('#rSzRound').oninput=()=>{SZDIRTY=true;$('#rSzSave').disabled=false;$('#rSzSave').textContent='保存';$('#rSzMsg').textContent='改了还没保存';$('#rSzMsg').style.color='var(--amber)'};
 $('#rSzSave').onclick=async()=>{const c=Math.round(+$('#rSzChunk').value),r=Math.round(+$('#rSzRound').value);
   if(!(c>=1&&r>=1)){$('#rSzMsg').textContent='要填 1 以上的数';return}
-  const d=await api('/api/relay',{op:'size',kind:RL.sizeKind,chunk:c,round:r});SZDIRTY=false;$('#rSzMsg').style.color='';
-  const pd=(RL.pending||[]).length;
-  $('#rSzMsg').innerHTML=d.ok?`✓ ${esc(d.msg)}${pd&&RL.multi?`。想这一批马上按新的：点「剩下的 ${pd} 个另开对话继续」`:''}`:'✗ '+esc(d.msg);relayTick()};
+  $('#rSzSave').disabled=true;$('#rSzSave').textContent='正在保存…';
+  const d=await api('/api/relay',{op:'size',kind:RL.sizeKind,chunk:c,round:r});$('#rSzMsg').style.color='';
+  if(d.ok){SZDIRTY=false;$('#rSzSave').textContent='已保存';$('#rSzMsg').textContent='✓ '+d.msg}
+  else{$('#rSzSave').disabled=false;$('#rSzSave').textContent='保存';$('#rSzMsg').textContent='✗ '+d.msg}
+  for(let i=0;i<6;i++){await new Promise(z=>setTimeout(z,700));await relayTick()}};
 $('#rPollNow').onclick=async()=>{const d=await api('/api/relay',{op:'pollnow'});
   if(!d.ok){$('#rPollRes').className='pr bad';$('#rPollRes').textContent='✗ '+d.msg;return}
   PWAIT={t0:(RL.lastPoll||0),ms:Date.now()};$('#rPollNow').disabled=true;$('#rPollNow').textContent='正在看…';$('#rPollRes').textContent='';pollInfo();

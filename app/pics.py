@@ -256,6 +256,7 @@ def do_pics_relay(R, tid, total, only):
         chunk, res, t0 = list(pend), {}, time.time()
         C.log("第 %d 份（共 %d 份）：%s … %s，%d 个词" % (k, nb, pend[0], pend[-1], len(pend)), tid)
         while pend:
+            C.RELAY_QLEFT[0] = len(queue)
             for part in R.ask_parts(tid, "做画面", build_prompt_multi(pend, min(rnd, len(pend))), pend, min(rnd, len(pend))):
                 got = parse_multi(part, pend)        # v1.11.2：以前这里用 res，把这一批前几个词的结果冲掉了（生成历史里算成没做成）
                 if not got:
@@ -281,10 +282,15 @@ def do_pics_relay(R, tid, total, only):
                         _commit(tid, batch)
                         batch = []
             why = C.RELAY.get("endReason")
-            if pend and why == "newchat":
+            if pend and why in ("newchat", "resize"):
                 N2, rnd = C.relay_size("pic")
                 if len(pend) > N2:                  # 一批改小了：多出来的放回去，排到下一份
                     queue, pend = pend[N2:] + queue, pend[:N2]
+                elif len(pend) < N2 and queue:      # v1.11.3：一批改大了，后面排着的拿进来
+                    more, queue = queue[:N2 - len(pend)], queue[N2 - len(pend):]
+                    pend += more
+                    chunk += more
+                nb = k + (len(queue) + N2 - 1) // N2
                 C.log("  剩下的 %d 个另开对话：出一份新的提示词" % len(pend), tid)
                 continue
             for w in pend:                      # 你点了「剩下的先跳过」
@@ -1055,6 +1061,7 @@ def _fix_relay(R, tid, words, todos, batch):
         chunk, res, t0 = list(pend), {}, time.time()
         C.log("补画面第 %d 份（共 %d 份）：%s … %s，%d 个词" % (k, nb, pend[0], pend[-1], len(pend)), tid)
         while pend:
+            C.RELAY_QLEFT[0] = len(queue)
             for part in R.ask_parts(tid, "补画面", build_prompt_fix_multi(pend, todos, min(rnd, len(pend))), pend, min(rnd, len(pend))):
                 got = parse_multi(part, pend)
                 if not got:
@@ -1091,10 +1098,15 @@ def _fix_relay(R, tid, words, todos, batch):
                     if len(saved) >= 5:
                         _commit(tid, saved, "补画面")
                         saved = []
-            if pend and C.RELAY.get("endReason") == "newchat":
+            if pend and C.RELAY.get("endReason") in ("newchat", "resize"):
                 N2, rnd = C.relay_size("fix")
                 if len(pend) > N2:                  # 一批改小了：多出来的放回去，排到下一份
                     queue, pend = pend[N2:] + queue, pend[:N2]
+                elif len(pend) < N2 and queue:      # v1.11.3：一批改大了，后面排着的拿进来
+                    more, queue = queue[:N2 - len(pend)], queue[N2 - len(pend):]
+                    pend += more
+                    chunk += more
+                nb = k + (len(queue) + N2 - 1) // N2
                 C.log("  剩下的 %d 个另开对话：出一份新的提示词" % len(pend), tid)
                 continue
             for w in pend:

@@ -1144,6 +1144,7 @@ def group_size():
 
 
 RELAY_ACT = {"rid": 0, "act": ""}
+RELAY_QLEFT = [0]        # 这一批后面还排着几个词（调用方出提示词前填上；改“每批几个词”时用）
 
 
 def relay_act(rid, act):
@@ -1189,9 +1190,22 @@ def relay_size_set(kind, chunk, rnd):
     rnd = min(rnd, chunk)
     a, b = SIZE_KEYS[kind]
     save_cfg({a: chunk, b: rnd})
-    log("手动接力设置改了（%s）：一批 %d 个词，每写完 %d 个传一次" % ({"q": "出题", "pic": "画面", "fix": "补画面"}[kind], chunk, rnd),
-        (RUNNER.task or {}).get("id"))
-    return True, "存好了：一批 %d 个词，每写完 %d 个传一次。下一批起按这个来" % (chunk, rnd)
+    tid = (RUNNER.task or {}).get("id")
+    log("手动接力设置改了（%s）：一批 %d 个词，每写完 %d 个传一次" % ({"q": "出题", "pic": "画面", "fix": "补画面"}[kind], chunk, rnd), tid)
+    # v1.11.3：正在等的这一批马上按新的来——这一批还没做的词 + 后面排着的，按新的数重新出一份提示词
+    with _RELAY_LOCK:
+        live = (RELAY.get("multi") and RELAY.get("status") in ("等你操作", "交回了") and KIND_SIZE.get(RELAY.get("kind")) == kind
+                and RELAY.get("tid") == tid and RELAY.get("pending"))
+        if live:
+            pend = len(RELAY["pending"])
+            n2 = min(chunk, pend + int(RELAY.get("qLeft") or 0))
+            if n2 == pend and min(rnd, n2) == int(RELAY.get("round") or 0):
+                live = False
+        if live:
+            RELAY_ACT.update(rid=RELAY["id"], act="resize")
+    if live:
+        return True, "已保存：这一批马上按新的来（%d 个词，每写完 %d 个传一次），提示词重新出了、会自动复制，到网页 AI 开个新对话粘贴" % (n2, min(rnd, n2))
+    return True, "已保存：一批 %d 个词，每写完 %d 个传一次" % (chunk, rnd)
 
 
 def relay_word(w, ok, detail=""):
@@ -1273,7 +1287,7 @@ def relay_parts(prompt, words, kind, rnd):
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=kind, reply="", ts=time.time(),
                      copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "", phase="send", tid=tid,
                      polls=0, lastPoll=0.0, stage="", multi=True, pending=list(words), doneIn=[], parts=0, endReason="", round=rnd,
-                     aiDone=False, pollNow=0.0, nextPoll=0.0, pollBy="", pollGot=0)
+                     aiDone=False, pollNow=0.0, nextPoll=0.0, pollBy="", pollGot=0, qLeft=RELAY_QLEFT[0])
         rid = RELAY["id"]
         RELAY_ACT.update(rid=0, act="")
         RELAY_HIST.clear()
@@ -2464,6 +2478,7 @@ class Runner:
                 if relay:                  # v1.10.9：一份好几个词，网页 AI 写完一轮传一轮，收到一轮判一轮
                     pend = list(chunk)
                     while pend:
+                        RELAY_QLEFT[0] = len(queue)
                         for part in self.ask_parts(tid, "出题", build_prompt(pend), pend, min(rq, len(pend))):
                             got, iss = parse_reply(part, pend)
                             issues += iss
@@ -2476,11 +2491,15 @@ class Runner:
                                 relay_word(w, w in saved, "" if w in saved else "；".join(bad.get(w, ([], ["没过"]))[1])[:80])
                                 pend.remove(w)
                         why = RELAY.get("endReason")
-                        if pend and why == "newchat":
+                        if pend and why in ("newchat", "resize"):
                             cs, rq = relay_size("q")
                             if len(pend) > cs:     # 一批改小了：多出来的放回去，排到下一份
                                 queue, pend = pend[cs:] + queue, pend[:cs]
                                 chunk = [w for w in chunk if w not in queue]
+                            elif len(pend) < cs and queue:     # 一批改大了：后面排着的拿进来
+                                more, queue = queue[:cs - len(pend)], queue[cs - len(pend):]
+                                pend += more
+                                chunk += more
                             log("  剩下的 %d 个另开对话：出一份新的提示词" % len(pend), tid)
                             continue
                         for w in pend:          # 你点了「剩下的先跳过」
