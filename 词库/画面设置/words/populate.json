@@ -79,7 +79,8 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.5,
-     "shadow": true
+     "shadow": true,
+     "anim": "bob"
     },
     {
      "label": "使…",
@@ -90,6 +91,42 @@
      "bg": "#FFF6D8",
      "border": "#E0A800",
      "delay": 0.6
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ]
   }
@@ -210,7 +247,12 @@
       "y": 0.64,
       "s": 0.6,
       "z": 3,
-      "when": "farmers"
+      "when": "farmers",
+      "id": "f",
+      "turn": [
+       0,
+       2
+      ]
      },
      {
       "actor": "west-man-smile",
@@ -218,7 +260,11 @@
       "y": 0.64,
       "s": 0.6,
       "z": 3,
-      "when": "farmers"
+      "when": "farmers",
+      "turn": [
+       1,
+       2
+      ]
      },
      {
       "label": "populate",
@@ -238,6 +284,42 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "住着"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -258,7 +340,8 @@
      "x": 0.86,
      "y": 0.62,
      "s": 0.6,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     }
    ],
    "text": "往表格里填入数据",
@@ -275,7 +358,8 @@
       "x": 0.5,
       "y": 0.52,
       "s": 0.62,
-      "when": "program"
+      "when": "program",
+      "anim": "bob"
      },
      {
       "label": "Tom",
@@ -340,7 +424,8 @@
       "svg": "art/house-new.svg",
       "x": 0.5,
       "y": 0.56,
-      "s": 0.46
+      "s": 0.46,
+      "anim": "bob"
      },
      {
       "label": "popul 人 + ate 使…",
@@ -349,6 +434,42 @@
       "size": 0.075,
       "color": "#7048E8",
       "border": "#7048E8"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -453,7 +574,8 @@
       "y": 0.54,
       "s": 0.6,
       "cue": 1,
-      "when": "电脑"
+      "when": "电脑",
+      "anim": "bob"
      },
      {
       "label": "virus 病毒",
@@ -500,16 +622,267 @@
   }
  ],
  "distinguish": {
-  "pics": {
-   "inhabit": {
+  "key": "居住于",
+  "items": [
+   {
+    "w": "populate",
+    "gloss": "居住于、使有人住",
+    "note": "popul 人 + ate 使…：重在“使一个地方有人、住满”，多用被动 be populated by。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/house-new.svg",
+       "x": 0.3,
+       "y": 0.56,
+       "s": 0.5,
+       "pop": true
+      },
+      {
+       "svg": "art/house-new.svg",
+       "x": 0.7,
+       "y": 0.56,
+       "s": 0.5,
+       "delay": 0.6,
+       "pop": true
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      }
+     ]
+    }
+   },
+   {
+    "w": "inhabit",
+    "gloss": "居住在、栖息于",
+    "note": "in 在里面 + habit 住：只说谁住在哪儿，常说动物栖息（Fish inhabit the lake）。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/house-new.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.66,
+       "anim": "bob"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "逻辑不同：populate 从“人”来，重在使一个地方有人、住满；inhabit 从“住”来，只说谁住在哪儿。",
+  "tip": "一句话记法：一个地方住满了人用 populate，谁住在这儿用 inhabit。"
+ },
+ "demo": {
+  "widen": {
+   "pic": {
     "bg": "blank",
-    "img": "art/park-bg.svg",
+    "img": "art/classroom-bg.svg",
     "items": [
      {
-      "svg": "art/house-new.svg",
+      "svg": "art/map.svg",
       "x": 0.5,
-      "y": 0.55,
-      "s": 0.7
+      "y": 0.5,
+      "s": 0.3,
+      "s2": 0.6,
+      "grow": [
+       0.3,
+       2
+      ]
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.88
+       ],
+       [
+        0.08,
+        0.88
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.3
+     },
+     {
+      "ray": [
+       [
+        0.6,
+        0.88
+       ],
+       [
+        0.92,
+        0.88
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.3
+     }
+    ]
+   }
+  },
+  "modernize": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/rotary-phone.svg",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.4,
+      "anim": "shake"
+     },
+     {
+      "ray": [
+       [
+        0.42,
+        0.6
+       ],
+       [
+        0.58,
+        0.6
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.6
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.74,
+      "y": 0.56,
+      "s": 0.48,
+      "delay": 1.2,
+      "pop": true
+     },
+     {
+      "waves": true,
+      "x": 0.86,
+      "y": 0.46,
+      "dir": 0,
+      "spread": 50,
+      "n": 3,
+      "delay": 1.4
+     }
+    ]
+   }
+  },
+  "create": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/yarn.svg",
+      "x": 0.24,
+      "y": 0.62,
+      "s": 0.36,
+      "anim": "spin"
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.6
+       ],
+       [
+        0.58,
+        0.6
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.6
+     },
+     {
+      "svg": "art/cushion.svg",
+      "x": 0.74,
+      "y": 0.62,
+      "s": 0.46,
+      "delay": 1.2,
+      "pop": true
      }
     ]
    }

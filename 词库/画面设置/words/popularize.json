@@ -10,7 +10,8 @@
      "svg": "art/icecream.svg",
      "x": 0.5,
      "y": 0.56,
-     "s": 0.6
+     "s": 0.6,
+     "anim": "bob"
     },
     {
      "label": "大众的",
@@ -19,6 +20,42 @@
      "size": 0.09,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ]
   },
@@ -30,7 +67,8 @@
      "svg": "art/lightbulb.svg",
      "x": 0.3,
      "y": 0.5,
-     "s": 0.4
+     "s": 0.4,
+     "anim": "pulse"
     },
     {
      "ray": [
@@ -55,10 +93,11 @@
      "y": 0.62,
      "s": 0.7,
      "z": 3,
-     "delay": 0.8
+     "delay": 0.8,
+     "seq": "blink"
     },
     {
-     "label": "使…化",
+     "label": "ize",
      "x": 0.5,
      "y": 0.1,
      "size": 0.09,
@@ -82,7 +121,9 @@
     "x": 0.22,
     "y": 0.6,
     "s": 0.86,
-    "z": 3
+    "z": 3,
+    "id": "t",
+    "seq": "talk"
    },
    {
     "svg": "art/lightbulb.svg",
@@ -96,14 +137,18 @@
     "x": 0.62,
     "y": 0.64,
     "s": 0.62,
-    "z": 3
+    "z": 3,
+    "nodWith": "t",
+    "seq": "blink"
    },
    {
-    "actor": "cn-boy-raise",
+    "actor": "west-clerk-happy",
     "x": 0.82,
     "y": 0.64,
     "s": 0.62,
-    "z": 3
+    "z": 3,
+    "nodWith": "t",
+    "seq": "blink"
    },
    {
     "svg": "art/class-desks.svg",
@@ -204,7 +249,9 @@
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "He"
+      "when": "He",
+      "id": "h",
+      "seq": "talk"
      },
      {
       "svg": "art/ball.svg",
@@ -220,7 +267,9 @@
       "y": 0.64,
       "s": 0.62,
       "z": 3,
-      "when": "town"
+      "when": "town",
+      "nodWith": "h",
+      "seq": "blink"
      },
      {
       "actor": "west-girl-raise",
@@ -229,7 +278,9 @@
       "s": 0.62,
       "z": 3,
       "when": "town",
-      "delay": 0.3
+      "delay": 0.3,
+      "nodWith": "h",
+      "seq": "blink"
      },
      {
       "label": "popularize",
@@ -249,6 +300,42 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "推广"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -258,11 +345,12 @@
    "img": "art/classroom-bg.svg",
    "items": [
     {
-     "actor": "cn-teacher-point",
+     "actor": "west-girl-explain",
      "x": 0.24,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "seq": "talk"
     },
     {
      "svg": "art/book-open.svg",
@@ -350,7 +438,9 @@
       "x": 0.22,
       "y": 0.6,
       "s": 0.86,
-      "z": 3
+      "z": 3,
+      "id": "t",
+      "seq": "talk"
      },
      {
       "svg": "art/lightbulb.svg",
@@ -360,11 +450,14 @@
       "anim": "pulse"
      },
      {
-      "actor": "cn-boy-raise",
+      "actor": "west-man-hello",
       "x": 0.78,
       "y": 0.64,
       "s": 0.62,
-      "z": 3
+      "z": 3,
+      "nodWith": "t",
+      "seq": "pingpong",
+      "fps": 2
      },
      {
       "label": "popular 大众的 + ize 使…化",
@@ -484,12 +577,13 @@
       "when": "深奥的东西"
      },
      {
-      "actor": "cn-teacher-point",
+      "actor": "west-man-speech",
       "x": 0.56,
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "讲得"
+      "when": "讲得",
+      "seq": "talk"
      },
      {
       "svg": "art/lightbulb.svg",
@@ -513,40 +607,329 @@
   }
  ],
  "distinguish": {
-  "pics": {
-   "publicize": {
+  "key": "推广",
+  "items": [
+   {
+    "w": "popularize",
+    "gloss": "普及、推广（让大众接受、看懂）",
+    "note": "popular 大众的 + ize 使…化：让一样东西变成大家都接受、都看得懂的。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/ball.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.4,
+       "anim": "bob"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      }
+     ]
+    }
+   },
+   {
+    "w": "publicize",
+    "gloss": "宣传、公布（让大家知道）",
+    "note": "public 公开的 + ize：让一件事公开，重在“让很多人知道”，不管懂不懂、喜不喜欢。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/poster.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "sway"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      }
+     ]
+    }
+   },
+   {
+    "w": "generalize",
+    "gloss": "推广到一般、概括",
+    "note": "general 一般的 + ize：把一个做法、结论推到一般情况上去，多说道理、规律。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/book-open.svg",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.5
+      },
+      {
+       "svg": "art/lightbulb.svg",
+       "x": 0.72,
+       "y": 0.36,
+       "s": 0.36,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "push",
+    "gloss": "推销、大力推动（口语）",
+    "note": "本义是用力推，引申为使劲推销、推动，口气比较硬。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/loudspeaker.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.6
+      },
+      {
+       "waves": true,
+       "x": 0.66,
+       "y": 0.36,
+       "dir": 0,
+       "spread": 50,
+       "n": 3
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "逻辑不同：popularize 从“大众的”来，要大家接受、看懂；publicize 从“公开的”来，只要大家知道；generalize 从“一般的”来，是把道理推到一般；push 从“推”来，是使劲推销。",
+  "tip": "一句话记法：普及科学用 popularize，宣传活动用 publicize，总结规律用 generalize，硬推东西用 push。"
+ },
+ "demo": {
+  "widen": {
+   "pic": {
     "bg": "blank",
-    "img": "art/street-bg.svg",
+    "img": "art/classroom-bg.svg",
     "items": [
      {
-      "svg": "art/poster.svg",
+      "svg": "art/map.svg",
       "x": 0.5,
       "y": 0.5,
-      "s": 0.8
+      "s": 0.3,
+      "s2": 0.6,
+      "grow": [
+       0.3,
+       2
+      ]
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.88
+       ],
+       [
+        0.08,
+        0.88
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.3
+     },
+     {
+      "ray": [
+       [
+        0.6,
+        0.88
+       ],
+       [
+        0.92,
+        0.88
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.3
      }
     ]
-   },
-   "promote": {
+   }
+  },
+  "modernize": {
+   "pic": {
     "bg": "blank",
-    "img": "art/street-bg.svg",
+    "img": "art/room-bg.svg",
     "items": [
      {
-      "svg": "art/tag.svg",
-      "x": 0.5,
-      "y": 0.5,
-      "s": 0.6
+      "svg": "art/rotary-phone.svg",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.4,
+      "anim": "shake"
+     },
+     {
+      "ray": [
+       [
+        0.42,
+        0.6
+       ],
+       [
+        0.58,
+        0.6
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.6
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.74,
+      "y": 0.56,
+      "s": 0.48,
+      "delay": 1.2,
+      "pop": true
+     },
+     {
+      "waves": true,
+      "x": 0.86,
+      "y": 0.46,
+      "dir": 0,
+      "spread": 50,
+      "n": 3,
+      "delay": 1.4
      }
     ]
-   },
-   "push": {
+   }
+  },
+  "simplify": {
+   "pic": {
     "bg": "blank",
-    "img": "art/street-bg.svg",
+    "img": "art/classroom-bg.svg",
     "items": [
      {
-      "svg": "art/loudspeaker.svg",
+      "svg": "art/desk-papers.svg",
       "x": 0.5,
-      "y": 0.5,
-      "s": 0.7
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "shake",
+      "hide": 1.6
+     },
+     {
+      "svg": "art/photo.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.44,
+      "delay": 1.6,
+      "pop": true,
+      "anim": "bob"
      }
     ]
    }

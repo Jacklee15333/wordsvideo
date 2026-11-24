@@ -53,7 +53,8 @@
       "x": 0.5,
       "y": 0.56,
       "s": 0.5,
-      "shadow": true
+      "shadow": true,
+      "anim": "sway"
      },
      {
       "label": "…的整体",
@@ -185,14 +186,16 @@
       "svg": "art/map.svg",
       "x": 0.5,
       "y": 0.46,
-      "s": 0.66
+      "s": 0.66,
+      "anim": "pulse"
      },
      {
       "actor": "cn-teacher-point",
       "x": 0.14,
       "y": 0.62,
       "s": 0.7,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "label": "1,400,000,000",
@@ -218,15 +221,17 @@
        "x": 0.5,
        "y": 0.44,
        "s": 0.66,
-       "when": "China"
+       "when": "China",
+       "anim": "pulse"
       },
       {
-       "actor": "cn-teacher-point",
+       "actor": "west-man-present",
        "x": 0.14,
        "y": 0.62,
        "s": 0.7,
        "z": 3,
-       "when": "China"
+       "when": "China",
+       "seq": "talk"
       },
       {
        "label": "large population",
@@ -569,6 +574,42 @@
        "color": "#2B8A3E",
        "border": "#2B8A3E",
        "when": "越来越多"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -813,7 +854,8 @@
        "x": 0.5,
        "y": 0.44,
        "s": 0.66,
-       "when": "这些人"
+       "when": "这些人",
+       "anim": "pulse"
       },
       {
        "label": "人口",
@@ -870,7 +912,12 @@
        "s": 0.4,
        "cue": 1,
        "when": "草木生长",
-       "hideCue": 2
+       "hideCue": 2,
+       "s2": 0.5,
+       "grow": [
+        0,
+        2
+       ]
       },
       {
        "ray": [
@@ -899,7 +946,8 @@
        "z": 3,
        "cue": 1,
        "when": "人、动物长大",
-       "hideCue": 2
+       "hideCue": 2,
+       "seq": "blink"
       },
       {
        "svg": "art/fish.svg",
@@ -937,12 +985,140 @@
        "color": "#2B8A3E",
        "border": "#2B8A3E",
        "when": "种群"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
    }
   ],
-  "distinguish": false
+  "distinguish": false,
+  "demo": {
+   "reading": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/lamp.svg",
+       "x": 0.24,
+       "y": 0.56,
+       "s": 0.5
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.62,
+       "y": 0.64,
+       "s": 0.46,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   "action": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-present",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.86,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "beam": true,
+       "x": 0.5,
+       "y": 0.0,
+       "len": 0.9,
+       "width": 0.2,
+       "swing": 10,
+       "period": 3.5
+      }
+     ]
+    }
+   },
+   "movement": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.1,
+       "y": 0.74,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.74
+        ],
+        "to": [
+         0.98,
+         0.74
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.9,
+       "y": 0.7,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.7
+        ],
+        "to": [
+         0.02,
+         0.7
+        ],
+        "offset": 0.5
+       }
+      }
+     ]
+    }
+   }
+  }
  },
  "插图": [
   "populationai"
@@ -1037,5 +1213,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

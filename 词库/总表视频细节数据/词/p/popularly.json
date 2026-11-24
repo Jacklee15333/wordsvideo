@@ -12,7 +12,8 @@
       "svg": "art/icecream.svg",
       "x": 0.5,
       "y": 0.56,
-      "s": 0.6
+      "s": 0.6,
+      "anim": "bob"
      },
      {
       "label": "大众的",
@@ -21,6 +22,42 @@
       "size": 0.09,
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    },
@@ -388,13 +425,51 @@
       "svg": "art/map.svg",
       "x": 0.5,
       "y": 0.46,
-      "s": 0.6
+      "s": 0.6,
+      "anim": "sway"
      },
      {
       "svg": "art/apple.svg",
       "x": 0.82,
       "y": 0.3,
-      "s": 0.24
+      "s": 0.24,
+      "anim": "bob"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ],
     "text": "俗称",
@@ -411,7 +486,8 @@
        "x": 0.4,
        "y": 0.46,
        "s": 0.6,
-       "when": "New York"
+       "when": "New York",
+       "anim": "sway"
       },
       {
        "svg": "art/apple.svg",
@@ -419,7 +495,8 @@
        "y": 0.46,
        "s": 0.4,
        "when": "the Big Apple",
-       "pop": true
+       "pop": true,
+       "anim": "bob"
       },
       {
        "label": "the Big Apple",
@@ -458,14 +535,55 @@
       "x": 0.18,
       "y": 0.62,
       "s": 0.7,
-      "z": 3
+      "z": 3,
+      "seq": "blink",
+      "id": "s0"
      },
      {
       "actor": "cn-teacher-laugh",
       "x": 0.82,
       "y": 0.62,
       "s": 0.7,
-      "z": 3
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "nodWith": "s0"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ],
     "text": "由民众（选出）",
@@ -490,15 +608,20 @@
        "y": 0.6,
        "s": 0.8,
        "z": 3,
-       "when": "mayor"
+       "when": "mayor",
+       "seq": "pingpong",
+       "fps": 2,
+       "nodWith": "s0"
       },
       {
-       "actor": "cn-teacher-laugh",
+       "actor": "cn-teacher-point",
        "x": 0.84,
        "y": 0.62,
        "s": 0.72,
        "z": 3,
-       "when": "popularly"
+       "when": "popularly",
+       "seq": "talk",
+       "id": "s0"
       },
       {
        "label": "popularly elected",
@@ -518,6 +641,42 @@
        "color": "#2B8A3E",
        "border": "#2B8A3E",
        "when": "由民众选出"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -763,7 +922,8 @@
        "x": 0.5,
        "y": 0.36,
        "s": 0.3,
-       "when": "怎么叫"
+       "when": "怎么叫",
+       "anim": "bob"
       },
       {
        "label": "俗称",
@@ -798,12 +958,13 @@
        "when": "投票"
       },
       {
-       "actor": "west-girl-raise",
+       "actor": "cn-boy-raise",
        "x": 0.18,
        "y": 0.62,
        "s": 0.7,
        "z": 3,
-       "when": "大众"
+       "when": "大众",
+       "seq": "blink"
       },
       {
        "label": "由民众选出",
@@ -813,130 +974,313 @@
        "color": "#2B8A3E",
        "border": "#2B8A3E",
        "when": "由民众选出"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
    }
   ],
   "distinguish": {
-   "pics": {
-    "generally": {
+   "key": "普遍地",
+   "items": [
+    {
+     "w": "popularly",
+     "gloss": "在大众当中普遍地；俗称",
+     "note": "popular 大众的 + ly：说的是“在老百姓当中”，常和 believed、called、elected 连用。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/station-bg.svg",
+      "items": [
+       {
+        "actor": "walk-west-woman-case",
+        "x": 0.05,
+        "y": 0.62,
+        "s": 0.56,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.05,
+          0.62
+         ],
+         "to": [
+          0.95,
+          0.62
+         ],
+         "offset": 0
+        }
+       },
+       {
+        "actor": "walk-cn-boy-pack",
+        "x": 0.9,
+        "y": 0.66,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.9,
+          0.66
+         ],
+         "to": [
+          0.1,
+          0.66
+         ],
+         "offset": 0.4
+        }
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.25,
+        "y": 0.7,
+        "s": 0.6,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.25,
+          0.7
+         ],
+         "to": [
+          1.0,
+          0.7
+         ],
+         "offset": 0.7
+        }
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 1.0,
+        "y": 0.6,
+        "s": 0.54,
+        "z": 2,
+        "walk": {
+         "from": [
+          1.0,
+          0.6
+         ],
+         "to": [
+          0.0,
+          0.6
+         ],
+         "offset": 0.2
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "generally",
+     "gloss": "一般地、总体上",
+     "note": "general 一般的 + ly：说大多数情况、总的来看，不强调是不是老百姓。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/map.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.62,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "commonly",
+     "gloss": "通常、常见地",
+     "note": "common 共同的 + ly：很多人、很多时候都这样，强调“常见”。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "actor": "walk-west-woman-case",
+        "x": 0.05,
+        "y": 0.62,
+        "s": 0.56,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.05,
+          0.62
+         ],
+         "to": [
+          0.95,
+          0.62
+         ],
+         "offset": 0
+        }
+       },
+       {
+        "actor": "walk-cn-boy-pack",
+        "x": 0.9,
+        "y": 0.66,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.9,
+          0.66
+         ],
+         "to": [
+          0.1,
+          0.66
+         ],
+         "offset": 0.4
+        }
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.25,
+        "y": 0.7,
+        "s": 0.6,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.25,
+          0.7
+         ],
+         "to": [
+          1.0,
+          0.7
+         ],
+         "offset": 0.7
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：popularly 落在“大众”上（大家都这么叫、这么信）；generally 落在“总体”上；commonly 落在“常见”上。",
+   "tip": "一句话记法：俗称、民选用 popularly；总的来说用 generally；常常见到用 commonly。"
+  },
+  "demo": {
+   "sadly": {
+    "pic": {
      "bg": "blank",
-     "img": "art/station-bg.svg",
+     "img": "art/bedroom-bg.svg",
      "items": [
       {
-       "actor": "walk-west-woman-case",
-       "x": 0.05,
-       "y": 0.62,
+       "frames": [
+        "art/cat-sit_f0.svg",
+        "art/cat-sit_f1.svg",
+        "art/cat-sit_f2.svg"
+       ],
+       "svg": "art/cat-sit_f0.svg",
+       "x": 0.4,
+       "y": 0.6,
        "s": 0.56,
-       "z": 2,
-       "walk": {
-        "from": [
-         0.05,
-         0.62
-        ],
-        "to": [
-         0.95,
-         0.62
-        ],
-        "offset": 0
-       }
+       "fps": 2
       },
       {
-       "actor": "walk-cn-boy-pack",
-       "x": 0.9,
-       "y": 0.66,
-       "s": 0.5,
-       "z": 2,
-       "walk": {
-        "from": [
-         0.9,
-         0.66
-        ],
-        "to": [
-         0.1,
-         0.66
-        ],
-        "offset": 0.4
-       }
-      },
-      {
-       "actor": "walk-cn-girl",
-       "x": 0.25,
-       "y": 0.7,
-       "s": 0.6,
-       "z": 2,
-       "walk": {
-        "from": [
-         0.25,
-         0.7
-        ],
-        "to": [
-         1.0,
-         0.7
-        ],
-        "offset": 0.7
-       }
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.75,
+       "y": 0.1,
+       "s": 0.05,
+       "to": [
+        0,
+        0.6
+       ],
+       "every": 0.3
       }
      ]
-    },
-    "commonly": {
+    }
+   },
+   "basically": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.66,
+       "s": 0.5
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.24,
+       "s": 0.2,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   "forward": {
+    "pic": {
      "bg": "blank",
      "img": "art/street-bg.svg",
      "items": [
       {
-       "actor": "walk-west-woman-case",
-       "x": 0.05,
-       "y": 0.62,
-       "s": 0.56,
+       "actor": "walk-cn-girl",
+       "x": 0.1,
+       "y": 0.72,
+       "s": 0.6,
        "z": 2,
        "walk": {
         "from": [
          0.05,
-         0.62
+         0.72
         ],
         "to": [
          0.95,
-         0.62
+         0.72
         ],
         "offset": 0
        }
       },
       {
-       "actor": "walk-cn-boy-pack",
-       "x": 0.9,
-       "y": 0.66,
-       "s": 0.5,
-       "z": 2,
-       "walk": {
-        "from": [
-         0.9,
-         0.66
+       "ray": [
+        [
+         0.3,
+         0.3
         ],
-        "to": [
-         0.1,
-         0.66
-        ],
-        "offset": 0.4
-       }
-      },
-      {
-       "actor": "walk-cn-girl",
-       "x": 0.25,
-       "y": 0.7,
-       "s": 0.6,
-       "z": 2,
-       "walk": {
-        "from": [
-         0.25,
-         0.7
-        ],
-        "to": [
-         1.0,
-         0.7
-        ],
-        "offset": 0.7
-       }
+        [
+         0.8,
+         0.3
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "loop": true
       }
      ]
     }
@@ -1035,5 +1379,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
