@@ -294,7 +294,13 @@ def api_video_get(qs):
             idx = {V.folder_of(r[2]): r for r in rows}
         except Exception:
             pass
+        try:
+            import pics
+            unc = pics.unchecked_words()
+        except Exception:
+            unc = set()
         items = [{"word": idx[w][2] if w in idx else w, "folder": w, "inTable": w in idx, "video": vd.get(w),
+                  "picTodo": (idx[w][2] if w in idx else w) in unc,
                   "meaning": idx[w][3] if w in idx else "", "q": bool(w in idx and idx[w][4] != "缺")} for w in sorted(pw)]
         return {"items": items, "videos": list(vd.values()), "nPic": len(pw), "nVideo": len(vd)}
     return {"error": "不认识"}
@@ -313,6 +319,17 @@ def api_video_post(b):
         return d
     elif op == "envchk":
         return V.envchk_start()
+    elif op == "fixpics":                                  # v1.11.1：补画面（起草检查没过的交给 AI 改；补好的批次里接着做）
+        bn = (b.get("name") or "").strip()
+        ws = V.fix_words(bn, b.get("words") or [])
+        if not ws:
+            return {"ok": False, "msg": "没有要补画面的词：画面都过了起草检查"}
+        api_task_add({"kind": "pics", "params": {"words": ws, "fix": True, "batch": bn},
+                      "title": "补画面：%s%s" % ("、".join(ws[:4]), " 等 %d 个" % len(ws) if len(ws) > 4 else "")})
+        relay = C.load_cfg().get("provider") == "relay"
+        return {"ok": True, "n": len(ws), "msg": "开始补画面：%d 个词。%s%s" % (
+            len(ws), "到「画面」页，把提示词粘贴给网页 AI" if relay else "AI 自己改，过程在「画面」页",
+            "；补好一个，批次 %s 就接着做一个" % bn if bn else "")}
     elif op == "fix":
         return V.envfix(b.get("what", ""))
     elif op == "batch":

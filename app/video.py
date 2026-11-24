@@ -332,7 +332,12 @@ def batch_new(name, words):
             hasq[r[2]] = hasq.get(r[2], True) and r[4] != "缺"
     except Exception:
         pass
-    rows, noq, nopic = [], [], []
+    try:                                          # v1.11.1：画面还没过起草检查的，放进去也会卡在“准备”
+        import pics
+        unc = pics.unchecked_words()
+    except Exception:
+        unc = set()
+    rows, noq, nopic, nofix = [], [], [], []
     for w in words:
         f = folder_of(w)
         if not hasq.get(w):
@@ -341,11 +346,16 @@ def batch_new(name, words):
         if f not in pw:
             nopic.append(w)
             continue
+        if w in unc:
+            nofix.append(w)
+            continue
         rows.append("%02d\t%s\t%s\t出自单词工作台" % (len(rows) + 1, f, pw[f]))
     notes = ([("没有题目、没放进批次（先到「出题」）：" + "、".join(noq[:30]))] if noq else []) + \
-            ([("没有画面、没放进批次（先到「画面」）：" + "、".join(nopic[:30]))] if nopic else [])
+            ([("没有画面、没放进批次（先到「画面」）：" + "、".join(nopic[:30]))] if nopic else []) + \
+            ([("画面还没过起草检查、没放进批次（先点「补画面」）：" + "、".join(nofix[:30]))] if nofix else [])
     if not rows:
         return {"ok": False, "msg": "这些词都还不能出视频：" + "；".join(notes)}
+    sync_pics()                                   # v1.11.1：流水线用最新的画面设置
     lst = C.DATA / "batches" / (name + ".tsv")
     lst.parent.mkdir(exist_ok=True)
     lst.write_text("# 单词工作台建的批次\n" + "\n".join(rows) + "\n", encoding="utf-8")
@@ -401,6 +411,9 @@ s = json.load(open(os.path.join(d, "state.json"), encoding="utf-8"))
 os.makedirs(os.path.join(d, "cmd"), exist_ok=True)
 n = 0
 for w in s.get("words", []):
+    m = (w.get("msg") or "").lstrip("⚠❌✅ ")
+    if w.get("stage") == "prep" and m.startswith("起草检查没过"):
+        continue                                   # 画面的问题：要先补画面，再试也一样
     if w.get("stage") not in ("done", "skipped") and w.get("status") in ("blocked", "failed"):
         n += 1
         open(os.path.join(d, "cmd", str(time.time_ns() + n) + ".json"), "w", encoding="utf-8").write(
@@ -1140,9 +1153,11 @@ for d in sorted(glob.glob(os.path.join(B, "*", ""))):
         b["started"] = st is not None
         ws = (st or {}).get("words") or [dict(r, stage="prep", status="waiting", msg="", tries={}, t={}) for r in load_list(lst)]
         b["n"] = len(ws)
-        cnt = {"done": 0, "skipped": 0, "todo": 0, "running": 0, "waiting": 0}
+        cnt = {"done": 0, "skipped": 0, "todo": 0, "running": 0, "waiting": 0, "pic": 0}
         for w in ws:
             s, x = w.get("stage"), w.get("status")
+            if s == "prep" and x == "blocked" and (w.get("msg") or "").lstrip("\u26a0\u274c\u2705 ").startswith("起草检查没过"):
+                cnt["pic"] += 1
             cnt["done" if s == "done" else "skipped" if s == "skipped" else "todo" if x in ("blocked", "failed", "qa")
                 else "running" if x == "running" else "waiting"] += 1
         b["counts"] = cnt
@@ -1357,4 +1372,58 @@ def live(open_names=()):
             scan = True
     if scan:
         _scan_bg()
+    return out
+
+
+# ═══════════ v1.11.1：补画面要用的——画面设置拷进 WSL、批次里起草检查说的“还要补”、要补的词 ═══════════
+def sync_pics():
+    """词库/画面设置 → WSL 的 ~/kit-extra（流水线“准备”读的就是这一份）。几秒钟。"""
+    rc, t = wsl("mkdir -p ~/kit-extra && cp -r %s/. ~/kit-extra/ && find ~/kit-extra -name '*.py' -exec sed -i 's/\\r$//' {} +"
+                % q(to_wsl(C.REPO / EXTRA)), 120)
+    return rc == 0
+
+
+def prep_todo(batch, words):
+    """批次里这些词“准备”那一步起草检查最后一次说的“还要补：…”：{单词: 那一句}（日志里读，比任务里存的那一句全）。"""
+    if not NAME_RE.fullmatch(batch or ""):
+        return {}
+    fm = {folder_of(w): w for w in words}
+    rc, t = wsl("cd \"$HOME/wf-batch/%s/logs\" 2>/dev/null || exit 0\n"
+                "for f in *.prep.log; do [ -f \"$f\" ] || continue; l=$(grep -a '^还要补' \"$f\" | tail -1); "
+                "[ -n \"$l\" ] && printf '%%s\\t%%s\\n' \"${f%%.prep.log}\" \"$l\"; done\n" % batch, 60)
+    out = {}
+    for line in (t or "").splitlines():
+        if "\t" in line:
+            f, l = line.split("\t", 1)
+            if f in fm:
+                out[fm[f]] = l.strip()
+    return out
+
+
+def fix_words(batch="", words=()):
+    """要补画面的词：批次里卡在“准备”（起草检查没过）的，加上还没轮到、画面也没过起草检查的；
+    或者给的这些词里画面没过起草检查的。"""
+    import pics
+    unc = pics.unchecked_words()
+    out = []
+    if batch:
+        if not NAME_RE.fullmatch(batch):
+            return []
+        fm = {}
+        try:
+            for r in C.read_index()[1]:
+                fm.setdefault(folder_of(r[2]), r[2])
+        except Exception:
+            pass
+        b = next((x for x in live([batch]).get("batches") or [] if x.get("name") == batch), None) or {}
+        for w in b.get("words") or []:
+            if w.get("stage") in ("done", "skipped"):
+                continue
+            word = fm.get(w["word"], w["word"].replace("_", " "))
+            stuck = w.get("stage") == "prep" and w.get("status") == "blocked" and (w.get("msg") or "").startswith("起草检查没过")
+            if (stuck or word in unc) and word not in out:
+                out.append(word)
+    for w in words or []:
+        if w in unc and w not in out:
+            out.append(w)
     return out

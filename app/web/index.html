@@ -492,6 +492,11 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 .vrun{color:var(--blue);font-weight:600}
 .vwm p{margin:6px 0;font-size:13.5px}
 #modal pre.vlog{white-space:pre-wrap;font-size:12px;line-height:1.55;background:#F7F9FA;border:1px solid var(--rule2);padding:8px;margin:10px 0 0;max-height:360px;overflow:auto}
+/* v1.11.1：画面还要补——卡在“准备”的合成一组，点一下交给 AI 补 */
+.vfix{border:1px solid #F0D2CE;background:#FFF8F7;border-radius:6px;padding:9px 12px;margin:8px 0}
+.vfix p{margin:4px 0 6px;font-size:12.5px;color:#7A1F17;line-height:1.7}
+.vchips{display:flex;flex-wrap:wrap;max-height:112px;overflow:auto}
+.vfix .line{margin-top:6px}
 @media (prefers-reduced-motion:reduce){.spin,.kok.spin{animation:none;border-top-color:#C9D2DC}.vb,.vbbar i,.vm .mb i{transition:none}}
 </style>
 </head>
@@ -1298,9 +1303,11 @@ async function loadQbulk(){
 /* ⑤ 画面：这次给哪些词（选上的）、做的过程、画面结果（图、存在哪儿） */
 function picCheckRender(){const pk=picked(),box=$('#picCheck');if(!pk.length){box.hidden=true;return}box.hidden=false;
   const have=pk.filter(i=>i.pic).length,noq=pk.filter(i=>!i.q).length,doing=pk.filter(i=>i.st==='doing'&&!i.pic&&i.q).length,all=have===pk.length;
-  box.className='rep'+(all?' ok':noq&&!PP.length&&!doing?' warn':'');
-  box.innerHTML=all?`选上的 ${pk.length} 个都有画面了，不用做。`:[PP.length?`能做 <b>${PP.length}</b> 个`:'',doing?`正在做 <b>${doing}</b> 个`:'',
-    have?`不用做 <b>${have}</b> 个（已经有画面）`:'',noq?`不能做 <b>${noq}</b> 个（还没题目，先到 <a onclick="go('q')">出题</a>）`:''].filter(Boolean).join(' · ')}
+  const pt=pk.filter(i=>i.pic&&i.picTodo);
+  box.className='rep'+(all&&!pt.length?' ok':(noq&&!PP.length&&!doing)||pt.length?' warn':'');
+  box.innerHTML=(all?`选上的 ${pk.length} 个都有画面了，不用做。`:[PP.length?`能做 <b>${PP.length}</b> 个`:'',doing?`正在做 <b>${doing}</b> 个`:'',
+    have?`不用做 <b>${have}</b> 个（已经有画面）`:'',noq?`不能做 <b>${noq}</b> 个（还没题目，先到 <a onclick=\"go('q')\">出题</a>）`:''].filter(Boolean).join(' · '))+
+    (pt.length?`<br>其中 <b>${pt.length}</b> 个的画面还没过起草检查，出视频会卡在“准备”：<button class="btn sm" data-fixpics="" data-words="${esc(JSON.stringify(pt.map(i=>i.word)))}">交给 AI 补画面（${pt.length} 个）</button>`:'')}
 async function loadPic(){await poolNeed();picPickRender();picRes();stepTasks('pic');liveTick();tabCounts()}
 function picPickRender(){const pk=picked();picCheckRender();
   $('#picPickN').textContent=pk.length?`（选上的 ${pk.length} 个）`:'';
@@ -1885,23 +1892,25 @@ async function vWordsLoad(){
   let d,pl;try{[d,pl]=await Promise.all([api('/api/video?what=words'),api('/api/pool').catch(()=>({items:[]}))])}
   catch(e){$('#vReady').innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
   VW=d;const pk=((pl&&pl.items)||[]).filter(i=>i.picked),pkw=new Set(pk.map(i=>i.word)),onlyNew=$('#vOnlyNew').checked;
-  const ready=pk.filter(i=>i.q&&i.pic),miss=pk.filter(i=>!(i.q&&i.pic)),hv=ready.filter(i=>i.video).length;
+  const ready=pk.filter(i=>i.q&&i.pic&&!i.picTodo),miss=pk.filter(i=>!(i.q&&i.pic&&!i.picTodo)),hv=ready.filter(i=>i.video).length,pt=miss.filter(i=>i.q&&i.pic&&i.picTodo);
   $('#vPickN').textContent=pk.length?`选上的 ${pk.length} 个（第 3 步「选词」里勾的）`:'';
   const ck=$('#vCheck');ck.hidden=!pk.length;
   if(pk.length){ck.className='rep'+(miss.length?' warn':' ok');
-    ck.innerHTML=`能出视频（题目、画面都有）<b>${ready.length}</b> 个${hv?`，其中 ${hv} 个已经有视频`:''}${miss.length?` · 还不能出视频 <b>${miss.length}</b> 个（列在下面，不会放进批次）`:''}`}
+    ck.innerHTML=`能出视频（题目、画面都有）<b>${ready.length}</b> 个${hv?`，其中 ${hv} 个已经有视频`:''}${miss.length?` · 还不能出视频 <b>${miss.length}</b> 个（列在下面，不会放进批次）`:''}${pt.length?`<br>其中 <b>${pt.length}</b> 个的画面还没过起草检查，开工会卡在“准备”：先补画面。`:''}`}
   $('#vReady').innerHTML=!pk.length?'<div class="pempty">还没有选上的词：到第 3 步「选词」勾上要出视频的词。</div>':
     ready.length?'<table><tr><th style="width:26px"><input type="checkbox" id="vAll" title="全选 / 全不选"></th><th>单词</th><th>意思</th><th>视频</th></tr>'+ready.map(i=>`<tr><td><input type="checkbox" class="vck" value="${esc(i.word)}" ${i.video&&onlyNew?'':'checked'}></td>
       <td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,30)}</td><td class="n">${i.video?'<span class="ck-y">有了</span>':'<span class="ck-n">还没有</span>'}</td></tr>`).join('')+'</table>'
     :'<div class="pempty">选上的词里还没有能出视频的（题目、画面都有的）。看下面缺什么。</div>';
-  const fix=i=>!i.q?(i.manual?['出题没过','go(\'q\')','去「出题」改']:[i.pic?'缺题目':'缺题目、也缺画面（先出题，再做画面）','go(\'q\')','去出题'])
+  const fix=i=>i.q&&i.pic&&i.picTodo?['画面还没过起草检查（开工会卡在“准备”）','','']:!i.q?(i.manual?['出题没过','go(\'q\')','去「出题」改']:[i.pic?'缺题目':'缺题目、也缺画面（先出题，再做画面）','go(\'q\')','去出题'])
     :[i.picfail?'画面没做成':'缺画面','go(\'pic\')',i.picfail?'去「画面」再试':'去做画面'];
-  $('#vMiss').innerHTML=miss.length?`<div class="small" style="margin:12px 0 4px"><b>还不能出视频的 ${miss.length} 个</b>（不会放进批次）</div><div class="plist" style="max-height:200px"><table><tr><th>单词</th><th>题目</th><th>画面</th><th>缺什么</th><th></th></tr>`+
-    miss.map(i=>{const [why,act,btn]=fix(i);return `<tr><td class="w">${esc(i.word)}</td><td class="n">${ckQ(i)}</td><td class="n">${ckP(i)}</td><td>${why}</td><td class="n"><button class="btn ghost sm" onclick="${act}">${btn}</button></td></tr>`}).join('')+'</table></div>':'';
+  $('#vMiss').innerHTML=miss.length?`<div class="small" style="margin:12px 0 4px"><b>还不能出视频的 ${miss.length} 个</b>（不会放进批次）</div>`+
+    (pt.length?`<div class="vfix"><div class="line" style="margin:0"><span class="small">${pt.length} 个的画面要先补（起草检查说还缺东西）：</span><button class="btn sm" data-fixpics="" data-words="${esc(JSON.stringify(pt.map(i=>i.word)))}">交给 AI 补画面（${pt.length} 个）</button></div></div>`:'')+
+    `<div class="plist" style="max-height:200px"><table><tr><th>单词</th><th>题目</th><th>画面</th><th>缺什么</th><th></th></tr>`+
+    miss.map(i=>{const [why,act,btn]=fix(i);return `<tr><td class="w">${esc(i.word)}</td><td class="n">${ckQ(i)}</td><td class="n">${ckP(i)}</td><td>${why}</td><td class="n">${act?`<button class="btn ghost sm" onclick="${act}">${btn}</button>`:''}</td></tr>`}).join('')+'</table></div>':'';
   const others=(d.items||[]).filter(w=>w.q&&!pkw.has(w.word));
   $('#vOtherN').textContent=`（${others.length} 个）`;
-  $('#vWords').innerHTML=others.length?'<table>'+others.map(w=>`<tr><td style="width:26px"><input type="checkbox" class="vck" value="${esc(w.word)}"></td><td class="w">${esc(w.word)}</td>
-    <td class="small muted">${esc(w.meaning||'').slice(0,24)}</td><td class="n">${w.video?'<span class="ck-y">有视频</span>':'<span class="ck-n">还没有</span>'}</td></tr>`).join('')+'</table>':'<div class="pempty">没有。</div>';
+  $('#vWords').innerHTML=others.length?'<table>'+others.map(w=>`<tr><td style="width:26px">${w.picTodo?'':`<input type="checkbox" class="vck" value="${esc(w.word)}">`}</td><td class="w">${esc(w.word)}</td>
+    <td class="small muted">${esc(w.meaning||'').slice(0,24)}</td><td class="n">${w.picTodo?'<span class="wnote">画面还要补</span>':w.video?'<span class="ck-y">有视频</span>':'<span class="ck-n">还没有</span>'}</td></tr>`).join('')+'</table>':'<div class="pempty">没有。</div>';
   vVideos(d.videos||[]);VVN=(d.videos||[]).length;vNewBtn();vDefName()}
 function vNewBtn(){const b=$('#vNew');if(b.dataset.busy)return;const n=$$('.vck:checked').length;b.textContent=n?`建批次（${n} 个词）`:'建批次';b.disabled=!n}
 function vDefName(){const inp=$('#vName');if(inp.value&&inp.value!==VAUTO)return;
@@ -2007,7 +2016,8 @@ function vBtns(b){
   else if(s==='done')first=busy('✓ 做完了');
   else if(s==='new')first=B('start','开工','',false,'开始出这一批的视频');
   else if(s==='paused')first=B('start','继续','',false,'从停下的地方接着做');
-  else if(s==='stuck')first=B('retryall','再试一次','',false,'卡住的词都再试一次（“要处理”的最好先看原因）');
+  else if(s==='stuck'&&(b.counts||{}).pic&&b.counts.pic>=(b.counts.todo||0))first=`<button class="btn sm" data-fixpics="${nm}"${op?' disabled':''} title="卡住的都是画面的问题：交给 AI 补好，这一批接着做">补画面</button>`;
+  else if(s==='stuck')first=B('retryall','再试一次','',false,'卡住的词再试一次（画面的问题要先补画面，不在这里重试）');
   else if(s==='error')first='';
   else first=B('start','接着做','',false,'没做完的接着做（做好的不重做）');
   const run=s==='running',lab=(o,t)=>op===o?vSpin+t:t;
@@ -2055,18 +2065,33 @@ function vReport(b){
   if(b.active)h+=`<dt>用时</dt><dd>${b.first?fmtT(b.first)+' 开工，':''}出片一共 ${vDur(b.active)}${b.per?`，平均 ${vDur(b.per)}出一个`:''}</dd>`;
   const sa=VSTG.filter(s=>(b.stageAvg||{})[s]!=null);if(sa.length)h+=`<dt>每一步</dt><dd>平均一个词：${sa.map(s=>VSTN[s]+' '+vClock(b.stageAvg[s])).join('、')}</dd>`;
   if(b.machine)h+=`<dt>电脑</dt><dd>${vMachineSum(b.machine)}</dd>`;
-  if(b.todo&&b.todo.length)h+=`<dt>没做成</dt><dd>${b.todo.map(w=>`<span class="w">${esc(vWn(w.word))}</span>（${VSTN[w.stage]||''}：${esc((w.msg||'没写原因').slice(0,60))}）`).join('；')}</dd>`;
+  if(b.todo&&b.todo.length)h+=`<dt>没做成</dt><dd>${b.todo.map(w=>`<span class="w">${esc(vWn(w.word))}</span>（${vIsPic(w)?'画面还要补':(VSTN[w.stage]||'')+'：'+esc(vShort(w.msg||'没写原因',50))}）`).join('；')}</dd>`;
   const sk=(b.words||[]).filter(w=>w.stage==='skipped');if(sk.length)h+=`<dt>跳过</dt><dd>${sk.map(w=>`<span class="w">${esc(vWn(w.word))}</span>`+(w.msg?'（'+esc(w.msg.slice(0,30))+'）':'')).join('、')}</dd>`;
   if(b.notes&&b.notes.length)h+=`<dt>处理记录</dt><dd>${b.notes.map(esc).join('<br>')}</dd>`;
   if(b.res)h+=`<dt>分工</dt><dd class="small muted">${esc(b.res)}</dd>`;
   return h+`<dt>视频</dt><dd><code>${esc(b.winDir)}</code> <button class="btn ghost sm" data-open="vbatch" data-word="${esc(b.name)}">打开文件夹</button></dd></dl></div>`}
-function vTodo(b){const nm=esc(b.name),cm=new Set((b.cmds||[]).map(x=>x.word));
-  return `<div class="vtodo"><div class="vth">要你看一下的（${b.todo.length} 个）</div>`+b.todo.map(w=>{
+const vIsPic=w=>w.stage==='prep'&&w.status==='blocked'&&/^起草检查没过/.test(w.msg||'');
+const vShort=(t,n)=>{t=String(t||'');return t.length>n?t.slice(0,n)+'…':t};
+function vFixTask(name){const t=ST&&ST.runner&&ST.runner.task;if(!t||t.kind!=='pics')return null;let p={};try{p=JSON.parse(t.params||'{}')}catch(e){}return p.fix&&(p.batch||'')===(name||'')?t:null}
+function vTodo(b){const nm=esc(b.name),cm=new Set((b.cmds||[]).map(x=>x.word)),pic=b.todo.filter(vIsPic),rest=b.todo.filter(w=>!vIsPic(w));let h='';
+  if(pic.length){const fx=vFixTask(b.name);
+    h+=`<div class="vfix"><div class="vth">画面还要补（${pic.length} 个）</div>
+      <p>视频技能的起草检查说，这些词的画面设置还缺东西（比如同义词辨析没写话、场景画得太简单、同一个动作用了好几次），流水线就停在“准备”。交给 AI 照着“还要补什么”改好；补好一个，这一批就自动接着做那一个。点词看它缺什么。</p>
+      <div class="vchips">${pic.map(w=>`<a href="#" class="wchip bad" data-wo="look" data-b="${nm}" data-w="${esc(w.word)}">${esc(vWn(w.word))}</a>`).join('')}</div>
+      <div class="line">${fx?`<span class="ecbusy">${vSpin}正在补画面</span><button class="btn ghost sm" onclick="go('pic');stepScroll()">去「画面」页看</button><span class="small muted">手动接力要你把提示词粘贴给网页 AI</span>`
+        :`<button class="btn sm" data-fixpics="${nm}">交给 AI 补画面</button><span class="small muted">还没轮到、画面也要补的词一起补</span>`}</div></div>`}
+  if(rest.length)h+=`<div class="vtodo"><div class="vth">要你看一下的（${rest.length} 个）</div>`+rest.map(w=>{
     const st={blocked:'要处理',failed:'出错了',qa:'等你看'}[w.status]||w.status,wd=esc(w.word),q=cm.has(w.word);
-    return `<div class="vt"><span class="w">${esc(vWn(w.word))}</span><span class="why">${VSTN[w.stage]||''}${st}${w.status==='failed'&&w.tries?`（自动试了 ${w.tries} 次）`:''}：${esc(w.msg||'没写原因')}</span>
+    return `<div class="vt"><span class="w">${esc(vWn(w.word))}</span><span class="why" title="${esc(w.msg||'')}">${VSTN[w.stage]||''}${st}${w.status==='failed'&&w.tries?`（自动试了 ${w.tries} 次）`:''}：${esc(vShort(w.msg||'没写原因',90))}</span>
       <span class="acts"><button class="btn ghost sm" data-wo="look" data-b="${nm}" data-w="${wd}">看原因</button>${w.status==='qa'
         ?`<button class="btn sm" data-wo="ok" data-b="${nm}" data-w="${wd}"${q?' disabled':''}>${q?'已记下':'看过了，放行'}</button>`
-        :`<button class="btn sm" data-wo="retry" data-b="${nm}" data-w="${wd}"${q?' disabled':''}>${q?'已记下':'再试一次'}</button>`}<button class="btn warn sm" data-wo="skip" data-b="${nm}" data-w="${wd}">不做这个词</button></span></div>`}).join('')+'</div>'}
+        :`<button class="btn sm" data-wo="retry" data-b="${nm}" data-w="${wd}"${q?' disabled':''}>${q?'已记下':'再试一次'}</button>`}<button class="btn warn sm" data-wo="skip" data-b="${nm}" data-w="${wd}">不做这个词</button></span></div>`}).join('')+'</div>';
+  return h}
+async function vFixPics(batch,words,btn){
+  if(btn){btn.disabled=true;btn.innerHTML=vSpin+'正在安排…'}
+  let d;try{d=await api('/api/video',{op:'fixpics',name:batch||'',words:words||[]})}catch(e){d={ok:false,msg:e.message}}
+  toast((d.ok?'✓ ':'✗ ')+(d.msg||''),9000);if(btn){btn.disabled=false;btn.textContent='交给 AI 补画面'}
+  if(d.ok){poll();setTimeout(()=>{go('pic');try{stepScroll()}catch(e){}},700)}}
 function vDots(w){const i=VSTG.indexOf(w.stage);
   return '<span class="sd" aria-hidden="true">'+VSTG.map((s,k)=>`<i class="${w.stage==='done'||k<i?'ok':k===i?({running:'run',blocked:'bad',failed:'bad',qa:'qa'}[w.status]||'cur'):''}"></i>`).join('')+'</span>'}
 function vNowTxt(w){
@@ -2094,7 +2119,7 @@ function vWordModal(bn,word,showLog){
     ${w.msg&&!done?`<p><b>${stuck?'原因':'最后一句'}：</b>${esc(w.msg)}</p>`:''}
     ${durs?`<p class="small muted">各步用时：${durs}${w.took!=null?`；一共 ${vClock(w.took)}`:''}</p>`:''}
     ${vid?`<p>视频：<a href="/api/video/file?p=${encodeURIComponent(vid.file)}" target="_blank">播放</a> <span class="small muted">${esc(vid.size)} · ${esc(vid.ts)}</span></p>`:''}
-    ${stuck?'<p class="small muted">“要处理”的多半要先看原因、改一下再试；“出错了”的可以直接再试一次。</p>':''}
+    ${vIsPic(w)?'<p class="small" style="color:#9B2C22">这是画面设置的问题：关掉这个窗口，在批次里点「交给 AI 补画面」。</p>':stuck?'<p class="small muted">“要处理”的多半要先看原因、改一下再试；“出错了”的可以直接再试一次。</p>':''}
     <div class="line">${acts.join('')}</div><pre class="vlog" id="vLog" hidden></pre></div>`);
   if(showLog)vLog(bn,word,w.stage)}
 async function vLog(bn,word,stage){const p=$('#vLog');if(!p)return;p.hidden=false;p.textContent='正在读日志…';
@@ -2126,6 +2151,7 @@ function vToggle(name){VOPEN.has(name)?VOPEN.delete(name):VOPEN.add(name);
   const b=vB(name),c=document.querySelector(`.vb[data-name="${CSS.escape(name)}"]`);if(b&&c)vCardFill(c,b);if(VOPEN.has(name)&&!(b&&b.words))vTick(true)}
 document.addEventListener('click',e=>{
   const fx=e.target.closest('[data-fix]');if(fx){e.preventDefault();vFix(fx.dataset.fix,fx);return}
+  const fp=e.target.closest('[data-fixpics]');if(fp){e.preventDefault();e.stopPropagation();let ws=[];try{ws=JSON.parse(fp.dataset.words||'[]')}catch(_){}vFixPics(fp.dataset.fixpics,ws,fp);return}
   const bo=e.target.closest('[data-bo]');if(bo){e.preventDefault();e.stopPropagation();vBatchOp(bo.dataset.bo,bo.dataset.b,bo);return}
   const wo=e.target.closest('[data-wo]');if(wo){e.preventDefault();e.stopPropagation();vWordOp(wo.dataset.wo,wo.dataset.b,wo.dataset.w,wo);return}
   const tr=e.target.closest('tr[data-vw]');if(tr){vWordModal(tr.dataset.b,tr.dataset.vw);return}

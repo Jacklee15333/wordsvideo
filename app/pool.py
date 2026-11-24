@@ -210,6 +210,11 @@ def items():
     man = set(C.manual_words())
     pf = {r["word"] for r in C.q("SELECT word FROM picfail")}
     busy = _busy_words()
+    try:                                              # v1.11.1：画面存下了、还没过起草检查（出视频会卡住，要先补画面）
+        import pics
+        unc = pics.unchecked_words()
+    except Exception:
+        unc = set()
     out = []
     for r in rows:
         w = r["word"]
@@ -218,6 +223,7 @@ def items():
         has_q = bool(rs) and all(x[4] != "缺" for x in rs)
         it = {"word": w, "tag": r["tag"] or "", "ts": (r["ts"] or "")[:10], "picked": bool(r["picked"]), "meaning": (rs[0][3] if rs and len(rs[0]) > 3 else ""),
               "q": has_q, "manual": w in man, "pic": f in pw, "video": f in vd, "picfail": w in pf, "inTable": bool(rs)}
+        it["picTodo"] = it["pic"] and w in unc
         if w in busy:
             st = "doing"
         elif has_q and it["pic"]:
