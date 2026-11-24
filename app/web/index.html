@@ -153,6 +153,36 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 .kgo{margin-top:14px}
 .kopt{display:block;margin:8px 0 6px;font-weight:600}
 .kbig{font-size:16px;padding:9px 28px}
+/* v1.9.4：三样一键检测、每样单独检测、检测详情 */
+.khead{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.khead h3{margin:0}
+.kmid{flex:1;min-width:240px;display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.ksum{font-size:12px;color:var(--muted)}
+.ksum.ok{color:var(--pass)} .ksum.bad{color:var(--red)} .ksum.warn{color:var(--amber)}
+.kbtns{display:flex;gap:6px;margin-left:auto}
+.kok.warn{background:var(--amber-bg);color:var(--amber)}
+.kok.run{background:#E7EEF8;color:var(--blue);animation:blink 1.4s infinite}
+.kdet{border-top:1px solid var(--rule);margin-top:6px;padding-top:10px}
+.kdhead{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.kdhead .btn{margin-left:auto}
+.kdgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start}
+.kdgrid.noshot{grid-template-columns:minmax(0,1fr)}
+.ksec{border:1px solid var(--rule2);border-radius:4px;background:#fff;padding:8px 10px}
+.ksec+.ksec{margin-top:8px}
+.ksec.flash{animation:kflash 1.6s ease-out}
+@keyframes kflash{from{box-shadow:0 0 0 3px rgba(43,92,168,.5)}to{box-shadow:0 0 0 3px rgba(43,92,168,0)}}
+.kst{display:flex;align-items:center;gap:8px;font-size:13px;flex-wrap:wrap}
+.kst .kok{width:18px;height:18px;font-size:11px}
+.kempty{margin:4px 0 0;font-size:12.5px;color:var(--muted)}
+.klog{list-style:none;margin:6px 0 0;padding:0;max-height:260px;overflow:auto;font-size:12.5px;line-height:1.6}
+.klog li{display:grid;grid-template-columns:62px 14px minmax(0,1fr);gap:4px}
+.klog .kt{color:var(--faint);font-variant-numeric:tabular-nums}
+.klog i{font-style:normal;text-align:center;color:var(--faint)}
+.klog li.ok i{color:var(--pass)} .klog li.bad i,.klog li.bad span:last-child{color:var(--red)}
+.kshot img{width:100%;border:1px solid var(--rule);border-radius:4px;display:block;background:#eef1f4}
+.kshotbtns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+@media (max-width:1000px){.kdgrid{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.kok.run,.ksec.flash{animation:none}}
 details.adv{margin-top:18px}
 details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
 .gbtns{margin:6px 0 8px 138px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
@@ -256,13 +286,35 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px"><h2 style="margin:0">准备要出视频的词</h2>
     <button class="btn ghost sm" id="tHelp">怎么用？</button>
     <button class="btn ghost sm" id="tGear" title="用哪个 AI、账号">⚙ AI 设置</button></div>
-  <p class="muted" style="margin:0 0 10px">只要三步：<b>①</b> 看下面三样是不是都打了 ✓　<b>②</b> 填要做的词　<b>③</b> 点「开始准备」。出题、画画面、检查都是软件自己做，做好的词到「出视频」页在这台电脑上渲染。</p>
-  <div class="box kready">
-    <div class="krow"><span class="kok ok" id="kAIok">✓</span><span class="kname">① AI</span>
-  <div class="who" id="tWho">用的是：<b>—</b> <a href="#" onclick="gearOpen();return false">换一个</a><span id="tOpen" hidden> · <a href="#" onclick="openRelay();return false"><b>打开网页 AI ↗</b></a></span></div>
-      <button class="btn ghost sm" id="kTest" hidden>测一下能不能登录</button><span id="kTestMsg" class="small"></span></div>
-    <div class="krow"><span class="kok" id="kRepoOk">…</span><span class="kname">② 词库</span><span id="kRepo" class="small">—</span></div>
-    <div class="krow"><span class="kok" id="kEnvOk">…</span><span class="kname">③ 出片环境</span><span id="kEnv" class="small">正在看…</span></div>
+  <p class="muted" style="margin:0 0 10px">只要三步：<b>①</b> 点「一键检测」，三样都打 ✓　<b>②</b> 填要做的词　<b>③</b> 点「开始准备」。出题、画画面、检查都是软件自己做，做好的词到「出视频」页在这台电脑上渲染。</p>
+  <div class="box kready" id="kBox">
+    <div class="khead"><h3>三样准备好了没</h3><button class="btn" id="kAll">一键检测</button><span id="kAllMsg" class="small muted">三样一起测，每一步都写在下面的「检测详情」里</span></div>
+    <div class="krow"><span class="kok" id="kAIOk">–</span><span class="kname">① AI</span>
+      <div class="kmid"><div class="who" id="tWho">用的是：<b>—</b> <a href="#" onclick="gearOpen();return false">换一个</a><span id="tOpen" hidden> · <a href="#" onclick="openRelay();return false"><b>打开网页 AI ↗</b></a></span></div>
+        <div class="ksum" id="kAI">—</div></div>
+      <span class="kbtns"><button class="btn ghost sm" data-kc="ai">检测</button><button class="btn ghost sm" data-kd="ai">详情</button></span></div>
+    <div class="krow"><span class="kok" id="kRepoOk">…</span><span class="kname">② 词库</span>
+      <div class="kmid"><div class="ksum" id="kRepo">—</div></div>
+      <span class="kbtns"><button class="btn ghost sm" data-kc="repo">检测</button><button class="btn ghost sm" data-kd="repo">详情</button></span></div>
+    <div class="krow"><span class="kok" id="kEnvOk">…</span><span class="kname">③ 出片环境</span>
+      <div class="kmid"><div class="ksum" id="kEnv">正在看…</div></div>
+      <span class="kbtns"><button class="btn ghost sm" data-kc="env">检测</button><button class="btn ghost sm" data-kd="env">详情</button></span></div>
+    <div class="kdet" id="kDet" hidden>
+      <div class="kdhead"><b>检测详情</b><span id="kDetLive" class="small muted"></span><button class="btn ghost sm" id="kFold">收起 ▴</button></div>
+      <div class="kdgrid" id="kGrid">
+        <div class="ksecs">
+          <div class="ksec" id="ks-ai"><div class="kst"><span class="kok">–</span><b>① AI</b><span class="small muted"></span></div><p class="kempty"></p><ol class="klog"></ol></div>
+          <div class="ksec" id="ks-repo"><div class="kst"><span class="kok">–</span><b>② 词库</b><span class="small muted"></span></div><p class="kempty"></p><ol class="klog"></ol></div>
+          <div class="ksec" id="ks-env"><div class="kst"><span class="kok">–</span><b>③ 出片环境</b><span class="small muted"></span></div><p class="kempty"></p><ol class="klog"></ol></div>
+        </div>
+        <div class="kshot" id="kShotCol" hidden>
+          <div class="small muted" style="margin-bottom:6px">网页 AI 的浏览器画面 <span id="kShotAge" class="faint"></span></div>
+          <img id="kShot" alt="网页 AI 的浏览器画面" hidden>
+          <div id="kNoShot" class="lnoshot">浏览器还没打开。</div>
+          <div class="kshotbtns"><button class="btn ghost sm" data-ai="show">把浏览器拿到屏幕上</button><button class="btn ghost sm" data-ai="hide">藏起浏览器</button></div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="box kgo">
     <h3 style="margin-top:0">要准备哪些词</h3>
@@ -605,8 +657,9 @@ async function aiLive(){
   }catch(e){}
 }
 $('#shotBtn').onclick=()=>{watching=!watching;$('#shotBtn').textContent=watching?'关掉实时画面':'看实时画面';if(!watching)$('#shot').style.display='none'};
-$$('[data-ai]').forEach(b=>b.onclick=async()=>{b.disabled=true;
-  if(b.dataset.ai==='test')toast('正在打开浏览器登录，最多要等两三分钟…',8000);
+$$('[data-ai]').forEach(b=>b.onclick=async()=>{
+  if(b.dataset.ai==='test'){go('tasks');kRun('ai');return}       // 测登录：到开始页的「检测详情」里看每一步
+  b.disabled=true;
   try{const d=await api('/api/ai',{op:b.dataset.ai});toast((d.ok?'✓ ':'✗ ')+(d.msg||''),8000)}catch(e){toast('✗ '+e.message)}b.disabled=false});
 $('#qGo').onclick=async()=>{await api('/api/task',{kind:'chuti',params:{count:+$('#qCount').value||0}});toast('加进队列了');poll()};
 
@@ -701,8 +754,9 @@ async function gearOpen(){
   $('#g_itest').onclick=()=>busy($('#g_itest'),$('#g_imsg'),'正在保存、检测收件箱',async()=>{
     if($('#g_itok').value.trim())$('#g_ion').checked=true;
     const s=await save();if(s.ok===false)return s;return await api('/api/repo',{op:'inbox'})});
-  $('#g_test').onclick=()=>busy($('#g_test'),$('#g_tmsg'),'正在保存、打开浏览器登录（要等一两分钟）',async()=>{
-    const s=await save();if(s.ok===false)return s;return await api('/api/ai',{op:'test'})});
+  $('#g_test').onclick=()=>busy($('#g_test'),$('#g_tmsg'),'正在保存',async()=>{
+    const s=await save();if(s.ok===false)return s;closeModal();go('tasks');kRun('ai');
+    return{ok:true,msg:'开始测登录了：每一步写在开始页的「检测详情」里，右边看得到浏览器画面'}});
   $('#g_ropen').onclick=()=>busy($('#g_ropen'),$('#g_omsg'),'正在打开',async()=>{
     const s=await save();if(s.ok===false)return s;return await api('/api/open',{})});
   const vis=()=>{const v=pv();$('#g_web').hidden=v!=='web';$('#g_api').hidden=v!=='api';$('#g_relay').hidden=v!=='relay';
@@ -711,15 +765,15 @@ async function gearOpen(){
   $('#g_itok').oninput=()=>{if($('#g_itok').value.trim())$('#g_ion').checked=true};
   vis()}
 $('#tPush').onclick=async()=>{await api('/api/task',{kind:'push',params:{}});toast('在后台上传');loadTasks()};
-$('#tHelp').onclick=()=>modal('任务怎么用',`<ol class="steps">
-  <li><b>先点右上角「⚙ 设置」</b>，填 sorryios 的账号和密码，点「保存」，再点「测登录」。第一次用还要到左边「设置」里填 GitHub 令牌（左下角显示“仓库 就绪”才行）。</li>
-  <li><b>第 1 步 出题</b>：填出几个词（比如 100），点「开始出题」。AI 按总表顺序写 7 道题，程序检查，过了就存，每 25 个词上传一次。</li>
-  <li><b>第 2 步 做视频画面</b>：填做几个词（比如 20），点「开始做画面」。只做已经有题目的词，一个词几分钟。</li>
-  <li><b>第 3 步 出视频</b>：点「去视频页」，勾选题目和画面都有的词，建批次、开工。</li>
-  <li><b>看进度</b>：下面“正在做”里有进度条；点「详情」看每一步做了什么。</li>
+$('#tHelp').onclick=()=>modal('开始页怎么用',`<ol class="steps">
+  <li><b>点「一键检测」</b>：AI、词库、出片环境三样一起测，每一步都写在下面的「检测详情」里，用网页镜像时右边还看得到浏览器画面。三样都打 ✓ 就行。</li>
+  <li><b>哪样打 ✗</b>：看它后面那句话，照着点链接去修；点这一行的「详情」看是哪一步没过。修好了点这一行的「检测」再测一次。</li>
+  <li><b>第一次用</b>：先点 ① AI 后面的「换一个」选用哪个 AI、填账号；到左边「设置」里填 GitHub 令牌。</li>
+  <li><b>填要做的词</b>：自己写几个单词，或者选“按总表顺序，接着做几个词”。</li>
+  <li><b>点「开始准备」</b>：出题 → 画画面 → 用视频技能检查，软件自己做；“现在在做什么”里看得到实时画面和步骤记录。</li>
+  <li><b>出视频</b>：准备好的词到「出视频」页，在这台电脑上渲染。</li>
   <li><b>暂停、取消</b>：「暂停」后点「继续」接着做；「取消」就不做了，已经存好的不会丢。</li>
-  <li><b>夜里自动做</b>：在“每天自动出题”里设时间和数量，点「添加」；到点软件要开着。</li>
-  <li><b>没过的词</b>：AI 改了几次还不对的，会放在“其他”那一行，点「再交给 AI 试一次」。</li></ol>`);
+  <li><b>更多</b>：分步做、没过的词、每天自动出题、做完的记录，都在页面最下面的「更多」里。</li></ol>`);
 async function taskOp(id,op){await api('/api/task/op',{id,op});setTimeout(()=>{poll();if(page==='tasks')loadTasks()},300)}
 async function loadTasks(){
   liveTick();
@@ -794,17 +848,100 @@ async function liveTick(){
 setInterval(liveTick,2000);
 
 
-/* ───── 开始页：三样准备好了没、一个大按钮 ───── */
+/* ───── 开始页：三样准备好了没（一键检测、每样单独检测；检测详情里看每一步，网页镜像还看得到浏览器画面） ───── */
 const KENV={t:0,d:null};
-function kSet(id,ok,txt){const e=$('#'+id+'Ok');e.className='kok '+(ok===true?'ok':ok===false?'bad':'');e.textContent=ok===true?'✓':ok===false?'✗':'…';if(txt!=null)$('#'+id).innerHTML=txt}
+const KK=['ai','repo','env'],KN={ai:'① AI',repo:'② 词库',env:'③ 出片环境'},KID={ai:'kAI',repo:'kRepo',env:'kEnv'};
+const KICON={ok:'✓',bad:'✗',warn:'!',running:'…',idle:'–'};
+const KFIX={gear:'<a href="#" onclick="gearOpen();return false">去改 AI 设置</a>',
+  settings:'<a href="#" onclick="go(\'settings\');return false">去「设置」</a>',
+  video:'<a href="#" onclick="go(\'video\');return false">去「出视频」页</a>'};
+const KEMPTY={
+  ai:{web:'还没检测。点 ① AI 的「检测」：软件会打开浏览器、登录 sorryios、进 GPT、挑一辆车、问一句话，每一步都写在这里，右边看得到浏览器画面。',
+      relay:'还没检测。点「检测」：看网页 AI 地址，往中转仓库的收件箱真写一次。',
+      api:'还没检测。点「检测」：给接口发一句话，看它回不回。',mock:'现在用的是模拟 AI，只能试流程。'},
+  repo:'还没检测。点「检测」：看 GitHub 令牌、本机词库和 GitHub 一不一样新、总表、索引、题目和画面各有多少。',
+  env:'还没检测。点「检测」：看 WSL、视频技能是不是最新、出片脚本、总表、声音模型、系统软件、显卡。'};
+const KDEF='三样一起测，每一步都写在下面的「检测详情」里';
+let CK=null,CKshown=false,CKfold=false,CKshotTs=0,CKn=0,KPV='';
+const hhmm=t=>t?new Date(t*1000).toTimeString().slice(0,5):'';
+function kIcon(el,st){el.className='kok'+({ok:' ok',bad:' bad',warn:' warn',running:' run'}[st]||'');el.textContent=KICON[st]||'…'}
+function kPassive(k){
+  const ok=$('#'+KID[k]+'Ok'),sum=$('#'+KID[k]);sum.className='ksum';
+  if(k==='ai'){kIcon(ok,'idle');sum.textContent=KPV==='mock'?'模拟 AI 出不了真题：点「换一个」':KPV==='web'?'还没检测：点「检测」（会打开浏览器登录、问一句话，一两分钟）':'还没检测：点「检测」看能不能用';return}
+  if(k==='repo'){const r=(ST.repo||{}).repo||'',bad=/出错|等令牌|要人工|对不上/.test(r);
+    kIcon(ok,r==='就绪'?'ok':bad?'bad':'idle');sum.className='ksum'+(bad?' bad':'');
+    sum.innerHTML=r==='就绪'?'就绪（题目、画面做好会自己上传）':esc(r||'正在准备')+(bad?'　'+KFIX.settings:'');return}
+  const e=KENV.d;if(!e){kIcon(ok,'idle');sum.textContent='正在看…';return}
+  kIcon(ok,e.ready?'ok':'bad');sum.className='ksum'+(e.ready?'':' bad');
+  sum.innerHTML=e.ready?'装好了（检查画面、渲染都用它）':esc(e.msg||'还没装好')+'　'+KFIX.video+'（不装也能做，画面先不检查）'}
+function kRender(){
+  for(const k of KK){const it=(CK||{})[k],b=document.querySelector(`[data-kc="${k}"]`);
+    if(b)b.disabled=!!it&&it.state==='running';
+    if(!it||it.state==='idle'){kPassive(k);continue}
+    const ok=$('#'+KID[k]+'Ok'),sum=$('#'+KID[k]);kIcon(ok,it.state);sum.className='ksum'+(it.state==='running'?'':' '+it.state);
+    if(it.state==='running'){const last=(it.steps||[]).slice(-1)[0];sum.textContent=`正在检测（${secs(it.secs)}）`+(last?'：'+last.msg:'')}
+    else sum.innerHTML=esc(it.summary)+(it.fix&&it.state!=='ok'&&KFIX[it.fix]?'　'+KFIX[it.fix]:'')+`<span class="faint">　${hhmm(it.finished)} 检测</span>`}
+  const run=CK?KK.filter(k=>CK[k]&&CK[k].state==='running'):[],done=CK?KK.filter(k=>CK[k]&&['ok','bad','warn'].includes(CK[k].state)):[];
+  $('#kAll').disabled=run.length===3;
+  const m=$('#kAllMsg');m.style.color='';
+  if(run.length)m.textContent='正在检测：'+run.map(k=>KN[k]).join('、')+'（每一步写在下面的「检测详情」里）';
+  else if(done.length===3){const bad=KK.filter(k=>CK[k].state==='bad'),warn=KK.filter(k=>CK[k].state==='warn');
+    m.style.color=bad.length?'var(--red)':warn.length?'var(--amber)':'var(--pass)';
+    m.textContent=bad.length?`✗ ${bad.map(k=>KN[k]).join('、')} 没好：看它后面那句，点「详情」看是哪一步`:warn.length?`! ${warn.map(k=>KN[k]).join('、')} 要留意，其余都好了`:'✓ 三样都好了：填词，点「开始准备」'}
+  else m.textContent=KDEF}
+function kSec(k){
+  const it=(CK||{})[k]||{state:'idle',steps:[],run:0},sec=$('#ks-'+k);
+  kIcon(sec.querySelector('.kok'),it.state);
+  sec.querySelector('.kst .small').textContent=it.state==='running'?`正在检测，已经 ${secs(it.secs)}`:it.state==='idle'?'':
+    `${{ok:'好了',bad:'没好',warn:'要留意'}[it.state]||''}　${hhmm(it.finished)} 检测，用了 ${secs(it.secs)}`;
+  const steps=it.steps||[],em=sec.querySelector('.kempty');
+  em.hidden=steps.length>0;if(!steps.length)em.textContent=k==='ai'?(KEMPTY.ai[KPV]||KEMPTY.ai.web):KEMPTY[k];
+  const ol=sec.querySelector('.klog');
+  if(ol.dataset.run!==String(it.run)){ol.innerHTML='';ol.dataset.run=String(it.run);ol.dataset.n='0'}
+  const n=+ol.dataset.n||0;
+  if(steps.length>n){const stick=ol.scrollTop+ol.clientHeight>=ol.scrollHeight-24;
+    ol.insertAdjacentHTML('beforeend',steps.slice(n).map(x=>`<li class="${x.ok===true?'ok':x.ok===false?'bad':''}"><span class="kt">${esc(x.t)}</span><i>${x.ok===true?'✓':x.ok===false?'✗':'·'}</i><span>${esc(x.msg)}</span></li>`).join(''));
+    ol.dataset.n=String(steps.length);if(stick||it.state==='running')ol.scrollTop=1e9}}
+function kShot(){
+  const web=KPV==='web',w=(CK&&CK.web)||{};
+  $('#kShotCol').hidden=!web;$('#kGrid').classList.toggle('noshot',!web);if(!web)return;
+  const has=!!w.has_shot;$('#kShot').hidden=!has;$('#kNoShot').hidden=has;
+  if(has&&w.shot_ts&&w.shot_ts!==CKshotTs){CKshotTs=w.shot_ts;$('#kShot').src='/api/ai/shot?t='+w.shot_ts}
+  $('#kShotAge').textContent=has?`（${Math.max(0,Math.round(Date.now()/1000-w.shot_ts))} 秒前）`:'';
+  if(!has)$('#kNoShot').textContent=w.hasBrowser?'浏览器开着，正在截图…':'浏览器还没打开。点 ① AI 的「检测」，这里会出现它的画面，每两秒更新。'}
+function kShow(){CKshown=true;$('#kDet').hidden=false}
+function kUnfold(){if(CKfold){CKfold=false;$('#kGrid').hidden=false;$('#kFold').textContent='收起 ▴'}}
+$('#kFold').onclick=()=>{CKfold=!CKfold;$('#kGrid').hidden=CKfold;$('#kFold').textContent=CKfold?'展开 ▾':'收起 ▴';if(!CKfold)chkTick(true)};
+function kFocus(k){const x=$('#ks-'+k);x.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});
+  x.classList.remove('flash');void x.offsetWidth;x.classList.add('flash')}
+async function kRun(k,btn){
+  kShow();kUnfold();if(btn)btn.disabled=true;
+  try{const d=await api('/api/check',{what:k});if(d.ok===false)toast('✗ '+d.msg,6000)}catch(e){toast('✗ 没开始检测：'+e.message,8000)}
+  finally{if(btn)btn.disabled=false}
+  await chkTick(true);if(k!=='all')kFocus(k)}
+function kOpen(k){kShow();kUnfold();const it=(CK||{})[k];
+  if(k!=='ai'&&(!it||it.state==='idle'))return kRun(k);      // 词库、出片环境测一次只要几秒：没测过就直接测
+  chkTick(true).then(()=>kFocus(k))}
+async function chkTick(force){
+  if(page!=='tasks'&&!force)return;
+  const running=!!CK&&KK.some(k=>CK[k]&&CK[k].state==='running'),open=CKshown&&!CKfold;
+  CKn++;if(!force&&!running&&!open&&CKn%5)return;            // 没在检测、详情也没开着：5 秒看一次
+  let d;try{d=await api('/api/check?watch='+(open&&KPV==='web'?1:0))}catch(e){return}
+  const prev=CK;CK=d;KPV=d.pv||KPV;
+  for(const k of KK){const a=(prev||{})[k]||{},b=d[k]||{};
+    if(a.state==='running'&&b.state!=='running'&&a.run===b.run)toast(`${KICON[b.state]||''} ${KN[k]}：${b.summary}`,b.state==='ok'?4000:9000)}
+  if(!CKshown&&KK.some(k=>d[k]&&d[k].state==='running'))kShow();   // 在别处（设置里）点的检测，也打开详情
+  kRender();
+  if(CKshown){KK.forEach(kSec);kShot();const run=KK.filter(k=>d[k]&&d[k].state==='running');
+    $('#kDetLive').innerHTML=run.length?`<span class="dot"></span> 正在检测：${run.map(k=>KN[k]).join('、')}`:''}}
+setInterval(chkTick,1000);
 async function kTick(d){
-  $('#kTest').hidden=d.pv!=='web';
-  const r=(ST.repo||{}).repo||'';
-  kSet('kRepo',r==='就绪'?true:(/出错|等令牌/.test(r)?false:null),r==='就绪'?'就绪（题目、画面做好会自己上传）':esc(r||'正在准备')+'　<a href="#" onclick="go(\'settings\');return false">去设置</a>');
+  KPV=d.pv||KPV;
   if(Date.now()-KENV.t>600000){KENV.t=Date.now();try{KENV.d=await api('/api/video?what=env')}catch(e){KENV.d={msg:e.message}}}
-  const e=KENV.d;if(!e)return;
-  kSet('kEnv',e.ready?true:false,e.ready?'装好了（检查画面、渲染都用它）':esc(e.msg||'还没装好')+'　<a href="#" onclick="go(\'video\');return false">去「出视频」页装</a>（不装也能做，画面先不检查）')}
-$('#kTest').onclick=()=>busy($('#kTest'),$('#kTestMsg'),'正在打开浏览器登录（要等一两分钟）',()=>api('/api/ai',{op:'test'}));
+  kRender()}
+$('#kAll').onclick=()=>kRun('all',$('#kAll'));
+$$('[data-kc]').forEach(b=>b.onclick=()=>kRun(b.dataset.kc,b));
+$$('[data-kd]').forEach(b=>b.onclick=()=>kOpen(b.dataset.kd));
 $$('input[name=kMode]').forEach(x=>x.onchange=async()=>{if(x.value==='next'&&x.checked){try{const d=await api('/api/next?n='+(+$('#kN').value||5));$('#kNext').textContent=d.words.length?'（接下来是：'+d.words.slice(0,6).join('、')+(d.words.length>6?'…':'')+'）':''}catch(e){}}});
 $('#kWords').oninput=()=>{document.querySelector('input[name=kMode][value=words]').checked=true};
 $('#kN').oninput=()=>{document.querySelector('input[name=kMode][value=next]').checked=true;$('input[name=kMode][value=next]')?.onchange?.()};

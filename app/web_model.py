@@ -537,7 +537,8 @@ _LIVE_LOCK = threading.Lock()
 _LIVE = {"busy": False, "job": "", "stage": "", "stage_at": 0.0, "started": 0.0,
          "finished": 0.0, "reply": "", "reply_at": 0.0, "shot": b"", "shot_ts": 0.0,
          "shot_err": "", "watch_until": 0.0, "visible": None}
-_LIVE_LOG = _collections.deque(maxlen=80)
+_LIVE_LOG = _collections.deque(maxlen=200)
+_LIVE_SEQ = [0]                   # v1.9.4：每条实时步骤一个编号，开始页的「检测详情」按编号往下接，一条不漏
 _UI_CMDS = queue.Queue()          # 「显示/隐藏浏览器」这类命令，交给 worker 线程去做
 OFFSCREEN_X = -12000              # 隐藏＝把窗口挪到屏幕外（不能最小化：最小化后 Chrome 会暂停页面）
 
@@ -564,7 +565,8 @@ def _live_set(**kw):
 
 def _live_log(msg):
     with _LIVE_LOCK:
-        _LIVE_LOG.append((round(time.time(), 1), str(msg)[:300]))
+        _LIVE_SEQ[0] += 1
+        _LIVE_LOG.append((round(time.time(), 1), str(msg)[:300], _LIVE_SEQ[0]))
 
 
 def _save_pref(**kw):
@@ -919,6 +921,8 @@ class _WebWorker:
                 user_agent=UA,
             )
             self._page = self._context.new_page()
+            self._hook_dialogs(self._page)
+            self._safe(lambda: self._context.on("page", self._hook_dialogs))
             # v55：默认把浏览器挪到屏幕外（照常工作），软件里看实时画面；点「显示浏览器」再挪回来
             if not headless:
                 if cfg.get("browserHidden", True):
@@ -1080,12 +1084,74 @@ class _WebWorker:
                 except Exception:
                     pass
                 self._safe(lambda: newp.set_default_timeout(8000))
+                self._hook_dialogs(newp)
                 self._page = newp
                 self._log("检测到新标签页，已切换: " + (newp.url or ""))
                 return True
         except Exception:
             pass
         return False
+
+    def _hook_dialogs(self, page):
+        """v1.9.4：网页弹出的 confirm / alert（比如“确定进入这辆车吗？”）自动点「确定」。
+        不挂这个，Playwright 默认点「取消」，进车就被取消了。"""
+        if page is None or getattr(page, "_wv_dialogs", False):
+            return
+        def on_dialog(d):
+            try:
+                d.accept()
+            except Exception:
+                pass
+            try:
+                msg = "网页弹框「%s」→ 点了确定" % ((d.message or "").strip()[:60] or d.type)
+                _live_log(msg)
+                self._logger("[web_model] " + msg)
+            except Exception:
+                pass
+        try:
+            page.on("dialog", on_dialog)
+            page._wv_dialogs = True
+        except Exception:
+            pass
+
+    # 网页自己画的确认框（Element / Ant / Vant / Naive… 或站点自己写的）：只认浮在最上面的那个框里、字正好是“确定”这类的按钮
+    _CONFIRM_JS = r"""() => {
+        const vis = el => { const r = el.getBoundingClientRect(), cs = getComputedStyle(el);
+            return r.width > 0 && r.height > 0 && cs.visibility !== 'hidden' && cs.display !== 'none' && +cs.opacity !== 0; };
+        const ok = /^(确\s*定|确\s*认|进\s*入|继\s*续|好\s*的|是|同\s*意|OK|Yes|Confirm|Continue)$/i;
+        const vw = window.innerWidth, vh = window.innerHeight;
+        const boxes = [...document.querySelectorAll('[role="dialog"],[role="alertdialog"],[aria-modal="true"],' +
+            '.el-message-box,.el-dialog,.ant-modal,.van-dialog,.n-dialog,.n-modal,.arco-modal,.t-dialog,.semi-modal,' +
+            '[class*="modal" i],[class*="dialog" i],[class*="confirm" i],[class*="popup" i]')]
+            .filter(b => b !== document.body && b !== document.documentElement && vis(b))
+            .filter(b => { const r = b.getBoundingClientRect();
+                return b.matches('[role="dialog"],[role="alertdialog"],[aria-modal="true"]') || r.width * r.height < vw * vh * 0.9; })
+            .sort((a, b) => { const x = a.getBoundingClientRect(), y = b.getBoundingClientRect(); return x.width * x.height - y.width * y.height; });
+        for (const box of boxes) {
+            const btns = [...box.querySelectorAll('button,[role="button"],a,span,div')]
+                .filter(b => vis(b) && ok.test((b.innerText || '').trim()))
+                .sort((a, b) => (b.matches('button,[role="button"]') - a.matches('button,[role="button"]')) ||
+                    (a.getBoundingClientRect().width * a.getBoundingClientRect().height - b.getBoundingClientRect().width * b.getBoundingClientRect().height));
+            for (const b of btns) {
+                const r = b.getBoundingClientRect(), cx = r.x + r.width / 2, cy = r.y + r.height / 2;
+                const top = document.elementFromPoint(cx, cy);
+                if (top && !(top === b || b.contains(top) || top.contains(b))) continue;
+                return { text: (b.innerText || '').trim(), title: (box.innerText || '').replace(/\s+/g, ' ').trim().slice(0, 60),
+                         cx: Math.round(cx), cy: Math.round(cy) };
+            }
+        }
+        return null;
+    }"""
+
+    def _accept_confirm(self):
+        """页面上有“确定进入吗？”这类确认框就点确定。返回点了的按钮字，没有就返回空。"""
+        hit = self._safe(lambda: self._page.evaluate(self._CONFIRM_JS), None)
+        if not hit:
+            return ""
+        self._safe(lambda: self._page.mouse.click(hit["cx"], hit["cy"]))
+        self._log("网页问「%s」→ 点了「%s」" % (hit.get("title") or "", hit.get("text")))
+        time.sleep(0.8)
+        return hit.get("text") or "确定"
 
     def _click_text(self, text):
         """点击页面上包含 text 的、尽量小的可见可点元素。返回是否点到。"""
@@ -1515,6 +1581,9 @@ class _WebWorker:
                 if (r.bottom < 0 || r.top > window.innerHeight ||
                     r.width < 150 || r.width > 460 || r.height < 70 || r.height > 280) continue;
                 const t = el.innerText || '';
+                // v1.9.4：包着好几张卡的一层不算（车名不止一个），不然状态会张冠李戴
+                const all = new Set(t.match(/\\b[A-Z]{0,4}\\d{3,5}-\\d{1,3}\\b/g) || []);
+                if (all.size > 1) continue;
                 const m = t.match(/[A-Z]{2}\\d{4}-\\d{2}/) || t.match(/\\b[A-Z]{0,4}\\d{3,5}-\\d{1,3}\\b/);
                 const hasTeamOrPlus = t.includes('TEAM') || t.includes('PLUS') || t.includes('STANDARD') ||
                                       t.includes('Plus') || t.includes('PRO') || !!m;
@@ -1574,31 +1643,97 @@ class _WebWorker:
             raise RuntimeError("选中卡 %s 但点击失败（页面结构可能变了）" % chosen)
         time.sleep(2)
 
+    # v1.9.4：进车要稳——
+    #   找车：车名完全一样（1121-1 不会认成 1121-10），挑包含它的最小那一块＝这张卡本身（不是包着好几张卡的一层）；
+    #   点法：先点卡上的「进入」，没反应再点卡片本身；网页问“确定进入吗”就点确定；还不行、卡上有链接就直接打开链接。
+    _CARD_JS = r"""(name) => {
+        const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const tok = new RegExp('(^|[^A-Za-z0-9])' + esc(name) + '(?![A-Za-z0-9]|-\\d)');
+        const area = x => { const q = x.getBoundingClientRect(); return q.width * q.height; };
+        const cards = [];
+        for (const el of document.querySelectorAll('body *')) {
+            const r = el.getBoundingClientRect();
+            if (r.width < 150 || r.width > 560 || r.height < 60 || r.height > 340) continue;
+            const t = el.innerText || '';
+            if (!tok.test(t) || !/空闲|繁忙|正常/.test(t)) continue;
+            cards.push(el);
+        }
+        if (!cards.length) return null;
+        cards.sort((a, b) => area(a) - area(b));
+        const card = cards[0];
+        card.scrollIntoView({block: 'center'});
+        const enterRe = /^(立即)?进\s*入(车厢|聊天|对话|使用)?$|^(开始|去|立即)?使用$|^上车$|^选择$|^(Enter|Go|Start|Open)$/i;
+        const btns = [...card.querySelectorAll('a,button,[role="button"],span,div,i')].filter(x => {
+            const t = (x.innerText || '').trim();
+            return t && t.length <= 8 && enterRe.test(t) && area(x) > 0;
+        }).sort((a, b) => (b.matches('a,button,[role="button"]') - a.matches('a,button,[role="button"]')) || (area(a) - area(b)));
+        const go = btns[0] || null;
+        let href = '';
+        const linkEl = (go && (go.closest('a[href]') || go.querySelector('a[href]'))) || card.closest('a[href]') || card.querySelector('a[href]');
+        if (linkEl) {
+            const h = (linkEl.getAttribute('href') || '').trim();
+            if (h && (!/^(#|javascript:)/i.test(h) || /^#\//.test(h))) href = new URL(h, location.href).href;
+        }
+        const dh = (go && (go.dataset.href || go.dataset.url || go.dataset.link)) || card.dataset.href || card.dataset.url || card.dataset.link || '';
+        if (!href && dh) href = new URL(dh, location.href).href;
+        const mid = el => { const q = el.getBoundingClientRect(); return { cx: Math.round(q.x + q.width / 2), cy: Math.round(q.y + q.height / 2) }; };
+        // 卡片本身：点车名那一块（不点到按钮上）
+        const title = [...card.querySelectorAll('*')].filter(x => tok.test(x.innerText || '') &&
+            (x.innerText || '').trim().length <= name.length + 12 && !(go && (x === go || go.contains(x) || x.contains(go))))
+            .sort((a, b) => area(a) - area(b))[0];
+        const R = card.getBoundingClientRect();
+        return { btn: go ? Object.assign(mid(go), { text: (go.innerText || '').trim() }) : null,
+                 card: title ? mid(title) : { cx: Math.round(R.x + R.width / 2), cy: Math.round(R.y + R.height * 0.3) },
+                 href, cardText: (card.innerText || '').replace(/\s+/g, ' ').trim().slice(0, 80) };
+    }"""
+
+    def _entered_after_click(self, before_pages, before_url, secs):
+        """点了进车以后：弹出新标签页、网址变了、车队列表不见了，都算进去了。中间网页问“确定进入吗”就点确定。"""
+        end = time.time() + secs
+        while time.time() < end:
+            time.sleep(0.5)
+            _check_cancel()
+            if self._adopt_new_page(before_pages):
+                return True
+            if self._accept_confirm():
+                end = max(end, time.time() + 5)
+                continue
+            st = self._page_status()
+            url = st.get("url") or ""
+            if before_url and url and url != before_url:
+                return True
+            if url and not st.get("hasCardListMarkers") and not st.get("isLoginPage"):
+                return True
+        return False
+
     def _click_card_by_name(self, name):
-        coords = self._safe(lambda: self._page.evaluate("""(name) => {
-            for (const el of document.querySelectorAll('*')) {
-                const r = el.getBoundingClientRect();
-                if (r.width < 150 || r.width > 460 || r.height < 70 || r.height > 280) continue;
-                if ((el.innerText || '').includes(name)) {
-                    el.scrollIntoView({block: 'center'});
-                    const area = x => { const q = x.getBoundingClientRect(); return q.width * q.height; };
-                    const go = [...el.querySelectorAll('a,button,span,div')].filter(x => /^\\s*进入/.test(x.innerText || '') &&
-                        (x.innerText || '').trim().length <= 6 && area(x) > 0).sort((a, b) => area(a) - area(b))[0];
-                    const rr = (go || el).getBoundingClientRect();
-                    return { cx: Math.round(rr.x + rr.width/2), cy: Math.round(rr.y + rr.height/2) };
-                }
-            }
-            return null;
-        }""", name), None)
-        if not coords:
+        info = self._safe(lambda: self._page.evaluate(self._CARD_JS, name), None)
+        if not info:
+            self._log("⚠ 页面上找不到车 %s" % name)
             return False
         time.sleep(0.4)
-        before = len(self._context.pages)
-        self._page.mouse.click(coords["cx"], coords["cy"])
-        time.sleep(1.5)
-        self._adopt_new_page(before)
-        # ★ 鼠标停在原地，进了聊天页正好压在右下角的悬浮菜单上 → 菜单被悬停展开，
-        #   它的半透明遮罩会挡住输入框（之前「卡住不发提示词」就是这个原因）。点完马上挪开。
+        tries = []
+        if info.get("btn"):
+            tries.append(("点卡上的「%s」" % (info["btn"].get("text") or "进入"), info["btn"]))
+        tries.append(("点卡片本身", info["card"]))
+        for i, (label, pt) in enumerate(tries):
+            before_pages = len(self._context.pages)
+            before_url = self._safe(lambda: self._page.url, "") or ""
+            self._log("进车 %s：%s" % (name, label))
+            self._safe(lambda pt=pt: self._page.mouse.click(pt["cx"], pt["cy"]))
+            if self._entered_after_click(before_pages, before_url, 8 if i == 0 else 6):
+                # ★ 鼠标停在原地，进了聊天页正好压在右下角的悬浮菜单上 → 菜单被悬停展开，
+                #   它的半透明遮罩会挡住输入框（之前「卡住不发提示词」就是这个原因）。点完马上挪开。
+                self._park_mouse()
+                return True
+            self._log("点了还停在车队页")
+        href = info.get("href")
+        if href:
+            self._log("进车 %s：点了没反应，直接打开卡上的链接 %s" % (name, href))
+            self._safe(lambda: self._page.goto(href, wait_until="domcontentloaded", timeout=30000))
+            self._entered_after_click(len(self._context.pages), "", 3)
+        else:
+            self._log("⚠ 点「进入」和点卡片都没反应，卡上也没有链接（诊断截图会存下来）")
         self._park_mouse()
         return True
 
@@ -1629,6 +1764,7 @@ class _WebWorker:
         while time.time() - start < timeout_sec:
             time.sleep(2)
             self._ready_check()          # v121
+            self._accept_confirm()       # v1.9.4：进车后网页还在问“确定吗”
             try:
                 info = self._page.evaluate("""(carlistUrl) => {
                     const url = window.location.href;
@@ -3351,10 +3487,16 @@ class _WebWorker:
             _live_set(stage=str(m), stage_at=time.time())
             if on_progress:
                 self._safe(lambda: on_progress(m))
+        _CANCEL_EVT.clear()
+        prog("打开网页 / 就位中…")
+        if self._state == "ready" and self._page and not self._page.is_closed() and not self._want_restart:
+            self._log("浏览器已经在 GPT 的聊天页上了（之前登录、进车过），直接问一句")
         self._ensure_started()
         # 用一句简短的问题（比回复短），让 AI 给出一两句话的回答——这样回复块足够长、
         # 能被答完判定正常抓到，前端就能显示 AI 的真实回复内容。
         test_prompt = "你好，请用一两句话简单介绍一下你能帮我做什么。"
+        self._log("就位了（登录、进车都好了）。发一句话试试：%s" % test_prompt)
+        prog("问一句话试试…")
         reply = ""
         try:
             reply = self._query_once(test_prompt, {"timeout": 120000}, 1, prog)
@@ -3366,6 +3508,7 @@ class _WebWorker:
                 raise
         if not (reply or "").strip():
             reply = self._grab_latest_reply(exclude_text=test_prompt)
+        self._log("✓ AI 回了：%s" % " ".join((reply or "").split())[:120])
         return {"ok": True, "reply": (reply or "").strip()[:500]}
 
     def _grab_latest_reply(self, exclude_text=""):
@@ -4323,7 +4466,8 @@ def web_complete(prompt, on_progress=None, **opts):
 def test_login(on_progress=None):
     if not is_available():
         return {"ok": False, "error": "Playwright 未安装"}
-    return _worker().submit("test_login", {"on_progress": on_progress}, timeout=180)
+    # v1.9.4：最多 10 分钟——自动登录不成时要等你在弹出的浏览器里登录（最多 5 分钟），以前 3 分钟就被强制关掉
+    return _worker().submit("test_login", {"on_progress": on_progress}, timeout=600)
 
 
 def get_state():
@@ -4359,6 +4503,18 @@ def live_state(watch=False):
 def live_shot():
     with _LIVE_LOCK:
         return _LIVE.get("shot") or b"", _LIVE.get("shot_ts") or 0
+
+
+def live_seq():
+    """最新一条实时步骤的编号（开始页的检测从这里往后接）。"""
+    with _LIVE_LOCK:
+        return _LIVE_SEQ[0]
+
+
+def live_log_since(seq=0):
+    """编号大于 seq 的实时步骤：[(编号, 时间, 内容)]。"""
+    with _LIVE_LOCK:
+        return [(n, t, m) for (t, m, n) in _LIVE_LOG if n > seq]
 
 
 def request_window(action, wait=6.0):

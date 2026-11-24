@@ -12,7 +12,7 @@
 
 ```
 启动.bat                      双击运行软件
-app\                          软件本身（server.py 服务、core.py 词库和出题、video.py 出片、selfup.py 版本和改写、web\ 界面），版本号在 app\VERSION
+app\                          软件本身（server.py 服务、core.py 词库和出题、video.py 出片、selfup.py 版本和改写、check.py 开始页的三样检测、web\ 界面），版本号在 app\VERSION
 版本备份\                      每个旧版本的 app 文件夹（v版本号），CHANGELOG.md 是更新记录
 词库\总表\第八十五版\          词源拆分总表（2词源拆分总表_初中含义版.xlsx）。出新版就新建「第八十六版」文件夹，软件自动用编号最大的
 词库\总表视频细节数据\         每个词的 7 道题和画面数据（词\<首字母>\<单词>.json、索引.tsv、README 进度表、工具\、出题技能\）

@@ -99,6 +99,180 @@ def env_status():
     return out
 
 
+# ═══════════════════════ 开始页「③ 出片环境」的检测：一步一步说，每一步马上显示 ═══════════════════════
+def wsl_distros():
+    """WSL 里装了哪些 Linux（wsl -l -q）。认不出返回 None。"""
+    if not has_wsl():
+        return None
+    try:
+        r = subprocess.run(["wsl", "-l", "-q"], capture_output=True, timeout=20, creationflags=NOWIN)
+    except Exception:
+        return None
+    names = [l.strip().strip("\x00").strip() for l in _dec(r.stdout).splitlines()]
+    return [n for n in names if n]
+
+
+def wsl_stream(cmd, on_line, timeout=120):
+    """和 wsl() 一样跑一段脚本，不过每输出一行就交给 on_line（检测详情里一行一行实时出来）。返回 (返回码, 最后几行)。"""
+    if not has_wsl():
+        return 127, "这台电脑没有 WSL"
+    import threading
+    try:
+        pr = subprocess.Popen(wsl_argv(cmd), stdout=subprocess.PIPE, stderr=subprocess.STDOUT, creationflags=NOWIN)
+    except Exception as e:
+        return 126, str(e)
+    killed = []
+    timer = threading.Timer(timeout, lambda: (killed.append(1), pr.kill()))
+    timer.start()
+    raw, tail = b"", []
+    try:
+        for b in iter(pr.stdout.readline, b""):
+            raw += b
+            if b.count(b"\x00") > len(b) // 4:            # wsl.exe 自己的提示是 UTF-16，留到最后一起解
+                continue
+            line = b.decode("utf-8", "replace").rstrip("\r\n")
+            tail = (tail + [line])[-6:]
+            try:
+                on_line(line)
+            except Exception:
+                pass
+        rc = pr.wait()
+    finally:
+        timer.cancel()
+    if killed:
+        return 124, "超时（%d 秒）" % timeout
+    if rc and not "".join(tail).strip():
+        tail = _dec(raw).splitlines()[-6:]
+    return rc, "\n".join(tail)
+
+
+ENV_SH = r"""SK=~/skills/word-construction-video/SKILL.md
+echo "up=$(uname -r | cut -c1-40)"
+echo "skill=$(grep -m1 '^当前 6\.' "$SK" 2>/dev/null | sed 's/：.*//; s/^当前 *//')"
+echo "lw=$([ -f ~/lw/scripts/wsl/common.sh ] && echo 1)"
+echo "lwb=$([ -f ~/lwb/scripts/wsl/batch.sh ] && echo 1)"
+VER=; TABLE=; SYL=; . ~/.wordfilm-local.env 2>/dev/null
+echo "VER=$VER"
+echo "TABLE=$([ -n "$TABLE" ] && [ -f "$TABLE" ] && echo 1)"
+echo "SYL=$([ -n "$SYL" ] && [ -f "$SYL" ] && echo 1)"
+echo "ffmpeg=$(command -v ffmpeg)"
+echo "node=$(command -v node)"
+echo "chrome=$(ls -d ~/.cache/ms-playwright/chromium* 2>/dev/null | head -1)"
+echo "models=$(du -sh ~/wordfilm-models 2>/dev/null | cut -f1)"
+echo "gpu=$([ -f ~/.wordfilm-gpu.env ] && echo 1)"
+echo "mem=$(free -g | awk '/Mem/{print $2}')G"
+echo "cores=$(nproc)"
+echo "batches=$(ls ~/wf-batch 2>/dev/null | tr '\n' ' ')"
+echo "end=1"
+"""
+
+
+def env_check(say):
+    """检测这台电脑能不能出片（只看，不装、不同步）。返回 (状态, 一句话, 去哪儿修)。"""
+    c = vcfg()
+    if not has_wsl():
+        say("这台电脑没有 WSL：视频只能在装了 WSL 的 Windows 上做（出题、做画面不受影响）", False)
+        return "bad", "这台电脑没有 WSL，出不了片（出题、做画面不受影响）", ""
+    say("这台电脑有 WSL", True)
+    names = wsl_distros()
+    if names is not None:
+        if c["distro"] not in names:
+            say("WSL 里没有 %s（现在有：%s）" % (c["distro"], "、".join(names) or "一个都没有"), False)
+            return "bad", "WSL 里没有 %s：先按「引擎/本地出片/SKILL.md」第 1 步装好" % c["distro"], "video"
+        say("WSL 里有 %s" % c["distro"], True)
+    say("打开 %s 看里面装了什么（WSL 没开着的话要十几秒）…" % c["distro"])
+    try:
+        import pics
+        rv, red = pics.skill_version()
+    except Exception:
+        rv, red = "", ""
+    tver = C.STATE.get("version") or ""
+    got, miss, warn = {}, [], []
+
+    def on_line(line):
+        if "=" not in line:
+            return
+        k, v = line.split("=", 1)
+        k, v = k.strip(), v.strip()
+        got[k] = v
+        if k == "up":
+            say("%s 打开了（Linux 内核 %s）" % (c["distro"], v), True)
+        elif k == "skill":
+            m = re.match(r"(\S+?)（(第[^）]+版)）", v)
+            wv = m.group(1) if m else v
+            if not v:
+                say("WSL 里还没有视频技能：到「出视频」页点「把引擎同步进 WSL」", False)
+                miss.append("视频技能（同步引擎）")
+            elif rv and wv != rv:
+                say("WSL 里的视频技能是 %s，仓库里是 %s（%s）：到「出视频」页点「把引擎同步进 WSL」" % (v, rv, red), False)
+                warn.append("视频技能比仓库旧（同步引擎）")
+            else:
+                say("视频技能 %s%s" % (v, "，和仓库里的一样" if rv else ""), True)
+        elif k == "lwb":
+            if got.get("lw") and v:
+                say("本地出片、批量出片的脚本都在", True)
+            else:
+                say("出片脚本不全（%s）：同步引擎" % "、".join(n for n, x in (("本地出片", got.get("lw")), ("批量出片", v)) if not x), False)
+                miss.append("出片脚本（同步引擎）")
+        elif k == "VER":
+            if not v:
+                say("WSL 里还没有总表：同步引擎", False)
+                miss.append("总表（同步引擎）")
+            elif tver and v != tver:
+                say("WSL 里的总表是%s，词库是%s：同步引擎" % (v, tver), False)
+                warn.append("WSL 里的总表比词库旧（同步引擎）")
+            else:
+                say("WSL 里的总表是%s%s" % (v, "，和词库一样" if tver else ""), True)
+        elif k == "TABLE" and got.get("VER") and not v:
+            say("总表文件不在了：同步引擎", False)
+            miss.append("总表文件（同步引擎）")
+        elif k == "SYL":
+            if v:
+                say("音节划分表在", True)
+            else:
+                say("没有音节划分表（读音拆分会缺）：把「音节划分_总词库7869词_细分版.xlsx」放进仓库的「词库」文件夹，再同步引擎", False)
+                warn.append("没有音节划分表（读音拆分会缺）")
+        elif k == "chrome":
+            lack = [n for n, x in (("ffmpeg", got.get("ffmpeg")), ("node", got.get("node")), ("渲染用的浏览器", v)) if not x]
+            if lack:
+                say("系统软件没装齐（缺 %s）：到「出视频」页点「① 装系统软件」" % "、".join(lack), False)
+                miss.append("系统软件（①）")
+            else:
+                say("系统软件装好了（ffmpeg、node、渲染用的浏览器）", True)
+        elif k == "models":
+            if v:
+                say("声音模型装好了（%s）" % v, True)
+            else:
+                say("还没装声音模型：到「出视频」页点「② 装声音模型」", False)
+                miss.append("声音模型（②）")
+        elif k == "gpu":
+            say("显卡开好了，渲染快一些" if v else "显卡没开（可选；开了渲染快一些：「出视频」页「③ 开显卡」）", True if v else None)
+        elif k == "cores":
+            say("给 WSL 的：%s 核、内存 %s" % (v, got.get("mem") or "?"))
+        elif k == "batches" and v:
+            say("WSL 里的批次：%s" % v)
+
+    rc, tail = wsl_stream(ENV_SH, on_line, 120)
+    if "end" not in got:
+        say("WSL 没有回应完（%s）：%s" % (rc, " ".join(tail.split())[-200:]), False)
+        return "bad", "WSL 没有回应（%s）：重开电脑或在命令行运行 wsl --shutdown 后再试" % rc, "video"
+    wd = Path(c["winDir"])
+    say(("出片文件夹 %s 在" if wd.exists() else "出片文件夹 %s 还没有（出片时会用到，没有就先建一个）") % wd, True if wd.exists() else None)
+    ready = bool(got.get("skill") and got.get("lwb") and got.get("models") and got.get("ffmpeg"))
+    try:
+        import pics
+        pics._ENV.update(t=time.time(), ready=ready)          # 做画面的起草检查也按这次的结果
+    except Exception:
+        pass
+    if miss:
+        return "bad", "还缺：" + "、".join(dict.fromkeys(miss)) + (
+            "；另外" + "、".join(dict.fromkeys(warn)) if warn else ""), "video"
+    if warn:
+        return "warn", "能出片，但" + "、".join(dict.fromkeys(warn)), "video"
+    return "ok", "装好了：视频技能 %s，声音模型 %s%s" % (
+        got.get("skill") or "", got.get("models") or "", "，显卡开了" if got.get("gpu") else ""), ""
+
+
 def sync_engine():
     """仓库「引擎」→ WSL：~/lw（本地出片）、~/lwb（批量出片）、~/skills/word-construction-video（视频技能）、
     ~/kit（视频技能自带的画面设置）、~/kit-extra（词库/画面设置）；总表、音节表拷到 ~/wv-data，写进 ~/.wordfilm-local.env。"""

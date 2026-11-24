@@ -137,12 +137,16 @@ def backups():
 
 def rollback(name):
     src = ROOT / BACKUP / name / "app"
+    if not src.exists() and (ROOT / BACKUP / name / "core.py").exists():
+        src = ROOT / BACKUP / name           # v1.8.0～v1.9.2 的备份没有 app 这一层，文件直接放在版本号文件夹里
     if not src.exists():
         return False, "没有这个备份：%s" % name
     files = {}
     for p in src.rglob("*"):
-        if p.is_file() and p.name != "VERSION" and not (set(p.relative_to(src).parts) & SKIP):
-            files["app/" + p.relative_to(src).as_posix()] = p.read_text(encoding="utf-8", errors="replace")
+        rel = "app/" + p.relative_to(src).as_posix()
+        # 图标这类图片不换（各版本都一样；发布也只许写文字文件，带上它们整个回退会被拦下）
+        if p.is_file() and p.name != "VERSION" and not (set(p.relative_to(src).parts) & SKIP) and EDITABLE.match(rel):
+            files[rel] = p.read_text(encoding="utf-8", errors="replace")
     return publish(files, "回退到 %s" % name, ["软件文件内容换回 %s 的样子" % name], part="patch")
 
 

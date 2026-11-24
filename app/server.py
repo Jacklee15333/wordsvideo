@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core as C
 import video as V
 import selfup as SU
+import check as CK
 
 WEB = Path(__file__).resolve().parent / "web"
 MIME = {".html": "text/html; charset=utf-8", ".js": "application/javascript; charset=utf-8",
@@ -501,6 +502,7 @@ GET = {
     "/api/relay": api_relay_get,
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
     "/api/next": lambda qs: {"words": next_unready(int(qs.get("n", 5)))},
+    "/api/check": lambda qs: CK.snapshot(watch=qs.get("watch") == "1"),
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
 NEED_REPO = {"/api/next", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
@@ -512,6 +514,7 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/open": api_open,
         "/api/words-task": api_words_task,
         "/api/prep": api_prep,
+        "/api/check": lambda b: CK.start(b.get("what") or "all"),
         "/api/prepare": lambda b: C.prepare(b.get("words") or [])}
 
 
