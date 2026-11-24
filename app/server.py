@@ -15,6 +15,7 @@ import video as V
 import selfup as SU
 import check as CK
 import pool as PL
+import results as RS
 
 WEB = Path(__file__).resolve().parent / "web"
 MIME = {".html": "text/html; charset=utf-8", ".js": "application/javascript; charset=utf-8",
@@ -508,7 +509,7 @@ def api_results(qs):
     out = [r for r in rows if keep(r) and (not t or t in r["word"].lower() or t in (r["meaning"] or ""))]
     vd = V.videos()
     items = [dict(r, vfile=(vd.get(V.folder_of(r["word"])) or {})) for r in out[(page - 1) * size: page * size]]
-    return {"items": items, "total": len(out), "page": page, "counts": counts}
+    return {"items": items, "total": len(out), "page": page, "counts": counts, "root": str(RS.out_root())}
 
 
 GET = {
@@ -532,10 +533,12 @@ GET = {
     "/api/next": lambda qs: {"words": next_unready(int(qs.get("n", 5)))},
     "/api/check": lambda qs: CK.snapshot(watch=qs.get("watch") == "1"),
     "/api/results": api_results,
+    "/api/qres": lambda qs: {"items": RS.q_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
+    "/api/pres": lambda qs: {"items": RS.p_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
     "/api/pool": lambda qs: PL.summary() if qs.get("brief") else PL.items(),
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
-NEED_REPO = {"/api/next", "/api/pool", "/api/results", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
+NEED_REPO = {"/api/next", "/api/pool", "/api/results", "/api/qres", "/api/pres", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
 POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/task/op": api_task_op,
         "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
         "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,
@@ -545,6 +548,9 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/words-task": api_words_task,
         "/api/prep": api_prep,
         "/api/check": lambda b: CK.start(b.get("what") or "all"),
+        "/api/qres": lambda b: RS.export_words(b.get("words") or []),
+        "/api/pres": lambda b: RS.draw(b.get("word") or ""),
+        "/api/open-path": lambda b: RS.open_path(b.get("what") or "", b.get("word") or ""),
         "/api/pool": lambda b: PL.op(b) if C.STATE.get("repo") in ("就绪", "索引和总表对不上") else {
             "ok": False, "msg": "词库还没准备好（%s），等左下角显示“仓库 就绪”再导入" % C.STATE.get("repo")},
         "/api/prepare": lambda b: C.prepare(b.get("words") or [])}
@@ -576,6 +582,9 @@ class H(BaseHTTPRequestHandler):
                 return self._send(200, GET[u.path](qs))
             if u.path == "/api/video/file":
                 return video_file(self, qs)
+            if u.path == "/api/res/file":                  # 成果文件夹里的图（画面的 svg）
+                data, ct = RS.res_file(qs.get("p", ""))
+                return self._send(200, data, ct) if data is not None else self._send(404, {"error": "没有这个文件"})
             if u.path == "/api/ai/shot":
                 m = wm()
                 data = m.live_shot()[0] if m else b""

@@ -281,6 +281,11 @@ def save(word, P, svgs, checked):
                 r[6] = r[6] or rel
         C.write_index(head, rows)
     C.x("DELETE FROM picfail WHERE word=?", (word,))
+    try:                                   # v1.9.9：画面里的图也拷到成果文件夹（画面\<单词>\）
+        import results
+        results.copy_ai_pics(word)
+    except Exception as e:
+        C.log("画面的图没拷到成果文件夹（%s）：词库里的照常存好了" % str(e)[:120])
 
 
 def _rec_path(word):

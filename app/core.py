@@ -802,6 +802,11 @@ def save_word(word, qs, version, attribution):
         pics.refresh_lianxi(word)
     except Exception as e:
         log("画面设置里的练习题没更新（%s）" % str(e)[:100])
+    try:                                   # v1.9.9：题目也存一个 Excel 在成果文件夹（题目\<单词>.xlsx）
+        import results
+        results.export_word(word, rec)
+    except Exception as e:
+        log("题目的 Excel 没存上（%s）：词库里的照常存好了" % str(e)[:120])
     return rel
 
 
