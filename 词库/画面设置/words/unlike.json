@@ -1,0 +1,554 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/twin-cups.svg",
+     "x": 0.5,
+     "y": 0.55,
+     "s": 0.5
+    },
+    {
+     "shape": "circle",
+     "x": 0.5,
+     "y": 0.55,
+     "r": 0.3,
+     "stroke": "#E2453C",
+     "lw": 8,
+     "fill": "rgba(0,0,0,0)",
+     "delay": 1.0
+    },
+    {
+     "ray": [
+      [
+       0.29000000000000004,
+       0.22000000000000003
+      ],
+      [
+       0.71,
+       0.8800000000000001
+      ]
+     ],
+     "color": "#E2453C",
+     "lw": 0.02,
+     "dur": 0.4,
+     "delay": 1.0
+    },
+    {
+     "label": "不",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#C92A2A",
+     "border": "#C92A2A",
+     "delay": 1.0
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/twin-cups.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "label": "像",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-xx.svg",
+  "p1": "art/ic-eq.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/twin-cups.svg",
+    "x": 0.5,
+    "y": 0.56,
+    "s": 0.5
+   },
+   {
+    "shape": "circle",
+    "x": 0.5,
+    "y": 0.56,
+    "r": 0.24,
+    "stroke": "#E2453C",
+    "lw": 8,
+    "fill": "rgba(0,0,0,0)",
+    "delay": 0.8
+   },
+   {
+    "ray": [
+     [
+      0.332,
+      0.29600000000000004
+     ],
+     [
+      0.6679999999999999,
+      0.8240000000000001
+     ]
+    ],
+    "color": "#E2453C",
+    "lw": 0.02,
+    "dur": 0.4,
+    "delay": 0.8
+   },
+   {
+    "label": "不像的",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#C92A2A",
+    "border": "#C92A2A"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-explain",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.9,
+     "z": 3,
+     "seq": "talk"
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.7,
+     "y": 0.62,
+     "s": 0.8,
+     "z": 3
+    }
+   ],
+   "text": "不像…、与…不同",
+   "pos": "介词、形容词",
+   "diff": "和某人某物不一样",
+   "ex": "Unlike his sister, he is very quiet.",
+   "exzh": "和他姐姐不同，他很安静。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "when": "his sister",
+      "seq": "talk"
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.74,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "when": "quiet"
+     },
+     {
+      "label": "Unlike",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "Unlike"
+     },
+     {
+      "label": "不同",
+      "x": 0.5,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "不同"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/clock.svg",
+     "x": 0.8,
+     "y": 0.26,
+     "s": 0.3
+    },
+    {
+     "actor": "cn-teacher-listen",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    }
+   ],
+   "text": "不像…的作风",
+   "pos": "介词",
+   "diff": "不像某人平时的样子",
+   "ex": "It's unlike her to be late.",
+   "exzh": "迟到可不像她的作风。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock.svg",
+      "x": 0.8,
+      "y": 0.26,
+      "s": 0.3,
+      "when": "late",
+      "anim": "shake"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.0,
+      "y": 0.66,
+      "s": 0.7,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.0,
+        0.66
+       ],
+       "to": [
+        0.5,
+        0.66
+       ],
+       "offset": 0
+      },
+      "when": "her"
+     },
+     {
+      "label": "unlike her",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "unlike her"
+     },
+     {
+      "label": "不像她的作风",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "不像她的作风"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“不像的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/twin-cups.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.56,
+      "r": 0.24,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "delay": 0.8
+     },
+     {
+      "ray": [
+       [
+        0.332,
+        0.29600000000000004
+       ],
+       [
+        0.6679999999999999,
+        0.8240000000000001
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 0.8
+     },
+     {
+      "label": "un 不 + like 像",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "和某人某物不一样",
+   "node": "① 不像…、与…不同",
+   "pos": "介词",
+   "pic": 0,
+   "say": [
+    "和某人某物不一样，就是不像、与…不同。",
+    "注意：unlike 否定的是像，dislike 否定的是喜欢。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "when": "不一样"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.7,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "when": "不一样"
+     },
+     {
+      "label": "与…不同",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "不同"
+     },
+     {
+      "label": "unlike ≠ dislike",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "dislike"
+     }
+    ]
+   }
+  },
+  {
+   "via": "不像平时的样子",
+   "node": "② 不像…的作风",
+   "pos": "介词",
+   "pic": 1,
+   "say": [
+    "不像某人平时的样子，就是不像他的作风。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock.svg",
+      "x": 0.8,
+      "y": 0.26,
+      "s": 0.3,
+      "when": "平时",
+      "anim": "shake"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.0,
+      "y": 0.66,
+      "s": 0.7,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.0,
+        0.66
+       ],
+       "to": [
+        0.5,
+        0.66
+       ],
+       "offset": 0
+      },
+      "when": "某人"
+     },
+     {
+      "label": "不像他的作风",
+      "x": 0.4,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "作风"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "different": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.35,
+      "y": 0.55,
+      "s": 0.7
+     },
+     {
+      "svg": "art/sock-blue.svg",
+      "x": 0.65,
+      "y": 0.55,
+      "s": 0.7
+     }
+    ]
+   },
+   "various": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人和姐姐有什么不同？",
+    "listen": "Unlike my sister, I don't like sweets.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "我喜欢吃甜食",
+     "我不喜欢吃甜食",
+     "我比姐姐高",
+     "我和姐姐一样"
+    ],
+    "ans": "B",
+    "why": "unlike 不像……，说明“我”和姐姐不一样。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She sings ______ a bird; her voice is beautiful.",
+    "opts": [
+     "unlike",
+     "alike",
+     "like",
+     "likely"
+    ],
+    "ans": "C",
+    "why": "像鸟一样唱歌，用介词 like。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 unlike、dislike 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "I ______ getting up early on weekends.",
+    "opts": [],
+    "ans": "dislike",
+    "why": "不喜欢做某事用动词 dislike；unlike 是“不像”。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The twins look very much ______. (unlike)",
+    "opts": [],
+    "ans": "alike",
+    "why": "双胞胎长得很像，用 alike（相像的）。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Unlike his father, he like sports.",
+    "opts": [],
+    "ans": "like → likes",
+    "why": "主语 he 是第三人称单数，动词加 s。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "和我不一样，她很擅长数学。",
+    "stem": "______ me, she is good at maths.",
+    "opts": [],
+    "ans": "Unlike",
+    "why": "不像我、和我不同，用介词 unlike。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "My brother and I are not ______ at all.",
+    "opts": [
+     "alike",
+     "like",
+     "unlike",
+     "likely"
+    ],
+    "ans": "A",
+    "why": "“A 和 B 相像”作表语用 alike。",
+    "kd": "易混"
+   }
+  ]
+ }
+}

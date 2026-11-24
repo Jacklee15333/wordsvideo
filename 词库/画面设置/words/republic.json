@@ -1,0 +1,669 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/ballot.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "label": "事",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.05,
+     "y": 0.62,
+     "s": 0.56,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.05,
+       0.62
+      ],
+      "to": [
+       0.95,
+       0.62
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.9,
+     "y": 0.66,
+     "s": 0.5,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.9,
+       0.66
+      ],
+      "to": [
+       0.1,
+       0.66
+      ],
+      "offset": 0.4
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.25,
+     "y": 0.7,
+     "s": 0.6,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.25,
+       0.7
+      ],
+      "to": [
+       1.0,
+       0.7
+      ],
+      "offset": 0.7
+     }
+    },
+    {
+     "label": "公共的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-ballot.svg",
+  "p1": "art/ic-crowd.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/street-bg.svg",
+  "items": [
+   {
+    "svg": "art/ballot.svg",
+    "x": 0.5,
+    "y": 0.56,
+    "s": 0.46
+   },
+   {
+    "actor": "walk-west-woman-case",
+    "x": 0.05,
+    "y": 0.62,
+    "s": 0.56,
+    "z": 2,
+    "walk": {
+     "from": [
+      0.05,
+      0.62
+     ],
+     "to": [
+      0.95,
+      0.62
+     ],
+     "offset": 0
+    }
+   },
+   {
+    "actor": "walk-cn-boy-pack",
+    "x": 0.9,
+    "y": 0.66,
+    "s": 0.5,
+    "z": 2,
+    "walk": {
+     "from": [
+      0.9,
+      0.66
+     ],
+     "to": [
+      0.1,
+      0.66
+     ],
+     "offset": 0.4
+    }
+   },
+   {
+    "label": "公共的事",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/ballot.svg",
+     "x": 0.5,
+     "y": 0.58,
+     "s": 0.46
+    },
+    {
+     "svg": "art/flag.svg",
+     "x": 0.84,
+     "y": 0.3,
+     "s": 0.34
+    },
+    {
+     "actor": "west-girl-raise",
+     "x": 0.18,
+     "y": 0.62,
+     "s": 0.7,
+     "z": 3
+    }
+   ],
+   "text": "共和国",
+   "pos": "名词",
+   "diff": "国家是全体公民的“公事”，没有世袭君主",
+   "ex": "France is a republic.",
+   "exzh": "法国是一个共和国。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/flag.svg",
+      "x": 0.3,
+      "y": 0.42,
+      "s": 0.56,
+      "when": "France"
+     },
+     {
+      "svg": "art/crown.svg",
+      "x": 0.74,
+      "y": 0.4,
+      "s": 0.26,
+      "when": "republic"
+     },
+     {
+      "shape": "circle",
+      "x": 0.74,
+      "y": 0.4,
+      "r": 0.18,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "when": "republic"
+     },
+     {
+      "ray": [
+       [
+        0.614,
+        0.202
+       ],
+       [
+        0.866,
+        0.5980000000000001
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "when": "republic"
+     },
+     {
+      "label": "republic",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "republic"
+     },
+     {
+      "label": "共和国",
+      "x": 0.74,
+      "y": 0.8,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "共和国"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-laugh",
+     "x": 0.2,
+     "y": 0.6,
+     "s": 0.8,
+     "z": 3
+    },
+    {
+     "actor": "west-girl-raise",
+     "x": 0.5,
+     "y": 0.64,
+     "s": 0.68,
+     "z": 3
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.78,
+     "y": 0.64,
+     "s": 0.68,
+     "z": 3
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.6,
+     "y": 0.92,
+     "s": 0.26,
+     "z": 5
+    }
+   ],
+   "text": "共同体",
+   "pos": "名词",
+   "diff": "一群人共同的天地",
+   "ex": "Our class is like a small republic.",
+   "exzh": "我们班就像一个小小的共同体。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.18,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "when": "Our class"
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.48,
+      "y": 0.64,
+      "s": 0.68,
+      "z": 3,
+      "when": "Our class"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.76,
+      "y": 0.64,
+      "s": 0.68,
+      "z": 3,
+      "when": "Our class"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.6,
+      "y": 0.92,
+      "s": 0.26,
+      "z": 5
+     },
+     {
+      "label": "a small republic",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "republic"
+     },
+     {
+      "label": "共同体",
+      "x": 0.86,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "共同体"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“公共的事”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/ballot.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.46
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "label": "re 事 + public 公共的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "拉丁语 res publica 整个借进来",
+   "node": "① 共和国",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "在别的语言里就合成好了，整个借进英语",
+   "ruleEx": "republic：res publica 事 + 公共的      vinegar：vin aigre 酒 + 酸的",
+   "say": [
+    "这个词在拉丁语里就合成好了：res publica，事加公共的，形容词放在后面。",
+    "国家不是国王一家的私事，而是全体公民的公事，这就是共和国。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "label": "res + publica",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.1,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "res publica",
+      "hideCue": 1
+     },
+     {
+      "label": "事 + 公共的",
+      "x": 0.5,
+      "y": 0.32,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "事加公共的",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/crown.svg",
+      "x": 0.26,
+      "y": 0.4,
+      "s": 0.3,
+      "cue": 1,
+      "when": "国王"
+     },
+     {
+      "shape": "circle",
+      "x": 0.26,
+      "y": 0.4,
+      "r": 0.2,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "cue": 1,
+      "when": "私事"
+     },
+     {
+      "ray": [
+       [
+        0.12000000000000002,
+        0.18
+       ],
+       [
+        0.4,
+        0.6200000000000001
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "cue": 1,
+      "when": "私事"
+     },
+     {
+      "svg": "art/ballot.svg",
+      "x": 0.7,
+      "y": 0.56,
+      "s": 0.44,
+      "cue": 1,
+      "when": "全体公民"
+     },
+     {
+      "label": "共和国",
+      "x": 0.7,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "共和国"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一群人共同的天地",
+   "node": "② 共同体",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "一群人共同的天地，也可以叫 republic，就是共同体。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "when": "一群人"
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.5,
+      "y": 0.64,
+      "s": 0.68,
+      "z": 3,
+      "when": "一群人"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.78,
+      "y": 0.64,
+      "s": 0.68,
+      "z": 3,
+      "when": "一群人"
+     },
+     {
+      "label": "共同体",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "共同体"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "democracy": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/ballot.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人在说哪个国家？",
+    "listen": "The People's Republic of China was founded in 1949.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "美国",
+     "中华人民共和国",
+     "英国",
+     "日本"
+    ],
+    "ans": "B",
+    "why": "The People's Republic of China 中华人民共和国。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "There are several ______ in that area. (republic)",
+    "opts": [],
+    "ans": "republics",
+    "why": "several 后面用复数 republics。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "A republic has no ______.",
+    "opts": [
+     "president",
+     "people",
+     "government",
+     "king"
+    ],
+    "ans": "D",
+    "why": "共和国没有世袭的国王 king。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 republic、public 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The park is open to the ______.",
+    "opts": [],
+    "ans": "public",
+    "why": "the public 公众；republic 是共和国。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The two republics was founded many years ago.",
+    "opts": [],
+    "ans": "was → were",
+    "why": "主语 the two republics 是复数，用 were。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "中华人民共和国成立于 1949 年。",
+    "stem": "The People's ______ of China was founded in 1949.",
+    "opts": [],
+    "ans": "Republic",
+    "why": "the People's Republic of China 中华人民共和国。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "How many ______ are there in the world?",
+    "opts": [
+     "republic",
+     "republics",
+     "republican",
+     "public"
+    ],
+    "ans": "B",
+    "why": "How many 后面用可数名词复数 republics。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

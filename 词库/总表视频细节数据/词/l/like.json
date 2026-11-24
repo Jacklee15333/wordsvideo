@@ -1,7 +1,459 @@
 {
  "单词": "like",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "originPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-music",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "svg": "art/heart.svg",
+     "x": 0.72,
+     "y": 0.36,
+     "s": 0.3,
+     "anim": "pulse"
+    },
+    {
+     "label": "like：像 / 合心意",
+     "x": 0.7,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-music",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.3,
+      "shadow": true
+     },
+     {
+      "svg": "art/heart.svg",
+      "x": 0.72,
+      "y": 0.26,
+      "s": 0.2,
+      "anim": "pulse"
+     }
+    ],
+    "text": "喜欢",
+    "pos": "动词",
+    "diff": "合心意",
+    "ex": "I like apples very much.",
+    "exzh": "我非常喜欢苹果。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "I"
+      },
+      {
+       "svg": "art/apple.svg",
+       "x": 0.72,
+       "y": 0.62,
+       "s": 0.32,
+       "when": "apples",
+       "pop": true
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.72,
+       "y": 0.26,
+       "s": 0.2,
+       "anim": "pulse",
+       "when": "like"
+      },
+      {
+       "label": "like",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "like"
+      },
+      {
+       "label": "喜欢",
+       "x": 0.9,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "喜欢"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.72,
+      "y": 0.66,
+      "s": 0.26,
+      "shadow": true
+     }
+    ],
+    "text": "想要",
+    "pos": "动词",
+    "diff": "礼貌说法 would like",
+    "ex": "Would you like some tea?",
+    "exzh": "你想喝点茶吗？",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.24,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "when": "Would"
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.54,
+       "y": 0.7,
+       "s": 0.22,
+       "when": "tea",
+       "pop": true
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.8,
+       "y": 0.6,
+       "s": 0.84,
+       "z": 3,
+       "when": "you"
+      },
+      {
+       "label": "Would you like",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "Would you like"
+      },
+      {
+       "label": "想喝",
+       "x": 0.5,
+       "y": 0.26,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "想喝"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.7,
+      "y": 0.66,
+      "s": 0.66,
+      "z": 3
+     }
+    ],
+    "text": "像",
+    "pos": "介词",
+    "diff": "长得一样、同一个样子",
+    "ex": "She looks like her mother.",
+    "exzh": "她长得像她妈妈。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-listen",
+       "x": 0.68,
+       "y": 0.66,
+       "s": 0.66,
+       "z": 3,
+       "when": "She"
+      },
+      {
+       "actor": "west-girl-explain",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "when": "her mother"
+      },
+      {
+       "svg": "art/twin-cups.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "s": 0.2,
+       "when": "looks like"
+      },
+      {
+       "label": "looks like",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "looks like"
+      },
+      {
+       "label": "像",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "像"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“同一个身形；使满意”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/twin-cups.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.4
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.36,
+       "anim": "pulse"
+      },
+      {
+       "label": "like：两条线",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "形容词线：同一个身形的",
+    "node": "③ 像",
+    "pos": "介词",
+    "pic": 2,
+    "say": [
+     "一条线：同一个身形的，就是相像的、同样的，当介词就是像。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/twin-cups.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "同一个身形"
+      },
+      {
+       "label": "相像的",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "相像的"
+      },
+      {
+       "label": "像",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "就是像"
+      }
+     ]
+    }
+   },
+   {
+    "via": "动词线：使满意、合心意",
+    "node": "① 喜欢；② 想要",
+    "pos": "动词",
+    "pic": 0,
+    "from": 0,
+    "say": [
+     "另一条线：古英语里是使某人满意，喜欢的人反倒是宾语。",
+     "后来主宾倒过来，成了我喜欢它，就是喜欢；礼貌地说 would like，就是想要。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/apple.svg",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.3,
+       "when": "使某人满意"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "宾语"
+      },
+      {
+       "label": "使满意",
+       "x": 0.7,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "使某人满意"
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.2,
+       "anim": "pulse",
+       "cue": 1,
+       "when": "我喜欢它"
+      },
+      {
+       "label": "喜欢",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "就是喜欢"
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.86,
+       "y": 0.84,
+       "s": 0.16,
+       "z": 5,
+       "when": "would like"
+      },
+      {
+       "label": "想要",
+       "x": 0.86,
+       "y": 0.6,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "想要"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "enjoy": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-music",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3
+      }
+     ]
+    },
+    "love": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/heart.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8
+      }
+     ]
+    },
+    "want": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/mug.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.6
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "likeai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人想要什么？\n听：I'd like a cup of tea, please.\nA. 一杯咖啡\nB. 一杯牛奶\nC. 一杯茶\nD. 一杯果汁",
@@ -90,5 +542,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
