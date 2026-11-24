@@ -1470,6 +1470,11 @@ def relay_wait(prompt, words):
         _hist_save()
         alts = [h["inbox"][:-5] for h in RELAY_HIST[:-1] if h.get("inbox")]      # 前几轮的文件名：网页 AI 用了旧名字也认
         t0 = RELAY_HIST[-1]["t0"]
+    if len(RELAY_HIST) > 1 and RELAY_HIST[-2].get("res") in ("fail", "gone"):
+        pv = RELAY_HIST[-2]
+        _say("━━━━ 第 %d 轮%s → 现在是第 %d 轮：新的提示词已经复制好了，请到网页 AI 里重新粘贴、发送（最好开新对话）%s ━━━━" % (
+            len(RELAY_HIST) - 1, "收到了、检查没过" if pv.get("res") == "fail" else "没等到回复（软件重开过）", len(RELAY_HIST),
+            ("；网页 AI 说的“已上传 %s”是第 %d 轮的，已经用过了" % (pv["inbox"].rsplit("/", 1)[-1], len(RELAY_HIST) - 1)) if pv.get("got") and pv.get("inbox") else ""))
     _say("手动接力 第 %d 轮（%s）：%s … %s，%d 个词，等你在网页 AI 里粘贴、发送%s" % (
         len(RELAY_HIST), RELAY["kind"] or "提示词", words[0], words[-1], len(words), ("；写完它会传 %s.xlsx" % ipath) if ipath else ""))
     after = ("写完它会自己把回复整理成 Excel 传到中转仓库（%s.xlsx），软件看到就接着做" % ipath) if ibox else "写完点它回复下面的「复制」，软件会自己接着做"
@@ -1513,13 +1518,19 @@ def relay_wait(prompt, words):
                                         got = g2
                                         log("网页 AI 传上来的文件名和这一轮的不一样（%s，这一轮要的是 %s.xlsx）：看内容是这一批的，收下了" % (p0, ipath), tid)
                                         break
-                    if not got:
+                    if not got and (RELAY["polls"] <= 4 or RELAY["polls"] % max(1, 60 // poll) == 0):
                         fs = INBOX_LAST.get("files") or []
                         up = (INBOX_LAST.get("uploads") or [None])[0]
-                        _say("中转仓库 第 %d 次看：还没有 %s.xlsx（等了 %s）；inbox/ 里现在：%s；网页 AI 最近一次上传：%s" % (
-                            RELAY["polls"], ipath.rsplit("/", 1)[-1], _dur(time.time() - RELAY["ts"]),
+                        lab = ""
+                        if up:
+                            b0 = up["path"].rsplit(".", 1)[0]
+                            k = next((i for i, h in enumerate(RELAY_HIST[:-1]) if h.get("inbox") and h["inbox"].rsplit(".", 1)[0] == b0), None)
+                            lab = "（就是这一轮的）" if b0 == ipath else ("（第 %d 轮的，已经收下用过了）" % (k + 1)) if k is not None else \
+                                ("（这一轮开始以前传的）" if up["ts"] < t0 else "")
+                        _say("中转仓库 第 %d 次看：还没有第 %d 轮的 %s.xlsx（等了 %s）；inbox/ 里现在：%s；网页 AI 最近一次上传：%s%s" % (
+                            RELAY["polls"], len(RELAY_HIST), ipath.rsplit("/", 1)[-1], _dur(time.time() - RELAY["ts"]),
                             "、".join(fs[:6]) + ("…" if len(fs) > 6 else "") if fs else "空的",
-                            ("%s %s" % (time.strftime("%H:%M:%S", time.localtime(up["ts"])), up["path"])) if up else "没有记录"))
+                            ("%s %s" % (time.strftime("%H:%M:%S", time.localtime(up["ts"])), up["path"].rsplit("/", 1)[-1])) if up else "没有记录", lab))
                 except ExcelBad as e:
                     got = None
                     if RELAY.get("hint") != str(e) + "：点网页里回复下面的「复制」交回，或者叫它照常把全文写在聊天里":

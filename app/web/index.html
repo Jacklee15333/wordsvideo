@@ -289,6 +289,8 @@ tr.wdim td.w{color:var(--faint)}
 .rhist{background:#fff;border:1px solid #F0DDB8;border-radius:6px;padding:6px 10px;margin:6px 0 8px;font-size:12.5px}
 .rhist ul{margin:4px 0 0;padding-left:16px}
 .rhist li{margin:2px 0}
+.rnew{background:#FDECEA;border:1px solid #F0B9B3;border-radius:6px;padding:8px 12px;margin:6px 0 8px;font-size:13px;line-height:1.7;color:#7A1F17}
+.rnew code{font-size:11.5px;background:#fff;padding:0 4px;border-radius:3px}
 /* v1.9.9：这次给哪些词、结果、存在哪儿 */
 .pst-will{background:#E7EEF8;color:var(--blue)}
 .tc{font-weight:600;color:var(--red);margin-left:2px}
@@ -486,6 +488,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
         <div id="lNoShot" class="lnoshot" hidden></div>
   <div class="relay" id="rBox" hidden>
     <h3 style="margin:0 0 4px" id="rTitle">要你操作：把这一批交给网页 AI <span id="rWords" class="small muted"></span></h3>
+    <div id="rNew" class="rnew" hidden></div>
     <div id="rHist"></div>
     <div id="rAuto">
     <ol class="steps rsteps">
@@ -1491,11 +1494,19 @@ async function relayTick(){
   const on=d.status==='等你操作';
   $('#rBox').hidden=!d.show;
   RL.status=d.status;navBadges();
+  if(on&&d.id!==RL.id&&RL.id&&(d.hist||[]).length>1){const H0=d.hist,pv=H0[H0.length-2];if(pv&&pv.res==='fail')toast(`第 ${H0.length-1} 轮收到了但检查没过：第 ${H0.length} 轮的新提示词已经复制好了，到网页 AI 里重新粘贴、发送`,12000)}
   if(on&&d.id!==RL.id){$('#rReply').value='';$('#rMsg').textContent='';const rs=stepOf((ST.runner||{}).task);if(page!==rs)toast('有一批词等你交给网页 AI：在左边「'+(STEPNAME[rs]||'')+'」那一步',8000);else setTimeout(()=>$('#tLive').scrollIntoView({behavior:'smooth',block:'start'}),300)}
   RL=d;
   if(!d.show)return;
   const ph=d.phase,H=d.hist||[],cur=H[H.length-1]||{},n=H.length,ib=!!d.inbox,sent=ph!=='send',ws=d.words||[];
-  $('#rTitle').firstChild.textContent={send:'要你操作：把这一批交给网页 AI ',checking:'收到网页 AI 的回复了，软件在检查 ',ok:'这一轮过了 ',fail:'这一轮没过：软件在准备改错的提示词 '}[ph]||'';
+  // 上一轮没过（或者软件重开没等到）、换了新的一轮：最上面红框说清楚，不然看着像网页 AI 传了软件没收到
+  const prev=n>1?H[n-2]:null,isNew=ph==='send'&&prev&&(prev.res==='fail'||prev.res==='gone');
+  $('#rNew').hidden=!isNew;
+  if(isNew)$('#rNew').innerHTML=prev.res==='fail'
+    ?`<b>第 ${n-1} 轮的结果软件已经收到、检查了：没过</b>（为什么没过，看下面“这一批的经过”）。${prev.inbox?`网页 AI 说的“已上传 <code>${esc(prev.inbox.split('/').pop())}</code>”就是第 ${n-1} 轮的，已经用过了。`:''}<br>现在是<b>第 ${n} 轮（改错）</b>：<b>新的提示词</b>已经复制好了（里面写了要改什么），请到网页 AI 里<b>重新粘贴、发送</b>，最好开一个新对话。网页 AI 这次会传 <code>${esc((d.inbox||'').split('/').pop())}</code>。`
+    :`<b>软件重开过，第 ${n-1} 轮没等到回复。</b>现在是第 ${n} 轮：新的提示词已经复制好了，请到网页 AI 里重新粘贴、发送。`;
+  $('#rS1').querySelector('b').textContent=n>1?`第 ${n} 轮的新提示词已经自动复制好了`:'提示词已经自动复制好了';
+  $('#rTitle').firstChild.textContent={send:n>1?`要你操作：第 ${n} 轮——把新的提示词交给网页 AI `:'要你操作：把这一批交给网页 AI ',checking:'收到网页 AI 的回复了，软件在检查 ',ok:'这一轮过了 ',fail:'这一轮没过：软件在准备改错的提示词 '}[ph]||'';
   $('#rWords').textContent=`第 ${n} 轮 · ${d.kind||''}：${ws[0]||''}${ws.length>1?' … '+ws[ws.length-1]:''}（${ws.length} 个词）`;
   $('#rLen').textContent=`提示词 ${(d.promptLen||0).toLocaleString()} 字`;
   $('#rHint').textContent=sent?'':(d.hint||'');
