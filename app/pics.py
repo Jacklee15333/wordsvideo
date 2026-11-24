@@ -164,7 +164,7 @@ OUT_MULTI = """【输出格式（程序按这个格式自动读，请严格照�
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">……</svg>
 >>>END
    插图要求：图画书风（黑色勾线、饱和平涂），画成现实生活里的样子；一张图不超过 12 KB。
-5. 每一次交回（每一轮）的最后单独一行写：%s"""
+5. 每次上传的内容，最后单独一行写：%s"""
 
 
 def _mat_short(word, budget):
@@ -185,13 +185,13 @@ def build_prompt_multi(words, rnd):
     ver, ed = skill_version()
     n = len(words)
     budget = max(250, min(1200, 120000 // max(1, n)))
-    head = ("【做画面 · 这一份 %d 个词】你在帮一位中学英语老师给下面 %d 个单词各做一份构词动画视频的“画面设置”。视频的讲解稿由程序从总表生成，"
+    head = ("【做画面 · 这一批 %d 个词】你在帮一位中学英语老师给下面 %d 个单词各做一份构词动画视频的“画面设置”。视频的讲解稿由程序从总表生成，"
             "你只管画面：每个意思一幅生活场景、例句和例句动画、各部分卡片的画（partPics）和小图标（icons）、拼起来那一格的画（comboPic）、"
             "同义词辨析、意思怎么一步步变过来的示意图。练习题不用写，程序会把出好的 7 道题放进去。\n"
-            "不用一次写完：每写完 %d 个词就交回一次（怎么交回看最后），再接着写下一轮。" % (n, n, rnd))
+            "按顺序一个接一个写：每写完 %d 个词就上传一次（怎么传看最后），中间不用在聊天里汇报，接着写下一个；这一批全部传完再汇报一次。" % (n, n, rnd))
     return "\n\n".join([
         head,
-        "【这一份的词（按这个顺序做）】\n" + "\n".join("%d. %s" % (i + 1, w) for i, w in enumerate(words)),
+        "【这一批的词（按这个顺序做）】\n" + "\n".join("%d. %s" % (i + 1, w) for i, w in enumerate(words)),
         "【每个词的总表材料】\n" + "\n\n".join("@%s\n%s" % (w, _mat_short(w, budget)) for w in words),
         "【视频技能 %s（%s）里和画面有关的规矩：每个词每一条都要做到】\n" % (ver, ed) + rules,
         "【画面怎么画、画面设置怎么写（视频技能 %s 的 pictures.md 全文）】\n" % ver + pm,
@@ -255,7 +255,7 @@ def do_pics_relay(R, tid, total, only):
             for part in R.ask_parts(tid, "做画面", build_prompt_multi(pend, min(rnd, len(pend))), pend, min(rnd, len(pend))):
                 res = parse_multi(part, pend)
                 if not res:
-                    C.RELAY["hint"] = "交回的这一轮里没认出这一份还没做的词（每个词要先写一行 @单词）"
+                    C.RELAY["hint"] = "交回的这个文件里没认出这一批还没做的词（每个词要先写一行 @单词）"
                     continue
                 for w, (P, raw, svgs, errs) in res.items():
                     if w not in pend:

@@ -512,6 +512,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
   <div class="relay" id="rBox" hidden>
     <h3 style="margin:0 0 4px" id="rTitle">要你操作：把提示词交给网页 AI <span id="rWords" class="small muted"></span></h3>
     <div class="rprog" id="rProg"></div>
+    <div id="rBatchDone" class="rdone ok" hidden></div>
     <div id="rRes" class="rdone" hidden></div>
     <details class="rdlist" id="rDoneBox" hidden><summary id="rDoneN"></summary><ul id="rDoneList"></ul></details>
     <div class="rnow" id="rNow"></div>
@@ -1534,7 +1535,7 @@ async function showRes(w){const st=stepOf((ST.runner||{}).task)||page,isQ=st==='
     if(n){n.scrollIntoView({behavior:'smooth',block:'center'});return}
     return toast(`「${w}」不在下面的结果里（不是选上的词）`)}
   d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});d.classList.add('flash');setTimeout(()=>d.classList.remove('flash'),2200)}
-let RLLAST=null;
+let RLLAST=null,RLBATCH=null;
 async function relayTick(){
   let d;try{d=await api('/api/relay')}catch(e){return}
   const on=d.status==='等你操作';
@@ -1544,6 +1545,8 @@ async function relayTick(){
   RL=d;
   // 一个词做完了：这一页的表和结果马上刷新（画面那一列变“有”）
   const L=d.last;
+  const lbt=((d.lastBatch||{}).t)||0;
+  if(RLBATCH===null)RLBATCH=lbt;else if(lbt!==RLBATCH){RLBATCH=lbt;const B=d.lastBatch;toast(`✓ 这一批 ${B.words.length} 个词已经生成完：做好了 ${B.ok} 个${B.bad?`，没做成 ${B.bad} 个`:''}`,10000)}
   const lt=(L&&L.t)||0;
   if(RLLAST===null)RLLAST=lt;                       // 打开页面时先记下现在的，之后有词做完就刷新
   else if(lt!==RLLAST){RLLAST=lt;await poolNeed();if(page==='pic'){picPickRender();picRes()}else if(page==='q'){qPickRender();qRes()}}
@@ -1553,7 +1556,7 @@ async function relayTick(){
   const okN=done.filter(x=>x.ok).length,badN=done.length-okN,cnt=done.reduce((a,x)=>a+(x.words||[]).length,0);
   $('#rTitle').firstChild.textContent={send:'要你操作：把提示词交给网页 AI ',checking:'收到了，软件在存 ',ok:'这个词完成了 ',fail:'这个词没做成 '}[ph]||'';
   $('#rWords').textContent='';
-  $('#rProg').innerHTML=d.total?`这一批 ${d.total} 个词：现在是第 <b>${Math.min(d.total,cnt+1)}</b> 个 · 做好了 <b>${okN}</b> 个${badN?` · 没做成 <b>${badN}</b> 个`:''}`:'';
+  $('#rProg').innerHTML=d.total?`这次一共 ${d.total} 个词：现在是第 <b>${Math.min(d.total,cnt+1)}</b> 个 · 做好了 <b>${okN}</b> 个${badN?` · 没做成 <b>${badN}</b> 个`:''}`:'';
   // 刚做完的那个词：一张卡片，4 步都打勾，能点开看
   const nm=x=>(x.words||[]).length>1?`${x.words[0]} 等 ${x.words.length} 个`:(x.words||[])[0];
   const showL=L&&L.t&&done.length&&(sent||ph==='send');
@@ -1583,20 +1586,25 @@ async function relayTick(){
     (up?`网页 AI 最近一次上传：${hm(up.ts)} <code>${esc(up.path.split('/').pop())}</code>${base(up.path)===base(d.inbox)?'（就是这个词的）':'（是上一个词的，已经收下了）'}`:'网页 AI 还没上传过'):'';
   $('#rNew').hidden=true;
   $('#rManual').hidden=sent;$('#rSkip').hidden=sent;
-  // v1.10.9：一份好几个词，网页 AI 一轮一轮交回
-  const M=!!d.multi&&ws.length>1;$('#rMulti').hidden=!(M&&(d.pending||[]).length);$('#rSkipRest').hidden=!(M&&(d.pending||[]).length);$('#rSkip').hidden=M||sent;
+  // v1.10.10：一批好几个词——网页 AI 写一个传一个，中间不在聊天里汇报；最后一个传上来，第 ④ 步打勾“这一批已经生成完”
+  const M=!!d.multi&&ws.length>1,LB=d.lastBatch,lbNew=LB&&JSON.stringify(LB.words)!==JSON.stringify(ws);
+  $('#rBatchDone').hidden=!(LB&&lbNew);
+  if(LB&&lbNew)$('#rBatchDone').innerHTML=`<div class="hd">✓ 上一批 ${LB.words.length} 个词已经生成完 <span class="small" style="font-weight:400;color:var(--muted)">（${esc(LB.words[0])} … ${esc(LB.words[LB.words.length-1])}）做好了 ${LB.ok} 个${LB.bad?`，没做成 ${LB.bad} 个`:''}</span></div>`;
+  $('#rMulti').hidden=!(M&&(d.pending||[]).length);$('#rSkipRest').hidden=!(M&&(d.pending||[]).length);$('#rSkip').hidden=M||sent;
   if(M){const pd=d.pending||[],dn=(d.doneIn||[]).length,k=d.parts||0,base=done.reduce((a,x)=>a+(x.words||[]).length,0)-dn;
-    $('#rTitle').firstChild.textContent=k?'网页 AI 在一轮一轮写 ':'要你操作：把提示词交给网页 AI ';
-    $('#rProg').innerHTML=d.total?`这一批 ${d.total} 个词：做好了 <b>${okN}</b> 个${badN?` · 没做成 <b>${badN}</b> 个`:''} · 还剩 <b>${Math.max(0,d.total-cnt)}</b> 个`:'';
-    $('#rNow').innerHTML=`现在：这一份 <b>${ws.length}</b> 个词（${esc(ws[0])} … ${esc(ws[ws.length-1])}${d.total?`，这一批的第 ${base+1}–${base+ws.length} 个`:''}）`+
-      (k?` <span class="small" style="font-weight:400">已经交回 <b>${k}</b> 轮 · 做完 <b>${dn}</b> 个 · 还剩 <b>${pd.length}</b> 个</span>`:(done.length?' <span class="small" style="color:var(--amber);font-weight:400">——新的一份，提示词换了，要再粘贴一次</span>':''));
+    $('#rTitle').firstChild.textContent=k?'网页 AI 在一个一个写、一个一个传 ':'要你操作：把提示词交给网页 AI ';
+    $('#rProg').innerHTML=d.total?`这次一共 ${d.total} 个词：做好了 <b>${okN}</b> 个${badN?` · 没做成 <b>${badN}</b> 个`:''} · 还剩 <b>${Math.max(0,d.total-cnt)}</b> 个`:'';
+    $('#rNow').innerHTML=`现在这一批 <b>${ws.length}</b> 个词（${esc(ws[0])} … ${esc(ws[ws.length-1])}${d.total?`，这次的第 ${base+1}–${base+ws.length} 个`:''}）`+
+      (k?` <span class="small" style="font-weight:400">收到 <b>${k}</b> 个文件 · 做完 <b>${dn}</b> 个 · 还剩 <b>${pd.length}</b> 个</span>`:(done.length?' <span class="small" style="color:var(--amber);font-weight:400">——新的一批，提示词换了，要再粘贴一次</span>':''));
     $('#rNewChat').textContent=`剩下的 ${pd.length} 个另开对话继续`;
     rStep('rS2',k||sent?'done':'you',k||sent?'':`等你粘贴、发送（已经 ${secs(Date.now()/1000-d.ts)}）`);
-    $('#rT3').innerHTML=`网页 AI <b>一轮一轮写</b>，每写完 ${d.round||1} 个就自己传回来（它会接着写，不用你说“继续”）`;
-    rStep('rStep3',pd.length?'run':'done',pd.length?(k?`收到 ${k} 轮 · 做完 ${dn} 个 · 还剩 ${pd.length} 个：等下一轮`:(d.inbox?'软件每 '+d.pollSec+' 秒看一次，还没传回来':'它写完一轮，点它回复下面的「复制」')):`${k} 轮都收到了`,pd.length?'':'ok');
-    $('#rStep4').querySelector('span').textContent='这一份全部做完';
-    rStep('rStep4',pd.length?(ph==='checking'?'run':'wait'):'done',ph==='checking'?esc(d.stage||'在看、存…'):pd.length?`还剩 ${pd.length} 个：${esc(pd.slice(0,8).join('、'))}${pd.length>8?'…':''}`:'这一份做完了','');
-    if(showL&&L.multi){$('#rRes').querySelector('.chain')&&($('#rRes').querySelector('.chain').textContent=`这一份第 ${dn} 个做完的`)}}
+    $('#rT3').innerHTML=`网页 AI <b>写一个传一个</b>（每 ${d.round||1} 个传一次，中间不在聊天里汇报，接着写）`;
+    rStep('rStep3',k?'done':'run',k?`已经开始传回来了：收到 ${k} 个文件`:(d.inbox?'软件每 '+d.pollSec+' 秒看一次中转仓库，还没传回来':'它写完，点它回复下面的「复制」'),k?'ok':'');
+    $('#rStep4').querySelector('span').textContent='这一批生成完';
+    if(!pd.length)rStep('rStep4','done','✓ 这一批已经生成完','ok');
+    else if(d.aiDone)rStep('rStep4','bad',`网页 AI 说写完了，但还差 ${pd.length} 个没收到：${esc(pd.slice(0,10).join('、'))}${pd.length>10?'…':''}——点上面「剩下的另开对话继续」`,'bad');
+    else rStep('rStep4','run',ph==='checking'?esc(d.stage||'在看、存…'):`还在生成：做完 ${dn} 个，还剩 ${pd.length} 个（${esc(pd.slice(0,6).join('、'))}${pd.length>6?'…':''}）。最后一个传上来，这里就打勾`,'');
+    if(showL&&L.multi){const ch=$('#rRes').querySelector('.chain');if(ch)ch.textContent=`这一批第 ${dn} 个做完的`}}
   else $('#rStep4').querySelector('span').textContent='存好，这个词完成';
 }
 setInterval(relayTick,2500);

@@ -1087,7 +1087,7 @@ def relay_act(rid, act):
     """黄框里点的：newchat（剩下的另开对话继续）/ skiprest（剩下的先跳过）。"""
     with _RELAY_LOCK:
         if RELAY.get("id") != int(rid or 0) or not RELAY.get("multi") or RELAY.get("status") not in ("等你操作", "交回了"):
-            return False, "这一份已经不在等了，刷新一下"
+            return False, "这一批已经不在等了，刷新一下"
         RELAY_ACT.update(rid=int(rid), act=act)
     return True, {"newchat": "好：剩下的词马上出一份新的提示词（会自动复制），开一个新对话粘贴",
                   "skiprest": "剩下的这些词先跳过了"}.get(act, "")
@@ -1110,8 +1110,8 @@ def relay_word(w, ok, detail=""):
 
 
 def _inbox_parts(ipath, seen, pending, t0):
-    """中转仓库里这一份传上来的文件：名字以这一份的名字开头的；名字对不上、但这一份开始以后传的、内容是这一份的词，也收。
-    返回 [(原文, 路径)]，收下的都从中转仓库删掉。"""
+    """中转仓库里这一批传上来的文件：名字以这一批的名字开头的；名字对不上、但这一批开始以后传的、内容是这一批的词，也收。
+    返回 [(原文, 路径, 是不是这一批最后一个)]，收下的都从中转仓库删掉。"""
     ib = inbox_cfg()
     br = urllib.parse.quote(ib["branch"] or "main")
     folder, base = ipath.rsplit("/", 1)
@@ -1144,9 +1144,10 @@ def _inbox_parts(ipath, seen, pending, t0):
         if _looks_reply(text, pending) or (ours and END in text and any(
                 re.search(r"[@＠]\s*" + re.escape(w) + r"(?![A-Za-z'’\-])", text) for w in pending)):
             inbox_delete(gpath, sha)
-            out.append((text, gpath))
+            nm = gpath.rsplit("/", 1)[-1]
+            out.append((text, gpath, nm.rsplit(".", 1)[0].endswith("-end") or "【这一批最后一个】" in text))
         elif ours:
-            RELAY["hint"] = "收到 %s，但里面没有这一份还没做的词（或者没有最后一行 %s）" % (gpath.rsplit("/", 1)[-1], END)
+            RELAY["hint"] = "收到 %s，但里面没有这一批还没做的词（或者没有最后一行 %s）" % (gpath.rsplit("/", 1)[-1], END)
             inbox_delete(gpath, sha)
     return out
 
@@ -1156,6 +1157,7 @@ def relay_parts(prompt, words, kind, rnd):
     收到一个就 yield 出去处理，处理完的词由调用方用 relay_word() 记下。全部做完，或者你点了「剩下的另开对话继续」「剩下的先跳过」
     就结束，原因放在 RELAY["endReason"]：all / newchat / skiprest。剪贴板、手动粘贴交回的也一样一轮一轮收。"""
     import clip
+    words = list(words)        # 自己留一份：调用方做完一个词会从它的列表里删，不能跟着变（v1.10.10：以前一批做完会出错停下）
     cfg = load_cfg()
     use_clip = clip.WIN and cfg.get("relayClipboard", True)
     ibox = inbox_on(cfg)
@@ -1169,7 +1171,8 @@ def relay_parts(prompt, words, kind, rnd):
     with _RELAY_LOCK:
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=kind, reply="", ts=time.time(),
                      copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "", phase="send", tid=tid,
-                     polls=0, lastPoll=0.0, stage="", multi=True, pending=list(words), doneIn=[], parts=0, endReason="", round=rnd)
+                     polls=0, lastPoll=0.0, stage="", multi=True, pending=list(words), doneIn=[], parts=0, endReason="", round=rnd,
+                     aiDone=False)
         rid = RELAY["id"]
         RELAY_ACT.update(rid=0, act="")
         RELAY_HIST.clear()
@@ -1192,8 +1195,13 @@ def relay_parts(prompt, words, kind, rnd):
     try:
         while time.time() < end:
             with _RELAY_LOCK:
-                if not RELAY["pending"]:
+                if not RELAY["pending"]:          # 这一批都收到、都做完了
                     RELAY["endReason"] = "all"
+                    res = {x["words"][0]: x["ok"] for x in (RELAY.get("done") or []) if x.get("words")}
+                    nok = len([w for w in words if res.get(w)])
+                    RELAY["lastBatch"] = {"words": list(words), "ok": nok, "bad": len(words) - nok, "t": time.time(), "kind": kind}
+                    _say("━━━━ 这一批 %d 个词已经生成完（%s … %s）：做好了 %d 个，没做成 %d 个 ━━━━" % (len(words), words[0], words[-1], nok, len(words) - nok))
+                    log("这一批 %d 个词已经生成完：做好了 %d 个，没做成 %d 个" % (len(words), nok, len(words) - nok), tid)
                     return
                 act = RELAY_ACT["act"] if RELAY_ACT["rid"] == rid else ""
             if act:
@@ -1218,12 +1226,12 @@ def relay_parts(prompt, words, kind, rnd):
                     RELAY["lastPoll"] = time.time()
                 if not texts and (RELAY["polls"] <= 4 or RELAY["polls"] % max(1, 60 // poll) == 0):
                     fs = INBOX_LAST.get("files") or []
-                    _say("中转仓库 第 %d 次看：这一份 %d 个词，收到 %d 轮，做完 %d 个，还剩 %d 个（等了 %s）；inbox/ 里现在：%s" % (
+                    _say("中转仓库 第 %d 次看：这一批 %d 个词，收到 %d 个文件，做完 %d 个，还剩 %d 个，还在生成（等了 %s）；inbox/ 里现在：%s" % (
                         RELAY["polls"], len(words), RELAY["parts"], len(RELAY["doneIn"]), len(RELAY["pending"]),
                         _dur(time.time() - t0), "、".join(fs[:6]) + ("…" if len(fs) > 6 else "") if fs else "空的"))
             with _RELAY_LOCK:
                 if RELAY["id"] == rid and RELAY["status"] == "交回了":
-                    texts.append((RELAY["reply"], "你粘贴的"))
+                    texts.append((RELAY["reply"], "你粘贴的", "【这一批最后一个】" in RELAY["reply"]))
                     RELAY.update(status="等你操作", reply="")
             if use_clip:
                 sq = clip.seq()
@@ -1231,8 +1239,10 @@ def relay_parts(prompt, words, kind, rnd):
                     last = sq
                     t = clip.get_text()
                     if t and t.strip() != prompt.strip() and _looks_reply(t, list(RELAY["pending"])):
-                        texts.append((t, "剪贴板"))
-            for t, src in texts:
+                        texts.append((t, "剪贴板", "【这一批最后一个】" in t))
+            for t, src, lastp in texts:
+                if lastp:
+                    RELAY["aiDone"] = True
                 with _RELAY_LOCK:
                     RELAY["parts"] += 1
                     k = RELAY["parts"]
@@ -1245,6 +1255,10 @@ def relay_parts(prompt, words, kind, rnd):
                 with _RELAY_LOCK:
                     RELAY["phase"] = "send" if RELAY["pending"] else "ok"
                     RELAY["stage"] = ""
+                    miss = list(RELAY["pending"]) if RELAY.get("aiDone") else []
+                if miss:                         # 网页 AI 说这一批写完了，可还有词没收到
+                    RELAY["hint"] = "网页 AI 说这一批写完了，但还有 %d 个没收到：%s——点「剩下的另开对话继续」" % (len(miss), "、".join(miss[:12]))
+                    _say("网页 AI 说这一批写完了，但还有 %d 个没收到：%s" % (len(miss), "、".join(miss[:12])))
             time.sleep(1)
         raise Fatal("等了 24 小时，先停下")
     finally:
@@ -1289,13 +1303,43 @@ WORDS = __WORDS__          # 这一份是哪些词
 REPORT = __REPORT__        # 上传好以后在聊天里回的汇报
 PARTS = __PARTS__          # 一份好几个词、写完一轮传一轮
 ROUND = __ROUND__          # 每一轮几个词
-LASTONE = __LASTONE__      # 这一份是不是这一批的最后一份
+LASTONE = __LASTONE__      # 这一批是不是这次的最后一批
+PARTIAL = __PARTIAL__      # 写不下了、要停下时的汇报
+MODE = "上传"              # 对话太长写不下、要停下的时候：把这里改成 "汇报" 再运行一次（只打印汇报，不上传）
+import sys as _s
+if any(a in ("汇报", "report") for a in _s.argv[1:]):
+    MODE = "汇报"
+MEM = "." + NAME.rsplit("/", 1)[-1] + ".done.json"   # 这一批已经传了哪些词（记在你这边）
+
+
+def _sent():
+    try:
+        return json.load(open(MEM, encoding="utf-8"))
+    except Exception:
+        return {"k": 0, "w": []}
+
+
+if PARTS and MODE == "汇报":
+    _s0 = _sent()
+    _left = [w for w in WORDS if w not in _s0["w"]]
+    print("【汇报：把下面几行原样回在聊天里】")
+    print(PARTIAL.replace("{cum}", str(len(_s0["w"]))).replace("{done}", "、".join(w + " ✓" for w in _s0["w"]) or "还没有")
+          .replace("{left}", str(len(_left))).replace("{rest}", "、".join(_left[:30]) + ("…" if len(_left) > 30 else "")))
+    raise SystemExit
 FILE = "reply.txt"         # 你把回复写进的文件；放在别处就改成那个路径
 _c = [d + FILE for d in ("", "/home/claude/", "/mnt/user-data/outputs/", "/tmp/") if os.path.exists(d + FILE)]
 if _c:
     FILE = max(_c, key=os.path.getmtime)    # 好几个 reply.txt 时用最新写的那个（别把上一轮的传上去）
 text = open(FILE, encoding="utf-8").read().replace("\r", "").replace(TOKEN, "***")   # 令牌别跟着传上去
 assert "__END__" in text, "文件里没有最后一行 __END__：先把回复写完整"
+IS_LAST = False
+if PARTS:                  # 这次传的是哪几个词（看 @单词 那一行）；传完这次，这一批是不是全传完了
+    here = [w for w in WORDS if re.search(r"[@＠]\s*" + re.escape(w) + r"(?![A-Za-z'’\-])", text)]
+    s0 = _sent()
+    after = [w for w in WORDS if w in set(s0["w"]) | set(here)]
+    IS_LAST = len(after) == len(WORDS)
+    if IS_LAST and "【这一批最后一个】" not in text:
+        text = text.rstrip() + "\n【这一批最后一个】\n"      # 告诉单词工作台：这一批写完了
 
 # 整理成 Excel：「题目」一题一行（给人看），「原文」一行一格原样放着（给软件读）
 TYPES = {"听": "听力", "单": "单项选择", "形": "适当形式填空", "选": "选词填空", "改": "改错", "完": "完成句子"}
@@ -1402,7 +1446,7 @@ try:
         sh.append(("总表问题", sheet(iss, [16, 80])))
     sh.append(("原文", sheet(src, [120, 10], keep=True)))
     import time as _t
-    STEM = NAME + ("-" + _t.strftime("%H%M%S") if PARTS else "")      # 一轮一轮传：每一轮一个文件，名字都以 NAME 开头
+    STEM = NAME + ("-" + _t.strftime("%H%M%S") + ("-end" if IS_LAST else "") if PARTS else "")   # 一个一个传：每次一个文件，名字都以 NAME 开头；最后一个带 -end
     data, path = xlsx(sh), STEM + ".xlsx"
 except Exception as e:
     print("做 Excel 出错（%s），改传文本文件" % e)
@@ -1420,25 +1464,19 @@ try:
     with urllib.request.urlopen(urllib.request.Request(url, data=json.dumps(body).encode(), headers=H, method="PUT"), timeout=120) as r:
         nq = len(qs) - 1 if len(qs) > 1 and qs[1][1:] else 0
         print("上传好了", r.status, path, ("（%d 道题）" % nq) if nq else "")
-    if PARTS:              # 这一轮传了哪几个词（看 @单词 那一行），这一份一共传了几个（记在本机）
-        here = [w for w in WORDS if re.search(r"[@＠]\s*" + re.escape(w) + r"(?![A-Za-z'’\-])", text)]
-        mem = "." + NAME.rsplit("/", 1)[-1] + ".done.json"
-        try:
-            sent = json.load(open(mem, encoding="utf-8"))
-        except Exception:
-            sent = {"k": 0, "w": []}
-        sent["k"] += 1
-        sent["w"] = [w for w in WORDS if w in set(sent["w"]) | set(here)]
-        json.dump(sent, open(mem, "w", encoding="utf-8"), ensure_ascii=False)
-        left = [w for w in WORDS if w not in sent["w"]]
-        nxt = ("→ 还没写完：马上接着写下一轮（就在这个对话里，再写 %d 个：%s），写完再运行上传；对话太长写不下了，就说一声写到哪个词了"
-               % (min(ROUND, len(left)), "、".join(left[:ROUND]))) if left else \
-            ("→ 这一份写完了：这一批就做完了" if LASTONE else "→ 这一份写完了：回到单词工作台，它会给下一份新的提示词，要再粘贴过来")
-        print()
-        print("【汇报：把下面这几行原样回在聊天里，然后接着写】" if left else "【汇报：把下面这几行原样回在聊天里】")
-        print(REPORT.replace("{path}", path).replace("{k}", str(sent["k"])).replace("{nf}", str(len(here)))
-              .replace("{found}", "、".join(w + " ✓" for w in here) or "（没找到这一份的词：@单词 那一行要写）")
-              .replace("{cum}", str(len(sent["w"]))).replace("{left}", str(len(left))).replace("{next}", nxt))
+    if PARTS:              # 记下传到第几个；没传完不汇报，接着写；全部传完才打印【最后汇报】
+        s0["k"] += 1
+        s0["w"] = after
+        json.dump(s0, open(MEM, "w", encoding="utf-8"), ensure_ascii=False)
+        left = [w for w in WORDS if w not in after]
+        if left:
+            print("上传好了（第 %d 次）：这次 %s；这一批已经传了 %d/%d 个。不用在聊天里汇报，直接接着写下一个：%s"
+                  % (s0["k"], "、".join(w + " ✓" for w in here) or "（没认出词：每个词前面要有 @单词 那一行）",
+                     len(after), len(WORDS), "、".join(left[:ROUND])))
+        else:
+            print()
+            print("【最后汇报：这一批全部传完了，把下面几行原样回在聊天里】")
+            print(REPORT.replace("{k}", str(s0["k"])).replace("{list}", "、".join(w + " ✓" for w in after)))
         raise SystemExit
     found = [w for w in WORDS if w in text]
     miss = [w for w in WORDS if w not in text]
@@ -1580,17 +1618,17 @@ def relay_report(name, info):
     """网页 AI 上传好以后在聊天里回的汇报（{path} {found} {miss} {chars} 由上传脚本填；
     一份好几个词、一轮一轮传时还有 {k} {nf} {cum} {left} {next}）。"""
     ws = info.get("words") or []
-    if info.get("round") and len(ws) > 1:
+    if info.get("round") and len(ws) > 1:      # v1.10.10：一批好几个词——一个一个传，全部传完才汇报一次
         tot, dn, n = int(info.get("total") or 0), int(info.get("done") or 0), len(ws)
-        lines = ["✅ 已上传 {path}（这一份的第 {k} 轮）",
-                 "这一轮：%s · {nf} 个词：{found}" % (info.get("kind") or "这一份"),
-                 "这一份 %d 个词：已经传了 {cum} 个，还剩 {left} 个" % n,
-                 "{next}"]
+        lines = ["✅ 这一批 %d 个词都写完、上传好了（一共传了 {k} 次）" % n,
+                 "%s：{list}" % (info.get("kind") or "这一批")]
         if tot:
-            lines.append("这一份是这一批 %d 个词里的第 %d–%d 个" % (tot, dn + 1, min(tot, dn + n)))
+            lines.append("这一批是这次 %d 个词里的第 %d–%d 个" % (tot, dn + 1, min(tot, dn + n)))
+        lines.append("→ 这次的词就都做完了" if tot and dn + n >= tot else
+                     "→ 回到单词工作台：它收下、检查以后会给下一批新的提示词，要再粘贴过来")
         return "\n".join(lines)
     ws = info.get("words") or []
-    n, kind = len(ws), info.get("kind") or "这一份"
+    n, kind = len(ws), info.get("kind") or "这一批"
     fix = "改" in kind
     lines = ["✅ 已上传 {path}",
              "这次：%s · %d 个词：%s" % (kind, n, "、".join(ws[:12]) + ("…（共 %d 个）" % n if n > 12 else "")),
@@ -1602,11 +1640,18 @@ def relay_report(name, info):
     elif tot:
         a, b = dn + 1, min(tot, dn + n)
         left = tot - b
-        lines.append("这一批进度：%d 个词里的第 %s 个（这份交回去，就做完 %d 个，还剩 %d 个）"
+        lines.append("这次进度：%d 个词里的第 %s 个（这份交回去，就做完 %d 个，还剩 %d 个）"
                      % (tot, ("%d" % a) if a == b else "%d–%d" % (a, b), b, left))
-    lines.append("这是这一批的最后一份：交回去、单词工作台检查完，这一批就做完了。" if left == 0 else
-                 "⚠ 这一批还没做完：回到单词工作台，它收下、检查以后会给下一份新的提示词，要再粘贴过来。")
+    lines.append("这是这次的最后一份：交回去、单词工作台检查完，这次的词就都做完了。" if left == 0 else
+                 "⚠ 这次还没做完：回到单词工作台，它收下、检查以后会给下一份新的提示词，要再粘贴过来。")
     return "\n".join(lines)
+
+
+def relay_partial(info):
+    """写到一半对话写不下了、要停下时的汇报（{cum} {done} {left} {rest} 由上传脚本填）。"""
+    n = len(info.get("words") or [])
+    return ("⏸ 这一批 %d 个词：已经上传 {cum} 个（{done}），还没写 {left} 个：{rest}\n"
+            "→ 对话太长写不下了：回到单词工作台点「剩下的另开对话继续」，把新的提示词粘贴到一个新对话里" % n)
 
 
 def inbox_prompt(name, info=None):
@@ -1620,20 +1665,23 @@ def inbox_prompt(name, info=None):
     lastone = bool(tot) and dn + len(ws) >= tot
     script = INBOX_SCRIPT.replace("__WORDS__", repr(ws)).replace("__REPORT__", repr(relay_report(name, info))) \
         .replace("__PARTS__", "True" if parts else "False").replace("__ROUND__", str(int(info.get("round") or 0))) \
-        .replace("__LASTONE__", "True" if lastone else "False")
+        .replace("__LASTONE__", "True" if lastone else "False").replace("__PARTIAL__", repr(relay_partial(info)))
     for k, v in (("__TOKEN__", ib["token"]), ("__REPO__", ib["repo"]), ("__BRANCH__", ib["branch"] or "main"),
                  ("__NAME__", name), ("__END__", END)):
         script = script.replace(k, v)
     if parts:
         rnd = int(info.get("round") or 1)
-        return ("【写完一轮就上传一轮：你自己传到 GitHub，不用在聊天里贴全文】\n"
-                "这一份 %d 个词不用一次写完：每写完 %d 个词（%d 个 @单词 段），就：\n"
-                "1. 把这一轮写的这几个词（格式完全一样，最后一行 %s）写进文本文件 reply.txt（用你的建文件工具，覆盖上一轮的）。\n"
-                "2. 用代码执行工具运行下面这段 Python（只用标准库，不用装任何东西）：它会把 reply.txt 整理成 Excel 传到 GitHub，文件名自己会加上时间，不用改。\n"
+        return ("【写完一个就上传一个：你自己传到 GitHub；中间不用在聊天里汇报，全部写完再汇报一次】\n"
+                "这一批 %d 个词，按顺序一个接一个写。每写完 %d 个词（%d 个 @单词 段），就：\n"
+                "1. 把刚写的这几个词（格式完全一样，最后一行 %s）写进文本文件 reply.txt（用你的建文件工具，覆盖上一次的）。\n"
+                "2. 用代码执行工具运行下面这段 Python（只用标准库，不用装任何东西）：它把 reply.txt 整理成 Excel 传到 GitHub，自己记着传到第几个了；"
+                "传的是这一批最后一个词时，它会自动告诉单词工作台“这一批写完了”。文件名、记数都不用你管。\n"
                 "```python\n%s```\n"
-                "3. 上传好了，脚本最后会打印【汇报】几行：原样回在聊天里，然后**马上接着写下一轮**（不用等我说“继续”），直到 %d 个词都写完、汇报写“这一份写完了”。\n"
-                "4. 写到一半对话太长、写不下了：就停下来，说一声写到哪个词了。我会开一个新对话，把剩下的词重新给你。\n"
-                "5. 没有代码执行工具、或者上传失败了：就照常把这一轮的完整回复直接写在聊天里（最后一行 %s），并说明上传失败的原因，我会点「复制」交回。"
+                "3. 上传好了**不用在聊天里汇报**，直接接着写下一个，一直写到这一批 %d 个词全部传完（不用等我说“继续”）。\n"
+                "4. 全部传完时，脚本会打印【最后汇报】：这时才在聊天里把【最后汇报】那几行原样回给我——整批只汇报这一次。\n"
+                "5. 写到一半对话太长、写不下了：先把已经写好的传上去，再把脚本里的 MODE 改成 \"汇报\" 运行一次（或者运行 python upload.py 汇报），"
+                "把它打印的几行回给我，说一声写到哪个词了。我会开一个新对话，把剩下的词重新给你。\n"
+                "6. 没有代码执行工具、或者上传失败了：就照常把写好的完整回复直接写在聊天里（最后一行 %s），并说明上传失败的原因，我会点「复制」交回。"
                 % (len(ws), rnd, rnd, END, script, len(ws), END))
     return ("【写完以后：你自己把回复整理成 Excel 传到 GitHub，不用在聊天里贴全文】\n"
             "1. 把上面要求的完整回复（格式完全一样，最后一行 %s）写进文本文件 reply.txt（用你的建文件工具）。\n"
@@ -2303,7 +2351,7 @@ class Runner:
                             issues += iss
                             gw = [w for w in pend if got.get(w)]
                             if not gw:
-                                RELAY["hint"] = "交回的这一轮里没有这一份还没做的词（要有 @单词 那一行）"
+                                RELAY["hint"] = "交回的这个文件里没有这一批还没做的词（要有 @单词 那一行）"
                                 continue
                             judge(gw, got, 0)
                             for w in gw:
@@ -2315,7 +2363,7 @@ class Runner:
                             continue
                         for w in pend:          # 你点了「剩下的先跳过」
                             tries[w] = tries.get(w, 0)
-                            bad[w] = ([], ["这一份交回以前你点了「剩下的先跳过」"])
+                            bad[w] = ([], ["这一批交回以前你点了「剩下的先跳过」"])
                             relay_word(w, False, "跳过了")
                         pend = []
                     log("  %s … %s：过了 %d 个，没过 %d 个" % (chunk[0], chunk[-1], len([w for w in chunk if w in saved]),
