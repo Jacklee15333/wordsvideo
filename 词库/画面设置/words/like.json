@@ -10,7 +10,9 @@
     "x": 0.3,
     "y": 0.6,
     "s": 0.9,
-    "z": 3
+    "z": 3,
+    "seq": "pingpong",
+    "fps": 2
    },
    {
     "svg": "art/heart.svg",
@@ -35,18 +37,20 @@
    "img": "art/room-bg.svg",
    "items": [
     {
-     "actor": "west-girl-music",
+     "actor": "west-clerk-happy",
      "x": 0.3,
      "y": 0.6,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/apple.svg",
      "x": 0.72,
      "y": 0.6,
      "s": 0.3,
-     "shadow": true
+     "shadow": true,
+     "anim": "bob"
     },
     {
      "svg": "art/heart.svg",
@@ -71,7 +75,8 @@
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "I"
+      "when": "I",
+      "seq": "blink"
      },
      {
       "svg": "art/apple.svg",
@@ -116,18 +121,20 @@
    "img": "art/room-bg.svg",
    "items": [
     {
-     "actor": "west-clerk-happy",
+     "actor": "west-man-smile",
      "x": 0.3,
      "y": 0.6,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/mug.svg",
      "x": 0.72,
      "y": 0.66,
      "s": 0.26,
-     "shadow": true
+     "shadow": true,
+     "anim": "bob"
     }
    ],
    "text": "想要",
@@ -145,7 +152,12 @@
       "y": 0.6,
       "s": 0.9,
       "z": 3,
-      "when": "Would"
+      "when": "Would",
+      "id": "w",
+      "turn": [
+       0,
+       2
+      ]
      },
      {
       "svg": "art/mug.svg",
@@ -156,12 +168,16 @@
       "pop": true
      },
      {
-      "actor": "west-girl-listen",
+      "actor": "cn-teacher-listen",
       "x": 0.8,
       "y": 0.6,
       "s": 0.84,
       "z": 3,
-      "when": "you"
+      "when": "you",
+      "turn": [
+       1,
+       2
+      ]
      },
      {
       "label": "Would you like",
@@ -194,14 +210,54 @@
      "x": 0.3,
      "y": 0.6,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "id": "m",
+     "seq": "talk"
     },
     {
      "actor": "west-girl-listen",
      "x": 0.7,
      "y": 0.66,
      "s": 0.66,
-     "z": 3
+     "z": 3,
+     "nodWith": "m",
+     "seq": "blink"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ],
    "text": "像",
@@ -219,7 +275,9 @@
       "y": 0.66,
       "s": 0.66,
       "z": 3,
-      "when": "She"
+      "when": "She",
+      "nodWith": "m",
+      "seq": "blink"
      },
      {
       "actor": "west-girl-explain",
@@ -227,14 +285,17 @@
       "y": 0.6,
       "s": 0.9,
       "z": 3,
-      "when": "her mother"
+      "when": "her mother",
+      "id": "m",
+      "seq": "talk"
      },
      {
       "svg": "art/twin-cups.svg",
       "x": 0.5,
       "y": 0.2,
       "s": 0.2,
-      "when": "looks like"
+      "when": "looks like",
+      "anim": "bob"
      },
      {
       "label": "looks like",
@@ -254,6 +315,42 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "像"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -270,7 +367,8 @@
       "svg": "art/twin-cups.svg",
       "x": 0.3,
       "y": 0.5,
-      "s": 0.4
+      "s": 0.4,
+      "anim": "bob"
      },
      {
       "svg": "art/heart.svg",
@@ -295,8 +393,12 @@
    "node": "③ 像",
    "pos": "介词",
    "pic": 2,
+   "rule": "表示性质的词，也能直接当介词用",
+   "ruleEx": "like 相像的 → 像      near 近的 → 在…附近",
    "say": [
-    "一条线：同一个身形的，就是相像的、同样的，当介词就是像。"
+    "一条线：同一个身形的，就是相像的、同样的。",
+    "形容词也能直接当介词用：near 是近的，也是在…附近。",
+    "like 也一样：当介词就是像。"
    ],
    "fig": {
     "bg": "blank",
@@ -307,7 +409,9 @@
       "x": 0.5,
       "y": 0.5,
       "s": 0.5,
-      "when": "同一个身形"
+      "when": "同一个身形",
+      "anim": "bob",
+      "hideCue": 1
      },
      {
       "label": "相像的",
@@ -316,7 +420,50 @@
       "size": 0.075,
       "color": "#2F6FB3",
       "border": "#2F6FB3",
-      "when": "相像的"
+      "when": "相像的",
+      "hideCue": 1
+     },
+     {
+      "label": "形容词 → 介词",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "cue": 1,
+      "when": "当介词用",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/map.svg",
+      "x": 0.36,
+      "y": 0.52,
+      "s": 0.4,
+      "cue": 1,
+      "when": "近的",
+      "hideCue": 2,
+      "anim": "pulse"
+     },
+     {
+      "label": "near 在…附近",
+      "x": 0.7,
+      "y": 0.36,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "cue": 1,
+      "when": "在…附近",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/twin-cups.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.5,
+      "cue": 2,
+      "when": "like",
+      "anim": "bob"
      },
      {
       "label": "像",
@@ -325,7 +472,44 @@
       "size": 0.075,
       "color": "#2B8A3E",
       "border": "#2B8A3E",
+      "cue": 2,
       "when": "就是像"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -349,7 +533,8 @@
       "x": 0.7,
       "y": 0.6,
       "s": 0.3,
-      "when": "使某人满意"
+      "when": "使某人满意",
+      "anim": "bob"
      },
      {
       "actor": "cn-boy-raise",
@@ -357,7 +542,8 @@
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "宾语"
+      "when": "宾语",
+      "seq": "blink"
      },
      {
       "label": "使满意",
@@ -418,7 +604,45 @@
       "x": 0.5,
       "y": 0.6,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    },
@@ -430,7 +654,8 @@
       "svg": "art/heart.svg",
       "x": 0.5,
       "y": 0.5,
-      "s": 0.8
+      "s": 0.8,
+      "anim": "pulse"
      }
     ]
    },
@@ -442,11 +667,14 @@
       "svg": "art/mug.svg",
       "x": 0.5,
       "y": 0.55,
-      "s": 0.6
+      "s": 0.6,
+      "anim": "bob"
      }
     ]
    }
-  }
+  },
+  "logic": "逻辑不同：like 本义“合心意”，是一般的喜欢；love 程度深得多；enjoy 是 en 使 + joy 快乐，侧重享受过程，后接名词或 doing；want 是想要，would like 是它的礼貌说法。",
+  "tip": "一句话记法：喜欢 like，爱 love，享受 enjoy，想要 want / would like。"
  },
  "lianxi": {
   "qs": [
