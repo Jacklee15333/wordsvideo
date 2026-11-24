@@ -214,6 +214,25 @@ dl.mat dt{color:var(--muted)} dl.mat dd{margin:0;white-space:pre-wrap}
 .pst-fail{background:var(--red-bg);color:var(--red)} .pst-doing{background:var(--ink);color:#fff} .pst-done{background:var(--pass-bg);color:var(--pass)}
 .ptag{font-size:11.5px;color:var(--blue);background:#EEF3FB;border-radius:3px;padding:0 6px;white-space:nowrap}
 .pempty{padding:22px 16px;color:var(--muted);text-align:center;font-size:13px}
+/* v1.9.6：左边栏＝做视频的五步，一页只管一件事 */
+.snav{position:relative;margin-bottom:4px}
+.snav::before{content:"";position:absolute;left:30px;top:20px;bottom:20px;width:1px;background:#3D4B74}
+.sn{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:10px;border:1px solid #5E6E96;background:var(--ink);color:#C9D3E2;
+  font:600 11px/1 var(--en);font-style:normal;margin-right:10px;position:relative;z-index:1;flex:none}
+nav a:hover .sn{background:#28365A}
+nav a.on .sn{background:var(--base);border-color:var(--base);color:#fff}
+.nl{display:inline-flex;align-items:center}
+.navsep{height:1px;background:#33416A;margin:6px 20px 8px}
+.phead{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px}
+.phead h2{display:flex;align-items:center;margin:0 0 4px}
+.phead h2 .sn{width:26px;height:26px;border-radius:13px;font-size:14px;background:var(--base);border-color:var(--base);color:#fff;margin-right:10px}
+.phead p{margin:0;max-width:820px}
+.phead>.btn{margin-left:auto;flex:none}
+.pnext{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:20px;padding-top:14px;border-top:1px solid var(--rule)}
+.pgo{display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap}
+.tally .a b{color:var(--amber)}
+.pfl li{margin:3px 0}
+@media (max-width:820px){.snav{display:contents}.snav::before,.navsep{display:none}}
 details.adv{margin-top:18px}
 details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
 .gbtns{margin:6px 0 8px 138px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
@@ -261,9 +280,16 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
 <body>
 <nav>
   <h1><img src="/icon2-192.png?v=1.2.1" alt="" class="logo">单词工作台<small>words · questions · films</small></h1>
-  <a data-p="tasks" class="on">开始<span class="n" id="nTasks" hidden></span></a>
+  <div class="snav">
+  <a data-p="check" class="on"><span class="nl"><i class="sn">1</i>检测</span></a>
+  <a data-p="pick"><span class="nl"><i class="sn">2</i>选词</span></a>
+  <a data-p="q"><span class="nl"><i class="sn">3</i>出题</span></a>
+  <a data-p="pic"><span class="nl"><i class="sn">4</i>画面</span></a>
+  <a data-p="video"><span class="nl"><i class="sn">5</i>出视频</span></a>
+  </div>
+  <div class="navsep"></div>
+  <a data-p="run">正在做<span class="n" id="nTasks" hidden></span></a>
   <a data-p="ai">AI</a>
-  <a data-p="video">出视频</a>
   <a data-p="settings">设置<span class="n" id="nSoft" hidden>新</span></a>
   <div class="navmore" id="navMore" onclick="$('#navExtra').hidden=!$('#navExtra').hidden;this.textContent=$('#navExtra').hidden?'更多 ▾':'收起 ▴'">更多 ▾</div>
   <div id="navExtra" hidden>
@@ -314,30 +340,29 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
   </div>
 </section>
 
-<section id="p-tasks">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px"><h2 style="margin:0">准备要出视频的词</h2>
-    <button class="btn ghost sm" id="tHelp">怎么用？</button>
-    <button class="btn ghost sm" id="tGear" title="用哪个 AI、账号">⚙ AI 设置</button></div>
-  <p class="muted" style="margin:0 0 10px">只要三步：<b>①</b> 点「一键检测」，三样都打 ✓　<b>②</b> 填要做的词　<b>③</b> 点「开始准备」。出题、画画面、检查都是软件自己做，做好的词到「出视频」页在这台电脑上渲染。</p>
+<section id="p-check">
+  <div class="phead"><div><h2><i class="sn">1</i>检测：三样准备好了没</h2>
+    <p class="muted">出题、画画面要用 AI 和词库，出视频要用这台电脑的出片环境。点「一键检测」，三样都打 ✓ 就可以往下做。</p></div>
+    <button class="btn ghost sm" id="tHelp">怎么用？</button></div>
   <div class="box kready" id="kBox">
-    <div class="khead"><h3>三样准备好了没</h3><button class="btn" id="kAll">一键检测</button><span id="kAllMsg" class="small muted">三样一起测，每一步都写在下面的「检测详情」里</span></div>
-    <div class="krow"><span class="kok" id="kAIOk">–</span><span class="kname">① AI</span>
+    <div class="khead"><button class="btn" id="kAll">一键检测</button><span id="kAllMsg" class="small muted">三样一起测，每一步都写在下面的「检测详情」里</span></div>
+    <div class="krow"><span class="kok" id="kAIOk">–</span><span class="kname">AI</span>
       <div class="kmid"><div class="who" id="tWho">用的是：<b>—</b> <a href="#" onclick="gearOpen();return false">换一个</a><span id="tOpen" hidden> · <a href="#" onclick="openRelay();return false"><b>打开网页 AI ↗</b></a></span></div>
         <div class="ksum" id="kAI">—</div></div>
       <span class="kbtns"><button class="btn ghost sm" data-kc="ai">检测</button><button class="btn ghost sm" data-kd="ai">详情</button></span></div>
-    <div class="krow"><span class="kok" id="kRepoOk">…</span><span class="kname">② 词库</span>
+    <div class="krow"><span class="kok" id="kRepoOk">…</span><span class="kname">词库</span>
       <div class="kmid"><div class="ksum" id="kRepo">—</div></div>
       <span class="kbtns"><button class="btn ghost sm" data-kc="repo">检测</button><button class="btn ghost sm" data-kd="repo">详情</button></span></div>
-    <div class="krow"><span class="kok" id="kEnvOk">…</span><span class="kname">③ 出片环境</span>
+    <div class="krow"><span class="kok" id="kEnvOk">…</span><span class="kname">出片环境</span>
       <div class="kmid"><div class="ksum" id="kEnv">正在看…</div></div>
       <span class="kbtns"><button class="btn ghost sm" data-kc="env">检测</button><button class="btn ghost sm" data-kd="env">详情</button></span></div>
     <div class="kdet" id="kDet" hidden>
       <div class="kdhead"><b>检测详情</b><span id="kDetLive" class="small muted"></span><button class="btn ghost sm" id="kFold">收起 ▴</button></div>
       <div class="kdgrid" id="kGrid">
         <div class="ksecs">
-          <div class="ksec" id="ks-ai"><div class="kst"><span class="kok">–</span><b>① AI</b><span class="small muted"></span></div><p class="kempty"></p><ol class="klog"></ol></div>
-          <div class="ksec" id="ks-repo"><div class="kst"><span class="kok">–</span><b>② 词库</b><span class="small muted"></span></div><p class="kempty"></p><ol class="klog"></ol></div>
-          <div class="ksec" id="ks-env"><div class="kst"><span class="kok">–</span><b>③ 出片环境</b><span class="small muted"></span></div><p class="kempty"></p><ol class="klog"></ol></div>
+          <div class="ksec" id="ks-ai"><div class="kst"><span class="kok">–</span><b>AI</b><span class="small muted"></span></div><p class="kempty"></p><ol class="klog"></ol></div>
+          <div class="ksec" id="ks-repo"><div class="kst"><span class="kok">–</span><b>词库</b><span class="small muted"></span></div><p class="kempty"></p><ol class="klog"></ol></div>
+          <div class="ksec" id="ks-env"><div class="kst"><span class="kok">–</span><b>出片环境</b><span class="small muted"></span></div><p class="kempty"></p><ol class="klog"></ol></div>
         </div>
         <div class="kshot" id="kShotCol" hidden>
           <div class="small muted" style="margin-bottom:6px">网页 AI 的浏览器画面 <span id="kShotAge" class="faint"></span></div>
@@ -348,30 +373,86 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
       </div>
     </div>
   </div>
-  <div class="box kgo">
-    <h3 style="margin-top:0">要准备哪些词</h3>
-    <label class="kopt"><input type="radio" name="kMode" value="words" checked> 我指定单词</label>
-    <textarea id="kWords" rows="3" style="width:100%;font-family:var(--en)" placeholder="一行一个，或者用逗号隔开。比如：protect, camera, explore"></textarea>
-    <label class="kopt"><input type="radio" name="kMode" value="next"> 按总表顺序，接着做 <input type="number" id="kN" value="5" min="1" max="200" style="width:64px"> 个词 <span class="small faint" id="kNext"></span></label>
-    <label class="kopt"><input type="radio" name="kMode" value="pool"> 从备选单词里挑 <span class="small faint" id="kPoolN"></span></label>
-    <div id="kPool" hidden>
-      <div class="pbar">
+  <div class="pnext"><span class="small muted">三样都打 ✓ 了？</span><button class="btn" onclick="go('pick')">下一步：选词</button></div>
+</section>
+
+<section id="p-pick">
+  <div class="phead"><div><h2><i class="sn">2</i>选词：这一阵要做哪些词</h2>
+    <p class="muted">把要做的词导进「备选单词」存着，做到哪一步每次现查，不会忘了哪些还没处理。勾几个，点「开始准备」：出题 → 画画面 → 检查，软件一条龙做完。</p></div></div>
+  <div class="box">
+    <h3 style="margin-top:0">备选单词 <span class="small faint" id="kPoolN"></span></h3>
+    <div class="pbar">
         <span class="pfilt" id="pFilt"><a data-pf="todo" class="on">没做完 <b></b></a><a data-pf="doing">正在做 <b></b></a><a data-pf="done">做好了 <b></b></a><a data-pf="all">全部 <b></b></a></span>
         <select id="pTag" class="small" hidden><option value="">所有批</option></select>
         <span class="pacts"><button class="btn ghost sm" id="pImpBtn">导入单词</button><button class="btn ghost sm" id="pAll">全选这些</button><button class="btn ghost sm" id="pNone">都不勾</button><button class="btn warn sm" id="pDel">从备选里删掉勾的</button></span>
-      </div>
-      <div class="pimp" id="pImp" hidden>
+    </div>
+    <div class="pimp" id="pImp" hidden>
         <textarea id="pText" rows="4" style="font-family:var(--en)" placeholder="把要做的词粘贴进来：一行一个，或者用逗号隔开。也可以点「选文件」，从 Excel（.xlsx）、txt、csv 里读。只收总表里有的词。"></textarea>
         <div class="line"><input type="file" id="pFile" accept=".xlsx,.xlsm,.txt,.csv,.tsv" hidden><button class="btn ghost sm" id="pFileBtn">选文件（Excel / txt / csv）</button>
           <span class="small">这一批叫</span><input type="text" id="pTagIn" placeholder="可不填，比如 7A-U5" style="width:160px">
           <button class="btn sm" id="pAdd">加进备选单词</button><span id="pImpMsg" class="small"></span></div>
       </div>
-      <div class="plist" id="pList"></div>
-      <div class="small muted" id="pSel" style="margin-top:6px"></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:12px;margin-top:10px"><button class="btn kbig" id="kStart">开始准备 ▶</button><span id="kMsg" class="small muted">软件会自动：出 7 道题（已经有的不重出）→ 画画面 → 用视频技能检查，过了才存。</span></div>
+    <div class="plist" id="pList"></div>
+    <div class="small muted" id="pSel" style="margin-top:6px"></div>
+    <div class="pgo"><button class="btn kbig" id="kStart">开始准备勾的词 ▶</button><span id="kMsg" class="small muted">出 7 道题（已经有的不重出）→ 画画面 → 用视频技能检查，过了才存。做的过程在「正在做」里看。</span></div>
   </div>
-  <h3>现在在做什么</h3>
+  <div class="box">
+    <h3 style="margin-top:0">不想挑：按总表顺序接着做</h3>
+    <div class="line">接着做 <input type="number" id="kN" value="5" min="1" max="200" style="width:64px"> 个词 <button class="btn ghost" id="kStartNext">开始准备这几个</button>
+      <span class="small faint" id="kNext"></span></div>
+    <div class="small" id="kNMsg" style="margin-top:6px"></div>
+  </div>
+  <div class="pnext"><span class="small muted">只想单独出题、单独做画面？</span><button class="btn ghost" onclick="go('q')">出题</button><button class="btn ghost" onclick="go('pic')">画面</button></div>
+</section>
+
+<section id="p-q">
+  <div class="phead"><div><h2><i class="sn">3</i>出题：每个词 7 道练习题</h2>
+    <p class="muted">视频最后的练习和答案。AI 写，软件按规矩检查，过了才存进词库、上传；没过的退回给 AI 改，改几次还不过就放进“待人工”。</p></div></div>
+  <div class="box"><div class="tally" id="qStats">—</div></div>
+  <div class="row" style="margin-top:14px">
+    <div class="col"><div class="box">
+      <h3 style="margin-top:0">给哪些词出题</h3>
+      <label class="kopt"><input type="radio" name="qSrc" value="pool" checked> 备选单词里还缺题目的 <span class="small faint" id="qPoolN"></span></label>
+      <label class="kopt"><input type="radio" name="qSrc" value="next"> 按总表顺序接着出 <input type="number" id="tCount" value="100" min="0" style="width:76px"> 个词 <span class="small faint">填 0＝一直做到全部做完</span></label>
+      <div class="line small"><label><input type="radio" name="tWhen" value="now" checked> 现在开始</label>
+        <label><input type="radio" name="tWhen" value="at"> 到点开始</label><input type="datetime-local" id="tAt" style="width:190px"></div>
+      <div class="pgo"><button class="btn" id="tAdd">开始出题</button><span class="small muted" id="qMsg">只出题，不做画面。</span></div>
+    </div></div>
+    <div class="col">
+      <div class="box"><h3 style="margin-top:0">出题没过的词</h3>
+        <div id="tManN" class="small">—</div>
+        <div class="line"><button class="btn ghost sm" id="tRedo">再交给 AI 试一次</button><button class="btn ghost sm" onclick="go('manual')">自己改（待人工）</button></div></div>
+      <div class="box"><h3 style="margin-top:0">每天自动出题</h3>
+        <div class="line" style="flex-wrap:wrap">每天 <input type="time" id="sAt" value="23:00"> 自动出 <input type="number" id="sCount" value="300" min="0" style="width:80px"> 个词，
+          <span class="days" id="sDays"></span><button class="btn" id="sAdd">添加</button></div>
+        <div id="sList" style="margin-top:8px"></div>
+        <p class="faint small" style="margin:8px 0 0">按总表顺序出；到点时软件要开着。</p></div>
+    </div>
+  </div>
+  <div class="pnext"><span class="small muted">题目有了？</span><button class="btn" onclick="go('pic')">下一步：画面</button></div>
+</section>
+
+<section id="p-pic">
+  <div class="phead"><div><h2><i class="sn">4</i>画面：视频里的画</h2>
+    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
+  <div class="box"><div class="tally" id="picStats">—</div></div>
+  <div class="row" style="margin-top:14px">
+    <div class="col"><div class="box">
+      <h3 style="margin-top:0">给哪些词做画面</h3>
+      <label class="kopt"><input type="radio" name="pSrc" value="pool" checked> 备选单词里有题目、缺画面的 <span class="small faint" id="picPoolN"></span></label>
+      <label class="kopt"><input type="radio" name="pSrc" value="next"> 按总表顺序接着做 <input type="number" id="tPCount" value="20" min="0" style="width:76px"> 个词 <span class="small faint">只做已经有题目的；一个词几分钟</span></label>
+      <div class="pgo"><button class="btn" id="tPics">开始做画面</button><span class="small muted" id="picMsg">只做画面，不出题；还没题目的词先到「出题」。</span></div>
+    </div></div>
+    <div class="col"><div class="box"><h3 style="margin-top:0">画面没做成的词</h3>
+      <div id="picFail" class="small">—</div>
+      <div class="line"><button class="btn ghost sm" id="tPicRedo">这些再试一次</button></div></div></div>
+  </div>
+  <div class="pnext"><span class="small muted">画面做好了？</span><button class="btn" onclick="go('video')">下一步：出视频</button></div>
+</section>
+
+<section id="p-run">
+  <div class="phead"><div><h2>正在做</h2>
+    <p class="muted">出题、画画面在后台一个一个做：这里看实时画面和每一步。用手动接力时，轮到你的时候这里会出现黄框，照着做就行。</p></div></div>
   <div class="box live" id="tLive" hidden>
     <div class="lhead"><span class="dot"></span><b id="lTitle">—</b><span id="lStage" class="muted small"></span><span id="lTime" class="faint small"></span></div>
     <div class="lgrid">
@@ -406,54 +487,11 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
     </div>
   </div>
   <div class="box" id="tNow"></div>
-  <details class="adv"><summary>更多：分步做、没过的词、定时出题、做完的记录</summary>
-  <div class="box" id="wBox">
-    <h3 style="margin-top:0">做指定的词</h3>
-    <div class="line" style="align-items:flex-start"><textarea id="wIn" rows="3" style="flex:1;font-family:var(--en)" placeholder="把要做的单词输进来：一行一个，或者用逗号隔开。比如：protect, camera, explore"></textarea>
-      <div style="display:flex;flex-direction:column;gap:6px;min-width:150px"><label><input type="checkbox" id="wQ" checked> 出题</label><label><input type="checkbox" id="wP" checked> 做视频画面</label>
-        <button class="btn" id="wGo">开始做这些词</button></div></div>
-    <div id="wMsg" class="small muted" style="margin-top:6px">已经有题目的词不会重出；没有题目的词，做画面会等题目出好再做。</div>
-  </div>
-  <div class="acts">
-    <div class="box act">
-      <div class="stepno">1</div><h3>出题</h3><p class="muted small">给每个词出 7 道练习题（视频最后的练习和答案）。</p>
-      <div class="big" id="tQ">—</div>
-      <div class="line">出 <input type="number" id="tCount" value="100" min="0" style="width:76px"> 个词</div>
-      <div class="line small"><label><input type="radio" name="tWhen" value="now" checked> 现在开始</label>
-        <label><input type="radio" name="tWhen" value="at"> 到点开始</label><input type="datetime-local" id="tAt" style="width:190px"></div>
-      <button class="btn" id="tAdd">开始出题</button>
-    </div>
-    <div class="box act">
-      <div class="stepno">2</div><h3>做视频画面</h3><p class="muted small">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。</p>
-      <div class="big" id="tP">—</div>
-      <div class="line">做 <input type="number" id="tPCount" value="20" min="0" style="width:76px"> 个词</div>
-      <div class="line small faint">一个词要几分钟，比出题慢</div>
-      <button class="btn" id="tPics">开始做画面</button>
-    </div>
-    <div class="box act">
-      <div class="stepno">3</div><h3>出视频</h3><p class="muted small">题目和画面都有了的词，在这台电脑上配音、渲染成视频。</p>
-      <div class="big" id="tV">—</div>
-      <div class="line small faint">在「视频」页选词、开工</div>
-      <button class="btn" onclick="go('video')">去「视频」页</button>
-    </div>
-  </div>
-  <div class="box" style="margin-top:14px;display:flex;gap:18px;align-items:center;flex-wrap:wrap" id="tOther">
-    <span class="muted small">其他：</span>
-    <span id="tManN" class="small">—</span><button class="btn ghost sm" id="tRedo">再交给 AI 试一次</button>
-    <span id="tPicFail" class="small">—</span><button class="btn ghost sm" id="tPicRedo">画面再试一次</button>
-    <span id="tPend" class="small">—</span><button class="btn ghost sm" id="tPush">现在上传</button>
-  </div>
-  <h3>每天自动出题</h3>
-  <div class="box">
-    <div class="line" style="flex-wrap:wrap">每天 <input type="time" id="sAt" value="23:00"> 自动出 <input type="number" id="sCount" value="300" min="0" style="width:80px"> 个词，
-      <span class="days" id="sDays"></span><button class="btn" id="sAdd">添加</button></div>
-    <div id="sList" style="margin-top:8px"></div>
-    <p class="faint small" style="margin:8px 0 0">到点时软件要开着。</p>
-  </div>
+  <div class="box" style="margin-top:14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap"><span id="tPend" class="small">—</span><button class="btn ghost sm" id="tPush">现在上传</button></div>
   <h3>做完的 <button class="btn ghost sm" id="tClear">清掉做完的记录</button></h3>
   <div class="box" id="tDone"></div>
-  </details>
 </section>
+
 
 <section id="p-words">
   <div class="row">
@@ -509,7 +547,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
       </div></div>
       <div class="col"><div class="box">
         <h3 style="margin-top:0">检测</h3>
-        <p class="small muted" style="margin-top:0">打开浏览器、登录、进 GPT、挑一辆车、问一句话，一般一两分钟。每一步在「开始」页的「检测详情」里看，右边有浏览器画面。</p>
+        <p class="small muted" style="margin-top:0">打开浏览器、登录、进 GPT、挑一辆车、问一句话，一般一两分钟。每一步在左边「检测」页的「检测详情」里看，右边有浏览器画面。</p>
         <div class="line"><button class="btn" data-mtest="web">检测（看每一步）</button><button class="btn ghost" data-ai="probe">只测网站能不能连上</button></div>
         <div class="line"><button class="btn ghost sm" data-ai="show">把浏览器拿到屏幕上</button><button class="btn ghost sm" data-ai="hide">藏起浏览器</button></div>
         <div class="small" data-mtmsg="web" style="margin-top:6px"></div>
@@ -532,7 +570,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
       </div></div>
       <div class="col"><div class="box">
         <h3 style="margin-top:0">检测</h3>
-        <p class="small muted" style="margin-top:0">给接口发一句话，看它回不回。每一步在「开始」页的「检测详情」里。</p>
+        <p class="small muted" style="margin-top:0">给接口发一句话，看它回不回。每一步在左边「检测」页的「检测详情」里。</p>
         <button class="btn" data-mtest="api">检测（看每一步）</button>
         <div class="small" data-mtmsg="api" style="margin-top:6px"></div>
       </div></div>
@@ -562,13 +600,13 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
       <div class="col">
         <div class="box">
           <h3 style="margin-top:0">备选单词</h3>
-          <p class="small muted" style="margin-top:0">把这一阵要做的词导进来存着，再挑着做；哪些做完了、哪些还没做，软件都记着。在「开始」页第 ② 步「从备选单词里挑」。</p>
+          <p class="small muted" style="margin-top:0">把这一阵要做的词导进来存着，再挑着做；哪些做完了、哪些还没做，软件都记着。在左边「选词」页。</p>
           <div id="m_poolSum" style="margin-bottom:10px">—</div>
           <button class="btn" id="m_poolGo">去挑备选单词</button>
         </div>
         <div class="box">
           <h3 style="margin-top:0">检测</h3>
-          <p class="small muted" style="margin-top:0">看网页 AI 地址，往中转仓库的收件箱真写一次。每一步在「开始」页的「检测详情」里。</p>
+          <p class="small muted" style="margin-top:0">看网页 AI 地址，往中转仓库的收件箱真写一次。每一步在左边「检测」页的「检测详情」里。</p>
           <button class="btn" data-mtest="relay">检测（看每一步）</button>
           <div class="small" data-mtmsg="relay" style="margin-top:6px"></div>
         </div>
@@ -585,8 +623,8 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
 </section>
 
 <section id="p-video">
-  <h2>视频</h2>
-  <p class="muted" style="margin-top:-6px">出片用原来的视频技能和批量流水线，在这台电脑的 WSL（Ubuntu）里跑；做好的视频放在出片文件夹，登记进「词库/视频清单.tsv」，视频本身不传 GitHub。</p>
+  <div class="phead"><div><h2><i class="sn">5</i>出视频：在这台电脑上渲染</h2>
+  <p class="muted">出片用原来的视频技能和批量流水线，在这台电脑的 WSL（Ubuntu）里跑；做好的视频放在出片文件夹，登记进「词库/视频清单.tsv」，视频本身不传 GitHub。</p></div></div>
   <div class="row">
   <div class="col">
     <div class="box">
@@ -740,9 +778,9 @@ function toast(m,ms=3500){const t=$('#toast');t.textContent=m;t.style.display='b
 function modal(title,html){$('#mTitle').textContent=title;$('#mBody').innerHTML=html;$('#modal').style.display='flex'}
 function closeModal(){$('#modal').style.display='none'}
 $('#modal').onclick=e=>{if(e.target.id==='modal')closeModal()};
-let page='tasks';
+let page='check';
 function go(p){page=p;if(['home','words','manual','history'].includes(p)){$('#navExtra').hidden=false;$('#navMore').textContent='收起 ▴'}$$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===p));$$('main section').forEach(s=>s.classList.toggle('on',s.id==='p-'+p));
-  ({ai:loadAI,video:loadVideo,tasks:loadTasks,words:loadWords,manual:loadManual,history:loadHistory,settings:loadSettings,home:loadMap}[p]||(()=>{}))()}
+  ({check:loadCheck,pick:loadPick,q:loadQ,pic:loadPic,run:loadRun,ai:loadAI,video:loadVideo,words:loadWords,manual:loadManual,history:loadHistory,settings:loadSettings,home:loadMap}[p]||(()=>{}))()}
 $$('nav a').forEach(a=>a.onclick=()=>go(a.dataset.p));
 
 /* ───── 状态轮询 ───── */
@@ -788,7 +826,7 @@ async function aiLive(){
 }
 $('#shotBtn').onclick=()=>{watching=!watching;$('#shotBtn').textContent=watching?'关掉实时画面':'看实时画面';if(!watching)$('#shot').style.display='none'};
 $$('[data-ai]').forEach(b=>b.onclick=async()=>{
-  if(b.dataset.ai==='test'){go('tasks');kRun('ai');return}       // 测登录：到开始页的「检测详情」里看每一步
+  if(b.dataset.ai==='test'){go('check');kRun('ai');return}       // 测登录：到「检测」页的「检测详情」里看每一步
   b.disabled=true;
   try{const d=await api('/api/ai',{op:b.dataset.ai});toast((d.ok?'✓ ':'✗ ')+(d.msg||''),8000)}catch(e){toast('✗ '+e.message)}b.disabled=false});
 $('#qGo').onclick=async()=>{await api('/api/task',{kind:'chuti',params:{count:+$('#qCount').value||0}});toast('加进队列了');poll()};
@@ -821,13 +859,27 @@ $('#map').onclick=e=>{const i=mapIdx(e);if(i>=0)openWord(MAP.words[i])};
 const DAYN=['一','二','三','四','五','六','日'];
 $('#sDays').innerHTML='星期 '+DAYN.map((d,i)=>`<label><input type="checkbox" value="${i+1}" checked>${d}</label>`).join('');
 const ST_WORD={'运行中':'正在做','排队':'排队中','已暂停':'暂停了','已完成':'做完了','失败':'没做成','已取消':'取消了'};
-$('#tAdd').onclick=async()=>{const at=document.querySelector('input[name=tWhen]:checked').value==='at'?$('#tAt').value:'';
-  if(document.querySelector('input[name=tWhen]:checked').value==='at'&&!at)return toast('先选个开始时间');
-  await api('/api/task',{kind:'chuti',params:{count:+$('#tCount').value||0},runAt:at});toast(at?'定好了，到点开始':'开始了');loadTasks();poll()};
-$('#tRedo').onclick=async()=>{await api('/api/task',{kind:'redo',params:{}});toast('交给 AI 了');loadTasks()};
-$('#tPics').onclick=async()=>{await api('/api/task',{kind:'pics',params:{count:+$('#tPCount').value||0}});toast('开始了');loadTasks();poll()};
-$('#tPicRedo').onclick=async()=>{const d=await api('/api/picfail');if(!d.items.length)return;await api('/api/task',{kind:'pics',params:{words:d.items.map(x=>x.word)}});toast('交给 AI 了');loadTasks()};
-$('#tGear').onclick=gearOpen;
+$('#tAdd').onclick=()=>busy($('#tAdd'),$('#qMsg'),'正在安排',async()=>{
+  const when=document.querySelector('input[name=tWhen]:checked').value,at=when==='at'?$('#tAt').value:'';
+  if(when==='at'&&!at)return{ok:false,msg:'先选个开始时间'};
+  let t;
+  if(document.querySelector('input[name=qSrc]:checked').value==='pool'){
+    if(!PQ.length)return{ok:false,msg:'备选单词里没有缺题目的词：先到「选词」导入，或者选“按总表顺序”'};
+    t={kind:'words',params:{words:PQ,steps:['chuti']},title:`出题：备选单词里的 ${PQ.length} 个（${PQ.slice(0,3).join('、')}${PQ.length>3?'…':''}）`}}
+  else t={kind:'chuti',params:{count:+$('#tCount').value||0}};
+  await api('/api/task',{...t,runAt:at});poll();if(!at)setTimeout(()=>go('run'),700);
+  return{ok:true,msg:at?'定好了，到点开始':'开始了：在「正在做」里看'}});
+$('#tRedo').onclick=async()=>{await api('/api/task',{kind:'redo',params:{}});toast('交给 AI 了：在「正在做」里看');poll();setTimeout(()=>go('run'),500)};
+$('#tPics').onclick=()=>busy($('#tPics'),$('#picMsg'),'正在安排',async()=>{
+  let t;
+  if(document.querySelector('input[name=pSrc]:checked').value==='pool'){
+    if(!PP.length)return{ok:false,msg:'备选单词里没有“有题目、缺画面”的词：先出题，或者选“按总表顺序”'};
+    t={kind:'pics',params:{words:PP},title:`做画面：备选单词里的 ${PP.length} 个（${PP.slice(0,3).join('、')}${PP.length>3?'…':''}）`}}
+  else t={kind:'pics',params:{count:+$('#tPCount').value||0}};
+  await api('/api/task',t);poll();setTimeout(()=>go('run'),700);
+  return{ok:true,msg:'开始了：在「正在做」里看'}});
+$('#tPicRedo').onclick=async()=>{const d=await api('/api/picfail');if(!d.items.length)return;
+  await api('/api/task',{kind:'pics',params:{words:d.items.map(x=>x.word)},title:`画面再试一次：${d.items.length} 个词`});toast('交给 AI 了：在「正在做」里看');poll();setTimeout(()=>go('run'),500)};
 /* 按钮统一的反馈：点了先显示“正在…”，做完显示 ✓ 或 ✗（旁边一行 + 右下角弹一下），做完前按钮不能重复点 */
 async function busy(btn,msgEl,doing,fn){
   const say=(t,ok)=>{if(msgEl){msgEl.textContent=t;msgEl.style.color=ok===false?'var(--red)':ok?'var(--pass)':'var(--muted)'}};
@@ -838,17 +890,19 @@ async function busy(btn,msgEl,doing,fn){
 async function openRelay(){const d=await api('/api/open',{});if(!d.ok)toast('✗ '+d.msg,8000);else toast('✓ '+d.msg);return d}
 function gearOpen(){go('ai')}
 $('#tPush').onclick=async()=>{await api('/api/task',{kind:'push',params:{}});toast('在后台上传');loadTasks()};
-$('#tHelp').onclick=()=>modal('开始页怎么用',`<ol class="steps">
-  <li><b>点「一键检测」</b>：AI、词库、出片环境三样一起测，每一步都写在下面的「检测详情」里，用网页镜像时右边还看得到浏览器画面。三样都打 ✓ 就行。</li>
-  <li><b>哪样打 ✗</b>：看它后面那句话，照着点链接去修；点这一行的「详情」看是哪一步没过。修好了点这一行的「检测」再测一次。</li>
-  <li><b>第一次用</b>：到左边「AI」页，点要用的那种 AI 的标签，填好账号、点「改用这个」；到左边「设置」里填 GitHub 令牌。</li>
-  <li><b>填要做的词</b>：自己写几个单词；或者“按总表顺序，接着做几个词”；或者“从备选单词里挑”——先把这一阵要做的词导入存着（粘贴或者从 Excel 读），做没做完软件都记着，挑着做。</li>
-  <li><b>点「开始准备」</b>：出题 → 画画面 → 用视频技能检查，软件自己做；“现在在做什么”里看得到实时画面和步骤记录。</li>
-  <li><b>出视频</b>：准备好的词到「出视频」页，在这台电脑上渲染。</li>
-  <li><b>暂停、取消</b>：「暂停」后点「继续」接着做；「取消」就不做了，已经存好的不会丢。</li>
-  <li><b>更多</b>：分步做、没过的词、每天自动出题、做完的记录，都在页面最下面的「更多」里。</li></ol>`);
-async function taskOp(id,op){await api('/api/task/op',{id,op});setTimeout(()=>{poll();if(page==='tasks')loadTasks()},300)}
-async function loadTasks(){
+$('#tHelp').onclick=()=>modal('做视频的五步',`<p class="muted" style="margin-top:0">左边从上到下就是做视频的顺序，一页只管一件事。</p><ol class="steps">
+  <li><b>检测</b>：点「一键检测」，AI、词库、出片环境三样都打 ✓ 就行；哪样打 ✗，看它后面那句话，点「详情」看是哪一步。</li>
+  <li><b>选词</b>：把这一阵要做的词导进「备选单词」（粘贴，或者从 Excel 读），做没做完软件都记着；勾几个点「开始准备」，出题 → 画面 → 检查一条龙。也可以按总表顺序接着做几个。</li>
+  <li><b>出题</b>：只想出题时用。出题没过的词、每天自动出题也在这里。</li>
+  <li><b>画面</b>：只想做画面时用（要先有题目）。画面没做成的词在这里再试。</li>
+  <li><b>出视频</b>：题目、画面都好了的词，在这台电脑上建批次、渲染。</li></ol>
+  <p><b>正在做</b>：点了开始以后都到这里：实时画面、每一步、排队的任务；用手动接力时，轮到你会出现黄框。<br>
+  <b>AI</b>：用哪个 AI、账号、每种 AI 自己的设置。<b>设置</b>：GitHub 令牌、出题的规矩、软件版本。</p>`);
+async function taskOp(id,op){await api('/api/task/op',{id,op});setTimeout(()=>{poll();loadTasks()},300)}
+/* 每一页自己刷新自己的；别处要刷新就调 loadTasks()，它刷新现在这一页 */
+function loadTasks(){({check:loadCheck,pick:loadPick,q:loadQ,pic:loadPic,run:loadRun}[page]||(()=>{}))()}
+function loadCheck(){kRender();chkTick(true);liveTick()}
+async function loadRun(){
   liveTick();
   const d=await api('/api/tasks');
   const live=d.tasks.filter(t=>['运行中','排队','已暂停'].includes(t.status)), done=d.tasks.filter(t=>!['运行中','排队','已暂停'].includes(t.status)).slice(0,30);
@@ -865,20 +919,34 @@ async function loadTasks(){
       ${t.error?`<div class="small" style="color:var(--red)">${esc(t.error.split('\n')[0]).slice(0,200)}</div>`:''}</div>
       <div>${ops.map(([o,n])=>`<button class="btn ghost sm" onclick="taskOp(${t.id},'${o}')">${n}</button>`).join(' ')}
         <button class="btn ghost sm" onclick="taskLog(${t.id})">详情</button></div></div>`};
-  $('#tNow').innerHTML=live.map(row).join('')||'<p class="muted" style="margin:0">现在没有在做的事。在上面点「开始准备」就开始了。</p>';
+  $('#tNow').innerHTML=live.map(row).join('')||'<p class="muted" style="margin:0">现在没有在做的事。到「选词」勾几个词，点「开始准备」就开始了。</p>';
   $('#tDone').innerHTML=done.map(row).join('')||'<p class="muted" style="margin:0">还没有。</p>';
-  const s=ST.stats||{};$('#tManN').textContent=s.manual?`出题没过的词 ${s.manual} 个`:'出题没过的词 0 个';$('#tRedo').disabled=!s.manual;
-  api('/api/words?ready=').then(w=>{const c=w.counts||{};
-    $('#tQ').innerHTML=`${(c.needq||0).toLocaleString()}<small>个词还缺题目</small>`;
-    $('#tP').innerHTML=`${(c.needpic||0).toLocaleString()}<small>个词有题目、还缺画面</small>`;
-    $('#tV').innerHTML=`${(c.ready||0).toLocaleString()}<small>个词可以出视频</small>`}).catch(()=>{});
-  api('/api/picfail').then(f=>{const n=(f.items||[]).length;$('#tPicFail').textContent=`画面没做成的词 ${n} 个`;$('#tPicRedo').disabled=!n}).catch(()=>{});
-  $('#tPend').textContent=ST.pending?`${ST.pending} 处修改还没上传`:'都上传了';$('#tPush').disabled=!ST.pending;
+  $('#tPend').textContent=ST.pending?`${ST.pending} 处修改还没上传（做完一组会自己上传）`:'做好的都上传到 GitHub 了';$('#tPush').disabled=!ST.pending}
+let PQ=[],PP=[];
+async function poolNeed(){try{const d=await api('/api/pool');if(d.notReady)return;PL=d;
+  PQ=d.items.filter(i=>!i.q&&i.st!=='doing').map(i=>i.word);PP=d.items.filter(i=>i.q&&!i.pic&&i.st!=='doing').map(i=>i.word);
+  const f=a=>a.length?`（${a.length} 个：${a.slice(0,6).join('、')}${a.length>6?'…':''}）`:'（没有：到「选词」导入）';
+  $('#qPoolN').textContent=f(PQ);$('#picPoolN').textContent=f(PP)}catch(e){}}
+async function loadQ(){
+  const s=ST.stats||{};
+  $('#qStats').innerHTML=s.total?`<div class="d"><b>${s.done.toLocaleString()}</b>行有题目</div><div><b>${s.missing.toLocaleString()}</b>行还缺</div>
+    <div class="${s.manual?'r':''}"><b>${s.manual}</b>个出题没过</div><div><b style="font-size:22px">${esc(s.next||'—')}</b>按总表顺序下一个</div>`:`<div>${esc((ST.repo||{}).repo||'词库还没准备好')}</div>`;
+  $('#tManN').textContent=s.manual?`${s.manual} 个词 AI 改了几次还不对，放在“待人工”里`:'没有出题没过的词';$('#tRedo').disabled=!s.manual;
+  poolNeed();
+  const d=await api('/api/tasks');
   $('#sList').innerHTML=d.schedules.map(x=>{const p=JSON.parse(x.params||'{}');
     return `<div class="tk"><div class="t1">每天 <b>${x.at}</b> 自动出 <b>${p.count||'全部剩下的'}</b> 个词（星期${[...(x.days||'')].map(i=>DAYN[i-1]).join('、')}）
       ${x.enabled?'':'<span class="tag t-已取消">停用了</span>'}${x.last_date?`<span class="faint small"> 上次 ${x.last_date}</span>`:''}</div>
       <div><button class="btn ghost sm" onclick="sched(${x.id},'toggle')">${x.enabled?'停用':'启用'}</button> <button class="btn ghost sm" onclick="sched(${x.id},'delete')">删掉</button></div></div>`}).join('')||'<p class="faint small" style="margin:0">还没设。</p>';
 }
+async function loadPic(){
+  api('/api/words?ready=').then(w=>{const c=w.counts||{};
+    $('#picStats').innerHTML=`<div class="d"><b>${(c.ready||0).toLocaleString()}</b>个词能出视频了</div><div class="a"><b>${(c.needpic||0).toLocaleString()}</b>个词有题目、缺画面</div><div><b>${(c.video||0).toLocaleString()}</b>个词有视频</div>`}).catch(()=>{});
+  api('/api/picfail').then(f=>{const it=f.items||[];
+    const why=x=>{let e=x.errors||'';try{const j=JSON.parse(e);e=Array.isArray(j)?j.join('；'):String(j)}catch(_){}return String(e).slice(0,120)};
+    $('#picFail').innerHTML=it.length?'<ul class="pfl" style="margin:0;padding-left:18px">'+it.slice(0,30).map(x=>`<li><b style="font-family:var(--en)">${esc(x.word)}</b> <span class="muted">${esc(why(x))}</span></li>`).join('')+'</ul>'+(it.length>30?`<div class="faint">…还有 ${it.length-30} 个</div>`:''):'没有画面没做成的词';
+    $('#tPicRedo').disabled=!it.length}).catch(()=>{});
+  poolNeed()}
 $('#sAdd').onclick=async()=>{const days=$$('#sDays input:checked').map(i=>i.value).join('');if(!days)return toast('至少勾一天');
   await api('/api/schedule',{name:'',at:$('#sAt').value,days,kind:'chuti',params:{count:+$('#sCount').value||0}});toast('加好了');loadTasks()};
 $('#tClear').onclick=async()=>{const d=await api('/api/tasks');for(const t of d.tasks.filter(t=>['已完成','已取消','失败'].includes(t.status)))await api('/api/task/op',{id:t.id,op:'delete'});loadTasks()};
@@ -892,7 +960,7 @@ $$('[data-lt]').forEach(a=>a.onclick=e=>{e.preventDefault();LT=a.dataset.lt;$$('
   $('#lReply').hidden=LT!=='reply';$('#lLog').hidden=LT!=='log'});
 const secs=t=>{t=Math.max(0,Math.round(t));return t<60?t+' 秒':Math.floor(t/60)+' 分 '+(t%60)+' 秒'};
 async function liveTick(){
-  if(page!=='tasks')return;
+  if(page!=='check'&&page!=='run')return;
   let d;try{d=await api('/api/live?watch=1')}catch(e){return}
   $('#tWho').querySelector('b').textContent=d.provider;$('#tOpen').hidden=d.pv!=='relay';kTick(d);
   $('#tLive').hidden=!d.running;if(!d.running)return;
@@ -923,13 +991,13 @@ setInterval(liveTick,2000);
 
 /* ───── 开始页：三样准备好了没（一键检测、每样单独检测；检测详情里看每一步，网页镜像还看得到浏览器画面） ───── */
 const KENV={t:0,d:null};
-const KK=['ai','repo','env'],KN={ai:'① AI',repo:'② 词库',env:'③ 出片环境'},KID={ai:'kAI',repo:'kRepo',env:'kEnv'};
+const KK=['ai','repo','env'],KN={ai:'AI',repo:'词库',env:'出片环境'},KID={ai:'kAI',repo:'kRepo',env:'kEnv'};
 const KICON={ok:'✓',bad:'✗',warn:'!',running:'…',idle:'–'};
 const KFIX={gear:'<a href="#" onclick="gearOpen();return false">去改 AI 设置</a>',
   settings:'<a href="#" onclick="go(\'settings\');return false">去「设置」</a>',
   video:'<a href="#" onclick="go(\'video\');return false">去「出视频」页</a>'};
 const KEMPTY={
-  ai:{web:'还没检测。点 ① AI 的「检测」：软件会打开浏览器、登录 sorryios、进 GPT、挑一辆车、问一句话，每一步都写在这里，右边看得到浏览器画面。',
+  ai:{web:'还没检测。点 AI 那一行的「检测」：软件会打开浏览器、登录 sorryios、进 GPT、挑一辆车、问一句话，每一步都写在这里，右边看得到浏览器画面。',
       relay:'还没检测。点「检测」：看网页 AI 地址，往中转仓库的收件箱真写一次。',
       api:'还没检测。点「检测」：给接口发一句话，看它回不回。',mock:'现在用的是模拟 AI，只能试流程。'},
   repo:'还没检测。点「检测」：看 GitHub 令牌、本机词库和 GitHub 一不一样新、总表、索引、题目和画面各有多少。',
@@ -981,7 +1049,7 @@ function kShot(){
   const has=!!w.has_shot;$('#kShot').hidden=!has;$('#kNoShot').hidden=has;
   if(has&&w.shot_ts&&w.shot_ts!==CKshotTs){CKshotTs=w.shot_ts;$('#kShot').src='/api/ai/shot?t='+w.shot_ts}
   $('#kShotAge').textContent=has?`（${Math.max(0,Math.round(Date.now()/1000-w.shot_ts))} 秒前）`:'';
-  if(!has)$('#kNoShot').textContent=w.hasBrowser?'浏览器开着，正在截图…':'浏览器还没打开。点 ① AI 的「检测」，这里会出现它的画面，每两秒更新。'}
+  if(!has)$('#kNoShot').textContent=w.hasBrowser?'浏览器开着，正在截图…':'浏览器还没打开。点 AI 那一行的「检测」，这里会出现它的画面，每两秒更新。'}
 function kShow(){CKshown=true;$('#kDet').hidden=false}
 function kUnfold(){if(CKfold){CKfold=false;$('#kGrid').hidden=false;$('#kFold').textContent='收起 ▴'}}
 $('#kFold').onclick=()=>{CKfold=!CKfold;$('#kGrid').hidden=CKfold;$('#kFold').textContent=CKfold?'展开 ▾':'收起 ▴';if(!CKfold)chkTick(true)};
@@ -996,7 +1064,7 @@ function kOpen(k){kShow();kUnfold();const it=(CK||{})[k];
   if(k!=='ai'&&(!it||it.state==='idle'))return kRun(k);      // 词库、出片环境测一次只要几秒：没测过就直接测
   chkTick(true).then(()=>kFocus(k))}
 async function chkTick(force){
-  if(page!=='tasks'&&!force)return;
+  if(page!=='check'&&!force)return;
   const running=!!CK&&KK.some(k=>CK[k]&&CK[k].state==='running'),open=CKshown&&!CKfold;
   CKn++;if(!force&&!running&&!open&&CKn%5)return;            // 没在检测、详情也没开着：5 秒看一次
   let d;try{d=await api('/api/check?watch='+(open&&KPV==='web'?1:0))}catch(e){return}
@@ -1015,18 +1083,18 @@ async function kTick(d){
 $('#kAll').onclick=()=>kRun('all',$('#kAll'));
 $$('[data-kc]').forEach(b=>b.onclick=()=>kRun(b.dataset.kc,b));
 $$('[data-kd]').forEach(b=>b.onclick=()=>kOpen(b.dataset.kd));
-$$('input[name=kMode]').forEach(x=>x.onchange=async()=>{$('#kPool').hidden=!document.querySelector('input[name=kMode][value=pool]').checked;
-  if(x.value==='pool'&&x.checked)loadPool();
-  if(x.value==='next'&&x.checked){try{const d=await api('/api/next?n='+(+$('#kN').value||5));$('#kNext').textContent=d.words.length?'（接下来是：'+d.words.slice(0,6).join('、')+(d.words.length>6?'…':'')+'）':''}catch(e){}}});
-$('#kWords').oninput=()=>{document.querySelector('input[name=kMode][value=words]').checked=true;$('#kPool').hidden=true};
-$('#kN').oninput=()=>{document.querySelector('input[name=kMode][value=next]').checked=true;$('input[name=kMode][value=next]')?.onchange?.()};
 $('#kStart').onclick=()=>busy($('#kStart'),$('#kMsg'),'正在安排',async()=>{
-  const mode=document.querySelector('input[name=kMode]:checked').value;
-  if(mode==='words'&&!$('#kWords').value.trim())return{ok:false,msg:'先填要做的单词，或者选“按总表顺序”'};
-  if(mode==='pool'&&!PSEL.size)return{ok:false,msg:'先在备选单词里勾要做的词（「全选这些」能一下勾上）'};
-  const d=await api('/api/prep',{mode,text:$('#kWords').value,n:+$('#kN').value||5,words:[...PSEL]});
-  if(d.ok){$('#kWords').value='';if(mode==='pool'){PSEL.clear();loadPool()}loadTasks();poll();setTimeout(()=>$('#tLive').scrollIntoView({behavior:'smooth',block:'start'}),800)}
+  if(!PSEL.size)return{ok:false,msg:'先勾要做的词（「全选这些」能一下勾上）'};
+  const d=await api('/api/prep',{mode:'pool',words:[...PSEL]});
+  if(d.ok){PSEL.clear();loadPool();poll();setTimeout(()=>go('run'),700)}
   return d});
+async function kNextShow(){try{const d=await api('/api/next?n='+(+$('#kN').value||5));$('#kNext').textContent=d.words&&d.words.length?'接下来是：'+d.words.slice(0,6).join('、')+(d.words.length>6?'…':''):''}catch(e){}}
+$('#kN').oninput=kNextShow;
+$('#kStartNext').onclick=()=>busy($('#kStartNext'),$('#kNMsg'),'正在安排',async()=>{
+  const d=await api('/api/prep',{mode:'next',n:+$('#kN').value||5});
+  if(d.ok){poll();setTimeout(()=>go('run'),700)}
+  return d});
+function loadPick(){loadPool();kNextShow()}
 
 /* ───── AI 页：一种 AI 一个标签，点哪个看哪个；正在用的那个标着「正在用」，别的点「改用这个」 ───── */
 const MNAME={web:'网页镜像 ChatGPT',api:'接口 AI',relay:'手动接力',mock:'模拟'};
@@ -1063,20 +1131,20 @@ async function mSave(m){
 $$('[data-msave]').forEach(b=>b.onclick=()=>busy(b,document.querySelector(`[data-mmsg="${b.dataset.msave}"]`),'正在保存',()=>mSave(b.dataset.msave)));
 async function mSwitch(m){
   if(ST.runner&&ST.runner.task&&!confirm(`有任务在做。现在改用「${MNAME[m]}」，下一次问 AI 就用它。确定吗？`))return;
-  try{await api('/api/settings',{cfg:{provider:m}});toast('✓ 改用「'+MNAME[m]+'」了：开始页 ① 会显示它，点「检测」看能不能用');await loadAI(true);poll();liveTick()}
+  try{await api('/api/settings',{cfg:{provider:m}});toast('✓ 改用「'+MNAME[m]+'」了：「检测」页会显示它，点「检测」看能不能用');await loadAI(true);poll();liveTick()}
   catch(e){toast('✗ 没改成：'+e.message,8000)}}
 $$('[data-mtest]').forEach(b=>b.onclick=()=>{const m=b.dataset.mtest,el=document.querySelector(`[data-mtmsg="${m}"]`);
   if(!MS||MS.cfg.provider!==m){el.style.color='var(--amber)';el.textContent='现在用的不是它：先点右上角「改用这个」，再检测';return}
-  el.textContent='';go('tasks');kRun('ai')});
+  el.textContent='';go('check');kRun('ai')});
 $('#m_ropen').onclick=()=>busy($('#m_ropen'),$('#m_romsg'),'正在保存、打开',async()=>{await mSave('relay');return await api('/api/open',{})});
 $('#m_itest').onclick=()=>busy($('#m_itest'),$('#m_imsg'),'正在保存、检测收件箱',async()=>{if($('#m_itok').value.trim())$('#m_ion').checked=true;
   await mSave('relay');return await api('/api/repo',{op:'inbox'})});
 $('#m_itok').oninput=()=>{if($('#m_itok').value.trim())$('#m_ion').checked=true};
 async function mPoolSum(){try{const d=await api('/api/pool?brief=1');
   $('#m_poolSum').innerHTML=d.notReady?esc(d.msg):d.all?`存着 <b>${d.all}</b> 个，还有 <b>${d.todo}</b> 个没做完`:'还没有备选单词：点下面去导入'}catch(e){}}
-$('#m_poolGo').onclick=()=>{go('tasks');kPoolOpen()};
+$('#m_poolGo').onclick=()=>go('pick');
 
-/* ───── 开始页 ②：备选单词（导入存着、挑着做；做没做完每次现查） ───── */
+/* ───── 选词：备选单词（导入存着、挑着做；做没做完每次现查） ───── */
 let PL={items:[],counts:{},tags:[]},PF='todo',PSEL=new Set(),PLt=0,PBt=0;
 const PGROUP={todo:['todo','needpic','fail'],doing:['doing'],done:['done'],all:null};
 function pVisible(){const g=PGROUP[PF],tag=$('#pTag').value;return (PL.items||[]).filter(i=>(!g||g.includes(i.st))&&(!tag||i.tag===tag))}
@@ -1100,10 +1168,7 @@ function pSelN(){$('#pSel').textContent=PSEL.size?`勾了 ${PSEL.size} 个：点
 async function loadPool(){try{const d=await api('/api/pool');PLt=Date.now();
   if(d.notReady){$('#pList').innerHTML=`<div class="pempty">${esc(d.msg)}</div>`;return}PL=d;pRender()}catch(e){}}
 async function pBrief(){PBt=Date.now();try{const d=await api('/api/pool?brief=1');if(!d.notReady)pCount(d)}catch(e){}}
-setInterval(()=>{if(page!=='tasks')return;
-  if(!$('#kPool').hidden){if(Date.now()-PLt>8000)loadPool()}else if(Date.now()-PBt>30000)pBrief()},3000);
-function kPoolOpen(){const r=document.querySelector('input[name=kMode][value=pool]');r.checked=true;r.onchange();
-  setTimeout(()=>$('#kPool').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'}),300)}
+setInterval(()=>{if(page==='pick'&&Date.now()-PLt>8000)loadPool()},3000);   // 选词页开着：做到哪一步隔一会儿刷新
 $$('#pFilt a').forEach(a=>a.onclick=e=>{e.preventDefault();PF=a.dataset.pf;pRender()});
 $('#pTag').onchange=pRender;
 $('#pImpBtn').onclick=()=>{$('#pImp').hidden=!$('#pImp').hidden;if(!$('#pImp').hidden)$('#pText').focus()};
@@ -1135,7 +1200,7 @@ async function relayTick(){
   const on=d.status==='等你操作';
   $('#rBox').hidden=!on;
   const nt=$('#nTasks');if(on){nt.hidden=false;nt.textContent='要你操作'}
-  if(on&&d.id!==RL.id){$('#rReply').value='';$('#rMsg').textContent='';if(page!=='tasks')toast('有一批词等你交给网页 AI（任务页）',8000);else setTimeout(()=>$('#tLive').scrollIntoView({behavior:'smooth',block:'start'}),300)}
+  if(on&&d.id!==RL.id){$('#rReply').value='';$('#rMsg').textContent='';if(page!=='run')toast('有一批词等你交给网页 AI：点左边「正在做」',8000);else setTimeout(()=>$('#tLive').scrollIntoView({behavior:'smooth',block:'start'}),300)}
   RL=d;
   if(on){$('#rHint').textContent=d.hint||'';if(!d.clip)$('#rAuto').querySelector('li b').textContent='先点右边「再复制一次」复制提示词';
     if(d.inbox){$('#rStep3').innerHTML='它写完会<b>自己把结果整理成 Excel 传到中转仓库</b>，你不用复制（它要是传不上、把全文写在聊天里了，再点「复制」也行）';
@@ -1150,8 +1215,6 @@ $('#rCopy').onclick=async()=>{const d=await api('/api/relay?full=1');const ok=aw
 $('#rOpen').onclick=()=>busy($('#rOpen'),$('#rMsg'),'正在打开网页 AI',()=>api('/api/open',{}));
 $('#rSend').onclick=async()=>{const d=await api('/api/relay',{id:RL.id,reply:$('#rReply').value});$('#rMsg').textContent=(d.ok?'✓ ':'✗ ')+d.msg;if(d.ok){$('#rReply').value='';setTimeout(relayTick,800)}};
 $('#rSkip').onclick=async()=>{if(!confirm('这一批先跳过？这些词这次算没做。'))return;const d=await api('/api/relay',{id:RL.id,skip:true});$('#rMsg').textContent=d.msg;setTimeout(relayTick,800)};
-$('#wGo').onclick=async()=>{const steps=[];if($('#wQ').checked)steps.push('chuti');if($('#wP').checked)steps.push('pics');
-  const d=await api('/api/words-task',{text:$('#wIn').value,steps});$('#wMsg').textContent=(d.ok?'✓ ':'✗ ')+d.msg;if(d.ok){$('#wIn').value='';loadTasks();poll()}};
 
 /* ───── 单词 ───── */
 let wPage=1,wTimer,wReady='',SEL=new Set();
@@ -1356,7 +1419,7 @@ $$('[data-repo]').forEach(b=>b.onclick=async()=>{const op=b.dataset.repo;
   b.disabled=true;try{const d=await api('/api/repo',{op});toast(op==='token'?((d.ok?'✓ ':'✗ ')+d.msg):(d.msg||'好的，在后台做，看「动态」'),6000)}catch(e){toast('✗ '+e.message)}b.disabled=false});
 $('#pPrev').onclick=async()=>{const d=await api('/api/prompt-preview?n=3');modal('发给 AI 的提示词（用下一批 3 个词举例）','<pre>'+esc(d.text)+'</pre>')};
 
-go('tasks');poll();setInterval(poll,3000);
+go('check');poll().then(()=>{if(ST.runner&&ST.runner.task)go('run')});setInterval(poll,3000);
 </script>
 </body>
 </html>

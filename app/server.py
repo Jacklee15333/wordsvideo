@@ -126,7 +126,7 @@ def api_task_add(b):
     ra = 0
     if b.get("runAt"):
         ra = time.mktime(time.strptime(b["runAt"].replace("T", " ")[:16], "%Y-%m-%d %H:%M"))
-    tid = C.add_task(kind, params, ra)
+    tid = C.add_task(kind, params, ra, title=(b.get("title") or "")[:60])
     C.RUNNER.wake.set()
     return {"id": tid}
 
