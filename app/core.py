@@ -1082,6 +1082,7 @@ def relay_result(ok, detail=""):
             return
         RELAY_HIST[-1].update(res="ok" if ok else "fail", detail=mask(str(detail))[:400], t1=time.time())
         RELAY["phase"], RELAY["stage"] = ("ok" if ok else "fail"), ""
+        RELAY["last"] = {"words": list(RELAY_HIST[-1]["words"]), "ok": bool(ok), "detail": mask(str(detail))[:200], "t": time.time()}
         n = len(RELAY_HIST)
         _hist_save()
     _say("手动接力 第 %d 轮：%s%s" % (n, "✓ 检查过了" if ok else "✗ 没过", ("：" + str(detail)[:160]) if detail else ""))
@@ -1738,7 +1739,10 @@ class Runner:
         self.thread = None
 
     def start(self):
-        x("UPDATE tasks SET status='排队' WHERE status='运行中'")      # 上次没跑完的（软件被关掉）接着排队
+        # v1.10.6：上次没做完的（软件被关掉）先暂停，不自己接着做——你点开始才做；要接着做，在那一步点「继续」
+        for t in q("SELECT id,title FROM tasks WHERE status='运行中' OR (status='排队' AND run_after<=?)", (time.time(),)):
+            log("上次没做完的任务 #%d 暂停了：%s（要接着做，到那一步的进度里点「继续」；也可以直接重新开始）" % (t["id"], t["title"]), t["id"])
+        x("UPDATE tasks SET status='已暂停' WHERE status='运行中' OR (status='排队' AND run_after<=?)", (time.time(),))
         self.thread = threading.Thread(target=self.loop, name="runner", daemon=True)
         self.thread.start()
 
@@ -1802,6 +1806,7 @@ class Runner:
     def run_task(self, t):
         self.task, self.stop_req = t, None
         tid = t["id"]
+        AI_LIVE.update(reply="", kind="", words=[], started=0.0, done=0.0)
         x("UPDATE tasks SET status='运行中', started=COALESCE(started, ?), error='' WHERE id=?", (now(), tid))
         self.state = "运行中：" + t["title"]
         log("开始任务 #%d：%s" % (tid, t["title"]), tid)

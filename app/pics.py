@@ -502,9 +502,15 @@ def _try(R, tid, w, rounds):
                     C.log("  %s 的起草检查没跑成（%s）：画面先照旧，出片时再起草检查" % (w, line[:160]), tid)
                     save(w, P, svgs, False)
                     return True, []
+                if st == "todo":
+                    save(w, P, svgs, False)
+                    todo_note(w, line)
+                    C.log("  %s 存着的画面能用，留着（出片前还要补 %d 处：%s）" % (w, ntodo(line), line[:160]), tid)
+                    return True, []
                 errs = ["视频技能起草检查没过：" + line]
             fix = (json.dumps(P, ensure_ascii=False), errs)
             C.log("  %s 存着的画面没过：%s；交给 AI 改" % (w, "；".join(errs)[:200]), tid)
+        R.stage = "%s：先起草一遍，看要画什么（在 WSL 里，几秒到一两分钟）" % w
         todo = "" if fix else draft_todo(w)
         if todo:
             C.log("  %s 先起草了一遍：要画齐的已经写进提示词" % w, tid)
@@ -514,23 +520,29 @@ def _try(R, tid, w, rounds):
             P, raw, svgs, errs = parse(rep)
             C.relay_stage("检查画面设置、插图…")
             errs = errs or check(w, P, svgs)
-            checked = False
+            checked, left = False, ""
             if not errs:
                 C.relay_stage("起草检查：在 WSL 里用视频技能画一遍（几秒钟）…")
+                R.stage = "%s：起草检查（在 WSL 里）" % w
                 st, line = wsl_draft_safe(w, P, svgs)
                 temp = True
                 if st == "ok":
                     checked = True
                 elif st == "todo":
-                    errs = ["视频技能起草检查没过：" + line]
+                    left = line
+                    if rnd < rounds:              # 网页镜像、接口 AI 还能自己改（不用你动手）；最后一轮能用就存下
+                        errs = ["视频技能起草检查没过：" + line]
                 elif st == "env":
                     C.log("  %s 的起草检查没跑成（%s）：这不是 AI 的问题，本机检查过了就先存下，出片时再起草检查" % (w, line[:160]), tid)
             if not errs:
                 save(w, P, svgs, checked)
                 temp = False
-                C.relay_result(True, "过了，画面存好了" if checked else "本机检查过了，先存下（出片时再起草检查）")
+                todo_note(w, left)
+                if left:
+                    C.log("  %s 的画面存下了：能用（起草检查说出片前还要补 %d 处：%s）" % (w, ntodo(left), left[:160]), tid)
+                C.relay_result(True, "做好了" + ("（出片前还要补 %d 处）" % ntodo(left) if left else ""))
                 return True, []
-            C.relay_result(False, "；".join(errs))
+            C.relay_result(False, short_why(errs))
             fix = (raw or json.dumps(P or {}, ensure_ascii=False), errs)
             C.log("  %s 的画面没过：%s" % (w, "；".join(errs)[:200]), tid)
         return False, errs
@@ -557,7 +569,8 @@ def do_pics(R, tid, p):
     C.log("画面按视频技能 %s（%s）做：和画面有关的规矩、pictures.md 全文、kit 里 %s 的画面设置当范例" % (ver, ed, EXAMPLE_WORD), tid)
     done = 0
     batch = []
-    rounds = int(C.load_cfg().get("fixRounds", 3))
+    # v1.10.6：手动接力每改一轮都要你再粘贴一次：不来回改——能用就存下，不能用就记“没做成”、做下一个
+    rounds = 0 if C.load_cfg().get("provider") == "relay" else int(C.load_cfg().get("fixRounds", 3))
     while True:
         R.check_stop()
         if not C.in_window() and C.load_cfg().get("provider") != "relay":
@@ -615,6 +628,36 @@ def unsave(word):
                         p.write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
                 r[5] = "缺"
         C.write_index(head, rows)
+
+
+def ntodo(line):
+    """“还要补：a；b；c” → 3"""
+    rest = (line or "").split("：", 1)[1] if "：" in (line or "") else (line or "")
+    return len([x for x in re.split(r"[；;]", rest) if x.strip()]) or (1 if line else 0)
+
+
+def short_why(errs):
+    """没做成的原因，一句话。"""
+    e = (errs or ["没说原因"])[0]
+    e = re.sub(r"^视频技能起草检查没过：(还要补：)?", "", e).split("；")[0]
+    return (e[:40] + "…") if len(e) > 40 else e
+
+
+def todo_note(word, line):
+    """能用、但起草检查说出片前还要补的，记在本机 data/pic_todo.json（以后可以再改）。"""
+    p = C.DATA / "pic_todo.json"
+    try:
+        d = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    except Exception:
+        d = {}
+    if line:
+        d[word] = {"todo": line, "t": time.strftime("%Y-%m-%d %H:%M")}
+    else:
+        d.pop(word, None)
+    try:
+        p.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+    except Exception:
+        pass
 
 
 def wsl_draft_safe(w, P, svgs):

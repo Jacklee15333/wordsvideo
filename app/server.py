@@ -127,6 +127,18 @@ def api_task_add(b):
     ra = 0
     if b.get("runAt"):
         ra = time.mktime(time.strptime(b["runAt"].replace("T", " ")[:16], "%Y-%m-%d %H:%M"))
+    # v1.10.6：同一步旧的、暂停着或排着队的任务（比如上次没做完的）取消掉，免得重新开始以后两个一起排着
+    fam = lambda k, p: "pic" if k == "pics" else ("q" if k in ("chuti", "redo") or (k == "words" and "chuti" in (p.get("steps") or ["chuti"])) else k)
+    me = fam(kind, params)
+    if me in ("q", "pic"):
+        for t in C.q("SELECT id,kind,params,title FROM tasks WHERE status IN ('已暂停','排队') AND run_after<=?", (time.time(),)):
+            try:
+                tp = json.loads(t["params"] or "{}")
+            except Exception:
+                tp = {}
+            if fam(t["kind"], tp) == me:
+                C.x("UPDATE tasks SET status='已取消' WHERE id=?", (t["id"],))
+                C.log("重新开始了：上次没做完的任务 #%d 取消了（%s）" % (t["id"], t["title"]), t["id"])
     tid = C.add_task(kind, params, ra, title=(b.get("title") or "")[:60])
     C.RUNNER.wake.set()
     return {"id": tid}
