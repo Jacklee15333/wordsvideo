@@ -10,7 +10,8 @@
     "x": 0.3,
     "y": 0.6,
     "s": 0.86,
-    "z": 3
+    "z": 3,
+    "seq": "talk"
    },
    {
     "svg": "art/brickwall.svg",
@@ -29,6 +30,24 @@
     "anim": "shake"
    },
    {
+    "actor": "walk-west-woman-case",
+    "x": 0.9,
+    "y": 0.82,
+    "s": 0.36,
+    "z": 6,
+    "walk": {
+     "from": [
+      0.98,
+      0.82
+     ],
+     "to": [
+      0.02,
+      0.82
+     ],
+     "offset": 0
+    }
+   },
+   {
     "label": "mason ≈ make：做墙的人",
     "x": 0.5,
     "y": 0.1,
@@ -44,11 +63,12 @@
    "img": "art/street-bg.svg",
    "items": [
     {
-     "actor": "cn-teacher-point",
+     "actor": "west-man-present",
      "x": 0.3,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/brickwall.svg",
@@ -65,6 +85,24 @@
      "s": 0.18,
      "z": 5,
      "anim": "shake"
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.05,
+     "y": 0.84,
+     "s": 0.36,
+     "z": 6,
+     "walk": {
+      "from": [
+       0.02,
+       0.84
+      ],
+      "to": [
+       0.98,
+       0.84
+      ],
+      "offset": 0.2
+     }
     }
    ],
    "text": "石匠、砖石工",
@@ -82,7 +120,8 @@
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "mason"
+      "when": "mason",
+      "seq": "talk"
      },
      {
       "svg": "art/trowel.svg",
@@ -101,6 +140,24 @@
       "when": "stone wall",
       "reveal": "up",
       "rdur": 3
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.9,
+      "y": 0.84,
+      "s": 0.36,
+      "z": 6,
+      "walk": {
+       "from": [
+        0.98,
+        0.84
+       ],
+       "to": [
+        0.02,
+        0.84
+       ],
+       "offset": 0.4
+      }
      },
      {
       "label": "mason",
@@ -130,23 +187,35 @@
    "items": [
     {
      "actor": "west-man-hello",
+     "id": "h",
      "x": 0.34,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "seq": "talk",
+     "turn": [
+      0,
+      2
+     ]
     },
     {
      "actor": "west-clerk-happy",
      "x": 0.68,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "turn": [
+      1,
+      2
+     ],
+     "nodWith": "h"
     },
     {
      "svg": "art/trowel.svg",
      "x": 0.5,
      "y": 0.22,
-     "s": 0.16
+     "s": 0.16,
+     "anim": "swing"
     }
    ],
    "text": "共济会会员",
@@ -164,14 +233,16 @@
       "y": 0.6,
       "s": 0.9,
       "z": 3,
-      "when": "grandfather"
+      "when": "grandfather",
+      "seq": "blink"
      },
      {
       "svg": "art/trowel.svg",
       "x": 0.7,
       "y": 0.4,
       "s": 0.24,
-      "when": "Mason"
+      "when": "Mason",
+      "anim": "swing"
      },
      {
       "label": "Mason",
@@ -204,11 +275,12 @@
     "img": "art/street-bg.svg",
     "items": [
      {
-      "actor": "cn-teacher-point",
+      "actor": "cn-teacher-listen",
       "x": 0.3,
       "y": 0.6,
       "s": 0.86,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/brickwall.svg",
@@ -225,6 +297,24 @@
       "s": 0.18,
       "z": 5,
       "anim": "shake"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.05,
+      "y": 0.84,
+      "s": 0.36,
+      "z": 6,
+      "walk": {
+       "from": [
+        0.02,
+        0.84
+       ],
+       "to": [
+        0.98,
+        0.84
+       ],
+       "offset": 0
+      }
      },
      {
       "label": "mason ≈ make",
@@ -255,7 +345,8 @@
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "石块"
+      "when": "石块",
+      "seq": "talk"
      },
      {
       "svg": "art/brickwall.svg",
@@ -274,6 +365,24 @@
       "z": 5,
       "anim": "shake",
       "when": "砌成墙"
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.9,
+      "y": 0.84,
+      "s": 0.38,
+      "z": 6,
+      "walk": {
+       "from": [
+        0.98,
+        0.84
+       ],
+       "to": [
+        0.02,
+        0.84
+       ],
+       "offset": 0.3
+      }
      },
      {
       "label": "石匠",
@@ -301,20 +410,23 @@
     "img": "art/castle-bg.svg",
     "items": [
      {
-      "actor": "west-man-hello",
+      "actor": "west-man-speech",
+      "id": "s",
       "x": 0.3,
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "团体"
+      "when": "团体",
+      "seq": "talk"
      },
      {
-      "actor": "west-clerk-happy",
+      "actor": "west-clerk-think",
       "x": 0.62,
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "团体"
+      "when": "团体",
+      "nodWith": "s"
      },
      {
       "label": "共济会会员",
@@ -332,7 +444,8 @@
       "s": 0.3,
       "cue": 1,
       "when": "Mason jar",
-      "pop": true
+      "pop": true,
+      "anim": "bob"
      },
      {
       "label": "Mason jar",

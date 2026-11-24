@@ -315,34 +315,41 @@
       "x": 0.2,
       "y": 0.6,
       "s": 0.8,
-      "z": 3
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
      },
      {
       "actor": "west-man-hello",
+      "id": "h",
       "x": 0.42,
       "y": 0.58,
       "s": 0.84,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "actor": "cn-boy-raise",
       "x": 0.62,
       "y": 0.64,
       "s": 0.66,
-      "z": 3
+      "z": 3,
+      "nodWith": "h"
      },
      {
       "actor": "west-girl-raise",
       "x": 0.82,
       "y": 0.62,
       "s": 0.72,
-      "z": 3
+      "z": 3,
+      "nodWith": "h"
      },
      {
       "svg": "art/flag.svg",
       "x": 0.5,
       "y": 0.18,
-      "s": 0.26
+      "s": 0.26,
+      "anim": "swing"
      }
     ],
     "text": "人民",
@@ -359,24 +366,28 @@
        "x": 0.5,
        "y": 0.2,
        "s": 0.3,
-       "when": "country"
+       "when": "country",
+       "anim": "swing"
       },
       {
-       "actor": "cn-teacher-laugh",
+       "actor": "cn-teacher-listen",
        "x": 0.2,
        "y": 0.62,
        "s": 0.78,
        "z": 3,
-       "when": "people"
+       "when": "people",
+       "nodWith": "w"
       },
       {
-       "actor": "west-man-hello",
+       "actor": "west-man-speech",
+       "id": "w",
        "x": 0.42,
        "y": 0.6,
        "s": 0.82,
        "z": 3,
        "when": "people",
-       "delay": 0.2
+       "delay": 0.2,
+       "seq": "talk"
       },
       {
        "actor": "cn-boy-raise",
@@ -385,16 +396,18 @@
        "s": 0.64,
        "z": 3,
        "when": "people",
-       "delay": 0.4
+       "delay": 0.4,
+       "nodWith": "w"
       },
       {
-       "actor": "west-girl-raise",
+       "actor": "west-girl-surprised",
        "x": 0.82,
        "y": 0.64,
        "s": 0.7,
        "z": 3,
        "when": "people",
-       "delay": 0.6
+       "delay": 0.6,
+       "nodWith": "w"
       },
       {
        "svg": "art/heart.svg",
@@ -424,21 +437,25 @@
       "svg": "art/map.svg",
       "x": 0.5,
       "y": 0.48,
-      "s": 0.66
+      "s": 0.66,
+      "anim": "pulse"
      },
      {
       "actor": "cn-teacher-point",
+      "id": "t",
       "x": 0.16,
       "y": 0.64,
       "s": 0.66,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "actor": "west-girl-explain",
       "x": 0.86,
       "y": 0.64,
       "s": 0.66,
-      "z": 3
+      "z": 3,
+      "nodWith": "t"
      }
     ],
     "text": "民族",
@@ -455,15 +472,17 @@
        "x": 0.5,
        "y": 0.46,
        "s": 0.66,
-       "when": "Asia"
+       "when": "Asia",
+       "anim": "pulse"
       },
       {
-       "actor": "cn-teacher-point",
+       "actor": "west-man-point",
        "x": 0.16,
        "y": 0.62,
        "s": 0.7,
        "z": 3,
-       "when": "Many peoples"
+       "when": "Many peoples",
+       "seq": "talk"
       },
       {
        "label": "peoples",
@@ -718,30 +737,53 @@
        "x": 0.2,
        "y": 0.2,
        "s": 0.18,
-       "when": "贵族"
+       "when": "贵族",
+       "anim": "swing"
       },
       {
-       "actor": "cn-teacher-laugh",
+       "actor": "west-clerk-happy",
+       "id": "c",
        "x": 0.3,
        "y": 0.6,
        "s": 0.8,
        "z": 3,
-       "when": "普通人"
+       "when": "普通人",
+       "seq": "talk"
       },
       {
-       "actor": "west-man-hello",
+       "actor": "west-man-smile",
        "x": 0.56,
        "y": 0.6,
        "s": 0.84,
        "z": 3,
-       "when": "普通人"
+       "when": "普通人",
+       "nodWith": "c"
       },
       {
        "svg": "art/flag.svg",
        "x": 0.82,
        "y": 0.3,
        "s": 0.36,
-       "when": "一个国家"
+       "when": "一个国家",
+       "anim": "swing"
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.9,
+       "y": 0.84,
+       "s": 0.36,
+       "z": 6,
+       "walk": {
+        "from": [
+         0.98,
+         0.84
+        ],
+        "to": [
+         0.02,
+         0.84
+        ],
+        "offset": 0.3
+       }
       },
       {
        "label": "人民",
@@ -772,7 +814,8 @@
        "x": 0.5,
        "y": 0.46,
        "s": 0.66,
-       "when": "一族一族"
+       "when": "一族一族",
+       "anim": "pulse"
       },
       {
        "label": "peoples 民族",
@@ -788,32 +831,100 @@
    }
   ],
   "distinguish": {
-   "pics": {
-    "nation": {
-     "bg": "blank",
-     "img": "art/street-bg.svg",
-     "items": [
-      {
-       "svg": "art/flag.svg",
-       "x": 0.5,
-       "y": 0.5,
-       "s": 0.8
-      }
-     ]
+   "key": "民族",
+   "items": [
+    {
+     "w": "people",
+     "gloss": "民族（可数，a people / peoples）",
+     "note": "popul 人民：同一种语言、文化、来历的一族人，说的是“人”这一面（the peoples of Asia 亚洲各民族）。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/map.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.8,
+        "anim": "pulse"
+       },
+       {
+        "label": "peoples",
+        "x": 0.2,
+        "y": 0.3,
+        "size": 0.1,
+        "color": "#7A3E00",
+        "bg": "#FFF6D8",
+        "border": "#E0A800"
+       }
+      ]
+     }
     },
-    "nationality": {
-     "bg": "studio",
-     "tint": "blue",
-     "items": [
-      {
-       "svg": "art/map.svg",
-       "x": 0.5,
-       "y": 0.5,
-       "s": 0.8
-      }
-     ]
+    {
+     "w": "nation",
+     "gloss": "民族、国家",
+     "note": "nat 出生：生在同一片土地上、有自己国家和政府的一族人，说的是“国”这一面（the Chinese nation 中华民族）。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/flag.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "swing"
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.1,
+        "y": 0.8,
+        "s": 0.4,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.02,
+          0.8
+         ],
+         "to": [
+          0.98,
+          0.8
+         ],
+         "offset": 0
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "nationality",
+     "gloss": "国籍；（一国之内的）民族",
+     "note": "nation + al + ity：属于哪个国家的身份，填表时问的就是它（What's your nationality? 你是哪国人？）。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "actor": "west-clerk-think",
+        "x": 0.3,
+        "y": 0.6,
+        "s": 0.9,
+        "z": 3,
+        "seq": "blink"
+       },
+       {
+        "svg": "art/map.svg",
+        "x": 0.74,
+        "y": 0.5,
+        "s": 0.6,
+        "anim": "pulse"
+       }
+      ]
+     }
     }
-   }
+   ],
+   "logic": "逻辑不同：people 从“人”说民族，nation 从“国”说民族，nationality 说的是一个人属于哪国的身份。",
+   "tip": "一句话记法：讲一族人用 people，讲一国人用 nation，问哪国人用 nationality。"
   }
  },
  "插图": [
@@ -913,5 +1024,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

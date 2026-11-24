@@ -10,7 +10,8 @@
     "x": 0.5,
     "y": 0.6,
     "s": 0.5,
-    "shadow": true
+    "shadow": true,
+    "anim": "swing"
    },
    {
     "label": "包住脚的东西",
@@ -32,14 +33,16 @@
      "x": 0.4,
      "y": 0.62,
      "s": 0.46,
-     "shadow": true
+     "shadow": true,
+     "anim": "swing"
     },
     {
      "svg": "art/shoe.svg",
      "x": 0.62,
      "y": 0.68,
      "s": 0.42,
-     "shadow": true
+     "shadow": true,
+     "anim": "bob"
     },
     {
      "svg": "art/rack.svg",
@@ -63,7 +66,8 @@
       "y": 0.58,
       "s": 0.9,
       "z": 3,
-      "when": "me"
+      "when": "me",
+      "seq": "blink"
      },
      {
       "svg": "art/shoe.svg",
@@ -71,7 +75,8 @@
       "y": 0.74,
       "s": 0.3,
       "when": "shoes",
-      "shadow": true
+      "shadow": true,
+      "anim": "shake"
      },
      {
       "label": "too small",
@@ -182,7 +187,8 @@
       "x": 0.5,
       "y": 0.6,
       "s": 0.5,
-      "shadow": true
+      "shadow": true,
+      "anim": "swing"
      },
      {
       "label": "shoe",
@@ -215,7 +221,8 @@
       "y": 0.64,
       "s": 0.4,
       "when": "不过脚踝",
-      "shadow": true
+      "shadow": true,
+      "anim": "swing"
      },
      {
       "label": "shoe 鞋",
@@ -233,7 +240,8 @@
       "s": 0.56,
       "cue": 1,
       "when": "boot",
-      "shadow": true
+      "shadow": true,
+      "anim": "bob"
      },
      {
       "label": "boot 靴子",
@@ -314,7 +322,8 @@
       "x": 0.46,
       "y": 0.66,
       "s": 0.4,
-      "when": "汽车"
+      "when": "汽车",
+      "anim": "ride"
      },
      {
       "label": "brake shoe 刹车蹄片",
@@ -333,7 +342,26 @@
       "s": 0.2,
       "cue": 1,
       "when": "旧鞋",
-      "rot": -20
+      "rot": -20,
+      "anim": "swing"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.84,
+      "s": 0.36,
+      "z": 6,
+      "walk": {
+       "from": [
+        0.02,
+        0.84
+       ],
+       "to": [
+        0.98,
+        0.84
+       ],
+       "offset": 0
+      }
      },
      {
       "label": "祝好运",
@@ -350,6 +378,28 @@
  ],
  "distinguish": {
   "pics": {
+   "shoe": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/shoe.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.6,
+      "shadow": true,
+      "anim": "swing"
+     },
+     {
+      "label": "不过脚踝",
+      "x": 0.2,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
    "boot": {
     "bg": "blank",
     "img": "art/room-bg.svg",
@@ -359,11 +409,67 @@
       "x": 0.5,
       "y": 0.55,
       "s": 0.8,
-      "shadow": true
+      "shadow": true,
+      "anim": "bob"
+     },
+     {
+      "label": "包住脚踝",
+      "x": 0.2,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   },
+   "in": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "id": "e",
+      "x": 0.24,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.76,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "nodWith": "e"
+     },
+     {
+      "svg": "art/shoe.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.2,
+      "z": 5,
+      "go": [
+       0.62,
+       0.86
+      ],
+      "dur": 1.4,
+      "loop": true
+     },
+     {
+      "label": "in sb's shoes",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
      }
     ]
    }
-  }
+  },
+  "logic": "逻辑不同：shoe 和 boot 看高度——shoe 不过脚踝，boot 包住脚踝甚至小腿；in sb's shoes 是借“穿上别人的鞋”比作站到他的处境上。",
+  "tip": "一句话记法：低帮是 shoe，高帮是 boot；穿上别人的鞋，就懂了别人的难处。"
  },
  "lianxi": {
   "qs": [
