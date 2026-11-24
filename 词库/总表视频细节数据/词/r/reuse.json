@@ -12,7 +12,8 @@
       "svg": "art/bottle.svg",
       "x": 0.5,
       "y": 0.56,
-      "s": 0.56
+      "s": 0.56,
+      "anim": "bob"
      },
      {
       "ray": [
@@ -62,7 +63,8 @@
       "x": 0.36,
       "y": 0.6,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/wrench.svg",
@@ -94,7 +96,8 @@
      "svg": "art/bottle.svg",
      "x": 0.5,
      "y": 0.56,
-     "s": 0.56
+     "s": 0.56,
+     "anim": "bob"
     },
     {
      "ray": [
@@ -151,7 +154,8 @@
       "x": 0.18,
       "y": 0.62,
       "s": 0.7,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "emit": true,
@@ -180,7 +184,8 @@
        "x": 0.5,
        "y": 0.56,
        "s": 0.56,
-       "when": "this bottle"
+       "when": "this bottle",
+       "anim": "bob"
       },
       {
        "actor": "cn-boy-raise",
@@ -188,7 +193,8 @@
        "y": 0.62,
        "s": 0.76,
        "z": 3,
-       "when": "We"
+       "when": "We",
+       "seq": "blink"
       },
       {
        "ray": [
@@ -245,7 +251,8 @@
        "svg": "art/bottle.svg",
        "x": 0.5,
        "y": 0.56,
-       "s": 0.56
+       "s": 0.56,
+       "anim": "bob"
       },
       {
        "ray": [
@@ -305,7 +312,8 @@
        "x": 0.36,
        "y": 0.56,
        "s": 0.52,
-       "when": "再用一次"
+       "when": "再用一次",
+       "anim": "bob"
       },
       {
        "label": "reuse 原样再用",
@@ -322,7 +330,8 @@
        "y": 0.6,
        "s": 0.46,
        "cue": 1,
-       "when": "recycle"
+       "when": "recycle",
+       "anim": "shake"
       },
       {
        "label": "recycle 回收加工",
@@ -347,7 +356,44 @@
        "svg": "art/recyclebin.svg",
        "x": 0.5,
        "y": 0.55,
-       "s": 0.8
+       "s": 0.8,
+       "anim": "shake"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
       }
      ]
     },
@@ -359,11 +405,26 @@
        "svg": "art/masonjar.svg",
        "x": 0.5,
        "y": 0.55,
-       "s": 0.7
+       "s": 0.7,
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.05,
+       "to": [
+        0,
+        -0.2
+       ],
+       "every": 0.7
       }
      ]
     }
-   }
+   },
+   "logic": "逻辑不同：reuse 是 re 再 + use 用，原样再用一次；recycle 是 re 再 + cycle 循环，回收加工成新东西；repurpose 是 re + purpose 用途，改作别的用途。",
+   "tip": "一句话记法：瓶子洗洗再用 reuse，熔了做新瓶 recycle，果酱瓶当笔筒 repurpose。"
   }
  },
  "插图": [
@@ -458,5 +519,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

@@ -10,7 +10,8 @@
      "svg": "art/bottle.svg",
      "x": 0.5,
      "y": 0.56,
-     "s": 0.56
+     "s": 0.56,
+     "anim": "bob"
     },
     {
      "ray": [
@@ -60,7 +61,8 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.5,
-     "shadow": true
+     "shadow": true,
+     "anim": "bob"
     },
     {
      "svg": "art/star.svg",
@@ -70,7 +72,7 @@
      "anim": "pulse"
     },
     {
-     "label": "能…的、值得…的",
+     "label": "able",
      "x": 0.5,
      "y": 0.1,
      "size": 0.09,
@@ -94,7 +96,8 @@
     "svg": "art/shopbag.svg",
     "x": 0.5,
     "y": 0.56,
-    "s": 0.56
+    "s": 0.56,
+    "anim": "sway"
    },
    {
     "ray": [
@@ -143,20 +146,60 @@
      "svg": "art/shopbag.svg",
      "x": 0.36,
      "y": 0.58,
-     "s": 0.5
+     "s": 0.5,
+     "anim": "sway"
     },
     {
      "svg": "art/bottle.svg",
      "x": 0.66,
      "y": 0.58,
-     "s": 0.5
+     "s": 0.5,
+     "anim": "bob"
     },
     {
      "actor": "west-girl-music",
      "x": 0.88,
      "y": 0.62,
      "s": 0.6,
-     "z": 3
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ],
    "text": "可重复使用的",
@@ -193,7 +236,8 @@
       "y": 0.58,
       "s": 0.5,
       "when": "reusable bag",
-      "pop": true
+      "pop": true,
+      "anim": "sway"
      },
      {
       "svg": "art/papercup.svg",
@@ -215,7 +259,7 @@
      {
       "ray": [
        [
-        0.8300000000000001,
+        0.83,
         0.61
        ],
        [
@@ -262,7 +306,8 @@
       "svg": "art/shopbag.svg",
       "x": 0.5,
       "y": 0.56,
-      "s": 0.56
+      "s": 0.56,
+      "anim": "sway"
      },
      {
       "label": "reuse + able 能被…的",
@@ -293,14 +338,16 @@
       "x": 0.36,
       "y": 0.56,
       "s": 0.5,
-      "when": "重复使用"
+      "when": "重复使用",
+      "anim": "sway"
      },
      {
       "svg": "art/bottle.svg",
       "x": 0.66,
       "y": 0.56,
       "s": 0.5,
-      "when": "重复使用"
+      "when": "重复使用",
+      "anim": "bob"
      },
      {
       "label": "可重复使用的",
@@ -326,6 +373,102 @@
   }
  ],
  "distinguish": false,
+ "demo": {
+  "active": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.1,
+      "y": 0.74,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.74
+       ],
+       "to": [
+        0.98,
+        0.74
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.9,
+      "y": 0.7,
+      "s": 0.52,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.98,
+        0.7
+       ],
+       "to": [
+        0.02,
+        0.7
+       ],
+       "offset": 0.3
+      }
+     }
+    ]
+   }
+  },
+  "usable": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.56,
+      "anim": "bob"
+     },
+     {
+      "waves": true,
+      "x": 0.64,
+      "y": 0.42,
+      "dir": 0,
+      "spread": 50,
+      "n": 3
+     }
+    ]
+   }
+  },
+  "interesting": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/fishtank.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.66
+     },
+     {
+      "svg": "art/fish2.svg",
+      "x": 0.6,
+      "y": 0.6,
+      "s": 0.12,
+      "go": [
+       0.38,
+       0.6
+      ],
+      "dur": 3,
+      "loop": true,
+      "z": 3
+     }
+    ]
+   }
+  }
+ },
  "lianxi": {
   "qs": [
    {
