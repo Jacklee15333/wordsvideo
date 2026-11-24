@@ -1102,6 +1102,8 @@ TOKEN = "__TOKEN__"
 REPO = "__REPO__"
 BRANCH = "__BRANCH__"
 NAME = "__NAME__"          # 收件箱里的文件名（不带扩展名）
+WORDS = __WORDS__          # 这一份是哪些词
+REPORT = __REPORT__        # 上传好以后在聊天里回的汇报
 FILE = "reply.txt"         # 你把回复写进的文件；放在别处就改成那个路径
 _c = [d + FILE for d in ("", "/home/claude/", "/mnt/user-data/outputs/", "/tmp/") if os.path.exists(d + FILE)]
 if _c:
@@ -1228,7 +1230,14 @@ try:
         if e.code != 404:
             raise
     with urllib.request.urlopen(urllib.request.Request(url, data=json.dumps(body).encode(), headers=H, method="PUT"), timeout=120) as r:
-        print("上传好了", r.status, path, "（%d 道题）" % (len(qs) - 1 if qs[1][1:] else 0))
+        nq = len(qs) - 1 if len(qs) > 1 and qs[1][1:] else 0
+        print("上传好了", r.status, path, ("（%d 道题）" % nq) if nq else "")
+    found = [w for w in WORDS if w in text]
+    miss = [w for w in WORDS if w not in text]
+    print()
+    print("【汇报：把下面这几行原样回在聊天里】")
+    print(REPORT.replace("{path}", path).replace("{found}", "、".join(w + " ✓" for w in found) or "（一个词都没找到）")
+          .replace("{miss}", ("；没找到：" + "、".join(w + " ✗" for w in miss)) if miss else "").replace("{chars}", "{:,}".format(len(text))))
 except urllib.error.HTTPError as e:
     print("上传失败", e.code, e.read().decode("utf-8", "replace")[:300])
 except Exception as e:
@@ -1346,10 +1355,47 @@ def check_inbox():
     return True, "有写权限，而且只能写收件箱，不能动主仓库 ✓ 可以用了"
 
 
-def inbox_prompt(name):
-    """name：收件箱里的文件名，不带扩展名（网页 AI 传上来的是 name.xlsx；做不成 Excel 时是 name.txt）。"""
+def batch_info(words, kind):
+    """这一份在这一批里的位置：这一批几个词、已经做完几个（同一个词改错几轮只算一次）。"""
+    t = RUNNER.task or {}
+    try:
+        tp = json.loads(t.get("params") or "{}")
+    except Exception:
+        tp = {}
+    total = len(tp.get("words") or []) or int(tp.get("count") or 0)
+    done = len({w for x in (RELAY.get("done") or []) if x.get("ok") is not None for w in (x.get("words") or [])}) \
+        if RELAY.get("doneTid") == t.get("id") else 0
+    return {"kind": kind or "", "words": list(words), "total": total, "done": done}
+
+
+def relay_report(name, info):
+    """网页 AI 上传好以后在聊天里回的汇报（{path} {found} {miss} {chars} 由上传脚本填）。"""
+    ws = info.get("words") or []
+    n, kind = len(ws), info.get("kind") or "这一份"
+    fix = "改" in kind
+    lines = ["✅ 已上传 {path}",
+             "这次：%s · %d 个词：%s" % (kind, n, "、".join(ws[:12]) + ("…（共 %d 个）" % n if n > 12 else "")),
+             "文件里有：{found}{miss}（{chars} 字）"]
+    tot, dn = int(info.get("total") or 0), int(info.get("done") or 0)
+    left = None
+    if fix:
+        lines.append("这是改错：这些词上次没过检查，这次重新写")
+    elif tot:
+        a, b = dn + 1, min(tot, dn + n)
+        left = tot - b
+        lines.append("这一批进度：%d 个词里的第 %s 个（这份交回去，就做完 %d 个，还剩 %d 个）"
+                     % (tot, ("%d" % a) if a == b else "%d–%d" % (a, b), b, left))
+    lines.append("这是这一批的最后一份：交回去、单词工作台检查完，这一批就做完了。" if left == 0 else
+                 "⚠ 这一批还没做完：回到单词工作台，它收下、检查以后会给下一份新的提示词，要再粘贴过来。")
+    return "\n".join(lines)
+
+
+def inbox_prompt(name, info=None):
+    """name：收件箱里的文件名，不带扩展名（网页 AI 传上来的是 name.xlsx；做不成 Excel 时是 name.txt）。
+    info：这一份是哪些词、这一批做到第几个了（写进汇报，网页 AI 上传好以后原样回在聊天里）。"""
     ib = inbox_cfg()
-    script = INBOX_SCRIPT
+    info = info or {"words": [], "kind": ""}
+    script = INBOX_SCRIPT.replace("__WORDS__", repr(list(info.get("words") or []))).replace("__REPORT__", repr(relay_report(name, info)))
     for k, v in (("__TOKEN__", ib["token"]), ("__REPO__", ib["repo"]), ("__BRANCH__", ib["branch"] or "main"),
                  ("__NAME__", name), ("__END__", END)):
         script = script.replace(k, v)
@@ -1357,8 +1403,8 @@ def inbox_prompt(name):
             "1. 把上面要求的完整回复（格式完全一样，最后一行 %s）写进文本文件 reply.txt（用你的建文件工具）。\n"
             "2. 用代码执行工具运行下面这段 Python（只用标准库，不用装任何东西）：它会把 reply.txt 整理成 Excel（.xlsx）传到 GitHub。\n"
             "```python\n%s```\n"
-            "3. 看到“上传好了”以后，在聊天里只回一行：已上传 %s.xlsx。不要在聊天里再写一遍全文。"
-            "（文件名一定用上面脚本里的 NAME，不要用以前的；每一轮的名字都不一样）\n"
+            "3. 上传好了，脚本最后会打印【汇报】几行：把这几行原样回在聊天里（写清楚这次传的是哪几个词、这一批做到第几个、还剩几个）。"
+            "不要只写一行“已上传 %s.xlsx”，也不要在聊天里再写一遍全文。（文件名一定用上面脚本里的 NAME，不要用以前的；每一份的名字都不一样）\n"
             "4. 要是没有代码执行工具、或者上传失败了：就照常把完整回复直接写在聊天里（最后一行 %s），并说明上传失败的原因。"
             % (END, script, name, END))
 
@@ -1460,7 +1506,7 @@ def relay_wait(prompt, words):
     ipath = ""
     if ibox:      # 每一批一个新文件名，旧回复不会被当成这一批的
         ipath = "%s/%s-%s" % (inbox_cfg(cfg)["dir"], time.strftime("%Y%m%d-%H%M%S"), os.urandom(3).hex())
-        prompt = prompt.rstrip() + "\n\n" + inbox_prompt(ipath)
+        prompt = prompt.rstrip() + "\n\n" + inbox_prompt(ipath, batch_info(words, AI_LIVE.get("kind", "")))
     with _RELAY_LOCK:
         tid = (RUNNER.task or {}).get("id")
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=AI_LIVE.get("kind", ""),
