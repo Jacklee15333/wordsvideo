@@ -1,7 +1,425 @@
 {
  "单词": "unusual",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/mug.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.5
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.55,
+      "r": 0.3,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "delay": 1.0
+     },
+     {
+      "ray": [
+       [
+        0.29000000000000004,
+        0.22000000000000003
+       ],
+       [
+        0.71,
+        0.8800000000000001
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 1.0
+     },
+     {
+      "label": "不",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "delay": 1.0
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.62,
+      "y": 0.7,
+      "s": 0.2,
+      "z": 5
+     },
+     {
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "svg": "art/clock_f0.svg",
+      "x": 0.8,
+      "y": 0.3,
+      "s": 0.26,
+      "fps": 2
+     },
+     {
+      "label": "平常的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-xx.svg",
+   "p1": "art/ic-star.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/star.svg",
+     "x": 0.5,
+     "y": 0.36,
+     "s": 0.3,
+     "anim": "pulse"
+    },
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.2,
+     "y": 0.62,
+     "s": 0.7,
+     "z": 3
+    },
+    {
+     "label": "不平常的",
+     "x": 0.5,
+     "y": 0.86,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.5,
+      "y": 0.22,
+      "s": 0.3
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.06,
+      "to": [
+       0,
+       0.5
+      ],
+      "every": 0.5
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.3,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3
+     }
+    ],
+    "text": "不寻常的、少见的",
+    "pos": "形容词",
+    "diff": "中性或偏褒",
+    "ex": "It's unusual to see snow here.",
+    "exzh": "这里很少见到下雪。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/raincloud.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "s": 0.3,
+       "when": "snow"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.06,
+       "to": [
+        0,
+        0.5
+       ],
+       "every": 0.5,
+       "when": "snow"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.26,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "when": "see"
+      },
+      {
+       "label": "unusual",
+       "x": 0.8,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "unusual"
+      },
+      {
+       "label": "很少见",
+       "x": 0.8,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "很少见"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.72,
+      "y": 0.3,
+      "s": 0.2,
+      "anim": "pulse"
+     }
+    ],
+    "text": "与众不同的、独特的",
+    "pos": "形容词",
+    "diff": "特别",
+    "ex": "She has an unusual name.",
+    "exzh": "她的名字很特别。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "She",
+       "seq": "talk"
+      },
+      {
+       "label": "Zephyrine",
+       "x": 0.72,
+       "y": 0.4,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "name"
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.86,
+       "y": 0.2,
+       "s": 0.14,
+       "when": "unusual",
+       "anim": "pulse"
+      },
+      {
+       "label": "unusual name",
+       "x": 0.72,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "unusual name"
+      },
+      {
+       "label": "很特别",
+       "x": 0.72,
+       "y": 0.7,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "很特别"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“不平常的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.3,
+       "anim": "pulse"
+      },
+      {
+       "label": "un 不 + usual 平常的",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "不平常",
+    "node": "不寻常的；与众不同的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "不平常的，就是不寻常的、少见的；说人或东西，就是与众不同的、独特的。",
+     "strange 偏奇怪，abnormal 偏反常。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.3,
+       "anim": "pulse",
+       "when": "不平常"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.2,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 3,
+       "when": "少见"
+      },
+      {
+       "label": "不寻常的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "不寻常的"
+      },
+      {
+       "label": "与众不同",
+       "x": 0.78,
+       "y": 0.6,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "与众不同"
+      },
+      {
+       "label": "strange / abnormal",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "strange"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "distinctive": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6
+      }
+     ]
+    },
+    "unique": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/trophy.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7
+      }
+     ]
+    },
+    "strange": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/spider.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "unusualai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人觉得四月下雪怎么样？\n听：It's unusual to have snow in April.\nA. 很常见\nB. 很少见\nC. 很舒服\nD. 很热",
@@ -90,5 +508,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

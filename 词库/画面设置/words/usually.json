@@ -1,0 +1,462 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-listen",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "svg": "art/mug.svg",
+     "x": 0.62,
+     "y": 0.7,
+     "s": 0.2,
+     "z": 5
+    },
+    {
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "svg": "art/clock_f0.svg",
+     "x": 0.8,
+     "y": 0.3,
+     "s": 0.26,
+     "fps": 2
+    },
+    {
+     "label": "平常的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.1,
+     "y": 0.64,
+     "s": 0.7,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.1,
+       0.64
+      ],
+      "to": [
+       0.9,
+       0.64
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "label": "…地",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-star.svg",
+  "p1": "art/ic-road.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/street-bg.svg",
+  "items": [
+   {
+    "actor": "walk-cn-boy-pack",
+    "x": 0.0,
+    "y": 0.66,
+    "s": 0.66,
+    "z": 2,
+    "walk": {
+     "from": [
+      0.0,
+      0.66
+     ],
+     "to": [
+      1.0,
+      0.66
+     ],
+     "offset": 0
+    }
+   },
+   {
+    "svg": "art/clock.svg",
+    "x": 0.8,
+    "y": 0.2,
+    "s": 0.2
+   },
+   {
+    "label": "平常地",
+    "x": 0.4,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.0,
+     "y": 0.66,
+     "s": 0.66,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.0,
+       0.66
+      ],
+      "to": [
+       1.0,
+       0.66
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "svg": "art/clock.svg",
+     "x": 0.8,
+     "y": 0.2,
+     "s": 0.2
+    }
+   ],
+   "text": "通常、一般",
+   "pos": "副词",
+   "diff": "多数时候这样",
+   "ex": "I usually walk to school.",
+   "exzh": "我通常步行上学。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.0,
+      "y": 0.66,
+      "s": 0.66,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.0,
+        0.66
+       ],
+       "to": [
+        1.0,
+        0.66
+       ],
+       "offset": 0
+      },
+      "when": "walk"
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.84,
+      "y": 0.2,
+      "s": 0.2,
+      "when": "usually"
+     },
+     {
+      "label": "usually",
+      "x": 0.4,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "usually"
+     },
+     {
+      "label": "通常",
+      "x": 0.4,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "通常"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“平常地”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.0,
+      "y": 0.66,
+      "s": 0.66,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.0,
+        0.66
+       ],
+       "to": [
+        1.0,
+        0.66
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "usual + ly",
+      "x": 0.4,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "按平常的情况",
+   "node": "通常、一般",
+   "pos": "副词",
+   "pic": 0,
+   "say": [
+    "按平常的情况，就是通常、一般。",
+    "它放在实义动词前、be 动词后：He is usually late。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.0,
+      "y": 0.66,
+      "s": 0.66,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.0,
+        0.66
+       ],
+       "to": [
+        1.0,
+        0.66
+       ],
+       "offset": 0
+      },
+      "when": "平常的情况"
+     },
+     {
+      "label": "通常",
+      "x": 0.4,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "通常"
+     },
+     {
+      "label": "He is usually late.",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "He is usually late"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "generally": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.1,
+      "y": 0.64,
+      "s": 0.7,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.1,
+        0.64
+       ],
+       "to": [
+        0.9,
+        0.64
+       ],
+       "offset": 0
+      }
+     }
+    ]
+   },
+   "commonly": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.1,
+      "y": 0.64,
+      "s": 0.7,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.1,
+        0.64
+       ],
+       "to": [
+        0.9,
+        0.64
+       ],
+       "offset": 0
+      }
+     }
+    ]
+   },
+   "normally": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人通常怎么去上班？",
+    "listen": "I usually take the subway to work.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "开车",
+     "坐地铁",
+     "骑车",
+     "走路"
+    ],
+    "ans": "B",
+    "why": "usually 通常。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "What time do you ______ get up?",
+    "opts": [
+     "usually",
+     "usual",
+     "unusual",
+     "use"
+    ],
+    "ans": "A",
+    "why": "修饰动词 get up 用副词 usually。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 usual、usually 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He came late as ______.",
+    "opts": [],
+    "ans": "usual",
+    "why": "as usual 照常，用形容词 usual。",
+    "kd": "短语"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "It's ______ to see snow here in May. (usually)",
+    "opts": [],
+    "ans": "unusual",
+    "why": "五月下雪是不寻常的，用 unusual。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "She usually go to bed at ten.",
+    "opts": [],
+    "ans": "go → goes",
+    "why": "主语 she 是单数，动词加 es。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "他通常在周末踢足球。",
+    "stem": "He ______ ______ football on weekends.",
+    "opts": [],
+    "ans": [
+     "usually",
+     "plays"
+    ],
+    "why": "usually 放在实义动词前；主语单数用 plays。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "______ does he visit his grandparents? Twice a month.",
+    "opts": [
+     "How long",
+     "How many",
+     "How often",
+     "How much"
+    ],
+    "ans": "C",
+    "why": "问频率用 How often。",
+    "kd": "用法"
+   }
+  ]
+ }
+}
