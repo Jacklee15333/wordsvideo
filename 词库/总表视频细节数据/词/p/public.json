@@ -3,6 +3,13 @@
  "画面": {
   "style": "core",
   "board": true,
+  "kaodian": {
+   "rows": [
+    "考意思：公共的、公众的、公开的、公立的；the public 公众",
+    "考搭配：in public 当众；public places 公共场所；be open to the public 对公众开放",
+    "考辨析：英国 public school 是收费的私立名校，美国 public school 才是公立学校；反义词 private"
+   ]
+  },
   "partPics": {
    "p0": {
     "bg": "blank",
@@ -81,7 +88,8 @@
       "x": 0.5,
       "y": 0.56,
       "s": 0.4,
-      "shadow": true
+      "shadow": true,
+      "anim": "pulse"
      },
      {
       "label": "…的",
@@ -92,6 +100,42 @@
       "bg": "#FFF6D8",
       "border": "#E0A800",
       "delay": 0.6
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -305,7 +349,7 @@
        "when": "公共场所"
       },
       {
-       "label": "No smoking",
+       "label": "Don't smoke",
        "x": 0.84,
        "y": 0.88,
        "size": 0.075,
@@ -354,7 +398,10 @@
        "y": 0.58,
        "s": 0.9,
        "z": 3,
-       "when": "meeting"
+       "when": "meeting",
+       "id": "h",
+       "seq": "pingpong",
+       "fps": 2
       },
       {
        "svg": "art/audience-wide.svg",
@@ -363,7 +410,8 @@
        "s": 0.3,
        "z": 6,
        "crowd": 9,
-       "when": "the public"
+       "when": "the public",
+       "nodWith": "h"
       },
       {
        "label": "the public",
@@ -396,7 +444,8 @@
       "x": 0.24,
       "y": 0.58,
       "s": 0.86,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "svg": "art/class-desks.svg",
@@ -409,7 +458,8 @@
       "svg": "art/flag.svg",
       "x": 0.86,
       "y": 0.3,
-      "s": 0.3
+      "s": 0.3,
+      "anim": "swing"
      }
     ],
     "text": "公立的、政府的",
@@ -427,7 +477,8 @@
        "y": 0.62,
        "s": 0.74,
        "z": 3,
-       "when": "My brother"
+       "when": "My brother",
+       "seq": "blink"
       },
       {
        "svg": "art/class-desks.svg",
@@ -441,7 +492,8 @@
        "x": 0.8,
        "y": 0.3,
        "s": 0.3,
-       "when": "public school"
+       "when": "public school",
+       "anim": "swing"
       },
       {
        "label": "public school",
@@ -555,7 +607,13 @@
        "x": 0.5,
        "y": 0.56,
        "s": 0.46,
-       "when": "全体民众"
+       "when": "全体民众",
+       "go": [
+        0.3,
+        0.56
+       ],
+       "dur": 4,
+       "loop": true
       },
       {
        "actor": "walk-west-woman-case",
@@ -619,13 +677,14 @@
      "img": "art/stage-bg.svg",
      "items": [
       {
-       "actor": "west-man-speech",
+       "actor": "west-man-present",
        "x": 0.36,
        "y": 0.58,
        "s": 0.9,
        "z": 3,
        "when": "看见",
-       "seq": "talk"
+       "seq": "talk",
+       "id": "m"
       },
       {
        "svg": "art/audience-wide.svg",
@@ -634,7 +693,8 @@
        "s": 0.3,
        "z": 6,
        "crowd": 9,
-       "when": "人人"
+       "when": "人人",
+       "nodWith": "m"
       },
       {
        "label": "公开的",
@@ -677,15 +737,17 @@
        "x": 0.8,
        "y": 0.3,
        "s": 0.3,
-       "when": "国家"
+       "when": "国家",
+       "anim": "swing"
       },
       {
-       "actor": "cn-teacher-point",
+       "actor": "west-girl-explain",
        "x": 0.26,
        "y": 0.58,
        "s": 0.86,
        "z": 3,
-       "when": "为大家"
+       "when": "为大家",
+       "seq": "talk"
       },
       {
        "label": "公立的",
@@ -719,28 +781,214 @@
    }
   ],
   "distinguish": {
-   "pics": {
-    "open": {
+   "key": "公开的",
+   "items": [
+    {
+     "w": "public",
+     "gloss": "公开的、公众的",
+     "note": "publ 人民 + ic …的：属于全体人民的，所以大家都能看、都能用（a public meeting 公开的会）。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "svg": "art/audience-wide.svg",
+        "x": 0.5,
+        "y": 0.86,
+        "s": 0.36,
+        "z": 6,
+        "crowd": 9
+       },
+       {
+        "svg": "art/flag.svg",
+        "x": 0.5,
+        "y": 0.34,
+        "s": 0.36,
+        "anim": "swing"
+       }
+      ]
+     }
+    },
+    {
+     "w": "open",
+     "gloss": "开放的、不遮掩的",
+     "note": "本义是门“开着”，引申为不关门、谁都能进（open to the public 对公众开放）。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/house-new.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.7,
+        "anim": "bob"
+       },
+       {
+        "actor": "walk-west-woman-case",
+        "x": 0.05,
+        "y": 0.62,
+        "s": 0.56,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.05,
+          0.62
+         ],
+         "to": [
+          0.95,
+          0.62
+         ],
+         "offset": 0
+        }
+       },
+       {
+        "actor": "walk-cn-boy-pack",
+        "x": 0.9,
+        "y": 0.66,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.9,
+          0.66
+         ],
+         "to": [
+          0.1,
+          0.66
+         ],
+         "offset": 0.4
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "out",
+     "gloss": "（秘密）公开了、传出去了",
+     "note": "本义是“在外面”，说本来藏着的事“出来了”：The secret is out. 秘密传出去了。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/loudspeaker.svg",
+        "x": 0.5,
+        "y": 0.4,
+        "s": 0.6
+       },
+       {
+        "waves": true,
+        "x": 0.66,
+        "y": 0.36,
+        "dir": 0,
+        "spread": 50,
+        "n": 3
+       },
+       {
+        "actor": "walk-west-woman-case",
+        "x": 0.05,
+        "y": 0.62,
+        "s": 0.56,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.05,
+          0.62
+         ],
+         "to": [
+          0.95,
+          0.62
+         ],
+         "offset": 0
+        }
+       },
+       {
+        "actor": "walk-cn-boy-pack",
+        "x": 0.9,
+        "y": 0.66,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.9,
+          0.66
+         ],
+         "to": [
+          0.1,
+          0.66
+         ],
+         "offset": 0.4
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：public 从“人民”来，说属于大家、对大家公开；open 从“开着”来，说不关门、不遮掩；out 从“出去”来，说藏着的事传出来了。",
+   "tip": "一句话记法：公共场所用 public，对外开放用 open，秘密传开用 out；政府的也可以说 governmental。"
+  },
+  "demo": {
+   "careful": {
+    "pic": {
      "bg": "blank",
-     "img": "art/street-bg.svg",
+     "img": "art/room-bg.svg",
      "items": [
       {
-       "svg": "art/house-new.svg",
+       "svg": "art/desk.svg",
        "x": 0.5,
-       "y": 0.55,
-       "s": 0.7
+       "y": 0.86,
+       "s": 0.3
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.48,
+       "anim": "sway"
       }
      ]
-    },
-    "governmental": {
+    }
+   },
+   "careless": {
+    "pic": {
      "bg": "blank",
-     "img": "art/street-bg.svg",
+     "img": "art/room-bg.svg",
      "items": [
       {
-       "svg": "art/flag.svg",
+       "svg": "art/mug.svg",
+       "x": 0.42,
+       "y": 0.6,
+       "s": 0.42,
+       "rot": 70,
+       "anim": "shake"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.58,
+       "y": 0.62,
+       "s": 0.06,
+       "to": [
+        0.25,
+        0.25
+       ],
+       "every": 0.4
+      }
+     ]
+    }
+   },
+   "national": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/map.svg",
        "x": 0.5,
-       "y": 0.5,
-       "s": 0.8
+       "y": 0.48,
+       "s": 0.62,
+       "anim": "pulse"
       }
      ]
     }
@@ -839,5 +1087,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

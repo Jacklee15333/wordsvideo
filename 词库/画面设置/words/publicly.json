@@ -1,6 +1,13 @@
 {
  "style": "core",
  "board": true,
+ "kaodian": {
+  "rows": [
+   "考意思：公开地、当众；由公共资金（publicly funded）",
+   "考拼写：publicly 不写 publically（-ic 形容词变副词一般加 -ally，这是例外）",
+   "考搭配：publicly funded 由公共资金资助；publicly announce 公开宣布"
+  ]
+ },
  "partPics": {
   "p0": {
    "bg": "blank",
@@ -11,7 +18,9 @@
      "x": 0.36,
      "y": 0.58,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "id": "m",
+     "seq": "talk"
     },
     {
      "svg": "art/audience-wide.svg",
@@ -19,7 +28,8 @@
      "y": 0.92,
      "s": 0.3,
      "z": 6,
-     "crowd": 9
+     "crowd": 9,
+     "nodWith": "m"
     },
     {
      "label": "公开的",
@@ -143,7 +153,7 @@
    "img": "art/stage-bg.svg",
    "items": [
     {
-     "actor": "west-girl-explain",
+     "actor": "cn-teacher-point",
      "x": 0.36,
      "y": 0.58,
      "s": 0.9,
@@ -166,6 +176,15 @@
      "y": 0.64,
      "s": 0.3,
      "z": 4
+    },
+    {
+     "waves": true,
+     "x": 0.62,
+     "y": 0.5,
+     "dir": 0,
+     "spread": 50,
+     "n": 3,
+     "with": "m"
     }
    ],
    "text": "公开地、当众",
@@ -178,13 +197,17 @@
     "img": "art/stage-bg.svg",
     "items": [
      {
-      "actor": "west-girl-explain",
+      "actor": "west-girl-raise",
       "x": 0.26,
       "y": 0.58,
       "s": 0.9,
       "z": 3,
       "when": "She",
-      "seq": "talk"
+      "id": "s",
+      "turn": [
+       0,
+       2
+      ]
      },
      {
       "actor": "cn-teacher-laugh",
@@ -192,7 +215,11 @@
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "her teacher"
+      "when": "her teacher",
+      "turn": [
+       1,
+       2
+      ]
      },
      {
       "svg": "art/heart.svg",
@@ -209,7 +236,8 @@
       "s": 0.26,
       "z": 6,
       "crowd": 9,
-      "when": "publicly"
+      "when": "publicly",
+      "nodWith": "s"
      },
      {
       "label": "publicly",
@@ -247,7 +275,44 @@
      "svg": "art/tag.svg",
      "x": 0.84,
      "y": 0.3,
-     "s": 0.2
+     "s": 0.2,
+     "anim": "swing"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ],
    "text": "由公共资金",
@@ -272,7 +337,8 @@
       "y": 0.4,
       "s": 0.26,
       "when": "funded",
-      "pop": true
+      "pop": true,
+      "anim": "swing"
      },
      {
       "label": "publicly funded",
@@ -305,11 +371,13 @@
     "img": "art/stage-bg.svg",
     "items": [
      {
-      "actor": "west-girl-explain",
+      "actor": "west-man-present",
       "x": 0.36,
       "y": 0.58,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "id": "m",
+      "seq": "talk"
      },
      {
       "svg": "art/audience-wide.svg",
@@ -317,7 +385,8 @@
       "y": 0.92,
       "s": 0.3,
       "z": 6,
-      "crowd": 9
+      "crowd": 9,
+      "nodWith": "m"
      },
      {
       "label": "public + ly",
@@ -350,7 +419,8 @@
       "s": 0.9,
       "z": 3,
       "when": "众人",
-      "seq": "talk"
+      "seq": "talk",
+      "id": "m"
      },
      {
       "svg": "art/audience-wide.svg",
@@ -359,7 +429,8 @@
       "s": 0.3,
       "z": 6,
       "crowd": 9,
-      "when": "众人"
+      "when": "众人",
+      "nodWith": "m"
      },
      {
       "label": "当众",
@@ -408,7 +479,8 @@
       "x": 0.8,
       "y": 0.4,
       "s": 0.26,
-      "when": "公众的钱"
+      "when": "公众的钱",
+      "anim": "swing"
      },
      {
       "label": "由公共资金",
@@ -434,7 +506,45 @@
       "x": 0.5,
       "y": 0.6,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
      }
     ]
    },
@@ -447,7 +557,108 @@
       "x": 0.5,
       "y": 0.6,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
+     }
+    ]
+   }
+  },
+  "logic": "逻辑不同：publicly 从“公众”来，说在大家面前、由公家出钱；openly 从“开着”来，说不遮不掩；frankly 从“直率”来，只说说话直。",
+  "tip": "一句话记法：当众用 publicly，不藏着用 openly，说话直用 frankly。"
+ },
+ "demo": {
+  "sadly": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "frames": [
+       "art/cat-sit_f0.svg",
+       "art/cat-sit_f1.svg",
+       "art/cat-sit_f2.svg"
+      ],
+      "svg": "art/cat-sit_f0.svg",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.56,
+      "fps": 2
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.75,
+      "y": 0.1,
+      "s": 0.05,
+      "to": [
+       0,
+       0.6
+      ],
+      "every": 0.3
+     }
+    ]
+   }
+  },
+  "basically": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.5
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.24,
+      "s": 0.2,
+      "anim": "pulse"
+     }
+    ]
+   }
+  },
+  "forward": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.1,
+      "y": 0.72,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.72
+       ],
+       "to": [
+        0.95,
+        0.72
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "ray": [
+       [
+        0.3,
+        0.3
+       ],
+       [
+        0.8,
+        0.3
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "loop": true
      }
     ]
    }

@@ -3,6 +3,13 @@
  "画面": {
   "style": "core",
   "board": true,
+  "kaodian": {
+   "rows": [
+    "考意思：populous 人口众多的、人口稠密的，a populous city / country",
+    "考形近词：populous 人多 vs popular 受欢迎，只差两个字母",
+    "考词形：名词是 population 人口；形容词 populated 有人居住的"
+   ]
+  },
   "partPics": {
    "p0": {
     "bg": "blank",
@@ -81,7 +88,8 @@
       "x": 0.5,
       "y": 0.56,
       "s": 0.5,
-      "shadow": true
+      "shadow": true,
+      "anim": "sway"
      },
      {
       "label": "多…的",
@@ -639,6 +647,102 @@
   ],
   "distinguish": {
    "pics": {
+    "populous": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 1.0,
+       "y": 0.6,
+       "s": 0.54,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.0,
+         0.6
+        ],
+        "to": [
+         0.0,
+         0.6
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.0,
+       "y": 0.68,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.0,
+         0.68
+        ],
+        "to": [
+         1.0,
+         0.68
+        ],
+        "offset": 0.55
+       }
+      }
+     ]
+    },
     "popular": {
      "bg": "blank",
      "img": "art/street-bg.svg",
@@ -647,7 +751,112 @@
        "svg": "art/icecream.svg",
        "x": 0.5,
        "y": 0.55,
-       "s": 0.7
+       "s": 0.7,
+       "anim": "bob"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      }
+     ]
+    }
+   },
+   "logic": "逻辑不同：populous 是 popul 人 + ous 多…的，“人多”；popular 是 popul 人 + ar …的，“属于大家的、大家喜欢的”。",
+   "tip": "一句话记法：人多 populous，人爱 popular——多出来的 ou 像挤在一起的人。"
+  },
+  "demo": {
+   "careful": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.86,
+       "s": 0.3
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.48,
+       "anim": "sway"
+      }
+     ]
+    }
+   },
+   "careless": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/mug.svg",
+       "x": 0.42,
+       "y": 0.6,
+       "s": 0.42,
+       "rot": 70,
+       "anim": "shake"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.58,
+       "y": 0.62,
+       "s": 0.06,
+       "to": [
+        0.25,
+        0.25
+       ],
+       "every": 0.4
+      }
+     ]
+    }
+   },
+   "dangerous": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/spider.svg",
+       "x": 0.5,
+       "y": 0.45,
+       "s": 0.55,
+       "anim": "bob"
       }
      ]
     }
@@ -747,5 +956,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

@@ -3,6 +3,13 @@
  "画面": {
   "style": "core",
   "board": true,
+  "kaodian": {
+   "rows": [
+    "考意思：populated 有人居住的、人口…的，a densely populated city 人口稠密的城市",
+    "考搭配：densely / heavily populated 人口稠密；sparsely / thinly populated 人口稀少",
+    "考形近词：populated 有人住的 ≠ popular 受欢迎的 ≠ populous 人口多的"
+   ]
+  },
   "partPics": {
    "p0": {
     "bg": "blank",
@@ -51,7 +58,8 @@
       "x": 0.5,
       "y": 0.56,
       "s": 0.5,
-      "shadow": true
+      "shadow": true,
+      "anim": "bob"
      },
      {
       "label": "被…了的",
@@ -62,6 +70,42 @@
       "bg": "#FFF6D8",
       "border": "#E0A800",
       "delay": 0.6
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -539,7 +583,103 @@
     }
    }
   ],
-  "distinguish": false
+  "distinguish": false,
+  "demo": {
+   "active": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.1,
+       "y": 0.74,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.74
+        ],
+        "to": [
+         0.98,
+         0.74
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.9,
+       "y": 0.7,
+       "s": 0.52,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.7
+        ],
+        "to": [
+         0.02,
+         0.7
+        ],
+        "offset": 0.3
+       }
+      }
+     ]
+    }
+   },
+   "usable": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.56,
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.64,
+       "y": 0.42,
+       "dir": 0,
+       "spread": 50,
+       "n": 3
+      }
+     ]
+    }
+   },
+   "interested": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/fishtank.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.66
+      },
+      {
+       "svg": "art/fish.svg",
+       "x": 0.4,
+       "y": 0.52,
+       "s": 0.14,
+       "go": [
+        0.62,
+        0.52
+       ],
+       "dur": 3,
+       "loop": true,
+       "z": 3
+      }
+     ]
+    }
+   }
+  }
  },
  "插图": [
   "populatedai"
@@ -632,5 +772,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

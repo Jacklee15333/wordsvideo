@@ -11,7 +11,9 @@
      "x": 0.36,
      "y": 0.58,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "id": "m",
+     "seq": "talk"
     },
     {
      "svg": "art/audience-wide.svg",
@@ -19,7 +21,8 @@
      "y": 0.92,
      "s": 0.3,
      "z": 6,
-     "crowd": 9
+     "crowd": 9,
+     "nodWith": "m"
     },
     {
      "label": "公开的",
@@ -40,10 +43,11 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.56,
-     "shadow": true
+     "shadow": true,
+     "anim": "sway"
     },
     {
-     "label": "使…化",
+     "label": "ize",
      "x": 0.5,
      "y": 0.1,
      "size": 0.09,
@@ -51,6 +55,42 @@
      "bg": "#FFF6D8",
      "border": "#E0A800",
      "delay": 0.6
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ]
   }
@@ -132,7 +172,8 @@
      "x": 0.74,
      "y": 0.6,
      "s": 0.84,
-     "z": 3
+     "z": 3,
+     "seq": "talk"
     },
     {
      "svg": "art/loudspeaker.svg",
@@ -147,6 +188,42 @@
      "dir": 0,
      "spread": 50,
      "n": 3
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ],
    "text": "宣传、推广",
@@ -164,7 +241,8 @@
       "y": 0.62,
       "s": 0.72,
       "z": 3,
-      "when": "We"
+      "when": "We",
+      "seq": "blink"
      },
      {
       "svg": "art/poster.svg",
@@ -301,7 +379,9 @@
       "y": 0.6,
       "s": 0.78,
       "z": 3,
-      "when": "The school"
+      "when": "The school",
+      "id": "t",
+      "seq": "talk"
      },
      {
       "actor": "west-girl-surprised",
@@ -309,7 +389,9 @@
       "y": 0.62,
       "s": 0.7,
       "z": 3,
-      "when": "results"
+      "when": "results",
+      "nodWith": "t",
+      "seq": "blink"
      },
      {
       "label": "publicized",
@@ -345,7 +427,8 @@
       "svg": "art/poster.svg",
       "x": 0.5,
       "y": 0.5,
-      "s": 0.56
+      "s": 0.56,
+      "anim": "sway"
      },
      {
       "actor": "walk-west-woman-case",
@@ -499,13 +582,51 @@
       "svg": "art/tag.svg",
       "x": 0.5,
       "y": 0.5,
-      "s": 0.6
+      "s": 0.6,
+      "anim": "swing"
      },
      {
       "svg": "art/shopbag.svg",
       "x": 0.8,
       "y": 0.55,
-      "s": 0.6
+      "s": 0.6,
+      "anim": "sway"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.62,
+      "s": 0.56,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.62
+       ],
+       "to": [
+        0.95,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.9,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
      }
     ]
    },
@@ -517,7 +638,8 @@
       "svg": "art/press.svg",
       "x": 0.5,
       "y": 0.5,
-      "s": 0.8
+      "s": 0.8,
+      "anim": "shake"
      }
     ]
    },
@@ -529,7 +651,139 @@
       "svg": "art/lightbulb.svg",
       "x": 0.5,
       "y": 0.5,
-      "s": 0.7
+      "s": 0.7,
+      "anim": "pulse"
+     }
+    ]
+   }
+  },
+  "logic": "逻辑不同：publicize 是 public + ize，“使公开”，让很多人知道；advertise 是做广告，为了卖东西；publish 是出版、正式发表；popularise 是让大家接受、看懂。",
+  "tip": "一句话记法：让人知道用 publicize，让人买用 advertise，印成书用 publish，讲通俗用 popularise。"
+ },
+ "demo": {
+  "widen": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/map.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.3,
+      "s2": 0.6,
+      "grow": [
+       0.3,
+       2
+      ]
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.88
+       ],
+       [
+        0.08,
+        0.88
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.3
+     },
+     {
+      "ray": [
+       [
+        0.6,
+        0.88
+       ],
+       [
+        0.92,
+        0.88
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.3
+     }
+    ]
+   }
+  },
+  "modernize": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/rotary-phone.svg",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.4,
+      "anim": "shake"
+     },
+     {
+      "ray": [
+       [
+        0.42,
+        0.6
+       ],
+       [
+        0.58,
+        0.6
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.6
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.74,
+      "y": 0.56,
+      "s": 0.48,
+      "delay": 1.2,
+      "pop": true
+     },
+     {
+      "waves": true,
+      "x": 0.86,
+      "y": 0.46,
+      "dir": 0,
+      "spread": 50,
+      "n": 3,
+      "delay": 1.4
+     }
+    ]
+   }
+  },
+  "simplify": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "shake",
+      "hide": 1.6
+     },
+     {
+      "svg": "art/photo.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.44,
+      "delay": 1.6,
+      "pop": true,
+      "anim": "bob"
      }
     ]
    }
