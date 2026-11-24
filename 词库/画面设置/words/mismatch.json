@@ -1,0 +1,672 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/sock-red.svg",
+     "x": 0.36,
+     "y": 0.56,
+     "s": 0.5
+    },
+    {
+     "svg": "art/sock-blue.svg",
+     "x": 0.64,
+     "y": 0.56,
+     "s": 0.5,
+     "delay": 0.6
+    },
+    {
+     "ray": [
+      [
+       0.3,
+       0.3
+      ],
+      [
+       0.7,
+       0.82
+      ]
+     ],
+     "color": "#E2453C",
+     "lw": 0.02,
+     "dur": 0.4,
+     "delay": 1.4
+    },
+    {
+     "ray": [
+      [
+       0.7,
+       0.3
+      ],
+      [
+       0.3,
+       0.82
+      ]
+     ],
+     "color": "#E2453C",
+     "lw": 0.02,
+     "dur": 0.4,
+     "delay": 1.7
+    },
+    {
+     "label": "错",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#C92A2A",
+     "border": "#C92A2A",
+     "delay": 1.4
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/sock-red.svg",
+     "x": 0.2,
+     "y": 0.56,
+     "s": 0.48,
+     "go": [
+      0.4,
+      0.56
+     ],
+     "dur": 1.2
+    },
+    {
+     "svg": "art/sock-red.svg",
+     "x": 0.8,
+     "y": 0.56,
+     "s": 0.48,
+     "go": [
+      0.6,
+      0.56
+     ],
+     "dur": 1.2
+    },
+    {
+     "label": "相配、成一对",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.085,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.4
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-xx.svg",
+  "p1": "art/ic-pair.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/bedroom-bg.svg",
+  "items": [
+   {
+    "svg": "art/sock-red.svg",
+    "x": 0.36,
+    "y": 0.56,
+    "s": 0.5
+   },
+   {
+    "svg": "art/sock-blue.svg",
+    "x": 0.64,
+    "y": 0.56,
+    "s": 0.5,
+    "delay": 0.6
+   },
+   {
+    "ray": [
+     [
+      0.3,
+      0.3
+     ],
+     [
+      0.7,
+      0.82
+     ]
+    ],
+    "color": "#E2453C",
+    "lw": 0.02,
+    "dur": 0.4,
+    "delay": 1.4
+   },
+   {
+    "ray": [
+     [
+      0.7,
+      0.3
+     ],
+     [
+      0.3,
+      0.82
+     ]
+    ],
+    "color": "#E2453C",
+    "lw": 0.02,
+    "dur": 0.4,
+    "delay": 1.7
+   },
+   {
+    "label": "错",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.1,
+    "color": "#C92A2A",
+    "border": "#C92A2A",
+    "delay": 1.4
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/sock-red.svg",
+     "x": 0.36,
+     "y": 0.56,
+     "s": 0.52
+    },
+    {
+     "svg": "art/sock-blue.svg",
+     "x": 0.64,
+     "y": 0.56,
+     "s": 0.52
+    },
+    {
+     "shape": "circle",
+     "x": 0.5,
+     "y": 0.56,
+     "r": 0.24,
+     "stroke": "#E2453C",
+     "lw": 8,
+     "fill": "rgba(0,0,0,0)",
+     "delay": 1
+    },
+    {
+     "ray": [
+      [
+       0.332,
+       0.29600000000000004
+      ],
+      [
+       0.6679999999999999,
+       0.8240000000000001
+      ]
+     ],
+     "color": "#E2453C",
+     "lw": 0.02,
+     "dur": 0.4,
+     "delay": 1
+    }
+   ],
+   "text": "不匹配、不对口",
+   "pos": "名词",
+   "diff": "两样东西凑在一起却不合适",
+   "ex": "There is a mismatch between the photo and the name.",
+   "exzh": "照片和名字对不上。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/photo.svg",
+      "x": 0.34,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "photo"
+     },
+     {
+      "label": "Tom",
+      "x": 0.7,
+      "y": 0.5,
+      "size": 0.12,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "name"
+     },
+     {
+      "label": "mismatch",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "mismatch"
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.5,
+      "r": 0.2,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "when": "对不上"
+     },
+     {
+      "ray": [
+       [
+        0.36,
+        0.27999999999999997
+       ],
+       [
+        0.64,
+        0.72
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "when": "对不上"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-smile",
+     "x": 0.28,
+     "y": 0.56,
+     "s": 0.96,
+     "z": 3
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.72,
+     "y": 0.68,
+     "s": 0.6,
+     "z": 3
+    },
+    {
+     "svg": "art/ball.svg",
+     "x": 0.5,
+     "y": 0.86,
+     "s": 0.12
+    },
+    {
+     "label": "10 : 0",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#C92A2A",
+     "border": "#C92A2A"
+    }
+   ],
+   "text": "实力悬殊的比赛",
+   "pos": "名词",
+   "diff": "两边根本配不上做对手",
+   "ex": "The game was a mismatch: ten to zero.",
+   "exzh": "那场比赛实力悬殊：十比零。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/goal.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.46
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.5,
+      "y": 0.78,
+      "s": 0.14,
+      "go": [
+       0.5,
+       0.42
+      ],
+      "dur": 1,
+      "wait": 1.5,
+      "loop": true
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.16,
+      "y": 0.56,
+      "s": 0.9,
+      "z": 3,
+      "when": "game"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.86,
+      "y": 0.7,
+      "s": 0.56,
+      "z": 3,
+      "when": "game"
+     },
+     {
+      "label": "10 : 0",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "ten to zero"
+     },
+     {
+      "label": "实力悬殊",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "实力悬殊"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“配错了”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.36,
+      "y": 0.56,
+      "s": 0.5
+     },
+     {
+      "svg": "art/sock-blue.svg",
+      "x": 0.64,
+      "y": 0.56,
+      "s": 0.5,
+      "delay": 0.6
+     },
+     {
+      "ray": [
+       [
+        0.3,
+        0.3
+       ],
+       [
+        0.7,
+        0.82
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 1.4
+     },
+     {
+      "ray": [
+       [
+        0.7,
+        0.3
+       ],
+       [
+        0.3,
+        0.82
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 1.7
+     },
+     {
+      "label": "错",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "delay": 1.4
+     }
+    ]
+   }
+  },
+  {
+   "via": "凑在一起却不合适",
+   "node": "① 不匹配、不对口",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "两样东西凑在一起却不合适，就是不匹配、不对口。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.36,
+      "y": 0.56,
+      "s": 0.52,
+      "when": "两样东西"
+     },
+     {
+      "svg": "art/sock-blue.svg",
+      "x": 0.64,
+      "y": 0.56,
+      "s": 0.52,
+      "when": "两样东西",
+      "delay": 0.2
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.56,
+      "r": 0.24,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "when": "不合适"
+     },
+     {
+      "ray": [
+       [
+        0.332,
+        0.29600000000000004
+       ],
+       [
+        0.6679999999999999,
+        0.8240000000000001
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "when": "不合适"
+     },
+     {
+      "label": "不匹配",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "不匹配"
+     }
+    ]
+   }
+  },
+  {
+   "via": "比赛两边配不上做对手",
+   "node": "② 实力悬殊的比赛",
+   "pos": "名词",
+   "pic": 1,
+   "from": 0,
+   "say": [
+    "比赛的两边，根本配不上做对手，就是实力悬殊的比赛。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-smile",
+      "x": 0.28,
+      "y": 0.56,
+      "s": 0.96,
+      "z": 3,
+      "when": "两边"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.72,
+      "y": 0.7,
+      "s": 0.56,
+      "z": 3,
+      "when": "两边"
+     },
+     {
+      "svg": "art/scales.svg",
+      "x": 0.5,
+      "y": 0.24,
+      "s": 0.26,
+      "when": "配不上",
+      "rot": -12
+     },
+     {
+      "label": "实力悬殊",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "实力悬殊"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "unmatched": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.8,
+      "y": 0.3,
+      "s": 0.2,
+      "anim": "pulse"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：那场比赛怎么样？",
+    "listen": "The game was a mismatch; our team was much stronger.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "两队打成平局",
+     "两队实力相差很大",
+     "比赛被取消了",
+     "两队实力差不多"
+    ],
+    "ans": "B",
+    "why": "mismatch 实力悬殊的比赛。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "There are some ______ between the words and the pictures. (mismatch)",
+    "opts": [],
+    "ans": "mismatches",
+    "why": "some 后面用复数，mismatch 以 ch 结尾加 es。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The colors of her shoes and dress were a ______.",
+    "opts": [
+     "match",
+     "rematch",
+     "matcher",
+     "mismatch"
+    ],
+    "ans": "D",
+    "why": "鞋和裙子的颜色配错了，mis-（错）+ match：mismatch。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 mismatch、unmatched 中选一个填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Her skill at chess is ______ in our school.",
+    "opts": [],
+    "ans": "unmatched",
+    "why": "全校没人比得上用 unmatched；mismatch 是配错了。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "There are a mismatch between his words and actions.",
+    "opts": [],
+    "ans": "are → is",
+    "why": "a mismatch 是单数，用 is。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这些配错的地方很容易发现。",
+    "stem": "These ______ are easy to find.",
+    "opts": [],
+    "ans": "mismatches",
+    "why": "these 后面用复数 mismatches。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The singer has a ______ voice; no one is better.",
+    "opts": [
+     "mismatched",
+     "matchless",
+     "matching",
+     "matched"
+    ],
+    "ans": "B",
+    "why": "没人比得上用 matchless（无敌的）；mismatched 是配错了的。",
+    "kd": "易混"
+   }
+  ]
+ }
+}

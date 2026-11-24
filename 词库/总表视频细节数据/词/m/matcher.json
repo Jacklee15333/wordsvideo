@@ -1,7 +1,449 @@
 {
  "单词": "matcher",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.2,
+      "y": 0.56,
+      "s": 0.48,
+      "go": [
+       0.4,
+       0.56
+      ],
+      "dur": 1.2
+     },
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.8,
+      "y": 0.56,
+      "s": 0.48,
+      "go": [
+       0.6,
+       0.56
+      ],
+      "dur": 1.2
+     },
+     {
+      "label": "配对",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 1.4
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-think",
+      "x": 0.42,
+      "y": 0.56,
+      "s": 0.92,
+      "z": 3
+     },
+     {
+      "label": "做…的人或东西",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "svg": "art/computer.svg",
+      "x": 0.78,
+      "y": 0.72,
+      "s": 0.3,
+      "z": 5,
+      "pop": true,
+      "delay": 0.5
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-pair.svg",
+   "p1": "art/ic-person.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-clerk-think",
+     "x": 0.3,
+     "y": 0.58,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "svg": "art/sock-red.svg",
+     "x": 0.62,
+     "y": 0.6,
+     "s": 0.3,
+     "go": [
+      0.72,
+      0.6
+     ],
+     "dur": 1
+    },
+    {
+     "svg": "art/sock-red.svg",
+     "x": 0.88,
+     "y": 0.6,
+     "s": 0.3,
+     "go": [
+      0.78,
+      0.6
+     ],
+     "dur": 1
+    },
+    {
+     "label": "做配对的人",
+     "x": 0.7,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.64,
+      "y": 0.62,
+      "s": 0.3
+     },
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.8,
+      "y": 0.62,
+      "s": 0.3
+     },
+     {
+      "svg": "art/sock-blue.svg",
+      "x": 0.72,
+      "y": 0.84,
+      "s": 0.26
+     }
+    ],
+    "text": "匹配者",
+    "pos": "名词",
+    "diff": "做配对的人",
+    "ex": "He is a good matcher of socks.",
+    "exzh": "他很会给袜子配对。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-think",
+       "x": 0.26,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "He"
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.56,
+       "y": 0.4,
+       "s": 0.3,
+       "when": "socks",
+       "go": [
+        0.68,
+        0.6
+       ],
+       "dur": 1
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.88,
+       "y": 0.4,
+       "s": 0.3,
+       "when": "socks",
+       "go": [
+        0.76,
+        0.6
+       ],
+       "dur": 1,
+       "delay": 0.2
+      },
+      {
+       "label": "matcher",
+       "x": 0.7,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "matcher"
+      },
+      {
+       "label": "配对",
+       "x": 0.7,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "配对"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/computer.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.6,
+      "shadow": true
+     },
+     {
+      "label": "Job",
+      "x": 0.16,
+      "y": 0.4,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.86,
+      "y": 0.62,
+      "s": 0.6,
+      "z": 3
+     }
+    ],
+    "text": "匹配器、匹配程序",
+    "pos": "名词",
+    "diff": "做配对的东西（技术）",
+    "ex": "The website uses a job matcher.",
+    "exzh": "这个网站用一个求职匹配程序。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/computer.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "when": "website"
+      },
+      {
+       "actor": "west-girl-explain",
+       "x": 0.86,
+       "y": 0.6,
+       "s": 0.66,
+       "z": 3,
+       "when": "job"
+      },
+      {
+       "label": "job",
+       "x": 0.16,
+       "y": 0.4,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "job"
+      },
+      {
+       "ray": [
+        [
+         0.24,
+         0.4
+        ],
+        [
+         0.36,
+         0.48
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "when": "matcher"
+      },
+      {
+       "label": "job matcher",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "job matcher"
+      },
+      {
+       "label": "求职匹配程序",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "匹配程序"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“做配对的人或东西”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-think",
+       "x": 0.3,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.62,
+       "y": 0.6,
+       "s": 0.3,
+       "go": [
+        0.72,
+        0.6
+       ],
+       "dur": 1
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.88,
+       "y": 0.6,
+       "s": 0.3,
+       "go": [
+        0.78,
+        0.6
+       ],
+       "dur": 1
+      },
+      {
+       "label": "match 配对 + er 做…的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.066,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "做配对的人",
+    "node": "① 匹配者",
+    "pos": "名词",
+    "say": [
+     "做配对的人，就是匹配者。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.3,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "做配对的人"
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.66,
+       "y": 0.6,
+       "s": 0.3,
+       "when": "配对"
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.82,
+       "y": 0.6,
+       "s": 0.3,
+       "when": "配对"
+      },
+      {
+       "label": "匹配者",
+       "x": 0.74,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "匹配者"
+      }
+     ]
+    }
+   },
+   {
+    "via": "做配对的东西（技术）",
+    "node": "② 匹配器、匹配程序",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "在电脑上，做配对的程序，就是匹配器、匹配程序。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/computer.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.6,
+       "when": "电脑"
+      },
+      {
+       "label": "匹配程序",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "匹配程序"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "matcherai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：这个网站能帮学生做什么？\n听：This website is a good job matcher for students.\nA. 找到合适的工作\nB. 学英语\nC. 买书\nD. 交朋友",
@@ -89,5 +531,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

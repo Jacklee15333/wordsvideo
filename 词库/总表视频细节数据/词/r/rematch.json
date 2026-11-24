@@ -1,7 +1,502 @@
 {
  "单词": "rematch",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/goal.svg",
+      "x": 0.6,
+      "y": 0.5,
+      "s": 0.46
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.2,
+      "y": 0.78,
+      "s": 0.16,
+      "go": [
+       0.6,
+       0.5
+      ],
+      "dur": 1.0,
+      "loop": true,
+      "arc": 0.2,
+      "z": 3
+     },
+     {
+      "ray": [
+       [
+        0.3,
+        0.3
+       ],
+       [
+        0.45,
+        0.16
+       ],
+       [
+        0.3,
+        0.1
+       ]
+      ],
+      "color": "#3FA7D6",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 1
+     },
+     {
+      "label": "再一次",
+      "x": 0.2,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/goal.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.46
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.5,
+      "y": 0.78,
+      "s": 0.14,
+      "go": [
+       0.5,
+       0.42
+      ],
+      "dur": 1,
+      "wait": 1.5,
+      "loop": true
+     },
+     {
+      "label": "比赛",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-loop.svg",
+   "p1": "art/ic-ball.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/goal.svg",
+     "x": 0.5,
+     "y": 0.42,
+     "s": 0.46
+    },
+    {
+     "svg": "art/ball.svg",
+     "x": 0.5,
+     "y": 0.78,
+     "s": 0.14,
+     "go": [
+      0.5,
+      0.42
+     ],
+     "dur": 1,
+     "wait": 1.5,
+     "loop": true
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.16,
+     "y": 0.62,
+     "s": 0.7,
+     "z": 3
+    },
+    {
+     "actor": "west-girl-raise",
+     "x": 0.84,
+     "y": 0.62,
+     "s": 0.7,
+     "z": 3
+    },
+    {
+     "label": "再比一场",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/goal.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.46
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.5,
+      "y": 0.78,
+      "s": 0.14,
+      "go": [
+       0.5,
+       0.42
+      ],
+      "dur": 1,
+      "wait": 1.5,
+      "loop": true
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.16,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3
+     },
+     {
+      "label": "Round 2",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ],
+    "text": "再赛、复赛",
+    "pos": "名词",
+    "diff": "同一对对手再交手一次",
+    "ex": "The two teams will have a rematch next week.",
+    "exzh": "下周两队要再赛一场。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/goal.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 0.46
+      },
+      {
+       "svg": "art/ball.svg",
+       "x": 0.5,
+       "y": 0.78,
+       "s": 0.14,
+       "go": [
+        0.5,
+        0.42
+       ],
+       "dur": 1,
+       "wait": 1.5,
+       "loop": true
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.14,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 3,
+       "when": "two teams"
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.86,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 3,
+       "when": "two teams"
+      },
+      {
+       "label": "rematch",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "rematch"
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.12,
+       "when": "next week"
+      },
+      {
+       "label": "再赛一场",
+       "x": 0.5,
+       "y": 0.24,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "再赛一场"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.28,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.5,
+      "y": 0.78,
+      "s": 0.2
+     }
+    ],
+    "text": "使再次交手",
+    "pos": "动词",
+    "diff": "让两个对手再碰一次",
+    "ex": "The two players were rematched in the final.",
+    "exzh": "这两名选手在决赛中再次交手。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "x": 0.24,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "two players"
+      },
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.76,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "two players"
+      },
+      {
+       "svg": "art/trophy.svg",
+       "x": 0.5,
+       "y": 0.72,
+       "s": 0.26,
+       "when": "final",
+       "pop": true
+      },
+      {
+       "label": "rematched",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "rematched"
+      },
+      {
+       "label": "再次交手",
+       "x": 0.5,
+       "y": 0.24,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "再次交手"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“再比一场”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/goal.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 0.46
+      },
+      {
+       "svg": "art/ball.svg",
+       "x": 0.5,
+       "y": 0.78,
+       "s": 0.14,
+       "go": [
+        0.5,
+        0.42
+       ],
+       "dur": 1,
+       "wait": 1.5,
+       "loop": true
+      },
+      {
+       "label": "re 再 + match 比赛",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.07,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "上次没比出满意的结果",
+    "node": "再赛、复赛；使再次交手",
+    "pos": "名词、动词",
+    "pic": 0,
+    "say": [
+     "两个对手上次没比出满意的结果，再交手一次。",
+     "名词是再赛、复赛；动词是使再次交手。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/goal.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 0.46
+      },
+      {
+       "svg": "art/ball.svg",
+       "x": 0.5,
+       "y": 0.78,
+       "s": 0.14,
+       "go": [
+        0.5,
+        0.42
+       ],
+       "dur": 1,
+       "wait": 1.5,
+       "loop": true
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.16,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 3,
+       "when": "两个对手"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 3,
+       "when": "两个对手"
+      },
+      {
+       "label": "1 : 1",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "没比出",
+       "hideCue": 1
+      },
+      {
+       "label": "再赛、复赛",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "cue": 1,
+       "when": "再赛"
+      },
+      {
+       "label": "动词：使再次交手",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "使再次交手"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "replay": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sofa.svg",
+       "x": 0.4,
+       "y": 0.66,
+       "s": 0.5
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.78,
+       "y": 0.5,
+       "s": 0.5
+      },
+      {
+       "label": "重播",
+       "x": 0.78,
+       "y": 0.15,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "rematchai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：两个队下周日要做什么？\n听：The two teams will play a rematch next Sunday.\nA. 第一次比赛\nB. 再比一场\nC. 一起训练\nD. 去看比赛",
@@ -88,5 +583,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
