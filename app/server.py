@@ -389,7 +389,7 @@ def api_live(qs):
            "relayUrl": cfg.get("relayUrl", ""), "inbox": C.inbox_on(cfg), "stage": r.stage,
            "state": r.state, "ai": {k: v for k, v in C.AI_LIVE.items()}, "web": None, "logs": []}
     if t:
-        out["task"] = C.q("SELECT id,title,kind,progress,started FROM tasks WHERE id=?", (t["id"],), one=True)
+        out["task"] = C.q("SELECT id,title,kind,params,progress,started FROM tasks WHERE id=?", (t["id"],), one=True)
         out["logs"] = [l for l in C.live_logs(300) if l.get("task") == t["id"]][-60:]
     out["ai"]["reply"] = (out["ai"].get("reply") or "")[-6000:]
     if out["pv"] == "web":
