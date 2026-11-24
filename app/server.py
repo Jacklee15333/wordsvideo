@@ -593,6 +593,7 @@ GET = {
     "/api/check": lambda qs: CK.snapshot(watch=qs.get("watch") == "1"),
     "/api/results": api_results,
     "/api/find": api_find,
+    "/api/genhist": lambda qs: {"items": C.gen_hist_list(qs.get("kind") or "pic")[:300], "dirs": RS.dirs()},
     "/api/qres": lambda qs: {"items": RS.q_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
     "/api/pres": lambda qs: {"items": RS.p_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
     "/api/pool": lambda qs: PL.summary() if qs.get("brief") else PL.items(),

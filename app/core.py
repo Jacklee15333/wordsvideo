@@ -1073,6 +1073,67 @@ def inbox_uploads(n=6):
     return out[:n]
 
 
+GEN_HIST = DATA / "gen_hist.json"
+
+
+def gen_hist_add(kind, words, results, tid=None, src="", t0=0.0):
+    """生成历史（v1.10.11）：一批做完记一行——哪些词、每个词做好了没有（没做成的一句原因）。kind：pic / q。"""
+    try:
+        h = json.loads(GEN_HIST.read_text(encoding="utf-8")) if GEN_HIST.exists() else []
+    except Exception:
+        h = []
+    t = time.time()
+    h.append({"id": int(t * 1000), "kind": kind, "t": t, "t0": t0 or t, "tid": tid, "src": src, "words": list(words),
+              "res": {w: {"ok": bool((results.get(w) or {}).get("ok")), "detail": str((results.get(w) or {}).get("detail") or "")[:200]}
+                      for w in words}})
+    del h[:-500]
+    try:
+        GEN_HIST.write_text(json.dumps(h, ensure_ascii=False), encoding="utf-8")
+    except Exception:
+        pass
+
+
+def gen_hist_list(kind):
+    """生成历史，新的在前。以前做完、还没记历史的任务（v1.10.11 以前）照任务记录补上：词现在有没有画面/题目就是结果。"""
+    try:
+        h = [x for x in json.loads(GEN_HIST.read_text(encoding="utf-8")) if x.get("kind") == kind] if GEN_HIST.exists() else []
+    except Exception:
+        h = []
+    have = {x.get("tid") for x in h}
+    if kind == "pic":
+        import video as V
+        pw = V.pic_words()
+        fail = {r["word"]: r["errors"] for r in q("SELECT word, errors FROM picfail")}
+        for t in q("SELECT id, params, started, finished, status FROM tasks WHERE kind='pics' AND status IN ('已完成','已取消','出错') ORDER BY id"):
+            if t["id"] in have:
+                continue
+            try:
+                ws = json.loads(t["params"] or "{}").get("words") or []
+            except Exception:
+                ws = []
+            if not ws:
+                continue
+            res = {}
+            for w in ws:
+                ok = V.folder_of(w) in pw
+                why = ""
+                if not ok:
+                    try:
+                        e = json.loads(fail.get(w) or "[]")
+                        why = "；".join(e) if isinstance(e, list) else str(e)
+                    except Exception:
+                        why = str(fail.get(w) or "")
+                    why = why or ("没做到（任务%s）" % t["status"].replace("已", "") if t["status"] != "已完成" else "没做成")
+                res[w] = {"ok": ok, "detail": why[:200]}
+            tt = t["finished"] or t["started"] or ""
+            try:
+                ts = time.mktime(time.strptime(tt[:19], "%Y-%m-%d %H:%M:%S"))
+            except Exception:
+                ts = 0.0
+            h.append({"id": t["id"], "kind": kind, "t": ts, "t0": ts, "tid": t["id"], "src": "任务 #%d" % t["id"], "words": ws, "res": res})
+    return sorted(h, key=lambda x: x.get("t") or 0, reverse=True)
+
+
 def group_size():
     """出题一组几个词：手动接力时一组至少一份那么大（一份 300 个就一组 300 个，不再切成 25 个一份）。"""
     cfg = load_cfg()

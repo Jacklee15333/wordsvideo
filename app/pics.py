@@ -250,6 +250,7 @@ def do_pics_relay(R, tid, total, only):
     done, batch = 0, []
     for i in range(0, len(todo), N):
         pend = list(todo[i:i + N])
+        chunk, res, t0 = list(pend), {}, time.time()
         C.log("第 %d 份（共 %d 份）：%s … %s，%d 个词" % (i // N + 1, nb, pend[0], pend[-1], len(pend)), tid)
         while pend:
             for part in R.ask_parts(tid, "做画面", build_prompt_multi(pend, min(rnd, len(pend))), pend, min(rnd, len(pend))):
@@ -269,6 +270,7 @@ def do_pics_relay(R, tid, total, only):
                         C.x("INSERT OR REPLACE INTO picfail(word, errors, ts) VALUES(?,?,?)", (w, json.dumps(errs2, ensure_ascii=False), C.now()))
                         C.log("  %s 的画面没做成：%s" % (w, why), tid)
                     C.relay_word(w, ok, why)
+                    res[w] = {"ok": ok, "detail": why or ("做好了" if ok else "没做成")}
                     pend.remove(w)
                     done += 1
                     R.progress(tid, processed=done, total=len(todo))
@@ -283,10 +285,12 @@ def do_pics_relay(R, tid, total, only):
                 C.x("INSERT OR REPLACE INTO picfail(word, errors, ts) VALUES(?,?,?)",
                     (w, json.dumps(["你点了「剩下的先跳过」"], ensure_ascii=False), C.now()))
                 C.relay_word(w, False, "跳过了")
+                res[w] = {"ok": False, "detail": "你点了「剩下的先跳过」"}
                 done += 1
             if pend:
                 C.log("  剩下的 %d 个先跳过了：%s" % (len(pend), "、".join(pend[:20])), tid)
             pend = []
+        C.gen_hist_add("pic", chunk, res, tid, "手动接力 · 第 %d 批（共 %d 批）" % (i // N + 1, nb), t0)
         _commit(tid, batch)
         batch = []
     _commit(tid, batch)
@@ -709,6 +713,7 @@ def do_pics(R, tid, p):
         return do_pics_relay(R, tid, total, only)
     done = 0
     batch = []
+    hist, t0h = {}, time.time()
     # v1.10.6：手动接力每改一轮都要你再粘贴一次：不来回改——能用就存下，不能用就记“没做成”、做下一个
     rounds = 0 if C.load_cfg().get("provider") == "relay" else int(C.load_cfg().get("fixRounds", 3))
     while True:
@@ -726,6 +731,7 @@ def do_pics(R, tid, p):
         w = ws[0]
         _DONE.add(w)
         ok, errs = _try(R, tid, w, rounds)
+        hist[w] = {"ok": ok, "detail": "" if ok else short_why(errs)}
         if ok:
             batch.append(w)
             C.log("  %s 的画面做好了" % w, tid)
@@ -739,6 +745,8 @@ def do_pics(R, tid, p):
             batch = []
         if only is not None and not pick(1, only):
             break
+    if hist:
+        C.gen_hist_add("pic", list(hist), hist, tid, C.provider_name(), t0h)
     _commit(tid, batch)
 
 

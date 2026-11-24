@@ -310,6 +310,19 @@ tr.wdim td.w{color:var(--faint)}
 .rdlist summary{font-size:12.5px;color:var(--muted);cursor:pointer}
 .rdlist ul{margin:4px 0 0;padding-left:18px;font-size:12.5px;max-height:180px;overflow:auto}
 .rdlist li{margin:2px 0}
+/* v1.10.11：画面页简单一点——选上的词收起来；生成历史一批一行，点开看这一批 */
+.pickbox{margin:2px 0 10px}
+.pickbox>summary{font-size:13px;color:var(--muted);cursor:pointer;padding:4px 0}
+table.gh{width:100%;border-collapse:collapse;font-size:13px}
+table.gh th{text-align:left;font-weight:500;color:var(--muted);font-size:12px;padding:4px 8px;border-bottom:1px solid var(--line)}
+table.gh td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+table.gh tr.ghrow{cursor:pointer}
+table.gh tr.ghrow:hover td{background:#F6F8FB}
+table.gh tr.ghd td{background:#FAFBFD;padding:8px 10px 10px}
+.wchip{display:inline-block;margin:2px 4px 2px 0;padding:2px 8px;border-radius:12px;font-size:12.5px;font-family:var(--en);text-decoration:none}
+.wchip.ok{background:var(--pass-bg);color:var(--pass);border:1px solid #BFDCCB}
+.wchip.bad{background:#FDECEA;color:#9B2C22;border:1px solid #F0B9B3}
+.wchip:hover{filter:brightness(.96)}
 details.res.flash{box-shadow:0 0 0 3px #F3C969;transition:box-shadow .4s}
 .rmore summary{font-size:12.5px;color:var(--muted);cursor:pointer}
 .rnew{background:#FDECEA;border:1px solid #F0B9B3;border-radius:6px;padding:8px 12px;margin:6px 0 8px;font-size:13px;line-height:1.7;color:#7A1F17}
@@ -629,7 +642,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
     <h3 style="margin-top:0">这次给哪些词做画面 <span class="small faint" id="picPickN"></span></h3>
     <p class="small muted" style="margin:0 0 8px">就是第 3 步「选词」里选上的词。要先有题目才能做画面；已经有画面的不重做。</p>
     <div class="rep" id="picCheck" hidden></div>
-    <div class="plist" id="picPick"></div>
+    <details class="pickbox" id="picPickBox"><summary id="picPickSum">选上的词（点开看每个词）</summary><div class="plist" id="picPick"></div></details>
     <div class="pgo"><button class="btn kbig" id="tPics">给要做的词做画面 ▶</button><button class="btn kbig" id="picNext" hidden onclick="go('video')">下一步：出视频 ▶</button><span class="small muted" id="picMsg">只做画面，不出题。一个词几分钟，做的过程就在下面。</span></div>
   </div>
   <div class="sprog" data-step="pic">
@@ -638,11 +651,10 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
     <div class="sother" hidden></div>
     <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
   </div>
-  <div class="box rep-box" id="picRep" hidden style="margin-top:22px"><h3 style="margin-top:0">画面汇报（最近一次）</h3><div id="picRepBody"></div></div>
   <div class="box" style="margin-top:22px">
-    <h3 style="margin-top:0">画面结果（选上的词的画面）</h3>
-    <div class="rsave" id="picSave">—</div>
-    <div id="picRes"></div>
+    <h3 style="margin-top:0">生成历史 <span class="small faint" id="ghN"></span></h3>
+    <div class="small muted" id="picSave" style="margin:-4px 0 8px"></div>
+    <div id="genHist"></div>
   </div>
   <div class="pnext"><span class="small muted">画面做好了？</span><button class="btn" onclick="go('video')">下一步：出视频</button></div>
 </section>
@@ -1203,6 +1215,7 @@ function picCheckRender(){const pk=picked(),box=$('#picCheck');if(!pk.length){bo
 async function loadPic(){await poolNeed();picPickRender();picRes();stepTasks('pic');liveTick();tabCounts()}
 function picPickRender(){const pk=picked();picCheckRender();
   $('#picPickN').textContent=pk.length?`（选上的 ${pk.length} 个）`:'';
+  $('#picPickSum').textContent=pk.length?`选上的 ${pk.length} 个词（点开看每个词的题目、画面）`:'还没有选上的词';
   $('#picPick').innerHTML=pk.length?'<table><tr><th>单词</th><th>意思</th><th>题目</th><th>画面</th><th>这次</th></tr>'+pk.map(i=>{
       const doing=i.st==='doing'&&!i.pic&&!i.picfail,will=i.q&&!i.pic&&!doing&&i.st!=='doing',fin=i.st==='doing'&&i.pic,lost=i.st==='doing'&&!i.pic&&i.picfail;
       const now=i.pic?'<span class="ck-y">有</span>':i.picfail?'<span class="ck-bad">上次没做成</span>':'<span class="ck-n">没有</span>';
@@ -1213,22 +1226,35 @@ function picPickRender(){const pk=picked();picCheckRender();
   const allP=pk.length&&!PP.length&&pk.every(i=>i.pic);$('#picNext').hidden=!allP;
   if(allP)$('#picMsg').textContent='选上的词都有画面了，点「下一步：出视频」去出视频。';
   else if($('#picMsg').textContent.startsWith('选上的词都有画面了'))$('#picMsg').textContent='只做画面，不出题。一个词几分钟，做的过程就在下面。'}
-async function picRes(){const pk=picked().map(i=>i.word);
-  let d;try{d=await api('/api/pres?w='+encodeURIComponent(pk.join('|')))}catch(e){return}
+const picImg=(w,f)=>`<figure><img loading="lazy" src="/api/res/file?p=${encodeURIComponent('画面/'+w+'/'+f)}" alt="${esc(f)}"><figcaption>${esc(f.replace(/\.svg$/,''))}</figcaption></figure>`;
+const fmtT=t=>{if(!t)return '';const d=new Date(t*1000),z=n=>String(n).padStart(2,'0');return `${z(d.getMonth()+1)}-${z(d.getDate())} ${z(d.getHours())}:${z(d.getMinutes())}`};
+let GHALL=false;
+/* 生成历史：一批一行（几点、哪些词、做好几个、没做成几个），点一行看这一批每个词；点词看它的画面 */
+async function picRes(){
+  let d;try{d=await api('/api/genhist?kind=pic')}catch(e){return}
   if(d.notReady)return;const D=d.dirs||{};
-  $('#picSave').innerHTML=`<div><b>画面的图</b>（每个词一个文件夹，SVG 图，浏览器能打开）：<code>${esc(D.p||'')}</code><button class="btn ghost sm" data-open="pdir">打开文件夹</button></div>
-    <div><b>词库里的原件</b>（AI 做的画面设置和插图，会上传到 GitHub）：<code>${esc(D.prepo||'')}</code><button class="btn ghost sm" data-open="prepo">打开文件夹</button></div>`;
-  const img=(w,f)=>`<figure><img loading="lazy" src="/api/res/file?p=${encodeURIComponent('画面/'+w+'/'+f)}" alt="${esc(f)}"><figcaption>${esc(f.replace(/\.svg$/,''))}</figcaption></figure>`;
-  const shown=d.items.filter(i=>i.pic);
-  $('#picRes').innerHTML=!pk.length?'<div class="pempty">还没有选上的词。</div>':d.items.map(i=>{
-    if(!i.pic)return `<div class="rnone"><b>${esc(i.word)}</b>${i.fail?`<span style="color:var(--red)">没做成：${esc(i.fail).slice(0,160)}</span>`:i.q?'还没有画面':'还没有题目，先出题'}</div>`;
-    const src=i.src==='ai'?`AI 做的${i.gen?'（'+esc(i.gen)+'）':''}`:'kit 里做好的';
-    const others=i.files.filter(f=>!i.used.includes(f));
-    const gal=i.files.length?`<div class="gal">${i.used.map(f=>img(i.word,f)).join('')}</div>`+(others.length?`<details style="margin-bottom:10px"><summary class="small muted">同一套里画的其他图（${others.length} 个）</summary><div class="gal">${others.map(f=>img(i.word,f)).join('')}</div></details>`:'')
-      :`<p class="small muted">这个词的图还没存成文件。<button class="btn sm" data-draw="${esc(i.word)}">${i.src==='ai'?'拷出来':'画出来（在 WSL 里画，几秒钟）'}</button> <span class="small" data-drawmsg="${esc(i.word)}"></span></p>`;
-    return `<details class="res" ${shown.length<=2||i.word===(shown[0]||{}).word?'open':''}><summary><span class="w">${esc(i.word)}</span><span class="small muted">${esc(i.meaning).slice(0,30)}</span>
-      <span class="pst pst-done">${i.files.length?i.used.length+' 个图':'有画面'}</span><span class="small faint">${src}</span>${i.files.length?`<button class="btn ghost sm" data-open="pword" data-word="${esc(i.word)}">打开文件夹</button><button class="btn ghost sm" data-draw="${esc(i.word)}">重新${i.src==='ai'?'拷':'画'}</button>`:''}</summary>
-      ${gal}<p class="small faint">${i.check?'检查：'+esc(i.check)+'　':''}画面设置：${esc(i.where)}${i.files.length?'　图：'+esc(i.dir):''}</p></details>`}).join('')}
+  $('#picSave').innerHTML=`画面的图存在 <code>${esc(D.p||'')}</code> <button class="btn ghost sm" data-open="pdir">打开文件夹</button>`;
+  const it=d.items||[],show=GHALL?it:it.slice(0,8);
+  $('#ghN').textContent=it.length?`（${it.length} 批）`:'';
+  $('#genHist').innerHTML=it.length?'<table class="gh"><tr><th>时间</th><th>这一批</th><th>结果</th><th></th></tr>'+show.map(x=>{const ws=x.words||[],r=x.res||{},ok=ws.filter(w=>(r[w]||{}).ok).length,bad=ws.length-ok;
+    return `<tr class="ghrow"><td class="n small">${fmtT(x.t)}</td><td>${ws.length} 个词：<span style="font-family:var(--en)">${esc(ws.slice(0,3).join('、'))}${ws.length>3?' …':''}</span>${x.src?` <span class="small faint">${esc(x.src)}</span>`:''}</td>
+      <td class="n"><span class="ck-y">✓ ${ok}</span>${bad?` <span class="ck-bad">✗ ${bad}</span>`:''}</td><td class="n"><a href="#">查看 ▸</a></td></tr>
+      <tr class="ghd" hidden><td colspan="4"><div class="small muted" style="margin-bottom:4px">点词看它的画面</div>${ws.map(w=>{const o=r[w]||{};return `<a href="#" class="wchip ${o.ok?'ok':'bad'}" title="${esc(o.detail||(o.ok?'做好了':'没做成'))}" onclick="picWordModal('${esc(w)}');return false">${o.ok?'✓':'✗'} ${esc(w)}</a>`}).join('')}
+        ${bad?`<div class="small" style="margin-top:6px;color:#9B2C22">没做成：${ws.filter(w=>!(r[w]||{}).ok).map(w=>`${esc(w)}（${esc(((r[w]||{}).detail||'').slice(0,40))}）`).join('；')}</div>`:''}</td></tr>`}).join('')+'</table>'+
+    (it.length>8?`<div style="margin-top:6px"><button class="btn ghost sm" onclick="GHALL=!GHALL;picRes()">${GHALL?'收起':'看全部 '+it.length+' 批'}</button></div>`:'')
+    :'<div class="pempty">还没有生成记录。做完一批，这里就多一行。</div>';
+  $$('#genHist .ghrow').forEach(tr=>tr.onclick=e=>{e.preventDefault();const n=tr.nextElementSibling;n.hidden=!n.hidden;tr.querySelector('a').textContent=n.hidden?'查看 ▸':'收起 ▾'})}
+/* 一个词的画面：弹出来看（图、存在哪儿；没做成的写原因） */
+async function picWordModal(w){modal(w+' 的画面','<p class="muted">正在读…</p>');
+  let d;try{d=await api('/api/pres?w='+encodeURIComponent(w))}catch(e){$('#mBody').textContent=e.message;return}
+  if(d.notReady){$('#mBody').innerHTML=`<p class="ck-bad">现在看不了：${esc(d.msg||'词库还没准备好')}</p>`;return}
+  const i=(d.items||[])[0];if(!i){$('#mBody').textContent='总表里没有这个词';return}
+  if(!i.pic){$('#mBody').innerHTML=`<p>${i.fail?`<span class="ck-bad">没做成</span>：${esc(i.fail).slice(0,300)}`:i.q?'还没有画面':'还没有题目，先出题'}</p>`;return}
+  const others=i.files.filter(f=>!i.used.includes(f)),src=i.src==='ai'?`AI 做的${i.gen?'（'+esc(i.gen)+'）':''}`:'kit 里做好的';
+  $('#mBody').innerHTML=`<p class="small muted" style="margin-top:0">${esc(i.meaning||'')}　${src}${i.files.length?`　<button class="btn ghost sm" data-open="pword" data-word="${esc(w)}">打开文件夹</button>`:''}</p>`+
+    (i.files.length?`<div class="gal">${i.used.map(f=>picImg(w,f)).join('')}</div>`+(others.length?`<details><summary class="small muted">同一套里画的其他图（${others.length} 个）</summary><div class="gal">${others.map(f=>picImg(w,f)).join('')}</div></details>`:'')
+      :`<p class="small muted">这个词的图还没存成文件。<button class="btn sm" data-draw="${esc(w)}">${i.src==='ai'?'拷出来':'画出来（在 WSL 里画，几秒钟）'}</button> <span class="small" data-drawmsg="${esc(w)}"></span></p>`)+
+    `<p class="small faint">${i.check?'检查：'+esc(i.check)+'　':''}画面设置：${esc(i.where)}${i.files.length?'　图：'+esc(i.dir):''}</p>`}
 async function loadPicfail(){tabCounts();
   api('/api/picfail').then(f=>{const it=f.items||[];
     const why=x=>{let e=x.errors||'';try{const j=JSON.parse(e);e=Array.isArray(j)?j.join('；'):String(j)}catch(_){}return String(e).slice(0,120)};
@@ -1528,9 +1554,10 @@ function rStep(id,st,detail,cls){const li=$('#'+id);li.dataset.st=st;const d=li.
 const hm=t=>t?new Date(t*1000).toTimeString().slice(0,8):'';
 /* 「查看详情」：在这一页下面的“结果”里把这个词打开 */
 async function showRes(w){const st=stepOf((ST.runner||{}).task)||page,isQ=st==='q';
+  if(!isQ)return picWordModal(w);
   if(page!==(isQ?'q':'pic'))go(isQ?'q':'pic');
   await poolNeed();if(isQ){qPickRender();await qRes()}else{picPickRender();await picRes()}
-  const box=$(isQ?'#qRes':'#picRes'),d=[...box.querySelectorAll('details.res')].find(x=>(x.querySelector('summary .w')||{}).textContent===w);
+  const box=$('#qRes'),d=[...box.querySelectorAll('details.res')].find(x=>(x.querySelector('summary .w')||{}).textContent===w);
   if(!d){const n=[...box.querySelectorAll('.rnone')].find(x=>(x.querySelector('b')||{}).textContent===w);
     if(n){n.scrollIntoView({behavior:'smooth',block:'center'});return}
     return toast(`「${w}」不在下面的结果里（不是选上的词）`)}
