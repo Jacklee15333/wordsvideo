@@ -240,27 +240,28 @@ def _accept(R, tid, w, P, svgs, errs, info=None):
 
 def do_pics_relay(R, tid, total, only):
     """手动接力做画面：选的词按设置分成一份一份（一份 N 个），网页 AI 一轮一轮交回，收到一轮做一轮。"""
-    cfg = C.load_cfg()
-    N = max(1, int(cfg.get("relayPicChunk") or 10))
-    rnd = max(1, int(cfg.get("relayPicRound") or 1))
+    N, rnd = C.relay_size("pic")
     todo = pick(total or 10 ** 6, only)
     if not todo:
         C.log("没有要做画面的词了（要先有题目；做不出来的在“画面没做成”里）", tid)
         return
     nb = (len(todo) + N - 1) // N
     C.log("画面（手动接力）：一共 %d 个词，一份 %d 个，分 %d 份；网页 AI 每写完 %d 个上传一次" % (len(todo), N, nb, rnd), tid)
-    done, batch = 0, []
-    for i in range(0, len(todo), N):
-        pend = list(todo[i:i + N])
+    done, batch, queue, k = 0, [], list(todo), 0
+    while queue:                    # v1.11.2：每一份开始时按现在的设置分（黄框里改了，下一份就按新的）
+        N, rnd = C.relay_size("pic")
+        pend, queue = queue[:N], queue[N:]
+        k += 1
+        nb = k + (len(queue) + N - 1) // N
         chunk, res, t0 = list(pend), {}, time.time()
-        C.log("第 %d 份（共 %d 份）：%s … %s，%d 个词" % (i // N + 1, nb, pend[0], pend[-1], len(pend)), tid)
+        C.log("第 %d 份（共 %d 份）：%s … %s，%d 个词" % (k, nb, pend[0], pend[-1], len(pend)), tid)
         while pend:
             for part in R.ask_parts(tid, "做画面", build_prompt_multi(pend, min(rnd, len(pend))), pend, min(rnd, len(pend))):
-                res = parse_multi(part, pend)
-                if not res:
+                got = parse_multi(part, pend)        # v1.11.2：以前这里用 res，把这一批前几个词的结果冲掉了（生成历史里算成没做成）
+                if not got:
                     C.RELAY["hint"] = "交回的这个文件里没认出这一批还没做的词（每个词要先写一行 @单词）"
                     continue
-                for w, (P, raw, svgs, errs) in res.items():
+                for w, (P, raw, svgs, errs) in got.items():
                     if w not in pend:
                         continue
                     _DONE.add(w)
@@ -281,6 +282,9 @@ def do_pics_relay(R, tid, total, only):
                         batch = []
             why = C.RELAY.get("endReason")
             if pend and why == "newchat":
+                N2, rnd = C.relay_size("pic")
+                if len(pend) > N2:                  # 一批改小了：多出来的放回去，排到下一份
+                    queue, pend = pend[N2:] + queue, pend[:N2]
                 C.log("  剩下的 %d 个另开对话：出一份新的提示词" % len(pend), tid)
                 continue
             for w in pend:                      # 你点了「剩下的先跳过」
@@ -292,7 +296,7 @@ def do_pics_relay(R, tid, total, only):
             if pend:
                 C.log("  剩下的 %d 个先跳过了：%s" % (len(pend), "、".join(pend[:20])), tid)
             pend = []
-        C.gen_hist_add("pic", chunk, res, tid, "手动接力 · 第 %d 批（共 %d 批）" % (i // N + 1, nb), t0)
+        C.gen_hist_add("pic", [w for w in chunk if w in res], res, tid, "手动接力 · 第 %d 批（共 %d 批）" % (k, nb), t0)
         _commit(tid, batch)
         batch = []
     _commit(tid, batch)
@@ -1039,16 +1043,17 @@ def do_pics_fix(R, tid, p):
 
 def _fix_relay(R, tid, words, todos, batch):
     """手动接力补画面：一份几个词（带着上次的画面设置，一份比做新画面少一些），网页 AI 一轮一轮交回。"""
-    cfg = C.load_cfg()
-    N = max(1, min(8, int(cfg.get("relayPicChunk") or 10)))
-    rnd = max(1, int(cfg.get("relayPicRound") or 1))
+    N, rnd = C.relay_size("fix")
     nb = (len(words) + N - 1) // N
     C.log("补画面（手动接力）：一共 %d 个词，一份 %d 个，分 %d 份；网页 AI 每写完 %d 个上传一次" % (len(words), N, nb, rnd), tid)
-    done, saved = 0, []
-    for i in range(0, len(words), N):
-        pend = list(words[i:i + N])
+    done, saved, queue, k = 0, [], list(words), 0
+    while queue:                    # v1.11.2：每一份开始时按现在的设置分（黄框里改了，下一份就按新的）
+        N, rnd = C.relay_size("fix")
+        pend, queue = queue[:N], queue[N:]
+        k += 1
+        nb = k + (len(queue) + N - 1) // N
         chunk, res, t0 = list(pend), {}, time.time()
-        C.log("补画面第 %d 份（共 %d 份）：%s … %s，%d 个词" % (i // N + 1, nb, pend[0], pend[-1], len(pend)), tid)
+        C.log("补画面第 %d 份（共 %d 份）：%s … %s，%d 个词" % (k, nb, pend[0], pend[-1], len(pend)), tid)
         while pend:
             for part in R.ask_parts(tid, "补画面", build_prompt_fix_multi(pend, todos, min(rnd, len(pend))), pend, min(rnd, len(pend))):
                 got = parse_multi(part, pend)
@@ -1087,6 +1092,9 @@ def _fix_relay(R, tid, words, todos, batch):
                         _commit(tid, saved, "补画面")
                         saved = []
             if pend and C.RELAY.get("endReason") == "newchat":
+                N2, rnd = C.relay_size("fix")
+                if len(pend) > N2:                  # 一批改小了：多出来的放回去，排到下一份
+                    queue, pend = pend[N2:] + queue, pend[:N2]
                 C.log("  剩下的 %d 个另开对话：出一份新的提示词" % len(pend), tid)
                 continue
             for w in pend:
@@ -1097,6 +1105,6 @@ def _fix_relay(R, tid, words, todos, batch):
                 C.log("  剩下的 %d 个先跳过了：%s" % (len(pend), "、".join(pend[:20])), tid)
             pend = []
         _UC["t"] = 0.0
-        C.gen_hist_add("pic", chunk, res, tid, "补画面 · 第 %d 批（共 %d 批）" % (i // N + 1, nb), t0)
+        C.gen_hist_add("pic", [w for w in chunk if w in res], res, tid, "补画面 · 第 %d 批（共 %d 批）" % (k, nb), t0)
         _commit(tid, saved, "补画面")
         saved = []

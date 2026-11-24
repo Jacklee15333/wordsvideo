@@ -464,7 +464,14 @@ def api_relay_get(qs):
         r["promptLen"] = len(r.get("prompt") or "")
         r["prompt"] = (r.get("prompt") or "")[:600]
     r.pop("reply", None)
-    r["url"] = C.load_cfg().get("relayUrl", "")
+    cfg = C.load_cfg()
+    r["url"] = cfg.get("relayUrl", "")
+    sk = C.KIND_SIZE.get(r.get("kind") or "", "")     # v1.11.2：黄框里能改一批几个词、每写完几个传一次
+    r["sizeKind"] = sk
+    if sk:
+        r["sizeChunk"], r["sizeRound"] = C.relay_size(sk, cfg)
+    ib = C.inbox_cfg(cfg)
+    r["inboxUrl"] = "https://github.com/%s/tree/%s/%s" % (ib["repo"], ib.get("branch") or "main", ib["dir"]) if ib.get("repo") else ""
     return r
 
 
@@ -484,6 +491,12 @@ def api_open(b):
 
 
 def api_relay_post(b):
+    if b.get("op") == "pollnow":                     # v1.11.2：立即查看中转仓库
+        ok, msg = C.relay_poll_now()
+        return {"ok": ok, "msg": msg}
+    if b.get("op") == "size":                        # v1.11.2：一批几个词、每写完几个传一次
+        ok, msg = C.relay_size_set(b.get("kind", ""), b.get("chunk"), b.get("round"))
+        return {"ok": ok, "msg": msg}
     if b.get("op") in ("newchat", "skiprest"):        # v1.10.9：一份好几个词：剩下的另开对话继续 / 剩下的先跳过
         ok, msg = C.relay_act(b.get("id", 0), b["op"])
         return {"ok": ok, "msg": msg}

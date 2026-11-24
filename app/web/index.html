@@ -306,6 +306,14 @@ tr.wdim td.w{color:var(--faint)}
 .rdone .chain i{font-style:normal;color:var(--pass);font-weight:700}
 .rdone .chain i.x{color:var(--red)}
 .rnow{font-size:13.5px;font-weight:600;margin:2px 0 6px}
+.rsize,.rpoll{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;font-size:12.5px;background:#fff;border:1px solid #F0D9B0;border-radius:4px;padding:6px 10px;margin:0 0 8px}
+.rsize input{width:58px;padding:3px 6px}
+.rsize .rsn{color:var(--muted)}
+.rpoll{margin:6px 0 4px}
+.rpoll .pk{color:var(--muted)}
+.rpoll .pr{font-weight:600}
+.rpoll .pr.ok{color:#2F7D4F}.rpoll .pr.bad{color:#9B2C22}
+.rpoll a{font-size:12px}
 .rdlist{margin:4px 0 8px}
 .rdlist summary{font-size:12.5px;color:var(--muted);cursor:pointer}
 .rdlist ul{margin:4px 0 0;padding-left:18px;font-size:12.5px;max-height:180px;overflow:auto}
@@ -636,6 +644,8 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
   <div class="relay" id="rBox" hidden>
     <h3 style="margin:0 0 4px" id="rTitle">要你操作：把提示词交给网页 AI <span id="rWords" class="small muted"></span></h3>
     <div class="rprog" id="rProg"></div>
+    <div class="rsize" id="rSize" hidden><b>每批</b> <input type="number" id="rSzChunk" min="1" max="1000"> 个词 <span class="faint">·</span> <b>每写完</b> <input type="number" id="rSzRound" min="1" max="1000"> 个传一次
+      <button class="btn sm" id="rSzSave">保存</button> <span class="rsn" id="rSzMsg">改了从下一批起按新的来</span></div>
     <div id="rBatchDone" class="rdone ok" hidden></div>
     <div id="rRes" class="rdone" hidden></div>
     <details class="rdlist" id="rDoneBox" hidden><summary id="rDoneN"></summary><ul id="rDoneList"></ul></details>
@@ -648,6 +658,8 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
       <li id="rStep3"><span id="rT3">等网页 AI 写完、自己传回来</span><div class="rs"></div></li>
       <li id="rStep4"><span>存好，这个词完成</span><div class="rs"></div></li>
     </ol>
+    <div class="rpoll" id="rPoll" hidden><b>中转仓库</b> <span class="pk" id="rPollInfo"></span>
+      <button class="btn sm" id="rPollNow">立即查看仓库</button> <span class="pr" id="rPollRes"></span> <a href="#" id="rPollGh" target="_blank" rel="noopener">在 GitHub 上看 ↗</a></div>
     <div id="rHint" class="small" style="color:var(--amber)"></div>
     </div>
     <details class="rmore"><summary>详细情况</summary>
@@ -898,6 +910,7 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
           <label class="f"><span>出题</span><span>一份 <input type="number" id="m_rchunk" min="1" max="2000" style="width:76px"> 个词，它每写完 <input type="number" id="m_rround" min="1" max="500" style="width:62px"> 个上传一次</span></label>
           <div class="gbtns" style="margin:-4px 0 6px"><span class="small muted">快选：</span><button class="btn ghost sm" data-rq="25">25</button><button class="btn ghost sm" data-rq="50">50</button><button class="btn ghost sm" data-rq="100">100</button><button class="btn ghost sm" data-rq="300">300</button></div>
           <label class="f"><span>画面</span><span>一份 <input type="number" id="m_rpchunk" min="1" max="2000" style="width:76px"> 个词，它每写完 <input type="number" id="m_rpround" min="1" max="50" style="width:62px"> 个上传一次</span></label>
+          <label class="f"><span>补画面</span><span>一份 <input type="number" id="m_rfchunk" min="1" max="1000" style="width:76px"> 个词，它每写完 <input type="number" id="m_rfround" min="1" max="50" style="width:62px"> 个上传一次</span></label>
           <div class="gbtns" style="margin:-4px 0 6px"><span class="small muted">快选：</span><button class="btn ghost sm" data-rp="1">1</button><button class="btn ghost sm" data-rp="5">5</button><button class="btn ghost sm" data-rp="10">10</button><button class="btn ghost sm" data-rp="20">20</button><button class="btn ghost sm" data-rp="50">50</button><button class="btn ghost sm" data-rp="300">300</button></div>
           <p class="small muted" style="margin:2px 0 0">网页 AI 一个对话能写多少有上限：出题一个词一千来字，一个对话写一两百个没问题；画面一个词要写三四万字，一个对话大概写 3–5 个就满了。满了不要紧：黄框里点「剩下的另开对话继续」，软件只给还没做的词出一份新的提示词，做好的都留着。</p>
         </div>
@@ -1531,7 +1544,7 @@ async function loadAI(keep){
   $('#m_browserHidden').checked=w.browserHidden!==false;
   $('#m_pw').textContent=w.playwright===false?'这台电脑的 Python 还没装 Playwright：关掉软件，重新双击「启动.bat」会自己装':'';
   $('#m_base').value=c.api.baseUrl||'';$('#m_key').value='';$('#m_key').placeholder=c.api.key?'（已填，不改就空着）':'sk-…';$('#m_model').value=c.api.model||'';
-  $('#m_rurl').value=c.relayUrl||'';$('#m_rchunk').value=c.relayChunk||25;$('#m_rround').value=c.relayRound||25;$('#m_rpchunk').value=c.relayPicChunk||10;$('#m_rpround').value=c.relayPicRound||1;$('#m_ion').checked=!!ib.enabled;$('#m_irepo').value=ib.repo||'';
+  $('#m_rurl').value=c.relayUrl||'';$('#m_rchunk').value=c.relayChunk||25;$('#m_rround').value=c.relayRound||25;$('#m_rpchunk').value=c.relayPicChunk||10;$('#m_rpround').value=c.relayPicRound||1;$('#m_rfchunk').value=c.relayFixChunk||8;$('#m_rfround').value=c.relayFixRound||1;$('#m_ion').checked=!!ib.enabled;$('#m_irepo').value=ib.repo||'';
   $('#m_itok').value='';$('#m_itok').placeholder=ib.token?'（已填，不改就空着）':'粘贴「收件箱用」小令牌 github_pat_…';
   mUse();mTab(keep&&MTAB?MTAB:(c.provider||'web'))}
 async function mSave(m){
@@ -1542,7 +1555,7 @@ async function mSave(m){
     cfg={bestModel:$('#m_bestModel').checked,replyTimeoutMin:+$('#m_replyTimeoutMin').value||30,aiProxy:$('#m_aiProxy').value.trim()}}
   if(m==='api'){const a={baseUrl:$('#m_base').value.trim(),model:$('#m_model').value.trim()};if($('#m_key').value.trim())a.key=$('#m_key').value.trim();cfg={api:a}}
   if(m==='relay'){const ib={enabled:$('#m_ion').checked,repo:$('#m_irepo').value.trim()},t=$('#m_itok').value.trim();if(t){ib.token=t;ib.enabled=true}
-    cfg={relayUrl:$('#m_rurl').value.trim(),relayChunk:Math.max(1,+$('#m_rchunk').value||25),relayRound:Math.max(1,+$('#m_rround').value||25),relayPicChunk:Math.max(1,+$('#m_rpchunk').value||10),relayPicRound:Math.max(1,+$('#m_rpround').value||1),relayInbox:ib}}
+    cfg={relayUrl:$('#m_rurl').value.trim(),relayChunk:Math.max(1,+$('#m_rchunk').value||25),relayRound:Math.max(1,+$('#m_rround').value||25),relayPicChunk:Math.max(1,+$('#m_rpchunk').value||10),relayPicRound:Math.max(1,+$('#m_rpround').value||1),relayFixChunk:Math.max(1,+$('#m_rfchunk').value||8),relayFixRound:Math.max(1,+$('#m_rfround').value||1),relayInbox:ib}}
   await api('/api/settings',{cfg,web});await loadAI(true);poll();
   return{ok:true,msg:'保存好了 '+new Date().toLocaleTimeString()}}
 $$('[data-rq]').forEach(b=>b.onclick=()=>{$('#m_rchunk').value=b.dataset.rq});
@@ -1729,7 +1742,33 @@ async function relayTick(){
     else rStep('rStep4','run',ph==='checking'?esc(d.stage||'在看、存…'):`还在生成：做完 ${dn} 个，还剩 ${pd.length} 个（${esc(pd.slice(0,6).join('、'))}${pd.length>6?'…':''}）。最后一个传上来，这里就打勾`,'');
     if(showL&&L.multi){const ch=$('#rRes').querySelector('.chain');if(ch)ch.textContent=`这一批第 ${dn} 个做完的`}}
   else $('#rStep4').querySelector('span').textContent='存好，这个词完成';
+  // v1.11.2：一批几个词、每写完几个传一次（这里直接改）
+  $('#rSize').hidden=!d.sizeKind;
+  if(d.sizeKind&&!SZDIRTY){$('#rSzChunk').value=d.sizeChunk;$('#rSzRound').value=d.sizeRound}
+  // v1.11.2：中转仓库：上次看、下次看、立即查看
+  $('#rPoll').hidden=!d.inbox;
+  if(d.inbox){RLOFF=(d.now||Date.now()/1000)-Date.now()/1000;$('#rPollGh').href=d.inboxUrl||'#';$('#rPollGh').hidden=!d.inboxUrl;pollInfo();
+    if(PWAIT&&(d.lastPoll||0)>PWAIT.t0){const fs=d.inboxNow||[];PWAIT=null;$('#rPollNow').disabled=false;$('#rPollNow').textContent='立即查看仓库';
+      const r=$('#rPollRes');r.className='pr '+(d.pollErr?'bad':'ok');
+      r.textContent=d.pollErr?'✗ '+d.pollErr:`✓ 刚看了（${hm(d.lastPoll)}）：${d.pollGot?`收下 ${d.pollGot} 个文件，在处理`:(fs.length?`inbox/ 里有 ${fs.length} 个文件，没有这一批的新文件`:'inbox/ 里是空的，还没传上来')}`}
+    else if(PWAIT&&Date.now()-PWAIT.ms>20000){PWAIT=null;$('#rPollNow').disabled=false;$('#rPollNow').textContent='立即查看仓库';$('#rPollRes').className='pr bad';$('#rPollRes').textContent='✗ 软件这会儿在处理收到的文件，等一下再点'}}
 }
+let SZDIRTY=false,RLOFF=0,PWAIT=null;
+function pollInfo(){const d=RL;if(!d||!d.inbox||$('#rPoll').hidden)return;const now=Date.now()/1000+RLOFF;
+  const nx=Math.max(0,Math.round((d.nextPoll||0)-now)),fs=d.inboxNow||[];
+  $('#rPollInfo').innerHTML=(d.lastPoll?`上次看 ${hm(d.lastPoll)}（第 ${d.polls||0} 次${d.pollBy==='you'?'，你点的':''}）`:'还没看过')+
+    ` · ${PWAIT?'正在看…':d.nextPoll?(nx?`${nx} 秒后自动再看`:'马上自动再看'):`每 ${d.pollSec||15} 秒自动看一次`} · inbox/ 里：${fs.length?fs.length+' 个文件':'空的'}`}
+setInterval(pollInfo,1000);
+$('#rSzChunk').oninput=$('#rSzRound').oninput=()=>{SZDIRTY=true;$('#rSzMsg').textContent='改了还没保存';$('#rSzMsg').style.color='var(--amber)'};
+$('#rSzSave').onclick=async()=>{const c=Math.round(+$('#rSzChunk').value),r=Math.round(+$('#rSzRound').value);
+  if(!(c>=1&&r>=1)){$('#rSzMsg').textContent='要填 1 以上的数';return}
+  const d=await api('/api/relay',{op:'size',kind:RL.sizeKind,chunk:c,round:r});SZDIRTY=false;$('#rSzMsg').style.color='';
+  const pd=(RL.pending||[]).length;
+  $('#rSzMsg').innerHTML=d.ok?`✓ ${esc(d.msg)}${pd&&RL.multi?`。想这一批马上按新的：点「剩下的 ${pd} 个另开对话继续」`:''}`:'✗ '+esc(d.msg);relayTick()};
+$('#rPollNow').onclick=async()=>{const d=await api('/api/relay',{op:'pollnow'});
+  if(!d.ok){$('#rPollRes').className='pr bad';$('#rPollRes').textContent='✗ '+d.msg;return}
+  PWAIT={t0:(RL.lastPoll||0),ms:Date.now()};$('#rPollNow').disabled=true;$('#rPollNow').textContent='正在看…';$('#rPollRes').textContent='';pollInfo();
+  for(let i=0;i<16&&PWAIT;i++){await new Promise(r=>setTimeout(r,700));await relayTick()}};
 setInterval(relayTick,2500);
 async function copyText(t){try{await navigator.clipboard.writeText(t);return true}catch(e){
   const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();return ok}}

@@ -54,6 +54,8 @@ DEFAULT_CFG = {
     "relayRound": 25,            # 手动接力·出题：网页 AI 每写完几个词上传一次
     "relayPicChunk": 10,         # 手动接力·画面：一份给网页 AI 几个词
     "relayPicRound": 1,          # 手动接力·画面：网页 AI 每写完几个词上传一次（一个词三四万字，一个一个传最稳）
+    "relayFixChunk": 8,          # 手动接力·补画面：一份几个词（带着上次的画面设置，提示词长，一份少一些）
+    "relayFixRound": 1,          # 手动接力·补画面：每写完几个词上传一次
     "relayUrl": "https://zd87.com/ai-fleet/claude",
     "relayClipboard": True,      # 手动接力：自动把提示词放进剪贴板；你在网页里点“复制”回复，软件看到就自己接着做
     # 手动接力 · 收件箱：网页 AI 写完自己把回复传到 GitHub（不用你复制）；软件隔一会儿去看，看到就接着做。
@@ -1154,6 +1156,44 @@ def relay_act(rid, act):
                   "skiprest": "剩下的这些词先跳过了"}.get(act, "")
 
 
+def relay_poll_now():
+    """黄框里点「立即查看仓库」：马上看一次中转仓库，看完从这一刻起重新数 15 秒。"""
+    with _RELAY_LOCK:
+        if RELAY.get("status") not in ("等你操作", "交回了") or not RELAY.get("inbox"):
+            return False, "现在没有在等中转仓库"
+        RELAY["pollNow"] = time.time()
+    return True, "正在看中转仓库…"
+
+
+# 黄框里能直接改的：一批几个词、每写完几个传一次（kind：q 出题 / pic 画面 / fix 补画面）
+SIZE_KEYS = {"q": ("relayChunk", "relayRound"), "pic": ("relayPicChunk", "relayPicRound"), "fix": ("relayFixChunk", "relayFixRound")}
+KIND_SIZE = {"出题": "q", "做画面": "pic", "补画面": "fix"}
+
+
+def relay_size(kind, cfg=None):
+    """这一种活现在的设置：(一批几个词, 每写完几个传一次)。"""
+    cfg = cfg or load_cfg()
+    a, b = SIZE_KEYS.get(kind, SIZE_KEYS["pic"])
+    return max(1, int(cfg.get(a) or DEFAULT_CFG[a])), max(1, int(cfg.get(b) or DEFAULT_CFG[b]))
+
+
+def relay_size_set(kind, chunk, rnd):
+    if kind not in SIZE_KEYS:
+        return False, "认不出是哪一步"
+    try:
+        chunk, rnd = int(chunk), int(rnd)
+    except Exception:
+        return False, "要填数字"
+    if not (1 <= chunk <= 1000 and 1 <= rnd <= 1000):
+        return False, "要填 1 到 1000 之间的数"
+    rnd = min(rnd, chunk)
+    a, b = SIZE_KEYS[kind]
+    save_cfg({a: chunk, b: rnd})
+    log("手动接力设置改了（%s）：一批 %d 个词，每写完 %d 个传一次" % ({"q": "出题", "pic": "画面", "fix": "补画面"}[kind], chunk, rnd),
+        (RUNNER.task or {}).get("id"))
+    return True, "存好了：一批 %d 个词，每写完 %d 个传一次。下一批起按这个来" % (chunk, rnd)
+
+
 def relay_word(w, ok, detail=""):
     """一份好几个词时，一个词做完（做好了 / 没做成）：从“还剩”里拿掉，记进做完的列表（黄框、汇报用）。"""
     with _RELAY_LOCK:
@@ -1233,7 +1273,7 @@ def relay_parts(prompt, words, kind, rnd):
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=kind, reply="", ts=time.time(),
                      copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "", phase="send", tid=tid,
                      polls=0, lastPoll=0.0, stage="", multi=True, pending=list(words), doneIn=[], parts=0, endReason="", round=rnd,
-                     aiDone=False)
+                     aiDone=False, pollNow=0.0, nextPoll=0.0, pollBy="", pollGot=0)
         rid = RELAY["id"]
         RELAY_ACT.update(rid=0, act="")
         RELAY_HIST.clear()
@@ -1252,6 +1292,7 @@ def relay_parts(prompt, words, kind, rnd):
     last = clip.seq() if use_clip else 0
     poll = max(5, int(inbox_cfg(cfg).get("pollSec") or 15))
     next_ib, ib_err, seen = time.time() + poll, 0, set()
+    RELAY["nextPoll"] = next_ib
     end = time.time() + 24 * 3600
     try:
         while time.time() < end:
@@ -1271,20 +1312,30 @@ def relay_parts(prompt, words, kind, rnd):
             if RUNNER.stop_req:
                 raise Stopped(RUNNER.stop_req)
             texts = []
-            if ibox and time.time() >= next_ib:
-                next_ib = time.time() + poll
+            by_you = bool(RELAY.get("pollNow"))
+            if ibox and (time.time() >= next_ib or by_you):
+                RELAY["pollNow"] = 0.0
+                perr = ""
                 try:
                     texts += _inbox_parts(ipath, seen, list(RELAY["pending"]), t0)
                     ib_err = 0
                 except ExcelBad as e:
-                    RELAY["hint"] = str(e) + "：在网页里叫它把这一轮重新传一次，或者照常把全文写在聊天里、点「复制」"
+                    RELAY["hint"] = perr = str(e) + "：在网页里叫它把这一轮重新传一次，或者照常把全文写在聊天里、点「复制」"
                 except Exception as e:
                     ib_err += 1
-                    if ib_err in (1, 20):
+                    perr = "看中转仓库出错：%s" % mask(str(e))[:120]
+                    if ib_err in (1, 20) or by_you:
                         log("看收件箱出错（%s），过一会儿再看" % mask(str(e))[:160], tid)
+                next_ib = time.time() + poll           # 看完（不管是到点了还是你点的）从现在起重新数
                 with _RELAY_LOCK:
                     RELAY["polls"] += 1
-                    RELAY["lastPoll"] = time.time()
+                    RELAY.update(lastPoll=time.time(), nextPoll=next_ib, pollBy="you" if by_you else "auto",
+                                 pollGot=len(texts), pollErr=perr)
+                if by_you:
+                    fs = INBOX_LAST.get("files") or []
+                    _say("你点了「立即查看仓库」：inbox/ 里现在 %s；%s" % (
+                        ("、".join(fs[:6]) + ("…" if len(fs) > 6 else "")) if fs else "空的",
+                        ("收下 %d 个文件，接着做" % len(texts)) if texts else (perr or "没有这一批的新文件")))
                 if not texts and (RELAY["polls"] <= 4 or RELAY["polls"] % max(1, 60 // poll) == 0):
                     fs = INBOX_LAST.get("files") or []
                     _say("中转仓库 第 %d 次看：这一批 %d 个词，收到 %d 个文件，做完 %d 个，还剩 %d 个，还在生成（等了 %s）；inbox/ 里现在：%s" % (
@@ -1856,7 +1907,7 @@ def relay_wait(prompt, words):
         tid = (RUNNER.task or {}).get("id")
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=AI_LIVE.get("kind", ""),
                      reply="", ts=time.time(), copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "",
-                     phase="send", tid=tid, polls=0, lastPoll=0.0, stage="")
+                     phase="send", tid=tid, polls=0, lastPoll=0.0, stage="", multi=False, pollNow=0.0, nextPoll=0.0, pollBy="", pollGot=0)
         rid = RELAY["id"]
         if not RELAY_HIST:
             RELAY_HIST.extend(_hist_load(tid, words))   # 软件重开：接上重开前的几轮
@@ -1885,17 +1936,21 @@ def relay_wait(prompt, words):
     last = clip.seq() if use_clip else 0
     poll = max(5, int(inbox_cfg(cfg).get("pollSec") or 15))
     next_ib, ib_err = time.time() + poll, 0
+    RELAY["nextPoll"] = next_ib
     end = time.time() + 12 * 3600
     try:
         while time.time() < end:
-            if ibox and time.time() >= next_ib:
+            by_you = bool(RELAY.get("pollNow"))
+            if ibox and (time.time() >= next_ib or by_you):
+                RELAY["pollNow"] = 0.0
                 next_ib = time.time() + poll
                 try:
                     got = inbox_fetch(ipath, alts)
                     ib_err = 0
                     with _RELAY_LOCK:
                         RELAY["polls"] = RELAY.get("polls", 0) + 1
-                        RELAY["lastPoll"] = time.time()
+                        RELAY.update(lastPoll=time.time(), nextPoll=time.time() + poll, pollBy="you" if by_you else "auto",
+                                     pollGot=1 if got else 0, pollErr="")
                     if not got:
                         try:
                             ups = inbox_uploads()
@@ -2401,9 +2456,11 @@ class Runner:
         try:
             cs = max(1, int(cfg["relayChunk"] if cfg.get("provider") == "relay" else cfg["chunkSize"]))
             relay = cfg.get("provider") == "relay"
-            rq = max(1, int(cfg.get("relayRound") or 25))
-            for i in range(0, len(words), cs):
-                chunk = words[i:i + cs]
+            queue = list(words)
+            while queue:
+                if relay:                  # v1.11.2：每一份开始时按现在的设置分（黄框里改了，下一份就按新的）
+                    cs, rq = relay_size("q")
+                chunk, queue = queue[:cs], queue[cs:]
                 if relay:                  # v1.10.9：一份好几个词，网页 AI 写完一轮传一轮，收到一轮判一轮
                     pend = list(chunk)
                     while pend:
@@ -2420,6 +2477,10 @@ class Runner:
                                 pend.remove(w)
                         why = RELAY.get("endReason")
                         if pend and why == "newchat":
+                            cs, rq = relay_size("q")
+                            if len(pend) > cs:     # 一批改小了：多出来的放回去，排到下一份
+                                queue, pend = pend[cs:] + queue, pend[:cs]
+                                chunk = [w for w in chunk if w not in queue]
                             log("  剩下的 %d 个另开对话：出一份新的提示词" % len(pend), tid)
                             continue
                         for w in pend:          # 你点了「剩下的先跳过」
