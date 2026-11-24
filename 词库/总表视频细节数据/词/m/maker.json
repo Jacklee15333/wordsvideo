@@ -46,9 +46,11 @@
     "items": [
      {
       "actor": "west-man-present",
+      "id": "p",
       "x": 0.42,
       "y": 0.56,
       "s": 0.92,
+      "seq": "talk",
       "z": 3
      },
      {
@@ -86,7 +88,8 @@
      "y": 0.56,
      "s": 0.92,
      "z": 3,
-     "id": "m"
+     "id": "m",
+     "seq": "blink"
     },
     {
      "svg": "art/workbench.svg",
@@ -148,6 +151,42 @@
       "z": 3
      },
      {
+      "actor": "walk-west-woman-case",
+      "x": 0.1,
+      "y": 0.76,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.76
+       ],
+       "to": [
+        0.98,
+        0.76
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.78,
+      "s": 0.42,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.98,
+        0.78
+       ],
+       "to": [
+        0.02,
+        0.78
+       ],
+       "offset": 0.5
+      }
+     },
+     {
       "label": "制造商",
       "x": 0.8,
       "y": 0.12,
@@ -187,6 +226,42 @@
        "z": 3
       },
       {
+       "actor": "walk-cn-girl",
+       "x": 0.1,
+       "y": 0.76,
+       "s": 0.48,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.76
+        ],
+        "to": [
+         0.98,
+         0.76
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.9,
+       "y": 0.77,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.77
+        ],
+        "to": [
+         0.02,
+         0.77
+        ],
+        "offset": 0.4
+       }
+      },
+      {
        "label": "car maker",
        "x": 0.74,
        "y": 0.16,
@@ -213,12 +288,13 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "actor": "west-clerk-happy",
+      "actor": "west-clerk-think",
       "x": 0.42,
       "y": 0.56,
       "s": 0.92,
       "z": 3,
-      "id": "m"
+      "id": "m",
+      "seq": "blink"
      },
      {
       "svg": "art/workbench.svg",
@@ -266,11 +342,13 @@
      "items": [
       {
        "actor": "west-man-smile",
+       "id": "g",
        "x": 0.36,
        "y": 0.56,
        "s": 0.92,
        "z": 3,
-       "when": "grandpa"
+       "when": "grandpa",
+       "seq": "blink"
       },
       {
        "svg": "art/workbench.svg",
@@ -327,12 +405,13 @@
      "img": "art/room-bg.svg",
      "items": [
       {
-       "actor": "west-clerk-happy",
+       "actor": "cn-teacher-point",
        "x": 0.42,
        "y": 0.56,
        "s": 0.92,
        "z": 3,
-       "id": "m"
+       "id": "m",
+       "seq": "talk"
       },
       {
        "svg": "art/workbench.svg",
@@ -384,12 +463,14 @@
      "img": "art/street-bg.svg",
      "items": [
       {
-       "actor": "west-clerk-happy",
+       "actor": "west-man-hello",
+       "id": "h",
        "x": 0.24,
        "y": 0.6,
        "s": 0.78,
        "z": 3,
-       "when": "手艺人"
+       "when": "手艺人",
+       "seq": "blink"
       },
       {
        "svg": "art/chair.svg",
@@ -424,6 +505,42 @@
        "color": "#2F6FB3",
        "border": "#2F6FB3",
        "when": "大工厂"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.1,
+       "y": 0.8,
+       "s": 0.42,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.8
+        ],
+        "to": [
+         0.98,
+         0.8
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.9,
+       "y": 0.8,
+       "s": 0.46,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.8
+        ],
+        "to": [
+         0.02,
+         0.8
+        ],
+        "offset": 0.5
+       }
       },
       {
        "label": "maker 制造商",
@@ -464,7 +581,8 @@
        "x": 0.26,
        "y": 0.52,
        "s": 0.5,
-       "when": "chair maker"
+       "when": "chair maker",
+       "anim": "bob"
       },
       {
        "label": "chair maker",
@@ -481,7 +599,8 @@
        "x": 0.7,
        "y": 0.52,
        "s": 0.6,
-       "when": "filmmaker"
+       "when": "filmmaker",
+       "blink": 1
       },
       {
        "label": "filmmaker",
@@ -547,28 +666,209 @@
    }
   ],
   "distinguish": {
-   "pics": {
-    "manufacturer": {
+   "key": "制造商",
+   "items": [
+    {
+     "w": "maker",
+     "gloss": "制造者、制造商（口语）",
+     "note": "make 做 + er …的人：做东西的人或公司，大到工厂、小到手艺人都能说，常和别的词连在一起（carmaker 汽车制造商、filmmaker 电影人）。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/factory.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.7
+       },
+       {
+        "svg": "art/car.svg",
+        "x": 0.7,
+        "y": 0.84,
+        "s": 0.24,
+        "go": [
+         1.1,
+         0.84
+        ],
+        "dur": 4,
+        "wait": 0.5,
+        "loop": true,
+        "z": 3
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.1,
+        "y": 0.78,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.02,
+          0.78
+         ],
+         "to": [
+          0.98,
+          0.78
+         ],
+         "offset": 0.2
+        }
+       },
+       {
+        "label": "carmaker",
+        "x": 0.8,
+        "y": 0.14,
+        "size": 0.12,
+        "color": "#7A3E00",
+        "bg": "#FFF6D8",
+        "border": "#E0A800",
+        "delay": 0.6
+       }
+      ]
+     }
+    },
+    {
+     "w": "manufacturer",
+     "gloss": "制造商（正式）",
+     "note": "最早指在工场里用手干活的工人，今天专指用机器成批生产东西的工厂、公司，说法更正式。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/factory.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.9
+       },
+       {
+        "svg": "art/car.svg",
+        "x": 0.85,
+        "y": 0.8,
+        "s": 0.3,
+        "go": [
+         1.1,
+         0.8
+        ],
+        "dur": 3,
+        "loop": true,
+        "z": 3
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.9,
+        "y": 0.78,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.98,
+          0.78
+         ],
+         "to": [
+          0.02,
+          0.78
+         ],
+         "offset": 0.3
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：maker 是 make 加 -er，“做东西的人”，大小都能说；manufacturer 原来是“用手做”的人，现在专指工厂成批生产，更正式。",
+   "tip": "一句话记法：口语、连写的词用 maker，正式场合说 manufacturer。"
+  },
+  "demo": {
+   "driver": {
+    "icons": [
+     "art/car.svg",
+     "art/ic-person.svg"
+    ],
+    "lit": "开车的人",
+    "pic": {
      "bg": "blank",
      "img": "art/street-bg.svg",
      "items": [
       {
-       "svg": "art/factory.svg",
-       "x": 0.5,
-       "y": 0.5,
-       "s": 0.9
-      },
-      {
        "svg": "art/car.svg",
-       "x": 0.85,
-       "y": 0.8,
-       "s": 0.3,
+       "x": 0.15,
+       "y": 0.76,
+       "s": 0.5,
        "go": [
-        1.1,
-        0.8
+        0.85,
+        0.76
        ],
        "dur": 3,
-       "loop": true
+       "wait": 0,
+       "loop": true,
+       "anim": "ride",
+       "z": 3
+      }
+     ]
+    }
+   },
+   "actor": {
+    "icons": [
+     "art/mic.svg",
+     "art/ic-person.svg"
+    ],
+    "lit": "表演的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-speech",
+       "id": "s",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.9,
+       "seq": "talk",
+       "z": 3
+      },
+      {
+       "waves": true,
+       "on": "s",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "spread": 60,
+       "n": 3,
+       "period": 1.2,
+       "color": "#F08C00",
+       "lw": 0.01,
+       "with": "s"
+      }
+     ]
+    }
+   },
+   "artist": {
+    "icons": [
+     "art/easel.svg",
+     "art/ic-person.svg"
+    ],
+    "lit": "搞艺术的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/easel.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.82,
+       "shadow": true,
+       "reveal": "up",
+       "rdur": 2
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.82,
+       "y": 0.2,
+       "s": 0.16,
+       "anim": "pulse",
+       "delay": 2
       }
      ]
     }

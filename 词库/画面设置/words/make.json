@@ -236,12 +236,12 @@
       "border": "#2B8A3E"
      },
      {
-      "actor": "west-clerk-happy",
+      "actor": "west-man-point",
       "id": "w",
       "x": 0.86,
       "y": 0.76,
       "s": 0.9,
-      "seq": "blink",
+      "seq": "talk",
       "z": 5
      },
      {
@@ -315,7 +315,7 @@
     "img": "art/classroom-bg.svg",
     "items": [
      {
-      "actor": "west-girl-explain",
+      "actor": "west-girl-raise",
       "id": "g",
       "x": 0.3,
       "y": 0.66,
@@ -325,8 +325,8 @@
       "z": 4
      },
      {
-      "actor": "cn-boy-raise",
-      "id": "b",
+      "actor": "cn-teacher-laugh",
+      "id": "t",
       "x": 0.72,
       "y": 0.66,
       "s": 0.84,
@@ -544,12 +544,12 @@
       "z": 5
      },
      {
-      "actor": "cn-boy-raise",
-      "id": "b",
+      "actor": "cn-teacher-point",
+      "id": "p",
       "x": 0.88,
       "y": 0.68,
       "s": 0.78,
-      "seq": "blink",
+      "seq": "talk",
       "z": 4
      },
      {
@@ -667,7 +667,7 @@
       "border": "#E0A800"
      },
      {
-      "actor": "west-clerk-happy",
+      "actor": "west-clerk-think",
       "id": "w",
       "x": 0.84,
       "y": 0.76,
@@ -689,9 +689,12 @@
   }
  ],
  "distinguish": {
+  "key": "做",
   "items": [
    {
     "w": "make",
+    "gloss": "做出东西、产生结果",
+    "note": "做完以后多出一样东西或一个结果：make a kite 做风筝、make a mistake 犯错、make a decision 作决定。",
     "text": "make 重在“造出东西、产生结果”：做完多出一样东西或一个结果，比如 make a kite 做风筝、make a mistake 犯错、make a decision 作决定。",
     "pic": {
      "bg": "blank",
@@ -714,8 +717,8 @@
        "z": 3
       },
       {
-       "actor": "west-girl-explain",
-       "id": "g",
+       "actor": "west-man-hello",
+       "id": "m",
        "x": 0.22,
        "y": 0.72,
        "s": 0.95,
@@ -723,12 +726,12 @@
        "z": 4
       },
       {
-       "actor": "cn-boy-raise",
-       "id": "b",
+       "actor": "west-girl-surprised",
+       "id": "s",
        "x": 0.8,
        "y": 0.72,
        "s": 0.92,
-       "nodWith": "g",
+       "nodWith": "m",
        "z": 4
       },
       {
@@ -745,7 +748,72 @@
    },
    {
     "w": "do",
-    "text": "do 重在“从事一项活动”：去干一件事，干完不一定多出新东西，比如 do homework 做作业、do the dishes 洗碗。"
+    "gloss": "从事一项活动",
+    "note": "去干一件事，干完不一定多出新东西：do homework 做作业、do the dishes 洗碗、do sports 做运动。",
+    "text": "do 重在“从事一项活动”：去干一件事，干完不一定多出新东西，比如 do homework 做作业、do the dishes 洗碗。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 1.9,
+       "z": -5
+      },
+      {
+       "actor": "west-girl-listen",
+       "id": "h",
+       "x": 0.45,
+       "y": 0.72,
+       "s": 1.0,
+       "seq": "blink",
+       "z": 3
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.45,
+       "y": 0.95,
+       "s": 0.42,
+       "z": 5
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.36,
+       "y": 0.78,
+       "s": 0.2,
+       "z": 6
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.56,
+       "y": 0.76,
+       "s": 0.24,
+       "z": 6
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.84,
+       "y": 0.3,
+       "s": 0.3,
+       "z": 2
+      },
+      {
+       "label": "do homework",
+       "x": 0.8,
+       "y": 0.12,
+       "size": 0.13,
+       "delay": 0.8,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
    }
   ],
   "pics": {
@@ -770,8 +838,8 @@
       "z": 3
      },
      {
-      "actor": "west-girl-explain",
-      "id": "g",
+      "actor": "west-man-hello",
+      "id": "m",
       "x": 0.22,
       "y": 0.72,
       "s": 0.95,
@@ -779,12 +847,12 @@
       "z": 4
      },
      {
-      "actor": "cn-boy-raise",
-      "id": "b",
+      "actor": "west-girl-surprised",
+      "id": "s",
       "x": 0.8,
       "y": 0.72,
       "s": 0.92,
-      "nodWith": "g",
+      "nodWith": "m",
       "z": 4
      },
      {

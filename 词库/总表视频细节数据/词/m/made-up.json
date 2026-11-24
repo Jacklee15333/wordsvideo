@@ -138,7 +138,7 @@
      "stroke": "#1B1A1F",
      "lw": 3,
      "go": [
-      0.22499999999999998,
+      0.225,
       0.38
      ],
      "dur": 1.2,
@@ -170,7 +170,7 @@
      "stroke": "#1B1A1F",
      "lw": 3,
      "go": [
-      0.22499999999999998,
+      0.225,
       0.62
      ],
      "dur": 1.2,
@@ -235,10 +235,12 @@
     "items": [
      {
       "actor": "west-man-speech",
+      "id": "s",
       "x": 0.3,
       "y": 0.58,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "svg": "art/book-open.svg",
@@ -265,11 +267,13 @@
      "items": [
       {
        "actor": "cn-teacher-point",
+       "id": "t",
        "x": 0.24,
        "y": 0.58,
        "s": 0.9,
        "z": 3,
-       "when": "story"
+       "when": "story",
+       "seq": "talk"
       },
       {
        "svg": "art/book-open.svg",
@@ -280,6 +284,7 @@
       },
       {
        "actor": "west-girl-listen",
+       "id": "l",
        "x": 0.82,
        "y": 0.62,
        "s": 0.8,
@@ -315,16 +320,19 @@
     "items": [
      {
       "actor": "west-girl-explain",
+      "id": "e",
       "x": 0.36,
       "y": 0.58,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/makeupkit.svg",
       "x": 0.76,
       "y": 0.8,
-      "s": 0.26
+      "s": 0.26,
+      "anim": "pulse"
      }
     ],
     "text": "化了妆的",
@@ -402,7 +410,7 @@
        "stroke": "#1B1A1F",
        "lw": 3,
        "go": [
-        0.22499999999999998,
+        0.225,
         0.38
        ],
        "dur": 1.2,
@@ -434,7 +442,7 @@
        "stroke": "#1B1A1F",
        "lw": 3,
        "go": [
-        0.22499999999999998,
+        0.225,
         0.62
        ],
        "dur": 1.2,
@@ -498,7 +506,7 @@
        "stroke": "#1B1A1F",
        "lw": 3,
        "go": [
-        0.22499999999999998,
+        0.225,
         0.38
        ],
        "dur": 1.2,
@@ -530,11 +538,11 @@
        "stroke": "#1B1A1F",
        "lw": 3,
        "go": [
-        0.22499999999999998,
+        0.225,
         0.62
        ],
        "dur": 1.2,
-       "wait": 0.6000000000000001
+       "wait": 0.6
       },
       {
        "shape": "rect",
@@ -595,19 +603,23 @@
      "img": "art/stage-bg.svg",
      "items": [
       {
-       "actor": "west-girl-explain",
+       "actor": "west-girl-surprised",
+       "id": "f",
        "x": 0.3,
        "y": 0.58,
        "s": 0.9,
        "z": 3,
-       "when": "脸"
+       "when": "脸",
+       "seq": "blink"
       },
       {
        "svg": "art/makeupkit.svg",
        "x": 0.72,
        "y": 0.74,
        "s": 0.3,
-       "when": "打扮"
+       "when": "打扮",
+       "pop": true,
+       "anim": "pulse"
       },
       {
        "label": "化了妆的",
@@ -623,60 +635,163 @@
    }
   ],
   "distinguish": {
-   "pics": {
-    "imaginary": {
-     "bg": "blank",
-     "img": "art/bedroom-bg.svg",
-     "items": [
-      {
-       "svg": "art/bed.svg",
-       "x": 0.4,
-       "y": 0.6,
-       "s": 0.6
-      },
-      {
-       "svg": "art/star.svg",
-       "x": 0.7,
-       "y": 0.3,
-       "s": 0.3,
-       "anim": "pulse"
-      }
-     ]
+   "key": "虚构的",
+   "items": [
+    {
+     "w": "made-up",
+     "gloss": "编造的（口语）",
+     "note": "made 被做出来的 + up 拼成：东拼西凑编出来的，常带“不是真的、骗人的”味道（a made-up story、a made-up excuse 编出来的借口）。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/bedroom-bg.svg",
+      "items": [
+       {
+        "actor": "west-man-speech",
+        "id": "s",
+        "x": 0.3,
+        "y": 0.58,
+        "s": 0.9,
+        "z": 3,
+        "seq": "talk"
+       },
+       {
+        "svg": "art/book-open.svg",
+        "x": 0.72,
+        "y": 0.6,
+        "s": 0.5,
+        "pop": true
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.86,
+        "y": 0.22,
+        "s": 0.14,
+        "anim": "pulse"
+       }
+      ]
+     }
     },
-    "fictional": {
+    {
+     "w": "imaginary",
+     "gloss": "想象中的",
+     "note": "来自 imagine 想象：只存在于脑子里、现实中没有（an imaginary friend 想象出来的朋友），不带“骗人”的意思。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/bedroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/bed.svg",
+        "x": 0.4,
+        "y": 0.62,
+        "s": 0.6
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.66,
+        "y": 0.26,
+        "s": 0.22,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.82,
+        "y": 0.18,
+        "s": 0.14,
+        "anim": "pulse",
+        "delay": 0.4
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.78,
+        "y": 0.4,
+        "s": 0.1,
+        "anim": "pulse",
+        "delay": 0.8
+       }
+      ]
+     }
+    },
+    {
+     "w": "fictional",
+     "gloss": "小说里虚构的",
+     "note": "来自 fiction 小说：小说、电影里写出来的人物和事（a fictional character 虚构的人物）。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/books.svg",
+        "x": 0.32,
+        "y": 0.6,
+        "s": 0.5,
+        "shadow": true
+       },
+       {
+        "svg": "art/book-open.svg",
+        "x": 0.66,
+        "y": 0.56,
+        "s": 0.6,
+        "shadow": true,
+        "reveal": "up",
+        "rdur": 1.6
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.86,
+        "y": 0.22,
+        "s": 0.12,
+        "anim": "pulse",
+        "delay": 1.6
+       }
+      ]
+     }
+    },
+    {
+     "w": "mythical",
+     "gloss": "神话、传说里的",
+     "note": "来自 myth 神话：古老传说里的东西（a mythical creature 神话里的动物），也指“根本不存在的”。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/castle-bg.svg",
+      "items": [
+       {
+        "svg": "art/crown.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.5,
+        "anim": "bob",
+        "shadow": true
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.26,
+        "y": 0.24,
+        "s": 0.14,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.76,
+        "y": 0.2,
+        "s": 0.12,
+        "anim": "pulse",
+        "delay": 0.5
+       }
+      ]
+     }
+    }
+   ],
+   "pics": {
+    "fake": {
      "bg": "blank",
      "img": "art/room-bg.svg",
-     "items": [
-      {
-       "svg": "art/books.svg",
-       "x": 0.5,
-       "y": 0.55,
-       "s": 0.7,
-       "shadow": true
-      }
-     ]
-    },
-    "mythical": {
-     "bg": "blank",
-     "img": "art/castle-bg.svg",
-     "items": [
-      {
-       "svg": "art/crown.svg",
-       "x": 0.5,
-       "y": 0.5,
-       "s": 0.5
-      }
-     ]
-    },
-    "fake": {
-     "bg": "studio",
-     "tint": "gray",
      "items": [
       {
        "svg": "art/tag.svg",
        "x": 0.5,
        "y": 0.5,
-       "s": 0.6
+       "s": 0.6,
+       "anim": "bob"
       },
       {
        "shape": "circle",
@@ -685,26 +800,30 @@
        "r": 0.3,
        "stroke": "#E2453C",
        "lw": 8,
-       "fill": "rgba(0,0,0,0)"
+       "fill": "rgba(0,0,0,0)",
+       "delay": 0.6
       },
       {
        "ray": [
         [
-         0.29000000000000004,
-         0.16999999999999998
+         0.29,
+         0.17
         ],
         [
          0.71,
-         0.8300000000000001
+         0.83
         ]
        ],
        "color": "#E2453C",
        "lw": 0.02,
-       "dur": 0.4
+       "dur": 0.4,
+       "delay": 0.8
       }
      ]
     }
-   }
+   },
+   "logic": "逻辑不同：made-up 是动词短语 make up“编造”变来的，重在“被人编出来”；imaginary 来自 imagine，只在脑子里；fictional 来自 fiction，是小说里的；mythical 来自 myth，是神话里的。",
+   "tip": "一句话记法：被人编的 made-up，脑子里想的 imaginary，小说里的 fictional，神话里的 mythical；仿造的假货要说 fake。"
   }
  },
  "插图": [
@@ -798,5 +917,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

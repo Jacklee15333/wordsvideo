@@ -116,10 +116,10 @@
       "wait": 1.1
      },
      {
-      "label": "凑齐、拼成",
+      "label": "up",
       "x": 0.5,
       "y": 0.1,
-      "size": 0.09,
+      "size": 0.1,
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "delay": 2
@@ -216,11 +216,98 @@
     "img": "art/classroom-bg.svg",
     "items": [
      {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 1
+     },
+     {
+      "shape": "rect",
+      "x": 0.12,
+      "y": 0.2,
+      "w": 0.12,
+      "h": 0.2,
+      "fill": "#E2453C",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.42,
+       0.42
+      ],
+      "dur": 1.0,
+      "wait": 0.2,
+      "hide": 1.6
+     },
+     {
+      "shape": "rect",
+      "x": 0.88,
+      "y": 0.2,
+      "w": 0.12,
+      "h": 0.2,
+      "fill": "#3FA7D6",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.58,
+       0.42
+      ],
+      "dur": 1.0,
+      "wait": 0.3,
+      "hide": 1.6
+     },
+     {
+      "shape": "rect",
+      "x": 0.12,
+      "y": 0.82,
+      "w": 0.12,
+      "h": 0.2,
+      "fill": "#F2C14E",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.42,
+       0.62
+      ],
+      "dur": 1.0,
+      "wait": 0.4,
+      "hide": 1.6
+     },
+     {
+      "shape": "rect",
+      "x": 0.88,
+      "y": 0.82,
+      "w": 0.12,
+      "h": 0.2,
+      "fill": "#59B95A",
+      "stroke": "#1B1A1F",
+      "lw": 3,
+      "go": [
+       0.58,
+       0.62
+      ],
+      "dur": 1.0,
+      "wait": 0.5,
+      "hide": 1.6
+     },
+     {
       "svg": "art/puzzle.svg",
       "x": 0.5,
       "y": 0.52,
       "s": 0.66,
-      "shadow": true
+      "shadow": true,
+      "delay": 1.5,
+      "pop": true,
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.74,
+      "y": 0.24,
+      "s": 0.12,
+      "anim": "pulse",
+      "delay": 1.8
      },
      {
       "label": "整体",
@@ -228,7 +315,8 @@
       "y": 0.2,
       "size": 0.075,
       "color": "#2B8A3E",
-      "border": "#2B8A3E"
+      "border": "#2B8A3E",
+      "delay": 1.8
      }
     ],
     "text": "构成、组成",
@@ -246,15 +334,40 @@
        "y": 0.84,
        "s": 0.16,
        "when": "team",
-       "anim": "bob"
+       "anim": "bob",
+       "z": 4
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.1,
+       "y": 0.72,
+       "s": 0.44,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.72
+        ],
+        "to": [
+         0.98,
+         0.72
+        ],
+        "offset": 0
+       }
       },
       {
        "actor": "cn-boy-raise",
+       "id": "b",
        "x": 0.24,
        "y": 0.56,
        "s": 0.8,
        "z": 3,
-       "when": "six boys"
+       "when": "six boys",
+       "seq": "talk",
+       "turn": [
+        0,
+        2
+       ]
       },
       {
        "label": "six boys",
@@ -268,11 +381,17 @@
       },
       {
        "actor": "west-girl-raise",
+       "id": "g",
        "x": 0.76,
        "y": 0.56,
        "s": 0.8,
        "z": 3,
-       "when": "five girls"
+       "when": "five girls",
+       "seq": "talk",
+       "turn": [
+        1,
+        2
+       ]
       },
       {
        "label": "five girls",
@@ -302,10 +421,12 @@
     "items": [
      {
       "actor": "west-girl-surprised",
+      "id": "s",
       "x": 0.3,
       "y": 0.58,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/mirror.svg",
@@ -318,7 +439,8 @@
       "x": 0.76,
       "y": 0.84,
       "s": 0.24,
-      "z": 5
+      "z": 5,
+      "anim": "pulse"
      },
      {
       "svg": "art/desk.svg",
@@ -326,6 +448,14 @@
       "y": 0.94,
       "s": 0.26,
       "z": 4
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.84,
+      "y": 0.2,
+      "s": 0.1,
+      "anim": "pulse",
+      "delay": 0.6
      }
     ],
     "text": "化妆品、妆容",
@@ -339,11 +469,13 @@
      "items": [
       {
        "actor": "west-girl-explain",
+       "id": "e",
        "x": 0.28,
        "y": 0.58,
        "s": 0.9,
        "z": 3,
-       "when": "She"
+       "when": "She",
+       "seq": "blink"
       },
       {
        "svg": "art/mirror.svg",
@@ -360,6 +492,15 @@
        "z": 5,
        "when": "make-up",
        "pop": true
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "s": 0.1,
+       "anim": "pulse",
+       "when": "make-up",
+       "delay": 0.4
       },
       {
        "label": "make-up",
@@ -389,10 +530,12 @@
     "items": [
      {
       "actor": "west-man-smile",
+      "id": "m",
       "x": 0.4,
       "y": 0.58,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/heart.svg",
@@ -406,7 +549,8 @@
       "x": 0.8,
       "y": 0.7,
       "s": 0.18,
-      "delay": 0.5
+      "delay": 0.5,
+      "anim": "pulse"
      }
     ],
     "text": "性格、素质",
@@ -420,11 +564,13 @@
      "items": [
       {
        "actor": "west-man-hello",
+       "id": "h",
        "x": 0.36,
        "y": 0.58,
        "s": 0.9,
        "z": 3,
-       "when": "his"
+       "when": "his",
+       "seq": "blink"
       },
       {
        "svg": "art/heart.svg",
@@ -616,7 +762,7 @@
         0.62
        ],
        "dur": 1.2,
-       "wait": 0.9000000000000001
+       "wait": 0.9
       },
       {
        "label": "零散的部分",
@@ -668,12 +814,14 @@
      "items": [
       {
        "actor": "west-man-speech",
+       "id": "a",
        "x": 0.3,
        "y": 0.58,
        "s": 0.9,
        "z": 3,
        "when": "演员",
-       "hideCue": 1
+       "hideCue": 1,
+       "seq": "talk"
       },
       {
        "label": "扮相",
@@ -713,7 +861,8 @@
        "y": 0.5,
        "s": 0.2,
        "when": "一切食物",
-       "hideCue": 3
+       "hideCue": 3,
+       "anim": "bob"
       },
       {
        "svg": "art/apple.svg",
@@ -722,7 +871,8 @@
        "s": 0.2,
        "when": "一切食物",
        "delay": 0.2,
-       "hideCue": 3
+       "hideCue": 3,
+       "anim": "bob"
       },
       {
        "svg": "art/meat.svg",
@@ -730,7 +880,8 @@
        "y": 0.5,
        "s": 0.36,
        "when": "专指肉",
-       "hideCue": 3
+       "hideCue": 3,
+       "pop": true
       },
       {
        "label": "meat 肉",
@@ -748,7 +899,8 @@
        "y": 0.56,
        "s": 0.5,
        "when": "化妆品",
-       "pop": true
+       "pop": true,
+       "anim": "pulse"
       },
       {
        "label": "make-up 化妆品、妆容",
@@ -776,12 +928,14 @@
      "img": "art/room-bg.svg",
      "items": [
       {
-       "actor": "west-man-smile",
+       "actor": "cn-teacher-listen",
+       "id": "l",
        "x": 0.36,
        "y": 0.58,
        "s": 0.9,
        "z": 3,
-       "when": "一个人"
+       "when": "一个人",
+       "seq": "blink"
       },
       {
        "svg": "art/heart.svg",
@@ -789,7 +943,8 @@
        "y": 0.3,
        "s": 0.2,
        "when": "各种特点",
-       "pop": true
+       "pop": true,
+       "anim": "pulse"
       },
       {
        "svg": "art/star.svg",
@@ -798,7 +953,8 @@
        "s": 0.18,
        "when": "各种特点",
        "delay": 0.3,
-       "pop": true
+       "pop": true,
+       "anim": "pulse"
       },
       {
        "label": "性格、素质",
@@ -814,33 +970,178 @@
    }
   ],
   "distinguish": {
+   "key": "构成",
+   "items": [
+    {
+     "w": "make-up",
+     "gloss": "构成、组成（较口语）",
+     "note": "从 make up“把零散的部分凑齐、拼成”来：说一个团队、一个人由哪些部分拼成（the make-up of the team），还能指化妆品、性格。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "shape": "rect",
+        "x": 0.12,
+        "y": 0.2,
+        "w": 0.1,
+        "h": 0.24,
+        "fill": "#E2453C",
+        "stroke": "#1B1A1F",
+        "lw": 3,
+        "go": [
+         0.45,
+         0.38
+        ],
+        "dur": 1.0,
+        "wait": 0.2,
+        "hide": 1.6
+       },
+       {
+        "shape": "rect",
+        "x": 0.88,
+        "y": 0.2,
+        "w": 0.1,
+        "h": 0.24,
+        "fill": "#3FA7D6",
+        "stroke": "#1B1A1F",
+        "lw": 3,
+        "go": [
+         0.55,
+         0.38
+        ],
+        "dur": 1.0,
+        "wait": 0.3,
+        "hide": 1.6
+       },
+       {
+        "shape": "rect",
+        "x": 0.12,
+        "y": 0.8,
+        "w": 0.1,
+        "h": 0.24,
+        "fill": "#F2C14E",
+        "stroke": "#1B1A1F",
+        "lw": 3,
+        "go": [
+         0.45,
+         0.62
+        ],
+        "dur": 1.0,
+        "wait": 0.4,
+        "hide": 1.6
+       },
+       {
+        "shape": "rect",
+        "x": 0.88,
+        "y": 0.8,
+        "w": 0.1,
+        "h": 0.24,
+        "fill": "#59B95A",
+        "stroke": "#1B1A1F",
+        "lw": 3,
+        "go": [
+         0.55,
+         0.62
+        ],
+        "dur": 1.0,
+        "wait": 0.5,
+        "hide": 1.6
+       },
+       {
+        "svg": "art/puzzle.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "shadow": true,
+        "delay": 1.5,
+        "pop": true,
+        "anim": "bob",
+        "z": 3
+       }
+      ]
+     }
+    },
+    {
+     "w": "composition",
+     "gloss": "构成、成分（较正式）",
+     "note": "com 一起 + pos 放 + ition 名词：把东西放在一起，多说物质的成分、文章和画的构图，用在课本、科学里，比较正式。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/books.svg",
+        "x": 0.28,
+        "y": 0.62,
+        "s": 0.5,
+        "shadow": true
+       },
+       {
+        "svg": "art/puzzle.svg",
+        "x": 0.62,
+        "y": 0.55,
+        "s": 0.66,
+        "shadow": true,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/ball.svg",
+        "x": 0.86,
+        "y": 0.7,
+        "s": 0.24,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.86,
+        "y": 0.22,
+        "s": 0.16,
+        "anim": "pulse"
+       }
+      ]
+     }
+    }
+   ],
    "pics": {
     "composition": {
-     "bg": "studio",
-     "tint": "blue",
+     "bg": "blank",
+     "img": "art/room-bg.svg",
      "items": [
       {
-       "svg": "art/puzzle.svg",
-       "x": 0.5,
-       "y": 0.5,
-       "s": 0.8,
+       "svg": "art/books.svg",
+       "x": 0.28,
+       "y": 0.62,
+       "s": 0.5,
        "shadow": true
       },
       {
+       "svg": "art/puzzle.svg",
+       "x": 0.62,
+       "y": 0.55,
+       "s": 0.66,
+       "shadow": true,
+       "anim": "pulse"
+      },
+      {
        "svg": "art/ball.svg",
-       "x": 0.2,
-       "y": 0.6,
-       "s": 0.3
+       "x": 0.86,
+       "y": 0.7,
+       "s": 0.24,
+       "anim": "bob"
       },
       {
        "svg": "art/star.svg",
-       "x": 0.82,
-       "y": 0.4,
-       "s": 0.3
+       "x": 0.86,
+       "y": 0.22,
+       "s": 0.16,
+       "anim": "pulse"
       }
      ]
     }
-   }
+   },
+   "logic": "逻辑不同：make-up 是动词短语 make up“凑齐拼成”直接变成的名词；composition 是“放在一起”加名词后缀 -ition，更正式。",
+   "tip": "一句话记法：团队、人的组成用 make-up，物质成分、作品构图用 composition。"
   }
  },
  "插图": [
@@ -940,5 +1241,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

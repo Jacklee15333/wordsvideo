@@ -60,6 +60,14 @@
       "fade": 0.6
      },
      {
+      "svg": "art/star.svg",
+      "x": 0.78,
+      "y": 0.3,
+      "s": 0.1,
+      "delay": 2.8,
+      "anim": "pulse"
+     },
+     {
       "ray": [
        [
         0.15,
@@ -81,10 +89,46 @@
       "delay": 0.5
      },
      {
-      "label": "从头到尾重做",
+      "actor": "walk-west-woman-case",
+      "x": 0.1,
+      "y": 0.8,
+      "s": 0.44,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.02,
+        0.8
+       ],
+       "to": [
+        0.98,
+        0.8
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.9,
+      "y": 0.82,
+      "s": 0.4,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.98,
+        0.82
+       ],
+       "to": [
+        0.02,
+        0.82
+       ],
+       "offset": 0.5
+      }
+     },
+     {
+      "label": "over",
       "x": 0.5,
       "y": 0.92,
-      "size": 0.08,
+      "size": 0.09,
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "delay": 1
@@ -116,6 +160,14 @@
      "fade": 0.6
     },
     {
+     "svg": "art/star.svg",
+     "x": 0.76,
+     "y": 0.3,
+     "s": 0.1,
+     "delay": 2.8,
+     "anim": "pulse"
+    },
+    {
      "ray": [
       [
        0.15,
@@ -137,6 +189,42 @@
      "delay": 0.5
     },
     {
+     "actor": "walk-cn-girl",
+     "x": 0.1,
+     "y": 0.8,
+     "s": 0.44,
+     "z": 3,
+     "walk": {
+      "from": [
+       0.02,
+       0.8
+      ],
+      "to": [
+       0.98,
+       0.8
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.9,
+     "y": 0.8,
+     "s": 0.46,
+     "z": 3,
+     "walk": {
+      "from": [
+       0.98,
+       0.8
+      ],
+      "to": [
+       0.02,
+       0.8
+      ],
+      "offset": 0.45
+     }
+    },
+    {
      "label": "从头到尾重做",
      "x": 0.5,
      "y": 0.92,
@@ -154,10 +242,12 @@
     "items": [
      {
       "actor": "west-girl-surprised",
+      "id": "s",
       "x": 0.32,
       "y": 0.58,
       "s": 0.92,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/mirror.svg",
@@ -198,48 +288,62 @@
      "items": [
       {
        "actor": "west-girl-listen",
+       "id": "g",
        "x": 0.3,
        "y": 0.58,
        "s": 0.92,
        "z": 3,
        "when": "She",
-       "hideWhen": "makeover"
+       "seq": "blink",
+       "nodWith": "t"
       },
       {
-       "actor": "west-girl-surprised",
-       "x": 0.3,
-       "y": 0.58,
-       "s": 0.92,
-       "z": 3,
-       "when": "makeover"
+       "actor": "cn-teacher-point",
+       "id": "t",
+       "x": 0.56,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 4,
+       "when": "She",
+       "seq": "talk"
       },
       {
        "svg": "art/star.svg",
-       "x": 0.46,
-       "y": 0.2,
+       "x": 0.3,
+       "y": 0.16,
        "s": 0.12,
        "when": "makeover",
        "anim": "pulse"
       },
       {
+       "svg": "art/star.svg",
+       "x": 0.16,
+       "y": 0.3,
+       "s": 0.08,
+       "when": "makeover",
+       "delay": 0.3,
+       "anim": "pulse"
+      },
+      {
        "svg": "art/mirror.svg",
-       "x": 0.7,
+       "x": 0.82,
        "y": 0.42,
-       "s": 0.56,
+       "s": 0.5,
        "when": "She"
       },
       {
        "svg": "art/makeupkit.svg",
-       "x": 0.76,
+       "x": 0.82,
        "y": 0.84,
-       "s": 0.24,
+       "s": 0.22,
        "z": 5,
-       "when": "makeover"
+       "when": "makeover",
+       "pop": true
       },
       {
        "label": "makeover",
        "x": 0.86,
-       "y": 0.14,
+       "y": 0.12,
        "size": 0.075,
        "color": "#7A3E00",
        "bg": "#FFF6D8",
@@ -248,8 +352,8 @@
       },
       {
        "label": "大变身",
-       "x": 0.86,
-       "y": 0.3,
+       "x": 0.6,
+       "y": 0.12,
        "size": 0.075,
        "color": "#2B8A3E",
        "border": "#2B8A3E",
@@ -292,6 +396,32 @@
       "s": 0.58,
       "delay": 1,
       "pop": true
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.86,
+      "y": 0.24,
+      "s": 0.1,
+      "delay": 1.4,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.1,
+      "y": 0.84,
+      "s": 0.4,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.02,
+        0.84
+       ],
+       "to": [
+        0.98,
+        0.84
+       ],
+       "offset": 0.2
+      }
      }
     ],
     "text": "翻新改造",
@@ -309,7 +439,8 @@
        "y": 0.66,
        "s": 0.4,
        "when": "makeover",
-       "pop": true
+       "pop": true,
+       "anim": "sway"
       },
       {
        "svg": "art/lamp.svg",
@@ -319,6 +450,15 @@
        "when": "makeover",
        "delay": 0.3,
        "pop": true
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.68,
+       "y": 0.36,
+       "s": 0.1,
+       "when": "makeover",
+       "delay": 0.5,
+       "anim": "pulse"
       },
       {
        "svg": "art/class-desks.svg",
@@ -374,6 +514,14 @@
        "fade": 0.6
       },
       {
+       "svg": "art/star.svg",
+       "x": 0.76,
+       "y": 0.3,
+       "s": 0.1,
+       "delay": 2.8,
+       "anim": "pulse"
+      },
+      {
        "ray": [
         [
          0.15,
@@ -393,6 +541,42 @@
        "arrow": true,
        "dur": 1.6,
        "delay": 0.5
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.1,
+       "y": 0.8,
+       "s": 0.46,
+       "z": 3,
+       "walk": {
+        "from": [
+         0.02,
+         0.8
+        ],
+        "to": [
+         0.98,
+         0.8
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.9,
+       "y": 0.82,
+       "s": 0.42,
+       "z": 3,
+       "walk": {
+        "from": [
+         0.98,
+         0.82
+        ],
+        "to": [
+         0.02,
+         0.82
+        ],
+        "offset": 0.5
+       }
       },
       {
        "label": "从头到尾重做",
@@ -419,33 +603,52 @@
      "img": "art/bedroom-bg.svg",
      "items": [
       {
-       "actor": "west-girl-listen",
+       "actor": "west-girl-music",
+       "id": "g",
        "x": 0.3,
        "y": 0.58,
        "s": 0.92,
        "z": 3,
        "when": "人身上",
-       "hideWhen": "大变身"
+       "seq": "pingpong",
+       "fps": 2.5
+      },
+      {
+       "svg": "art/mirror.svg",
+       "x": 0.72,
+       "y": 0.42,
+       "s": 0.46,
+       "when": "发型"
       },
       {
        "svg": "art/makeupkit.svg",
        "x": 0.74,
-       "y": 0.8,
+       "y": 0.82,
        "s": 0.26,
-       "when": "妆容"
+       "when": "妆容",
+       "pop": true
       },
       {
-       "actor": "west-girl-surprised",
+       "svg": "art/star.svg",
        "x": 0.3,
-       "y": 0.58,
-       "s": 0.92,
-       "z": 3,
-       "when": "大变身"
+       "y": 0.14,
+       "s": 0.12,
+       "when": "大变身",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.14,
+       "y": 0.3,
+       "s": 0.08,
+       "when": "大变身",
+       "delay": 0.3,
+       "anim": "pulse"
       },
       {
        "label": "大变身",
        "x": 0.74,
-       "y": 0.2,
+       "y": 0.12,
        "size": 0.09,
        "color": "#2B8A3E",
        "border": "#2B8A3E",
@@ -498,6 +701,33 @@
        "s": 0.56,
        "when": "翻新",
        "pop": true
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.86,
+       "y": 0.26,
+       "s": 0.1,
+       "when": "翻新",
+       "delay": 0.4,
+       "anim": "pulse"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.9,
+       "y": 0.84,
+       "s": 0.4,
+       "z": 3,
+       "walk": {
+        "from": [
+         0.98,
+         0.84
+        ],
+        "to": [
+         0.02,
+         0.84
+        ],
+        "offset": 0.3
+       }
       },
       {
        "label": "翻新改造",
@@ -606,5 +836,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
