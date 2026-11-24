@@ -407,6 +407,12 @@ def api_live(qs):
 
 def api_relay_get(qs):
     r = dict(C.RELAY)
+    t = C.RUNNER.task
+    r["show"] = bool(t and t["id"] == r.get("tid") and r.get("phase") in ("send", "checking", "ok", "fail"))
+    r["hist"] = [dict(h) for h in C.RELAY_HIST]
+    r["inboxNow"] = list(C.INBOX_LAST.get("files") or [])
+    r["pollSec"] = max(5, int(C.inbox_cfg().get("pollSec") or 15))
+    r["now"] = time.time()
     if qs.get("full") != "1":
         r["promptLen"] = len(r.get("prompt") or "")
         r["prompt"] = (r.get("prompt") or "")[:600]

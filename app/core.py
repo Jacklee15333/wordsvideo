@@ -1005,6 +1005,38 @@ AI_LIVE = {"reply": "", "provider": "", "kind": "", "words": [], "started": 0.0,
 
 RELAY_SKIP = set()
 RELAY = {"id": 0, "status": "", "prompt": "", "words": [], "kind": "", "reply": "", "ts": 0.0}
+# v1.10.3：这一批每一轮的经过（提示词 → 收到回复 → 检查过了/没过），黄框里一步一步显示；换一批词就重新记
+RELAY_HIST = []
+INBOX_LAST = {"files": [], "ts": 0.0}        # 最近一次看中转仓库 inbox/ 里有哪些文件
+
+
+def _say(msg):
+    """只在黑色窗口里显示（不进步骤记录，免得每十几秒一行把记录刷满）。"""
+    try:
+        print("%s %s" % (now(), mask(msg)), flush=True)
+    except Exception:
+        pass
+
+
+def _dur(s):
+    s = max(0, int(s))
+    return "%d 秒" % s if s < 60 else "%d 分 %d 秒" % (s // 60, s % 60)
+
+
+def relay_stage(text):
+    """检查进行到哪儿了（黄框第 4 步下面那行）。"""
+    RELAY["stage"] = str(text)[:200]
+
+
+def relay_result(ok, detail=""):
+    """这一轮交回的回复检查完了：过了还是没过（黄框第 4 步打勾或者打叉，记进这一批的经过）。"""
+    with _RELAY_LOCK:
+        if not RELAY_HIST or RELAY.get("phase") != "checking":
+            return
+        RELAY_HIST[-1].update(res="ok" if ok else "fail", detail=mask(str(detail))[:400], t1=time.time())
+        RELAY["phase"], RELAY["stage"] = ("ok" if ok else "fail"), ""
+        n = len(RELAY_HIST)
+    _say("手动接力 第 %d 轮：%s%s" % (n, "✓ 检查过了" if ok else "✗ 没过", ("：" + str(detail)[:160]) if detail else ""))
 _RELAY_LOCK = threading.Lock()
 
 
@@ -1294,18 +1326,20 @@ def xlsx_reply_text(data):
     return "\n".join(lines)
 
 
-def inbox_fetch(name):
+def inbox_fetch(name, alts=()):
     """看收件箱里有没有这一批的回复（name.xlsx，或者做不成 Excel 时的 name.txt）：有就返回 (原文, sha, 文件路径)，没有返回 None。"""
     ib = inbox_cfg()
     br = urllib.parse.quote(ib["branch"] or "main")
     folder = name.rsplit("/", 1)[0] if "/" in name else ""
     st, d = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], urllib.parse.quote(folder), br), ib["token"])
     if st == 404:                           # inbox 文件夹还没有：还没传上来
+        INBOX_LAST.update(files=[], ts=time.time())
         return None
     if st != 200:
         raise RuntimeError("看收件箱出错（%s）：%s" % (st, str((d or {}).get("message", ""))[:120]))
     have = {x.get("path") for x in d} if isinstance(d, list) else set()
-    path = next((name + e for e in (".xlsx", ".txt") if name + e in have), "")
+    INBOX_LAST.update(files=sorted(p.rsplit("/", 1)[-1] for p in have if p), ts=time.time())
+    path = next((n + e for n in (name,) + tuple(alts or ()) for e in (".xlsx", ".txt") if n + e in have), "")
     if not path:
         return None
     st, d = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], urllib.parse.quote(path), br), ib["token"])
@@ -1373,10 +1407,19 @@ def relay_wait(prompt, words):
         ipath = "%s/%s-%s" % (inbox_cfg(cfg)["dir"], time.strftime("%Y%m%d-%H%M%S"), os.urandom(3).hex())
         prompt = prompt.rstrip() + "\n\n" + inbox_prompt(ipath)
     with _RELAY_LOCK:
+        tid = (RUNNER.task or {}).get("id")
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=AI_LIVE.get("kind", ""),
-                     reply="", ts=time.time(), copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "")
+                     reply="", ts=time.time(), copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "",
+                     phase="send", tid=tid, polls=0, lastPoll=0.0, stage="")
         rid = RELAY["id"]
-    tid = (RUNNER.task or {}).get("id")
+        if RELAY_HIST and (RELAY_HIST[-1].get("words") != list(words) or RELAY_HIST[-1].get("tid") != tid):
+            RELAY_HIST.clear()                       # 换了一批词（或者换了任务）：重新记
+        RELAY_HIST.append({"id": rid, "kind": RELAY["kind"], "words": list(words), "tid": tid, "t0": time.time(),
+                           "inbox": RELAY["inbox"], "got": 0.0, "glen": 0, "res": "", "detail": "", "t1": 0.0})
+        del RELAY_HIST[:-10]
+        alts = [h["inbox"][:-5] for h in RELAY_HIST[:-1] if h.get("inbox")]      # 前几轮的文件名：网页 AI 用了旧名字也认
+    _say("手动接力 第 %d 轮（%s）：%s … %s，%d 个词，等你在网页 AI 里粘贴、发送%s" % (
+        len(RELAY_HIST), RELAY["kind"] or "提示词", words[0], words[-1], len(words), ("；写完它会传 %s.xlsx" % ipath) if ipath else ""))
     after = ("写完它会自己把回复整理成 Excel 传到中转仓库（%s.xlsx），软件看到就接着做" % ipath) if ibox else "写完点它回复下面的「复制」，软件会自己接着做"
     if use_clip and clip.set_text(prompt):
         RELAY["copied"] = True
@@ -1393,8 +1436,16 @@ def relay_wait(prompt, words):
             if ibox and time.time() >= next_ib:
                 next_ib = time.time() + poll
                 try:
-                    got = inbox_fetch(ipath)
+                    got = inbox_fetch(ipath, alts)
                     ib_err = 0
+                    with _RELAY_LOCK:
+                        RELAY["polls"] = RELAY.get("polls", 0) + 1
+                        RELAY["lastPoll"] = time.time()
+                    if not got:
+                        fs = INBOX_LAST.get("files") or []
+                        _say("中转仓库 第 %d 次看：还没有 %s.xlsx（等了 %s）；inbox/ 里现在：%s" % (
+                            RELAY["polls"], ipath.rsplit("/", 1)[-1], _dur(time.time() - RELAY["ts"]),
+                            "、".join(fs[:6]) + ("…" if len(fs) > 6 else "") if fs else "空的"))
                 except ExcelBad as e:
                     got = None
                     if RELAY.get("hint") != str(e) + "：点网页里回复下面的「复制」交回，或者叫它照常把全文写在聊天里":
@@ -1411,7 +1462,8 @@ def relay_wait(prompt, words):
                         with _RELAY_LOCK:
                             if RELAY["id"] == rid and RELAY["status"] == "等你操作":
                                 RELAY.update(status="交回了", reply=t, hint="")
-                        log("网页 AI 把回复传到中转仓库了（%s，%d 字），接着做" % (gpath, len(t)), tid)
+                        log("网页 AI 把回复传到中转仓库了（%s，%d 字%s），接着做" % (
+                            gpath, len(t), "；文件名是上一轮的，也收下了" if not gpath.startswith(ipath) else ""), tid)
                         inbox_delete(gpath, sha)
                         continue
                     RELAY["hint"] = "收件箱里的回复不完整（没有最后一行 ZBQ-END，或者没提到这批词）：在网页里叫它写完整再传一次"
@@ -1420,8 +1472,14 @@ def relay_wait(prompt, words):
             with _RELAY_LOCK:
                 if RELAY["id"] == rid and RELAY["status"] == "交回了":
                     AI_LIVE["reply"] = RELAY["reply"]
+                    RELAY.update(phase="checking", stage="检查格式、规矩…")
+                    if RELAY_HIST and RELAY_HIST[-1]["id"] == rid:
+                        RELAY_HIST[-1].update(got=time.time(), glen=len(RELAY["reply"]))
                     return RELAY["reply"]
                 if RELAY["id"] == rid and RELAY["status"] == "跳过":
+                    RELAY["phase"] = ""
+                    if RELAY_HIST and RELAY_HIST[-1]["id"] == rid:
+                        RELAY_HIST[-1].update(res="skip", detail="你点了「这一批先跳过」", t1=time.time())
                     return ""
             if use_clip:
                 sq = clip.seq()
@@ -1845,6 +1903,9 @@ class Runner:
                 got, iss = parse_reply(rep, chunk)
                 issues += iss
                 judge(chunk, got, 0)
+                nb = [w for w in chunk if w in bad]
+                relay_result(not nb, "过了 %d 个，没过 %d 个%s" % (len(chunk) - len(nb), len(nb), ("：" + "；".join(
+                    "%s %s" % (w, "；".join(bad[w][1])[:80]) for w in nb[:3])) if nb else ""))
                 log("  %s … %s：过了 %d 个，没过 %d 个" % (chunk[0], chunk[-1], len([w for w in chunk if w in saved]),
                                                      len([w for w in chunk if w in bad])), tid)
             for rnd in range(1, int(cfg["fixRounds"]) + 1):
@@ -1857,6 +1918,9 @@ class Runner:
                     got, iss = parse_reply(rep, chunk)
                     issues += iss
                     judge(chunk, got, rnd)
+                    nb = [w for w in chunk if w in bad]
+                    relay_result(not nb, "过了 %d 个，没过 %d 个%s" % (len(chunk) - len(nb), len(nb), ("：" + "；".join(
+                        "%s %s" % (w, "；".join(bad[w][1])[:80]) for w in nb[:3])) if nb else ""))
                 log("  改错第 %d 轮后还有 %d 个没过" % (rnd, len(bad)), tid)
         finally:
             for w, (lines, errs) in bad.items():

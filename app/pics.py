@@ -512,9 +512,11 @@ def _try(R, tid, w, rounds):
         for rnd in range(rounds + 1):
             rep = R.ask(tid, "做画面" if not (rnd or old) else "画面改第 %d 次" % (rnd + (1 if old else 0)), build_prompt(w, fix, todo), [w])
             P, raw, svgs, errs = parse(rep)
+            C.relay_stage("检查画面设置、插图…")
             errs = errs or check(w, P, svgs)
             checked = False
             if not errs:
+                C.relay_stage("起草检查：在 WSL 里用视频技能画一遍（几秒钟）…")
                 st, line = wsl_draft_safe(w, P, svgs)
                 temp = True
                 if st == "ok":
@@ -526,7 +528,9 @@ def _try(R, tid, w, rounds):
             if not errs:
                 save(w, P, svgs, checked)
                 temp = False
+                C.relay_result(True, "过了，画面存好了" if checked else "本机检查过了，先存下（出片时再起草检查）")
                 return True, []
+            C.relay_result(False, "；".join(errs))
             fix = (raw or json.dumps(P or {}, ensure_ascii=False), errs)
             C.log("  %s 的画面没过：%s" % (w, "；".join(errs)[:200]), tid)
         return False, errs

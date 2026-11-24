@@ -273,6 +273,22 @@ tr.wdim td.w{color:var(--faint)}
 .wmode .chip small{font-size:11.5px;opacity:.75;font-weight:400}
 #pImpCheck{margin-top:10px}
 .plist th{white-space:nowrap}
+/* v1.10.3：手动接力的 4 步是活的：做完打勾、正在做的转圈、等你做的标黄、没过打叉 */
+.rsteps li::before{transition:background .2s}
+.rsteps li[data-st=done]::before{content:"✓";background:var(--pass)}
+.rsteps li[data-st=bad]::before{content:"✗";background:var(--red)}
+.rsteps li[data-st=you]::before{background:#E9A23B}
+.rsteps li[data-st=wait]::before{background:#C9D2DC}
+.rsteps li[data-st=wait]{color:var(--muted)}
+.rsteps li[data-st=run]::before{content:"";background:#fff;border:2px solid #C9D2DC;border-top-color:var(--blue);animation:rspin .9s linear infinite}
+@keyframes rspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.rsteps li[data-st=run]::before{animation:none;content:"…";border:0;background:var(--blue)}}
+.rs{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.6}
+.rs.ok{color:var(--pass)} .rs.bad{color:var(--red)}
+.rs code{font-size:11.5px;background:#F1F4F7;padding:0 4px;border-radius:3px}
+.rhist{background:#fff;border:1px solid #F0DDB8;border-radius:6px;padding:6px 10px;margin:6px 0 8px;font-size:12.5px}
+.rhist ul{margin:4px 0 0;padding-left:16px}
+.rhist li{margin:2px 0}
 /* v1.9.9：这次给哪些词、结果、存在哪儿 */
 .pst-will{background:#E7EEF8;color:var(--blue)}
 .tc{font-weight:600;color:var(--red);margin-left:2px}
@@ -469,16 +485,17 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
         <div id="lShotWrap"><img id="lShot" alt="网页 AI 的浏览器画面"><div id="lShotAge" class="small faint"></div></div>
         <div id="lNoShot" class="lnoshot" hidden></div>
   <div class="relay" id="rBox" hidden>
-    <h3 style="margin:0 0 4px">要你操作：把这一批交给网页 AI <span id="rWords" class="small muted"></span></h3>
+    <h3 style="margin:0 0 4px" id="rTitle">要你操作：把这一批交给网页 AI <span id="rWords" class="small muted"></span></h3>
+    <div id="rHist"></div>
     <div id="rAuto">
-    <ol class="steps">
-      <li><b>提示词已经自动复制好了</b> <span class="small muted" id="rLen"></span> <button class="btn ghost sm" id="rCopy">再复制一次</button></li>
-      <li><button class="btn sm" id="rOpen">打开网页 AI ↗</button> 在网页里 Ctrl+V 粘贴、发送 <span class="small faint">（用你平时的浏览器打开，不用复制网址）</span></li>
-      <li id="rStep3">等它写完（最后一行是 ZBQ-END），点它回复下面的<b>「复制」</b>按钮</li>
-      <li id="rStep4">软件看到剪贴板里的回复，就<b>自己接着往下做</b>了</li>
+    <ol class="steps rsteps">
+      <li id="rS1"><b>提示词已经自动复制好了</b> <span class="small muted" id="rLen"></span> <button class="btn ghost sm" id="rCopy">再复制一次</button><div class="rs"></div></li>
+      <li id="rS2"><button class="btn sm" id="rOpen">打开网页 AI ↗</button> 在网页里 Ctrl+V 粘贴、发送 <span class="small faint">（用你平时的浏览器打开，不用复制网址）</span><div class="rs"></div></li>
+      <li id="rStep3"><span id="rT3"></span><div class="rs"></div></li>
+      <li id="rStep4"><span id="rT4">软件<b>自己检查、存盘</b>（没过就给你一份改错的提示词）</span><div class="rs"></div></li>
     </ol>
     <div id="rHint" class="small" style="color:var(--amber)"></div>
-    <details style="margin:6px 0"><summary class="small muted">剪贴板没反应？手动粘贴回复</summary>
+    <details style="margin:6px 0" id="rManual"><summary class="small muted">剪贴板没反应？手动粘贴回复</summary>
     <textarea id="rReply" rows="5" placeholder="把 AI 的整段回复粘贴到这里"></textarea>
       <div style="margin-top:6px"><button class="btn sm" id="rSend">交回给软件</button></div></details>
     </div>
@@ -1467,18 +1484,37 @@ $('#pClearDone').onclick=async()=>{const n=(PL.counts||{}).done||0;if(!n)return 
 
 /* ───── 手动接力、做指定的词 ───── */
 let RL={};
+function rStep(id,st,detail,cls){const li=$('#'+id);li.dataset.st=st;const d=li.querySelector('.rs');d.innerHTML=detail||'';d.className='rs'+(cls?' '+cls:'')}
+const hm=t=>t?new Date(t*1000).toTimeString().slice(0,8):'';
 async function relayTick(){
   let d;try{d=await api('/api/relay')}catch(e){return}
   const on=d.status==='等你操作';
-  $('#rBox').hidden=!on;
+  $('#rBox').hidden=!d.show;
   RL.status=d.status;navBadges();
   if(on&&d.id!==RL.id){$('#rReply').value='';$('#rMsg').textContent='';const rs=stepOf((ST.runner||{}).task);if(page!==rs)toast('有一批词等你交给网页 AI：在左边「'+(STEPNAME[rs]||'')+'」那一步',8000);else setTimeout(()=>$('#tLive').scrollIntoView({behavior:'smooth',block:'start'}),300)}
   RL=d;
-  if(on){$('#rHint').textContent=d.hint||'';if(!d.clip)$('#rAuto').querySelector('li b').textContent='先点右边「再复制一次」复制提示词';
-    if(d.inbox){$('#rStep3').innerHTML='它写完会<b>自己把结果整理成 Excel 传到中转仓库</b>，你不用复制（它要是传不上、把全文写在聊天里了，再点「复制」也行）';
-      $('#rStep4').innerHTML='软件每隔十几秒看一次中转仓库，看到就<b>自己接着往下做</b>了 <span class="small muted">'+esc(d.inbox)+'</span>'}
-    else{$('#rStep3').innerHTML='等它写完（最后一行是 ZBQ-END），点它回复下面的<b>「复制」</b>按钮';$('#rStep4').innerHTML='软件看到剪贴板里的回复，就<b>自己接着往下做</b>了'}
-    $('#rWords').textContent=`${d.kind||''}：${(d.words||[])[0]||''} … ${(d.words||[]).slice(-1)[0]||''}（${(d.words||[]).length} 个词）`;$('#rLen').textContent=`提示词 ${d.promptLen} 字`}
+  if(!d.show)return;
+  const ph=d.phase,H=d.hist||[],cur=H[H.length-1]||{},n=H.length,ib=!!d.inbox,sent=ph!=='send',ws=d.words||[];
+  $('#rTitle').firstChild.textContent={send:'要你操作：把这一批交给网页 AI ',checking:'收到网页 AI 的回复了，软件在检查 ',ok:'这一轮过了 ',fail:'这一轮没过：软件在准备改错的提示词 '}[ph]||'';
+  $('#rWords').textContent=`第 ${n} 轮 · ${d.kind||''}：${ws[0]||''}${ws.length>1?' … '+ws[ws.length-1]:''}（${ws.length} 个词）`;
+  $('#rLen').textContent=`提示词 ${(d.promptLen||0).toLocaleString()} 字`;
+  $('#rHint').textContent=sent?'':(d.hint||'');
+  // ① 提示词 ② 粘贴发送 ③ 网页 AI 写完交回 ④ 软件检查、存盘
+  rStep('rS1',d.copied||sent?'done':'you',d.copied||sent?'':'剪贴板没复制上：点「再复制一次」');
+  rStep('rS2',sent?'done':'you',sent?'发出去了':`粘贴、发送以后，等网页 AI 写完（已经 ${secs(Date.now()/1000-d.ts)}）`);
+  $('#rT3').innerHTML=ib?'网页 AI 写完，<b>自己把结果整理成 Excel 传到中转仓库</b>（不用你复制；它传不上、把全文写在聊天里了，再点「复制」也行）':'等它写完（最后一行是 ZBQ-END），点它回复下面的<b>「复制」</b>';
+  if(sent)rStep('rStep3','done',cur.got?`${hm(cur.got)} 收到了（${(cur.glen||0).toLocaleString()} 字）`:'收到了','ok');
+  else if(ib)rStep('rStep3','run',`软件每 ${d.pollSec} 秒看一次中转仓库：第 ${d.polls||0} 次看，还没有 <code>${esc(d.inbox)}</code>${d.lastPoll?`（上次 ${hm(d.lastPoll)}）`:''}<br>inbox/ 里现在：${(d.inboxNow||[]).length?(d.inboxNow||[]).map(x=>'<code>'+esc(x)+'</code>').join(' '):'空的'}`);
+  else rStep('rStep3','you','软件在看剪贴板：你一点「复制」它就收到');
+  if(ph==='send')rStep('rStep4','wait','收到以后自动检查');
+  else if(ph==='checking')rStep('rStep4','run',esc(d.stage||'正在检查…'));
+  else if(ph==='ok')rStep('rStep4','done',esc(cur.detail||'过了'),'ok');
+  else if(ph==='fail')rStep('rStep4','bad','没过：'+esc((cur.detail||'').slice(0,400))+'<br>软件马上给你一份改错的提示词，这里会变成下一轮','bad');
+  // 这一批前几轮的经过
+  const past=H.slice(0,-1);
+  $('#rHist').innerHTML=past.length?`<div class="rhist"><b>这一批的经过</b><ul>${past.map((h,k)=>`<li>${h.res==='ok'?'<span class="ck-y">✓</span>':h.res==='fail'?'<span class="ck-bad">✗</span>':'<span class="ck-n">–</span>'}
+    第 ${k+1} 轮（${esc(h.kind||'')}）${hm(h.t0).slice(0,5)} 发出${h.got?` → ${hm(h.got).slice(0,5)} 收到（${(h.glen||0).toLocaleString()} 字）`:''}${h.res==='fail'?` → <span class="ck-bad">没过</span>：${esc((h.detail||'').slice(0,160))}${(h.detail||'').length>160?'…':''}`:h.res==='ok'?' → <span class="ck-y">过了</span>':h.res==='skip'?' → 跳过了':''}</li>`).join('')}</ul></div>`:'';
+  $('#rManual').hidden=sent;$('#rSkip').hidden=sent;
 }
 setInterval(relayTick,2500);
 async function copyText(t){try{await navigator.clipboard.writeText(t);return true}catch(e){
