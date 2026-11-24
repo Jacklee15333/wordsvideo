@@ -1,7 +1,376 @@
 {
  "单词": "shoe",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "originPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/shoe.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "label": "包住脚的东西",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/shoe.svg",
+      "x": 0.4,
+      "y": 0.62,
+      "s": 0.46,
+      "shadow": true
+     },
+     {
+      "svg": "art/shoe.svg",
+      "x": 0.62,
+      "y": 0.68,
+      "s": 0.42,
+      "shadow": true
+     },
+     {
+      "svg": "art/rack.svg",
+      "x": 0.84,
+      "y": 0.56,
+      "s": 0.6
+     }
+    ],
+    "text": "鞋",
+    "pos": "名词",
+    "diff": "包住脚面、不过脚踝",
+    "ex": "These shoes are too small for me.",
+    "exzh": "这双鞋我穿太小了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.3,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "me"
+      },
+      {
+       "svg": "art/shoe.svg",
+       "x": 0.66,
+       "y": 0.74,
+       "s": 0.3,
+       "when": "shoes",
+       "shadow": true
+      },
+      {
+       "label": "too small",
+       "x": 0.66,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "too small"
+      },
+      {
+       "label": "鞋",
+       "x": 0.66,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "鞋"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/horseshoe.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.6,
+      "shadow": true
+     },
+     {
+      "svg": "art/hammer.svg",
+      "x": 0.8,
+      "y": 0.4,
+      "s": 0.24,
+      "anim": "shake"
+     }
+    ],
+    "text": "马掌；给马钉掌",
+    "pos": "名词、动词",
+    "diff": "给马蹄“穿”上的铁片",
+    "ex": "The horse needs new shoes.",
+    "exzh": "这匹马需要换新马掌了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/horseshoe.svg",
+       "x": 0.42,
+       "y": 0.52,
+       "s": 0.56,
+       "when": "new shoes",
+       "pop": true
+      },
+      {
+       "svg": "art/hammer.svg",
+       "x": 0.72,
+       "y": 0.4,
+       "s": 0.24,
+       "anim": "shake",
+       "when": "needs"
+      },
+      {
+       "label": "horse 马",
+       "x": 0.2,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "horse"
+      },
+      {
+       "label": "new shoes",
+       "x": 0.42,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "new shoes"
+      },
+      {
+       "label": "马掌",
+       "x": 0.72,
+       "y": 0.8,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "马掌"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“包住脚的东西”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/shoe.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.5,
+       "shadow": true
+      },
+      {
+       "label": "shoe",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      }
+     ]
+    }
+   },
+   {
+    "via": "不过脚踝的那种",
+    "node": "① 鞋",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "包住脚面、不过脚踝的那种，就是鞋。",
+     "包住脚踝甚至小腿的，是 boot 靴子。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/shoe.svg",
+       "x": 0.3,
+       "y": 0.64,
+       "s": 0.4,
+       "when": "不过脚踝",
+       "shadow": true
+      },
+      {
+       "label": "shoe 鞋",
+       "x": 0.3,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "就是鞋"
+      },
+      {
+       "svg": "art/boot.svg",
+       "x": 0.72,
+       "y": 0.56,
+       "s": 0.56,
+       "cue": 1,
+       "when": "boot",
+       "shadow": true
+      },
+      {
+       "label": "boot 靴子",
+       "x": 0.72,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "靴子"
+      }
+     ]
+    }
+   },
+   {
+    "via": "给马蹄穿上的铁片",
+    "node": "② 马掌；给马钉掌",
+    "pos": "名词、动词",
+    "pic": 1,
+    "say": [
+     "给马蹄穿上的铁片，也叫 shoe，就是马掌。",
+     "当动词，就是给马钉掌。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/horseshoe.svg",
+       "x": 0.44,
+       "y": 0.52,
+       "s": 0.56,
+       "when": "铁片",
+       "pop": true
+      },
+      {
+       "label": "马掌",
+       "x": 0.44,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "马掌"
+      },
+      {
+       "svg": "art/hammer.svg",
+       "x": 0.76,
+       "y": 0.4,
+       "s": 0.24,
+       "anim": "shake",
+       "when": "钉掌"
+      },
+      {
+       "label": "动词：钉掌",
+       "x": 0.76,
+       "y": 0.84,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "钉掌"
+      }
+     ]
+    }
+   },
+   {
+    "via": "形状、作用像鞋的零件",
+    "node": "刹车蹄片",
+    "from": 0,
+    "say": [
+     "形状、作用像鞋的零件，也叫 shoe，比如汽车的刹车蹄片 brake shoe。",
+     "往新人婚车尾绑旧鞋祝好运，这个风俗很早就有。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/car.svg",
+       "x": 0.46,
+       "y": 0.66,
+       "s": 0.4,
+       "when": "汽车"
+      },
+      {
+       "label": "brake shoe 刹车蹄片",
+       "x": 0.46,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "brake shoe"
+      },
+      {
+       "svg": "art/shoe.svg",
+       "x": 0.82,
+       "y": 0.8,
+       "s": 0.2,
+       "cue": 1,
+       "when": "旧鞋",
+       "rot": -20
+      },
+      {
+       "label": "祝好运",
+       "x": 0.82,
+       "y": 0.5,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "祝好运"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "boot": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/boot.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "shadow": true
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "shoeai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人昨天买了什么？\n听：I bought a new pair of running shoes yesterday.\nA. 一双袜子\nB. 一件运动衫\nC. 一双跑鞋\nD. 一个书包",
@@ -90,5 +459,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

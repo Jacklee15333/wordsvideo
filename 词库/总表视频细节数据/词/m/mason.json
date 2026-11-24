@@ -1,7 +1,360 @@
 {
  "单词": "mason",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "originPic": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "svg": "art/brickwall.svg",
+     "x": 0.7,
+     "y": 0.62,
+     "s": 0.56,
+     "reveal": "up",
+     "rdur": 3
+    },
+    {
+     "svg": "art/trowel.svg",
+     "x": 0.48,
+     "y": 0.7,
+     "s": 0.18,
+     "z": 5,
+     "anim": "shake"
+    },
+    {
+     "label": "mason ≈ make：做墙的人",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.07,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/brickwall.svg",
+      "x": 0.7,
+      "y": 0.62,
+      "s": 0.56,
+      "reveal": "up",
+      "rdur": 3
+     },
+     {
+      "svg": "art/trowel.svg",
+      "x": 0.48,
+      "y": 0.7,
+      "s": 0.18,
+      "z": 5,
+      "anim": "shake"
+     }
+    ],
+    "text": "石匠、砖石工",
+    "pos": "名词",
+    "diff": "把石块一块块砌成墙的人",
+    "ex": "The mason is building a stone wall.",
+    "exzh": "石匠正在砌一堵石墙。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "x": 0.28,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "mason"
+      },
+      {
+       "svg": "art/trowel.svg",
+       "x": 0.46,
+       "y": 0.7,
+       "s": 0.18,
+       "z": 5,
+       "anim": "shake",
+       "when": "building"
+      },
+      {
+       "svg": "art/brickwall.svg",
+       "x": 0.72,
+       "y": 0.62,
+       "s": 0.56,
+       "when": "stone wall",
+       "reveal": "up",
+       "rdur": 3
+      },
+      {
+       "label": "mason",
+       "x": 0.28,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "mason"
+      },
+      {
+       "label": "石墙",
+       "x": 0.72,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "石墙"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.34,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.68,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/trowel.svg",
+      "x": 0.5,
+      "y": 0.22,
+      "s": 0.16
+     }
+    ],
+    "text": "共济会会员",
+    "pos": "名词",
+    "diff": "起源于石匠行会的团体的会员",
+    "ex": "His grandfather was a Mason.",
+    "exzh": "他爷爷是共济会会员。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.36,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "when": "grandfather"
+      },
+      {
+       "svg": "art/trowel.svg",
+       "x": 0.7,
+       "y": 0.4,
+       "s": 0.24,
+       "when": "Mason"
+      },
+      {
+       "label": "Mason",
+       "x": 0.7,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "Mason"
+      },
+      {
+       "label": "共济会会员",
+       "x": 0.7,
+       "y": 0.72,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "共济会会员"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“（用石头）做墙的人”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3
+      },
+      {
+       "svg": "art/brickwall.svg",
+       "x": 0.7,
+       "y": 0.62,
+       "s": 0.56,
+       "reveal": "up",
+       "rdur": 3
+      },
+      {
+       "svg": "art/trowel.svg",
+       "x": 0.48,
+       "y": 0.7,
+       "s": 0.18,
+       "z": 5,
+       "anim": "shake"
+      },
+      {
+       "label": "mason ≈ make",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "把石块凿方、砌成墙",
+    "node": "① 石匠、砖石工",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "把石块凿方，一块块砌成墙的人，就是石匠、砖石工。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "x": 0.28,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "石块"
+      },
+      {
+       "svg": "art/brickwall.svg",
+       "x": 0.7,
+       "y": 0.62,
+       "s": 0.56,
+       "when": "一块块",
+       "reveal": "up",
+       "rdur": 2.5
+      },
+      {
+       "svg": "art/trowel.svg",
+       "x": 0.48,
+       "y": 0.7,
+       "s": 0.18,
+       "z": 5,
+       "anim": "shake",
+       "when": "砌成墙"
+      },
+      {
+       "label": "石匠",
+       "x": 0.7,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "石匠"
+      }
+     ]
+    }
+   },
+   {
+    "via": "转指石匠行会里的团体",
+    "node": "② 共济会会员",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "后来，一个从石匠行会发展起来的团体，会员也叫 Mason，就是共济会会员。",
+     "装果酱的梅森罐 Mason jar，是按一个叫 Mason 的人命名的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-hello",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "团体"
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.62,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "团体"
+      },
+      {
+       "label": "共济会会员",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "共济会会员"
+      },
+      {
+       "svg": "art/masonjar.svg",
+       "x": 0.86,
+       "y": 0.7,
+       "s": 0.3,
+       "cue": 1,
+       "when": "Mason jar",
+       "pop": true
+      },
+      {
+       "label": "Mason jar",
+       "x": 0.86,
+       "y": 0.36,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "Mason jar"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "masonai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：石匠做了什么？\n听：The mason built a stone wall around the garden.\nA. 砌了一道石墙\nB. 种了一些花\nC. 修了一辆车\nD. 画了一幅画",
@@ -88,5 +441,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

@@ -1,7 +1,793 @@
 {
  "单词": "popular",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.1,
+      "y": 0.62,
+      "s": 0.55,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.1,
+        0.62
+       ],
+       "to": [
+        0.9,
+        0.62
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.85,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.85,
+        0.66
+       ],
+       "to": [
+        0.1,
+        0.66
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.3,
+      "y": 0.7,
+      "s": 0.58,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.3,
+        0.7
+       ],
+       "to": [
+        1.0,
+        0.7
+       ],
+       "offset": 0.7
+      }
+     },
+     {
+      "label": "人民、人",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.4,
+      "shadow": true
+     },
+     {
+      "label": "…的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-crowd.svg",
+   "p1": "art/ic-star.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.05,
+     "y": 0.62,
+     "s": 0.56,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.05,
+       0.62
+      ],
+      "to": [
+       0.95,
+       0.62
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.9,
+     "y": 0.66,
+     "s": 0.5,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.9,
+       0.66
+      ],
+      "to": [
+       0.1,
+       0.66
+      ],
+      "offset": 0.4
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.25,
+     "y": 0.7,
+     "s": 0.6,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.25,
+       0.7
+      ],
+      "to": [
+       1.0,
+       0.7
+      ],
+      "offset": 0.7
+     }
+    },
+    {
+     "svg": "art/star.svg",
+     "x": 0.5,
+     "y": 0.3,
+     "s": 0.2,
+     "anim": "pulse"
+    },
+    {
+     "label": "属于人民的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "x": 0.2,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.4,
+      "y": 0.64,
+      "s": 0.66,
+      "z": 3
+     },
+     {
+      "actor": "west-girl-music",
+      "x": 0.6,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3
+     },
+     {
+      "svg": "art/icecream.svg",
+      "x": 0.84,
+      "y": 0.56,
+      "s": 0.5,
+      "anim": "bob"
+     }
+    ],
+    "text": "受欢迎的",
+    "pos": "形容词",
+    "diff": "普通人都喜欢",
+    "ex": "Ice cream is popular with children.",
+    "exzh": "冰淇淋很受孩子们欢迎。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/icecream.svg",
+       "x": 0.78,
+       "y": 0.54,
+       "s": 0.56,
+       "when": "Ice cream",
+       "pop": true
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.22,
+       "y": 0.64,
+       "s": 0.66,
+       "z": 3,
+       "when": "children"
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.44,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 3,
+       "when": "children",
+       "delay": 0.3
+      },
+      {
+       "label": "popular",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "popular"
+      },
+      {
+       "label": "受欢迎",
+       "x": 0.78,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "受",
+       "delay": 0.2
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/computer-music.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.54
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "alt": [
+       "art/note2.svg"
+      ],
+      "x": 0.6,
+      "y": 0.4,
+      "s": 0.12,
+      "to": [
+       0.2,
+       -0.3
+      ]
+     },
+     {
+      "actor": "west-girl-music",
+      "x": 0.16,
+      "y": 0.62,
+      "s": 0.66,
+      "z": 3
+     }
+    ],
+    "beat": 100,
+    "text": "流行的、大众的",
+    "pos": "形容词",
+    "diff": "很多人在听、在用",
+    "ex": "This is a popular song.",
+    "exzh": "这是一首流行歌曲。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/computer-music.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.54,
+       "when": "song"
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "x": 0.6,
+       "y": 0.4,
+       "s": 0.12,
+       "to": [
+        0.2,
+        -0.3
+       ],
+       "when": "song"
+      },
+      {
+       "actor": "west-girl-music",
+       "x": 0.16,
+       "y": 0.62,
+       "s": 0.68,
+       "z": 3,
+       "when": "popular"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.86,
+       "y": 0.64,
+       "s": 0.62,
+       "z": 3,
+       "when": "popular"
+      },
+      {
+       "label": "popular song",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "popular song"
+      },
+      {
+       "label": "流行歌曲",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "流行歌曲"
+      }
+     ],
+     "beat": 100
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/book-open.svg",
+      "x": 0.6,
+      "y": 0.56,
+      "s": 0.5
+     },
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.22,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/lightbulb.svg",
+      "x": 0.86,
+      "y": 0.3,
+      "s": 0.26,
+      "anim": "pulse"
+     }
+    ],
+    "text": "通俗的",
+    "pos": "形容词",
+    "diff": "普通人都能懂",
+    "ex": "He wrote a popular science book.",
+    "exzh": "他写了一本通俗科普书。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-present",
+       "x": 0.26,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "when": "He"
+      },
+      {
+       "svg": "art/book-open.svg",
+       "x": 0.68,
+       "y": 0.6,
+       "s": 0.46,
+       "when": "book",
+       "pop": true
+      },
+      {
+       "svg": "art/lightbulb.svg",
+       "x": 0.86,
+       "y": 0.24,
+       "s": 0.22,
+       "when": "science",
+       "anim": "pulse"
+      },
+      {
+       "label": "popular science",
+       "x": 0.68,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "popular science"
+      },
+      {
+       "label": "通俗",
+       "x": 0.68,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "通俗"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“属于人民的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "label": "popul 人民 + ar …的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.07,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "普通人都能懂的",
+    "node": "③ 通俗的、大众的",
+    "pos": "形容词",
+    "pic": 2,
+    "say": [
+     "属于大家的、普通人都能懂的，就是通俗的、大众的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.22,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "属于大家的"
+      },
+      {
+       "svg": "art/book-open.svg",
+       "x": 0.62,
+       "y": 0.56,
+       "s": 0.48,
+       "when": "都能懂"
+      },
+      {
+       "svg": "art/lightbulb.svg",
+       "x": 0.86,
+       "y": 0.3,
+       "s": 0.24,
+       "anim": "pulse",
+       "when": "都能懂"
+      },
+      {
+       "label": "通俗的",
+       "x": 0.62,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "通俗的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "普通人都喜欢的",
+    "node": "① 受欢迎的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "普通人都喜欢的，就是受欢迎的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-raise",
+       "x": 0.2,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 3,
+       "when": "普通人"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.4,
+       "y": 0.64,
+       "s": 0.66,
+       "z": 3,
+       "when": "普通人"
+      },
+      {
+       "svg": "art/icecream.svg",
+       "x": 0.78,
+       "y": 0.54,
+       "s": 0.54,
+       "when": "都喜欢",
+       "pop": true
+      },
+      {
+       "label": "受欢迎的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "受欢迎的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "大家都在听、在用",
+    "node": "② 流行的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "大家都在听、都在用，就是流行的；pop music 的 pop，就是 popular 的缩写。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/computer-music.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.54,
+       "when": "都在听"
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "x": 0.6,
+       "y": 0.4,
+       "s": 0.12,
+       "to": [
+        0.2,
+        -0.3
+       ],
+       "when": "都在听"
+      },
+      {
+       "label": "流行的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "流行的"
+      },
+      {
+       "label": "pop music",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "pop music"
+      }
+     ],
+     "beat": 100
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "famous": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-speech",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3
+      },
+      {
+       "label": "很多人知道",
+       "x": 0.15,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    },
+    "fashionable": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/shopbag.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7
+      }
+     ]
+    },
+    "mass": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 1.0,
+       "y": 0.6,
+       "s": 0.54,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.0,
+         0.6
+        ],
+        "to": [
+         0.0,
+         0.6
+        ],
+        "offset": 0.2
+       }
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "popularai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：这首歌怎么样？\n听：This song is very popular among young people.\nA. 很难学会\nB. 是一首老歌\nC. 很受年轻人欢迎\nD. 没有人听过",
@@ -90,5 +876,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
