@@ -12,7 +12,8 @@
      "x": 0.36,
      "y": 0.6,
      "s": 0.9,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/wrench.svg",
@@ -41,13 +42,15 @@
       "x": 0.34,
       "y": 0.6,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "svg": "art/computer.svg",
       "x": 0.74,
       "y": 0.6,
-      "s": 0.4
+      "s": 0.4,
+      "anim": "bob"
      }
     ],
     "text": "用、使用",
@@ -65,14 +68,16 @@
        "y": 0.6,
        "s": 0.86,
        "z": 3,
-       "when": "Can I"
+       "when": "Can I",
+       "seq": "blink"
       },
       {
        "svg": "art/computer.svg",
        "x": 0.68,
        "y": 0.56,
        "s": 0.46,
-       "when": "computer"
+       "when": "computer",
+       "anim": "bob"
       },
       {
        "label": "use",
@@ -101,17 +106,23 @@
     "img": "art/classroom-bg.svg",
     "items": [
      {
-      "svg": "art/clock.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "svg": "art/clock_f0.svg",
       "x": 0.74,
       "y": 0.3,
-      "s": 0.34
+      "s": 0.34,
+      "fps": 2
      },
      {
       "actor": "cn-teacher-point",
       "x": 0.3,
       "y": 0.6,
       "s": 0.86,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      }
     ],
     "text": "利用",
@@ -124,18 +135,24 @@
      "img": "art/classroom-bg.svg",
      "items": [
       {
-       "actor": "cn-teacher-point",
+       "actor": "west-man-point",
        "x": 0.28,
        "y": 0.6,
        "s": 0.86,
        "z": 3,
-       "when": "Use"
+       "when": "Use",
+       "seq": "talk"
       },
       {
-       "svg": "art/clock.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "svg": "art/clock_f0.svg",
        "x": 0.72,
        "y": 0.4,
        "s": 0.4,
+       "fps": 2,
        "when": "time"
       },
       {
@@ -169,13 +186,15 @@
       "x": 0.4,
       "y": 0.5,
       "s": 0.5,
-      "shadow": true
+      "shadow": true,
+      "anim": "shake"
      },
      {
       "svg": "art/hammer.svg",
       "x": 0.72,
       "y": 0.56,
-      "s": 0.36
+      "s": 0.36,
+      "anim": "bob"
      }
     ],
     "text": "使用；用途、用处",
@@ -192,7 +211,8 @@
        "x": 0.36,
        "y": 0.52,
        "s": 0.5,
-       "when": "tool"
+       "when": "tool",
+       "anim": "shake"
       },
       {
        "label": "many uses",
@@ -229,7 +249,8 @@
        "x": 0.36,
        "y": 0.6,
        "s": 0.9,
-       "z": 3
+       "z": 3,
+       "seq": "blink"
       },
       {
        "svg": "art/wrench.svg",
@@ -263,12 +284,13 @@
      "img": "art/room-bg.svg",
      "items": [
       {
-       "actor": "west-clerk-happy",
+       "actor": "west-man-smile",
        "x": 0.36,
        "y": 0.6,
        "s": 0.9,
        "z": 3,
-       "when": "把东西"
+       "when": "把东西",
+       "seq": "blink"
       },
       {
        "svg": "art/wrench.svg",
@@ -288,14 +310,23 @@
        "when": "使用"
       },
       {
-       "label": "/juːs/ 名  /juːz/ 动",
-       "x": 0.5,
+       "label": "名词读 /juːs/",
+       "x": 0.3,
        "y": 0.92,
        "size": 0.075,
        "color": "#7A3E00",
        "bg": "#FFF6D8",
        "border": "#E0A800",
        "when": "/juːs/"
+      },
+      {
+       "label": "动词读 /juːz/",
+       "x": 0.72,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "/juːz/"
       }
      ]
     }
@@ -313,19 +344,26 @@
      "img": "art/classroom-bg.svg",
      "items": [
       {
-       "svg": "art/clock.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "svg": "art/clock_f0.svg",
        "x": 0.7,
        "y": 0.36,
        "s": 0.4,
+       "fps": 2,
        "when": "时间"
       },
       {
-       "actor": "cn-teacher-point",
+       "actor": "cn-teacher-laugh",
        "x": 0.3,
        "y": 0.6,
        "s": 0.86,
        "z": 3,
-       "when": "机会"
+       "when": "机会",
+       "seq": "pingpong",
+       "fps": 2
       },
       {
        "label": "利用",
@@ -357,14 +395,16 @@
        "x": 0.36,
        "y": 0.52,
        "s": 0.5,
-       "when": "当名词"
+       "when": "当名词",
+       "anim": "shake"
       },
       {
        "svg": "art/hammer.svg",
        "x": 0.72,
        "y": 0.56,
        "s": 0.36,
-       "when": "用场"
+       "when": "用场",
+       "anim": "bob"
       },
       {
        "label": "用途、用处",
@@ -381,16 +421,37 @@
   ],
   "distinguish": {
    "pics": {
+    "use": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/wrench.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/hammer.svg",
+       "x": 0.8,
+       "y": 0.6,
+       "s": 0.3,
+       "anim": "bob"
+      }
+     ]
+    },
     "employ": {
      "bg": "blank",
      "img": "art/room-bg.svg",
      "items": [
       {
-       "actor": "west-clerk-happy",
+       "actor": "west-clerk-think",
        "x": 0.5,
        "y": 0.6,
        "s": 0.9,
-       "z": 3
+       "z": 3,
+       "seq": "blink"
       }
      ]
     },
@@ -402,7 +463,44 @@
        "svg": "art/star.svg",
        "x": 0.5,
        "y": 0.5,
-       "s": 0.5
+       "s": 0.5,
+       "anim": "pulse"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     },
@@ -414,7 +512,8 @@
        "svg": "art/wrench.svg",
        "x": 0.5,
        "y": 0.5,
-       "s": 0.7
+       "s": 0.7,
+       "anim": "swing"
       }
      ]
     },
@@ -426,11 +525,14 @@
        "svg": "art/book-open.svg",
        "x": 0.5,
        "y": 0.55,
-       "s": 0.7
+       "s": 0.7,
+       "anim": "bob"
       }
      ]
     }
-   }
+   },
+   "logic": "逻辑不同：use 是“拿来用”这个动作，也指用途；usage 是用的方式、用量（词的用法）；employ 正式，多说雇人、采用方法；harness 是驾驭、利用自然的力量；purpose 是做事的目的。",
+   "tip": "一句话记法：拿来用 use，用法 usage，雇人 employ，利用风力水力 harness，目的 purpose。"
   }
  },
  "插图": [
@@ -526,5 +628,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

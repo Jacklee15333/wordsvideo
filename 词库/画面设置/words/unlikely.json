@@ -10,7 +10,8 @@
      "svg": "art/raincloud.svg",
      "x": 0.5,
      "y": 0.55,
-     "s": 0.5
+     "s": 0.5,
+     "anim": "bob"
     },
     {
      "shape": "circle",
@@ -25,12 +26,12 @@
     {
      "ray": [
       [
-       0.29000000000000004,
-       0.22000000000000003
+       0.29,
+       0.22
       ],
       [
        0.71,
-       0.8800000000000001
+       0.88
       ]
      ],
      "color": "#E2453C",
@@ -46,6 +47,42 @@
      "color": "#C92A2A",
      "border": "#C92A2A",
      "delay": 1.0
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ]
   },
@@ -58,7 +95,8 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.5,
-     "shadow": true
+     "shadow": true,
+     "anim": "bob"
     },
     {
      "label": "很可能的",
@@ -69,6 +107,42 @@
      "bg": "#FFF6D8",
      "border": "#E0A800",
      "delay": 0.6
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ]
   }
@@ -85,7 +159,8 @@
     "svg": "art/raincloud.svg",
     "x": 0.5,
     "y": 0.36,
-    "s": 0.4
+    "s": 0.4,
+    "anim": "sway"
    },
    {
     "shape": "circle",
@@ -101,10 +176,10 @@
     "ray": [
      [
       0.332,
-      0.09599999999999997
+      0.096
      ],
      [
-      0.6679999999999999,
+      0.668,
       0.624
      ]
     ],
@@ -120,6 +195,42 @@
     "size": 0.075,
     "color": "#C92A2A",
     "border": "#C92A2A"
+   },
+   {
+    "actor": "walk-west-man-case",
+    "x": 0.96,
+    "y": 0.86,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.98,
+      0.86
+     ],
+     "to": [
+      0.02,
+      0.86
+     ],
+     "offset": 0.1
+    }
+   },
+   {
+    "actor": "walk-cn-girl",
+    "x": 0.04,
+    "y": 0.88,
+    "s": 0.38,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.02,
+      0.88
+     ],
+     "to": [
+      0.98,
+      0.88
+     ],
+     "offset": 0.6
+    }
    }
   ]
  },
@@ -133,20 +244,60 @@
      "x": 0.5,
      "y": 0.3,
      "s": 0.36,
-     "a": 0.6
+     "a": 0.6,
+     "anim": "sway"
     },
     {
      "svg": "art/star.svg",
      "x": 0.8,
      "y": 0.2,
-     "s": 0.14
+     "s": 0.14,
+     "anim": "pulse"
     },
     {
      "actor": "west-girl-music",
      "x": 0.3,
      "y": 0.64,
      "s": 0.72,
-     "z": 3
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ],
    "text": "不太可能的",
@@ -167,12 +318,14 @@
       "anim": "pulse"
      },
      {
-      "actor": "west-girl-music",
+      "actor": "cn-teacher-laugh",
       "x": 0.3,
       "y": 0.64,
       "s": 0.72,
       "z": 3,
-      "when": "summer"
+      "when": "summer",
+      "seq": "pingpong",
+      "fps": 2
      },
      {
       "label": "snow ?",
@@ -200,6 +353,42 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "不太可能"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -332,7 +521,8 @@
       "svg": "art/raincloud.svg",
       "x": 0.5,
       "y": 0.36,
-      "s": 0.4
+      "s": 0.4,
+      "anim": "sway"
      },
      {
       "shape": "circle",
@@ -348,10 +538,10 @@
       "ray": [
        [
         0.332,
-        0.09599999999999997
+        0.096
        ],
        [
-        0.6679999999999999,
+        0.668,
         0.624
        ]
       ],
@@ -367,6 +557,42 @@
       "size": 0.075,
       "color": "#7048E8",
       "border": "#7048E8"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -389,7 +615,8 @@
       "y": 0.36,
       "s": 0.36,
       "when": "可能性小",
-      "a": 0.6
+      "a": 0.6,
+      "anim": "sway"
      },
      {
       "label": "不太可能的",
@@ -408,6 +635,42 @@
       "color": "#C92A2A",
       "border": "#C92A2A",
       "when": "impossible"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -489,7 +752,8 @@
       "svg": "art/star.svg",
       "x": 0.5,
       "y": 0.5,
-      "s": 0.5
+      "s": 0.5,
+      "anim": "pulse"
      },
      {
       "shape": "circle",
@@ -503,17 +767,183 @@
      {
       "ray": [
        [
-        0.29000000000000004,
-        0.16999999999999998
+        0.29,
+        0.17
        ],
        [
         0.71,
-        0.8300000000000001
+        0.83
        ]
       ],
       "color": "#E2453C",
       "lw": 0.02,
       "dur": 0.4
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
+     }
+    ]
+   }
+  }
+ },
+ "demo": {
+  "unhappy": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "frames": [
+       "art/cat-sit_f0.svg",
+       "art/cat-sit_f1.svg",
+       "art/cat-sit_f2.svg"
+      ],
+      "svg": "art/cat-sit_f0.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.6,
+      "fps": 2
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.5,
+      "y": 0.05,
+      "s": 0.05,
+      "to": [
+       0,
+       0.5
+      ],
+      "every": 0.25
+     }
+    ]
+   }
+  },
+  "unlock": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/padlock.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "hide": 1.2,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/padlock-open.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "delay": 1.2,
+      "pop": true,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "incorrect": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "shake"
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.56,
+      "r": 0.3,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "delay": 0.8
+     },
+     {
+      "ray": [
+       [
+        0.29,
+        0.23
+       ],
+       [
+        0.71,
+        0.89
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "disagree": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ]
      }
     ]
    }
