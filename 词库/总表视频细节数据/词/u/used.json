@@ -1,7 +1,397 @@
 {
  "单词": "used",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/wrench.svg",
+      "x": 0.66,
+      "y": 0.5,
+      "s": 0.3,
+      "anim": "shake"
+     },
+     {
+      "label": "用",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/car.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.36,
+      "shadow": true
+     },
+     {
+      "label": "被…了的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-wrench.svg",
+   "p1": "art/ic-check.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/car.svg",
+     "x": 0.5,
+     "y": 0.66,
+     "s": 0.36
+    },
+    {
+     "svg": "art/tag.svg",
+     "x": 0.78,
+     "y": 0.36,
+     "s": 0.2
+    },
+    {
+     "label": "被用过的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/car.svg",
+      "x": 0.46,
+      "y": 0.66,
+      "s": 0.4
+     },
+     {
+      "svg": "art/tag.svg",
+      "x": 0.8,
+      "y": 0.4,
+      "s": 0.2
+     },
+     {
+      "actor": "west-man-point",
+      "x": 0.16,
+      "y": 0.6,
+      "s": 0.76,
+      "z": 3
+     }
+    ],
+    "text": "用过的、二手的",
+    "pos": "形容词",
+    "diff": "被别人用过的",
+    "ex": "My dad bought a used car.",
+    "exzh": "我爸爸买了一辆二手车。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "My dad"
+      },
+      {
+       "svg": "art/car.svg",
+       "x": 0.6,
+       "y": 0.68,
+       "s": 0.4,
+       "when": "used car"
+      },
+      {
+       "svg": "art/tag.svg",
+       "x": 0.84,
+       "y": 0.36,
+       "s": 0.2,
+       "when": "bought"
+      },
+      {
+       "label": "used car",
+       "x": 0.6,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "used car"
+      },
+      {
+       "label": "二手车",
+       "x": 0.6,
+       "y": 0.26,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "二手车"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/bed.svg",
+      "x": 0.5,
+      "y": 0.7,
+      "s": 0.5
+     },
+     {
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "svg": "art/clock_f0.svg",
+      "x": 0.84,
+      "y": 0.36,
+      "s": 0.26,
+      "fps": 6
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.22,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3
+     }
+    ],
+    "text": "习惯于…；过去常常…",
+    "pos": "短语",
+    "diff": "be used to doing / used to do",
+    "ex": "I'm used to getting up early.",
+    "exzh": "我已经习惯早起了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bed.svg",
+       "x": 0.5,
+       "y": 0.72,
+       "s": 0.5,
+       "when": "getting up"
+      },
+      {
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "svg": "art/clock_f0.svg",
+       "x": 0.84,
+       "y": 0.36,
+       "s": 0.26,
+       "fps": 6,
+       "when": "early"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.22,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "when": "I'm"
+      },
+      {
+       "label": "be used to doing",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "used to"
+      },
+      {
+       "label": "习惯",
+       "x": 0.5,
+       "y": 0.26,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "习惯"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“被用过的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/car.svg",
+       "x": 0.5,
+       "y": 0.66,
+       "s": 0.36
+      },
+      {
+       "label": "use + ed",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "被别人用过的",
+    "node": "① 用过的、二手的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "被别人用过的，就是用过的、二手的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/car.svg",
+       "x": 0.5,
+       "y": 0.66,
+       "s": 0.4,
+       "when": "被别人用过"
+      },
+      {
+       "svg": "art/tag.svg",
+       "x": 0.8,
+       "y": 0.36,
+       "s": 0.2,
+       "when": "二手"
+      },
+      {
+       "label": "二手的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "二手的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "use 古旧的用法：使习惯于",
+    "node": "② 习惯于…；过去常常…",
+    "pos": "短语",
+    "pic": 1,
+    "from": 0,
+    "say": [
+     "use 还有个老用法：使习惯于。",
+     "所以 be used to doing 是习惯于；used to do 是过去常常，现在不了。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bed.svg",
+       "x": 0.5,
+       "y": 0.7,
+       "s": 0.5,
+       "when": "使习惯于"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.22,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "when": "使习惯于"
+      },
+      {
+       "label": "be used to doing 习惯于",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "be used to doing"
+      },
+      {
+       "label": "used to do 过去常常",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "used to do"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "secondhand": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/shopbag.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7
+      },
+      {
+       "svg": "art/tag.svg",
+       "x": 0.8,
+       "y": 0.4,
+       "s": 0.4
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "usedai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他上周买了什么？\n听：He bought a used car last week.\nA. 一辆新车\nB. 一辆二手车\nC. 一辆自行车\nD. 一辆公交车",
@@ -90,5 +480,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

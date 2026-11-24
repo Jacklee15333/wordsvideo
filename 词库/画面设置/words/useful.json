@@ -1,0 +1,470 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-clerk-happy",
+     "x": 0.36,
+     "y": 0.6,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "svg": "art/wrench.svg",
+     "x": 0.66,
+     "y": 0.5,
+     "s": 0.3,
+     "anim": "shake"
+    },
+    {
+     "label": "用",
+     "x": 0.8,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/mug.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5
+    },
+    {
+     "label": "充满…的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-wrench.svg",
+  "p1": "art/ic-cupfull.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/wrench.svg",
+    "x": 0.36,
+    "y": 0.5,
+    "s": 0.4
+   },
+   {
+    "svg": "art/star.svg",
+    "x": 0.7,
+    "y": 0.3,
+    "s": 0.16,
+    "anim": "pulse"
+   },
+   {
+    "label": "充满用处的",
+    "x": 0.5,
+    "y": 0.9,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/map.svg",
+     "x": 0.56,
+     "y": 0.48,
+     "s": 0.56
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.2,
+     "y": 0.62,
+     "s": 0.74,
+     "z": 3
+    }
+   ],
+   "text": "有用的、有益的",
+   "pos": "形容词",
+   "diff": "有用、有帮助",
+   "ex": "A map is useful when you travel.",
+   "exzh": "旅行时地图很有用。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "svg": "art/map.svg",
+      "x": 0.56,
+      "y": 0.46,
+      "s": 0.56,
+      "when": "A map"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.0,
+      "y": 0.66,
+      "s": 0.7,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.0,
+        0.66
+       ],
+       "to": [
+        0.4,
+        0.66
+       ],
+       "offset": 0
+      },
+      "when": "travel"
+     },
+     {
+      "label": "useful",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "useful"
+     },
+     {
+      "label": "很有用",
+      "x": 0.84,
+      "y": 0.28,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "很有用"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-raise",
+     "x": 0.34,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "svg": "art/ball.svg",
+     "x": 0.66,
+     "y": 0.8,
+     "s": 0.14
+    },
+    {
+     "svg": "art/trophy.svg",
+     "x": 0.82,
+     "y": 0.4,
+     "s": 0.26
+    }
+   ],
+   "text": "能干的、得力的",
+   "pos": "形容词",
+   "diff": "（口语）人有用处",
+   "ex": "She is a useful player.",
+   "exzh": "她是个得力的队员。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "when": "She"
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.62,
+      "y": 0.8,
+      "s": 0.14,
+      "when": "player",
+      "anim": "bob"
+     },
+     {
+      "label": "useful player",
+      "x": 0.7,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "useful player"
+     },
+     {
+      "label": "得力的",
+      "x": 0.7,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "得力的"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“充满用处的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/wrench.svg",
+      "x": 0.36,
+      "y": 0.5,
+      "s": 0.4
+     },
+     {
+      "label": "use 用处 + ful 充满…的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "有用处",
+   "node": "① 有用的、有益的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "东西有用处，就是有用的、有益的。",
+    "注意 useful 前面用 a：a useful book。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "svg": "art/map.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.56,
+      "when": "东西"
+     },
+     {
+      "label": "有用的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "有用的"
+     },
+     {
+      "label": "a useful book",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "a useful book"
+     }
+    ]
+   }
+  },
+  {
+   "via": "人有用处",
+   "node": "② 能干的、得力的",
+   "pos": "形容词",
+   "pic": 1,
+   "say": [
+    "人有用处，口语里就是能干的、得力的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "x": 0.34,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "when": "人有用处"
+     },
+     {
+      "label": "得力的",
+      "x": 0.7,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "得力的"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "helpful": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     }
+    ]
+   },
+   "beneficial": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/apple.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.6
+     }
+    ]
+   },
+   "usable": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/umbrella.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人觉得这本词典怎么样？",
+    "listen": "This dictionary is very useful for English learners.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "太贵了",
+     "很有用",
+     "太难了",
+     "很旧了"
+    ],
+    "ans": "B",
+    "why": "useful 有用的。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "It's ______ useful book.",
+    "opts": [
+     "an",
+     "some",
+     "a",
+     "many"
+    ],
+    "ans": "C",
+    "why": "useful 的 u 读 /juː/，前面用 a。",
+    "kd": "用法"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Computers are ______ than typewriters. (useful)",
+    "opts": [],
+    "ans": "more useful",
+    "why": "有 than 用比较级 more useful。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 useful、usable 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "My old bike is still ______, though it's not very fast.",
+    "opts": [],
+    "ans": "usable",
+    "why": "还能用（没坏）用 usable；useful 是“有用、有帮助”。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "This is the usefulest app on my phone.",
+    "opts": [],
+    "ans": "usefulest → most useful",
+    "why": "useful 的最高级是 most useful。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这本书对我很有帮助。",
+    "stem": "This book is very ______ to me.",
+    "opts": [],
+    "ans": "useful",
+    "why": "有用、有帮助用 useful。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Don't throw it away. It may be of ______.",
+    "opts": [
+     "use",
+     "useful",
+     "using",
+     "user"
+    ],
+    "ans": "A",
+    "why": "be of use = be useful 有用。",
+    "kd": "词性转换"
+   }
+  ]
+ }
+}

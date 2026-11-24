@@ -1,0 +1,529 @@
+{
+ "style": "core",
+ "board": true,
+ "originPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "actor": "west-clerk-happy",
+    "x": 0.36,
+    "y": 0.6,
+    "s": 0.9,
+    "z": 3
+   },
+   {
+    "svg": "art/wrench.svg",
+    "x": 0.66,
+    "y": 0.5,
+    "s": 0.3,
+    "anim": "shake"
+   },
+   {
+    "label": "use：拿来用",
+    "x": 0.8,
+    "y": 0.12,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-explain",
+     "x": 0.34,
+     "y": 0.6,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "svg": "art/computer.svg",
+     "x": 0.74,
+     "y": 0.6,
+     "s": 0.4
+    }
+   ],
+   "text": "用、使用",
+   "pos": "动词",
+   "diff": "把东西拿来派用场",
+   "ex": "Can I use your computer?",
+   "exzh": "我能用一下你的电脑吗？",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "when": "Can I"
+     },
+     {
+      "svg": "art/computer.svg",
+      "x": 0.68,
+      "y": 0.56,
+      "s": 0.46,
+      "when": "computer"
+     },
+     {
+      "label": "use",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "use"
+     },
+     {
+      "label": "用",
+      "x": 0.86,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "用"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/clock.svg",
+     "x": 0.74,
+     "y": 0.3,
+     "s": 0.34
+    },
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    }
+   ],
+   "text": "利用",
+   "pos": "动词",
+   "diff": "把时间、机会派上用场",
+   "ex": "Use your time well.",
+   "exzh": "好好利用你的时间。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.28,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "when": "Use"
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.72,
+      "y": 0.4,
+      "s": 0.4,
+      "when": "time"
+     },
+     {
+      "label": "use your time",
+      "x": 0.72,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "Use your time"
+     },
+     {
+      "label": "利用",
+      "x": 0.72,
+      "y": 0.84,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "利用"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/wrench.svg",
+     "x": 0.4,
+     "y": 0.5,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "svg": "art/hammer.svg",
+     "x": 0.72,
+     "y": 0.56,
+     "s": 0.36
+    }
+   ],
+   "text": "使用；用途、用处",
+   "pos": "名词",
+   "diff": "能派上的用场",
+   "ex": "This tool has many uses.",
+   "exzh": "这个工具有很多用途。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/wrench.svg",
+      "x": 0.36,
+      "y": 0.52,
+      "s": 0.5,
+      "when": "tool"
+     },
+     {
+      "label": "many uses",
+      "x": 0.74,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "many uses"
+     },
+     {
+      "label": "用途",
+      "x": 0.74,
+      "y": 0.6,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "用途"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“拿来用、得到好处”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/wrench.svg",
+      "x": 0.66,
+      "y": 0.5,
+      "s": 0.3,
+      "anim": "shake"
+     },
+     {
+      "label": "use",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "把东西拿来派用场",
+   "node": "① 用、使用",
+   "pos": "动词",
+   "pic": 0,
+   "say": [
+    "把东西拿来派用场，就是用、使用。",
+    "名词读 /juːs/，动词读 /juːz/。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "when": "把东西"
+     },
+     {
+      "svg": "art/wrench.svg",
+      "x": 0.66,
+      "y": 0.5,
+      "s": 0.3,
+      "anim": "shake",
+      "when": "派用场"
+     },
+     {
+      "label": "用、使用",
+      "x": 0.7,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "使用"
+     },
+     {
+      "label": "/juːs/ 名  /juːz/ 动",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "/juːs/"
+     }
+    ]
+   }
+  },
+  {
+   "via": "把时间、机会也派上用场",
+   "node": "② 利用",
+   "pos": "动词",
+   "pic": 1,
+   "say": [
+    "把时间、机会也拿来派用场，就是利用。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock.svg",
+      "x": 0.7,
+      "y": 0.36,
+      "s": 0.4,
+      "when": "时间"
+     },
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "when": "机会"
+     },
+     {
+      "label": "利用",
+      "x": 0.7,
+      "y": 0.84,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "利用"
+     }
+    ]
+   }
+  },
+  {
+   "via": "名词：能派上的用场",
+   "node": "③ 使用；用途",
+   "pos": "名词",
+   "pic": 2,
+   "from": 0,
+   "say": [
+    "当名词，就是使用；能派上的用场，就是用途、用处。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/wrench.svg",
+      "x": 0.36,
+      "y": 0.52,
+      "s": 0.5,
+      "when": "当名词"
+     },
+     {
+      "svg": "art/hammer.svg",
+      "x": 0.72,
+      "y": 0.56,
+      "s": 0.36,
+      "when": "用场"
+     },
+     {
+      "label": "用途、用处",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "用途"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "employ": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     }
+    ]
+   },
+   "harness": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.5
+     }
+    ]
+   },
+   "purpose": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/wrench.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7
+     }
+    ]
+   },
+   "usage": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/book-open.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人用什么做作业？",
+    "listen": "I use my computer to do homework.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "电脑",
+     "手机",
+     "词典",
+     "计算器"
+    ],
+    "ans": "A",
+    "why": "use my computer 用电脑。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "I ______ to walk to school, but now I ride a bike.",
+    "opts": [
+     "used",
+     "use",
+     "using",
+     "uses"
+    ],
+    "ans": "A",
+    "why": "used to do 过去常常做（现在不做了）。",
+    "kd": "用法"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 use、useful 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "This map is very ______ for visitors.",
+    "opts": [],
+    "ans": "useful",
+    "why": "be 后面要形容词 useful（有用的）。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He is good at ______ chopsticks. (use)",
+    "opts": [],
+    "ans": "using",
+    "why": "介词 at 后面用动名词 using（去 e 加 ing）。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "She is used to get up early now.",
+    "opts": [],
+    "ans": "get → getting",
+    "why": "be used to doing 习惯于做某事。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这台旧电脑一点用也没有。",
+    "stem": "This old computer is ______.",
+    "opts": [],
+    "ans": "useless",
+    "why": "没用的用 useless。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "What's the ______ of this tool?",
+    "opts": [
+     "use",
+     "using",
+     "useful",
+     "user"
+    ],
+    "ans": "A",
+    "why": "the … of 后面要名词 use（用途）。",
+    "kd": "词性转换"
+   }
+  ]
+ }
+}

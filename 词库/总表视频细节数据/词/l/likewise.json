@@ -1,7 +1,526 @@
 {
  "单词": "likewise",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/twin-cups.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "shadow": true
+     },
+     {
+      "label": "像、同样的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.6
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/map.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "shadow": true
+     },
+     {
+      "label": "方式",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-eq.svg",
+   "p1": "art/ic-road.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.72,
+     "y": 0.62,
+     "s": 0.74,
+     "z": 3
+    },
+    {
+     "label": "以同样的方式",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.72,
+      "y": 0.62,
+      "s": 0.74,
+      "z": 3
+     }
+    ],
+    "text": "同样地",
+    "pos": "副词",
+    "diff": "照着做一样的",
+    "ex": "Watch me and do likewise.",
+    "exzh": "看着我，照样做。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.28,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "Watch me",
+       "seq": "talk"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.72,
+       "y": 0.62,
+       "s": 0.74,
+       "z": 3,
+       "when": "do likewise"
+      },
+      {
+       "label": "likewise",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "likewise"
+      },
+      {
+       "label": "照样做",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "照样做"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/apple.svg",
+      "x": 0.36,
+      "y": 0.56,
+      "s": 0.36
+     },
+     {
+      "svg": "art/bread.svg",
+      "x": 0.68,
+      "y": 0.6,
+      "s": 0.3
+     }
+    ],
+    "text": "也、而且",
+    "pos": "副词",
+    "diff": "前面说了一件，再加一件",
+    "ex": "The food was good; likewise, the service.",
+    "exzh": "饭菜很好，服务也一样好。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bread.svg",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.32,
+       "when": "food"
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "service"
+      },
+      {
+       "label": "likewise",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "likewise"
+      },
+      {
+       "label": "也",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "也"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.7,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     }
+    ],
+    "text": "彼此彼此、我也一样",
+    "pos": "副词",
+    "diff": "口语应答",
+    "ex": "Nice to meet you. Likewise.",
+    "exzh": "见到你很高兴。我也是。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-hello",
+       "x": 0.28,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "when": "Nice",
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.72,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "Likewise",
+       "turn": [
+        1,
+        2
+       ]
+      },
+      {
+       "label": "Nice to meet you.",
+       "x": 0.28,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "Nice"
+      },
+      {
+       "label": "Likewise.",
+       "x": 0.72,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "Likewise"
+      },
+      {
+       "label": "我也是",
+       "x": 0.72,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "我也是"
+      },
+      {
+       "sound": "say:Likewise!",
+       "when": "Likewise",
+       "gap": true
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“以同样的方式”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.72,
+       "y": 0.62,
+       "s": 0.74,
+       "z": 3
+      },
+      {
+       "label": "like 同样的 + wise 方式",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "短语 in like wise 连写",
+    "node": "① 同样地；② 也、而且",
+    "pos": "副词",
+    "pic": 0,
+    "rule": "最后一个词是主体，前面的词说明它",
+    "ruleEx": "likewise 以同样的方式      otherwise 否则",
+    "say": [
+     "它来自短语 in like wise，以同样的方式，后来连写成一个词。",
+     "最后一个词 wise 是主体，前面的 like 说明它；otherwise 也一样。",
+     "意思就是同样地；也、而且。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "label": "in like wise",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.1,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "in like wise",
+       "hideCue": 1
+      },
+      {
+       "label": "likewise",
+       "x": 0.5,
+       "y": 0.34,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "连写成一个词",
+       "hideCue": 1
+      },
+      {
+       "label": "wise 主体",
+       "x": 0.7,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "cue": 1,
+       "when": "主体",
+       "hideCue": 2
+      },
+      {
+       "label": "otherwise",
+       "x": 0.3,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "otherwise",
+       "hideCue": 2
+      },
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "cue": 2,
+       "when": "同样地"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.72,
+       "y": 0.62,
+       "s": 0.74,
+       "z": 3,
+       "cue": 2,
+       "when": "同样地"
+      },
+      {
+       "label": "同样地",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "同样地"
+      }
+     ]
+    }
+   },
+   {
+    "via": "对方说客气话，你回一句“同样”",
+    "node": "③ 彼此彼此",
+    "pos": "副词",
+    "pic": 2,
+    "say": [
+     "对方说了一句客气话，你回一句同样，就是彼此彼此、我也一样。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-hello",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "when": "客气话"
+      },
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "回一句"
+      },
+      {
+       "label": "彼此彼此",
+       "x": 0.7,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "彼此彼此"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "too": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/apple.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.6
+      },
+      {
+       "svg": "art/apple.svg",
+       "x": 0.7,
+       "y": 0.55,
+       "s": 0.6
+      }
+     ]
+    },
+    "moreover": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7
+      }
+     ]
+    },
+    "similarly": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.35,
+       "y": 0.55,
+       "s": 0.7
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.65,
+       "y": 0.55,
+       "s": 0.7
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "likewiseai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人让大家怎么做？\n听：Watch me and do likewise.\nA. 不要动\nB. 坐下来\nC. 照着做\nD. 离开教室",
@@ -89,5 +608,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
