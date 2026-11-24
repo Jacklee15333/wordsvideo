@@ -251,6 +251,17 @@ nav a.on .sn{background:var(--base);border-color:var(--base);color:#fff}
 .ovt .bar{width:160px;margin:0 0 2px}
 .ovt td.go{text-align:right;white-space:nowrap}
 .vlink{font-weight:600}
+/* v1.10.0：检测、汇报 */
+.ck-y{color:var(--pass);font-weight:600} .ck-n{color:var(--faint)} .ck-bad{color:var(--red);font-weight:600}
+.rep{background:#F3F7FD;border:1px solid #D3E0F3;border-radius:6px;padding:8px 12px;margin:0 0 10px;font-size:13px;line-height:1.75}
+.rep b{font-variant-numeric:tabular-nums}
+.rep a{cursor:pointer}
+.rep.ok{background:var(--pass-bg);border-color:#BFDCCB}
+.rep.warn{background:var(--amber-bg);border-color:#E8D3A8}
+.rlist{margin:4px 0 0;padding-left:18px}
+.rlist li{margin:2px 0}
+.pbar label.small{white-space:nowrap}
+#vMiss th,#vReady th{white-space:nowrap}
 /* v1.9.9：这次给哪些词、结果、存在哪儿 */
 .pst-will{background:#E7EEF8;color:var(--blue)}
 .tc{font-weight:600;color:var(--red);margin-left:2px}
@@ -406,8 +417,10 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
   <div class="mtabs stabs"><a data-go="pick" class="on">备选单词</a><a data-go="words" class="">从总表里找</a></div>
   <div class="box">
     <h3 style="margin-top:0">备选单词 <span class="small faint" id="kPoolN"></span></h3>
+    <div class="rep" id="pCheck" hidden></div>
     <div class="pbar">
-        <span class="pfilt" id="pFilt"><a data-pf="picked">选上的 <b></b></a><a data-pf="todo" class="on">没做完 <b></b></a><a data-pf="doing">正在做 <b></b></a><a data-pf="done">做好了 <b></b></a><a data-pf="all">全部 <b></b></a></span>
+        <span class="pfilt" id="pFilt"><a data-pf="all" class="on">全部 <b></b></a><a data-pf="noq">没题目 <b></b></a><a data-pf="nopic">有题目、没画面 <b></b></a><a data-pf="ready">题目画面都有 <b></b></a><a data-pf="video">有视频 <b></b></a></span>
+        <label class="small"><input type="checkbox" id="pOnlyPicked"> 只看选上的</label>
         <select id="pTag" class="small" hidden><option value="">所有批</option></select>
         <span class="pacts"><button class="btn ghost sm" id="pImpBtn">导入单词</button><button class="btn ghost sm" id="pAll">这些都选上</button><button class="btn ghost sm" id="pNone">都不选</button><button class="btn ghost sm" id="pClearDone">清掉做好了的</button></span>
     </div>
@@ -430,6 +443,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
   <div class="box">
     <h3 style="margin-top:0">这次给哪些词出题 <span class="small faint" id="qPickN"></span></h3>
     <p class="small muted" style="margin:0 0 8px">就是第 3 步「选词」里选上的词。“要出”的这次出；已经有题目的不重出。要换词，到「选词」去勾。</p>
+    <div class="rep" id="qCheck" hidden></div>
     <div class="plist" id="qPick"></div>
     <div class="pgo"><button class="btn kbig" id="tAdd">给要出的词出题 ▶</button><span class="small muted" id="qMsg">只出题，不做画面。做的过程就在下面。</span></div>
   </div>
@@ -472,6 +486,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
     <div class="sother" hidden></div>
     <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
   </div>
+  <div class="box rep-box" id="qRep" hidden style="margin-top:22px"><h3 style="margin-top:0">出题汇报（最近一次）</h3><div id="qRepBody"></div></div>
   <div class="box" style="margin-top:22px">
     <h3 style="margin-top:0">出题结果（选上的词的题目）</h3>
     <div class="rsave" id="qSave">—</div>
@@ -552,6 +567,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
   <div class="box">
     <h3 style="margin-top:0">这次给哪些词做画面 <span class="small faint" id="picPickN"></span></h3>
     <p class="small muted" style="margin:0 0 8px">就是第 3 步「选词」里选上的词。要先有题目才能做画面；已经有画面的不重做。</p>
+    <div class="rep" id="picCheck" hidden></div>
     <div class="plist" id="picPick"></div>
     <div class="pgo"><button class="btn kbig" id="tPics">给要做的词做画面 ▶</button><span class="small muted" id="picMsg">只做画面，不出题。一个词几分钟，做的过程就在下面。</span></div>
   </div>
@@ -561,6 +577,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
     <div class="sother" hidden></div>
     <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
   </div>
+  <div class="box rep-box" id="picRep" hidden style="margin-top:22px"><h3 style="margin-top:0">画面汇报（最近一次）</h3><div id="picRepBody"></div></div>
   <div class="box" style="margin-top:22px">
     <h3 style="margin-top:0">画面结果（选上的词的画面）</h3>
     <div class="rsave" id="picSave">—</div>
@@ -738,11 +755,15 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
       <pre id="vOut" class="small" style="white-space:pre-wrap;max-height:260px;overflow:auto;background:#F7F9FA;border:1px solid var(--rule2);padding:8px;margin:8px 0 0;display:none"></pre>
     </div>
     <div class="box">
-      <h3 style="margin-top:0">建批次</h3>
-      <p class="small muted" style="margin:0 0 8px">只有做好了“画面设置”的词才能出片。现在有画面设置的词在下面（7A-U4 的 kit）。其他词要先做画面设置——下一步用网页 AI 自动写。</p>
-      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">批次名 <input type="text" id="vName" placeholder="比如 7A-U4-2" style="width:140px">
-        <button class="btn" id="vNew">用勾选的词建批次</button><label class="small"><input type="checkbox" id="vOnlyNew" checked> 只勾还没有视频的</label></div>
-      <div id="vWords" style="max-height:300px;overflow:auto;margin-top:8px"></div>
+      <h3 style="margin-top:0">这次出哪些词的视频 <span class="small faint" id="vPickN"></span></h3>
+      <p class="small muted" style="margin:0 0 8px">就是第 3 步「选词」里选上的词。先检测：题目和画面都有的才能出视频；缺的单独列在下面，点按钮去对应的那一步补。</p>
+      <div class="rep" id="vCheck" hidden></div>
+      <div class="plist" id="vReady" style="max-height:300px"></div>
+      <div class="line">批次名 <input type="text" id="vName" placeholder="比如 7A-U4-2" style="width:140px">
+        <button class="btn" id="vNew">用勾的词建批次</button><label class="small"><input type="checkbox" id="vOnlyNew" checked> 只勾还没有视频的</label></div>
+      <div id="vMiss" style="margin-top:12px"></div>
+      <details style="margin-top:10px"><summary class="small muted">没选上、但也能出视频的词 <span id="vOtherN"></span></summary>
+        <div id="vWords" style="max-height:260px;overflow:auto;margin-top:6px"></div></details>
     </div>
   </div>
   <div class="col">
@@ -956,10 +977,11 @@ const DAYN=['一','二','三','四','五','六','日'];
 $('#sDays').innerHTML='星期 '+DAYN.map((d,i)=>`<label><input type="checkbox" value="${i+1}" checked>${d}</label>`).join('');
 const ST_WORD={'运行中':'正在做','排队':'排队中','已暂停':'暂停了','已完成':'做完了','失败':'没做成','已取消':'取消了'};
 $('#tAdd').onclick=()=>busy($('#tAdd'),$('#qMsg'),'正在安排',async()=>{
-  if(!PQ.length)return{ok:false,msg:'选上的词里没有要出题的：到第 3 步「选词」选上要做的词'};
-  await api('/api/task',{kind:'words',params:{words:PQ,steps:['chuti']},title:`出题：${PQ.slice(0,4).join('、')}${PQ.length>4?' 等 '+PQ.length+' 个':''}`});
+  const have=picked().filter(i=>i.q).map(i=>i.word);
+  if(!PQ.length)return{ok:false,msg:have.length?`选上的 ${have.length} 个都已经有题目，都跳过了，这次不用出题。下一步：画面`:'选上的词里没有要出题的：到第 3 步「选词」选上要做的词'};
+  await api('/api/task',{kind:'words',params:{words:PQ,steps:['chuti'],skipped:{q:have}},title:`出题：${PQ.slice(0,4).join('、')}${PQ.length>4?' 等 '+PQ.length+' 个':''}`});
   poll();setTimeout(()=>{loadQ();stepScroll()},700);
-  return{ok:true,msg:'开始了：做的过程在下面'}});
+  return{ok:true,msg:`开始了：这次出 ${PQ.length} 个${have.length?`；已经有题目、跳过 ${have.length} 个`:''}。做的过程在下面，做完有汇报`}});
 $('#tAddNext').onclick=()=>busy($('#tAddNext'),$('#qbMsg'),'正在安排',async()=>{
   const when=document.querySelector('input[name=tWhen]:checked').value,at=when==='at'?$('#tAt').value:'';
   if(when==='at'&&!at)return{ok:false,msg:'先选个开始时间'};
@@ -967,10 +989,12 @@ $('#tAddNext').onclick=()=>busy($('#tAddNext'),$('#qbMsg'),'正在安排',async(
   if(!at)setTimeout(()=>{go('q');stepScroll()},700);
   return{ok:true,msg:at?'定好了，到点开始（在「出题」那一页下面能看到）':'开始了：做的过程在「出题」那一页下面'}});
 $('#tPics').onclick=()=>busy($('#tPics'),$('#picMsg'),'正在安排',async()=>{
-  if(!PP.length)return{ok:false,msg:'选上的词里没有“有题目、缺画面”的：先出题，或者到「选词」选上别的词'};
-  await api('/api/task',{kind:'pics',params:{words:PP},title:`做画面：${PP.slice(0,4).join('、')}${PP.length>4?' 等 '+PP.length+' 个':''}`});
+  const pk=picked(),havePic=pk.filter(i=>i.pic).map(i=>i.word),noQ=pk.filter(i=>!i.q).map(i=>i.word);
+  if(!PP.length)return{ok:false,msg:havePic.length&&!noQ.length?`选上的 ${havePic.length} 个都已经有画面，都跳过了，这次不用做。下一步：出视频`:
+    noQ.length?`没有能做画面的：${noQ.length} 个还没题目（先到第 4 步「出题」）${havePic.length?`，${havePic.length} 个已经有画面`:''}`:'选上的词里没有要做画面的：到第 3 步「选词」选上要做的词'};
+  await api('/api/task',{kind:'pics',params:{words:PP,skipped:{pic:havePic,noq:noQ}},title:`做画面：${PP.slice(0,4).join('、')}${PP.length>4?' 等 '+PP.length+' 个':''}`});
   poll();setTimeout(()=>{loadPic();stepScroll()},700);
-  return{ok:true,msg:'开始了：做的过程在下面'}});
+  return{ok:true,msg:`开始了：这次做 ${PP.length} 个${havePic.length?`；已经有画面、跳过 ${havePic.length} 个`:''}${noQ.length?`；还没题目、跳过 ${noQ.length} 个`:''}。做的过程在下面，做完有汇报`}});
 $('#tPicsNext').onclick=()=>busy($('#tPicsNext'),$('#pbMsg'),'正在安排',async()=>{
   await api('/api/task',{kind:'pics',params:{count:+$('#tPCount').value||0}});poll();setTimeout(()=>{go('pic');stepScroll()},700);
   return{ok:true,msg:'开始了：做的过程在「画面」那一页下面'}});
@@ -988,10 +1012,10 @@ function gearOpen(){go('ai')}
 $('#tHelp').onclick=()=>modal('做视频的六步',`<p class="muted" style="margin-top:0">左边从上到下就是做视频的顺序，一页只管一件事；在哪一步点了开始，做的过程就在那一步的页面下面，不会跳走。</p><ol class="steps">
   <li><b>选 AI</b>：用哪个 AI（网页镜像、接口、手动接力、模拟），一种一个标签；填好账号，点「改用这个」。</li>
   <li><b>检测</b>：点「一键检测」，AI、词库、出片环境三样都打 ✓ 就行；哪样打 ✗，看它后面那句话，点「详情」看是哪一步。</li>
-  <li><b>选词</b>：只管选词。把要做的词导进「备选单词」（或者在「从总表里找」里搜），勾上就是选上了，软件记着。</li>
-  <li><b>出题</b>：给选上的词里还缺题目的出题（也可以按总表顺序出）；出题没过的词在这里改、再试；「规矩和时间」「记录」两个小标签也在这一步。</li>
-  <li><b>画面</b>：给选上的词里有题目、缺画面的做画面；没做成的在这里再试。</li>
-  <li><b>出视频</b>：题目、画面都好了的词，在这台电脑上建批次、渲染。</li></ol>
+  <li><b>选词</b>：只管选词。把要做的词导进「备选单词」（或者在「从总表里找」里搜），勾上就是选上了，软件记着。每个词都检测：有没有题目、有没有画面、有没有视频，下一步该去哪。</li>
+  <li><b>出题</b>：给选上的词里还缺题目的出题，已经有题目的自动跳过；做完有汇报（跳过了哪些、每个词出好了没有）。</li>
+  <li><b>画面</b>：给选上的词里有题目、缺画面的做画面，已经有画面的、还没题目的自动跳过；做完有汇报。</li>
+  <li><b>出视频</b>：先检测，题目、画面都有的词才能建批次、渲染；缺的列出来，点按钮去「出题」或「画面」补。</li></ol>
   <p><b>总览</b>：六步各自做到哪儿了、选上的每个词走到哪一步。<b>成果</b>：做好的视频、能出视频的词、出好的题目。<b>设置</b>：GitHub 仓库、软件版本。<br>
   左边哪一步旁边出现“在跑”，就是那一步的任务在做；出现“要你操作”（手动接力），点那一步，照黄框做。</p>`);
 async function taskOp(id,op){await api('/api/task/op',{id,op});setTimeout(()=>{poll();loadTasks()},300)}
@@ -1024,11 +1048,28 @@ async function stepTasks(step){TLt=Date.now();
   let d;try{d=await api('/api/tasks')}catch(e){return}
   const mine=d.tasks.filter(t=>stepOf(t)===step),act=['运行中','排队','已暂停'];
   const live=mine.filter(t=>act.includes(t.status)),done=mine.filter(t=>!act.includes(t.status)).slice(0,10);
+  if(step==='q'||step==='pic')repRender(step,d.tasks);
   const sig=live.map(t=>t.id+t.status).join()+'|'+done.length;if(SDONE[step]!==undefined&&SDONE[step]!==sig){if(step==='q')loadQ();if(step==='pic')loadPic()}SDONE[step]=sig;
   sec.querySelector('.tlist').innerHTML=(live.length?live.map(taskRow).join(''):'<p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p>')+
     (done.length?`<details class="tdone" ${TOPEN[step]?'open':''}><summary class="small muted">做完的 ${done.length} 个</summary>${done.map(taskRow).join('')}
       <div class="line"><button class="btn ghost sm" onclick="clearDone('${step}')">清掉这一步做完的记录</button></div></details>`:'');
   const dt=sec.querySelector('.tdone');if(dt)dt.ontoggle=()=>{TOPEN[step]=dt.open}}
+/* 汇报：最近一次（点了「给这些词…」的）任务，跳过了哪些、这次做的每个词结果怎样 */
+function repRender(step,tasks){const box=$('#'+step+'Rep');if(!box)return;
+  const mine=(tasks||[]).filter(t=>stepOf(t)===step&&(()=>{try{return (JSON.parse(t.params||'{}').words||[]).length}catch(e){return 0}})());
+  const t=mine[0];if(!t){box.hidden=true;return}box.hidden=false;
+  const p=JSON.parse(t.params||'{}'),sk=p.skipped||{},by={};for(const i of PL.items||[])by[i.word]=i;
+  const act=['运行中','排队','已暂停'].includes(t.status),L=a=>a.slice(0,30).map(esc).join('、')+(a.length>30?`…（共 ${a.length} 个）`:'');
+  const res=w=>{const i=by[w]||{};
+    if(step==='q'){if(i.q)return '<span class="ck-y">✓ 出好了</span>';if(i.manual)return '<span class="ck-bad">✗ 没过</span>（到「没过的词」里改）'}
+    else{if(i.pic)return '<span class="ck-y">✓ 做好了</span>';if(i.picfail)return '<span class="ck-bad">✗ 没做成</span>（到「没做成的词」里看原因）'}
+    return act?'<span class="muted">… 还在做</span>':'<span class="muted">— 没做到（任务'+(ST_WORD[t.status]||t.status)+'）</span>'};
+  const words=p.words||[],ok=words.filter(w=>step==='q'?(by[w]||{}).q:(by[w]||{}).pic).length;
+  const skips=step==='q'?[['已经有题目，跳过（不重出）',sk.q||[]]]:[['已经有画面，跳过（不重做）',sk.pic||[]],['还没题目，跳过（先出题）',sk.noq||[]]];
+  $('#'+step+'RepBody').innerHTML=`<div class="small muted">任务 #${t.id}　${esc(ST_WORD[t.status]||t.status)}　${esc((t.started||t.created||'').slice(5,16))}${t.finished?' → '+esc(t.finished.slice(11,16)):''}</div>
+    <ul class="rlist">${skips.filter(x=>x[1].length).map(([n,a])=>`<li>${n} <b>${a.length}</b> 个：${L(a)}</li>`).join('')}
+    <li>这次${step==='q'?'出':'做'} <b>${words.length}</b> 个，${act?'正在做':'做完'}：${step==='q'?'出好了':'做好了'} <b>${ok}</b> 个
+      <ul class="rlist">${words.slice(0,60).map(w=>`<li><b style="font-family:var(--en)">${esc(w)}</b>　${res(w)}</li>`).join('')}${words.length>60?`<li>…还有 ${words.length-60} 个</li>`:''}</ul></li></ul>`}
 async function clearDone(step){const d=await api('/api/tasks');
   for(const t of d.tasks.filter(t=>stepOf(t)===step&&['已完成','已取消','失败'].includes(t.status)))await api('/api/task/op',{id:t.id,op:'delete'});stepTasks(step)}
 /* 点了开始：留在这一页，滚到下面的进度 */
@@ -1042,7 +1083,12 @@ function tabCounts(){const s=ST.stats||{};$$('[data-tc="qfail"]').forEach(e=>e.t
   api('/api/picfail').then(f=>{const n=(f.items||[]).length;$$('[data-tc="picfail"]').forEach(e=>e.textContent=n||'')}).catch(()=>{})}
 /* ④ 出题：这次给哪些词（选上的）、做的过程、出题结果（题目、存在哪儿） */
 async function loadQ(){await poolNeed();qPickRender();qRes();stepTasks('q');liveTick();tabCounts()}
-function qPickRender(){const pk=picked();
+function qCheckRender(){const pk=picked(),box=$('#qCheck');if(!pk.length){box.hidden=true;return}box.hidden=false;
+  const have=pk.filter(i=>i.q),doing=pk.filter(i=>i.st==='doing'),bad=pk.filter(i=>i.manual&&!i.q);
+  box.className='rep'+(PQ.length?'':' ok');
+  box.innerHTML=PQ.length?`<b>检测</b>：选上的 ${pk.length} 个里，已经有题目 <b>${have.length}</b> 个（跳过，不重出）· 这次要出 <b>${PQ.length}</b> 个${bad.length?`（其中 ${bad.length} 个上次没过，这次再试）`:''}${doing.length?` · 正在做 ${doing.length} 个`:''}`
+    :`<b>检测</b>：选上的 ${pk.length} 个${doing.length?`里 ${doing.length} 个正在做，其余`:''}都已经有题目了，这次不用出题（都跳过）。下一步：<a onclick="go('pic')">画面</a>`}
+function qPickRender(){const pk=picked();qCheckRender();
   $('#qPickN').textContent=pk.length?`（选上的 ${pk.length} 个，这次要出 ${PQ.length} 个）`:'';
   $('#qPick').innerHTML=pk.length?'<table><tr><th>单词</th><th>意思</th><th>题目现在</th><th>这次</th></tr>'+pk.map(i=>{
       const doing=i.st==='doing',will=!i.q&&!doing;
@@ -1076,8 +1122,13 @@ async function loadQbulk(){
       <div><button class="btn ghost sm" onclick="sched(${x.id},'toggle')">${x.enabled?'停用':'启用'}</button> <button class="btn ghost sm" onclick="sched(${x.id},'delete')">删掉</button></div></div>`}).join('')||'<p class="faint small" style="margin:0">还没设。</p>';
 }
 /* ⑤ 画面：这次给哪些词（选上的）、做的过程、画面结果（图、存在哪儿） */
+function picCheckRender(){const pk=picked(),box=$('#picCheck');if(!pk.length){box.hidden=true;return}box.hidden=false;
+  const have=pk.filter(i=>i.pic),noq=pk.filter(i=>!i.q),doing=pk.filter(i=>i.st==='doing'),bad=pk.filter(i=>i.q&&!i.pic&&i.picfail);
+  box.className='rep'+(PP.length?'':noq.length?' warn':' ok');
+  box.innerHTML=`<b>检测</b>：选上的 ${pk.length} 个里，已经有画面 <b>${have.length}</b> 个（跳过，不重做）· 还没题目 <b>${noq.length}</b> 个（跳过，先到 <a onclick="go('q')">出题</a>）· 这次要做 <b>${PP.length}</b> 个${bad.length?`（其中 ${bad.length} 个上次没做成，这次再试）`:''}${doing.length?` · 正在做 ${doing.length} 个`:''}`+
+    (PP.length?'':have.length===pk.length?`<br>都已经有画面了，这次不用做。下一步：<a onclick="go('video')">出视频</a>`:'')}
 async function loadPic(){await poolNeed();picPickRender();picRes();stepTasks('pic');liveTick();tabCounts()}
-function picPickRender(){const pk=picked();
+function picPickRender(){const pk=picked();picCheckRender();
   $('#picPickN').textContent=pk.length?`（选上的 ${pk.length} 个，这次要做 ${PP.length} 个）`:'';
   $('#picPick').innerHTML=pk.length?'<table><tr><th>单词</th><th>意思</th><th>题目</th><th>画面现在</th><th>这次</th></tr>'+pk.map(i=>{
       const doing=i.st==='doing',will=i.q&&!i.pic&&!doing;
@@ -1307,27 +1358,42 @@ $('#m_itest').onclick=()=>busy($('#m_itest'),$('#m_imsg'),'正在保存、检测
 $('#m_itok').oninput=()=>{if($('#m_itok').value.trim())$('#m_ion').checked=true};
 
 /* ───── 选词：备选单词（导入存着、挑着做；做没做完每次现查） ───── */
-let PL={items:[],counts:{},tags:[]},PF='todo',PLt=0;
-const PGROUP={todo:['todo','needpic','fail'],doing:['doing'],done:['done'],all:null,picked:null};
-function pVisible(){const g=PGROUP[PF],tag=$('#pTag').value;return (PL.items||[]).filter(i=>(PF!=='picked'||i.picked)&&(!g||g.includes(i.st))&&(!tag||i.tag===tag))}
+let PL={items:[],counts:{},tags:[]},PF='all',PLt=0;
+/* 每个词的检测：没题目 / 有题目、没画面 / 题目画面都有 / 有视频 */
+const PCAT=i=>i.video?'video':(i.q&&i.pic)?'ready':i.q?'nopic':'noq';
+const PCATN={noq:'没题目',nopic:'有题目、没画面',ready:'题目画面都有',video:'有视频'};
+function pBase(){const only=$('#pOnlyPicked').checked,tag=$('#pTag').value;return (PL.items||[]).filter(i=>(!only||i.picked)&&(!tag||i.tag===tag))}
+function pVisible(){return pBase().filter(i=>PF==='all'||PCAT(i)===PF)}
+const ckQ=i=>i.q?'<span class="ck-y">有</span>':i.manual?'<span class="ck-bad">没过</span>':'<span class="ck-n">没有</span>';
+const ckP=i=>i.pic?'<span class="ck-y">有</span>':i.picfail?'<span class="ck-bad">没做成</span>':'<span class="ck-n">没有</span>';
+function nextStep(i){if(i.st==='doing')return '<span class="pst pst-doing">正在做</span>';const c=PCAT(i);
+  return {video:'<span class="pst pst-done">有视频了</span>',ready:'<span class="pst pst-done">可以出视频</span>',
+    nopic:`<span class="pst pst-needpic">要做画面</span>`,noq:`<span class="pst pst-todo">${i.manual?'出题没过，要改':'要出题'}</span>`}[c]}
+function pCheckRender(){const pk=(PL.items||[]).filter(i=>i.picked),src=pk.length?pk:(PL.items||[]),box=$('#pCheck');
+  if(!src.length){box.hidden=true;return}box.hidden=false;
+  const n=k=>src.filter(i=>PCAT(i)===k).length,lk=(k,t)=>`<a onclick="pFilterTo('${k}')">${t} <b>${n(k)}</b></a>`;
+  box.innerHTML=`<b>检测结果</b>（${pk.length?'选上的 '+pk.length+' 个':'全部 '+src.length+' 个'}）：${lk('noq','没题目')} · ${lk('nopic','有题目、没画面')} · ${lk('ready','题目画面都有')} · ${lk('video','有视频')}`+
+    `<br><span class="muted">没题目的到第 4 步「出题」；有题目、没画面的到第 5 步「画面」；题目画面都有的就能到第 6 步「出视频」。</span>`}
+function pFilterTo(k){PF=k;if((PL.items||[]).some(i=>i.picked))$('#pOnlyPicked').checked=true;pRender()}
 function pCount(d){$('#kPoolN').textContent=d.all?`（存着 ${d.all} 个，选上 ${d.picked||0} 个，${d.todo} 个没做完）`:'（还没有，可以导入）'}
 function pRender(){
   const c=PL.counts||{};
-  $$('#pFilt a').forEach(a=>{a.classList.toggle('on',a.dataset.pf===PF);a.querySelector('b').textContent=c[a.dataset.pf]??0});
+  const base=pBase();$$('#pFilt a').forEach(a=>{const k=a.dataset.pf;a.classList.toggle('on',k===PF);a.querySelector('b').textContent=k==='all'?base.length:base.filter(i=>PCAT(i)===k).length});
   const ts=$('#pTag'),cur=ts.value;ts.innerHTML='<option value="">所有批</option>'+(PL.tags||[]).map(t=>`<option ${t===cur?'selected':''}>${esc(t)}</option>`).join('');ts.hidden=!(PL.tags||[]).length;
   const vis=pVisible(),box=$('#pList'),top=box.scrollTop;
   if(!(PL.items||[]).length)box.innerHTML='<div class="pempty">还没有备选单词。点上面「导入单词」：把这一阵要做的词粘贴进来，或者从 Excel 里读进来。做没做完，软件都记着。</div>';
-  else if(!vis.length)box.innerHTML=`<div class="pempty">${{picked:'还没有选上的词：勾上要做的词',todo:'✓ 备选单词都做完了（或者正在做）',doing:'现在没有正在做的备选单词',done:'还没有做好的',all:'没有'}[PF]}</div>`;
-  else box.innerHTML='<table>'+vis.map(i=>`<tr class="${i.st==='doing'?'dim':''}"><td style="width:22px"><input type="checkbox" class="pck" value="${esc(i.word)}" ${i.picked?'checked':''} title="勾上＝选上，出题、画面两步给选上的词做"></td>
-    <td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,40)}</td>
-    <td class="dots n" title="题目 · 画面 · 视频"><i class="${i.q?'y':i.manual?'w':''}">题</i><i class="${i.pic?'y':i.picfail?'w':''}">画</i><i class="${i.video?'y':''}">片</i></td>
-    <td class="n"><span class="pst pst-${i.st}">${esc(i.stName)}</span></td><td class="n">${i.tag?`<span class="ptag">${esc(i.tag)}</span>`:''}</td><td class="n"><button class="prow-x" title="从备选单词里拿掉" onclick="pDrop('${esc(i.word)}')">×</button></td></tr>`).join('')+'</table>';
+  else if(!vis.length)box.innerHTML=`<div class="pempty">${PF==='all'?'没有选上的词：勾上要做的词，或者去掉「只看选上的」':'没有「'+PCATN[PF]+'」的词'}</div>`;
+  else box.innerHTML='<table><tr><th></th><th>单词</th><th>意思</th><th>题目</th><th>画面</th><th>视频</th><th>检测：下一步</th><th></th><th></th></tr>'+vis.map(i=>`<tr class="${i.st==='doing'?'dim':''}"><td style="width:22px"><input type="checkbox" class="pck" value="${esc(i.word)}" ${i.picked?'checked':''} title="勾上＝选上，出题、画面两步给选上的词做"></td>
+    <td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,34)}</td>
+    <td class="n">${ckQ(i)}</td><td class="n">${ckP(i)}</td><td class="n">${i.video?'<span class="ck-y">有</span>':'<span class="ck-n">—</span>'}</td>
+    <td class="n">${nextStep(i)}</td><td class="n">${i.tag?`<span class="ptag">${esc(i.tag)}</span>`:''}</td><td class="n"><button class="prow-x" title="从备选单词里拿掉" onclick="pDrop('${esc(i.word)}')">×</button></td></tr>`).join('')+'</table>';
   box.scrollTop=top;
   $$('.pck').forEach(x=>x.onchange=()=>pPick([x.value],x.checked));
-  pSelN();pCount(c)}
+  pSelN();pCount(c);pCheckRender()}
 function pSelN(){const pk=(PL.items||[]).filter(i=>i.picked),n=pk.length;
   $('#pSel').textContent=n?`选上了 ${n} 个（勾上就是选上，软件记着）`:'还没选：勾上要做的词，或者点「这些都选上」';
-  $('#pSum').innerHTML=n?`选上的 ${n} 个里：还缺题目 <b>${pk.filter(i=>!i.q).length}</b> 个 · 有题目缺画面 <b>${pk.filter(i=>i.q&&!i.pic).length}</b> 个 · 做好了 <b>${pk.filter(i=>i.st==='done').length}</b> 个`:'<span class="muted">还没选上词</span>'}
+  const k=c=>pk.filter(i=>PCAT(i)===c).length;
+  $('#pSum').innerHTML=n?`选上的 ${n} 个：要出题 <b>${k('noq')}</b> · 要做画面 <b>${k('nopic')}</b> · 可以出视频 <b>${k('ready')}</b> · 有视频 <b>${k('video')}</b>`:'<span class="muted">还没选上词</span>'}
 async function pPick(words,on){if(!words.length)return;
   for(const i of PL.items||[])if(words.includes(i.word))i.picked=on;PL.counts.picked=(PL.items||[]).filter(i=>i.picked).length;pRender();
   try{await api('/api/pool',{op:'pick',words,on})}catch(e){toast('✗ 没记上：'+e.message,8000);loadPool()}}
@@ -1339,6 +1405,7 @@ async function pBrief(){PBt=Date.now();try{const d=await api('/api/pool?brief=1'
 setInterval(()=>{if(page==='pick'&&Date.now()-PLt>8000)loadPool();if(page==='home'&&Date.now()-OVt>10000)loadHome(true)},3000);   // 选词页开着：做到哪一步隔一会儿刷新
 $$('#pFilt a').forEach(a=>a.onclick=e=>{e.preventDefault();PF=a.dataset.pf;pRender()});
 $('#pTag').onchange=pRender;
+$('#pOnlyPicked').onchange=pRender;
 $('#pImpBtn').onclick=()=>{$('#pImp').hidden=!$('#pImp').hidden;if(!$('#pImp').hidden)$('#pText').focus()};
 $('#pFileBtn').onclick=()=>$('#pFile').click();
 $('#pFile').onchange=async()=>{const f=$('#pFile').files[0];if(!f)return;const m=$('#pImpMsg');m.style.color='var(--muted)';m.textContent='正在读「'+f.name+'」…';
@@ -1352,7 +1419,10 @@ $('#pFile').onchange=async()=>{const f=$('#pFile').files[0];if(!f)return;const m
 $('#pAdd').onclick=()=>busy($('#pAdd'),$('#pImpMsg'),'正在加',async()=>{
   if(!$('#pText').value.trim())return{ok:false,msg:'先粘贴单词，或者点「选文件」'};
   const d=await api('/api/pool',{op:'add',text:$('#pText').value,tag:$('#pTagIn').value});
-  if(d.ok){$('#pText').value='';$('#pTagIn').value='';$('#pImp').hidden=true;PF='todo';await loadPool()}
+  if(d.ok){$('#pText').value='';$('#pTagIn').value='';$('#pImp').hidden=true;PF='all';await loadPool();
+    const got=(d.added||[]).concat(d.have||[]),its=(PL.items||[]).filter(i=>got.includes(i.word));
+    if(its.length){const n=k=>its.filter(i=>PCAT(i)===k).length;
+      d.msg+=`。检测：没题目 ${n('noq')} 个、有题目没画面 ${n('nopic')} 个、题目画面都有 ${n('ready')} 个、有视频 ${n('video')} 个`}}
   return d});
 $('#pAll').onclick=()=>pPick(pVisible().filter(i=>!i.picked).map(i=>i.word),true);
 $('#pNone').onclick=()=>pPick((PL.items||[]).filter(i=>i.picked).map(i=>i.word),false);
@@ -1477,10 +1547,28 @@ async function loadVideo(){
       ${ok(e.skill)} 视频技能 ${esc(e.skill||'没同步')}　${ok(e.lwb)} 批量流水线　${ok(e.models)} 声音模型 ${esc(e.models||'')}<br>
       ${ok(e.ffmpeg&&e.node)} 系统软件　${e.gpu?'✓ 显卡已测好':'· 显卡没开'}　总表 ${esc(e.VER||'没同步')}${e.SYL?'':'　<span style="color:var(--red)">✗ 没有音节划分表</span>'}<br>
       <b style="color:${e.ready?'var(--pass)':'var(--amber)'}">${e.ready?'可以出片了':'还没装好：按 同步 → ① → ② 的顺序做'}</b>　出片文件夹 ${esc(e.winDir)}`)}).catch(x=>$('#vEnv').textContent=x.message);
-  const d=await api('/api/video?what=words');
-  $('#vWords').innerHTML=`<div class="faint small" style="margin-bottom:4px">有画面设置 ${d.nPic} 个词，已有视频 ${d.nVideo} 个</div><table>`+d.items.map(w=>
-    `<tr><td><input type="checkbox" class="vck" value="${esc(w.word)}" ${w.video?'':'checked'}></td><td style="font-family:var(--en)">${esc(w.word)}</td>
-    <td class="small muted">${esc(w.meaning||'').slice(0,18)}</td><td>${w.video?`<span class="tag t-done">有视频</span>`:'<span class="tag t-已暂停">能出片</span>'}</td></tr>`).join('')+'</table>';
+  const [d,pl]=await Promise.all([api('/api/video?what=words'),api('/api/pool').catch(()=>({items:[]}))]);
+  const pk=((pl&&pl.items)||[]).filter(i=>i.picked),pkw=new Set(pk.map(i=>i.word)),onlyNew=$('#vOnlyNew').checked;
+  const ready=pk.filter(i=>i.q&&i.pic),miss=pk.filter(i=>!(i.q&&i.pic));
+  $('#vPickN').textContent=pk.length?`（选上的 ${pk.length} 个，能出视频 ${ready.length} 个）`:'';
+  const ck=$('#vCheck');ck.hidden=!pk.length;
+  if(pk.length){const nq=miss.filter(i=>!i.q).length,np=miss.filter(i=>i.q&&!i.pic).length,hv=ready.filter(i=>i.video).length;
+    ck.className='rep'+(miss.length?' warn':' ok');
+    ck.innerHTML=`<b>检测</b>：选上的 ${pk.length} 个里，能出视频（题目、画面都有）<b>${ready.length}</b> 个${hv?`（其中 ${hv} 个已经有视频）`:''} · 缺题目 <b>${nq}</b> 个 · 缺画面 <b>${np}</b> 个`+
+      (miss.length?'<br>缺东西的不会放进批次，在下面列着，点按钮去补。':'')}
+  $('#vReady').innerHTML=!pk.length?'<div class="pempty">还没有选上的词：到第 3 步「选词」勾上要出视频的词。</div>':
+    ready.length?'<table><tr><th></th><th>单词</th><th>意思</th><th>题目</th><th>画面</th><th>视频</th></tr>'+ready.map(i=>`<tr><td style="width:22px"><input type="checkbox" class="vck" value="${esc(i.word)}" ${i.video&&onlyNew?'':'checked'}></td>
+      <td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,30)}</td><td><span class="ck-y">有</span></td><td><span class="ck-y">有</span></td>
+      <td>${i.video?'<span class="ck-y">有了</span>':'<span class="ck-n">还没有</span>'}</td></tr>`).join('')+'</table>'
+    :'<div class="pempty">选上的词里还没有能出视频的（题目、画面都有的）。看下面缺什么。</div>';
+  const fix=i=>!i.q?(i.manual?['出题没过','go(\'q\')','去「出题」改']:[i.pic?'缺题目':'缺题目、也缺画面（先出题，再做画面）','go(\'q\')','去出题'])
+    :[i.picfail?'画面没做成':'缺画面','go(\'pic\')',i.picfail?'去「画面」再试':'去做画面'];
+  $('#vMiss').innerHTML=miss.length?`<div class="small" style="margin-bottom:4px"><b>还不能出视频的 ${miss.length} 个</b>（不会放进批次）</div><div class="plist" style="max-height:240px"><table><tr><th>单词</th><th>题目</th><th>画面</th><th>缺什么</th><th></th></tr>`+
+    miss.map(i=>{const [why,act,btn]=fix(i);return `<tr><td class="w">${esc(i.word)}</td><td class="n">${ckQ(i)}</td><td class="n">${ckP(i)}</td><td>${why}</td><td class="n"><button class="btn ghost sm" onclick="${act}">${btn}</button></td></tr>`}).join('')+'</table></div>':'';
+  const others=d.items.filter(w=>w.q&&!pkw.has(w.word));
+  $('#vOtherN').textContent=`（${others.length} 个）`;
+  $('#vWords').innerHTML=others.length?'<table>'+others.map(w=>`<tr><td><input type="checkbox" class="vck" value="${esc(w.word)}"></td><td style="font-family:var(--en)">${esc(w.word)}</td>
+    <td class="small muted">${esc(w.meaning||'').slice(0,18)}</td><td>${w.video?`<span class="tag t-done">有视频</span>`:'<span class="tag t-已暂停">能出片</span>'}</td></tr>`).join('')+'</table>':'<span class="small muted">没有。</span>';
   $('#vList').innerHTML=d.videos.length?'<table><tr><th>单词</th><th>批次</th><th>大小</th><th>时间</th><th></th></tr>'+d.videos.slice().reverse().map(v=>
     `<tr><td style="font-family:var(--en)">${esc(v.word)}</td><td>${esc(v.batch)}</td><td>${esc(v.size)}</td><td>${esc(v.ts)}</td>
     <td><a href="/api/video/file?p=${encodeURIComponent(v.file)}" target="_blank">播放</a></td></tr>`).join('')+'</table>':'<span class="muted">还没有登记的视频。做好后点「登记新视频」，或者看批次进度时会自动登记。</span>';

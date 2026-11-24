@@ -279,7 +279,7 @@ def api_video_get(qs):
         except Exception:
             pass
         items = [{"word": idx[w][2] if w in idx else w, "folder": w, "inTable": w in idx, "video": vd.get(w),
-                  "meaning": idx[w][3] if w in idx else ""} for w in sorted(pw)]
+                  "meaning": idx[w][3] if w in idx else "", "q": bool(w in idx and idx[w][4] != "缺")} for w in sorted(pw)]
         return {"items": items, "videos": list(vd.values()), "nPic": len(pw), "nVideo": len(vd)}
     return {"error": "不认识"}
 

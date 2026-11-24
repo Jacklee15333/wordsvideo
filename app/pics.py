@@ -541,6 +541,10 @@ def do_pics(R, tid, p):
     """任务：给有题目、还没有画面的词做画面。R 是 core.RUNNER。"""
     total = int(p.get("count") or 0)
     only = set(p.get("words") or []) or None
+    sk = p.get("skipped") or {}                          # v1.10.0：开始时跳过的，记一笔汇报
+    for k, why in (("pic", "已经有画面，跳过 %d 个（不重做）：%s"), ("noq", "还没有题目，跳过 %d 个（先到「出题」出题）：%s")):
+        if sk.get(k):
+            C.log(why % (len(sk[k]), "、".join(sk[k][:40]) + ("…" if len(sk[k]) > 40 else "")), tid)
     if only:
         C.x("DELETE FROM picfail WHERE word IN (%s)" % ",".join("?" * len(only)), list(only))
     _DONE.clear()

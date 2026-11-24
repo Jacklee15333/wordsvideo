@@ -1748,6 +1748,9 @@ class Runner:
         words = [w for w in (p.get("words") or []) if w]
         steps = p.get("steps") or ["chuti", "pics"]
         sync()
+        sk = (p.get("skipped") or {}).get("q") or []        # v1.10.0：选上的词里已经有题目的，开始时就跳过了，记一笔汇报
+        if sk:
+            log("已经有题目，跳过 %d 个（不重出）：%s" % (len(sk), "、".join(sk[:40]) + ("…" if len(sk) > 40 else "")), tid)
         if "chuti" in steps:
             need = self.pick(10 ** 6, only=set(words))
             have = [w for w in words if w not in need]

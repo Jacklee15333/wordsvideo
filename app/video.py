@@ -405,15 +405,26 @@ def batch_new(name, words):
     if not re.fullmatch(r"[A-Za-z0-9_\-\u4e00-\u9fff]{1,40}", name or ""):
         return False, "批次名只用字母、数字、汉字、- 和 _"
     pw = pic_words()
-    rows, miss = [], []
-    for i, w in enumerate(words, 1):
+    hasq = {}                                     # v1.10.0：出视频要题目、画面都有：缺哪样就不放进批次，说去哪一步补
+    try:
+        for r in C.read_index()[1]:
+            hasq[r[2]] = hasq.get(r[2], True) and r[4] != "缺"
+    except Exception:
+        pass
+    rows, noq, nopic = [], [], []
+    for w in words:
         f = folder_of(w)
-        if f not in pw:
-            miss.append(w)
+        if not hasq.get(w):
+            noq.append(w)
             continue
-        rows.append("%02d\t%s\t%s\t出自单词工作台" % (i, f, pw[f]))
+        if f not in pw:
+            nopic.append(w)
+            continue
+        rows.append("%02d\t%s\t%s\t出自单词工作台" % (len(rows) + 1, f, pw[f]))
+    notes = ([("没有题目、没放进批次（先到「出题」）：" + "、".join(noq[:30]))] if noq else []) + \
+            ([("没有画面、没放进批次（先到「画面」）：" + "、".join(nopic[:30]))] if nopic else [])
     if not rows:
-        return False, "这些词都还没有画面设置，做不了视频：%s" % "、".join(miss[:20])
+        return False, "这些词都还不能出视频：" + "；".join(notes)
     lst = C.DATA / "batches" / (name + ".tsv")
     lst.parent.mkdir(exist_ok=True)
     lst.write_text("# 单词工作台建的批次\n" + "\n".join(rows) + "\n", encoding="utf-8")
@@ -423,11 +434,10 @@ def batch_new(name, words):
     rc, t = wsl("mkdir -p ~/wf-lists && tr -d '\\r' < %s > ~/wf-lists/%s.tsv && bash ~/lwb/scripts/wsl/batch.sh new %s ~/wf-lists/%s.tsv"
                 % (q(wl), name, q(name), name), 300)
     if rc != 0:
-        return False, t[-1500:]
+        return False, t[-1500:] + ("\n" + "\n".join(notes) if notes else "")
     sets = ["UPLOAD=0", "WIN_DIR=" + windir, "HOLD_QA=%d" % (1 if v["holdQA"] else 0), "GPU=%d" % (1 if v["gpu"] else 0)]
     batch_cmd(["set", name] + sets, 60)
-    note = ("；没有画面设置、没放进批次：%s" % "、".join(miss[:30])) if miss else ""
-    return True, t[-1500:] + note
+    return True, t[-1500:] + ("\n" + "\n".join(notes) if notes else "")
 
 
 def batch_list():
