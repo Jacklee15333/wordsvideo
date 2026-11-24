@@ -374,7 +374,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 P = json.load(open(os.path.join(HERE, '%(folder)s.json'), encoding='utf-8'))
 def conv(o):
     if isinstance(o, dict):
-        if 'actor' in o:
+        if isinstance(o.get('actor'), str):      # 只有值是动作名的才是人；演示词正好叫 actor（值是一幅画）照常往下走
             kw = {k: v for k, v in o.items() if k != 'actor'}
             return actor(o['actor'], **kw)
         return {k: conv(v) for k, v in o.items()}
@@ -391,6 +391,28 @@ for f in glob.glob(os.path.join(src, '*.svg')):
     shutil.copy(f, sys.argv[1])
 print('ok')
 '''
+
+
+OLD_CONV = "        if 'actor' in o:\n"
+NEW_CONV = "        if isinstance(o.get('actor'), str):      # 只有值是动作名的才是人；演示词正好叫 actor（值是一幅画）照常往下走\n"
+
+
+def fix_word_pys():
+    """v1.11.4：以前存的 words/<词>.py 把所有带 actor 的都当成人，演示词正好叫 actor 时出错（unhashable type: 'dict'）。
+    旧的这一行换成新的；起草检查、同步到 WSL 以前都跑一遍，改过的跟着词库提交。返回改了几个。"""
+    n = 0
+    d = C.REPO / EXTRA / "words"
+    if not d.is_dir():
+        return 0
+    for f in d.glob("*.py"):
+        try:
+            t = f.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        if t.startswith("# AI 生成的画面设置") and OLD_CONV in t.replace("\r\n", "\n"):
+            f.write_text(t.replace("\r\n", "\n").replace(OLD_CONV, NEW_CONV), encoding="utf-8")
+            n += 1
+    return n
 
 
 def save(word, P, svgs, checked):
@@ -548,6 +570,10 @@ def wsl_draft(word, pre=False):
     pre=True：还没有画面设置，先起草一遍，看这个词要画什么（放进第一次的提示词）。"""
     if not env_ready():
         return None, ""
+    try:
+        fix_word_pys()
+    except Exception:
+        pass
     f = V.folder_of(word)
     table = V.to_wsl(C.REPO / C.STATE["xlsx"]) if C.STATE.get("xlsx") else ""
     if pre:

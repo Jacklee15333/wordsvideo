@@ -306,6 +306,11 @@ tr.wdim td.w{color:var(--faint)}
 .rdone .chain i{font-style:normal;color:var(--pass);font-weight:700}
 .rdone .chain i.x{color:var(--red)}
 .rnow{font-size:13.5px;font-weight:600;margin:2px 0 6px}
+.rcont{border:1px solid #F0D9B0;background:#fff;border-radius:4px;padding:8px 10px;margin:0 0 8px}
+.rcont .hd{font-weight:600;font-size:13px;margin-bottom:6px}
+.rcont .rcb{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+.rcont.stop{border:2px solid #E9A23B;background:#FFF4E0}
+.rcont.stop .hd{color:#9A5B00;font-size:14px}
 .rsize,.rpoll{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;font-size:12.5px;background:#fff;border:1px solid #F0D9B0;border-radius:4px;padding:6px 10px;margin:0 0 8px}
 .rsize input{width:58px;padding:3px 6px}
 .rsize .rsn{color:var(--muted)}
@@ -651,7 +656,10 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
     <div id="rRes" class="rdone" hidden></div>
     <details class="rdlist" id="rDoneBox" hidden><summary id="rDoneN"></summary><ul id="rDoneList"></ul></details>
     <div class="rnow" id="rNow"></div>
-    <div id="rMulti" class="small" style="margin:-2px 0 8px" hidden><button class="btn sm" id="rNewChat">剩下的另开对话继续</button> <span class="muted">网页 AI 写不下了（对话太长）、或者停住不写了，点这个：软件只给还没做的词出一份新的提示词</span></div>
+    <div id="rMulti" class="rcont" hidden><div class="hd" id="rContHd">网页 AI 停住了、写不下了？点继续</div>
+      <div class="rcb"><button class="btn sm" id="rContSame">继续：在这个对话里接着写</button> <button class="btn sm" id="rNewChat">继续：开新对话</button></div>
+      <div class="small muted" id="rContTip">对话还能写：点「在这个对话里接着写」，软件复制好一句话，粘贴到同一个对话里发送。对话太长写不下了：点「开新对话」，软件给剩下的词出一份新的提示词（自动复制），到网页 AI 开个新对话粘贴。</div>
+      <div class="small" id="rContMsg"></div></div>
     <div id="rAuto">
     <ol class="steps rsteps">
       <li id="rS1"><b>提示词复制好了</b> <span class="small muted" id="rLen"></span> <button class="btn ghost sm" id="rCopy">再复制一次</button><div class="rs"></div></li>
@@ -913,7 +921,7 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
           <label class="f"><span>画面</span><span>一份 <input type="number" id="m_rpchunk" min="1" max="2000" style="width:76px"> 个词，它每写完 <input type="number" id="m_rpround" min="1" max="50" style="width:62px"> 个上传一次</span></label>
           <label class="f"><span>补画面</span><span>一份 <input type="number" id="m_rfchunk" min="1" max="1000" style="width:76px"> 个词，它每写完 <input type="number" id="m_rfround" min="1" max="50" style="width:62px"> 个上传一次</span></label>
           <div class="gbtns" style="margin:-4px 0 6px"><span class="small muted">快选：</span><button class="btn ghost sm" data-rp="1">1</button><button class="btn ghost sm" data-rp="5">5</button><button class="btn ghost sm" data-rp="10">10</button><button class="btn ghost sm" data-rp="20">20</button><button class="btn ghost sm" data-rp="50">50</button><button class="btn ghost sm" data-rp="300">300</button></div>
-          <p class="small muted" style="margin:2px 0 0">网页 AI 一个对话能写多少有上限：出题一个词一千来字，一个对话写一两百个没问题；画面一个词要写三四万字，一个对话大概写 3–5 个就满了。满了不要紧：黄框里点「剩下的另开对话继续」，软件只给还没做的词出一份新的提示词，做好的都留着。</p>
+          <p class="small muted" style="margin:2px 0 0">网页 AI 一个对话能写多少有上限：出题一个词一千来字，一个对话写一两百个没问题；画面一个词要写三四万字，一个对话大概写 3–5 个就满了。满了不要紧：黄框里点「继续：开新对话」，软件只给还没做的词出一份新的提示词，做好的都留着。</p>
         </div>
         <div class="gsub">
           <div><b>网页 AI 写完自己上传结果</b> <span class="small muted">传到中转仓库，是 Excel 文件（.xlsx）；打开后你就不用点「复制」</span></div>
@@ -1733,13 +1741,16 @@ async function relayTick(){
     $('#rProg').innerHTML=d.total?`这次一共 ${d.total} 个词：做好了 <b>${okN}</b> 个${badN?` · 没做成 <b>${badN}</b> 个`:''} · 还剩 <b>${Math.max(0,d.total-cnt)}</b> 个`:'';
     $('#rNow').innerHTML=`现在这一批 <b>${ws.length}</b> 个词（${esc(ws[0])} … ${esc(ws[ws.length-1])}${d.total?`，这次的第 ${base+1}–${base+ws.length} 个`:''}）`+
       (k?` <span class="small" style="font-weight:400">收到 <b>${k}</b> 个文件 · 做完 <b>${dn}</b> 个 · 还剩 <b>${pd.length}</b> 个</span>`:(done.length?' <span class="small" style="color:var(--amber);font-weight:400">——新的一批，提示词换了，要再粘贴一次</span>':''));
-    $('#rNewChat').textContent=`剩下的 ${pd.length} 个另开对话继续`;
+    $('#rNewChat').textContent=`继续：开新对话（剩下 ${pd.length} 个）`;
+    const S=d.aiStop;$('#rMulti').classList.toggle('stop',!!S);
+    $('#rContHd').textContent=S?`⏸ 网页 AI 停下了：已经传了 ${(S.done||[]).length} 个，还剩 ${pd.length} 个${S.why?'（'+S.why+'）':''}——点下面的「继续」`:(k?'网页 AI 停住了、写不下了？点继续':'网页 AI 写不下、或者停住不写了？点继续');
     rStep('rS2',k||sent?'done':'you',k||sent?'':`等你粘贴、发送（已经 ${secs(Date.now()/1000-d.ts)}）`);
     $('#rT3').innerHTML=`网页 AI <b>写一个传一个</b>（每 ${d.round||1} 个传一次，中间不在聊天里汇报，接着写）`;
     rStep('rStep3',k?'done':'run',k?`已经开始传回来了：收到 ${k} 个文件`:(d.inbox?'软件每 '+d.pollSec+' 秒看一次中转仓库，还没传回来':'它写完，点它回复下面的「复制」'),k?'ok':'');
     $('#rStep4').querySelector('span').textContent='这一批生成完';
     if(!pd.length)rStep('rStep4','done','✓ 这一批已经生成完','ok');
-    else if(d.aiDone)rStep('rStep4','bad',`网页 AI 说写完了，但还差 ${pd.length} 个没收到：${esc(pd.slice(0,10).join('、'))}${pd.length>10?'…':''}——点上面「剩下的另开对话继续」`,'bad');
+    else if(d.aiStop)rStep('rStep4','bad',`⏸ 网页 AI 停下了，还剩 ${pd.length} 个——点上面的「继续」`,'bad');
+    else if(d.aiDone)rStep('rStep4','bad',`网页 AI 说写完了，但还差 ${pd.length} 个没收到：${esc(pd.slice(0,10).join('、'))}${pd.length>10?'…':''}——点上面的「继续」`,'bad');
     else rStep('rStep4','run',ph==='checking'?esc(d.stage||'在看、存…'):`还在生成：做完 ${dn} 个，还剩 ${pd.length} 个（${esc(pd.slice(0,6).join('、'))}${pd.length>6?'…':''}）。最后一个传上来，这里就打勾`,'');
     if(showL&&L.multi){const ch=$('#rRes').querySelector('.chain');if(ch)ch.textContent=`这一批第 ${dn} 个做完的`}}
   else $('#rStep4').querySelector('span').textContent='存好，这个词完成';
@@ -1778,7 +1789,10 @@ async function copyText(t){try{await navigator.clipboard.writeText(t);return tru
 $('#rCopy').onclick=async()=>{const d=await api('/api/relay?full=1');const ok=await copyText(d.prompt||'');$('#rMsg').textContent=ok?'✓ 复制好了，去网页里粘贴':'没复制上，请再点一次';};
 $('#rOpen').onclick=()=>busy($('#rOpen'),$('#rMsg'),'正在打开网页 AI',()=>api('/api/open',{}));
 $('#rSend').onclick=async()=>{const d=await api('/api/relay',{id:RL.id,reply:$('#rReply').value});$('#rMsg').textContent=(d.ok?'✓ ':'✗ ')+d.msg;if(d.ok){$('#rReply').value='';setTimeout(relayTick,800)}};
-$('#rNewChat').onclick=()=>busy($('#rNewChat'),$('#rMsg'),'正在出新的提示词',()=>api('/api/relay',{op:'newchat',id:RL.id}));
+$('#rNewChat').onclick=()=>busy($('#rNewChat'),$('#rContMsg'),'正在出新的提示词',()=>api('/api/relay',{op:'newchat',id:RL.id}));
+$('#rContSame').onclick=async()=>{const d=await api('/api/relay',{op:'contmsg'});
+  if(!d.ok){$('#rContMsg').textContent='✗ '+d.msg;return}
+  const ok=await copyText(d.text);$('#rContMsg').innerHTML=ok?'✓ 复制好了：到网页 AI <b>同一个对话</b>里粘贴、发送。它又传上来，这里就接着打勾':'没复制上，请再点一次'};
 $('#rSkipRest').onclick=()=>{if(!confirm('剩下还没做的这些词先跳过？（会放进“没做成的词”，以后可以再做）'))return;busy($('#rSkipRest'),$('#rMsg'),'正在跳过',()=>api('/api/relay',{op:'skiprest',id:RL.id}))};
 $('#rSkip').onclick=async()=>{if(!confirm('这一批先跳过？这些词这次算没做。'))return;const d=await api('/api/relay',{id:RL.id,skip:true});$('#rMsg').textContent=d.msg;setTimeout(relayTick,800)};
 

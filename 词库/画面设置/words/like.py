@@ -7,7 +7,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 P = json.load(open(os.path.join(HERE, 'like.json'), encoding='utf-8'))
 def conv(o):
     if isinstance(o, dict):
-        if 'actor' in o:
+        if isinstance(o.get('actor'), str):      # 只有值是动作名的才是人；演示词正好叫 actor（值是一幅画）照常往下走
             kw = {k: v for k, v in o.items() if k != 'actor'}
             return actor(o['actor'], **kw)
         return {k: conv(v) for k, v in o.items()}

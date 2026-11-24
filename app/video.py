@@ -1378,6 +1378,13 @@ def live(open_names=()):
 # ═══════════ v1.11.1：补画面要用的——画面设置拷进 WSL、批次里起草检查说的“还要补”、要补的词 ═══════════
 def sync_pics():
     """词库/画面设置 → WSL 的 ~/kit-extra（流水线“准备”读的就是这一份）。几秒钟。"""
+    try:
+        import pics
+        n = pics.fix_word_pys()
+        if n:
+            C.log("画面设置程序修了 %d 个（演示词叫 actor 时不再出错）" % n)
+    except Exception:
+        pass
     rc, t = wsl("mkdir -p ~/kit-extra && cp -r %s/. ~/kit-extra/ && find ~/kit-extra -name '*.py' -exec sed -i 's/\\r$//' {} +"
                 % q(to_wsl(C.REPO / EXTRA)), 120)
     return rc == 0

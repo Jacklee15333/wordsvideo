@@ -494,6 +494,9 @@ def api_relay_post(b):
     if b.get("op") == "pollnow":                     # v1.11.2：立即查看中转仓库
         ok, msg = C.relay_poll_now()
         return {"ok": ok, "msg": msg}
+    if b.get("op") == "contmsg":                     # v1.11.4：在同一个对话里接着写——一句短话
+        t = C.relay_cont_msg()
+        return {"ok": bool(t), "text": t, "msg": "" if t else "这一批没有剩下的词了"}
     if b.get("op") == "size":                        # v1.11.2：一批几个词、每写完几个传一次
         ok, msg = C.relay_size_set(b.get("kind", ""), b.get("chunk"), b.get("round"))
         return {"ok": ok, "msg": msg}

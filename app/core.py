@@ -1208,6 +1208,19 @@ def relay_size_set(kind, chunk, rnd):
     return True, "已保存：一批 %d 个词，每写完 %d 个传一次" % (chunk, rnd)
 
 
+def relay_cont_msg():
+    """「在这个对话里接着写」：一句短话，粘贴到同一个对话里（不用再贴整份提示词）。"""
+    with _RELAY_LOCK:
+        pend = list(RELAY.get("pending") or [])
+        rnd = int(RELAY.get("round") or 1)
+    if not pend:
+        return ""
+    return ("继续：接着写这一批还没写的 %d 个词，按顺序：%s。\n"
+            "规矩和上面一样：每写完 %d 个就写进 reply.txt、运行同一段上传脚本（MODE 保持 \"上传\"）；中间不用在聊天里汇报，一直写到全部传完，"
+            "脚本打印【最后汇报】时再汇报一次。这次回复写不下了，就先传好已经写的，运行 python upload.py 汇报 停下。"
+            % (len(pend), "、".join(pend), rnd))
+
+
 def relay_word(w, ok, detail=""):
     """一份好几个词时，一个词做完（做好了 / 没做成）：从“还剩”里拿掉，记进做完的列表（黄框、汇报用）。"""
     with _RELAY_LOCK:
@@ -1238,6 +1251,20 @@ def _inbox_parts(ipath, seen, pending, t0):
         raise RuntimeError("看收件箱出错（%s）：%s" % (st, str((d or {}).get("message", ""))[:120]))
     files = [x.get("path") for x in d if x.get("path")] if isinstance(d, list) else []
     INBOX_LAST.update(files=sorted(f.rsplit("/", 1)[-1] for f in files), ts=time.time())
+    for f in [f for f in files if f.rsplit("/", 1)[-1].startswith(base) and f.endswith("-stop.json")]:    # v1.11.4：网页 AI 停下了
+        files.remove(f)
+        try:
+            st2, d2 = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], urllib.parse.quote(f), br), ib["token"])
+            if st2 == 200 and isinstance(d2, dict):
+                info = json.loads(base64.b64decode(d2.get("content") or "").decode("utf-8"))
+                with _RELAY_LOCK:
+                    RELAY["aiStop"] = {"t": time.time(), "done": list(info.get("done") or [])[:500],
+                                       "left": list(info.get("left") or [])[:500], "why": mask(str(info.get("why") or ""))[:300]}
+                _say("网页 AI 停下了：已经传了 %d 个，还剩 %d 个%s——黄框里点「继续」" % (
+                    len(info.get("done") or []), len(info.get("left") or []), ("（%s）" % info["why"][:80]) if info.get("why") else ""))
+                inbox_delete(f, d2.get("sha"))
+        except Exception as e:
+            log("读网页 AI 的停下记录出错：%s" % str(e)[:120])
     mine = [f for f in files if f.rsplit("/", 1)[-1].startswith(base) and f not in seen]
     others = [f for f in files if f not in seen and f not in mine]
     if others:
@@ -1287,7 +1314,7 @@ def relay_parts(prompt, words, kind, rnd):
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=kind, reply="", ts=time.time(),
                      copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "", phase="send", tid=tid,
                      polls=0, lastPoll=0.0, stage="", multi=True, pending=list(words), doneIn=[], parts=0, endReason="", round=rnd,
-                     aiDone=False, pollNow=0.0, nextPoll=0.0, pollBy="", pollGot=0, qLeft=RELAY_QLEFT[0])
+                     aiDone=False, pollNow=0.0, nextPoll=0.0, pollBy="", pollGot=0, qLeft=RELAY_QLEFT[0], aiStop=None)
         rid = RELAY["id"]
         RELAY_ACT.update(rid=0, act="")
         RELAY_HIST.clear()
@@ -1366,6 +1393,8 @@ def relay_parts(prompt, words, kind, rnd):
                     t = clip.get_text()
                     if t and t.strip() != prompt.strip() and _looks_reply(t, list(RELAY["pending"])):
                         texts.append((t, "剪贴板", "【这一批最后一个】" in t))
+            if texts:
+                RELAY["aiStop"] = None          # 又传上来了：它接着写了
             for t, src, lastp in texts:
                 if lastp:
                     RELAY["aiDone"] = True
@@ -1383,7 +1412,7 @@ def relay_parts(prompt, words, kind, rnd):
                     RELAY["stage"] = ""
                     miss = list(RELAY["pending"]) if RELAY.get("aiDone") else []
                 if miss:                         # 网页 AI 说这一批写完了，可还有词没收到
-                    RELAY["hint"] = "网页 AI 说这一批写完了，但还有 %d 个没收到：%s——点「剩下的另开对话继续」" % (len(miss), "、".join(miss[:12]))
+                    RELAY["hint"] = "网页 AI 说这一批写完了，但还有 %d 个没收到：%s——点黄框里的「继续」" % (len(miss), "、".join(miss[:12]))
                     _say("网页 AI 说这一批写完了，但还有 %d 个没收到：%s" % (len(miss), "、".join(miss[:12])))
             time.sleep(1)
         raise Fatal("等了 24 小时，先停下")
@@ -1451,6 +1480,21 @@ if PARTS and MODE == "汇报":
     print("【汇报：把下面几行原样回在聊天里】")
     print(PARTIAL.replace("{cum}", str(len(_s0["w"]))).replace("{done}", "、".join(w + " ✓" for w in _s0["w"]) or "还没有")
           .replace("{left}", str(len(_left))).replace("{rest}", "、".join(_left[:30]) + ("…" if len(_left) > 30 else "")))
+    try:                   # 也告诉单词工作台：停下了，写到哪儿、还剩哪些（它那边出“继续”的按钮）
+        _why = " ".join(a for a in _s.argv[1:] if a not in ("汇报", "report"))[:300]
+        _b = {"message": "接力：停下了", "branch": BRANCH, "content": base64.b64encode(json.dumps(
+            {"done": _s0["w"], "left": _left, "why": _why}, ensure_ascii=False).encode()).decode()}
+        _u = "https://api.github.com/repos/%s/contents/%s-stop.json" % (REPO, NAME)
+        _h = {"Authorization": "Bearer " + TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "wordsvideo-relay"}
+        try:
+            with urllib.request.urlopen(urllib.request.Request(_u + "?ref=" + BRANCH, headers=_h), timeout=60) as r:
+                _b["sha"] = json.load(r)["sha"]
+        except urllib.error.HTTPError:
+            pass
+        urllib.request.urlopen(urllib.request.Request(_u, data=json.dumps(_b).encode(), headers=_h, method="PUT"), timeout=60)
+        print("（已经告诉单词工作台停下了）")
+    except Exception as e:
+        print("（没告诉上单词工作台：%s，不要紧）" % str(e)[:120])
     raise SystemExit
 FILE = "reply.txt"         # 你把回复写进的文件；放在别处就改成那个路径
 _c = [d + FILE for d in ("", "/home/claude/", "/mnt/user-data/outputs/", "/tmp/") if os.path.exists(d + FILE)]
@@ -1777,7 +1821,7 @@ def relay_partial(info):
     """写到一半对话写不下了、要停下时的汇报（{cum} {done} {left} {rest} 由上传脚本填）。"""
     n = len(info.get("words") or [])
     return ("⏸ 这一批 %d 个词：已经上传 {cum} 个（{done}），还没写 {left} 个：{rest}\n"
-            "→ 对话太长写不下了：回到单词工作台点「剩下的另开对话继续」，把新的提示词粘贴到一个新对话里" % n)
+            "→ 停下了：回到单词工作台点「继续」（同一个对话还能写就点「在这个对话里接着写」，写不下了点「开新对话继续」）" % n)
 
 
 def inbox_prompt(name, info=None):
@@ -1805,8 +1849,8 @@ def inbox_prompt(name, info=None):
                 "```python\n%s```\n"
                 "3. 上传好了**不用在聊天里汇报**，直接接着写下一个，一直写到这一批 %d 个词全部传完（不用等我说“继续”）。\n"
                 "4. 全部传完时，脚本会打印【最后汇报】：这时才在聊天里把【最后汇报】那几行原样回给我——整批只汇报这一次。\n"
-                "5. 写到一半对话太长、写不下了：先把已经写好的传上去，再把脚本里的 MODE 改成 \"汇报\" 运行一次（或者运行 python upload.py 汇报），"
-                "把它打印的几行回给我，说一声写到哪个词了。我会开一个新对话，把剩下的词重新给你。\n"
+                "5. 写到一半对话太长、写不下了（或者这一次回复写不下了、要停下）：先把已经写好的传上去，再把脚本里的 MODE 改成 \"汇报\" 运行一次"
+                "（或者运行 python upload.py 汇报 一句话原因），它会告诉单词工作台你停在哪儿；把它打印的几行回给我。我会让你接着写，或者开新对话把剩下的词给你。\n"
                 "6. 没有代码执行工具、或者上传失败了：就照常把写好的完整回复直接写在聊天里（最后一行 %s），并说明上传失败的原因，我会点「复制」交回。"
                 % (len(ws), rnd, rnd, END, script, len(ws), END))
     return ("【写完以后：你自己把回复整理成 Excel 传到 GitHub，不用在聊天里贴全文】\n"
