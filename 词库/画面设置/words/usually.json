@@ -7,11 +7,12 @@
    "img": "art/room-bg.svg",
    "items": [
     {
-     "actor": "cn-teacher-listen",
+     "actor": "west-clerk-happy",
      "x": 0.3,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/mug.svg",
@@ -105,7 +106,8 @@
     "svg": "art/clock.svg",
     "x": 0.8,
     "y": 0.2,
-    "s": 0.2
+    "s": 0.2,
+    "anim": "swing"
    },
    {
     "label": "平常地",
@@ -144,7 +146,8 @@
      "svg": "art/clock.svg",
      "x": 0.8,
      "y": 0.2,
-     "s": 0.2
+     "s": 0.2,
+     "anim": "swing"
     }
    ],
    "text": "通常、一般",
@@ -180,7 +183,8 @@
       "x": 0.84,
       "y": 0.2,
       "s": 0.2,
-      "when": "usually"
+      "when": "usually",
+      "anim": "swing"
      },
      {
       "label": "usually",
@@ -351,10 +355,115 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "svg": "art/clock.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "svg": "art/clock_f0.svg",
       "x": 0.5,
       "y": 0.5,
-      "s": 0.6
+      "s": 0.6,
+      "fps": 2
+     }
+    ]
+   }
+  },
+  "logic": "逻辑不同：usually 是 usual + ly，说某人、某事多数时候都这样；generally 说总体上、大多数情况；commonly 说很多人都这样；normally 说在正常情况下。",
+  "tip": "一句话记法：我通常步行 usually，总的来说 generally，大家都这样 commonly，正常情况下 normally。"
+ },
+ "demo": {
+  "sadly": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "frames": [
+       "art/cat-sit_f0.svg",
+       "art/cat-sit_f1.svg",
+       "art/cat-sit_f2.svg"
+      ],
+      "svg": "art/cat-sit_f0.svg",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.56,
+      "fps": 2
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.75,
+      "y": 0.1,
+      "s": 0.05,
+      "to": [
+       0,
+       0.6
+      ],
+      "every": 0.3
+     }
+    ]
+   }
+  },
+  "basically": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.5
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.24,
+      "s": 0.2,
+      "anim": "pulse"
+     }
+    ]
+   }
+  },
+  "forward": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.1,
+      "y": 0.72,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.72
+       ],
+       "to": [
+        0.95,
+        0.72
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "ray": [
+       [
+        0.3,
+        0.3
+       ],
+       [
+        0.8,
+        0.3
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "loop": true
      }
     ]
    }

@@ -30,7 +30,8 @@
       "svg": "art/clock.svg",
       "x": 0.8,
       "y": 0.2,
-      "s": 0.2
+      "s": 0.2,
+      "anim": "swing"
      },
      {
       "label": "用惯了的做法",
@@ -51,7 +52,8 @@
       "x": 0.5,
       "y": 0.56,
       "s": 0.4,
-      "shadow": true
+      "shadow": true,
+      "anim": "pulse"
      },
      {
       "label": "…的",
@@ -79,7 +81,8 @@
      "x": 0.3,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/mug.svg",
@@ -115,11 +118,12 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "actor": "cn-teacher-listen",
+      "actor": "west-clerk-happy",
       "x": 0.3,
       "y": 0.6,
       "s": 0.86,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/mug.svg",
@@ -155,7 +159,8 @@
        "y": 0.62,
        "s": 0.8,
        "z": 3,
-       "when": "I got up"
+       "when": "I got up",
+       "seq": "blink"
       },
       {
        "frames": [
@@ -209,11 +214,12 @@
      "img": "art/room-bg.svg",
      "items": [
       {
-       "actor": "cn-teacher-listen",
+       "actor": "west-man-smile",
        "x": 0.3,
        "y": 0.6,
        "s": 0.86,
-       "z": 3
+       "z": 3,
+       "seq": "blink"
       },
       {
        "svg": "art/mug.svg",
@@ -263,15 +269,8 @@
        "y": 0.6,
        "s": 0.86,
        "z": 3,
-       "when": "同一时间"
-      },
-      {
-       "svg": "art/mug.svg",
-       "x": 0.62,
-       "y": 0.7,
-       "s": 0.2,
-       "z": 5,
-       "when": "同一时间"
+       "when": "同一时间",
+       "seq": "blink"
       },
       {
        "frames": [
@@ -291,7 +290,8 @@
        "y": 0.7,
        "s": 0.2,
        "z": 5,
-       "when": "同一杯咖啡"
+       "when": "同一杯咖啡",
+       "anim": "bob"
       },
       {
        "label": "每天",
@@ -369,7 +369,20 @@
        "svg": "art/mug.svg",
        "x": 0.5,
        "y": 0.55,
-       "s": 0.6
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.04,
+       "to": [
+        0,
+        -0.2
+       ],
+       "every": 0.8
       }
      ]
     },
@@ -378,10 +391,83 @@
      "img": "art/room-bg.svg",
      "items": [
       {
-       "svg": "art/clock.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "svg": "art/clock_f0.svg",
        "x": 0.5,
        "y": 0.5,
-       "s": 0.6
+       "s": 0.6,
+       "fps": 2
+      }
+     ]
+    }
+   },
+   "logic": "逻辑不同：usual 是 usu 用惯了的做法 + al，说对某人、某地来说平常；common 说很多人都有、普遍；ordinary 说普通、不特别；customary 说按习俗惯例。",
+   "tip": "一句话记法：照常 as usual，很常见 common，很普通 ordinary，照老规矩 customary。"
+  },
+  "demo": {
+   "careful": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.86,
+       "s": 0.3
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.48,
+       "anim": "sway"
+      }
+     ]
+    }
+   },
+   "careless": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/mug.svg",
+       "x": 0.42,
+       "y": 0.6,
+       "s": 0.42,
+       "rot": 70,
+       "anim": "shake"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.58,
+       "y": 0.62,
+       "s": 0.06,
+       "to": [
+        0.25,
+        0.25
+       ],
+       "every": 0.4
+      }
+     ]
+    }
+   },
+   "national": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.62,
+       "anim": "pulse"
       }
      ]
     }
@@ -481,5 +567,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

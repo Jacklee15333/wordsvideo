@@ -12,7 +12,8 @@
       "svg": "art/umbrella-broken.svg",
       "x": 0.5,
       "y": 0.56,
-      "s": 0.56
+      "s": 0.56,
+      "anim": "shake"
      },
      {
       "label": "没用的",
@@ -21,6 +22,42 @@
       "size": 0.09,
       "color": "#C92A2A",
       "border": "#C92A2A"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    },
@@ -78,7 +115,8 @@
      "x": 0.84,
      "y": 0.62,
      "s": 0.66,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "label": "没用地",
@@ -87,6 +125,42 @@
      "size": 0.075,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ]
   },
@@ -99,7 +173,8 @@
       "svg": "art/raincloud.svg",
       "x": 0.5,
       "y": 0.16,
-      "s": 0.3
+      "s": 0.3,
+      "anim": "bob"
      },
      {
       "svg": "art/umbrella-broken.svg",
@@ -109,11 +184,48 @@
       "anim": "shake"
      },
      {
-      "actor": "west-girl-surprised",
+      "actor": "cn-teacher-listen",
       "x": 0.84,
       "y": 0.62,
       "s": 0.66,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ],
     "text": "无用地、徒劳地",
@@ -130,6 +242,20 @@
        "x": 0.5,
        "y": 0.16,
        "s": 0.3,
+       "when": "umbrella",
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.22,
+       "s": 0.05,
+       "to": [
+        0,
+        0.6
+       ],
+       "every": 0.25,
        "when": "umbrella"
       },
       {
@@ -138,7 +264,8 @@
        "y": 0.6,
        "s": 0.86,
        "z": 3,
-       "when": "He"
+       "when": "He",
+       "seq": "talk"
       },
       {
        "svg": "art/umbrella-broken.svg",
@@ -166,6 +293,42 @@
        "color": "#2B8A3E",
        "border": "#2B8A3E",
        "when": "徒劳地"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -182,7 +345,8 @@
        "svg": "art/umbrella-broken.svg",
        "x": 0.5,
        "y": 0.56,
-       "s": 0.56
+       "s": 0.56,
+       "anim": "shake"
       },
       {
        "label": "useless + ly …地",
@@ -191,6 +355,42 @@
        "size": 0.075,
        "color": "#7048E8",
        "border": "#7048E8"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -212,6 +412,20 @@
        "x": 0.5,
        "y": 0.16,
        "s": 0.3,
+       "when": "做了",
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.22,
+       "s": 0.05,
+       "to": [
+        0,
+        0.6
+       ],
+       "every": 0.25,
        "when": "做了"
       },
       {
@@ -230,12 +444,146 @@
        "color": "#2B8A3E",
        "border": "#2B8A3E",
        "when": "徒劳地"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
    }
   ],
-  "distinguish": false
+  "distinguish": false,
+  "demo": {
+   "sadly": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "frames": [
+        "art/cat-sit_f0.svg",
+        "art/cat-sit_f1.svg",
+        "art/cat-sit_f2.svg"
+       ],
+       "svg": "art/cat-sit_f0.svg",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.56,
+       "fps": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.75,
+       "y": 0.1,
+       "s": 0.05,
+       "to": [
+        0,
+        0.6
+       ],
+       "every": 0.3
+      }
+     ]
+    }
+   },
+   "basically": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.66,
+       "s": 0.5
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.24,
+       "s": 0.2,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   "forward": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.1,
+       "y": 0.72,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.72
+        ],
+        "to": [
+         0.95,
+         0.72
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "ray": [
+        [
+         0.3,
+         0.3
+        ],
+        [
+         0.8,
+         0.3
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "loop": true
+      }
+     ]
+    }
+   }
+  }
  },
  "插图": [
   "uselesslyai"
@@ -330,5 +678,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

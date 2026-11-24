@@ -12,7 +12,8 @@
       "svg": "art/mug.svg",
       "x": 0.5,
       "y": 0.6,
-      "s": 0.4
+      "s": 0.4,
+      "anim": "shake"
      },
      {
       "emit": true,
@@ -39,6 +40,7 @@
       ],
       "color": "#E2453C",
       "lw": 0.01,
+      "arrow": false,
       "dur": 0.8
      },
      {
@@ -61,7 +63,8 @@
       "x": 0.36,
       "y": 0.6,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/wrench.svg",
@@ -93,7 +96,16 @@
      "svg": "art/smartphone.svg",
      "x": 0.4,
      "y": 0.5,
-     "s": 0.4
+     "s": 0.4,
+     "anim": "bob"
+    },
+    {
+     "waves": true,
+     "x": 0.54,
+     "y": 0.42,
+     "dir": 0,
+     "spread": 50,
+     "n": 3
     },
     {
      "svg": "art/clock.svg",
@@ -122,13 +134,23 @@
       "x": 0.3,
       "y": 0.62,
       "s": 0.8,
-      "z": 3
+      "z": 3,
+      "seq": "blink"
      },
      {
       "svg": "art/smartphone.svg",
       "x": 0.56,
       "y": 0.44,
-      "s": 0.22
+      "s": 0.22,
+      "anim": "bob"
+     },
+     {
+      "waves": true,
+      "x": 0.64,
+      "y": 0.4,
+      "dir": 0,
+      "spread": 50,
+      "n": 3
      },
      {
       "frames": [
@@ -152,18 +174,29 @@
      "img": "art/bedroom-bg.svg",
      "items": [
       {
-       "actor": "cn-boy-raise",
+       "actor": "west-clerk-think",
        "x": 0.28,
        "y": 0.62,
        "s": 0.8,
        "z": 3,
-       "when": "your phone"
+       "when": "your phone",
+       "seq": "blink"
       },
       {
        "svg": "art/smartphone.svg",
        "x": 0.54,
        "y": 0.44,
        "s": 0.22,
+       "when": "your phone",
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.62,
+       "y": 0.4,
+       "dir": 0,
+       "spread": 50,
+       "n": 3,
        "when": "your phone"
       },
       {
@@ -211,13 +244,23 @@
        "svg": "art/smartphone.svg",
        "x": 0.4,
        "y": 0.5,
-       "s": 0.4
+       "s": 0.4,
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.54,
+       "y": 0.42,
+       "dir": 0,
+       "spread": 50,
+       "n": 3
       },
       {
        "svg": "art/clock.svg",
        "x": 0.76,
        "y": 0.3,
-       "s": 0.26
+       "s": 0.26,
+       "anim": "shake"
       },
       {
        "label": "over 越过 + use 用",
@@ -248,6 +291,16 @@
        "x": 0.4,
        "y": 0.5,
        "s": 0.4,
+       "when": "用得",
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.54,
+       "y": 0.42,
+       "dir": 0,
+       "spread": 50,
+       "n": 3,
        "when": "用得"
       },
       {
@@ -282,6 +335,38 @@
   ],
   "distinguish": {
    "pics": {
+    "overuse": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.5,
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.56,
+       "y": 0.42,
+       "dir": 0,
+       "spread": 50,
+       "n": 3
+      },
+      {
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "svg": "art/clock_f0.svg",
+       "x": 0.78,
+       "y": 0.4,
+       "s": 0.4,
+       "fps": 4
+      }
+     ]
+    },
     "misuse": {
      "bg": "blank",
      "img": "art/room-bg.svg",
@@ -291,7 +376,132 @@
        "x": 0.5,
        "y": 0.5,
        "s": 0.7,
-       "rot": 180
+       "rot": 180,
+       "anim": "shake"
+      }
+     ]
+    }
+   },
+   "logic": "逻辑不同：overuse 是 over 越过 + use 用，用得超过了该停的线，说“量太多”；misuse 是 mis 错 + use 用，说“用法不对”。",
+   "tip": "一句话记法：玩手机太久是 overuse，拿锤子当勺子是 misuse。"
+  },
+  "demo": {
+   "overflow": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/mug.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.44,
+       "anim": "shake"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.06,
+       "to": [
+        0.25,
+        0.4
+       ],
+       "every": 0.3
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.06,
+       "to": [
+        -0.25,
+        0.4
+       ],
+       "every": 0.3,
+       "offset": 0.15
+      }
+     ]
+    }
+   },
+   "overweight": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.66,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.22
+      }
+     ]
+    }
+   },
+   "supermarket": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/rack.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.1,
+       "y": 0.72,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.72
+        ],
+        "to": [
+         0.98,
+         0.72
+        ],
+        "offset": 0
+       }
+      }
+     ]
+    }
+   },
+   "surface": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/fishtank.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.7
+      },
+      {
+       "svg": "art/fish.svg",
+       "x": 0.36,
+       "y": 0.34,
+       "s": 0.12,
+       "go": [
+        0.64,
+        0.34
+       ],
+       "dur": 3,
+       "loop": true,
+       "z": 3
       }
      ]
     }
@@ -391,5 +601,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
