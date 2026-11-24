@@ -14,8 +14,16 @@ _SPLIT = re.compile(r"[\n\r,，、;；\t|]+")
 _EN_RUN = re.compile(r"^([A-Za-z][A-Za-z'’\-]*(?:\s+[A-Za-z][A-Za-z'’\-]*)*)")
 
 
+_READY = []
+
+
 def _db():
-    C.x("CREATE TABLE IF NOT EXISTS pool(word TEXT PRIMARY KEY, tag TEXT DEFAULT '', ts TEXT, ord INTEGER)")
+    if _READY:
+        return
+    C.x("CREATE TABLE IF NOT EXISTS pool(word TEXT PRIMARY KEY, tag TEXT DEFAULT '', ts TEXT, ord INTEGER, picked INTEGER DEFAULT 0)")
+    if "picked" not in {r["name"] for r in C.q("PRAGMA table_info(pool)")}:     # v1.9.5 建的表没有这一列
+        C.x("ALTER TABLE pool ADD COLUMN picked INTEGER DEFAULT 0")
+    _READY.append(1)
 
 
 def _index():
@@ -107,7 +115,7 @@ def extract(name, b64):
     return {"ok": bool(found), "msg": msg if found else "「%s」里没认出总表里有的词" % name, "text": "\n".join(found)}
 
 
-def add(text, tag=""):
+def add(text, tag="", pick=False):
     _db()
     found, miss = parse(text)
     if not found:
@@ -119,16 +127,28 @@ def add(text, tag=""):
     for i, w in enumerate(new):
         C.x("INSERT OR IGNORE INTO pool(word, tag, ts, ord) VALUES(?,?,?,?)", (w, tag, C.now(), top + i + 1))
     old = [w for w in found if w in have]
+    if pick:                                          # 从总表里找来的：加进来就选上
+        for w in found:
+            C.x("UPDATE pool SET picked=1 WHERE word=?", (w,))
     if tag and old:                                   # 已经有的词也记上这一批的名字
         for w in old:
             C.x("UPDATE pool SET tag=? WHERE word=? AND (tag IS NULL OR tag='')", (tag, w))
-    msg = "加了 %d 个" % len(new)
+    msg = "加了 %d 个" % len(new) + ("，都选上了" if pick else "")
     if old:
         msg += "；%d 个本来就在" % len(old)
     if miss:
         msg += "；总表里没有、没加的 %d 个：%s" % (len(miss), "、".join(miss[:10]) + ("…" if len(miss) > 10 else ""))
     C.log("备选单词：%s" % msg)
     return {"ok": True, "msg": msg, "added": new, "have": old, "miss": miss}
+
+
+def pick(words, on=True):
+    """选上（或者不选）：出题、画面两步给“选上的词”做。"""
+    _db()
+    words = [w for w in (words or []) if w]
+    for w in words:
+        C.x("UPDATE pool SET picked=? WHERE word=?", (1 if on else 0, w))
+    return {"ok": True, "msg": ("选上了 %d 个" if on else "不选了 %d 个") % len(words)}
 
 
 def remove(words):
@@ -156,9 +176,9 @@ GROUPS = {"todo": ("todo", "needpic", "fail"), "doing": ("doing",), "done": ("do
 
 def items():
     _db()
-    rows = C.q("SELECT word, tag, ts, ord FROM pool ORDER BY ord")
+    rows = C.q("SELECT word, tag, ts, ord, picked FROM pool ORDER BY ord")
     if not rows:
-        return {"items": [], "counts": {"todo": 0, "doing": 0, "done": 0, "all": 0}, "tags": []}
+        return {"items": [], "counts": {"todo": 0, "doing": 0, "done": 0, "all": 0, "picked": 0}, "tags": []}
     by_low, by_word = _index()
     pw, vd = V.pic_words(), V.videos()
     man = set(C.manual_words())
@@ -170,7 +190,7 @@ def items():
         rs = by_word.get(w) or []
         f = V.folder_of(w)
         has_q = bool(rs) and all(x[4] != "缺" for x in rs)
-        it = {"word": w, "tag": r["tag"] or "", "ts": (r["ts"] or "")[:10], "meaning": (rs[0][3] if rs and len(rs[0]) > 3 else ""),
+        it = {"word": w, "tag": r["tag"] or "", "ts": (r["ts"] or "")[:10], "picked": bool(r["picked"]), "meaning": (rs[0][3] if rs and len(rs[0]) > 3 else ""),
               "q": has_q, "manual": w in man, "pic": f in pw, "video": f in vd, "picfail": w in pf, "inTable": bool(rs)}
         if w in busy:
             st = "doing"
@@ -186,6 +206,7 @@ def items():
         out.append(it)
     counts = {g: sum(1 for i in out if i["st"] in sts) for g, sts in GROUPS.items()}
     counts["all"] = len(out)
+    counts["picked"] = sum(1 for i in out if i["picked"])
     tags = sorted({i["tag"] for i in out if i["tag"]})
     return {"items": out, "counts": counts, "tags": tags}
 
@@ -194,7 +215,7 @@ def summary():
     """开始页那一行用：存着几个、几个没做完。"""
     try:
         d = items()
-        return {"all": d["counts"]["all"], "todo": d["counts"]["todo"]}
+        return {"all": d["counts"]["all"], "todo": d["counts"]["todo"], "picked": d["counts"]["picked"]}
     except Exception:
         return {"all": 0, "todo": 0}
 
@@ -202,7 +223,9 @@ def summary():
 def op(b):
     o = b.get("op")
     if o == "add":
-        return add(b.get("text") or "", b.get("tag") or "")
+        return add(b.get("text") or "", b.get("tag") or "", pick=bool(b.get("pick")))
+    if o == "pick":
+        return pick(b.get("words") or [], on=b.get("on", True) is not False)
     if o == "extract":
         return extract(b.get("name") or "", b.get("b64") or "")
     if o == "remove":

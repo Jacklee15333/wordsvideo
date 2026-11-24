@@ -492,6 +492,25 @@ def api_words_task(b):
             "msg": "开始了（任务 #%d），%d 个词%s" % (tid, len(found), ("；总表里没有、跳过的：" + "、".join(miss[:20])) if miss else "")}
 
 
+def api_results(qs):
+    """成果：做好的词，一个词一行（总表里一个词可能有好几行）。f＝video 有视频 / ready 题目和画面都好了、还没出视频 / q 有题目。"""
+    f, t = qs.get("f") or "video", (qs.get("q") or "").strip().lower()
+    page, size = max(1, int(qs.get("page") or 1)), 60
+    seen, rows = set(), []
+    for r in C.word_rows():
+        if r["word"] not in seen:
+            seen.add(r["word"])
+            rows.append(r)
+    hasq = lambda r: r["status"] in ("done", "orig")
+    counts = {"video": sum(1 for r in rows if r["video"]), "ready": sum(1 for r in rows if r["ready"] == "ready"),
+              "q": sum(1 for r in rows if hasq(r))}
+    keep = {"video": lambda r: r["video"], "ready": lambda r: r["ready"] == "ready", "q": hasq}.get(f, lambda r: r["video"])
+    out = [r for r in rows if keep(r) and (not t or t in r["word"].lower() or t in (r["meaning"] or ""))]
+    vd = V.videos()
+    items = [dict(r, vfile=(vd.get(V.folder_of(r["word"])) or {})) for r in out[(page - 1) * size: page * size]]
+    return {"items": items, "total": len(out), "page": page, "counts": counts}
+
+
 GET = {
     "/api/status": api_status, "/api/settings": api_settings_get, "/api/tasks": api_tasks, "/api/logs": api_logs,
     "/api/word": api_word, "/api/ai/live": api_ai_live,
@@ -512,10 +531,11 @@ GET = {
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
     "/api/next": lambda qs: {"words": next_unready(int(qs.get("n", 5)))},
     "/api/check": lambda qs: CK.snapshot(watch=qs.get("watch") == "1"),
+    "/api/results": api_results,
     "/api/pool": lambda qs: PL.summary() if qs.get("brief") else PL.items(),
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
-NEED_REPO = {"/api/next", "/api/pool", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
+NEED_REPO = {"/api/next", "/api/pool", "/api/results", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
 POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/task/op": api_task_op,
         "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
         "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,
