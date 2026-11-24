@@ -457,7 +457,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
     <p class="small muted" style="margin:0 0 8px">就是第 3 步「选词」里选上的词。“要出”的这次出；已经有题目的不重出。要换词，到「选词」去勾。</p>
     <div class="rep" id="qCheck" hidden></div>
     <div class="plist" id="qPick"></div>
-    <div class="pgo"><button class="btn kbig" id="tAdd">给要出的词出题 ▶</button><span class="small muted" id="qMsg">只出题，不做画面。做的过程就在下面。</span></div>
+    <div class="pgo"><button class="btn kbig" id="tAdd">给要出的词出题 ▶</button><button class="btn kbig" id="qNext" hidden onclick="go('pic')">下一步：画面 ▶</button><span class="small muted" id="qMsg">只出题，不做画面。做的过程就在下面。</span></div>
   </div>
   <div class="sprog" data-step="q">
     <h3>这一步的进度</h3>
@@ -581,7 +581,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
     <p class="small muted" style="margin:0 0 8px">就是第 3 步「选词」里选上的词。要先有题目才能做画面；已经有画面的不重做。</p>
     <div class="rep" id="picCheck" hidden></div>
     <div class="plist" id="picPick"></div>
-    <div class="pgo"><button class="btn kbig" id="tPics">给要做的词做画面 ▶</button><span class="small muted" id="picMsg">只做画面，不出题。一个词几分钟，做的过程就在下面。</span></div>
+    <div class="pgo"><button class="btn kbig" id="tPics">给要做的词做画面 ▶</button><button class="btn kbig" id="picNext" hidden onclick="go('video')">下一步：出视频 ▶</button><span class="small muted" id="picMsg">只做画面，不出题。一个词几分钟，做的过程就在下面。</span></div>
   </div>
   <div class="sprog" data-step="pic">
     <h3>这一步的进度</h3>
@@ -1111,7 +1111,10 @@ function qPickRender(){const pk=picked();qCheckRender();
       return `<tr class="${will||doing?'':'dim'}"><td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,32)}</td><td>${now}</td>
         <td>${doing?'<span class="pst pst-doing">正在做</span>':will?'<span class="pst pst-will">要出</span>':'<span class="small faint">有了，不重出</span>'}</td></tr>`}).join('')+'</table>'
     :'<div class="pempty">还没有选上的词。到第 3 步「选词」勾上要出题的词。</div>';
-  $('#tAdd').textContent=PQ.length?`给这 ${PQ.length} 个词出题 ▶`:'给要出的词出题 ▶';$('#tAdd').disabled=!PQ.length}
+  $('#tAdd').textContent=PQ.length?`给这 ${PQ.length} 个词出题 ▶`:'给要出的词出题 ▶';$('#tAdd').disabled=!PQ.length;
+  const allQ=pk.length&&!PQ.length&&pk.every(i=>i.q);$('#qNext').hidden=!allQ;
+  if(allQ)$('#qMsg').textContent='选上的词都有题目了，点「下一步：画面」去做画面。';
+  else if($('#qMsg').textContent.startsWith('选上的词都有题目了'))$('#qMsg').textContent='只出题，不做画面。做的过程就在下面。'}
 async function qRes(){const pk=picked().map(i=>i.word);
   let d;try{d=await api('/api/qres?w='+encodeURIComponent(pk.join('|')))}catch(e){return}
   if(d.notReady)return;const D=d.dirs||{};
@@ -1151,7 +1154,10 @@ function picPickRender(){const pk=picked();picCheckRender();
       const act=doing?'<span class="pst pst-doing">正在做</span>':will?'<span class="pst pst-will">要做</span>':i.pic?'<span class="small faint">有了，不重做</span>':'<span class="small" style="color:var(--amber)">先出题</span>';
       return `<tr class="${will||doing?'':'dim'}"><td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,30)}</td><td>${i.q?'有':'还没有'}</td><td>${now}</td><td>${act}</td></tr>`}).join('')+'</table>'
     :'<div class="pempty">还没有选上的词。到第 3 步「选词」勾上要做画面的词。</div>';
-  $('#tPics').textContent=PP.length?`给这 ${PP.length} 个词做画面 ▶`:'给要做的词做画面 ▶';$('#tPics').disabled=!PP.length}
+  $('#tPics').textContent=PP.length?`给这 ${PP.length} 个词做画面 ▶`:'给要做的词做画面 ▶';$('#tPics').disabled=!PP.length;
+  const allP=pk.length&&!PP.length&&pk.every(i=>i.pic);$('#picNext').hidden=!allP;
+  if(allP)$('#picMsg').textContent='选上的词都有画面了，点「下一步：出视频」去出视频。';
+  else if($('#picMsg').textContent.startsWith('选上的词都有画面了'))$('#picMsg').textContent='只做画面，不出题。一个词几分钟，做的过程就在下面。'}
 async function picRes(){const pk=picked().map(i=>i.word);
   let d;try{d=await api('/api/pres?w='+encodeURIComponent(pk.join('|')))}catch(e){return}
   if(d.notReady)return;const D=d.dirs||{};
