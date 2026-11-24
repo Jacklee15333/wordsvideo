@@ -1501,10 +1501,13 @@ async function relayTick(){
   $('#rHint').textContent=sent?'':(d.hint||'');
   // ① 提示词 ② 粘贴发送 ③ 网页 AI 写完交回 ④ 软件检查、存盘
   rStep('rS1',d.copied||sent?'done':'you',d.copied||sent?'':'剪贴板没复制上：点「再复制一次」');
-  rStep('rS2',sent?'done':'you',sent?'发出去了':`粘贴、发送以后，等网页 AI 写完（已经 ${secs(Date.now()/1000-d.ts)}）`);
+  rStep('rS2',sent?'done':'you',sent?'发出去了':`粘贴、发送以后，等网页 AI 写完（已经 ${secs(Date.now()/1000-d.ts)}）${n>1||d.kind&&/改/.test(d.kind)?'<br><b>这是新的一轮，提示词换了</b>：要重新粘贴、发送。最好开一个<b>新对话</b>再粘贴（提示词是完整的；同一个对话越聊越长，网页 AI 容易写不完、传不上）':''}`);
   $('#rT3').innerHTML=ib?'网页 AI 写完，<b>自己把结果整理成 Excel 传到中转仓库</b>（不用你复制；它传不上、把全文写在聊天里了，再点「复制」也行）':'等它写完（最后一行是 ZBQ-END），点它回复下面的<b>「复制」</b>';
   if(sent)rStep('rStep3','done',cur.got?`${hm(cur.got)} 收到了（${(cur.glen||0).toLocaleString()} 字）`:'收到了','ok');
-  else if(ib)rStep('rStep3','run',`软件每 ${d.pollSec} 秒看一次中转仓库：第 ${d.polls||0} 次看，还没有 <code>${esc(d.inbox)}</code>${d.lastPoll?`（上次 ${hm(d.lastPoll)}）`:''}<br>inbox/ 里现在：${(d.inboxNow||[]).length?(d.inboxNow||[]).map(x=>'<code>'+esc(x)+'</code>').join(' '):'空的'}`);
+  else if(ib){const ups=d.uploads||[],base=n=>(n||'').replace(/\.(xlsx|txt)$/,''),cn=base(d.inbox);
+    const which=u=>{const k=H.findIndex(h=>h.inbox&&base(u.path)===base(h.inbox));return base(u.path)===cn?'<b>就是这一轮的</b>':k>=0?`第 ${k+1} 轮的${H[k].got?'，已经收下':''}`:(u.ts<(cur.t0||0)?'这一轮开始以前传的':'名字对不上，软件在看内容')};
+    const up=ups[0],last=up?`网页 AI 最近一次往中转仓库传：${hm(up.ts)} <code>${esc(up.path.split('/').pop())}</code>（${which(up)}）`+(base(up.path)!==cn?'；<b>这一轮的还没传上来</b>':''):'网页 AI 还没往中转仓库传过东西';
+    rStep('rStep3','run',`软件每 ${d.pollSec} 秒看一次中转仓库：第 ${d.polls||0} 次看，还没有 <code>${esc(d.inbox)}</code>${d.lastPoll?`（上次 ${hm(d.lastPoll)}）`:''}<br>inbox/ 里现在：${(d.inboxNow||[]).length?(d.inboxNow||[]).map(x=>'<code>'+esc(x)+'</code>').join(' '):'空的'}<br>${last}`)}
   else rStep('rStep3','you','软件在看剪贴板：你一点「复制」它就收到');
   if(ph==='send')rStep('rStep4','wait','收到以后自动检查');
   else if(ph==='checking')rStep('rStep4','run',esc(d.stage||'正在检查…'));
@@ -1513,7 +1516,7 @@ async function relayTick(){
   // 这一批前几轮的经过
   const past=H.slice(0,-1);
   $('#rHist').innerHTML=past.length?`<div class="rhist"><b>这一批的经过</b><ul>${past.map((h,k)=>`<li>${h.res==='ok'?'<span class="ck-y">✓</span>':h.res==='fail'?'<span class="ck-bad">✗</span>':'<span class="ck-n">–</span>'}
-    第 ${k+1} 轮（${esc(h.kind||'')}）${hm(h.t0).slice(0,5)} 发出${h.got?` → ${hm(h.got).slice(0,5)} 收到（${(h.glen||0).toLocaleString()} 字）`:''}${h.res==='fail'?` → <span class="ck-bad">没过</span>：${esc((h.detail||'').slice(0,160))}${(h.detail||'').length>160?'…':''}`:h.res==='ok'?' → <span class="ck-y">过了</span>':h.res==='skip'?' → 跳过了':''}</li>`).join('')}</ul></div>`:'';
+    第 ${k+1} 轮（${esc(h.kind||'')}）${hm(h.t0).slice(0,5)} 发出${h.got?` → ${hm(h.got).slice(0,5)} 收到（${(h.glen||0).toLocaleString()} 字）`:''}${h.res==='fail'?` → <span class="ck-bad">没过</span>：${esc((h.detail||'').slice(0,160))}${(h.detail||'').length>160?'…':''}`:h.res==='ok'?' → <span class="ck-y">过了</span>':h.res==='skip'?' → 跳过了':h.res==='gone'?' → <span class="ck-n">软件重开了，没等到回复</span>':!h.got?' → <span class="ck-n">没等到回复</span>':''}</li>`).join('')}</ul></div>`:'';
   $('#rManual').hidden=sent;$('#rSkip').hidden=sent;
 }
 setInterval(relayTick,2500);

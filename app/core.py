@@ -1023,6 +1023,53 @@ def _dur(s):
     return "%d 秒" % s if s < 60 else "%d 分 %d 秒" % (s // 60, s % 60)
 
 
+HIST_FILE = DATA / "relay_hist.json"
+
+
+def _hist_save():
+    try:
+        HIST_FILE.write_text(json.dumps(RELAY_HIST, ensure_ascii=False), encoding="utf-8")
+    except Exception:
+        pass
+
+
+def _hist_load(tid, words):
+    """软件重开、同一个任务接着做同一批词：把重开前的几轮接上（没等到的标成“软件重开了”）。"""
+    try:
+        h = json.loads(HIST_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    if not h or h[-1].get("tid") != tid or h[-1].get("words") != list(words):
+        return []
+    for x in h:
+        if not x.get("res"):
+            x.update(res="gone", detail="软件关掉重开了，这一轮没等到回复（重开后重新出了提示词）")
+    return h
+
+
+def _iso(ts):
+    import calendar
+    try:
+        return float(calendar.timegm(time.strptime(ts, "%Y-%m-%dT%H:%M:%SZ")))
+    except Exception:
+        return 0.0
+
+
+def inbox_uploads(n=6):
+    """中转仓库里网页 AI 最近几次上传（它的提交说明是“接力回复 文件路径”）：[{ts, path}]，新的在前。"""
+    ib = inbox_cfg()
+    st, d = _gh("GET", "/repos/%s/commits?per_page=20&sha=%s" % (ib["repo"], urllib.parse.quote(ib["branch"] or "main")), ib["token"])
+    if st != 200 or not isinstance(d, list):
+        return None
+    out = []
+    for c in d:
+        cm = c.get("commit") or {}
+        m = (cm.get("message") or "").strip()
+        if m.startswith("接力回复 "):
+            out.append({"ts": _iso((cm.get("author") or {}).get("date") or ""), "path": m[5:].strip()})
+    return out[:n]
+
+
 def relay_stage(text):
     """检查进行到哪儿了（黄框第 4 步下面那行）。"""
     RELAY["stage"] = str(text)[:200]
@@ -1036,6 +1083,7 @@ def relay_result(ok, detail=""):
         RELAY_HIST[-1].update(res="ok" if ok else "fail", detail=mask(str(detail))[:400], t1=time.time())
         RELAY["phase"], RELAY["stage"] = ("ok" if ok else "fail"), ""
         n = len(RELAY_HIST)
+        _hist_save()
     _say("手动接力 第 %d 轮：%s%s" % (n, "✓ 检查过了" if ok else "✗ 没过", ("：" + str(detail)[:160]) if detail else ""))
 _RELAY_LOCK = threading.Lock()
 
@@ -1048,10 +1096,9 @@ REPO = "__REPO__"
 BRANCH = "__BRANCH__"
 NAME = "__NAME__"          # 收件箱里的文件名（不带扩展名）
 FILE = "reply.txt"         # 你把回复写进的文件；放在别处就改成那个路径
-for d in ("", "/home/claude/", "/mnt/user-data/outputs/", "/tmp/"):
-    if os.path.exists(d + FILE):
-        FILE = d + FILE
-        break
+_c = [d + FILE for d in ("", "/home/claude/", "/mnt/user-data/outputs/", "/tmp/") if os.path.exists(d + FILE)]
+if _c:
+    FILE = max(_c, key=os.path.getmtime)    # 好几个 reply.txt 时用最新写的那个（别把上一轮的传上去）
 text = open(FILE, encoding="utf-8").read().replace("\r", "").replace(TOKEN, "***")   # 令牌别跟着传上去
 assert "__END__" in text, "文件里没有最后一行 __END__：先把回复写完整"
 
@@ -1303,7 +1350,8 @@ def inbox_prompt(name):
             "1. 把上面要求的完整回复（格式完全一样，最后一行 %s）写进文本文件 reply.txt（用你的建文件工具）。\n"
             "2. 用代码执行工具运行下面这段 Python（只用标准库，不用装任何东西）：它会把 reply.txt 整理成 Excel（.xlsx）传到 GitHub。\n"
             "```python\n%s```\n"
-            "3. 看到“上传好了”以后，在聊天里只回一行：已上传 %s.xlsx。不要在聊天里再写一遍全文。\n"
+            "3. 看到“上传好了”以后，在聊天里只回一行：已上传 %s.xlsx。不要在聊天里再写一遍全文。"
+            "（文件名一定用上面脚本里的 NAME，不要用以前的；每一轮的名字都不一样）\n"
             "4. 要是没有代码执行工具、或者上传失败了：就照常把完整回复直接写在聊天里（最后一行 %s），并说明上传失败的原因。"
             % (END, script, name, END))
 
@@ -1412,12 +1460,16 @@ def relay_wait(prompt, words):
                      reply="", ts=time.time(), copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "",
                      phase="send", tid=tid, polls=0, lastPoll=0.0, stage="")
         rid = RELAY["id"]
+        if not RELAY_HIST:
+            RELAY_HIST.extend(_hist_load(tid, words))   # 软件重开：接上重开前的几轮
         if RELAY_HIST and (RELAY_HIST[-1].get("words") != list(words) or RELAY_HIST[-1].get("tid") != tid):
             RELAY_HIST.clear()                       # 换了一批词（或者换了任务）：重新记
         RELAY_HIST.append({"id": rid, "kind": RELAY["kind"], "words": list(words), "tid": tid, "t0": time.time(),
                            "inbox": RELAY["inbox"], "got": 0.0, "glen": 0, "res": "", "detail": "", "t1": 0.0})
         del RELAY_HIST[:-10]
+        _hist_save()
         alts = [h["inbox"][:-5] for h in RELAY_HIST[:-1] if h.get("inbox")]      # 前几轮的文件名：网页 AI 用了旧名字也认
+        t0 = RELAY_HIST[-1]["t0"]
     _say("手动接力 第 %d 轮（%s）：%s … %s，%d 个词，等你在网页 AI 里粘贴、发送%s" % (
         len(RELAY_HIST), RELAY["kind"] or "提示词", words[0], words[-1], len(words), ("；写完它会传 %s.xlsx" % ipath) if ipath else ""))
     after = ("写完它会自己把回复整理成 Excel 传到中转仓库（%s.xlsx），软件看到就接着做" % ipath) if ibox else "写完点它回复下面的「复制」，软件会自己接着做"
@@ -1442,10 +1494,32 @@ def relay_wait(prompt, words):
                         RELAY["polls"] = RELAY.get("polls", 0) + 1
                         RELAY["lastPoll"] = time.time()
                     if not got:
+                        try:
+                            ups = inbox_uploads()
+                        except Exception:
+                            ups = None
+                        if ups is not None:
+                            INBOX_LAST["uploads"] = ups
+                            fs0 = set(INBOX_LAST.get("files") or [])
+                            for u in ups:                  # 这一轮开始以后传的、还在 inbox/ 里、名字对不上的
+                                p0 = u["path"]
+                                if u["ts"] >= t0 - 5 and p0.rsplit("/", 1)[-1] in fs0 and not p0.startswith(ipath) \
+                                        and not any(p0.startswith(a) for a in alts):
+                                    try:
+                                        g2 = inbox_fetch(p0.rsplit(".", 1)[0])
+                                    except Exception:
+                                        g2 = None
+                                    if g2 and _looks_reply(g2[0], words) and any(w in g2[0] for w in words):
+                                        got = g2
+                                        log("网页 AI 传上来的文件名和这一轮的不一样（%s，这一轮要的是 %s.xlsx）：看内容是这一批的，收下了" % (p0, ipath), tid)
+                                        break
+                    if not got:
                         fs = INBOX_LAST.get("files") or []
-                        _say("中转仓库 第 %d 次看：还没有 %s.xlsx（等了 %s）；inbox/ 里现在：%s" % (
+                        up = (INBOX_LAST.get("uploads") or [None])[0]
+                        _say("中转仓库 第 %d 次看：还没有 %s.xlsx（等了 %s）；inbox/ 里现在：%s；网页 AI 最近一次上传：%s" % (
                             RELAY["polls"], ipath.rsplit("/", 1)[-1], _dur(time.time() - RELAY["ts"]),
-                            "、".join(fs[:6]) + ("…" if len(fs) > 6 else "") if fs else "空的"))
+                            "、".join(fs[:6]) + ("…" if len(fs) > 6 else "") if fs else "空的",
+                            ("%s %s" % (time.strftime("%H:%M:%S", time.localtime(up["ts"])), up["path"])) if up else "没有记录"))
                 except ExcelBad as e:
                     got = None
                     if RELAY.get("hint") != str(e) + "：点网页里回复下面的「复制」交回，或者叫它照常把全文写在聊天里":
@@ -1475,11 +1549,13 @@ def relay_wait(prompt, words):
                     RELAY.update(phase="checking", stage="检查格式、规矩…")
                     if RELAY_HIST and RELAY_HIST[-1]["id"] == rid:
                         RELAY_HIST[-1].update(got=time.time(), glen=len(RELAY["reply"]))
+                        _hist_save()
                     return RELAY["reply"]
                 if RELAY["id"] == rid and RELAY["status"] == "跳过":
                     RELAY["phase"] = ""
                     if RELAY_HIST and RELAY_HIST[-1]["id"] == rid:
                         RELAY_HIST[-1].update(res="skip", detail="你点了「这一批先跳过」", t1=time.time())
+                        _hist_save()
                     return ""
             if use_clip:
                 sq = clip.seq()

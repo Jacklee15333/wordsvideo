@@ -411,6 +411,7 @@ def api_relay_get(qs):
     r["show"] = bool(t and t["id"] == r.get("tid") and r.get("phase") in ("send", "checking", "ok", "fail"))
     r["hist"] = [dict(h) for h in C.RELAY_HIST]
     r["inboxNow"] = list(C.INBOX_LAST.get("files") or [])
+    r["uploads"] = list(C.INBOX_LAST.get("uploads") or [])
     r["pollSec"] = max(5, int(C.inbox_cfg().get("pollSec") or 15))
     r["now"] = time.time()
     if qs.get("full") != "1":
