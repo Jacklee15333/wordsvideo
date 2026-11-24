@@ -81,7 +81,8 @@
       "x": 0.5,
       "y": 0.56,
       "s": 0.4,
-      "shadow": true
+      "shadow": true,
+      "anim": "pulse"
      },
      {
       "label": "…的",
@@ -92,6 +93,42 @@
       "bg": "#FFF6D8",
       "border": "#E0A800",
       "delay": 0.6
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -185,21 +222,28 @@
       "x": 0.2,
       "y": 0.62,
       "s": 0.7,
-      "z": 3
+      "z": 3,
+      "seq": "blink",
+      "id": "s0"
      },
      {
       "actor": "cn-boy-raise",
       "x": 0.4,
       "y": 0.64,
       "s": 0.66,
-      "z": 3
+      "z": 3,
+      "seq": "blink",
+      "nodWith": "s0"
      },
      {
       "actor": "west-girl-music",
       "x": 0.6,
       "y": 0.62,
       "s": 0.7,
-      "z": 3
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "nodWith": "s0"
      },
      {
       "svg": "art/icecream.svg",
@@ -207,6 +251,42 @@
       "y": 0.56,
       "s": 0.5,
       "anim": "bob"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.96,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.04,
+      "y": 0.88,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ],
     "text": "受欢迎的",
@@ -232,7 +312,12 @@
        "y": 0.64,
        "s": 0.66,
        "z": 3,
-       "when": "children"
+       "when": "children",
+       "id": "k",
+       "turn": [
+        0,
+        2
+       ]
       },
       {
        "actor": "west-girl-raise",
@@ -241,7 +326,11 @@
        "s": 0.7,
        "z": 3,
        "when": "children",
-       "delay": 0.3
+       "delay": 0.3,
+       "turn": [
+        1,
+        2
+       ]
       },
       {
        "label": "popular",
@@ -262,6 +351,42 @@
        "border": "#2B8A3E",
        "when": "受",
        "delay": 0.2
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -279,15 +404,15 @@
      {
       "emit": true,
       "svg": "art/note.svg",
-      "alt": [
-       "art/note2.svg"
-      ],
       "x": 0.6,
       "y": 0.4,
       "s": 0.12,
       "to": [
        0.2,
        -0.3
+      ],
+      "alt": [
+       "art/note2.svg"
       ]
      },
      {
@@ -295,7 +420,9 @@
       "x": 0.16,
       "y": 0.62,
       "s": 0.66,
-      "z": 3
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
      }
     ],
     "beat": 100,
@@ -328,20 +455,26 @@
        "when": "song"
       },
       {
-       "actor": "west-girl-music",
+       "actor": "cn-teacher-laugh",
        "x": 0.16,
        "y": 0.62,
        "s": 0.68,
        "z": 3,
-       "when": "popular"
+       "when": "popular",
+       "seq": "pingpong",
+       "fps": 2,
+       "id": "s0"
       },
       {
-       "actor": "cn-boy-raise",
+       "actor": "west-man-hello",
        "x": 0.86,
        "y": 0.64,
        "s": 0.62,
        "z": 3,
-       "when": "popular"
+       "when": "popular",
+       "seq": "pingpong",
+       "fps": 2,
+       "nodWith": "s0"
       },
       {
        "label": "popular song",
@@ -381,7 +514,8 @@
       "x": 0.22,
       "y": 0.6,
       "s": 0.86,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "svg": "art/lightbulb.svg",
@@ -406,7 +540,8 @@
        "y": 0.58,
        "s": 0.9,
        "z": 3,
-       "when": "He"
+       "when": "He",
+       "seq": "talk"
       },
       {
        "svg": "art/book-open.svg",
@@ -537,7 +672,8 @@
        "y": 0.6,
        "s": 0.86,
        "z": 3,
-       "when": "属于大家的"
+       "when": "属于大家的",
+       "seq": "talk"
       },
       {
        "svg": "art/book-open.svg",
@@ -579,20 +715,29 @@
      "img": "art/street-bg.svg",
      "items": [
       {
-       "actor": "west-girl-raise",
+       "actor": "cn-teacher-laugh",
        "x": 0.2,
        "y": 0.62,
        "s": 0.7,
        "z": 3,
-       "when": "普通人"
+       "when": "普通人",
+       "id": "a",
+       "turn": [
+        0,
+        2
+       ]
       },
       {
-       "actor": "cn-boy-raise",
+       "actor": "west-man-hello",
        "x": 0.4,
        "y": 0.64,
        "s": 0.66,
        "z": 3,
-       "when": "普通人"
+       "when": "普通人",
+       "turn": [
+        1,
+        2
+       ]
       },
       {
        "svg": "art/icecream.svg",
@@ -610,6 +755,42 @@
        "color": "#2B8A3E",
        "border": "#2B8A3E",
        "when": "受欢迎的"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -670,115 +851,203 @@
    }
   ],
   "distinguish": {
-   "pics": {
-    "famous": {
+   "key": "流行的",
+   "items": [
+    {
+     "w": "popular",
+     "gloss": "受欢迎的、流行的（很多人喜欢）",
+     "note": "popul 人民 + ar …的：属于大家的，所以是“很多人都喜欢、都在用”，人和东西都能说（a popular song）。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/icecream.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.62,
+        "anim": "bob"
+       },
+       {
+        "actor": "walk-west-woman-case",
+        "x": 0.05,
+        "y": 0.62,
+        "s": 0.56,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.05,
+          0.62
+         ],
+         "to": [
+          0.95,
+          0.62
+         ],
+         "offset": 0
+        }
+       },
+       {
+        "actor": "walk-cn-boy-pack",
+        "x": 0.9,
+        "y": 0.66,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.9,
+          0.66
+         ],
+         "to": [
+          0.1,
+          0.66
+         ],
+         "offset": 0.4
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "fashionable",
+     "gloss": "时髦的（衣着、去处）",
+     "note": "fashion 时尚 + able：赶得上时尚的，多说衣服、发型、去处正时兴。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/shopbag.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.7,
+        "anim": "sway"
+       },
+       {
+        "actor": "walk-west-woman-case",
+        "x": 0.05,
+        "y": 0.62,
+        "s": 0.56,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.05,
+          0.62
+         ],
+         "to": [
+          0.95,
+          0.62
+         ],
+         "offset": 0
+        }
+       },
+       {
+        "actor": "walk-cn-boy-pack",
+        "x": 0.9,
+        "y": 0.66,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.9,
+          0.66
+         ],
+         "to": [
+          0.1,
+          0.66
+         ],
+         "offset": 0.4
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "current",
+     "gloss": "当前通行的",
+     "note": "curr 跑 + ent：正在“流动”的，说眼下正通行的说法、做法（current ideas），不管喜欢不喜欢。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "frames": [
+         "art/clock_f0.svg",
+         "art/clock_f1.svg"
+        ],
+        "svg": "art/clock_f0.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.6,
+        "fps": 2
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：popular 从“人民”来，看的是多少人喜欢；fashionable 从“时尚”来，看的是赶不赶得上潮流；current 从“跑、流动”来，看的是是不是眼下正通行。",
+   "tip": "一句话记法：大家喜欢用 popular，穿得时髦用 fashionable，眼下通行用 current；famous 只是“很多人知道”。"
+  },
+  "demo": {
+   "careful": {
+    "pic": {
      "bg": "blank",
-     "img": "art/stage-bg.svg",
+     "img": "art/room-bg.svg",
      "items": [
       {
-       "actor": "west-man-speech",
+       "svg": "art/desk.svg",
        "x": 0.5,
-       "y": 0.6,
-       "s": 0.9,
-       "z": 3
+       "y": 0.86,
+       "s": 0.3
       },
       {
-       "label": "很多人知道",
-       "x": 0.15,
-       "y": 0.3,
-       "size": 0.075,
-       "color": "#2F6FB3",
-       "border": "#2F6FB3"
-      }
-     ]
-    },
-    "fashionable": {
-     "bg": "blank",
-     "img": "art/street-bg.svg",
-     "items": [
-      {
-       "svg": "art/shopbag.svg",
+       "svg": "art/books.svg",
        "x": 0.5,
-       "y": 0.55,
-       "s": 0.7
+       "y": 0.56,
+       "s": 0.48,
+       "anim": "sway"
       }
      ]
-    },
-    "mass": {
+    }
+   },
+   "careless": {
+    "pic": {
      "bg": "blank",
-     "img": "art/station-bg.svg",
+     "img": "art/room-bg.svg",
      "items": [
       {
-       "actor": "walk-west-woman-case",
-       "x": 0.05,
+       "svg": "art/mug.svg",
+       "x": 0.42,
+       "y": 0.6,
+       "s": 0.42,
+       "rot": 70,
+       "anim": "shake"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.58,
        "y": 0.62,
-       "s": 0.56,
-       "z": 2,
-       "walk": {
-        "from": [
-         0.05,
-         0.62
-        ],
-        "to": [
-         0.95,
-         0.62
-        ],
-        "offset": 0
-       }
-      },
+       "s": 0.06,
+       "to": [
+        0.25,
+        0.25
+       ],
+       "every": 0.4
+      }
+     ]
+    }
+   },
+   "national": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
       {
-       "actor": "walk-cn-boy-pack",
-       "x": 0.9,
-       "y": 0.66,
-       "s": 0.5,
-       "z": 2,
-       "walk": {
-        "from": [
-         0.9,
-         0.66
-        ],
-        "to": [
-         0.1,
-         0.66
-        ],
-        "offset": 0.4
-       }
-      },
-      {
-       "actor": "walk-cn-girl",
-       "x": 0.25,
-       "y": 0.7,
-       "s": 0.6,
-       "z": 2,
-       "walk": {
-        "from": [
-         0.25,
-         0.7
-        ],
-        "to": [
-         1.0,
-         0.7
-        ],
-        "offset": 0.7
-       }
-      },
-      {
-       "actor": "walk-west-man-case",
-       "x": 1.0,
-       "y": 0.6,
-       "s": 0.54,
-       "z": 2,
-       "walk": {
-        "from": [
-         1.0,
-         0.6
-        ],
-        "to": [
-         0.0,
-         0.6
-        ],
-        "offset": 0.2
-       }
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.62,
+       "anim": "pulse"
       }
      ]
     }
@@ -878,5 +1147,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

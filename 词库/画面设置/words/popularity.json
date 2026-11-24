@@ -10,7 +10,8 @@
      "svg": "art/icecream.svg",
      "x": 0.5,
      "y": 0.56,
-     "s": 0.6
+     "s": 0.6,
+     "anim": "bob"
     },
     {
      "label": "受欢迎的",
@@ -19,6 +20,42 @@
      "size": 0.09,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.96,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.86
+      ],
+      "to": [
+       0.02,
+       0.86
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.04,
+     "y": 0.88,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.88
+      ],
+      "to": [
+       0.98,
+       0.88
+      ],
+      "offset": 0.6
+     }
     }
    ]
   },
@@ -31,7 +68,8 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.5,
-     "shadow": true
+     "shadow": true,
+     "anim": "sway"
     },
     {
      "label": "…的程度",
@@ -59,7 +97,9 @@
     "x": 0.3,
     "y": 0.6,
     "s": 0.9,
-    "z": 3
+    "z": 3,
+    "id": "m",
+    "seq": "talk"
    },
    {
     "svg": "art/audience-wide.svg",
@@ -67,7 +107,8 @@
     "y": 0.92,
     "s": 0.3,
     "z": 6,
-    "crowd": 9
+    "crowd": 9,
+    "nodWith": "m"
    },
    {
     "label": "受欢迎的程度",
@@ -125,7 +166,10 @@
       "y": 0.58,
       "s": 0.9,
       "z": 3,
-      "when": "singer"
+      "when": "singer",
+      "id": "s",
+      "seq": "pingpong",
+      "fps": 2
      },
      {
       "svg": "art/audience-wide.svg",
@@ -134,7 +178,8 @@
       "s": 0.26,
       "z": 6,
       "crowd": 9,
-      "when": "popularity"
+      "when": "popularity",
+      "nodWith": "s"
      },
      {
       "svg": "art/star.svg",
@@ -232,7 +277,16 @@
      "svg": "art/smartphone.svg",
      "x": 0.5,
      "y": 0.3,
-     "s": 0.3
+     "s": 0.3,
+     "anim": "bob"
+    },
+    {
+     "waves": true,
+     "x": 0.62,
+     "y": 0.26,
+     "dir": 0,
+     "spread": 50,
+     "n": 3
     }
    ],
    "text": "普及、流行",
@@ -325,6 +379,15 @@
       "pop": true
      },
      {
+      "waves": true,
+      "x": 0.62,
+      "y": 0.26,
+      "dir": 0,
+      "spread": 50,
+      "n": 3,
+      "when": "Smartphones"
+     },
+     {
       "label": "popularity",
       "x": 0.5,
       "y": 0.08,
@@ -355,11 +418,13 @@
     "img": "art/stage-bg.svg",
     "items": [
      {
-      "actor": "west-man-speech",
+      "actor": "west-man-present",
       "x": 0.3,
       "y": 0.6,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "id": "m",
+      "seq": "talk"
      },
      {
       "svg": "art/audience-wide.svg",
@@ -367,7 +432,8 @@
       "y": 0.92,
       "s": 0.3,
       "z": 6,
-      "crowd": 9
+      "crowd": 9,
+      "nodWith": "m"
      },
      {
       "label": "popular + ity 程度",
@@ -394,7 +460,7 @@
     "img": "art/stage-bg.svg",
     "items": [
      {
-      "actor": "west-man-speech",
+      "actor": "west-man-point",
       "x": 0.34,
       "y": 0.58,
       "s": 0.9,
@@ -526,6 +592,16 @@
       "x": 0.5,
       "y": 0.3,
       "s": 0.32,
+      "when": "一样东西",
+      "anim": "bob"
+     },
+     {
+      "waves": true,
+      "x": 0.62,
+      "y": 0.26,
+      "dir": 0,
+      "spread": 50,
+      "n": 3,
       "when": "一样东西"
      },
      {
@@ -542,28 +618,179 @@
   }
  ],
  "distinguish": {
-  "pics": {
-   "fashion": {
+  "key": "流行",
+  "items": [
+   {
+    "w": "popularity",
+    "gloss": "受欢迎（的程度）、普及",
+    "note": "popular + ity：受欢迎的程度，说人、东西有多少人喜欢，也说一样东西在大众中传开了。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.34,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.3,
+       "z": 6,
+       "crowd": 9
+      }
+     ]
+    }
+   },
+   {
+    "w": "fashion",
+    "gloss": "时尚、风尚",
+    "note": "说穿着、做法一时兴起的样子，重在“正时兴、赶潮流”，过一阵就会变。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/shopbag.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.7,
+       "anim": "sway"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      }
+     ]
+    }
+   },
+   {
+    "w": "currency",
+    "gloss": "通行、流通（也指货币）",
+    "note": "curr 跑 + ency：在人手里“跑来跑去”，说一个说法、想法正在通行；最常用的意思其实是“货币”。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/tag.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "swing"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "逻辑不同：popularity 看“多少人喜欢”；fashion 看“是不是正时兴”；currency 看“是不是在流通、通用”。",
+  "tip": "一句话记法：人气、普及用 popularity；时髦用 fashion；钱和说法的流通用 currency。"
+ },
+ "demo": {
+  "happiness": {
+   "pic": {
     "bg": "blank",
-    "img": "art/street-bg.svg",
+    "img": "art/room-bg.svg",
     "items": [
      {
-      "svg": "art/shopbag.svg",
+      "actor": "west-girl-music",
       "x": 0.5,
-      "y": 0.56,
-      "s": 0.7
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "x": 0.78,
+      "y": 0.3,
+      "s": 0.1,
+      "to": [
+       0.1,
+       -0.25
+      ]
      }
     ]
-   },
-   "currency": {
-    "bg": "studio",
-    "tint": "green",
+   }
+  },
+  "popularity": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
     "items": [
      {
-      "svg": "art/tag.svg",
+      "svg": "art/star.svg",
       "x": 0.5,
-      "y": 0.5,
-      "s": 0.6
+      "y": 0.34,
+      "s": 0.3,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9
+     }
+    ]
+   }
+  },
+  "importance": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.42,
+      "y": 0.66,
+      "s": 0.44
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.7,
+      "y": 0.3,
+      "s": 0.3,
+      "anim": "pulse"
      }
     ]
    }

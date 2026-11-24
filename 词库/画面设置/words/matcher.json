@@ -577,6 +577,41 @@
      }
     ]
    }
+  },
+  "actor": {
+   "pic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "beam": true,
+      "x": 0.3,
+      "y": 0.0,
+      "len": 0.9,
+      "width": 0.18,
+      "swing": 12,
+      "period": 4
+     },
+     {
+      "actor": "west-man-speech",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3,
+      "id": "a",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.24,
+      "z": 6,
+      "crowd": 7,
+      "nodWith": "a"
+     }
+    ]
+   }
   }
  },
  "lianxi": {

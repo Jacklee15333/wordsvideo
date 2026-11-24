@@ -46,12 +46,12 @@
     "items": [
      {
       "actor": "west-man-present",
-      "id": "p",
       "x": 0.42,
       "y": 0.56,
       "s": 0.92,
-      "seq": "talk",
-      "z": 3
+      "z": 3,
+      "id": "p",
+      "seq": "talk"
      },
      {
       "label": "…的人",
@@ -342,11 +342,11 @@
      "items": [
       {
        "actor": "west-man-smile",
-       "id": "g",
        "x": 0.36,
        "y": 0.56,
        "s": 0.92,
        "z": 3,
+       "id": "g",
        "when": "grandpa",
        "seq": "blink"
       },
@@ -464,11 +464,11 @@
      "items": [
       {
        "actor": "west-man-hello",
-       "id": "h",
        "x": 0.24,
        "y": 0.6,
        "s": 0.78,
        "z": 3,
+       "id": "h",
        "when": "手艺人",
        "seq": "blink"
       },
@@ -660,6 +660,42 @@
        "color": "#2B8A3E",
        "border": "#2B8A3E",
        "when": "造物主"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.96,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.04,
+       "y": 0.88,
+       "s": 0.38,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.6
+       }
       }
      ]
     }
@@ -855,6 +891,41 @@
       }
      ]
     }
+   },
+   "actor": {
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "beam": true,
+       "x": 0.3,
+       "y": 0.0,
+       "len": 0.9,
+       "width": 0.18,
+       "swing": 12,
+       "period": 4
+      },
+      {
+       "actor": "west-man-speech",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.86,
+       "z": 3,
+       "id": "a",
+       "seq": "talk"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.94,
+       "s": 0.24,
+       "z": 6,
+       "crowd": 7,
+       "nodWith": "a"
+      }
+     ]
+    }
    }
   }
  },
@@ -951,5 +1022,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
