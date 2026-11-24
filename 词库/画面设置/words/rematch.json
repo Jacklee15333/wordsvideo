@@ -24,7 +24,7 @@
      "dur": 1.0,
      "loop": true,
      "arc": 0.2,
-     "z": 3
+     "z": 4
     },
     {
      "ray": [
@@ -47,10 +47,28 @@
      "dur": 1
     },
     {
-     "label": "再一次",
+     "actor": "walk-west-woman-case",
+     "x": 0.9,
+     "y": 0.72,
+     "s": 0.44,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.98,
+       0.72
+      ],
+      "to": [
+       0.02,
+       0.72
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "label": "re",
      "x": 0.2,
      "y": 0.12,
-     "size": 0.09,
+     "size": 0.1,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
     }
@@ -77,7 +95,26 @@
      ],
      "dur": 1,
      "wait": 1.5,
-     "loop": true
+     "loop": true,
+     "z": 4
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.1,
+     "y": 0.72,
+     "s": 0.42,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.02,
+       0.72
+      ],
+      "to": [
+       0.98,
+       0.72
+      ],
+      "offset": 0.3
+     }
     },
     {
      "label": "比赛",
@@ -115,21 +152,52 @@
     ],
     "dur": 1,
     "wait": 1.5,
-    "loop": true
+    "loop": true,
+    "z": 4
+   },
+   {
+    "actor": "walk-cn-girl",
+    "x": 0.5,
+    "y": 0.7,
+    "s": 0.38,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.02,
+      0.7
+     ],
+     "to": [
+      0.98,
+      0.7
+     ],
+     "offset": 0
+    }
    },
    {
     "actor": "cn-boy-raise",
+    "id": "a",
     "x": 0.16,
     "y": 0.62,
     "s": 0.7,
-    "z": 3
+    "z": 3,
+    "seq": "talk",
+    "turn": [
+     0,
+     2
+    ]
    },
    {
     "actor": "west-girl-raise",
+    "id": "b",
     "x": 0.84,
     "y": 0.62,
     "s": 0.7,
-    "z": 3
+    "z": 3,
+    "seq": "talk",
+    "turn": [
+     1,
+     2
+    ]
    },
    {
     "label": "再比一场",
@@ -163,21 +231,45 @@
      ],
      "dur": 1,
      "wait": 1.5,
-     "loop": true
+     "loop": true,
+     "z": 4
     },
     {
-     "actor": "cn-boy-raise",
+     "actor": "walk-west-man-case",
+     "x": 0.9,
+     "y": 0.7,
+     "s": 0.4,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.7
+      ],
+      "to": [
+       0.02,
+       0.7
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "west-girl-explain",
+     "id": "e",
      "x": 0.16,
      "y": 0.62,
      "s": 0.7,
-     "z": 3
+     "z": 3,
+     "seq": "talk"
     },
     {
-     "actor": "west-girl-raise",
+     "actor": "cn-teacher-listen",
+     "id": "l",
      "x": 0.84,
      "y": 0.62,
      "s": 0.7,
-     "z": 3
+     "z": 3,
+     "seq": "blink",
+     "nodWith": "e"
     },
     {
      "label": "Round 2",
@@ -215,23 +307,54 @@
       ],
       "dur": 1,
       "wait": 1.5,
-      "loop": true
+      "loop": true,
+      "z": 4
      },
      {
-      "actor": "cn-boy-raise",
+      "actor": "walk-west-boy-pack",
+      "x": 0.1,
+      "y": 0.7,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.7
+       ],
+       "to": [
+        0.98,
+        0.7
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "west-man-hello",
+      "id": "h",
       "x": 0.14,
       "y": 0.62,
       "s": 0.7,
       "z": 3,
-      "when": "two teams"
+      "when": "two teams",
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
      },
      {
-      "actor": "west-girl-raise",
+      "actor": "west-girl-surprised",
+      "id": "s",
       "x": 0.86,
       "y": 0.62,
       "s": 0.7,
       "z": 3,
-      "when": "two teams"
+      "when": "two teams",
+      "seq": "talk",
+      "turn": [
+       1,
+       2
+      ]
      },
      {
       "label": "rematch",
@@ -244,11 +367,17 @@
       "when": "rematch"
      },
      {
-      "svg": "art/clock.svg",
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1,
       "x": 0.5,
       "y": 0.92,
       "s": 0.12,
-      "when": "next week"
+      "when": "next week",
+      "z": 5
      },
      {
       "label": "再赛一场",
@@ -268,23 +397,37 @@
    "items": [
     {
      "actor": "west-man-point",
+     "id": "m",
      "x": 0.28,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "seq": "talk",
+     "turn": [
+      0,
+      2
+     ]
     },
     {
      "actor": "cn-teacher-laugh",
+     "id": "t",
      "x": 0.72,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "seq": "pingpong",
+     "turn": [
+      1,
+      2
+     ]
     },
     {
      "svg": "art/trophy.svg",
      "x": 0.5,
      "y": 0.78,
-     "s": 0.2
+     "s": 0.2,
+     "anim": "pulse",
+     "z": 4
     }
    ],
    "text": "使再次交手",
@@ -297,20 +440,32 @@
     "img": "art/stage-bg.svg",
     "items": [
      {
-      "actor": "west-man-point",
+      "actor": "west-man-speech",
+      "id": "p",
       "x": 0.24,
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "two players"
+      "when": "two players",
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
      },
      {
-      "actor": "cn-teacher-laugh",
+      "actor": "west-man-smile",
+      "id": "w",
       "x": 0.76,
       "y": 0.6,
       "s": 0.86,
       "z": 3,
-      "when": "two players"
+      "when": "two players",
+      "seq": "talk",
+      "turn": [
+       1,
+       2
+      ]
      },
      {
       "svg": "art/trophy.svg",
@@ -318,7 +473,9 @@
       "y": 0.72,
       "s": 0.26,
       "when": "final",
-      "pop": true
+      "pop": true,
+      "anim": "pulse",
+      "z": 4
      },
      {
       "label": "rematched",
@@ -367,7 +524,26 @@
       ],
       "dur": 1,
       "wait": 1.5,
-      "loop": true
+      "loop": true,
+      "z": 4
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.9,
+      "y": 0.72,
+      "s": 0.44,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.98,
+        0.72
+       ],
+       "to": [
+        0.02,
+        0.72
+       ],
+       "offset": 0
+      }
      },
      {
       "label": "re 再 + match 比赛",
@@ -410,23 +586,47 @@
       ],
       "dur": 1,
       "wait": 1.5,
-      "loop": true
+      "loop": true,
+      "z": 4
      },
      {
-      "actor": "cn-boy-raise",
+      "actor": "walk-west-woman-case",
+      "x": 0.1,
+      "y": 0.7,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.7
+       ],
+       "to": [
+        0.98,
+        0.7
+       ],
+       "offset": 0.5
+      }
+     },
+     {
+      "actor": "cn-teacher-point",
+      "id": "p",
       "x": 0.16,
       "y": 0.62,
       "s": 0.7,
       "z": 3,
-      "when": "两个对手"
+      "when": "两个对手",
+      "seq": "talk"
      },
      {
-      "actor": "west-girl-surprised",
+      "actor": "west-clerk-think",
+      "id": "k",
       "x": 0.84,
       "y": 0.62,
       "s": 0.7,
       "z": 3,
-      "when": "两个对手"
+      "when": "两个对手",
+      "seq": "blink",
+      "nodWith": "p"
      },
      {
       "label": "1 : 1",
@@ -478,6 +678,25 @@
       "x": 0.78,
       "y": 0.5,
       "s": 0.5
+     },
+     {
+      "eq": true,
+      "x": 0.78,
+      "y": 0.44,
+      "w": 0.14,
+      "h": 0.12,
+      "n": 5
+     },
+     {
+      "waves": true,
+      "x": 0.88,
+      "y": 0.46,
+      "dir": 0,
+      "spread": 60,
+      "n": 3,
+      "period": 1.2,
+      "color": "#F08C00",
+      "lw": 0.01
      },
      {
       "label": "重播",

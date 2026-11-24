@@ -48,14 +48,30 @@
      "x": 0.5,
      "y": 0.56,
      "s": 0.56,
-     "shadow": true
+     "shadow": true,
+     "anim": "sway"
     },
     {
      "svg": "art/sock-red.svg",
-     "x": 0.74,
+     "x": 0.9,
      "y": 0.56,
      "s": 0.5,
-     "delay": 0.4
+     "delay": 0.4,
+     "go": [
+      0.74,
+      0.56
+     ],
+     "dur": 1.2,
+     "wait": 0.2,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/star.svg",
+     "x": 0.3,
+     "y": 0.28,
+     "s": 0.1,
+     "delay": 1.4,
+     "anim": "pulse"
     },
     {
      "label": "正…着的 / …这件事",
@@ -119,13 +135,15 @@
      "svg": "art/sock-red.svg",
      "x": 0.36,
      "y": 0.56,
-     "s": 0.52
+     "s": 0.52,
+     "anim": "sway"
     },
     {
      "svg": "art/sock-red.svg",
      "x": 0.64,
      "y": 0.56,
-     "s": 0.52
+     "s": 0.52,
+     "anim": "sway"
     },
     {
      "svg": "art/star.svg",
@@ -146,18 +164,21 @@
     "items": [
      {
       "actor": "west-girl-raise",
+      "id": "g",
       "x": 0.24,
       "y": 0.58,
       "s": 0.9,
       "z": 3,
-      "when": "bought"
+      "when": "bought",
+      "seq": "blink"
      },
      {
       "svg": "art/sock-red.svg",
       "x": 0.6,
       "y": 0.56,
       "s": 0.5,
-      "when": "matching socks"
+      "when": "matching socks",
+      "anim": "sway"
      },
      {
       "svg": "art/sock-red.svg",
@@ -165,7 +186,8 @@
       "y": 0.56,
       "s": 0.5,
       "when": "matching socks",
-      "delay": 0.2
+      "delay": 0.2,
+      "anim": "sway"
      },
      {
       "label": "matching socks",
@@ -202,15 +224,27 @@
     },
     {
      "svg": "art/sock-red.svg",
-     "x": 0.2,
-     "y": 0.6,
-     "s": 0.3
+     "x": 0.1,
+     "y": 0.62,
+     "s": 0.3,
+     "go": [
+      0.24,
+      0.6
+     ],
+     "dur": 1.2,
+     "loop": true
     },
     {
      "svg": "art/sock-red.svg",
-     "x": 0.8,
-     "y": 0.6,
-     "s": 0.3
+     "x": 0.9,
+     "y": 0.62,
+     "s": 0.3,
+     "go": [
+      0.76,
+      0.6
+     ],
+     "dur": 1.2,
+     "loop": true
     }
    ],
    "text": "匹配",
@@ -336,18 +370,30 @@
     "items": [
      {
       "svg": "art/sock-red.svg",
-      "x": 0.36,
+      "x": 0.2,
       "y": 0.56,
       "s": 0.5,
       "when": "matching",
+      "go": [
+       0.36,
+       0.56
+      ],
+      "dur": 0.9,
+      "anim": "sway",
       "hideCue": 1
      },
      {
       "svg": "art/sock-red.svg",
-      "x": 0.64,
+      "x": 0.8,
       "y": 0.56,
       "s": 0.5,
       "when": "matching",
+      "go": [
+       0.64,
+       0.56
+      ],
+      "dur": 0.9,
+      "anim": "sway",
       "hideCue": 1
      },
      {
@@ -362,12 +408,33 @@
       "hideCue": 2
      },
      {
+      "ray": [
+       [
+        0.2,
+        0.5
+       ],
+       [
+        0.8,
+        0.5
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "cue": 1,
+      "when": "放在别的名词前面",
+      "dur": 1.0,
+      "hideCue": 2
+     },
+     {
       "svg": "art/brickwall.svg",
       "x": 0.5,
       "y": 0.56,
       "s": 0.5,
       "when": "a stone wall",
-      "hideCue": 3
+      "hideCue": 3,
+      "reveal": "up",
+      "rdur": 1.2
      },
      {
       "label": "a stone wall",
@@ -386,7 +453,8 @@
       "y": 0.56,
       "s": 0.5,
       "cue": 3,
-      "when": "matching socks"
+      "when": "matching socks",
+      "anim": "sway"
      },
      {
       "svg": "art/sock-red.svg",
@@ -394,7 +462,17 @@
       "y": 0.56,
       "s": 0.5,
       "cue": 3,
-      "when": "matching socks"
+      "when": "matching socks",
+      "anim": "sway"
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.1,
+      "cue": 3,
+      "when": "配套的",
+      "anim": "pulse"
      },
      {
       "label": "配套的",
