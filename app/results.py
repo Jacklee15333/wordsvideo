@@ -328,10 +328,11 @@ def draw(word):
 # ═══════════════════════ 打开文件夹、给界面读文件 ═══════════════════════
 def open_path(what, word=""):
     p = {"qdir": qdir(), "pdir": pdir(), "root": out_root(), "qrepo": C.REPO / C.D / "词",
-         "prepo": C.REPO / V.EXTRA, "pword": pdir() / fname(word), "qfile": qdir() / (fname(word) + ".xlsx")}.get(what)
+         "prepo": C.REPO / V.EXTRA, "pword": pdir() / fname(word), "qfile": qdir() / (fname(word) + ".xlsx"),
+         "vbatch": out_root() / fname(word)}.get(what)
     if p is None:
         return {"ok": False, "msg": "不认识要打开什么"}
-    if what in ("qdir", "pdir", "root", "pword"):
+    if what in ("qdir", "pdir", "root", "pword", "vbatch"):
         p.mkdir(parents=True, exist_ok=True)
     if not p.exists():
         return {"ok": False, "msg": "还没有：%s" % p}

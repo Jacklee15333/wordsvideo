@@ -278,6 +278,10 @@ def api_video_get(qs):
     what = qs.get("what")
     if what == "env":
         return V.env_status()
+    if what == "envchk":                                  # v1.11.0：出片前检查，一项一项的
+        return V.envchk_get()
+    if what == "live":                                    # v1.11.0：批次的实时情况、电脑占用
+        return V.live([x for x in (qs.get("open") or "").split("|") if x])
     if what == "batches":
         return {"items": V.batch_list()}
     if what == "setup":
@@ -304,7 +308,13 @@ def api_video_post(b):
         ok, t = V.setup_start(b.get("step"), b.get("proxy", ""))
     elif op == "new":
         words = [w.strip() for w in re.split(r"[,，、\n]+", b.get("words") or "") if w.strip()]
-        ok, t = V.batch_new(b.get("name", "").strip(), words)
+        d = V.batch_new(b.get("name", "").strip(), words)
+        d["msg"] = C.mask(d.get("msg", ""))
+        return d
+    elif op == "envchk":
+        return V.envchk_start()
+    elif op == "fix":
+        return V.envfix(b.get("what", ""))
     elif op == "batch":
         ok, t = V.batch_op(b.get("name", ""), b.get("action", ""), b.get("word", ""), b.get("stage", ""))
     elif op == "scan":
@@ -658,8 +668,18 @@ class H(BaseHTTPRequestHandler):
             traceback.print_exc()
             self._send(500, {"error": C.mask(str(e))})
 
+    def _same_origin(self):
+        """v1.11.0：别的网站不能借你的浏览器给单词工作台发指令（删批次、停任务……）：带着 Origin 的，只认本机这个地址。"""
+        o = self.headers.get("Origin")
+        if o is None:
+            return True
+        u = urllib.parse.urlparse(o)
+        return u.scheme == "http" and u.hostname in ("127.0.0.1", "localhost") and u.port == self.server.server_address[1]
+
     def do_POST(self):
         u = urllib.parse.urlparse(self.path)
+        if not self._same_origin():
+            return self._send(403, {"error": "只接受单词工作台自己的页面发来的操作"})
         try:
             n = int(self.headers.get("Content-Length") or 0)
             b = json.loads(self.rfile.read(n).decode("utf-8") or "{}") if n else {}
@@ -699,6 +719,7 @@ def main():
     threading.Thread(target=prepare_repo, daemon=True).start()
     threading.Thread(target=repo_watch, daemon=True).start()
     C.RUNNER.start()
+    V.startup()                                    # v1.11.0：有批次正在出片，就接着记电脑占用
     threading.Timer(20, check_update_bg).start()
     url = "http://127.0.0.1:%d" % port
     print("单词工作台已启动：%s （关掉这个窗口就退出）" % url, flush=True)
