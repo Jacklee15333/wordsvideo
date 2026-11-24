@@ -153,6 +153,144 @@ def build_prompt(word, fix=None, todo=""):
 
 SVG_RE = re.compile(r"<<<SVG\s+([\w.\-]+\.svg)\s*\n(.*?)>>>END", re.S)
 
+# ═══════════ v1.10.9：手动接力一份好几个词 ═══════════
+OUT_MULTI = """【输出格式（程序按这个格式自动读，请严格照做）】
+0. 一个词一段，按上面的顺序写：每段先单独一行写 @单词（比如 @%s），下面是这个词的全部内容；写完一个词再写下一个。
+1. 每个词：一个代码块（第一行写 ```json），里面是这个词的画面设置：一个 JSON 对象，写法和上面的范例一样（style、board、pics、originPic、flow、extend…… 用得到的都写）。
+2. 画里的人不要自己画，写成 {"actor": "动作名", "x": 0.3, "y": 0.6, "s": 0.9, "z": 3}，程序会换成会动的人。动作名只能用这些：%s。
+3. 不许用表情图（"e": "🚗" 这种），东西都用写实插图："svg": "art/名字.svg"。下面这些现成的场景和东西可以直接用：%s。
+4. 现成里没有的插图，你自己画成 SVG，每张一块，放在这个词的 JSON 代码块后面（别的词要用就再画一份，各词的插图分开放）：
+<<<SVG 名字.svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">……</svg>
+>>>END
+   插图要求：图画书风（黑色勾线、饱和平涂），画成现实生活里的样子；一张图不超过 12 KB。
+5. 每一次交回（每一轮）的最后单独一行写：%s"""
+
+
+def _mat_short(word, budget):
+    """一份好几个词时每个词的总表材料：词多就短一些，免得提示词太长贴不进去。"""
+    rows = C.TABLE["words"].get(word) or [{}]
+    m = C.material(word)
+    m = m[:budget] + ("…" if len(m) > budget else "")
+    if rows[0].get("拆分"):
+        m += "\n  拆分：" + rows[0]["拆分"]
+    if rows[0].get("组合 → 现在的含义"):
+        m += "\n  意思怎么变过来（总表）：" + rows[0]["组合 → 现在的含义"][:max(150, budget // 3)].replace("\n", " / ")
+    return m
+
+
+def build_prompt_multi(words, rnd):
+    """手动接力：一份好几个词的画面提示词。规矩、pictures.md、范例只放一次，每个词一段材料。"""
+    rules, pm, ex = docs()
+    ver, ed = skill_version()
+    n = len(words)
+    budget = max(250, min(1200, 120000 // max(1, n)))
+    head = ("【做画面 · 这一份 %d 个词】你在帮一位中学英语老师给下面 %d 个单词各做一份构词动画视频的“画面设置”。视频的讲解稿由程序从总表生成，"
+            "你只管画面：每个意思一幅生活场景、例句和例句动画、各部分卡片的画（partPics）和小图标（icons）、拼起来那一格的画（comboPic）、"
+            "同义词辨析、意思怎么一步步变过来的示意图。练习题不用写，程序会把出好的 7 道题放进去。\n"
+            "不用一次写完：每写完 %d 个词就交回一次（怎么交回看最后），再接着写下一轮。" % (n, n, rnd))
+    return "\n\n".join([
+        head,
+        "【这一份的词（按这个顺序做）】\n" + "\n".join("%d. %s" % (i + 1, w) for i, w in enumerate(words)),
+        "【每个词的总表材料】\n" + "\n\n".join("@%s\n%s" % (w, _mat_short(w, budget)) for w in words),
+        "【视频技能 %s（%s）里和画面有关的规矩：每个词每一条都要做到】\n" % (ver, ed) + rules,
+        "【画面怎么画、画面设置怎么写（视频技能 %s 的 pictures.md 全文）】\n" % ver + pm,
+        "【范例：%s 的画面设置（视频技能 %s kit 里过了起草检查的，写法和你要交的一样；里面的 art/… 插图是那个词自己画的）】\n" % (EXAMPLE_WORD, ed) + ex,
+        OUT_MULTI % (words[0], "、".join(motions()), "、".join("art/" + x for x in scenes()), END)])
+
+
+_MARK = re.compile(r"^[ \t>*#_]*[@＠]\s*([A-Za-z][A-Za-z0-9'’\- .]*?)\s*[*_]*\s*$", re.M)
+
+
+def parse_multi(text, words):
+    """一轮交回的原文 → {单词: (P, raw, svgs, errs)}：按 @单词 那一行分段，每段照一个词读。没有 @ 行、只要一个词时整段算这个词。"""
+    t = (text or "").replace("\r", "")
+    low = {w.lower(): w for w in words}
+    marks = [(m.start(), m.end(), low.get(m.group(1).strip().lower())) for m in _MARK.finditer(t)]
+    marks = [x for x in marks if x[2]]
+    out = {}
+    if not marks:
+        if len(words) == 1:
+            out[words[0]] = parse(t.replace(END, ""))
+        return out
+    for k, (a, b, w) in enumerate(marks):
+        sec = t[b:marks[k + 1][0] if k + 1 < len(marks) else len(t)].replace(END, "")
+        if w not in out or len(sec) > 200:
+            out[w] = parse(sec)
+    return out
+
+
+def _accept(R, tid, w, P, svgs, errs):
+    """手动接力交回的一个词：能用（格式对、该有的都有）就存下；起草检查还想补的记一句。返回 (做好了吗, 一句话, 问题)。"""
+    errs = errs or check(w, P, svgs)
+    if errs:
+        return False, short_why(errs), errs
+    C.relay_stage("%s：起草检查（在 WSL 里）…" % w)
+    R.stage = "%s：起草检查（在 WSL 里）" % w
+    st, line = wsl_draft_safe(w, P, svgs)
+    left = line if st == "todo" else ""
+    save(w, P, svgs, st == "ok")
+    todo_note(w, left)
+    if st in ("env", None):
+        C.log("  %s 的起草检查没跑成（%s）：本机检查过了，先存下，出片时再起草检查" % (w, (line or "")[:160]), tid)
+    return True, ("出片前还要补 %d 处" % ntodo(left)) if left else "", []
+
+
+def do_pics_relay(R, tid, total, only):
+    """手动接力做画面：选的词按设置分成一份一份（一份 N 个），网页 AI 一轮一轮交回，收到一轮做一轮。"""
+    cfg = C.load_cfg()
+    N = max(1, int(cfg.get("relayPicChunk") or 10))
+    rnd = max(1, int(cfg.get("relayPicRound") or 1))
+    todo = pick(total or 10 ** 6, only)
+    if not todo:
+        C.log("没有要做画面的词了（要先有题目；做不出来的在“画面没做成”里）", tid)
+        return
+    nb = (len(todo) + N - 1) // N
+    C.log("画面（手动接力）：一共 %d 个词，一份 %d 个，分 %d 份；网页 AI 每写完 %d 个上传一次" % (len(todo), N, nb, rnd), tid)
+    done, batch = 0, []
+    for i in range(0, len(todo), N):
+        pend = list(todo[i:i + N])
+        C.log("第 %d 份（共 %d 份）：%s … %s，%d 个词" % (i // N + 1, nb, pend[0], pend[-1], len(pend)), tid)
+        while pend:
+            for part in R.ask_parts(tid, "做画面", build_prompt_multi(pend, min(rnd, len(pend))), pend, min(rnd, len(pend))):
+                res = parse_multi(part, pend)
+                if not res:
+                    C.RELAY["hint"] = "交回的这一轮里没认出这一份还没做的词（每个词要先写一行 @单词）"
+                    continue
+                for w, (P, raw, svgs, errs) in res.items():
+                    if w not in pend:
+                        continue
+                    _DONE.add(w)
+                    ok, why, errs2 = _accept(R, tid, w, P, svgs, errs)
+                    if ok:
+                        batch.append(w)
+                        C.log("  %s 的画面做好了%s" % (w, "（%s）" % why if why else ""), tid)
+                    else:
+                        C.x("INSERT OR REPLACE INTO picfail(word, errors, ts) VALUES(?,?,?)", (w, json.dumps(errs2, ensure_ascii=False), C.now()))
+                        C.log("  %s 的画面没做成：%s" % (w, why), tid)
+                    C.relay_word(w, ok, why)
+                    pend.remove(w)
+                    done += 1
+                    R.progress(tid, processed=done, total=len(todo))
+                    if len(batch) >= 5:
+                        _commit(tid, batch)
+                        batch = []
+            why = C.RELAY.get("endReason")
+            if pend and why == "newchat":
+                C.log("  剩下的 %d 个另开对话：出一份新的提示词" % len(pend), tid)
+                continue
+            for w in pend:                      # 你点了「剩下的先跳过」
+                C.x("INSERT OR REPLACE INTO picfail(word, errors, ts) VALUES(?,?,?)",
+                    (w, json.dumps(["你点了「剩下的先跳过」"], ensure_ascii=False), C.now()))
+                C.relay_word(w, False, "跳过了")
+                done += 1
+            if pend:
+                C.log("  剩下的 %d 个先跳过了：%s" % (len(pend), "、".join(pend[:20])), tid)
+            pend = []
+        _commit(tid, batch)
+        batch = []
+    _commit(tid, batch)
+
 
 def parse(reply):
     t = (reply or "").replace("\r", "")
@@ -567,6 +705,8 @@ def do_pics(R, tid, p):
     _ENV.update(t=0.0, warned=False)
     ver, ed = skill_version()
     C.log("画面按视频技能 %s（%s）做：和画面有关的规矩、pictures.md 全文、kit 里 %s 的画面设置当范例" % (ver, ed, EXAMPLE_WORD), tid)
+    if C.load_cfg().get("provider") == "relay":           # v1.10.9：一份好几个词，一轮一轮交回
+        return do_pics_relay(R, tid, total, only)
     done = 0
     batch = []
     # v1.10.6：手动接力每改一轮都要你再粘贴一次：不来回改——能用就存下，不能用就记“没做成”、做下一个

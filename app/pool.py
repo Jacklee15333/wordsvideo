@@ -185,9 +185,10 @@ def remove(words):
 
 
 def _busy_words():
-    """排着队、正在做、暂停着的任务里点了名的词。"""
+    """排着队、正在做的任务里点了名的词。暂停着的不算（v1.10.9）：打开软件时上次没做完的会暂停，
+    这些词照样能重新开始；重新开始时同一步暂停着的旧任务会自动取消。"""
     out = set()
-    for t in C.q("SELECT params FROM tasks WHERE status IN ('运行中','排队','已暂停')"):
+    for t in C.q("SELECT params FROM tasks WHERE status IN ('运行中','排队')"):
         try:
             out.update(json.loads(t["params"] or "{}").get("words") or [])
         except Exception:

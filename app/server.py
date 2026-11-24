@@ -457,6 +457,12 @@ def api_open(b):
 
 
 def api_relay_post(b):
+    if b.get("op") in ("newchat", "skiprest"):        # v1.10.9：一份好几个词：剩下的另开对话继续 / 剩下的先跳过
+        ok, msg = C.relay_act(b.get("id", 0), b["op"])
+        return {"ok": ok, "msg": msg}
+    if b.get("skip") and C.RELAY.get("multi"):
+        ok, msg = C.relay_act(b.get("id", 0), "skiprest")
+        return {"ok": ok, "msg": msg}
     ok, msg = C.relay_submit(b.get("id", 0), b.get("reply", ""), skip=bool(b.get("skip")))
     return {"ok": ok, "msg": msg}
 
