@@ -1,0 +1,487 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/twin-cups.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "label": "像、同样的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/raincloud.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "label": "…样子的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-eq.svg",
+  "p1": "art/ic-raincloud.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/street-bg.svg",
+  "items": [
+   {
+    "svg": "art/raincloud.svg",
+    "x": 0.5,
+    "y": 0.3,
+    "s": 0.4,
+    "anim": "bob"
+   },
+   {
+    "actor": "west-girl-surprised",
+    "x": 0.3,
+    "y": 0.64,
+    "s": 0.7,
+    "z": 3
+   },
+   {
+    "label": "看起来像是真的",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/raincloud.svg",
+     "x": 0.5,
+     "y": 0.3,
+     "s": 0.4,
+     "anim": "bob"
+    },
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.26,
+     "y": 0.64,
+     "s": 0.72,
+     "z": 3
+    },
+    {
+     "svg": "art/umbrella.svg",
+     "x": 0.74,
+     "y": 0.66,
+     "s": 0.4
+    }
+   ],
+   "text": "很可能的",
+   "pos": "形容词",
+   "diff": "八九不离十",
+   "ex": "It is likely to rain this afternoon.",
+   "exzh": "今天下午很可能下雨。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.4,
+      "when": "rain",
+      "anim": "bob"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.22,
+      "y": 0.64,
+      "s": 0.72,
+      "z": 3,
+      "when": "afternoon"
+     },
+     {
+      "svg": "art/umbrella.svg",
+      "x": 0.76,
+      "y": 0.66,
+      "s": 0.4,
+      "when": "rain",
+      "delay": 0.6
+     },
+     {
+      "label": "likely",
+      "x": 0.84,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "likely"
+     },
+     {
+      "label": "很可能",
+      "x": 0.84,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "很可能"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "svg": "art/trophy.svg",
+     "x": 0.66,
+     "y": 0.54,
+     "s": 0.46
+    },
+    {
+     "actor": "west-girl-raise",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    }
+   ],
+   "text": "多半",
+   "pos": "副词",
+   "diff": "常说 most likely",
+   "ex": "She will most likely win the race.",
+   "exzh": "她多半会赢得比赛。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "when": "She"
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.7,
+      "y": 0.54,
+      "s": 0.46,
+      "when": "win",
+      "pop": true
+     },
+     {
+      "label": "most likely",
+      "x": 0.7,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "most likely"
+     },
+     {
+      "label": "多半",
+      "x": 0.7,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "多半"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“看起来像（是真的）的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.4,
+      "anim": "bob"
+     },
+     {
+      "label": "like 像 + ly …样子的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "看着就像要发生",
+   "node": "① 很可能的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "乌云压城，看着就像要下雨。",
+    "还没下，但八九不离十，就是很可能的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.4,
+      "when": "乌云",
+      "anim": "bob"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.26,
+      "y": 0.64,
+      "s": 0.72,
+      "z": 3,
+      "when": "要下雨"
+     },
+     {
+      "label": "还没下",
+      "x": 0.8,
+      "y": 0.6,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "还没下"
+     },
+     {
+      "label": "很可能的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "很可能的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "当副词",
+   "node": "② 多半",
+   "pos": "副词",
+   "pic": 1,
+   "say": [
+    "当副词，就是多半；只有 likely 能说 sb is likely to do。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.66,
+      "y": 0.54,
+      "s": 0.46,
+      "when": "当副词"
+     },
+     {
+      "label": "多半",
+      "x": 0.66,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "多半"
+     },
+     {
+      "label": "He is likely to win",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "likely to do"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "possible": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.5,
+      "a": 0.5
+     }
+    ]
+   },
+   "probable": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8
+     }
+    ]
+   },
+   "probably": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人觉得明天会怎样？",
+    "listen": "It's likely to rain tomorrow.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "很可能下雨",
+     "一定不会下雨",
+     "会下雪",
+     "会很热"
+    ],
+    "ans": "A",
+    "why": "be likely to 很可能。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "He is ______ to win the race.",
+    "opts": [
+     "likely",
+     "probable",
+     "possible",
+     "like"
+    ],
+    "ans": "A",
+    "why": "sb. is likely to do 某人很可能做某事；probable、possible 不这样用。",
+    "kd": "用法"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 likely、unlikely 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The sky is clear, so it's ______ to rain.",
+    "opts": [],
+    "ans": "unlikely",
+    "why": "天很晴，下雨的可能性小，用 unlikely。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Which team is ______ to win, A or B? (likely)",
+    "opts": [],
+    "ans": "more likely",
+    "why": "两队比较，用比较级 more likely。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "She is likely come late today.",
+    "opts": [],
+    "ans": "come → to come",
+    "why": "be likely to do，要带 to。",
+    "kd": "用法"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这是最可能发生的事。",
+    "stem": "This is the ______ ______ thing to happen.",
+    "opts": [],
+    "ans": [
+     "most",
+     "likely"
+    ],
+    "why": "最可能用最高级 most likely。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Do you ______ this film?",
+    "opts": [
+     "likely",
+     "alike",
+     "liking",
+     "like"
+    ],
+    "ans": "D",
+    "why": "Do 后面用动词原形 like（喜欢）；likely 是形容词。",
+    "kd": "词性转换"
+   }
+  ]
+ }
+}

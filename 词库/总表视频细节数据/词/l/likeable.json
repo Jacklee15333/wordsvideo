@@ -1,7 +1,283 @@
 {
  "单词": "likeable",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/heart.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "shadow": true
+     },
+     {
+      "label": "喜欢",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.6
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/heart.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "shadow": true
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.8,
+      "y": 0.3,
+      "s": 0.14,
+      "anim": "pulse"
+     },
+     {
+      "label": "能…的、值得…的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-heart.svg",
+   "p1": "art/ic-check.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.36,
+     "y": 0.62,
+     "s": 0.8,
+     "z": 3
+    },
+    {
+     "svg": "art/heart.svg",
+     "x": 0.72,
+     "y": 0.3,
+     "s": 0.22,
+     "anim": "pulse"
+    },
+    {
+     "label": "值得被喜欢的",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.36,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.76,
+      "y": 0.62,
+      "s": 0.74,
+      "z": 3
+     },
+     {
+      "svg": "art/heart.svg",
+      "x": 0.56,
+      "y": 0.22,
+      "s": 0.16,
+      "anim": "pulse"
+     }
+    ],
+    "text": "讨人喜欢的、招人喜爱的",
+    "pos": "形容词",
+    "diff": "值得被喜欢",
+    "ex": "Tom is a likeable boy.",
+    "exzh": "汤姆是个讨人喜欢的男孩。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "when": "Tom"
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.62,
+       "y": 0.3,
+       "s": 0.2,
+       "anim": "pulse",
+       "when": "likeable"
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.82,
+       "y": 0.62,
+       "s": 0.72,
+       "z": 3,
+       "when": "likeable",
+       "delay": 0.3
+      },
+      {
+       "label": "likeable",
+       "x": 0.62,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "likeable"
+      },
+      {
+       "label": "讨人喜欢",
+       "x": 0.62,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "讨人喜欢"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“值得被喜欢的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.36,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.72,
+       "y": 0.3,
+       "s": 0.22,
+       "anim": "pulse"
+      },
+      {
+       "label": "like 喜欢 + able 值得…的",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.066,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "值得被喜欢",
+    "node": "讨人喜欢的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "值得被喜欢的，就是讨人喜欢的、招人喜爱的。",
+     "英式多写 likeable，美式常写 likable。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.36,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "when": "值得被喜欢"
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.72,
+       "y": 0.3,
+       "s": 0.22,
+       "anim": "pulse",
+       "when": "讨人喜欢"
+      },
+      {
+       "label": "讨人喜欢的",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "讨人喜欢的"
+      },
+      {
+       "label": "likeable / likable",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "likeable"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "engaging": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-speech",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "likeableai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人觉得新同学怎么样？\n听：Our new classmate is very likeable.\nA. 很难相处\nB. 很爱生气\nC. 很讨人喜欢\nD. 很少说话",
@@ -89,5 +365,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

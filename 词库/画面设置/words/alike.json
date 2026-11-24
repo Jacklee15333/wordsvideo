@@ -1,0 +1,528 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/map.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "label": "在…上",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/twin-cups.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true
+    },
+    {
+     "label": "像、同样的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/ic-eq.svg",
+  "p1": "art/ic-eq.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/park-bg.svg",
+  "items": [
+   {
+    "actor": "west-girl-listen",
+    "x": 0.3,
+    "y": 0.62,
+    "s": 0.8,
+    "z": 3
+   },
+   {
+    "actor": "west-girl-listen",
+    "x": 0.7,
+    "y": 0.62,
+    "s": 0.8,
+    "z": 3
+   },
+   {
+    "label": "样子上相同的",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-listen",
+     "x": 0.3,
+     "y": 0.62,
+     "s": 0.8,
+     "z": 3,
+     "seq": "blink"
+    },
+    {
+     "actor": "west-girl-listen",
+     "x": 0.7,
+     "y": 0.62,
+     "s": 0.8,
+     "z": 3,
+     "seq": "blink"
+    }
+   ],
+   "text": "相像的",
+   "pos": "形容词",
+   "diff": "只能放在动词后",
+   "ex": "The two sisters look alike.",
+   "exzh": "这两姐妹长得很像。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-listen",
+      "x": 0.3,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "when": "two sisters"
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.7,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "when": "two sisters",
+      "delay": 0.3
+     },
+     {
+      "label": "look alike",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "alike"
+     },
+     {
+      "label": "很像",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "很像"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-laugh",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.66,
+     "y": 0.64,
+     "s": 0.7,
+     "z": 3
+    },
+    {
+     "actor": "west-girl-raise",
+     "x": 0.86,
+     "y": 0.64,
+     "s": 0.66,
+     "z": 3
+    }
+   ],
+   "text": "同样地；…和…都",
+   "pos": "副词",
+   "diff": "一样对待",
+   "ex": "Teachers and students alike enjoyed the show.",
+   "exzh": "老师和学生都喜欢这场演出。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.84,
+      "z": 3,
+      "when": "Teachers"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.6,
+      "y": 0.64,
+      "s": 0.7,
+      "z": 3,
+      "when": "students"
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.82,
+      "y": 0.64,
+      "s": 0.66,
+      "z": 3,
+      "when": "students",
+      "delay": 0.2
+     },
+     {
+      "svg": "art/heart.svg",
+      "x": 0.4,
+      "y": 0.24,
+      "s": 0.16,
+      "anim": "pulse",
+      "when": "enjoyed"
+     },
+     {
+      "label": "... and ... alike",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "alike"
+     },
+     {
+      "label": "都",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "都"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“在样子上相同的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-listen",
+      "x": 0.3,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.7,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3
+     },
+     {
+      "label": "a 在…上 + like 同一个身形",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.066,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "样子上相同",
+   "node": "① 相像的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "在样子上相同，就是相像的。",
+    "它只能放在动词后面：They are alike，不说 alike twins。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-listen",
+      "x": 0.3,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "when": "样子上相同"
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.7,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "when": "样子上相同"
+     },
+     {
+      "label": "相像的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "相像的"
+     },
+     {
+      "label": "They are alike ✓",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "They are alike"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一样对待",
+   "node": "② 同样地；…和…都",
+   "pos": "副词",
+   "pic": 1,
+   "say": [
+    "一样对待，就是同样地；…and…alike，就是…和…都。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.84,
+      "z": 3,
+      "when": "一样对待"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.66,
+      "y": 0.64,
+      "s": 0.7,
+      "z": 3,
+      "when": "一样对待"
+     },
+     {
+      "label": "同样地",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "同样地"
+     },
+     {
+      "label": "…和…都",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "和…都"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "equally": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/scales.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7
+     }
+    ]
+   },
+   "likewise": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.7,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     }
+    ]
+   },
+   "similarly": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.35,
+      "y": 0.55,
+      "s": 0.7
+     },
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.65,
+      "y": 0.55,
+      "s": 0.7
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人说双胞胎怎么样？",
+    "listen": "The twins look so alike that I can't tell them apart.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "一点不像",
+     "长得很像",
+     "个子不同",
+     "性格相反"
+    ],
+    "ans": "B",
+    "why": "look alike 看起来很像。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The two sisters are very ______.",
+    "opts": [
+     "like",
+     "likely",
+     "likes",
+     "alike"
+    ],
+    "ans": "D",
+    "why": "作表语说“相像的”用 alike，不用 like。",
+    "kd": "易混"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 alike、similar 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "My idea is ______ to yours.",
+    "opts": [],
+    "ans": "similar",
+    "why": "be similar to 与……相似；alike 后面不接 to。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "My sister and I ______ the same music. (alike)",
+    "opts": [],
+    "ans": "like",
+    "why": "主语是复数，动词“喜欢”用 like。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "My brother and I are not alike at all, so we like the same food.",
+    "opts": [],
+    "ans": "so → but",
+    "why": "前面说不像，后面说喜欢一样的食物，是转折，用 but。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这对双胞胎长得很像。",
+    "stem": "The twins ______ alike.",
+    "opts": [],
+    "ans": "look",
+    "why": "look alike 看起来很像。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "My new phone is ______ yours.",
+    "opts": [
+     "alike",
+     "likely",
+     "likes",
+     "like"
+    ],
+    "ans": "D",
+    "why": "介词 like 后面接宾语 yours；alike 后面不能直接接宾语。",
+    "kd": "易混"
+   }
+  ]
+ }
+}

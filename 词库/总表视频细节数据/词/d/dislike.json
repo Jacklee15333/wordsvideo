@@ -1,7 +1,430 @@
 {
  "单词": "dislike",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/heart.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.5
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.55,
+      "r": 0.3,
+      "stroke": "#E2453C",
+      "lw": 8,
+      "fill": "rgba(0,0,0,0)",
+      "delay": 1.0
+     },
+     {
+      "ray": [
+       [
+        0.29000000000000004,
+        0.22000000000000003
+       ],
+       [
+        0.71,
+        0.8800000000000001
+       ]
+      ],
+      "color": "#E2453C",
+      "lw": 0.02,
+      "dur": 0.4,
+      "delay": 1.0
+     },
+     {
+      "label": "相反",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "delay": 1.0
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/heart.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "shadow": true
+     },
+     {
+      "label": "喜欢",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/ic-xx.svg",
+   "p1": "art/ic-heart.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/heart.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.4
+    },
+    {
+     "shape": "circle",
+     "x": 0.5,
+     "y": 0.5,
+     "r": 0.24,
+     "stroke": "#E2453C",
+     "lw": 8,
+     "fill": "rgba(0,0,0,0)",
+     "delay": 0.8
+    },
+    {
+     "ray": [
+      [
+       0.332,
+       0.236
+      ],
+      [
+       0.6679999999999999,
+       0.764
+      ]
+     ],
+     "color": "#E2453C",
+     "lw": 0.02,
+     "dur": 0.4,
+     "delay": 0.8
+    },
+    {
+     "label": "和喜欢相反",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#C92A2A",
+     "border": "#C92A2A"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/bed.svg",
+      "x": 0.5,
+      "y": 0.7,
+      "s": 0.5
+     },
+     {
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "svg": "art/clock_f0.svg",
+      "x": 0.84,
+      "y": 0.4,
+      "s": 0.26,
+      "fps": 6
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.24,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     }
+    ],
+    "text": "不喜欢、厌恶",
+    "pos": "动词",
+    "diff": "比 hate 轻",
+    "ex": "I dislike getting up early.",
+    "exzh": "我不喜欢早起。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bed.svg",
+       "x": 0.5,
+       "y": 0.72,
+       "s": 0.5,
+       "when": "getting up"
+      },
+      {
+       "frames": [
+        "art/bell_f0.svg",
+        "art/bell_f1.svg"
+       ],
+       "svg": "art/bell_f0.svg",
+       "x": 0.84,
+       "y": 0.4,
+       "s": 0.26,
+       "fps": 6,
+       "when": "early"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.22,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "when": "I"
+      },
+      {
+       "label": "dislike",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "dislike"
+      },
+      {
+       "label": "不喜欢早起",
+       "x": 0.5,
+       "y": 0.26,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "不喜欢早起"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/spider.svg",
+      "x": 0.72,
+      "y": 0.36,
+      "s": 0.3,
+      "anim": "bob"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     }
+    ],
+    "text": "反感",
+    "pos": "名词",
+    "diff": "不喜欢的感觉、不喜欢的东西",
+    "ex": "She has a strong dislike of spiders.",
+    "exzh": "她特别讨厌蜘蛛。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.28,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "when": "She"
+      },
+      {
+       "svg": "art/spider.svg",
+       "x": 0.72,
+       "y": 0.36,
+       "s": 0.32,
+       "when": "spiders",
+       "anim": "bob"
+      },
+      {
+       "label": "dislike",
+       "x": 0.72,
+       "y": 0.8,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "dislike"
+      },
+      {
+       "label": "讨厌",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "讨厌"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“和喜欢相反”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/heart.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.4
+      },
+      {
+       "shape": "circle",
+       "x": 0.5,
+       "y": 0.5,
+       "r": 0.24,
+       "stroke": "#E2453C",
+       "lw": 8,
+       "fill": "rgba(0,0,0,0)",
+       "delay": 0.8
+      },
+      {
+       "ray": [
+        [
+         0.332,
+         0.236
+        ],
+        [
+         0.6679999999999999,
+         0.764
+        ]
+       ],
+       "color": "#E2453C",
+       "lw": 0.02,
+       "dur": 0.4,
+       "delay": 0.8
+      },
+      {
+       "label": "dis 相反 + like 喜欢",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "和喜欢相反",
+    "node": "不喜欢、反感",
+    "pos": "动词、名词",
+    "pic": 0,
+    "say": [
+     "和喜欢相反，就是不喜欢、反感；当名词，就是反感、不喜欢的东西。",
+     "dislike 后面接动名词：dislike getting up early。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/heart.svg",
+       "x": 0.3,
+       "y": 0.4,
+       "s": 0.3,
+       "when": "和喜欢相反"
+      },
+      {
+       "shape": "circle",
+       "x": 0.3,
+       "y": 0.4,
+       "r": 0.18,
+       "stroke": "#E2453C",
+       "lw": 8,
+       "fill": "rgba(0,0,0,0)",
+       "when": "不喜欢"
+      },
+      {
+       "ray": [
+        [
+         0.174,
+         0.202
+        ],
+        [
+         0.426,
+         0.5980000000000001
+        ]
+       ],
+       "color": "#E2453C",
+       "lw": 0.02,
+       "dur": 0.4,
+       "when": "不喜欢"
+      },
+      {
+       "svg": "art/spider.svg",
+       "x": 0.74,
+       "y": 0.36,
+       "s": 0.28,
+       "when": "不喜欢的东西",
+       "anim": "bob"
+      },
+      {
+       "label": "不喜欢",
+       "x": 0.3,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "不喜欢"
+      },
+      {
+       "label": "dislike getting up early",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "dislike getting up early"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "hate": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/spider.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "dislikeai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人不喜欢做什么？\n听：I dislike getting up early in winter.\nA. 冬天游泳\nB. 冬天吃冰淇淋\nC. 冬天出门旅行\nD. 冬天早起",
@@ -90,5 +513,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-24 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
