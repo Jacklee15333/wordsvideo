@@ -493,6 +493,33 @@ def api_words_task(b):
             "msg": "开始了（任务 #%d），%d 个词%s" % (tid, len(found), ("；总表里没有、跳过的：" + "、".join(miss[:20])) if miss else "")}
 
 
+def api_find(qs):
+    """选词「从总表里找」：整张总表分两段。mode=q：没题目的在前（能选），有题目的在后（灰的，不能选）；
+    mode=pic：没画面的在前（有题目的排最前，能直接做画面；没题目的要先出题），有画面的在后（灰的）。"""
+    mode, t = qs.get("mode") or "q", (qs.get("q") or "").strip().lower()
+    page, size = max(1, int(qs.get("page") or 1)), 60
+    seen, rows = set(), []
+    for r in C.word_rows():
+        if r["word"] not in seen:
+            seen.add(r["word"])
+            rows.append(r)
+    hasq = lambda r: r["status"] in ("done", "orig")
+    sel = (lambda r: not r["pic"]) if mode == "pic" else (lambda r: not hasq(r))
+    hit = [r for r in rows if not t or t in r["word"].lower() or t in (r["meaning"] or "")]
+    A = [r for r in hit if sel(r)]
+    if mode == "pic":
+        A.sort(key=lambda r: 0 if hasq(r) else 1)         # 有题目的排前面：选上就能直接做画面
+    B = [r for r in hit if not sel(r)]
+    PL._db()
+    pool = {x["word"]: x for x in C.q("SELECT word, picked FROM pool")}
+    out = A + B
+    items = [{"word": r["word"], "meaning": r["meaning"], "q": hasq(r), "manual": r["status"] == "manual", "pic": r["pic"],
+              "video": r["video"], "sel": sel(r), "inPool": r["word"] in pool, "picked": bool((pool.get(r["word"]) or {}).get("picked"))}
+             for r in out[(page - 1) * size: page * size]]
+    return {"items": items, "total": len(out), "nSel": len(A), "nOther": len(B), "page": page, "size": size, "mode": mode,
+            "all": [r["word"] for r in A] if len(A) <= 3000 else []}
+
+
 def api_results(qs):
     """成果：做好的词，一个词一行（总表里一个词可能有好几行）。f＝video 有视频 / ready 题目和画面都好了、还没出视频 / q 有题目。"""
     f, t = qs.get("f") or "video", (qs.get("q") or "").strip().lower()
@@ -533,12 +560,13 @@ GET = {
     "/api/next": lambda qs: {"words": next_unready(int(qs.get("n", 5)))},
     "/api/check": lambda qs: CK.snapshot(watch=qs.get("watch") == "1"),
     "/api/results": api_results,
+    "/api/find": api_find,
     "/api/qres": lambda qs: {"items": RS.q_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
     "/api/pres": lambda qs: {"items": RS.p_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
     "/api/pool": lambda qs: PL.summary() if qs.get("brief") else PL.items(),
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
-NEED_REPO = {"/api/next", "/api/pool", "/api/results", "/api/qres", "/api/pres", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
+NEED_REPO = {"/api/next", "/api/pool", "/api/find", "/api/results", "/api/qres", "/api/pres", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
 POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/task/op": api_task_op,
         "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
         "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,

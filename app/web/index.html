@@ -262,6 +262,17 @@ nav a.on .sn{background:var(--base);border-color:var(--base);color:#fff}
 .rlist li{margin:2px 0}
 .pbar label.small{white-space:nowrap}
 #vMiss th,#vReady th{white-space:nowrap}
+/* v1.10.1：从总表里找分两段；导入先检测 */
+.wsec td{background:#F3F7FD;color:var(--ink);font-weight:600;font-size:12.5px;padding:7px 8px;border-bottom-color:#D3E0F3}
+.wsec.g td{background:#EEF1F4;color:var(--muted)}
+tr.wdim td{color:var(--faint)}
+tr.wdim td.w{color:var(--faint)}
+.wnote{font-size:11.5px;color:var(--amber);white-space:nowrap}
+.wnote.g{color:var(--faint)}
+.wmode .chip{flex-direction:column;align-items:flex-start;gap:2px}
+.wmode .chip small{font-size:11.5px;opacity:.75;font-weight:400}
+#pImpCheck{margin-top:10px}
+.plist th{white-space:nowrap}
 /* v1.9.9：这次给哪些词、结果、存在哪儿 */
 .pst-will{background:#E7EEF8;color:var(--blue)}
 .tc{font-weight:600;color:var(--red);margin-left:2px}
@@ -425,10 +436,11 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
         <span class="pacts"><button class="btn ghost sm" id="pImpBtn">导入单词</button><button class="btn ghost sm" id="pAll">这些都选上</button><button class="btn ghost sm" id="pNone">都不选</button><button class="btn ghost sm" id="pClearDone">清掉做好了的</button></span>
     </div>
     <div class="pimp" id="pImp" hidden>
-        <textarea id="pText" rows="4" style="font-family:var(--en)" placeholder="把要做的词粘贴进来：一行一个，或者用逗号隔开。也可以点「选文件」，从 Excel（.xlsx）、txt、csv 里读。只收总表里有的词。"></textarea>
+        <textarea id="pText" rows="4" style="font-family:var(--en)" placeholder="把要做的词粘贴、输入进来：一行一个，或者用逗号隔开。也可以点「选文件」，从 Excel（.xlsx）、txt、csv 里读。点「检测这些词」，先看每个词有没有题目、画面，再决定加哪些。"></textarea>
         <div class="line"><input type="file" id="pFile" accept=".xlsx,.xlsm,.txt,.csv,.tsv" hidden><button class="btn ghost sm" id="pFileBtn">选文件（Excel / txt / csv）</button>
           <span class="small">这一批叫</span><input type="text" id="pTagIn" placeholder="可不填，比如 7A-U5" style="width:160px">
-          <button class="btn sm" id="pAdd">加进备选单词</button><span id="pImpMsg" class="small"></span></div>
+          <button class="btn sm" id="pAdd">检测这些词</button><span id="pImpMsg" class="small"></span></div>
+        <div id="pImpCheck" hidden></div>
       </div>
     <div class="plist" id="pList"></div>
     <div class="small muted" id="pSel" style="margin-top:6px"></div>
@@ -616,16 +628,19 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
     <p class="muted">在整张总表里搜单词、按准备情况筛，勾几个点「加进备选单词」，它们就进了备选单词、并且选上了。点一个词看它的题目和准备情况。</p></div></div>
   <div class="mtabs stabs"><a data-go="pick" class="">备选单词</a><a data-go="words" class="on">从总表里找</a></div>
   <div class="row">
-    <div style="width:176px;flex:none"><div class="cats" id="wChips"></div></div>
+    <div style="width:196px;flex:none"><div class="cats wmode" id="wChips">
+      <div class="hd">找哪种词</div>
+      <span class="chip on" data-wm="q"><span>找要出题的词</span><small>没题目的在前面，能选</small></span>
+      <span class="chip" data-wm="pic"><span>找要做画面的词</span><small>没画面的在前面，能选</small></span>
+    </div></div>
     <div style="width:420px;flex:none">
       <div style="display:flex;gap:8px;margin-bottom:8px">
         <input type="text" id="wq" placeholder="搜单词或中文意思" style="flex:1">
-        <select id="ws"><option value="">题目：全部</option><option value="done">有题目</option><option value="missing">还缺</option>
-          <option value="manual">待人工</option><option value="orig">总表原有</option></select>
       </div>
+      <div class="rep" id="wHelp"></div>
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap" class="small">
-        <label><input type="checkbox" id="wAllPage"> 全选这一页</label>
-        <button class="btn ghost sm" id="wAllHit">选中筛出来的全部</button>
+        <label><input type="checkbox" id="wAllPage"> 全选这一页能选的</label>
+        <button class="btn ghost sm" id="wAllHit">能选的全选上</button>
         <span id="wSelN" class="muted">没选</span>
         <button class="btn sm" id="wPrep">加进备选单词（选上）</button>
       </div>
@@ -633,7 +648,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
         <div class="pager" id="wPager"></div></div>
     </div>
     <div class="col"><div class="box" id="wDetail"><p class="muted">在左边选一个词。<br><br>每个词出片前要准备好两样：<b>7 道题</b>（出题）和<b>画面设置</b>（场景、人物、插图）。
-      列表里三个小格依次是 题 · 画 · 片，绿的是有了。勾几个词点「加进备选单词」：它们进了「备选单词」并且选上了，到「出题」「画面」去做。</p></div></div>
+      列表分两段：前面是还没有题目（或者画面）的词，能勾；后面灰色的是已经有了的，不能选。三个小格依次是 题 · 画 · 片，绿的是有了。勾几个词点「加进备选单词」：它们进了「备选单词」并且选上了，到「出题」「画面」去做。</p></div></div>
   </div>
 </section>
 
@@ -1012,7 +1027,7 @@ function gearOpen(){go('ai')}
 $('#tHelp').onclick=()=>modal('做视频的六步',`<p class="muted" style="margin-top:0">左边从上到下就是做视频的顺序，一页只管一件事；在哪一步点了开始，做的过程就在那一步的页面下面，不会跳走。</p><ol class="steps">
   <li><b>选 AI</b>：用哪个 AI（网页镜像、接口、手动接力、模拟），一种一个标签；填好账号，点「改用这个」。</li>
   <li><b>检测</b>：点「一键检测」，AI、词库、出片环境三样都打 ✓ 就行；哪样打 ✗，看它后面那句话，点「详情」看是哪一步。</li>
-  <li><b>选词</b>：只管选词。把要做的词导进「备选单词」（或者在「从总表里找」里搜），勾上就是选上了，软件记着。每个词都检测：有没有题目、有没有画面、有没有视频，下一步该去哪。</li>
+  <li><b>选词</b>：只管选词。把要做的词导进「备选单词」（或者在「从总表里找」里搜），勾上就是选上了，软件记着。每个词都检测：有没有题目、有没有画面、有没有视频，下一步该去哪。导入、自己输入的词先检测再加；「从总表里找」把还缺的排在前面能选，已经有了的灰掉不能选。</li>
   <li><b>出题</b>：给选上的词里还缺题目的出题，已经有题目的自动跳过；做完有汇报（跳过了哪些、每个词出好了没有）。</li>
   <li><b>画面</b>：给选上的词里有题目、缺画面的做画面，已经有画面的、还没题目的自动跳过；做完有汇报。</li>
   <li><b>出视频</b>：先检测，题目、画面都有的词才能建批次、渲染；缺的列出来，点按钮去「出题」或「画面」补。</li></ol>
@@ -1413,17 +1428,31 @@ $('#pFile').onchange=async()=>{const f=$('#pFile').files[0];if(!f)return;const m
     const d=await api('/api/pool',{op:'extract',name:f.name,b64});
     if(d.text)$('#pText').value=($('#pText').value.trim()?$('#pText').value.trim()+'\n':'')+d.text;
     if(d.text&&!$('#pTagIn').value.trim())$('#pTagIn').value=f.name.replace(/\.[^.]+$/,'').slice(0,30);
-    m.style.color=d.ok?'var(--pass)':'var(--red)';m.textContent=(d.ok?'✓ ':'✗ ')+d.msg+(d.ok?'。看一眼，没问题就点「加进备选单词」':'')}
+    m.style.color=d.ok?'var(--pass)':'var(--red)';m.textContent=(d.ok?'✓ ':'✗ ')+d.msg;if(d.ok)setTimeout(()=>$('#pAdd').click(),200)}
   catch(e){m.style.color='var(--red)';m.textContent='✗ '+e.message}
   $('#pFile').value=''};
-$('#pAdd').onclick=()=>busy($('#pAdd'),$('#pImpMsg'),'正在加',async()=>{
-  if(!$('#pText').value.trim())return{ok:false,msg:'先粘贴单词，或者点「选文件」'};
-  const d=await api('/api/pool',{op:'add',text:$('#pText').value,tag:$('#pTagIn').value});
-  if(d.ok){$('#pText').value='';$('#pTagIn').value='';$('#pImp').hidden=true;PF='all';await loadPool();
-    const got=(d.added||[]).concat(d.have||[]),its=(PL.items||[]).filter(i=>got.includes(i.word));
-    if(its.length){const n=k=>its.filter(i=>PCAT(i)===k).length;
-      d.msg+=`。检测：没题目 ${n('noq')} 个、有题目没画面 ${n('nopic')} 个、题目画面都有 ${n('ready')} 个、有视频 ${n('video')} 个`}}
-  return d});
+/* 先检测：题目、画面有没有；都有了的不用再做（灰的），缺的默认勾上，你看一眼再加 */
+let PIC=[];
+$('#pAdd').onclick=()=>busy($('#pAdd'),$('#pImpMsg'),'正在检测',async()=>{
+  if(!$('#pText').value.trim())return{ok:false,msg:'先粘贴、输入单词，或者点「选文件」'};
+  const d=await api('/api/pool',{op:'check',text:$('#pText').value});PIC=d.items||[];
+  const box=$('#pImpCheck');box.hidden=!PIC.length&&!(d.miss||[]).length;
+  const need=i=>!i.q||!i.pic,todo=i=>!i.q&&!i.pic?'要出题、再做画面':!i.q?'要出题':!i.pic?'要做画面':'题目、画面都有了，不用再做';
+  const n=f=>PIC.filter(f).length;
+  box.innerHTML=(PIC.length?`<div class="rep"><b>检测</b>：认出 ${PIC.length} 个 · 没题目 <b>${n(i=>!i.q)}</b> · 有题目没画面 <b>${n(i=>i.q&&!i.pic)}</b> · 题目画面都有 <b>${n(i=>i.q&&i.pic)}</b>（灰的，不用再做）。缺东西的已经勾上，看一眼，点「加进备选单词」。</div>
+    <div class="plist" style="max-height:260px"><table><tr><th></th><th>单词</th><th>意思</th><th>题目</th><th>画面</th><th>视频</th><th>要做什么</th><th></th></tr>`+PIC.map(i=>`<tr class="${need(i)?'':'wdim'}">
+      <td style="width:22px">${need(i)?`<input type="checkbox" class="pimck" value="${esc(i.word)}" checked>`:''}</td><td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,26)}</td>
+      <td class="n">${ckQ(i)}</td><td class="n">${ckP(i)}</td><td class="n">${i.video?'<span class="ck-y">有</span>':'<span class="ck-n">—</span>'}</td>
+      <td class="n">${need(i)?`<span class="pst ${i.q?'pst-needpic':'pst-todo'}">${todo(i)}</span>`:`<span class="small faint">${todo(i)}</span>`}</td>
+      <td class="n small faint">${i.picked?'已选上':i.inPool?'在备选里':''}</td></tr>`).join('')+'</table></div>':'')+
+    ((d.miss||[]).length?`<div class="small" style="margin-top:6px;color:var(--amber)">总表里没有、加不了的 ${d.miss.length} 个：${d.miss.slice(0,20).map(esc).join('、')}${d.miss.length>20?'…':''}</div>`:'')+
+    (n(need)?'<div class="line"><button class="btn sm" id="pAddGo">加进备选单词（勾的，并选上）</button><span class="small muted" id="pAddMsg"></span></div>':'<div class="small muted" style="margin-top:6px">这些词都不用再做了。</div>');
+  const go=$('#pAddGo');if(go)go.onclick=()=>busy(go,$('#pAddMsg'),'正在加',async()=>{
+    const ws=$$('.pimck:checked').map(c=>c.value);if(!ws.length)return{ok:false,msg:'一个都没勾'};
+    const r=await api('/api/pool',{op:'add',text:ws.join('\n'),tag:$('#pTagIn').value,pick:true});
+    if(r.ok){$('#pText').value='';$('#pTagIn').value='';$('#pImpCheck').hidden=true;$('#pImp').hidden=true;$('#pImpMsg').textContent='';PF='all';await loadPool()}
+    return r});
+  return{ok:!!PIC.length,msg:PIC.length?`认出 ${PIC.length} 个：需要做的 ${n(need)} 个，都有了的 ${PIC.length-n(need)} 个`:d.msg}});
 $('#pAll').onclick=()=>pPick(pVisible().filter(i=>!i.picked).map(i=>i.word),true);
 $('#pNone').onclick=()=>pPick((PL.items||[]).filter(i=>i.picked).map(i=>i.word),false);
 $('#pClearDone').onclick=async()=>{const n=(PL.counts||{}).done||0;if(!n)return toast('没有做好了的');
@@ -1454,31 +1483,40 @@ $('#rSend').onclick=async()=>{const d=await api('/api/relay',{id:RL.id,reply:$('
 $('#rSkip').onclick=async()=>{if(!confirm('这一批先跳过？这些词这次算没做。'))return;const d=await api('/api/relay',{id:RL.id,skip:true});$('#rMsg').textContent=d.msg;setTimeout(relayTick,800)};
 
 /* ───── 单词 ───── */
-let wPage=1,wTimer,wReady='',SEL=new Set();
-const RN={'':'全部单词',ready:'可以出视频了',needpic:'缺视频画面',needq:'缺题目',video:'有视频'};
+let wPage=1,wTimer,WM='q',SEL=new Set();
 $('#wq').oninput=()=>{clearTimeout(wTimer);wTimer=setTimeout(()=>{wPage=1;loadWords()},250)};
-$('#ws').onchange=()=>{wPage=1;loadWords()};
+$$('#wChips [data-wm]').forEach(x=>x.onclick=()=>{if(WM===x.dataset.wm)return;WM=x.dataset.wm;wPage=1;SEL.clear();
+  $$('#wChips [data-wm]').forEach(y=>y.classList.toggle('on',y===x));loadWords()});
 let WLAST={};
-function selN(){$('#wSelN').textContent=SEL.size?`选了 ${SEL.size} 个`:'没选'}
+function selN(){$('#wSelN').textContent=SEL.size?`勾了 ${SEL.size} 个`:'没勾'}
+/* 从总表里找：整张总表分两段——前面是还缺的（能选），后面灰色的是已经有了的（不能选） */
 async function loadWords(){
-  const d=await api(`/api/words?q=${encodeURIComponent($('#wq').value)}&status=${$('#ws').value}&page=${wPage}&ready=${wReady}`);WLAST=d;
-  if(d.notReady){$('#wTable').innerHTML=`<tr><td class="muted">${esc(d.msg)}<br><br>${/令牌/.test(d.msg)?'去「设置」填令牌、保存。':'到「设置 → GitHub 仓库」点「重新克隆仓库」再试；还不行把这句话发给我。'}</td></tr>`;$('#wPager').innerHTML='';$('#wChips').innerHTML='';return}
-  const c=d.counts||{},tot=Object.values(c).reduce((a,b)=>a+b,0);
-  const ch=k=>`<span class="chip ${k?'':'all'} ${wReady===k?'on':''}" data-r="${k}"><span>${RN[k]}</span><b>${((k?c[k]:tot)||0).toLocaleString()}</b></span>`;
-  $('#wChips').innerHTML=ch('')+'<div class="hd">出片准备到哪一步</div>'+['ready','needpic','needq','video'].map(ch).join('');
-  $$('#wChips .chip').forEach(x=>x.onclick=()=>{wReady=x.dataset.r;wPage=1;loadWords()});
-  $('#wTable').innerHTML=d.items.map(it=>{const w=esc(it.word),q=it.status==='done'||it.status==='orig';
-    return `<tr class="click"><td style="width:22px"><input type="checkbox" class="wck" value="${w}" ${SEL.has(it.word)?'checked':''}></td>
-    <td class="w" onclick="openWord(this.dataset.w)" data-w="${w}">${w}</td><td class="small muted" onclick="openWord(this.parentElement.querySelector('.w').dataset.w)">${esc(it.meaning).slice(0,22)}</td>
-    <td class="dots" title="题目 · 画面设置 · 视频"><i class="${q?'y':(it.status==='manual'?'w':'')}">题</i><i class="${it.pic?'y':''}">画</i><i class="${it.video?'y':''}">片</i></td></tr>`}).join('')||'<tr><td class="muted">没有找到。</td></tr>';
+  const d=await api(`/api/find?mode=${WM}&q=${encodeURIComponent($('#wq').value)}&page=${wPage}`);WLAST=d;
+  if(d.notReady){$('#wTable').innerHTML=`<tr><td class="muted">${esc(d.msg)}<br><br>${/令牌/.test(d.msg)?'去「设置」填令牌、保存。':'到「设置 → GitHub 仓库」点「重新克隆仓库」再试；还不行把这句话发给我。'}</td></tr>`;$('#wPager').innerHTML='';$('#wHelp').textContent='';return}
+  const Q=WM==='q',nA=d.nSel.toLocaleString(),nB=d.nOther.toLocaleString(),srch=$('#wq').value.trim();
+  $('#wHelp').innerHTML=(srch?`搜「${esc(srch)}」：`:'整张总表分两段：')+(Q
+    ?`前面 <b>${nA}</b> 个是<b>还没有题目</b>的词，能勾，勾上加进备选单词去出题；后面灰色的 <b>${nB}</b> 个<b>已经有题目</b>了，不能选。`
+    :`前面 <b>${nA}</b> 个是<b>还没有画面</b>的词，能勾（有题目的排在最前，选上就能做画面；没题目的要先出题）；后面灰色的 <b>${nB}</b> 个<b>已经有画面</b>了，不能选。`);
+  const off=(d.page-1)*d.size;let html='';
+  d.items.forEach((it,k)=>{const g=off+k;
+    if(g===0&&d.nSel)html+=`<tr class="wsec"><td colspan="4">${Q?'还没有题目的':'还没有画面的'}（能选）${nA} 个</td></tr>`;
+    if(g===d.nSel&&d.nOther)html+=`<tr class="wsec g"><td colspan="4">${Q?'已经有题目的':'已经有画面的'}（灰的，不能选）${nB} 个</td></tr>`;
+    const w=esc(it.word),note=it.sel?(Q?(it.manual?'<span class="wnote">上次没过</span>':''):(!it.q?'<span class="wnote">要先出题</span>':''))
+      :`<span class="wnote g">${Q?'有题目了':'有画面了'}</span>`,inp=it.picked?'<span class="wnote g">已选上</span>':it.inPool?'<span class="wnote g">在备选里</span>':'';
+    html+=`<tr class="click ${it.sel?'':'wdim'}"><td style="width:22px">${it.sel?`<input type="checkbox" class="wck" value="${w}" ${SEL.has(it.word)?'checked':''}>`:''}</td>
+    <td class="w" onclick="openWord(this.dataset.w)" data-w="${w}">${w}</td><td class="small" onclick="openWord(this.parentElement.querySelector('.w').dataset.w)"><span class="muted">${esc(it.meaning).slice(0,20)}</span> ${note} ${inp}</td>
+    <td class="dots" title="题目 · 画面 · 视频"><i class="${it.q?'y':(it.manual?'w':'')}">题</i><i class="${it.pic?'y':''}">画</i><i class="${it.video?'y':''}">片</i></td></tr>`});
+  $('#wTable').innerHTML=html||'<tr><td class="muted">没有找到。</td></tr>';
   $$('.wck').forEach(x=>x.onchange=()=>{x.checked?SEL.add(x.value):SEL.delete(x.value);selN()});
   $('#wAllPage').checked=false;selN();
-  const pages=Math.max(1,Math.ceil(d.total/60));
+  const pages=Math.max(1,Math.ceil(d.total/d.size)),pA=Math.max(1,Math.ceil(d.nSel/d.size));
   $('#wPager').innerHTML=`<button class="btn ghost sm" ${wPage<=1?'disabled':''} onclick="wPage--;loadWords()">上一页</button>
-    ${wPage} / ${pages}（${d.total} 个）<button class="btn ghost sm" ${wPage>=pages?'disabled':''} onclick="wPage++;loadWords()">下一页</button>`;
+    ${wPage} / ${pages}（${d.total.toLocaleString()} 个${d.nSel&&d.nOther?`；前 ${pA} 页是能选的`:''}）<button class="btn ghost sm" ${wPage>=pages?'disabled':''} onclick="wPage++;loadWords()">下一页</button>
+    ${d.nSel&&d.nOther&&wPage<=pA?`<button class="btn ghost sm" onclick="wPage=${pA+(d.nSel%d.size===0?1:0)};loadWords()">跳到灰的那段</button>`:''}`;
 }
 $('#wAllPage').onchange=()=>{$$('.wck').forEach(x=>{x.checked=$('#wAllPage').checked;x.checked?SEL.add(x.value):SEL.delete(x.value)});selN()};
-$('#wAllHit').onclick=()=>{if(!(WLAST.all||[]).length)return toast('筛出来的太多了（超过 3000 个），先缩小一点');WLAST.all.forEach(w=>SEL.add(w));loadWords()};
+$('#wAllHit').onclick=()=>{if(!(WLAST.all||[]).length)return toast(WLAST.nSel?'能选的太多了（超过 3000 个）：先搜一下缩小范围':'没有能选的词');
+  if(WLAST.all.length>300&&!confirm(`把能选的 ${WLAST.all.length} 个全勾上？`))return;WLAST.all.forEach(w=>SEL.add(w));loadWords()};
 $('#wPrep').onclick=async()=>{if(!SEL.size)return toast('先勾几个词');
   try{const d=await api('/api/pool',{op:'add',text:[...SEL].join('\n'),tag:'从总表找',pick:true});toast((d.ok?'✓ ':'✗ ')+d.msg+(d.ok?'：在「备选单词」里':''),6000)}
   catch(e){toast('✗ '+e.message,8000)}

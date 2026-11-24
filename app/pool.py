@@ -115,6 +115,31 @@ def extract(name, b64):
     return {"ok": bool(found), "msg": msg if found else "「%s」里没认出总表里有的词" % name, "text": "\n".join(found)}
 
 
+def status(words):
+    """每个词现在的情况：题目（有/没过/没有）、画面（有/没做成/没有）、视频、在不在备选单词里、选上没有。"""
+    _db()
+    _, by_word = _index()
+    pw, vd = V.pic_words(), V.videos()
+    man = set(C.manual_words())
+    pf = {r["word"] for r in C.q("SELECT word FROM picfail")}
+    have = {r["word"]: r for r in C.q("SELECT word, picked FROM pool")}
+    out = []
+    for w in words:
+        rs = by_word.get(w) or []
+        f = V.folder_of(w)
+        out.append({"word": w, "meaning": rs[0][3] if rs and len(rs[0]) > 3 else "", "q": bool(rs) and all(x[4] != "缺" for x in rs),
+                    "manual": w in man, "pic": f in pw, "picfail": w in pf, "video": f in vd,
+                    "inPool": w in have, "picked": bool((have.get(w) or {}).get("picked"))})
+    return out
+
+
+def check(text):
+    """导入、自己输入的词：先检测（总表里有没有、有没有题目、有没有画面），再决定加哪些。"""
+    found, miss = parse(text)
+    return {"ok": bool(found), "items": status(found), "miss": miss,
+            "msg": "" if found else "没认出总表里有的词" + ("（认不出：%s）" % "、".join(miss[:8]) if miss else "：先粘贴单词或者选文件")}
+
+
 def add(text, tag="", pick=False):
     _db()
     found, miss = parse(text)
@@ -224,6 +249,8 @@ def op(b):
     o = b.get("op")
     if o == "add":
         return add(b.get("text") or "", b.get("tag") or "", pick=bool(b.get("pick")))
+    if o == "check":
+        return check(b.get("text") or "")
     if o == "pick":
         return pick(b.get("words") or [], on=b.get("on", True) is not False)
     if o == "extract":
