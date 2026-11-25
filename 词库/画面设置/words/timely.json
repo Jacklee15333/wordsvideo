@@ -618,15 +618,31 @@
       "x": 0.2,
       "y": 0.6,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "turn": [
+       0,
+       2
+      ]
      },
      {
-      "actor": "west-girl-raise",
+      "id": "a",
+      "actor": "west-man-speech",
       "x": 0.5,
-      "y": 0.64,
+      "y": 0.62,
       "s": 0.86,
       "z": 3,
-      "delay": 0.3
+      "turn": [
+       1,
+       2
+      ]
+     },
+     {
+      "waves": true,
+      "on": "a",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "a"
      },
      {
       "label": "prompt 迅速的、立刻的",
@@ -656,16 +672,112 @@
      },
      {
       "svg": "art/bus.svg",
-      "x": 0.52,
+      "x": -0.1,
       "y": 0.6,
       "s": 0.5,
-      "z": 3
+      "z": 3,
+      "go": [
+       0.52,
+       0.6
+      ],
+      "dur": 2.0,
+      "wait": 0.2,
+      "anim": "ride"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 1.05,
+      "y": 0.86,
+      "s": 0.34,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.4
+      }
+     },
+     {
+      "sound": "bell",
+      "delay": 2.2
      },
      {
       "label": "on time 准时（不早不晚）",
       "x": 0.82,
       "y": 0.5,
       "size": 0.085,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   },
+   "timely": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.4,
+      "y": 0.02,
+      "every": 0.15,
+      "life": 1.2,
+      "to": [
+       0,
+       0.9
+      ],
+      "s": 0.05,
+      "wobble": 0.4
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.18,
+      "y": 0.62,
+      "s": 0.84,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/umbrella.svg",
+      "x": 0.6,
+      "y": 0.26,
+      "s": 0.4,
+      "z": 4,
+      "go": [
+       0.3,
+       0.26
+      ],
+      "dur": 1.2,
+      "loop": true
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": -0.05,
+      "y": 0.88,
+      "s": 0.32,
+      "z": 1,
+      "walk": {
+       "from": [
+        -0.05,
+        0.88
+       ],
+       "to": [
+        1.05,
+        0.88
+       ],
+       "offset": 0.3
+      }
+     },
+     {
+      "label": "timely 来得正是时候",
+      "x": 0.8,
+      "y": 0.5,
+      "size": 0.09,
       "color": "#2F6FB3",
       "border": "#2F6FB3"
      }
@@ -677,17 +789,192 @@
    {
     "w": "timely",
     "gloss": "及时的、适时的",
-    "note": "来得正是时候，不早也不晚（timely help）"
+    "note": "来得正是时候，不早也不晚（timely help）",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.4,
+       "y": 0.02,
+       "every": 0.15,
+       "life": 1.2,
+       "to": [
+        0,
+        0.9
+       ],
+       "s": 0.05,
+       "wobble": 0.4
+      },
+      {
+       "actor": "west-man-smile",
+       "x": 0.18,
+       "y": 0.62,
+       "s": 0.84,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/umbrella.svg",
+       "x": 0.6,
+       "y": 0.26,
+       "s": 0.4,
+       "z": 4,
+       "go": [
+        0.3,
+        0.26
+       ],
+       "dur": 1.2,
+       "loop": true
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": -0.05,
+       "y": 0.88,
+       "s": 0.32,
+       "z": 1,
+       "walk": {
+        "from": [
+         -0.05,
+         0.88
+        ],
+        "to": [
+         1.05,
+         0.88
+        ],
+        "offset": 0.3
+       }
+      },
+      {
+       "label": "timely 来得正是时候",
+       "x": 0.8,
+       "y": 0.5,
+       "size": 0.09,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
    },
    {
     "w": "prompt",
     "gloss": "迅速的、立刻的",
-    "note": "一叫就马上做，强调快（a prompt answer）"
+    "note": "一叫就马上做，强调快（a prompt answer）",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "id": "t",
+       "actor": "cn-teacher-point",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "id": "a",
+       "actor": "west-man-speech",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.86,
+       "z": 3,
+       "turn": [
+        1,
+        2
+       ]
+      },
+      {
+       "waves": true,
+       "on": "a",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "a"
+      },
+      {
+       "label": "prompt 迅速的、立刻的",
+       "x": 0.8,
+       "y": 0.5,
+       "size": 0.09,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
    },
    {
     "w": "on time",
     "gloss": "准时",
-    "note": "照约好的时间，不早不晚（The bus came on time.）；是短语，不是形容词"
+    "note": "照约好的时间，不早不晚（The bus came on time.）；是短语，不是形容词",
+    "pic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.24,
+       "y": 0.46,
+       "s": 0.6,
+       "z": 3
+      },
+      {
+       "svg": "art/bus.svg",
+       "x": -0.1,
+       "y": 0.6,
+       "s": 0.5,
+       "z": 3,
+       "go": [
+        0.52,
+        0.6
+       ],
+       "dur": 2.0,
+       "wait": 0.2,
+       "anim": "ride"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 1.05,
+       "y": 0.86,
+       "s": 0.34,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.05,
+         0.86
+        ],
+        "to": [
+         -0.05,
+         0.86
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "sound": "bell",
+       "delay": 2.2
+      },
+      {
+       "label": "on time 准时（不早不晚）",
+       "x": 0.82,
+       "y": 0.5,
+       "size": 0.085,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
    }
   ],
   "logic": "timely 是 time + ly：“合乎时候的”，重在时机对；prompt 重在动作快；on time 重在和约好的钟点对上"

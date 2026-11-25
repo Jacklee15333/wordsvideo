@@ -32,14 +32,16 @@
      "x": 0.38,
      "y": 0.6,
      "s": 0.85,
-     "z": 3
+     "z": 3,
+     "seq": "blink"
     },
     {
      "svg": "art/mug.svg",
      "x": 0.62,
      "y": 0.66,
      "s": 0.14,
-     "z": 6
+     "z": 6,
+     "anim": "bob"
     },
     {
      "label": "us：习惯",
@@ -49,16 +51,6 @@
      "delay": 0.5,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
-    },
-    {
-     "label": "每天七点喝一杯茶",
-     "x": 0.6,
-     "y": 0.3,
-     "size": 0.06,
-     "delay": 1.2,
-     "color": "#7A3E00",
-     "bg": "#FFF6D8",
-     "border": "#E0A800"
     }
    ]
   },
@@ -68,11 +60,12 @@
    "items": [
     {
      "id": "t",
-     "actor": "cn-teacher-point",
+     "actor": "west-man-speech",
      "x": 0.32,
      "y": 0.6,
      "s": 0.85,
-     "z": 3
+     "z": 3,
+     "seq": "talk"
     },
     {
      "svg": "art/class-desks.svg",
@@ -97,6 +90,14 @@
      "delay": 0.5,
      "color": "#2F6FB3",
      "border": "#2F6FB3"
+    },
+    {
+     "waves": true,
+     "on": "t",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "with": "t"
     }
    ]
   }
@@ -115,7 +116,8 @@
     "x": 0.3,
     "y": 0.62,
     "s": 0.85,
-    "z": 3
+    "z": 3,
+    "seq": "talk"
    },
    {
     "actor": "cn-teacher-laugh",
@@ -141,6 +143,42 @@
     "delay": 0.6,
     "color": "#2B8A3E",
     "border": "#2B8A3E"
+   },
+   {
+    "actor": "walk-west-woman-case",
+    "x": 1.05,
+    "y": 0.86,
+    "s": 0.34,
+    "z": 1,
+    "walk": {
+     "from": [
+      1.05,
+      0.86
+     ],
+     "to": [
+      -0.05,
+      0.86
+     ],
+     "offset": 0.1
+    }
+   },
+   {
+    "actor": "walk-cn-boy-pack",
+    "x": -0.05,
+    "y": 0.88,
+    "s": 0.34,
+    "z": 1,
+    "walk": {
+     "from": [
+      -0.05,
+      0.88
+     ],
+     "to": [
+      1.05,
+      0.88
+     ],
+     "offset": 0.6
+    }
    }
   ]
  },
@@ -392,7 +430,8 @@
       "x": 0.3,
       "y": 0.62,
       "s": 0.85,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "actor": "cn-teacher-laugh",
@@ -403,6 +442,14 @@
       "nodWith": "m"
      },
      {
+      "waves": true,
+      "on": "m",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "m"
+     },
+     {
       "label": "见面的习惯做法",
       "x": 0.5,
       "y": 0.1,
@@ -410,6 +457,42 @@
       "delay": 0.6,
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 1.05,
+      "y": 0.86,
+      "s": 0.34,
+      "z": 1,
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": -0.05,
+      "y": 0.88,
+      "s": 0.34,
+      "z": 1,
+      "walk": {
+       "from": [
+        -0.05,
+        0.88
+       ],
+       "to": [
+        1.05,
+        0.88
+       ],
+       "offset": 0.6
+      }
      }
     ]
    }
@@ -429,11 +512,12 @@
     "items": [
      {
       "id": "t",
-      "actor": "cn-teacher-point",
+      "actor": "west-man-present",
       "x": 0.2,
       "y": 0.6,
       "s": 0.85,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "label": "make a cake",
@@ -580,11 +664,20 @@
       "z": 5
      },
      {
+      "svg": "art/smartphone.svg",
+      "x": 0.86,
+      "y": 0.62,
+      "s": 0.3,
+      "z": 5,
+      "anim": "shake"
+     },
+     {
       "actor": "west-girl-explain",
       "x": 0.28,
       "y": 0.62,
       "s": 0.9,
-      "z": 3
+      "z": 3,
+      "seq": "talk"
      },
      {
       "label": "use 用（这个动作）",
@@ -593,6 +686,283 @@
       "size": 0.1,
       "color": "#2F6FB3",
       "border": "#2F6FB3"
+     }
+    ]
+   },
+   "usage": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-think",
+      "x": 0.18,
+      "y": 0.62,
+      "s": 0.84,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/dictionary.svg",
+      "x": 0.46,
+      "y": 0.56,
+      "s": 0.5,
+      "z": 4,
+      "shadow": true,
+      "anim": "bob"
+     },
+     {
+      "label": "make a cake ✓",
+      "x": 0.46,
+      "y": 0.16,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.5
+     },
+     {
+      "label": "usage 用法、用量",
+      "x": 0.82,
+      "y": 0.5,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   }
+  },
+  "key": "使用",
+  "items": [
+   {
+    "w": "usage",
+    "gloss": "用法；使用量",
+    "note": "说用的方式、习惯和用了多少（the usage of a word / water usage）",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-think",
+       "x": 0.18,
+       "y": 0.62,
+       "s": 0.84,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/dictionary.svg",
+       "x": 0.46,
+       "y": 0.56,
+       "s": 0.5,
+       "z": 4,
+       "shadow": true,
+       "anim": "bob"
+      },
+      {
+       "label": "make a cake ✓",
+       "x": 0.46,
+       "y": 0.16,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.5
+      },
+      {
+       "label": "usage 用法、用量",
+       "x": 0.82,
+       "y": 0.5,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
+   },
+   {
+    "w": "use",
+    "gloss": "使用、用",
+    "note": "说“用”这个动作本身，也能当动词（the use of computers / use a computer）",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.42,
+       "z": 4
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.62,
+       "y": 0.5,
+       "s": 0.5,
+       "z": 5
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.86,
+       "y": 0.62,
+       "s": 0.3,
+       "z": 5,
+       "anim": "shake"
+      },
+      {
+       "actor": "west-girl-explain",
+       "x": 0.28,
+       "y": 0.62,
+       "s": 0.9,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "label": "use 用（这个动作）",
+       "x": 0.8,
+       "y": 0.14,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "usage 是 us（用）+ age（…的做法）：“用的做法”，重在方式和数量；use 就是“用”这个动作",
+  "tip": "问怎么用、用了多少，说 usage；说用这件事，说 use"
+ },
+ "demo": {
+  "reading": {
+   "icons": [
+    "art/books.svg",
+    "art/star.svg"
+   ],
+   "lit": "读这件事：阅读",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.3,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.66,
+      "y": 0.6,
+      "s": 0.5,
+      "z": 4,
+      "anim": "bob"
+     },
+     {
+      "label": "阅读",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.12,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  "action": {
+   "icons": [
+    "art/drum.svg",
+    "art/star.svg"
+   ],
+   "lit": "做这件事：行动",
+   "pic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-girl",
+      "x": -0.05,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 3,
+      "walk": {
+       "from": [
+        -0.05,
+        0.7
+       ],
+       "to": [
+        1.05,
+        0.7
+       ],
+       "offset": 0.0
+      }
+     },
+     {
+      "ray": [
+       [
+        0.15,
+        0.4
+       ],
+       [
+        0.85,
+        0.4
+       ]
+      ],
+      "color": "#E8453C",
+      "lw": 0.02,
+      "arrow": true,
+      "dur": 1.0
+     },
+     {
+      "label": "行动",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.12,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  "pressure": {
+   "icons": [
+    "art/smartphone.svg",
+    "art/star.svg"
+   ],
+   "lit": "压着的状态：压力",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.26,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.6,
+      "y": 0.9,
+      "s": 0.4,
+      "z": 4
+     },
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.64,
+      "y": 0.62,
+      "s": 0.4,
+      "z": 5,
+      "anim": "shake"
+     },
+     {
+      "label": "压力",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.12,
+      "color": "#C0392B",
+      "border": "#C0392B"
      }
     ]
    }

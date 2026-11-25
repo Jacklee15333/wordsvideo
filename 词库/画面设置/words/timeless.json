@@ -458,6 +458,21 @@
       "delay": 0.8
      },
      {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.45,
+      "y": 0.1,
+      "every": 0.6,
+      "life": 1.6,
+      "to": [
+       0.1,
+       0.25
+      ],
+      "s": 0.05,
+      "spin": true,
+      "z": 2
+     },
+     {
       "label": "eternal 永远存在的",
       "x": 0.8,
       "y": 0.6,
@@ -477,13 +492,64 @@
       "y": 0.52,
       "s": 0.7,
       "z": 3,
-      "shadow": true
+      "shadow": true,
+      "anim": "pulse"
+     },
+     {
+      "id": "cl",
+      "actor": "cn-teacher-laugh",
+      "x": 0.14,
+      "y": 0.62,
+      "s": 0.84,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
      },
      {
       "label": "classic 公认最好的、经典的",
       "x": 0.76,
       "y": 0.5,
       "size": 0.09,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   },
+   "timeless": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.16,
+      "y": 0.62,
+      "s": 0.84,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/storybook.svg",
+      "x": 0.42,
+      "y": 0.56,
+      "s": 0.5,
+      "z": 4,
+      "shadow": true,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.6,
+      "y": 0.26,
+      "s": 0.26,
+      "z": 2,
+      "anim": "spin"
+     },
+     {
+      "label": "timeless 永不过时",
+      "x": 0.82,
+      "y": 0.5,
+      "size": 0.1,
       "color": "#2F6FB3",
       "border": "#2F6FB3"
      }
@@ -495,17 +561,155 @@
    {
     "w": "timeless",
     "gloss": "永恒的、经典的",
-    "note": "多夸作品、风格：过多少年都不过时（Fairy tales are timeless.）"
+    "note": "多夸作品、风格：过多少年都不过时（Fairy tales are timeless.）",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.16,
+       "y": 0.62,
+       "s": 0.84,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/storybook.svg",
+       "x": 0.42,
+       "y": 0.56,
+       "s": 0.5,
+       "z": 4,
+       "shadow": true,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.6,
+       "y": 0.26,
+       "s": 0.26,
+       "z": 2,
+       "anim": "spin"
+      },
+      {
+       "label": "timeless 永不过时",
+       "x": 0.82,
+       "y": 0.5,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
    },
    {
     "w": "eternal",
     "gloss": "永恒的、永远存在的",
-    "note": "说没有开始也没有结束，多用在宗教、哲学（eternal life）"
+    "note": "说没有开始也没有结束，多用在宗教、哲学（eternal life）",
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "shape": "rect",
+       "x": 0.5,
+       "y": 0.5,
+       "w": 1,
+       "h": 1,
+       "fill": "#0B1A3A",
+       "a": 0.6,
+       "z": 1
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.3,
+       "y": 0.3,
+       "s": 0.3,
+       "z": 2,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "s": 0.22,
+       "z": 2,
+       "anim": "pulse",
+       "delay": 0.4
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.6,
+       "y": 0.42,
+       "s": 0.18,
+       "z": 2,
+       "anim": "pulse",
+       "delay": 0.8
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.45,
+       "y": 0.1,
+       "every": 0.6,
+       "life": 1.6,
+       "to": [
+        0.1,
+        0.25
+       ],
+       "s": 0.05,
+       "spin": true,
+       "z": 2
+      },
+      {
+       "label": "eternal 永远存在的",
+       "x": 0.8,
+       "y": 0.6,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
    },
    {
     "w": "classic",
     "gloss": "经典的、公认最好的",
-    "note": "说一类东西里的代表作、标准样子（a classic film）"
+    "note": "说一类东西里的代表作、标准样子（a classic film）",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/vase.svg",
+       "x": 0.4,
+       "y": 0.52,
+       "s": 0.7,
+       "z": 3,
+       "shadow": true,
+       "anim": "pulse"
+      },
+      {
+       "id": "cl",
+       "actor": "cn-teacher-laugh",
+       "x": 0.14,
+       "y": 0.62,
+       "s": 0.84,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "label": "classic 公认最好的、经典的",
+       "x": 0.76,
+       "y": 0.5,
+       "size": 0.09,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
    }
   ],
   "logic": "timeless 是 time + less：“时间管不着它”，重在不过时；eternal 重在永远存在；classic 从“头等的”来，重在公认最好"

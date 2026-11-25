@@ -12,11 +12,17 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "svg": "art/clock.svg",
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 2,
       "x": 0.4,
       "y": 0.46,
       "s": 0.6,
-      "z": 3
+      "z": 3,
+      "anim": "pulse"
      },
      {
       "shape": "rect",
@@ -27,15 +33,6 @@
       "fill": "#2F6FB3",
       "delay": 0.4,
       "z": 4
-     },
-     {
-      "label": "规定",
-      "x": 0.4,
-      "y": 0.86,
-      "size": 0.07,
-      "delay": 0.5,
-      "color": "#2F6FB3",
-      "border": "#2F6FB3"
      },
      {
       "ray": [
@@ -83,11 +80,12 @@
       "z": 3
      },
      {
-      "actor": "west-girl-listen",
+      "actor": "cn-boy-raise",
       "x": 0.15,
       "y": 0.66,
       "s": 0.72,
-      "z": 4
+      "z": 4,
+      "seq": "blink"
      },
      {
       "label": "time：时间",
@@ -124,6 +122,19 @@
      "x": 0.84,
      "y": 0.18,
      "s": 0.2,
+     "z": 2,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/clock_f0.svg",
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 2,
+     "x": 0.16,
+     "y": 0.2,
+     "s": 0.22,
      "z": 2
     },
     {
@@ -139,6 +150,21 @@
      "y": 0.52,
      "s": 0.5,
      "z": 4
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.84,
+     "y": 0.18,
+     "every": 0.8,
+     "life": 1.4,
+     "to": [
+      -0.1,
+      0.1
+     ],
+     "s": 0.04,
+     "spin": true,
+     "z": 2
     },
     {
      "label": "超过规定的时间",
@@ -246,12 +272,13 @@
        "when": "overtime"
       },
       {
-       "actor": "west-clerk-think",
+       "actor": "west-man-point",
        "x": 0.22,
        "y": 0.6,
        "s": 0.88,
        "z": 3,
-       "when": "My dad"
+       "when": "My dad",
+       "seq": "blink"
       },
       {
        "svg": "art/desk.svg",
@@ -310,11 +337,13 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "actor": "west-clerk-happy",
+      "actor": "cn-teacher-laugh",
       "x": 0.26,
       "y": 0.6,
       "s": 0.86,
-      "z": 3
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
      },
      {
       "svg": "art/pay-envelope.svg",
@@ -349,12 +378,13 @@
      "img": "art/room-bg.svg",
      "items": [
       {
-       "actor": "west-clerk-happy",
+       "actor": "west-man-smile",
        "x": 0.22,
        "y": 0.6,
        "s": 0.88,
        "z": 3,
-       "when": "He"
+       "when": "He",
+       "seq": "blink"
       },
       {
        "svg": "art/calendar.svg",
@@ -532,11 +562,17 @@
      "img": "art/room-bg.svg",
      "items": [
       {
-       "svg": "art/clock.svg",
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2,
        "x": 0.4,
        "y": 0.46,
        "s": 0.6,
-       "z": 3
+       "z": 3,
+       "anim": "pulse"
       },
       {
        "shape": "rect",
@@ -574,6 +610,15 @@
        "delay": 1.2,
        "color": "#2B8A3E",
        "border": "#2B8A3E"
+      },
+      {
+       "svg": "art/moon.svg",
+       "x": 0.86,
+       "y": 0.16,
+       "s": 0.18,
+       "z": 2,
+       "delay": 1.0,
+       "anim": "pulse"
       }
      ]
     }
@@ -760,7 +805,7 @@
        "when": "再接着打"
       },
       {
-       "actor": "walk-west-boy-pack",
+       "actor": "walk-cn-boy-pack",
        "walk": {
         "from": [
          -0.05,
@@ -806,7 +851,252 @@
     "m": "时刻表",
     "share": "time"
    }
-  ]
+  ],
+  "demo": {
+   "overflow": {
+    "icons": [
+     "art/icon-over.svg",
+     "art/drop.svg"
+    ],
+    "lit": "流过头了：溢出",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.52,
+       "z": 3,
+       "anim": "shake"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.62,
+       "y": 0.4,
+       "every": 0.2,
+       "life": 0.9,
+       "to": [
+        0.08,
+        0.4
+       ],
+       "s": 0.06
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.38,
+       "y": 0.4,
+       "every": 0.25,
+       "life": 0.9,
+       "to": [
+        -0.08,
+        0.4
+       ],
+       "s": 0.06,
+       "offset": 0.1
+      },
+      {
+       "label": "溢出",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   "overweight": {
+    "icons": [
+     "art/icon-over.svg",
+     "art/scale.svg"
+    ],
+    "lit": "超过了该有的重量",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/scale.svg",
+       "x": 0.5,
+       "y": 0.64,
+       "s": 0.56,
+       "z": 3,
+       "shadow": true,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.3,
+       "z": 4,
+       "go": [
+        0.5,
+        0.42
+       ],
+       "dur": 0.8,
+       "loop": true
+      },
+      {
+       "label": "超重的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.12,
+       "color": "#C0392B",
+       "border": "#C0392B"
+      }
+     ]
+    }
+   },
+   "supermarket": {
+    "icons": [
+     "art/icon-over.svg",
+     "art/rack.svg"
+    ],
+    "lit": "超大的市场",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/rack.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.6,
+       "z": 3,
+       "shadow": true
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 1.05,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 4,
+       "walk": {
+        "from": [
+         1.05,
+         0.86
+        ],
+        "to": [
+         -0.05,
+         0.86
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": -0.05,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 4,
+       "walk": {
+        "from": [
+         -0.05,
+         0.88
+        ],
+        "to": [
+         1.05,
+         0.88
+        ],
+        "offset": 0.6
+       }
+      },
+      {
+       "label": "超市",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   "surface": {
+    "icons": [
+     "art/icon-over.svg",
+     "art/mirror.svg"
+    ],
+    "lit": "在脸（面）上面的：表面",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/fishtank.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.6,
+       "z": 3,
+       "shadow": true
+      },
+      {
+       "svg": "art/fish.svg",
+       "x": 0.36,
+       "y": 0.66,
+       "s": 0.12,
+       "z": 4,
+       "go": [
+        0.64,
+        0.66
+       ],
+       "dur": 3,
+       "loop": true
+      },
+      {
+       "ray": [
+        [
+         0.24,
+         0.4
+        ],
+        [
+         0.76,
+         0.4
+        ]
+       ],
+       "color": "#E8453C",
+       "lw": 0.016,
+       "arrow": true,
+       "dur": 1.0,
+       "z": 5
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.42,
+       "y": 0.62,
+       "every": 0.6,
+       "life": 1.0,
+       "to": [
+        0,
+        -0.2
+       ],
+       "s": 0.03
+      },
+      {
+       "label": "表面",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  }
  },
  "插图": [
   "overtimeai"
@@ -901,5 +1191,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
