@@ -1,0 +1,746 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈmɪs",
+  "ɪz"
+ ],
+ "pics": [
+  {
+   "text": "夫人、太太",
+   "pos": "名词",
+   "diff": "放在已婚女子的姓前",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.36,
+     "y": 0.55,
+     "s": 0.92,
+     "z": 3,
+     "id": "t",
+     "seq": "talk"
+    },
+    {
+     "waves": true,
+     "on": "t",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#2F6FB3",
+     "with": "t"
+    },
+    {
+     "svg": "art/nametag-mrs.svg",
+     "x": 0.36,
+     "y": 0.13,
+     "s": 0.18,
+     "z": 4,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/ring.svg",
+     "x": 0.8,
+     "y": 0.42,
+     "s": 0.3,
+     "z": 4,
+     "anim": "pulse"
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.8,
+     "y": 0.3,
+     "every": 0.9,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.25
+     ],
+     "s": 0.08,
+     "spin": true
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.94,
+     "s": 0.26,
+     "z": 5
+    }
+   ],
+   "ex": "Mrs Li is our English teacher.",
+   "exzh": "李太太是我们的英语老师。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.3,
+      "y": 0.55,
+      "s": 0.9,
+      "z": 3,
+      "id": "l",
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "Mrs Li"
+     },
+     {
+      "svg": "art/nametag-mrs.svg",
+      "x": 0.3,
+      "y": 0.12,
+      "s": 0.18,
+      "z": 4,
+      "when": "Mrs Li",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.74,
+      "y": 0.58,
+      "s": 0.84,
+      "z": 3,
+      "nodWith": "l",
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.24,
+      "z": 5
+     },
+     {
+      "label": "Mrs Li",
+      "x": 0.55,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "Mrs Li",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "李太太",
+      "x": 0.74,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "李太太"
+     }
+    ]
+   }
+  },
+  {
+   "text": "我太太",
+   "pos": "名词",
+   "diff": "（口）the Mrs：说起自家的女主人",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sofa.svg",
+     "x": 0.5,
+     "y": 0.82,
+     "s": 0.38,
+     "z": 2
+    },
+    {
+     "actor": "west-man-smile",
+     "x": 0.42,
+     "y": 0.56,
+     "s": 0.92,
+     "z": 3,
+     "seq": "blink"
+    },
+    {
+     "svg": "art/ring.svg",
+     "x": 0.8,
+     "y": 0.4,
+     "s": 0.3,
+     "z": 4,
+     "anim": "pulse"
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.8,
+     "y": 0.28,
+     "every": 0.9,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.25
+     ],
+     "s": 0.08,
+     "spin": true
+    }
+   ],
+   "ex": "I'll ask the Mrs.",
+   "exzh": "我去问问我太太。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.32,
+      "y": 0.56,
+      "s": 0.92,
+      "z": 3,
+      "id": "w",
+      "seq": "talk",
+      "talkWhen": "ask"
+     },
+     {
+      "waves": true,
+      "on": "w",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#2F6FB3",
+      "with": "w"
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.6,
+      "y": 0.58,
+      "s": 0.3,
+      "z": 4,
+      "when": "ask",
+      "anim": "shake"
+     },
+     {
+      "svg": "art/ring.svg",
+      "x": 0.84,
+      "y": 0.4,
+      "s": 0.3,
+      "z": 4,
+      "when": "Mrs",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "label": "the Mrs",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "the Mrs",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "我太太",
+      "x": 0.84,
+      "y": 0.66,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "我太太"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“女主人”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/keys.svg",
+      "x": 0.36,
+      "y": 0.5,
+      "s": 0.48,
+      "z": 3,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/nametag-mrs.svg",
+      "x": 0.78,
+      "y": 0.5,
+      "s": 0.3,
+      "z": 3,
+      "delay": 0.6,
+      "pop": true,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  {
+   "via": "master 加女性词尾，再缩写",
+   "node": "“M(ist)r(es)s”",
+   "say": [
+    "master 是主人，加上表示女性的词尾，就成了 mistress，女主人。",
+    "写的时候缩成 Mrs，只留几个字母。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/keys.svg",
+      "x": 0.26,
+      "y": 0.5,
+      "s": 0.45,
+      "z": 3,
+      "when": "主人",
+      "anim": "swing",
+      "hideCue": 1
+     },
+     {
+      "label": "mistress",
+      "x": 0.68,
+      "y": 0.36,
+      "size": 0.1,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "mistress",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "女主人",
+      "x": 0.68,
+      "y": 0.56,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "女主人",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/nametag-mrs.svg",
+      "x": 0.3,
+      "y": 0.55,
+      "s": 0.46,
+      "z": 3,
+      "cue": 1,
+      "when": "Mrs",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "label": "只留几个字母",
+      "x": 0.68,
+      "y": 0.8,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "只留几个字母"
+     }
+    ]
+   }
+  },
+  {
+   "via": "管着一个家的女主人",
+   "node": "① 夫人、太太",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "管着一个家的女主人，后来专门放在已婚女子的姓前面，就是夫人、太太。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/keys.svg",
+      "x": 0.22,
+      "y": 0.5,
+      "s": 0.4,
+      "z": 3,
+      "when": "管着一个家",
+      "anim": "swing"
+     },
+     {
+      "svg": "art/ring.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.4,
+      "z": 3,
+      "when": "已婚女子",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/nametag-mrs.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.3,
+      "z": 3,
+      "when": "姓前面",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "label": "太太",
+      "x": 0.8,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "太太"
+     }
+    ]
+   }
+  },
+  {
+   "via": "说起自家的女主人",
+   "node": "② the Mrs 我太太",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "口语里说起自家的女主人，the Mrs 就是我太太。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.4,
+      "y": 0.78,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/ring.svg",
+      "x": 0.76,
+      "y": 0.42,
+      "s": 0.42,
+      "z": 3,
+      "when": "自家",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "label": "the Mrs",
+      "x": 0.3,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "the Mrs",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "我太太",
+      "x": 0.76,
+      "y": 0.86,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "我太太"
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/keys.svg",
+     "x": 0.3,
+     "y": 0.5,
+     "s": 0.42,
+     "z": 3,
+     "anim": "swing"
+    },
+    {
+     "svg": "art/nametag-mrs.svg",
+     "x": 0.72,
+     "y": 0.5,
+     "s": 0.5,
+     "z": 3,
+     "anim": "pulse"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-nametag-mrs.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/keys.svg",
+    "x": 0.3,
+    "y": 0.5,
+    "s": 0.42,
+    "z": 3,
+    "anim": "swing"
+   },
+   {
+    "svg": "art/nametag-mrs.svg",
+    "x": 0.72,
+    "y": 0.5,
+    "s": 0.5,
+    "z": 3,
+    "anim": "pulse"
+   }
+  ]
+ },
+ "distinguish": {
+  "key": "夫人、太太",
+  "items": [
+   {
+    "w": "Mrs",
+    "m": "夫人、太太",
+    "say": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/nametag-mrs.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "text": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "diff": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "line": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "note": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "desc": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "explain": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "sentence": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "talk": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "speech": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "zh": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "cn": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "why": "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。",
+    "lines": [
+     "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。"
+    ],
+    "says": [
+     "Mrs 放在已婚女子的姓前面，比如 Mrs Li，不能单独用。"
+    ],
+    "word": "Mrs"
+   },
+   {
+    "w": "madam",
+    "m": "夫人、女士",
+    "say": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/envelope-ms.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.75,
+       "anim": "bob"
+      }
+     ]
+    },
+    "text": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "diff": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "line": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "note": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "desc": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "explain": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "sentence": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "talk": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "speech": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "zh": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "cn": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "why": "madam 可以单独用来客气地称呼女士，比如 Yes, madam。",
+    "lines": [
+     "madam 可以单独用来客气地称呼女士，比如 Yes, madam。"
+    ],
+    "says": [
+     "madam 可以单独用来客气地称呼女士，比如 Yes, madam。"
+    ],
+    "word": "madam"
+   },
+   {
+    "w": "wife",
+    "m": "妻子、太太",
+    "say": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/ring.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.75,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "spin": true
+      }
+     ]
+    },
+    "text": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "diff": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "line": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "note": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "desc": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "explain": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "sentence": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "talk": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "speech": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "zh": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "cn": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "why": "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。",
+    "lines": [
+     "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。"
+    ],
+    "says": [
+     "wife 是妻子，说的是家里的身份，不放在姓前面当称呼。"
+    ],
+    "word": "wife"
+   }
+  ],
+  "logic": "逻辑不同：Mrs 是 mistress（女主人）的缩写，madam 来自法语的“我的夫人”，wife 本来就是女人、妻子。",
+  "tip": "全拼 mistress 今天多指女主人、女教师，跟 Mrs 已经分了家；不清楚对方婚否时用 Ms。"
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：谁是新来的音乐老师？",
+    "listen": "Mrs Brown is our new music teacher.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "布朗先生",
+     "布朗小姐的爸爸",
+     "布朗同学",
+     "布朗太太"
+    ],
+    "ans": "D",
+    "why": "Mrs 用在已婚女子的姓前。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "______ Li is married. Her husband is a doctor.",
+    "opts": [
+     "Mr",
+     "Miss",
+     "Sir",
+     "Mrs"
+    ],
+    "ans": "D",
+    "why": "已婚女子用 Mrs。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 Mrs、Miss 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "______ Wang isn't married yet.",
+    "opts": [],
+    "ans": "Miss",
+    "why": "未婚女子用 Miss；Mrs 用于已婚女子。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Mrs Green ______ two children. (have)",
+    "opts": [],
+    "ans": "has",
+    "why": "主语单数，have 变 has。",
+    "kd": ""
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Mrs Smith is a man.",
+    "opts": [],
+    "ans": "Mrs → Mr",
+    "why": "男子用 Mr，Mrs 只用于已婚女子。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "不知道对方是否结婚，就写 Ms。",
+    "stem": "Write “______ Lee” if you don't know if she is married.",
+    "opts": [],
+    "ans": "Ms",
+    "why": "不论婚否用 Ms。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Mrs Wang and her husband ______ teachers.",
+    "opts": [
+     "is",
+     "am",
+     "be",
+     "are"
+    ],
+    "ans": "D",
+    "why": "主语是两个人，用 are。",
+    "kd": "用法"
+   }
+  ]
+ }
+}

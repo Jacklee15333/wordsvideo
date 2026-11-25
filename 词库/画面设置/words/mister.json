@@ -1,0 +1,711 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈmɪs",
+  "tə"
+ ],
+ "pics": [
+  {
+   "text": "先生",
+   "pos": "名词",
+   "diff": "Mr 的全拼，多见于口语或特意强调",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-point",
+     "x": 0.34,
+     "y": 0.55,
+     "s": 0.92,
+     "z": 3,
+     "id": "m",
+     "seq": "talk"
+    },
+    {
+     "waves": true,
+     "on": "m",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#2F6FB3",
+     "with": "m"
+    },
+    {
+     "svg": "art/nametag-mr.svg",
+     "x": 0.34,
+     "y": 0.13,
+     "s": 0.18,
+     "z": 4,
+     "anim": "bob"
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.76,
+     "y": 0.58,
+     "s": 0.84,
+     "z": 3,
+     "nodWith": "m",
+     "seq": "pingpong",
+     "fps": 2
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.94,
+     "s": 0.26,
+     "z": 5
+    }
+   ],
+   "ex": "Mister Brown is our new music teacher.",
+   "exzh": "布朗先生是我们的新音乐老师。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "x": 0.28,
+      "y": 0.55,
+      "s": 0.9,
+      "z": 3,
+      "id": "b",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/piano.svg",
+      "x": 0.62,
+      "y": 0.7,
+      "s": 0.42,
+      "z": 3,
+      "when": "music"
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "alt": [
+       "art/note2.svg"
+      ],
+      "x": 0.62,
+      "y": 0.5,
+      "every": 1.0,
+      "life": 2.0,
+      "to": [
+       0.1,
+       -0.3
+      ],
+      "s": 0.1,
+      "when": "music"
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.86,
+      "y": 0.58,
+      "s": 0.82,
+      "z": 3,
+      "nodWith": "b",
+      "seq": "blink"
+     },
+     {
+      "label": "Mister Brown",
+      "x": 0.28,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "Mister Brown",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "先生",
+      "x": 0.62,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "先生"
+     }
+    ]
+   }
+  },
+  {
+   "text": "喂，先生",
+   "pos": "名词",
+   "diff": "（口语）叫不出名字时单独喊一声，带点市井味",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.24,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3,
+     "id": "g",
+     "seq": "blink"
+    },
+    {
+     "waves": true,
+     "on": "g",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#2F6FB3",
+     "with": "g"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.45,
+     "y": 0.66,
+     "s": 0.6,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.45,
+       0.66
+      ],
+      "to": [
+       0.98,
+       0.66
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.95,
+     "y": 0.72,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.95,
+       0.72
+      ],
+      "to": [
+       0.3,
+       0.72
+      ],
+      "offset": 1.0
+     }
+    }
+   ],
+   "ex": "Hey, mister! You dropped your keys.",
+   "exzh": "喂，先生！你的钥匙掉了。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "id": "e",
+      "seq": "talk",
+      "talkWhen": "Hey"
+     },
+     {
+      "waves": true,
+      "on": "e",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#2F6FB3",
+      "with": "e"
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.72,
+      "y": 0.56,
+      "s": 0.9,
+      "z": 3,
+      "seq": "blink",
+      "when": "mister"
+     },
+     {
+      "svg": "art/keys.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.16,
+      "go": [
+       0.5,
+       0.88
+      ],
+      "dur": 0.8,
+      "when": "dropped",
+      "z": 5,
+      "anim": "swing"
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.95,
+      "y": 0.66,
+      "s": 0.42,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.95,
+        0.66
+       ],
+       "to": [
+        0.4,
+        0.66
+       ],
+       "offset": 0.5
+      }
+     },
+     {
+      "sound": "say:Hey, mister!|bf_emma",
+      "when": "Hey",
+      "gap": true
+     },
+     {
+      "label": "Hey, mister",
+      "x": 0.2,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "mister",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "钥匙",
+      "x": 0.5,
+      "y": 0.96,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "钥匙"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“master 主人”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/keys.svg",
+      "x": 0.4,
+      "y": 0.5,
+      "s": 0.5,
+      "z": 3,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/nametag-mr.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.3,
+      "z": 3,
+      "delay": 0.6,
+      "pop": true,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  {
+   "via": "放在名字前，嘴上念得又快又轻",
+   "node": "① 先生",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "master 放在名字前面，嘴上念得又快又轻，就变成了 mister，只是个客套称呼，就是先生。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/keys.svg",
+      "x": 0.24,
+      "y": 0.5,
+      "s": 0.42,
+      "z": 3,
+      "when": "master",
+      "anim": "swing"
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.5
+       ],
+       [
+        0.54,
+        0.5
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "又快又轻"
+     },
+     {
+      "svg": "art/nametag-mr.svg",
+      "x": 0.74,
+      "y": 0.5,
+      "s": 0.5,
+      "z": 3,
+      "when": "mister",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "label": "mister",
+      "x": 0.74,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "mister",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "先生",
+      "x": 0.74,
+      "y": 0.86,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "就是先生"
+     }
+    ]
+   }
+  },
+  {
+   "via": "叫不出名字时单独喊一声",
+   "node": "② 喂，先生",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "叫不出对方的名字，单独喊一声 mister，就是喂，先生，带点市井味，不太礼貌。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.3,
+      "y": 0.68,
+      "s": 0.58,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.3,
+        0.68
+       ],
+       "to": [
+        0.95,
+        0.68
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "waves": true,
+      "x": 0.2,
+      "y": 0.45,
+      "dir": 0,
+      "n": 3,
+      "period": 1.4,
+      "color": "#2F6FB3",
+      "when": "单独喊一声"
+     },
+     {
+      "label": "喂",
+      "x": 0.2,
+      "y": 0.15,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "就是喂"
+     },
+     {
+      "label": "不太礼貌",
+      "x": 0.75,
+      "y": 0.15,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "不太礼貌"
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/keys.svg",
+     "x": 0.3,
+     "y": 0.5,
+     "s": 0.42,
+     "z": 3,
+     "anim": "swing"
+    },
+    {
+     "svg": "art/nametag-mr.svg",
+     "x": 0.72,
+     "y": 0.5,
+     "s": 0.5,
+     "z": 3,
+     "anim": "pulse"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-keys.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/keys.svg",
+    "x": 0.3,
+    "y": 0.5,
+    "s": 0.45,
+    "z": 3,
+    "anim": "swing"
+   },
+   {
+    "svg": "art/nametag-mr.svg",
+    "x": 0.74,
+    "y": 0.5,
+    "s": 0.48,
+    "z": 3,
+    "anim": "pulse"
+   }
+  ]
+ },
+ "distinguish": {
+  "key": "先生",
+  "items": [
+   {
+    "w": "mister",
+    "m": "先生；喂，先生",
+    "say": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/street-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.15,
+       "y": 0.6,
+       "s": 0.55,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.15,
+         0.6
+        ],
+        "to": [
+         0.85,
+         0.6
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "waves": true,
+       "x": 0.75,
+       "y": 0.4,
+       "dir": 180,
+       "n": 3,
+       "period": 1.4,
+       "color": "#2F6FB3"
+      }
+     ]
+    },
+    "text": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "diff": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "line": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "note": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "desc": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "explain": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "sentence": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "talk": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "speech": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "zh": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "cn": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "why": "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。",
+    "lines": [
+     "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。"
+    ],
+    "says": [
+     "mister 是全拼，多见于口语或特意强调；单独喊 Hey, mister! 不够礼貌。"
+    ],
+    "word": "mister"
+   },
+   {
+    "w": "Mr",
+    "m": "先生",
+    "say": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/nametag-mr.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "text": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "diff": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "line": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "note": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "desc": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "explain": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "sentence": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "talk": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "speech": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "zh": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "cn": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "why": "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。",
+    "lines": [
+     "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。"
+    ],
+    "says": [
+     "Mr 是书面上的写法，放在男子的姓或姓名前，比如 Mr Brown。"
+    ],
+    "word": "Mr"
+   }
+  ],
+  "logic": "逻辑不同：两个都是从 master（主人）来的；mister 是嘴上念出来的全拼，Mr 是写下来的缩写。",
+  "tip": "正式地单独称呼陌生男子用 sir；书面上一般写 Mr。"
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：小男孩叫住了谁？",
+    "listen": "“Hey, mister!” the boy called to the man.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "一位女士",
+     "他的老师",
+     "一个男人",
+     "他的爸爸"
+    ],
+    "ans": "C",
+    "why": "mister 先生（口语，不太礼貌）。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "In writing, “mister” is usually written as “______”.",
+    "opts": [
+     "Mrs",
+     "Ms",
+     "Mr",
+     "Miss"
+    ],
+    "ans": "C",
+    "why": "书面上一般写 Mr。",
+    "kd": "易混"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 mister、sir 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "“Can I help you, ______?” asked the shop assistant politely.",
+    "opts": [],
+    "ans": "sir",
+    "why": "礼貌地称呼男子用 sir；mister 带市井味。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The ______ are waiting outside. (gentleman)",
+    "opts": [],
+    "ans": "gentlemen",
+    "why": "gentleman 的复数是 gentlemen。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Hey, mister! You drop your wallet just now.",
+    "opts": [],
+    "ans": "drop → dropped",
+    "why": "just now 刚才，讲过去用 dropped。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "嘿，先生！您的帽子掉了。",
+    "stem": "Hey, ______! Your hat fell off.",
+    "opts": [],
+    "ans": "mister",
+    "why": "口语里叫住陌生男子说 Hey, mister!",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "We call a man we don't know “______” to be polite.",
+    "opts": [
+     "mister",
+     "sir",
+     "boy",
+     "hey"
+    ],
+    "ans": "B",
+    "why": "礼貌称呼陌生男子用 sir。",
+    "kd": "用法"
+   }
+  ]
+ }
+}
