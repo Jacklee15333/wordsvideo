@@ -1,0 +1,697 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈmɑːs",
+  "tə",
+  "piːs"
+ ],
+ "pics": [
+  {
+   "text": "杰作、代表作",
+   "pos": "名词",
+   "diff": "水平最高的作品",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/frame-painting.svg",
+     "x": 0.52,
+     "y": 0.38,
+     "s": 0.56,
+     "z": 3,
+     "anim": "pulse"
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.52,
+     "y": 0.12,
+     "every": 0.9,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.25
+     ],
+     "s": 0.08,
+     "spin": true
+    },
+    {
+     "actor": "west-clerk-think",
+     "x": 0.16,
+     "y": 0.62,
+     "s": 0.82,
+     "z": 3,
+     "seq": "blink"
+    },
+    {
+     "svg": "art/plant.svg",
+     "x": 0.88,
+     "y": 0.72,
+     "s": 0.36,
+     "z": 3,
+     "anim": "sway"
+    }
+   ],
+   "ex": "This painting is a masterpiece.",
+   "exzh": "这幅画是一件杰作。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/frame-painting.svg",
+      "x": 0.5,
+      "y": 0.38,
+      "s": 0.56,
+      "z": 3,
+      "when": "painting",
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.12,
+      "every": 0.9,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "spin": true,
+      "when": "masterpiece"
+     },
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.18,
+      "y": 0.6,
+      "s": 0.84,
+      "z": 3,
+      "id": "t",
+      "seq": "talk"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "nodWith": "t",
+      "seq": "blink"
+     },
+     {
+      "label": "a masterpiece",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "masterpiece",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "杰作",
+      "x": 0.84,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "杰作"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“够得上师傅水平的一件作品”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/tools.svg",
+      "x": 0.3,
+      "y": 0.66,
+      "s": 0.4,
+      "z": 3,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/wood-chair.svg",
+      "x": 0.7,
+      "y": 0.56,
+      "s": 0.56,
+      "z": 3,
+      "delay": 0.6,
+      "pop": true,
+      "anim": "pulse"
+     }
+    ]
+   }
+  },
+  {
+   "via": "合成词：最后一个词是主体",
+   "node": "“够得上师傅水平的一件作品”",
+   "rule": "合成词：最后一个词是主体，前面的词说明它",
+   "ruleEx": "masterpiece 师傅水平的作品      masterclass 大师课",
+   "say": [
+    "合成词里，最后一个词是主体，前面的词说明它。",
+    "masterclass 说的是 class，大师上的课，就是大师课。",
+    "masterpiece 说的是 piece，一件作品；master 是师傅，合起来就是够得上师傅水平的一件作品。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/tag-noun.svg",
+      "x": 0.72,
+      "y": 0.5,
+      "s": 0.42,
+      "z": 3,
+      "when": "主体",
+      "anim": "pulse",
+      "hideCue": 1
+     },
+     {
+      "label": "主体",
+      "x": 0.72,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "主体",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/tag-adj.svg",
+      "x": 0.27,
+      "y": 0.5,
+      "s": 0.42,
+      "z": 3,
+      "when": "前面的词",
+      "hideCue": 1
+     },
+     {
+      "label": "说明它",
+      "x": 0.27,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "说明它",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/piano.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.5,
+      "z": 3,
+      "anim": "pulse",
+      "cue": 1,
+      "when": "masterclass",
+      "hideCue": 2
+     },
+     {
+      "label": "masterclass",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "masterclass",
+      "cue": 1,
+      "hideCue": 2,
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "大师课",
+      "x": 0.82,
+      "y": 0.86,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "大师课",
+      "cue": 1,
+      "hideCue": 2
+     },
+     {
+      "svg": "art/tools.svg",
+      "x": 0.27,
+      "y": 0.56,
+      "s": 0.45,
+      "z": 3,
+      "anim": "bob",
+      "cue": 2,
+      "when": "师傅"
+     },
+     {
+      "svg": "art/frame-painting.svg",
+      "x": 0.72,
+      "y": 0.55,
+      "s": 0.45,
+      "z": 3,
+      "anim": "pulse",
+      "cue": 2,
+      "when": "一件作品"
+     },
+     {
+      "label": "够得上师傅水平的一件作品",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "够得上师傅水平的一件作品",
+      "cue": 2
+     }
+    ]
+   }
+  },
+  {
+   "via": "学徒满师前交的一件活儿",
+   "node": "出师之作",
+   "say": [
+    "从前，手艺行里的学徒满师前，要交一件拿得出手的活儿。",
+    "行会认可了，学徒才能升成师傅，这件活儿就是出师之作。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/tools.svg",
+      "x": 0.28,
+      "y": 0.66,
+      "s": 0.42,
+      "z": 3,
+      "when": "学徒",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/wood-chair.svg",
+      "x": 0.68,
+      "y": 0.55,
+      "s": 0.58,
+      "z": 3,
+      "when": "拿得出手的活儿",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/diploma.svg",
+      "x": 0.3,
+      "y": 0.3,
+      "s": 0.26,
+      "z": 4,
+      "cue": 1,
+      "when": "认可",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.68,
+      "y": 0.25,
+      "every": 0.9,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "spin": true,
+      "cue": 1,
+      "when": "升成师傅"
+     },
+     {
+      "label": "出师之作",
+      "x": 0.68,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "出师之作"
+     }
+    ]
+   }
+  },
+  {
+   "via": "不限于手艺人，凡是水平最高的作品",
+   "node": "杰作、代表作",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "后来不限于手艺人，凡是水平最高的作品，都叫 masterpiece，就是杰作、代表作。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/wood-chair.svg",
+      "x": 0.2,
+      "y": 0.62,
+      "s": 0.4,
+      "z": 3,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/frame-painting.svg",
+      "x": 0.6,
+      "y": 0.42,
+      "s": 0.56,
+      "z": 3,
+      "when": "水平最高的作品",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.6,
+      "y": 0.15,
+      "every": 0.9,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "spin": true,
+      "when": "水平最高的作品"
+     },
+     {
+      "label": "杰作",
+      "x": 0.6,
+      "y": 0.86,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "杰作"
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/tools.svg",
+     "x": 0.4,
+     "y": 0.62,
+     "s": 0.55,
+     "z": 3,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/wood-chair.svg",
+     "x": 0.8,
+     "y": 0.58,
+     "s": 0.45,
+     "z": 3,
+     "anim": "pulse"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/frame-painting.svg",
+     "x": 0.5,
+     "y": 0.42,
+     "s": 0.6,
+     "z": 3,
+     "anim": "pulse"
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.5,
+     "y": 0.15,
+     "every": 0.9,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.25
+     ],
+     "s": 0.08,
+     "spin": true
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-tools.svg",
+  "p1": "art/icon-frame-painting.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/tools.svg",
+    "x": 0.3,
+    "y": 0.66,
+    "s": 0.4,
+    "z": 3,
+    "anim": "bob"
+   },
+   {
+    "svg": "art/wood-chair.svg",
+    "x": 0.7,
+    "y": 0.56,
+    "s": 0.56,
+    "z": 3,
+    "anim": "pulse"
+   }
+  ]
+ },
+ "distinguish": {
+  "key": "杰作",
+  "items": [
+   {
+    "w": "masterpiece",
+    "m": "杰作、代表作",
+    "say": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/frame-painting.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.8,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "spin": true
+      }
+     ]
+    },
+    "text": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "diff": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "line": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "note": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "desc": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "explain": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "sentence": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "talk": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "speech": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "zh": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "cn": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "why": "masterpiece 指具体的一件杰作，谁的作品都能有好几件。",
+    "lines": [
+     "masterpiece 指具体的一件杰作，谁的作品都能有好几件。"
+    ],
+    "says": [
+     "masterpiece 指具体的一件杰作，谁的作品都能有好几件。"
+    ],
+    "word": "masterpiece"
+   },
+   {
+    "w": "magnum opus",
+    "m": "毕生大作",
+    "say": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/easel-painting.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.85,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.7,
+       "y": 0.25,
+       "every": 0.9,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "spin": true
+      }
+     ]
+    },
+    "text": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "diff": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "line": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "note": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "desc": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "explain": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "sentence": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "talk": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "speech": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "zh": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "cn": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "why": "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。",
+    "lines": [
+     "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。"
+    ],
+    "says": [
+     "magnum opus 是拉丁语的大作，专指一个人一生最重要的那一部作品。"
+    ],
+    "word": "magnum opus"
+   }
+  ],
+  "logic": "逻辑不同：masterpiece 是够得上师傅水平的一件作品，magnum opus 是一个人最大的那部作品。",
+  "tip": "a masterpiece of … 某某的一件杰作；magnum opus 一个人一般只有一部。"
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人怎么评价这幅画？",
+    "listen": "This painting is a masterpiece.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "很普通",
+     "是一件杰作",
+     "是假的",
+     "很便宜"
+    ],
+    "ans": "B",
+    "why": "masterpiece 杰作。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The museum has many ______. (masterpiece)",
+    "opts": [],
+    "ans": "masterpieces",
+    "why": "many 后面用复数 masterpieces。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The Mona Lisa is a ______ by Leonardo da Vinci.",
+    "opts": [
+     "masterpiece",
+     "masterclass",
+     "master",
+     "mastery"
+    ],
+    "ans": "A",
+    "why": "著名的画作是杰作 masterpiece。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 masterpiece、master 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He is a ______ of Chinese painting.",
+    "opts": [],
+    "ans": "master",
+    "why": "人是大师 master；masterpiece 是作品。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "This book are his masterpiece.",
+    "opts": [],
+    "ans": "are → is",
+    "why": "主语 this book 是单数，用 is。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这些杰作都是他画的。",
+    "stem": "These ______ were all painted by him.",
+    "opts": [],
+    "ans": "masterpieces",
+    "why": "these 后面用复数 masterpieces。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Which is a masterpiece?",
+    "opts": [
+     "a famous painter",
+     "an art class",
+     "a great painting",
+     "a museum"
+    ],
+    "ans": "C",
+    "why": "masterpiece 是杰作（作品），不是人、课或地方。",
+    "kd": "易混"
+   }
+  ]
+ }
+}
