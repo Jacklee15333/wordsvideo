@@ -1,0 +1,681 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˌriː",
+  "ˈteɪk"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/loop-arrow.svg",
+     "x": 0.44,
+     "y": 0.5,
+     "s": 0.6,
+     "anim": "spin"
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.82,
+     "y": 0.66,
+     "s": 0.28
+    },
+    {
+     "svg": "art/lamp.svg",
+     "x": 0.1,
+     "y": 0.6,
+     "s": 0.5
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/hand-grab.svg",
+     "x": 0.44,
+     "y": 0.5,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.82,
+     "y": 0.62,
+     "s": 0.3,
+     "go": [
+      0.6,
+      0.5
+     ],
+     "dur": 1.4,
+     "loop": true
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-re.svg",
+  "p1": "art/icon-take.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/hand-grab.svg",
+    "x": 0.4,
+    "y": 0.5,
+    "s": 0.56,
+    "anim": "pulse"
+   },
+   {
+    "svg": "art/loop-arrow.svg",
+    "x": 0.76,
+    "y": 0.44,
+    "s": 0.44,
+    "anim": "spin"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "重考；补考",
+   "pos": "动词 / 名词",
+   "diff": "考试再考一遍",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.28,
+     "y": 0.58,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "svg": "art/exam-x.svg",
+     "x": 0.6,
+     "y": 0.44,
+     "s": 0.44,
+     "anim": "shake",
+     "hide": 2.5
+    },
+    {
+     "svg": "art/exam.svg",
+     "x": 0.6,
+     "y": 0.44,
+     "s": 0.44,
+     "delay": 2.5,
+     "pop": true
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.94,
+     "s": 0.24,
+     "z": 6
+    }
+   ],
+   "ex": "He will retake the exam next week.",
+   "exzh": "他下周要重考。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.26,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/exam-x.svg",
+      "x": 0.58,
+      "y": 0.46,
+      "s": 0.46,
+      "when": "exam",
+      "pop": true
+     },
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.86,
+      "y": 0.24,
+      "s": 0.3,
+      "when": "next week",
+      "anim": "bob"
+     },
+     {
+      "label": "retake",
+      "x": 0.58,
+      "y": 0.08,
+      "size": 0.075,
+      "when": "retake",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "重考",
+      "x": 0.86,
+      "y": 0.66,
+      "size": 0.075,
+      "when": "重考",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "重拍；重拍的镜头",
+   "pos": "动词 / 名词",
+   "diff": "镜头再拍一遍",
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "beam": true,
+     "x": 0.25,
+     "y": 0.0,
+     "len": 0.8,
+     "width": 0.14,
+     "swing": 12,
+     "period": 4
+    },
+    {
+     "beam": true,
+     "x": 0.75,
+     "y": 0.0,
+     "len": 0.8,
+     "width": 0.14,
+     "swing": 12,
+     "period": 4.6
+    },
+    {
+     "actor": "west-man-point",
+     "x": 0.3,
+     "y": 0.58,
+     "s": 0.88,
+     "z": 3
+    },
+    {
+     "svg": "art/tripod-cam.svg",
+     "x": 0.64,
+     "y": 0.56,
+     "s": 0.6
+    },
+    {
+     "svg": "art/clapboard.svg",
+     "x": 0.88,
+     "y": 0.5,
+     "s": 0.3,
+     "anim": "shake"
+    }
+   ],
+   "ex": "Let's retake this scene.",
+   "exzh": "这个镜头我们重拍一遍吧。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "beam": true,
+      "x": 0.25,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4
+     },
+     {
+      "beam": true,
+      "x": 0.75,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4.6
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.26,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/tripod-cam.svg",
+      "x": 0.58,
+      "y": 0.56,
+      "s": 0.58,
+      "when": "scene"
+     },
+     {
+      "svg": "art/clapboard.svg",
+      "x": 0.84,
+      "y": 0.44,
+      "s": 0.34,
+      "when": "retake",
+      "pop": true,
+      "anim": "shake"
+     },
+     {
+      "label": "retake",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "when": "retake",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "重拍",
+      "x": 0.84,
+      "y": 0.82,
+      "size": 0.075,
+      "when": "重拍",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "夺回、收复",
+   "pos": "动词",
+   "diff": "把丢掉的地方重新拿回来",
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/flag.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.5,
+     "go": [
+      0.5,
+      0.36
+     ],
+     "dur": 2.4,
+     "wait": 0.5,
+     "anim": "swing"
+    },
+    {
+     "svg": "art/loop-arrow.svg",
+     "x": 0.84,
+     "y": 0.3,
+     "s": 0.26,
+     "anim": "spin"
+    }
+   ],
+   "ex": "They retook the city.",
+   "exzh": "他们收复了这座城。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/flag.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.5,
+      "when": "retook",
+      "go": [
+       0.5,
+       0.38
+      ],
+      "goWhen": "收复",
+      "dur": 1.4,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/loop-arrow.svg",
+      "x": 0.16,
+      "y": 0.36,
+      "s": 0.26,
+      "when": "city",
+      "anim": "spin"
+     },
+     {
+      "label": "retook",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.075,
+      "when": "retook",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "收复",
+      "x": 0.84,
+      "y": 0.3,
+      "size": 0.075,
+      "when": "收复",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“再拿一次 / 拿回来”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/hand-grab.svg",
+      "x": 0.4,
+      "y": 0.5,
+      "s": 0.56,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/loop-arrow.svg",
+      "x": 0.76,
+      "y": 0.44,
+      "s": 0.44,
+      "anim": "spin"
+     }
+    ]
+   }
+  },
+  {
+   "via": "再拿一次：考试再考一遍",
+   "node": "① 重考；补考",
+   "pos": "动词 / 名词",
+   "pic": 0,
+   "say": [
+    "re 有两个意思：一是再，一是回。",
+    "再拿一次考试，就是重考；当名词，是补考。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/loop-arrow.svg",
+      "x": 0.5,
+      "y": 0.36,
+      "s": 0.4,
+      "when": "两个意思",
+      "anim": "spin",
+      "hideCue": 1
+     },
+     {
+      "label": "再",
+      "x": 0.3,
+      "y": 0.76,
+      "size": 0.12,
+      "when": "一是再",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "hideCue": 1
+     },
+     {
+      "label": "回",
+      "x": 0.7,
+      "y": 0.76,
+      "size": 0.12,
+      "when": "一是回",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/exam-x.svg",
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "再拿一次考试"
+     },
+     {
+      "svg": "art/exam.svg",
+      "x": 0.66,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "重考",
+      "pop": true
+     },
+     {
+      "label": "补考",
+      "x": 0.86,
+      "y": 0.86,
+      "size": 0.075,
+      "when": "补考",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "镜头再拍一遍",
+   "node": "② 重拍；重拍的镜头",
+   "pos": "动词 / 名词",
+   "pic": 1,
+   "say": [
+    "镜头没拍好，再拍一遍，就是重拍。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "beam": true,
+      "x": 0.25,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4
+     },
+     {
+      "beam": true,
+      "x": 0.75,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4.6
+     },
+     {
+      "svg": "art/tripod-cam.svg",
+      "x": 0.4,
+      "y": 0.56,
+      "s": 0.6,
+      "when": "镜头"
+     },
+     {
+      "svg": "art/clapboard.svg",
+      "x": 0.76,
+      "y": 0.46,
+      "s": 0.4,
+      "when": "再拍一遍",
+      "pop": true,
+      "anim": "shake"
+     },
+     {
+      "label": "重拍",
+      "x": 0.76,
+      "y": 0.86,
+      "size": 0.1,
+      "when": "重拍",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "拿回来：把丢掉的地方夺回",
+   "node": "③ 夺回、收复",
+   "pos": "动词",
+   "pic": 2,
+   "say": [
+    "re 是回的时候，retake 就是拿回来。",
+    "把丢掉的地方重新夺到手里，就是夺回、收复。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/loop-arrow.svg",
+      "x": 0.2,
+      "y": 0.36,
+      "s": 0.34,
+      "when": "拿回来",
+      "anim": "spin"
+     },
+     {
+      "svg": "art/flag.svg",
+      "x": 0.56,
+      "y": 0.66,
+      "s": 0.5,
+      "when": "夺到手里",
+      "go": [
+       0.56,
+       0.4
+      ],
+      "goWhen": "夺到手里",
+      "dur": 1.4,
+      "anim": "swing"
+     },
+     {
+      "label": "收复",
+      "x": 0.86,
+      "y": 0.14,
+      "size": 0.1,
+      "when": "收复",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "redo",
+   "m": "重做",
+   "share": "re"
+  },
+  {
+   "w": "return",
+   "m": "回来",
+   "share": "re"
+  },
+  {
+   "w": "take",
+   "m": "拿",
+   "share": "take"
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：他下个月要做什么？",
+    "listen": "He has to retake the maths exam next month.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "教数学",
+     "考英语",
+     "重考数学",
+     "放假"
+    ],
+    "ans": "C",
+    "why": "retake 重考。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "She ______ the test last week and passed. (retake)",
+    "opts": [],
+    "ans": "retook",
+    "why": "retake 的过去式不规则：retook。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "If you fail, you can ______ the exam in June.",
+    "opts": [
+     "retook",
+     "retaken",
+     "retaking",
+     "retake"
+    ],
+    "ans": "D",
+    "why": "can 后面用原形 retake。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 retake、resit 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "In Britain, people often say “______ an exam”.",
+    "opts": [],
+    "ans": "resit",
+    "why": "英式“重考”也说 resit。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He has retook the driving test twice.",
+    "opts": [],
+    "ans": "retook → retaken",
+    "why": "has 加过去分词 retaken。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "士兵们夺回了那座城市。",
+    "stem": "The soldiers ______ the city.",
+    "opts": [],
+    "ans": "retook",
+    "why": "讲过去，“夺回”retake 的过去式 retook。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She is ______ the exam today.",
+    "opts": [
+     "retakeing",
+     "retaking",
+     "retook",
+     "retaken"
+    ],
+    "ans": "B",
+    "why": "is 后面用现在分词，retake 去 e 加 ing。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
