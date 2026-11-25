@@ -21,7 +21,8 @@
       2
      ],
      "z": 3,
-     "shadow": true
+     "shadow": true,
+     "anim": "breathe"
     },
     {
      "label": "（个头、数量）大",
@@ -31,6 +32,20 @@
      "delay": 1.2,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "every": 0.6,
+     "life": 1.4,
+     "to": [
+      0.1,
+      -0.2
+     ],
+     "s": 0.06,
+     "spin": true
     }
    ]
   },
@@ -192,6 +207,38 @@
       "delay": 0.8,
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.1
+      },
+      "s": 0.36,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-girl",
+      "walk": {
+       "from": [
+        -0.05,
+        0.88
+       ],
+       "to": [
+        1.05,
+        0.88
+       ],
+       "offset": 0.6
+      },
+      "s": 0.36,
+      "z": 1
      }
     ],
     "ex": "Thank you very much.",
@@ -255,6 +302,38 @@
        "when": "非常感谢",
        "color": "#2B8A3E",
        "border": "#2B8A3E"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "walk": {
+        "from": [
+         1.05,
+         0.86
+        ],
+        "to": [
+         -0.05,
+         0.86
+        ],
+        "offset": 0.1
+       },
+       "s": 0.36,
+       "z": 1
+      },
+      {
+       "actor": "walk-cn-girl",
+       "walk": {
+        "from": [
+         -0.05,
+         0.88
+        ],
+        "to": [
+         1.05,
+         0.88
+        ],
+        "offset": 0.6
+       },
+       "s": 0.36,
+       "z": 1
       }
      ]
     }
@@ -278,7 +357,8 @@
         2
        ],
        "z": 3,
-       "shadow": true
+       "shadow": true,
+       "anim": "breathe"
       },
       {
        "label": "大",
@@ -288,6 +368,20 @@
        "delay": 1.2,
        "color": "#2B8A3E",
        "border": "#2B8A3E"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "every": 0.6,
+       "life": 1.4,
+       "to": [
+        0.1,
+        -0.2
+       ],
+       "s": 0.06,
+       "spin": true
       }
      ]
     }
@@ -355,7 +449,8 @@
        "z": 4,
        "shadow": true,
        "when": "sugar",
-       "pop": true
+       "pop": true,
+       "anim": "pulse"
       },
       {
        "label": "much sugar",
@@ -366,6 +461,21 @@
        "color": "#7A3E00",
        "bg": "#FFF6D8",
        "border": "#E0A800"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "every": 0.6,
+       "life": 1.4,
+       "to": [
+        0.1,
+        -0.2
+       ],
+       "s": 0.06,
+       "spin": true,
+       "when": "好大一片"
       }
      ]
     }
@@ -376,41 +486,68 @@
     "pos": "副词",
     "pic": 1,
     "say": [
-     "不说东西多，说程度大，much 就成了副词：很、非常。",
-     "Thank you very much，就是非常感谢；放在比较级前面，much bigger，就是大得多。"
+     "说多少的词，也能用来说程度，放在形容词、动词前面，就成了副词。",
+     "a lot 是很多，Thanks a lot，就是非常感谢。",
+     "much 也一样：Thank you very much，非常感谢；much bigger，大得多。"
     ],
     "fig": {
      "bg": "blank",
      "img": "art/street-bg.svg",
      "items": [
       {
-       "label": "东西多 → 程度大",
+       "label": "多少 → 程度（副词）",
        "x": 0.5,
-       "y": 0.12,
-       "size": 0.085,
-       "when": "程度大",
+       "y": 0.4,
+       "size": 0.09,
+       "when": "说程度",
        "hideCue": 1,
        "color": "#7048E8",
        "border": "#7048E8"
       },
       {
-       "actor": "west-man-hello",
+       "id": "m",
+       "actor": "west-man-smile",
        "x": 0.26,
        "y": 0.62,
        "s": 0.86,
        "z": 3,
-       "when": "很、非常",
-       "hideWhen": "比较级"
+       "cue": 1,
+       "when": "a lot",
+       "seq": "talk",
+       "hideWhen": "much bigger"
       },
       {
-       "actor": "cn-teacher-laugh",
+       "actor": "cn-teacher-listen",
        "x": 0.74,
        "y": 0.62,
        "s": 0.86,
        "z": 3,
        "cue": 1,
-       "when": "非常感谢",
-       "hideWhen": "比较级"
+       "when": "a lot",
+       "nodWith": "m",
+       "hideWhen": "much bigger"
+      },
+      {
+       "waves": true,
+       "on": "m",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "m",
+       "cue": 1,
+       "when": "Thanks a lot",
+       "hideWhen": "much bigger"
+      },
+      {
+       "label": "Thanks a lot 非常感谢",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.08,
+       "when": "Thanks a lot",
+       "hideCue": 2,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
       },
       {
        "label": "very much 非常",
@@ -418,7 +555,7 @@
        "y": 0.12,
        "size": 0.085,
        "when": "very much",
-       "hideWhen": "比较级",
+       "hideWhen": "much bigger",
        "color": "#7A3E00",
        "bg": "#FFF6D8",
        "border": "#E0A800"
@@ -426,7 +563,7 @@
       {
        "svg": "art/box.svg",
        "x": 0.28,
-       "y": 0.76,
+       "y": 0.7,
        "s": 0.18,
        "z": 3,
        "when": "much bigger"
@@ -434,12 +571,13 @@
       {
        "svg": "art/box.svg",
        "x": 0.62,
-       "y": 0.6,
-       "s": 0.56,
+       "y": 0.56,
+       "s": 0.52,
        "z": 3,
        "when": "much bigger",
        "delay": 0.3,
-       "pop": true
+       "pop": true,
+       "anim": "pulse"
       },
       {
        "label": "much bigger 大得多",
@@ -449,9 +587,43 @@
        "when": "大得多",
        "color": "#2B8A3E",
        "border": "#2B8A3E"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "walk": {
+        "from": [
+         1.05,
+         0.86
+        ],
+        "to": [
+         -0.05,
+         0.86
+        ],
+        "offset": 0.1
+       },
+       "s": 0.36,
+       "z": 1
+      },
+      {
+       "actor": "walk-cn-girl",
+       "walk": {
+        "from": [
+         -0.05,
+         0.88
+        ],
+        "to": [
+         1.05,
+         0.88
+        ],
+        "offset": 0.6
+       },
+       "s": 0.36,
+       "z": 1
       }
      ]
-    }
+    },
+    "rule": "说多少的词，也能用来说程度：放在形容词、动词前面当副词",
+    "ruleEx": "much 多的 → 很、非常      a lot 很多 → 非常（Thanks a lot）"
    }
   ],
   "extend": [
@@ -483,7 +655,16 @@
        "y": 0.52,
        "s": 0.7,
        "z": 3,
-       "shadow": true
+       "shadow": true,
+       "anim": "bob"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.1,
+       "y": 0.66,
+       "s": 0.6,
+       "z": 4,
+       "seq": "blink"
       },
       {
        "label": "many + 可数复数（many apples）",
@@ -492,10 +673,20 @@
        "size": 0.08,
        "color": "#2F6FB3",
        "border": "#2F6FB3"
+      },
+      {
+       "label": "1, 2, 3…",
+       "x": 0.34,
+       "y": 0.14,
+       "size": 0.08,
+       "delay": 0.6,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
       }
      ]
     }
-   }
+   },
+   "logic": "much 说“一大堆、分不出一个一个”，所以接不可数名词（much sugar）；many 说“很多个、能一个一个数”，所以接可数名词复数（many apples）"
   }
  },
  "插图": [
@@ -591,5 +782,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

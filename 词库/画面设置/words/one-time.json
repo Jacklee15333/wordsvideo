@@ -16,7 +16,8 @@
      "s": 0.42,
      "z": 3,
      "pop": true,
-     "delay": 0.3
+     "delay": 0.3,
+     "anim": "sway"
     },
     {
      "label": "1",
@@ -35,6 +36,38 @@
      "delay": 0.9,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "walk": {
+      "from": [
+       1.05,
+       0.86
+      ],
+      "to": [
+       -0.05,
+       0.86
+      ],
+      "offset": 0.1
+     },
+     "s": 0.36,
+     "z": 1
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "walk": {
+      "from": [
+       -0.05,
+       0.88
+      ],
+      "to": [
+       1.05,
+       0.88
+      ],
+      "offset": 0.6
+     },
+     "s": 0.36,
+     "z": 1
     }
    ]
   },
@@ -93,7 +126,8 @@
     "y": 0.54,
     "s": 0.6,
     "z": 3,
-    "shadow": true
+    "shadow": true,
+    "anim": "bob"
    },
    {
     "label": "只用一次",
@@ -103,6 +137,38 @@
     "delay": 0.6,
     "color": "#2B8A3E",
     "border": "#2B8A3E"
+   },
+   {
+    "actor": "walk-west-woman-case",
+    "walk": {
+     "from": [
+      1.05,
+      0.86
+     ],
+     "to": [
+      -0.05,
+      0.86
+     ],
+     "offset": 0.1
+    },
+    "s": 0.36,
+    "z": 1
+   },
+   {
+    "actor": "walk-cn-boy-pack",
+    "walk": {
+     "from": [
+      -0.05,
+      0.88
+     ],
+     "to": [
+      1.05,
+      0.88
+     ],
+     "offset": 0.6
+    },
+    "s": 0.36,
+    "z": 1
    }
   ]
  },
@@ -146,6 +212,38 @@
      "delay": 0.8,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "walk": {
+      "from": [
+       1.05,
+       0.86
+      ],
+      "to": [
+       -0.05,
+       0.86
+      ],
+      "offset": 0.1
+     },
+     "s": 0.36,
+     "z": 1
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "walk": {
+      "from": [
+       -0.05,
+       0.88
+      ],
+      "to": [
+       1.05,
+       0.88
+      ],
+      "offset": 0.6
+     },
+     "s": 0.36,
+     "z": 1
     }
    ],
    "ex": "You only need to make a one-time payment.",
@@ -199,6 +297,38 @@
       "when": "一次性付款",
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.1
+      },
+      "s": 0.36,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "walk": {
+       "from": [
+        -0.05,
+        0.88
+       ],
+       "to": [
+        1.05,
+        0.88
+       ],
+       "offset": 0.6
+      },
+      "s": 0.36,
+      "z": 1
      }
     ]
    }
@@ -319,7 +449,8 @@
       "y": 0.54,
       "s": 0.6,
       "z": 3,
-      "shadow": true
+      "shadow": true,
+      "anim": "bob"
      },
      {
       "label": "一次的",
@@ -329,6 +460,38 @@
       "delay": 0.6,
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.1
+      },
+      "s": 0.36,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "walk": {
+       "from": [
+        -0.05,
+        0.88
+       ],
+       "to": [
+        1.05,
+        0.88
+       ],
+       "offset": 0.6
+      },
+      "s": 0.36,
+      "z": 1
      }
     ]
    }
@@ -412,7 +575,7 @@
       "pop": true
      },
      {
-      "actor": "west-girl-explain",
+      "actor": "west-girl-listen",
       "x": 0.14,
       "y": 0.64,
       "s": 0.8,
@@ -428,6 +591,38 @@
       "when": "一次性付款",
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.1
+      },
+      "s": 0.36,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "walk": {
+       "from": [
+        -0.05,
+        0.88
+       ],
+       "to": [
+        1.05,
+        0.88
+       ],
+       "offset": 0.6
+      },
+      "s": 0.36,
+      "z": 1
      }
     ]
    }
@@ -465,7 +660,7 @@
       "border": "#2F6FB3"
      },
      {
-      "actor": "west-man-hello",
+      "actor": "west-man-smile",
       "x": 0.18,
       "y": 0.62,
       "s": 0.86,
@@ -556,7 +751,46 @@
      }
     ]
    }
-  }
+  },
+  "key": "一次性的",
+  "items": [
+   {
+    "w": "one-time",
+    "gloss": "一次性的；从前的",
+    "note": "只发生一次、只付一次（a one-time payment）；也指从前的"
+   },
+   {
+    "w": "disposable",
+    "gloss": "一次性的、用完就扔的",
+    "note": "说东西：用一回就扔掉（disposable cups 一次性杯子）"
+   },
+   {
+    "w": "former",
+    "gloss": "从前的",
+    "note": "和 one-time 的第二个意思一样，更常用（a former teacher）"
+   }
+  ],
+  "logic": "one-time 是“一 + 次”合成的形容词，说事情的次数；disposable 是 dispose（扔掉）+ able（能…的），说东西能扔掉"
+ },
+ "kaodian": {
+  "rows": [
+   [
+    "考意思",
+    "one-time 两个意思：一次性的（a one-time payment 一次性付款）；从前的、曾经的（a one-time teacher 从前的老师）"
+   ],
+   [
+    "考写法",
+    "当形容词放在名词前，中间要加连字符 one-time；time 不加 s（a two-time champion）"
+   ],
+   [
+    "考区别",
+    "one-time 一次性的、从前的（形容词）/ one time 一次（名词短语）/ once 一次；曾经（副词）"
+   ],
+   [
+    "考辨析",
+    "one-time 说只发生一次；disposable 说东西用完就扔（disposable cups 一次性杯子）"
+   ]
+  ]
  },
  "lianxi": {
   "qs": [

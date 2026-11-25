@@ -10,55 +10,51 @@
    "img": "art/room-bg.svg",
    "items": [
     {
-     "svg": "art/clock.svg",
+     "actor": "west-man-point",
+     "x": 0.5,
+     "y": 0.66,
+     "s": 0.5,
+     "z": 2,
+     "seq": "talk"
+    },
+    {
+     "svg": "art/clock_f0.svg",
      "x": 0.2,
      "y": 0.46,
      "s": 0.32,
      "z": 3,
-     "delay": 0.2
+     "delay": 0.2,
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 1
     },
     {
-     "svg": "art/clock.svg",
+     "svg": "art/clock_f0.svg",
      "x": 0.5,
      "y": 0.46,
      "s": 0.32,
      "z": 3,
-     "delay": 0.6
+     "delay": 0.6,
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 1
     },
     {
-     "svg": "art/clock.svg",
+     "svg": "art/clock_f0.svg",
      "x": 0.8,
      "y": 0.46,
      "s": 0.32,
      "z": 3,
-     "delay": 1.0
-    },
-    {
-     "label": "早上",
-     "x": 0.2,
-     "y": 0.74,
-     "size": 0.07,
-     "delay": 0.3,
-     "color": "#2F6FB3",
-     "border": "#2F6FB3"
-    },
-    {
-     "label": "中午",
-     "x": 0.5,
-     "y": 0.74,
-     "size": 0.07,
-     "delay": 0.7,
-     "color": "#2F6FB3",
-     "border": "#2F6FB3"
-    },
-    {
-     "label": "晚上",
-     "x": 0.8,
-     "y": 0.74,
-     "size": 0.07,
-     "delay": 1.1,
-     "color": "#2F6FB3",
-     "border": "#2F6FB3"
+     "delay": 1.0,
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 1
     },
     {
      "label": "any：任何（哪一个都行）",
@@ -275,7 +271,7 @@
    "items": [
     {
      "id": "g",
-     "actor": "west-girl-explain",
+     "actor": "west-girl-raise",
      "x": 0.26,
      "y": 0.62,
      "s": 0.86,
@@ -322,7 +318,7 @@
     "items": [
      {
       "id": "g",
-      "actor": "west-girl-explain",
+      "actor": "west-girl-surprised",
       "x": 0.24,
       "y": 0.62,
       "s": 0.88,
@@ -392,27 +388,42 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "svg": "art/clock.svg",
+      "svg": "art/clock_f0.svg",
       "x": 0.2,
       "y": 0.46,
       "s": 0.3,
-      "z": 3
+      "z": 3,
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1
      },
      {
-      "svg": "art/clock.svg",
+      "svg": "art/clock_f0.svg",
       "x": 0.5,
       "y": 0.46,
       "s": 0.3,
       "z": 3,
-      "delay": 0.3
+      "delay": 0.3,
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1
      },
      {
-      "svg": "art/clock.svg",
+      "svg": "art/clock_f0.svg",
       "x": 0.8,
       "y": 0.46,
       "s": 0.3,
       "z": 3,
-      "delay": 0.6
+      "delay": 0.6,
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1
      },
      {
       "label": "任何时候",
@@ -422,6 +433,20 @@
       "delay": 1.0,
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "every": 0.6,
+      "life": 1.4,
+      "to": [
+       0.1,
+       -0.2
+      ],
+      "s": 0.06,
+      "spin": true
      }
     ]
    }
@@ -444,6 +469,14 @@
     "img": "art/room-bg.svg",
     "items": [
      {
+      "actor": "cn-teacher-point",
+      "x": 0.12,
+      "y": 0.66,
+      "s": 0.6,
+      "z": 5,
+      "seq": "talk"
+     },
+     {
       "label": "any / some + 小词 = 一个词",
       "x": 0.5,
       "y": 0.36,
@@ -464,14 +497,19 @@
       "border": "#2F6FB3"
      },
      {
-      "svg": "art/clock.svg",
+      "svg": "art/clock_f0.svg",
       "x": 0.5,
       "y": 0.48,
       "s": 0.44,
       "z": 3,
       "cue": 1,
       "when": "某个时候",
-      "hideCue": 2
+      "hideCue": 2,
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1
      },
      {
       "shape": "circle",
@@ -497,30 +535,45 @@
       "border": "#E0A800"
      },
      {
-      "svg": "art/clock.svg",
+      "svg": "art/clock_f0.svg",
       "x": 0.2,
       "y": 0.5,
       "s": 0.3,
       "z": 3,
-      "when": "任何时候都行"
+      "when": "任何时候都行",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1
      },
      {
-      "svg": "art/clock.svg",
+      "svg": "art/clock_f0.svg",
       "x": 0.5,
       "y": 0.5,
       "s": 0.3,
       "z": 3,
       "when": "任何时候都行",
-      "delay": 0.2
+      "delay": 0.2,
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1
      },
      {
-      "svg": "art/clock.svg",
+      "svg": "art/clock_f0.svg",
       "x": 0.8,
       "y": 0.5,
       "s": 0.3,
       "z": 3,
       "when": "任何时候都行",
-      "delay": 0.4
+      "delay": 0.4,
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1
      },
      {
       "label": "anytime 随时",
@@ -558,7 +611,7 @@
     "img": "art/classroom-bg.svg",
     "items": [
      {
-      "actor": "west-girl-explain",
+      "actor": "west-girl-raise",
       "x": 0.24,
       "y": 0.62,
       "s": 0.86,
@@ -584,7 +637,7 @@
       "border": "#E0A800"
      },
      {
-      "actor": "cn-teacher-laugh",
+      "actor": "cn-teacher-listen",
       "x": 0.76,
       "y": 0.62,
       "s": 0.86,
@@ -632,6 +685,26 @@
    "share": "any"
   }
  ],
+ "kaodian": {
+  "rows": [
+   [
+    "考意思",
+    "anytime 是副词：随时、在任何时候；口语里别人道谢，回一句 Anytime! 就是“不客气、随时效劳”"
+   ],
+   [
+    "考搭配",
+    "call me anytime 随时给我打电话；anytime soon（否定句）近期内；Come anytime. 随时来"
+   ],
+   [
+    "考写法",
+    "美式连写 anytime；英式多分开写 any time，前面有 at 时要分开：at any time"
+   ],
+   [
+    "考区别",
+    "anytime 任何时候 / sometime 某个时候 / sometimes 有时 / some time 一段时间"
+   ]
+  ]
+ },
  "lianxi": {
   "qs": [
    {
