@@ -1074,6 +1074,37 @@ def later_op(b):
     return r
 
 
+def check_typed(text):
+    """v1.17.0「接着做 → 自己输入单词」：一个一个看——总表里有没有、有没有题目、是不是已经有画面。大小写不用管。"""
+    import video as V2
+    raw = [w.strip() for w in re.split(r"[\n,，、;；\t]+|\s{2,}", str(text or "")) if w.strip()]
+    if len(raw) == 1 and " " in raw[0] and not any(r[2].lower() == raw[0].lower() for r in C.read_index()[1]):
+        raw = raw[0].split()                    # 用空格隔开的一串词（词组本身带空格的整个能找到就不拆）
+    _, rows = C.read_index()
+    by = {}
+    for r in rows:
+        by.setdefault(r[2].lower(), r)
+    pw = V2.pic_words()
+    out = {"ok": [], "havepic": [], "noq": [], "nofound": []}
+    seen = set()
+    for w in raw[:500]:
+        r = by.get(w.lower())
+        if not r:
+            out["nofound"].append(w)
+            continue
+        cw = r[2]
+        if cw in seen:
+            continue
+        seen.add(cw)
+        if r[4] not in ("细节数据有", "总表有"):
+            out["noq"].append(cw)
+        elif V2.folder_of(cw) in pw and not _unchecked(cw):
+            out["havepic"].append(cw)
+        else:
+            out["ok"].append(cw)
+    return out
+
+
 def todo_all():
     p = C.DATA / "pic_todo.json"
     try:

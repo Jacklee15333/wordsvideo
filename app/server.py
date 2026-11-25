@@ -667,6 +667,7 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/self": api_self_post,
         "/api/relay": api_relay_post,
         "/api/fixlater": lambda b: __import__("pics").later_op(b),
+        "/api/pictyped": lambda b: __import__("pics").check_typed(b.get("text", "")),
         "/api/open": api_open,
         "/api/words-task": api_words_task,
         "/api/prep": api_prep,

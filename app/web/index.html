@@ -864,13 +864,13 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 <section id="p-pic">
   <div class="phead"><div><h2><i class="sn">5</i>画面：视频里的画</h2>
     <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="on">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="picbulk" class="">批量</a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="picbulk" class="">批量</a><a data-go="pic" class="on">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0">这次给哪些词做画面 <span class="small faint" id="picPickN"></span></h3>
     <p class="small muted" style="margin:0 0 8px">就是第 3 步「选词」里选上的词。要先有题目才能做画面；已经有画面的不重做。</p>
     <div class="rep" id="picCheck" hidden></div>
     <details class="pickbox" id="picPickBox"><summary id="picPickSum">选上的词（点开看每个词）</summary><div class="plist" id="picPick"></div></details>
-    <div class="pgo"><button class="btn kbig" id="tPics">给要做的词做画面 ▶</button><button class="btn kbig" id="picNext" hidden onclick="go('video')">下一步：出视频 ▶</button><span class="small muted" id="picMsg">只做画面，不出题。一个词几分钟，做的过程就在下面。</span></div>
+    <div class="pgo"><button class="btn kbig" id="tPics">给要做的词做画面 ▶</button><button class="btn kbig" id="picNext" hidden onclick="go('video')">下一步：出视频 ▶</button><button class="btn ghost kbig" id="picMore" title="选上的词做完了，再多做一些：按总表顺序接着做，或者自己输入单词">接着做…</button><span class="small muted" id="picMsg">只做画面，不出题。一个词几分钟，做的过程就在下面。</span></div>
   </div>
   <div class="sprog" data-step="pic">
     <h3>这一步的进度</h3>
@@ -883,7 +883,7 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 <section id="p-pichist">
   <div class="phead"><div><h2><i class="sn">5</i>画面：生成历史</h2>
     <p class="muted">做完一批，这里多一行：几点做的、哪些词、做好几个、没做成几个。点一行看这一批每个词，点词看它的画面。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="picbulk" class="">批量</a><a data-go="pichist" class="on">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="picbulk" class="">批量</a><a data-go="pic" class="">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="on">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0">生成历史 <span class="small faint" id="ghN"></span></h3>
     <div class="small muted" id="picSave" style="margin:-4px 0 8px"></div>
@@ -901,7 +901,7 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 <section id="p-picfail">
   <div class="phead"><div><h2><i class="sn">5</i>画面：没做成的词</h2>
     <p class="muted">AI 改了几轮还没过检查的画面。看一下原因，点「这些再试一次」交给 AI 重做。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="picbulk" class="">批量</a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="picbulk" class="">批量</a><a data-go="pic" class="">画面</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><h3 style="margin-top:0">画面没做成的词</h3>
       <div id="picFail" class="small">—</div>
       <div class="line"><button class="btn ghost sm" id="tPicRedo">这些再试一次</button></div></div></div>
@@ -911,7 +911,7 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 <section id="p-picbulk">
   <div class="phead"><div><h2><i class="sn">5</i>画面：批量</h2>
     <p class="muted">不按选上的词，按总表顺序给已经有题目的词一口气做一批画面。做的过程在「画面」那一页下面。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="picbulk" class="on">批量</a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="picbulk" class="on">批量</a><a data-go="pic" class="">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><div class="tally" id="picStats">—</div></div>
   <div class="box" style="margin-top:14px">
     <h3 style="margin-top:0">按总表顺序接着做</h3>
@@ -1304,6 +1304,32 @@ $('#tPics').onclick=()=>busy($('#tPics'),$('#picMsg'),'正在安排',async()=>{
   await api('/api/task',{kind:'pics',params:{words:PP,skipped:{pic:havePic,noq:noQ}},title:`做画面：${PP.slice(0,4).join('、')}${PP.length>4?' 等 '+PP.length+' 个':''}`});
   poll();setTimeout(()=>{loadPic();stepScroll()},700);
   return{ok:true,msg:`开始了：这次做 ${PP.length} 个${havePic.length?`；已经有画面、跳过 ${havePic.length} 个`:''}${noQ.length?`；还没题目、跳过 ${noQ.length} 个`:''}。做的过程在下面，做完有汇报`}});
+/* v1.17.0「接着做」：按总表顺序接着做（就是「批量」），或者自己输入单词做画面 */
+let PMT=0,PMOK=[];
+$('#picMore').onclick=()=>{modal('接着做画面',`
+  <div class="box" style="margin:0 0 12px"><h3 style="margin-top:0">按总表顺序接着做</h3>
+    <div class="line">接着做 <input type="number" id="pmN" value="${+$('#tPCount').value||20}" min="1" style="width:76px"> 个词 <span class="small faint">只做有题目、还没画面的</span></div>
+    <div class="line"><button class="btn" id="pmBulk">开始做这一批</button> <a href="#" class="small" id="pmGoBulk">去「批量」页看看 →</a></div></div>
+  <div class="box" style="margin:0"><h3 style="margin-top:0">自己输入单词</h3>
+    <textarea id="pmWords" rows="5" style="width:100%" placeholder="一行一个，或者用逗号、空格隔开，比如：apple, banana, orange"></textarea>
+    <div class="small" id="pmCheck" style="margin:6px 0;line-height:1.7"></div>
+    <button class="btn" id="pmTyped" disabled>开始做画面</button> <span class="small" id="pmMsg"></span></div>`);
+  $('#pmGoBulk').onclick=e=>{e.preventDefault();closeModal();go('picbulk')};
+  $('#pmBulk').onclick=async()=>{const n=Math.max(1,+$('#pmN').value||20);$('#tPCount').value=n;$('#pmBulk').disabled=true;
+    await api('/api/task',{kind:'pics',params:{count:n},title:`做视频画面 ${n} 个词`});closeModal();toast(`开始了：按总表顺序接着做 ${n} 个词，做的过程在下面`,6000);poll();setTimeout(()=>{loadPic();stepScroll()},700)};
+  $('#pmWords').oninput=()=>{clearTimeout(PMT);$('#pmTyped').disabled=true;$('#pmCheck').textContent=$('#pmWords').value.trim()?'正在对总表…':'';PMT=setTimeout(pmCheck,500)};
+  $('#pmTyped').onclick=async()=>{if(!PMOK.length)return;$('#pmTyped').disabled=true;const ws=PMOK.slice();
+    await api('/api/task',{kind:'pics',params:{words:ws},title:`做画面：${ws.slice(0,4).join('、')}${ws.length>4?' 等 '+ws.length+' 个':''}`});
+    closeModal();toast(`开始了：做 ${ws.length} 个词的画面，做的过程在下面`,6000);poll();setTimeout(()=>{loadPic();stepScroll()},700)};
+  setTimeout(()=>$('#pmWords').focus(),50)};
+async function pmCheck(){const t=$('#pmWords').value;if(!t.trim()){$('#pmCheck').textContent='';PMOK=[];return}
+  let d;try{d=await api('/api/pictyped',{text:t})}catch(e){$('#pmCheck').textContent='✗ 对不了总表（词库还没准备好？）';return}
+  if($('#pmWords').value!==t)return;PMOK=d.ok||[];const L=a=>esc(a.slice(0,12).join('、'))+(a.length>12?` 等 ${a.length} 个`:'');
+  $('#pmCheck').innerHTML=[PMOK.length?`<span class="ck-y">✓ 能做 ${PMOK.length} 个</span>：${L(PMOK)}`:'',
+    d.havepic.length?`<span class="muted">已经有画面、跳过 ${d.havepic.length} 个：${L(d.havepic)}</span>`:'',
+    d.noq.length?`<span style="color:var(--amber)">还没题目、跳过 ${d.noq.length} 个（先到第 4 步「出题」）：${L(d.noq)}</span>`:'',
+    d.nofound.length?`<span class="ck-bad">总表里没有 ${d.nofound.length} 个：${L(d.nofound)}</span>`:''].filter(Boolean).join('<br>')||'没认出词';
+  $('#pmTyped').disabled=!PMOK.length;$('#pmTyped').textContent=PMOK.length?`开始做这 ${PMOK.length} 个`:'开始做画面'}
 $('#tPicsNext').onclick=()=>busy($('#tPicsNext'),$('#pbMsg'),'正在安排',async()=>{
   await api('/api/task',{kind:'pics',params:{count:+$('#tPCount').value||0}});poll();setTimeout(()=>{go('pic');stepScroll()},700);
   return{ok:true,msg:'开始了：做的过程在「画面」那一页下面'}});
@@ -1370,7 +1396,7 @@ async function stepTasks(step){TLt=Date.now();
   const th=(rest.length?rest.map(taskRow).join(''):(mg||toHist)?'':'<p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p>')+
     (done.length&&!toHist?`<details class="tdone" ${TOPEN[step]?'open':''}><summary class="small muted">做完的 ${done.length} 个任务</summary>${done.map(taskRow).join('')}
       <div class="line"><button class="btn ghost sm" onclick="clearDone('${step}')">清掉这一步做完的记录</button></div></details>`:'');
-  const tl=sec.querySelector('.tlist');tl.innerHTML=th;tl.hidden=!th;
+  const tl=sec.querySelector('.tlist');tl.innerHTML=th;tl.hidden=!th;sprogHead(sec)
   const dt=sec.querySelector('.tdone');if(dt)dt.ontoggle=()=>{TOPEN[step]=dt.open}}
 /* 汇报：最近一次（点了「给这些词…」的）任务，跳过了哪些、这次做的每个词结果怎样 */
 function repRender(step,tasks){const box=$('#'+step+'Rep');if(!box)return;
@@ -1526,6 +1552,9 @@ async function loadPicfail(){tabCounts();
     $('#picFail').innerHTML=it.length?'<ul class="pfl" style="margin:0;padding-left:18px">'+it.slice(0,30).map(x=>`<li><b style="font-family:var(--en)">${esc(x.word)}</b> <span class="muted">${esc(why(x))}</span></li>`).join('')+'</ul>'+(it.length>30?`<div class="faint">…还有 ${it.length-30} 个</div>`:''):'没有画面没做成的词';
     $('#tPicRedo').disabled=!it.length}).catch(()=>{});
 }
+function sprogHead(sec){const h=sec.querySelector(':scope > h3');if(!h)return;
+  const vis=[...sec.querySelectorAll('.tslot > *, .sother, .tlist')].some(e=>!e.hidden&&getComputedStyle(e).display!=='none');h.hidden=!vis}
+setInterval(()=>$$('.sprog').forEach(sprogHead),1500);
 function loadPichist(){tabCounts();picRes();stepTasks('pic')}
 function loadPicbulk(){tabCounts();
   api('/api/words?ready=').then(w=>{const c=w.counts||{};
