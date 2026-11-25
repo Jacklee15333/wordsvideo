@@ -1,7 +1,661 @@
 {
  "单词": "highway",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "公路、干道；大道、途径"
+  },
+  "sylIpa": [
+   "haɪ",
+   "weɪ"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/highway-bg.svg",
+    "items": [
+     {
+      "svg": "art/highway-sign.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.62,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/truck.svg",
+      "x": 0.1,
+      "y": 0.86,
+      "s": 0.2,
+      "go": [
+       0.9,
+       0.86
+      ],
+      "dur": 4,
+      "loop": true,
+      "z": 3
+     },
+     {
+      "label": "主要的",
+      "x": 0.15,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.4
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/car-blue.svg",
+      "x": 0.2,
+      "y": 0.8,
+      "s": 0.4,
+      "go": [
+       0.85,
+       0.8
+      ],
+      "dur": 4,
+      "loop": true,
+      "anim": "ride",
+      "z": 3
+     },
+     {
+      "label": "路",
+      "x": 0.85,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "delay": 0.4
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-highway-sign.svg",
+   "p1": "art/icon-car-blue.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/highway-bg.svg",
+   "items": [
+    {
+     "svg": "art/truck.svg",
+     "x": 0.1,
+     "y": 0.84,
+     "s": 0.34,
+     "go": [
+      0.9,
+      0.84
+     ],
+     "dur": 4,
+     "loop": true,
+     "z": 3
+    },
+    {
+     "svg": "art/highway-sign.svg",
+     "x": 0.5,
+     "y": 0.4,
+     "s": 0.5
+    },
+    {
+     "label": "主要的路",
+     "x": 0.15,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "公路、干道",
+    "pos": "名词",
+    "diff": "把城镇连起来的大路",
+    "bg": "blank",
+    "img": "art/highway-bg.svg",
+    "items": [
+     {
+      "svg": "art/truck.svg",
+      "x": 0.1,
+      "y": 0.8,
+      "s": 0.46,
+      "go": [
+       0.8,
+       0.8
+      ],
+      "dur": 4,
+      "loop": true,
+      "anim": "ride",
+      "z": 3
+     },
+     {
+      "svg": "art/car-red.svg",
+      "x": 0.9,
+      "y": 0.9,
+      "s": 0.2,
+      "go": [
+       0.1,
+       0.9
+      ],
+      "dur": 3,
+      "loop": true,
+      "z": 4
+     },
+     {
+      "svg": "art/highway-sign.svg",
+      "x": 0.62,
+      "y": 0.3,
+      "s": 0.4
+     }
+    ],
+    "ex": "We drove along the highway.",
+    "exzh": "我们沿着公路开车。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "svg": "art/car-red.svg",
+       "x": 0.1,
+       "y": 0.82,
+       "s": 0.46,
+       "go": [
+        0.7,
+        0.82
+       ],
+       "dur": 3.5,
+       "when": "drove",
+       "anim": "ride",
+       "z": 3
+      },
+      {
+       "svg": "art/highway-sign.svg",
+       "x": 0.75,
+       "y": 0.3,
+       "s": 0.4
+      },
+      {
+       "label": "highway",
+       "x": 0.2,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "highway"
+      },
+      {
+       "label": "公路",
+       "x": 0.2,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "公路"
+      }
+     ]
+    }
+   },
+   {
+    "text": "大道、途径",
+    "pos": "名词",
+    "diff": "通向一个目标的路",
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/books.svg",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.75,
+      "y": 0.4,
+      "s": 0.5,
+      "anim": "pulse"
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.6
+       ],
+       [
+        0.65,
+        0.45
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "delay": 0.6
+     }
+    ],
+    "ex": "Reading is a highway to knowledge.",
+    "exzh": "读书是通往知识的大道。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.28,
+       "y": 0.6,
+       "s": 0.5,
+       "when": "Reading"
+      },
+      {
+       "x": 0.08,
+       "y": 0.62,
+       "s": 0.6,
+       "z": 4,
+       "when": "Reading",
+       "actor": "cn-boy-raise",
+       "id": "p1"
+      },
+      {
+       "ray": [
+        [
+         0.38,
+         0.6
+        ],
+        [
+         0.62,
+         0.45
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "when": "highway"
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.75,
+       "y": 0.42,
+       "s": 0.5,
+       "when": "knowledge",
+       "anim": "pulse"
+      },
+      {
+       "label": "a highway to knowledge",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "highway to knowledge"
+      },
+      {
+       "label": "大道",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "大道"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“主要的路”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "svg": "art/truck.svg",
+       "x": 0.1,
+       "y": 0.84,
+       "s": 0.34,
+       "go": [
+        0.9,
+        0.84
+       ],
+       "dur": 4,
+       "loop": true,
+       "z": 3
+      },
+      {
+       "svg": "art/highway-sign.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.5
+      },
+      {
+       "label": "主要的路",
+       "x": 0.15,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "把一座座城镇连起来的大路",
+    "node": "① 公路、干道",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "high 在这里是主要的，way 是路，主要的路。",
+     "古英语里就有，把一座座城镇连起来的大路，就是公路、干道。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "label": "high 主要的",
+       "x": 0.2,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "主要的"
+      },
+      {
+       "label": "way 路",
+       "x": 0.8,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "way 是路"
+      },
+      {
+       "svg": "art/highway-sign.svg",
+       "x": 0.5,
+       "y": 0.38,
+       "s": 0.5,
+       "when": "城镇连起来"
+      },
+      {
+       "svg": "art/truck.svg",
+       "x": 0.1,
+       "y": 0.84,
+       "s": 0.34,
+       "go": [
+        0.9,
+        0.84
+       ],
+       "dur": 4,
+       "loop": true,
+       "when": "大路",
+       "z": 3
+      },
+      {
+       "label": "公路、干道",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "公路、干道"
+      }
+     ]
+    }
+   },
+   {
+    "via": "通向某个目标的一条大路",
+    "node": "② 大道、途径",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "通向一个目标的一条大路，就是大道、途径。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.5,
+       "when": "通向"
+      },
+      {
+       "ray": [
+        [
+         0.4,
+         0.6
+        ],
+        [
+         0.65,
+         0.45
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "when": "一个目标"
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.75,
+       "y": 0.42,
+       "s": 0.5,
+       "when": "一个目标",
+       "anim": "pulse"
+      },
+      {
+       "label": "大道、途径",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "大道、途径"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "high",
+    "m": "主要的；高的",
+    "share": "high"
+   },
+   {
+    "w": "expressway",
+    "m": "高速公路",
+    "share": "way"
+   },
+   {
+    "w": "runway",
+    "m": "跑道",
+    "share": "way"
+   }
+  ],
+  "distinguish": {
+   "key": "公路",
+   "items": [
+    {
+     "w": "highway",
+     "word": "highway",
+     "m": "公路、干道",
+     "mean": "公路、干道",
+     "diff": "主要的大路、干道；在美国不一定是封闭的高速路。",
+     "say": "主要的大路、干道；在美国不一定是封闭的高速路。",
+     "text": "主要的大路、干道；在美国不一定是封闭的高速路。",
+     "note": "主要的大路、干道；在美国不一定是封闭的高速路。",
+     "line": "主要的大路、干道；在美国不一定是封闭的高速路。",
+     "desc": "主要的大路、干道；在美国不一定是封闭的高速路。",
+     "explain": "主要的大路、干道；在美国不一定是封闭的高速路。",
+     "talk": "主要的大路、干道；在美国不一定是封闭的高速路。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/highway-bg.svg",
+      "items": [
+       {
+        "svg": "art/highway-sign.svg",
+        "x": 0.5,
+        "y": 0.4,
+        "s": 0.6
+       },
+       {
+        "svg": "art/truck.svg",
+        "x": 0.1,
+        "y": 0.86,
+        "s": 0.3,
+        "go": [
+         0.9,
+         0.86
+        ],
+        "dur": 4,
+        "loop": true,
+        "z": 3
+       }
+      ]
+     }
+    },
+    {
+     "w": "road",
+     "word": "road",
+     "m": "路",
+     "mean": "路",
+     "diff": "什么路都可以叫 road，大路小路都算。",
+     "say": "什么路都可以叫 road，大路小路都算。",
+     "text": "什么路都可以叫 road，大路小路都算。",
+     "note": "什么路都可以叫 road，大路小路都算。",
+     "line": "什么路都可以叫 road，大路小路都算。",
+     "desc": "什么路都可以叫 road，大路小路都算。",
+     "explain": "什么路都可以叫 road，大路小路都算。",
+     "talk": "什么路都可以叫 road，大路小路都算。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/car-green.svg",
+        "x": 0.2,
+        "y": 0.8,
+        "s": 0.4,
+        "go": [
+         0.8,
+         0.8
+        ],
+        "dur": 3,
+        "loop": true,
+        "z": 3
+       },
+       {
+        "y": 0.86,
+        "s": 0.46,
+        "actor": "walk-west-woman-case",
+        "x": -0.1,
+        "walk": {
+         "from": [
+          -0.1,
+          0.86
+         ],
+         "to": [
+          1.1,
+          0.86
+         ],
+         "offset": 0
+        },
+        "z": 5
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "highway 是 high（主要的）+ way，专说主要的大路；road 是路的统称。",
+   "tip": "高速公路美式多说 freeway / expressway / interstate，英式说 motorway；英式 high street 是城镇的主街。",
+   "pics": {
+    "highway": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "svg": "art/highway-sign.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.6
+      },
+      {
+       "svg": "art/truck.svg",
+       "x": 0.1,
+       "y": 0.86,
+       "s": 0.3,
+       "go": [
+        0.9,
+        0.86
+       ],
+       "dur": 4,
+       "loop": true,
+       "z": 3
+      }
+     ]
+    },
+    "road": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/car-green.svg",
+       "x": 0.2,
+       "y": 0.8,
+       "s": 0.4,
+       "go": [
+        0.8,
+        0.8
+       ],
+       "dur": 3,
+       "loop": true,
+       "z": 3
+      },
+      {
+       "y": 0.86,
+       "s": 0.46,
+       "actor": "walk-west-woman-case",
+       "x": -0.1,
+       "walk": {
+        "from": [
+         -0.1,
+         0.86
+        ],
+        "to": [
+         1.1,
+         0.86
+        ],
+        "offset": 0
+       },
+       "z": 5
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "highwayai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他们怎么去海边？\n听：We drove along the highway to the beach.\nA. 坐火车\nB. 坐飞机\nC. 沿着公路开车\nD. 骑车",
@@ -88,5 +742,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

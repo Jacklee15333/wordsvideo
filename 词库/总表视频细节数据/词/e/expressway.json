@@ -1,7 +1,469 @@
 {
  "单词": "expressway",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "高速公路、快速路"
+  },
+  "sylIpa": [
+   "ɪkˈspres",
+   "weɪ"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/subway-bg.svg",
+    "items": [
+     {
+      "svg": "art/subway-train.svg",
+      "x": 1.3,
+      "y": 0.7,
+      "s": 0.5,
+      "go": [
+       -0.3,
+       0.7
+      ],
+      "dur": 2.2,
+      "loop": true,
+      "z": 3
+     },
+     {
+      "label": "快速直达",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.4
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/car-blue.svg",
+      "x": 0.2,
+      "y": 0.8,
+      "s": 0.4,
+      "go": [
+       0.85,
+       0.8
+      ],
+      "dur": 4,
+      "loop": true,
+      "anim": "ride",
+      "z": 3
+     },
+     {
+      "label": "路",
+      "x": 0.85,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "delay": 0.4
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-subway-train.svg",
+   "p1": "art/icon-car-blue.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/highway-bg.svg",
+   "items": [
+    {
+     "svg": "art/express-sign.svg",
+     "x": 0.5,
+     "y": 0.36,
+     "s": 0.5
+    },
+    {
+     "svg": "art/car-red.svg",
+     "x": 0.0,
+     "y": 0.84,
+     "s": 0.3,
+     "go": [
+      1.0,
+      0.84
+     ],
+     "dur": 2,
+     "loop": true,
+     "z": 3
+    },
+    {
+     "label": "快速直达的路",
+     "x": 0.15,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "高速公路、快速路",
+    "pos": "名词",
+    "diff": "车不用走走停停、一路直达的路",
+    "bg": "blank",
+    "img": "art/highway-bg.svg",
+    "items": [
+     {
+      "svg": "art/express-sign.svg",
+      "x": 0.5,
+      "y": 0.36,
+      "s": 0.52
+     },
+     {
+      "svg": "art/car-red.svg",
+      "x": 0.0,
+      "y": 0.86,
+      "s": 0.3,
+      "go": [
+       1.0,
+       0.86
+      ],
+      "dur": 2,
+      "loop": true,
+      "z": 3
+     },
+     {
+      "svg": "art/truck.svg",
+      "x": 1.0,
+      "y": 0.76,
+      "s": 0.24,
+      "go": [
+       0.0,
+       0.76
+      ],
+      "dur": 2.6,
+      "loop": true,
+      "flip": true,
+      "z": 2
+     }
+    ],
+    "ex": "We took the expressway to the airport.",
+    "exzh": "我们走高速去机场。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "svg": "art/express-sign.svg",
+       "x": 0.45,
+       "y": 0.36,
+       "s": 0.5,
+       "when": "expressway"
+      },
+      {
+       "svg": "art/car-blue.svg",
+       "x": 0.0,
+       "y": 0.84,
+       "s": 0.32,
+       "go": [
+        0.9,
+        0.84
+       ],
+       "dur": 2.5,
+       "when": "took",
+       "z": 3
+      },
+      {
+       "svg": "art/plane.svg",
+       "x": 0.85,
+       "y": 0.12,
+       "s": 0.16,
+       "go": [
+        0.6,
+        0.05
+       ],
+       "dur": 3,
+       "when": "airport"
+      },
+      {
+       "label": "expressway",
+       "x": 0.15,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "expressway"
+      },
+      {
+       "label": "走高速",
+       "x": 0.15,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "走高速"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“快速直达的路”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "svg": "art/express-sign.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.5
+      },
+      {
+       "svg": "art/car-red.svg",
+       "x": 0.0,
+       "y": 0.84,
+       "s": 0.3,
+       "go": [
+        1.0,
+        0.84
+       ],
+       "dur": 2,
+       "loop": true,
+       "z": 3
+      },
+      {
+       "label": "快速直达的路",
+       "x": 0.15,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "车不用走走停停、一路直达",
+    "node": "① 高速公路",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "express 是快速直达的，way 是路。",
+     "车不用走走停停，一路直达，这就是高速公路。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "label": "express 快速直达",
+       "x": 0.25,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "快速直达"
+      },
+      {
+       "label": "way 路",
+       "x": 0.8,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "way 是路"
+      },
+      {
+       "svg": "art/express-sign.svg",
+       "x": 0.5,
+       "y": 0.38,
+       "s": 0.5,
+       "when": "一路直达"
+      },
+      {
+       "svg": "art/car-red.svg",
+       "x": 0.0,
+       "y": 0.84,
+       "s": 0.3,
+       "go": [
+        1.0,
+        0.84
+       ],
+       "dur": 2,
+       "loop": true,
+       "when": "走走停停",
+       "z": 3
+      },
+      {
+       "label": "高速公路",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "高速公路"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "express",
+    "m": "快速的；快车",
+    "share": "express"
+   },
+   {
+    "w": "highway",
+    "m": "公路",
+    "share": "way"
+   },
+   {
+    "w": "runway",
+    "m": "跑道",
+    "share": "way"
+   }
+  ],
+  "distinguish": {
+   "key": "高速公路",
+   "items": [
+    {
+     "w": "expressway",
+     "word": "expressway",
+     "m": "高速公路",
+     "mean": "高速公路",
+     "diff": "美国部分地区和亚洲很多地方这样叫。",
+     "say": "美国部分地区和亚洲很多地方这样叫。",
+     "text": "美国部分地区和亚洲很多地方这样叫。",
+     "note": "美国部分地区和亚洲很多地方这样叫。",
+     "line": "美国部分地区和亚洲很多地方这样叫。",
+     "desc": "美国部分地区和亚洲很多地方这样叫。",
+     "explain": "美国部分地区和亚洲很多地方这样叫。",
+     "talk": "美国部分地区和亚洲很多地方这样叫。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/highway-bg.svg",
+      "items": [
+       {
+        "svg": "art/express-sign.svg",
+        "x": 0.5,
+        "y": 0.4,
+        "s": 0.62,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "freeway",
+     "word": "freeway",
+     "m": "高速公路（美）",
+     "mean": "高速公路（美）",
+     "diff": "美国西部常说，原来指不收费的高速路。",
+     "say": "美国西部常说，原来指不收费的高速路。",
+     "text": "美国西部常说，原来指不收费的高速路。",
+     "note": "美国西部常说，原来指不收费的高速路。",
+     "line": "美国西部常说，原来指不收费的高速路。",
+     "desc": "美国西部常说，原来指不收费的高速路。",
+     "explain": "美国西部常说，原来指不收费的高速路。",
+     "talk": "美国西部常说，原来指不收费的高速路。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/highway-bg.svg",
+      "items": [
+       {
+        "svg": "art/freeway-sign.svg",
+        "x": 0.5,
+        "y": 0.4,
+        "s": 0.62,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "motorway",
+     "word": "motorway",
+     "m": "高速公路（英）",
+     "mean": "高速公路（英）",
+     "diff": "英国的叫法，路牌是蓝底白字，比如 M1。",
+     "say": "英国的叫法，路牌是蓝底白字，比如 M1。",
+     "text": "英国的叫法，路牌是蓝底白字，比如 M1。",
+     "note": "英国的叫法，路牌是蓝底白字，比如 M1。",
+     "line": "英国的叫法，路牌是蓝底白字，比如 M1。",
+     "desc": "英国的叫法，路牌是蓝底白字，比如 M1。",
+     "explain": "英国的叫法，路牌是蓝底白字，比如 M1。",
+     "talk": "英国的叫法，路牌是蓝底白字，比如 M1。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/highway-bg.svg",
+      "items": [
+       {
+        "svg": "art/motorway-sign.svg",
+        "x": 0.5,
+        "y": 0.4,
+        "s": 0.62,
+        "anim": "pulse"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "expressway 说“快速直达”；freeway 说“不收费、畅通”；motorway 说“给机动车走的”。",
+   "tip": "美国各地叫法不一：expressway、freeway、interstate，收费的叫 turnpike。",
+   "pics": {
+    "expressway": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "svg": "art/express-sign.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.62,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "freeway": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "svg": "art/freeway-sign.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.62,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "motorway": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "svg": "art/motorway-sign.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.62,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "expresswayai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他们为什么走这条路？\n听：We took the expressway to save time.\nA. 为了节省时间\nB. 为了看风景\nC. 因为不收费\nD. 因为路近",
@@ -89,5 +551,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

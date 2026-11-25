@@ -1,7 +1,735 @@
 {
  "单词": "weigh",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "称重；重达；权衡、考虑；压在心头"
+  },
+  "sylIpa": [
+   "weɪ"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/scale-kitchen.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.68,
+      "anim": "pulse"
+     },
+     {
+      "label": "称",
+      "x": 0.15,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.4
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-scale-kitchen.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/farm-bg.svg",
+   "items": [
+    {
+     "svg": "art/suitcase.svg",
+     "x": 0.5,
+     "y": 0.72,
+     "s": 0.46,
+     "go": [
+      0.5,
+      0.45
+     ],
+     "dur": 1.2,
+     "loop": true
+    },
+    {
+     "label": "举起",
+     "x": 0.15,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "称（重量）",
+    "pos": "动词",
+    "diff": "把东西放到秤上称",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/scale-kitchen.svg",
+      "x": 0.45,
+      "y": 0.55,
+      "s": 0.66,
+      "anim": "pulse"
+     },
+     {
+      "x": 0.82,
+      "y": 0.6,
+      "s": 0.66,
+      "z": 4,
+      "actor": "west-man-point",
+      "id": "p1"
+     }
+    ],
+    "ex": "Please weigh the apples.",
+    "exzh": "请称一下这些苹果。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/scale-kitchen.svg",
+       "x": 0.45,
+       "y": 0.55,
+       "s": 0.66,
+       "when": "weigh",
+       "pop": true
+      },
+      {
+       "x": 0.82,
+       "y": 0.6,
+       "s": 0.66,
+       "z": 4,
+       "when": "Please",
+       "actor": "west-man-speech",
+       "id": "p2"
+      },
+      {
+       "label": "weigh",
+       "x": 0.15,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "weigh"
+      },
+      {
+       "label": "称一下",
+       "x": 0.15,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "称一下"
+      }
+     ]
+    }
+   },
+   {
+    "text": "重达",
+    "pos": "动词",
+    "diff": "东西本身有多沉",
+    "bg": "blank",
+    "img": "art/checkin-bg.svg",
+    "items": [
+     {
+      "svg": "art/scale-bag.svg",
+      "x": 0.45,
+      "y": 0.78,
+      "s": 0.3,
+      "z": 2
+     },
+     {
+      "svg": "art/suitcase.svg",
+      "x": 0.45,
+      "y": 0.45,
+      "s": 0.5,
+      "anim": "bob",
+      "z": 3
+     }
+    ],
+    "ex": "The bag weighs five kilos.",
+    "exzh": "这个包重五公斤。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/checkin-bg.svg",
+     "items": [
+      {
+       "svg": "art/scale-bag.svg",
+       "x": 0.45,
+       "y": 0.8,
+       "s": 0.3,
+       "z": 2
+      },
+      {
+       "svg": "art/suitcase.svg",
+       "x": 0.45,
+       "y": 0.46,
+       "s": 0.5,
+       "when": "bag",
+       "go": [
+        0.45,
+        0.5
+       ],
+       "dur": 0.6,
+       "z": 3
+      },
+      {
+       "label": "weighs five kilos",
+       "x": 0.82,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "weighs five kilos"
+      },
+      {
+       "label": "重五公斤",
+       "x": 0.82,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "重五公斤"
+      }
+     ]
+    }
+   },
+   {
+    "text": "权衡、考虑",
+    "pos": "动词",
+    "diff": "把两件事放在心里比一比",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/balance-pros.svg",
+      "x": 0.4,
+      "y": 0.5,
+      "s": 0.66,
+      "anim": "sway"
+     },
+     {
+      "x": 0.82,
+      "y": 0.6,
+      "s": 0.66,
+      "z": 4,
+      "actor": "west-clerk-think",
+      "id": "p3"
+     }
+    ],
+    "ex": "We need to weigh the pros and cons.",
+    "exzh": "我们需要权衡利弊。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/balance-pros.svg",
+       "x": 0.45,
+       "y": 0.5,
+       "s": 0.68,
+       "when": "weigh",
+       "anim": "sway"
+      },
+      {
+       "x": 0.86,
+       "y": 0.6,
+       "s": 0.64,
+       "z": 4,
+       "when": "We",
+       "actor": "cn-teacher-listen",
+       "id": "p4"
+      },
+      {
+       "label": "pros",
+       "x": 0.15,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "pros"
+      },
+      {
+       "label": "cons",
+       "x": 0.7,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "cons"
+      },
+      {
+       "label": "权衡利弊",
+       "x": 0.45,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "权衡利弊"
+      }
+     ]
+    }
+   },
+   {
+    "text": "压在心头",
+    "pos": "动词",
+    "diff": "（weigh on）心事像重物一样压着",
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.62,
+      "z": 4,
+      "actor": "west-girl-surprised",
+      "id": "p5"
+     },
+     {
+      "svg": "art/stone.svg",
+      "x": 0.5,
+      "y": 0.15,
+      "s": 0.24,
+      "anim": "bob"
+     }
+    ],
+    "ex": "The exam weighed on her mind.",
+    "exzh": "考试的事压在她心头。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "x": 0.4,
+       "y": 0.62,
+       "s": 0.62,
+       "z": 4,
+       "when": "her mind",
+       "actor": "cn-teacher-point",
+       "id": "p6"
+      },
+      {
+       "svg": "art/stone.svg",
+       "x": 0.4,
+       "y": -0.1,
+       "s": 0.24,
+       "go": [
+        0.4,
+        0.14
+       ],
+       "dur": 1,
+       "when": "weighed on"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.8,
+       "y": 0.7,
+       "s": 0.36
+      },
+      {
+       "label": "weighed on",
+       "x": 0.8,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "weighed on"
+      },
+      {
+       "label": "压在她心头",
+       "x": 0.8,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "压在她心头"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“举起、移动”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/suitcase.svg",
+       "x": 0.5,
+       "y": 0.72,
+       "s": 0.46,
+       "go": [
+        0.5,
+        0.45
+       ],
+       "dur": 1.2,
+       "loop": true
+      },
+      {
+       "label": "举起、移动",
+       "x": 0.2,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "把东西提起来、放到秤上",
+    "node": "① 称（重量）",
+    "pos": "动词",
+    "pic": 0,
+    "say": [
+     "weigh 最早是举起、移动。",
+     "把东西提起来、放到秤上，就是称重量。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/suitcase.svg",
+       "x": 0.2,
+       "y": 0.7,
+       "s": 0.42,
+       "go": [
+        0.2,
+        0.45
+       ],
+       "dur": 1,
+       "when": "举起"
+      },
+      {
+       "svg": "art/scale-kitchen.svg",
+       "x": 0.6,
+       "y": 0.55,
+       "s": 0.6,
+       "when": "放到秤上"
+      },
+      {
+       "label": "称重量",
+       "x": 0.6,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "称重量"
+      }
+     ]
+    }
+   },
+   {
+    "via": "东西本身有多沉",
+    "node": "② 重达",
+    "pos": "动词",
+    "pic": 1,
+    "say": [
+     "东西本身有多沉，就说它重达多少。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/checkin-bg.svg",
+     "items": [
+      {
+       "svg": "art/scale-bag.svg",
+       "x": 0.45,
+       "y": 0.8,
+       "s": 0.3,
+       "z": 2
+      },
+      {
+       "svg": "art/suitcase.svg",
+       "x": 0.45,
+       "y": 0.46,
+       "s": 0.5,
+       "when": "有多沉",
+       "go": [
+        0.45,
+        0.5
+       ],
+       "dur": 0.6,
+       "z": 3
+      },
+      {
+       "label": "重达",
+       "x": 0.82,
+       "y": 0.15,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "重达"
+      }
+     ]
+    }
+   },
+   {
+    "via": "放在心里的“秤”上比一比",
+    "node": "③ 权衡、考虑",
+    "pos": "动词",
+    "pic": 2,
+    "say": [
+     "把两件事放在心里的秤上比一比，就是权衡、考虑。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "x": 0.82,
+       "y": 0.6,
+       "s": 0.64,
+       "z": 4,
+       "when": "心里",
+       "actor": "west-girl-listen",
+       "id": "p7"
+      },
+      {
+       "svg": "art/balance-pros.svg",
+       "x": 0.42,
+       "y": 0.5,
+       "s": 0.68,
+       "when": "比一比",
+       "anim": "sway"
+      },
+      {
+       "label": "权衡、考虑",
+       "x": 0.42,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "权衡"
+      }
+     ]
+    }
+   },
+   {
+    "via": "心事像重物一样压着",
+    "node": "④ 压在心头",
+    "pos": "动词",
+    "pic": 3,
+    "say": [
+     "心事像重物一样压着，就是 weigh on，压在心头。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "x": 0.45,
+       "y": 0.62,
+       "s": 0.62,
+       "z": 4,
+       "when": "心事",
+       "actor": "west-man-hello",
+       "id": "p8"
+      },
+      {
+       "svg": "art/stone.svg",
+       "x": 0.45,
+       "y": -0.1,
+       "s": 0.24,
+       "go": [
+        0.45,
+        0.14
+       ],
+       "dur": 1,
+       "when": "重物"
+      },
+      {
+       "label": "weigh on",
+       "x": 0.82,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "weigh on"
+      },
+      {
+       "label": "压在心头",
+       "x": 0.82,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "压在心头"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "weight",
+    "m": "重量",
+    "share": "weigh"
+   },
+   {
+    "w": "outweigh",
+    "m": "超过",
+    "share": "weigh"
+   },
+   {
+    "w": "overweight",
+    "m": "超重的",
+    "share": "weigh"
+   }
+  ],
+  "distinguish": {
+   "key": "权衡、考虑",
+   "items": [
+    {
+     "w": "weigh",
+     "word": "weigh",
+     "m": "权衡",
+     "mean": "权衡",
+     "diff": "像放到秤上比一比，仔细掂量两边的轻重：weigh the pros and cons。",
+     "say": "像放到秤上比一比，仔细掂量两边的轻重：weigh the pros and cons。",
+     "text": "像放到秤上比一比，仔细掂量两边的轻重：weigh the pros and cons。",
+     "note": "像放到秤上比一比，仔细掂量两边的轻重：weigh the pros and cons。",
+     "line": "像放到秤上比一比，仔细掂量两边的轻重：weigh the pros and cons。",
+     "desc": "像放到秤上比一比，仔细掂量两边的轻重：weigh the pros and cons。",
+     "explain": "像放到秤上比一比，仔细掂量两边的轻重：weigh the pros and cons。",
+     "talk": "像放到秤上比一比，仔细掂量两边的轻重：weigh the pros and cons。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/balance-pros.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "sway"
+       }
+      ]
+     }
+    },
+    {
+     "w": "balance",
+     "word": "balance",
+     "m": "权衡、平衡",
+     "mean": "权衡、平衡",
+     "diff": "让两边一样重，兼顾两头：balance work and play。",
+     "say": "让两边一样重，兼顾两头：balance work and play。",
+     "text": "让两边一样重，兼顾两头：balance work and play。",
+     "note": "让两边一样重，兼顾两头：balance work and play。",
+     "line": "让两边一样重，兼顾两头：balance work and play。",
+     "desc": "让两边一样重，兼顾两头：balance work and play。",
+     "explain": "让两边一样重，兼顾两头：balance work and play。",
+     "talk": "让两边一样重，兼顾两头：balance work and play。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/balance-level.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "consider",
+     "word": "consider",
+     "m": "考虑",
+     "mean": "考虑",
+     "diff": "最常用的“想一想、考虑”：consider the plan。",
+     "say": "最常用的“想一想、考虑”：consider the plan。",
+     "text": "最常用的“想一想、考虑”：consider the plan。",
+     "note": "最常用的“想一想、考虑”：consider the plan。",
+     "line": "最常用的“想一想、考虑”：consider the plan。",
+     "desc": "最常用的“想一想、考虑”：consider the plan。",
+     "explain": "最常用的“想一想、考虑”：consider the plan。",
+     "talk": "最常用的“想一想、考虑”：consider the plan。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/bedroom-bg.svg",
+      "items": [
+       {
+        "x": 0.5,
+        "y": 0.6,
+        "s": 0.9,
+        "z": 4,
+        "actor": "cn-teacher-laugh",
+        "id": "p9"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "weigh 是“掂一掂、比轻重”；balance 是“让两边平”；consider 是一般的“想一想”。",
+   "tip": "weigh 是动词，weight 是名词：How much do you weigh? = What's your weight?",
+   "pics": {
+    "weigh": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/balance-pros.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "sway"
+      }
+     ]
+    },
+    "balance": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/balance-level.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "consider": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 4,
+       "actor": "cn-teacher-laugh",
+       "id": "p9"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "weighai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：这个西瓜多重？\n听：The watermelon weighs five kilos.\nA. 三公斤\nB. 五公斤\nC. 十公斤\nD. 一公斤",
@@ -90,5 +818,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

@@ -1,7 +1,1154 @@
 {
  "单词": "away",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "离开；在远处；不在；持续地；客场的"
+  },
+  "sylIpa": [
+   "ə",
+   "weɪ"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/car-green.svg",
+      "x": 0.3,
+      "y": 0.78,
+      "s": 0.46,
+      "go": [
+       0.75,
+       0.78
+      ],
+      "dur": 3,
+      "loop": true,
+      "anim": "ride",
+      "z": 3
+     },
+     {
+      "label": "在……上",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.4
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/highway-sign.svg",
+      "x": 0.45,
+      "y": 0.42,
+      "s": 0.55,
+      "anim": "sway"
+     },
+     {
+      "label": "路",
+      "x": 0.85,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "delay": 0.4
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-arr-out.svg",
+   "p1": "art/icon-highway-sign.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/farm-bg.svg",
+   "items": [
+    {
+     "svg": "art/car-green.svg",
+     "x": 0.3,
+     "y": 0.8,
+     "s": 0.46,
+     "s2": 0.1,
+     "go": [
+      0.55,
+      0.52
+     ],
+     "dur": 3.5,
+     "anim": "ride",
+     "z": 3
+    },
+    {
+     "label": "在路上",
+     "x": 0.18,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "离开",
+    "pos": "副词",
+    "diff": "人上了路，离原地越来越远",
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "x": 0.25,
+      "y": 0.6,
+      "s": 0.66,
+      "z": 4,
+      "actor": "west-man-hello",
+      "id": "p1"
+     },
+     {
+      "y": 0.82,
+      "s": 0.5,
+      "actor": "walk-west-woman-case",
+      "x": -0.1,
+      "walk": {
+       "from": [
+        -0.1,
+        0.82
+       ],
+       "to": [
+        1.1,
+        0.82
+       ],
+       "offset": 0
+      },
+      "z": 5
+     }
+    ],
+    "ex": "He waved and walked away.",
+    "exzh": "他挥挥手走开了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.66,
+       "z": 4,
+       "when": "waved",
+       "actor": "west-girl-raise",
+       "id": "p2"
+      },
+      {
+       "y": 0.82,
+       "s": 0.5,
+       "actor": "walk-cn-boy-pack",
+       "x": -0.1,
+       "walk": {
+        "from": [
+         -0.1,
+         0.82
+        ],
+        "to": [
+         1.1,
+         0.82
+        ],
+        "offset": 0
+       },
+       "z": 5
+      },
+      {
+       "label": "walked away",
+       "x": 0.7,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "walked away"
+      },
+      {
+       "label": "走开了",
+       "x": 0.7,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "走开了"
+      }
+     ]
+    }
+   },
+   {
+    "text": "在远处",
+    "pos": "副词",
+    "diff": "离这儿很远",
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/distance-sign.svg",
+      "x": 0.45,
+      "y": 0.45,
+      "s": 0.6,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/car-red.svg",
+      "x": 0.2,
+      "y": 0.86,
+      "s": 0.2,
+      "s2": 0.08,
+      "go": [
+       0.55,
+       0.6
+      ],
+      "dur": 3,
+      "loop": true,
+      "z": 3
+     }
+    ],
+    "ex": "The school is two kilometres away.",
+    "exzh": "学校在两公里以外。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/distance-sign.svg",
+       "x": 0.4,
+       "y": 0.45,
+       "s": 0.62,
+       "when": "school"
+      },
+      {
+       "svg": "art/car-blue.svg",
+       "x": 0.2,
+       "y": 0.86,
+       "s": 0.2,
+       "s2": 0.08,
+       "go": [
+        0.55,
+        0.6
+       ],
+       "dur": 3,
+       "when": "away",
+       "z": 3
+      },
+      {
+       "label": "two kilometres away",
+       "x": 0.78,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "two kilometres"
+      },
+      {
+       "label": "两公里以外",
+       "x": 0.78,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "两公里以外"
+      }
+     ]
+    }
+   },
+   {
+    "text": "不在",
+    "pos": "副词",
+    "diff": "人走了，不在这里",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/podium.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.5
+     },
+     {
+      "svg": "art/away-note.svg",
+      "x": 0.5,
+      "y": 0.36,
+      "s": 0.46,
+      "anim": "swing"
+     }
+    ],
+    "ex": "Mr Li is away today.",
+    "exzh": "李老师今天不在。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/podium.svg",
+       "x": 0.45,
+       "y": 0.66,
+       "s": 0.5
+      },
+      {
+       "svg": "art/away-note.svg",
+       "x": 0.45,
+       "y": 0.34,
+       "s": 0.46,
+       "when": "away",
+       "pop": true
+      },
+      {
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.6,
+       "z": 4,
+       "when": "today",
+       "actor": "cn-boy-raise",
+       "id": "p3"
+      },
+      {
+       "label": "is away",
+       "x": 0.15,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "is away"
+      },
+      {
+       "label": "不在",
+       "x": 0.15,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "不在"
+      }
+     ]
+    }
+   },
+   {
+    "text": "持续地",
+    "pos": "副词",
+    "diff": "时间一直往前走，一直干下去",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.78,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/computer.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.46,
+      "z": 3
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 2,
+      "x": 0.85,
+      "y": 0.2,
+      "s": 0.24
+     }
+    ],
+    "ex": "She worked away all night.",
+    "exzh": "她整夜不停地干活。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.8,
+       "s": 0.38,
+       "z": 3
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.62,
+       "y": 0.55,
+       "s": 0.36,
+       "z": 4
+      },
+      {
+       "x": 0.36,
+       "y": 0.56,
+       "s": 0.62,
+       "z": 2,
+       "when": "worked away",
+       "actor": "cn-teacher-point",
+       "id": "p4"
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2,
+       "x": 0.86,
+       "y": 0.2,
+       "s": 0.26,
+       "when": "all night"
+      },
+      {
+       "label": "worked away",
+       "x": 0.15,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "worked away"
+      },
+      {
+       "label": "不停地",
+       "x": 0.15,
+       "y": 0.26,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "不停地"
+      }
+     ]
+    }
+   },
+   {
+    "text": "客场的",
+    "pos": "形容词",
+    "diff": "不在自己的场地比赛",
+    "bg": "blank",
+    "img": "art/highway-bg.svg",
+    "items": [
+     {
+      "svg": "art/bus.svg",
+      "x": 0.15,
+      "y": 0.8,
+      "s": 0.5,
+      "go": [
+       0.7,
+       0.8
+      ],
+      "dur": 4,
+      "loop": true,
+      "anim": "ride",
+      "z": 3
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.85,
+      "y": 0.3,
+      "s": 0.3,
+      "anim": "bob"
+     }
+    ],
+    "ex": "We won the away game.",
+    "exzh": "我们赢了客场比赛。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/ball.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.46,
+       "when": "game",
+       "anim": "bob"
+      },
+      {
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.66,
+       "z": 4,
+       "when": "won",
+       "actor": "west-man-smile",
+       "id": "p5"
+      },
+      {
+       "x": 0.8,
+       "y": 0.6,
+       "s": 0.64,
+       "z": 4,
+       "when": "won",
+       "delay": 0.2,
+       "actor": "west-girl-surprised",
+       "id": "p6",
+       "nodWith": "p5"
+      },
+      {
+       "label": "away game",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "away game"
+      },
+      {
+       "label": "客场比赛",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "客场比赛"
+      },
+      {
+       "y": 0.86,
+       "s": 0.46,
+       "actor": "walk-west-man-case",
+       "x": -0.1,
+       "walk": {
+        "from": [
+         -0.1,
+         0.86
+        ],
+        "to": [
+         1.1,
+         0.86
+        ],
+        "offset": 0
+       },
+       "z": 5
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“在路上”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/car-green.svg",
+       "x": 0.3,
+       "y": 0.8,
+       "s": 0.46,
+       "s2": 0.1,
+       "go": [
+        0.55,
+        0.52
+       ],
+       "dur": 3.5,
+       "anim": "ride",
+       "z": 3
+      },
+      {
+       "label": "在路上",
+       "x": 0.18,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "人上了路，离原地越来越远",
+    "node": "① 离开",
+    "pos": "副词",
+    "pic": 0,
+    "say": [
+     "a 是在……上，way 是路，在路上，就是已经从这里出发了。",
+     "人上了路，离原地越来越远，就是离开。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "label": "在路上",
+       "x": 0.2,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "在路上"
+      },
+      {
+       "label": "way 路",
+       "x": 0.8,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "way 是路"
+      },
+      {
+       "y": 0.82,
+       "s": 0.5,
+       "actor": "walk-cn-girl",
+       "x": -0.1,
+       "walk": {
+        "from": [
+         -0.1,
+         0.82
+        ],
+        "to": [
+         1.1,
+         0.82
+        ],
+        "offset": 0
+       },
+       "z": 5
+      },
+      {
+       "label": "出发了",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "出发了"
+      },
+      {
+       "label": "离开",
+       "x": 0.5,
+       "y": 0.5,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "就是离开"
+      }
+     ]
+    }
+   },
+   {
+    "via": "已经走远了",
+    "node": "② 在远处",
+    "pos": "副词",
+    "pic": 1,
+    "say": [
+     "已经走远了，就在远处，离这儿很远。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/distance-sign.svg",
+       "x": 0.45,
+       "y": 0.45,
+       "s": 0.6,
+       "when": "在远处"
+      },
+      {
+       "svg": "art/car-red.svg",
+       "x": 0.2,
+       "y": 0.86,
+       "s": 0.2,
+       "s2": 0.08,
+       "go": [
+        0.55,
+        0.6
+       ],
+       "dur": 3,
+       "when": "走远了",
+       "z": 3
+      },
+      {
+       "label": "很远",
+       "x": 0.82,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "很远"
+      }
+     ]
+    }
+   },
+   {
+    "via": "人走了，不在这里",
+    "node": "③ 不在",
+    "pos": "副词",
+    "pic": 2,
+    "say": [
+     "人走了，不在这里，就是不在。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/podium.svg",
+       "x": 0.5,
+       "y": 0.66,
+       "s": 0.5,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/away-note.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.46,
+       "when": "不在这里",
+       "pop": true
+      },
+      {
+       "label": "不在",
+       "x": 0.15,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "就是不在"
+      }
+     ]
+    }
+   },
+   {
+    "via": "时间上一直往前走、不停下",
+    "node": "④ 持续地",
+    "pos": "副词",
+    "pic": 3,
+    "rule": "说空间、位置的词，也拿来说时间",
+    "ruleEx": "away 离开 → 一直、持续地      point 一个点 → 时刻",
+    "say": [
+     "说位置的词，也拿来说时间。",
+     "point 是一个点，也指时间上的一个时刻。",
+     "away 也一样：时间一直往前走、不停下，就是持续地干下去。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "位置",
+       "x": 0.25,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "说位置的词",
+       "hideCue": 1
+      },
+      {
+       "ray": [
+        [
+         0.38,
+         0.2
+        ],
+        [
+         0.6,
+         0.2
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "when": "也拿来说时间",
+       "hideCue": 1
+      },
+      {
+       "label": "时间",
+       "x": 0.75,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "也拿来说时间",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/sign-half.svg",
+       "x": 0.28,
+       "y": 0.55,
+       "s": 0.5,
+       "when": "一个点",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.72,
+       "y": 0.55,
+       "s": 0.5,
+       "when": "时刻",
+       "hideCue": 2
+      },
+      {
+       "label": "point",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "point",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2,
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "when": "一直往前走"
+      },
+      {
+       "label": "持续地",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "持续地"
+      }
+     ]
+    }
+   },
+   {
+    "via": "不在自己的场地",
+    "node": "⑤ 客场的",
+    "pos": "形容词",
+    "pic": 4,
+    "rule": "词的核心意思不变，换了对象、场合，中文要换个说法，英语还是这个词",
+    "ruleEx": "away 离开 → 客场的      play 玩 → 踢（球）",
+    "say": [
+     "词的核心意思不变，换了场合，中文要换个说法。",
+     "play 是玩，玩球就是踢球。",
+     "away 也一样：球队离开自己的场地去比赛，就是客场的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "label": "核心意思不变",
+       "x": 0.3,
+       "y": 0.15,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "核心意思不变",
+       "hideCue": 1
+      },
+      {
+       "label": "中文换说法",
+       "x": 0.7,
+       "y": 0.15,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "中文要换个说法",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/ball.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.46,
+       "when": "踢球",
+       "anim": "bob",
+       "hideCue": 2
+      },
+      {
+       "label": "play",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "play 是玩",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/bus.svg",
+       "x": 0.15,
+       "y": 0.8,
+       "s": 0.5,
+       "go": [
+        0.7,
+        0.8
+       ],
+       "dur": 3,
+       "when": "离开自己的场地",
+       "anim": "ride",
+       "z": 3
+      },
+      {
+       "label": "客场的",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "客场的"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "way",
+    "m": "路",
+    "share": "way"
+   },
+   {
+    "w": "runaway",
+    "m": "逃跑者",
+    "share": "away"
+   },
+   {
+    "w": "always",
+    "m": "总是",
+    "share": "way"
+   }
+  ],
+  "distinguish": {
+   "key": "离开、不在",
+   "items": [
+    {
+     "w": "away",
+     "word": "away",
+     "m": "离开；不在",
+     "mean": "离开；不在",
+     "diff": "强调离这里越来越远、人不在这儿：go away 走开。",
+     "say": "强调离这里越来越远、人不在这儿：go away 走开。",
+     "text": "强调离这里越来越远、人不在这儿：go away 走开。",
+     "note": "强调离这里越来越远、人不在这儿：go away 走开。",
+     "line": "强调离这里越来越远、人不在这儿：go away 走开。",
+     "desc": "强调离这里越来越远、人不在这儿：go away 走开。",
+     "explain": "强调离这里越来越远、人不在这儿：go away 走开。",
+     "talk": "强调离这里越来越远、人不在这儿：go away 走开。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/station-bg.svg",
+      "items": [
+       {
+        "y": 0.8,
+        "s": 0.52,
+        "actor": "walk-west-boy-pack",
+        "x": 1.1,
+        "walk": {
+         "from": [
+          1.1,
+          0.8
+         ],
+         "to": [
+          -0.1,
+          0.8
+         ],
+         "offset": 0
+        },
+        "z": 5
+       }
+      ]
+     }
+    },
+    {
+     "w": "off",
+     "word": "off",
+     "m": "离开、脱离",
+     "mean": "离开、脱离",
+     "diff": "强调从一个地方下来、分开：take off 起飞。",
+     "say": "强调从一个地方下来、分开：take off 起飞。",
+     "text": "强调从一个地方下来、分开：take off 起飞。",
+     "note": "强调从一个地方下来、分开：take off 起飞。",
+     "line": "强调从一个地方下来、分开：take off 起飞。",
+     "desc": "强调从一个地方下来、分开：take off 起飞。",
+     "explain": "强调从一个地方下来、分开：take off 起飞。",
+     "talk": "强调从一个地方下来、分开：take off 起飞。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/airport-bg.svg",
+      "items": [
+       {
+        "svg": "art/plane.svg",
+        "x": 0.2,
+        "y": 0.7,
+        "s": 0.4,
+        "go": [
+         0.85,
+         0.25
+        ],
+        "dur": 3,
+        "loop": true,
+        "rot": -12
+       },
+       {
+        "y": 0.86,
+        "s": 0.46,
+        "actor": "walk-cn-teacher-case",
+        "x": 1.1,
+        "walk": {
+         "from": [
+          1.1,
+          0.86
+         ],
+         "to": [
+          -0.1,
+          0.86
+         ],
+         "offset": 0
+        },
+        "z": 5
+       }
+      ]
+     }
+    },
+    {
+     "w": "absent",
+     "word": "absent",
+     "m": "缺席的",
+     "mean": "缺席的",
+     "diff": "正式的“不在场”：be absent from school 缺课。",
+     "say": "正式的“不在场”：be absent from school 缺课。",
+     "text": "正式的“不在场”：be absent from school 缺课。",
+     "note": "正式的“不在场”：be absent from school 缺课。",
+     "line": "正式的“不在场”：be absent from school 缺课。",
+     "desc": "正式的“不在场”：be absent from school 缺课。",
+     "explain": "正式的“不在场”：be absent from school 缺课。",
+     "talk": "正式的“不在场”：be absent from school 缺课。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/class-desks.svg",
+        "x": 0.5,
+        "y": 0.75,
+        "s": 0.4,
+        "z": 2
+       },
+       {
+        "svg": "art/away-note.svg",
+        "x": 0.5,
+        "y": 0.36,
+        "s": 0.5,
+        "anim": "swing"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "away 是“在路上”越走越远；off 是“从上面离开”；absent 是正式说“该在的时候没在”。",
+   "tip": "run away 逃跑；take away 拿走；throw away 扔掉；far away (from) 遥远。",
+   "pics": {
+    "away": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "y": 0.8,
+       "s": 0.52,
+       "actor": "walk-west-boy-pack",
+       "x": 1.1,
+       "walk": {
+        "from": [
+         1.1,
+         0.8
+        ],
+        "to": [
+         -0.1,
+         0.8
+        ],
+        "offset": 0
+       },
+       "z": 5
+      }
+     ]
+    },
+    "off": {
+     "bg": "blank",
+     "img": "art/airport-bg.svg",
+     "items": [
+      {
+       "svg": "art/plane.svg",
+       "x": 0.2,
+       "y": 0.7,
+       "s": 0.4,
+       "go": [
+        0.85,
+        0.25
+       ],
+       "dur": 3,
+       "loop": true,
+       "rot": -12
+      },
+      {
+       "y": 0.86,
+       "s": 0.46,
+       "actor": "walk-cn-teacher-case",
+       "x": 1.1,
+       "walk": {
+        "from": [
+         1.1,
+         0.86
+        ],
+        "to": [
+         -0.1,
+         0.86
+        ],
+        "offset": 0
+       },
+       "z": 5
+      }
+     ]
+    },
+    "absent": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.75,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/away-note.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.5,
+       "anim": "swing"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "awayai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：小狗怎么了？\n听：The dog ran away.\nA. 睡着了\nB. 跑掉了\nC. 生病了\nD. 被找到了",
@@ -94,5 +1241,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

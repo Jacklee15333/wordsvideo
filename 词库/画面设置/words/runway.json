@@ -1,0 +1,839 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "（机场）跑道；（时装秀的）T 台"
+ },
+ "sylIpa": [
+  "rʌn",
+  "weɪ"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/farm-bg.svg",
+   "items": [
+    {
+     "svg": "art/deer.svg",
+     "x": 0.2,
+     "y": 0.62,
+     "s": 0.56,
+     "go": [
+      0.8,
+      0.62
+     ],
+     "dur": 3,
+     "loop": true,
+     "anim": "ride",
+     "z": 3
+    },
+    {
+     "label": "跑",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.4
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/farm-bg.svg",
+   "items": [
+    {
+     "svg": "art/highway-sign.svg",
+     "x": 0.45,
+     "y": 0.42,
+     "s": 0.55,
+     "anim": "sway"
+    },
+    {
+     "label": "路",
+     "x": 0.85,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.4
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-deer.svg",
+  "p1": "art/icon-highway-sign.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/airport-bg.svg",
+  "items": [
+   {
+    "svg": "art/plane.svg",
+    "x": 0.2,
+    "y": 0.8,
+    "s": 0.45,
+    "go": [
+     0.8,
+     0.8
+    ],
+    "dur": 3,
+    "loop": true,
+    "z": 3
+   },
+   {
+    "label": "跑的路",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   },
+   {
+    "y": 0.86,
+    "s": 0.46,
+    "actor": "walk-west-woman-case",
+    "x": -0.1,
+    "walk": {
+     "from": [
+      -0.1,
+      0.86
+     ],
+     "to": [
+      1.1,
+      0.86
+     ],
+     "offset": 0
+    },
+    "z": 5
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "（机场）跑道",
+   "pos": "名词",
+   "diff": "飞机加速跑起来、离开地面的长道",
+   "bg": "blank",
+   "img": "art/airport-bg.svg",
+   "items": [
+    {
+     "svg": "art/plane.svg",
+     "x": 0.15,
+     "y": 0.8,
+     "s": 0.46,
+     "go": [
+      0.85,
+      0.42
+     ],
+     "dur": 4,
+     "loop": true,
+     "z": 3
+    },
+    {
+     "y": 0.86,
+     "s": 0.46,
+     "actor": "walk-cn-boy-pack",
+     "x": 1.1,
+     "walk": {
+      "from": [
+       1.1,
+       0.86
+      ],
+      "to": [
+       -0.1,
+       0.86
+      ],
+      "offset": 0
+     },
+     "z": 5
+    }
+   ],
+   "ex": "The plane is moving down the runway.",
+   "exzh": "飞机正沿着跑道滑行。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/airport-bg.svg",
+    "items": [
+     {
+      "svg": "art/plane.svg",
+      "x": 0.12,
+      "y": 0.8,
+      "s": 0.5,
+      "go": [
+       0.7,
+       0.8
+      ],
+      "dur": 3.5,
+      "when": "moving",
+      "z": 3
+     },
+     {
+      "label": "runway",
+      "x": 0.5,
+      "y": 0.94,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "runway"
+     },
+     {
+      "label": "跑道",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "跑道"
+     },
+     {
+      "y": 0.86,
+      "s": 0.46,
+      "actor": "walk-west-man-case",
+      "x": -0.1,
+      "walk": {
+       "from": [
+        -0.1,
+        0.86
+       ],
+       "to": [
+        1.1,
+        0.86
+       ],
+       "offset": 0
+      },
+      "z": 5
+     }
+    ]
+   }
+  },
+  {
+   "text": "（时装秀的）T 台",
+   "pos": "名词",
+   "diff": "模特一个接一个走过的长台",
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "svg": "art/catwalk.svg",
+     "x": 0.5,
+     "y": 0.8,
+     "s": 0.45,
+     "z": 2
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.96,
+     "s": 0.2,
+     "z": 6
+    },
+    {
+     "y": 0.66,
+     "s": 0.62,
+     "actor": "walk-cn-girl",
+     "x": -0.1,
+     "walk": {
+      "from": [
+       -0.1,
+       0.66
+      ],
+      "to": [
+       1.1,
+       0.66
+      ],
+      "offset": 0
+     },
+     "z": 5
+    }
+   ],
+   "ex": "The model walked down the runway.",
+   "exzh": "模特沿着 T 台走过来。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/catwalk.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.45,
+      "z": 2
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.2,
+      "z": 6
+     },
+     {
+      "y": 0.66,
+      "s": 0.62,
+      "actor": "walk-west-boy-pack",
+      "x": -0.1,
+      "walk": {
+       "from": [
+        -0.1,
+        0.66
+       ],
+       "to": [
+        1.1,
+        0.66
+       ],
+       "offset": 0
+      },
+      "z": 5
+     },
+     {
+      "label": "runway",
+      "x": 0.15,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "runway"
+     },
+     {
+      "label": "T 台",
+      "x": 0.85,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "T 台"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“跑的路”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/deer.svg",
+      "x": 0.2,
+      "y": 0.62,
+      "s": 0.56,
+      "go": [
+       0.8,
+       0.62
+      ],
+      "dur": 3,
+      "loop": true,
+      "anim": "ride",
+      "z": 3
+     },
+     {
+      "label": "跑的路",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "鹿等野兽常跑的那条道（1833，美国）",
+   "node": "兽道",
+   "pos": "名词",
+   "say": [
+    "run 是跑，way 是路，跑的路。",
+    "19 世纪 30 年代，美国人把鹿常跑的那条道叫 runway，就是兽道。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "label": "run 跑",
+      "x": 0.2,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "run 是跑"
+     },
+     {
+      "label": "way 路",
+      "x": 0.8,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "way 是路"
+     },
+     {
+      "svg": "art/deer.svg",
+      "x": 0.2,
+      "y": 0.62,
+      "s": 0.56,
+      "go": [
+       0.8,
+       0.62
+      ],
+      "dur": 3,
+      "loop": true,
+      "anim": "ride",
+      "when": "鹿常跑",
+      "z": 3
+     },
+     {
+      "label": "兽道",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "兽道"
+     }
+    ]
+   }
+  },
+  {
+   "via": "人工修的斜坡，让东西滑下去（1883）",
+   "node": "滑道",
+   "pos": "名词",
+   "say": [
+    "1883 年起，人工修的斜坡，让木头顺着滑下去，也叫 runway，就是滑道。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/ramp.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.65,
+      "when": "人工修的斜坡",
+      "anim": "pulse"
+     },
+     {
+      "label": "木头",
+      "x": 0.85,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "木头"
+     },
+     {
+      "label": "滑道",
+      "x": 0.2,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "滑道"
+     }
+    ]
+   }
+  },
+  {
+   "via": "飞机加速、离开地面的长道（1923）",
+   "node": "① 跑道",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "1923 年起，飞机在一条长长的道上加速跑起来，再离开地面，这就是机场跑道。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/airport-bg.svg",
+    "items": [
+     {
+      "svg": "art/plane.svg",
+      "x": 0.15,
+      "y": 0.8,
+      "s": 0.46,
+      "go": [
+       0.85,
+       0.4
+      ],
+      "dur": 3.5,
+      "when": "加速跑起来",
+      "z": 3
+     },
+     {
+      "label": "离开地面",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "离开地面"
+     },
+     {
+      "label": "机场跑道",
+      "x": 0.25,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "机场跑道"
+     },
+     {
+      "y": 0.86,
+      "s": 0.46,
+      "actor": "walk-cn-teacher-case",
+      "x": 1.1,
+      "walk": {
+       "from": [
+        1.1,
+        0.86
+       ],
+       "to": [
+        -0.1,
+        0.86
+       ],
+       "offset": 0
+      },
+      "z": 5
+     }
+    ]
+   }
+  },
+  {
+   "via": "模特走过的长台，样子像跑道",
+   "node": "② T 台",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "时装秀上，模特一个接一个走过的长台，样子像跑道，就叫 T 台。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/catwalk.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.45,
+      "z": 2,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.2,
+      "z": 6
+     },
+     {
+      "label": "T 台",
+      "x": 0.12,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "T 台"
+     },
+     {
+      "label": "像跑道",
+      "x": 0.85,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "像跑道"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "run",
+   "m": "跑",
+   "share": "run"
+  },
+  {
+   "w": "highway",
+   "m": "公路",
+   "share": "way"
+  },
+  {
+   "w": "runaway",
+   "m": "逃跑者",
+   "share": "run"
+  }
+ ],
+ "distinguish": {
+  "key": "T 台",
+  "items": [
+   {
+    "w": "runway",
+    "word": "runway",
+    "m": "T 台（美式）",
+    "mean": "T 台（美式）",
+    "diff": "美式说法：时装秀上模特走的长台。",
+    "say": "美式说法：时装秀上模特走的长台。",
+    "text": "美式说法：时装秀上模特走的长台。",
+    "note": "美式说法：时装秀上模特走的长台。",
+    "line": "美式说法：时装秀上模特走的长台。",
+    "desc": "美式说法：时装秀上模特走的长台。",
+    "explain": "美式说法：时装秀上模特走的长台。",
+    "talk": "美式说法：时装秀上模特走的长台。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/catwalk.svg",
+       "x": 0.5,
+       "y": 0.65,
+       "s": 0.6,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.96,
+       "s": 0.25,
+       "z": 6
+      }
+     ]
+    }
+   },
+   {
+    "w": "catwalk",
+    "word": "catwalk",
+    "m": "T 台（英式）",
+    "mean": "T 台（英式）",
+    "diff": "英式多说 catwalk，原来指窄窄的、只有猫走得过去的高处通道。",
+    "say": "英式多说 catwalk，原来指窄窄的、只有猫走得过去的高处通道。",
+    "text": "英式多说 catwalk，原来指窄窄的、只有猫走得过去的高处通道。",
+    "note": "英式多说 catwalk，原来指窄窄的、只有猫走得过去的高处通道。",
+    "line": "英式多说 catwalk，原来指窄窄的、只有猫走得过去的高处通道。",
+    "desc": "英式多说 catwalk，原来指窄窄的、只有猫走得过去的高处通道。",
+    "explain": "英式多说 catwalk，原来指窄窄的、只有猫走得过去的高处通道。",
+    "talk": "英式多说 catwalk，原来指窄窄的、只有猫走得过去的高处通道。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/catwalk.svg",
+       "x": 0.5,
+       "y": 0.7,
+       "s": 0.5,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/pa-speaker.svg",
+       "x": 0.12,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "thump"
+      },
+      {
+       "waves": true,
+       "x": 0.2,
+       "y": 0.4,
+       "dir": 0,
+       "n": 3,
+       "color": "#1C7ED6"
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "alt": [
+        "art/note2.svg"
+       ],
+       "x": 0.2,
+       "y": 0.35,
+       "every": 1,
+       "life": 2,
+       "to": [
+        0.15,
+        -0.25
+       ],
+       "s": 0.14
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "runway 用“跑道”比方这条长台；catwalk 用“猫走的窄道”比方它。",
+  "tip": "runway 和 runaway（逃跑者；失控的）只差一个 a；创业圈说 runway，是公司的钱还能撑多久。",
+  "pics": {
+   "runway": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/catwalk.svg",
+      "x": 0.5,
+      "y": 0.65,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.25,
+      "z": 6
+     }
+    ]
+   },
+   "catwalk": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/catwalk.svg",
+      "x": 0.5,
+      "y": 0.7,
+      "s": 0.5,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/pa-speaker.svg",
+      "x": 0.12,
+      "y": 0.5,
+      "s": 0.6,
+      "anim": "thump"
+     },
+     {
+      "waves": true,
+      "x": 0.2,
+      "y": 0.4,
+      "dir": 0,
+      "n": 3,
+      "color": "#1C7ED6"
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "alt": [
+       "art/note2.svg"
+      ],
+      "x": 0.2,
+      "y": 0.35,
+      "every": 1,
+      "life": 2,
+      "to": [
+       0.15,
+       -0.25
+      ],
+      "s": 0.14
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：飞机在哪里等着？",
+    "listen": "The plane is waiting on the runway.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "天上",
+     "停车场",
+     "跑道上",
+     "机场大厅"
+    ],
+    "ans": "C",
+    "why": "runway 跑道。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The plane landed safely on the ______.",
+    "opts": [
+     "runaway",
+     "highway",
+     "runway",
+     "subway"
+    ],
+    "ans": "C",
+    "why": "飞机降落在跑道 runway 上。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 runway、runaway 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The police found the ______ boy at the station.",
+    "opts": [],
+    "ans": "runaway",
+    "why": "离家出走的孩子是 runaway；runway 是跑道。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The airport has three ______. (runway)",
+    "opts": [],
+    "ans": "runways",
+    "why": "three 后面用复数 runways。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The runway are wet after the rain.",
+    "opts": [],
+    "ans": "are → is",
+    "why": "主语 the runway 是单数，用 is。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "在英国，T 台多叫 catwalk。",
+    "stem": "In Britain, a fashion runway is often called a ______.",
+    "opts": [],
+    "ans": "catwalk",
+    "why": "英式多说 catwalk，美式说 runway。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Big airports have many ______.",
+    "opts": [
+     "runway",
+     "runways",
+     "runaways",
+     "runway's"
+    ],
+    "ans": "B",
+    "why": "many 后面用复数 runways。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
