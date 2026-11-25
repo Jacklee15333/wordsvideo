@@ -206,7 +206,7 @@
       "y": 0.6,
       "s": 0.66,
       "z": 4,
-      "actor": "west-man-point",
+      "actor": "cn-teacher-listen",
       "id": "p3"
      }
     ],
@@ -473,11 +473,11 @@
       "img": "art/gym-bg.svg",
       "items": [
        {
-        "svg": "art/dumbbell.svg",
+        "svg": "art/scale-bath.svg",
         "x": 0.5,
-        "y": 0.5,
+        "y": 0.6,
         "s": 0.6,
-        "anim": "bob"
+        "anim": "pulse"
        }
       ]
      }
@@ -531,11 +531,11 @@
      "img": "art/gym-bg.svg",
      "items": [
       {
-       "svg": "art/dumbbell.svg",
+       "svg": "art/scale-bath.svg",
        "x": 0.5,
-       "y": 0.5,
+       "y": 0.6,
        "s": 0.6,
-       "anim": "bob"
+       "anim": "pulse"
       }
      ]
     },
@@ -561,6 +561,114 @@
     "【考形近词】overweight / fat / obese：overweight 客气、中性；fat 太直接；obese 是医学上的肥胖",
     "【考构词】over（超过）+ weight（重量）"
    ]
+  },
+  "demo": {
+   "overflow": {
+    "icons": [
+     "art/icon-arr-over.svg",
+     "art/icon-cupfull.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.82,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/cupfull.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "z": 3,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/drop.svg",
+       "x": 0.66,
+       "y": 0.62,
+       "s": 0.14,
+       "anim": "bob",
+       "z": 4
+      }
+     ]
+    }
+   },
+   "overweight": {
+    "icons": [
+     "art/icon-arr-over.svg",
+     "art/icon-weight-kg.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/checkin-bg.svg",
+     "items": [
+      {
+       "svg": "art/scale-bag.svg",
+       "x": 0.5,
+       "y": 0.8,
+       "s": 0.3,
+       "z": 2
+      },
+      {
+       "svg": "art/suitcase.svg",
+       "x": 0.5,
+       "y": 0.45,
+       "s": 0.5,
+       "anim": "shake",
+       "z": 3
+      }
+     ]
+    }
+   },
+   "supermarket": {
+    "icons": [
+     "art/icon-arr-over.svg",
+     "art/icon-gift.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/gift.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.55,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.75,
+       "y": 0.62,
+       "s": 0.3
+      }
+     ]
+    }
+   },
+   "surface": {
+    "icons": [
+     "art/icon-arr-over.svg",
+     "art/icon-cupfull.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/cupfull.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
   }
  },
  "插图": [
@@ -654,5 +762,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

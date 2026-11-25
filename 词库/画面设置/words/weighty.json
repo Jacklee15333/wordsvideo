@@ -51,13 +51,11 @@
      "z": 3
     },
     {
-     "label": "有……的",
-     "x": 0.15,
-     "y": 0.12,
-     "size": 0.1,
-     "color": "#2F6FB3",
-     "border": "#2F6FB3",
-     "delay": 0.4
+     "svg": "art/books.svg",
+     "x": 0.85,
+     "y": 0.66,
+     "s": 0.22,
+     "z": 3
     }
    ]
   }
@@ -678,6 +676,95 @@
       "dir": 0,
       "n": 3,
       "color": "#1C7ED6"
+     }
+    ]
+   }
+  }
+ },
+ "demo": {
+  "careful": {
+   "icons": [
+    "art/icon-heart.svg",
+    "art/icon-cupfull.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.82,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "bob",
+      "z": 3
+     }
+    ]
+   }
+  },
+  "careless": {
+   "icons": [
+    "art/icon-heart.svg",
+    "art/icon-arr-not.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.82,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.45,
+      "y": 0.5,
+      "s": 0.5,
+      "rot": 80,
+      "anim": "shake",
+      "z": 3
+     },
+     {
+      "svg": "art/drop.svg",
+      "x": 0.62,
+      "y": 0.62,
+      "s": 0.15,
+      "anim": "bob",
+      "z": 4
+     }
+    ]
+   }
+  },
+  "rainy": {
+   "icons": [
+    "art/icon-rain.svg",
+    "art/icon-arr-out.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/rain.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.6,
+      "go": [
+       0.6,
+       0.4
+      ],
+      "dur": 2,
+      "loop": true
      }
     ]
    }
