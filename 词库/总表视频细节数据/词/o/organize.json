@@ -1,7 +1,839 @@
 {
  "单词": "organize",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "组织、筹办；整理；组成工会"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/heart-organ.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "器官",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/ify.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "使…",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/heart-organ.svg",
+   "p1": "art/ify.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/heart-organ.svg",
+     "x": 0.32,
+     "y": 0.56,
+     "s": 0.46,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "svg": "art/hand.svg",
+     "x": 0.56,
+     "y": 0.58,
+     "s": 0.36,
+     "anim": "shake",
+     "z": 2
+    },
+    {
+     "svg": "art/together.svg",
+     "x": 0.8,
+     "y": 0.56,
+     "s": 0.32,
+     "anim": "spin",
+     "z": 2
+    },
+    {
+     "label": "使具有器官",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "组织、筹办",
+    "pos": "动词",
+    "diff": "把人和事安排成有条理的整体",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "id": "t",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "waves": true,
+      "on": "t",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "t"
+     },
+     {
+      "actor": "west-girl-listen",
+      "id": "g",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.66,
+      "z": 3,
+      "nodWith": "t"
+     },
+     {
+      "svg": "art/map.svg",
+      "x": 0.52,
+      "y": 0.34,
+      "s": 0.4,
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 4
+     }
+    ],
+    "ex": "We organized a school trip.",
+    "exzh": "我们组织了一次学校旅行。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-present",
+       "id": "m",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.72,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "waves": true,
+       "on": "m",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "m"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "id": "k",
+       "x": 0.84,
+       "y": 0.64,
+       "s": 0.64,
+       "z": 3,
+       "nodWith": "m"
+      },
+      {
+       "svg": "art/map.svg",
+       "x": 0.52,
+       "y": 0.36,
+       "s": 0.42,
+       "when": "school trip",
+       "pop": true,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "label": "organized",
+       "x": 0.52,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "organized"
+      },
+      {
+       "label": "组织",
+       "x": 0.52,
+       "y": 0.74,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "组织"
+      }
+     ]
+    }
+   },
+   {
+    "text": "整理",
+    "pos": "动词",
+    "diff": "把东西分门别类放好",
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/rack.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "z": 2
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.3,
+      "y": 0.8,
+      "s": 0.18,
+      "go": [
+       0.46,
+       0.42
+      ],
+      "dur": 1.2,
+      "wait": 0.8,
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "label": "整理",
+      "x": 0.84,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Please organize your books.",
+    "exzh": "请把你的书整理好。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/rack.svg",
+       "x": 0.52,
+       "y": 0.56,
+       "s": 0.6,
+       "z": 2
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.2,
+       "y": 0.84,
+       "s": 0.18,
+       "when": "books",
+       "go": [
+        0.48,
+        0.42
+       ],
+       "goWhen": "organize",
+       "dur": 1.2,
+       "anim": "bob",
+       "z": 3
+      },
+      {
+       "label": "organize",
+       "x": 0.84,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "organize"
+      },
+      {
+       "label": "整理好",
+       "x": 0.84,
+       "y": 0.32,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "整理好"
+      }
+     ]
+    }
+   },
+   {
+    "text": "（使）组成工会",
+    "pos": "动词",
+    "diff": "工人们组织起来，结成团体",
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/banner-speech.svg",
+      "x": 0.5,
+      "y": 0.12,
+      "s": 0.16,
+      "z": 1
+     },
+     {
+      "svg": "art/helmet.svg",
+      "x": 0.3,
+      "y": 0.56,
+      "s": 0.24,
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "svg": "art/helmet.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.26,
+      "anim": "bob",
+      "delay": 0.3,
+      "z": 3
+     },
+     {
+      "svg": "art/helmet.svg",
+      "x": 0.7,
+      "y": 0.56,
+      "s": 0.24,
+      "anim": "bob",
+      "delay": 0.6,
+      "z": 3
+     },
+     {
+      "svg": "art/together.svg",
+      "x": 0.5,
+      "y": 0.82,
+      "s": 0.2,
+      "anim": "spin",
+      "z": 3
+     },
+     {
+      "label": "工会",
+      "x": 0.86,
+      "y": 0.3,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "The workers organized a union.",
+    "exzh": "工人们组成了工会。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/banner-speech.svg",
+       "x": 0.5,
+       "y": 0.12,
+       "s": 0.16,
+       "z": 1
+      },
+      {
+       "actor": "west-man-speech",
+       "id": "s",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.72,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "svg": "art/podium.svg",
+       "x": 0.5,
+       "y": 0.8,
+       "s": 0.36,
+       "z": 4
+      },
+      {
+       "svg": "art/mic.svg",
+       "x": 0.56,
+       "y": 0.6,
+       "s": 0.2,
+       "z": 5
+      },
+      {
+       "waves": true,
+       "x": 0.62,
+       "y": 0.45,
+       "dir": 0,
+       "with": "s"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.93,
+       "s": 0.24,
+       "z": 6,
+       "crowd": 9,
+       "nodWith": "s"
+      },
+      {
+       "label": "union",
+       "x": 0.18,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "union"
+      },
+      {
+       "label": "工会",
+       "x": 0.82,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "工会"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“使具有器官”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/heart-organ.svg",
+       "x": 0.32,
+       "y": 0.56,
+       "s": 0.46,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "svg": "art/hand.svg",
+       "x": 0.56,
+       "y": 0.58,
+       "s": 0.36,
+       "anim": "shake",
+       "z": 2
+      },
+      {
+       "svg": "art/together.svg",
+       "x": 0.8,
+       "y": 0.56,
+       "s": 0.32,
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "label": "使具有器官",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "身体里各部分各司其职，配合起来才活",
+    "node": "使各部分成为一个整体",
+    "say": [
+     "一具身体，心、肺、手、脚各管一摊。",
+     "它们配合起来，身体才活，这就是 organize 最早的意思。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/heart-organ.svg",
+       "x": 0.3,
+       "y": 0.54,
+       "s": 0.4,
+       "when": "心",
+       "anim": "pulse",
+       "z": 3
+      },
+      {
+       "svg": "art/hand.svg",
+       "x": 0.62,
+       "y": 0.56,
+       "s": 0.34,
+       "when": "手",
+       "anim": "shake",
+       "z": 3
+      },
+      {
+       "svg": "art/together.svg",
+       "x": 0.5,
+       "y": 0.84,
+       "s": 0.2,
+       "cue": 1,
+       "when": "配合起来",
+       "anim": "spin",
+       "z": 3
+      },
+      {
+       "label": "各管一摊",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "各管一摊"
+      }
+     ]
+    }
+   },
+   {
+    "via": "把人和事也这样安排起来",
+    "node": "① 组织、筹办",
+    "pos": "动词",
+    "pic": 0,
+    "say": [
+     "把人和事也这样安排起来，各管一摊，就是组织、筹办。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.46,
+       "when": "人和事",
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.3,
+       "z": 4
+      },
+      {
+       "label": "组织、筹办",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "组织、筹办"
+      }
+     ]
+    }
+   },
+   {
+    "via": "把东西分门别类放好",
+    "node": "② 整理",
+    "pos": "动词",
+    "pic": 1,
+    "say": [
+     "把东西也分门别类放好，就是整理。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/rack.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.6,
+       "z": 2
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.2,
+       "y": 0.84,
+       "s": 0.18,
+       "when": "东西",
+       "go": [
+        0.46,
+        0.42
+       ],
+       "goWhen": "分门别类",
+       "dur": 1.2,
+       "anim": "bob",
+       "z": 3
+      },
+      {
+       "label": "整理",
+       "x": 0.84,
+       "y": 0.12,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "整理"
+      }
+     ]
+    }
+   },
+   {
+    "via": "工人们组织起来，结成团体",
+    "node": "③ （使）组成工会",
+    "pos": "动词",
+    "pic": 2,
+    "say": [
+     "工人们组织起来，结成一个团体，就是组成工会。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/helmet.svg",
+       "x": 0.3,
+       "y": 0.56,
+       "s": 0.24,
+       "when": "工人们",
+       "anim": "bob",
+       "z": 3
+      },
+      {
+       "svg": "art/helmet.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.26,
+       "when": "工人们",
+       "anim": "bob",
+       "delay": 0.2,
+       "z": 3
+      },
+      {
+       "svg": "art/helmet.svg",
+       "x": 0.7,
+       "y": 0.56,
+       "s": 0.24,
+       "when": "工人们",
+       "anim": "bob",
+       "delay": 0.4,
+       "z": 3
+      },
+      {
+       "svg": "art/together.svg",
+       "x": 0.5,
+       "y": 0.82,
+       "s": 0.2,
+       "when": "结成一个团体",
+       "anim": "spin",
+       "z": 3
+      },
+      {
+       "label": "工会",
+       "x": 0.86,
+       "y": 0.2,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "工会"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "中文都能说“整理、安排”，范围不一样",
+   "items": [
+    {
+     "w": "organize",
+     "word": "organize",
+     "name": "organize",
+     "en": "organize",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/bedroom-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/rack.svg",
+        "x": 0.5,
+        "y": 0.56,
+        "s": 0.62,
+        "z": 2
+       },
+       {
+        "svg": "art/books.svg",
+        "x": 0.5,
+        "y": 0.4,
+        "s": 0.22,
+        "anim": "bob",
+        "z": 3
+       }
+      ]
+     },
+     "text": "organize 是把人、事、东西安排成有条理的整体。",
+     "say": "organize 是把人、事、东西安排成有条理的整体。",
+     "diff": "organize 是把人、事、东西安排成有条理的整体。",
+     "note": "organize 是把人、事、东西安排成有条理的整体。",
+     "desc": "organize 是把人、事、东西安排成有条理的整体。",
+     "m": "organize 是把人、事、东西安排成有条理的整体。",
+     "mean": "organize 是把人、事、东西安排成有条理的整体。",
+     "line": "organize 是把人、事、东西安排成有条理的整体。",
+     "explain": "organize 是把人、事、东西安排成有条理的整体。",
+     "zh": "organize 是把人、事、东西安排成有条理的整体。",
+     "def": "organize 是把人、事、东西安排成有条理的整体。",
+     "gloss": "organize 是把人、事、东西安排成有条理的整体。",
+     "sense": "organize 是把人、事、东西安排成有条理的整体。",
+     "comment": "organize 是把人、事、东西安排成有条理的整体。",
+     "hint": "organize 是把人、事、东西安排成有条理的整体。",
+     "txt": "organize 是把人、事、东西安排成有条理的整体。",
+     "talk": "organize 是把人、事、东西安排成有条理的整体。",
+     "words": "organize 是把人、事、东西安排成有条理的整体。",
+     "detail": "organize 是把人、事、东西安排成有条理的整体。"
+    },
+    {
+     "w": "arrange",
+     "word": "arrange",
+     "name": "arrange",
+     "en": "arrange",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/flowers.svg",
+        "x": 0.5,
+        "y": 0.56,
+        "s": 0.62,
+        "anim": "sway",
+        "z": 2
+       }
+      ]
+     },
+     "text": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "say": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "diff": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "note": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "desc": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "m": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "mean": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "line": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "explain": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "zh": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "def": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "gloss": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "sense": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "comment": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "hint": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "txt": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "talk": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "words": "arrange 偏布置、安排：摆放物品、安排时间。",
+     "detail": "arrange 偏布置、安排：摆放物品、安排时间。"
+    }
+   ],
+   "logic": "organize 从 organ“器官”来：像身体一样各部分配合；arrange 是 ar“向”+ range“排成一行”：把东西排好。",
+   "tip": "办一场活动用 organize；摆花、约时间用 arrange；plan 只是计划。",
+   "pics": {
+    "organize": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/bedroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/rack.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.62,
+       "z": 2
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.22,
+       "anim": "bob",
+       "z": 3
+      }
+     ]
+    },
+    "arrange": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/flowers.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.62,
+       "anim": "sway",
+       "z": 2
+      }
+     ]
+    }
+   },
+   "notes": {
+    "organize": "organize 是把人、事、东西安排成有条理的整体。",
+    "arrange": "arrange 偏布置、安排：摆放物品、安排时间。"
+   }
+  }
+ },
+ "插图": [
+  "organizeai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：学校下周要做什么？\n听：Our school will organize a sports meeting next week.\nA. 组织一场运动会\nB. 放假\nC. 开家长会\nD. 考试",
@@ -90,5 +922,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

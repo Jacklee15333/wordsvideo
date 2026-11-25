@@ -1,0 +1,853 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "外科医生；军医"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/clinic-bg.svg",
+   "items": [
+    {
+     "svg": "art/op-lamp.svg",
+     "x": 0.5,
+     "y": 0.4,
+     "s": 0.5,
+     "anim": "sway"
+    },
+    {
+     "beam": true,
+     "x": 0.5,
+     "y": 0.5,
+     "len": 0.4,
+     "width": 0.3,
+     "swing": 2,
+     "period": 4
+    },
+    {
+     "label": "手术",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/clinic-bg.svg",
+   "items": [
+    {
+     "svg": "art/surgeon-cap.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.6,
+     "anim": "bob"
+    },
+    {
+     "label": "…的人",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/op-lamp.svg",
+  "p1": "art/surgeon-cap.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/clinic-bg.svg",
+  "items": [
+   {
+    "svg": "art/op-table.svg",
+    "x": 0.5,
+    "y": 0.74,
+    "s": 0.36,
+    "z": 3
+   },
+   {
+    "svg": "art/op-lamp.svg",
+    "x": 0.5,
+    "y": 0.16,
+    "s": 0.3,
+    "anim": "sway",
+    "z": 4
+   },
+   {
+    "beam": true,
+    "x": 0.5,
+    "y": 0.22,
+    "len": 0.45,
+    "width": 0.3,
+    "swing": 2,
+    "period": 4
+   },
+   {
+    "svg": "art/surgeon-cap.svg",
+    "x": 0.8,
+    "y": 0.5,
+    "s": 0.34,
+    "anim": "bob",
+    "z": 5
+   },
+   {
+    "label": "做手术的人",
+    "x": 0.2,
+    "y": 0.1,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.8
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "外科医生",
+   "pos": "名词",
+   "diff": "动刀给人治病的医生",
+   "bg": "blank",
+   "img": "art/clinic-bg.svg",
+   "items": [
+    {
+     "svg": "art/op-table.svg",
+     "x": 0.5,
+     "y": 0.74,
+     "s": 0.36,
+     "z": 3
+    },
+    {
+     "svg": "art/op-lamp.svg",
+     "x": 0.5,
+     "y": 0.16,
+     "s": 0.3,
+     "anim": "sway",
+     "z": 4
+    },
+    {
+     "beam": true,
+     "x": 0.5,
+     "y": 0.22,
+     "len": 0.45,
+     "width": 0.3,
+     "swing": 2,
+     "period": 4
+    },
+    {
+     "svg": "art/surgeon-cap.svg",
+     "x": 0.82,
+     "y": 0.48,
+     "s": 0.38,
+     "anim": "bob",
+     "z": 5
+    },
+    {
+     "svg": "art/tools.svg",
+     "x": 0.2,
+     "y": 0.62,
+     "s": 0.22,
+     "anim": "shake",
+     "z": 5
+    },
+    {
+     "label": "外科医生",
+     "x": 0.18,
+     "y": 0.14,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "The surgeon saved the boy's life.",
+   "exzh": "外科医生救了那个男孩的命。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/clinic-bg.svg",
+    "items": [
+     {
+      "svg": "art/op-table.svg",
+      "x": 0.5,
+      "y": 0.74,
+      "s": 0.36,
+      "z": 3
+     },
+     {
+      "svg": "art/op-lamp.svg",
+      "x": 0.5,
+      "y": 0.16,
+      "s": 0.3,
+      "anim": "sway",
+      "z": 4
+     },
+     {
+      "beam": true,
+      "x": 0.5,
+      "y": 0.22,
+      "len": 0.45,
+      "width": 0.3,
+      "swing": 2,
+      "period": 4
+     },
+     {
+      "svg": "art/surgeon-cap.svg",
+      "x": 0.8,
+      "y": 0.48,
+      "s": 0.36,
+      "when": "surgeon",
+      "pop": true,
+      "anim": "bob",
+      "z": 5
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "every": 0.6,
+      "life": 1.6,
+      "to": [
+       0.1,
+       -0.18
+      ],
+      "s": 0.06,
+      "x": 0.5,
+      "y": 0.5,
+      "when": "saved"
+     },
+     {
+      "label": "surgeon",
+      "x": 0.18,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "surgeon"
+     },
+     {
+      "label": "外科医生",
+      "x": 0.18,
+      "y": 0.34,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "外科医生"
+     }
+    ]
+   }
+  },
+  {
+   "text": "军医",
+   "pos": "名词",
+   "diff": "部队、军舰上的医生",
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/ship.svg",
+     "x": 0.5,
+     "y": 0.7,
+     "s": 0.34,
+     "anim": "ride",
+     "go": [
+      0.6,
+      0.7
+     ],
+     "dur": 3,
+     "loop": true,
+     "z": 3
+    },
+    {
+     "svg": "art/surgeon-cap.svg",
+     "x": 0.82,
+     "y": 0.32,
+     "s": 0.3,
+     "anim": "bob",
+     "z": 3
+    },
+    {
+     "label": "军医",
+     "x": 0.18,
+     "y": 0.14,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "His grandfather was a navy surgeon.",
+   "exzh": "他爷爷是一名海军军医。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/ship.svg",
+      "x": 0.4,
+      "y": 0.7,
+      "s": 0.36,
+      "when": "navy",
+      "go": [
+       0.6,
+       0.7
+      ],
+      "dur": 3,
+      "loop": true,
+      "anim": "ride",
+      "z": 3
+     },
+     {
+      "svg": "art/surgeon-cap.svg",
+      "x": 0.82,
+      "y": 0.34,
+      "s": 0.3,
+      "when": "surgeon",
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "label": "navy surgeon",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "navy surgeon"
+     },
+     {
+      "label": "海军军医",
+      "x": 0.2,
+      "y": 0.34,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "海军军医"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“做手术的人”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/clinic-bg.svg",
+    "items": [
+     {
+      "svg": "art/op-table.svg",
+      "x": 0.5,
+      "y": 0.74,
+      "s": 0.36,
+      "z": 3
+     },
+     {
+      "svg": "art/op-lamp.svg",
+      "x": 0.5,
+      "y": 0.16,
+      "s": 0.3,
+      "anim": "sway",
+      "z": 4
+     },
+     {
+      "beam": true,
+      "x": 0.5,
+      "y": 0.22,
+      "len": 0.45,
+      "width": 0.3,
+      "swing": 2,
+      "period": 4
+     },
+     {
+      "svg": "art/surgeon-cap.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.34,
+      "anim": "bob",
+      "z": 5
+     },
+     {
+      "label": "做手术的人",
+      "x": 0.2,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "动刀给人治病的医生",
+   "node": "① 外科医生",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "动刀给人治病的医生，就是 surgeon，外科医生。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/clinic-bg.svg",
+    "items": [
+     {
+      "svg": "art/op-table.svg",
+      "x": 0.5,
+      "y": 0.74,
+      "s": 0.36,
+      "z": 3
+     },
+     {
+      "svg": "art/op-lamp.svg",
+      "x": 0.5,
+      "y": 0.16,
+      "s": 0.3,
+      "anim": "sway",
+      "z": 4
+     },
+     {
+      "beam": true,
+      "x": 0.5,
+      "y": 0.22,
+      "len": 0.45,
+      "width": 0.3,
+      "swing": 2,
+      "period": 4
+     },
+     {
+      "svg": "art/tools.svg",
+      "x": 0.2,
+      "y": 0.62,
+      "s": 0.24,
+      "when": "动刀",
+      "anim": "shake",
+      "z": 5
+     },
+     {
+      "svg": "art/surgeon-cap.svg",
+      "x": 0.82,
+      "y": 0.48,
+      "s": 0.36,
+      "when": "医生",
+      "anim": "bob",
+      "z": 5
+     },
+     {
+      "label": "外科医生",
+      "x": 0.18,
+      "y": 0.14,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "外科医生"
+     }
+    ]
+   }
+  },
+  {
+   "via": "部队、军舰上的医生",
+   "node": "② 军医",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "部队、军舰上的医生也叫 surgeon，就是军医。",
+    "可以这样记：打仗受的伤，多半要靠动刀来治。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/ship.svg",
+      "x": 0.5,
+      "y": 0.7,
+      "s": 0.34,
+      "when": "军舰",
+      "go": [
+       0.6,
+       0.7
+      ],
+      "dur": 3,
+      "loop": true,
+      "anim": "ride",
+      "z": 3
+     },
+     {
+      "svg": "art/surgeon-cap.svg",
+      "x": 0.82,
+      "y": 0.32,
+      "s": 0.28,
+      "when": "医生",
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "label": "军医",
+      "x": 0.18,
+      "y": 0.14,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "军医"
+     },
+     {
+      "svg": "art/tools.svg",
+      "x": 0.2,
+      "y": 0.4,
+      "s": 0.2,
+      "cue": 1,
+      "when": "动刀",
+      "anim": "shake",
+      "z": 3
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "中文都能说“医生”，管的不一样",
+  "items": [
+   {
+    "w": "surgeon",
+    "word": "surgeon",
+    "name": "surgeon",
+    "en": "surgeon",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/clinic-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/surgeon-cap.svg",
+       "x": 0.4,
+       "y": 0.54,
+       "s": 0.56,
+       "anim": "bob",
+       "z": 2
+      },
+      {
+       "svg": "art/op-lamp.svg",
+       "x": 0.66,
+       "y": 0.4,
+       "s": 0.36,
+       "anim": "sway",
+       "z": 2
+      }
+     ]
+    },
+    "text": "surgeon 是动刀的外科医生。",
+    "say": "surgeon 是动刀的外科医生。",
+    "diff": "surgeon 是动刀的外科医生。",
+    "note": "surgeon 是动刀的外科医生。",
+    "desc": "surgeon 是动刀的外科医生。",
+    "m": "surgeon 是动刀的外科医生。",
+    "mean": "surgeon 是动刀的外科医生。",
+    "line": "surgeon 是动刀的外科医生。",
+    "explain": "surgeon 是动刀的外科医生。",
+    "zh": "surgeon 是动刀的外科医生。",
+    "def": "surgeon 是动刀的外科医生。",
+    "gloss": "surgeon 是动刀的外科医生。",
+    "sense": "surgeon 是动刀的外科医生。",
+    "comment": "surgeon 是动刀的外科医生。",
+    "hint": "surgeon 是动刀的外科医生。",
+    "txt": "surgeon 是动刀的外科医生。",
+    "talk": "surgeon 是动刀的外科医生。",
+    "words": "surgeon 是动刀的外科医生。",
+    "detail": "surgeon 是动刀的外科医生。"
+   },
+   {
+    "w": "doctor",
+    "word": "doctor",
+    "name": "doctor",
+    "en": "doctor",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/clinic-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/stethoscope.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.6,
+       "anim": "swing",
+       "z": 2
+      }
+     ]
+    },
+    "text": "doctor 是医生的通称，平常看病都找 doctor。",
+    "say": "doctor 是医生的通称，平常看病都找 doctor。",
+    "diff": "doctor 是医生的通称，平常看病都找 doctor。",
+    "note": "doctor 是医生的通称，平常看病都找 doctor。",
+    "desc": "doctor 是医生的通称，平常看病都找 doctor。",
+    "m": "doctor 是医生的通称，平常看病都找 doctor。",
+    "mean": "doctor 是医生的通称，平常看病都找 doctor。",
+    "line": "doctor 是医生的通称，平常看病都找 doctor。",
+    "explain": "doctor 是医生的通称，平常看病都找 doctor。",
+    "zh": "doctor 是医生的通称，平常看病都找 doctor。",
+    "def": "doctor 是医生的通称，平常看病都找 doctor。",
+    "gloss": "doctor 是医生的通称，平常看病都找 doctor。",
+    "sense": "doctor 是医生的通称，平常看病都找 doctor。",
+    "comment": "doctor 是医生的通称，平常看病都找 doctor。",
+    "hint": "doctor 是医生的通称，平常看病都找 doctor。",
+    "txt": "doctor 是医生的通称，平常看病都找 doctor。",
+    "talk": "doctor 是医生的通称，平常看病都找 doctor。",
+    "words": "doctor 是医生的通称，平常看病都找 doctor。",
+    "detail": "doctor 是医生的通称，平常看病都找 doctor。"
+   },
+   {
+    "w": "physician",
+    "word": "physician",
+    "name": "physician",
+    "en": "physician",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/clinic-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/stethoscope.svg",
+       "x": 0.4,
+       "y": 0.54,
+       "s": 0.5,
+       "anim": "swing",
+       "z": 2
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.64,
+       "y": 0.58,
+       "s": 0.4,
+       "anim": "bob",
+       "z": 2
+      }
+     ]
+    },
+    "text": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "say": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "diff": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "note": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "desc": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "m": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "mean": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "line": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "explain": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "zh": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "def": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "gloss": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "sense": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "comment": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "hint": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "txt": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "talk": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "words": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。",
+    "detail": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。"
+   }
+  ],
+  "logic": "surgeon 是 surg“手术”+ eon“人”；doctor 本义是“教导的人”；physician 来自 physic“医药”。",
+  "tip": "平常说“看医生”用 doctor；专指开刀的用 surgeon。",
+  "pics": {
+   "surgeon": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/clinic-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/surgeon-cap.svg",
+      "x": 0.4,
+      "y": 0.54,
+      "s": 0.56,
+      "anim": "bob",
+      "z": 2
+     },
+     {
+      "svg": "art/op-lamp.svg",
+      "x": 0.66,
+      "y": 0.4,
+      "s": 0.36,
+      "anim": "sway",
+      "z": 2
+     }
+    ]
+   },
+   "doctor": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/clinic-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/stethoscope.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.6,
+      "anim": "swing",
+      "z": 2
+     }
+    ]
+   },
+   "physician": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/clinic-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/stethoscope.svg",
+      "x": 0.4,
+      "y": 0.54,
+      "s": 0.5,
+      "anim": "swing",
+      "z": 2
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.64,
+      "y": 0.58,
+      "s": 0.4,
+      "anim": "bob",
+      "z": 2
+     }
+    ]
+   }
+  },
+  "notes": {
+   "surgeon": "surgeon 是动刀的外科医生。",
+   "doctor": "doctor 是医生的通称，平常看病都找 doctor。",
+   "physician": "physician 是（内科）医师，说法比较正式，靠诊断、开药治病。"
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：她妈妈是做什么的？",
+    "listen": "Her mother is a heart surgeon.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "护士",
+     "老师",
+     "药剂师",
+     "心脏外科医生"
+    ],
+    "ans": "D",
+    "why": "surgeon 外科医生。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Three ______ did the operation together. (surgeon)",
+    "opts": [],
+    "ans": "surgeons",
+    "why": "three 后面用复数 surgeons。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "A ______ operates on patients.",
+    "opts": [
+     "surgery",
+     "surgical",
+     "surgeon",
+     "sugar"
+    ],
+    "ans": "C",
+    "why": "给病人动手术的是外科医生 surgeon。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 surgeon、surgery 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He had ______ on his leg last week.",
+    "opts": [],
+    "ans": "surgery",
+    "why": "“动手术”用名词 surgery；surgeon 是外科医生。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The surgeon are very famous.",
+    "opts": [],
+    "ans": "are → is",
+    "why": "主语 the surgeon 是单数，用 is。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "我感冒了，要去看医生。",
+    "stem": "I have a cold. I need to see a ______.",
+    "opts": [],
+    "ans": "doctor",
+    "why": "看病说 see a doctor；surgeon 是动刀的外科医生。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Both of my parents are ______.",
+    "opts": [
+     "surgeons",
+     "surgeon",
+     "surgery",
+     "surgical"
+    ],
+    "ans": "A",
+    "why": "both 后面用复数 surgeons。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
