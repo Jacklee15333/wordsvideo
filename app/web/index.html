@@ -1326,11 +1326,39 @@ async function loadQbulk(){
 function picCheckRender(){const pk=picked(),box=$('#picCheck');if(!pk.length){box.hidden=true;return}box.hidden=false;
   const have=pk.filter(i=>i.pic).length,noq=pk.filter(i=>!i.q).length,doing=pk.filter(i=>i.st==='doing'&&!i.pic&&i.q).length,all=have===pk.length;
   const pt=pk.filter(i=>i.pic&&i.picTodo);
-  box.className='rep'+(all&&!pt.length?' ok':(noq&&!PP.length&&!doing)||pt.length?' warn':'');
+  const L=new Set(FL.later),ptw=pt.filter(i=>!L.has(i.word)).length||FL.all.length>=FL.at;   // 先攒着的不算要你处理
+  box.className='rep'+(all&&!ptw?' ok':(noq&&!PP.length&&!doing)||ptw?' warn':'');
   box.innerHTML=(all?`选上的 ${pk.length} 个都有画面了，不用做。`:[PP.length?`能做 <b>${PP.length}</b> 个`:'',doing?`正在做 <b>${doing}</b> 个`:'',
     have?`不用做 <b>${have}</b> 个（已经有画面）`:'',noq?`不能做 <b>${noq}</b> 个（还没题目，先到 <a onclick=\"go('q')\">出题</a>）`:''].filter(Boolean).join(' · '))+
-    (pt.length?`<br>其中 <b>${pt.length}</b> 个的画面还没过起草检查，出视频会卡在“准备”：<button class="btn sm" data-fixpics="" data-words="${esc(JSON.stringify(pt.map(i=>i.word)))}">交给 AI 补画面（${pt.length} 个）</button>`:'')}
-async function loadPic(){await poolNeed();picPickRender();picRes();stepTasks('pic');liveTick();tabCounts()}
+    flLine(pt.map(i=>i.word))}
+/* v1.11.5：补画面先攒着——点「补画面…」可以现在补，也可以暂时忽略、攒够了再一起补 */
+let FL={later:[],all:[],at:10};
+async function flNeed(){try{const d=await api('/api/fixlater');if(d&&d.all)FL=d}catch(e){}}
+function flLine(pw){const L=new Set(FL.later),nw=pw.filter(w=>!L.has(w)),M=FL.all.length,enough=M>=FL.at;
+  const b=(t,cls)=>`<button class="btn sm${cls||''}" data-fixopen="" data-words="${esc(JSON.stringify(pw))}">${t}</button>`;
+  if(nw.length)return `<br>其中 <b>${nw.length}</b> 个的画面还没过起草检查，出视频会卡在“准备”：${b(`补画面…（${nw.length} 个）`)} <span class="small muted">可以现在补，也可以先攒着</span>`;
+  if(!M)return '';
+  return enough?`<br><b style="color:var(--amber)">攒够了：</b>库里一共 <b>${M}</b> 个画面要补（攒够 ${FL.at} 个提醒），可以一起交给 AI 了：<button class="btn sm" data-fixpics="" data-words="${esc(JSON.stringify(FL.all))}">一起补（${M} 个）</button> ${b('先看看…',' ghost')}`
+    :`<br><span class="muted">要补画面的先攒着：库里一共 <b>${M}</b> 个${pw.length?`（选上的里有 ${pw.length} 个）`:''}，攒够 ${FL.at} 个提醒你。</span>${b('补画面…',' ghost')}`}
+async function flOpen(pw){await flNeed();const P=new Set(pw),L=new Set(FL.later),rest=FL.all.filter(w=>!P.has(w)),now=pw.filter(w=>!L.has(w));
+  const lst=a=>a.length?esc(a.slice(0,40).join('、'))+(a.length>40?` …（共 ${a.length} 个）`:''):'';
+  modal('补画面',`<p class="small muted" style="margin-top:0">起草检查没过的画面，出视频会卡在“准备”，要交给网页 AI 补好。一个一个交给 AI 有点浪费：可以先攒着，攒够了一起补。</p>
+    ${pw.length?`<div class="box" style="margin:8px 0"><b>这次的 ${pw.length} 个</b>：${lst(pw)}</div>`:''}
+    ${rest.length?`<div class="box" style="margin:8px 0"><b>库里还有 ${rest.length} 个也要补</b>${FL.later.length?`（攒着的 ${FL.later.filter(w=>!P.has(w)).length} 个）`:''}：<span class="small">${lst(rest)}</span></div>`:''}
+    <div class="row" style="gap:8px;flex-wrap:wrap;margin:12px 0">
+      ${pw.length?`<button class="btn" id="flNow">现在就补这 ${pw.length} 个</button>`:''}
+      ${rest.length?`<button class="btn" id="flAll">连库里的一起补（${pw.length+rest.length} 个）</button>`:''}
+      ${now.length?`<button class="btn ghost" id="flLater">暂时忽略，先攒着</button>`:''}
+      ${pw.length&&!now.length?`<button class="btn ghost" id="flUnlater">不攒了（取消忽略）</button>`:''}</div>
+    <div class="small">攒够 <input type="number" id="flAt" min="1" max="1000" value="${FL.at}" style="width:70px"> 个提醒我一起补 <button class="btn ghost sm" id="flAtSave">存</button> <span id="flMsg" class="muted"></span></div>
+    <p class="small muted">先攒着的词：出视频时不会放进批次（画面还没过起草检查），这里也不再催你；库里要补的攒够了，「画面」页会提醒「一起补」。</p>`);
+  const go2=async ws=>{closeModal();await vFixPics('',ws,null)};
+  if($('#flNow'))$('#flNow').onclick=()=>go2(pw);
+  if($('#flAll'))$('#flAll').onclick=()=>go2(pw.concat(rest));
+  if($('#flLater'))$('#flLater').onclick=async()=>{const d=await api('/api/fixlater',{op:'add',words:now});if(d.ok)FL=d;toast((d.ok?'✓ ':'✗ ')+d.msg,6000);closeModal();try{picCheckRender()}catch(e){}};
+  if($('#flUnlater'))$('#flUnlater').onclick=async()=>{const d=await api('/api/fixlater',{op:'remove',words:pw});if(d.ok)FL=d;closeModal();try{picCheckRender()}catch(e){}};
+  $('#flAtSave').onclick=async()=>{const d=await api('/api/fixlater',{op:'at',at:+$('#flAt').value});if(d.ok)FL=d;$('#flMsg').textContent=(d.ok?'✓ ':'✗ ')+d.msg;try{picCheckRender()}catch(e){}}}
+async function loadPic(){await poolNeed();await flNeed();picPickRender();picRes();stepTasks('pic');liveTick();tabCounts()}
 function picPickRender(){const pk=picked();picCheckRender();
   $('#picPickN').textContent=pk.length?`（选上的 ${pk.length} 个）`:'';
   $('#picPickSum').textContent=pk.length?`选上的 ${pk.length} 个词（点开看每个词的题目、画面）`:'还没有选上的词';
@@ -1960,7 +1988,7 @@ async function vWordsLoad(){
   const fix=i=>i.q&&i.pic&&i.picTodo?['画面还没过起草检查（开工会卡在“准备”）','','']:!i.q?(i.manual?['出题没过','go(\'q\')','去「出题」改']:[i.pic?'缺题目':'缺题目、也缺画面（先出题，再做画面）','go(\'q\')','去出题'])
     :[i.picfail?'画面没做成':'缺画面','go(\'pic\')',i.picfail?'去「画面」再试':'去做画面'];
   $('#vMiss').innerHTML=miss.length?`<div class="small" style="margin:12px 0 4px"><b>还不能出视频的 ${miss.length} 个</b>（不会放进批次）</div>`+
-    (pt.length?`<div class="vfix"><div class="line" style="margin:0"><span class="small">${pt.length} 个的画面要先补（起草检查说还缺东西）：</span><button class="btn sm" data-fixpics="" data-words="${esc(JSON.stringify(pt.map(i=>i.word)))}">交给 AI 补画面（${pt.length} 个）</button></div></div>`:'')+
+    (pt.length?`<div class="vfix"><div class="line" style="margin:0"><span class="small">${pt.length} 个的画面要先补（起草检查说还缺东西）：</span><button class="btn sm" data-fixopen="" data-words="${esc(JSON.stringify(pt.map(i=>i.word)))}">补画面…（${pt.length} 个）</button> <span class="small muted">可以现在补，也可以先攒着</span></div></div>`:'')+
     `<div class="plist" style="max-height:200px"><table><tr><th>单词</th><th>题目</th><th>画面</th><th>缺什么</th><th></th></tr>`+
     miss.map(i=>{const [why,act,btn]=fix(i);return `<tr><td class="w">${esc(i.word)}</td><td class="n">${ckQ(i)}</td><td class="n">${ckP(i)}</td><td>${why}</td><td class="n">${act?`<button class="btn ghost sm" onclick="${act}">${btn}</button>`:''}</td></tr>`}).join('')+'</table></div>':'';
   const others=(d.items||[]).filter(w=>w.q&&!pkw.has(w.word));
@@ -2207,6 +2235,7 @@ function vToggle(name){VOPEN.has(name)?VOPEN.delete(name):VOPEN.add(name);
   const b=vB(name),c=document.querySelector(`.vb[data-name="${CSS.escape(name)}"]`);if(b&&c)vCardFill(c,b);if(VOPEN.has(name)&&!(b&&b.words))vTick(true)}
 document.addEventListener('click',e=>{
   const fx=e.target.closest('[data-fix]');if(fx){e.preventDefault();vFix(fx.dataset.fix,fx);return}
+  const fo=e.target.closest('[data-fixopen]');if(fo){e.preventDefault();e.stopPropagation();let ws=[];try{ws=JSON.parse(fo.dataset.words||'[]')}catch(_){}flOpen(ws);return}
   const fp=e.target.closest('[data-fixpics]');if(fp){e.preventDefault();e.stopPropagation();let ws=[];try{ws=JSON.parse(fp.dataset.words||'[]')}catch(_){}vFixPics(fp.dataset.fixpics,ws,fp);return}
   const bo=e.target.closest('[data-bo]');if(bo){e.preventDefault();e.stopPropagation();vBatchOp(bo.dataset.bo,bo.dataset.b,bo);return}
   const wo=e.target.closest('[data-wo]');if(wo){e.preventDefault();e.stopPropagation();vWordOp(wo.dataset.wo,wo.dataset.b,wo.dataset.w,wo);return}

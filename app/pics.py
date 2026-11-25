@@ -923,6 +923,64 @@ def unchecked_words():
     return set(out)
 
 
+# ═══════════ v1.11.5：补画面先攒着——点了「暂时忽略」的词记下来，攒够一定数量再一起交给 AI ═══════════
+LATER = C.DATA / "pic_later.json"
+
+
+def later_get():
+    """{"later": [先攒着的词（还没补好的）], "all": [库里所有要补画面的词], "at": 攒够几个提醒}。补好了的自动拿掉。"""
+    try:
+        d = json.loads(LATER.read_text(encoding="utf-8")) if LATER.exists() else {}
+    except Exception:
+        d = {}
+    unc = unchecked_words()
+    words = [w for w in (d.get("words") or []) if w in unc]
+    if words != (d.get("words") or []):
+        d["words"] = words
+        _later_save(d)
+    return {"later": words, "all": sorted(unc), "at": max(1, int(d.get("at") or 10))}
+
+
+def _later_save(d):
+    try:
+        LATER.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+    except Exception:
+        pass
+
+
+def later_op(b):
+    try:
+        d = json.loads(LATER.read_text(encoding="utf-8")) if LATER.exists() else {}
+    except Exception:
+        d = {}
+    ws = list(d.get("words") or [])
+    op = b.get("op")
+    if op == "add":                    # 暂时忽略：先攒着
+        new = [w for w in (b.get("words") or []) if isinstance(w, str) and w not in ws]
+        ws += new
+        msg = "先攒着了：%d 个词。攒够 %d 个，这里会提醒你一起补" % (len(new), max(1, int(d.get("at") or 10))) if new else "这些词本来就攒着了"
+    elif op == "remove":
+        rm = set(b.get("words") or [])
+        ws = [w for w in ws if w not in rm]
+        msg = "不再攒着了"
+    elif op == "at":
+        try:
+            n = int(b.get("at"))
+        except Exception:
+            return {"ok": False, "msg": "要填数字"}
+        if not 1 <= n <= 1000:
+            return {"ok": False, "msg": "要填 1 到 1000 之间的数"}
+        d["at"] = n
+        msg = "存好了：攒够 %d 个提醒你" % n
+    else:
+        return {"ok": False, "msg": "认不出要做什么"}
+    d["words"] = ws
+    _later_save(d)
+    r = later_get()
+    r.update(ok=True, msg=msg)
+    return r
+
+
 def todo_all():
     p = C.DATA / "pic_todo.json"
     try:
