@@ -676,9 +676,6 @@
   "items": [
    {
     "w": "organize",
-    "word": "organize",
-    "name": "organize",
-    "en": "organize",
     "pic": {
      "bg": "blank",
      "items": [
@@ -706,6 +703,9 @@
       }
      ]
     },
+    "word": "organize",
+    "name": "organize",
+    "en": "organize",
     "text": "organize 是把人、事、东西安排成有条理的整体。",
     "say": "organize 是把人、事、东西安排成有条理的整体。",
     "diff": "organize 是把人、事、东西安排成有条理的整体。",
@@ -724,13 +724,20 @@
     "txt": "organize 是把人、事、东西安排成有条理的整体。",
     "talk": "organize 是把人、事、东西安排成有条理的整体。",
     "words": "organize 是把人、事、东西安排成有条理的整体。",
-    "detail": "organize 是把人、事、东西安排成有条理的整体。"
+    "detail": "organize 是把人、事、东西安排成有条理的整体。",
+    "sentence": "organize 是把人、事、东西安排成有条理的整体。",
+    "speech": "organize 是把人、事、东西安排成有条理的整体。",
+    "cn": "organize 是把人、事、东西安排成有条理的整体。",
+    "why": "organize 是把人、事、东西安排成有条理的整体。",
+    "lines": [
+     "organize 是把人、事、东西安排成有条理的整体。"
+    ],
+    "says": [
+     "organize 是把人、事、东西安排成有条理的整体。"
+    ]
    },
    {
     "w": "arrange",
-    "word": "arrange",
-    "name": "arrange",
-    "en": "arrange",
     "pic": {
      "bg": "blank",
      "items": [
@@ -751,6 +758,9 @@
       }
      ]
     },
+    "word": "arrange",
+    "name": "arrange",
+    "en": "arrange",
     "text": "arrange 偏布置、安排：摆放物品、安排时间。",
     "say": "arrange 偏布置、安排：摆放物品、安排时间。",
     "diff": "arrange 偏布置、安排：摆放物品、安排时间。",
@@ -769,7 +779,17 @@
     "txt": "arrange 偏布置、安排：摆放物品、安排时间。",
     "talk": "arrange 偏布置、安排：摆放物品、安排时间。",
     "words": "arrange 偏布置、安排：摆放物品、安排时间。",
-    "detail": "arrange 偏布置、安排：摆放物品、安排时间。"
+    "detail": "arrange 偏布置、安排：摆放物品、安排时间。",
+    "sentence": "arrange 偏布置、安排：摆放物品、安排时间。",
+    "speech": "arrange 偏布置、安排：摆放物品、安排时间。",
+    "cn": "arrange 偏布置、安排：摆放物品、安排时间。",
+    "why": "arrange 偏布置、安排：摆放物品、安排时间。",
+    "lines": [
+     "arrange 偏布置、安排：摆放物品、安排时间。"
+    ],
+    "says": [
+     "arrange 偏布置、安排：摆放物品、安排时间。"
+    ]
    }
   ],
   "logic": "organize 从 organ“器官”来：像身体一样各部分配合；arrange 是 ar“向”+ range“排成一行”：把东西排好。",
@@ -826,6 +846,135 @@
   "notes": {
    "organize": "organize 是把人、事、东西安排成有条理的整体。",
    "arrange": "arrange 偏布置、安排：摆放物品、安排时间。"
+  }
+ },
+ "demo": {
+  "widen": {
+   "icons": [
+    "art/icon-wide.svg",
+    "art/icon-make.svg"
+   ],
+   "lit": "使变宽",
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "ray": [
+       [
+        0.5,
+        0.55
+       ],
+       [
+        0.1,
+        0.55
+       ]
+      ],
+      "color": "#F59F00",
+      "lw": 0.035,
+      "arrow": true,
+      "dur": 1.2
+     },
+     {
+      "ray": [
+       [
+        0.5,
+        0.55
+       ],
+       [
+        0.9,
+        0.55
+       ]
+      ],
+      "color": "#F59F00",
+      "lw": 0.035,
+      "arrow": true,
+      "dur": 1.2
+     }
+    ]
+   }
+  },
+  "modernize": {
+   "icons": [
+    "art/smartphone.svg",
+    "art/icon-make.svg"
+   ],
+   "lit": "使变得现代",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/rotary-phone.svg",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.42,
+      "a": 0.6,
+      "z": 2
+     },
+     {
+      "waves": true,
+      "x": 0.16,
+      "y": 0.52,
+      "dir": 180,
+      "n": 3,
+      "period": 1.2,
+      "color": "#2F6FB3"
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.66,
+      "y": 0.58,
+      "s": 0.5,
+      "delay": 1,
+      "pop": true,
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "waves": true,
+      "x": 0.8,
+      "y": 0.5,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#2F6FB3",
+      "delay": 1
+     }
+    ]
+   }
+  },
+  "simplify": {
+   "icons": [
+    "art/icon-simple.svg",
+    "art/icon-make.svg"
+   ],
+   "lit": "使变简单",
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "shake",
+      "hide": 1.6,
+      "z": 3
+     },
+     {
+      "svg": "art/icon-simple.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.46,
+      "delay": 1.6,
+      "pop": true,
+      "anim": "pulse",
+      "z": 3
+     }
+    ]
+   }
   }
  },
  "lianxi": {

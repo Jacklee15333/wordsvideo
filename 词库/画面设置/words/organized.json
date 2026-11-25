@@ -468,9 +468,6 @@
   "items": [
    {
     "w": "organized",
-    "word": "organized",
-    "name": "organized",
-    "en": "organized",
     "pic": {
      "bg": "blank",
      "items": [
@@ -498,6 +495,9 @@
       }
      ]
     },
+    "word": "organized",
+    "name": "organized",
+    "en": "organized",
     "text": "organized 是日常说法：有条理、会安排。",
     "say": "organized 是日常说法：有条理、会安排。",
     "diff": "organized 是日常说法：有条理、会安排。",
@@ -516,13 +516,20 @@
     "txt": "organized 是日常说法：有条理、会安排。",
     "talk": "organized 是日常说法：有条理、会安排。",
     "words": "organized 是日常说法：有条理、会安排。",
-    "detail": "organized 是日常说法：有条理、会安排。"
+    "detail": "organized 是日常说法：有条理、会安排。",
+    "sentence": "organized 是日常说法：有条理、会安排。",
+    "speech": "organized 是日常说法：有条理、会安排。",
+    "cn": "organized 是日常说法：有条理、会安排。",
+    "why": "organized 是日常说法：有条理、会安排。",
+    "lines": [
+     "organized 是日常说法：有条理、会安排。"
+    ],
+    "says": [
+     "organized 是日常说法：有条理、会安排。"
+    ]
    },
    {
     "w": "orderly",
-    "word": "orderly",
-    "name": "orderly",
-    "en": "orderly",
     "pic": {
      "bg": "blank",
      "items": [
@@ -543,6 +550,9 @@
       }
      ]
     },
+    "word": "orderly",
+    "name": "orderly",
+    "en": "orderly",
     "text": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
     "say": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
     "diff": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
@@ -561,13 +571,20 @@
     "txt": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
     "talk": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
     "words": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
-    "detail": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。"
+    "detail": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
+    "sentence": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
+    "speech": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
+    "cn": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
+    "why": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
+    "lines": [
+     "orderly 是整整齐齐、有秩序，东西排得规规矩矩。"
+    ],
+    "says": [
+     "orderly 是整整齐齐、有秩序，东西排得规规矩矩。"
+    ]
    },
    {
     "w": "systematic",
-    "word": "systematic",
-    "name": "systematic",
-    "en": "systematic",
     "pic": {
      "bg": "blank",
      "items": [
@@ -588,6 +605,9 @@
       }
      ]
     },
+    "word": "systematic",
+    "name": "systematic",
+    "en": "systematic",
     "text": "systematic 强调成体系、全面，一步一步按系统来。",
     "say": "systematic 强调成体系、全面，一步一步按系统来。",
     "diff": "systematic 强调成体系、全面，一步一步按系统来。",
@@ -606,7 +626,17 @@
     "txt": "systematic 强调成体系、全面，一步一步按系统来。",
     "talk": "systematic 强调成体系、全面，一步一步按系统来。",
     "words": "systematic 强调成体系、全面，一步一步按系统来。",
-    "detail": "systematic 强调成体系、全面，一步一步按系统来。"
+    "detail": "systematic 强调成体系、全面，一步一步按系统来。",
+    "sentence": "systematic 强调成体系、全面，一步一步按系统来。",
+    "speech": "systematic 强调成体系、全面，一步一步按系统来。",
+    "cn": "systematic 强调成体系、全面，一步一步按系统来。",
+    "why": "systematic 强调成体系、全面，一步一步按系统来。",
+    "lines": [
+     "systematic 强调成体系、全面，一步一步按系统来。"
+    ],
+    "says": [
+     "systematic 强调成体系、全面，一步一步按系统来。"
+    ]
    }
   ],
   "logic": "organized 是 organize + ed“被组织好的”；orderly 是 order“秩序”+ ly；systematic 是 system“系统”+ atic。",
@@ -684,6 +714,111 @@
    "organized": "organized 是日常说法：有条理、会安排。",
    "orderly": "orderly 是整整齐齐、有秩序，东西排得规规矩矩。",
    "systematic": "systematic 强调成体系、全面，一步一步按系统来。"
+  }
+ },
+ "demo": {
+  "active": {
+   "icons": [
+    "art/icon-act.svg",
+    "art/icon-adj.svg"
+   ],
+   "lit": "爱动的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-music",
+      "x": 0.44,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2.5
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "alt": [
+       "art/note2.svg"
+      ],
+      "x": 0.7,
+      "y": 0.3,
+      "every": 0.9,
+      "life": 1.6,
+      "to": [
+       0.05,
+       -0.2
+      ],
+      "s": 0.06
+     }
+    ]
+   }
+  },
+  "usable": {
+   "icons": [
+    "art/icon-use.svg",
+    "art/icon-able.svg"
+   ],
+   "lit": "能用的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/lamp.svg",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "pulse",
+      "z": 3
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.72,
+      "y": 0.72,
+      "s": 0.22,
+      "z": 3
+     }
+    ]
+   }
+  },
+  "interested": {
+   "icons": [
+    "art/star.svg",
+    "art/icon-adj.svg"
+   ],
+   "lit": "被吸引住的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.44,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.78,
+      "y": 0.3,
+      "s": 0.2,
+      "anim": "spin",
+      "z": 4
+     }
+    ]
+   }
   }
  },
  "lianxi": {

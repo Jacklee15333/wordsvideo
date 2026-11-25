@@ -554,9 +554,6 @@
    "items": [
     {
      "w": "organizer",
-     "word": "organizer",
-     "name": "organizer",
-     "en": "organizer",
      "pic": {
       "bg": "blank",
       "items": [
@@ -586,6 +583,9 @@
        }
       ]
      },
+     "word": "organizer",
+     "name": "organizer",
+     "en": "organizer",
      "text": "organizer 是活动的操办人，张罗安排。",
      "say": "organizer 是活动的操办人，张罗安排。",
      "diff": "organizer 是活动的操办人，张罗安排。",
@@ -604,13 +604,20 @@
      "txt": "organizer 是活动的操办人，张罗安排。",
      "talk": "organizer 是活动的操办人，张罗安排。",
      "words": "organizer 是活动的操办人，张罗安排。",
-     "detail": "organizer 是活动的操办人，张罗安排。"
+     "detail": "organizer 是活动的操办人，张罗安排。",
+     "sentence": "organizer 是活动的操办人，张罗安排。",
+     "speech": "organizer 是活动的操办人，张罗安排。",
+     "cn": "organizer 是活动的操办人，张罗安排。",
+     "why": "organizer 是活动的操办人，张罗安排。",
+     "lines": [
+      "organizer 是活动的操办人，张罗安排。"
+     ],
+     "says": [
+      "organizer 是活动的操办人，张罗安排。"
+     ]
     },
     {
      "w": "arranger",
-     "word": "arranger",
-     "name": "arranger",
-     "en": "arranger",
      "pic": {
       "bg": "blank",
       "items": [
@@ -631,6 +638,9 @@
        }
       ]
      },
+     "word": "arranger",
+     "name": "arranger",
+     "en": "arranger",
      "text": "arranger 是安排、布置的人，也指给乐曲编配的人。",
      "say": "arranger 是安排、布置的人，也指给乐曲编配的人。",
      "diff": "arranger 是安排、布置的人，也指给乐曲编配的人。",
@@ -649,13 +659,20 @@
      "txt": "arranger 是安排、布置的人，也指给乐曲编配的人。",
      "talk": "arranger 是安排、布置的人，也指给乐曲编配的人。",
      "words": "arranger 是安排、布置的人，也指给乐曲编配的人。",
-     "detail": "arranger 是安排、布置的人，也指给乐曲编配的人。"
+     "detail": "arranger 是安排、布置的人，也指给乐曲编配的人。",
+     "sentence": "arranger 是安排、布置的人，也指给乐曲编配的人。",
+     "speech": "arranger 是安排、布置的人，也指给乐曲编配的人。",
+     "cn": "arranger 是安排、布置的人，也指给乐曲编配的人。",
+     "why": "arranger 是安排、布置的人，也指给乐曲编配的人。",
+     "lines": [
+      "arranger 是安排、布置的人，也指给乐曲编配的人。"
+     ],
+     "says": [
+      "arranger 是安排、布置的人，也指给乐曲编配的人。"
+     ]
     },
     {
      "w": "host",
-     "word": "host",
-     "name": "host",
-     "en": "host",
      "pic": {
       "bg": "blank",
       "items": [
@@ -685,6 +702,9 @@
        }
       ]
      },
+     "word": "host",
+     "name": "host",
+     "en": "host",
      "text": "host 是东道主、主人，请大家来、招待大家。",
      "say": "host 是东道主、主人，请大家来、招待大家。",
      "diff": "host 是东道主、主人，请大家来、招待大家。",
@@ -703,7 +723,17 @@
      "txt": "host 是东道主、主人，请大家来、招待大家。",
      "talk": "host 是东道主、主人，请大家来、招待大家。",
      "words": "host 是东道主、主人，请大家来、招待大家。",
-     "detail": "host 是东道主、主人，请大家来、招待大家。"
+     "detail": "host 是东道主、主人，请大家来、招待大家。",
+     "sentence": "host 是东道主、主人，请大家来、招待大家。",
+     "speech": "host 是东道主、主人，请大家来、招待大家。",
+     "cn": "host 是东道主、主人，请大家来、招待大家。",
+     "why": "host 是东道主、主人，请大家来、招待大家。",
+     "lines": [
+      "host 是东道主、主人，请大家来、招待大家。"
+     ],
+     "says": [
+      "host 是东道主、主人，请大家来、招待大家。"
+     ]
     }
    ],
    "logic": "organizer 是 organize + er；arranger 是 arrange + er；host 本义是“接待客人的人”。",
@@ -792,6 +822,93 @@
     "organizer": "organizer 是活动的操办人，张罗安排。",
     "arranger": "arranger 是安排、布置的人，也指给乐曲编配的人。",
     "host": "host 是东道主、主人，请大家来、招待大家。"
+   }
+  },
+  "demo": {
+   "driver": {
+    "icons": [
+     "art/icon-wheel.svg",
+     "art/icon-person.svg"
+    ],
+    "lit": "开车的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/car.svg",
+       "x": 0.12,
+       "y": 0.74,
+       "s": 0.44,
+       "go": [
+        0.7,
+        0.74
+       ],
+       "dur": 3,
+       "anim": "ride",
+       "z": 3
+      }
+     ]
+    }
+   },
+   "actor": {
+    "icons": [
+     "art/icon-act.svg",
+     "art/icon-person.svg"
+    ],
+    "lit": "表演的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-hello",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2.5
+      },
+      {
+       "beam": true,
+       "x": 0.5,
+       "y": 0.05,
+       "len": 0.6,
+       "width": 0.3,
+       "swing": 2,
+       "period": 4
+      }
+     ]
+    }
+   },
+   "artist": {
+    "icons": [
+     "art/icon-palette.svg",
+     "art/icon-person.svg"
+    ],
+    "lit": "搞艺术的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/easel.svg",
+       "x": 0.46,
+       "y": 0.58,
+       "s": 0.74,
+       "z": 3
+      },
+      {
+       "svg": "art/plant.svg",
+       "x": 0.84,
+       "y": 0.7,
+       "s": 0.36,
+       "anim": "sway",
+       "z": 2
+      }
+     ]
+    }
    }
   }
  },
@@ -886,5 +1003,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
