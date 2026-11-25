@@ -229,6 +229,16 @@ def self_check():
     return "\n".join(out)
 
 
+def relay_final(tid, kind, allres, t0):
+    """v1.13.0：这一轮（这个任务）做完了：一共几个、做好几个、没做成的和原因——黄框没了以后，「这一步的进度」里还看得到。"""
+    if not allres:
+        return
+    bad = [[w, (r.get("detail") or "没做成")[:120]] for w, r in allres.items() if not r.get("ok")]
+    C.RELAY["final"] = {"t": time.time(), "t0": t0, "tid": tid, "kind": kind, "n": len(allres), "ok": len(allres) - len(bad), "bad": bad}
+    C.log("━━ 本轮任务完成（%s）：一共 %d 个词，做好 %d 个，没做成 %d 个%s ━━" % (
+        kind, len(allres), len(allres) - len(bad), len(bad), ("：" + "、".join(w for w, _ in bad[:20])) if bad else ""), tid)
+
+
 def build_prompt_multi(words, rnd):
     """手动接力：一份好几个词的画面提示词。规矩、pictures.md、范例只放一次，每个词一段材料。"""
     rules, pm, ex = docs()
@@ -299,6 +309,7 @@ def do_pics_relay(R, tid, total, only):
     nb = (len(todo) + N - 1) // N
     C.log("画面（手动接力）：一共 %d 个词，一份 %d 个，分 %d 份；网页 AI 每写完 %d 个上传一次" % (len(todo), N, nb, rnd), tid)
     done, batch, queue, k = 0, [], list(todo), 0
+    allres, t_all = {}, time.time()
     while queue:                    # v1.11.2：每一份开始时按现在的设置分（黄框里改了，下一份就按新的）
         N, rnd = C.relay_size("pic")
         pend, queue = queue[:N], queue[N:]
@@ -375,9 +386,11 @@ def do_pics_relay(R, tid, total, only):
                 C.log("  剩下的 %d 个先跳过了：%s" % (len(pend), "、".join(pend[:20])), tid)
             pend = []
         C.gen_hist_add("pic", [w for w in chunk if w in res], res, tid, "手动接力 · 第 %d 批（共 %d 批）" % (k, nb), t0)
+        allres.update(res)
         _commit(tid, batch)
         batch = []
     _commit(tid, batch)
+    relay_final(tid, "做画面", allres, t_all)
 
 
 def parse(reply):
@@ -1210,6 +1223,7 @@ def _fix_relay(R, tid, words, todos, batch):
     nb = (len(words) + N - 1) // N
     C.log("补画面（手动接力）：一共 %d 个词，一份 %d 个，分 %d 份；网页 AI 每写完 %d 个上传一次" % (len(words), N, nb, rnd), tid)
     done, saved, queue, k = 0, [], list(words), 0
+    allres, t_all = {}, time.time()
     while queue:                    # v1.11.2：每一份开始时按现在的设置分（黄框里改了，下一份就按新的）
         N, rnd = C.relay_size("fix")
         pend, queue = queue[:N], queue[N:]
@@ -1296,5 +1310,7 @@ def _fix_relay(R, tid, words, todos, batch):
             pend = []
         _UC["t"] = 0.0
         C.gen_hist_add("pic", [w for w in chunk if w in res], res, tid, "补画面 · 第 %d 批（共 %d 批）" % (k, nb), t0)
+        allres.update(res)
         _commit(tid, saved, "补画面")
         saved = []
+    relay_final(tid, "补画面", allres, t_all)

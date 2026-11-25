@@ -348,6 +348,35 @@ tr.wdim td.w{color:var(--faint)}
 .r3repo b,.r3task b{color:var(--ink);font-weight:600}
 .r3task .btn{margin-left:4px}
 @media (prefers-reduced-motion:reduce){.r3h .tri{transition:none}}
+/* v1.13.0：手动接力一栏铺满（右边的提示词框去掉了，提示词在第 ① 步点「查看提示词」看） */
+#tLive.relaymode .lgrid{grid-template-columns:minmax(0,1fr)}
+#tLive.relaymode .lright{display:none}
+/* 第 ③ 步里一行一件事（像 Claude 做任务时那样），点一行展开、再点收起 */
+.relay .steps .r3feed li.rw{display:block;padding:0;border-bottom:1px solid #F5EBD8;counter-increment:none}
+.relay .steps .r3feed li.rw:last-child{border-bottom:0}
+.rw .rh{display:flex;align-items:baseline;gap:8px;padding:5px 2px;cursor:pointer;border-radius:3px}
+.rw .rh:hover{background:#FBF4E6}
+.rw .rh:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
+.rw .ic{flex:none;width:14px;text-align:center;font-weight:700;color:var(--faint)}
+.rw .tt{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)}
+.rw .tm{flex:none;color:var(--faint);font-variant-numeric:tabular-nums;font-size:11.5px}
+.rw .ch{flex:none;color:var(--faint);font-size:11px;transition:transform .15s}
+.rw.open .ch{transform:rotate(90deg)}
+.rw .rd{padding:2px 2px 8px 24px;color:var(--muted);white-space:pre-wrap;word-break:break-word;line-height:1.6}
+.rw.ok .ic{color:var(--pass)}.rw.bad .ic{color:#9B2C22}.rw.fix .ic{color:#9A5B00}.rw.in .ic{color:var(--blue)}
+.rw.now .tt{color:var(--blue)}
+.rw.now .ic{display:inline-block;width:10px;height:10px;margin:0 2px;border-radius:50%;border:2px solid #C9D2DC;border-top-color:var(--blue);animation:rspin .9s linear infinite}
+@media (prefers-reduced-motion:reduce){.rw.now .ic{animation:none}.rw .ch{transition:none}}
+.r3feed{max-height:340px}
+.r3stop{font-size:12px;color:var(--muted)}
+.r3sum{margin-top:6px;padding:8px 10px;border-radius:4px;background:var(--pass-bg);border:1px solid #BFDCCB;font-size:13px;line-height:1.7}
+.r3sum b{color:var(--pass)}
+.r3sum.bad{background:#FFF4E0;border-color:#F0D2A0}
+.rcont .rcb{align-items:center}
+.rcont .btn.ghost{background:#fff}
+.rfinal{margin-bottom:12px;border-left:4px solid var(--pass)}
+.rfinal .hd{font-weight:600;font-size:14.5px;color:var(--pass)}
+.rfinal ul{margin:4px 0 6px;padding-left:18px;font-size:12.5px;color:var(--muted)}
 .rcont{border:1px solid #F0D9B0;background:#fff;border-radius:4px;padding:8px 10px;margin:0 0 8px}
 .rcont .hd{font-weight:600;font-size:13px;margin-bottom:6px}
 .rcont .rcb{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
@@ -700,22 +729,22 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
     <div id="rRes" class="rdone" hidden></div>
     <details class="rdlist" id="rDoneBox" hidden><summary id="rDoneN"></summary><ul id="rDoneList"></ul></details>
     <div class="rnow" id="rNow"></div>
-    <div id="rMulti" class="rcont" hidden><div class="hd" id="rContHd">网页 AI 停住了、写不下了？点继续</div>
-      <div class="rcb"><button class="btn sm" id="rContSame">继续：在这个对话里接着写</button> <button class="btn sm" id="rNewChat">继续：开新对话</button></div>
-      <div class="small muted" id="rContTip">对话还能写，点左边；写不下了，点右边。</div>
-      <div class="small" id="rContMsg"></div></div>
     <div id="rAuto">
     <ol class="steps rsteps">
-      <li id="rS1"><b>提示词复制好了</b> <span class="small muted" id="rLen"></span> <button class="btn ghost sm" id="rCopy">再复制一次</button><div class="rs"></div></li>
+      <li id="rS1"><b>提示词复制好了</b> <span class="small muted" id="rLen"></span> <button class="btn ghost sm" id="rCopy">再复制一次</button> <button class="btn ghost sm" id="rView">查看提示词</button><div class="rs"></div></li>
       <li id="rS2"><button class="btn sm" id="rOpen">打开网页 AI ↗</button> 粘贴、发送 <span class="small faint">（最好开新对话）</span><div class="rs"></div></li>
       <li id="rStep3"><div class="r3h" id="r3H" role="button" tabindex="0" aria-expanded="false" aria-controls="r3Body"><span class="tri" aria-hidden="true">▸</span><span id="rT3">等网页 AI 写完、自己传回来</span></div>
-        <div class="r3line"><div class="rs"></div><span class="r3act" id="r3Act" hidden><button class="btn ghost sm" id="rPollNow">查看结果</button> <span class="pr" id="rPollRes"></span></span></div>
+        <div class="r3line"><div class="rs"></div><span class="r3act" id="r3Act" hidden><button class="btn ghost sm" id="rPollNow">查看结果</button> <span class="pr" id="rPollRes"></span></span><a href="#" class="r3stop" id="r3Stop" hidden>网页 AI 停了？</a></div>
+        <div id="rMulti" class="rcont" hidden><div class="hd" id="rContHd"></div><div class="small" id="rContTip"></div>
+          <div class="rcb"><button class="btn sm" id="rContSame">继续：在原来的对话里接着写</button><button class="btn sm" id="rNewChat">继续：开新对话</button><a href="#" class="small" id="rContX">它没停，不用了</a></div>
+          <div class="small" id="rContMsg"></div></div>
         <div class="r3body" id="r3Body" hidden>
-          <div class="r3hd">现在的动态</div><ul class="r3feed" id="r3Feed"></ul>
+          <ul class="r3feed" id="r3Feed"></ul>
           <div class="r3repo" id="rPoll" hidden><b>中转仓库</b> <span id="rPollInfo"></span> <a href="#" id="rPollGh" target="_blank" rel="noopener">在 GitHub 上看 ↗</a></div>
           <div class="r3task" id="r3Task" hidden></div>
-        </div></li>
-      <li id="rStep4"><span>存好，这个词完成</span><div class="rs"></div></li>
+        </div>
+        <div class="r3sum" id="r3Sum" hidden></div></li>
+      <li id="rStep4" hidden><span>存好，这个词完成</span><div class="rs"></div></li>
     </ol>
     <div id="rHint" class="small" style="color:var(--amber)"></div>
     </div>
@@ -736,6 +765,7 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
       </div>
     </div>
   </div>
+  <div class="box rfinal" id="rFinal" hidden></div>
 </div>
     <div class="sother" hidden></div>
     <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
@@ -1513,7 +1543,8 @@ async function liveTick(){
   const t=d.task||{},ai=d.ai||{};
   $('#lTitle').textContent='正在做：'+(t.title||'');
   $('#lTime').textContent=ai.started&&!ai.done?(d.relay?'等你操作，已经 ':'这一次已经等了 ')+secs(Date.now()/1000-ai.started):'';
-  $('#lStage').textContent=d.relay?'轮到你了：照左边黄框做':(d.stage||'');
+  $('#lStage').textContent=d.relay?'轮到你了：照下面黄框做':(d.stage||'');
+  L.classList.toggle('relaymode',d.pv==='relay');
   $('#lWho').textContent='用的是：'+(d.pv==='relay'?String(d.provider||'').replace(/[（(].*$/,''):d.provider);
   const web=d.pv==='web';
   $('#lShotWrap').hidden=!web;$('#lBtns').style.display=web?'flex':'none';
@@ -1791,6 +1822,7 @@ async function relayTick(){
   const lt=(L&&L.t)||0;
   if(RLLAST===null)RLLAST=lt;                       // 打开页面时先记下现在的，之后有词做完就刷新
   else if(lt!==RLLAST){RLLAST=lt;await poolNeed();if(page==='pic'){picPickRender();picRes()}else if(page==='q'){qPickRender();qRes()}}
+  rFinalRender(d);
   if(!d.show)return;
   const ph=d.phase,H=d.hist||[],n=H.length,ws=d.words||[],sent=ph!=='send',done=d.done||[];
   const wn=ws.length>1?`${ws[0]} … ${ws[ws.length-1]}（${ws.length} 个词）`:(ws[0]||'');
@@ -1817,8 +1849,9 @@ async function relayTick(){
   const cur=H[n-1]||{};
   rStep('rS1',d.copied||sent?'done':'you',d.copied||sent?'':'没复制上：点「再复制一次」');
   rStep('rS2',sent?'done':'you',sent?'':`等你粘贴、发送（已经 ${secs(Date.now()/1000-d.ts)}）`);
-  rStep('rStep3',ph==='send'?'run':'done',ph==='send'?(d.inbox?'还没传回来 · <span id="r3Cd"></span>':'它写完，点它回复下面的「复制」'):`收到了 ${hm(cur.got)}${cur.glen?`（${cur.glen.toLocaleString()} 字）`:''}`,ph==='send'?'':'ok');
-  rStep('rStep4',ph==='send'?'wait':ph==='checking'?'run':ph==='ok'?'done':'bad',ph==='send'?'':ph==='checking'?esc(d.stage||'在看能不能用、存下…'):ph==='ok'?'完成了':'没法用：'+esc((cur.detail||'').slice(0,60)),ph==='ok'?'ok':ph==='fail'?'bad':'');
+  rStep('rStep3',ph==='send'||ph==='checking'?'run':ph==='ok'?'done':'bad',ph==='send'?(d.inbox?'还没传回来 · <span id="r3Cd"></span>':'它写完，点它回复下面的「复制」'):
+    ph==='checking'?esc(d.stage||'收到了，在检查、存…'):ph==='ok'?`✓ 这个词完成了（${hm(cur.got)} 收到${cur.glen?`，${cur.glen.toLocaleString()} 字`:''}）`:'没法用：'+esc((cur.detail||'').slice(0,80)),ph==='ok'?'ok':ph==='fail'?'bad':'');
+  $('#rT3').textContent='等网页 AI 写完、自己传回来';$('#r3Sum').hidden=true;
   // 详细情况（收着）
   const ups=d.uploads||[],up=ups[0],base=x=>(x||'').replace(/\.(xlsx|txt)$/,'');
   $('#rHist').innerHTML=n>1?`<div class="rhist"><b>这个词前几轮</b><ul>${H.slice(0,-1).map((h,k)=>`<li>${h.res==='ok'?'<span class="ck-y">✓</span>':h.res==='fail'?'<span class="ck-bad">✗</span>':'<span class="ck-n">–</span>'}
@@ -1831,27 +1864,45 @@ async function relayTick(){
   $('#rBatchDone').hidden=!(LB&&lbNew);
   if(LB&&lbNew)$('#rBatchDone').innerHTML=`<div class="hd">✓ 上一批 ${LB.words.length} 个词已经生成完 <span class="small" style="font-weight:400;color:var(--muted)">（${esc(LB.words[0])} … ${esc(LB.words[LB.words.length-1])}）做好了 ${LB.ok} 个${LB.bad?`，没做成 ${LB.bad} 个`:''}</span></div>`;
   const FXW=d.fixing||[],PDN=(d.pending||[]).length+FXW.length;      // v1.12.0：没过检查、网页 AI 在改的词也算还没完
-  $('#rMulti').hidden=!(M&&PDN);$('#rSkipRest').hidden=!(M&&PDN);$('#rSkip').hidden=M||sent;
-  if(M){const pd=d.pending||[],dn=(d.doneIn||[]).length,k=d.parts||0,base=done.reduce((a,x)=>a+(x.words||[]).length,0)-dn;
+  $('#rSkipRest').hidden=!(M&&PDN);$('#rSkip').hidden=M||sent;
+  $('#rRes').hidden=$('#rRes').hidden||M;$('#rDoneBox').hidden=$('#rDoneBox').hidden||M;   // v1.13.0：一批好几个词时，每个词的结果在第 ③ 步一行一行看
+  let cont='';
+  if(M){const pd=d.pending||[],dn=(d.doneIn||[]).length,k=d.parts||0,now=d.now||Date.now()/1000;
     $('#rTitle').firstChild.textContent=k?'网页 AI 在一个一个写、一个一个传 ':'要你操作：把提示词交给网页 AI ';
-    $('#rProg').innerHTML=d.total?`这次一共 ${d.total} 个词：做好了 <b>${okN}</b> 个${badN?` · 没做成 <b>${badN}</b> 个`:''} · 还剩 <b>${Math.max(0,d.total-cnt)}</b> 个`:'';
-    $('#rNow').innerHTML=`现在这一批 <b>${ws.length}</b> 个词（${esc(ws[0])} … ${esc(ws[ws.length-1])}${d.total?`，这次的第 ${base+1}–${base+ws.length} 个`:''}）`+
-      (k?` <span class="small" style="font-weight:400">收到 <b>${k}</b> 个文件 · 做完 <b>${dn}</b> 个 · 还剩 <b>${pd.length}</b> 个${FXW.length?` · 在改 <b>${FXW.length}</b> 个`:''}</span>`:(done.length?' <span class="small" style="color:var(--amber);font-weight:400">——新的一批，提示词换了，要再粘贴一次</span>':''));
-    $('#rNewChat').textContent=`继续：开新对话（剩下 ${PDN} 个）`;
-    const S=d.aiStop;$('#rMulti').classList.toggle('stop',!!S);
-    $('#rContHd').textContent=S?`⏸ 网页 AI 停下了：已经传了 ${(S.done||[]).length} 个，还剩 ${pd.length} 个${S.why?'（'+S.why+'）':''}——点下面的「继续」`:(k?'网页 AI 停住了、写不下了？点继续':'网页 AI 写不下、或者停住不写了？点继续');
-    rStep('rS2',k||sent?'done':'you',k||sent?'':`等你粘贴、发送（已经 ${secs(Date.now()/1000-d.ts)}）`);
-    $('#rT3').innerHTML=`网页 AI <b>写一个传一个</b>（每 ${d.round||1} 个传一次）`;
+    $('#rProg').innerHTML=d.total?`这次一共 ${d.total} 个词：做好了 <b>${okN}</b> 个${badN?` · 没做成 <b>${badN}</b> 个`:''} · 还剩 <b>${Math.max(0,d.total-cnt)+FXW.length}</b> 个`:'';
+    $('#rNow').innerHTML=`现在这一批 <b>${ws.length}</b> 个词（${esc(ws[0])} … ${esc(ws[ws.length-1])}）`+
+      (!k&&done.length?' <span class="small" style="color:var(--amber);font-weight:400">——新的一批，提示词换了，要再粘贴一次</span>':'');
+    rStep('rS2',k||sent?'done':'you',k||sent?'':`等你粘贴、发送（已经 ${secs(now-d.ts)}）`);
+    const tEnd=PDN?now:Math.max(d.ts||0,...done.filter(x=>ws.includes((x.words||[])[0])).map(x=>x.t||0));   // 做完了就停在做完的那一刻
+    $('#rT3').innerHTML=`网页 AI <b>写一个传一个</b>（每 ${d.round||1} 个传一次）<span class="faint" style="font-weight:400"> · ${PDN?'':'用了 '}${secs(tEnd-d.ts)}</span>`;
+    // 网页 AI 是不是停了：它自己说停了 / 说写完了可还缺 / 好久没传了 / 你点了「网页 AI 停了？」——这时才出「继续」
+    const lastAct=Math.max(d.ts||0,...(d.gotFiles||[]).map(f=>f.t||0)),idle=now-lastAct;
+    if(PDN){if(d.aiStop)cont='stop';else if(d.aiDone&&pd.length)cont='miss';
+      else if(idle>(k?600:1200)&&RCDISMISS!==lastAct)cont='quiet';else if(RCMAN===d.id)cont='man'}
+    const ok3=done.filter(x=>x.ok&&ws.includes((x.words||[])[0])).length,bad3=done.filter(x=>!x.ok&&ws.includes((x.words||[])[0])&&!FX0.has((x.words||[])[0]));
     const cnt3=(k?`收到 ${k} 个文件 · 做完 ${dn} 个 · 还剩 ${pd.length} 个`:'还没传回来')+(FXW.length?` · <b style="color:var(--amber)">没过检查、网页 AI 在改 ${FXW.length} 个</b>`:'');
-    if(!pd.length&&!FXW.length)rStep('rStep3','done',`全部传回来了：收到 ${k} 个文件`,'ok');
-    else if(d.aiStop)rStep('rStep3','you',`⏸ 网页 AI 停下了，还剩 ${pd.length} 个——点上面的「继续」`,'bad');
-    else if(d.aiDone)rStep('rStep3','you',`网页 AI 说写完了，但还差 ${pd.length} 个没收到——点上面的「继续」`,'bad');
+    if(!PDN)rStep('rStep3','done',`全部传回来了：收到 ${k} 个文件`,'ok');
+    else if(cont==='stop'||cont==='miss')rStep('rStep3','you',cont==='stop'?`⏸ 网页 AI 停下了，还剩 ${PDN} 个`:`网页 AI 说写完了，可还差 ${pd.length} 个没收到`,'bad');
     else rStep('rStep3','run',ph==='checking'?`收到第 ${k} 个文件，在检查、存… · ${cnt3}`:cnt3+(d.inbox?' · <span id="r3Cd"></span>':''),'');
-    $('#rStep4').querySelector('span').textContent='这一批生成完';
-    if(!pd.length&&!FXW.length)rStep('rStep4','done','✓ 这一批已经生成完','ok');
-    else rStep('rStep4','wait',FXW.length&&!pd.length?'没过的改好了就打勾':'全部传回来、都过了检查就打勾','');
-    if(showL&&L.multi){const ch=$('#rRes').querySelector('.chain');if(ch)ch.textContent=`这一批第 ${dn} 个做完的`}}
+    // 这一批做完：第 ③ 步最后写一句“本批完成：做好几个、没做成几个”
+    $('#r3Sum').hidden=!!PDN;
+    if(!PDN){$('#r3Sum').className='r3sum'+(bad3.length?' bad':'');
+      $('#r3Sum').innerHTML=`<b>✓ 本批完成</b>：一共 ${ws.length} 个，做好 <b>${ok3}</b> 个${bad3.length?`，没做成 ${bad3.length} 个（${bad3.map(x=>esc((x.words||[])[0])).join('、')}）`:''}`}
+    $('#rNewChat').textContent=`继续：开新对话（剩下 ${PDN} 个）`}
   else $('#rStep4').querySelector('span').textContent='存好，这个词完成';
+  // v1.13.0：「继续」放在第 ③ 步里，只在该点的时候出来，并且说清楚该点哪个
+  $('#rMulti').hidden=!cont;$('#r3Stop').hidden=!(M&&PDN&&!cont);
+  if(cont){const S=d.aiStop||{},why=S.why||'',full=cont==='stop'&&/对话|context|token|太长|满/i.test(why)&&!/回复/.test(why),pd=d.pending||[];
+    const mins=Math.max(1,Math.round(((d.now||Date.now()/1000)-Math.max(d.ts||0,...(d.gotFiles||[]).map(f=>f.t||0)))/60));
+    $('#rMulti').classList.toggle('stop',cont==='stop'||cont==='miss');
+    $('#rContHd').textContent={stop:`⏸ 网页 AI 停下了：还剩 ${PDN} 个没做完${why?`（它说：${why}）`:''}`,miss:`网页 AI 说写完了，可还有 ${pd.length} 个没收到：${pd.slice(0,6).join('、')}${pd.length>6?'…':''}`,
+      quiet:`网页 AI 已经 ${mins} 分钟没传新的了`,man:'网页 AI 停了？'}[cont];
+    $('#rContTip').textContent={stop:full?'它说对话满了：点「开新对话」，把新的提示词贴到一个新对话里。':'原来的对话还能用：点「在原来的对话里接着写」，把复制好的一句话贴回去。要是它说对话太长了，就点「开新对话」。',
+      miss:'先去网页看一眼它传了没有；没传，点「在原来的对话里接着写」让它补上。',
+      quiet:'先去网页看一眼：它还在写，就点「它没停，不用了」；停了、对话还能写，点左边；它说对话太长了，点右边。',
+      man:'停了、对话还能写，点左边；它说对话太长了，点右边。'}[cont];
+    $('#rContSame').classList.toggle('ghost',full);$('#rNewChat').classList.toggle('ghost',!full&&cont!=='quiet'&&cont!=='man');
+    $('#rContX').hidden=cont==='stop'||cont==='miss'}
   // v1.11.2：一批几个词、每写完几个传一次（这里直接改）
   $('#rSize').hidden=!d.sizeKind;
   if(d.sizeKind&&!SZDIRTY){$('#rSzChunk').value=d.sizeChunk;$('#rSzRound').value=d.sizeRound}
@@ -1878,20 +1929,42 @@ function pollInfo(){const d=RL;if(!d||!d.inbox)return;const now=Date.now()/1000+
 function r3Set(open){R3OPEN=open;$('#r3Body').hidden=!open;$('#r3H').setAttribute('aria-expanded',open?'true':'false');try{localStorage.setItem('r3open',open?'1':'0')}catch(e){}}
 $('#r3H').onclick=()=>r3Set(!R3OPEN);
 $('#r3H').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();r3Set(!R3OPEN)}};
+let RCMAN=0,RCDISMISS=0;const R3ROW=new Set();
 function r3Feed(d){if($('#r3Body').hidden!==!R3OPEN)r3Set(R3OPEN);
-  const t0=d.ts||0,it=[],ws=d.words||[];
-  if(t0)it.push({t:t0,x:`提示词出好了（${ws.length>1?ws.length+' 个词':esc(ws[0]||'')}），等你粘贴给网页 AI`});
-  for(const f of d.gotFiles||[])it.push({t:f.t,x:`收到文件 <code>${esc(f.f)}</code>${f.len?`（${f.len.toLocaleString()} 字）`:''}`});
-  if(!d.multi)for(const h of d.hist||[])if(h.got&&h.got>=t0)it.push({t:h.got,x:`收到回复${h.glen?`（${h.glen.toLocaleString()} 字）`:''}`});
-  const FXS=new Set(d.fixing||[]);
-  for(const x of d.done||[])if((x.t||0)>=t0&&!(FXS.has((x.words||[])[0])&&!x.ok))it.push({t:x.t,c:x.ok?'ok':'bad',x:`${x.ok?'✓':'✗'} <b style="font-family:var(--en)">${esc((x.words||[])[0]||'')}</b> ${x.ok?'存好了':'没做成'}${!x.ok&&x.detail?'：'+esc(x.detail.slice(0,50)):''}`});
-  if(d.aiStop)it.push({t:d.aiStop.t,c:'bad',x:`⏸ 网页 AI 停下了${d.aiStop.why?'（'+esc(d.aiStop.why)+'）':''}`});
-  for(const w of d.fixing||[]){const v=(d.verdict||{})[w]||{};it.push({t:(v.t||0)+0.001,c:'fix',x:`↻ <b style="font-family:var(--en)">${esc(w)}</b> 没过检查，已经告诉网页 AI 照“还要补”改（第 ${v.try||1} 次没过，最多改 ${d.tries||3} 次）<span class="faint">：${esc((v.todo||'').slice(0,80))}</span>`})}
-  if(d.inbox&&d.lastPoll&&d.lastPoll>=t0)it.push({t:d.lastPoll,x:`看了中转仓库（第 ${d.polls||0} 次${d.pollBy==='you'?'，你点的':''}）：${d.pollErr?esc(d.pollErr):d.pollGot?`收到 ${d.pollGot} 个文件`:'还没有新的'}`});
-  it.sort((a,b)=>b.t-a.t);
-  if(d.phase==='checking')it.unshift({t:(d.now||Date.now()/1000),c:'now',x:esc(d.stage||'在检查、存…')});
-  const h=it.slice(0,14).map(i=>`<li class="${i.c||''}"><span class="tm">${i.c==='now'?'现在':hm(i.t)}</span><span>${i.x}</span></li>`).join('')||'<li class="faint">还没有动静</li>';
-  const F=$('#r3Feed');if(F.dataset.h!==h){F.innerHTML=h;F.dataset.h=h}}
+  const FX=new Set(d.fixing||[]),rows=[],wre=/^([A-Za-z][A-Za-z'’\-. ]*?) (的画面|补好了|改了|存下了|这次没补成)/;
+  for(const l of d.rows||[]){const m=String(l.msg||'').trim();if(!m||/^━━━━ 手动接力/.test(m))continue;
+    const wm=m.match(wre),w=wm?wm[1]:'';let c='',ic='•';
+    if(/交回了第 \d+ 轮/.test(m)){c='in';ic='↓'}
+    else if(/已上传 \d+ 个提交/.test(m)){ic='↑'}
+    else if(/已经生成完|本轮任务完成/.test(m)){c='ok';ic='✓'}
+    else if(w&&/补好了|画面做好了/.test(m)&&!/没/.test(m.slice(0,w.length+6))){c='ok';ic='✓'}
+    else if(w){c=FX.has(w)?'fix':'bad';ic=FX.has(w)?'↻':'✗'}
+    rows.push({k:'l'+l.id,c,ic,t:m,tm:String(l.ts||'').slice(11,19),d:(m.length>60||w)?esc(m)+(w?`\n<a href="#" onclick="picWordModal('${esc(w)}');return false">看 ${esc(w)} 的画面</a>`:''):''})}
+  const pd=d.pending||[],fx=d.fixing||[];
+  if(d.multi&&(pd.length||fx.length)){
+    const t=d.phase==='checking'?(d.stage||'收到了，在检查、存…'):`等网页 AI 传${fx.length?'改好的 '+fx.slice(0,4).join('、')+(pd.length?'，再接着写':''):''}${pd.length?`下一个（还剩 ${pd.length} 个：${pd.slice(0,3).join('、')}${pd.length>3?'…':''}）`:''}`;
+    rows.push({k:'now',c:'now',ic:'',t,tm:'现在',d:''})}
+  const h=rows.map(r=>{const o=R3ROW.has(r.k)&&r.d;return `<li class="rw ${r.c}${o?' open':''}" data-k="${r.k}"><div class="rh"${r.d?' role="button" tabindex="0" aria-expanded="'+(o?'true':'false')+'"':''}><span class="ic">${r.ic}</span><span class="tt">${esc(r.t)}</span><span class="tm">${r.tm}</span>${r.d?'<span class="ch">›</span>':''}</div>${r.d?`<div class="rd"${o?'':' hidden'}>${r.d}</div>`:''}</li>`}).join('')||'<li class="rw"><div class="rh"><span class="ic">•</span><span class="tt faint">还没有动静</span></div></li>';
+  const F=$('#r3Feed');if(F.dataset.h!==h){const bottom=F.scrollTop+F.clientHeight>=F.scrollHeight-24;F.innerHTML=h;F.dataset.h=h;if(bottom)F.scrollTop=F.scrollHeight}}
+function r3Toggle(li){const k=li.dataset.k,rd=li.querySelector('.rd');if(!rd)return;const o=!R3ROW.has(k);if(o)R3ROW.add(k);else R3ROW.delete(k);
+  li.classList.toggle('open',o);rd.hidden=!o;li.querySelector('.rh').setAttribute('aria-expanded',o?'true':'false');$('#r3Feed').dataset.h=''}
+$('#r3Feed').onclick=e=>{if(e.target.closest('a'))return;const rh=e.target.closest('.rh');if(rh)r3Toggle(rh.parentElement)};
+$('#r3Feed').onkeydown=e=>{const rh=e.target.closest('.rh');if(rh&&(e.key==='Enter'||e.key===' ')){e.preventDefault();r3Toggle(rh.parentElement)}};
+$('#r3Stop').onclick=e=>{e.preventDefault();RCMAN=RL.id;relayTick()};
+$('#rContX').onclick=e=>{e.preventDefault();RCMAN=0;RCDISMISS=Math.max(RL.ts||0,...(RL.gotFiles||[]).map(f=>f.t||0));relayTick()};
+/* 第 ① 步「查看提示词」：弹出来看全文，也能从这里复制 */
+$('#rView').onclick=async()=>{let f;try{f=await api('/api/relay?full=1')}catch(e){return toast('读不到提示词')}
+  const t=f.prompt||'';modal('要发给网页 AI 的提示词',`<div class="line" style="margin:0 0 8px"><button class="btn sm" id="pvCopy">复制提示词</button> <span class="small muted">${t.length.toLocaleString()} 字</span></div><pre class="vlog" style="max-height:62vh">${esc(t)}</pre>`);
+  $('#pvCopy').onclick=async()=>{const ok=await copyText(t);$('#pvCopy').textContent=ok?'复制好了 ✓':'没复制上，再点一次'}};
+/* 这一轮做完了（黄框没了）：「这一步的进度」最上面一张卡片——一共几个、做好几个、没做成的和原因 */
+function rFinalRender(d){const F=d.final,el=$('#rFinal');let seen=0;try{seen=+localStorage.getItem('rfinalSeen')||0}catch(e){}
+  const on=!!F&&!d.show&&page==='pic'&&F.t>(Date.now()/1000-6*3600)&&seen!==F.t&&['做画面','补画面'].includes(F.kind);
+  if(on){const sl=document.querySelector('.sprog[data-step="pic"] .tslot');if(sl&&el.parentElement!==sl)sl.insertBefore(el,sl.firstChild)}
+  el.hidden=!on;if(!on)return;const bad=F.bad||[],sig=F.t+'|'+bad.length;if(el.dataset.s===sig)return;el.dataset.s=sig;
+  el.innerHTML=`<div class="hd">✓ 本轮任务完成</div><div>${esc(F.kind)}：一共 ${F.n} 个词，做好 <b>${F.ok}</b> 个${bad.length?`，没做成 <b>${bad.length}</b> 个`:''} <span class="faint">· ${hm(F.t0).slice(0,5)} → ${hm(F.t).slice(0,5)}，用了 ${secs(F.t-F.t0)}</span></div>
+    ${bad.length?`<ul>${bad.slice(0,30).map(([w,why])=>`<li><a href="#" onclick="picWordModal('${esc(w)}');return false">${esc(w)}</a>：${esc(why)}</li>`).join('')}</ul><div class="small muted">没做成的在「画面」页上面「补画面…」里，攒够了一起补。</div>`:''}
+    <div class="line" style="margin-top:6px"><button class="btn ghost sm" onclick="go('pichist')">看生成历史</button> <button class="btn ghost sm" id="rFinalX">知道了</button></div>`;
+  $('#rFinalX').onclick=()=>{try{localStorage.setItem('rfinalSeen',String(F.t))}catch(e){}el.hidden=true}}
 setInterval(pollInfo,1000);
 $('#rSzChunk').oninput=$('#rSzRound').oninput=()=>{SZDIRTY=true;$('#rSzSave').disabled=false;$('#rSzSave').textContent='保存';$('#rSzMsg').textContent='改了还没保存';$('#rSzMsg').style.color='var(--amber)'};
 $('#rSzSave').onclick=async()=>{const c=Math.round(+$('#rSzChunk').value),r=Math.round(+$('#rSzRound').value);

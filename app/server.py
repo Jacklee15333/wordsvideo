@@ -460,6 +460,13 @@ def api_relay_get(qs):
         r["total"] = 0
     if r.get("doneTid") != (t or {}).get("id"):
         r["done"] = []
+    if r["show"] and r.get("ts"):                  # v1.13.0：第 ③ 步一行一行的经过＝这一份开始以后的步骤记录
+        try:
+            since = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(float(r["ts"]) - 2))
+            r["rows"] = [dict(x) for x in C.q("SELECT id, ts, msg FROM logs WHERE task_id=? AND ts>=? ORDER BY id LIMIT 400",
+                                              (r.get("tid"), since))]
+        except Exception:
+            r["rows"] = []
     if qs.get("full") != "1":
         r["promptLen"] = len(r.get("prompt") or "")
         r["prompt"] = (r.get("prompt") or "")[:600]
