@@ -1,0 +1,1009 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "一生、终身；使用寿命"
+ },
+ "sylIpa": [
+  "laɪf",
+  "taɪm"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sprout.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.55,
+     "shadow": true,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/sun.svg",
+     "x": 0.82,
+     "y": 0.2,
+     "s": 0.26,
+     "anim": "spin"
+    },
+    {
+     "svg": "art/wateringcan.svg",
+     "x": 0.2,
+     "y": 0.62,
+     "s": 0.3,
+     "anim": "swing"
+    },
+    {
+     "label": "life 一生、生命",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/clock_f0.svg",
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 2,
+     "x": 0.4,
+     "y": 0.45,
+     "s": 0.55
+    },
+    {
+     "svg": "art/hourglass.svg",
+     "x": 0.76,
+     "y": 0.6,
+     "s": 0.45,
+     "shadow": true,
+     "anim": "swing"
+    },
+    {
+     "label": "time 一段时间",
+     "x": 0.5,
+     "y": 0.9,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-sprout.svg",
+  "p1": "art/icon-hourglass.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/lifeline.svg",
+    "x": 0.5,
+    "y": 0.45,
+    "s": 0.4
+   },
+   {
+    "label": "一生这段时间",
+    "x": 0.5,
+    "y": 0.85,
+    "size": 0.1,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   },
+   {
+    "svg": "art/hourglass.svg",
+    "x": 0.9,
+    "y": 0.2,
+    "s": 0.3,
+    "anim": "swing"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "一生、终身",
+   "pos": "名词",
+   "diff": "一个人从生到死的这段时长",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/lifeline.svg",
+     "x": 0.6,
+     "y": 0.3,
+     "s": 0.3,
+     "delay": 0
+    },
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.2,
+     "y": 0.62,
+     "s": 0.8,
+     "z": 3,
+     "id": "t",
+     "seq": "talk"
+    },
+    {
+     "actor": "west-girl-listen",
+     "x": 0.84,
+     "y": 0.66,
+     "s": 0.68,
+     "z": 3,
+     "nodWith": "t"
+    },
+    {
+     "label": "一生",
+     "x": 0.6,
+     "y": 0.06,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "I have seen many changes in my lifetime.",
+   "exzh": "我这一生见过很多变化。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/album.svg",
+      "x": 0.38,
+      "y": 0.55,
+      "s": 0.6,
+      "shadow": true,
+      "when": "seen",
+      "pop": true
+     },
+     {
+      "svg": "art/photo.svg",
+      "x": 0.7,
+      "y": 0.45,
+      "s": 0.32,
+      "rot": 8,
+      "when": "many changes",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "label": "many changes 很多变化",
+      "x": 0.7,
+      "y": 0.85,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "many changes"
+     },
+     {
+      "svg": "art/lifeline.svg",
+      "x": 0.5,
+      "y": 0.12,
+      "s": 0.17,
+      "when": "lifetime"
+     },
+     {
+      "label": "这一生",
+      "x": 0.86,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "这一生"
+     }
+    ]
+   }
+  },
+  {
+   "text": "使用寿命",
+   "pos": "名词",
+   "diff": "机器、物品从开始用到用坏的时长",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/washer.svg",
+     "x": 0.42,
+     "y": 0.56,
+     "s": 0.66,
+     "shadow": true,
+     "anim": "shake"
+    },
+    {
+     "svg": "art/hourglass.svg",
+     "x": 0.78,
+     "y": 0.6,
+     "s": 0.4,
+     "anim": "swing"
+    },
+    {
+     "label": "能用多久？",
+     "x": 0.78,
+     "y": 0.14,
+     "size": 0.075,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.6
+    }
+   ],
+   "ex": "This washing machine has a lifetime of ten years.",
+   "exzh": "这台洗衣机的使用寿命是十年。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/washer.svg",
+      "x": 0.32,
+      "y": 0.55,
+      "s": 0.66,
+      "shadow": true,
+      "anim": "shake",
+      "when": "washing machine"
+     },
+     {
+      "svg": "art/hourglass.svg",
+      "x": 0.62,
+      "y": 0.56,
+      "s": 0.44,
+      "anim": "swing",
+      "when": "lifetime"
+     },
+     {
+      "label": "ten years 十年",
+      "x": 0.84,
+      "y": 0.4,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "ten years"
+     },
+     {
+      "label": "使用寿命",
+      "x": 0.84,
+      "y": 0.62,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "使用寿命"
+     }
+    ]
+   }
+  },
+  {
+   "text": "终身的",
+   "pos": "名词作定语",
+   "diff": "放在名词前：管一辈子的",
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "svg": "art/podium.svg",
+     "x": 0.45,
+     "y": 0.78,
+     "s": 0.42,
+     "z": 4
+    },
+    {
+     "actor": "west-man-speech",
+     "x": 0.45,
+     "y": 0.5,
+     "s": 0.8,
+     "z": 3,
+     "id": "m",
+     "seq": "talk"
+    },
+    {
+     "svg": "art/trophy.svg",
+     "x": 0.78,
+     "y": 0.55,
+     "s": 0.45,
+     "shadow": true,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.95,
+     "s": 0.24,
+     "z": 6,
+     "crowd": 9,
+     "nodWith": "m"
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.78,
+     "y": 0.3,
+     "every": 0.9,
+     "life": 1.8,
+     "to": [
+      0,
+      -0.25
+     ],
+     "s": 0.08,
+     "wobble": 0.03
+    }
+   ],
+   "ex": "He won a lifetime achievement award.",
+   "exzh": "他获得了终身成就奖。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.36,
+      "y": 0.55,
+      "s": 0.9,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "He"
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.62,
+      "y": 0.55,
+      "s": 0.5,
+      "when": "award",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.62,
+      "y": 0.3,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03,
+      "when": "award"
+     },
+     {
+      "label": "lifetime achievement award",
+      "x": 0.8,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "lifetime"
+     },
+     {
+      "label": "终身成就奖",
+      "x": 0.84,
+      "y": 0.86,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "终身成就奖"
+     },
+     {
+      "sound": "say:Thank you so much!",
+      "when": "award",
+      "gap": true
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“一生这段时间”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.18,
+      "y": 0.4,
+      "s": 0.4,
+      "anim": "bob"
+     },
+     {
+      "label": "life 一生",
+      "x": 0.18,
+      "y": 0.75,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "label": "+",
+      "x": 0.36,
+      "y": 0.4,
+      "size": 0.12,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "svg": "art/hourglass.svg",
+      "x": 0.52,
+      "y": 0.4,
+      "s": 0.4,
+      "delay": 0.4,
+      "anim": "swing"
+     },
+     {
+      "label": "time 一段时间",
+      "x": 0.52,
+      "y": 0.75,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "delay": 0.4
+     },
+     {
+      "ray": [
+       [
+        0.64,
+        0.4
+       ],
+       [
+        0.74,
+        0.4
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "delay": 0.9
+     },
+     {
+      "svg": "art/lifeline.svg",
+      "x": 0.88,
+      "y": 0.4,
+      "s": 0.16,
+      "delay": 1.1
+     },
+     {
+      "label": "一生这段时间",
+      "x": 0.86,
+      "y": 0.75,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 1.3
+     }
+    ]
+   }
+  },
+  {
+   "via": "一个人从生到死的这段时长",
+   "node": "① 一生、终身",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "合成词：最后一个词是主体，前面的词说明它",
+   "ruleEx": "daytime 白天这段时间      lifetime 一生这段时间",
+   "cap": "一生这段时间 → 一生",
+   "say": [
+    "合成词里，最后一个词是主体，前面的词说明它。",
+    "daytime 说的是 time，前面的 day 说明它：白天这段时间。",
+    "lifetime 说的也是 time：一个人从出生到老，一生这段时间。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "life",
+      "x": 0.3,
+      "y": 0.4,
+      "size": 0.13,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "前面的词说明它",
+      "hideCue": 1
+     },
+     {
+      "label": "time",
+      "x": 0.66,
+      "y": 0.4,
+      "size": 0.16,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "最后一个词是主体",
+      "hideCue": 1
+     },
+     {
+      "shape": "ellipse",
+      "x": 0.66,
+      "y": 0.4,
+      "w": 0.26,
+      "h": 0.3,
+      "stroke": "#E03131",
+      "lw": 5,
+      "when": "主体",
+      "hideCue": 1
+     },
+     {
+      "label": "主体",
+      "x": 0.66,
+      "y": 0.7,
+      "size": 0.08,
+      "color": "#C92A2A",
+      "border": "#E03131",
+      "bg": "#FFF5F5",
+      "when": "主体",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.25,
+      "y": 0.45,
+      "s": 0.42,
+      "anim": "spin",
+      "when": "daytime",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.62,
+      "y": 0.45,
+      "s": 0.42,
+      "when": "白天这段时间",
+      "hideCue": 2
+     },
+     {
+      "label": "daytime 白天",
+      "x": 0.45,
+      "y": 0.88,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "白天这段时间",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/lifeline.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.3,
+      "when": "从出生到老"
+     },
+     {
+      "label": "lifetime 一生",
+      "x": 0.5,
+      "y": 0.82,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "一生这段时间"
+     }
+    ]
+   }
+  },
+  {
+   "via": "机器、物品从开始用到用坏",
+   "node": "② 使用寿命",
+   "pos": "名词",
+   "pic": 1,
+   "cap": "人的一生 → 机器的一生",
+   "say": [
+    "人有一生，机器也有一生。",
+    "一台洗衣机，从买回家开始用，到用坏了不能再用，这段时间就是它的使用寿命。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "机器也有一生",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "机器也有一生"
+     },
+     {
+      "svg": "art/washer.svg",
+      "x": 0.3,
+      "y": 0.56,
+      "s": 0.62,
+      "shadow": true,
+      "anim": "shake",
+      "when": "洗衣机"
+     },
+     {
+      "label": "买回家",
+      "x": 0.12,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "买回家"
+     },
+     {
+      "svg": "art/hourglass.svg",
+      "x": 0.62,
+      "y": 0.56,
+      "s": 0.42,
+      "anim": "swing",
+      "when": "这段时间"
+     },
+     {
+      "label": "用坏了",
+      "x": 0.84,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#E03131",
+      "bg": "#FFF5F5",
+      "when": "用坏了"
+     },
+     {
+      "svg": "art/bigx.svg",
+      "x": 0.84,
+      "y": 0.55,
+      "s": 0.22,
+      "when": "不能再用"
+     },
+     {
+      "label": "使用寿命",
+      "x": 0.62,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "使用寿命"
+     }
+    ]
+   }
+  },
+  {
+   "via": "放在名词前：管一辈子的",
+   "node": "③ 终身的",
+   "pos": "名词作定语",
+   "pic": 2,
+   "from": 1,
+   "cap": "一生 → 终身的",
+   "say": [
+    "lifetime 放在名词前面，说明这个名词，就是管一辈子的。",
+    "a lifetime award，就是表彰一辈子成就的奖：终身成就奖。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "label": "lifetime + 名词",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "放在名词前面"
+     },
+     {
+      "label": "管一辈子的",
+      "x": 0.5,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "管一辈子的"
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.5,
+      "shadow": true,
+      "anim": "pulse",
+      "when": "lifetime award",
+      "pop": true
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03,
+      "when": "lifetime award"
+     },
+     {
+      "label": "终身成就奖",
+      "x": 0.82,
+      "y": 0.7,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "终身成就奖"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "daytime",
+   "m": "白天",
+   "share": "time"
+  },
+  {
+   "w": "meantime",
+   "m": "其间",
+   "share": "time"
+  },
+  {
+   "w": "lifelong",
+   "m": "终身的",
+   "share": "life"
+  }
+ ],
+ "distinguish": {
+  "key": "一生",
+  "items": [
+   {
+    "w": "lifetime",
+    "word": "lifetime",
+    "zh": "一生（这段时长）",
+    "m": "一生（这段时长）",
+    "say": "lifetime 说一辈子这段时长；放在名词前是终身的，比如 a lifetime ban，终身禁赛。",
+    "text": "lifetime 说一辈子这段时长；放在名词前是终身的，比如 a lifetime ban，终身禁赛。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/lifeline.svg",
+       "x": 0.45,
+       "y": 0.45,
+       "s": 0.42
+      },
+      {
+       "svg": "art/hourglass.svg",
+       "x": 0.88,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "swing"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.1,
+       "y": 0.4,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    }
+   },
+   {
+    "w": "life",
+    "word": "life",
+    "zh": "一生；生命、生活",
+    "m": "一生；生命、生活",
+    "say": "life 也能说一生，还可以指生命、生活，比如 daily life，日常生活。",
+    "text": "life 也能说一生，还可以指生命、生活，比如 daily life，日常生活。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/wateringcan.svg",
+       "x": 0.75,
+       "y": 0.45,
+       "s": 0.45,
+       "anim": "swing"
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.1,
+       "y": 0.25,
+       "s": 0.4,
+       "anim": "spin"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "逻辑不同：lifetime 的主体是 time，只说时长；life 是活着这件事本身，所以还能指生命和生活。",
+  "tip": "说一辈子有多长、在这一生里，用 lifetime；说生命、生活，用 life。",
+  "pics": {
+   "lifetime": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/lifeline.svg",
+      "x": 0.45,
+      "y": 0.45,
+      "s": 0.42
+     },
+     {
+      "svg": "art/hourglass.svg",
+      "x": 0.88,
+      "y": 0.5,
+      "s": 0.6,
+      "anim": "swing"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.1,
+      "y": 0.4,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     }
+    ]
+   },
+   "life": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.4,
+      "y": 0.55,
+      "s": 0.6,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/wateringcan.svg",
+      "x": 0.75,
+      "y": 0.45,
+      "s": 0.45,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.1,
+      "y": 0.25,
+      "s": 0.4,
+      "anim": "spin"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：这样的机会多难得？",
+    "listen": "It's the chance of a lifetime.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "每天都有",
+     "每年一次",
+     "一辈子难得一次",
+     "很常见"
+    ],
+    "ans": "C",
+    "why": "the chance of a lifetime 一生难得的机会。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She lived in the same town for her whole ______.",
+    "opts": [
+     "lifetimes",
+     "lifelong",
+     "lively",
+     "lifetime"
+    ],
+    "ans": "D",
+    "why": "her whole lifetime 她的一生。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 lifetime、lifelong 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "They are ______ friends.",
+    "opts": [],
+    "ans": "lifelong",
+    "why": "作定语“从小到老一直是”的朋友用 lifelong。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Great people make great changes in their ______. (lifetime)",
+    "opts": [],
+    "ans": "lifetimes",
+    "why": "their 指好几个人，用复数 lifetimes。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "A trip like this happens once in a lifetimes.",
+    "opts": [],
+    "ans": "lifetimes → lifetime",
+    "why": "once in a lifetime 一生一次，用单数。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "他一辈子都住在这里。",
+    "stem": "He has lived here all his ______.",
+    "opts": [],
+    "ans": "life",
+    "why": "all one's life 一辈子。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "He won a ______ award for his work.",
+    "opts": [
+     "lifelong achievement",
+     "life achievement",
+     "lifetime achievement",
+     "living achievement"
+    ],
+    "ans": "C",
+    "why": "“终身成就奖”是 lifetime achievement award。",
+    "kd": "短语"
+   }
+  ]
+ }
+}

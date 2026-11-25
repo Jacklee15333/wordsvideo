@@ -1,7 +1,669 @@
 {
  "单词": "lifelong",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "终身的、毕生的"
+  },
+  "sylIpa": [
+   "laɪf",
+   "lɒŋ"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.55,
+      "shadow": true,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.82,
+      "y": 0.2,
+      "s": 0.26,
+      "anim": "spin"
+     },
+     {
+      "label": "life 一生",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/tape.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.22,
+      "reveal": "right",
+      "rdur": 2,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/hourglass.svg",
+      "x": 0.88,
+      "y": 0.25,
+      "s": 0.3,
+      "anim": "swing"
+     },
+     {
+      "ray": [
+       [
+        0.12,
+        0.72
+       ],
+       [
+        0.88,
+        0.72
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 1.6
+     },
+     {
+      "label": "long 长的",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-sprout.svg",
+   "p1": "art/icon-tape.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.9,
+     "y": 0.3,
+     "every": 0.9,
+     "life": 1.8,
+     "to": [
+      0,
+      -0.25
+     ],
+     "s": 0.08,
+     "wobble": 0.03
+    },
+    {
+     "svg": "art/lifeline.svg",
+     "x": 0.5,
+     "y": 0.35,
+     "s": 0.36
+    },
+    {
+     "svg": "art/tape.svg",
+     "x": 0.5,
+     "y": 0.66,
+     "s": 0.14,
+     "reveal": "right",
+     "rdur": 1.6,
+     "delay": 0.5
+    },
+    {
+     "label": "和一生一样长的",
+     "x": 0.5,
+     "y": 0.88,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "终身的、毕生的",
+    "pos": "形容词",
+    "diff": "从很早一直延续下来、贯穿一辈子",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/lifeline.svg",
+      "x": 0.5,
+      "y": 0.14,
+      "s": 0.2
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "id": "a",
+      "seq": "talk"
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.7,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "nodWith": "a"
+     },
+     {
+      "svg": "art/album.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.22,
+      "z": 6,
+      "anim": "bob"
+     }
+    ],
+    "ex": "They became lifelong friends.",
+    "exzh": "他们成了一辈子的朋友。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.24,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "id": "g",
+       "seq": "talk",
+       "when": "They"
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "x": 0.76,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "nodWith": "g",
+       "when": "They"
+      },
+      {
+       "svg": "art/album.svg",
+       "x": 0.5,
+       "y": 0.74,
+       "s": 0.3,
+       "when": "friends",
+       "pop": true,
+       "z": 5
+      },
+      {
+       "label": "lifelong friends",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "lifelong"
+      },
+      {
+       "label": "一辈子的朋友",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "一辈子的朋友"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“和一生一样长的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.9,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      },
+      {
+       "svg": "art/lifeline.svg",
+       "x": 0.5,
+       "y": 0.32,
+       "s": 0.3
+      },
+      {
+       "svg": "art/tape.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.16,
+       "reveal": "right",
+       "rdur": 1.6,
+       "delay": 0.5
+      },
+      {
+       "label": "as long as life",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 1.2
+      }
+     ]
+    }
+   },
+   {
+    "via": "名词挪前、介词省掉、形容词放最后",
+    "node": "life + long",
+    "pos": "形容词",
+    "rule": "名词和形容词合成形容词：名词挪到前面，介词省掉，形容词放在最后",
+    "ruleEx": "friendly to users → user-friendly      as long as life → lifelong",
+    "cap": "as long as life → lifelong",
+    "say": [
+     "名词和形容词合成一个形容词时，名词挪到前面，介词省掉，形容词放在最后。",
+     "friendly to users，对用户友好，合起来就是 user-friendly。",
+     "as long as life，和一生一样长，合起来就是 lifelong。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "名词挪到前面",
+       "x": 0.25,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "名词挪到前面",
+       "hideCue": 1
+      },
+      {
+       "label": "介词省掉",
+       "x": 0.5,
+       "y": 0.42,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#E03131",
+       "bg": "#FFF5F5",
+       "when": "介词省掉",
+       "hideCue": 1
+      },
+      {
+       "label": "形容词放在最后",
+       "x": 0.75,
+       "y": 0.64,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "形容词放在最后",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.28,
+       "y": 0.5,
+       "s": 0.55,
+       "when": "对用户友好",
+       "hideCue": 2,
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.36,
+       "y": 0.35,
+       "dir": 0,
+       "n": 3,
+       "when": "对用户友好",
+       "hideCue": 2
+      },
+      {
+       "label": "friendly to users",
+       "x": 0.68,
+       "y": 0.36,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "friendly to users",
+       "hideCue": 2
+      },
+      {
+       "label": "user-friendly",
+       "x": 0.68,
+       "y": 0.62,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "user-friendly",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/lifeline.svg",
+       "x": 0.5,
+       "y": 0.34,
+       "s": 0.26,
+       "when": "和一生一样长"
+      },
+      {
+       "svg": "art/tape.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.12,
+       "when": "和一生一样长",
+       "reveal": "right"
+      },
+      {
+       "label": "lifelong",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "lifelong"
+      }
+     ]
+    }
+   },
+   {
+    "via": "从很早一直延续下来、贯穿一辈子",
+    "node": "终身的、毕生的",
+    "pos": "形容词",
+    "pic": 0,
+    "cap": "和一生一样长 → 终身的",
+    "say": [
+     "一样东西从很早就开始，一直延续下来，贯穿一辈子，就是终身的、毕生的。",
+     "比如一个人从小学画，一直画到老，画画就是他毕生的爱好。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/lifeline.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "s": 0.24,
+       "when": "从很早就开始"
+      },
+      {
+       "ray": [
+        [
+         0.1,
+         0.38
+        ],
+        [
+         0.9,
+         0.38
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 1.5,
+       "when": "一直延续下来"
+      },
+      {
+       "label": "贯穿一辈子",
+       "x": 0.5,
+       "y": 0.48,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "贯穿一辈子"
+      },
+      {
+       "svg": "art/painting.svg",
+       "x": 0.4,
+       "y": 0.72,
+       "s": 0.4,
+       "when": "从小学画",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "画到老"
+      },
+      {
+       "label": "毕生的爱好",
+       "x": 0.78,
+       "y": 0.74,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "毕生的爱好"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "lifetime",
+    "m": "一生",
+    "share": "life"
+   },
+   {
+    "w": "user-friendly",
+    "m": "用起来方便的",
+    "share": ""
+   }
+  ],
+  "kaodian": {
+   "rows": [
+    "【搭配】lifelong friends 一辈子的朋友；lifelong learning 终身学习",
+    "【用法】只放在名词前：a lifelong dream，不说 The dream is lifelong.",
+    "【易混】lifelong / lifetime：lifelong 一直延续下来；lifetime 管一辈子的、一生一次的"
+   ]
+  },
+  "distinguish": {
+   "key": "终身的",
+   "items": [
+    {
+     "w": "lifelong",
+     "word": "lifelong",
+     "zh": "终身的、毕生的",
+     "m": "终身的、毕生的",
+     "say": "lifelong 强调从很早一直延续下来，比如 lifelong friends，一辈子的朋友。",
+     "text": "lifelong 强调从很早一直延续下来，比如 lifelong friends，一辈子的朋友。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/album.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.6,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/lifeline.svg",
+        "x": 0.13,
+        "y": 0.5,
+        "s": 0.3
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.85,
+        "y": 0.4,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       }
+      ]
+     }
+    },
+    {
+     "w": "lifetime",
+     "word": "lifetime",
+     "zh": "管一辈子的、一生一次的",
+     "m": "管一辈子的、一生一次的",
+     "say": "lifetime 放在名词前，多指管一辈子的，比如 a lifetime achievement award，终身成就奖。",
+     "text": "lifetime 放在名词前，多指管一辈子的，比如 a lifetime achievement award，终身成就奖。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "svg": "art/trophy.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.7,
+        "anim": "pulse"
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.5,
+        "y": 0.3,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       },
+       {
+        "svg": "art/audience-wide.svg",
+        "x": 0.5,
+        "y": 0.95,
+        "s": 0.3,
+        "crowd": 9,
+        "z": 6
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：lifelong 的主体是 long，说像一生那么长；lifetime 的主体是 time，说一生这段时间。",
+   "tip": "一直延续下来的友谊、爱好用 lifelong；终身成就奖、终身禁赛用 lifetime。",
+   "pics": {
+    "lifelong": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/album.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/lifeline.svg",
+       "x": 0.13,
+       "y": 0.5,
+       "s": 0.3
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.85,
+       "y": 0.4,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    },
+    "lifetime": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/trophy.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.95,
+       "s": 0.3,
+       "crowd": 9,
+       "z": 6
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "lifelongai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他们是什么样的朋友？\n听：They have been lifelong friends.\nA. 一辈子的朋友\nB. 新朋友\nC. 网友\nD. 同事",
@@ -88,5 +750,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
