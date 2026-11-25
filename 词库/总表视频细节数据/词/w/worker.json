@@ -855,6 +855,81 @@
     "employee": "employee 是被公司雇用、拿工资的人，偏正式。",
     "labour": "labour 作“工人”是统称，指劳动力、工人阶层。"
    }
+  },
+  "demo": {
+   "driver": {
+    "icons": [
+     "art/car.svg",
+     "art/helmet.svg"
+    ],
+    "lit": "开车的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/car.svg",
+       "x": 0.2,
+       "y": 0.7,
+       "s": 0.36,
+       "go": [
+        0.8,
+        0.7
+       ],
+       "dur": 3,
+       "loop": true,
+       "anim": "ride"
+      }
+     ]
+    }
+   },
+   "actor": {
+    "icons": [
+     "art/mic.svg",
+     "art/helmet.svg"
+    ],
+    "lit": "表演的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/mic.svg",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.5,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/pa-speaker.svg",
+       "x": 0.75,
+       "y": 0.6,
+       "s": 0.5,
+       "anim": "thump"
+      }
+     ]
+    }
+   },
+   "artist": {
+    "icons": [
+     "art/painting.svg",
+     "art/helmet.svg"
+    ],
+    "lit": "画画的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/painting.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
   }
  },
  "插图": [
@@ -948,5 +1023,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

@@ -1,0 +1,655 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "锻炼、健身"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/dumbbell.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.4,
+     "go": [
+      0.5,
+      0.42
+     ],
+     "dur": 0.8,
+     "loop": true,
+     "shadow": true
+    },
+    {
+     "label": "work",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8",
+     "delay": 0.8
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/out.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "label": "out",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8",
+     "delay": 0.8
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/dumbbell.svg",
+  "p1": "art/out.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/dumbbell.svg",
+    "x": 0.4,
+    "y": 0.6,
+    "s": 0.4,
+    "go": [
+     0.4,
+     0.42
+    ],
+    "dur": 0.8,
+    "loop": true,
+    "z": 2
+   },
+   {
+    "emit": true,
+    "svg": "art/drop.svg",
+    "every": 0.7,
+    "life": 1.4,
+    "to": [
+     0.05,
+     0.2
+    ],
+    "s": 0.05,
+    "x": 0.62,
+    "y": 0.3
+   },
+   {
+    "svg": "art/out.svg",
+    "x": 0.78,
+    "y": 0.56,
+    "s": 0.3,
+    "anim": "pulse",
+    "z": 2
+   },
+   {
+    "label": "把力气使出来",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.8
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "锻炼、健身",
+   "pos": "名词",
+   "diff": "（一次）具体的锻炼",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/dumbbell.svg",
+     "x": 0.5,
+     "y": 0.62,
+     "s": 0.46,
+     "go": [
+      0.5,
+      0.4
+     ],
+     "dur": 0.8,
+     "loop": true,
+     "shadow": true,
+     "z": 3
+    },
+    {
+     "emit": true,
+     "svg": "art/drop.svg",
+     "every": 0.7,
+     "life": 1.4,
+     "to": [
+      0.05,
+      0.2
+     ],
+     "s": 0.05,
+     "x": 0.5,
+     "y": 0.28
+    },
+    {
+     "svg": "art/clock.svg",
+     "x": 0.84,
+     "y": 0.22,
+     "s": 0.22,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "svg": "art/sofa.svg",
+     "x": 0.14,
+     "y": 0.78,
+     "s": 0.3,
+     "z": 1
+    },
+    {
+     "label": "锻炼",
+     "x": 0.16,
+     "y": 0.14,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "I do a 30-minute workout every morning.",
+   "exzh": "我每天早上锻炼 30 分钟。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/dumbbell.svg",
+      "x": 0.4,
+      "y": 0.62,
+      "s": 0.46,
+      "when": "workout",
+      "go": [
+       0.4,
+       0.4
+      ],
+      "dur": 0.8,
+      "loop": true,
+      "shadow": true,
+      "z": 3
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "every": 0.7,
+      "life": 1.4,
+      "to": [
+       0.05,
+       0.2
+      ],
+      "s": 0.05,
+      "x": 0.4,
+      "y": 0.28,
+      "when": "workout"
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.78,
+      "y": 0.4,
+      "s": 0.34,
+      "when": "30-minute",
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "label": "30 minutes",
+      "x": 0.78,
+      "y": 0.76,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "30-minute"
+     },
+     {
+      "label": "workout",
+      "x": 0.4,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "workout"
+     },
+     {
+      "label": "锻炼",
+      "x": 0.78,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "锻炼"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“把力气使出来”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/dumbbell.svg",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.4,
+      "go": [
+       0.4,
+       0.42
+      ],
+      "dur": 0.8,
+      "loop": true,
+      "z": 2
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "every": 0.7,
+      "life": 1.4,
+      "to": [
+       0.05,
+       0.2
+      ],
+      "s": 0.05,
+      "x": 0.62,
+      "y": 0.3
+     },
+     {
+      "svg": "art/out.svg",
+      "x": 0.78,
+      "y": 0.56,
+      "s": 0.3,
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "label": "把力气使出来",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "在健身房里一直练到出汗、练够量",
+   "node": "① 锻炼、健身",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "动词短语整个变成名词，先后不变",
+   "ruleEx": "work out → workout      lay out → layout",
+   "cap": "work out → workout",
+   "say": [
+    "动词短语可以整个变成一个名词，先后不变。",
+    "lay out 是把东西摆开，连起来 layout，就是布局。",
+    "work out 是一直练、练到出汗，连起来 workout，就是一次锻炼、健身。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "动词短语 → 名词",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.08,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "名词",
+      "hideCue": 1
+     },
+     {
+      "label": "先后不变",
+      "x": 0.5,
+      "y": 0.5,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "先后不变",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/map.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.5,
+      "cue": 1,
+      "when": "摆开",
+      "anim": "pulse",
+      "hideCue": 2
+     },
+     {
+      "label": "layout 布局",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "布局",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/dumbbell.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.44,
+      "cue": 2,
+      "when": "一直练",
+      "go": [
+       0.5,
+       0.4
+      ],
+      "dur": 0.8,
+      "loop": true
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "every": 0.7,
+      "life": 1.4,
+      "to": [
+       0.05,
+       0.2
+      ],
+      "s": 0.05,
+      "x": 0.5,
+      "y": 0.26,
+      "cue": 2,
+      "when": "出汗"
+     },
+     {
+      "label": "workout 锻炼",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "锻炼"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "中文都能说“锻炼”，可数不可数不一样",
+  "items": [
+   {
+    "w": "workout",
+    "word": "workout",
+    "name": "workout",
+    "en": "workout",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/dumbbell.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.6,
+       "go": [
+        0.5,
+        0.42
+       ],
+       "dur": 0.8,
+       "loop": true,
+       "z": 2
+      }
+     ]
+    },
+    "text": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "say": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "diff": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "note": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "desc": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "m": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "mean": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "line": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "explain": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "zh": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "def": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "gloss": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "sense": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "comment": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "hint": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "txt": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "talk": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "words": "workout 指一次具体的锻炼：a 30-minute workout。",
+    "detail": "workout 指一次具体的锻炼：a 30-minute workout。"
+   },
+   {
+    "w": "exercise",
+    "word": "exercise",
+    "name": "exercise",
+    "en": "exercise",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.6,
+       "anim": "bob",
+       "z": 2
+      }
+     ]
+    },
+    "text": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "say": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "diff": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "note": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "desc": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "m": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "mean": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "line": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "explain": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "zh": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "def": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "gloss": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "sense": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "comment": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "hint": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "txt": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "talk": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "words": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。",
+    "detail": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。"
+   }
+  ],
+  "logic": "workout 是 work out“把力气使出来”；exercise 从拉丁语“操练”来，范围更大，还能指做题。",
+  "tip": "去健身房练一次说 a workout；多运动说 take exercise；做练习题说 do exercises。",
+  "pics": {
+   "workout": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/dumbbell.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "go": [
+       0.5,
+       0.42
+      ],
+      "dur": 0.8,
+      "loop": true,
+      "z": 2
+     }
+    ]
+   },
+   "exercise": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/classroom-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "bob",
+      "z": 2
+     }
+    ]
+   }
+  },
+  "notes": {
+   "workout": "workout 指一次具体的锻炼：a 30-minute workout。",
+   "exercise": "exercise 泛指运动（不可数），也指一项练习（可数），比如课本上的练习题。"
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：她每天早上做什么？",
+    "listen": "She does a short workout every morning.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "做一会儿锻炼",
+     "读英语",
+     "做早饭",
+     "遛狗"
+    ],
+    "ans": "A",
+    "why": "workout 锻炼、健身。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He does three ______ a week. (workout)",
+    "opts": [],
+    "ans": "workouts",
+    "why": "three 后面用复数 workouts。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "After a long ______ at the gym, I was very tired.",
+    "opts": [
+     "work",
+     "worker",
+     "workday",
+     "workout"
+    ],
+    "ans": "D",
+    "why": "在健身房的一次锻炼是 workout。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 workout、exercise 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Doing ______ is good for your health.",
+    "opts": [],
+    "ans": "exercise",
+    "why": "泛指“运动”用不可数的 exercise；workout 是一次具体的锻炼。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "My workout last for an hour yesterday.",
+    "opts": [],
+    "ans": "last → lasted",
+    "why": "yesterday 讲过去，用过去式 lasted。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "我每天锻炼一小时。",
+    "stem": "I ______ ______ for an hour every day.",
+    "opts": [],
+    "ans": [
+     "work",
+     "out"
+    ],
+    "why": "动词短语 work out 锻炼。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Two ______ a day are too many for me.",
+    "opts": [
+     "workout",
+     "workouts",
+     "working out",
+     "works out"
+    ],
+    "ans": "B",
+    "why": "two 后面用复数 workouts。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

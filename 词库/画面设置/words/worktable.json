@@ -1,0 +1,800 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "工作台；（旧）针线桌"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/build.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.62,
+     "anim": "shake",
+     "shadow": true
+    },
+    {
+     "label": "干活",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.66,
+     "s": 0.46,
+     "anim": "bob",
+     "shadow": true
+    },
+    {
+     "label": "桌子",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/build.svg",
+  "p1": "art/desk.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/worktable.svg",
+    "x": 0.5,
+    "y": 0.64,
+    "s": 0.56,
+    "z": 2
+   },
+   {
+    "svg": "art/tools.svg",
+    "x": 0.4,
+    "y": 0.36,
+    "s": 0.26,
+    "anim": "shake",
+    "z": 3
+   },
+   {
+    "label": "干活用的桌子",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.1,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.8
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "工作台",
+   "pos": "名词",
+   "diff": "摆着工具、做手工活的桌子",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "id": "t",
+     "x": 0.22,
+     "y": 0.56,
+     "s": 0.68,
+     "z": 3,
+     "seq": "talk"
+    },
+    {
+     "waves": true,
+     "on": "t",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "with": "t"
+    },
+    {
+     "actor": "west-girl-listen",
+     "id": "g",
+     "x": 0.8,
+     "y": 0.58,
+     "s": 0.64,
+     "z": 3,
+     "nodWith": "t"
+    },
+    {
+     "svg": "art/worktable.svg",
+     "x": 0.5,
+     "y": 0.84,
+     "s": 0.4,
+     "z": 4
+    },
+    {
+     "svg": "art/tools.svg",
+     "x": 0.5,
+     "y": 0.62,
+     "s": 0.2,
+     "anim": "shake",
+     "z": 5
+    }
+   ],
+   "ex": "Put the tools on the worktable.",
+   "exzh": "把工具放到工作台上。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "id": "m",
+      "x": 0.2,
+      "y": 0.56,
+      "s": 0.68,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "waves": true,
+      "on": "m",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "m"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "id": "k",
+      "x": 0.84,
+      "y": 0.6,
+      "s": 0.62,
+      "z": 3,
+      "nodWith": "m"
+     },
+     {
+      "svg": "art/worktable.svg",
+      "x": 0.52,
+      "y": 0.84,
+      "s": 0.42,
+      "z": 4
+     },
+     {
+      "svg": "art/tools.svg",
+      "x": 0.52,
+      "y": 0.3,
+      "s": 0.22,
+      "when": "tools",
+      "go": [
+       0.52,
+       0.62
+      ],
+      "goWhen": "worktable",
+      "dur": 0.8,
+      "anim": "bob",
+      "z": 5
+     },
+     {
+      "label": "worktable",
+      "x": 0.52,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "worktable"
+     },
+     {
+      "label": "工作台",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "工作台"
+     }
+    ]
+   }
+  },
+  {
+   "text": "（旧）针线桌",
+   "pos": "名词",
+   "diff": "从前做针线活、带小抽屉的桌子",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sewing-table.svg",
+     "x": 0.5,
+     "y": 0.62,
+     "s": 0.66,
+     "shadow": true,
+     "z": 2
+    },
+    {
+     "svg": "art/yarn.svg",
+     "x": 0.36,
+     "y": 0.32,
+     "s": 0.14,
+     "anim": "bob",
+     "z": 3
+    },
+    {
+     "svg": "art/cushion.svg",
+     "x": 0.82,
+     "y": 0.8,
+     "s": 0.2,
+     "z": 2
+    },
+    {
+     "label": "针线桌",
+     "x": 0.82,
+     "y": 0.14,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "Grandma kept her needles in the old worktable.",
+   "exzh": "奶奶把针放在那张旧针线桌里。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sewing-table.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.66,
+      "when": "worktable",
+      "shadow": true,
+      "z": 2
+     },
+     {
+      "svg": "art/yarn.svg",
+      "x": 0.34,
+      "y": 0.3,
+      "s": 0.14,
+      "when": "needles",
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "label": "old worktable",
+      "x": 0.8,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "old worktable"
+     },
+     {
+      "label": "针线桌",
+      "x": 0.8,
+      "y": 0.34,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "针线桌"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“干活用的桌子”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/worktable.svg",
+      "x": 0.5,
+      "y": 0.64,
+      "s": 0.56,
+      "z": 2
+     },
+     {
+      "svg": "art/tools.svg",
+      "x": 0.4,
+      "y": 0.36,
+      "s": 0.26,
+      "anim": "shake",
+      "z": 3
+     },
+     {
+      "label": "干活用的桌子",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "摆着工具、在上面做手工活的桌子",
+   "node": "① 工作台",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "最后一个词是主体，前面的词说明它",
+   "ruleEx": "worktable 干活用的桌子      timetable 时刻表",
+   "cap": "work + table",
+   "say": [
+    "合成词里，最后一个词是主体，前面的词说明它。",
+    "timetable 说的是 table，排时间用的表，就是时刻表。",
+    "worktable 说的是 table：摆着工具、做手工活的桌子，就是工作台。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "主体",
+      "x": 0.7,
+      "y": 0.4,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "主体",
+      "hideCue": 1
+     },
+     {
+      "label": "说明它",
+      "x": 0.3,
+      "y": 0.4,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "说明它",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.4,
+      "cue": 1,
+      "when": "timetable",
+      "anim": "pulse",
+      "hideCue": 2
+     },
+     {
+      "label": "时刻表",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "时刻表",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/worktable.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.52,
+      "cue": 2,
+      "when": "摆着工具",
+      "z": 2
+     },
+     {
+      "svg": "art/tools.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.24,
+      "cue": 2,
+      "when": "工具",
+      "anim": "shake",
+      "z": 3
+     },
+     {
+      "label": "工作台",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "工作台"
+     }
+    ]
+   }
+  },
+  {
+   "via": "从前做针线活、带小抽屉的桌子",
+   "node": "② （旧）针线桌",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "从前，人们做针线活用一种带小抽屉的桌子，也叫 worktable，就是针线桌。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sewing-table.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.62,
+      "when": "带小抽屉",
+      "z": 2
+     },
+     {
+      "svg": "art/yarn.svg",
+      "x": 0.34,
+      "y": 0.32,
+      "s": 0.14,
+      "when": "针线活",
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "label": "针线桌",
+      "x": 0.8,
+      "y": 0.14,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "针线桌"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "中文都能说“工作台、桌子”，用处不一样",
+  "items": [
+   {
+    "w": "worktable",
+    "word": "worktable",
+    "name": "worktable",
+    "en": "worktable",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/worktable.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.62,
+       "z": 2
+      },
+      {
+       "svg": "art/tools.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.3,
+       "anim": "shake",
+       "z": 3
+      }
+     ]
+    },
+    "text": "worktable 是做手工活、摆工具的桌子。",
+    "say": "worktable 是做手工活、摆工具的桌子。",
+    "diff": "worktable 是做手工活、摆工具的桌子。",
+    "note": "worktable 是做手工活、摆工具的桌子。",
+    "desc": "worktable 是做手工活、摆工具的桌子。",
+    "m": "worktable 是做手工活、摆工具的桌子。",
+    "mean": "worktable 是做手工活、摆工具的桌子。",
+    "line": "worktable 是做手工活、摆工具的桌子。",
+    "explain": "worktable 是做手工活、摆工具的桌子。",
+    "zh": "worktable 是做手工活、摆工具的桌子。",
+    "def": "worktable 是做手工活、摆工具的桌子。",
+    "gloss": "worktable 是做手工活、摆工具的桌子。",
+    "sense": "worktable 是做手工活、摆工具的桌子。",
+    "comment": "worktable 是做手工活、摆工具的桌子。",
+    "hint": "worktable 是做手工活、摆工具的桌子。",
+    "txt": "worktable 是做手工活、摆工具的桌子。",
+    "talk": "worktable 是做手工活、摆工具的桌子。",
+    "words": "worktable 是做手工活、摆工具的桌子。",
+    "detail": "worktable 是做手工活、摆工具的桌子。"
+   },
+   {
+    "w": "workbench",
+    "word": "workbench",
+    "name": "workbench",
+    "en": "workbench",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/tools.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "anim": "shake",
+       "z": 2
+      }
+     ]
+    },
+    "text": "workbench 多指木工、修理用的结实工作台。",
+    "say": "workbench 多指木工、修理用的结实工作台。",
+    "diff": "workbench 多指木工、修理用的结实工作台。",
+    "note": "workbench 多指木工、修理用的结实工作台。",
+    "desc": "workbench 多指木工、修理用的结实工作台。",
+    "m": "workbench 多指木工、修理用的结实工作台。",
+    "mean": "workbench 多指木工、修理用的结实工作台。",
+    "line": "workbench 多指木工、修理用的结实工作台。",
+    "explain": "workbench 多指木工、修理用的结实工作台。",
+    "zh": "workbench 多指木工、修理用的结实工作台。",
+    "def": "workbench 多指木工、修理用的结实工作台。",
+    "gloss": "workbench 多指木工、修理用的结实工作台。",
+    "sense": "workbench 多指木工、修理用的结实工作台。",
+    "comment": "workbench 多指木工、修理用的结实工作台。",
+    "hint": "workbench 多指木工、修理用的结实工作台。",
+    "txt": "workbench 多指木工、修理用的结实工作台。",
+    "talk": "workbench 多指木工、修理用的结实工作台。",
+    "words": "workbench 多指木工、修理用的结实工作台。",
+    "detail": "workbench 多指木工、修理用的结实工作台。"
+   },
+   {
+    "w": "desk",
+    "word": "desk",
+    "name": "desk",
+    "en": "desk",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.4,
+       "anim": "bob",
+       "z": 3
+      }
+     ]
+    },
+    "text": "desk 是写字、办公用的桌子。",
+    "say": "desk 是写字、办公用的桌子。",
+    "diff": "desk 是写字、办公用的桌子。",
+    "note": "desk 是写字、办公用的桌子。",
+    "desc": "desk 是写字、办公用的桌子。",
+    "m": "desk 是写字、办公用的桌子。",
+    "mean": "desk 是写字、办公用的桌子。",
+    "line": "desk 是写字、办公用的桌子。",
+    "explain": "desk 是写字、办公用的桌子。",
+    "zh": "desk 是写字、办公用的桌子。",
+    "def": "desk 是写字、办公用的桌子。",
+    "gloss": "desk 是写字、办公用的桌子。",
+    "sense": "desk 是写字、办公用的桌子。",
+    "comment": "desk 是写字、办公用的桌子。",
+    "hint": "desk 是写字、办公用的桌子。",
+    "txt": "desk 是写字、办公用的桌子。",
+    "talk": "desk 是写字、办公用的桌子。",
+    "words": "desk 是写字、办公用的桌子。",
+    "detail": "desk 是写字、办公用的桌子。"
+   }
+  ],
+  "logic": "worktable 是 work + table；workbench 是 work + bench“长凳”，更结实；desk 是坐着写字的桌子。",
+  "tip": "敲敲打打用 workbench，做手工用 worktable，写作业用 desk。",
+  "pics": {
+   "worktable": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/worktable.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.62,
+      "z": 2
+     },
+     {
+      "svg": "art/tools.svg",
+      "x": 0.5,
+      "y": 0.36,
+      "s": 0.3,
+      "anim": "shake",
+      "z": 3
+     }
+    ]
+   },
+   "workbench": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/castle-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/tools.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "shake",
+      "z": 2
+     }
+    ]
+   },
+   "desk": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2
+     },
+     {
+      "svg": "art/computer.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.4,
+      "anim": "bob",
+      "z": 3
+     }
+    ]
+   }
+  },
+  "notes": {
+   "worktable": "worktable 是做手工活、摆工具的桌子。",
+   "workbench": "workbench 多指木工、修理用的结实工作台。",
+   "desk": "desk 是写字、办公用的桌子。"
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：工具放在哪里？",
+    "listen": "The tools are on the worktable.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "工作台上",
+     "地板上",
+     "书架上",
+     "床底下"
+    ],
+    "ans": "A",
+    "why": "worktable 工作台。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The workshop has three ______. (worktable)",
+    "opts": [],
+    "ans": "worktables",
+    "why": "three 后面用复数 worktables。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "He fixed the chair on his ______.",
+    "opts": [
+     "workday",
+     "workout",
+     "worker",
+     "worktable"
+    ],
+    "ans": "D",
+    "why": "修东西用的台子是工作台 worktable。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 desk、worktable 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "I do my homework at my ______.",
+    "opts": [],
+    "ans": "desk",
+    "why": "写作业用书桌 desk；worktable 多是干活、修理用的。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The worktable are made of wood.",
+    "opts": [],
+    "ans": "are → is",
+    "why": "主语 the worktable 是单数，用 is。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "请把锤子放在工作台上。",
+    "stem": "Please put the hammer ______ the worktable.",
+    "opts": [],
+    "ans": "on",
+    "why": "放在台面上用 on。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "These ______ are too small for us.",
+    "opts": [
+     "worktable",
+     "workout",
+     "worker",
+     "worktables"
+    ],
+    "ans": "D",
+    "why": "these 后面用复数 worktables。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

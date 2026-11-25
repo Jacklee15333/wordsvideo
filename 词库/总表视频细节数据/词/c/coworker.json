@@ -1,7 +1,640 @@
 {
  "单词": "coworker",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "同事、同僚"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/together.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.62,
+      "anim": "pulse"
+     },
+     {
+      "label": "一起",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/build.svg",
+      "x": 0.42,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "shake",
+      "z": 2
+     },
+     {
+      "svg": "art/helmet.svg",
+      "x": 0.72,
+      "y": 0.42,
+      "s": 0.26,
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "label": "干活的人",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/together.svg",
+   "p1": "art/helmet.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/helmet.svg",
+     "x": 0.32,
+     "y": 0.5,
+     "s": 0.3,
+     "anim": "bob",
+     "z": 2
+    },
+    {
+     "svg": "art/helmet.svg",
+     "x": 0.68,
+     "y": 0.5,
+     "s": 0.3,
+     "anim": "bob",
+     "delay": 0.3,
+     "z": 2
+    },
+    {
+     "svg": "art/together.svg",
+     "x": 0.5,
+     "y": 0.78,
+     "s": 0.24,
+     "anim": "pulse",
+     "z": 3
+    },
+    {
+     "label": "一起干活的人",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "同事、同僚",
+    "pos": "名词",
+    "diff": "在同一个地方一起干活的人",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "id": "a",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.7,
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "id": "b",
+      "x": 0.74,
+      "y": 0.6,
+      "s": 0.7,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "a"
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.4,
+      "z": 4
+     },
+     {
+      "svg": "art/computer.svg",
+      "x": 0.3,
+      "y": 0.74,
+      "s": 0.24,
+      "z": 5
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.66,
+      "y": 0.78,
+      "s": 0.1,
+      "z": 5,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.8,
+      "y": 0.78,
+      "s": 0.14,
+      "z": 5
+     }
+    ],
+    "ex": "My coworker helped me with the report.",
+    "exzh": "我的同事帮我一起写报告。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "id": "m",
+       "x": 0.22,
+       "y": 0.6,
+       "s": 0.72,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "waves": true,
+       "on": "m",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "m"
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "id": "b",
+       "x": 0.8,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 3,
+       "nodWith": "m"
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.34,
+       "z": 4
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.5,
+       "y": 0.76,
+       "s": 0.18,
+       "when": "report",
+       "anim": "bob",
+       "z": 5
+      },
+      {
+       "label": "coworker",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "coworker"
+      },
+      {
+       "label": "同事",
+       "x": 0.5,
+       "y": 0.32,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "同事"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“一起干活的人”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/helmet.svg",
+       "x": 0.32,
+       "y": 0.5,
+       "s": 0.3,
+       "anim": "bob",
+       "z": 2
+      },
+      {
+       "svg": "art/helmet.svg",
+       "x": 0.68,
+       "y": 0.5,
+       "s": 0.3,
+       "anim": "bob",
+       "delay": 0.3,
+       "z": 2
+      },
+      {
+       "svg": "art/together.svg",
+       "x": 0.5,
+       "y": 0.78,
+       "s": 0.24,
+       "anim": "pulse",
+       "z": 3
+      },
+      {
+       "label": "一起干活的人",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "在同一个地方、同一个团队里一起干活的人",
+    "node": "① 同事、同僚",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "在同一个地方、同一个团队里一起干活的人，就是 coworker，同事。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.88,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.32,
+       "y": 0.66,
+       "s": 0.3,
+       "when": "同一个地方",
+       "z": 3,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.68,
+       "y": 0.66,
+       "s": 0.3,
+       "when": "同一个团队",
+       "z": 3,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/together.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.26,
+       "when": "一起干活",
+       "anim": "pulse"
+      },
+      {
+       "label": "同事",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "同事"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "中文都能说“同事”，口气不一样",
+   "items": [
+    {
+     "w": "coworker",
+     "word": "coworker",
+     "name": "coworker",
+     "en": "coworker",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/desk-papers.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.6,
+        "anim": "bob",
+        "z": 2
+       }
+      ]
+     },
+     "text": "coworker 偏美式，泛指一起工作的人。",
+     "say": "coworker 偏美式，泛指一起工作的人。",
+     "diff": "coworker 偏美式，泛指一起工作的人。",
+     "note": "coworker 偏美式，泛指一起工作的人。",
+     "desc": "coworker 偏美式，泛指一起工作的人。",
+     "m": "coworker 偏美式，泛指一起工作的人。",
+     "mean": "coworker 偏美式，泛指一起工作的人。",
+     "line": "coworker 偏美式，泛指一起工作的人。",
+     "explain": "coworker 偏美式，泛指一起工作的人。",
+     "zh": "coworker 偏美式，泛指一起工作的人。",
+     "def": "coworker 偏美式，泛指一起工作的人。",
+     "gloss": "coworker 偏美式，泛指一起工作的人。",
+     "sense": "coworker 偏美式，泛指一起工作的人。",
+     "comment": "coworker 偏美式，泛指一起工作的人。",
+     "hint": "coworker 偏美式，泛指一起工作的人。",
+     "txt": "coworker 偏美式，泛指一起工作的人。",
+     "talk": "coworker 偏美式，泛指一起工作的人。",
+     "words": "coworker 偏美式，泛指一起工作的人。",
+     "detail": "coworker 偏美式，泛指一起工作的人。"
+    },
+    {
+     "w": "colleague",
+     "word": "colleague",
+     "name": "colleague",
+     "en": "colleague",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/classroom-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/books.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.6,
+        "anim": "bob",
+        "z": 2
+       }
+      ]
+     },
+     "text": "colleague 更正式，多指同行、同单位的专业人员。",
+     "say": "colleague 更正式，多指同行、同单位的专业人员。",
+     "diff": "colleague 更正式，多指同行、同单位的专业人员。",
+     "note": "colleague 更正式，多指同行、同单位的专业人员。",
+     "desc": "colleague 更正式，多指同行、同单位的专业人员。",
+     "m": "colleague 更正式，多指同行、同单位的专业人员。",
+     "mean": "colleague 更正式，多指同行、同单位的专业人员。",
+     "line": "colleague 更正式，多指同行、同单位的专业人员。",
+     "explain": "colleague 更正式，多指同行、同单位的专业人员。",
+     "zh": "colleague 更正式，多指同行、同单位的专业人员。",
+     "def": "colleague 更正式，多指同行、同单位的专业人员。",
+     "gloss": "colleague 更正式，多指同行、同单位的专业人员。",
+     "sense": "colleague 更正式，多指同行、同单位的专业人员。",
+     "comment": "colleague 更正式，多指同行、同单位的专业人员。",
+     "hint": "colleague 更正式，多指同行、同单位的专业人员。",
+     "txt": "colleague 更正式，多指同行、同单位的专业人员。",
+     "talk": "colleague 更正式，多指同行、同单位的专业人员。",
+     "words": "colleague 更正式，多指同行、同单位的专业人员。",
+     "detail": "colleague 更正式，多指同行、同单位的专业人员。"
+    },
+    {
+     "w": "workmate",
+     "word": "workmate",
+     "name": "workmate",
+     "en": "workmate",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/mug.svg",
+        "x": 0.42,
+        "y": 0.56,
+        "s": 0.5,
+        "anim": "bob",
+        "z": 2
+       },
+       {
+        "svg": "art/mug.svg",
+        "x": 0.62,
+        "y": 0.56,
+        "s": 0.5,
+        "anim": "bob",
+        "delay": 0.3,
+        "z": 2
+       }
+      ]
+     },
+     "text": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "say": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "diff": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "note": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "desc": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "m": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "mean": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "line": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "explain": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "zh": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "def": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "gloss": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "sense": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "comment": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "hint": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "txt": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "talk": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "words": "workmate 偏英式口语，就是一起干活的伙伴。",
+     "detail": "workmate 偏英式口语，就是一起干活的伙伴。"
+    }
+   ],
+   "logic": "coworker 是 co“一起”+ worker；workmate 是 work + mate“伙伴”；colleague 从拉丁语“一起被选出来的人”来，所以更正式。",
+   "tip": "平常说话用 coworker 或 workmate；正式场合、写信用 colleague。",
+   "pics": {
+    "coworker": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "bob",
+       "z": 2
+      }
+     ]
+    },
+    "colleague": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "bob",
+       "z": 2
+      }
+     ]
+    },
+    "workmate": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.42,
+       "y": 0.56,
+       "s": 0.5,
+       "anim": "bob",
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.62,
+       "y": 0.56,
+       "s": 0.5,
+       "anim": "bob",
+       "delay": 0.3,
+       "z": 2
+      }
+     ]
+    }
+   },
+   "notes": {
+    "coworker": "coworker 偏美式，泛指一起工作的人。",
+    "colleague": "colleague 更正式，多指同行、同单位的专业人员。",
+    "workmate": "workmate 偏英式口语，就是一起干活的伙伴。"
+   }
+  },
+  "demo": {
+   "combine": {
+    "icons": [
+     "art/together.svg",
+     "art/build.svg"
+    ],
+    "lit": "合在一起",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/together.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   "connect": {
+    "icons": [
+     "art/together.svg",
+     "art/build.svg"
+    ],
+    "lit": "连在一起",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/together.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "anim": "spin"
+      }
+     ]
+    }
+   },
+   "cooperate": {
+    "icons": [
+     "art/together.svg",
+     "art/build.svg"
+    ],
+    "lit": "一起干活",
+    "pic": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/build.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.6,
+       "anim": "shake"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "coworkerai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人今天和谁吃午饭？\n听：I had lunch with my coworkers today.\nA. 同学们\nB. 家人\nC. 邻居们\nD. 同事们",
@@ -88,5 +721,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
