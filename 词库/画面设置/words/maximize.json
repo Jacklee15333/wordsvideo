@@ -6,6 +6,128 @@
   "ɪ",
   "maɪz"
  ],
+ "demo": {
+  "widen": {
+   "icons": [
+    "art/icon-tag-adj.svg",
+    "art/icon-tag-verb.svg"
+   ],
+   "lit": "使变宽",
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/way.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.6,
+      "s2": 0.75,
+      "grow": [
+       0.4,
+       1.8
+      ]
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.1,
+      "y": 0.7,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.1,
+        0.7
+       ],
+       "to": [
+        0.9,
+        0.7
+       ],
+       "offset": 0
+      }
+     }
+    ]
+   }
+  },
+  "modernize": {
+   "icons": [
+    "art/icon-tag-adj.svg",
+    "art/icon-tag-verb.svg"
+   ],
+   "lit": "使现代化",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/rotary-phone.svg",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.4,
+      "anim": "shake"
+     },
+     {
+      "ray": [
+       [
+        0.45,
+        0.6
+       ],
+       [
+        0.58,
+        0.6
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "delay": 0.3
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.72,
+      "y": 0.58,
+      "s": 0.5,
+      "anim": "pulse"
+     }
+    ]
+   }
+  },
+  "simplify": {
+   "icons": [
+    "art/icon-tag-adj.svg",
+    "art/icon-tag-verb.svg"
+   ],
+   "lit": "使简单",
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/blackboard-mini.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.7,
+      "y": 0.25,
+      "every": 0.9,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "spin": true
+     }
+    ]
+   }
+  }
+ },
  "pics": [
   {
    "text": "使最大化",
