@@ -1,7 +1,886 @@
 {
  "单词": "leftover",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "剩菜剩饭；残余、遗留；剩余的"
+  },
+  "sylIpa": [
+   "left",
+   "ˈəʊvə"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/cake.svg",
+      "x": 0.45,
+      "y": 0.6,
+      "s": 0.5,
+      "shadow": true,
+      "anim": "bob"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.45,
+      "y": 0.35,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     },
+     {
+      "label": "left 被留下的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/jar-full.svg",
+      "x": 0.45,
+      "y": 0.55,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.45,
+      "y": 0.2,
+      "every": 0.35,
+      "life": 1.2,
+      "to": [
+       0,
+       0.3
+      ],
+      "s": 0.07,
+      "wobble": 0.06
+     },
+     {
+      "label": "over 多出来的",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-cake.svg",
+   "p1": "art/icon-jar-full.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bowl.svg",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.4,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/lunchbox.svg",
+     "x": 0.68,
+     "y": 0.6,
+     "s": 0.35,
+     "anim": "pulse"
+    },
+    {
+     "label": "用完以后多出来、被留下的",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "剩菜、剩饭",
+    "pos": "名词（复数 leftovers）",
+    "diff": "一顿饭吃完，还剩下的饭菜",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/fridge.svg",
+      "x": 0.2,
+      "y": 0.55,
+      "s": 0.85
+     },
+     {
+      "svg": "art/lunchbox.svg",
+      "x": 0.55,
+      "y": 0.6,
+      "s": 0.38,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/bowl.svg",
+      "x": 0.82,
+      "y": 0.62,
+      "s": 0.3,
+      "anim": "pulse"
+     }
+    ],
+    "ex": "We had leftovers for lunch.",
+    "exzh": "我们午饭吃的是剩饭剩菜。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "id": "t",
+       "seq": "talk",
+       "when": "We"
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.8,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "nodWith": "t",
+       "when": "We"
+      },
+      {
+       "svg": "art/lunchbox.svg",
+       "x": 0.5,
+       "y": 0.7,
+       "s": 0.35,
+       "when": "leftovers",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "label": "leftovers 剩饭剩菜",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "剩饭剩菜"
+      }
+     ]
+    }
+   },
+   {
+    "text": "残余、遗留",
+    "pos": "名词",
+    "diff": "一件事过去了，还剩在那里的东西",
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/lantern.svg",
+      "x": 0.3,
+      "y": 0.4,
+      "s": 0.5,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/hourglass.svg",
+      "x": 0.72,
+      "y": 0.55,
+      "s": 0.45,
+      "anim": "swing"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.3,
+      "y": 0.2,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     }
+    ],
+    "ex": "This custom is a leftover from the past.",
+    "exzh": "这个习俗是过去遗留下来的。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/lantern.svg",
+       "x": 0.3,
+       "y": 0.42,
+       "s": 0.55,
+       "when": "custom",
+       "anim": "swing"
+      },
+      {
+       "svg": "art/hourglass.svg",
+       "x": 0.7,
+       "y": 0.55,
+       "s": 0.45,
+       "when": "the past",
+       "anim": "swing"
+      },
+      {
+       "label": "a leftover 遗留",
+       "x": 0.7,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "leftover"
+      },
+      {
+       "label": "过去遗留下来的",
+       "x": 0.3,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "遗留下来"
+      }
+     ]
+    }
+   },
+   {
+    "text": "剩余的",
+    "pos": "形容词",
+    "diff": "放在名词前：剩下的",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bowl.svg",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.45,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/fridge.svg",
+      "x": 0.82,
+      "y": 0.55,
+      "s": 0.8
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.4,
+      "y": 0.4,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     }
+    ],
+    "ex": "Put the leftover rice in the fridge.",
+    "exzh": "把剩下的米饭放进冰箱。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bowl.svg",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "leftover rice",
+       "go": [
+        0.75,
+        0.5
+       ],
+       "goWhen": "fridge",
+       "dur": 1.2,
+       "z": 5
+      },
+      {
+       "svg": "art/fridge.svg",
+       "x": 0.78,
+       "y": 0.52,
+       "s": 0.85,
+       "when": "fridge"
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.4,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "when": "Put",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "label": "leftover rice",
+       "x": 0.25,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "leftover rice"
+      },
+      {
+       "label": "剩下的米饭",
+       "x": 0.25,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "剩下的米饭"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“用完以后多出来、被留下的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bowl.svg",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.4,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/cake.svg",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.35,
+       "anim": "pulse",
+       "delay": 0.5
+      }
+     ]
+    }
+   },
+   {
+    "via": "动词短语整个变成名词、形容词",
+    "node": "left + over",
+    "pos": "名词 / 形容词",
+    "rule": "动词短语整个变成名词或形容词：先后不变，动词在前、小词在后",
+    "ruleEx": "grow up → grown-up      leave over → leftover",
+    "cap": "leave over → leftover",
+    "say": [
+     "动词短语可以整个变成名词或形容词，先后不变，动词在前、小词在后。",
+     "grow up，长大，变成 grown-up，大人。",
+     "leave over，剩下，动词换成 left，就是 leftover。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "动词在前",
+       "x": 0.3,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "动词在前",
+       "hideCue": 1
+      },
+      {
+       "label": "小词在后",
+       "x": 0.7,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "小词在后",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/gears.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.35,
+       "when": "动词短语",
+       "hideCue": 1,
+       "anim": "spin"
+      },
+      {
+       "actor": "west-man-smile",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "when": "大人",
+       "hideCue": 2,
+       "seq": "blink"
+      },
+      {
+       "label": "grow up",
+       "x": 0.72,
+       "y": 0.36,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "grow up",
+       "hideCue": 2
+      },
+      {
+       "label": "grown-up 大人",
+       "x": 0.72,
+       "y": 0.62,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "grown-up",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/bowl.svg",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "leave over",
+       "anim": "bob"
+      },
+      {
+       "label": "leave over",
+       "x": 0.72,
+       "y": 0.36,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "leave over"
+      },
+      {
+       "label": "leftover",
+       "x": 0.72,
+       "y": 0.62,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "就是 leftover"
+      }
+     ]
+    }
+   },
+   {
+    "via": "一顿饭吃完，锅里还剩一些",
+    "node": "① 剩菜、剩饭",
+    "pos": "名词（复数）",
+    "pic": 0,
+    "cap": "剩下的 → 剩饭剩菜",
+    "say": [
+     "一顿饭吃完，锅里、碗里还剩一些。",
+     "这些剩下的饭菜，就叫 leftovers，常用复数。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bowl.svg",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "碗里",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/lunchbox.svg",
+       "x": 0.62,
+       "y": 0.6,
+       "s": 0.35,
+       "when": "剩下的饭菜",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/fridge.svg",
+       "x": 0.88,
+       "y": 0.55,
+       "s": 0.8,
+       "when": "剩下的饭菜"
+      },
+      {
+       "label": "leftovers",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "leftovers"
+      },
+      {
+       "label": "复数",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "复数"
+      }
+     ]
+    }
+   },
+   {
+    "via": "一件事过去了，还剩在那里的东西",
+    "node": "② 残余、遗留",
+    "pos": "名词",
+    "pic": 1,
+    "cap": "剩饭 → 剩下的东西",
+    "say": [
+     "不光是饭菜，一件事过去了，还剩在那里的东西，也叫 leftover。",
+     "这就是残余、遗留。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/hourglass.svg",
+       "x": 0.25,
+       "y": 0.55,
+       "s": 0.45,
+       "when": "过去了",
+       "anim": "swing"
+      },
+      {
+       "svg": "art/lantern.svg",
+       "x": 0.6,
+       "y": 0.42,
+       "s": 0.5,
+       "when": "还剩在那里",
+       "anim": "swing"
+      },
+      {
+       "label": "残余、遗留",
+       "x": 0.82,
+       "y": 0.85,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "残余、遗留"
+      }
+     ]
+    }
+   },
+   {
+    "via": "放在名词前",
+    "node": "③ 剩余的",
+    "pos": "形容词",
+    "pic": 2,
+    "from": 0,
+    "cap": "当形容词用",
+    "say": [
+     "leftover 放在名词前面，就是剩余的。",
+     "比如 leftover rice，剩下的米饭。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "leftover + 名词",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "放在名词前面"
+      },
+      {
+       "label": "剩余的",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "剩余的"
+      },
+      {
+       "svg": "art/bowl.svg",
+       "x": 0.4,
+       "y": 0.65,
+       "s": 0.4,
+       "when": "leftover rice",
+       "anim": "bob"
+      },
+      {
+       "label": "剩下的米饭",
+       "x": 0.78,
+       "y": 0.65,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "剩下的米饭"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "left",
+    "m": "剩下的",
+    "share": "left"
+   },
+   {
+    "w": "grown-up",
+    "m": "大人",
+    "share": ""
+   }
+  ],
+  "distinguish": {
+   "key": "剩余的",
+   "items": [
+    {
+     "w": "leftover",
+     "word": "leftover",
+     "name": "leftover",
+     "zh": "剩下的（饭菜）",
+     "m": "剩下的（饭菜）",
+     "mean": "剩下的（饭菜）",
+     "meaning": "剩下的（饭菜）",
+     "say": "leftovers 多指剩饭剩菜，常用复数；当形容词是剩余的。",
+     "text": "leftovers 多指剩饭剩菜，常用复数；当形容词是剩余的。",
+     "line": "leftovers 多指剩饭剩菜，常用复数；当形容词是剩余的。",
+     "note": "leftovers 多指剩饭剩菜，常用复数；当形容词是剩余的。",
+     "desc": "leftovers 多指剩饭剩菜，常用复数；当形容词是剩余的。",
+     "diff": "leftovers 多指剩饭剩菜，常用复数；当形容词是剩余的。",
+     "explain": "leftovers 多指剩饭剩菜，常用复数；当形容词是剩余的。",
+     "detail": "leftovers 多指剩饭剩菜，常用复数；当形容词是剩余的。",
+     "sentence": "leftovers 多指剩饭剩菜，常用复数；当形容词是剩余的。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/lunchbox.svg",
+        "x": 0.4,
+        "y": 0.55,
+        "s": 0.65,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/bowl.svg",
+        "x": 0.78,
+        "y": 0.6,
+        "s": 0.45,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "residual",
+     "word": "residual",
+     "name": "residual",
+     "zh": "残留的",
+     "m": "残留的",
+     "mean": "残留的",
+     "meaning": "残留的",
+     "say": "residual 是残留的，正式，多用在科学上，比如 residual heat，余热。",
+     "text": "residual 是残留的，正式，多用在科学上，比如 residual heat，余热。",
+     "line": "residual 是残留的，正式，多用在科学上，比如 residual heat，余热。",
+     "note": "residual 是残留的，正式，多用在科学上，比如 residual heat，余热。",
+     "desc": "residual 是残留的，正式，多用在科学上，比如 residual heat，余热。",
+     "diff": "residual 是残留的，正式，多用在科学上，比如 residual heat，余热。",
+     "explain": "residual 是残留的，正式，多用在科学上，比如 residual heat，余热。",
+     "detail": "residual 是残留的，正式，多用在科学上，比如 residual heat，余热。",
+     "sentence": "residual 是残留的，正式，多用在科学上，比如 residual heat，余热。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/heater.svg",
+        "x": 0.45,
+        "y": 0.55,
+        "s": 0.7,
+        "anim": "pulse"
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.45,
+        "y": 0.3,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       }
+      ]
+     }
+    },
+    {
+     "w": "remains",
+     "word": "remains",
+     "name": "remains",
+     "zh": "残余、遗迹",
+     "m": "残余、遗迹",
+     "mean": "残余、遗迹",
+     "meaning": "残余、遗迹",
+     "say": "remains 是残余、遗迹、遗体，比 leftovers 正式。",
+     "text": "remains 是残余、遗迹、遗体，比 leftovers 正式。",
+     "line": "remains 是残余、遗迹、遗体，比 leftovers 正式。",
+     "note": "remains 是残余、遗迹、遗体，比 leftovers 正式。",
+     "desc": "remains 是残余、遗迹、遗体，比 leftovers 正式。",
+     "diff": "remains 是残余、遗迹、遗体，比 leftovers 正式。",
+     "explain": "remains 是残余、遗迹、遗体，比 leftovers 正式。",
+     "detail": "remains 是残余、遗迹、遗体，比 leftovers 正式。",
+     "sentence": "remains 是残余、遗迹、遗体，比 leftovers 正式。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/castle-bg.svg",
+      "items": [
+       {
+        "svg": "art/hourglass.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.6,
+        "anim": "swing"
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.5,
+        "y": 0.3,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：leftover 是用完以后多出来、被留下的；residual 是慢慢退去后还残留着的；remains 是一样东西没了以后剩下的部分。",
+   "tip": "剩饭剩菜用 leftovers；余热、残留用 residual；遗迹、遗体用 remains。",
+   "pics": {
+    "leftover": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/lunchbox.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.65,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/bowl.svg",
+       "x": 0.78,
+       "y": 0.6,
+       "s": 0.45,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "residual": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/heater.svg",
+       "x": 0.45,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.45,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    },
+    "remains": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/hourglass.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "swing"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "leftoverai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：今天午饭吃什么？\n听：We had leftovers for lunch today.\nA. 饺子\nB. 汉堡\nC. 面条\nD. 剩饭剩菜",
@@ -88,5 +967,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

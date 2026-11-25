@@ -1,0 +1,1160 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "离开；留下；遗赠；剩下"
+ },
+ "sylIpa": [
+  "liːv"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/door.svg",
+     "x": 0.3,
+     "y": 0.5,
+     "s": 0.75
+    },
+    {
+     "svg": "art/sticky.svg",
+     "x": 0.32,
+     "y": 0.4,
+     "s": 0.22,
+     "z": 4,
+     "anim": "swing"
+    },
+    {
+     "svg": "art/will.svg",
+     "x": 0.75,
+     "y": 0.55,
+     "s": 0.45,
+     "anim": "bob"
+    },
+    {
+     "label": "leave 使…留下",
+     "x": 0.6,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-sticky.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/door.svg",
+    "x": 0.3,
+    "y": 0.5,
+    "s": 0.75
+   },
+   {
+    "svg": "art/sticky.svg",
+    "x": 0.32,
+    "y": 0.4,
+    "s": 0.22,
+    "z": 4,
+    "anim": "swing"
+   },
+   {
+    "label": "使…留下",
+    "x": 0.72,
+    "y": 0.5,
+    "size": 0.1,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.5
+   },
+   {
+    "emit": true,
+    "svg": "art/star.svg",
+    "x": 0.32,
+    "y": 0.3,
+    "every": 0.9,
+    "life": 1.8,
+    "to": [
+     0,
+     -0.25
+    ],
+    "s": 0.08,
+    "wobble": 0.03
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "离开",
+   "pos": "动词",
+   "diff": "自己走了，把地方留在身后",
+   "bg": "blank",
+   "img": "art/station-bg.svg",
+   "items": [
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.4,
+     "y": 0.68,
+     "s": 0.6,
+     "z": 4,
+     "walk": {
+      "from": [
+       0.4,
+       0.68
+      ],
+      "to": [
+       1.05,
+       0.68
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.6,
+     "y": 0.7,
+     "s": 0.55,
+     "z": 4,
+     "walk": {
+      "from": [
+       0.6,
+       0.7
+      ],
+      "to": [
+       -0.05,
+       0.7
+      ],
+      "offset": 1.4
+     }
+    },
+    {
+     "svg": "art/board.svg",
+     "x": 0.5,
+     "y": 0.2,
+     "s": 0.22,
+     "anim": "pulse"
+    },
+    {
+     "label": "离开",
+     "x": 0.85,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "We leave for Shanghai tomorrow morning.",
+   "exzh": "我们明天早上动身去上海。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "svg": "art/board.svg",
+      "x": 0.3,
+      "y": 0.2,
+      "s": 0.3,
+      "when": "Shanghai",
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.3,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.3,
+        0.7
+       ],
+       "to": [
+        1.05,
+        0.7
+       ],
+       "offset": 0
+      },
+      "when": "leave for"
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.45,
+      "y": 0.68,
+      "s": 0.56,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.45,
+        0.68
+       ],
+       "to": [
+        1.05,
+        0.68
+       ],
+       "offset": 0.6
+      },
+      "when": "leave for"
+     },
+     {
+      "actor": "west-man-hello",
+      "x": 0.12,
+      "y": 0.62,
+      "s": 0.75,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "We"
+     },
+     {
+      "label": "leave for 动身去",
+      "x": 0.75,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "leave for"
+     },
+     {
+      "label": "动身去上海",
+      "x": 0.75,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "动身去上海"
+     }
+    ]
+   }
+  },
+  {
+   "text": "留下、遗留",
+   "pos": "动词",
+   "diff": "让东西待在原处，不去动它",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/door.svg",
+     "x": 0.35,
+     "y": 0.5,
+     "s": 0.78
+    },
+    {
+     "svg": "art/sticky.svg",
+     "x": 0.37,
+     "y": 0.4,
+     "s": 0.22,
+     "z": 4,
+     "anim": "swing"
+    },
+    {
+     "actor": "west-clerk-think",
+     "x": 0.78,
+     "y": 0.62,
+     "s": 0.8,
+     "z": 3,
+     "seq": "blink"
+    }
+   ],
+   "ex": "She left a note on the door.",
+   "exzh": "她在门上留了一张字条。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/door.svg",
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.8,
+      "when": "door"
+     },
+     {
+      "svg": "art/sticky.svg",
+      "x": 0.32,
+      "y": 0.42,
+      "s": 0.24,
+      "z": 4,
+      "when": "left a note",
+      "pop": true,
+      "anim": "swing"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.45,
+      "y": 0.66,
+      "s": 0.62,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.45,
+        0.66
+       ],
+       "to": [
+        1.05,
+        0.66
+       ],
+       "offset": 0
+      },
+      "when": "She"
+     },
+     {
+      "label": "left a note",
+      "x": 0.72,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "left a note"
+     },
+     {
+      "label": "留了一张字条",
+      "x": 0.72,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "留了一张字条"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.32,
+      "y": 0.3,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03,
+      "when": "字条"
+     }
+    ]
+   }
+  },
+  {
+   "text": "遗赠",
+   "pos": "动词",
+   "diff": "人去世了，把财物留给后人",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/will.svg",
+     "x": 0.25,
+     "y": 0.55,
+     "s": 0.55,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/house.svg",
+     "x": 0.62,
+     "y": 0.55,
+     "s": 0.45,
+     "anim": "pulse"
+    },
+    {
+     "actor": "west-man-present",
+     "x": 0.88,
+     "y": 0.6,
+     "s": 0.75,
+     "z": 3,
+     "seq": "talk"
+    }
+   ],
+   "ex": "He left his house to his son.",
+   "exzh": "他把房子留给了儿子。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/will.svg",
+      "x": 0.2,
+      "y": 0.55,
+      "s": 0.55,
+      "when": "left",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/house.svg",
+      "x": 0.5,
+      "y": 0.45,
+      "s": 0.5,
+      "when": "his house",
+      "go": [
+       0.5,
+       0.45
+      ],
+      "anim": "pulse"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.82,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "when": "his son",
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "ray": [
+       [
+        0.6,
+        0.6
+       ],
+       [
+        0.72,
+        0.6
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "to his son"
+     },
+     {
+      "label": "留给了儿子",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "留给了儿子"
+     }
+    ]
+   }
+  },
+  {
+   "text": "剩下",
+   "pos": "动词（be left）",
+   "diff": "东西被留下、没用掉",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/cake.svg",
+     "x": 0.45,
+     "y": 0.6,
+     "s": 0.45,
+     "shadow": true,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/mug.svg",
+     "x": 0.78,
+     "y": 0.62,
+     "s": 0.3
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.45,
+     "y": 0.35,
+     "every": 0.9,
+     "life": 1.8,
+     "to": [
+      0,
+      -0.25
+     ],
+     "s": 0.08,
+     "wobble": 0.03
+    }
+   ],
+   "ex": "There is only one apple left.",
+   "exzh": "只剩下一个苹果了。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bowl.svg",
+      "x": 0.4,
+      "y": 0.68,
+      "s": 0.35,
+      "when": "There is"
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.4,
+      "y": 0.5,
+      "s": 0.35,
+      "when": "one apple",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.78,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "when": "only",
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "label": "one apple left",
+      "x": 0.4,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "left"
+     },
+     {
+      "label": "只剩下一个",
+      "x": 0.15,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "只剩下一个"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“使…留下”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/door.svg",
+      "x": 0.35,
+      "y": 0.5,
+      "s": 0.78
+     },
+     {
+      "svg": "art/sticky.svg",
+      "x": 0.37,
+      "y": 0.4,
+      "s": 0.22,
+      "z": 4,
+      "anim": "swing",
+      "delay": 0.5
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.37,
+      "y": 0.3,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     }
+    ]
+   }
+  },
+  {
+   "via": "让东西待在原处、不去动它",
+   "node": "② 留下、遗留",
+   "pos": "动词",
+   "pic": 1,
+   "cap": "使…留下 → 留下",
+   "say": [
+    "leave 最早的意思是：让东西待在原处，不去动它。",
+    "人走了，门上的字条还留在那里，这就是留下。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/door.svg",
+      "x": 0.35,
+      "y": 0.5,
+      "s": 0.78,
+      "when": "待在原处"
+     },
+     {
+      "svg": "art/sticky.svg",
+      "x": 0.37,
+      "y": 0.4,
+      "s": 0.22,
+      "z": 4,
+      "when": "字条",
+      "anim": "swing"
+     },
+     {
+      "label": "不去动它",
+      "x": 0.75,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "不去动它"
+     },
+     {
+      "label": "留下",
+      "x": 0.75,
+      "y": 0.6,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "留下"
+     }
+    ]
+   }
+  },
+  {
+   "via": "人死了，把财物留给后人",
+   "node": "③ 遗赠",
+   "pos": "动词",
+   "pic": 2,
+   "cap": "留下 → 留给后人",
+   "say": [
+    "人去世了，把房子、钱财留给后人。",
+    "这也是一种留下，就是遗赠。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/house.svg",
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "房子",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/will.svg",
+      "x": 0.65,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "留给后人",
+      "anim": "bob"
+     },
+     {
+      "label": "留给后人",
+      "x": 0.3,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "留给后人"
+     },
+     {
+      "label": "遗赠",
+      "x": 0.85,
+      "y": 0.15,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "遗赠"
+     }
+    ]
+   }
+  },
+  {
+   "via": "东西被留下、没用掉",
+   "node": "④ 剩下",
+   "pos": "动词（be left）",
+   "pic": 3,
+   "from": 1,
+   "cap": "被留下 → 剩下",
+   "say": [
+    "东西被留下来、没有用掉，就说 be left，剩下。",
+    "一个蛋糕吃了半天，盘子里还剩一块。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "be left",
+      "x": 0.25,
+      "y": 0.15,
+      "size": 0.1,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "be left"
+     },
+     {
+      "svg": "art/cake.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.45,
+      "when": "蛋糕",
+      "anim": "bob"
+     },
+     {
+      "label": "还剩一块",
+      "x": 0.8,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "还剩一块"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.35,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03,
+      "when": "还剩一块"
+     }
+    ]
+   }
+  },
+  {
+   "via": "自己走了，把这个地方留在身后",
+   "node": "① 离开",
+   "pos": "动词",
+   "pic": 0,
+   "from": 1,
+   "cap": "约 1200 年起：留下 → 离开",
+   "rule": "把地方留在身后 = 离开",
+   "ruleEx": "leave the room 离开房间      leave for Shanghai 动身去上海",
+   "say": [
+    "大约 1200 年起，leave 又有了新意思。",
+    "人自己走了，把这个地方留在身后，就是离开。",
+    "要说动身去哪儿，用 leave for，比如 leave for Shanghai。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "label": "1200 年",
+      "x": 0.15,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "1200 年"
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.4,
+      "y": 0.7,
+      "s": 0.58,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.4,
+        0.7
+       ],
+       "to": [
+        1.05,
+        0.7
+       ],
+       "offset": 0
+      },
+      "when": "人自己走了"
+     },
+     {
+      "label": "离开",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "离开"
+     },
+     {
+      "svg": "art/board.svg",
+      "x": 0.8,
+      "y": 0.22,
+      "s": 0.25,
+      "when": "leave for",
+      "anim": "pulse"
+     },
+     {
+      "label": "leave for",
+      "x": 0.8,
+      "y": 0.45,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "leave for"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "left",
+   "m": "剩下的；左边",
+   "share": ""
+  },
+  {
+   "w": "leftover",
+   "m": "剩饭剩菜",
+   "share": "left"
+  }
+ ],
+ "distinguish": {
+  "key": "离开；留下",
+  "items": [
+   {
+    "w": "leave",
+    "word": "leave",
+    "name": "leave",
+    "zh": "离开；留下",
+    "m": "离开；留下",
+    "mean": "离开；留下",
+    "meaning": "离开；留下",
+    "say": "leave 最常用：leave Beijing 离开北京，动身去某地说 leave for Shanghai。",
+    "text": "leave 最常用：leave Beijing 离开北京，动身去某地说 leave for Shanghai。",
+    "line": "leave 最常用：leave Beijing 离开北京，动身去某地说 leave for Shanghai。",
+    "note": "leave 最常用：leave Beijing 离开北京，动身去某地说 leave for Shanghai。",
+    "desc": "leave 最常用：leave Beijing 离开北京，动身去某地说 leave for Shanghai。",
+    "diff": "leave 最常用：leave Beijing 离开北京，动身去某地说 leave for Shanghai。",
+    "explain": "leave 最常用：leave Beijing 离开北京，动身去某地说 leave for Shanghai。",
+    "detail": "leave 最常用：leave Beijing 离开北京，动身去某地说 leave for Shanghai。",
+    "sentence": "leave 最常用：leave Beijing 离开北京，动身去某地说 leave for Shanghai。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/door.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.8
+      },
+      {
+       "svg": "art/sticky.svg",
+       "x": 0.32,
+       "y": 0.4,
+       "s": 0.24,
+       "z": 4,
+       "anim": "swing"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.7,
+       "y": 0.4,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    }
+   },
+   {
+    "w": "depart",
+    "word": "depart",
+    "name": "depart",
+    "zh": "（正式）离开、出发",
+    "m": "（正式）离开、出发",
+    "mean": "（正式）离开、出发",
+    "meaning": "（正式）离开、出发",
+    "say": "depart 正式，多见于时刻表、公告；口语说 leave。",
+    "text": "depart 正式，多见于时刻表、公告；口语说 leave。",
+    "line": "depart 正式，多见于时刻表、公告；口语说 leave。",
+    "note": "depart 正式，多见于时刻表、公告；口语说 leave。",
+    "desc": "depart 正式，多见于时刻表、公告；口语说 leave。",
+    "diff": "depart 正式，多见于时刻表、公告；口语说 leave。",
+    "explain": "depart 正式，多见于时刻表、公告；口语说 leave。",
+    "detail": "depart 正式，多见于时刻表、公告；口语说 leave。",
+    "sentence": "depart 正式，多见于时刻表、公告；口语说 leave。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/board.svg",
+       "x": 0.45,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/bus.svg",
+       "x": 0.85,
+       "y": 0.6,
+       "s": 0.4,
+       "anim": "ride"
+      }
+     ]
+    }
+   },
+   {
+    "w": "remain",
+    "word": "remain",
+    "name": "remain",
+    "zh": "留下、仍然是",
+    "m": "留下、仍然是",
+    "mean": "留下、仍然是",
+    "meaning": "留下、仍然是",
+    "say": "remain 是东西自己留在原处、保持原样，不说是谁留下的。",
+    "text": "remain 是东西自己留在原处、保持原样，不说是谁留下的。",
+    "line": "remain 是东西自己留在原处、保持原样，不说是谁留下的。",
+    "note": "remain 是东西自己留在原处、保持原样，不说是谁留下的。",
+    "desc": "remain 是东西自己留在原处、保持原样，不说是谁留下的。",
+    "diff": "remain 是东西自己留在原处、保持原样，不说是谁留下的。",
+    "explain": "remain 是东西自己留在原处、保持原样，不说是谁留下的。",
+    "detail": "remain 是东西自己留在原处、保持原样，不说是谁留下的。",
+    "sentence": "remain 是东西自己留在原处、保持原样，不说是谁留下的。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bowl.svg",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.5
+      },
+      {
+       "svg": "art/apple.svg",
+       "x": 0.4,
+       "y": 0.42,
+       "s": 0.4,
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.7,
+       "y": 0.4,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "逻辑不同：leave 是人做的事，把东西留下或者自己走；depart 是正式地出发；remain 是东西自己还留在那里。",
+  "tip": "日常说离开、留下用 leave；时刻表上的出发用 depart；还剩着、仍然在用 remain。",
+  "pics": {
+   "leave": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/door.svg",
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.8
+     },
+     {
+      "svg": "art/sticky.svg",
+      "x": 0.32,
+      "y": 0.4,
+      "s": 0.24,
+      "z": 4,
+      "anim": "swing"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.7,
+      "y": 0.4,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     }
+    ]
+   },
+   "depart": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/board.svg",
+      "x": 0.45,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/bus.svg",
+      "x": 0.85,
+      "y": 0.6,
+      "s": 0.4,
+      "anim": "ride"
+     }
+    ]
+   },
+   "remain": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bowl.svg",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.5
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.4,
+      "y": 0.42,
+      "s": 0.4,
+      "anim": "bob"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.7,
+      "y": 0.4,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：火车几点开？",
+    "listen": "The train leaves at ten o'clock.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "九点",
+     "十一点",
+     "十二点",
+     "十点"
+    ],
+    "ans": "D",
+    "why": "leave 离开、出发。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "He ______ for Beijing yesterday.",
+    "opts": [
+     "leaves",
+     "left",
+     "leave",
+     "leaving"
+    ],
+    "ans": "B",
+    "why": "yesterday 讲过去，leave 的过去式是 left。",
+    "kd": "变形"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The bus is ______ now. Hurry! (leave)",
+    "opts": [],
+    "ans": "leaving",
+    "why": "is 后面用现在分词，leave 去 e 加 ing。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 leave、forget 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "I ______ my keys at home.",
+    "opts": [],
+    "ans": "left",
+    "why": "“把……落在某处”有地点时用 leave；forget 后面一般不接地点。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He has left for two hours.",
+    "opts": [],
+    "ans": "has left → has been away",
+    "why": "leave 是短暂动词，不能和 for two hours 连用，改成 has been away。",
+    "kd": "用法"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "我可以给他留个口信吗？",
+    "stem": "Can I ______ a ______ for him?",
+    "opts": [],
+    "ans": [
+     "leave",
+     "message"
+    ],
+    "why": "leave a message 留个口信。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She will ______ school next year.",
+    "opts": [
+     "leaves",
+     "leave",
+     "left",
+     "leaving"
+    ],
+    "ans": "B",
+    "why": "leave school 毕业、离开学校，will 后面用原形。",
+    "kd": "短语"
+   }
+  ]
+ }
+}

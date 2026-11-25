@@ -1,7 +1,1145 @@
 {
  "单词": "thought",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "想法、念头；思考；思想；心意"
+  },
+  "sylIpa": [
+   "θɔːt"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bubble.svg",
+      "x": 0.45,
+      "y": 0.42,
+      "s": 0.55,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.46,
+      "y": 0.4,
+      "s": 0.28,
+      "z": 4,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 2,
+      "x": 0.85,
+      "y": 0.3,
+      "s": 0.3
+     },
+     {
+      "label": "thought ← think 想",
+      "x": 0.45,
+      "y": 0.9,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-bubble.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bubble.svg",
+     "x": 0.4,
+     "y": 0.45,
+     "s": 0.6,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/bulb.svg",
+     "x": 0.42,
+     "y": 0.42,
+     "s": 0.3,
+     "z": 4,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/clock_f0.svg",
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 2,
+     "x": 0.85,
+     "y": 0.35,
+     "s": 0.35
+    },
+    {
+     "label": "想出来的东西",
+     "x": 0.82,
+     "y": 0.85,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "想了、认为过",
+    "pos": "think 的过去式、过去分词",
+    "diff": "想这件事发生在过去",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-think",
+      "x": 0.35,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 2,
+      "x": 0.75,
+      "y": 0.3,
+      "s": 0.35
+     },
+     {
+      "svg": "art/bubble.svg",
+      "x": 0.72,
+      "y": 0.7,
+      "s": 0.3,
+      "anim": "bob"
+     }
+    ],
+    "ex": "I thought you were at school.",
+    "exzh": "我以为你在学校呢。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-hello",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "I thought",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.7,
+       "y": 0.3,
+       "s": 0.45,
+       "when": "thought",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.7,
+       "y": 0.3,
+       "s": 0.15,
+       "z": 4,
+       "when": "at school"
+      },
+      {
+       "label": "我以为",
+       "x": 0.7,
+       "y": 0.8,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "我以为"
+      }
+     ]
+    }
+   },
+   {
+    "text": "想法、念头",
+    "pos": "名词",
+    "diff": "想出来的东西",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.45,
+      "y": 0.45,
+      "s": 0.7,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.45,
+      "y": 0.25,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     },
+     {
+      "svg": "art/bubble.svg",
+      "x": 0.82,
+      "y": 0.3,
+      "s": 0.3,
+      "anim": "bob"
+     }
+    ],
+    "ex": "I had a sudden thought.",
+    "exzh": "我突然有了一个念头。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "I had",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.68,
+       "y": 0.4,
+       "s": 0.55,
+       "when": "sudden thought",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.68,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "sudden thought"
+      },
+      {
+       "label": "一个念头",
+       "x": 0.68,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "一个念头"
+      }
+     ]
+    }
+   },
+   {
+    "text": "思考",
+    "pos": "名词",
+    "diff": "“想”这个过程",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/chess.svg",
+      "x": 0.45,
+      "y": 0.62,
+      "s": 0.45
+     },
+     {
+      "svg": "art/gears.svg",
+      "x": 0.45,
+      "y": 0.3,
+      "s": 0.35,
+      "anim": "spin"
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 2,
+      "x": 0.85,
+      "y": 0.3,
+      "s": 0.3
+     }
+    ],
+    "ex": "After much thought, she said yes.",
+    "exzh": "考虑了很久，她答应了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2,
+       "x": 0.2,
+       "y": 0.3,
+       "s": 0.35,
+       "when": "much thought"
+      },
+      {
+       "svg": "art/chess.svg",
+       "x": 0.25,
+       "y": 0.75,
+       "s": 0.3,
+       "when": "much thought"
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.65,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "said yes",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/tick.svg",
+       "x": 0.9,
+       "y": 0.3,
+       "s": 0.25,
+       "when": "yes",
+       "pop": true
+      },
+      {
+       "label": "考虑了很久",
+       "x": 0.25,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "考虑了很久"
+      }
+     ]
+    }
+   },
+   {
+    "text": "思想",
+    "pos": "名词",
+    "diff": "很多人一代代想出来、成了体系的",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/bust.svg",
+      "x": 0.4,
+      "y": 0.55,
+      "s": 0.65,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.75,
+      "y": 0.65,
+      "s": 0.4,
+      "anim": "bob"
+     }
+    ],
+    "ex": "Confucius's thought is still important today.",
+    "exzh": "孔子的思想今天依然重要。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bust.svg",
+       "x": 0.3,
+       "y": 0.55,
+       "s": 0.7,
+       "when": "Confucius",
+       "pop": true
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.65,
+       "y": 0.65,
+       "s": 0.4,
+       "when": "thought",
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.3,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "important"
+      },
+      {
+       "label": "孔子的思想",
+       "x": 0.75,
+       "y": 0.15,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "孔子的思想"
+      }
+     ]
+    }
+   },
+   {
+    "text": "关心、心意",
+    "pos": "名词",
+    "diff": "心里替别人想着",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/gift.svg",
+      "x": 0.45,
+      "y": 0.55,
+      "s": 0.55,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/card.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.4,
+      "anim": "bob"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.45,
+      "y": 0.3,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     }
+    ],
+    "ex": "Thank you for your kind thought.",
+    "exzh": "谢谢你的一番心意。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.25,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "id": "t",
+       "seq": "talk",
+       "when": "Thank you"
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.78,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "nodWith": "t",
+       "when": "Thank you"
+      },
+      {
+       "svg": "art/gift.svg",
+       "x": 0.52,
+       "y": 0.65,
+       "s": 0.35,
+       "when": "kind thought",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "label": "一番心意",
+       "x": 0.52,
+       "y": 0.15,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "一番心意"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“想了；想出来的东西”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.3,
+       "y": 0.45,
+       "s": 0.55,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2,
+       "x": 0.72,
+       "y": 0.45,
+       "s": 0.45,
+       "delay": 0.5
+      }
+     ]
+    }
+   },
+   {
+    "via": "说这件事在过去发生、已经结束了",
+    "node": "① 过去式：想了、认为过",
+    "pos": "动词",
+    "pic": 0,
+    "cap": "think → thought",
+    "say": [
+     "thought 是 think 的过去式：说想这件事发生在过去，已经结束了。",
+     "比如 I thought，我当时想、我以为。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "think → thought",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.1,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "过去式"
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2,
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.45,
+       "when": "发生在过去"
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.4,
+       "when": "I thought",
+       "anim": "bob"
+      },
+      {
+       "label": "我以为",
+       "x": 0.72,
+       "y": 0.85,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "我以为"
+      }
+     ]
+    }
+   },
+   {
+    "via": "跟在 have、be 后面",
+    "node": "② 过去分词：已经想过了；被认为",
+    "pos": "动词",
+    "pic": 0,
+    "cap": "过去分词",
+    "say": [
+     "thought 也是过去分词：跟在 have 后面，是已经想过了。",
+     "跟在 be 后面，是被认为，比如 It is thought that，人们认为。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "have thought",
+       "x": 0.3,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "跟在 have 后面"
+      },
+      {
+       "label": "已经想过了",
+       "x": 0.3,
+       "y": 0.4,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "已经想过了"
+      },
+      {
+       "svg": "art/tick.svg",
+       "x": 0.3,
+       "y": 0.7,
+       "s": 0.25,
+       "when": "已经想过了",
+       "anim": "pulse"
+      },
+      {
+       "actor": "west-man-present",
+       "x": 0.75,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "seq": "talk",
+       "when": "be 后面"
+      },
+      {
+       "label": "被认为",
+       "x": 0.75,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "被认为"
+      }
+     ]
+    }
+   },
+   {
+    "via": "想出来的东西",
+    "node": "③ 想法、念头",
+    "pos": "名词",
+    "pic": 1,
+    "from": 0,
+    "rule": "表示动作的词，也拿来叫这个动作做出来的东西",
+    "ruleEx": "invention 发明 → 发明物      thought 想 → 想法",
+    "cap": "想 → 想法",
+    "say": [
+     "表示动作的词，也常拿来叫这个动作做出来的东西。",
+     "invention 是发明，也指发明出来的东西。",
+     "thought 也一样：想出来的东西，就是想法、念头。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/gears.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.4,
+       "when": "表示动作的词",
+       "hideCue": 1,
+       "anim": "spin"
+      },
+      {
+       "label": "做出来的东西",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "做出来的东西",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.55,
+       "when": "invention",
+       "hideCue": 2,
+       "anim": "pulse"
+      },
+      {
+       "label": "invention 发明出来的东西",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "发明出来的东西",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.45,
+       "y": 0.45,
+       "s": 0.55,
+       "when": "想出来的东西",
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.45,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "想法、念头"
+      },
+      {
+       "label": "想法、念头",
+       "x": 0.82,
+       "y": 0.85,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "想法、念头"
+      }
+     ]
+    }
+   },
+   {
+    "via": "“想”这个过程",
+    "node": "④ 思考",
+    "pos": "名词",
+    "pic": 2,
+    "from": 0,
+    "cap": "想出来的 → 想的过程",
+    "say": [
+     "不说想出来的东西，说想的这个过程，就是思考。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/chess.svg",
+       "x": 0.35,
+       "y": 0.65,
+       "s": 0.4,
+       "when": "想的这个过程"
+      },
+      {
+       "svg": "art/gears.svg",
+       "x": 0.35,
+       "y": 0.3,
+       "s": 0.3,
+       "when": "想的这个过程",
+       "anim": "spin"
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2,
+       "x": 0.75,
+       "y": 0.4,
+       "s": 0.4,
+       "when": "这个过程"
+      },
+      {
+       "label": "思考",
+       "x": 0.75,
+       "y": 0.85,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "思考"
+      }
+     ]
+    }
+   },
+   {
+    "via": "很多人一代代想出来、成了体系的",
+    "node": "⑤ 思想",
+    "pos": "名词",
+    "pic": 3,
+    "from": 3,
+    "cap": "一个想法 → 一整套思想",
+    "say": [
+     "很多人一代代想出来、成了一整套的，就是思想。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bust.svg",
+       "x": 0.3,
+       "y": 0.55,
+       "s": 0.6,
+       "when": "一代代"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.65,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "一整套",
+       "anim": "bob"
+      },
+      {
+       "label": "一整套",
+       "x": 0.65,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "一整套"
+      },
+      {
+       "label": "思想",
+       "x": 0.85,
+       "y": 0.85,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "思想"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.3,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "思想"
+      }
+     ]
+    }
+   },
+   {
+    "via": "心里替别人想着",
+    "node": "⑥ 关心、心意",
+    "pos": "名词",
+    "pic": 4,
+    "from": 3,
+    "cap": "想法 → 替别人的想法",
+    "say": [
+     "心里替别人想着，送一份礼物、写一张卡片，就是关心、心意。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.3,
+       "y": 0.35,
+       "s": 0.45,
+       "when": "替别人想着",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/gift.svg",
+       "x": 0.6,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "礼物",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/card.svg",
+       "x": 0.85,
+       "y": 0.55,
+       "s": 0.3,
+       "when": "卡片",
+       "anim": "bob"
+      },
+      {
+       "label": "关心、心意",
+       "x": 0.3,
+       "y": 0.85,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "关心、心意"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "think",
+    "m": "想",
+    "share": ""
+   },
+   {
+    "w": "thoughtful",
+    "m": "体贴的",
+    "share": "thought"
+   },
+   {
+    "w": "thoughtless",
+    "m": "欠考虑的",
+    "share": "thought"
+   }
+  ],
+  "distinguish": {
+   "key": "想法",
+   "items": [
+    {
+     "w": "thought",
+     "word": "thought",
+     "name": "thought",
+     "zh": "一个念头；思想",
+     "m": "一个念头；思想",
+     "mean": "一个念头；思想",
+     "meaning": "一个念头；思想",
+     "say": "a thought 是一个念头，也指成体系的思想。",
+     "text": "a thought 是一个念头，也指成体系的思想。",
+     "line": "a thought 是一个念头，也指成体系的思想。",
+     "note": "a thought 是一个念头，也指成体系的思想。",
+     "desc": "a thought 是一个念头，也指成体系的思想。",
+     "diff": "a thought 是一个念头，也指成体系的思想。",
+     "explain": "a thought 是一个念头，也指成体系的思想。",
+     "detail": "a thought 是一个念头，也指成体系的思想。",
+     "sentence": "a thought 是一个念头，也指成体系的思想。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/bubble.svg",
+        "x": 0.45,
+        "y": 0.5,
+        "s": 0.75,
+        "anim": "bob"
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.45,
+        "y": 0.3,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       }
+      ]
+     }
+    },
+    {
+     "w": "idea",
+     "word": "idea",
+     "name": "idea",
+     "zh": "主意、构想",
+     "m": "主意、构想",
+     "mean": "主意、构想",
+     "meaning": "主意、构想",
+     "say": "idea 偏主意、构想，比如 a good idea，好主意。",
+     "text": "idea 偏主意、构想，比如 a good idea，好主意。",
+     "line": "idea 偏主意、构想，比如 a good idea，好主意。",
+     "note": "idea 偏主意、构想，比如 a good idea，好主意。",
+     "desc": "idea 偏主意、构想，比如 a good idea，好主意。",
+     "diff": "idea 偏主意、构想，比如 a good idea，好主意。",
+     "explain": "idea 偏主意、构想，比如 a good idea，好主意。",
+     "detail": "idea 偏主意、构想，比如 a good idea，好主意。",
+     "sentence": "idea 偏主意、构想，比如 a good idea，好主意。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/bulb.svg",
+        "x": 0.45,
+        "y": 0.5,
+        "s": 0.75,
+        "anim": "pulse"
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.45,
+        "y": 0.25,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       }
+      ]
+     }
+    },
+    {
+     "w": "thinking",
+     "word": "thinking",
+     "name": "thinking",
+     "zh": "思路、思考方式",
+     "m": "思路、思考方式",
+     "mean": "思路、思考方式",
+     "meaning": "思路、思考方式",
+     "say": "thinking 偏思路、思考方式，比如 new thinking，新思路。",
+     "text": "thinking 偏思路、思考方式，比如 new thinking，新思路。",
+     "line": "thinking 偏思路、思考方式，比如 new thinking，新思路。",
+     "note": "thinking 偏思路、思考方式，比如 new thinking，新思路。",
+     "desc": "thinking 偏思路、思考方式，比如 new thinking，新思路。",
+     "diff": "thinking 偏思路、思考方式，比如 new thinking，新思路。",
+     "explain": "thinking 偏思路、思考方式，比如 new thinking，新思路。",
+     "detail": "thinking 偏思路、思考方式，比如 new thinking，新思路。",
+     "sentence": "thinking 偏思路、思考方式，比如 new thinking，新思路。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/gears.svg",
+        "x": 0.45,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "spin"
+       },
+       {
+        "svg": "art/chess.svg",
+        "x": 0.82,
+        "y": 0.62,
+        "s": 0.4
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：thought 是想出来的东西；idea 是心里看见的样子，所以偏主意；thinking 是想这件事本身，所以偏思路。",
+   "tip": "一个念头用 thought；好主意用 idea；新思路、思维方式用 thinking。",
+   "pics": {
+    "thought": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.45,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.45,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    },
+    "idea": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.45,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.45,
+       "y": 0.25,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    },
+    "thinking": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/gears.svg",
+       "x": 0.45,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "spin"
+      },
+      {
+       "svg": "art/chess.svg",
+       "x": 0.82,
+       "y": 0.62,
+       "s": 0.4
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "thoughtai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人突然有了什么？\n听：I had a sudden thought.\nA. 一个问题\nB. 一个礼物\nC. 一个朋友\nD. 一个念头",
@@ -90,5 +1228,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
