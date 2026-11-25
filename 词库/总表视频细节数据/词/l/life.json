@@ -1,7 +1,1305 @@
 {
  "单词": "life",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "laɪf"
+  ],
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.46,
+      "y": 0.56,
+      "s": 0.62,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/glass.svg",
+      "x": 0.8,
+      "y": 0.66,
+      "s": 0.3
+     },
+     {
+      "label": "生命",
+      "x": 0.16,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "text": "生命",
+    "pos": "名词",
+    "diff": "活着的状态",
+    "ex": "Water is important to life.",
+    "exzh": "水对生命很重要。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.36,
+       "y": 0.56,
+       "s": 0.6,
+       "when": "life",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/glass.svg",
+       "x": 0.72,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "Water",
+       "go": [
+        0.56,
+        0.5
+       ],
+       "goWhen": "important",
+       "dur": 1,
+       "rot": -30
+      },
+      {
+       "svg": "art/drop.svg",
+       "x": 0.52,
+       "y": 0.5,
+       "s": 0.08,
+       "when": "important",
+       "go": [
+        0.42,
+        0.62
+       ],
+       "dur": 0.8
+      },
+      {
+       "label": "life",
+       "x": 0.36,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "life"
+      },
+      {
+       "label": "生命",
+       "x": 0.36,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "生命"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/loudspeaker.svg",
+      "x": 0.82,
+      "y": 0.3,
+      "s": 0.3
+     },
+     {
+      "actor": "west-man-hello",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "seq": "pingpong"
+     },
+     {
+      "label": "城市生活",
+      "x": 0.6,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     },
+     {
+      "waves": true,
+      "x": 0.9249999999999999,
+      "y": 0.24,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": -0.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        -0.1,
+        0.7
+       ],
+       "to": [
+        1.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ],
+    "text": "生活",
+    "pos": "名词",
+    "diff": "日子每天怎么过",
+    "ex": "City life is busy.",
+    "exzh": "城市生活很忙碌。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 1.1,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.1,
+         0.66
+        ],
+        "to": [
+         -0.1,
+         0.66
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": -0.1,
+       "y": 0.7,
+       "s": 0.48,
+       "z": 2,
+       "walk": {
+        "from": [
+         -0.1,
+         0.7
+        ],
+        "to": [
+         1.1,
+         0.7
+        ],
+        "offset": 0.6
+       }
+      },
+      {
+       "label": "City life",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "City life"
+      },
+      {
+       "label": "很忙碌",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "很忙碌"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/timeline.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.56,
+      "reveal": "right",
+      "rdur": 2
+     },
+     {
+      "label": "一生",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "text": "一生",
+    "pos": "名词",
+    "diff": "从生到死的那一整段日子",
+    "ex": "She spent her whole life teaching.",
+    "exzh": "她一生都在教书。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.24,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "id": "t",
+       "seq": "talk"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.64,
+       "y": 0.88,
+       "s": 0.32,
+       "crowd": 7,
+       "nodWith": "t",
+       "z": 4
+      },
+      {
+       "svg": "art/timeline.svg",
+       "x": 0.66,
+       "y": 0.36,
+       "s": 0.3,
+       "when": "whole life",
+       "reveal": "right",
+       "rdur": 2
+      },
+      {
+       "label": "her whole life",
+       "x": 0.66,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "whole life"
+      },
+      {
+       "label": "一生",
+       "x": 0.66,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "一生"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/balloons.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.66,
+      "anim": "bob"
+     },
+     {
+      "label": "活力",
+      "x": 0.84,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 1.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.1,
+        0.7
+       ],
+       "to": [
+        -0.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ],
+    "text": "活力、生气",
+    "pos": "名词",
+    "diff": "活着的人有精神、有劲头",
+    "ex": "The kids are full of life.",
+    "exzh": "孩子们充满活力。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "id": "b",
+       "seq": "pingpong",
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "id": "g",
+       "seq": "pingpong",
+       "turn": [
+        1,
+        2
+       ],
+       "nodWith": "b"
+      },
+      {
+       "svg": "art/balloons.svg",
+       "x": 0.5,
+       "y": 0.32,
+       "s": 0.4,
+       "when": "full of life",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/football.svg",
+       "x": 0.5,
+       "y": 0.84,
+       "s": 0.14,
+       "go": [
+        0.6,
+        0.8
+       ],
+       "loop": true,
+       "dur": 0.8,
+       "anim": "spin"
+      },
+      {
+       "label": "full of life",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "full of life"
+      },
+      {
+       "label": "充满活力",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "充满活力"
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": -0.1,
+       "y": 0.7,
+       "s": 0.46,
+       "z": 2,
+       "walk": {
+        "from": [
+         -0.1,
+         0.7
+        ],
+        "to": [
+         1.1,
+         0.7
+        ],
+        "offset": 0.8
+       }
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/rack.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.66,
+      "z": 1
+     },
+     {
+      "svg": "art/biography.svg",
+      "x": 0.42,
+      "y": 0.52,
+      "s": 0.66,
+      "shadow": true,
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "label": "传记",
+      "x": 0.16,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "text": "传记",
+    "pos": "名词",
+    "diff": "把一个人的一生写下来",
+    "ex": "I'm reading a life of Lu Xun.",
+    "exzh": "我在读一本鲁迅传。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sofa.svg",
+       "x": 0.5,
+       "y": 0.8,
+       "s": 0.34,
+       "z": 1
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/biography.svg",
+       "x": 0.62,
+       "y": 0.5,
+       "s": 0.4,
+       "when": "a life of",
+       "pop": true,
+       "z": 4
+      },
+      {
+       "label": "a life of Lu Xun",
+       "x": 0.62,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "a life of"
+      },
+      {
+       "label": "鲁迅传",
+       "x": 0.62,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "鲁迅传"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/phone-battery.svg",
+      "x": 0.36,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/game-screen.svg",
+      "x": 0.78,
+      "y": 0.5,
+      "s": 0.36
+     },
+     {
+      "label": "使用期",
+      "x": 0.36,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     },
+     {
+      "label": "一条命",
+      "x": 0.78,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 1.2
+     },
+     {
+      "waves": true,
+      "x": 0.591,
+      "y": 0.388,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2
+     }
+    ],
+    "text": "寿命、使用期；（游戏里的）一条命",
+    "pos": "名词",
+    "diff": "东西能“活”多久",
+    "ex": "The battery life is ten hours.",
+    "exzh": "电池续航十小时。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/phone-battery.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "when": "battery life",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "x": 0.84,
+       "y": 0.3,
+       "s": 0.26,
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2,
+       "when": "ten hours"
+      },
+      {
+       "label": "battery life",
+       "x": 0.2,
+       "y": 0.2,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "battery life"
+      },
+      {
+       "label": "电池续航",
+       "x": 0.2,
+       "y": 0.2,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "电池续航"
+      },
+      {
+       "waves": true,
+       "x": 0.731,
+       "y": 0.388,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2
+      }
+     ]
+    }
+   }
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/word-life.svg",
+      "x": 0.5,
+      "y": 0.45,
+      "s": 0.46,
+      "anim": "pulse"
+     },
+     {
+      "label": "live",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.09,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-life.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sprout.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "label": "留在世上",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "flow": [
+   {
+    "node": "“留在世上的状态”",
+    "say": [
+     "life 是 live 对应的名词，说的是留在世上的状态。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.62,
+       "when": "留在世上",
+       "anim": "pulse"
+      },
+      {
+       "label": "live → life",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "名词"
+      }
+     ]
+    }
+   },
+   {
+    "via": "活着的状态",
+    "node": "① 生命",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "活着的状态，就是生命。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.62,
+       "when": "活着",
+       "anim": "pulse"
+      },
+      {
+       "label": "生命",
+       "x": 0.84,
+       "y": 0.14,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "生命"
+      }
+     ]
+    }
+   },
+   {
+    "via": "从生到死、留在世上的那一整段日子",
+    "node": "③ 一生、寿命",
+    "pos": "名词",
+    "pic": 2,
+    "say": [
+     "从出生到老去，留在世上的那一整段日子，就是一生、寿命。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/timeline.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.56,
+       "when": "从出生",
+       "reveal": "right",
+       "rdur": 2.5
+      },
+      {
+       "label": "一生",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "一生"
+      }
+     ]
+    }
+   },
+   {
+    "via": "这段日子每天怎么过",
+    "node": "② 生活",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "这段日子每天怎么过，上班、上学、走在街上，就是生活。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/loudspeaker.svg",
+       "x": 0.82,
+       "y": 0.3,
+       "s": 0.3,
+       "when": "每天",
+       "anim": "pulse"
+      },
+      {
+       "label": "生活",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "生活"
+      },
+      {
+       "waves": true,
+       "x": 0.9249999999999999,
+       "y": 0.24,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 1.1,
+       "y": 0.7,
+       "s": 0.46,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.1,
+         0.7
+        ],
+        "to": [
+         -0.1,
+         0.7
+        ],
+        "offset": 0.8
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "把一个人的一生写下来",
+    "node": "⑤ 传记",
+    "pos": "名词",
+    "pic": 4,
+    "from": 2,
+    "say": [
+     "把一个人的一生写成一本书，就是传记。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/biography.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.68,
+       "when": "一本书",
+       "anim": "pulse"
+      },
+      {
+       "label": "传记",
+       "x": 0.84,
+       "y": 0.14,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "传记"
+      }
+     ]
+    }
+   },
+   {
+    "via": "活着的人有精神、有劲头",
+    "node": "④ 活力、生气",
+    "pos": "名词",
+    "pic": 3,
+    "from": 1,
+    "say": [
+     "活着的人有精神、有劲头，蹦蹦跳跳，就是活力、生气。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/balloons.svg",
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.66,
+       "when": "有精神",
+       "anim": "bob"
+      },
+      {
+       "label": "活力",
+       "x": 0.84,
+       "y": 0.14,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "活力"
+      }
+     ]
+    }
+   },
+   {
+    "via": "东西能“活”多久",
+    "node": "⑥ 使用期、寿命；一条命",
+    "pos": "名词",
+    "pic": 5,
+    "rule": "说人的词，慢慢用到东西上",
+    "ruleEx": "leg 腿 → table leg 桌腿      life 寿命 → battery life 电池续航",
+    "say": [
+     "说人的词，慢慢会用到东西上：leg 是腿，桌子也有 leg，桌腿。",
+     "life 也一样：东西能活多久，就是使用期，比如电池续航；游戏里还有一条命、两条命。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "leg → table leg 桌腿",
+       "x": 0.5,
+       "y": 0.45,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "桌腿",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/phone-battery.svg",
+       "x": 0.34,
+       "y": 0.52,
+       "s": 0.62,
+       "cue": 1,
+       "when": "电池续航",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/game-screen.svg",
+       "x": 0.78,
+       "y": 0.5,
+       "s": 0.36,
+       "when": "一条命"
+      },
+      {
+       "label": "使用期",
+       "x": 0.34,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "使用期"
+      },
+      {
+       "waves": true,
+       "x": 0.557,
+       "y": 0.396,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "生活；一生；活力",
+   "items": [
+    {
+     "w": "life",
+     "word": "life",
+     "en": "life",
+     "m": "生命；生活；一生；活力",
+     "zh": "生命；生活；一生；活力",
+     "mean": "生命；生活；一生；活力",
+     "note": "生命；生活；一生；活力",
+     "say": "汉语的生命、生活、一生、人生，英语都用 life。",
+     "text": "汉语的生命、生活、一生、人生，英语都用 life。",
+     "line": "汉语的生命、生活、一生、人生，英语都用 life。",
+     "desc": "汉语的生命、生活、一生、人生，英语都用 life。",
+     "diff": "汉语的生命、生活、一生、人生，英语都用 life。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/sprout.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.7,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "existence",
+     "word": "existence",
+     "en": "existence",
+     "m": "生活、存在",
+     "zh": "生活、存在",
+     "mean": "生活、存在",
+     "note": "生活、存在",
+     "say": "existence 偏正式，说活着、存在下去，常带着艰难：a hard existence。",
+     "text": "existence 偏正式，说活着、存在下去，常带着艰难：a hard existence。",
+     "line": "existence 偏正式，说活着、存在下去，常带着艰难：a hard existence。",
+     "desc": "existence 偏正式，说活着、存在下去，常带着艰难：a hard existence。",
+     "diff": "existence 偏正式，说活着、存在下去，常带着艰难：a hard existence。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/green-planet.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.7,
+        "anim": "spin"
+       }
+      ]
+     }
+    },
+    {
+     "w": "lifetime",
+     "word": "lifetime",
+     "en": "lifetime",
+     "m": "一生",
+     "zh": "一生",
+     "mean": "一生",
+     "note": "一生",
+     "say": "lifetime 说一辈子这段时长：once in a lifetime 一生难得一次。",
+     "text": "lifetime 说一辈子这段时长：once in a lifetime 一生难得一次。",
+     "line": "lifetime 说一辈子这段时长：once in a lifetime 一生难得一次。",
+     "desc": "lifetime 说一辈子这段时长：once in a lifetime 一生难得一次。",
+     "diff": "lifetime 说一辈子这段时长：once in a lifetime 一生难得一次。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/timeline.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.6,
+        "reveal": "right"
+       }
+      ]
+     }
+    },
+    {
+     "w": "energy",
+     "word": "energy",
+     "en": "energy",
+     "m": "活力",
+     "zh": "活力",
+     "mean": "活力",
+     "note": "活力",
+     "say": "energy 是精力、能量，说人有劲。",
+     "text": "energy 是精力、能量，说人有劲。",
+     "line": "energy 是精力、能量，说人有劲。",
+     "desc": "energy 是精力、能量，说人有劲。",
+     "diff": "energy 是精力、能量，说人有劲。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/battery.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.6,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "liveliness",
+     "word": "liveliness",
+     "en": "liveliness",
+     "m": "活力",
+     "zh": "活力",
+     "mean": "活力",
+     "note": "活力",
+     "say": "liveliness 是 lively 的名词，说热闹、活泼的劲头。",
+     "text": "liveliness 是 lively 的名词，说热闹、活泼的劲头。",
+     "line": "liveliness 是 lively 的名词，说热闹、活泼的劲头。",
+     "desc": "liveliness 是 lively 的名词，说热闹、活泼的劲头。",
+     "diff": "liveliness 是 lively 的名词，说热闹、活泼的劲头。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/balloons.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.72,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "animation",
+     "word": "animation",
+     "en": "animation",
+     "m": "活力、生气",
+     "zh": "活力、生气",
+     "mean": "活力、生气",
+     "note": "活力、生气",
+     "say": "animation 本来是赋予生命，说说话做事有生气，也是动画。",
+     "text": "animation 本来是赋予生命，说说话做事有生气，也是动画。",
+     "line": "animation 本来是赋予生命，说说话做事有生气，也是动画。",
+     "desc": "animation 本来是赋予生命，说说话做事有生气，也是动画。",
+     "diff": "animation 本来是赋予生命，说说话做事有生气，也是动画。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "svg": "art/clapper.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.66,
+        "anim": "shake"
+       }
+      ]
+     }
+    },
+    {
+     "w": "sparkle",
+     "word": "sparkle",
+     "en": "sparkle",
+     "m": "活力",
+     "zh": "活力",
+     "mean": "活力",
+     "note": "活力",
+     "say": "sparkle 是闪光，说人眼睛发亮、有神采。",
+     "text": "sparkle 是闪光，说人眼睛发亮、有神采。",
+     "line": "sparkle 是闪光，说人眼睛发亮、有神采。",
+     "desc": "sparkle 是闪光，说人眼睛发亮、有神采。",
+     "diff": "sparkle 是闪光，说人眼睛发亮、有神采。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "svg": "art/star.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.6,
+        "anim": "spin"
+       }
+      ]
+     }
+    },
+    {
+     "w": "bounce",
+     "word": "bounce",
+     "en": "bounce",
+     "m": "活力",
+     "zh": "活力",
+     "mean": "活力",
+     "note": "活力",
+     "say": "bounce 是弹跳，说人走路都一蹦一蹦的劲头。",
+     "text": "bounce 是弹跳，说人走路都一蹦一蹦的劲头。",
+     "line": "bounce 是弹跳，说人走路都一蹦一蹦的劲头。",
+     "desc": "bounce 是弹跳，说人走路都一蹦一蹦的劲头。",
+     "diff": "bounce 是弹跳，说人走路都一蹦一蹦的劲头。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/football.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.5,
+        "go": [
+         0.5,
+         0.75
+        ],
+        "loop": true,
+        "dur": 0.6
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "life 是活着本身；lifetime 只说多长；energy、sparkle、bounce 各借一个画面：电量、闪光、弹跳。",
+   "tip": "希腊语把生物意义的生命 zōē 和一生、生活方式 bios 分开说，英语都用 life。",
+   "pics": {
+    "life": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "existence": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/green-planet.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.7,
+       "anim": "spin"
+      }
+     ]
+    },
+    "lifetime": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/timeline.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.6,
+       "reveal": "right"
+      }
+     ]
+    },
+    "energy": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/battery.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "liveliness": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/balloons.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.72,
+       "anim": "bob"
+      }
+     ]
+    },
+    "animation": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/clapper.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "anim": "shake"
+      }
+     ]
+    },
+    "sparkle": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "spin"
+      }
+     ]
+    },
+    "bounce": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/football.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "go": [
+        0.5,
+        0.75
+       ],
+       "loop": true,
+       "dur": 0.6
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "lifeai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人觉得城市生活怎么样？\n听：Life in the city is busy.\nA. 农村生活很忙\nB. 城市很安静\nC. 他不喜欢城市\nD. 城市生活很忙",
@@ -90,5 +1388,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

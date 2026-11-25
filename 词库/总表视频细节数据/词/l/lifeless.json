@@ -1,7 +1,767 @@
 {
  "单词": "lifeless",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ˈlaɪf",
+   "ləs"
+  ],
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/wilted.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.64,
+      "shadow": true,
+      "anim": "sway"
+     },
+     {
+      "label": "没有生命迹象",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "text": "死的、没有生命迹象的",
+    "pos": "形容词",
+    "diff": "一点生命迹象也没有",
+    "ex": "The flower is lifeless now.",
+    "exzh": "这朵花已经死了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.62,
+       "when": "flower",
+       "hideWhen": "lifeless",
+       "shadow": true
+      },
+      {
+       "svg": "art/wilted.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.62,
+       "when": "lifeless",
+       "shadow": true,
+       "anim": "sway"
+      },
+      {
+       "label": "lifeless",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "lifeless"
+      },
+      {
+       "label": "已经死了",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "已经死了"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/puppet.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.62,
+      "anim": "sway"
+     },
+     {
+      "label": "呆板",
+      "x": 0.84,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "text": "死气沉沉的、呆板的",
+    "pos": "形容词",
+    "diff": "人、表演看着没有一点生气",
+    "ex": "His speech was lifeless.",
+    "exzh": "他的演讲死气沉沉的。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/podium.svg",
+       "x": 0.36,
+       "y": 0.72,
+       "s": 0.36,
+       "z": 4
+      },
+      {
+       "actor": "west-man-speech",
+       "x": 0.36,
+       "y": 0.52,
+       "s": 0.66,
+       "z": 3,
+       "id": "m",
+       "seq": "talk"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.6,
+       "y": 0.9,
+       "s": 0.3,
+       "crowd": 8,
+       "nodWith": "m",
+       "z": 5
+      },
+      {
+       "label": "lifeless",
+       "x": 0.74,
+       "y": 0.14,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "lifeless"
+      },
+      {
+       "label": "死气沉沉的",
+       "x": 0.74,
+       "y": 0.14,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "死气沉沉"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "space",
+    "items": [
+     {
+      "svg": "art/star.svg",
+      "x": 0.12,
+      "y": 0.2,
+      "s": 0.1,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.88,
+      "y": 0.8,
+      "s": 0.08,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/barren.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "spin"
+     },
+     {
+      "label": "没有生物",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "text": "没有生物的",
+    "pos": "形容词",
+    "diff": "一个地方连一个生物都没有",
+    "ex": "The moon is a lifeless place.",
+    "exzh": "月球是一个没有生物的地方。",
+    "exPic": {
+     "bg": "space",
+     "items": [
+      {
+       "svg": "art/star.svg",
+       "x": 0.1,
+       "y": 0.2,
+       "s": 0.08,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/barren.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.72,
+       "when": "moon",
+       "anim": "spin"
+      },
+      {
+       "label": "a lifeless place",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "lifeless place"
+      },
+      {
+       "label": "没有生物的地方",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "没有生物"
+      }
+     ]
+    }
+   }
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.62,
+      "anim": "pulse"
+     },
+     {
+      "label": "生命",
+      "x": 0.84,
+      "y": 0.14,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.5
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/less.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "pulse"
+     },
+     {
+      "label": "没有",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "delay": 0.5
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-life.svg",
+   "p1": "art/icon-less.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/wilted.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.62,
+     "anim": "sway"
+    },
+    {
+     "label": "没有生命的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "flow": [
+   {
+    "node": "“没有生命的”",
+    "say": [
+     "life 是生命，加上 less，表示没有，合起来就是没有生命的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.28,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "life"
+      },
+      {
+       "svg": "art/less.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.3,
+       "when": "less",
+       "anim": "pulse"
+      },
+      {
+       "label": "没有生命的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "没有生命的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "一点生命迹象也没有",
+    "node": "① 死的、无生命的",
+    "pos": "形容词",
+    "pic": 0,
+    "rule": "名词加 -less，就是没有…的",
+    "ruleEx": "home 家 → homeless 无家可归的      life 生命 → lifeless 死的",
+    "say": [
+     "名词加上 less，就是没有什么的：home 是家，homeless 是无家可归的。",
+     "lifeless 也一样：一点生命迹象也没有，就是死的、无生命的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "home → homeless",
+       "x": 0.5,
+       "y": 0.4,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "homeless",
+       "hideCue": 1
+      },
+      {
+       "label": "无家可归的",
+       "x": 0.5,
+       "y": 0.6,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "无家可归",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/wilted.svg",
+       "x": 0.36,
+       "y": 0.56,
+       "s": 0.6,
+       "cue": 1,
+       "when": "生命迹象",
+       "anim": "sway"
+      },
+      {
+       "svg": "art/ecg-flat.svg",
+       "x": 0.78,
+       "y": 0.5,
+       "s": 0.3,
+       "cue": 1,
+       "when": "一点生命迹象也没有"
+      },
+      {
+       "label": "死的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "死的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "人、表演看着没有一点生气",
+    "node": "② 死气沉沉的、呆板的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "人、表演看着像个木偶，没有一点生气，就是死气沉沉的、呆板的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/puppet.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.64,
+       "when": "木偶",
+       "anim": "sway"
+      },
+      {
+       "label": "呆板的",
+       "x": 0.84,
+       "y": 0.14,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "呆板"
+      }
+     ]
+    }
+   },
+   {
+    "via": "一个地方连一个生物都没有",
+    "node": "③ 没有生物的",
+    "pos": "形容词",
+    "pic": 2,
+    "say": [
+     "一个地方，比如月球，连一个生物都没有，就是没有生物的。"
+    ],
+    "fig": {
+     "bg": "space",
+     "items": [
+      {
+       "svg": "art/star.svg",
+       "x": 0.12,
+       "y": 0.2,
+       "s": 0.1,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.88,
+       "y": 0.8,
+       "s": 0.08,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/barren.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.7,
+       "when": "月球",
+       "anim": "spin"
+      },
+      {
+       "label": "没有生物的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "没有生物"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "死的；呆板的",
+   "items": [
+    {
+     "w": "lifeless",
+     "word": "lifeless",
+     "en": "lifeless",
+     "m": "死的；呆板的",
+     "zh": "死的；呆板的",
+     "mean": "死的；呆板的",
+     "note": "死的；呆板的",
+     "say": "lifeless 侧重没有生气、没有生命迹象。",
+     "text": "lifeless 侧重没有生气、没有生命迹象。",
+     "line": "lifeless 侧重没有生气、没有生命迹象。",
+     "desc": "lifeless 侧重没有生气、没有生命迹象。",
+     "diff": "lifeless 侧重没有生气、没有生命迹象。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/wilted.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.7,
+        "anim": "sway"
+       }
+      ]
+     }
+    },
+    {
+     "w": "dead",
+     "word": "dead",
+     "en": "dead",
+     "m": "死的",
+     "zh": "死的",
+     "mean": "死的",
+     "note": "死的",
+     "say": "dead 只说死了，是最普通的说法。",
+     "text": "dead 只说死了，是最普通的说法。",
+     "line": "dead 只说死了，是最普通的说法。",
+     "desc": "dead 只说死了，是最普通的说法。",
+     "diff": "dead 只说死了，是最普通的说法。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/ecg-flat.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.6,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "wooden",
+     "word": "wooden",
+     "en": "wooden",
+     "m": "呆板的",
+     "zh": "呆板的",
+     "mean": "呆板的",
+     "note": "呆板的",
+     "say": "wooden 本来是木头做的，说表演像木头一样僵。",
+     "text": "wooden 本来是木头做的，说表演像木头一样僵。",
+     "line": "wooden 本来是木头做的，说表演像木头一样僵。",
+     "desc": "wooden 本来是木头做的，说表演像木头一样僵。",
+     "diff": "wooden 本来是木头做的，说表演像木头一样僵。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "svg": "art/puppet.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "sway"
+       }
+      ]
+     }
+    },
+    {
+     "w": "cardboard",
+     "word": "cardboard",
+     "en": "cardboard",
+     "m": "呆板的",
+     "zh": "呆板的",
+     "mean": "呆板的",
+     "note": "呆板的",
+     "say": "cardboard 本来是硬纸板，说人物写得像纸片，没有血肉。",
+     "text": "cardboard 本来是硬纸板，说人物写得像纸片，没有血肉。",
+     "line": "cardboard 本来是硬纸板，说人物写得像纸片，没有血肉。",
+     "desc": "cardboard 本来是硬纸板，说人物写得像纸片，没有血肉。",
+     "diff": "cardboard 本来是硬纸板，说人物写得像纸片，没有血肉。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/box.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.6,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "inanimate",
+     "word": "inanimate",
+     "en": "inanimate",
+     "m": "无生命的",
+     "zh": "无生命的",
+     "mean": "无生命的",
+     "note": "无生命的",
+     "say": "inanimate 是本来就不是活物的：石头、桌子。",
+     "text": "inanimate 是本来就不是活物的：石头、桌子。",
+     "line": "inanimate 是本来就不是活物的：石头、桌子。",
+     "desc": "inanimate 是本来就不是活物的：石头、桌子。",
+     "diff": "inanimate 是本来就不是活物的：石头、桌子。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/statue.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.72,
+        "anim": "pulse"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "lifeless 是生命加没有；wooden、cardboard 借木头、纸板说僵；inanimate 是天生就不是活物。",
+   "tip": "lifeless 侧重看着没有生气；dead 只说死了。",
+   "pics": {
+    "lifeless": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/wilted.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "sway"
+      }
+     ]
+    },
+    "dead": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/ecg-flat.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "wooden": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/puppet.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "sway"
+      }
+     ]
+    },
+    "cardboard": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/box.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "inanimate": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/statue.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.72,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  },
+  "demo": {
+   "careful": {
+    "icons": [
+     "art/ic-heart.svg",
+     "art/ic-b_ful.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/glass.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "小心的"
+   },
+   "careless": {
+    "icons": [
+     "art/ic-heart.svg",
+     "art/ic-b_less.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/mess.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "anim": "shake"
+      }
+     ]
+    },
+    "lit": "粗心的"
+   },
+   "rainy": {
+    "icons": [
+     "art/ic-storm.svg",
+     "art/ic-b_y.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/storm.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "anim": "shake"
+      }
+     ]
+    },
+    "lit": "下雨的"
+   }
+  }
+ },
+ "插图": [
+  "lifelessai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：这座老房子看起来怎么样？\n听：The old house looked dark and lifeless.\nA. 明亮温暖\nB. 很热闹\nC. 阴暗没生气\nD. 很新",
@@ -88,5 +848,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

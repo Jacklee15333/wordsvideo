@@ -1,0 +1,1049 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈlaɪv",
+  "li"
+ ],
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/balloons.svg",
+     "x": 0.7,
+     "y": 0.4,
+     "s": 0.5,
+     "anim": "bob"
+    },
+    {
+     "actor": "west-girl-raise",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.9,
+     "z": 3,
+     "seq": "pingpong"
+    },
+    {
+     "label": "活泼的",
+     "x": 0.7,
+     "y": 0.86,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": -0.1,
+     "y": 0.7,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       -0.1,
+       0.7
+      ],
+      "to": [
+       1.1,
+       0.7
+      ],
+      "offset": 0.8
+     }
+    }
+   ],
+   "text": "活泼的、精力充沛的",
+   "pos": "形容词",
+   "diff": "浑身是生命的劲头",
+   "ex": "She is a lively girl.",
+   "exzh": "她是个活泼的女孩。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-music",
+      "x": 0.32,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "g",
+      "seq": "pingpong"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "t",
+      "nodWith": "g"
+     },
+     {
+      "svg": "art/balloons.svg",
+      "x": 0.52,
+      "y": 0.3,
+      "s": 0.36,
+      "when": "lively",
+      "anim": "bob"
+     },
+     {
+      "label": "a lively girl",
+      "x": 0.52,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "lively girl"
+     },
+     {
+      "label": "活泼的女孩",
+      "x": 0.52,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "活泼的"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 1.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.1,
+        0.7
+       ],
+       "to": [
+        -0.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/market.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.56,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/bunting.svg",
+     "x": 0.5,
+     "y": 0.12,
+     "s": 0.2,
+     "anim": "sway"
+    },
+    {
+     "label": "热闹的",
+     "x": 0.84,
+     "y": 0.3,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": -0.1,
+     "y": 0.7,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       -0.1,
+       0.7
+      ],
+      "to": [
+       1.1,
+       0.7
+      ],
+      "offset": 0.8
+     }
+    }
+   ],
+   "text": "热闹的",
+   "pos": "形容词",
+   "diff": "地方、场面人多声响",
+   "ex": "The market is lively on Sundays.",
+   "exzh": "星期天集市很热闹。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/market.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "market"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 1.1,
+      "y": 0.7,
+      "s": 0.48,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.1,
+        0.7
+       ],
+       "to": [
+        -0.1,
+        0.7
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": -0.1,
+      "y": 0.72,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        -0.1,
+        0.72
+       ],
+       "to": [
+        1.1,
+        0.72
+       ],
+       "offset": 0.7
+      }
+     },
+     {
+      "label": "lively",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "lively"
+     },
+     {
+      "label": "很热闹",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "很热闹"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/painting.svg",
+     "x": 0.5,
+     "y": 0.46,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "label": "鲜明的",
+     "x": 0.84,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "text": "生动的、鲜明的",
+   "pos": "形容词",
+   "diff": "文字、颜色像活的一样",
+   "ex": "The painting has lively colours.",
+   "exzh": "这幅画色彩鲜明。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/painting.svg",
+      "x": 0.56,
+      "y": 0.44,
+      "s": 0.6,
+      "when": "painting",
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.16,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "label": "lively colours",
+      "x": 0.56,
+      "y": 0.9,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "lively colours",
+      "z": 6
+     },
+     {
+      "label": "色彩鲜明",
+      "x": 0.56,
+      "y": 0.9,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "色彩鲜明",
+      "z": 6
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.86,
+     "s": 0.36,
+     "crowd": 8,
+     "z": 4
+    },
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.8,
+     "z": 3,
+     "id": "t3",
+     "seq": "talk"
+    },
+    {
+     "label": "热烈的",
+     "x": 0.84,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "text": "（讨论）热烈的",
+   "pos": "形容词",
+   "diff": "你来我往、说个不停",
+   "ex": "We had a lively discussion.",
+   "exzh": "我们进行了热烈的讨论。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 5
+     },
+     {
+      "actor": "west-man-point",
+      "x": 0.24,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "m",
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.76,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "g2",
+      "seq": "talk",
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "m"
+     },
+     {
+      "label": "a lively discussion",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "lively discussion"
+     },
+     {
+      "label": "热烈的讨论",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "热烈的讨论"
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sprout.svg",
+     "x": 0.5,
+     "y": 0.55,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "label": "生命",
+     "x": 0.84,
+     "y": 0.14,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.5
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/ly.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "pulse"
+    },
+    {
+     "label": "样子的",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.5
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-live.svg",
+  "p1": "art/icon-ly.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/sprout.svg",
+    "x": 0.5,
+    "y": 0.56,
+    "s": 0.62,
+    "anim": "bob"
+   },
+   {
+    "label": "有生气的",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "flow": [
+  {
+   "node": "“有生气的、活生生的”",
+   "say": [
+    "live 在这里是生命，加上 ly，表示什么样子的，合起来就是有生气的、活生生的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.28,
+      "y": 0.56,
+      "s": 0.5,
+      "when": "生命",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/ly.svg",
+      "x": 0.72,
+      "y": 0.5,
+      "s": 0.3,
+      "when": "ly"
+     },
+     {
+      "label": "有生气的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "有生气的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "最早就是像个活物",
+   "node": "活着的（古义）",
+   "say": [
+    "古英语里，它最早就是像个活物，意思是活着的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/fishtank.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.64,
+      "when": "活物"
+     },
+     {
+      "svg": "art/fish.svg",
+      "x": 0.4,
+      "y": 0.5,
+      "s": 0.16,
+      "go": [
+       0.62,
+       0.48
+      ],
+      "loop": true,
+      "dur": 2,
+      "z": 3,
+      "when": "活物"
+     },
+     {
+      "label": "活着的",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "活着的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "浑身是生命的劲头",
+   "node": "① 活泼的、精力充沛的",
+   "pos": "形容词",
+   "pic": 0,
+   "rule": "名词加 -ly，就成了形容词，说像…样子的",
+   "ruleEx": "friend 朋友 → friendly 友好的      life 生命 → lively 活泼的",
+   "say": [
+    "名词加上 ly，就成了形容词：friend 是朋友，friendly 是像朋友一样的，友好的。",
+    "lively 也一样：浑身是生命的劲头，就是活泼的、精力充沛的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "friend → friendly",
+      "x": 0.5,
+      "y": 0.4,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "friendly",
+      "hideCue": 1
+     },
+     {
+      "label": "友好的",
+      "x": 0.5,
+      "y": 0.6,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "友好的",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/balloons.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.64,
+      "cue": 1,
+      "when": "劲头",
+      "anim": "bob"
+     },
+     {
+      "label": "活泼的",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "活泼的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "地方、场面人多声响",
+   "node": "② 热闹的",
+   "pos": "形容词",
+   "pic": 1,
+   "say": [
+    "一个地方人多声响，像集市那样，就是热闹的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/market.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.56,
+      "when": "集市",
+      "anim": "pulse"
+     },
+     {
+      "label": "热闹的",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "热闹的"
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 1.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.1,
+        0.7
+       ],
+       "to": [
+        -0.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "讨论你来我往",
+   "node": "④ 热烈的",
+   "pos": "形容词",
+   "pic": 3,
+   "say": [
+    "讨论的时候你来我往、说个不停，就是热烈的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.84,
+      "s": 0.4,
+      "crowd": 8,
+      "when": "你来我往",
+      "z": 4
+     },
+     {
+      "label": "热烈的",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "热烈的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "文字、颜色像活的一样",
+   "node": "③ 生动的、鲜明的",
+   "pos": "形容词",
+   "pic": 2,
+   "from": 2,
+   "say": [
+    "文字、颜色像活的一样，就是生动的、鲜明的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/painting.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.6,
+      "when": "颜色",
+      "anim": "pulse"
+     },
+     {
+      "label": "生动的、鲜明的",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "生动的",
+      "z": 6
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "精力充沛的；热闹的",
+  "items": [
+   {
+    "w": "lively",
+    "word": "lively",
+    "en": "lively",
+    "m": "活泼的；热闹的",
+    "zh": "活泼的；热闹的",
+    "mean": "活泼的；热闹的",
+    "note": "活泼的；热闹的",
+    "say": "lively 是形容词，说有精神、热闹；活泼地要说 in a lively way。",
+    "text": "lively 是形容词，说有精神、热闹；活泼地要说 in a lively way。",
+    "line": "lively 是形容词，说有精神、热闹；活泼地要说 in a lively way。",
+    "desc": "lively 是形容词，说有精神、热闹；活泼地要说 in a lively way。",
+    "diff": "lively 是形容词，说有精神、热闹；活泼地要说 in a lively way。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/balloons.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.72,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "energetic",
+    "word": "energetic",
+    "en": "energetic",
+    "m": "精力充沛的",
+    "zh": "精力充沛的",
+    "mean": "精力充沛的",
+    "note": "精力充沛的",
+    "say": "energetic 说有使不完的劲，像充满电的电池。",
+    "text": "energetic 说有使不完的劲，像充满电的电池。",
+    "line": "energetic 说有使不完的劲，像充满电的电池。",
+    "desc": "energetic 说有使不完的劲，像充满电的电池。",
+    "diff": "energetic 说有使不完的劲，像充满电的电池。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/battery.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "fresh",
+    "word": "fresh",
+    "en": "fresh",
+    "m": "精力充沛的",
+    "zh": "精力充沛的",
+    "mean": "精力充沛的",
+    "note": "精力充沛的",
+    "say": "fresh 说精神饱满、不累，像刚睡醒一样。",
+    "text": "fresh 说精神饱满、不累，像刚睡醒一样。",
+    "line": "fresh 说精神饱满、不累，像刚睡醒一样。",
+    "desc": "fresh 说精神饱满、不累，像刚睡醒一样。",
+    "diff": "fresh 说精神饱满、不累，像刚睡醒一样。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "busy",
+    "word": "busy",
+    "en": "busy",
+    "m": "热闹的",
+    "zh": "热闹的",
+    "mean": "热闹的",
+    "note": "热闹的",
+    "say": "busy 说地方忙碌、人来人往：a busy street。",
+    "text": "busy 说地方忙碌、人来人往：a busy street。",
+    "line": "busy 说地方忙碌、人来人往：a busy street。",
+    "desc": "busy 说地方忙碌、人来人往：a busy street。",
+    "diff": "busy 说地方忙碌、人来人往：a busy street。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/market.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "lifelike",
+    "word": "lifelike",
+    "en": "lifelike",
+    "m": "逼真的",
+    "zh": "逼真的",
+    "mean": "逼真的",
+    "note": "逼真的",
+    "say": "lifelike 是逼真的、栩栩如生的：a lifelike statue。",
+    "text": "lifelike 是逼真的、栩栩如生的：a lifelike statue。",
+    "line": "lifelike 是逼真的、栩栩如生的：a lifelike statue。",
+    "desc": "lifelike 是逼真的、栩栩如生的：a lifelike statue。",
+    "diff": "lifelike 是逼真的、栩栩如生的：a lifelike statue。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/statue.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.72,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "lively 是生命加 ly，有生气；energetic 讲劲头；busy 讲忙；lifelike 是像真的一样。",
+  "tip": "lively 以 ly 结尾，却是形容词，不是副词。",
+  "pics": {
+   "lively": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/balloons.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.72,
+      "anim": "bob"
+     }
+    ]
+   },
+   "energetic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/battery.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.6,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "fresh": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "busy": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/market.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.7,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lifelike": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/statue.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.72,
+      "anim": "pulse"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：派对怎么样？",
+    "listen": "The party was very lively.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "很热闹",
+     "很安静",
+     "很无聊",
+     "很短"
+    ],
+    "ans": "A",
+    "why": "lively 热闹的。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She is a ______ girl; she loves singing and dancing.",
+    "opts": [
+     "lively",
+     "alive",
+     "living",
+     "live"
+    ],
+    "ans": "A",
+    "why": "活泼的女孩用 lively。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 lively、alive 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Is the bird still ______?",
+    "opts": [],
+    "ans": "alive",
+    "why": "“活着”作表语用 alive；lively 是活泼的。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The market is ______ than before. (lively)",
+    "opts": [],
+    "ans": "livelier",
+    "why": "有 than 用比较级，y 变 i 加 er：livelier。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "She talked lively about her trip.",
+    "opts": [],
+    "ans": "lively → in a lively way",
+    "why": "lively 是形容词，“活泼地”要说 in a lively way。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "她是我们班最活泼的女孩。",
+    "stem": "She is the ______ girl in our class.",
+    "opts": [],
+    "ans": "liveliest",
+    "why": "最高级 y 变 i 加 est：liveliest。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "We need some music to ______ up the party.",
+    "opts": [
+     "lively",
+     "life",
+     "living",
+     "liven"
+    ],
+    "ans": "D",
+    "why": "liven up 使活跃起来。",
+    "kd": "词性转换"
+   }
+  ]
+ }
+}

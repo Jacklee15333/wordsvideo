@@ -1,0 +1,968 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ə",
+  "ˈlaɪv"
+ ],
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/fishtank.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.66,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/fish.svg",
+     "x": 0.4,
+     "y": 0.5,
+     "s": 0.16,
+     "go": [
+      0.62,
+      0.48
+     ],
+     "loop": true,
+     "dur": 2,
+     "z": 3
+    },
+    {
+     "label": "活着的",
+     "x": 0.84,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "text": "活着的",
+   "pos": "形容词",
+   "diff": "人还待在生命里",
+   "ex": "The fish is still alive.",
+   "exzh": "这条鱼还活着。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/fishbowl.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.66,
+      "when": "fish",
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.16,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "g",
+      "seq": "talk"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.86,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "id": "b",
+      "nodWith": "g"
+     },
+     {
+      "label": "still alive",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "still alive"
+     },
+     {
+      "label": "还活着",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "还活着"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/bunting.svg",
+     "x": 0.5,
+     "y": 0.2,
+     "s": 0.26,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/loudspeaker.svg",
+     "x": 0.86,
+     "y": 0.36,
+     "s": 0.26
+    },
+    {
+     "label": "有活力的",
+     "x": 0.5,
+     "y": 0.36,
+     "size": 0.085,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    },
+    {
+     "waves": true,
+     "x": 0.95,
+     "y": 0.308,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2
+    },
+    {
+     "actor": "walk-west-boy-pack",
+     "x": -0.1,
+     "y": 0.7,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       -0.1,
+       0.7
+      ],
+      "to": [
+       1.1,
+       0.7
+      ],
+      "offset": 0.8
+     }
+    }
+   ],
+   "text": "有活力的",
+   "pos": "形容词",
+   "diff": "浑身是劲、处处在动",
+   "ex": "The city comes alive at night.",
+   "exzh": "这座城市一到晚上就热闹起来。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/bunting.svg",
+      "x": 0.5,
+      "y": 0.2,
+      "s": 0.26,
+      "when": "comes alive",
+      "anim": "sway"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 1.1,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.1,
+        0.66
+       ],
+       "to": [
+        -0.1,
+        0.66
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": -0.1,
+      "y": 0.7,
+      "s": 0.48,
+      "z": 2,
+      "walk": {
+       "from": [
+        -0.1,
+        0.7
+       ],
+       "to": [
+        1.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     },
+     {
+      "label": "comes alive",
+      "x": 0.5,
+      "y": 0.4,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "comes alive"
+     },
+     {
+      "label": "热闹起来",
+      "x": 0.5,
+      "y": 0.4,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "热闹起来"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bulb.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "label": "意识到",
+     "x": 0.84,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "text": "意识到",
+   "pos": "形容词",
+   "diff": "（alive to）感觉是醒着的",
+   "ex": "She is alive to the danger.",
+   "exzh": "她意识到了危险。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/plug-spark.svg",
+      "x": 0.62,
+      "y": 0.56,
+      "s": 0.32,
+      "when": "danger",
+      "anim": "shake"
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.22,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.4,
+      "y": 0.2,
+      "s": 0.2,
+      "when": "alive to",
+      "pop": true
+     },
+     {
+      "label": "alive to the danger",
+      "x": 0.66,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "alive to"
+     },
+     {
+      "label": "意识到了危险",
+      "x": 0.66,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "意识到"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/bees.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.62,
+     "anim": "bob"
+    },
+    {
+     "label": "到处都是",
+     "x": 0.84,
+     "y": 0.12,
+     "size": 0.085,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "x": 1.1,
+     "y": 0.7,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       1.1,
+       0.7
+      ],
+      "to": [
+       -0.1,
+       0.7
+      ],
+      "offset": 0.8
+     }
+    }
+   ],
+   "text": "充满",
+   "pos": "形容词",
+   "diff": "（alive with）到处都是",
+   "ex": "The garden is alive with bees.",
+   "exzh": "花园里到处都是蜜蜂。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/bees.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.66,
+      "when": "bees",
+      "anim": "bob"
+     },
+     {
+      "sound": "buzz",
+      "when": "bees"
+     },
+     {
+      "label": "alive with bees",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "alive with"
+     },
+     {
+      "label": "到处都是蜜蜂",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "到处都是"
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/fishbowl.svg",
+     "x": 0.5,
+     "y": 0.55,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "label": "在…里",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.5
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sprout.svg",
+     "x": 0.5,
+     "y": 0.55,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "label": "生命",
+     "x": 0.84,
+     "y": 0.14,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.5
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-a.svg",
+  "p1": "art/icon-live.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/ecg.svg",
+    "x": 0.5,
+    "y": 0.5,
+    "s": 0.5,
+    "anim": "pulse"
+   },
+   {
+    "label": "在生命里",
+    "x": 0.5,
+    "y": 0.12,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "flow": [
+  {
+   "node": "“在生命里”",
+   "say": [
+    "古英语说 on life，在生命里；约 1200 年缩成了 alive。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/ecg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.56,
+      "when": "在生命里",
+      "anim": "pulse"
+     },
+     {
+      "label": "on life → alive",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "alive"
+     }
+    ]
+   }
+  },
+  {
+   "via": "人还待在生命里，没有走出去",
+   "node": "① 活着的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "人、动物还待在生命里，没有走出去，就是活着的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/fishbowl.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.64,
+      "when": "动物",
+      "anim": "pulse"
+     },
+     {
+      "label": "活着的",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "活着的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "事情还在进行、火还没熄灭",
+   "node": "仍在起作用的",
+   "say": [
+    "火还没熄灭，事情还在进行，也说 alive，仍在起作用的。"
+   ],
+   "fig": {
+    "bg": "night",
+    "items": [
+     {
+      "svg": "art/campfire.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.6,
+      "when": "火",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.15,
+      "y": 0.2,
+      "s": 0.08,
+      "anim": "pulse"
+     },
+     {
+      "label": "还没熄灭",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "还没熄灭"
+     }
+    ]
+   }
+  },
+  {
+   "via": "浑身是劲、处处在动",
+   "node": "② 有活力的",
+   "pos": "形容词",
+   "pic": 1,
+   "say": [
+    "浑身是劲、处处在动，就是有活力的；一座城市到了晚上热闹起来，也叫 comes alive。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/bunting.svg",
+      "x": 0.5,
+      "y": 0.2,
+      "s": 0.26,
+      "when": "处处在动",
+      "anim": "sway"
+     },
+     {
+      "label": "有活力的",
+      "x": 0.5,
+      "y": 0.4,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "有活力的"
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": -0.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        -0.1,
+        0.7
+       ],
+       "to": [
+        1.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "感觉是活的、醒着的",
+   "node": "③ 意识到",
+   "pos": "形容词",
+   "pic": 2,
+   "say": [
+    "感觉是活的、醒着的，alive to 什么，就是意识到、察觉到。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "when": "醒着",
+      "anim": "pulse"
+     },
+     {
+      "label": "意识到",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "意识到"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一个地方被某样东西弄得活了起来",
+   "node": "④ 充满",
+   "pos": "形容词",
+   "pic": 3,
+   "say": [
+    "一个地方被蜜蜂弄得活了起来，到处都是，alive with 就是充满。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/bees.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.62,
+      "when": "蜜蜂",
+      "anim": "bob"
+     },
+     {
+      "label": "充满",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "充满"
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 1.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.1,
+        0.7
+       ],
+       "to": [
+        -0.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "活着的；有活力的",
+  "items": [
+   {
+    "w": "alive",
+    "word": "alive",
+    "en": "alive",
+    "m": "活着的；有活力的",
+    "zh": "活着的；有活力的",
+    "mean": "活着的；有活力的",
+    "note": "活着的；有活力的",
+    "say": "alive 一般作表语或放在名词后：The fish is alive.；the oldest man alive。",
+    "text": "alive 一般作表语或放在名词后：The fish is alive.；the oldest man alive。",
+    "line": "alive 一般作表语或放在名词后：The fish is alive.；the oldest man alive。",
+    "desc": "alive 一般作表语或放在名词后：The fish is alive.；the oldest man alive。",
+    "diff": "alive 一般作表语或放在名词后：The fish is alive.；the oldest man alive。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/fishbowl.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "living",
+    "word": "living",
+    "en": "living",
+    "m": "活着的",
+    "zh": "活着的",
+    "mean": "活着的",
+    "note": "活着的",
+    "say": "living 放在名词前：a living fish，不说 an alive fish。",
+    "text": "living 放在名词前：a living fish，不说 an alive fish。",
+    "line": "living 放在名词前：a living fish，不说 an alive fish。",
+    "desc": "living 放在名词前：a living fish，不说 an alive fish。",
+    "diff": "living 放在名词前：a living fish，不说 an alive fish。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "dynamic",
+    "word": "dynamic",
+    "en": "dynamic",
+    "m": "有活力的",
+    "zh": "有活力的",
+    "mean": "有活力的",
+    "note": "有活力的",
+    "say": "dynamic 说人、城市充满干劲、不断变化。",
+    "text": "dynamic 说人、城市充满干劲、不断变化。",
+    "line": "dynamic 说人、城市充满干劲、不断变化。",
+    "desc": "dynamic 说人、城市充满干劲、不断变化。",
+    "diff": "dynamic 说人、城市充满干劲、不断变化。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bunting.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.4,
+       "anim": "sway"
+      },
+      {
+       "svg": "art/ecg.svg",
+       "x": 0.5,
+       "y": 0.75,
+       "s": 0.4
+      }
+     ]
+    }
+   },
+   {
+    "w": "vital",
+    "word": "vital",
+    "en": "vital",
+    "m": "有活力的",
+    "zh": "有活力的",
+    "mean": "有活力的",
+    "note": "有活力的",
+    "say": "vital 本来是生命的，说精力旺盛，也说至关重要的。",
+    "text": "vital 本来是生命的，说精力旺盛，也说至关重要的。",
+    "line": "vital 本来是生命的，说精力旺盛，也说至关重要的。",
+    "desc": "vital 本来是生命的，说精力旺盛，也说至关重要的。",
+    "diff": "vital 本来是生命的，说精力旺盛，也说至关重要的。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/campfire.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.66,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "alive 是 a 加 live，在生命里；living 是 live 加 ing，正活着的；dynamic 从力来；vital 从生命来。",
+  "tip": "放在名词前用 living：a living fish；alive 放在 be 后面：The fish is alive。",
+  "pics": {
+   "alive": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/fishbowl.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.7,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "living": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "dynamic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bunting.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.4,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/ecg.svg",
+      "x": 0.5,
+      "y": 0.75,
+      "s": 0.4
+     }
+    ]
+   },
+   "vital": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/campfire.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.66,
+      "anim": "pulse"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：这条鱼怎么样？",
+    "listen": "The fish is still alive.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "已经死了",
+     "被吃了",
+     "还活着",
+     "游走了"
+    ],
+    "ans": "C",
+    "why": "alive 活着的。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "We must keep the fish ______.",
+    "opts": [
+     "alive",
+     "live",
+     "lively",
+     "life"
+    ],
+    "ans": "A",
+    "why": "keep + 宾语 + alive，alive 作表语或放名词后。",
+    "kd": "用法"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 alive、living 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "My grandpa is the oldest ______ person in our family.",
+    "opts": [],
+    "ans": "living",
+    "why": "放在名词前“活着的”用 living；alive 不放名词前。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "They ______ in a small village. (alive)",
+    "opts": [],
+    "ans": "live",
+    "why": "主语复数，动词用 live。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "It's an alive fish.",
+    "opts": [],
+    "ans": "an alive → a living",
+    "why": "名词前“活着的”用 living，不用 alive。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "那场比赛在电视上现场直播。",
+    "stem": "The match was shown ______ on TV.",
+    "opts": [],
+    "ans": "live",
+    "why": "“现场直播”用 live（读 /laɪv/）。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She is ______ and always smiling.",
+    "opts": [
+     "lively",
+     "alive",
+     "living",
+     "live"
+    ],
+    "ans": "A",
+    "why": "活泼的用 lively。",
+    "kd": "易混"
+   }
+  ]
+ }
+}
