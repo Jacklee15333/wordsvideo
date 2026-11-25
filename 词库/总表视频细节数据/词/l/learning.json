@@ -614,6 +614,77 @@
      ]
     }
    }
+  },
+  "demo": {
+   "reading": {
+    "icons": [
+     "art/ic-read-book.svg",
+     "art/ic-ing.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.3,
+       "z": 1
+      },
+      {
+       "svg": "art/read-book.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.62,
+       "shadow": true,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "读这件事"
+   },
+   "action": {
+    "icons": [
+     "art/ic-clapper.svg",
+     "art/ic-ion.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/clapper.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "shake"
+      }
+     ]
+    },
+    "lit": "行动这件事"
+   },
+   "movement": {
+    "icons": [
+     "art/ic-footprints.svg",
+     "art/ic-ment.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/footprints.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.62,
+       "reveal": "right",
+       "rdur": 1.5
+      }
+     ]
+    },
+    "lit": "移动这件事"
+   }
   }
  },
  "插图": [
@@ -709,5 +780,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

@@ -68,7 +68,8 @@
       "s": 0.9,
       "z": 3,
       "id": "g",
-      "seq": "pingpong"
+      "seq": "pingpong",
+      "nodWith": "m"
      },
      {
       "actor": "west-man-present",
@@ -130,6 +131,14 @@
      "color": "#2B8A3E",
      "border": "#2B8A3E",
      "delay": 0.8
+    },
+    {
+     "waves": true,
+     "x": 0.745,
+     "y": 0.36,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2
     }
    ],
    "text": "得知",
@@ -430,6 +439,14 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "得知"
+     },
+     {
+      "waves": true,
+      "x": 0.911,
+      "y": 0.368,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2
      }
     ]
    }

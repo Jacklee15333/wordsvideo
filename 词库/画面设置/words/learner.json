@@ -610,6 +610,68 @@
    }
   }
  },
+ "demo": {
+  "driver": {
+   "icons": [
+    "art/ic-steering.svg",
+    "art/ic-er.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/learner-car.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.6,
+      "anim": "ride"
+     }
+    ]
+   },
+   "lit": "开车的人"
+  },
+  "actor": {
+   "icons": [
+    "art/ic-clapper.svg",
+    "art/ic-or.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/clapper.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "演戏的人"
+  },
+  "artist": {
+   "icons": [
+    "art/ic-painting.svg",
+    "art/ic-ist.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/painting.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "搞艺术的人"
+  }
+ },
  "lianxi": {
   "qs": [
    {

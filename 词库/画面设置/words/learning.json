@@ -613,6 +613,77 @@
    }
   }
  },
+ "demo": {
+  "reading": {
+   "icons": [
+    "art/ic-read-book.svg",
+    "art/ic-ing.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 1
+     },
+     {
+      "svg": "art/read-book.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.62,
+      "shadow": true,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "读这件事"
+  },
+  "action": {
+   "icons": [
+    "art/ic-clapper.svg",
+    "art/ic-ion.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/clapper.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "行动这件事"
+  },
+  "movement": {
+   "icons": [
+    "art/ic-footprints.svg",
+    "art/ic-ment.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/footprints.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.62,
+      "reveal": "right",
+      "rdur": 1.5
+     }
+    ]
+   },
+   "lit": "移动这件事"
+  }
+ },
  "lianxi": {
   "qs": [
    {
