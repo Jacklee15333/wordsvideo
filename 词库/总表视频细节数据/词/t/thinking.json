@@ -1,7 +1,923 @@
 {
  "单词": "thinking",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "思考；想法、见解；有思想的"
+  },
+  "sylIpa": [
+   "θɪŋk",
+   "ɪŋ"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bubble.svg",
+      "x": 0.45,
+      "y": 0.42,
+      "s": 0.55,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.46,
+      "y": 0.4,
+      "s": 0.28,
+      "z": 4,
+      "anim": "pulse"
+     },
+     {
+      "label": "think 想",
+      "x": 0.45,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/gears.svg",
+      "x": 0.45,
+      "y": 0.45,
+      "s": 0.6,
+      "anim": "spin"
+     },
+     {
+      "label": "-ing …这件事；会…的",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-bubble.svg",
+   "p1": "art/icon-gears.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bubble.svg",
+     "x": 0.35,
+     "y": 0.45,
+     "s": 0.55,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/gears.svg",
+     "x": 0.36,
+     "y": 0.43,
+     "s": 0.25,
+     "z": 4,
+     "anim": "spin"
+    },
+    {
+     "label": "想这件事",
+     "x": 0.78,
+     "y": 0.5,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "思考、思维",
+    "pos": "名词",
+    "diff": "“想”这件事",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.4,
+      "y": 0.55,
+      "s": 0.85,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/gears.svg",
+      "x": 0.78,
+      "y": 0.25,
+      "s": 0.3,
+      "anim": "spin"
+     }
+    ],
+    "ex": "Reading helps your thinking.",
+    "exzh": "阅读有助于你的思考。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.25,
+       "y": 0.6,
+       "s": 0.45,
+       "when": "Reading",
+       "anim": "bob"
+      },
+      {
+       "ray": [
+        [
+         0.4,
+         0.55
+        ],
+        [
+         0.55,
+         0.55
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.7,
+       "when": "helps"
+      },
+      {
+       "svg": "art/gears.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "thinking",
+       "anim": "spin"
+      },
+      {
+       "label": "思考",
+       "x": 0.72,
+       "y": 0.88,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "思考"
+      }
+     ]
+    }
+   },
+   {
+    "text": "想法、见解",
+    "pos": "名词",
+    "diff": "对一件事怎么想",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "id": "m",
+      "seq": "talk"
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.75,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "nodWith": "m"
+     },
+     {
+      "svg": "art/bubble.svg",
+      "x": 0.53,
+      "y": 0.2,
+      "s": 0.25,
+      "anim": "bob"
+     }
+    ],
+    "ex": "What's your thinking on this plan?",
+    "exzh": "你对这个计划有什么想法？",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.25,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "id": "g",
+       "seq": "talk",
+       "when": "What's"
+      },
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.78,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "nodWith": "g",
+       "when": "What's"
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.52,
+       "y": 0.55,
+       "s": 0.3,
+       "when": "this plan",
+       "anim": "pulse"
+      },
+      {
+       "label": "什么想法",
+       "x": 0.52,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "什么想法"
+      }
+     ]
+    }
+   },
+   {
+    "text": "有思想的、理性的",
+    "pos": "形容词",
+    "diff": "会想、肯想的",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.35,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.75,
+      "y": 0.65,
+      "s": 0.4,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.75,
+      "y": 0.25,
+      "s": 0.25,
+      "anim": "pulse"
+     }
+    ],
+    "ex": "Every thinking person knows this.",
+    "exzh": "每个有思想的人都明白这一点。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "thinking person",
+       "seq": "blink"
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.68,
+       "y": 0.35,
+       "s": 0.45,
+       "when": "knows this",
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.68,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "knows"
+      },
+      {
+       "label": "有思想的人",
+       "x": 0.7,
+       "y": 0.85,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "有思想的人"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“想这件事 / 会想的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.3,
+       "y": 0.45,
+       "s": 0.55,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/gears.svg",
+       "x": 0.72,
+       "y": 0.45,
+       "s": 0.45,
+       "anim": "spin",
+       "delay": 0.5
+      }
+     ]
+    }
+   },
+   {
+    "via": "动词加 -ing 变名词：想这件事",
+    "node": "① 思考、思维",
+    "pos": "名词",
+    "pic": 0,
+    "rule": "动词 + -ing → 名词：说这件事",
+    "ruleEx": "swim → swimming 游泳      think → thinking 思考",
+    "cap": "想 → 思考",
+    "say": [
+     "动词后面加 -ing，可以变成名词，说这件事。",
+     "swim 是游泳，swimming 就是游泳这件事。",
+     "think 是想，thinking 就是想这件事：思考、思维。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "动词 + -ing",
+       "x": 0.3,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "加 -ing",
+       "hideCue": 1
+      },
+      {
+       "label": "名词",
+       "x": 0.7,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "变成名词",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/gears.svg",
+       "x": 0.5,
+       "y": 0.65,
+       "s": 0.35,
+       "when": "这件事",
+       "hideCue": 1,
+       "anim": "spin"
+      },
+      {
+       "svg": "art/pool.svg",
+       "x": 0.35,
+       "y": 0.55,
+       "s": 0.4,
+       "when": "swim",
+       "hideCue": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.35,
+       "y": 0.3,
+       "every": 0.35,
+       "life": 1.2,
+       "to": [
+        0,
+        0.3
+       ],
+       "s": 0.07,
+       "wobble": 0.06,
+       "when": "swimming",
+       "hideCue": 2
+      },
+      {
+       "label": "swimming 游泳",
+       "x": 0.78,
+       "y": 0.55,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "swimming",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.35,
+       "y": 0.45,
+       "s": 0.5,
+       "when": "think 是想",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/gears.svg",
+       "x": 0.36,
+       "y": 0.43,
+       "s": 0.22,
+       "z": 4,
+       "when": "想这件事",
+       "anim": "spin"
+      },
+      {
+       "label": "thinking 思考、思维",
+       "x": 0.75,
+       "y": 0.55,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "思考、思维"
+      }
+     ]
+    }
+   },
+   {
+    "via": "对一件事怎么想",
+    "node": "② 想法、见解",
+    "pos": "名词",
+    "pic": 1,
+    "cap": "想这件事 → 怎么想",
+    "say": [
+     "对一件事怎么想、想到了哪儿，就是你的想法、见解。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.25,
+       "y": 0.5,
+       "s": 0.4,
+       "when": "一件事",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.62,
+       "y": 0.35,
+       "s": 0.45,
+       "when": "怎么想",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.63,
+       "y": 0.33,
+       "s": 0.2,
+       "z": 4,
+       "when": "想到了哪儿",
+       "anim": "pulse"
+      },
+      {
+       "label": "想法、见解",
+       "x": 0.65,
+       "y": 0.85,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "想法、见解"
+      }
+     ]
+    }
+   },
+   {
+    "via": "放在名词前：会想、肯想的",
+    "node": "③ 有思想的、理性的",
+    "pos": "形容词",
+    "pic": 2,
+    "from": 0,
+    "cap": "当形容词",
+    "say": [
+     "-ing 放在名词前，还能当形容词。",
+     "会想、肯想的人，就是有思想的、理性的人。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "label": "-ing + 名词",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "放在名词前"
+      },
+      {
+       "label": "形容词",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "当形容词"
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.35,
+       "y": 0.65,
+       "s": 0.7,
+       "z": 3,
+       "when": "会想、肯想的人",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.7,
+       "y": 0.55,
+       "s": 0.4,
+       "when": "有思想的",
+       "anim": "pulse"
+      },
+      {
+       "label": "有思想的、理性的",
+       "x": 0.75,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "有思想的、理性的"
+      }
+     ]
+    }
+   }
+  ],
+  "demo": {
+   "reading": {
+    "icons": [
+     "art/icon-album.svg",
+     "art/icon-gears.svg"
+    ],
+    "lit": "读这件事",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.45,
+       "y": 0.55,
+       "s": 0.65,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/lamp.svg",
+       "x": 0.82,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   "action": {
+    "icons": [
+     "art/icon-footsteps.svg",
+     "art/icon-nountag.svg"
+    ],
+    "lit": "做的事",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/footsteps.svg",
+       "x": 0.45,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/gears.svg",
+       "x": 0.8,
+       "y": 0.5,
+       "s": 0.4,
+       "anim": "spin"
+      }
+     ]
+    }
+   },
+   "movement": {
+    "icons": [
+     "art/icon-bus.svg",
+     "art/icon-nountag.svg"
+    ],
+    "lit": "动的样子",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/bus.svg",
+       "x": 0.4,
+       "y": 0.62,
+       "s": 0.45,
+       "anim": "ride",
+       "go": [
+        0.7,
+        0.62
+       ],
+       "loop": true,
+       "dur": 3
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.95,
+       "y": 0.66,
+       "s": 0.6,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.95,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0
+       }
+      }
+     ]
+    }
+   }
+  },
+  "extend": [
+   {
+    "w": "swimming",
+    "m": "游泳",
+    "share": "ing"
+   },
+   {
+    "w": "reading",
+    "m": "阅读",
+    "share": "ing"
+   },
+   {
+    "w": "thinker",
+    "m": "思想家",
+    "share": "think"
+   }
+  ],
+  "distinguish": {
+   "key": "想法",
+   "items": [
+    {
+     "w": "thinking",
+     "word": "thinking",
+     "name": "thinking",
+     "zh": "思路、思考方式",
+     "m": "思路、思考方式",
+     "mean": "思路、思考方式",
+     "meaning": "思路、思考方式",
+     "say": "thinking 作名词多指思考方式、思路，比如 new thinking，新思路。",
+     "text": "thinking 作名词多指思考方式、思路，比如 new thinking，新思路。",
+     "line": "thinking 作名词多指思考方式、思路，比如 new thinking，新思路。",
+     "note": "thinking 作名词多指思考方式、思路，比如 new thinking，新思路。",
+     "desc": "thinking 作名词多指思考方式、思路，比如 new thinking，新思路。",
+     "diff": "thinking 作名词多指思考方式、思路，比如 new thinking，新思路。",
+     "explain": "thinking 作名词多指思考方式、思路，比如 new thinking，新思路。",
+     "detail": "thinking 作名词多指思考方式、思路，比如 new thinking，新思路。",
+     "sentence": "thinking 作名词多指思考方式、思路，比如 new thinking，新思路。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/gears.svg",
+        "x": 0.45,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "spin"
+       },
+       {
+        "svg": "art/chess.svg",
+        "x": 0.82,
+        "y": 0.62,
+        "s": 0.4
+       }
+      ]
+     }
+    },
+    {
+     "w": "thought",
+     "word": "thought",
+     "name": "thought",
+     "zh": "一个个想法；思想",
+     "m": "一个个想法；思想",
+     "mean": "一个个想法；思想",
+     "meaning": "一个个想法；思想",
+     "say": "thought 多指一个个想法，或者成体系的思想。",
+     "text": "thought 多指一个个想法，或者成体系的思想。",
+     "line": "thought 多指一个个想法，或者成体系的思想。",
+     "note": "thought 多指一个个想法，或者成体系的思想。",
+     "desc": "thought 多指一个个想法，或者成体系的思想。",
+     "diff": "thought 多指一个个想法，或者成体系的思想。",
+     "explain": "thought 多指一个个想法，或者成体系的思想。",
+     "detail": "thought 多指一个个想法，或者成体系的思想。",
+     "sentence": "thought 多指一个个想法，或者成体系的思想。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/bubble.svg",
+        "x": 0.45,
+        "y": 0.5,
+        "s": 0.75,
+        "anim": "bob"
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.45,
+        "y": 0.3,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       }
+      ]
+     }
+    },
+    {
+     "w": "idea",
+     "word": "idea",
+     "name": "idea",
+     "zh": "主意",
+     "m": "主意",
+     "mean": "主意",
+     "meaning": "主意",
+     "say": "idea 是一个具体的主意、点子，比如 a good idea。",
+     "text": "idea 是一个具体的主意、点子，比如 a good idea。",
+     "line": "idea 是一个具体的主意、点子，比如 a good idea。",
+     "note": "idea 是一个具体的主意、点子，比如 a good idea。",
+     "desc": "idea 是一个具体的主意、点子，比如 a good idea。",
+     "diff": "idea 是一个具体的主意、点子，比如 a good idea。",
+     "explain": "idea 是一个具体的主意、点子，比如 a good idea。",
+     "detail": "idea 是一个具体的主意、点子，比如 a good idea。",
+     "sentence": "idea 是一个具体的主意、点子，比如 a good idea。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/bulb.svg",
+        "x": 0.45,
+        "y": 0.5,
+        "s": 0.75,
+        "anim": "pulse"
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.45,
+        "y": 0.25,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：thinking 是想这件事本身，所以说思路；thought 是想出来的东西；idea 是一个具体的点子。",
+   "tip": "说新思路、思维方式用 thinking；一个念头用 thought；一个好主意用 idea。",
+   "pics": {
+    "thinking": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/gears.svg",
+       "x": 0.45,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "spin"
+      },
+      {
+       "svg": "art/chess.svg",
+       "x": 0.82,
+       "y": 0.62,
+       "s": 0.4
+      }
+     ]
+    },
+    "thought": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.45,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.45,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    },
+    "idea": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.45,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.45,
+       "y": 0.25,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "thinkingai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：解决这个问题需要什么？\n听：We need new thinking to solve this problem.\nA. 更多的钱\nB. 更多的人\nC. 新的思路\nD. 更多的时间",
@@ -90,5 +1006,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

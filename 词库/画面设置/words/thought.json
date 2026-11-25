@@ -103,7 +103,7 @@
    "img": "art/room-bg.svg",
    "items": [
     {
-     "actor": "west-clerk-think",
+     "actor": "cn-teacher-listen",
      "x": 0.35,
      "y": 0.6,
      "s": 0.85,
@@ -269,16 +269,25 @@
    "img": "art/room-bg.svg",
    "items": [
     {
+     "actor": "west-clerk-think",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.85,
+     "z": 3,
+     "seq": "blink"
+    },
+    {
      "svg": "art/chess.svg",
-     "x": 0.45,
-     "y": 0.62,
-     "s": 0.45
+     "x": 0.65,
+     "y": 0.72,
+     "s": 0.35,
+     "z": 5
     },
     {
      "svg": "art/gears.svg",
-     "x": 0.45,
+     "x": 0.65,
      "y": 0.3,
-     "s": 0.35,
+     "s": 0.3,
      "anim": "spin"
     },
     {
@@ -288,9 +297,9 @@
       "art/clock_f1.svg"
      ],
      "fps": 2,
-     "x": 0.85,
+     "x": 0.9,
      "y": 0.3,
-     "s": 0.3
+     "s": 0.25
     }
    ],
    "ex": "After much thought, she said yes.",

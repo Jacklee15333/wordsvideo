@@ -105,7 +105,7 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "actor": "west-clerk-think",
+      "actor": "cn-teacher-listen",
       "x": 0.35,
       "y": 0.6,
       "s": 0.85,
@@ -271,16 +271,25 @@
     "img": "art/room-bg.svg",
     "items": [
      {
+      "actor": "west-clerk-think",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
       "svg": "art/chess.svg",
-      "x": 0.45,
-      "y": 0.62,
-      "s": 0.45
+      "x": 0.65,
+      "y": 0.72,
+      "s": 0.35,
+      "z": 5
      },
      {
       "svg": "art/gears.svg",
-      "x": 0.45,
+      "x": 0.65,
       "y": 0.3,
-      "s": 0.35,
+      "s": 0.3,
       "anim": "spin"
      },
      {
@@ -290,9 +299,9 @@
        "art/clock_f1.svg"
       ],
       "fps": 2,
-      "x": 0.85,
+      "x": 0.9,
       "y": 0.3,
-      "s": 0.3
+      "s": 0.25
      }
     ],
     "ex": "After much thought, she said yes.",
@@ -1230,5 +1239,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

@@ -1,7 +1,864 @@
 {
  "单词": "thoughtful",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "体贴的；若有所思的；考虑周到的"
+  },
+  "sylIpa": [
+   "θɔːt",
+   "fəl"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bubble.svg",
+      "x": 0.45,
+      "y": 0.42,
+      "s": 0.55,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.46,
+      "y": 0.4,
+      "s": 0.28,
+      "z": 4,
+      "anim": "pulse"
+     },
+     {
+      "label": "thought 想法",
+      "x": 0.45,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/jar-full.svg",
+      "x": 0.45,
+      "y": 0.55,
+      "s": 0.65,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.45,
+      "y": 0.2,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     },
+     {
+      "label": "-ful 充满…的",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-bubble.svg",
+   "p1": "art/icon-jar-full.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bubble.svg",
+     "x": 0.35,
+     "y": 0.45,
+     "s": 0.6,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/jar-full.svg",
+     "x": 0.75,
+     "y": 0.55,
+     "s": 0.45,
+     "anim": "pulse"
+    },
+    {
+     "label": "满是想法的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "体贴的、为别人着想的",
+    "pos": "形容词",
+    "diff": "主动替别人想到了",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.25,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "id": "g",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/tea.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.25,
+      "anim": "bob",
+      "z": 5
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.78,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "nodWith": "g"
+     }
+    ],
+    "ex": "It was thoughtful of you to bring tea.",
+    "exzh": "你给我带茶来，真是体贴。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/tea.svg",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.3,
+       "when": "bring tea",
+       "go": [
+        0.5,
+        0.6
+       ],
+       "goWhen": "bring tea",
+       "dur": 1.2,
+       "z": 5
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.75,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "thoughtful",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.35,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "thoughtful"
+      },
+      {
+       "label": "真是体贴",
+       "x": 0.3,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "真是体贴"
+      }
+     ]
+    }
+   },
+   {
+    "text": "若有所思的",
+    "pos": "形容词",
+    "diff": "想得出了神",
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.35,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/bubble.svg",
+      "x": 0.72,
+      "y": 0.28,
+      "s": 0.35,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/gears.svg",
+      "x": 0.73,
+      "y": 0.27,
+      "s": 0.14,
+      "z": 4,
+      "anim": "spin"
+     }
+    ],
+    "ex": "She looked thoughtful for a moment.",
+    "exzh": "她看上去若有所思。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-listen",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "She looked",
+       "seq": "blink"
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.68,
+       "y": 0.3,
+       "s": 0.4,
+       "when": "thoughtful",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2,
+       "x": 0.88,
+       "y": 0.7,
+       "s": 0.3,
+       "when": "a moment"
+      },
+      {
+       "label": "若有所思",
+       "x": 0.62,
+       "y": 0.85,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "若有所思"
+      }
+     ]
+    }
+   },
+   {
+    "text": "考虑周到的、有深度的",
+    "pos": "形容词",
+    "diff": "想得多、想得细",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.85,
+      "s": 0.3,
+      "z": 5
+     },
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.4,
+      "y": 0.68,
+      "s": 0.25,
+      "z": 6
+     },
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.72,
+      "y": 0.4,
+      "s": 0.4,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/tick.svg",
+      "x": 0.3,
+      "y": 0.35,
+      "s": 0.25,
+      "anim": "pulse"
+     }
+    ],
+    "ex": "He wrote a thoughtful report.",
+    "exzh": "他写了一份考虑周到的报告。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-present",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "He",
+       "seq": "talk"
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.68,
+       "y": 0.55,
+       "s": 0.35,
+       "when": "report",
+       "pop": true
+      },
+      {
+       "svg": "art/tick.svg",
+       "x": 0.85,
+       "y": 0.3,
+       "s": 0.2,
+       "when": "thoughtful",
+       "anim": "pulse"
+      },
+      {
+       "label": "考虑周到的报告",
+       "x": 0.68,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "考虑周到的报告"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“满是想法的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.35,
+       "y": 0.45,
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/jar-full.svg",
+       "x": 0.75,
+       "y": 0.55,
+       "s": 0.45,
+       "anim": "pulse",
+       "delay": 0.5
+      }
+     ]
+    }
+   },
+   {
+    "via": "名词加 -ful 变形容词",
+    "node": "thought + ful",
+    "pos": "形容词",
+    "rule": "名词 + -ful → 形容词：充满…的",
+    "ruleEx": "care → careful      thought → thoughtful",
+    "cap": "想法 → 满是想法的",
+    "say": [
+     "名词后面加 -ful，就变成形容词，意思是充满…的。",
+     "care 是小心，careful 就是满是小心的：仔细的。",
+     "thought 是想法，thoughtful 就是满是想法的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "名词 + -ful",
+       "x": 0.3,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "-ful",
+       "hideCue": 1
+      },
+      {
+       "label": "形容词",
+       "x": 0.72,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "变成形容词",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/jar-full.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.45,
+       "when": "充满",
+       "hideCue": 1,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/glass.svg",
+       "x": 0.3,
+       "y": 0.55,
+       "s": 0.45,
+       "when": "小心",
+       "hideCue": 2,
+       "anim": "bob"
+      },
+      {
+       "label": "careful 仔细的",
+       "x": 0.72,
+       "y": 0.55,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "careful",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.3,
+       "y": 0.45,
+       "s": 0.5,
+       "when": "thought 是想法",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/jar-full.svg",
+       "x": 0.3,
+       "y": 0.8,
+       "s": 0.2,
+       "when": "满是想法的"
+      },
+      {
+       "label": "thoughtful",
+       "x": 0.72,
+       "y": 0.55,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "thoughtful"
+      }
+     ]
+    }
+   },
+   {
+    "via": "脑子里装满了念头，想得出了神",
+    "node": "① 若有所思的",
+    "pos": "形容词",
+    "pic": 1,
+    "cap": "约 1200 年：沉思的",
+    "say": [
+     "脑子里装满了念头，想得出了神，就是若有所思的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "想得出了神",
+       "seq": "blink"
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.7,
+       "y": 0.3,
+       "s": 0.4,
+       "when": "装满了念头",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/gears.svg",
+       "x": 0.71,
+       "y": 0.29,
+       "s": 0.16,
+       "z": 4,
+       "when": "念头",
+       "anim": "spin"
+      },
+      {
+       "label": "若有所思的",
+       "x": 0.7,
+       "y": 0.8,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "若有所思的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "想得多、想得细",
+    "node": "② 考虑周到的、有深度的",
+    "pos": "形容词",
+    "pic": 2,
+    "from": 1,
+    "cap": "想得多 → 周到",
+    "say": [
+     "想得多、想得细，事情就安排得周到，所以也是考虑周到的、有深度的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "想得多"
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.62,
+       "y": 0.45,
+       "s": 0.4,
+       "when": "安排得周到",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/tick.svg",
+       "x": 0.85,
+       "y": 0.3,
+       "s": 0.22,
+       "when": "周到",
+       "anim": "pulse"
+      },
+      {
+       "label": "考虑周到的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "考虑周到的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "不光替自己想，还替别人想到了",
+    "node": "③ 体贴的、为别人着想的",
+    "pos": "形容词",
+    "pic": 0,
+    "from": 1,
+    "cap": "1851 年：体贴别人的",
+    "say": [
+     "不光替自己想，还替别人想到了，就是体贴的、为别人着想的。",
+     "这个意思到十九世纪中才有。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "替别人想到了",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/gift.svg",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "替别人想到了",
+       "anim": "pulse"
+      },
+      {
+       "label": "体贴的",
+       "x": 0.7,
+       "y": 0.15,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "体贴的"
+      },
+      {
+       "label": "十九世纪",
+       "x": 0.7,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "十九世纪"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "careful",
+    "m": "仔细的",
+    "share": "ful"
+   },
+   {
+    "w": "thoughtless",
+    "m": "欠考虑的",
+    "share": "thought"
+   },
+   {
+    "w": "thoughtfully",
+    "m": "体贴地",
+    "share": "thoughtful"
+   }
+  ],
+  "distinguish": {
+   "key": "体贴的",
+   "items": [
+    {
+     "w": "thoughtful",
+     "word": "thoughtful",
+     "name": "thoughtful",
+     "zh": "体贴的",
+     "m": "体贴的",
+     "mean": "体贴的",
+     "meaning": "体贴的",
+     "say": "thoughtful 偏主动想到别人需要什么，比如替你带一杯茶。",
+     "text": "thoughtful 偏主动想到别人需要什么，比如替你带一杯茶。",
+     "line": "thoughtful 偏主动想到别人需要什么，比如替你带一杯茶。",
+     "note": "thoughtful 偏主动想到别人需要什么，比如替你带一杯茶。",
+     "desc": "thoughtful 偏主动想到别人需要什么，比如替你带一杯茶。",
+     "diff": "thoughtful 偏主动想到别人需要什么，比如替你带一杯茶。",
+     "explain": "thoughtful 偏主动想到别人需要什么，比如替你带一杯茶。",
+     "detail": "thoughtful 偏主动想到别人需要什么，比如替你带一杯茶。",
+     "sentence": "thoughtful 偏主动想到别人需要什么，比如替你带一杯茶。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/gift.svg",
+        "x": 0.4,
+        "y": 0.55,
+        "s": 0.65,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/tea.svg",
+        "x": 0.78,
+        "y": 0.62,
+        "s": 0.4,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "considerate",
+     "word": "considerate",
+     "name": "considerate",
+     "zh": "体谅人的",
+     "m": "体谅人的",
+     "mean": "体谅人的",
+     "meaning": "体谅人的",
+     "say": "considerate 偏顾及别人的感受、不给人添麻烦，比如夜里把灯关小、说话放轻。",
+     "text": "considerate 偏顾及别人的感受、不给人添麻烦，比如夜里把灯关小、说话放轻。",
+     "line": "considerate 偏顾及别人的感受、不给人添麻烦，比如夜里把灯关小、说话放轻。",
+     "note": "considerate 偏顾及别人的感受、不给人添麻烦，比如夜里把灯关小、说话放轻。",
+     "desc": "considerate 偏顾及别人的感受、不给人添麻烦，比如夜里把灯关小、说话放轻。",
+     "diff": "considerate 偏顾及别人的感受、不给人添麻烦，比如夜里把灯关小、说话放轻。",
+     "explain": "considerate 偏顾及别人的感受、不给人添麻烦，比如夜里把灯关小、说话放轻。",
+     "detail": "considerate 偏顾及别人的感受、不给人添麻烦，比如夜里把灯关小、说话放轻。",
+     "sentence": "considerate 偏顾及别人的感受、不给人添麻烦，比如夜里把灯关小、说话放轻。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/bedroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/lamp.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/bed.svg",
+        "x": 0.78,
+        "y": 0.65,
+        "s": 0.5
+       }
+      ]
+     }
+    },
+    {
+     "w": "caring",
+     "word": "caring",
+     "name": "caring",
+     "zh": "关心人的",
+     "m": "关心人的",
+     "mean": "关心人的",
+     "meaning": "关心人的",
+     "say": "caring 偏有爱心、愿意照顾人，比如照顾生病的朋友。",
+     "text": "caring 偏有爱心、愿意照顾人，比如照顾生病的朋友。",
+     "line": "caring 偏有爱心、愿意照顾人，比如照顾生病的朋友。",
+     "note": "caring 偏有爱心、愿意照顾人，比如照顾生病的朋友。",
+     "desc": "caring 偏有爱心、愿意照顾人，比如照顾生病的朋友。",
+     "diff": "caring 偏有爱心、愿意照顾人，比如照顾生病的朋友。",
+     "explain": "caring 偏有爱心、愿意照顾人，比如照顾生病的朋友。",
+     "detail": "caring 偏有爱心、愿意照顾人，比如照顾生病的朋友。",
+     "sentence": "caring 偏有爱心、愿意照顾人，比如照顾生病的朋友。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/pills.svg",
+        "x": 0.35,
+        "y": 0.55,
+        "s": 0.6,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/glass.svg",
+        "x": 0.7,
+        "y": 0.6,
+        "s": 0.5
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.5,
+        "y": 0.3,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：thoughtful 是想到了别人要什么；considerate 是顾及别人、不打扰；caring 是心里关心、愿意照顾。",
+   "tip": "主动送去关怀用 thoughtful；不给别人添麻烦用 considerate；有爱心、会照顾人用 caring。",
+   "pics": {
+    "thoughtful": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/gift.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.65,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/tea.svg",
+       "x": 0.78,
+       "y": 0.62,
+       "s": 0.4,
+       "anim": "bob"
+      }
+     ]
+    },
+    "considerate": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/lamp.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/bed.svg",
+       "x": 0.78,
+       "y": 0.65,
+       "s": 0.5
+      }
+     ]
+    },
+    "caring": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/pills.svg",
+       "x": 0.35,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/glass.svg",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.5
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "thoughtfulai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人怎么评价他的朋友？\n听：My friend is very thoughtful.\nA. 很粗心\nB. 很体贴\nC. 很吵\nD. 很懒",
@@ -89,5 +946,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

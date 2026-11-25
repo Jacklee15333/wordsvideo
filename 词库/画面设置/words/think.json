@@ -49,6 +49,110 @@
  "icons": {
   "p0": "art/icon-bulb.svg"
  },
+ "originPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/books.svg",
+    "x": 0.15,
+    "y": 0.62,
+    "s": 0.4,
+    "anim": "bob"
+   },
+   {
+    "svg": "art/bubble.svg",
+    "x": 0.35,
+    "y": 0.3,
+    "s": 0.38,
+    "anim": "bob"
+   },
+   {
+    "label": "去想",
+    "x": 0.35,
+    "y": 0.58,
+    "size": 0.075,
+    "color": "#2F6FB3",
+    "border": "#2F6FB3",
+    "delay": 0.4
+   },
+   {
+    "svg": "art/bulb.svg",
+    "x": 0.62,
+    "y": 0.3,
+    "s": 0.36,
+    "anim": "pulse",
+    "delay": 0.6
+   },
+   {
+    "label": "显得",
+    "x": 0.62,
+    "y": 0.58,
+    "size": 0.075,
+    "color": "#2F6FB3",
+    "border": "#2F6FB3",
+    "delay": 0.8
+   },
+   {
+    "ray": [
+     [
+      0.42,
+      0.66
+     ],
+     [
+      0.72,
+      0.78
+     ]
+    ],
+    "color": "#C9A85A",
+    "lw": 0.014,
+    "arrow": true,
+    "dur": 0.7,
+    "delay": 1.2
+   },
+   {
+    "ray": [
+     [
+      0.62,
+      0.66
+     ],
+     [
+      0.75,
+      0.78
+     ]
+    ],
+    "color": "#C9A85A",
+    "lw": 0.014,
+    "arrow": true,
+    "dur": 0.7,
+    "delay": 1.2
+   },
+   {
+    "label": "think",
+    "x": 0.85,
+    "y": 0.85,
+    "size": 0.11,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 1.6
+   },
+   {
+    "emit": true,
+    "svg": "art/star.svg",
+    "x": 0.85,
+    "y": 0.7,
+    "every": 0.9,
+    "life": 1.8,
+    "to": [
+     0,
+     -0.25
+    ],
+    "s": 0.08,
+    "wobble": 0.03,
+    "delay": 1.6
+   }
+  ]
+ },
  "comboPic": {
   "bg": "blank",
   "img": "art/room-bg.svg",
