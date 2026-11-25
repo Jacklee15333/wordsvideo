@@ -59,7 +59,9 @@
       "x": 0.3,
       "y": 0.62,
       "s": 0.86,
-      "z": 3
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
      },
      {
       "label": "-ness：…的状态（变名词）",
@@ -71,14 +73,36 @@
       "border": "#2F6FB3"
      },
      {
-      "label": "happy → happiness 快乐",
-      "x": 0.7,
-      "y": 0.5,
-      "size": 0.075,
-      "delay": 1.1,
-      "color": "#7A3E00",
-      "bg": "#FFF6D8",
-      "border": "#E0A800"
+      "actor": "walk-west-man-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.1
+      },
+      "s": 0.36,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-girl",
+      "walk": {
+       "from": [
+        -0.05,
+        0.88
+       ],
+       "to": [
+        1.05,
+        0.88
+       ],
+       "offset": 0.6
+      },
+      "s": 0.36,
+      "z": 1
      }
     ]
    }
@@ -416,7 +440,128 @@
     "m": "仁慈、友好",
     "share": "ness"
    }
-  ]
+  ],
+  "demo": {
+   "happiness": {
+    "icons": [
+     "art/star.svg",
+     "art/icon-ness.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.4,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.4,
+       "y": 0.3,
+       "every": 0.5,
+       "life": 1.4,
+       "to": [
+        0.2,
+        -0.2
+       ],
+       "s": 0.08,
+       "spin": true
+      },
+      {
+       "label": "快乐",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    },
+    "lit": "快乐的状态"
+   },
+   "popularity": {
+    "icons": [
+     "art/audience-wide.svg",
+     "art/star.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 0.4,
+       "z": 3,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.3,
+       "z": 5,
+       "crowd": 9
+      },
+      {
+       "label": "受欢迎",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    },
+    "lit": "受欢迎的性质"
+   },
+   "importance": {
+    "icons": [
+     "art/star.svg",
+     "art/books.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.46,
+       "z": 3,
+       "anim": "pulse"
+      },
+      {
+       "shape": "circle",
+       "x": 0.5,
+       "y": 0.58,
+       "r": 0.3,
+       "stroke": "#FF7A1A",
+       "lw": 6,
+       "glow": 2,
+       "z": 4
+      },
+      {
+       "label": "重要",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    },
+    "lit": "重要的性质"
+   }
+  }
  },
  "插图": [
   "tidinessai"
@@ -511,5 +656,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

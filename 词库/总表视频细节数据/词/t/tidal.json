@@ -64,14 +64,36 @@
       "border": "#2F6FB3"
      },
      {
-      "label": "nature → natural 自然的",
-      "x": 0.66,
-      "y": 0.52,
-      "size": 0.07,
-      "delay": 1.1,
-      "color": "#7A3E00",
-      "bg": "#FFF6D8",
-      "border": "#E0A800"
+      "actor": "walk-west-man-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.1
+      },
+      "s": 0.36,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-girl",
+      "walk": {
+       "from": [
+        -0.05,
+        0.88
+       ],
+       "to": [
+        1.05,
+        0.88
+       ],
+       "offset": 0.6
+      },
+      "s": 0.36,
+      "z": 1
      }
     ]
    }
@@ -440,7 +462,148 @@
     "m": "国家的",
     "share": "al"
    }
-  ]
+  ],
+  "demo": {
+   "careful": {
+    "icons": [
+     "art/plant.svg",
+     "art/star.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.5,
+       "z": 3,
+       "anim": "bob"
+      },
+      {
+       "label": "小心的",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    },
+    "lit": "满是小心的"
+   },
+   "careless": {
+    "icons": [
+     "art/plant.svg",
+     "art/drop.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.46,
+       "y": 0.6,
+       "s": 0.46,
+       "rot": 50,
+       "z": 3,
+       "anim": "shake"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.6,
+       "y": 0.62,
+       "every": 0.25,
+       "life": 0.9,
+       "to": [
+        0.1,
+        0.3
+       ],
+       "s": 0.06
+      },
+      {
+       "label": "粗心的",
+       "x": 0.5,
+       "y": "#C0392B",
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    },
+    "lit": "没有小心的"
+   },
+   "national": {
+    "icons": [
+     "art/station-bg.svg",
+     "art/icon-al.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "label": "国家的",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "walk": {
+        "from": [
+         -0.05,
+         0.82
+        ],
+        "to": [
+         1.05,
+         0.82
+        ],
+        "offset": 0.0
+       },
+       "s": 0.34,
+       "z": 1
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "walk": {
+        "from": [
+         1.05,
+         0.84
+        ],
+        "to": [
+         -0.05,
+         0.84
+        ],
+        "offset": 0.5
+       },
+       "s": 0.34,
+       "z": 1
+      }
+     ]
+    },
+    "lit": "国家的"
+   }
+  }
  },
  "插图": [
   "tidalai"
@@ -534,5 +697,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

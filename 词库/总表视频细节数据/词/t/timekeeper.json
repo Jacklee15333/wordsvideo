@@ -46,7 +46,7 @@
     "img": "art/park-bg.svg",
     "items": [
      {
-      "actor": "west-man-point",
+      "actor": "cn-boy-raise",
       "x": 0.3,
       "y": 0.62,
       "s": 0.86,
@@ -76,14 +76,36 @@
       "border": "#2B8A3E"
      },
      {
-      "label": "goalkeeper 守门员",
-      "x": 0.6,
-      "y": 0.28,
-      "size": 0.06,
-      "delay": 1.1,
-      "color": "#7A3E00",
-      "bg": "#FFF6D8",
-      "border": "#E0A800"
+      "actor": "walk-west-man-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.1
+      },
+      "s": 0.36,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-girl",
+      "walk": {
+       "from": [
+        -0.05,
+        0.88
+       ],
+       "to": [
+        1.05,
+        0.88
+       ],
+       "offset": 0.6
+      },
+      "s": 0.36,
+      "z": 1
      }
     ]
    }
@@ -97,7 +119,7 @@
    "img": "art/park-bg.svg",
    "items": [
     {
-     "actor": "west-man-point",
+     "actor": "west-man-smile",
      "x": 0.26,
      "y": 0.62,
      "s": 0.86,
@@ -119,6 +141,38 @@
      "delay": 0.6,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "walk": {
+      "from": [
+       1.05,
+       0.86
+      ],
+      "to": [
+       -0.05,
+       0.86
+      ],
+      "offset": 0.1
+     },
+     "s": 0.36,
+     "z": 1
+    },
+    {
+     "actor": "walk-cn-girl",
+     "walk": {
+      "from": [
+       -0.05,
+       0.88
+      ],
+      "to": [
+       1.05,
+       0.88
+      ],
+      "offset": 0.6
+     },
+     "s": 0.36,
+     "z": 1
     }
    ]
   },
@@ -533,11 +587,12 @@
      "img": "art/park-bg.svg",
      "items": [
       {
-       "actor": "west-man-point",
+       "actor": "cn-teacher-point",
        "x": 0.26,
        "y": 0.62,
        "s": 0.86,
-       "z": 3
+       "z": 3,
+       "seq": "talk"
       },
       {
        "svg": "art/stopwatch.svg",
@@ -555,6 +610,38 @@
        "delay": 0.6,
        "color": "#2B8A3E",
        "border": "#2B8A3E"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "walk": {
+        "from": [
+         1.05,
+         0.86
+        ],
+        "to": [
+         -0.05,
+         0.86
+        ],
+        "offset": 0.1
+       },
+       "s": 0.36,
+       "z": 1
+      },
+      {
+       "actor": "walk-cn-girl",
+       "walk": {
+        "from": [
+         -0.05,
+         0.88
+        ],
+        "to": [
+         1.05,
+         0.88
+        ],
+        "offset": 0.6
+       },
+       "s": 0.36,
+       "z": 1
       }
      ]
     }
@@ -587,14 +674,15 @@
        "border": "#7048E8"
       },
       {
-       "actor": "west-man-point",
+       "actor": "cn-boy-raise",
        "x": 0.3,
        "y": 0.62,
        "s": 0.86,
        "z": 3,
        "cue": 1,
        "when": "守门",
-       "hideCue": 2
+       "hideCue": 2,
+       "id": "gk"
       },
       {
        "svg": "art/football.svg",
@@ -625,13 +713,16 @@
        "border": "#E0A800"
       },
       {
-       "actor": "west-man-point",
+       "actor": "west-man-smile",
        "x": 0.22,
        "y": 0.62,
        "s": 0.86,
        "z": 4,
        "cue": 2,
-       "when": "keep time"
+       "when": "keep time",
+       "id": "k",
+       "seq": "talk",
+       "nodWith": "gk"
       },
       {
        "svg": "art/stopwatch.svg",
@@ -695,7 +786,7 @@
        "z": 4
       },
       {
-       "actor": "west-clerk-think",
+       "actor": "west-clerk-happy",
        "x": 0.22,
        "y": 0.6,
        "s": 0.86,
@@ -1020,5 +1111,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
