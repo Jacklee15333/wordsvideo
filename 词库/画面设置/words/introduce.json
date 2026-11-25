@@ -795,5 +795,106 @@
   }
  ],
  "lexicon": {},
- "rules": []
+ "rules": [],
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人想做什么？",
+    "listen": "Let me introduce myself. I'm Li Ming.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "自我介绍",
+     "介绍朋友",
+     "介绍一本书",
+     "介绍学校"
+    ],
+    "ans": "A",
+    "why": "introduce myself 自我介绍。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Can you ______ me to your parents?",
+    "opts": [
+     "introduce",
+     "introduction",
+     "introducing",
+     "introduced"
+    ],
+    "ans": "A",
+    "why": "can 后面接动词原形 introduce。",
+    "kd": "用法"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 introduce、introduction 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Please read the ______ of the book first.",
+    "opts": [],
+    "ans": "introduction",
+    "why": "the … of 中间用名词 introduction。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He ______ his new friend to us yesterday. (introduce)",
+    "opts": [],
+    "ans": "introduced",
+    "why": "yesterday 用过去式，去 e 加 d。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "She is introduceing the new teacher now.",
+    "opts": [],
+    "ans": "introduceing → introducing",
+    "why": "去 e 加 ing。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The teacher introduced a new student ______ the class.",
+    "opts": [
+     "to",
+     "for",
+     "with",
+     "at"
+    ],
+    "ans": "A",
+    "why": "introduce A to B 把 A 介绍给 B。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "This is an ______ course for beginners.",
+    "opts": [
+     "introductory",
+     "introduce",
+     "introduction",
+     "introduced"
+    ],
+    "ans": "A",
+    "why": "“入门的”课程用形容词 introductory。",
+    "kd": "词性转换"
+   }
+  ]
+ }
 }
