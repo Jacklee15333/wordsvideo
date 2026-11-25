@@ -448,9 +448,6 @@
    "items": [
     {
      "w": "organisation",
-     "word": "organisation",
-     "name": "organisation",
-     "en": "organisation",
      "pic": {
       "bg": "blank",
       "items": [
@@ -471,6 +468,9 @@
        }
       ]
      },
+     "word": "organisation",
+     "name": "organisation",
+     "en": "organisation",
      "text": "organisation 泛指组织、机构（英式拼写）。",
      "say": "organisation 泛指组织、机构（英式拼写）。",
      "diff": "organisation 泛指组织、机构（英式拼写）。",
@@ -489,13 +489,20 @@
      "txt": "organisation 泛指组织、机构（英式拼写）。",
      "talk": "organisation 泛指组织、机构（英式拼写）。",
      "words": "organisation 泛指组织、机构（英式拼写）。",
-     "detail": "organisation 泛指组织、机构（英式拼写）。"
+     "detail": "organisation 泛指组织、机构（英式拼写）。",
+     "sentence": "organisation 泛指组织、机构（英式拼写）。",
+     "speech": "organisation 泛指组织、机构（英式拼写）。",
+     "cn": "organisation 泛指组织、机构（英式拼写）。",
+     "why": "organisation 泛指组织、机构（英式拼写）。",
+     "lines": [
+      "organisation 泛指组织、机构（英式拼写）。"
+     ],
+     "says": [
+      "organisation 泛指组织、机构（英式拼写）。"
+     ]
     },
     {
      "w": "institution",
-     "word": "institution",
-     "name": "institution",
-     "en": "institution",
      "pic": {
       "bg": "blank",
       "items": [
@@ -516,6 +523,9 @@
        }
       ]
      },
+     "word": "institution",
+     "name": "institution",
+     "en": "institution",
      "text": "institution 偏历史悠久的机构、制度，比如大学、银行。",
      "say": "institution 偏历史悠久的机构、制度，比如大学、银行。",
      "diff": "institution 偏历史悠久的机构、制度，比如大学、银行。",
@@ -534,13 +544,20 @@
      "txt": "institution 偏历史悠久的机构、制度，比如大学、银行。",
      "talk": "institution 偏历史悠久的机构、制度，比如大学、银行。",
      "words": "institution 偏历史悠久的机构、制度，比如大学、银行。",
-     "detail": "institution 偏历史悠久的机构、制度，比如大学、银行。"
+     "detail": "institution 偏历史悠久的机构、制度，比如大学、银行。",
+     "sentence": "institution 偏历史悠久的机构、制度，比如大学、银行。",
+     "speech": "institution 偏历史悠久的机构、制度，比如大学、银行。",
+     "cn": "institution 偏历史悠久的机构、制度，比如大学、银行。",
+     "why": "institution 偏历史悠久的机构、制度，比如大学、银行。",
+     "lines": [
+      "institution 偏历史悠久的机构、制度，比如大学、银行。"
+     ],
+     "says": [
+      "institution 偏历史悠久的机构、制度，比如大学、银行。"
+     ]
     },
     {
      "w": "organ",
-     "word": "organ",
-     "name": "organ",
-     "en": "organ",
      "pic": {
       "bg": "blank",
       "items": [
@@ -561,6 +578,9 @@
        }
       ]
      },
+     "word": "organ",
+     "name": "organ",
+     "en": "organ",
      "text": "organ 作“机构”是政府、政党用来办事的机关，偏正式。",
      "say": "organ 作“机构”是政府、政党用来办事的机关，偏正式。",
      "diff": "organ 作“机构”是政府、政党用来办事的机关，偏正式。",
@@ -579,7 +599,17 @@
      "txt": "organ 作“机构”是政府、政党用来办事的机关，偏正式。",
      "talk": "organ 作“机构”是政府、政党用来办事的机关，偏正式。",
      "words": "organ 作“机构”是政府、政党用来办事的机关，偏正式。",
-     "detail": "organ 作“机构”是政府、政党用来办事的机关，偏正式。"
+     "detail": "organ 作“机构”是政府、政党用来办事的机关，偏正式。",
+     "sentence": "organ 作“机构”是政府、政党用来办事的机关，偏正式。",
+     "speech": "organ 作“机构”是政府、政党用来办事的机关，偏正式。",
+     "cn": "organ 作“机构”是政府、政党用来办事的机关，偏正式。",
+     "why": "organ 作“机构”是政府、政党用来办事的机关，偏正式。",
+     "lines": [
+      "organ 作“机构”是政府、政党用来办事的机关，偏正式。"
+     ],
+     "says": [
+      "organ 作“机构”是政府、政党用来办事的机关，偏正式。"
+     ]
     }
    ],
    "logic": "organisation 从 organise“组织”来；institution 从“建立”来；organ 原来是“工具”，机关就是办事的工具。",
@@ -650,6 +680,140 @@
     "organisation": "organisation 泛指组织、机构（英式拼写）。",
     "institution": "institution 偏历史悠久的机构、制度，比如大学、银行。",
     "organ": "organ 作“机构”是政府、政党用来办事的机关，偏正式。"
+   }
+  },
+  "demo": {
+   "reading": {
+    "icons": [
+     "art/books.svg",
+     "art/icon-noun.svg"
+    ],
+    "lit": "读这件事",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sofa.svg",
+       "x": 0.5,
+       "y": 0.84,
+       "s": 0.44,
+       "z": 2
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.46,
+       "y": 0.6,
+       "s": 0.82,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.72,
+       "y": 0.7,
+       "s": 0.22,
+       "anim": "bob",
+       "z": 4
+      }
+     ]
+    }
+   },
+   "action": {
+    "icons": [
+     "art/icon-act.svg",
+     "art/icon-noun.svg"
+    ],
+    "lit": "行动这件事",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.05,
+       "y": 0.78,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.78
+        ],
+        "to": [
+         0.95,
+         0.78
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "ray": [
+        [
+         0.2,
+         0.3
+        ],
+        [
+         0.8,
+         0.3
+        ]
+       ],
+       "color": "#F59F00",
+       "lw": 0.025,
+       "arrow": true,
+       "dur": 1
+      }
+     ]
+    }
+   },
+   "movement": {
+    "icons": [
+     "art/icon-move.svg",
+     "art/icon-noun.svg"
+    ],
+    "lit": "移动这件事",
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.05,
+       "y": 0.78,
+       "s": 0.52,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.78
+        ],
+        "to": [
+         0.95,
+         0.78
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.95,
+       "y": 0.8,
+       "s": 0.52,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.95,
+         0.8
+        ],
+        "to": [
+         0.05,
+         0.8
+        ],
+        "offset": 1.5
+       }
+      }
+     ]
+    }
    }
   }
  },
@@ -744,5 +908,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

@@ -453,9 +453,6 @@
    "items": [
     {
      "w": "organise",
-     "word": "organise",
-     "name": "organise",
-     "en": "organise",
      "pic": {
       "bg": "blank",
       "items": [
@@ -484,6 +481,9 @@
        }
       ]
      },
+     "word": "organise",
+     "name": "organise",
+     "en": "organise",
      "text": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
      "say": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
      "diff": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
@@ -502,13 +502,20 @@
      "txt": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
      "talk": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
      "words": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
-     "detail": "organise 是把人、事安排起来（英式拼写，美式写 organize）。"
+     "detail": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
+     "sentence": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
+     "speech": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
+     "cn": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
+     "why": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
+     "lines": [
+      "organise 是把人、事安排起来（英式拼写，美式写 organize）。"
+     ],
+     "says": [
+      "organise 是把人、事安排起来（英式拼写，美式写 organize）。"
+     ]
     },
     {
      "w": "structure",
-     "word": "structure",
-     "name": "structure",
-     "en": "structure",
      "pic": {
       "bg": "blank",
       "items": [
@@ -529,6 +536,9 @@
        }
       ]
      },
+     "word": "structure",
+     "name": "structure",
+     "en": "structure",
      "text": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。",
      "say": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。",
      "diff": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。",
@@ -547,7 +557,17 @@
      "txt": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。",
      "talk": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。",
      "words": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。",
-     "detail": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。"
+     "detail": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。",
+     "sentence": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。",
+     "speech": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。",
+     "cn": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。",
+     "why": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。",
+     "lines": [
+      "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。"
+     ],
+     "says": [
+      "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。"
+     ]
     }
    ],
    "logic": "organise 从 organ“器官”来；structure 从拉丁语“建造”来，像盖房子搭架子。",
@@ -605,6 +625,135 @@
    "notes": {
     "organise": "organise 是把人、事安排起来（英式拼写，美式写 organize）。",
     "structure": "structure 作动词是搭好框架、安排结构，偏说文章、计划的结构。"
+   }
+  },
+  "demo": {
+   "widen": {
+    "icons": [
+     "art/icon-wide.svg",
+     "art/icon-make.svg"
+    ],
+    "lit": "使变宽",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "ray": [
+        [
+         0.5,
+         0.55
+        ],
+        [
+         0.1,
+         0.55
+        ]
+       ],
+       "color": "#F59F00",
+       "lw": 0.035,
+       "arrow": true,
+       "dur": 1.2
+      },
+      {
+       "ray": [
+        [
+         0.5,
+         0.55
+        ],
+        [
+         0.9,
+         0.55
+        ]
+       ],
+       "color": "#F59F00",
+       "lw": 0.035,
+       "arrow": true,
+       "dur": 1.2
+      }
+     ]
+    }
+   },
+   "modernize": {
+    "icons": [
+     "art/smartphone.svg",
+     "art/icon-make.svg"
+    ],
+    "lit": "使变得现代",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/rotary-phone.svg",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.42,
+       "a": 0.6,
+       "z": 2
+      },
+      {
+       "waves": true,
+       "x": 0.16,
+       "y": 0.52,
+       "dir": 180,
+       "n": 3,
+       "period": 1.2,
+       "color": "#2F6FB3"
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.66,
+       "y": 0.58,
+       "s": 0.5,
+       "delay": 1,
+       "pop": true,
+       "anim": "bob",
+       "z": 3
+      },
+      {
+       "waves": true,
+       "x": 0.8,
+       "y": 0.5,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#2F6FB3",
+       "delay": 1
+      }
+     ]
+    }
+   },
+   "simplify": {
+    "icons": [
+     "art/icon-simple.svg",
+     "art/icon-make.svg"
+    ],
+    "lit": "使变简单",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.5,
+       "anim": "shake",
+       "hide": 1.6,
+       "z": 3
+      },
+      {
+       "svg": "art/icon-simple.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.46,
+       "delay": 1.6,
+       "pop": true,
+       "anim": "pulse",
+       "z": 3
+      }
+     ]
+    }
    }
   }
  },
@@ -701,5 +850,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

@@ -423,6 +423,93 @@
    }
   }
  ],
+ "demo": {
+  "driver": {
+   "icons": [
+    "art/icon-wheel.svg",
+    "art/icon-person.svg"
+   ],
+   "lit": "开车的人",
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/car.svg",
+      "x": 0.12,
+      "y": 0.74,
+      "s": 0.44,
+      "go": [
+       0.7,
+       0.74
+      ],
+      "dur": 3,
+      "anim": "ride",
+      "z": 3
+     }
+    ]
+   }
+  },
+  "actor": {
+   "icons": [
+    "art/icon-act.svg",
+    "art/icon-person.svg"
+   ],
+   "lit": "表演的人",
+   "pic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2.5
+     },
+     {
+      "beam": true,
+      "x": 0.5,
+      "y": 0.05,
+      "len": 0.6,
+      "width": 0.3,
+      "swing": 2,
+      "period": 4
+     }
+    ]
+   }
+  },
+  "artist": {
+   "icons": [
+    "art/icon-palette.svg",
+    "art/icon-person.svg"
+   ],
+   "lit": "搞艺术的人",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/easel.svg",
+      "x": 0.46,
+      "y": 0.58,
+      "s": 0.74,
+      "z": 3
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.84,
+      "y": 0.7,
+      "s": 0.36,
+      "anim": "sway",
+      "z": 2
+     }
+    ]
+   }
+  }
+ },
  "lianxi": {
   "qs": [
    {

@@ -376,7 +376,7 @@
     "via": "各部分组织起来、配合着活下去的整体",
     "node": "有机结构（早期）",
     "say": [
-     "各部分组织起来、配合着活下去，这样的结构叫 organism。"
+     "各部分组织起来、配合着活下去，这样的有机结构，最早就叫 organism。"
     ],
     "fig": {
      "bg": "blank",
@@ -527,9 +527,6 @@
    "items": [
     {
      "w": "organism",
-     "word": "organism",
-     "name": "organism",
-     "en": "organism",
      "pic": {
       "bg": "blank",
       "items": [
@@ -575,6 +572,9 @@
        }
       ]
      },
+     "word": "organism",
+     "name": "organism",
+     "en": "organism",
      "text": "organism 是生物学的“有机体”，细菌也算。",
      "say": "organism 是生物学的“有机体”，细菌也算。",
      "diff": "organism 是生物学的“有机体”，细菌也算。",
@@ -593,13 +593,20 @@
      "txt": "organism 是生物学的“有机体”，细菌也算。",
      "talk": "organism 是生物学的“有机体”，细菌也算。",
      "words": "organism 是生物学的“有机体”，细菌也算。",
-     "detail": "organism 是生物学的“有机体”，细菌也算。"
+     "detail": "organism 是生物学的“有机体”，细菌也算。",
+     "sentence": "organism 是生物学的“有机体”，细菌也算。",
+     "speech": "organism 是生物学的“有机体”，细菌也算。",
+     "cn": "organism 是生物学的“有机体”，细菌也算。",
+     "why": "organism 是生物学的“有机体”，细菌也算。",
+     "lines": [
+      "organism 是生物学的“有机体”，细菌也算。"
+     ],
+     "says": [
+      "organism 是生物学的“有机体”，细菌也算。"
+     ]
     },
     {
      "w": "creature",
-     "word": "creature",
-     "name": "creature",
-     "en": "creature",
      "pic": {
       "bg": "blank",
       "items": [
@@ -625,6 +632,9 @@
        }
       ]
      },
+     "word": "creature",
+     "name": "creature",
+     "en": "creature",
      "text": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。",
      "say": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。",
      "diff": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。",
@@ -643,7 +653,17 @@
      "txt": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。",
      "talk": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。",
      "words": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。",
-     "detail": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。"
+     "detail": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。",
+     "sentence": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。",
+     "speech": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。",
+     "cn": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。",
+     "why": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。",
+     "lines": [
+      "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。"
+     ],
+     "says": [
+      "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。"
+     ]
     }
    ],
    "logic": "organism 是 organ + ism“组织成体系的状态”；creature 是 create“创造”+ ure“被创造出来的东西”。",
@@ -723,6 +743,112 @@
    "notes": {
     "organism": "organism 是生物学的“有机体”，细菌也算。",
     "creature": "creature 是“生物、动物”，偏口语，带感情色彩：a lovely creature。"
+   }
+  },
+  "demo": {
+   "friendship": {
+    "icons": [
+     "art/icon-friend.svg",
+     "art/icon-noun.svg"
+    ],
+    "lit": "朋友之间的情谊",
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-raise",
+       "id": "a",
+       "x": 0.28,
+       "y": 0.62,
+       "s": 0.82,
+       "z": 3,
+       "seq": "talk",
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "actor": "west-man-hello",
+       "id": "b",
+       "x": 0.74,
+       "y": 0.62,
+       "s": 0.82,
+       "z": 3,
+       "seq": "talk",
+       "turn": [
+        1,
+        2
+       ],
+       "nodWith": "a"
+      }
+     ]
+    }
+   },
+   "childhood": {
+    "icons": [
+     "art/icon-toy.svg",
+     "art/icon-noun.svg"
+    ],
+    "lit": "孩子的时期",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/photo.svg",
+       "x": 0.58,
+       "y": 0.42,
+       "s": 0.46,
+       "anim": "bob",
+       "z": 3
+      },
+      {
+       "svg": "art/cushion.svg",
+       "x": 0.3,
+       "y": 0.8,
+       "s": 0.3,
+       "z": 2
+      },
+      {
+       "svg": "art/yarn.svg",
+       "x": 0.3,
+       "y": 0.7,
+       "s": 0.2,
+       "anim": "bob",
+       "z": 3
+      }
+     ]
+    }
+   },
+   "realism": {
+    "icons": [
+     "art/icon-real.svg",
+     "art/icon-noun.svg"
+    ],
+    "lit": "照真实的样子",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/easel.svg",
+       "x": 0.44,
+       "y": 0.58,
+       "s": 0.74,
+       "z": 3
+      },
+      {
+       "svg": "art/lamp.svg",
+       "x": 0.82,
+       "y": 0.6,
+       "s": 0.4,
+       "anim": "pulse",
+       "z": 2
+      }
+     ]
+    }
    }
   }
  },
@@ -817,5 +943,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
