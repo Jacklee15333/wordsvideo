@@ -586,9 +586,6 @@
   "items": [
    {
     "w": "surgery",
-    "word": "surgery",
-    "name": "surgery",
-    "en": "surgery",
     "pic": {
      "bg": "blank",
      "items": [
@@ -617,6 +614,9 @@
       }
      ]
     },
+    "word": "surgery",
+    "name": "surgery",
+    "en": "surgery",
     "text": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
     "say": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
     "diff": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
@@ -635,13 +635,20 @@
     "txt": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
     "talk": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
     "words": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
-    "detail": "surgery 作“手术”多不可数，说做手术这件事：have surgery。"
+    "detail": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
+    "sentence": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
+    "speech": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
+    "cn": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
+    "why": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
+    "lines": [
+     "surgery 作“手术”多不可数，说做手术这件事：have surgery。"
+    ],
+    "says": [
+     "surgery 作“手术”多不可数，说做手术这件事：have surgery。"
+    ]
    },
    {
     "w": "operation",
-    "word": "operation",
-    "name": "operation",
-    "en": "operation",
     "pic": {
      "bg": "blank",
      "items": [
@@ -669,6 +676,9 @@
       }
      ]
     },
+    "word": "operation",
+    "name": "operation",
+    "en": "operation",
     "text": "operation 说一台具体的手术，可数：an operation。",
     "say": "operation 说一台具体的手术，可数：an operation。",
     "diff": "operation 说一台具体的手术，可数：an operation。",
@@ -687,7 +697,17 @@
     "txt": "operation 说一台具体的手术，可数：an operation。",
     "talk": "operation 说一台具体的手术，可数：an operation。",
     "words": "operation 说一台具体的手术，可数：an operation。",
-    "detail": "operation 说一台具体的手术，可数：an operation。"
+    "detail": "operation 说一台具体的手术，可数：an operation。",
+    "sentence": "operation 说一台具体的手术，可数：an operation。",
+    "speech": "operation 说一台具体的手术，可数：an operation。",
+    "cn": "operation 说一台具体的手术，可数：an operation。",
+    "why": "operation 说一台具体的手术，可数：an operation。",
+    "lines": [
+     "operation 说一台具体的手术，可数：an operation。"
+    ],
+    "says": [
+     "operation 说一台具体的手术，可数：an operation。"
+    ]
    }
   ],
   "logic": "surgery 从希腊语“用手干活”来，说的是这门手艺；operation 从 operate“操作”来，说的是一次操作。",
@@ -752,6 +772,127 @@
   "notes": {
    "surgery": "surgery 作“手术”多不可数，说做手术这件事：have surgery。",
    "operation": "operation 说一台具体的手术，可数：an operation。"
+  }
+ },
+ "demo": {
+  "friendship": {
+   "icons": [
+    "art/icon-friend.svg",
+    "art/icon-noun.svg"
+   ],
+   "lit": "朋友之间的情谊",
+   "pic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "id": "a",
+      "x": 0.28,
+      "y": 0.62,
+      "s": 0.82,
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "west-man-hello",
+      "id": "b",
+      "x": 0.74,
+      "y": 0.62,
+      "s": 0.82,
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "a"
+     }
+    ]
+   }
+  },
+  "childhood": {
+   "icons": [
+    "art/icon-toy.svg",
+    "art/icon-noun.svg"
+   ],
+   "lit": "孩子的时期",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/photo.svg",
+      "x": 0.58,
+      "y": 0.42,
+      "s": 0.46,
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "svg": "art/cushion.svg",
+      "x": 0.3,
+      "y": 0.8,
+      "s": 0.3,
+      "z": 2
+     },
+     {
+      "svg": "art/yarn.svg",
+      "x": 0.3,
+      "y": 0.7,
+      "s": 0.2,
+      "anim": "bob",
+      "z": 3
+     }
+    ]
+   }
+  },
+  "bakery": {
+   "icons": [
+    "art/bread.svg",
+    "art/icon-place.svg"
+   ],
+   "lit": "烤面包的地方",
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/bread.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.46,
+      "anim": "bob",
+      "shadow": true,
+      "z": 3
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.2,
+      "every": 0.9,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "spin": true
+     }
+    ]
+   }
   }
  },
  "lianxi": {

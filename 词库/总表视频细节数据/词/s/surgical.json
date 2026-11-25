@@ -465,9 +465,6 @@
    "items": [
     {
      "w": "surgical",
-     "word": "surgical",
-     "name": "surgical",
-     "en": "surgical",
      "pic": {
       "bg": "blank",
       "items": [
@@ -496,6 +493,9 @@
        }
       ]
      },
+     "word": "surgical",
+     "name": "surgical",
+     "en": "surgical",
      "text": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
      "say": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
      "diff": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
@@ -514,13 +514,20 @@
      "txt": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
      "talk": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
      "words": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
-     "detail": "surgical 说动刀的、手术的：surgical treatment 手术治疗。"
+     "detail": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
+     "sentence": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
+     "speech": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
+     "cn": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
+     "why": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
+     "lines": [
+      "surgical 说动刀的、手术的：surgical treatment 手术治疗。"
+     ],
+     "says": [
+      "surgical 说动刀的、手术的：surgical treatment 手术治疗。"
+     ]
     },
     {
      "w": "medical",
-     "word": "medical",
-     "name": "medical",
-     "en": "medical",
      "pic": {
       "bg": "blank",
       "items": [
@@ -541,6 +548,9 @@
        }
       ]
      },
+     "word": "medical",
+     "name": "medical",
+     "en": "medical",
      "text": "medical 说医学的、内科的：medical treatment 药物治疗。",
      "say": "medical 说医学的、内科的：medical treatment 药物治疗。",
      "diff": "medical 说医学的、内科的：medical treatment 药物治疗。",
@@ -559,7 +569,17 @@
      "txt": "medical 说医学的、内科的：medical treatment 药物治疗。",
      "talk": "medical 说医学的、内科的：medical treatment 药物治疗。",
      "words": "medical 说医学的、内科的：medical treatment 药物治疗。",
-     "detail": "medical 说医学的、内科的：medical treatment 药物治疗。"
+     "detail": "medical 说医学的、内科的：medical treatment 药物治疗。",
+     "sentence": "medical 说医学的、内科的：medical treatment 药物治疗。",
+     "speech": "medical 说医学的、内科的：medical treatment 药物治疗。",
+     "cn": "medical 说医学的、内科的：medical treatment 药物治疗。",
+     "why": "medical 说医学的、内科的：medical treatment 药物治疗。",
+     "lines": [
+      "medical 说医学的、内科的：medical treatment 药物治疗。"
+     ],
+     "says": [
+      "medical 说医学的、内科的：medical treatment 药物治疗。"
+     ]
     }
    ],
    "logic": "surgical 是 surgery + ical，跟“动手”有关；medical 从拉丁语 medicus“医生”来，泛指医学。",
@@ -617,6 +637,129 @@
    "notes": {
     "surgical": "surgical 说动刀的、手术的：surgical treatment 手术治疗。",
     "medical": "medical 说医学的、内科的：medical treatment 药物治疗。"
+   }
+  },
+  "demo": {
+   "careful": {
+    "icons": [
+     "art/icon-care.svg",
+     "art/icon-ful.svg"
+    ],
+    "lit": "充满小心的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.46,
+       "y": 0.62,
+       "s": 0.46,
+       "anim": "bob",
+       "shadow": true,
+       "z": 3
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.8,
+       "y": 0.72,
+       "s": 0.22,
+       "z": 3
+      }
+     ]
+    }
+   },
+   "careless": {
+    "icons": [
+     "art/icon-care.svg",
+     "art/icon-less.svg"
+    ],
+    "lit": "不上心的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.34,
+       "y": 0.72,
+       "s": 0.3,
+       "anim": "shake",
+       "z": 3
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.66,
+       "y": 0.6,
+       "s": 0.42,
+       "rot": -30,
+       "anim": "shake",
+       "z": 3
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.74,
+       "y": 0.62,
+       "every": 0.4,
+       "life": 1,
+       "to": [
+        0.05,
+        0.2
+       ],
+       "s": 0.05
+      }
+     ]
+    }
+   },
+   "national": {
+    "icons": [
+     "art/map.svg",
+     "art/icon-adj.svg"
+    ],
+    "lit": "国家的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "spin": true
+      }
+     ]
+    }
    }
   }
  },
@@ -712,5 +855,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

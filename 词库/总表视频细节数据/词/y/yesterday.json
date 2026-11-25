@@ -303,12 +303,31 @@
        "z": 3
       },
       {
+       "waves": true,
+       "x": 0.22,
+       "y": 0.5,
+       "dir": 180,
+       "n": 3,
+       "period": 1.2,
+       "color": "#2F6FB3",
+       "when": "That phone"
+      },
+      {
        "svg": "art/smartphone.svg",
        "x": 0.72,
        "y": 0.56,
        "s": 0.3,
        "anim": "bob",
        "z": 3
+      },
+      {
+       "waves": true,
+       "x": 0.82,
+       "y": 0.5,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#2F6FB3"
       },
       {
        "label": "yesterday's technology",
@@ -490,6 +509,17 @@
        "z": 3
       },
       {
+       "waves": true,
+       "x": 0.82,
+       "y": 0.48,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#2F6FB3",
+       "cue": 1,
+       "when": "旧了的东西"
+      },
+      {
        "label": "过时的",
        "x": 0.5,
        "y": 0.1,
@@ -507,9 +537,6 @@
    "items": [
     {
      "w": "yesterday",
-     "word": "yesterday",
-     "name": "yesterday",
-     "en": "yesterday",
      "pic": {
       "bg": "blank",
       "items": [
@@ -546,6 +573,9 @@
        }
       ]
      },
+     "word": "yesterday",
+     "name": "yesterday",
+     "en": "yesterday",
      "text": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。",
      "say": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。",
      "diff": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。",
@@ -564,13 +594,20 @@
      "txt": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。",
      "talk": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。",
      "words": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。",
-     "detail": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。"
+     "detail": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。",
+     "sentence": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。",
+     "speech": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。",
+     "cn": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。",
+     "why": "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。",
+     "lines": [
+      "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。"
+     ],
+     "says": [
+      "yesterday 前面不加介词：I saw him yesterday，不说 on yesterday。"
+     ]
     },
     {
      "w": "the day before",
-     "word": "the day before",
-     "name": "the day before",
-     "en": "the day before",
      "pic": {
       "bg": "blank",
       "items": [
@@ -591,6 +628,9 @@
        }
       ]
      },
+     "word": "the day before",
+     "name": "the day before",
+     "en": "the day before",
      "text": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。",
      "say": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。",
      "diff": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。",
@@ -609,7 +649,17 @@
      "txt": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。",
      "talk": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。",
      "words": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。",
-     "detail": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。"
+     "detail": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。",
+     "sentence": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。",
+     "speech": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。",
+     "cn": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。",
+     "why": "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。",
+     "lines": [
+      "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。"
+     ],
+     "says": [
+      "the day before 是“前一天”，以过去某天为准；yesterday 以今天为准。"
+     ]
     }
    ],
    "logic": "yester- 原来是以今天为准的“另一天”，别的日耳曼语只用 yester-（德语 gestern），英语偏要再加个 day。",
@@ -770,5 +820,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
