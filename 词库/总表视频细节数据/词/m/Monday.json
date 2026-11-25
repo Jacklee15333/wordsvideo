@@ -1,7 +1,508 @@
 {
  "单词": "Monday",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "星期一"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/moon.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "月亮",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "日",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/moon.svg",
+   "p1": "art/calendar.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/moon.svg",
+     "x": 0.34,
+     "y": 0.5,
+     "s": 0.46,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "svg": "art/calendar.svg",
+     "x": 0.72,
+     "y": 0.56,
+     "s": 0.36,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "label": "月亮之日",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "星期一",
+    "pos": "名词",
+    "diff": "一周里的这一天",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "id": "m",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "waves": true,
+      "on": "m",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "m"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "id": "k",
+      "x": 0.84,
+      "y": 0.64,
+      "s": 0.64,
+      "z": 3,
+      "nodWith": "m"
+     },
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.52,
+      "y": 0.36,
+      "s": 0.3,
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 4
+     }
+    ],
+    "ex": "School starts on Monday.",
+    "exzh": "星期一开学。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-laugh",
+       "id": "t",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.72,
+       "z": 3,
+       "seq": "talk",
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "waves": true,
+       "on": "t",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "t"
+      },
+      {
+       "actor": "west-girl-raise",
+       "id": "g",
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.66,
+       "z": 3,
+       "turn": [
+        1,
+        2
+       ],
+       "nodWith": "t"
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.52,
+       "y": 0.34,
+       "s": 0.28,
+       "when": "Monday",
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.94,
+       "s": 0.26,
+       "z": 4
+      },
+      {
+       "label": "on Monday",
+       "x": 0.52,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "on Monday"
+      },
+      {
+       "label": "星期一",
+       "x": 0.52,
+       "y": 0.66,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "星期一"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“月亮之日”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/moon.svg",
+       "x": 0.34,
+       "y": 0.5,
+       "s": 0.46,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.72,
+       "y": 0.56,
+       "s": 0.36,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "label": "月亮之日",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "罗马人把这一天归给月亮",
+    "node": "罗马人的说法",
+    "say": [
+     "古罗马人把这一天归给月亮。",
+     "英语照直翻译，这一天就是月亮之日。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/moon.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.46,
+       "when": "月亮",
+       "pop": true,
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "label": "月亮之日",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "月亮之日"
+      }
+     ]
+    }
+   },
+   {
+    "via": "英语照直翻译：月亮之日",
+    "node": "① 星期一",
+    "pos": "名词",
+    "pic": 0,
+    "rule": "很老的合成词，用了上千年，读音、拼写磨损了，已经看不出是两个词",
+    "ruleEx": "月亮之日      window 窗户",
+    "cap": "Monday",
+    "say": [
+     "很老的合成词，用了上千年，读音、拼写都磨损了，已经看不出是两个词。",
+     "window 原来是“风的眼睛”，现在就是窗户。",
+     "Monday 也一样，现在就是星期一。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "磨损了",
+       "x": 0.5,
+       "y": 0.4,
+       "size": 0.08,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "磨损了",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/waves.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.3,
+       "cue": 1,
+       "when": "风的眼睛",
+       "anim": "pulse",
+       "hideCue": 2
+      },
+      {
+       "label": "window 窗户",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "窗户",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.46,
+       "cue": 2,
+       "when": "星期一",
+       "anim": "pulse"
+      },
+      {
+       "label": "Monday",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "Monday",
+       "cue": 2
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "中文都是“星期一”，写的地方不一样",
+   "items": [
+    {
+     "w": "Monday",
+     "word": "Monday",
+     "name": "Monday",
+     "en": "Monday",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/castle-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/moon.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.6,
+        "anim": "bob",
+        "z": 2
+       }
+      ]
+     },
+     "text": "Monday 是完整的写法，句子里用它。",
+     "say": "Monday 是完整的写法，句子里用它。",
+     "diff": "Monday 是完整的写法，句子里用它。",
+     "note": "Monday 是完整的写法，句子里用它。",
+     "desc": "Monday 是完整的写法，句子里用它。",
+     "m": "Monday 是完整的写法，句子里用它。",
+     "mean": "Monday 是完整的写法，句子里用它。",
+     "line": "Monday 是完整的写法，句子里用它。",
+     "explain": "Monday 是完整的写法，句子里用它。",
+     "zh": "Monday 是完整的写法，句子里用它。",
+     "def": "Monday 是完整的写法，句子里用它。",
+     "gloss": "Monday 是完整的写法，句子里用它。",
+     "sense": "Monday 是完整的写法，句子里用它。",
+     "comment": "Monday 是完整的写法，句子里用它。",
+     "hint": "Monday 是完整的写法，句子里用它。",
+     "txt": "Monday 是完整的写法，句子里用它。",
+     "talk": "Monday 是完整的写法，句子里用它。",
+     "words": "Monday 是完整的写法，句子里用它。",
+     "detail": "Monday 是完整的写法，句子里用它。"
+    },
+    {
+     "w": "Mon.",
+     "word": "Mon.",
+     "name": "Mon.",
+     "en": "Mon.",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/calendar.svg",
+        "x": 0.5,
+        "y": 0.54,
+        "s": 0.6,
+        "anim": "pulse",
+        "z": 2
+       }
+      ]
+     },
+     "text": "Mon. 是缩写，用在日历、表格、日程里。",
+     "say": "Mon. 是缩写，用在日历、表格、日程里。",
+     "diff": "Mon. 是缩写，用在日历、表格、日程里。",
+     "note": "Mon. 是缩写，用在日历、表格、日程里。",
+     "desc": "Mon. 是缩写，用在日历、表格、日程里。",
+     "m": "Mon. 是缩写，用在日历、表格、日程里。",
+     "mean": "Mon. 是缩写，用在日历、表格、日程里。",
+     "line": "Mon. 是缩写，用在日历、表格、日程里。",
+     "explain": "Mon. 是缩写，用在日历、表格、日程里。",
+     "zh": "Mon. 是缩写，用在日历、表格、日程里。",
+     "def": "Mon. 是缩写，用在日历、表格、日程里。",
+     "gloss": "Mon. 是缩写，用在日历、表格、日程里。",
+     "sense": "Mon. 是缩写，用在日历、表格、日程里。",
+     "comment": "Mon. 是缩写，用在日历、表格、日程里。",
+     "hint": "Mon. 是缩写，用在日历、表格、日程里。",
+     "txt": "Mon. 是缩写，用在日历、表格、日程里。",
+     "talk": "Mon. 是缩写，用在日历、表格、日程里。",
+     "words": "Mon. 是缩写，用在日历、表格、日程里。",
+     "detail": "Mon. 是缩写，用在日历、表格、日程里。"
+    }
+   ],
+   "logic": "Mon. 就是 Monday 截取前三个字母加点。",
+   "tip": "写句子用 Monday；日历、课表上地方小用 Mon.。",
+   "pics": {
+    "Monday": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/moon.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "bob",
+       "z": 2
+      }
+     ]
+    },
+    "Mon.": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.6,
+       "anim": "pulse",
+       "z": 2
+      }
+     ]
+    }
+   },
+   "notes": {
+    "Monday": "Monday 是完整的写法，句子里用它。",
+    "Mon.": "Mon. 是缩写，用在日历、表格、日程里。"
+   }
+  }
+ },
+ "插图": [
+  "Mondayai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：学校星期几开学？\n听：School starts on Monday.\nA. 星期天\nB. 星期二\nC. 星期一\nD. 星期五",
@@ -89,5 +590,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
