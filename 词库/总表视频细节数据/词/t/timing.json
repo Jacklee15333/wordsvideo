@@ -1,7 +1,750 @@
 {
  "单词": "timing",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "时机的选择；计时、定时；节奏感"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1,
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.6,
+      "z": 3
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.15,
+      "y": 0.66,
+      "s": 0.72,
+      "z": 4
+     },
+     {
+      "label": "time：时间",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.085,
+      "delay": 0.5,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "id": "c",
+      "actor": "west-man-point",
+      "x": 0.32,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/stopwatch.svg",
+      "x": 0.62,
+      "y": 0.4,
+      "s": 0.36,
+      "z": 4,
+      "anim": "pulse"
+     },
+     {
+      "label": "-ing：做这件事（变名词）",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "delay": 0.5,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/clock.svg",
+   "p1": "art/icon-ing.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/station-bg.svg",
+   "items": [
+    {
+     "id": "m",
+     "actor": "west-man-point",
+     "x": 0.3,
+     "y": 0.62,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "svg": "art/clock_f0.svg",
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 1,
+     "x": 0.68,
+     "y": 0.36,
+     "s": 0.44,
+     "z": 4
+    },
+    {
+     "label": "挑时间这件事",
+     "x": 0.68,
+     "y": 0.8,
+     "size": 0.085,
+     "delay": 0.6,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "时机的选择",
+    "pos": "名词",
+    "diff": "时间点挑得对不对",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/bus.svg",
+      "x": 0.62,
+      "y": 0.6,
+      "s": 0.44,
+      "z": 3,
+      "go": [
+       0.66,
+       0.6
+      ],
+      "dur": 1.4
+     },
+     {
+      "actor": "walk-cn-girl",
+      "walk": {
+       "from": [
+        -0.05,
+        0.68
+       ],
+       "to": [
+        0.3,
+        0.68
+       ]
+      },
+      "x": -0.05,
+      "y": 0.68,
+      "s": 0.7,
+      "z": 4
+     },
+     {
+      "label": "来得正好",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "delay": 0.8,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ],
+    "ex": "Good timing! The bus is here.",
+    "exzh": "来得正好！公交车到了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-cn-girl",
+       "walk": {
+        "from": [
+         -0.05,
+         0.68
+        ],
+        "to": [
+         0.32,
+         0.68
+        ]
+       },
+       "x": -0.05,
+       "y": 0.68,
+       "s": 0.72,
+       "z": 4
+      },
+      {
+       "label": "Good timing!",
+       "x": 0.24,
+       "y": 0.14,
+       "size": 0.08,
+       "when": "Good timing",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "svg": "art/bus.svg",
+       "x": 1.2,
+       "y": 0.6,
+       "s": 0.46,
+       "z": 3,
+       "go": [
+        0.68,
+        0.6
+       ],
+       "goWhen": "bus",
+       "dur": 1.4
+      },
+      {
+       "label": "来得正好",
+       "x": 0.7,
+       "y": 0.12,
+       "size": 0.085,
+       "when": "来得正好",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "计时、定时",
+    "pos": "名词",
+    "diff": "掐着表算时间",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "id": "c",
+      "actor": "west-man-point",
+      "x": 0.2,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 4
+     },
+     {
+      "svg": "art/stopwatch.svg",
+      "x": 0.46,
+      "y": 0.36,
+      "s": 0.4,
+      "z": 5,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "walk": {
+       "from": [
+        1.05,
+        0.7
+       ],
+       "to": [
+        -0.05,
+        0.7
+       ]
+      },
+      "x": 1.05,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 3
+     },
+     {
+      "label": "计时",
+      "x": 0.46,
+      "y": 0.08,
+      "size": 0.08,
+      "delay": 0.8,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ],
+    "ex": "He is in charge of timing.",
+    "exzh": "他负责计时。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "id": "c",
+       "actor": "west-man-point",
+       "x": 0.2,
+       "y": 0.62,
+       "s": 0.88,
+       "z": 4,
+       "when": "He"
+      },
+      {
+       "svg": "art/stopwatch.svg",
+       "x": 0.48,
+       "y": 0.38,
+       "s": 0.42,
+       "z": 5,
+       "when": "timing",
+       "anim": "pulse",
+       "pop": true
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "walk": {
+        "from": [
+         1.05,
+         0.7
+        ],
+        "to": [
+         -0.05,
+         0.7
+        ]
+       },
+       "x": 1.05,
+       "y": 0.7,
+       "s": 0.62,
+       "z": 3
+      },
+      {
+       "label": "in charge of timing",
+       "x": 0.7,
+       "y": 0.12,
+       "size": 0.07,
+       "when": "in charge",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "负责计时",
+       "x": 0.7,
+       "y": 0.28,
+       "size": 0.085,
+       "when": "负责计时",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "节奏感",
+    "pos": "名词",
+    "diff": "演出、运动中每一下都掐在点上",
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "beat": 100,
+    "items": [
+     {
+      "svg": "art/drum.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "z": 3,
+      "anim": "thump"
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "alt": [
+       "art/note2.svg"
+      ],
+      "x": 0.5,
+      "y": 0.36,
+      "life": 1.6,
+      "to": [
+       0.2,
+       -0.25
+      ],
+      "s": 0.1
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.24,
+      "crowd": 9,
+      "z": 6
+     },
+     {
+      "label": "节奏感",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "delay": 0.8,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ],
+    "ex": "The drummer has great timing.",
+    "exzh": "这位鼓手节奏感很好。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "beat": 100,
+     "items": [
+      {
+       "beam": true,
+       "x": 0.3,
+       "y": 0,
+       "len": 0.8,
+       "width": 0.12,
+       "swing": 10,
+       "period": 4
+      },
+      {
+       "svg": "art/drum.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.52,
+       "z": 3,
+       "anim": "thump",
+       "when": "drummer"
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "alt": [
+        "art/note2.svg"
+       ],
+       "x": 0.5,
+       "y": 0.38,
+       "life": 1.6,
+       "to": [
+        0.2,
+        -0.25
+       ],
+       "s": 0.1,
+       "when": "great timing"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.94,
+       "s": 0.24,
+       "crowd": 9,
+       "z": 6
+      },
+      {
+       "label": "great timing",
+       "x": 0.8,
+       "y": 0.2,
+       "size": 0.075,
+       "when": "great timing",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "节奏感很好",
+       "x": 0.8,
+       "y": 0.36,
+       "size": 0.085,
+       "when": "节奏感很好",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“挑时间这件事”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "x": 0.3,
+       "y": 0.62,
+       "s": 0.86,
+       "z": 3
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.68,
+       "y": 0.36,
+       "s": 0.44,
+       "z": 4
+      },
+      {
+       "label": "挑时间这件事",
+       "x": 0.68,
+       "y": 0.8,
+       "size": 0.085,
+       "delay": 0.6,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "时间点挑得对不对",
+    "node": "① 时机的选择",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "做一件事，挑什么时候做，很要紧。",
+     "她刚走到车站，车就来了，时间点挑得正好，这就是时机的选择。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/clock.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "s": 0.26,
+       "z": 3,
+       "when": "什么时候"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "walk": {
+        "from": [
+         -0.05,
+         0.68
+        ],
+        "to": [
+         0.32,
+         0.68
+        ]
+       },
+       "x": -0.05,
+       "y": 0.68,
+       "s": 0.7,
+       "z": 4,
+       "cue": 1,
+       "when": "走到车站"
+      },
+      {
+       "svg": "art/bus.svg",
+       "x": 1.2,
+       "y": 0.6,
+       "s": 0.44,
+       "z": 3,
+       "go": [
+        0.68,
+        0.6
+       ],
+       "goWhen": "车就来了",
+       "dur": 1.2
+      },
+      {
+       "label": "时机的选择",
+       "x": 0.66,
+       "y": 0.12,
+       "size": 0.085,
+       "when": "时机的选择",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "掐着时间",
+    "node": "② 计时、定时",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "比赛的时候，有人掐着表，一秒一秒地算。",
+     "这件事就是计时、定时。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "x": 0.2,
+       "y": 0.62,
+       "s": 0.86,
+       "z": 4,
+       "when": "掐着表"
+      },
+      {
+       "svg": "art/stopwatch.svg",
+       "x": 0.48,
+       "y": 0.36,
+       "s": 0.4,
+       "z": 5,
+       "when": "掐着表",
+       "anim": "pulse"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "walk": {
+        "from": [
+         1.05,
+         0.7
+        ],
+        "to": [
+         -0.05,
+         0.7
+        ]
+       },
+       "x": 1.05,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 3,
+       "when": "比赛"
+      },
+      {
+       "label": "一秒一秒",
+       "x": 0.76,
+       "y": 0.14,
+       "size": 0.075,
+       "when": "一秒一秒",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "label": "计时、定时",
+       "x": 0.76,
+       "y": 0.3,
+       "size": 0.085,
+       "when": "计时、定时",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "演出、运动中把时间掐准",
+    "node": "③ 节奏感",
+    "pos": "名词",
+    "pic": 2,
+    "from": 2,
+    "say": [
+     "打鼓的时候，每一下都要掐在点上，不早也不晚。",
+     "掐得准，就是节奏感好。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "beat": 100,
+     "items": [
+      {
+       "svg": "art/drum.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.52,
+       "z": 3,
+       "anim": "thump",
+       "when": "打鼓"
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "alt": [
+        "art/note2.svg"
+       ],
+       "x": 0.5,
+       "y": 0.36,
+       "life": 1.6,
+       "to": [
+        0.2,
+        -0.25
+       ],
+       "s": 0.1,
+       "when": "掐在点上"
+      },
+      {
+       "label": "不早也不晚",
+       "x": 0.18,
+       "y": 0.3,
+       "size": 0.075,
+       "when": "不早也不晚",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.94,
+       "s": 0.24,
+       "crowd": 9,
+       "z": 6
+      },
+      {
+       "label": "节奏感",
+       "x": 0.8,
+       "y": 0.3,
+       "size": 0.09,
+       "when": "节奏感",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "time",
+    "m": "时间",
+    "share": "time"
+   },
+   {
+    "w": "timer",
+    "m": "计时器",
+    "share": "time"
+   },
+   {
+    "w": "meeting",
+    "m": "会议",
+    "share": "ing"
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "time": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.7,
+       "z": 3
+      },
+      {
+       "label": "time 时间本身",
+       "x": 0.78,
+       "y": 0.5,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "timingai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人觉得什么在体育运动里很重要？\n听：Good timing is important in sports.\nA. 力气\nB. 速度\nC. 时机\nD. 运气",
@@ -90,5 +833,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

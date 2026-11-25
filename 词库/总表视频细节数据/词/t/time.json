@@ -1,7 +1,1369 @@
 {
  "单词": "time",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "时间；时刻；次；倍；时代；为…计时、选定时机"
+  },
+  "originPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/clock_f0.svg",
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 1,
+     "x": 0.5,
+     "y": 0.48,
+     "s": 0.6,
+     "z": 3
+    },
+    {
+     "shape": "circle",
+     "x": 0.5,
+     "y": 0.48,
+     "r": 0.31,
+     "stroke": "#FF7A1A",
+     "lw": 7,
+     "glow": 2,
+     "reveal": "right",
+     "rdur": 1.6,
+     "delay": 0.6,
+     "z": 4
+    },
+    {
+     "label": "切出来的一段时间",
+     "x": 0.5,
+     "y": 0.9,
+     "size": 0.08,
+     "delay": 1.2,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "时间",
+    "pos": "名词（不可数）",
+    "diff": "一段一段过去的时间",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-think",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.46,
+      "y": 0.9,
+      "s": 0.38,
+      "z": 4
+     },
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.52,
+      "y": 0.7,
+      "s": 0.2,
+      "z": 5
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1,
+      "x": 0.78,
+      "y": 0.22,
+      "s": 0.3,
+      "z": 2
+     },
+     {
+      "label": "没时间",
+      "x": 0.78,
+      "y": 0.52,
+      "size": 0.08,
+      "delay": 0.8,
+      "color": "#C0392B",
+      "border": "#C0392B"
+     }
+    ],
+    "ex": "I have no time to play.",
+    "exzh": "我没有时间玩。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-think",
+       "x": 0.24,
+       "y": 0.58,
+       "s": 0.88,
+       "z": 3
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.4,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 4
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.46,
+       "y": 0.7,
+       "s": 0.22,
+       "z": 5,
+       "when": "no time"
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.62,
+       "y": 0.22,
+       "s": 0.32,
+       "z": 2,
+       "when": "time"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "walk": {
+        "from": [
+         1.05,
+         0.7
+        ],
+        "to": [
+         0.7,
+         0.7
+        ]
+       },
+       "x": 1.05,
+       "y": 0.7,
+       "s": 0.56,
+       "z": 2,
+       "when": "play"
+      },
+      {
+       "label": "no time",
+       "x": 0.84,
+       "y": 0.2,
+       "size": 0.08,
+       "when": "no time",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "没有时间",
+       "x": 0.84,
+       "y": 0.36,
+       "size": 0.085,
+       "when": "没有时间",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "时刻",
+    "pos": "名词",
+    "diff": "时间上的一个点，几点几分",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1,
+      "x": 0.5,
+      "y": 0.36,
+      "s": 0.56,
+      "z": 3
+     },
+     {
+      "id": "g",
+      "actor": "west-girl-raise",
+      "x": 0.17,
+      "y": 0.64,
+      "s": 0.8,
+      "z": 4
+     },
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.83,
+      "y": 0.62,
+      "s": 0.82,
+      "z": 4,
+      "nodWith": "g"
+     },
+     {
+      "label": "三点整",
+      "x": 0.5,
+      "y": 0.78,
+      "size": 0.085,
+      "delay": 0.8,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ],
+    "ex": "What time is it? It's three o'clock.",
+    "exzh": "几点了？三点了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "id": "g",
+       "actor": "west-girl-raise",
+       "x": 0.16,
+       "y": 0.64,
+       "s": 0.82,
+       "z": 4,
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "id": "t",
+       "actor": "cn-teacher-point",
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.84,
+       "z": 4,
+       "turn": [
+        1,
+        2
+       ]
+      },
+      {
+       "label": "What time is it?",
+       "x": 0.3,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "What time",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.5,
+       "y": 0.44,
+       "s": 0.6,
+       "z": 3,
+       "when": "three o'clock",
+       "pop": true
+      },
+      {
+       "label": "三点了",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.085,
+       "when": "三点了",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "次",
+    "pos": "名词（可数）",
+    "diff": "做一回事算一次",
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-man-case",
+      "walk": {
+       "from": [
+        -0.05,
+        0.68
+       ],
+       "to": [
+        1.05,
+        0.68
+       ]
+      },
+      "x": -0.05,
+      "y": 0.68,
+      "s": 0.64,
+      "z": 3
+     },
+     {
+      "svg": "art/ticket.svg",
+      "x": 0.3,
+      "y": 0.3,
+      "s": 0.2,
+      "rot": -8,
+      "delay": 0.3,
+      "z": 4
+     },
+     {
+      "svg": "art/ticket.svg",
+      "x": 0.5,
+      "y": 0.27,
+      "s": 0.2,
+      "rot": 3,
+      "delay": 0.7,
+      "z": 4
+     },
+     {
+      "svg": "art/ticket.svg",
+      "x": 0.7,
+      "y": 0.3,
+      "s": 0.2,
+      "rot": 9,
+      "delay": 1.1,
+      "z": 4
+     },
+     {
+      "label": "三次",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "delay": 1.5,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ],
+    "ex": "I have been to Beijing three times.",
+    "exzh": "我去过北京三次。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-man-case",
+       "walk": {
+        "from": [
+         -0.05,
+         0.68
+        ],
+        "to": [
+         1.05,
+         0.68
+        ]
+       },
+       "x": -0.05,
+       "y": 0.68,
+       "s": 0.66,
+       "z": 3
+      },
+      {
+       "label": "Beijing 北京",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "when": "Beijing",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.3,
+       "y": 0.34,
+       "s": 0.24,
+       "rot": -8,
+       "when": "three times",
+       "z": 4,
+       "pop": true
+      },
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.5,
+       "y": 0.31,
+       "s": 0.24,
+       "rot": 3,
+       "when": "three times",
+       "delay": 0.35,
+       "z": 4,
+       "pop": true
+      },
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.7,
+       "y": 0.34,
+       "s": 0.24,
+       "rot": 9,
+       "when": "three times",
+       "delay": 0.7,
+       "z": 4,
+       "pop": true
+      },
+      {
+       "label": "三次",
+       "x": 0.88,
+       "y": 0.34,
+       "size": 0.09,
+       "when": "三次",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "倍",
+    "pos": "名词（复数 times）",
+    "diff": "几个同样大的加在一起",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/box.svg",
+      "x": 0.24,
+      "y": 0.78,
+      "s": 0.2,
+      "z": 3,
+      "shadow": true
+     },
+     {
+      "svg": "art/box.svg",
+      "x": 0.62,
+      "y": 0.6,
+      "s": 0.56,
+      "z": 3,
+      "shadow": true,
+      "delay": 0.5,
+      "pop": true
+     },
+     {
+      "label": "× 3",
+      "x": 0.4,
+      "y": 0.4,
+      "size": 0.12,
+      "delay": 1.0,
+      "color": "#C0392B",
+      "border": "#C0392B"
+     }
+    ],
+    "ex": "This box is three times as big as that one.",
+    "exzh": "这个箱子是那个的三倍大。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/box.svg",
+       "x": 0.66,
+       "y": 0.58,
+       "s": 0.6,
+       "z": 3,
+       "shadow": true,
+       "when": "This box",
+       "pop": true
+      },
+      {
+       "svg": "art/box.svg",
+       "x": 0.24,
+       "y": 0.78,
+       "s": 0.2,
+       "z": 3,
+       "shadow": true,
+       "when": "that one",
+       "pop": true
+      },
+      {
+       "label": "three times",
+       "x": 0.4,
+       "y": 0.18,
+       "size": 0.08,
+       "when": "three times",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "ray": [
+        [
+         0.3,
+         0.74
+        ],
+        [
+         0.48,
+         0.5
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "when": "three times",
+       "dur": 0.6
+      },
+      {
+       "label": "三倍大",
+       "x": 0.4,
+       "y": 0.34,
+       "size": 0.085,
+       "when": "三倍大",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "时代",
+    "pos": "名词（常用复数）",
+    "diff": "很长很长的一段时间",
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/bamboo.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.52,
+      "z": 3,
+      "shadow": true
+     },
+     {
+      "svg": "art/brush.svg",
+      "x": 0.74,
+      "y": 0.48,
+      "s": 0.4,
+      "rot": 20,
+      "z": 4,
+      "anim": "swing"
+     },
+     {
+      "label": "古时候",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "delay": 0.8,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ],
+    "ex": "In ancient times, people wrote on bamboo.",
+    "exzh": "古时候，人们在竹简上写字。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "label": "ancient times",
+       "x": 0.22,
+       "y": 0.14,
+       "size": 0.08,
+       "when": "ancient times",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "svg": "art/bamboo.svg",
+       "x": 0.52,
+       "y": 0.58,
+       "s": 0.56,
+       "z": 3,
+       "shadow": true,
+       "when": "bamboo",
+       "pop": true
+      },
+      {
+       "svg": "art/brush.svg",
+       "x": 0.7,
+       "y": 0.46,
+       "s": 0.4,
+       "rot": 20,
+       "z": 4,
+       "when": "wrote",
+       "go": [
+        0.4,
+        0.46
+       ],
+       "dur": 2.2,
+       "loop": true
+      },
+      {
+       "label": "古时候",
+       "x": 0.22,
+       "y": 0.3,
+       "size": 0.085,
+       "when": "古时候",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "label": "竹简",
+       "x": 0.84,
+       "y": 0.8,
+       "size": 0.085,
+       "when": "竹简",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "为…计时、选定时机",
+    "pos": "动词",
+    "diff": "给一件事掐表，或者挑好时间",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "id": "c",
+      "actor": "west-man-point",
+      "x": 0.2,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 4
+     },
+     {
+      "svg": "art/stopwatch.svg",
+      "x": 0.46,
+      "y": 0.34,
+      "s": 0.36,
+      "z": 5,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "walk": {
+       "from": [
+        1.05,
+        0.7
+       ],
+       "to": [
+        -0.05,
+        0.7
+       ]
+      },
+      "x": 1.05,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 3
+     },
+     {
+      "label": "计时",
+      "x": 0.46,
+      "y": 0.08,
+      "size": 0.08,
+      "delay": 0.8,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ],
+    "ex": "The coach timed my run.",
+    "exzh": "教练给我的跑步计时。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "id": "c",
+       "actor": "west-man-point",
+       "x": 0.18,
+       "y": 0.62,
+       "s": 0.88,
+       "z": 4,
+       "when": "coach"
+      },
+      {
+       "svg": "art/stopwatch.svg",
+       "x": 0.42,
+       "y": 0.36,
+       "s": 0.4,
+       "z": 5,
+       "when": "timed",
+       "anim": "pulse",
+       "pop": true
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "walk": {
+        "from": [
+         1.05,
+         0.7
+        ],
+        "to": [
+         -0.05,
+         0.7
+        ]
+       },
+       "x": 1.05,
+       "y": 0.7,
+       "s": 0.62,
+       "z": 3,
+       "when": "run"
+      },
+      {
+       "label": "timed",
+       "x": 0.42,
+       "y": 0.08,
+       "size": 0.08,
+       "when": "timed",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "计时",
+       "x": 0.7,
+       "y": 0.2,
+       "size": 0.085,
+       "when": "计时",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“切出来的一段时间”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.6,
+       "z": 3
+      },
+      {
+       "shape": "circle",
+       "x": 0.5,
+       "y": 0.48,
+       "r": 0.31,
+       "stroke": "#FF7A1A",
+       "lw": 7,
+       "glow": 2,
+       "reveal": "right",
+       "rdur": 1.6,
+       "delay": 0.6,
+       "z": 4
+      },
+      {
+       "label": "一段时间",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.08,
+       "delay": 1.2,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "一段一段的时间",
+    "node": "① 时间",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "一天被切成一段一段的时间。",
+     "做作业用掉一段，玩又要一段，这就是时间。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.4,
+       "z": 3
+      },
+      {
+       "shape": "circle",
+       "x": 0.5,
+       "y": 0.3,
+       "r": 0.21,
+       "stroke": "#FF7A1A",
+       "lw": 6,
+       "reveal": "right",
+       "rdur": 1.4,
+       "when": "一段一段",
+       "z": 4
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.26,
+       "y": 0.74,
+       "s": 0.26,
+       "z": 3,
+       "when": "做作业"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "walk": {
+        "from": [
+         1.05,
+         0.72
+        ],
+        "to": [
+         0.62,
+         0.72
+        ]
+       },
+       "x": 1.05,
+       "y": 0.72,
+       "s": 0.5,
+       "z": 3,
+       "when": "玩又要"
+      },
+      {
+       "label": "时间",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.09,
+       "when": "这就是时间",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "时间上的某一个点",
+    "node": "② 时刻",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "在这一段段时间上，指出其中一个点。",
+     "比如三点整，这一下就是时刻。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "ray": [
+        [
+         0.06,
+         0.78
+        ],
+        [
+         0.94,
+         0.78
+        ]
+       ],
+       "color": "#2F6FB3",
+       "lw": 0.016,
+       "arrow": true,
+       "when": "一段段时间",
+       "dur": 1.0,
+       "z": 4
+      },
+      {
+       "shape": "circle",
+       "x": 0.5,
+       "y": 0.78,
+       "r": 0.035,
+       "fill": "#E8453C",
+       "stroke": "#1B1A1F",
+       "lw": 3,
+       "glow": 2,
+       "when": "一个点",
+       "z": 5
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.5,
+       "y": 0.38,
+       "s": 0.52,
+       "z": 3,
+       "when": "三点整",
+       "pop": true
+      },
+      {
+       "label": "时刻",
+       "x": 0.78,
+       "y": 0.38,
+       "size": 0.1,
+       "when": "时刻",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "做一回事占用一段时间",
+    "node": "③ 次",
+    "pos": "名词",
+    "pic": 2,
+    "say": [
+     "每做一回事，就占用一段时间。",
+     "去一趟北京占一段，再去一趟又占一段，一段就是一次。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-man-case",
+       "walk": {
+        "from": [
+         -0.05,
+         0.7
+        ],
+        "to": [
+         1.05,
+         0.7
+        ]
+       },
+       "x": -0.05,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 3,
+       "when": "做一回事"
+      },
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.32,
+       "y": 0.3,
+       "s": 0.24,
+       "rot": -6,
+       "z": 4,
+       "when": "去一趟北京",
+       "pop": true
+      },
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.62,
+       "y": 0.3,
+       "s": 0.24,
+       "rot": 6,
+       "z": 4,
+       "when": "再去一趟",
+       "pop": true
+      },
+      {
+       "label": "一次",
+       "x": 0.47,
+       "y": 0.1,
+       "size": 0.09,
+       "when": "一次",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "几次相加",
+    "node": "④ 倍",
+    "pos": "名词",
+    "pic": 3,
+    "say": [
+     "把同样大的一份，加一次、两次、三次。",
+     "三份加在一起，就是三倍。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/box.svg",
+       "x": 0.18,
+       "y": 0.74,
+       "s": 0.22,
+       "z": 3,
+       "when": "同样大的一份"
+      },
+      {
+       "svg": "art/box.svg",
+       "x": 0.6,
+       "y": 0.8,
+       "s": 0.2,
+       "z": 3,
+       "when": "加一次"
+      },
+      {
+       "svg": "art/box.svg",
+       "x": 0.6,
+       "y": 0.6,
+       "s": 0.2,
+       "z": 4,
+       "when": "两次"
+      },
+      {
+       "svg": "art/box.svg",
+       "x": 0.6,
+       "y": 0.4,
+       "s": 0.2,
+       "z": 5,
+       "when": "三次"
+      },
+      {
+       "label": "三倍",
+       "x": 0.84,
+       "y": 0.6,
+       "size": 0.1,
+       "when": "三倍",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "很长的一段",
+    "node": "⑤ 时代",
+    "pos": "名词",
+    "pic": 4,
+    "say": [
+     "如果这一段时间很长很长，长到几百年。",
+     "那就是一个时代，比如在竹简上写字的古时候。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "ray": [
+        [
+         0.06,
+         0.2
+        ],
+        [
+         0.94,
+         0.2
+        ]
+       ],
+       "color": "#7048E8",
+       "lw": 0.018,
+       "arrow": true,
+       "when": "很长很长",
+       "dur": 1.6,
+       "z": 4
+      },
+      {
+       "label": "几百年",
+       "x": 0.5,
+       "y": 0.32,
+       "size": 0.08,
+       "when": "几百年",
+       "color": "#7048E8",
+       "border": "#7048E8"
+      },
+      {
+       "svg": "art/bamboo.svg",
+       "x": 0.48,
+       "y": 0.64,
+       "s": 0.48,
+       "z": 3,
+       "cue": 1,
+       "when": "竹简",
+       "pop": true
+      },
+      {
+       "svg": "art/brush.svg",
+       "x": 0.72,
+       "y": 0.56,
+       "s": 0.36,
+       "rot": 20,
+       "z": 4,
+       "cue": 1,
+       "when": "写字",
+       "anim": "swing"
+      },
+      {
+       "label": "时代",
+       "x": 0.18,
+       "y": 0.6,
+       "size": 0.1,
+       "when": "时代",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "动词：给一段时间计时、挑好时间",
+    "node": "⑥ 为…计时、选定时机",
+    "pos": "动词",
+    "pic": 5,
+    "rule": "表示东西、性质的词，也能直接当动词用",
+    "ruleEx": "time 时间 → 为…计时、选定时机      water 水 → 浇水",
+    "cap": "时间 → 计时",
+    "say": [
+     "表示东西的词，也能直接当动词用。",
+     "water 是水，也能当动词，就是浇水。",
+     "time 是时间，当动词就是给一件事计时，或者挑好时间。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "label": "东西 → 用它做事",
+       "x": 0.5,
+       "y": 0.4,
+       "size": 0.09,
+       "when": "当动词用",
+       "hideCue": 1,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      },
+      {
+       "svg": "art/plant.svg",
+       "x": 0.62,
+       "y": 0.62,
+       "s": 0.4,
+       "z": 3,
+       "cue": 1,
+       "when": "water",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/watering-can.svg",
+       "x": 0.34,
+       "y": 0.44,
+       "s": 0.32,
+       "rot": -15,
+       "z": 4,
+       "cue": 1,
+       "when": "浇水",
+       "hideCue": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.46,
+       "y": 0.44,
+       "every": 0.4,
+       "life": 1,
+       "to": [
+        0.08,
+        0.2
+       ],
+       "s": 0.05,
+       "cue": 1,
+       "when": "浇水",
+       "hideCue": 2
+      },
+      {
+       "label": "water 水 → 浇水",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "when": "浇水",
+       "hideCue": 2,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "actor": "west-man-point",
+       "x": 0.2,
+       "y": 0.62,
+       "s": 0.86,
+       "z": 4,
+       "cue": 2,
+       "when": "time"
+      },
+      {
+       "svg": "art/stopwatch.svg",
+       "x": 0.48,
+       "y": 0.36,
+       "s": 0.38,
+       "z": 5,
+       "when": "计时",
+       "anim": "pulse",
+       "pop": true
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "walk": {
+        "from": [
+         1.05,
+         0.7
+        ],
+        "to": [
+         -0.05,
+         0.7
+        ]
+       },
+       "x": 1.05,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 3,
+       "when": "计时"
+      },
+      {
+       "label": "挑好时间",
+       "x": 0.78,
+       "y": 0.12,
+       "size": 0.08,
+       "when": "挑好时间",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "timely",
+    "m": "及时的",
+    "share": "time"
+   },
+   {
+    "w": "timeless",
+    "m": "永恒的",
+    "share": "time"
+   },
+   {
+    "w": "timetable",
+    "m": "时刻表",
+    "share": "time"
+   },
+   {
+    "w": "overtime",
+    "m": "加班",
+    "share": "time"
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "moment": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/camera.svg",
+       "x": 0.4,
+       "y": 0.52,
+       "s": 0.6,
+       "z": 3,
+       "shadow": true,
+       "anim": "click",
+       "at": 1
+      },
+      {
+       "svg": "art/flash.svg",
+       "x": 0.58,
+       "y": 0.32,
+       "s": 0.3,
+       "z": 4,
+       "delay": 1,
+       "hide": 1.6
+      },
+      {
+       "label": "moment 一瞬间",
+       "x": 0.8,
+       "y": 0.5,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    },
+    "hour": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.7,
+       "z": 3
+      },
+      {
+       "label": "two hours 两个钟头",
+       "x": 0.78,
+       "y": 0.5,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    },
+    "era": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/bamboo.svg",
+       "x": 0.4,
+       "y": 0.56,
+       "s": 0.6,
+       "z": 3,
+       "shadow": true
+      },
+      {
+       "svg": "art/brush.svg",
+       "x": 0.6,
+       "y": 0.5,
+       "s": 0.5,
+       "rot": 20,
+       "z": 4,
+       "anim": "swing"
+      },
+      {
+       "label": "era 时代、纪元",
+       "x": 0.82,
+       "y": 0.5,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "timeai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他们在聚会上过得怎么样？\n听：We had a good time at the party.\nA. 很无聊\nB. 玩得很开心\nC. 很累\nD. 很早就走了",
@@ -90,5 +1452,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

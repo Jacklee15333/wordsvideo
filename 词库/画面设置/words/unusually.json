@@ -1,0 +1,748 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "异常地、格外；不同寻常地"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 5
+    },
+    {
+     "svg": "art/cat-sit_f0.svg",
+     "frames": [
+      "art/cat-sit_f0.svg",
+      "art/cat-sit_f1.svg",
+      "art/cat-sit_f2.svg"
+     ],
+     "fps": 2,
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "z": 6,
+     "shadow": true
+    },
+    {
+     "id": "boy",
+     "actor": "cn-boy-raise",
+     "x": 0.17,
+     "y": 0.64,
+     "s": 0.8,
+     "z": 3
+    },
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.83,
+     "y": 0.64,
+     "s": 0.8,
+     "z": 3
+    },
+    {
+     "label": "unusual 不寻常的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.085,
+     "delay": 0.6,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "label": "课桌上坐着一只猫",
+     "x": 0.5,
+     "y": 0.24,
+     "size": 0.06,
+     "delay": 1.2,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "actor": "walk-cn-girl",
+     "walk": {
+      "from": [
+       0.05,
+       0.66
+      ],
+      "to": [
+       0.95,
+       0.66
+      ]
+     },
+     "x": 0.05,
+     "y": 0.66,
+     "s": 0.72,
+     "z": 3
+    },
+    {
+     "label": "-ly：…地",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "delay": 0.4,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3"
+    },
+    {
+     "label": "slow 慢的 → slowly 慢慢地（走）",
+     "x": 0.5,
+     "y": 0.25,
+     "size": 0.06,
+     "delay": 1.0,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800"
+    },
+    {
+     "label": "说她怎么做",
+     "x": 0.5,
+     "y": 0.92,
+     "size": 0.065,
+     "delay": 1.6,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/cat-sit_f0.svg",
+  "p1": "art/icon-ly.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/street-bg.svg",
+  "items": [
+   {
+    "svg": "art/sun.svg",
+    "x": 0.84,
+    "y": 0.2,
+    "s": 0.3,
+    "anim": "pulse"
+   },
+   {
+    "svg": "art/thermometer_f0.svg",
+    "frames": [
+     "art/thermometer_f0.svg",
+     "art/thermometer_f1.svg",
+     "art/thermometer_f2.svg",
+     "art/thermometer_f3.svg"
+    ],
+    "fps": 1.5,
+    "x": 0.32,
+    "y": 0.52,
+    "s": 0.72,
+    "z": 3
+   },
+   {
+    "label": "不寻常地热",
+    "x": 0.64,
+    "y": 0.6,
+    "size": 0.1,
+    "delay": 0.8,
+    "color": "#C0392B",
+    "border": "#C0392B"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "异常地、格外",
+   "pos": "副词",
+   "diff": "程度超出平常",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/sun.svg",
+     "x": 0.85,
+     "y": 0.18,
+     "s": 0.3,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/thermometer_f0.svg",
+     "frames": [
+      "art/thermometer_f0.svg",
+      "art/thermometer_f1.svg",
+      "art/thermometer_f2.svg",
+      "art/thermometer_f3.svg"
+     ],
+     "fps": 1.5,
+     "x": 0.44,
+     "y": 0.5,
+     "s": 0.7,
+     "z": 3
+    },
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.16,
+     "y": 0.64,
+     "s": 0.78,
+     "z": 4
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "walk": {
+      "from": [
+       1.05,
+       0.7
+      ],
+      "to": [
+       -0.05,
+       0.7
+      ]
+     },
+     "x": 1.05,
+     "y": 0.7,
+     "s": 0.6,
+     "z": 2
+    },
+    {
+     "label": "格外热",
+     "x": 0.72,
+     "y": 0.56,
+     "size": 0.09,
+     "delay": 0.8,
+     "color": "#C0392B",
+     "border": "#C0392B"
+    }
+   ],
+   "ex": "It is unusually hot today.",
+   "exzh": "今天格外热。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/sun.svg",
+      "x": 0.87,
+      "y": 0.2,
+      "s": 0.34,
+      "anim": "pulse",
+      "when": "hot"
+     },
+     {
+      "svg": "art/thermometer_f0.svg",
+      "frames": [
+       "art/thermometer_f0.svg",
+       "art/thermometer_f1.svg",
+       "art/thermometer_f2.svg",
+       "art/thermometer_f3.svg"
+      ],
+      "fps": 1.5,
+      "x": 0.48,
+      "y": 0.5,
+      "s": 0.74,
+      "z": 3,
+      "when": "unusually",
+      "pop": true
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.2,
+      "y": 0.64,
+      "s": 0.8,
+      "z": 4
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "walk": {
+       "from": [
+        1.05,
+        0.7
+       ],
+       "to": [
+        -0.05,
+        0.7
+       ]
+      },
+      "x": 1.05,
+      "y": 0.7,
+      "s": 0.62,
+      "z": 2
+     },
+     {
+      "label": "unusually hot",
+      "x": 0.72,
+      "y": 0.48,
+      "size": 0.08,
+      "when": "unusually",
+      "delay": 0.3,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "格外热",
+      "x": 0.72,
+      "y": 0.66,
+      "size": 0.085,
+      "when": "格外热",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "不同寻常地",
+   "pos": "副词",
+   "diff": "一反平常、难得",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sofa.svg",
+     "x": 0.62,
+     "y": 0.8,
+     "s": 0.34,
+     "z": 2
+    },
+    {
+     "svg": "art/clock_f0.svg",
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 1,
+     "x": 0.5,
+     "y": 0.2,
+     "s": 0.24
+    },
+    {
+     "id": "dad",
+     "actor": "west-man-hello",
+     "x": 0.24,
+     "y": 0.62,
+     "s": 0.85,
+     "z": 3
+    },
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.76,
+     "y": 0.64,
+     "s": 0.78,
+     "z": 4,
+     "nodWith": "dad"
+    },
+    {
+     "label": "难得早回家",
+     "x": 0.5,
+     "y": 0.44,
+     "size": 0.08,
+     "delay": 0.8,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ],
+   "ex": "Dad came home unusually early today.",
+   "exzh": "爸爸今天难得早早回家。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.64,
+      "y": 0.82,
+      "s": 0.32,
+      "z": 2
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1,
+      "x": 0.5,
+      "y": 0.18,
+      "s": 0.26,
+      "when": "early"
+     },
+     {
+      "actor": "west-man-hello",
+      "x": 0.06,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "go": [
+       0.28,
+       0.62
+      ],
+      "goWhen": "came home",
+      "dur": 1.2
+     },
+     {
+      "sound": "say:I'm home!",
+      "when": "came home",
+      "gap": true
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.8,
+      "y": 0.64,
+      "s": 0.8,
+      "z": 4,
+      "when": "unusually"
+     },
+     {
+      "label": "unusually early",
+      "x": 0.52,
+      "y": 0.42,
+      "size": 0.08,
+      "when": "unusually",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "难得早早回家",
+      "x": 0.52,
+      "y": 0.6,
+      "size": 0.085,
+      "when": "难得早早回家",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“不寻常地”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/sun.svg",
+      "x": 0.84,
+      "y": 0.2,
+      "s": 0.3,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/thermometer_f0.svg",
+      "frames": [
+       "art/thermometer_f0.svg",
+       "art/thermometer_f1.svg",
+       "art/thermometer_f2.svg",
+       "art/thermometer_f3.svg"
+      ],
+      "fps": 1.5,
+      "x": 0.34,
+      "y": 0.52,
+      "s": 0.72,
+      "z": 3
+     },
+     {
+      "label": "不寻常地",
+      "x": 0.66,
+      "y": 0.6,
+      "size": 0.1,
+      "delay": 0.6,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "程度超出平常",
+   "node": "① 异常地、格外",
+   "pos": "副词",
+   "pic": 0,
+   "say": [
+    "平常这个时候，温度到这条线就差不多了。",
+    "今天温度一下冲过了这条线，超出平常一大截，这就是异常地、格外。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/thermometer_f0.svg",
+      "frames": [
+       "art/thermometer_f0.svg",
+       "art/thermometer_f1.svg",
+       "art/thermometer_f2.svg",
+       "art/thermometer_f3.svg"
+      ],
+      "fps": 1.5,
+      "x": 0.4,
+      "y": 0.5,
+      "s": 0.74,
+      "z": 3
+     },
+     {
+      "shape": "rect",
+      "x": 0.4,
+      "y": 0.56,
+      "w": 0.3,
+      "h": 0.012,
+      "fill": "#2F6FB3",
+      "when": "这条线",
+      "z": 4
+     },
+     {
+      "label": "平常",
+      "x": 0.64,
+      "y": 0.56,
+      "size": 0.075,
+      "when": "这条线",
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.86,
+      "y": 0.18,
+      "s": 0.28,
+      "anim": "pulse",
+      "cue": 1,
+      "when": "温度一下"
+     },
+     {
+      "label": "超出平常",
+      "x": 0.66,
+      "y": 0.32,
+      "size": 0.075,
+      "when": "超出平常",
+      "color": "#C0392B",
+      "border": "#C0392B"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.13,
+      "y": 0.64,
+      "s": 0.75,
+      "z": 4,
+      "when": "超出平常"
+     },
+     {
+      "label": "异常地、格外",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.085,
+      "when": "格外",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一件事不像平常那样",
+   "node": "② 不同寻常地、难得",
+   "pos": "副词",
+   "pic": 1,
+   "say": [
+    "爸爸平常总是天黑了才到家。",
+    "今天他一反平常，太阳还没落山就回来了，这就是不同寻常地，难得。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "shape": "rect",
+      "x": 0.5,
+      "y": 0.5,
+      "w": 1,
+      "h": 1,
+      "fill": "#0B1A3A",
+      "a": 0.4,
+      "when": "天黑了",
+      "hideCue": 1,
+      "z": 1
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.5,
+      "y": 0.2,
+      "s": 0.24
+     },
+     {
+      "label": "平常：天黑了才到家",
+      "x": 0.5,
+      "y": 0.42,
+      "size": 0.075,
+      "when": "天黑了",
+      "hideCue": 1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.86,
+      "y": 0.2,
+      "s": 0.24,
+      "anim": "pulse",
+      "when": "太阳还没落山"
+     },
+     {
+      "actor": "west-man-hello",
+      "x": 0.06,
+      "y": 0.62,
+      "s": 0.85,
+      "z": 3,
+      "cue": 1,
+      "when": "回来了",
+      "go": [
+       0.3,
+       0.62
+      ],
+      "dur": 1.2
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.76,
+      "y": 0.64,
+      "s": 0.78,
+      "z": 4,
+      "when": "一反平常"
+     },
+     {
+      "label": "不同寻常地、难得",
+      "x": 0.52,
+      "y": 0.44,
+      "size": 0.085,
+      "when": "难得",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "usual",
+   "m": "平常的",
+   "share": "usual"
+  },
+  {
+   "w": "unusual",
+   "m": "不寻常的",
+   "share": "unusual"
+  },
+  {
+   "w": "usually",
+   "m": "通常",
+   "share": "ly"
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：今天天气怎么样？",
+    "listen": "It's unusually cold today.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "很暖和",
+     "很热",
+     "和平时一样",
+     "格外冷"
+    ],
+    "ans": "D",
+    "why": "unusually cold 格外冷。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She was ______ quiet this morning.",
+    "opts": [
+     "unusual",
+     "usual",
+     "use",
+     "unusually"
+    ],
+    "ans": "D",
+    "why": "修饰形容词 quiet 用副词 unusually。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 unusual、unusually 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "What an ______ day!",
+    "opts": [],
+    "ans": "unusual",
+    "why": "修饰名词 day 用形容词 unusual。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "We ______ have lunch at twelve. (unusually)",
+    "opts": [],
+    "ans": "usually",
+    "why": "说平常的习惯用 usually。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The river is unusual high this year.",
+    "opts": [],
+    "ans": "unusual → unusually",
+    "why": "修饰形容词 high 要用副词 unusually。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "她和平常一样，七点起床。",
+    "stem": "______ usual, she got up at seven.",
+    "opts": [],
+    "ans": "As",
+    "why": "As usual 照常。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The test was ______ difficult; nobody got full marks.",
+    "opts": [
+     "extreme",
+     "most",
+     "more",
+     "extremely"
+    ],
+    "ans": "D",
+    "why": "修饰形容词 difficult 用副词 extremely（非常），和 unusually 意思相近。",
+    "kd": "易混"
+   }
+  ]
+ }
+}
