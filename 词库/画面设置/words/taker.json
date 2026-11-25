@@ -465,6 +465,65 @@
    "share": "taker"
   }
  ],
+ "demo": {
+  "driver": {
+   "icons": [
+    "art/icon-drive.svg",
+    "art/icon-er.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/taxi.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.66,
+      "anim": "ride"
+     }
+    ]
+   },
+   "lit": "开车的人"
+  },
+  "actor": {
+   "icons": [
+    "art/icon-act.svg",
+    "art/icon-or.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/clapboard.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "演戏的人"
+  },
+  "artist": {
+   "icons": [
+    "art/icon-art.svg",
+    "art/icon-ist.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/brush.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.82,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "搞艺术的人"
+  }
+ },
  "distinguish": {
   "key": "接受者",
   "items": [

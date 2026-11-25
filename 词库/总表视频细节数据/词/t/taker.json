@@ -467,6 +467,65 @@
     "share": "taker"
    }
   ],
+  "demo": {
+   "driver": {
+    "icons": [
+     "art/icon-drive.svg",
+     "art/icon-er.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/taxi.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.66,
+       "anim": "ride"
+      }
+     ]
+    },
+    "lit": "开车的人"
+   },
+   "actor": {
+    "icons": [
+     "art/icon-act.svg",
+     "art/icon-or.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/clapboard.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "anim": "shake"
+      }
+     ]
+    },
+    "lit": "演戏的人"
+   },
+   "artist": {
+    "icons": [
+     "art/icon-art.svg",
+     "art/icon-ist.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/brush.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.82,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "搞艺术的人"
+   }
+  },
   "distinguish": {
    "key": "接受者",
    "items": [
@@ -630,5 +689,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

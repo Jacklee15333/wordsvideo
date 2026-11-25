@@ -1,7 +1,717 @@
 {
  "单词": "intake",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ˈɪn",
+   "teɪk"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/door-in.svg",
+      "x": 0.44,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/lamp.svg",
+      "x": 0.84,
+      "y": 0.6,
+      "s": 0.5
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.1,
+      "y": 0.66,
+      "s": 0.4
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/hand-grab.svg",
+      "x": 0.44,
+      "y": 0.5,
+      "s": 0.62,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.82,
+      "y": 0.62,
+      "s": 0.3,
+      "go": [
+       0.6,
+       0.5
+      ],
+      "dur": 1.4,
+      "loop": true
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-in.svg",
+   "p1": "art/icon-take.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/pipe-intake.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.7
+    },
+    {
+     "emit": true,
+     "svg": "art/drop.svg",
+     "x": 0.24,
+     "y": 0.72,
+     "s": 0.05,
+     "every": 0.5,
+     "life": 1.6,
+     "to": [
+      0.3,
+      0.05
+     ],
+     "wobble": 0.03
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "摄入；摄入量",
+    "pos": "名词",
+    "diff": "人把食物、空气收进身体",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/dining-table.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 2
+     },
+     {
+      "svg": "art/plate.svg",
+      "x": 0.42,
+      "y": 0.68,
+      "s": 0.28,
+      "z": 3
+     },
+     {
+      "svg": "art/glass-full.svg",
+      "x": 0.7,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "pulse",
+      "z": 3
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.7,
+      "y": 0.3,
+      "s": 0.05,
+      "every": 0.9,
+      "life": 2.2,
+      "to": [
+       0,
+       0.2
+      ],
+      "wobble": 0.03
+     }
+    ],
+    "ex": "We need a daily intake of water.",
+    "exzh": "我们每天都要摄入水分。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/dining-table.svg",
+       "x": 0.5,
+       "y": 0.88,
+       "s": 0.32,
+       "z": 2
+      },
+      {
+       "svg": "art/glass-full.svg",
+       "x": 0.46,
+       "y": 0.5,
+       "s": 0.56,
+       "when": "water",
+       "pop": true,
+       "anim": "pulse",
+       "z": 3
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.82,
+       "y": 0.3,
+       "s": 0.32,
+       "when": "daily",
+       "anim": "bob"
+      },
+      {
+       "label": "intake",
+       "x": 0.16,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "intake",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "摄入",
+       "x": 0.16,
+       "y": 0.3,
+       "size": 0.075,
+       "when": "摄入",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "（学校、单位一次）招收的人数",
+    "pos": "名词",
+    "diff": "一次收进来的人",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3,
+      "id": "t"
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.72,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "nodWith": "t"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 6
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.52,
+      "y": 0.7,
+      "s": 0.16,
+      "anim": "bob",
+      "z": 7
+     }
+    ],
+    "ex": "This year's intake is 300 students.",
+    "exzh": "今年招收了三百名学生。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.28,
+       "y": 0.58,
+       "s": 0.86,
+       "z": 3,
+       "id": "g"
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "x": 0.74,
+       "y": 0.6,
+       "s": 0.82,
+       "z": 3,
+       "nodWith": "g"
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.94,
+       "s": 0.26,
+       "z": 6,
+       "when": "students"
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.26,
+       "when": "This year",
+       "anim": "bob"
+      },
+      {
+       "label": "intake",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "when": "intake",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "招收",
+       "x": 0.88,
+       "y": 0.16,
+       "size": 0.075,
+       "when": "招收",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "进水口、进气口",
+    "pos": "名词",
+    "diff": "水、空气被收进来的地方",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/pipe-intake.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.7
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.24,
+      "y": 0.72,
+      "s": 0.05,
+      "every": 0.5,
+      "life": 1.6,
+      "to": [
+       0.3,
+       0.05
+      ],
+      "wobble": 0.03
+     }
+    ],
+    "ex": "Water flows into the intake.",
+    "exzh": "水流进进水口。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/pipe-intake.svg",
+       "x": 0.56,
+       "y": 0.6,
+       "s": 0.7,
+       "when": "intake"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.3,
+       "y": 0.72,
+       "s": 0.05,
+       "every": 0.5,
+       "life": 1.6,
+       "to": [
+        0.3,
+        0.05
+       ],
+       "wobble": 0.03,
+       "when": "flows"
+      },
+      {
+       "label": "intake",
+       "x": 0.16,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "intake",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "进水口",
+       "x": 0.86,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "进水口",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“收进来（的东西）”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/pipe-intake.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.7
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.24,
+       "y": 0.72,
+       "s": 0.05,
+       "every": 0.5,
+       "life": 1.6,
+       "to": [
+        0.3,
+        0.05
+       ],
+       "wobble": 0.03
+      }
+     ]
+    }
+   },
+   {
+    "via": "小词放在动词前，合成一个名词",
+    "node": "① 进水口、进气口",
+    "pos": "名词",
+    "pic": 2,
+    "rule": "小词放在动词前面，合成一个名词",
+    "ruleEx": "take in 收进来 → intake      come in 进来 → income 收入",
+    "say": [
+     "take in 是收进来。合成一个词，小词 in 放到前面，就是 intake。",
+     "come in 是进来，合成 income，就是收进来的钱：收入。",
+     "intake 最早指水渠、管道把水收进来的地方：进水口、进气口。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "label": "take in",
+       "x": 0.3,
+       "y": 0.2,
+       "size": 0.09,
+       "when": "take in",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "hideCue": 1
+      },
+      {
+       "ray": [
+        [
+         0.44,
+         0.2
+        ],
+        [
+         0.56,
+         0.2
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.7,
+       "when": "放到前面",
+       "hideCue": 1
+      },
+      {
+       "label": "intake",
+       "x": 0.72,
+       "y": 0.2,
+       "size": 0.09,
+       "when": "intake",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/door-in.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.46,
+       "when": "收进来",
+       "hideCue": 1
+      },
+      {
+       "label": "come in",
+       "x": 0.3,
+       "y": 0.2,
+       "size": 0.09,
+       "when": "come in",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "hideCue": 2
+      },
+      {
+       "label": "income",
+       "x": 0.72,
+       "y": 0.2,
+       "size": 0.09,
+       "when": "income",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/wallet.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.44,
+       "when": "收入",
+       "pop": true,
+       "hideCue": 2
+      },
+      {
+       "svg": "art/pipe-intake.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.7,
+       "when": "水渠"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.24,
+       "y": 0.72,
+       "s": 0.05,
+       "every": 0.5,
+       "life": 1.6,
+       "to": [
+        0.3,
+        0.05
+       ],
+       "wobble": 0.03,
+       "cue": 2,
+       "when": "把水收进来"
+      },
+      {
+       "label": "进水口",
+       "x": 0.84,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "进水口",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "人把食物、空气收进身体",
+    "node": "② 摄入；摄入量",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "人把食物、空气、水收进身体里，就是摄入。",
+     "收进来多少，就是摄入量。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/dining-table.svg",
+       "x": 0.5,
+       "y": 0.88,
+       "s": 0.32,
+       "z": 2
+      },
+      {
+       "svg": "art/plate.svg",
+       "x": 0.36,
+       "y": 0.68,
+       "s": 0.28,
+       "when": "食物",
+       "z": 3
+      },
+      {
+       "svg": "art/glass-full.svg",
+       "x": 0.7,
+       "y": 0.52,
+       "s": 0.5,
+       "when": "水",
+       "pop": true,
+       "anim": "pulse",
+       "z": 3
+      },
+      {
+       "label": "摄入",
+       "x": 0.2,
+       "y": 0.14,
+       "size": 0.1,
+       "when": "摄入",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "label": "摄入量",
+       "x": 0.7,
+       "y": 0.14,
+       "size": 0.1,
+       "when": "摄入量",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "学校一次收进来的人",
+    "node": "③ 招收的人数",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "学校、单位一次收进来的人，就是招收的人数。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.8,
+       "s": 0.4,
+       "when": "收进来的人"
+      },
+      {
+       "svg": "art/door-in.svg",
+       "x": 0.14,
+       "y": 0.5,
+       "s": 0.44,
+       "when": "学校",
+       "anim": "pulse"
+      },
+      {
+       "label": "招收的人数",
+       "x": 0.6,
+       "y": 0.2,
+       "size": 0.1,
+       "when": "招收的人数",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "income",
+    "m": "收入",
+    "share": "in"
+   },
+   {
+    "w": "input",
+    "m": "输入",
+    "share": "in"
+   },
+   {
+    "w": "take",
+    "m": "拿",
+    "share": "take"
+   }
+  ],
+  "distinguish": {
+   "key": "摄入 / 输入",
+   "items": [
+    {
+     "w": "intake",
+     "word": "intake",
+     "m": "摄入（量）",
+     "diff": "intake 偏吸收进来的量：吃进、喝进、吸进身体里的多少。",
+     "say": "intake 偏吸收进来的量：吃进、喝进、吸进身体里的多少。",
+     "line": "intake 偏吸收进来的量：吃进、喝进、吸进身体里的多少。",
+     "note": "intake 偏吸收进来的量：吃进、喝进、吸进身体里的多少。",
+     "desc": "intake 偏吸收进来的量：吃进、喝进、吸进身体里的多少。",
+     "explain": "intake 偏吸收进来的量：吃进、喝进、吸进身体里的多少。",
+     "zh": "intake 偏吸收进来的量：吃进、喝进、吸进身体里的多少。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/plate.svg",
+        "x": 0.4,
+        "y": 0.6,
+        "s": 0.6
+       },
+       {
+        "svg": "art/glass-full.svg",
+        "x": 0.76,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "input",
+     "word": "input",
+     "m": "投入、输入",
+     "diff": "input 偏投入、输入：把信息、资源放进去，比如往电脑里输入。",
+     "say": "input 偏投入、输入：把信息、资源放进去，比如往电脑里输入。",
+     "line": "input 偏投入、输入：把信息、资源放进去，比如往电脑里输入。",
+     "note": "input 偏投入、输入：把信息、资源放进去，比如往电脑里输入。",
+     "desc": "input 偏投入、输入：把信息、资源放进去，比如往电脑里输入。",
+     "explain": "input 偏投入、输入：把信息、资源放进去，比如往电脑里输入。",
+     "zh": "input 偏投入、输入：把信息、资源放进去，比如往电脑里输入。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/computer.svg",
+        "x": 0.46,
+        "y": 0.5,
+        "s": 0.86,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/desk-papers.svg",
+        "x": 0.84,
+        "y": 0.66,
+        "s": 0.4
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "intake 是“收进来”的量；input 是“放进去”的东西。",
+   "tip": "daily intake of water 每天喝水量；input data 输入数据。"
+  }
+ },
+ "插图": [
+  "intakeai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：医生让他少吃什么？\n听：The doctor told him to cut down his sugar intake.\nA. 盐\nB. 肉\nC. 糖\nD. 水",
@@ -88,5 +798,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

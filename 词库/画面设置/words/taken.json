@@ -620,6 +620,71 @@
   }
  ],
  "distinguish": false,
+ "demo": {
+  "active": {
+   "icons": [
+    "art/icon-act.svg",
+    "art/icon-ive.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/ball.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.82,
+      "anim": "bob"
+     }
+    ]
+   },
+   "lit": "爱活动的"
+  },
+  "usable": {
+   "icons": [
+    "art/icon-use.svg",
+    "art/icon-able.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/pen.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "swing"
+     }
+    ]
+   },
+   "lit": "能用的"
+  },
+  "interested": {
+   "icons": [
+    "art/icon-interest.svg",
+    "art/icon-ed.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/scroll.svg",
+      "x": 0.4,
+      "y": 0.55,
+      "s": 0.84
+     },
+     {
+      "svg": "art/heart.svg",
+      "x": 0.76,
+      "y": 0.36,
+      "s": 0.3,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "感兴趣的"
+  }
+ },
  "lianxi": {
   "qs": [
    {

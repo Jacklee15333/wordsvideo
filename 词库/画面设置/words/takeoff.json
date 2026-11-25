@@ -1,0 +1,870 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈteɪk",
+  "ɒf"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/hand-grab.svg",
+     "x": 0.44,
+     "y": 0.5,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.82,
+     "y": 0.62,
+     "s": 0.3,
+     "go": [
+      0.6,
+      0.5
+     ],
+     "dur": 1.4,
+     "loop": true
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/airport-bg.svg",
+   "items": [
+    {
+     "svg": "art/plane.svg",
+     "x": 0.3,
+     "y": 0.72,
+     "s": 0.36,
+     "go": [
+      0.95,
+      0.22
+     ],
+     "dur": 3.2,
+     "wait": 0.6,
+     "s2": 0.24,
+     "anim": "none"
+    },
+    {
+     "svg": "art/flag.svg",
+     "x": 0.9,
+     "y": 0.7,
+     "s": 0.26,
+     "anim": "swing"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-take.svg",
+  "p1": "art/icon-off.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/airport-bg.svg",
+  "items": [
+   {
+    "svg": "art/plane.svg",
+    "x": 0.3,
+    "y": 0.74,
+    "s": 0.34,
+    "go": [
+     0.95,
+     0.22
+    ],
+    "dur": 3.2,
+    "wait": 0.6,
+    "s2": 0.24,
+    "anim": "none"
+   },
+   {
+    "svg": "art/flag.svg",
+    "x": 0.9,
+    "y": 0.7,
+    "s": 0.26,
+    "anim": "swing"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "（飞机）起飞",
+   "pos": "名词",
+   "diff": "飞机把自己带离地面",
+   "bg": "blank",
+   "img": "art/airport-bg.svg",
+   "items": [
+    {
+     "svg": "art/plane.svg",
+     "x": 0.3,
+     "y": 0.74,
+     "s": 0.34,
+     "go": [
+      0.95,
+      0.22
+     ],
+     "dur": 3.2,
+     "wait": 0.6,
+     "s2": 0.24,
+     "anim": "none"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.05,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 4,
+     "walk": {
+      "from": [
+       0.05,
+       0.86
+      ],
+      "to": [
+       0.6,
+       0.86
+      ],
+      "offset": 0
+     }
+    }
+   ],
+   "ex": "The plane's takeoff was on time.",
+   "exzh": "飞机准时起飞了。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/airport-bg.svg",
+    "items": [
+     {
+      "svg": "art/plane.svg",
+      "x": 0.3,
+      "y": 0.74,
+      "s": 0.34,
+      "when": "plane",
+      "go": [
+       0.9,
+       0.22
+      ],
+      "goWhen": "takeoff",
+      "dur": 2.4,
+      "s2": 0.24
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.86,
+      "y": 0.64,
+      "s": 0.3,
+      "when": "on time",
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.05,
+      "y": 0.88,
+      "s": 0.34,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.05,
+        0.88
+       ],
+       "to": [
+        0.5,
+        0.88
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "takeoff",
+      "x": 0.16,
+      "y": 0.12,
+      "size": 0.075,
+      "when": "takeoff",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "准时起飞",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "when": "准时起飞",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "（经济、事业）腾飞",
+   "pos": "名词",
+   "diff": "像飞机一样离地升空",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/chart.svg",
+     "x": 0.46,
+     "y": 0.46,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/plane.svg",
+     "x": 0.6,
+     "y": 0.5,
+     "s": 0.16,
+     "go": [
+      0.9,
+      0.12
+     ],
+     "dur": 2.4,
+     "loop": true
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.05,
+     "y": 0.76,
+     "s": 0.44,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.05,
+       0.76
+      ],
+      "to": [
+       0.95,
+       0.76
+      ],
+      "offset": 0
+     }
+    }
+   ],
+   "ex": "The town's economy is ready for takeoff.",
+   "exzh": "这个镇的经济就要腾飞了。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/chart.svg",
+      "x": 0.44,
+      "y": 0.46,
+      "s": 0.6,
+      "when": "economy",
+      "pop": true
+     },
+     {
+      "ray": [
+       [
+        0.3,
+        0.7
+       ],
+       [
+        0.62,
+        0.22
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 1.2,
+      "when": "takeoff",
+      "glow": true
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.95,
+      "y": 0.76,
+      "s": 0.42,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.95,
+        0.76
+       ],
+       "to": [
+        0.05,
+        0.76
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "takeoff",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.075,
+      "when": "takeoff",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "腾飞",
+      "x": 0.84,
+      "y": 0.3,
+      "size": 0.075,
+      "when": "腾飞",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "模仿、恶搞",
+   "pos": "名词",
+   "diff": "把别人的样子照着学",
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "beam": true,
+     "x": 0.25,
+     "y": 0.0,
+     "len": 0.8,
+     "width": 0.14,
+     "swing": 12,
+     "period": 4
+    },
+    {
+     "beam": true,
+     "x": 0.75,
+     "y": 0.0,
+     "len": 0.8,
+     "width": 0.14,
+     "swing": 12,
+     "period": 4.6
+    },
+    {
+     "actor": "west-man-speech",
+     "x": 0.3,
+     "y": 0.58,
+     "s": 0.88,
+     "z": 3,
+     "id": "m"
+    },
+    {
+     "actor": "cn-teacher-laugh",
+     "x": 0.72,
+     "y": 0.6,
+     "s": 0.84,
+     "z": 3,
+     "nodWith": "m"
+    },
+    {
+     "svg": "art/mic.svg",
+     "x": 0.42,
+     "y": 0.52,
+     "s": 0.3
+    }
+   ],
+   "ex": "He did a funny takeoff of our teacher.",
+   "exzh": "他滑稽地模仿了我们的老师。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.28,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3,
+      "id": "b"
+     },
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.74,
+      "y": 0.6,
+      "s": 0.84,
+      "z": 3,
+      "nodWith": "b"
+     },
+     {
+      "svg": "art/mirror.svg",
+      "x": 0.52,
+      "y": 0.4,
+      "s": 0.34,
+      "when": "takeoff",
+      "pop": true,
+      "anim": "swing"
+     },
+     {
+      "label": "takeoff",
+      "x": 0.52,
+      "y": 0.08,
+      "size": 0.075,
+      "when": "takeoff",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "模仿",
+      "x": 0.52,
+      "y": 0.88,
+      "size": 0.075,
+      "when": "模仿",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“带离原处”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/airport-bg.svg",
+    "items": [
+     {
+      "svg": "art/plane.svg",
+      "x": 0.3,
+      "y": 0.74,
+      "s": 0.34,
+      "go": [
+       0.95,
+       0.22
+      ],
+      "dur": 3.2,
+      "wait": 0.6,
+      "s2": 0.24,
+      "anim": "none"
+     },
+     {
+      "svg": "art/flag.svg",
+      "x": 0.9,
+      "y": 0.7,
+      "s": 0.26,
+      "anim": "swing"
+     }
+    ]
+   }
+  },
+  {
+   "via": "动词短语整个变成名词",
+   "node": "① 起飞",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "动词短语整个变成名词，先后不变",
+   "ruleEx": "take off 起飞 → takeoff      run off 流走 → runoff 径流",
+   "say": [
+    "take off 是把东西带离原处。动词短语整个变成名词，先后不变，就是 takeoff。",
+    "人用力一蹬，把自己带离地面，是起跳。",
+    "飞机把自己带离地面，就是起飞。飞机 1903 年才第一次上天，第二年就有了这个意思。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/airport-bg.svg",
+    "items": [
+     {
+      "label": "take off",
+      "x": 0.26,
+      "y": 0.14,
+      "size": 0.09,
+      "when": "take off",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "hideCue": 1
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.14
+       ],
+       [
+        0.56,
+        0.14
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "先后不变",
+      "hideCue": 1
+     },
+     {
+      "label": "takeoff",
+      "x": 0.72,
+      "y": 0.14,
+      "size": 0.09,
+      "when": "takeoff",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.5,
+      "y": 0.7,
+      "s": 0.3,
+      "when": "用力一蹬",
+      "go": [
+       0.5,
+       0.36
+      ],
+      "dur": 0.6,
+      "loop": true,
+      "hideCue": 2
+     },
+     {
+      "label": "起跳",
+      "x": 0.7,
+      "y": 0.4,
+      "size": 0.075,
+      "when": "起跳",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/plane.svg",
+      "x": 0.3,
+      "y": 0.74,
+      "s": 0.34,
+      "when": "飞机",
+      "go": [
+       0.9,
+       0.24
+      ],
+      "goWhen": "起飞",
+      "dur": 2.4,
+      "s2": 0.24
+     },
+     {
+      "label": "1903",
+      "x": 0.84,
+      "y": 0.62,
+      "size": 0.1,
+      "when": "1903",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ]
+   }
+  },
+  {
+   "via": "像飞机一样离地升空",
+   "node": "② 腾飞",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "经济、事业像飞机一样离地升空，就是腾飞、迅速发展。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/chart.svg",
+      "x": 0.42,
+      "y": 0.5,
+      "s": 0.62,
+      "when": "经济",
+      "pop": true
+     },
+     {
+      "svg": "art/plane.svg",
+      "x": 0.66,
+      "y": 0.6,
+      "s": 0.2,
+      "when": "离地升空",
+      "go": [
+       0.92,
+       0.18
+      ],
+      "dur": 2.0,
+      "s2": 0.12
+     },
+     {
+      "label": "腾飞",
+      "x": 0.84,
+      "y": 0.86,
+      "size": 0.1,
+      "when": "腾飞",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "把别人的样子“拿下来”照着学",
+   "node": "③ 模仿、恶搞",
+   "pos": "名词",
+   "pic": 2,
+   "say": [
+    "把别人的样子拿下来，照着学，就是模仿、恶搞。",
+    "这反倒是 takeoff 最早的意思。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/photo.svg",
+      "x": 0.3,
+      "y": 0.46,
+      "s": 0.4,
+      "when": "别人的样子",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/mirror.svg",
+      "x": 0.66,
+      "y": 0.5,
+      "s": 0.6,
+      "when": "照着学",
+      "pop": true,
+      "anim": "swing"
+     },
+     {
+      "label": "模仿",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.1,
+      "when": "模仿",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     },
+     {
+      "label": "最早的意思",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "when": "最早的意思",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "takeout",
+   "m": "外卖",
+   "share": "take"
+  },
+  {
+   "w": "runoff",
+   "m": "径流",
+   "share": "off"
+  },
+  {
+   "w": "take off",
+   "m": "起飞；脱下",
+   "share": "take off"
+  }
+ ],
+ "distinguish": {
+  "key": "模仿",
+  "items": [
+   {
+    "w": "takeoff",
+    "word": "takeoff",
+    "m": "模仿、恶搞",
+    "diff": "takeoff 是把别人的样子拿下来照着演，多为了好笑，带点恶搞。",
+    "say": "takeoff 是把别人的样子拿下来照着演，多为了好笑，带点恶搞。",
+    "line": "takeoff 是把别人的样子拿下来照着演，多为了好笑，带点恶搞。",
+    "note": "takeoff 是把别人的样子拿下来照着演，多为了好笑，带点恶搞。",
+    "desc": "takeoff 是把别人的样子拿下来照着演，多为了好笑，带点恶搞。",
+    "explain": "takeoff 是把别人的样子拿下来照着演，多为了好笑，带点恶搞。",
+    "zh": "takeoff 是把别人的样子拿下来照着演，多为了好笑，带点恶搞。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/mic.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.7
+      },
+      {
+       "svg": "art/mirror.svg",
+       "x": 0.74,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "swing"
+      }
+     ]
+    }
+   },
+   {
+    "w": "imitation",
+    "word": "imitation",
+    "m": "模仿、仿制品",
+    "diff": "imitation 是照着做，可以是学样子，也可以是仿造的东西。",
+    "say": "imitation 是照着做，可以是学样子，也可以是仿造的东西。",
+    "line": "imitation 是照着做，可以是学样子，也可以是仿造的东西。",
+    "note": "imitation 是照着做，可以是学样子，也可以是仿造的东西。",
+    "desc": "imitation 是照着做，可以是学样子，也可以是仿造的东西。",
+    "explain": "imitation 是照着做，可以是学样子，也可以是仿造的东西。",
+    "zh": "imitation 是照着做，可以是学样子，也可以是仿造的东西。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/vase.svg",
+       "x": 0.36,
+       "y": 0.56,
+       "s": 0.7
+      },
+      {
+       "svg": "art/vase.svg",
+       "x": 0.66,
+       "y": 0.56,
+       "s": 0.7,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "mimicking",
+    "word": "mimicking",
+    "m": "学（声音、动作）",
+    "diff": "mimicking 是学别人的声音、动作，像鹦鹉学舌。",
+    "say": "mimicking 是学别人的声音、动作，像鹦鹉学舌。",
+    "line": "mimicking 是学别人的声音、动作，像鹦鹉学舌。",
+    "note": "mimicking 是学别人的声音、动作，像鹦鹉学舌。",
+    "desc": "mimicking 是学别人的声音、动作，像鹦鹉学舌。",
+    "explain": "mimicking 是学别人的声音、动作，像鹦鹉学舌。",
+    "zh": "mimicking 是学别人的声音、动作，像鹦鹉学舌。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/parrot.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.9,
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.6,
+       "y": 0.3,
+       "dir": 0,
+       "n": 3
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "takeoff 偏恶搞式的模仿；imitation 是一般的模仿、仿制；mimicking 是学声音、动作。",
+  "tip": "名词 ˈtakeoff 重音在前，动词 take ˈoff 重音在后。"
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：这个节目是关于什么的？",
+    "listen": "The show is a funny takeoff of a famous film.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "拍一部新电影",
+     "介绍演员",
+     "恶搞一部电影",
+     "采访导演"
+    ],
+    "ans": "C",
+    "why": "takeoff 模仿、恶搞。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "His ______ of our teacher made everyone laugh.",
+    "opts": [
+     "take",
+     "taker",
+     "takeoff",
+     "taken"
+    ],
+    "ans": "C",
+    "why": "模仿别人用名词 takeoff。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 takeoff、imitation 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "This bag is an ______; it's not real leather.",
+    "opts": [],
+    "ans": "imitation",
+    "why": "“仿制品”用 imitation；takeoff 偏好笑的模仿。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "They did two funny ______ of the singer. (takeoff)",
+    "opts": [],
+    "ans": "takeoffs",
+    "why": "two 后面用复数 takeoffs。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The plane will takes off at nine.",
+    "opts": [],
+    "ans": "takes → take",
+    "why": "will 后面用原形 take；take off 是起飞。",
+    "kd": "用法"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "飞机马上要起飞了。",
+    "stem": "The plane is going to take ______ soon.",
+    "opts": [],
+    "ans": "off",
+    "why": "take off 起飞。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "He likes to ______ famous people.",
+    "opts": [
+     "copies",
+     "copying",
+     "copied",
+     "copy"
+    ],
+    "ans": "D",
+    "why": "like to do，模仿别人可以说 copy。",
+    "kd": "易混"
+   }
+  ]
+ }
+}
