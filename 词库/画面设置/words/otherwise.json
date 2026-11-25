@@ -1,0 +1,935 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈʌ",
+  "ðə",
+  "waɪz"
+ ],
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/bus.svg",
+     "x": 0.55,
+     "y": 0.66,
+     "s": 0.5,
+     "go": [
+      1.3,
+      0.66
+     ],
+     "dur": 3,
+     "wait": 1.2,
+     "anim": "ride",
+     "z": 2
+    },
+    {
+     "svg": "art/clock_f0.svg",
+     "x": 0.15,
+     "y": 0.25,
+     "s": 0.3,
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 2
+    },
+    {
+     "label": "否则就晚了",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.0
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": -0.1,
+     "y": 0.7,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       -0.1,
+       0.7
+      ],
+      "to": [
+       1.1,
+       0.7
+      ],
+      "offset": 0.8
+     }
+    }
+   ],
+   "text": "否则、不然",
+   "pos": "副词",
+   "diff": "要是不这样，就会是另一个样子",
+   "ex": "Hurry up, otherwise you'll miss the bus.",
+   "exzh": "快点，不然你会错过公交车。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/bus.svg",
+      "x": 0.72,
+      "y": 0.64,
+      "s": 0.46,
+      "when": "bus",
+      "go": [
+       1.3,
+       0.64
+      ],
+      "goWhen": "miss the bus",
+      "dur": 2.4,
+      "anim": "ride",
+      "z": 2
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.14,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "g",
+      "seq": "talk"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.36,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "id": "b",
+      "nodWith": "g"
+     },
+     {
+      "label": "otherwise",
+      "x": 0.36,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "otherwise"
+     },
+     {
+      "label": "不然",
+      "x": 0.36,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "不然",
+      "delay": 0.1
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 1.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.1,
+        0.7
+       ],
+       "to": [
+        -0.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sofa.svg",
+     "x": 0.5,
+     "y": 0.7,
+     "s": 0.5,
+     "shadow": true,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/plant.svg",
+     "x": 0.86,
+     "y": 0.62,
+     "s": 0.42
+    },
+    {
+     "svg": "art/lamp.svg",
+     "x": 0.14,
+     "y": 0.58,
+     "s": 0.46
+    },
+    {
+     "label": "小了点",
+     "x": 0.3,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.4
+    },
+    {
+     "label": "其他方面都很好",
+     "x": 0.68,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.0
+    }
+   ],
+   "text": "在其他方面",
+   "pos": "副词",
+   "diff": "除了刚说的那一点，换个方面看",
+   "ex": "The room is small, but otherwise it's nice.",
+   "exzh": "房间小了点，但在其他方面都很好。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.5,
+      "y": 0.74,
+      "s": 0.42,
+      "z": 2
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.9,
+      "y": 0.62,
+      "s": 0.38
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.16,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "c",
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.8,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "id": "g",
+      "seq": "blink",
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "c"
+     },
+     {
+      "label": "small",
+      "x": 0.35,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "small"
+     },
+     {
+      "label": "otherwise it's nice",
+      "x": 0.6,
+      "y": 0.24,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "otherwise"
+     },
+     {
+      "label": "在其他方面都很好",
+      "x": 0.6,
+      "y": 0.24,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "其他方面"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/route-map.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.66,
+     "anim": "pulse"
+    },
+    {
+     "label": "换一条路",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "x": -0.1,
+     "y": 0.7,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       -0.1,
+       0.7
+      ],
+      "to": [
+       1.1,
+       0.7
+      ],
+      "offset": 0.8
+     }
+    }
+   ],
+   "text": "以别的方式；（想法）不同",
+   "pos": "副词",
+   "diff": "换个办法、换个想法",
+   "ex": "He says yes, but I think otherwise.",
+   "exzh": "他说是，可我不这么想。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-speech",
+      "x": 0.24,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "m",
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.76,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "t",
+      "seq": "talk",
+      "turn": [
+       1,
+       2
+      ]
+     },
+     {
+      "label": "yes",
+      "x": 0.24,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "yes"
+     },
+     {
+      "label": "I think otherwise",
+      "x": 0.74,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "I think otherwise"
+     },
+     {
+      "label": "我不这么想",
+      "x": 0.74,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "不这么想"
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 1
+    },
+    {
+     "svg": "art/apple-green.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true,
+     "anim": "pulse"
+    },
+    {
+     "label": "别的",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.5
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/route-map.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.7,
+     "anim": "pulse"
+    },
+    {
+     "label": "方式",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.5
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-other.svg",
+  "p1": "art/icon-wise.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/route-map.svg",
+    "x": 0.5,
+    "y": 0.52,
+    "s": 0.7,
+    "anim": "pulse"
+   },
+   {
+    "label": "以别的方式",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "flow": [
+  {
+   "node": "“以别的方式”",
+   "say": [
+    "other 是别的，wise 是方式，合起来是以别的方式。",
+    "古英语就有这个短语，14 世纪中写成了一个词。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/route-map.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.7,
+      "when": "方式",
+      "anim": "pulse"
+     },
+     {
+      "label": "别的",
+      "x": 0.25,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "别的"
+     },
+     {
+      "label": "以别的方式",
+      "x": 0.6,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "以别的方式"
+     },
+     {
+      "label": "otherwise",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "一个词"
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 1.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.1,
+        0.7
+       ],
+       "to": [
+        -0.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "换个办法、换个想法",
+   "node": "③ 以别的方式；（想法）不同",
+   "pos": "副词",
+   "pic": 2,
+   "rule": "合成词里，最后一个词是主体，前面的词说明它",
+   "ruleEx": "otherwise 说的是 wise 方式      likewise 同样地",
+   "say": [
+    "合成词里，最后一个词是主体，前面的词说明它：likewise，同样的方式，同样地。",
+    "otherwise 说的也是 wise：换个办法、换个想法，就是以别的方式，想法不同。",
+    "它说明动作怎么做，是副词。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "label": "最后一个词是主体",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.08,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "最后一个词是主体",
+      "hideCue": 1
+     },
+     {
+      "label": "like + wise",
+      "x": 0.5,
+      "y": 0.45,
+      "size": 0.12,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "likewise",
+      "hideCue": 1
+     },
+     {
+      "label": "同样地",
+      "x": 0.5,
+      "y": 0.7,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "同样地",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/route-map.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.62,
+      "cue": 1,
+      "when": "换个办法",
+      "anim": "pulse"
+     },
+     {
+      "label": "想法不同",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "想法不同"
+     },
+     {
+      "label": "副词",
+      "x": 0.88,
+      "y": 0.88,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "副词"
+     }
+    ]
+   }
+  },
+  {
+   "via": "情况要不是这样，就会是另一个样子",
+   "node": "① 否则、不然",
+   "pos": "副词",
+   "pic": 0,
+   "say": [
+    "情况要不是这样，就会是另一个样子：再不快点，公交车就开走了。",
+    "这就是否则、不然。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/bus.svg",
+      "x": 0.55,
+      "y": 0.64,
+      "s": 0.5,
+      "when": "公交车",
+      "go": [
+       1.3,
+       0.64
+      ],
+      "goWhen": "开走了",
+      "dur": 2.2,
+      "anim": "ride"
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "x": 0.15,
+      "y": 0.25,
+      "s": 0.3,
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 2,
+      "when": "再不快点"
+     },
+     {
+      "label": "否则、不然",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "否则"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": -0.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        -0.1,
+        0.7
+       ],
+       "to": [
+        1.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "除了刚说的那一点，换个方面看",
+   "node": "② 在其他方面",
+   "pos": "副词",
+   "pic": 1,
+   "say": [
+    "房间小了点，可除了这一点，换个方面看都很好，这就是在其他方面。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.5,
+      "y": 0.7,
+      "s": 0.5,
+      "shadow": true,
+      "when": "房间",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.86,
+      "y": 0.62,
+      "s": 0.42,
+      "when": "换个方面"
+     },
+     {
+      "svg": "art/lamp.svg",
+      "x": 0.14,
+      "y": 0.58,
+      "s": 0.46,
+      "when": "换个方面"
+     },
+     {
+      "label": "小了点",
+      "x": 0.3,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "小了点"
+     },
+     {
+      "label": "在其他方面",
+      "x": 0.68,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "在其他方面"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "否则",
+  "items": [
+   {
+    "w": "otherwise",
+    "word": "otherwise",
+    "en": "otherwise",
+    "m": "否则",
+    "zh": "否则",
+    "mean": "否则",
+    "note": "否则",
+    "say": "otherwise 是副词，正式写作中连接两个句子时，前面用分号或句号。",
+    "text": "otherwise 是副词，正式写作中连接两个句子时，前面用分号或句号。",
+    "line": "otherwise 是副词，正式写作中连接两个句子时，前面用分号或句号。",
+    "desc": "otherwise 是副词，正式写作中连接两个句子时，前面用分号或句号。",
+    "diff": "otherwise 是副词，正式写作中连接两个句子时，前面用分号或句号。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/clock_f0.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7,
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2
+      }
+     ]
+    }
+   },
+   {
+    "w": "else",
+    "word": "else",
+    "en": "else",
+    "m": "否则",
+    "zh": "否则",
+    "mean": "否则",
+    "note": "否则",
+    "say": "else 常说 or else，口气更随便，多用在口语里。",
+    "text": "else 常说 or else，口气更随便，多用在口语里。",
+    "line": "else 常说 or else，口气更随便，多用在口语里。",
+    "desc": "else 常说 or else，口气更随便，多用在口语里。",
+    "diff": "else 常说 or else，口气更随便，多用在口语里。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bell_f0.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "frames": [
+        "art/bell_f0.svg",
+        "art/bell_f1.svg"
+       ],
+       "fps": 4
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "otherwise 是 other 加 wise，本身是“换个样子”；else 本来是“别的”，要跟 or 连用才是否则。",
+  "tip": "or 是连词，更口语：Hurry up, or you'll be late.",
+  "pics": {
+   "otherwise": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock_f0.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 2
+     }
+    ]
+   },
+   "else": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/bell_f0.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "frames": [
+       "art/bell_f0.svg",
+       "art/bell_f1.svg"
+      ],
+      "fps": 4
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人提醒什么？",
+    "listen": "Hurry up, otherwise you'll miss the bus.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "快点，不然会错过公交",
+     "慢慢走",
+     "不用着急",
+     "公交已经走了"
+    ],
+    "ans": "A",
+    "why": "otherwise 否则、不然。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Wear a coat; ______ you'll catch a cold.",
+    "opts": [
+     "otherwise",
+     "however",
+     "because",
+     "so"
+    ],
+    "ans": "A",
+    "why": "“否则”用 otherwise。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 or、but 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Hurry up, ______ you'll be late.",
+    "opts": [],
+    "ans": "or",
+    "why": "“否则”用连词 or，和 otherwise 意思相近。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Take an umbrella, otherwise you got wet.",
+    "opts": [],
+    "ans": "got → will get",
+    "why": "otherwise 后面说可能发生的结果，用将来时 will get。",
+    "kd": "用法"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "如果不早点出发，我们会迟到。",
+    "stem": "______ we leave early, we will be late.",
+    "opts": [],
+    "ans": "Unless",
+    "why": "“除非、如果不”用 unless。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Go now, ______ you'll be late.",
+    "opts": [
+     "or else",
+     "or so",
+     "or not",
+     "or then"
+    ],
+    "ans": "A",
+    "why": "or else 否则，和 otherwise 意思相近。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Study hard, ______ you won't pass the exam.",
+    "opts": [
+     "or",
+     "and",
+     "so",
+     "because"
+    ],
+    "ans": "A",
+    "why": "“否则”用 or。",
+    "kd": "用法"
+   }
+  ]
+ }
+}

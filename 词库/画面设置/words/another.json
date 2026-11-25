@@ -1,0 +1,1122 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ə",
+  "ˈnʌ",
+  "ðə"
+ ],
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 1
+    },
+    {
+     "svg": "art/apple-red.svg",
+     "x": 0.36,
+     "y": 0.6,
+     "s": 0.34,
+     "shadow": true
+    },
+    {
+     "svg": "art/apple-red.svg",
+     "x": 0.64,
+     "y": 0.6,
+     "s": 0.34,
+     "shadow": true,
+     "pop": true,
+     "delay": 0.8,
+     "anim": "bob"
+    },
+    {
+     "label": "another 再一个",
+     "x": 0.64,
+     "y": 0.14,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.0
+    }
+   ],
+   "text": "又一个、再一",
+   "pos": "形容词",
+   "diff": "已经有了一个，再来一个",
+   "ex": "Can I have another apple?",
+   "exzh": "我能再吃一个苹果吗？",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.28,
+      "z": 5
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.22,
+      "y": 0.62,
+      "s": 0.9,
+      "z": 3,
+      "id": "b",
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.8,
+      "y": 0.62,
+      "s": 0.9,
+      "z": 3,
+      "id": "m",
+      "seq": "blink",
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "b"
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.42,
+      "y": 0.74,
+      "s": 0.2,
+      "z": 6
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.58,
+      "y": 0.74,
+      "s": 0.2,
+      "z": 6,
+      "when": "another apple",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "label": "another apple",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "another apple"
+     },
+     {
+      "label": "再吃一个",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "再吃一个",
+      "delay": 0.1
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 1
+    },
+    {
+     "svg": "art/mug-cracked.svg",
+     "x": 0.32,
+     "y": 0.56,
+     "s": 0.42,
+     "shadow": true,
+     "a": 0.8
+    },
+    {
+     "svg": "art/mug-new.svg",
+     "x": 0.7,
+     "y": 0.54,
+     "s": 0.48,
+     "shadow": true,
+     "pop": true,
+     "delay": 0.8,
+     "anim": "bob"
+    },
+    {
+     "label": "另一个",
+     "x": 0.7,
+     "y": 0.12,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.0
+    }
+   ],
+   "text": "另一个、别的",
+   "pos": "形容词",
+   "diff": "不是这一个，换成别的一个",
+   "ex": "This cup is broken. Give me another one.",
+   "exzh": "这个杯子破了，给我换一个。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.28,
+      "z": 5
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.2,
+      "y": 0.62,
+      "s": 0.9,
+      "z": 3,
+      "id": "g",
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.82,
+      "y": 0.62,
+      "s": 0.9,
+      "z": 3,
+      "id": "c",
+      "seq": "blink",
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "g"
+     },
+     {
+      "svg": "art/mug-cracked.svg",
+      "x": 0.4,
+      "y": 0.66,
+      "s": 0.26,
+      "z": 6,
+      "when": "broken",
+      "anim": "shake"
+     },
+     {
+      "svg": "art/mug-new.svg",
+      "x": 0.6,
+      "y": 0.66,
+      "s": 0.26,
+      "z": 6,
+      "when": "another one",
+      "pop": true
+     },
+     {
+      "label": "another one",
+      "x": 0.6,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "another one"
+     },
+     {
+      "label": "换一个",
+      "x": 0.6,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "换一个",
+      "delay": 0.1
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/books.svg",
+     "x": 0.5,
+     "y": 0.82,
+     "s": 0.22,
+     "z": 4
+    },
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.28,
+     "y": 0.6,
+     "s": 0.9,
+     "z": 3,
+     "id": "a",
+     "seq": "talk",
+     "turn": [
+      0,
+      2
+     ]
+    },
+    {
+     "actor": "west-girl-listen",
+     "x": 0.72,
+     "y": 0.6,
+     "s": 0.9,
+     "z": 3,
+     "id": "b2",
+     "seq": "blink",
+     "turn": [
+      1,
+      2
+     ],
+     "nodWith": "a"
+    },
+    {
+     "ray": [
+      [
+       0.4,
+       0.32
+      ],
+      [
+       0.6,
+       0.32
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 0.7,
+     "delay": 0.5,
+     "loop": true
+    },
+    {
+     "ray": [
+      [
+       0.6,
+       0.42
+      ],
+      [
+       0.4,
+       0.42
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 0.7,
+     "delay": 1.0
+    },
+    {
+     "label": "one another 互相",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.2
+    }
+   ],
+   "text": "互相",
+   "pos": "代词",
+   "diff": "你对我、我对你",
+   "ex": "Good friends help one another.",
+   "exzh": "好朋友互相帮助。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 5
+     },
+     {
+      "actor": "west-man-point",
+      "x": 0.25,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "m2",
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.75,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "t2",
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "m2"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.7,
+      "s": 0.2,
+      "z": 6,
+      "when": "help",
+      "go": [
+       0.62,
+       0.7
+      ],
+      "loop": true,
+      "dur": 1.2
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.3
+       ],
+       [
+        0.6,
+        0.3
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "one another"
+     },
+     {
+      "ray": [
+       [
+        0.6,
+        0.4
+       ],
+       [
+        0.4,
+        0.4
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "one another",
+      "delay": 0.4
+     },
+     {
+      "label": "one another",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "one another"
+     },
+     {
+      "label": "互相",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "互相",
+      "delay": 0.1
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 1
+    },
+    {
+     "svg": "art/apple-red.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "shadow": true,
+     "anim": "bob"
+    },
+    {
+     "label": "一个",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.5
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 1
+    },
+    {
+     "svg": "art/apple-red.svg",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.3,
+     "shadow": true
+    },
+    {
+     "svg": "art/apple-green.svg",
+     "x": 0.66,
+     "y": 0.56,
+     "s": 0.46,
+     "shadow": true,
+     "anim": "pulse"
+    },
+    {
+     "label": "另一个",
+     "x": 0.66,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.5
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-an.svg",
+  "p1": "art/icon-other.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/desk.svg",
+    "x": 0.5,
+    "y": 0.92,
+    "s": 0.3,
+    "z": 1
+   },
+   {
+    "svg": "art/apple-red.svg",
+    "x": 0.3,
+    "y": 0.58,
+    "s": 0.36,
+    "shadow": true
+   },
+   {
+    "svg": "art/plus.svg",
+    "x": 0.5,
+    "y": 0.58,
+    "s": 0.14,
+    "delay": 0.4
+   },
+   {
+    "svg": "art/apple-green.svg",
+    "x": 0.72,
+    "y": 0.58,
+    "s": 0.4,
+    "shadow": true,
+    "pop": true,
+    "delay": 0.8,
+    "anim": "bob"
+   },
+   {
+    "label": "又一个另外的",
+    "x": 0.5,
+    "y": 0.12,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 1.0
+   }
+  ]
+ },
+ "flow": [
+  {
+   "node": "“又一个另外的”",
+   "say": [
+    "an 是一个，other 是另一个，合起来就是又一个另外的。",
+    "13 世纪初，an other 两个词写到了一起，成了 another。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 1
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.28,
+      "y": 0.58,
+      "s": 0.36,
+      "shadow": true,
+      "when": "一个",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/plus.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.14,
+      "when": "other"
+     },
+     {
+      "svg": "art/apple-green.svg",
+      "x": 0.72,
+      "y": 0.58,
+      "s": 0.4,
+      "shadow": true,
+      "when": "另一个"
+     },
+     {
+      "label": "又一个另外的",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "又一个另外的"
+     },
+     {
+      "label": "an other → another",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "写到了一起",
+      "z": 6
+     }
+    ]
+   }
+  },
+  {
+   "via": "已经有了一个，再来一个",
+   "node": "① 又一个、再一",
+   "pos": "形容词",
+   "pic": 0,
+   "rule": "两个小词合成一个新词，意思由两个小词合起来",
+   "ruleEx": "an + other → another 又一个      with + out → without 没有",
+   "say": [
+    "两个小词合成一个新词，意思由两个小词合起来：with 和 out 合成 without，没有。",
+    "another 也一样：已经有了一个，再来一个，就是又一个、再一。",
+    "它放在名词前面，是形容词。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 1
+     },
+     {
+      "label": "两个小词",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.085,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "两个小词",
+      "hideCue": 1
+     },
+     {
+      "label": "with",
+      "x": 0.25,
+      "y": 0.45,
+      "size": 0.12,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "with",
+      "hideCue": 1
+     },
+     {
+      "label": "out",
+      "x": 0.5,
+      "y": 0.45,
+      "size": 0.12,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "out",
+      "hideCue": 1
+     },
+     {
+      "ray": [
+       [
+        0.58,
+        0.45
+       ],
+       [
+        0.68,
+        0.45
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "合成 without",
+      "hideCue": 1
+     },
+     {
+      "label": "without 没有",
+      "x": 0.82,
+      "y": 0.45,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "合成 without",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.34,
+      "y": 0.6,
+      "s": 0.34,
+      "shadow": true,
+      "cue": 1,
+      "when": "已经有了一个"
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.66,
+      "y": 0.6,
+      "s": 0.34,
+      "shadow": true,
+      "when": "再来一个",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "label": "又一个、再一",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "又一个、再一"
+     },
+     {
+      "label": "形容词",
+      "x": 0.86,
+      "y": 0.86,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "形容词"
+     }
+    ]
+   }
+  },
+  {
+   "via": "不是这一个，换成别的一个",
+   "node": "② 另一个、别的",
+   "pos": "形容词",
+   "pic": 1,
+   "say": [
+    "杯子破了，不要这一个，换成别的一个，这就是另一个、别的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 1
+     },
+     {
+      "svg": "art/mug-cracked.svg",
+      "x": 0.3,
+      "y": 0.56,
+      "s": 0.44,
+      "shadow": true,
+      "when": "杯子破了",
+      "anim": "shake",
+      "go": [
+       0.1,
+       0.56
+      ],
+      "goWhen": "换成别的一个",
+      "dur": 0.8
+     },
+     {
+      "svg": "art/mug-new.svg",
+      "x": 0.7,
+      "y": 0.54,
+      "s": 0.48,
+      "shadow": true,
+      "when": "换成别的一个",
+      "pop": true
+     },
+     {
+      "label": "另一个、别的",
+      "x": 0.7,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "另一个、别的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "（代词）one another：你对我、我对你",
+   "node": "③ 互相",
+   "pos": "代词",
+   "pic": 2,
+   "say": [
+    "one another 是你对我、我对你，就是互相，它代替人，是代词。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.25,
+      "y": 0.55,
+      "s": 0.5,
+      "anim": "shake",
+      "when": "你对我"
+     },
+     {
+      "svg": "art/rotary-phone.svg",
+      "x": 0.75,
+      "y": 0.6,
+      "s": 0.45,
+      "anim": "shake",
+      "when": "我对你"
+     },
+     {
+      "ray": [
+       [
+        0.36,
+        0.42
+       ],
+       [
+        0.62,
+        0.42
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "你对我"
+     },
+     {
+      "ray": [
+       [
+        0.62,
+        0.62
+       ],
+       [
+        0.36,
+        0.62
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "我对你"
+     },
+     {
+      "waves": true,
+      "x": 0.3,
+      "y": 0.4,
+      "dir": 0,
+      "n": 3
+     },
+     {
+      "label": "互相",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "互相"
+     },
+     {
+      "label": "代词",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "代词"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "另一个",
+  "items": [
+   {
+    "w": "another",
+    "word": "another",
+    "en": "another",
+    "m": "又一个、另一个",
+    "zh": "又一个、另一个",
+    "mean": "又一个、另一个",
+    "note": "又一个、另一个",
+    "say": "another 后面接单数名词：another book；接数词加复数是再几个：another three days 再三天。",
+    "text": "another 后面接单数名词：another book；接数词加复数是再几个：another three days 再三天。",
+    "line": "another 后面接单数名词：another book；接数词加复数是再几个：another three days 再三天。",
+    "desc": "another 后面接单数名词：another book；接数词加复数是再几个：another three days 再三天。",
+    "diff": "another 后面接单数名词：another book；接数词加复数是再几个：another three days 再三天。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.95,
+       "s": 0.32,
+       "z": 1
+      },
+      {
+       "svg": "art/apple-red.svg",
+       "x": 0.35,
+       "y": 0.56,
+       "s": 0.45,
+       "shadow": true
+      },
+      {
+       "svg": "art/apple-red.svg",
+       "x": 0.65,
+       "y": 0.56,
+       "s": 0.45,
+       "shadow": true,
+       "pop": true,
+       "delay": 0.6,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "second",
+    "word": "second",
+    "en": "second",
+    "m": "第二个",
+    "zh": "第二个",
+    "mean": "第二个",
+    "note": "第二个",
+    "say": "a second chance 和 another chance 都能说再给一次机会；the second 专指排在第二的那一个。",
+    "text": "a second chance 和 another chance 都能说再给一次机会；the second 专指排在第二的那一个。",
+    "line": "a second chance 和 another chance 都能说再给一次机会；the second 专指排在第二的那一个。",
+    "desc": "a second chance 和 another chance 都能说再给一次机会；the second 专指排在第二的那一个。",
+    "diff": "a second chance 和 another chance 都能说再给一次机会；the second 专指排在第二的那一个。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/rank-podium.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "another 是再来一个，不管排第几；second 讲的是顺序，排在第二。",
+  "tip": "不说 another books；one after another 一个接一个。",
+  "pics": {
+   "another": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.32,
+      "z": 1
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.35,
+      "y": 0.56,
+      "s": 0.45,
+      "shadow": true
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.65,
+      "y": 0.56,
+      "s": 0.45,
+      "shadow": true,
+      "pop": true,
+      "delay": 0.6,
+      "anim": "bob"
+     }
+    ]
+   },
+   "second": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/rank-podium.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.7,
+      "anim": "pulse"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人还想要什么？",
+    "listen": "Can I have another apple?",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "要一个梨",
+     "不要苹果",
+     "再要一个苹果",
+     "要两个香蕉"
+    ],
+    "ans": "C",
+    "why": "another apple 再一个苹果。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "I have two pens. One is red, and ______ is blue.",
+    "opts": [
+     "another",
+     "other",
+     "the other",
+     "others"
+    ],
+    "ans": "C",
+    "why": "两个中的另一个用 the other。",
+    "kd": "易混"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 another、other 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "There are ______ ways to solve the problem.",
+    "opts": [],
+    "ans": "other",
+    "why": "other + 复数名词表示“其他的”。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Some like red; ______ like blue. (other)",
+    "opts": [],
+    "ans": "others",
+    "why": "代词“别的人”用 others。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "I need other one.",
+    "opts": [],
+    "ans": "other → another",
+    "why": "“另一个”单数名词前用 another。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "他们一个接一个地离开了。",
+    "stem": "They left one ______ another.",
+    "opts": [],
+    "ans": "after",
+    "why": "one after another 一个接一个。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "We need ______ two weeks to finish it.",
+    "opts": [
+     "other",
+     "the other",
+     "others",
+     "another"
+    ],
+    "ans": "D",
+    "why": "another + 数词 + 复数名词表示“再……”。",
+    "kd": "用法"
+   }
+  ]
+ }
+}

@@ -1,0 +1,914 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ʌ",
+  "ðə"
+ ],
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/goal.svg",
+     "x": 0.72,
+     "y": 0.5,
+     "s": 0.5,
+     "z": 1
+    },
+    {
+     "svg": "art/football.svg",
+     "x": 0.3,
+     "y": 0.78,
+     "s": 0.2,
+     "go": [
+      0.7,
+      0.62
+     ],
+     "dur": 1.6,
+     "loop": true,
+     "anim": "spin",
+     "z": 3
+    },
+    {
+     "actor": "west-man-hello",
+     "x": 0.16,
+     "y": 0.58,
+     "s": 0.8,
+     "z": 3,
+     "seq": "pingpong"
+    },
+    {
+     "label": "other 其他的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": -0.1,
+     "y": 0.7,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       -0.1,
+       0.7
+      ],
+      "to": [
+       1.1,
+       0.7
+      ],
+      "offset": 0.8
+     }
+    }
+   ],
+   "text": "另外的、其他的",
+   "pos": "形容词",
+   "diff": "除了说到的这些，剩下的",
+   "ex": "Other students are playing football.",
+   "exzh": "其他学生在踢足球。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/goal.svg",
+      "x": 0.78,
+      "y": 0.5,
+      "s": 0.56,
+      "z": 1
+     },
+     {
+      "svg": "art/football.svg",
+      "x": 0.25,
+      "y": 0.8,
+      "s": 0.2,
+      "go": [
+       0.76,
+       0.62
+      ],
+      "dur": 1.4,
+      "loop": true,
+      "anim": "spin",
+      "when": "football",
+      "z": 3
+     },
+     {
+      "actor": "west-man-point",
+      "x": 0.12,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.35,
+      "y": 0.68,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.35,
+        0.68
+       ],
+       "to": [
+        0.6,
+        0.68
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.5,
+      "y": 0.7,
+      "s": 0.48,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.5,
+        0.7
+       ],
+       "to": [
+        0.3,
+        0.7
+       ],
+       "offset": 1.2
+      }
+     },
+     {
+      "label": "Other students",
+      "x": 0.48,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "Other students"
+     },
+     {
+      "label": "其他学生",
+      "x": 0.48,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "其他学生",
+      "delay": 0.1
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/bed.svg",
+     "x": 0.58,
+     "y": 0.62,
+     "s": 0.55,
+     "z": 1
+    },
+    {
+     "svg": "art/shoe.svg",
+     "x": 0.2,
+     "y": 0.8,
+     "s": 0.22,
+     "shadow": true,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/shoe.svg",
+     "x": 0.6,
+     "y": 0.9,
+     "s": 0.18,
+     "z": 2,
+     "reveal": "left",
+     "delay": 0.8
+    },
+    {
+     "label": "one 一只",
+     "x": 0.2,
+     "y": 0.6,
+     "size": 0.075,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.4
+    },
+    {
+     "label": "the other 另一只",
+     "x": 0.6,
+     "y": 0.12,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.2,
+     "to": [
+      0.6,
+      0.86
+     ]
+    }
+   ],
+   "text": "两者中的另一个",
+   "pos": "代词",
+   "diff": "两个当中剩下的那一个",
+   "ex": "One shoe is here, the other is under the bed.",
+   "exzh": "一只鞋在这儿，另一只在床底下。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/bed.svg",
+      "x": 0.62,
+      "y": 0.6,
+      "s": 0.56,
+      "z": 1
+     },
+     {
+      "svg": "art/shoe.svg",
+      "x": 0.22,
+      "y": 0.86,
+      "s": 0.2,
+      "when": "One shoe",
+      "pop": true,
+      "z": 3
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.12,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 2,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/shoe.svg",
+      "x": 0.66,
+      "y": 0.92,
+      "s": 0.16,
+      "z": 3,
+      "when": "the other",
+      "reveal": "left"
+     },
+     {
+      "label": "the other",
+      "x": 0.66,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "the other",
+      "to": [
+       0.66,
+       0.88
+      ]
+     },
+     {
+      "label": "另一只",
+      "x": 0.66,
+      "y": 0.24,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "另一只"
+     }
+    ]
+   }
+  }
+ ],
+ "originPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/desk.svg",
+    "x": 0.5,
+    "y": 0.9,
+    "s": 0.3,
+    "z": 1
+   },
+   {
+    "svg": "art/apple-red.svg",
+    "x": 0.38,
+    "y": 0.6,
+    "s": 0.3,
+    "shadow": true
+   },
+   {
+    "svg": "art/apple-green.svg",
+    "x": 0.62,
+    "y": 0.6,
+    "s": 0.3,
+    "shadow": true,
+    "anim": "bob"
+   },
+   {
+    "label": "两个当中的另一个",
+    "x": 0.5,
+    "y": 0.12,
+    "size": 0.08,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "flow": [
+  {
+   "node": "两个当中的另一个",
+   "say": [
+    "other 最早说的是：两个当中的另一个。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 1
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.36,
+      "shadow": true,
+      "when": "两个",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/apple-green.svg",
+      "x": 0.64,
+      "y": 0.6,
+      "s": 0.36,
+      "shadow": true,
+      "when": "两个",
+      "delay": 0.3
+     },
+     {
+      "label": "两个",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "两个"
+     },
+     {
+      "label": "另一个",
+      "x": 0.64,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "另一个"
+     }
+    ]
+   }
+  },
+  {
+   "via": "桌上两样东西，拿走一个，剩下的那个",
+   "node": "② 两者中的另一个",
+   "pos": "代词",
+   "pic": 1,
+   "say": [
+    "桌上有两个苹果，拿走一个，剩下的那一个，就是 the other。",
+    "它代替那个苹果，所以是代词。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 1
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.36,
+      "shadow": true,
+      "when": "两个苹果",
+      "go": [
+       0.2,
+       -0.3
+      ],
+      "goWhen": "拿走一个",
+      "dur": 0.9
+     },
+     {
+      "svg": "art/apple-green.svg",
+      "x": 0.64,
+      "y": 0.6,
+      "s": 0.36,
+      "shadow": true,
+      "when": "两个苹果",
+      "anim": "pulse"
+     },
+     {
+      "label": "拿走一个",
+      "x": 0.28,
+      "y": 0.16,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "拿走一个"
+     },
+     {
+      "label": "the other",
+      "x": 0.64,
+      "y": 0.24,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "the other"
+     },
+     {
+      "label": "代词",
+      "x": 0.86,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "代词"
+     }
+    ]
+   }
+  },
+  {
+   "via": "不止两个时，除了说到的这些，剩下的",
+   "node": "① 另外的、其他的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "东西不止两个时，除了说到的这个，剩下的就是 other，其他的。",
+    "它放在名词前面说明名词，比如 other apples，所以是形容词。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 1
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.18,
+      "y": 0.62,
+      "s": 0.3,
+      "shadow": true,
+      "when": "不止两个",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/apple-green.svg",
+      "x": 0.44,
+      "y": 0.62,
+      "s": 0.3,
+      "shadow": true,
+      "when": "不止两个",
+      "delay": 0.2
+     },
+     {
+      "svg": "art/apple-yellow.svg",
+      "x": 0.64,
+      "y": 0.62,
+      "s": 0.3,
+      "shadow": true,
+      "when": "不止两个",
+      "delay": 0.4
+     },
+     {
+      "svg": "art/apple-green.svg",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.3,
+      "shadow": true,
+      "when": "不止两个",
+      "delay": 0.6
+     },
+     {
+      "label": "说到的这个",
+      "x": 0.18,
+      "y": 0.3,
+      "size": 0.07,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "说到的这个"
+     },
+     {
+      "label": "other apples",
+      "x": 0.64,
+      "y": 0.24,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "other apples"
+     },
+     {
+      "label": "形容词",
+      "x": 0.86,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "形容词"
+     }
+    ]
+   }
+  },
+  {
+   "via": "（代词）除了自己以外的人",
+   "node": "别人",
+   "pos": "代词",
+   "say": [
+    "说人的时候，除了自己以外的人，就是别人，复数常说 others。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.22,
+      "y": 0.58,
+      "s": 0.9,
+      "z": 3,
+      "seq": "pingpong"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.62,
+      "y": 0.86,
+      "s": 0.36,
+      "crowd": 7,
+      "z": 4
+     },
+     {
+      "label": "自己",
+      "x": 0.22,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "自己"
+     },
+     {
+      "label": "别人",
+      "x": 0.66,
+      "y": 0.5,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "别人"
+     },
+     {
+      "label": "others",
+      "x": 0.66,
+      "y": 0.34,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "others"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "另一个、其他的",
+  "items": [
+   {
+    "w": "the other",
+    "word": "the other",
+    "en": "the other",
+    "m": "两者中的另一个",
+    "zh": "两者中的另一个",
+    "mean": "两者中的另一个",
+    "note": "两者中的另一个",
+    "say": "the other 说两个当中剩下的那一个：one... the other...。",
+    "text": "the other 说两个当中剩下的那一个：one... the other...。",
+    "line": "the other 说两个当中剩下的那一个：one... the other...。",
+    "desc": "the other 说两个当中剩下的那一个：one... the other...。",
+    "diff": "the other 说两个当中剩下的那一个：one... the other...。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bed.svg",
+       "x": 0.6,
+       "y": 0.6,
+       "s": 0.6,
+       "z": 1
+      },
+      {
+       "svg": "art/shoe.svg",
+       "x": 0.24,
+       "y": 0.8,
+       "s": 0.3,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/shoe.svg",
+       "x": 0.62,
+       "y": 0.88,
+       "s": 0.22,
+       "z": 2
+      }
+     ]
+    }
+   },
+   {
+    "w": "another",
+    "word": "another",
+    "en": "another",
+    "m": "又一个",
+    "zh": "又一个",
+    "mean": "又一个",
+    "note": "又一个",
+    "say": "another 说不确定的又一个，后面接单数名词。",
+    "text": "another 说不确定的又一个，后面接单数名词。",
+    "line": "another 说不确定的又一个，后面接单数名词。",
+    "desc": "another 说不确定的又一个，后面接单数名词。",
+    "diff": "another 说不确定的又一个，后面接单数名词。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.95,
+       "s": 0.32,
+       "z": 1
+      },
+      {
+       "svg": "art/apple-red.svg",
+       "x": 0.35,
+       "y": 0.56,
+       "s": 0.45,
+       "shadow": true
+      },
+      {
+       "svg": "art/apple-red.svg",
+       "x": 0.65,
+       "y": 0.56,
+       "s": 0.45,
+       "shadow": true,
+       "pop": true,
+       "delay": 0.6,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "other",
+    "word": "other",
+    "en": "other",
+    "m": "其他的",
+    "zh": "其他的",
+    "mean": "其他的",
+    "note": "其他的",
+    "say": "other 作形容词，后面接复数名词：other students 其他学生。",
+    "text": "other 作形容词，后面接复数名词：other students 其他学生。",
+    "line": "other 作形容词，后面接复数名词：other students 其他学生。",
+    "desc": "other 作形容词，后面接复数名词：other students 其他学生。",
+    "diff": "other 作形容词，后面接复数名词：other students 其他学生。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/football.svg",
+       "x": 0.3,
+       "y": 0.75,
+       "s": 0.3,
+       "anim": "spin",
+       "go": [
+        0.62,
+        0.72
+       ],
+       "loop": true,
+       "dur": 1.4
+      },
+      {
+       "svg": "art/football.svg",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.5,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "the other 是剩下的那一个，another 是再来一个，other 加复数名词是其他那些。",
+  "tip": "other 后面接名词时自己不加 s：other people，不说 others people。",
+  "pics": {
+   "the other": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/bed.svg",
+      "x": 0.6,
+      "y": 0.6,
+      "s": 0.6,
+      "z": 1
+     },
+     {
+      "svg": "art/shoe.svg",
+      "x": 0.24,
+      "y": 0.8,
+      "s": 0.3,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/shoe.svg",
+      "x": 0.62,
+      "y": 0.88,
+      "s": 0.22,
+      "z": 2
+     }
+    ]
+   },
+   "another": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.32,
+      "z": 1
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.35,
+      "y": 0.56,
+      "s": 0.45,
+      "shadow": true
+     },
+     {
+      "svg": "art/apple-red.svg",
+      "x": 0.65,
+      "y": 0.56,
+      "s": 0.45,
+      "shadow": true,
+      "pop": true,
+      "delay": 0.6,
+      "anim": "bob"
+     }
+    ]
+   },
+   "other": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/football.svg",
+      "x": 0.3,
+      "y": 0.75,
+      "s": 0.3,
+      "anim": "spin",
+      "go": [
+       0.62,
+       0.72
+      ],
+      "loop": true,
+      "dur": 1.4
+     },
+     {
+      "svg": "art/football.svg",
+      "x": 0.7,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "bob"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人问对方还有没有什么？",
+    "listen": "Do you have any other questions?",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "同样的问题",
+     "别的问题",
+     "很难的问题",
+     "很多问题"
+    ],
+    "ans": "B",
+    "why": "other questions 别的问题。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "I have two sisters. One is a doctor; the ______ is a teacher.",
+    "opts": [
+     "another",
+     "others",
+     "else",
+     "other"
+    ],
+    "ans": "D",
+    "why": "两个中的另一个用 the other。",
+    "kd": "易混"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 other、others 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Some students like music; ______ like sports.",
+    "opts": [],
+    "ans": "others",
+    "why": "代词“别的人”单独用 others。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Can I have ______ cup of tea? (other)",
+    "opts": [],
+    "ans": "another",
+    "why": "再要一杯，用 another + 单数名词。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He is taller than any others boy in his class.",
+    "opts": [],
+    "ans": "others → other",
+    "why": "other 作形容词，后面接名词，不加 s。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "学生们一个接一个走进了教室。",
+    "stem": "The students came in one after ______.",
+    "opts": [],
+    "ans": "another",
+    "why": "one after another 一个接一个。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "I don't like this one. Show me ______ one.",
+    "opts": [
+     "other",
+     "others",
+     "the others",
+     "another"
+    ],
+    "ans": "D",
+    "why": "三个以上中的“另一个”用 another。",
+    "kd": "易混"
+   }
+  ]
+ }
+}
