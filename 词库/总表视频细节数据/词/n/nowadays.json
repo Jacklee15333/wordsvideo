@@ -1,7 +1,591 @@
 {
  "单词": "nowadays",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "现今、如今"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "现在",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/in.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "在",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p2": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "日子",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p3": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/adj-tag.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "swing"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/clock.svg",
+   "p1": "art/in.svg",
+   "p2": "art/calendar.svg",
+   "p3": "art/adj-tag.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.36,
+     "y": 0.56,
+     "s": 0.4,
+     "anim": "bob",
+     "z": 2
+    },
+    {
+     "svg": "art/calendar.svg",
+     "x": 0.7,
+     "y": 0.52,
+     "s": 0.36,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "label": "在现在这些日子里",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "现今、如今",
+    "pos": "副词",
+    "diff": "跟过去比，现在一般是什么样",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-smile",
+      "id": "m",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "waves": true,
+      "on": "m",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "m"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "id": "t",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.68,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "m"
+     },
+     {
+      "svg": "art/rotary-phone.svg",
+      "x": 0.42,
+      "y": 0.4,
+      "s": 0.16,
+      "a": 0.6,
+      "z": 2
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.6,
+      "y": 0.4,
+      "s": 0.18,
+      "anim": "bob",
+      "z": 2
+     }
+    ],
+    "ex": "Nowadays many people work from home.",
+    "exzh": "如今很多人在家办公。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-happy",
+       "id": "c",
+       "x": 0.32,
+       "y": 0.6,
+       "s": 0.72,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.6,
+       "y": 0.92,
+       "s": 0.4,
+       "z": 4
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.66,
+       "y": 0.72,
+       "s": 0.26,
+       "when": "work from home",
+       "z": 5
+      },
+      {
+       "eq": true,
+       "x": 0.66,
+       "y": 0.69,
+       "w": 0.1,
+       "h": 0.07,
+       "n": 5
+      },
+      {
+       "label": "Nowadays",
+       "x": 0.66,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "Nowadays"
+      },
+      {
+       "label": "如今",
+       "x": 0.66,
+       "y": 0.32,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "如今"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“在现在这些日子里”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.36,
+       "y": 0.56,
+       "s": 0.4,
+       "anim": "bob",
+       "z": 2
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.7,
+       "y": 0.52,
+       "s": 0.36,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "label": "在现在这些日子里",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "跟过去比，说说现在一般是什么样",
+    "node": "① 现今、如今",
+    "pos": "副词",
+    "pic": 0,
+    "rule": "介词和后面的词连成一个词，先后不变",
+    "ruleEx": "now a days → nowadays      up the stairs → upstairs",
+    "cap": "now + a + day + s",
+    "say": [
+     "介词和后面的词可以连成一个词，先后不变。",
+     "up the stairs 是上楼梯，连起来 upstairs，就是在楼上。",
+     "now a days 是在现在这些日子里，连起来 nowadays，就是如今。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "连成一个词",
+       "x": 0.5,
+       "y": 0.4,
+       "size": 0.08,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "连成一个词",
+       "hideCue": 1
+      },
+      {
+       "label": "upstairs 在楼上",
+       "x": 0.5,
+       "y": 0.5,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "upstairs",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/rotary-phone.svg",
+       "x": 0.32,
+       "y": 0.56,
+       "s": 0.3,
+       "cue": 2,
+       "when": "现在这些日子",
+       "a": 0.6
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.68,
+       "y": 0.54,
+       "s": 0.34,
+       "cue": 2,
+       "when": "如今",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "label": "如今",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "如今"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "中文都能说“现在”，用法不一样",
+   "items": [
+    {
+     "w": "nowadays",
+     "word": "nowadays",
+     "name": "nowadays",
+     "en": "nowadays",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/rotary-phone.svg",
+        "x": 0.4,
+        "y": 0.56,
+        "s": 0.4,
+        "a": 0.6,
+        "z": 2
+       },
+       {
+        "svg": "art/smartphone.svg",
+        "x": 0.64,
+        "y": 0.54,
+        "s": 0.5,
+        "anim": "bob",
+        "z": 2
+       }
+      ]
+     },
+     "text": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "say": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "diff": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "note": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "desc": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "m": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "mean": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "line": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "explain": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "zh": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "def": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "gloss": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "sense": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "comment": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "hint": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "txt": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "talk": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "words": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+     "detail": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。"
+    },
+    {
+     "w": "these days",
+     "word": "these days",
+     "name": "these days",
+     "en": "these days",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/smartphone.svg",
+        "x": 0.5,
+        "y": 0.54,
+        "s": 0.56,
+        "anim": "bob",
+        "z": 2
+       }
+      ]
+     },
+     "text": "these days 意思一样，更口语。",
+     "say": "these days 意思一样，更口语。",
+     "diff": "these days 意思一样，更口语。",
+     "note": "these days 意思一样，更口语。",
+     "desc": "these days 意思一样，更口语。",
+     "m": "these days 意思一样，更口语。",
+     "mean": "these days 意思一样，更口语。",
+     "line": "these days 意思一样，更口语。",
+     "explain": "these days 意思一样，更口语。",
+     "zh": "these days 意思一样，更口语。",
+     "def": "these days 意思一样，更口语。",
+     "gloss": "these days 意思一样，更口语。",
+     "sense": "these days 意思一样，更口语。",
+     "comment": "these days 意思一样，更口语。",
+     "hint": "these days 意思一样，更口语。",
+     "txt": "these days 意思一样，更口语。",
+     "talk": "these days 意思一样，更口语。",
+     "words": "these days 意思一样，更口语。",
+     "detail": "these days 意思一样，更口语。"
+    },
+    {
+     "w": "today",
+     "word": "today",
+     "name": "today",
+     "en": "today",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/classroom-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/calendar.svg",
+        "x": 0.5,
+        "y": 0.54,
+        "s": 0.6,
+        "anim": "pulse",
+        "z": 2
+       }
+      ]
+     },
+     "text": "today 也可指“当今”，但更常指“今天”。",
+     "say": "today 也可指“当今”，但更常指“今天”。",
+     "diff": "today 也可指“当今”，但更常指“今天”。",
+     "note": "today 也可指“当今”，但更常指“今天”。",
+     "desc": "today 也可指“当今”，但更常指“今天”。",
+     "m": "today 也可指“当今”，但更常指“今天”。",
+     "mean": "today 也可指“当今”，但更常指“今天”。",
+     "line": "today 也可指“当今”，但更常指“今天”。",
+     "explain": "today 也可指“当今”，但更常指“今天”。",
+     "zh": "today 也可指“当今”，但更常指“今天”。",
+     "def": "today 也可指“当今”，但更常指“今天”。",
+     "gloss": "today 也可指“当今”，但更常指“今天”。",
+     "sense": "today 也可指“当今”，但更常指“今天”。",
+     "comment": "today 也可指“当今”，但更常指“今天”。",
+     "hint": "today 也可指“当今”，但更常指“今天”。",
+     "txt": "today 也可指“当今”，但更常指“今天”。",
+     "talk": "today 也可指“当今”，但更常指“今天”。",
+     "words": "today 也可指“当今”，但更常指“今天”。",
+     "detail": "today 也可指“当今”，但更常指“今天”。"
+    }
+   ],
+   "logic": "nowadays 是 now + a“在”+ days；days 的 -s 原来不是复数，后来被人当成了复数。",
+   "tip": "和过去比用 nowadays 或 these days；只说今天用 today。",
+   "pics": {
+    "nowadays": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/rotary-phone.svg",
+       "x": 0.4,
+       "y": 0.56,
+       "s": 0.4,
+       "a": 0.6,
+       "z": 2
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.64,
+       "y": 0.54,
+       "s": 0.5,
+       "anim": "bob",
+       "z": 2
+      }
+     ]
+    },
+    "these days": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.56,
+       "anim": "bob",
+       "z": 2
+      }
+     ]
+    },
+    "today": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.6,
+       "anim": "pulse",
+       "z": 2
+      }
+     ]
+    }
+   },
+   "notes": {
+    "nowadays": "nowadays 用来和过去对比，说现在一般都怎样，常配一般现在时。",
+    "these days": "these days 意思一样，更口语。",
+    "today": "today 也可指“当今”，但更常指“今天”。"
+   }
+  },
+  "kaodian": {
+   "rows": [
+    "意思：现今、如今（副词）",
+    "搭配：Nowadays + 一般现在时（Nowadays many people ...）",
+    "形近词：these days 如今（口语）；today 今天、当今",
+    "易错：nowadays 一个词，不写成 now a days"
+   ]
+  }
+ },
+ "插图": [
+  "nowadaysai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：现在很多人怎么买东西？\n听：Nowadays many people shop online.\nA. 去集市买\nB. 在网上买\nC. 自己做\nD. 不买东西",
@@ -89,5 +673,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

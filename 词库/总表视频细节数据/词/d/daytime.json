@@ -1,7 +1,654 @@
 {
  "单词": "daytime",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "白天、日间；白天的"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/sun.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.56,
+      "anim": "spin"
+     },
+     {
+      "label": "白天",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "时间",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/sun.svg",
+   "p1": "art/clock.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/sun.svg",
+     "x": 0.3,
+     "y": 0.3,
+     "s": 0.34,
+     "anim": "spin",
+     "z": 2
+    },
+    {
+     "svg": "art/clock.svg",
+     "x": 0.72,
+     "y": 0.5,
+     "s": 0.3,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "label": "白天的时间",
+     "x": 0.5,
+     "y": 0.86,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "白天、日间",
+    "pos": "名词",
+    "diff": "从天亮到天黑的这一段",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/sun.svg",
+      "x": 0.82,
+      "y": 0.22,
+      "s": 0.24,
+      "anim": "spin",
+      "z": 2
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.05,
+      "y": 0.74,
+      "s": 0.48,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.74
+       ],
+       "to": [
+        0.95,
+        0.74
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.95,
+      "y": 0.76,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.95,
+        0.76
+       ],
+       "to": [
+        0.05,
+        0.76
+       ],
+       "offset": 1.5
+      }
+     },
+     {
+      "label": "白天",
+      "x": 0.18,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Owls sleep in the daytime.",
+    "exzh": "猫头鹰白天睡觉。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/cat-sit_f0.svg",
+       "x": 0.5,
+       "y": 0.7,
+       "s": 0.36,
+       "frames": [
+        "art/cat-sit_f0.svg",
+        "art/cat-sit_f1.svg",
+        "art/cat-sit_f2.svg"
+       ],
+       "fps": 1.5,
+       "z": 3
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.82,
+       "y": 0.22,
+       "s": 0.24,
+       "anim": "spin",
+       "z": 2,
+       "when": "daytime"
+      },
+      {
+       "label": "in the daytime",
+       "x": 0.3,
+       "y": 0.12,
+       "size": 0.07,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "in the daytime"
+      },
+      {
+       "label": "白天",
+       "x": 0.3,
+       "y": 0.32,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "白天"
+      }
+     ]
+    }
+   },
+   {
+    "text": "白天的",
+    "pos": "形容词",
+    "diff": "放在名词前面：白天的",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "id": "m",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "waves": true,
+      "on": "m",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "m"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "id": "k",
+      "x": 0.84,
+      "y": 0.64,
+      "s": 0.64,
+      "z": 3,
+      "nodWith": "m"
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.52,
+      "y": 0.3,
+      "s": 0.26,
+      "anim": "spin",
+      "z": 2
+     }
+    ],
+    "ex": "She takes daytime classes.",
+    "exzh": "她上白天的课。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "id": "t",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.72,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "waves": true,
+       "on": "t",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "t"
+      },
+      {
+       "actor": "west-girl-listen",
+       "id": "g",
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.66,
+       "z": 3,
+       "nodWith": "t"
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.52,
+       "y": 0.28,
+       "s": 0.24,
+       "anim": "spin",
+       "z": 2,
+       "when": "daytime"
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.94,
+       "s": 0.26,
+       "z": 4
+      },
+      {
+       "label": "daytime classes",
+       "x": 0.52,
+       "y": 0.56,
+       "size": 0.07,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "daytime classes"
+      },
+      {
+       "label": "白天的课",
+       "x": 0.52,
+       "y": 0.74,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "白天的课"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“白天的时间”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/sun.svg",
+       "x": 0.3,
+       "y": 0.3,
+       "s": 0.34,
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.3,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "label": "白天的时间",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "从天亮到天黑的这一段",
+    "node": "① 白天、日间",
+    "pos": "名词",
+    "pic": 0,
+    "rule": "最后一个词是主体，前面的词说明它",
+    "ruleEx": "daytime 白天的时间      lifetime 一生",
+    "cap": "day + time",
+    "say": [
+     "合成词里，最后一个词是主体，前面的词说明它。",
+     "lifetime 说的是 time，活着的时间，就是一生。",
+     "daytime 说的是 time：从天亮到天黑的这一段时间，就是白天。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "label": "主体",
+       "x": 0.7,
+       "y": 0.4,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "主体",
+       "hideCue": 1
+      },
+      {
+       "label": "说明它",
+       "x": 0.3,
+       "y": 0.4,
+       "size": 0.08,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "说明它",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/photo.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.4,
+       "cue": 1,
+       "when": "活着的时间",
+       "anim": "bob",
+       "hideCue": 2
+      },
+      {
+       "label": "lifetime",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "lifetime",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.1,
+       "y": 0.7,
+       "s": 0.22,
+       "path": [
+        [
+         0,
+         0.1,
+         0.7
+        ],
+        [
+         1.5,
+         0.5,
+         0.2
+        ],
+        [
+         3,
+         0.9,
+         0.7
+        ]
+       ],
+       "cue": 2,
+       "when": "从天亮到天黑",
+       "anim": "spin"
+      },
+      {
+       "label": "白天",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "白天"
+      }
+     ]
+    }
+   },
+   {
+    "via": "放在名词前面",
+    "node": "② 白天的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "daytime 放在名词前面，就是白天的，比如 daytime classes 白天的课。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/sun.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.26,
+       "anim": "spin",
+       "z": 2,
+       "when": "白天的"
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.3,
+       "z": 4
+      },
+      {
+       "label": "daytime classes",
+       "x": 0.5,
+       "y": 0.6,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "daytime classes"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "中文都能说“白天”，范围不一样",
+   "items": [
+    {
+     "w": "daytime",
+     "word": "daytime",
+     "name": "daytime",
+     "en": "daytime",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/castle-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/sun.svg",
+        "x": 0.42,
+        "y": 0.44,
+        "s": 0.5,
+        "anim": "spin",
+        "z": 2
+       },
+       {
+        "svg": "art/clock.svg",
+        "x": 0.66,
+        "y": 0.5,
+        "s": 0.4,
+        "anim": "pulse",
+        "z": 2
+       }
+      ]
+     },
+     "text": "daytime 和 night-time 相对，专指白天这段时间。",
+     "say": "daytime 和 night-time 相对，专指白天这段时间。",
+     "diff": "daytime 和 night-time 相对，专指白天这段时间。",
+     "note": "daytime 和 night-time 相对，专指白天这段时间。",
+     "desc": "daytime 和 night-time 相对，专指白天这段时间。",
+     "m": "daytime 和 night-time 相对，专指白天这段时间。",
+     "mean": "daytime 和 night-time 相对，专指白天这段时间。",
+     "line": "daytime 和 night-time 相对，专指白天这段时间。",
+     "explain": "daytime 和 night-time 相对，专指白天这段时间。",
+     "zh": "daytime 和 night-time 相对，专指白天这段时间。",
+     "def": "daytime 和 night-time 相对，专指白天这段时间。",
+     "gloss": "daytime 和 night-time 相对，专指白天这段时间。",
+     "sense": "daytime 和 night-time 相对，专指白天这段时间。",
+     "comment": "daytime 和 night-time 相对，专指白天这段时间。",
+     "hint": "daytime 和 night-time 相对，专指白天这段时间。",
+     "txt": "daytime 和 night-time 相对，专指白天这段时间。",
+     "talk": "daytime 和 night-time 相对，专指白天这段时间。",
+     "words": "daytime 和 night-time 相对，专指白天这段时间。",
+     "detail": "daytime 和 night-time 相对，专指白天这段时间。"
+    },
+    {
+     "w": "day",
+     "word": "day",
+     "name": "day",
+     "en": "day",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/classroom-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/calendar.svg",
+        "x": 0.5,
+        "y": 0.54,
+        "s": 0.6,
+        "anim": "pulse",
+        "z": 2
+       }
+      ]
+     },
+     "text": "day 也能说白天，还能指一整天。",
+     "say": "day 也能说白天，还能指一整天。",
+     "diff": "day 也能说白天，还能指一整天。",
+     "note": "day 也能说白天，还能指一整天。",
+     "desc": "day 也能说白天，还能指一整天。",
+     "m": "day 也能说白天，还能指一整天。",
+     "mean": "day 也能说白天，还能指一整天。",
+     "line": "day 也能说白天，还能指一整天。",
+     "explain": "day 也能说白天，还能指一整天。",
+     "zh": "day 也能说白天，还能指一整天。",
+     "def": "day 也能说白天，还能指一整天。",
+     "gloss": "day 也能说白天，还能指一整天。",
+     "sense": "day 也能说白天，还能指一整天。",
+     "comment": "day 也能说白天，还能指一整天。",
+     "hint": "day 也能说白天，还能指一整天。",
+     "txt": "day 也能说白天，还能指一整天。",
+     "talk": "day 也能说白天，还能指一整天。",
+     "words": "day 也能说白天，还能指一整天。",
+     "detail": "day 也能说白天，还能指一整天。"
+    }
+   ],
+   "logic": "daytime 是 day + time，说的只是“时间段”；day 是最小单位，意思更多。",
+   "tip": "白天这段时间用 daytime 或 day；一整天只能用 day。",
+   "pics": {
+    "daytime": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.42,
+       "y": 0.44,
+       "s": 0.5,
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.66,
+       "y": 0.5,
+       "s": 0.4,
+       "anim": "pulse",
+       "z": 2
+      }
+     ]
+    },
+    "day": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.6,
+       "anim": "pulse",
+       "z": 2
+      }
+     ]
+    }
+   },
+   "notes": {
+    "daytime": "daytime 和 night-time 相对，专指白天这段时间。",
+    "day": "day 也能说白天，还能指一整天。"
+   }
+  }
+ },
+ "插图": [
+  "daytimeai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：这家店什么时候开门？\n听：The shop is only open in the daytime.\nA. 只在晚上\nB. 只在白天\nC. 全天\nD. 周末",
@@ -93,5 +740,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

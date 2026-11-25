@@ -1,0 +1,1024 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "黎明、拂晓；开端；破晓；渐渐明白"
+ },
+ "originPic": {
+  "bg": "blank",
+  "img": "art/castle-bg.svg",
+  "items": [
+   {
+    "svg": "art/sun.svg",
+    "x": 0.5,
+    "y": 0.92,
+    "s": 0.3,
+    "go": [
+     0.5,
+     0.62
+    ],
+    "dur": 3,
+    "anim": "spin",
+    "z": 1
+   },
+   {
+    "label": "变成 day",
+    "x": 0.5,
+    "y": 0.12,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.8
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "黎明、拂晓",
+   "pos": "名词",
+   "diff": "天刚亮的那一刻",
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/sun.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "go": [
+      0.5,
+      0.62
+     ],
+     "dur": 3,
+     "anim": "spin",
+     "z": 1
+    },
+    {
+     "label": "黎明",
+     "x": 0.84,
+     "y": 0.14,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "We got up at dawn.",
+   "exzh": "我们天一亮就起床了。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/bed.svg",
+      "x": 0.42,
+      "y": 0.72,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "x": 0.8,
+      "y": 0.66,
+      "s": 0.2,
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 4,
+      "when": "got up",
+      "z": 3,
+      "sfx": "bell"
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.2,
+      "y": 0.3,
+      "s": 0.12,
+      "s2": 0.24,
+      "growWhen": "dawn",
+      "growDur": 2,
+      "anim": "spin",
+      "z": 1
+     },
+     {
+      "label": "at dawn",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "at dawn"
+     },
+     {
+      "label": "天一亮",
+      "x": 0.8,
+      "y": 0.4,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "天一亮"
+     }
+    ]
+   }
+  },
+  {
+   "text": "开端",
+   "pos": "名词",
+   "diff": "一件大事从这里开始",
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-present",
+     "id": "m",
+     "x": 0.2,
+     "y": 0.6,
+     "s": 0.72,
+     "z": 3,
+     "seq": "talk"
+    },
+    {
+     "waves": true,
+     "on": "m",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "with": "m"
+    },
+    {
+     "actor": "cn-boy-raise",
+     "id": "k",
+     "x": 0.84,
+     "y": 0.64,
+     "s": 0.64,
+     "z": 3,
+     "nodWith": "m"
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.52,
+     "y": 0.4,
+     "s": 0.24,
+     "anim": "bob",
+     "z": 2
+    },
+    {
+     "svg": "art/sun.svg",
+     "x": 0.52,
+     "y": 0.18,
+     "s": 0.14,
+     "anim": "spin",
+     "z": 2
+    }
+   ],
+   "ex": "This was the dawn of a new age.",
+   "exzh": "这是一个新时代的开端。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "id": "t",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "waves": true,
+      "on": "t",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "t"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "id": "g",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.66,
+      "z": 3,
+      "nodWith": "t"
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.52,
+      "y": 0.4,
+      "s": 0.3,
+      "when": "dawn",
+      "anim": "spin",
+      "z": 2
+     },
+     {
+      "label": "the dawn of",
+      "x": 0.52,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "dawn"
+     },
+     {
+      "label": "开端",
+      "x": 0.52,
+      "y": 0.74,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "开端"
+     }
+    ]
+   }
+  },
+  {
+   "text": "破晓",
+   "pos": "动词",
+   "diff": "黑夜一点点退去，东方发白",
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/moon.svg",
+     "x": 0.2,
+     "y": 0.2,
+     "s": 0.16,
+     "go": [
+      0.1,
+      0.5
+     ],
+     "dur": 3,
+     "z": 1
+    },
+    {
+     "svg": "art/sun.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "go": [
+      0.5,
+      0.62
+     ],
+     "dur": 3,
+     "anim": "spin",
+     "z": 1
+    },
+    {
+     "label": "破晓",
+     "x": 0.84,
+     "y": 0.14,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "The day was just dawning.",
+   "exzh": "天刚刚破晓。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/moon.svg",
+      "x": 0.2,
+      "y": 0.2,
+      "s": 0.16,
+      "when": "day",
+      "go": [
+       0.08,
+       0.5
+      ],
+      "dur": 2,
+      "z": 1
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "go": [
+       0.5,
+       0.62
+      ],
+      "dur": 3,
+      "anim": "spin",
+      "z": 1,
+      "when": "dawning"
+     },
+     {
+      "label": "dawning",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "dawning"
+     },
+     {
+      "label": "破晓",
+      "x": 0.84,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "破晓"
+     }
+    ]
+   }
+  },
+  {
+   "text": "渐渐明白",
+   "pos": "动词",
+   "diff": "（dawn on）一个念头像天光一样亮起来",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-clerk-think",
+     "id": "c",
+     "x": 0.4,
+     "y": 0.6,
+     "s": 0.72,
+     "z": 3,
+     "seq": "blink"
+    },
+    {
+     "svg": "art/bulb.svg",
+     "x": 0.66,
+     "y": 0.22,
+     "s": 0.12,
+     "s2": 0.26,
+     "grow": [
+      0.6,
+      2.4
+     ],
+     "anim": "pulse",
+     "z": 3
+    },
+    {
+     "label": "渐渐明白",
+     "x": 0.16,
+     "y": 0.14,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "It dawned on me that I was wrong.",
+   "exzh": "我渐渐意识到是我错了。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "id": "a",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "waves": true,
+      "on": "a",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "a"
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.7,
+      "y": 0.26,
+      "s": 0.1,
+      "s2": 0.26,
+      "when": "dawned on",
+      "growWhen": "dawned on",
+      "growDur": 1.6,
+      "anim": "pulse",
+      "z": 3
+     },
+     {
+      "label": "dawned on me",
+      "x": 0.7,
+      "y": 0.62,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "dawned on"
+     },
+     {
+      "label": "意识到",
+      "x": 0.7,
+      "y": 0.82,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "意识到"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“天正在变成 day”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/sun.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "go": [
+       0.5,
+       0.62
+      ],
+      "dur": 3,
+      "anim": "spin",
+      "z": 1
+     },
+     {
+      "label": "变成 day",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "黑夜一点点退去，东方发白",
+   "node": "① 破晓；黎明",
+   "pos": "动词 / 名词",
+   "pic": 2,
+   "say": [
+    "dawn 原来就是天正在变成 day。",
+    "黑夜一点点退去，东方发白，动词是破晓，名词是黎明。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/moon.svg",
+      "x": 0.2,
+      "y": 0.2,
+      "s": 0.16,
+      "when": "黑夜",
+      "go": [
+       0.08,
+       0.5
+      ],
+      "goWhen": "退去",
+      "dur": 2,
+      "z": 1
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "go": [
+       0.5,
+       0.62
+      ],
+      "dur": 3,
+      "anim": "spin",
+      "z": 1,
+      "when": "东方发白"
+     },
+     {
+      "label": "破晓",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "破晓"
+     }
+    ]
+   }
+  },
+  {
+   "via": "天亮了，就是黎明",
+   "node": "② 黎明、拂晓",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "表示东西、性质的词，也能直接当动词用",
+   "ruleEx": "dawn 黎明 → 破晓      water 水 → 浇水",
+   "cap": "名词 ↔ 动词",
+   "say": [
+    "名词也能直接当动词用。",
+    "water 是水，也能说浇水。",
+    "dawn 是黎明，也能说天破晓。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "label": "名词 ↔ 动词",
+      "x": 0.5,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "动词",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.4,
+      "cue": 1,
+      "when": "浇水",
+      "anim": "sway",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "go": [
+       0.5,
+       0.62
+      ],
+      "dur": 3,
+      "anim": "spin",
+      "z": 1,
+      "cue": 2,
+      "when": "黎明"
+     },
+     {
+      "label": "黎明",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "黎明",
+      "cue": 2
+     }
+    ]
+   }
+  },
+  {
+   "via": "一天从这里开始",
+   "node": "③ 开端",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "一天从黎明开始，所以大事的开头也叫 dawn，开端。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/sun.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "go": [
+       0.5,
+       0.62
+      ],
+      "dur": 3,
+      "anim": "spin",
+      "z": 1,
+      "when": "黎明"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.3,
+      "y": 0.66,
+      "s": 0.2,
+      "when": "大事",
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "label": "开端",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "开端"
+     }
+    ]
+   }
+  },
+  {
+   "via": "念头像天光一样慢慢亮起来",
+   "node": "④ （dawn on）渐渐明白",
+   "pos": "动词",
+   "pic": 3,
+   "say": [
+    "一个念头像天光一样，在心里慢慢亮起来，就是 dawn on，渐渐明白。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.12,
+      "s2": 0.36,
+      "when": "念头",
+      "growWhen": "慢慢亮起来",
+      "growDur": 1.6,
+      "anim": "pulse",
+      "z": 3
+     },
+     {
+      "label": "渐渐明白",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "渐渐明白"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "中文都能说“黎明、早上”，时刻不一样",
+  "items": [
+   {
+    "w": "dawn",
+    "word": "dawn",
+    "name": "dawn",
+    "en": "dawn",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.5,
+       "y": 0.8,
+       "s": 0.5,
+       "go": [
+        0.5,
+        0.6
+       ],
+       "dur": 3,
+       "anim": "spin",
+       "z": 2
+      }
+     ]
+    },
+    "text": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "say": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "diff": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "note": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "desc": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "m": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "mean": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "line": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "explain": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "zh": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "def": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "gloss": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "sense": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "comment": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "hint": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "txt": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "talk": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "words": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "detail": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。"
+   },
+   {
+    "w": "daylight",
+    "word": "daylight",
+    "name": "daylight",
+    "en": "daylight",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "ray": [
+        [
+         0.2,
+         0.1
+        ],
+        [
+         0.6,
+         0.9
+        ]
+       ],
+       "color": "#FFE27A",
+       "lw": 0.05,
+       "glow": true,
+       "dur": 1
+      },
+      {
+       "svg": "art/plant.svg",
+       "x": 0.66,
+       "y": 0.6,
+       "s": 0.5,
+       "anim": "sway",
+       "z": 2
+      }
+     ]
+    },
+    "text": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "say": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "diff": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "note": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "desc": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "m": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "mean": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "line": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "explain": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "zh": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "def": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "gloss": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "sense": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "comment": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "hint": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "txt": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "talk": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "words": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "detail": "daylight 作“黎明”是天开始有光；平常更多指天光。"
+   },
+   {
+    "w": "sunrise",
+    "word": "sunrise",
+    "name": "sunrise",
+    "en": "sunrise",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.5,
+       "y": 0.7,
+       "s": 0.5,
+       "go": [
+        0.5,
+        0.5
+       ],
+       "dur": 2,
+       "anim": "spin",
+       "z": 2
+      }
+     ]
+    },
+    "text": "sunrise 是日出，太阳露出地平线那一刻。",
+    "say": "sunrise 是日出，太阳露出地平线那一刻。",
+    "diff": "sunrise 是日出，太阳露出地平线那一刻。",
+    "note": "sunrise 是日出，太阳露出地平线那一刻。",
+    "desc": "sunrise 是日出，太阳露出地平线那一刻。",
+    "m": "sunrise 是日出，太阳露出地平线那一刻。",
+    "mean": "sunrise 是日出，太阳露出地平线那一刻。",
+    "line": "sunrise 是日出，太阳露出地平线那一刻。",
+    "explain": "sunrise 是日出，太阳露出地平线那一刻。",
+    "zh": "sunrise 是日出，太阳露出地平线那一刻。",
+    "def": "sunrise 是日出，太阳露出地平线那一刻。",
+    "gloss": "sunrise 是日出，太阳露出地平线那一刻。",
+    "sense": "sunrise 是日出，太阳露出地平线那一刻。",
+    "comment": "sunrise 是日出，太阳露出地平线那一刻。",
+    "hint": "sunrise 是日出，太阳露出地平线那一刻。",
+    "txt": "sunrise 是日出，太阳露出地平线那一刻。",
+    "talk": "sunrise 是日出，太阳露出地平线那一刻。",
+    "words": "sunrise 是日出，太阳露出地平线那一刻。",
+    "detail": "sunrise 是日出，太阳露出地平线那一刻。"
+   }
+  ],
+  "logic": "dawn 来自“变成白天”；daylight 是“白天的光”；sunrise 是“太阳升起”。",
+  "tip": "天刚亮用 dawn；太阳出来用 sunrise；整个早上用 morning。",
+  "pics": {
+   "dawn": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/castle-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.5,
+      "go": [
+       0.5,
+       0.6
+      ],
+      "dur": 3,
+      "anim": "spin",
+      "z": 2
+     }
+    ]
+   },
+   "daylight": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "ray": [
+       [
+        0.2,
+        0.1
+       ],
+       [
+        0.6,
+        0.9
+       ]
+      ],
+      "color": "#FFE27A",
+      "lw": 0.05,
+      "glow": true,
+      "dur": 1
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.66,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "sway",
+      "z": 2
+     }
+    ]
+   },
+   "sunrise": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/castle-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.5,
+      "y": 0.7,
+      "s": 0.5,
+      "go": [
+       0.5,
+       0.5
+      ],
+      "dur": 2,
+      "anim": "spin",
+      "z": 2
+     }
+    ]
+   }
+  },
+  "notes": {
+   "dawn": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+   "daylight": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+   "sunrise": "sunrise 是日出，太阳露出地平线那一刻。"
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：他们什么时候出发？",
+    "listen": "We set off at dawn.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "天刚亮时",
+     "中午",
+     "傍晚",
+     "半夜"
+    ],
+    "ans": "A",
+    "why": "at dawn 黎明时。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "We got up at ______ to see the sunrise.",
+    "opts": [
+     "dusk",
+     "noon",
+     "midnight",
+     "dawn"
+    ],
+    "ans": "D",
+    "why": "看日出要黎明时起床。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 dawn、sunrise 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The ______ was beautiful; the sun looked red.",
+    "opts": [],
+    "ans": "sunrise",
+    "why": "“日出”太阳升起用 sunrise；dawn 是天刚亮的那一刻。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The new day ______ bright and clear. (dawn)",
+    "opts": [],
+    "ans": "dawned",
+    "why": "讲过去，dawn 作动词“破晓”，过去式 dawned。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Many dawn are cold in winter.",
+    "opts": [],
+    "ans": "dawn → dawns",
+    "why": "many 后面用复数 dawns。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "黎明前天最黑。",
+    "stem": "It's darkest ______ the dawn.",
+    "opts": [],
+    "ans": "before",
+    "why": "before the dawn 黎明前。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The day is ______; the sky is getting light.",
+    "opts": [
+     "dawned",
+     "dawning",
+     "dawns",
+     "dawn"
+    ],
+    "ans": "B",
+    "why": "is 后面用现在分词 dawning（破晓）。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
