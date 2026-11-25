@@ -16,33 +16,18 @@
       "x": 0.24,
       "y": 0.62,
       "s": 0.82,
-      "z": 3
+      "z": 3,
+      "id": "t",
+      "seq": "talk"
      },
      {
-      "actor": "west-clerk-think",
+      "actor": "west-man-hello",
       "x": 0.74,
       "y": 0.62,
       "s": 0.82,
       "z": 3,
-      "delay": 0.8
-     },
-     {
-      "label": "happy",
-      "x": 0.24,
-      "y": 0.1,
-      "size": 0.08,
-      "delay": 0.3,
-      "color": "#2B8A3E",
-      "border": "#2B8A3E"
-     },
-     {
-      "label": "unhappy",
-      "x": 0.74,
-      "y": 0.1,
-      "size": 0.08,
-      "delay": 1.0,
-      "color": "#C0392B",
-      "border": "#C0392B"
+      "delay": 0.8,
+      "nodWith": "t"
      },
      {
       "label": "un-：不（意思反过来）",
@@ -52,6 +37,38 @@
       "delay": 1.4,
       "color": "#2F6FB3",
       "border": "#2F6FB3"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.1
+      },
+      "s": 0.36,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-girl",
+      "walk": {
+       "from": [
+        -0.05,
+        0.88
+       ],
+       "to": [
+        1.05,
+        0.88
+       ],
+       "offset": 0.6
+      },
+      "s": 0.36,
+      "z": 1
      }
     ]
    },
@@ -439,6 +456,38 @@
        "s": 0.05,
        "wobble": 0.45,
        "when": "下起了大雨"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "walk": {
+        "from": [
+         1.05,
+         0.86
+        ],
+        "to": [
+         -0.05,
+         0.86
+        ],
+        "offset": 0.1
+       },
+       "s": 0.36,
+       "z": 1
+      },
+      {
+       "actor": "walk-cn-girl",
+       "walk": {
+        "from": [
+         -0.05,
+         0.88
+        ],
+        "to": [
+         1.05,
+         0.88
+        ],
+        "offset": 0.6
+       },
+       "s": 0.36,
+       "z": 1
       }
      ]
     }
@@ -536,7 +585,7 @@
        "when": "皱巴巴"
       },
       {
-       "actor": "west-clerk-think",
+       "actor": "west-man-smile",
        "x": 0.2,
        "y": 0.6,
        "s": 0.86,
@@ -618,6 +667,209 @@
       }
      ]
     }
+   },
+   "logic": "untidy 是 un + tidy：“没收拾整齐”；messy 从 mess（一团糟）来，口语，乱里常带着脏；dirty 从 dirt（泥土）来，只说脏，不管齐不齐"
+  },
+  "demo": {
+   "unhappy": {
+    "icons": [
+     "art/icon-un.svg",
+     "art/star.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "shape": "rect",
+       "x": 0.5,
+       "y": 0.5,
+       "w": 1,
+       "h": 1,
+       "fill": "#3A4256",
+       "a": 0.3,
+       "z": 1
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.02,
+       "every": 0.12,
+       "life": 1.1,
+       "to": [
+        0,
+        0.9
+       ],
+       "s": 0.05,
+       "wobble": 0.4
+      },
+      {
+       "label": "不快乐的",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.12,
+       "color": "#C0392B",
+       "border": "#C0392B"
+      }
+     ]
+    },
+    "lit": "不快乐的"
+   },
+   "unlock": {
+    "icons": [
+     "art/icon-un.svg",
+     "art/desk.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.56,
+       "z": 3,
+       "anim": "shake"
+      },
+      {
+       "ray": [
+        [
+         0.3,
+         0.62
+        ],
+        [
+         0.7,
+         0.62
+        ]
+       ],
+       "color": "#2B8A3E",
+       "lw": 0.02,
+       "arrow": true,
+       "dur": 0.8,
+       "delay": 0.6,
+       "z": 4
+      },
+      {
+       "label": "把锁打开",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    },
+    "lit": "把锁反过来：打开"
+   },
+   "incorrect": {
+    "icons": [
+     "art/icon-un.svg",
+     "art/books.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.46,
+       "z": 3,
+       "anim": "shake"
+      },
+      {
+       "ray": [
+        [
+         0.36,
+         0.44
+        ],
+        [
+         0.64,
+         0.72
+        ]
+       ],
+       "color": "#C0392B",
+       "lw": 0.03,
+       "dur": 0.4,
+       "delay": 0.6,
+       "z": 4
+      },
+      {
+       "ray": [
+        [
+         0.64,
+         0.44
+        ],
+        [
+         0.36,
+         0.72
+        ]
+       ],
+       "color": "#C0392B",
+       "lw": 0.03,
+       "dur": 0.4,
+       "delay": 0.9,
+       "z": 4
+      },
+      {
+       "label": "不正确的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.12,
+       "color": "#C0392B",
+       "border": "#C0392B"
+      }
+     ]
+    },
+    "lit": "不正确的"
+   },
+   "disagree": {
+    "icons": [
+     "art/icon-un.svg",
+     "art/waves.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "id": "a",
+       "actor": "cn-teacher-listen",
+       "x": 0.26,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "id": "b",
+       "actor": "west-girl-explain",
+       "x": 0.74,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "turn": [
+        1,
+        2
+       ]
+      },
+      {
+       "label": "不同意",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.12,
+       "color": "#C0392B",
+       "border": "#C0392B"
+      }
+     ]
+    },
+    "lit": "意见不一样"
    }
   }
  },
@@ -714,5 +966,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

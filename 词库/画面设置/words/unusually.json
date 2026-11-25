@@ -36,14 +36,16 @@
      "x": 0.17,
      "y": 0.64,
      "s": 0.8,
-     "z": 3
+     "z": 3,
+     "seq": "talk"
     },
     {
-     "actor": "west-girl-surprised",
+     "actor": "west-girl-raise",
      "x": 0.83,
      "y": 0.64,
      "s": 0.8,
-     "z": 3
+     "z": 3,
+     "nodWith": "boy"
     },
     {
      "label": "unusual 不寻常的",
@@ -53,16 +55,6 @@
      "delay": 0.6,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
-    },
-    {
-     "label": "课桌上坐着一只猫",
-     "x": 0.5,
-     "y": 0.24,
-     "size": 0.06,
-     "delay": 1.2,
-     "color": "#7A3E00",
-     "bg": "#FFF6D8",
-     "border": "#E0A800"
     }
    ]
   },
@@ -95,16 +87,6 @@
      "delay": 0.4,
      "color": "#2F6FB3",
      "border": "#2F6FB3"
-    },
-    {
-     "label": "slow 慢的 → slowly 慢慢地（走）",
-     "x": 0.5,
-     "y": 0.25,
-     "size": 0.06,
-     "delay": 1.0,
-     "color": "#7A3E00",
-     "bg": "#FFF6D8",
-     "border": "#E0A800"
     },
     {
      "label": "说她怎么做",
@@ -155,6 +137,38 @@
     "delay": 0.8,
     "color": "#C0392B",
     "border": "#C0392B"
+   },
+   {
+    "actor": "walk-west-woman-case",
+    "walk": {
+     "from": [
+      1.05,
+      0.88
+     ],
+     "to": [
+      -0.05,
+      0.88
+     ],
+     "offset": 0.1
+    },
+    "s": 0.32,
+    "z": 1
+   },
+   {
+    "actor": "walk-cn-girl",
+    "walk": {
+     "from": [
+      -0.05,
+      0.9
+     ],
+     "to": [
+      1.05,
+      0.9
+     ],
+     "offset": 0.6
+    },
+    "s": 0.32,
+    "z": 1
    }
   ]
  },
@@ -332,7 +346,7 @@
      "z": 3
     },
     {
-     "actor": "west-girl-surprised",
+     "actor": "west-girl-listen",
      "x": 0.76,
      "y": 0.64,
      "s": 0.78,
@@ -393,7 +407,7 @@
       "gap": true
      },
      {
-      "actor": "west-girl-surprised",
+      "actor": "west-girl-listen",
       "x": 0.8,
       "y": 0.64,
       "s": 0.8,
@@ -459,6 +473,38 @@
       "delay": 0.6,
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.88
+       ],
+       "to": [
+        -0.05,
+        0.88
+       ],
+       "offset": 0.1
+      },
+      "s": 0.32,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-girl",
+      "walk": {
+       "from": [
+        -0.05,
+        0.9
+       ],
+       "to": [
+        1.05,
+        0.9
+       ],
+       "offset": 0.6
+      },
+      "s": 0.32,
+      "z": 1
      }
     ]
    }
@@ -528,7 +574,7 @@
       "border": "#C0392B"
      },
      {
-      "actor": "west-girl-surprised",
+      "actor": "west-girl-explain",
       "x": 0.13,
       "y": 0.64,
       "s": 0.75,
@@ -543,6 +589,38 @@
       "when": "格外",
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.88
+       ],
+       "to": [
+        -0.05,
+        0.88
+       ],
+       "offset": 0.1
+      },
+      "s": 0.32,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-girl",
+      "walk": {
+       "from": [
+        -0.05,
+        0.9
+       ],
+       "to": [
+        1.05,
+        0.9
+       ],
+       "offset": 0.6
+      },
+      "s": 0.32,
+      "z": 1
      }
     ]
    }
@@ -597,7 +675,7 @@
       "when": "太阳还没落山"
      },
      {
-      "actor": "west-man-hello",
+      "actor": "west-man-smile",
       "x": 0.06,
       "y": 0.62,
       "s": 0.85,
@@ -611,7 +689,7 @@
       "dur": 1.2
      },
      {
-      "actor": "west-girl-surprised",
+      "actor": "cn-teacher-laugh",
       "x": 0.76,
       "y": 0.64,
       "s": 0.78,
@@ -649,6 +727,155 @@
   }
  ],
  "distinguish": false,
+ "demo": {
+  "sadly": {
+   "icons": [
+    "art/drop.svg",
+    "art/icon-ly.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.5,
+      "y": 0.02,
+      "every": 0.12,
+      "life": 1.1,
+      "to": [
+       0,
+       0.9
+      ],
+      "s": 0.05,
+      "wobble": 0.4
+     },
+     {
+      "actor": "walk-west-man-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.84
+       ],
+       "to": [
+        -0.05,
+        0.84
+       ],
+       "offset": 0.0
+      },
+      "s": 0.34,
+      "z": 1
+     },
+     {
+      "label": "伤心地",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.12,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   },
+   "lit": "伤心地"
+  },
+  "basically": {
+   "icons": [
+    "art/books.svg",
+    "art/icon-ly.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.44,
+      "z": 3,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.45,
+      "every": 0.6,
+      "life": 1.4,
+      "to": [
+       0.1,
+       -0.2
+      ],
+      "s": 0.06,
+      "spin": true
+     },
+     {
+      "label": "基本上",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.12,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "lit": "从根本上"
+  },
+  "forward": {
+   "icons": [
+    "art/street-bg.svg",
+    "art/sun.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-boy-pack",
+      "walk": {
+       "from": [
+        -0.05,
+        0.8
+       ],
+       "to": [
+        1.05,
+        0.8
+       ],
+       "offset": 0.0
+      },
+      "s": 0.4,
+      "z": 1
+     },
+     {
+      "ray": [
+       [
+        0.2,
+        0.36
+       ],
+       [
+        0.8,
+        0.36
+       ]
+      ],
+      "color": "#E8453C",
+      "lw": 0.02,
+      "arrow": true,
+      "dur": 1
+     },
+     {
+      "label": "向前",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.12,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "lit": "朝前面"
+  }
+ },
  "lianxi": {
   "qs": [
    {
