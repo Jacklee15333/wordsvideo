@@ -34,14 +34,13 @@
     ]
    },
    "p1": {
-    "bg": "blank",
-    "img": "art/airport-bg.svg",
+    "bg": "sky",
     "items": [
      {
       "svg": "art/plane.svg",
       "x": 0.3,
-      "y": 0.72,
-      "s": 0.36,
+      "y": 0.7,
+      "s": 0.46,
       "go": [
        0.95,
        0.22
@@ -55,8 +54,15 @@
       "svg": "art/flag.svg",
       "x": 0.9,
       "y": 0.7,
-      "s": 0.26,
+      "s": 0.3,
       "anim": "swing"
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.86,
+      "y": 0.18,
+      "s": 0.24,
+      "anim": "spin"
      }
     ]
    }
@@ -66,14 +72,13 @@
    "p1": "art/icon-off.svg"
   },
   "comboPic": {
-   "bg": "blank",
-   "img": "art/airport-bg.svg",
+   "bg": "sky",
    "items": [
     {
      "svg": "art/plane.svg",
      "x": 0.3,
-     "y": 0.74,
-     "s": 0.34,
+     "y": 0.7,
+     "s": 0.46,
      "go": [
       0.95,
       0.22
@@ -87,8 +92,15 @@
      "svg": "art/flag.svg",
      "x": 0.9,
      "y": 0.7,
-     "s": 0.26,
+     "s": 0.3,
      "anim": "swing"
+    },
+    {
+     "svg": "art/sun.svg",
+     "x": 0.86,
+     "y": 0.18,
+     "s": 0.24,
+     "anim": "spin"
     }
    ]
   },
@@ -103,8 +115,8 @@
      {
       "svg": "art/plane.svg",
       "x": 0.3,
-      "y": 0.74,
-      "s": 0.34,
+      "y": 0.72,
+      "s": 0.46,
       "go": [
        0.95,
        0.22
@@ -142,8 +154,8 @@
       {
        "svg": "art/plane.svg",
        "x": 0.3,
-       "y": 0.74,
-       "s": 0.34,
+       "y": 0.72,
+       "s": 0.46,
        "when": "plane",
        "go": [
         0.9,
@@ -424,14 +436,13 @@
    {
     "node": "“带离原处”",
     "fig": {
-     "bg": "blank",
-     "img": "art/airport-bg.svg",
+     "bg": "sky",
      "items": [
       {
        "svg": "art/plane.svg",
        "x": 0.3,
-       "y": 0.74,
-       "s": 0.34,
+       "y": 0.7,
+       "s": 0.46,
        "go": [
         0.95,
         0.22
@@ -445,8 +456,15 @@
        "svg": "art/flag.svg",
        "x": 0.9,
        "y": 0.7,
-       "s": 0.26,
+       "s": 0.3,
        "anim": "swing"
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.86,
+       "y": 0.18,
+       "s": 0.24,
+       "anim": "spin"
       }
      ]
     }
@@ -553,6 +571,24 @@
        "color": "#7A3E00",
        "bg": "#FFF6D8",
        "border": "#E0A800"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.05,
+       "y": 0.88,
+       "s": 0.32,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.05,
+         0.88
+        ],
+        "to": [
+         0.95,
+         0.88
+        ],
+        "offset": 0
+       }
       }
      ]
     }
@@ -750,7 +786,7 @@
      "zh": "mimicking 是学别人的声音、动作，像鹦鹉学舌。",
      "pic": {
       "bg": "blank",
-      "img": "art/park-bg.svg",
+      "img": "art/room-bg.svg",
       "items": [
        {
         "svg": "art/parrot.svg",
@@ -866,5 +902,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

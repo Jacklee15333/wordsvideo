@@ -64,8 +64,7 @@
    "p1": "art/icon-take.svg"
   },
   "comboPic": {
-   "bg": "blank",
-   "img": "art/park-bg.svg",
+   "bg": "sky",
    "items": [
     {
      "svg": "art/pipe-intake.svg",
@@ -86,6 +85,19 @@
       0.05
      ],
      "wobble": 0.03
+    },
+    {
+     "svg": "art/sun.svg",
+     "x": 0.86,
+     "y": 0.18,
+     "s": 0.26,
+     "anim": "spin"
+    },
+    {
+     "svg": "art/plant.svg",
+     "x": 0.08,
+     "y": 0.6,
+     "s": 0.34
     }
    ]
   },
@@ -290,8 +302,7 @@
     "text": "进水口、进气口",
     "pos": "名词",
     "diff": "水、空气被收进来的地方",
-    "bg": "blank",
-    "img": "art/park-bg.svg",
+    "bg": "sky",
     "items": [
      {
       "svg": "art/pipe-intake.svg",
@@ -312,14 +323,33 @@
        0.05
       ],
       "wobble": 0.03
+     },
+     {
+      "svg": "art/sun.svg",
+      "x": 0.86,
+      "y": 0.18,
+      "s": 0.26,
+      "anim": "spin"
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.08,
+      "y": 0.6,
+      "s": 0.34
      }
     ],
     "ex": "Water flows into the intake.",
     "exzh": "水流进进水口。",
     "exPic": {
-     "bg": "blank",
-     "img": "art/park-bg.svg",
+     "bg": "sky",
      "items": [
+      {
+       "svg": "art/sun.svg",
+       "x": 0.5,
+       "y": 0.16,
+       "s": 0.24,
+       "anim": "spin"
+      },
       {
        "svg": "art/pipe-intake.svg",
        "x": 0.56,
@@ -369,8 +399,7 @@
    {
     "node": "“收进来（的东西）”",
     "fig": {
-     "bg": "blank",
-     "img": "art/park-bg.svg",
+     "bg": "sky",
      "items": [
       {
        "svg": "art/pipe-intake.svg",
@@ -391,6 +420,19 @@
         0.05
        ],
        "wobble": 0.03
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.86,
+       "y": 0.18,
+       "s": 0.26,
+       "anim": "spin"
+      },
+      {
+       "svg": "art/plant.svg",
+       "x": 0.08,
+       "y": 0.6,
+       "s": 0.34
       }
      ]
     }
@@ -408,9 +450,15 @@
      "intake 最早指水渠、管道把水收进来的地方：进水口、进气口。"
     ],
     "fig": {
-     "bg": "blank",
-     "img": "art/park-bg.svg",
+     "bg": "sky",
      "items": [
+      {
+       "svg": "art/sun.svg",
+       "x": 0.92,
+       "y": 0.36,
+       "s": 0.2,
+       "anim": "spin"
+      },
       {
        "label": "take in",
        "x": 0.3,
@@ -800,5 +848,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

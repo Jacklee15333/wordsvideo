@@ -1,7 +1,615 @@
 {
  "单词": "takeout",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ˈteɪk",
+   "aʊt"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/hand-grab.svg",
+      "x": 0.44,
+      "y": 0.5,
+      "s": 0.62,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.82,
+      "y": 0.62,
+      "s": 0.3,
+      "go": [
+       0.6,
+       0.5
+      ],
+      "dur": 1.4,
+      "loop": true
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/door-out.svg",
+      "x": 0.42,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/lamp.svg",
+      "x": 0.84,
+      "y": 0.6,
+      "s": 0.5
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.1,
+      "y": 0.66,
+      "s": 0.4
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-take.svg",
+   "p1": "art/icon-out.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/door-out.svg",
+     "x": 0.4,
+     "y": 0.52,
+     "s": 0.62
+    },
+    {
+     "svg": "art/takeout-box.svg",
+     "x": 0.46,
+     "y": 0.6,
+     "s": 0.24,
+     "go": [
+      0.86,
+      0.6
+     ],
+     "dur": 1.8,
+     "loop": true,
+     "z": 4
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "外卖",
+    "pos": "名词",
+    "diff": "装进盒子带出去吃的饭",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8,
+      "z": 2
+     },
+     {
+      "svg": "art/counter.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 3
+     },
+     {
+      "svg": "art/takeout-box.svg",
+      "x": 0.36,
+      "y": 0.62,
+      "s": 0.26,
+      "anim": "bob",
+      "z": 4
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.95,
+      "y": 0.78,
+      "s": 0.4,
+      "z": 5,
+      "walk": {
+       "from": [
+        0.95,
+        0.78
+       ],
+       "to": [
+        0.05,
+        0.78
+       ],
+       "offset": 0
+      }
+     }
+    ],
+    "ex": "Let's get takeout tonight.",
+    "exzh": "我们今晚叫外卖吧。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.28,
+       "y": 0.58,
+       "s": 0.86,
+       "z": 3,
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.74,
+       "y": 0.6,
+       "s": 0.84,
+       "z": 3,
+       "turn": [
+        1,
+        2
+       ]
+      },
+      {
+       "svg": "art/takeout-box.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.36,
+       "when": "takeout",
+       "pop": true,
+       "z": 5
+      },
+      {
+       "svg": "art/moon.svg",
+       "x": 0.5,
+       "y": 0.18,
+       "s": 0.24,
+       "when": "tonight",
+       "anim": "bob"
+      },
+      {
+       "label": "takeout",
+       "x": 0.16,
+       "y": 0.1,
+       "size": 0.075,
+       "when": "takeout",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "叫外卖",
+       "x": 0.84,
+       "y": 0.1,
+       "size": 0.075,
+       "when": "叫外卖",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "外带的",
+    "pos": "形容词",
+    "diff": "做好了拿走、不在店里吃的",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-smile",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8,
+      "z": 2
+     },
+     {
+      "svg": "art/counter.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 3
+     },
+     {
+      "svg": "art/coffee-cup.svg",
+      "x": 0.36,
+      "y": 0.62,
+      "s": 0.24,
+      "anim": "bob",
+      "z": 4
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.05,
+      "y": 0.8,
+      "s": 0.4,
+      "z": 5,
+      "walk": {
+       "from": [
+        0.05,
+        0.8
+       ],
+       "to": [
+        0.95,
+        0.8
+       ],
+       "offset": 0
+      }
+     }
+    ],
+    "ex": "Two takeout coffees, please.",
+    "exzh": "请给我两杯外带咖啡。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.24,
+       "y": 0.56,
+       "s": 0.84,
+       "z": 3,
+       "id": "t"
+      },
+      {
+       "actor": "west-clerk-think",
+       "x": 0.66,
+       "y": 0.5,
+       "s": 0.78,
+       "z": 2,
+       "nodWith": "t"
+      },
+      {
+       "svg": "art/counter.svg",
+       "x": 0.62,
+       "y": 0.88,
+       "s": 0.34,
+       "z": 3
+      },
+      {
+       "svg": "art/coffee-cup.svg",
+       "x": 0.5,
+       "y": 0.64,
+       "s": 0.24,
+       "when": "coffees",
+       "pop": true,
+       "z": 4
+      },
+      {
+       "svg": "art/coffee-cup.svg",
+       "x": 0.6,
+       "y": 0.64,
+       "s": 0.24,
+       "when": "两杯",
+       "pop": true,
+       "z": 4
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.95,
+       "y": 0.82,
+       "s": 0.36,
+       "z": 5,
+       "walk": {
+        "from": [
+         0.95,
+         0.82
+        ],
+        "to": [
+         0.4,
+         0.82
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "label": "takeout",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "when": "takeout",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "外带咖啡",
+       "x": 0.86,
+       "y": 0.1,
+       "size": 0.075,
+       "when": "外带咖啡",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“把东西带出去”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/door-out.svg",
+       "x": 0.4,
+       "y": 0.52,
+       "s": 0.62
+      },
+      {
+       "svg": "art/takeout-box.svg",
+       "x": 0.46,
+       "y": 0.6,
+       "s": 0.24,
+       "go": [
+        0.86,
+        0.6
+       ],
+       "dur": 1.8,
+       "loop": true,
+       "z": 4
+      }
+     ]
+    }
+   },
+   {
+    "via": "动词短语整个变成名词",
+    "node": "① 外卖",
+    "pos": "名词",
+    "pic": 0,
+    "rule": "动词短语整个变成名词或形容词，先后不变",
+    "ruleEx": "take out 带出去 → takeout      lay out 摆开 → layout 布局",
+    "say": [
+     "take out 是把东西带出去。动词短语整个变成名词，先后不变，就是 takeout。",
+     "lay out 是摆开，合成 layout，就是布局。",
+     "饭馆做好的饭不在店里吃，装进盒子带出去吃，就是外卖。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "label": "take out",
+       "x": 0.26,
+       "y": 0.14,
+       "size": 0.09,
+       "when": "take out",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "hideCue": 1
+      },
+      {
+       "ray": [
+        [
+         0.4,
+         0.14
+        ],
+        [
+         0.56,
+         0.14
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.7,
+       "when": "先后不变",
+       "hideCue": 1
+      },
+      {
+       "label": "takeout",
+       "x": 0.72,
+       "y": 0.14,
+       "size": 0.09,
+       "when": "takeout",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/door-out.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "带出去",
+       "hideCue": 1
+      },
+      {
+       "label": "lay out",
+       "x": 0.26,
+       "y": 0.14,
+       "size": 0.09,
+       "when": "lay out",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "hideCue": 2
+      },
+      {
+       "label": "layout",
+       "x": 0.72,
+       "y": 0.14,
+       "size": 0.09,
+       "when": "layout",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "布局",
+       "pop": true,
+       "hideCue": 2
+      },
+      {
+       "svg": "art/counter.svg",
+       "x": 0.5,
+       "y": 0.86,
+       "s": 0.36,
+       "when": "饭馆",
+       "z": 3
+      },
+      {
+       "svg": "art/takeout-box.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.3,
+       "when": "装进盒子",
+       "pop": true,
+       "go": [
+        0.9,
+        0.62
+       ],
+       "goWhen": "带出去吃",
+       "dur": 1.2,
+       "z": 4
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.05,
+       "y": 0.82,
+       "s": 0.38,
+       "z": 5,
+       "walk": {
+        "from": [
+         0.05,
+         0.82
+        ],
+        "to": [
+         0.95,
+         0.82
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "label": "外卖",
+       "x": 0.16,
+       "y": 0.5,
+       "size": 0.1,
+       "when": "外卖",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "放在名词前当形容词",
+    "node": "② 外带的",
+    "pos": "形容词",
+    "pic": 1,
+    "rule": "动词短语变成的词，也能放在名词前当形容词",
+    "ruleEx": "takeout 外卖 → takeout coffee 外带的咖啡",
+    "say": [
+     "takeout 也能放在名词前，当形容词：外带的。",
+     "比如 takeout coffee，外带的咖啡。美国店员常问：For here or to go?"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "label": "形容词",
+       "x": 0.3,
+       "y": 0.14,
+       "size": 0.09,
+       "when": "形容词",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "svg": "art/takeout-box.svg",
+       "x": 0.3,
+       "y": 0.56,
+       "s": 0.4,
+       "when": "外带的",
+       "pop": true
+      },
+      {
+       "svg": "art/coffee-cup.svg",
+       "x": 0.66,
+       "y": 0.54,
+       "s": 0.46,
+       "when": "takeout coffee",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "label": "For here or to go?",
+       "x": 0.66,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "For here or to go?",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.95,
+       "y": 0.84,
+       "s": 0.34,
+       "z": 5,
+       "walk": {
+        "from": [
+         0.95,
+         0.84
+        ],
+        "to": [
+         0.05,
+         0.84
+        ],
+        "offset": 0
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "takeaway",
+    "m": "（英）外卖",
+    "share": "take"
+   },
+   {
+    "w": "layout",
+    "m": "布局",
+    "share": "out"
+   },
+   {
+    "w": "takeoff",
+    "m": "起飞",
+    "share": "take"
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "takeoutai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他们今晚吃什么？\n听：Let's order takeout tonight.\nA. 自己做饭\nB. 叫外卖\nC. 去饭店\nD. 不吃饭",
@@ -90,5 +698,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

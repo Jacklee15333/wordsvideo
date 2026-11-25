@@ -1,7 +1,382 @@
 {
  "单词": "mistook",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "originPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/umbrella.svg",
+     "x": 0.3,
+     "y": 0.56,
+     "s": 0.5,
+     "anim": "swing"
+    },
+    {
+     "svg": "art/umbrella-blue.svg",
+     "x": 0.72,
+     "y": 0.56,
+     "s": 0.5
+    },
+    {
+     "svg": "art/hand-grab.svg",
+     "x": 0.9,
+     "y": 0.2,
+     "s": 0.3,
+     "go": [
+      0.36,
+      0.3
+     ],
+     "dur": 1.6,
+     "wait": 0.4
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "误解了、弄错了",
+    "pos": "动词（过去式）",
+    "diff": "过去把事情弄错了",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-think",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.88,
+      "z": 3
+     },
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.68,
+      "y": 0.4,
+      "s": 0.44,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 2,
+      "x": 0.88,
+      "y": 0.26,
+      "s": 0.26
+     }
+    ],
+    "ex": "I mistook the date of the exam.",
+    "exzh": "我把考试日期弄错了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.26,
+       "y": 0.58,
+       "s": 0.86,
+       "z": 3
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.56,
+       "y": 0.4,
+       "s": 0.42,
+       "when": "date",
+       "pop": true,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/exam.svg",
+       "x": 0.84,
+       "y": 0.5,
+       "s": 0.4,
+       "when": "exam"
+      },
+      {
+       "label": "mistook",
+       "x": 0.56,
+       "y": 0.08,
+       "size": 0.075,
+       "when": "mistook",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "弄错了",
+       "x": 0.56,
+       "y": 0.9,
+       "size": 0.075,
+       "when": "弄错了",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "把…错当成了…",
+    "pos": "动词（过去式）",
+    "diff": "mistook A for B",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.26,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/umbrella.svg",
+      "x": 0.58,
+      "y": 0.54,
+      "s": 0.46,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/umbrella-blue.svg",
+      "x": 0.84,
+      "y": 0.54,
+      "s": 0.46
+     }
+    ],
+    "ex": "I mistook her umbrella for mine.",
+    "exzh": "我把她的伞错当成我的了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.24,
+       "y": 0.58,
+       "s": 0.86,
+       "z": 3
+      },
+      {
+       "svg": "art/umbrella.svg",
+       "x": 0.56,
+       "y": 0.54,
+       "s": 0.46,
+       "when": "her umbrella",
+       "anim": "swing"
+      },
+      {
+       "svg": "art/umbrella-blue.svg",
+       "x": 0.84,
+       "y": 0.54,
+       "s": 0.46,
+       "when": "mine"
+      },
+      {
+       "svg": "art/hand-grab.svg",
+       "x": 0.7,
+       "y": 0.18,
+       "s": 0.26,
+       "when": "mistook",
+       "go": [
+        0.58,
+        0.28
+       ],
+       "goWhen": "错当成",
+       "dur": 1.0,
+       "z": 5
+      },
+      {
+       "label": "mistook…for",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "when": "mistook",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "错当成",
+       "x": 0.86,
+       "y": 0.1,
+       "size": 0.075,
+       "when": "错当成",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“弄错了”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/exam-x.svg",
+       "x": 0.42,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.8,
+       "y": 0.36,
+       "s": 0.34,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "via": "过去式：事情在过去发生、已经结束",
+    "node": "① 误解了、弄错了",
+    "pos": "动词",
+    "pic": 0,
+    "say": [
+     "mistook 是 mistake 的过去式，说这件事在过去发生、已经结束了。",
+     "比如把考试日期弄错了，就说 mistook。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "label": "过去式",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.1,
+       "when": "过去式",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.28,
+       "y": 0.5,
+       "s": 0.4,
+       "when": "已经结束",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.68,
+       "y": 0.52,
+       "s": 0.46,
+       "when": "考试日期",
+       "pop": true,
+       "anim": "shake"
+      }
+     ]
+    }
+   },
+   {
+    "via": "mistake A for B 的过去式",
+    "node": "② 把…错当成了…",
+    "pos": "动词",
+    "pic": 1,
+    "say": [
+     "mistake A for B 是把 A 错当成 B。",
+     "过去弄错了，就说 mistook A for B：把伞错当成了自己的。",
+     "注意：mistook 只当过去式，不能跟在 have 后面；have 后面要用 mistaken：have mistaken。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "mistake A for B",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "when": "mistake A for B",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/umbrella.svg",
+       "x": 0.3,
+       "y": 0.54,
+       "s": 0.46,
+       "when": "错当成 B",
+       "anim": "swing",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/umbrella-blue.svg",
+       "x": 0.7,
+       "y": 0.54,
+       "s": 0.46,
+       "cue": 1,
+       "when": "把伞错当成",
+       "hideCue": 2
+      },
+      {
+       "label": "mistook A for B",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.075,
+       "when": "mistook A for B",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "hideCue": 2
+      },
+      {
+       "label": "have mistaken",
+       "x": 0.5,
+       "y": 0.4,
+       "size": 0.12,
+       "when": "have mistaken",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "label": "不能跟在 have 后面",
+       "x": 0.5,
+       "y": 0.64,
+       "size": 0.08,
+       "when": "不能跟在 have 后面",
+       "color": "#C92A2A",
+       "border": "#C92A2A"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "mistake",
+    "m": "错误；误解",
+    "share": "mistake"
+   },
+   {
+    "w": "mistaken",
+    "m": "弄错了的",
+    "share": "mist"
+   },
+   {
+    "w": "took",
+    "m": "take 的过去式",
+    "share": "took"
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "mistookai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人把他认成了谁？\n听：I mistook him for my cousin.\nA. 表哥\nB. 老师\nC. 邻居\nD. 同学",
@@ -89,5 +464,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
