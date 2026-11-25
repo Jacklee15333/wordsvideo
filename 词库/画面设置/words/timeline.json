@@ -1,0 +1,773 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "时间轴、大事年表；时间表、期限；时间线"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/clock_f0.svg",
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 1,
+     "x": 0.5,
+     "y": 0.46,
+     "s": 0.6,
+     "z": 3
+    },
+    {
+     "actor": "west-girl-listen",
+     "x": 0.15,
+     "y": 0.66,
+     "s": 0.72,
+     "z": 4
+    },
+    {
+     "label": "time：时间",
+     "x": 0.5,
+     "y": 0.9,
+     "size": 0.085,
+     "delay": 0.5,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "id": "t",
+     "actor": "cn-teacher-point",
+     "x": 0.18,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "ray": [
+      [
+       0.36,
+       0.44
+      ],
+      [
+       0.94,
+       0.44
+      ]
+     ],
+     "color": "#E8453C",
+     "lw": 0.022,
+     "delay": 0.5,
+     "dur": 1.4,
+     "z": 4
+    },
+    {
+     "label": "line：线",
+     "x": 0.64,
+     "y": 0.24,
+     "size": 0.1,
+     "delay": 1.2,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/clock.svg",
+  "p1": "art/icon-line.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/classroom-bg.svg",
+  "items": [
+   {
+    "svg": "art/timeline-board.svg",
+    "x": 0.5,
+    "y": 0.42,
+    "s": 0.56,
+    "z": 3
+   },
+   {
+    "actor": "cn-teacher-point",
+    "x": 0.14,
+    "y": 0.62,
+    "s": 0.8,
+    "z": 4
+   },
+   {
+    "label": "时间线",
+    "x": 0.5,
+    "y": 0.86,
+    "size": 0.09,
+    "delay": 0.6,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "时间轴、大事年表",
+   "pos": "名词",
+   "diff": "一条线上按先后标出大事",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/timeline-board.svg",
+     "x": 0.56,
+     "y": 0.4,
+     "s": 0.56,
+     "z": 3
+    },
+    {
+     "id": "t",
+     "actor": "cn-teacher-point",
+     "x": 0.16,
+     "y": 0.6,
+     "s": 0.86,
+     "z": 4
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.95,
+     "s": 0.24,
+     "z": 5
+    },
+    {
+     "actor": "west-girl-raise",
+     "x": 0.86,
+     "y": 0.66,
+     "s": 0.72,
+     "z": 4,
+     "nodWith": "t"
+    }
+   ],
+   "ex": "We drew a timeline of Chinese history.",
+   "exzh": "我们画了一条中国历史的时间轴。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "id": "t",
+      "actor": "cn-teacher-point",
+      "x": 0.14,
+      "y": 0.6,
+      "s": 0.88,
+      "z": 4
+     },
+     {
+      "svg": "art/timeline-board.svg",
+      "x": 0.52,
+      "y": 0.42,
+      "s": 0.6,
+      "z": 3,
+      "when": "timeline",
+      "reveal": "right",
+      "rdur": 1.6
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.24,
+      "z": 5
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.88,
+      "y": 0.66,
+      "s": 0.74,
+      "z": 4,
+      "nodWith": "t",
+      "when": "We"
+     },
+     {
+      "label": "Chinese history",
+      "x": 0.52,
+      "y": 0.08,
+      "size": 0.075,
+      "when": "Chinese history",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "时间轴",
+      "x": 0.52,
+      "y": 0.8,
+      "size": 0.09,
+      "when": "时间轴",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "（计划的）时间表、期限",
+   "pos": "名词",
+   "diff": "必须在什么时间做完",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.9,
+     "s": 0.4,
+     "z": 3
+    },
+    {
+     "svg": "art/calendar.svg",
+     "x": 0.6,
+     "y": 0.46,
+     "s": 0.56,
+     "z": 4,
+     "shadow": true
+    },
+    {
+     "actor": "west-clerk-think",
+     "x": 0.2,
+     "y": 0.6,
+     "s": 0.84,
+     "z": 2
+    },
+    {
+     "svg": "art/clock_f0.svg",
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 2,
+     "x": 0.88,
+     "y": 0.2,
+     "s": 0.24,
+     "z": 2
+    }
+   ],
+   "ex": "We have a tight timeline for this project.",
+   "exzh": "这个项目的期限很紧。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.4,
+      "z": 3
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.18,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 2
+     },
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.52,
+      "y": 0.46,
+      "s": 0.58,
+      "z": 4,
+      "shadow": true,
+      "when": "timeline",
+      "pop": true
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 2,
+      "x": 0.84,
+      "y": 0.22,
+      "s": 0.26,
+      "z": 2,
+      "when": "tight",
+      "anim": "shake"
+     },
+     {
+      "label": "tight timeline",
+      "x": 0.84,
+      "y": 0.52,
+      "size": 0.075,
+      "when": "tight",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "期限很紧",
+      "x": 0.84,
+      "y": 0.68,
+      "size": 0.085,
+      "when": "期限很紧",
+      "color": "#C0392B",
+      "border": "#C0392B"
+     }
+    ]
+   }
+  },
+  {
+   "text": "（社交媒体的）时间线",
+   "pos": "名词",
+   "diff": "手机上按时间排下来的动态",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sofa.svg",
+     "x": 0.5,
+     "y": 0.82,
+     "s": 0.36,
+     "z": 2
+    },
+    {
+     "svg": "art/feed-phone.svg",
+     "x": 0.6,
+     "y": 0.46,
+     "s": 0.7,
+     "z": 4
+    },
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.22,
+     "y": 0.62,
+     "s": 0.84,
+     "z": 3
+    }
+   ],
+   "ex": "I saw her photo on my timeline.",
+   "exzh": "我在我的时间线上看到了她的照片。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.5,
+      "y": 0.84,
+      "s": 0.34,
+      "z": 2
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.2,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "when": "saw"
+     },
+     {
+      "svg": "art/feed-phone.svg",
+      "x": 0.56,
+      "y": 0.5,
+      "s": 0.74,
+      "z": 4,
+      "when": "timeline",
+      "go": [
+       0.56,
+       0.46
+      ],
+      "dur": 1
+     },
+     {
+      "svg": "art/photo.svg",
+      "x": 0.82,
+      "y": 0.36,
+      "s": 0.3,
+      "z": 5,
+      "rot": 6,
+      "when": "photo",
+      "pop": true
+     },
+     {
+      "label": "my timeline",
+      "x": 0.84,
+      "y": 0.72,
+      "size": 0.075,
+      "when": "timeline",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "时间线",
+      "x": 0.84,
+      "y": 0.88,
+      "size": 0.09,
+      "when": "时间线",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“时间线”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/timeline-board.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.56,
+      "z": 3
+     },
+     {
+      "label": "时间线",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.09,
+      "delay": 0.6,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一条横线，上面按先后标出一个个事件",
+   "node": "① 时间轴、大事年表",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "最后一个词是主体，前面的词说明它",
+   "ruleEx": "timeline 说的是 line：时间线      deadline 最后期限",
+   "cap": "时间线 → 时间轴",
+   "say": [
+    "两个词合成一个词，最后一个是主体：deadline 说的是一条线，最后期限。",
+    "timeline 说的也是一条线：时间线。",
+    "在这条线上，按先后标出一件件大事，这就是时间轴、大事年表。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "label": "deadline 最后期限",
+      "x": 0.5,
+      "y": 0.4,
+      "size": 0.085,
+      "when": "deadline",
+      "hideCue": 1,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "ray": [
+       [
+        0.08,
+        0.6
+       ],
+       [
+        0.92,
+        0.6
+       ]
+      ],
+      "color": "#E8453C",
+      "lw": 0.02,
+      "cue": 1,
+      "when": "一条线",
+      "dur": 1.2,
+      "z": 3
+     },
+     {
+      "label": "时间线",
+      "x": 0.5,
+      "y": 0.42,
+      "size": 0.09,
+      "when": "时间线",
+      "hideCue": 2,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "svg": "art/timeline-board.svg",
+      "x": 0.5,
+      "y": 0.44,
+      "s": 0.6,
+      "z": 4,
+      "when": "一件件大事",
+      "reveal": "right",
+      "rdur": 1.4
+     },
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.1,
+      "y": 0.66,
+      "s": 0.7,
+      "z": 5,
+      "when": "按先后"
+     },
+     {
+      "label": "时间轴、大事年表",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.085,
+      "when": "时间轴",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一件事必须在什么时间完成",
+   "node": "② （计划的）时间表、期限",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "做一件事，也可以画一条时间线。",
+    "线的尽头写着：必须在这一天以前做完，这就是期限。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "ray": [
+       [
+        0.08,
+        0.3
+       ],
+       [
+        0.72,
+        0.3
+       ]
+      ],
+      "color": "#2F6FB3",
+      "lw": 0.02,
+      "arrow": true,
+      "when": "时间线",
+      "dur": 1.2,
+      "z": 3
+     },
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.82,
+      "y": 0.4,
+      "s": 0.44,
+      "z": 4,
+      "cue": 1,
+      "when": "这一天",
+      "pop": true
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.3,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 2,
+      "when": "做一件事"
+     },
+     {
+      "label": "期限",
+      "x": 0.82,
+      "y": 0.78,
+      "size": 0.1,
+      "when": "期限",
+      "color": "#C0392B",
+      "border": "#C0392B"
+     }
+    ]
+   }
+  },
+  {
+   "via": "社交媒体上按时间排列的动态",
+   "node": "③ （社交媒体的）时间线",
+   "pos": "名词",
+   "pic": 2,
+   "say": [
+    "手机上，朋友发的照片、消息，按时间先后一条条排下来。",
+    "这一长串，也叫时间线。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/feed-phone.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.76,
+      "z": 4,
+      "when": "手机上",
+      "go": [
+       0.5,
+       0.44
+      ],
+      "dur": 2,
+      "loop": true
+     },
+     {
+      "svg": "art/photo.svg",
+      "x": 0.82,
+      "y": 0.32,
+      "s": 0.3,
+      "z": 5,
+      "rot": 6,
+      "when": "照片"
+     },
+     {
+      "ray": [
+       [
+        0.2,
+        0.2
+       ],
+       [
+        0.2,
+        0.8
+       ]
+      ],
+      "color": "#2F6FB3",
+      "lw": 0.016,
+      "arrow": true,
+      "when": "一条条排下来",
+      "dur": 1
+     },
+     {
+      "label": "时间线",
+      "x": 0.82,
+      "y": 0.78,
+      "size": 0.1,
+      "when": "时间线",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "timetable",
+   "m": "时刻表",
+   "share": "time"
+  },
+  {
+   "w": "deadline",
+   "m": "最后期限",
+   "share": "line"
+  },
+  {
+   "w": "airline",
+   "m": "航空公司",
+   "share": "line"
+  }
+ ],
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：老师在黑板上画了什么？",
+    "listen": "The teacher drew a timeline of Chinese history.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "中国历史时间轴",
+     "中国地图",
+     "一棵树",
+     "一张表格"
+    ],
+    "ans": "A",
+    "why": "timeline 时间轴、大事年表。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "We made two ______ for our project. (timeline)",
+    "opts": [],
+    "ans": "timelines",
+    "why": "two 后面用复数 timelines。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Put these events in order on the ______.",
+    "opts": [
+     "timer",
+     "timeline",
+     "time",
+     "timing"
+    ],
+    "ans": "B",
+    "why": "按顺序排事件用时间轴 timeline。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 timeline、timetable 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Check the bus ______ before you go out.",
+    "opts": [],
+    "ans": "timetable",
+    "why": "公交时刻表用 timetable；timeline 是时间轴。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The timeline show the main events of his life.",
+    "opts": [],
+    "ans": "show → shows",
+    "why": "主语 the timeline 是单数，动词加 s。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这条时间轴从 1900 年开始。",
+    "stem": "The timeline ______ in 1900.",
+    "opts": [],
+    "ans": "starts",
+    "why": "主语单数，start 加 s。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "These ______ help us learn history.",
+    "opts": [
+     "timelines",
+     "timeline",
+     "timer",
+     "times"
+    ],
+    "ans": "A",
+    "why": "these 后面用复数 timelines。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

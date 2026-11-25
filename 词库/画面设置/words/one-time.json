@@ -1,0 +1,657 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "一次性的；从前的、曾经的"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/station-bg.svg",
+   "items": [
+    {
+     "svg": "art/ticket.svg",
+     "x": 0.5,
+     "y": 0.44,
+     "s": 0.42,
+     "z": 3,
+     "pop": true,
+     "delay": 0.3
+    },
+    {
+     "label": "1",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.14,
+     "delay": 0.6,
+     "color": "#E8453C",
+     "border": "#E8453C"
+    },
+    {
+     "label": "one：一",
+     "x": 0.5,
+     "y": 0.84,
+     "size": 0.09,
+     "delay": 0.9,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/station-bg.svg",
+   "items": [
+    {
+     "actor": "walk-west-man-case",
+     "walk": {
+      "from": [
+       -0.05,
+       0.7
+      ],
+      "to": [
+       1.05,
+       0.7
+      ]
+     },
+     "x": -0.05,
+     "y": 0.7,
+     "s": 0.64,
+     "z": 3
+    },
+    {
+     "svg": "art/ticket.svg",
+     "x": 0.5,
+     "y": 0.24,
+     "s": 0.24,
+     "z": 4,
+     "delay": 0.5
+    },
+    {
+     "label": "time：次（走一回）",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.075,
+     "delay": 0.9,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-one.svg",
+  "p1": "art/ticket.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/street-bg.svg",
+  "items": [
+   {
+    "svg": "art/paper-cup.svg",
+    "x": 0.46,
+    "y": 0.54,
+    "s": 0.6,
+    "z": 3,
+    "shadow": true
+   },
+   {
+    "label": "只用一次",
+    "x": 0.78,
+    "y": 0.5,
+    "size": 0.085,
+    "delay": 0.6,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "一次性的",
+   "pos": "形容词",
+   "diff": "只发生一次、用一次",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "id": "c",
+     "actor": "west-clerk-happy",
+     "x": 0.78,
+     "y": 0.6,
+     "s": 0.84,
+     "z": 3
+    },
+    {
+     "svg": "art/pos-machine.svg",
+     "x": 0.52,
+     "y": 0.52,
+     "s": 0.44,
+     "z": 4,
+     "shadow": true
+    },
+    {
+     "actor": "west-girl-explain",
+     "x": 0.2,
+     "y": 0.62,
+     "s": 0.84,
+     "z": 3,
+     "nodWith": "c"
+    },
+    {
+     "label": "一次付清",
+     "x": 0.52,
+     "y": 0.12,
+     "size": 0.085,
+     "delay": 0.8,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ],
+   "ex": "You only need to make a one-time payment.",
+   "exzh": "你只需要一次性付款。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "id": "c",
+      "actor": "west-clerk-happy",
+      "x": 0.8,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "talkWhen": "You"
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.18,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "nodWith": "c"
+     },
+     {
+      "svg": "art/pos-machine.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.46,
+      "z": 4,
+      "shadow": true,
+      "when": "payment",
+      "pop": true
+     },
+     {
+      "label": "one-time payment",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "when": "one-time",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "一次性付款",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.09,
+      "when": "一次性付款",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "从前的、曾经的",
+   "pos": "形容词",
+   "diff": "以前是，现在已经不是了",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/photo.svg",
+     "x": 0.54,
+     "y": 0.32,
+     "s": 0.4,
+     "z": 3,
+     "rot": -4
+    },
+    {
+     "id": "m",
+     "actor": "west-man-hello",
+     "x": 0.2,
+     "y": 0.62,
+     "s": 0.86,
+     "z": 4
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.95,
+     "s": 0.24,
+     "z": 5
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.84,
+     "y": 0.66,
+     "s": 0.74,
+     "z": 4,
+     "nodWith": "m"
+    }
+   ],
+   "ex": "He is a one-time teacher of our school.",
+   "exzh": "他曾经是我们学校的老师。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "id": "m",
+      "actor": "west-man-hello",
+      "x": 0.18,
+      "y": 0.62,
+      "s": 0.88,
+      "z": 4,
+      "when": "He"
+     },
+     {
+      "svg": "art/photo.svg",
+      "x": 0.52,
+      "y": 0.34,
+      "s": 0.44,
+      "z": 3,
+      "rot": -4,
+      "when": "one-time teacher",
+      "pop": true
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.24,
+      "z": 5
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.86,
+      "y": 0.66,
+      "s": 0.76,
+      "z": 4,
+      "nodWith": "m",
+      "when": "our school"
+     },
+     {
+      "label": "one-time teacher",
+      "x": 0.52,
+      "y": 0.72,
+      "size": 0.075,
+      "when": "one-time teacher",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "曾经是老师",
+      "x": 0.52,
+      "y": 0.08,
+      "size": 0.085,
+      "when": "曾经",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“一次的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/paper-cup.svg",
+      "x": 0.46,
+      "y": 0.54,
+      "s": 0.6,
+      "z": 3,
+      "shadow": true
+     },
+     {
+      "label": "一次的",
+      "x": 0.78,
+      "y": 0.5,
+      "size": 0.09,
+      "delay": 0.6,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "只发生一次的",
+   "node": "① 一次性的",
+   "pos": "形容词",
+   "pic": 0,
+   "rule": "数词和名词连起来放在名词前当形容词，名词用单数",
+   "ruleEx": "a one-time payment 一次性付款      a two-time champion 两届冠军",
+   "cap": "一次的 → 一次性的",
+   "say": [
+    "数词和名词连起来，放在名词前面，就成了形容词，中间加连字符，名词不加 s。",
+    "a two-time champion，是拿过两次的冠军。",
+    "one-time 就是只有一次的：钱一次付清，就是一次性付款。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "label": "two - time + 名词",
+      "x": 0.5,
+      "y": 0.36,
+      "size": 0.1,
+      "when": "数词和名词",
+      "hideCue": 1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "label": "加连字符，time 不加 s",
+      "x": 0.5,
+      "y": 0.56,
+      "size": 0.075,
+      "when": "连字符",
+      "hideCue": 1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.38,
+      "y": 0.52,
+      "s": 0.44,
+      "z": 3,
+      "cue": 1,
+      "when": "champion",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.62,
+      "y": 0.52,
+      "s": 0.44,
+      "z": 3,
+      "cue": 1,
+      "when": "两次",
+      "hideCue": 2
+     },
+     {
+      "label": "a two-time champion 两届冠军",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.07,
+      "when": "两次的冠军",
+      "hideCue": 2,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "svg": "art/pos-machine.svg",
+      "x": 0.46,
+      "y": 0.5,
+      "s": 0.48,
+      "z": 4,
+      "cue": 2,
+      "when": "一次付清",
+      "pop": true
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.14,
+      "y": 0.64,
+      "s": 0.8,
+      "z": 3,
+      "cue": 2,
+      "when": "一次付清"
+     },
+     {
+      "label": "一次性付款",
+      "x": 0.76,
+      "y": 0.5,
+      "size": 0.09,
+      "when": "一次性付款",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "曾经有过一次、现在已经不是了",
+   "node": "② 从前的、曾经的",
+   "pos": "形容词",
+   "pic": 1,
+   "say": [
+    "one time 还有一个意思：从前有过那么一回。",
+    "他从前在这里当过老师，现在不是了，one-time teacher 就是从前的老师。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/photo.svg",
+      "x": 0.5,
+      "y": 0.34,
+      "s": 0.46,
+      "z": 3,
+      "rot": -4,
+      "when": "从前有过",
+      "pop": true
+     },
+     {
+      "label": "从前",
+      "x": 0.82,
+      "y": 0.24,
+      "size": 0.085,
+      "when": "从前有过",
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "actor": "west-man-hello",
+      "x": 0.18,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 4,
+      "cue": 1,
+      "when": "现在不是了"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.24,
+      "z": 5
+     },
+     {
+      "label": "从前的、曾经的",
+      "x": 0.62,
+      "y": 0.74,
+      "size": 0.085,
+      "when": "从前的老师",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "sometimes",
+   "m": "有时",
+   "share": "time"
+  },
+  {
+   "w": "once",
+   "m": "一次；曾经",
+   "share": ""
+  },
+  {
+   "w": "former",
+   "m": "从前的",
+   "share": ""
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "disposable": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/paper-cup.svg",
+      "x": 0.36,
+      "y": 0.52,
+      "s": 0.7,
+      "z": 3,
+      "shadow": true
+     },
+     {
+      "label": "disposable 用完就扔的",
+      "x": 0.74,
+      "y": 0.5,
+      "size": 0.09,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   },
+   "former": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/photo.svg",
+      "x": 0.34,
+      "y": 0.48,
+      "s": 0.66,
+      "z": 3,
+      "rot": -4
+     },
+     {
+      "label": "former 从前的（＝one-time 的第二个意思）",
+      "x": 0.74,
+      "y": 0.5,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：他以前是做什么的？",
+    "listen": "He is a one-time teacher who now writes books.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "现在是老师",
+     "想当老师",
+     "曾经是老师",
+     "从没当过老师"
+    ],
+    "ans": "C",
+    "why": "one-time 从前的、曾经的。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "This is a ______ offer; it won't come again.",
+    "opts": [
+     "sometime",
+     "anytime",
+     "timeless",
+     "one-time"
+    ],
+    "ans": "D",
+    "why": "只有一次的机会用 one-time。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 once、one-time 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "I have been to Hong Kong only ______.",
+    "opts": [],
+    "ans": "once",
+    "why": "“一次”用副词 once；one-time 是形容词。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "You can use the ticket many ______. (time)",
+    "opts": [],
+    "ans": "times",
+    "why": "many 后面用复数 times（次数）。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He was a one-time football player, but now he coach a team.",
+    "opts": [],
+    "ans": "coach → coaches",
+    "why": "主语 he 是单数，动词加 es。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "她曾经是一名歌手。",
+    "stem": "She was ______ a singer.",
+    "opts": [],
+    "ans": "once",
+    "why": "“曾经”用 once，和 one-time（从前的）意思相近。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "I have read this book two ______.",
+    "opts": [
+     "time",
+     "timer",
+     "times",
+     "timing"
+    ],
+    "ans": "C",
+    "why": "two 后面用复数 times。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
