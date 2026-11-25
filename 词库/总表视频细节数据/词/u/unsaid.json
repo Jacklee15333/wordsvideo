@@ -1,7 +1,468 @@
 {
  "单词": "unsaid",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ʌn",
+   "sed"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bubble-said.svg",
+      "x": 0.45,
+      "y": 0.42,
+      "s": 0.5,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/bubble-cross.svg",
+      "x": 0.45,
+      "y": 0.42,
+      "s": 0.5,
+      "delay": 1.0,
+      "pop": true,
+      "z": 4
+     },
+     {
+      "label": "un- 没有、不",
+      "x": 0.45,
+      "y": 0.85,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "delay": 1.2
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "id": "t"
+     },
+     {
+      "waves": true,
+      "on": "t",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "t"
+     },
+     {
+      "svg": "art/bubble-said.svg",
+      "x": 0.68,
+      "y": 0.32,
+      "s": 0.42,
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/clock-past.svg",
+      "x": 0.85,
+      "y": 0.7,
+      "s": 0.3,
+      "delay": 0.8,
+      "anim": "pulse"
+     },
+     {
+      "label": "说出的",
+      "x": 0.68,
+      "y": 0.62,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 1.0
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-un.svg",
+   "p1": "art/icon-said.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bubble-unsaid.svg",
+     "x": 0.45,
+     "y": 0.4,
+     "s": 0.55,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/mouthzip.svg",
+     "x": 0.45,
+     "y": 0.82,
+     "s": 0.25,
+     "delay": 0.8,
+     "pop": true
+    },
+    {
+     "label": "没说出口的",
+     "x": 0.82,
+     "y": 0.2,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.0
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "没说出来的",
+    "pos": "形容词",
+    "diff": "话到嘴边又咽了回去",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.32,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/bubble-sorry.svg",
+      "x": 0.68,
+      "y": 0.3,
+      "s": 0.42,
+      "anim": "pulse",
+      "a": 0.6
+     },
+     {
+      "svg": "art/mouthzip.svg",
+      "x": 0.68,
+      "y": 0.7,
+      "s": 0.22,
+      "delay": 1.0,
+      "pop": true
+     },
+     {
+      "label": "没说出来",
+      "x": 0.68,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "delay": 1.2
+     }
+    ],
+    "ex": "Some things are better left unsaid.",
+    "exzh": "有些话还是不说为好。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sofa.svg",
+       "x": 0.5,
+       "y": 0.8,
+       "s": 0.4,
+       "z": 1
+      },
+      {
+       "actor": "west-clerk-think",
+       "x": 0.3,
+       "y": 0.55,
+       "s": 0.8,
+       "z": 2
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "x": 0.72,
+       "y": 0.55,
+       "s": 0.8,
+       "z": 2
+      },
+      {
+       "svg": "art/bubble-unsaid.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "s": 0.32,
+       "when": "unsaid",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "label": "left unsaid",
+       "x": 0.18,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "unsaid"
+      },
+      {
+       "label": "不说为好",
+       "x": 0.82,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "不说为好"
+      }
+     ]
+    }
+   },
+   {
+    "text": "心照不宣的",
+    "pos": "形容词",
+    "diff": "两人都明白，只是不说破",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-smile",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "id": "a"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "nodWith": "a"
+     },
+     {
+      "svg": "art/heart-dots.svg",
+      "x": 0.5,
+      "y": 0.22,
+      "s": 0.3,
+      "delay": 0.8,
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.22,
+      "z": 5
+     }
+    ],
+    "ex": "There was an unsaid agreement between them.",
+    "exzh": "他们之间有一种心照不宣的默契。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-listen",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "id": "g"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.72,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "nodWith": "g"
+      },
+      {
+       "svg": "art/heart-dots.svg",
+       "x": 0.5,
+       "y": 0.25,
+       "s": 0.32,
+       "when": "unsaid agreement",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "label": "unsaid agreement",
+       "x": 0.5,
+       "y": 0.06,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "unsaid agreement"
+      },
+      {
+       "label": "心照不宣的默契",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "心照不宣"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "un + said：“没说出口的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble-said.svg",
+       "x": 0.3,
+       "y": 0.42,
+       "s": 0.45,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/bubble-cross.svg",
+       "x": 0.3,
+       "y": 0.42,
+       "s": 0.45,
+       "delay": 0.8,
+       "z": 4,
+       "pop": true
+      },
+      {
+       "svg": "art/bubble-unsaid.svg",
+       "x": 0.75,
+       "y": 0.42,
+       "s": 0.45,
+       "delay": 1.2,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "via": "话到嘴边又咽了回去",
+    "node": "① 没说出来的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "话到了嘴边，又咽了回去。",
+     "这句话就是没说出来的，unsaid。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "id": "g"
+      },
+      {
+       "waves": true,
+       "on": "g",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "g",
+       "hideWhen": "咽了回去"
+      },
+      {
+       "svg": "art/bubble-sorry.svg",
+       "x": 0.68,
+       "y": 0.3,
+       "s": 0.42,
+       "when": "嘴边",
+       "hideWhen": "咽了回去"
+      },
+      {
+       "svg": "art/mouthzip.svg",
+       "x": 0.68,
+       "y": 0.45,
+       "s": 0.25,
+       "when": "咽了回去",
+       "pop": true
+      },
+      {
+       "label": "unsaid 没说出来的",
+       "x": 0.68,
+       "y": 0.8,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "没说出来"
+      }
+     ]
+    }
+   },
+   {
+    "via": "双方都明白，只是不说破",
+    "node": "② 心照不宣的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "两个人心里都明白，",
+     "只是谁也不说破，这就是心照不宣的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-present",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "id": "m"
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.72,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "nodWith": "m"
+      },
+      {
+       "svg": "art/heart-dots.svg",
+       "x": 0.5,
+       "y": 0.25,
+       "s": 0.32,
+       "when": "心里都明白",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "label": "不说破",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "不说破"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "unsaidai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：有些话怎么样比较好？\n听：Some things are better left unsaid.\nA. 早点说\nB. 大声说\nC. 写下来\nD. 不说为好",
@@ -88,5 +549,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

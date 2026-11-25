@@ -1,0 +1,1049 @@
+{
+ "style": "core",
+ "board": true,
+ "originPic": {
+  "bg": "blank",
+  "img": "art/stage-bg.svg",
+  "items": [
+   {
+    "svg": "art/bubble-say.svg",
+    "x": 0.5,
+    "y": 0.42,
+    "s": 0.5,
+    "pop": true,
+    "anim": "bob"
+   },
+   {
+    "svg": "art/mic.svg",
+    "x": 0.3,
+    "y": 0.62,
+    "s": 0.55,
+    "shadow": true
+   },
+   {
+    "waves": true,
+    "x": 0.38,
+    "y": 0.4,
+    "dir": 0
+   },
+   {
+    "label": "把心里的话说出口",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "说、讲",
+   "pos": "动词",
+   "diff": "把要说的内容说出来",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.32,
+     "y": 0.58,
+     "s": 0.9,
+     "z": 3,
+     "id": "t"
+    },
+    {
+     "waves": true,
+     "on": "t",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "with": "t"
+    },
+    {
+     "svg": "art/bubble-hello.svg",
+     "x": 0.7,
+     "y": 0.3,
+     "s": 0.42,
+     "delay": 0.6,
+     "pop": true,
+     "anim": "bob"
+    },
+    {
+     "actor": "west-girl-listen",
+     "x": 0.8,
+     "y": 0.78,
+     "s": 0.55,
+     "z": 4,
+     "id": "g",
+     "nodWith": "t"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.93,
+     "s": 0.25,
+     "z": 5
+    }
+   ],
+   "ex": "He says hello to everyone.",
+   "exzh": "他跟大家说你好。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "id": "m",
+      "talkWhen": "says"
+     },
+     {
+      "waves": true,
+      "on": "m",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "m"
+     },
+     {
+      "svg": "art/bubble-hello.svg",
+      "x": 0.58,
+      "y": 0.28,
+      "s": 0.4,
+      "when": "hello",
+      "pop": true
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.78,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "nodWith": "m"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.05,
+      "y": 0.75,
+      "s": 0.45,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.05,
+        0.75
+       ],
+       "to": [
+        0.95,
+        0.75
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "hello 你好",
+      "x": 0.58,
+      "y": 0.55,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "你好"
+     },
+     {
+      "sound": "say:Hello, everyone!",
+      "when": "hello",
+      "gap": true
+     }
+    ]
+   }
+  },
+  {
+   "text": "写着、显示",
+   "pos": "动词",
+   "diff": "牌子、钟表上写着",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/sign-open.svg",
+     "x": 0.45,
+     "y": 0.4,
+     "s": 0.5,
+     "anim": "swing",
+     "shadow": true
+    },
+    {
+     "label": "OPEN 营业中",
+     "x": 0.45,
+     "y": 0.78,
+     "size": 0.075,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8",
+     "delay": 0.8
+    },
+    {
+     "actor": "walk-west-boy-pack",
+     "x": 0.95,
+     "y": 0.82,
+     "s": 0.5,
+     "z": 3,
+     "walk": {
+      "from": [
+       0.95,
+       0.82
+      ],
+      "to": [
+       0.05,
+       0.82
+      ],
+      "offset": 0.3
+     }
+    }
+   ],
+   "ex": "The clock says ten o'clock.",
+   "exzh": "钟上显示十点。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock-ten.svg",
+      "x": 0.45,
+      "y": 0.45,
+      "s": 0.66,
+      "when": "clock",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "label": "ten o'clock",
+      "x": 0.78,
+      "y": 0.4,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "ten o'clock"
+     },
+     {
+      "label": "十点",
+      "x": 0.78,
+      "y": 0.6,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "十点"
+     },
+     {
+      "sound": "bell",
+      "when": "十点",
+      "vol": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "text": "比如、假如",
+   "pos": "插入语",
+   "diff": "先假定一种情况",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-clerk-think",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "svg": "art/thought-kite.svg",
+     "x": 0.68,
+     "y": 0.32,
+     "s": 0.5,
+     "delay": 0.8,
+     "pop": true,
+     "anim": "bob"
+    },
+    {
+     "label": "假如……",
+     "x": 0.68,
+     "y": 0.72,
+     "size": 0.075,
+     "color": "#7048E8",
+     "border": "#7048E8",
+     "delay": 1.2
+    }
+   ],
+   "ex": "Say you had a day off, where would you go?",
+   "exzh": "假如你放一天假，你会去哪儿？",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.25,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3
+     },
+     {
+      "svg": "art/thought-sea.svg",
+      "x": 0.6,
+      "y": 0.35,
+      "s": 0.55,
+      "when": "Say",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "label": "Say …",
+      "x": 0.45,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "Say"
+     },
+     {
+      "label": "假如",
+      "x": 0.6,
+      "y": 0.75,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "假如"
+     }
+    ]
+   }
+  },
+  {
+   "text": "发言权",
+   "pos": "名词",
+   "diff": "能说上话、有份决定",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.35,
+     "y": 0.62,
+     "s": 0.85,
+     "z": 3
+    },
+    {
+     "svg": "art/mic.svg",
+     "x": 0.62,
+     "y": 0.6,
+     "s": 0.5,
+     "anim": "pulse"
+    },
+    {
+     "label": "a say 发言权",
+     "x": 0.75,
+     "y": 0.18,
+     "size": 0.075,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8",
+     "delay": 0.8
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.93,
+     "s": 0.25,
+     "z": 5
+    }
+   ],
+   "ex": "Everyone has a say in the class rules.",
+   "exzh": "每个人对班规都有发言权。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/doc-rules.svg",
+      "x": 0.5,
+      "y": 0.45,
+      "s": 0.6,
+      "when": "class rules",
+      "pop": true
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.22,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "when": "Everyone"
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.8,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "when": "Everyone",
+      "delay": 0.3
+     },
+     {
+      "label": "a say",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "a say"
+     },
+     {
+      "label": "发言权",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "发言权"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“把心里的话说出口”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/mic.svg",
+      "x": 0.35,
+      "y": 0.6,
+      "s": 0.6,
+      "shadow": true
+     },
+     {
+      "svg": "art/bubble-say.svg",
+      "x": 0.65,
+      "y": 0.35,
+      "s": 0.45,
+      "pop": true,
+      "anim": "bob",
+      "delay": 0.4
+     },
+     {
+      "waves": true,
+      "x": 0.42,
+      "y": 0.42,
+      "dir": 0
+     },
+     {
+      "label": "说出来",
+      "x": 0.65,
+      "y": 0.75,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "把话说出来",
+   "node": "① 说、讲",
+   "pos": "动词",
+   "pic": 0
+  },
+  {
+   "via": "牌子、钟表不会开口，却也在“告诉”你",
+   "node": "② 写着、显示",
+   "pos": "动词",
+   "pic": 1,
+   "say": [
+    "牌子、钟表都不会开口说话。",
+    "可是你一看牌子，它就在告诉你：开门了。",
+    "所以 say 也能说牌子、钟表写着、显示。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/sign-open.svg",
+      "x": 0.32,
+      "y": 0.4,
+      "s": 0.46,
+      "when": "牌子",
+      "anim": "swing"
+     },
+     {
+      "svg": "art/clock-ten.svg",
+      "x": 0.75,
+      "y": 0.4,
+      "s": 0.4,
+      "when": "钟表"
+     },
+     {
+      "label": "开门了",
+      "x": 0.32,
+      "y": 0.8,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "开门了"
+     },
+     {
+      "label": "写着、显示",
+      "x": 0.75,
+      "y": 0.82,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "显示"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.95,
+      "y": 0.85,
+      "s": 0.42,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.95,
+        0.85
+       ],
+       "to": [
+        0.05,
+        0.85
+       ],
+       "offset": 0.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "“就说…吧”：先假定一种情况",
+   "node": "③ 比如、假如",
+   "pos": "插入语",
+   "pic": 2,
+   "say": [
+    "说话时先说一句：就说……吧，后面就是假定的一种情况。",
+    "Say 放在句子开头，就是假如、比如。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "id": "g"
+     },
+     {
+      "waves": true,
+      "on": "g",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "g"
+     },
+     {
+      "svg": "art/thought-kite.svg",
+      "x": 0.7,
+      "y": 0.35,
+      "s": 0.5,
+      "when": "假定",
+      "pop": true
+     },
+     {
+      "label": "就说……吧",
+      "x": 0.7,
+      "y": 0.75,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "就说"
+     },
+     {
+      "label": "Say = 假如",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "假如"
+     }
+    ]
+   }
+  },
+  {
+   "via": "动作也能当名词：轮到你开口的权利",
+   "node": "④ 发言权",
+   "pos": "名词",
+   "pic": 3,
+   "rule": "表示动作的词，也能直接当名词用",
+   "ruleEx": "say 说 → 发言权      walk 走 → 散步",
+   "cap": "说 → 发言权",
+   "say": [
+    "英语里，表示动作的词，也能直接当名词用。",
+    "walk 是走，take a walk 就是去散步。",
+    "say 也一样：轮到你开口说话的权利，就是发言权。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "label": "动作 → 名词",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "当名词",
+      "hideCue": 1
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.1,
+      "y": 0.72,
+      "s": 0.6,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.1,
+        0.72
+       ],
+       "to": [
+        0.9,
+        0.72
+       ],
+       "offset": 0
+      },
+      "when": "walk",
+      "hideCue": 2
+     },
+     {
+      "label": "walk 走",
+      "x": 0.25,
+      "y": 0.25,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "walk",
+      "hideCue": 2
+     },
+     {
+      "label": "take a walk 散步",
+      "x": 0.72,
+      "y": 0.25,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "散步",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/mic.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.55,
+      "cue": 2,
+      "when": "开口说话",
+      "shadow": true,
+      "anim": "pulse"
+     },
+     {
+      "label": "a say 发言权",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "发言权"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "都和“说”有关，用法不同",
+  "items": [
+   {
+    "w": "say",
+    "word": "say",
+    "m": "说（内容）",
+    "zh": "说（内容）",
+    "mean": "说（内容）",
+    "key": "say 重在说的内容：say hello, say something。",
+    "say": "say 重在说的内容：say hello, say something。",
+    "text": "say 重在说的内容：say hello, say something。",
+    "diff": "say 重在说的内容：say hello, say something。",
+    "line": "say 重在说的内容：say hello, say something。",
+    "desc": "say 重在说的内容：say hello, say something。",
+    "note": "say 重在说的内容：say hello, say something。",
+    "s": "say 重在说的内容：say hello, say something。",
+    "explain": "say 重在说的内容：say hello, say something。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 2.3,
+       "z": -5
+      },
+      {
+       "svg": "art/bubble-hello.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "speak",
+    "word": "speak",
+    "m": "说（语言）、开口",
+    "zh": "说（语言）、开口",
+    "mean": "说（语言）、开口",
+    "key": "speak 重在开口、说某种语言：speak English。",
+    "say": "speak 重在开口、说某种语言：speak English。",
+    "text": "speak 重在开口、说某种语言：speak English。",
+    "diff": "speak 重在开口、说某种语言：speak English。",
+    "line": "speak 重在开口、说某种语言：speak English。",
+    "desc": "speak 重在开口、说某种语言：speak English。",
+    "note": "speak 重在开口、说某种语言：speak English。",
+    "s": "speak 重在开口、说某种语言：speak English。",
+    "explain": "speak 重在开口、说某种语言：speak English。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/stage-bg.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 2.3,
+       "z": -5
+      },
+      {
+       "actor": "west-man-speech",
+       "x": 0.4,
+       "y": 0.62,
+       "s": 0.95,
+       "z": 3,
+       "id": "s"
+      },
+      {
+       "waves": true,
+       "on": "s",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "s"
+      },
+      {
+       "svg": "art/bubble-en.svg",
+       "x": 0.75,
+       "y": 0.45,
+       "s": 0.6
+      }
+     ]
+    }
+   },
+   {
+    "w": "talk",
+    "word": "talk",
+    "m": "交谈",
+    "zh": "交谈",
+    "mean": "交谈",
+    "key": "talk 是两个人你来我往地聊：talk with sb。",
+    "say": "talk 是两个人你来我往地聊：talk with sb。",
+    "text": "talk 是两个人你来我往地聊：talk with sb。",
+    "diff": "talk 是两个人你来我往地聊：talk with sb。",
+    "line": "talk 是两个人你来我往地聊：talk with sb。",
+    "desc": "talk 是两个人你来我往地聊：talk with sb。",
+    "note": "talk 是两个人你来我往地聊：talk with sb。",
+    "s": "talk 是两个人你来我往地聊：talk with sb。",
+    "explain": "talk 是两个人你来我往地聊：talk with sb。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 2.3,
+       "z": -5
+      },
+      {
+       "actor": "west-man-smile",
+       "x": 0.35,
+       "y": 0.62,
+       "s": 0.95,
+       "z": 3,
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.65,
+       "y": 0.62,
+       "s": 0.95,
+       "z": 3,
+       "turn": [
+        1,
+        2
+       ]
+      },
+      {
+       "svg": "art/bubble-chat.svg",
+       "x": 0.82,
+       "y": 0.3,
+       "s": 0.45,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "tell",
+    "word": "tell",
+    "m": "告诉",
+    "zh": "告诉",
+    "mean": "告诉",
+    "key": "tell 是把事告诉某人，后面先跟人：tell sb sth。",
+    "say": "tell 是把事告诉某人，后面先跟人：tell sb sth。",
+    "text": "tell 是把事告诉某人，后面先跟人：tell sb sth。",
+    "diff": "tell 是把事告诉某人，后面先跟人：tell sb sth。",
+    "line": "tell 是把事告诉某人，后面先跟人：tell sb sth。",
+    "desc": "tell 是把事告诉某人，后面先跟人：tell sb sth。",
+    "note": "tell 是把事告诉某人，后面先跟人：tell sb sth。",
+    "s": "tell 是把事告诉某人，后面先跟人：tell sb sth。",
+    "explain": "tell 是把事告诉某人，后面先跟人：tell sb sth。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/street-bg.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 2.3,
+       "z": -5
+      },
+      {
+       "actor": "west-man-point",
+       "x": 0.4,
+       "y": 0.62,
+       "s": 0.95,
+       "z": 3,
+       "id": "p"
+      },
+      {
+       "waves": true,
+       "on": "p",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "p"
+      },
+      {
+       "svg": "art/bubble-tell.svg",
+       "x": 0.75,
+       "y": 0.4,
+       "s": 0.55
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.95,
+       "y": 0.75,
+       "s": 0.6,
+       "z": 3,
+       "walk": {
+        "from": [
+         0.95,
+         0.75
+        ],
+        "to": [
+         0.6,
+         0.75
+        ],
+        "offset": 0
+       }
+      }
+     ]
+    }
+   },
+   {
+    "w": "voice",
+    "word": "voice",
+    "m": "发言权、意见",
+    "zh": "发言权、意见",
+    "mean": "发言权、意见",
+    "key": "当“发言权”讲时，voice 说的是表达意见的机会：have a voice in；say 说的是有份决定：have a say in。",
+    "say": "当“发言权”讲时，voice 说的是表达意见的机会：have a voice in；say 说的是有份决定：have a say in。",
+    "text": "当“发言权”讲时，voice 说的是表达意见的机会：have a voice in；say 说的是有份决定：have a say in。",
+    "diff": "当“发言权”讲时，voice 说的是表达意见的机会：have a voice in；say 说的是有份决定：have a say in。",
+    "line": "当“发言权”讲时，voice 说的是表达意见的机会：have a voice in；say 说的是有份决定：have a say in。",
+    "desc": "当“发言权”讲时，voice 说的是表达意见的机会：have a voice in；say 说的是有份决定：have a say in。",
+    "note": "当“发言权”讲时，voice 说的是表达意见的机会：have a voice in；say 说的是有份决定：have a say in。",
+    "s": "当“发言权”讲时，voice 说的是表达意见的机会：have a voice in；say 说的是有份决定：have a say in。",
+    "explain": "当“发言权”讲时，voice 说的是表达意见的机会：have a voice in；say 说的是有份决定：have a say in。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 2.3,
+       "z": -5
+      },
+      {
+       "actor": "west-man-present",
+       "x": 0.4,
+       "y": 0.62,
+       "s": 0.95,
+       "z": 3,
+       "id": "v"
+      },
+      {
+       "waves": true,
+       "on": "v",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "v"
+      },
+      {
+       "svg": "art/bubble-voice.svg",
+       "x": 0.75,
+       "y": 0.4,
+       "s": 0.55
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "say 后面接说的话；speak 接语言；talk 接 with / about；tell 先接人。当发言权讲，say 偏“能做主”，voice 偏“能表达意见”。",
+  "tip": "说内容 say，说语言 speak，聊天 talk，告诉人 tell。"
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：老师说了什么？",
+    "listen": "The teacher said we would have a test tomorrow.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "明天要考试",
+     "明天放假",
+     "今天不上课",
+     "作业取消了"
+    ],
+    "ans": "A",
+    "why": "said 是 say 的过去式。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "What did he ______ to you?",
+    "opts": [
+     "say",
+     "says",
+     "said",
+     "saying"
+    ],
+    "ans": "A",
+    "why": "did 后面用原形 say。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 say、speak 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Can you ______ English?",
+    "opts": [],
+    "ans": "speak",
+    "why": "说某种语言用 speak；say 重说的内容。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "She always ______ “thank you”. (say)",
+    "opts": [],
+    "ans": "says",
+    "why": "主语单数，say 加 s。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He said me a funny story.",
+    "opts": [],
+    "ans": "said → told",
+    "why": "“给某人讲故事”用 tell sb. a story。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "她说她很开心。",
+    "stem": "She ______ that she was happy.",
+    "opts": [],
+    "ans": "said",
+    "why": "讲过去，say 的过去式 said。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Can you ______ me the way to the station?",
+    "opts": [
+     "say",
+     "tell",
+     "speak",
+     "talk"
+    ],
+    "ans": "B",
+    "why": "告诉某人用 tell sb.。",
+    "kd": "易混"
+   }
+  ]
+ }
+}

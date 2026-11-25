@@ -1,7 +1,1004 @@
 {
  "单词": "two-way",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "双向的；可收可发的；相互的"
+  },
+  "sylIpa": [
+   "tuː",
+   "weɪ"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/car-red.svg",
+      "x": 0.15,
+      "y": 0.84,
+      "s": 0.3,
+      "go": [
+       0.85,
+       0.84
+      ],
+      "dur": 3.5,
+      "loop": true,
+      "z": 3
+     },
+     {
+      "svg": "art/car-blue.svg",
+      "x": 0.85,
+      "y": 0.68,
+      "s": 0.26,
+      "go": [
+       0.15,
+       0.68
+      ],
+      "dur": 3.5,
+      "loop": true,
+      "flip": true,
+      "z": 2
+     },
+     {
+      "label": "两个",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.4
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/twoway-sign.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.75,
+      "anim": "sway"
+     },
+     {
+      "label": "方向",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "delay": 0.4
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-twoway-sign.svg",
+   "p1": "art/icon-arr-between.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/farm-bg.svg",
+   "items": [
+    {
+     "svg": "art/twoway-sign.svg",
+     "x": 0.5,
+     "y": 0.45,
+     "s": 0.62,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/car-red.svg",
+     "x": 0.0,
+     "y": 0.86,
+     "s": 0.2,
+     "go": [
+      1.0,
+      0.86
+     ],
+     "dur": 4,
+     "loop": true,
+     "z": 3
+    },
+    {
+     "svg": "art/car-blue.svg",
+     "x": 1.0,
+     "y": 0.76,
+     "s": 0.18,
+     "go": [
+      0.0,
+      0.76
+     ],
+     "dur": 4,
+     "loop": true,
+     "flip": true,
+     "z": 2
+    },
+    {
+     "label": "两个方向",
+     "x": 0.82,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "双向的",
+    "pos": "形容词",
+    "diff": "来去都能走",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/twoway-sign.svg",
+      "x": 0.45,
+      "y": 0.45,
+      "s": 0.64
+     },
+     {
+      "svg": "art/car-red.svg",
+      "x": 0.0,
+      "y": 0.84,
+      "s": 0.22,
+      "go": [
+       1.0,
+       0.84
+      ],
+      "dur": 4,
+      "loop": true,
+      "anim": "ride",
+      "z": 3,
+      "delay": 0.3
+     },
+     {
+      "svg": "art/car-blue.svg",
+      "x": 1.0,
+      "y": 0.74,
+      "s": 0.2,
+      "go": [
+       0.0,
+       0.74
+      ],
+      "dur": 4.5,
+      "loop": true,
+      "anim": "ride",
+      "flip": true,
+      "z": 2,
+      "delay": 0.3
+     },
+     {
+      "y": 0.86,
+      "s": 0.46,
+      "actor": "walk-west-woman-case",
+      "x": -0.1,
+      "walk": {
+       "from": [
+        -0.1,
+        0.86
+       ],
+       "to": [
+        1.1,
+        0.86
+       ],
+       "offset": 0
+      },
+      "z": 5
+     }
+    ],
+    "ex": "This is a two-way street.",
+    "exzh": "这是一条双向车道。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/twoway-sign.svg",
+       "x": 0.3,
+       "y": 0.42,
+       "s": 0.62,
+       "when": "two-way street",
+       "anim": "sway"
+      },
+      {
+       "svg": "art/car-red.svg",
+       "x": 0.0,
+       "y": 0.84,
+       "s": 0.22,
+       "go": [
+        1.0,
+        0.84
+       ],
+       "dur": 4,
+       "loop": true,
+       "anim": "ride",
+       "z": 3,
+       "when": "street"
+      },
+      {
+       "svg": "art/car-blue.svg",
+       "x": 1.0,
+       "y": 0.74,
+       "s": 0.2,
+       "go": [
+        0.0,
+        0.74
+       ],
+       "dur": 4.5,
+       "loop": true,
+       "anim": "ride",
+       "flip": true,
+       "z": 2,
+       "when": "street"
+      },
+      {
+       "label": "two-way street",
+       "x": 0.72,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "two-way street"
+      },
+      {
+       "label": "双向车道",
+       "x": 0.72,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "双向车道"
+      },
+      {
+       "y": 0.86,
+       "s": 0.46,
+       "actor": "walk-cn-boy-pack",
+       "x": 1.1,
+       "walk": {
+        "from": [
+         1.1,
+         0.86
+        ],
+        "to": [
+         -0.1,
+         0.86
+        ],
+        "offset": 0
+       },
+       "z": 5
+      }
+     ]
+    }
+   },
+   {
+    "text": "可收可发的",
+    "pos": "形容词",
+    "diff": "既能发、也能收",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/walkie.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.62,
+      "anim": "shake"
+     },
+     {
+      "waves": true,
+      "x": 0.6,
+      "y": 0.18,
+      "dir": 0,
+      "n": 3,
+      "color": "#1C7ED6"
+     },
+     {
+      "y": 0.86,
+      "s": 0.46,
+      "actor": "walk-west-man-case",
+      "x": -0.1,
+      "walk": {
+       "from": [
+        -0.1,
+        0.86
+       ],
+       "to": [
+        1.1,
+        0.86
+       ],
+       "offset": 0
+      },
+      "z": 5
+     }
+    ],
+    "ex": "We talked on a two-way radio.",
+    "exzh": "我们用对讲机说话。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "x": 0.22,
+       "y": 0.6,
+       "s": 0.68,
+       "z": 4,
+       "id": "ta",
+       "turn": [
+        0,
+        2
+       ],
+       "actor": "west-man-speech"
+      },
+      {
+       "x": 0.78,
+       "y": 0.6,
+       "s": 0.66,
+       "z": 4,
+       "id": "tb",
+       "turn": [
+        1,
+        2
+       ],
+       "actor": "cn-teacher-listen"
+      },
+      {
+       "svg": "art/walkie.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.48,
+       "when": "two-way radio",
+       "anim": "shake"
+      },
+      {
+       "waves": true,
+       "x": 0.56,
+       "y": 0.22,
+       "dir": 0,
+       "n": 3,
+       "color": "#1C7ED6",
+       "with": "ta"
+      },
+      {
+       "label": "two-way radio",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "two-way radio"
+      },
+      {
+       "label": "对讲机",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "对讲机"
+      },
+      {
+       "y": 0.86,
+       "s": 0.46,
+       "actor": "walk-cn-girl",
+       "x": 1.1,
+       "walk": {
+        "from": [
+         1.1,
+         0.86
+        ],
+        "to": [
+         -0.1,
+         0.86
+        ],
+        "offset": 0
+       },
+       "z": 5
+      }
+     ]
+    }
+   },
+   {
+    "text": "相互的",
+    "pos": "形容词",
+    "diff": "两边都要出力、你来我往",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "x": 0.25,
+      "y": 0.6,
+      "s": 0.68,
+      "z": 4,
+      "actor": "west-man-smile",
+      "id": "p3"
+     },
+     {
+      "x": 0.75,
+      "y": 0.6,
+      "s": 0.66,
+      "z": 4,
+      "actor": "cn-boy-raise",
+      "id": "p4",
+      "nodWith": "p3"
+     },
+     {
+      "svg": "art/gift.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.3,
+      "go": [
+       0.55,
+       0.62
+      ],
+      "dur": 1,
+      "loop": true
+     }
+    ],
+    "ex": "Respect is a two-way street.",
+    "exzh": "尊重是相互的。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "x": 0.25,
+       "y": 0.6,
+       "s": 0.7,
+       "z": 4,
+       "id": "rc",
+       "turn": [
+        0,
+        2
+       ],
+       "actor": "west-man-point"
+      },
+      {
+       "x": 0.75,
+       "y": 0.6,
+       "s": 0.68,
+       "z": 4,
+       "id": "rd",
+       "turn": [
+        1,
+        2
+       ],
+       "actor": "west-girl-surprised"
+      },
+      {
+       "ray": [
+        [
+         0.4,
+         0.3
+        ],
+        [
+         0.6,
+         0.3
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "when": "two-way"
+      },
+      {
+       "ray": [
+        [
+         0.6,
+         0.4
+        ],
+        [
+         0.4,
+         0.4
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "when": "two-way",
+       "delay": 0.6
+      },
+      {
+       "label": "Respect",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "Respect"
+      },
+      {
+       "label": "相互的",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "相互的"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“两个方向的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/twoway-sign.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 0.6,
+       "anim": "sway"
+      },
+      {
+       "svg": "art/car-red.svg",
+       "x": 0.0,
+       "y": 0.86,
+       "s": 0.2,
+       "go": [
+        1.0,
+        0.86
+       ],
+       "dur": 4,
+       "loop": true,
+       "z": 3
+      },
+      {
+       "label": "两个方向",
+       "x": 0.82,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "来去都能走",
+    "node": "① 双向的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "two 是两个，way 是方向，两个方向。",
+     "来去都能走的路，就是双向的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "label": "two 两个",
+       "x": 0.2,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "two 是两个"
+      },
+      {
+       "label": "way 方向",
+       "x": 0.8,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "way 是方向"
+      },
+      {
+       "svg": "art/twoway-sign.svg",
+       "x": 0.5,
+       "y": 0.45,
+       "s": 0.62,
+       "when": "两个方向"
+      },
+      {
+       "svg": "art/car-red.svg",
+       "x": 0.0,
+       "y": 0.84,
+       "s": 0.22,
+       "go": [
+        1.0,
+        0.84
+       ],
+       "dur": 4,
+       "loop": true,
+       "anim": "ride",
+       "z": 3,
+       "when": "来去都能走"
+      },
+      {
+       "svg": "art/car-blue.svg",
+       "x": 1.0,
+       "y": 0.74,
+       "s": 0.2,
+       "go": [
+        0.0,
+        0.74
+       ],
+       "dur": 4.5,
+       "loop": true,
+       "anim": "ride",
+       "flip": true,
+       "z": 2,
+       "when": "来去都能走"
+      },
+      {
+       "label": "双向的",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "双向的"
+      },
+      {
+       "y": 0.86,
+       "s": 0.46,
+       "actor": "walk-west-boy-pack",
+       "x": -0.1,
+       "walk": {
+        "from": [
+         -0.1,
+         0.86
+        ],
+        "to": [
+         1.1,
+         0.86
+        ],
+        "offset": 0
+       },
+       "z": 5
+      }
+     ]
+    }
+   },
+   {
+    "via": "既能发、也能收",
+    "node": "② 可收可发的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "对讲机既能发、也能收，就是可收可发的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/walkie.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.62,
+       "when": "对讲机",
+       "anim": "shake"
+      },
+      {
+       "waves": true,
+       "x": 0.6,
+       "y": 0.18,
+       "dir": 0,
+       "n": 3,
+       "color": "#1C7ED6",
+       "when": "能发"
+      },
+      {
+       "label": "收",
+       "x": 0.2,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "也能收"
+      },
+      {
+       "label": "可收可发",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "可收可发"
+      },
+      {
+       "y": 0.86,
+       "s": 0.46,
+       "actor": "walk-cn-teacher-case",
+       "x": 1.1,
+       "walk": {
+        "from": [
+         1.1,
+         0.86
+        ],
+        "to": [
+         -0.1,
+         0.86
+        ],
+        "offset": 0
+       },
+       "z": 5
+      }
+     ]
+    }
+   },
+   {
+    "via": "两边都要出力",
+    "node": "③ 相互的",
+    "pos": "形容词",
+    "pic": 2,
+    "say": [
+     "两个人你来我往，都要出力，就是相互的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "x": 0.25,
+       "y": 0.6,
+       "s": 0.68,
+       "z": 4,
+       "when": "两个人",
+       "actor": "west-man-hello",
+       "id": "p7"
+      },
+      {
+       "x": 0.75,
+       "y": 0.6,
+       "s": 0.66,
+       "z": 4,
+       "when": "两个人",
+       "actor": "west-clerk-think",
+       "id": "p8",
+       "nodWith": "p7"
+      },
+      {
+       "svg": "art/gift.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.3,
+       "when": "你来我往",
+       "go": [
+        0.55,
+        0.62
+       ],
+       "dur": 1,
+       "loop": true
+      },
+      {
+       "label": "相互的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "相互的"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "one-way",
+    "m": "单向的",
+    "share": "way"
+   },
+   {
+    "w": "twice",
+    "m": "两次",
+    "share": "two"
+   },
+   {
+    "w": "highway",
+    "m": "公路",
+    "share": "way"
+   }
+  ],
+  "distinguish": {
+   "key": "相互的",
+   "items": [
+    {
+     "w": "two-way",
+     "word": "two-way",
+     "m": "相互的",
+     "mean": "相互的",
+     "diff": "像来回都能走的路，两边都得出力：Respect is a two-way street.",
+     "say": "像来回都能走的路，两边都得出力：Respect is a two-way street.",
+     "text": "像来回都能走的路，两边都得出力：Respect is a two-way street.",
+     "note": "像来回都能走的路，两边都得出力：Respect is a two-way street.",
+     "line": "像来回都能走的路，两边都得出力：Respect is a two-way street.",
+     "desc": "像来回都能走的路，两边都得出力：Respect is a two-way street.",
+     "explain": "像来回都能走的路，两边都得出力：Respect is a two-way street.",
+     "talk": "像来回都能走的路，两边都得出力：Respect is a two-way street.",
+     "pic": {
+      "bg": "blank",
+      "img": "art/farm-bg.svg",
+      "items": [
+       {
+        "svg": "art/twoway-sign.svg",
+        "x": 0.5,
+        "y": 0.48,
+        "s": 0.8,
+        "anim": "sway"
+       }
+      ]
+     }
+    },
+    {
+     "w": "mutual",
+     "word": "mutual",
+     "m": "共同的、相互的",
+     "mean": "共同的、相互的",
+     "diff": "说两人都有的感觉、关系：mutual friends 共同的朋友。",
+     "say": "说两人都有的感觉、关系：mutual friends 共同的朋友。",
+     "text": "说两人都有的感觉、关系：mutual friends 共同的朋友。",
+     "note": "说两人都有的感觉、关系：mutual friends 共同的朋友。",
+     "line": "说两人都有的感觉、关系：mutual friends 共同的朋友。",
+     "desc": "说两人都有的感觉、关系：mutual friends 共同的朋友。",
+     "explain": "说两人都有的感觉、关系：mutual friends 共同的朋友。",
+     "talk": "说两人都有的感觉、关系：mutual friends 共同的朋友。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "x": 0.3,
+        "y": 0.6,
+        "s": 0.7,
+        "z": 4,
+        "actor": "cn-teacher-point",
+        "id": "p9"
+       },
+       {
+        "x": 0.7,
+        "y": 0.6,
+        "s": 0.7,
+        "z": 4,
+        "actor": "west-clerk-happy",
+        "id": "p10",
+        "nodWith": "p9"
+       }
+      ]
+     }
+    },
+    {
+     "w": "reciprocal",
+     "word": "reciprocal",
+     "m": "互惠的、回报的",
+     "mean": "互惠的、回报的",
+     "diff": "正式，指一方给、另一方回报。",
+     "say": "正式，指一方给、另一方回报。",
+     "text": "正式，指一方给、另一方回报。",
+     "note": "正式，指一方给、另一方回报。",
+     "line": "正式，指一方给、另一方回报。",
+     "desc": "正式，指一方给、另一方回报。",
+     "explain": "正式，指一方给、另一方回报。",
+     "talk": "正式，指一方给、另一方回报。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/bedroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/gift.svg",
+        "x": 0.35,
+        "y": 0.55,
+        "s": 0.6,
+        "go": [
+         0.65,
+         0.55
+        ],
+        "dur": 1.5,
+        "loop": true
+       },
+       {
+        "svg": "art/gift.svg",
+        "x": 0.7,
+        "y": 0.55,
+        "s": 0.4,
+        "anim": "bob"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "two-way 用“双向的路”打比方；mutual 说双方共同有的；reciprocal 说一来一回的交换。",
+   "tip": "a two-way street 字面是双向街道，常比喻“要双方都出力的事”。",
+   "pics": {
+    "two-way": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/twoway-sign.svg",
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.8,
+       "anim": "sway"
+      }
+     ]
+    },
+    "mutual": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.7,
+       "z": 4,
+       "actor": "cn-teacher-point",
+       "id": "p9"
+      },
+      {
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.7,
+       "z": 4,
+       "actor": "west-clerk-happy",
+       "id": "p10",
+       "nodWith": "p9"
+      }
+     ]
+    },
+    "reciprocal": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/gift.svg",
+       "x": 0.35,
+       "y": 0.55,
+       "s": 0.6,
+       "go": [
+        0.65,
+        0.55
+       ],
+       "dur": 1.5,
+       "loop": true
+      },
+      {
+       "svg": "art/gift.svg",
+       "x": 0.7,
+       "y": 0.55,
+       "s": 0.4,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  },
+  "kaodian": {
+   "rows": [
+    "【考意思】two-way adj. 双向的；可收可发的；相互的",
+    "【考搭配】two-way traffic 双向通行；a two-way radio 对讲机；a two-way street 双方都要出力的事",
+    "【考构词】数词 + 名词当形容词，名词用单数：不说 a two-ways street",
+    "【考形近词】two-way / one-way：双向的 / 单向的"
+   ]
+  }
+ },
+ "插图": [
+  "two-wayai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：这条街怎么样？\n听：This is a two-way street.\nA. 单向行驶\nB. 不能通车\nC. 双向行驶\nD. 很窄",
@@ -93,5 +1090,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

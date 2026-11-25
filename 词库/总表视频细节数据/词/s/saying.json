@@ -1,7 +1,664 @@
 {
  "单词": "saying",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "seɪ",
+   "ɪŋ"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.35,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "t"
+     },
+     {
+      "waves": true,
+      "on": "t",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "t"
+     },
+     {
+      "svg": "art/bubble-saying.svg",
+      "x": 0.72,
+      "y": 0.32,
+      "s": 0.45,
+      "when": "说",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "label": "say 说",
+      "x": 0.72,
+      "y": 0.75,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "说"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bubble-saying.svg",
+      "x": 0.32,
+      "y": 0.45,
+      "s": 0.45,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/tag-ing.svg",
+      "x": 0.7,
+      "y": 0.45,
+      "s": 0.4,
+      "when": "ing",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "ray": [
+       [
+        0.5,
+        0.45
+       ],
+       [
+        0.58,
+        0.45
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "when": "ing"
+     },
+     {
+      "label": "这件事（名词）",
+      "x": 0.5,
+      "y": 0.85,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "delay": 1.2
+     }
+    ]
+   }
+  },
+  "demo": {
+   "reading": {
+    "icons": [
+     "art/icon-book.svg",
+     "art/icon-ing.svg"
+    ],
+    "lit": "读这件事",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.45,
+       "y": 0.6,
+       "s": 0.6,
+       "shadow": true,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/lamp.svg",
+       "x": 0.8,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "sway"
+      }
+     ]
+    }
+   },
+   "action": {
+    "icons": [
+     "art/icon-flag.svg",
+     "art/icon-ion.svg"
+    ],
+    "lit": "做这件事、行动",
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/flag-go2.svg",
+       "x": 0.35,
+       "y": 0.5,
+       "s": 0.65,
+       "anim": "swing"
+      },
+      {
+       "svg": "art/stopwatch.svg",
+       "x": 0.72,
+       "y": 0.55,
+       "s": 0.5,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   "movement": {
+    "icons": [
+     "art/icon-car.svg",
+     "art/icon-ment.svg"
+    ],
+    "lit": "动这件事、移动",
+    "pic": {
+     "bg": "blank",
+     "img": "art/highway-bg.svg",
+     "items": [
+      {
+       "svg": "art/car-red.svg",
+       "x": 0.2,
+       "y": 0.7,
+       "s": 0.4,
+       "go": [
+        0.85,
+        0.7
+       ],
+       "dur": 3,
+       "loop": true,
+       "anim": "ride"
+      }
+     ]
+    }
+   }
+  },
+  "icons": {
+   "p0": "art/icon-say.svg",
+   "p1": "art/icon-ing.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/bubble-saying.svg",
+     "x": 0.3,
+     "y": 0.4,
+     "s": 0.42,
+     "anim": "bob"
+    },
+    {
+     "ray": [
+      [
+       0.48,
+       0.4
+      ],
+      [
+       0.58,
+       0.4
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 0.8,
+     "delay": 0.6
+    },
+    {
+     "svg": "art/scroll-pmp.svg",
+     "x": 0.75,
+     "y": 0.42,
+     "s": 0.45,
+     "delay": 0.9,
+     "pop": true
+    },
+    {
+     "label": "说出来的话",
+     "x": 0.75,
+     "y": 0.82,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.1
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "谚语、俗话、格言",
+    "pos": "名词",
+    "diff": "大家一直这样说的老话",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/scroll-pmp.svg",
+      "x": 0.6,
+      "y": 0.38,
+      "s": 0.5,
+      "pop": true,
+      "anim": "swing"
+     },
+     {
+      "actor": "west-man-present",
+      "x": 0.22,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "id": "m"
+     },
+     {
+      "waves": true,
+      "on": "m",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "m"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.85,
+      "y": 0.75,
+      "s": 0.5,
+      "z": 4,
+      "nodWith": "m"
+     },
+     {
+      "label": "熟能生巧",
+      "x": 0.6,
+      "y": 0.75,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.9
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.22,
+      "z": 5
+     }
+    ],
+    "ex": "As the saying goes, practice makes perfect.",
+    "exzh": "俗话说，熟能生巧。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "id": "t",
+       "talkWhen": "saying"
+      },
+      {
+       "waves": true,
+       "on": "t",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "t"
+      },
+      {
+       "svg": "art/scroll-pmp.svg",
+       "x": 0.52,
+       "y": 0.38,
+       "s": 0.5,
+       "when": "saying",
+       "pop": true
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.85,
+       "y": 0.65,
+       "s": 0.7,
+       "z": 3,
+       "nodWith": "t"
+      },
+      {
+       "label": "the saying 俗话",
+       "x": 0.52,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "saying"
+      },
+      {
+       "label": "熟能生巧",
+       "x": 0.52,
+       "y": 0.78,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "熟能生巧"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "say + ing：“说”这件事",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble-saying.svg",
+       "x": 0.3,
+       "y": 0.45,
+       "s": 0.45,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/tag-ing.svg",
+       "x": 0.7,
+       "y": 0.45,
+       "s": 0.4,
+       "delay": 0.5,
+       "pop": true
+      },
+      {
+       "label": "说这件事",
+       "x": 0.5,
+       "y": 0.85,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.9
+      }
+     ]
+    }
+   },
+   {
+    "via": "说这件事 → 说出来的话",
+    "node": "说出来的话",
+    "pos": "名词",
+    "say": [
+     "-ing 把动作变成这件事：saying 就是说这件事。",
+     "说完留下来的，就是说出来的话。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble-saying.svg",
+       "x": 0.3,
+       "y": 0.42,
+       "s": 0.45,
+       "when": "saying",
+       "anim": "bob"
+      },
+      {
+       "label": "-ing 这件事",
+       "x": 0.3,
+       "y": 0.82,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "这件事"
+      },
+      {
+       "ray": [
+        [
+         0.5,
+         0.42
+        ],
+        [
+         0.6,
+         0.42
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "when": "说完"
+      },
+      {
+       "svg": "art/scroll-pmp.svg",
+       "x": 0.75,
+       "y": 0.42,
+       "s": 0.42,
+       "when": "说出来的话",
+       "pop": true,
+       "anim": "swing"
+      }
+     ]
+    }
+   },
+   {
+    "via": "大家一直这样说、有分量的话",
+    "node": "① 谚语、俗话、格言",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "有分量的人说过、大家一直这样说的话，",
+     "就成了谚语、俗话、格言。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-speech",
+       "x": 0.22,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "id": "a"
+      },
+      {
+       "waves": true,
+       "on": "a",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "a"
+      },
+      {
+       "actor": "west-girl-explain",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.75,
+       "z": 3,
+       "when": "大家",
+       "id": "b"
+      },
+      {
+       "waves": true,
+       "on": "b",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "b"
+      },
+      {
+       "svg": "art/scroll-pmp.svg",
+       "x": 0.8,
+       "y": 0.38,
+       "s": 0.45,
+       "when": "谚语",
+       "pop": true
+      },
+      {
+       "label": "一直这样说",
+       "x": 0.4,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "一直这样说"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.05,
+       "y": 0.85,
+       "s": 0.4,
+       "z": 3,
+       "walk": {
+        "from": [
+         0.05,
+         0.85
+        ],
+        "to": [
+         0.95,
+         0.85
+        ],
+        "offset": 0
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "都可以译成“谚语、格言”",
+   "items": [
+    {
+     "w": "saying",
+     "word": "saying",
+     "m": "老话、俗话",
+     "zh": "老话、俗话",
+     "mean": "老话、俗话",
+     "key": "saying 是一般的老话、俗话，大家常这样说。",
+     "say": "saying 是一般的老话、俗话，大家常这样说。",
+     "text": "saying 是一般的老话、俗话，大家常这样说。",
+     "diff": "saying 是一般的老话、俗话，大家常这样说。",
+     "line": "saying 是一般的老话、俗话，大家常这样说。",
+     "desc": "saying 是一般的老话、俗话，大家常这样说。",
+     "note": "saying 是一般的老话、俗话，大家常这样说。",
+     "s": "saying 是一般的老话、俗话，大家常这样说。",
+     "explain": "saying 是一般的老话、俗话，大家常这样说。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/classroom-bg.svg",
+        "x": 0.5,
+        "y": 0.42,
+        "s": 2.3,
+        "z": -5
+       },
+       {
+        "svg": "art/scroll-pmp.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.78,
+        "anim": "swing"
+       }
+      ]
+     }
+    },
+    {
+     "w": "proverb",
+     "word": "proverb",
+     "m": "谚语（带教训）",
+     "zh": "谚语（带教训）",
+     "mean": "谚语（带教训）",
+     "key": "proverb 是带教训意味的谚语，告诉你该怎么做：Haste makes waste。",
+     "say": "proverb 是带教训意味的谚语，告诉你该怎么做：Haste makes waste。",
+     "text": "proverb 是带教训意味的谚语，告诉你该怎么做：Haste makes waste。",
+     "diff": "proverb 是带教训意味的谚语，告诉你该怎么做：Haste makes waste。",
+     "line": "proverb 是带教训意味的谚语，告诉你该怎么做：Haste makes waste。",
+     "desc": "proverb 是带教训意味的谚语，告诉你该怎么做：Haste makes waste。",
+     "note": "proverb 是带教训意味的谚语，告诉你该怎么做：Haste makes waste。",
+     "s": "proverb 是带教训意味的谚语，告诉你该怎么做：Haste makes waste。",
+     "explain": "proverb 是带教训意味的谚语，告诉你该怎么做：Haste makes waste。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.42,
+        "s": 2.3,
+        "z": -5
+       },
+       {
+        "svg": "art/scroll-haste.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.78,
+        "anim": "swing"
+       },
+       {
+        "actor": "west-clerk-think",
+        "x": 0.78,
+        "y": 0.62,
+        "s": 0.95,
+        "z": 3
+       }
+      ]
+     }
+    },
+    {
+     "w": "motto",
+     "word": "motto",
+     "m": "座右铭",
+     "zh": "座右铭",
+     "mean": "座右铭",
+     "key": "motto 是自己或一个学校、团体拿来激励自己的座右铭：Never give up。",
+     "say": "motto 是自己或一个学校、团体拿来激励自己的座右铭：Never give up。",
+     "text": "motto 是自己或一个学校、团体拿来激励自己的座右铭：Never give up。",
+     "diff": "motto 是自己或一个学校、团体拿来激励自己的座右铭：Never give up。",
+     "line": "motto 是自己或一个学校、团体拿来激励自己的座右铭：Never give up。",
+     "desc": "motto 是自己或一个学校、团体拿来激励自己的座右铭：Never give up。",
+     "note": "motto 是自己或一个学校、团体拿来激励自己的座右铭：Never give up。",
+     "s": "motto 是自己或一个学校、团体拿来激励自己的座右铭：Never give up。",
+     "explain": "motto 是自己或一个学校、团体拿来激励自己的座右铭：Never give up。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/stage-bg.svg",
+        "x": 0.5,
+        "y": 0.42,
+        "s": 2.3,
+        "z": -5
+       },
+       {
+        "svg": "art/scroll-motto.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.78,
+        "anim": "pulse"
+       },
+       {
+        "actor": "west-girl-raise",
+        "x": 0.78,
+        "y": 0.62,
+        "s": 0.95,
+        "z": 3
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "saying 来自 say，说的是大家说的话；proverb 重在教训；motto 是给自己定的一句话。",
+   "tip": "俗话 saying，教训 proverb，座右铭 motto。"
+  }
+ },
+ "插图": [
+  "sayingai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：老人说了一句什么老话？\n听：There's an old saying: “Practice makes perfect.”\nA. 欲速则不达\nB. 时间就是金钱\nC. 眼见为实\nD. 熟能生巧",
@@ -90,5 +747,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

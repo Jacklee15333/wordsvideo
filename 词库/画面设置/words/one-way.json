@@ -1,0 +1,976 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "单行的；单程的；单向的"
+ },
+ "sylIpa": [
+  "wʌn",
+  "weɪ"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/farm-bg.svg",
+   "items": [
+    {
+     "svg": "art/car-red.svg",
+     "x": 0.2,
+     "y": 0.72,
+     "s": 0.46,
+     "go": [
+      0.7,
+      0.72
+     ],
+     "dur": 3,
+     "loop": true,
+     "anim": "ride",
+     "z": 3
+    },
+    {
+     "label": "一个",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.4
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/farm-bg.svg",
+   "items": [
+    {
+     "svg": "art/highway-sign.svg",
+     "x": 0.4,
+     "y": 0.42,
+     "s": 0.55,
+     "anim": "sway"
+    },
+    {
+     "ray": [
+      [
+       0.2,
+       0.86
+      ],
+      [
+       0.85,
+       0.86
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 0.8,
+     "delay": 0.5
+    },
+    {
+     "label": "方向",
+     "x": 0.8,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.4
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-car-red.svg",
+  "p1": "art/icon-arr-out.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/street-bg.svg",
+  "items": [
+   {
+    "svg": "art/oneway-sign.svg",
+    "x": 0.5,
+    "y": 0.45,
+    "s": 0.62,
+    "anim": "sway"
+   },
+   {
+    "svg": "art/car-red.svg",
+    "x": 0.0,
+    "y": 0.84,
+    "s": 0.22,
+    "go": [
+     1.0,
+     0.84
+    ],
+    "dur": 4,
+    "loop": true,
+    "anim": "ride",
+    "z": 3,
+    "delay": 0.3
+   },
+   {
+    "svg": "art/car-blue.svg",
+    "x": -0.2,
+    "y": 0.74,
+    "s": 0.2,
+    "go": [
+     1.0,
+     0.74
+    ],
+    "dur": 5,
+    "loop": true,
+    "anim": "ride",
+    "z": 2,
+    "delay": 0.3
+   },
+   {
+    "label": "只有一个方向",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   },
+   {
+    "y": 0.86,
+    "s": 0.46,
+    "actor": "walk-west-woman-case",
+    "x": -0.1,
+    "walk": {
+     "from": [
+      -0.1,
+      0.86
+     ],
+     "to": [
+      1.1,
+      0.86
+     ],
+     "offset": 0
+    },
+    "z": 5
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "单行的",
+   "pos": "形容词",
+   "diff": "车只能朝一个方向开",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/oneway-sign.svg",
+     "x": 0.45,
+     "y": 0.45,
+     "s": 0.64
+    },
+    {
+     "svg": "art/car-red.svg",
+     "x": 0.0,
+     "y": 0.84,
+     "s": 0.22,
+     "go": [
+      1.0,
+      0.84
+     ],
+     "dur": 4,
+     "loop": true,
+     "anim": "ride",
+     "z": 3,
+     "delay": 0.3
+    },
+    {
+     "svg": "art/car-blue.svg",
+     "x": -0.2,
+     "y": 0.74,
+     "s": 0.2,
+     "go": [
+      1.0,
+      0.74
+     ],
+     "dur": 5,
+     "loop": true,
+     "anim": "ride",
+     "z": 2,
+     "delay": 0.3
+    },
+    {
+     "y": 0.86,
+     "s": 0.46,
+     "actor": "walk-cn-boy-pack",
+     "x": 1.1,
+     "walk": {
+      "from": [
+       1.1,
+       0.86
+      ],
+      "to": [
+       -0.1,
+       0.86
+      ],
+      "offset": 0
+     },
+     "z": 5
+    }
+   ],
+   "ex": "This is a one-way street.",
+   "exzh": "这是一条单行道。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/oneway-sign.svg",
+      "x": 0.3,
+      "y": 0.42,
+      "s": 0.62,
+      "when": "one-way street",
+      "anim": "sway"
+     },
+     {
+      "svg": "art/car-red.svg",
+      "x": 0.0,
+      "y": 0.84,
+      "s": 0.22,
+      "go": [
+       1.0,
+       0.84
+      ],
+      "dur": 4,
+      "loop": true,
+      "anim": "ride",
+      "z": 3,
+      "when": "street"
+     },
+     {
+      "svg": "art/car-blue.svg",
+      "x": -0.2,
+      "y": 0.74,
+      "s": 0.2,
+      "go": [
+       1.0,
+       0.74
+      ],
+      "dur": 5,
+      "loop": true,
+      "anim": "ride",
+      "z": 2,
+      "when": "street"
+     },
+     {
+      "label": "one-way street",
+      "x": 0.72,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "one-way street"
+     },
+     {
+      "label": "单行道",
+      "x": 0.72,
+      "y": 0.28,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "单行道"
+     },
+     {
+      "y": 0.86,
+      "s": 0.46,
+      "actor": "walk-west-man-case",
+      "x": -0.1,
+      "walk": {
+       "from": [
+        -0.1,
+        0.86
+       ],
+       "to": [
+        1.1,
+        0.86
+       ],
+       "offset": 0
+      },
+      "z": 5
+     }
+    ]
+   }
+  },
+  {
+   "text": "单程的",
+   "pos": "形容词",
+   "diff": "只去不回",
+   "bg": "blank",
+   "img": "art/station-bg.svg",
+   "items": [
+    {
+     "svg": "art/ticket-one.svg",
+     "x": 0.42,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "pulse"
+    },
+    {
+     "x": 0.8,
+     "y": 0.6,
+     "s": 0.66,
+     "z": 4,
+     "actor": "west-man-smile",
+     "id": "p1"
+    },
+    {
+     "y": 0.86,
+     "s": 0.46,
+     "actor": "walk-cn-girl",
+     "x": 1.1,
+     "walk": {
+      "from": [
+       1.1,
+       0.86
+      ],
+      "to": [
+       -0.1,
+       0.86
+      ],
+      "offset": 0
+     },
+     "z": 5
+    }
+   ],
+   "ex": "I bought a one-way ticket to Beijing.",
+   "exzh": "我买了一张去北京的单程票。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "svg": "art/ticket-one.svg",
+      "x": 0.4,
+      "y": 0.48,
+      "s": 0.5,
+      "when": "one-way ticket",
+      "pop": true
+     },
+     {
+      "x": 0.82,
+      "y": 0.6,
+      "s": 0.66,
+      "z": 4,
+      "when": "bought",
+      "actor": "west-man-hello",
+      "id": "p2"
+     },
+     {
+      "label": "one-way ticket",
+      "x": 0.4,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "one-way ticket"
+     },
+     {
+      "label": "单程票",
+      "x": 0.4,
+      "y": 0.86,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "单程票"
+     },
+     {
+      "y": 0.86,
+      "s": 0.46,
+      "actor": "walk-west-boy-pack",
+      "x": -0.1,
+      "walk": {
+       "from": [
+        -0.1,
+        0.86
+       ],
+       "to": [
+        1.1,
+        0.86
+       ],
+       "offset": 0
+      },
+      "z": 5
+     }
+    ]
+   }
+  },
+  {
+   "text": "单向的、单方面的",
+   "pos": "形容词",
+   "diff": "只从一方传到另一方，没有回应",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.7,
+     "z": 4,
+     "actor": "west-man-speech",
+     "id": "p3"
+    },
+    {
+     "x": 0.75,
+     "y": 0.6,
+     "s": 0.66,
+     "z": 4,
+     "actor": "west-clerk-think",
+     "id": "p4",
+     "nodWith": "p3"
+    },
+    {
+     "ray": [
+      [
+       0.42,
+       0.32
+      ],
+      [
+       0.62,
+       0.32
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 0.8,
+     "delay": 0.6
+    }
+   ],
+   "ex": "Our talk was one-way: only he spoke.",
+   "exzh": "我们的谈话是单向的：只有他在说。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "x": 0.28,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 4,
+      "talkWhen": "spoke",
+      "actor": "west-man-point",
+      "id": "p5"
+     },
+     {
+      "x": 0.74,
+      "y": 0.6,
+      "s": 0.68,
+      "z": 4,
+      "actor": "cn-teacher-listen",
+      "id": "p6",
+      "nodWith": "p5"
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.3
+       ],
+       [
+        0.6,
+        0.3
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "when": "one-way"
+     },
+     {
+      "label": "one-way",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "one-way"
+     },
+     {
+      "label": "单向的",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "单向的"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“只有一个方向的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/oneway-sign.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.6,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/car-red.svg",
+      "x": 0.1,
+      "y": 0.86,
+      "s": 0.2,
+      "go": [
+       0.9,
+       0.86
+      ],
+      "dur": 3,
+      "loop": true,
+      "z": 3
+     },
+     {
+      "label": "一个方向",
+      "x": 0.82,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "车只能朝一个方向开",
+   "node": "① 单行的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "one 是一个，way 是方向，只有一个方向。",
+    "车只能朝一个方向开，这条路就是单行的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "label": "one 一个",
+      "x": 0.2,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "one 是一个"
+     },
+     {
+      "label": "way 方向",
+      "x": 0.8,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "way 是方向"
+     },
+     {
+      "svg": "art/oneway-sign.svg",
+      "x": 0.5,
+      "y": 0.45,
+      "s": 0.62,
+      "when": "只有一个方向"
+     },
+     {
+      "svg": "art/car-red.svg",
+      "x": 0.0,
+      "y": 0.84,
+      "s": 0.22,
+      "go": [
+       1.0,
+       0.84
+      ],
+      "dur": 4,
+      "loop": true,
+      "anim": "ride",
+      "z": 3,
+      "when": "车只能"
+     },
+     {
+      "svg": "art/car-blue.svg",
+      "x": -0.2,
+      "y": 0.74,
+      "s": 0.2,
+      "go": [
+       1.0,
+       0.74
+      ],
+      "dur": 5,
+      "loop": true,
+      "anim": "ride",
+      "z": 2,
+      "when": "车只能"
+     },
+     {
+      "label": "单行的",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "单行的"
+     },
+     {
+      "y": 0.86,
+      "s": 0.46,
+      "actor": "walk-cn-teacher-case",
+      "x": 1.1,
+      "walk": {
+       "from": [
+        1.1,
+        0.86
+       ],
+       "to": [
+        -0.1,
+        0.86
+       ],
+       "offset": 0
+      },
+      "z": 5
+     }
+    ]
+   }
+  },
+  {
+   "via": "人只去不回",
+   "node": "② 单程的",
+   "pos": "形容词",
+   "pic": 1,
+   "say": [
+    "人也一样，只去不回，买的就是单程票。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/checkin-bg.svg",
+    "items": [
+     {
+      "svg": "art/ticket-one.svg",
+      "x": 0.45,
+      "y": 0.48,
+      "s": 0.5,
+      "when": "只去不回",
+      "pop": true
+     },
+     {
+      "svg": "art/suitcase.svg",
+      "x": 0.82,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "bob"
+     },
+     {
+      "label": "单程票",
+      "x": 0.45,
+      "y": 0.86,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "单程票"
+     }
+    ]
+   }
+  },
+  {
+   "via": "话只从一方传到另一方",
+   "node": "③ 单向的、单方面的",
+   "pos": "形容词",
+   "pic": 2,
+   "say": [
+    "话只从一个人传到另一个人，没有回应，就是单向的、单方面的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "x": 0.25,
+      "y": 0.6,
+      "s": 0.7,
+      "z": 4,
+      "when": "话只从",
+      "actor": "west-girl-explain",
+      "id": "p7"
+     },
+     {
+      "x": 0.75,
+      "y": 0.6,
+      "s": 0.66,
+      "z": 4,
+      "when": "另一个人",
+      "actor": "west-girl-listen",
+      "id": "p8",
+      "nodWith": "p7"
+     },
+     {
+      "ray": [
+       [
+        0.38,
+        0.3
+       ],
+       [
+        0.6,
+        0.3
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "when": "传到"
+     },
+     {
+      "label": "没有回应",
+      "x": 0.75,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "没有回应"
+     },
+     {
+      "label": "单向的",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "单向的"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "two-way",
+   "m": "双向的",
+   "share": "way"
+  },
+  {
+   "w": "once",
+   "m": "一次",
+   "share": "one"
+  },
+  {
+   "w": "highway",
+   "m": "公路",
+   "share": "way"
+  }
+ ],
+ "distinguish": {
+  "key": "单方面的",
+  "items": [
+   {
+    "w": "one-way",
+    "word": "one-way",
+    "m": "单向的、单方面的",
+    "mean": "单向的、单方面的",
+    "diff": "只从一方到另一方、没有回来的；路、票、交流都能说。",
+    "say": "只从一方到另一方、没有回来的；路、票、交流都能说。",
+    "text": "只从一方到另一方、没有回来的；路、票、交流都能说。",
+    "note": "只从一方到另一方、没有回来的；路、票、交流都能说。",
+    "line": "只从一方到另一方、没有回来的；路、票、交流都能说。",
+    "desc": "只从一方到另一方、没有回来的；路、票、交流都能说。",
+    "explain": "只从一方到另一方、没有回来的；路、票、交流都能说。",
+    "talk": "只从一方到另一方、没有回来的；路、票、交流都能说。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/oneway-sign.svg",
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.8,
+       "anim": "sway"
+      }
+     ]
+    }
+   },
+   {
+    "w": "one-sided",
+    "word": "one-sided",
+    "m": "片面的、一边倒的",
+    "mean": "片面的、一边倒的",
+    "diff": "说比赛、看法偏向一边、不公平：a one-sided game 一边倒的比赛。",
+    "say": "说比赛、看法偏向一边、不公平：a one-sided game 一边倒的比赛。",
+    "text": "说比赛、看法偏向一边、不公平：a one-sided game 一边倒的比赛。",
+    "note": "说比赛、看法偏向一边、不公平：a one-sided game 一边倒的比赛。",
+    "line": "说比赛、看法偏向一边、不公平：a one-sided game 一边倒的比赛。",
+    "desc": "说比赛、看法偏向一边、不公平：a one-sided game 一边倒的比赛。",
+    "explain": "说比赛、看法偏向一边、不公平：a one-sided game 一边倒的比赛。",
+    "talk": "说比赛、看法偏向一边、不公平：a one-sided game 一边倒的比赛。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/balance-tilt.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "sway"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "one-way 是“一个方向”，管的是走向；one-sided 是“只有一边”，管的是偏向。",
+  "tip": "单程票美式 one-way ticket，英式 single；往返票美式 round-trip，英式 return。",
+  "pics": {
+   "one-way": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/oneway-sign.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.8,
+      "anim": "sway"
+     }
+    ]
+   },
+   "one-sided": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/balance-tilt.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8,
+      "anim": "sway"
+     }
+    ]
+   }
+  }
+ },
+ "kaodian": {
+  "rows": [
+   "【考意思】one-way adj. 单行的；单程的；单向的、单方面的",
+   "【考搭配】a one-way street 单行道；a one-way ticket 单程票（英式 a single）",
+   "【考构词】数词 + 名词连起来放在名词前当形容词，名词用单数：one-way，不说 one-ways",
+   "【考形近词】one-way / two-way：单向的 / 双向的"
+  ]
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：他买了什么票？",
+    "listen": "I bought a one-way ticket to Beijing.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "往返票",
+     "月票",
+     "学生票",
+     "单程票"
+    ],
+    "ans": "D",
+    "why": "one-way ticket 单程票。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "You can't drive this way. It's a ______ street.",
+    "opts": [
+     "two-way",
+     "one way",
+     "one-way",
+     "one-ways"
+    ],
+    "ans": "C",
+    "why": "只能单向行驶的街是 one-way street。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 one-way、round-trip 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "I'll come back, so I need a ______ ticket.",
+    "opts": [],
+    "ans": "round-trip",
+    "why": "要回来，买往返票 round-trip ticket；one-way 是单程。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "This is a one-ways street.",
+    "opts": [],
+    "ans": "one-ways → one-way",
+    "why": "连字符形容词不加 s。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "在英国，单程票叫 single。",
+    "stem": "In Britain, a one-way ticket is called a ______.",
+    "opts": [],
+    "ans": "single",
+    "why": "英式“单程票”说 single。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "A ______ street lets cars go both ways.",
+    "opts": [
+     "two-way",
+     "one-way",
+     "one way",
+     "two way"
+    ],
+    "ans": "A",
+    "why": "车辆可以双向行驶的街是 two-way street。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "A return ticket is the same as a ______ ticket.",
+    "opts": [
+     "round-trip",
+     "one-way",
+     "single",
+     "day"
+    ],
+    "ans": "A",
+    "why": "往返票 return ticket 就是 round-trip ticket。",
+    "kd": "易混"
+   }
+  ]
+ }
+}
