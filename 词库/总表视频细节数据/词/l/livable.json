@@ -1,7 +1,658 @@
 {
  "单词": "livable",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ˈlɪ",
+   "və",
+   "bl"
+  ],
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/house.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.86,
+      "y": 0.66,
+      "s": 0.3
+     },
+     {
+      "label": "宜居的",
+      "x": 0.16,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": -0.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        -0.1,
+        0.7
+       ],
+       "to": [
+        1.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ],
+    "text": "适合居住的、宜居的",
+    "pos": "形容词",
+    "diff": "条件够人住",
+    "ex": "This is a livable city.",
+    "exzh": "这是一座宜居的城市。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/house.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "city",
+       "z": 1
+      },
+      {
+       "actor": "west-man-present",
+       "x": 0.18,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "id": "m",
+       "seq": "talk",
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.82,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "id": "t",
+       "turn": [
+        1,
+        2
+       ],
+       "nodWith": "m"
+      },
+      {
+       "label": "a livable city",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "livable city"
+      },
+      {
+       "label": "宜居的城市",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "宜居的城市"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 1.1,
+       "y": 0.7,
+       "s": 0.46,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.1,
+         0.7
+        ],
+        "to": [
+         -0.1,
+         0.7
+        ],
+        "offset": 0.8
+       }
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/wall.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.9,
+      "z": 0,
+      "a": 0.6
+     },
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.5,
+      "y": 0.74,
+      "s": 0.4,
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "label": "过得下去",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "text": "过得下去的、可以忍受的",
+    "pos": "形容词",
+    "diff": "日子、处境还撑得下去",
+    "ex": "Life here is hard but livable.",
+    "exzh": "这里的日子苦，但还过得下去。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sofa.svg",
+       "x": 0.5,
+       "y": 0.78,
+       "s": 0.34,
+       "z": 1
+      },
+      {
+       "actor": "west-clerk-think",
+       "x": 0.26,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "id": "c",
+       "seq": "talk"
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.74,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3,
+       "id": "g",
+       "nodWith": "c"
+      },
+      {
+       "label": "hard but livable",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "livable"
+      },
+      {
+       "label": "还过得下去",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "过得下去"
+      }
+     ]
+    }
+   }
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.62,
+      "anim": "pulse"
+     },
+     {
+      "label": "活",
+      "x": 0.84,
+      "y": 0.14,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.5
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/able.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "pulse"
+     },
+     {
+      "label": "能",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "delay": 0.5
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-live.svg",
+   "p1": "art/icon-able.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/house.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "label": "能住下去",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "flow": [
+   {
+    "node": "“能住下去、能过下去的”",
+    "say": [
+     "live 是活、住，加上 able，表示能怎么样的，合起来就是能住下去、能过下去的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.28,
+       "y": 0.55,
+       "s": 0.46,
+       "when": "live"
+      },
+      {
+       "svg": "art/able.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.3,
+       "when": "able",
+       "anim": "pulse"
+      },
+      {
+       "label": "能住下去",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "能住下去"
+      }
+     ]
+    }
+   },
+   {
+    "via": "一个地方条件够人住",
+    "node": "① 适合居住的、宜居的",
+    "pos": "形容词",
+    "pic": 0,
+    "rule": "动词加 -able，就是能被怎么样的",
+    "ruleEx": "read 读 → readable 能读的      live 住 → livable 宜居的",
+    "say": [
+     "动词加上 able，就是能怎么样的：read 是读，readable 是能读的、好读的。",
+     "livable 也一样：一个地方条件够人住，就是适合居住的、宜居的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "label": "read → readable 能读的",
+       "x": 0.5,
+       "y": 0.45,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "readable",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/house.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.6,
+       "cue": 1,
+       "when": "条件够人住",
+       "anim": "pulse"
+      },
+      {
+       "label": "宜居的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "宜居的"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": -0.1,
+       "y": 0.7,
+       "s": 0.46,
+       "z": 2,
+       "walk": {
+        "from": [
+         -0.1,
+         0.7
+        ],
+        "to": [
+         1.1,
+         0.7
+        ],
+        "offset": 0.8
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "日子、处境还撑得下去",
+    "node": "② 过得下去的、可以忍受的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "日子苦一点，处境还撑得下去，就是过得下去的、可以忍受的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/wall.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.9,
+       "z": 0,
+       "a": 0.6,
+       "when": "日子苦"
+      },
+      {
+       "svg": "art/sofa.svg",
+       "x": 0.5,
+       "y": 0.74,
+       "s": 0.42,
+       "when": "撑得下去",
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "label": "可以忍受的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "可以忍受"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "适合居住的",
+   "items": [
+    {
+     "w": "livable",
+     "word": "livable",
+     "en": "livable",
+     "m": "适合居住的",
+     "zh": "适合居住的",
+     "mean": "适合居住的",
+     "note": "适合居住的",
+     "say": "livable 说条件够人住、日子能过。",
+     "text": "livable 说条件够人住、日子能过。",
+     "line": "livable 说条件够人住、日子能过。",
+     "desc": "livable 说条件够人住、日子能过。",
+     "diff": "livable 说条件够人住、日子能过。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/house.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.7,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "habitable",
+     "word": "habitable",
+     "en": "habitable",
+     "m": "可居住的",
+     "zh": "可居住的",
+     "mean": "可居住的",
+     "note": "可居住的",
+     "say": "habitable 偏正式，说一个地方能不能住人：a habitable planet。",
+     "text": "habitable 偏正式，说一个地方能不能住人：a habitable planet。",
+     "line": "habitable 偏正式，说一个地方能不能住人：a habitable planet。",
+     "desc": "habitable 偏正式，说一个地方能不能住人：a habitable planet。",
+     "diff": "habitable 偏正式，说一个地方能不能住人：a habitable planet。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/bed.svg",
+        "x": 0.5,
+        "y": 0.6,
+        "s": 0.62,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "comfortable",
+     "word": "comfortable",
+     "en": "comfortable",
+     "m": "舒服的",
+     "zh": "舒服的",
+     "mean": "舒服的",
+     "note": "舒服的",
+     "say": "comfortable 说住得舒服，比能住更进一步。",
+     "text": "comfortable 说住得舒服，比能住更进一步。",
+     "line": "comfortable 说住得舒服，比能住更进一步。",
+     "desc": "comfortable 说住得舒服，比能住更进一步。",
+     "diff": "comfortable 说住得舒服，比能住更进一步。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/sofa.svg",
+        "x": 0.5,
+        "y": 0.6,
+        "s": 0.62,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/cushion.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.2
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "livable 是 live 加 able 能活、能住；habitable 来自拉丁语的住；comfortable 说舒适。",
+   "tip": "英式也写 liveable。",
+   "pics": {
+    "livable": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/house.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "habitable": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bed.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.62,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "comfortable": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sofa.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.62,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/cushion.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.2
+      }
+     ]
+    }
+   }
+  },
+  "demo": {
+   "active": {
+    "icons": [
+     "art/ic-clapper.svg",
+     "art/ic-b_ive.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/football.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "go": [
+        0.5,
+        0.75
+       ],
+       "loop": true,
+       "dur": 0.6
+      }
+     ]
+    },
+    "lit": "爱活动的"
+   },
+   "usable": {
+    "icons": [
+     "art/ic-use-hand.svg",
+     "art/ic-b_able.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/socket.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "能用的"
+   },
+   "interested": {
+    "icons": [
+     "art/ic-bulb.svg",
+     "art/ic-b_ed.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/magnifier.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "anim": "bob"
+      }
+     ]
+    },
+    "lit": "感兴趣的"
+   }
+  }
+ },
+ "插图": [
+  "livableai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人觉得这座城市怎么样？\n听：This city is very livable.\nA. 很宜居\nB. 很拥挤\nC. 很脏\nD. 很危险",
@@ -88,5 +739,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

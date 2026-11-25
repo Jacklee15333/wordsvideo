@@ -1,0 +1,1024 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈlɪ",
+  "vɪŋ"
+ ],
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/textbook.svg",
+     "x": 0.5,
+     "y": 0.42,
+     "s": 0.44,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/bread.svg",
+     "x": 0.82,
+     "y": 0.7,
+     "s": 0.22
+    },
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.18,
+     "y": 0.6,
+     "s": 0.9,
+     "z": 3,
+     "seq": "talk"
+    },
+    {
+     "label": "生计",
+     "x": 0.82,
+     "y": 0.14,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "text": "生计",
+   "pos": "名词",
+   "diff": "靠什么过日子、挣钱",
+   "ex": "He makes a living by teaching.",
+   "exzh": "他靠教书谋生。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "x": 0.24,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "m",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.64,
+      "y": 0.88,
+      "s": 0.32,
+      "crowd": 7,
+      "nodWith": "m",
+      "z": 4
+     },
+     {
+      "svg": "art/bread.svg",
+      "x": 0.82,
+      "y": 0.4,
+      "s": 0.2,
+      "when": "makes a living",
+      "pop": true
+     },
+     {
+      "label": "makes a living",
+      "x": 0.6,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "makes a living"
+     },
+     {
+      "label": "谋生",
+      "x": 0.6,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "谋生"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/bike.svg",
+     "x": 0.5,
+     "y": 0.66,
+     "s": 0.46,
+     "go": [
+      0.7,
+      0.66
+     ],
+     "loop": true,
+     "dur": 2.5,
+     "anim": "ride"
+    },
+    {
+     "label": "生活方式",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": -0.1,
+     "y": 0.7,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       -0.1,
+       0.7
+      ],
+      "to": [
+       1.1,
+       0.7
+      ],
+      "offset": 0.8
+     }
+    }
+   ],
+   "text": "生活方式",
+   "pos": "名词",
+   "diff": "日子怎么过",
+   "ex": "Healthy living is important.",
+   "exzh": "健康的生活方式很重要。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/bike.svg",
+      "x": 0.36,
+      "y": 0.68,
+      "s": 0.44,
+      "when": "Healthy",
+      "go": [
+       0.64,
+       0.68
+      ],
+      "loop": true,
+      "dur": 2.5,
+      "anim": "ride",
+      "z": 3
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.84,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "seq": "pingpong"
+     },
+     {
+      "label": "Healthy living",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "Healthy living"
+     },
+     {
+      "label": "健康的生活方式",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "健康的生活方式"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 1.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.1,
+        0.7
+       ],
+       "to": [
+        -0.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sprout.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "label": "活着的",
+     "x": 0.84,
+     "y": 0.14,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "text": "活着的",
+   "pos": "形容词",
+   "diff": "正活着的，放在名词前",
+   "ex": "My grandpa is still living.",
+   "exzh": "我爷爷还健在。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.5,
+      "y": 0.78,
+      "s": 0.36,
+      "z": 1
+     },
+     {
+      "actor": "west-man-hello",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "gp",
+      "seq": "pingpong"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.74,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "id": "b",
+      "nodWith": "gp"
+     },
+     {
+      "label": "still living",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "still living"
+     },
+     {
+      "label": "还健在",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "还健在"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/textbook.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.56,
+     "anim": "pulse"
+    },
+    {
+     "label": "仍在用的",
+     "x": 0.84,
+     "y": 0.14,
+     "size": 0.085,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "text": "现存的、仍在用的",
+   "pos": "形容词",
+   "diff": "还在用、没有消失",
+   "ex": "English is a living language.",
+   "exzh": "英语是一门仍在使用的语言。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/textbook.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.44,
+      "when": "English"
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.16,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "t2",
+      "nodWith": "g2"
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.84,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "g2",
+      "seq": "talk"
+     },
+     {
+      "label": "a living language",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "living language",
+      "z": 6
+     },
+     {
+      "label": "仍在使用的语言",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "仍在使用",
+      "z": 6
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sprout.svg",
+     "x": 0.5,
+     "y": 0.55,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "label": "活",
+     "x": 0.84,
+     "y": 0.14,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.5
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/ing.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "pulse"
+    },
+    {
+     "label": "这件事",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.5
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-live.svg",
+  "p1": "art/icon-ing.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/sprout.svg",
+    "x": 0.3,
+    "y": 0.55,
+    "s": 0.5
+   },
+   {
+    "svg": "art/plus.svg",
+    "x": 0.52,
+    "y": 0.55,
+    "s": 0.12
+   },
+   {
+    "svg": "art/bread.svg",
+    "x": 0.74,
+    "y": 0.6,
+    "s": 0.3,
+    "anim": "bob"
+   },
+   {
+    "label": "过日子这件事",
+    "x": 0.5,
+    "y": 0.12,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "flow": [
+  {
+   "node": "“过日子这件事 / 正活着的”",
+   "say": [
+    "live 是活、过日子，加上 ing，就是过日子这件事，也是正活着的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.3,
+      "y": 0.55,
+      "s": 0.5,
+      "when": "live",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/ing.svg",
+      "x": 0.72,
+      "y": 0.5,
+      "s": 0.3,
+      "when": "ing"
+     },
+     {
+      "label": "过日子这件事",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "过日子这件事"
+     },
+     {
+      "label": "正活着的",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "正活着的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "名词：靠什么过日子",
+   "node": "① 生计",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "当名词，过日子这件事要靠什么来撑，比如教书挣钱，就是生计。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/textbook.svg",
+      "x": 0.4,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "教书",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/bread.svg",
+      "x": 0.8,
+      "y": 0.62,
+      "s": 0.3,
+      "when": "挣钱"
+     },
+     {
+      "label": "生计",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "生计"
+     }
+    ]
+   }
+  },
+  {
+   "via": "日子怎么过",
+   "node": "② 生活方式",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "日子怎么过，天天骑车、吃得健康，就是生活方式。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/bike.svg",
+      "x": 0.4,
+      "y": 0.66,
+      "s": 0.46,
+      "when": "骑车",
+      "go": [
+       0.66,
+       0.66
+      ],
+      "loop": true,
+      "dur": 2.4,
+      "anim": "ride"
+     },
+     {
+      "label": "生活方式",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "生活方式"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": -0.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        -0.1,
+        0.7
+       ],
+       "to": [
+        1.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "形容词：正活着的",
+   "node": "③ 活着的",
+   "pos": "形容词",
+   "pic": 2,
+   "from": 0,
+   "say": [
+    "当形容词，正活着的，就是活着的；石头雕像就不是 living。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.3,
+      "y": 0.56,
+      "s": 0.56,
+      "when": "正活着",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/statue.svg",
+      "x": 0.74,
+      "y": 0.54,
+      "s": 0.6,
+      "when": "石头雕像",
+      "a": 0.8
+     },
+     {
+      "label": "活着的",
+      "x": 0.3,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "活着的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "还在用、没有消失的",
+   "node": "④ 现存的、仍在用的",
+   "pos": "形容词",
+   "pic": 3,
+   "say": [
+    "一门语言、一种风俗还在用、没有消失，也说 living，就是现存的、仍在使用的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/textbook.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.56,
+      "when": "语言",
+      "anim": "pulse"
+     },
+     {
+      "label": "仍在使用的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "仍在使用"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "活着的；生计；生活方式",
+  "items": [
+   {
+    "w": "living",
+    "word": "living",
+    "en": "living",
+    "m": "活着的；生计；生活方式",
+    "zh": "活着的；生计；生活方式",
+    "mean": "活着的；生计；生活方式",
+    "note": "活着的；生计；生活方式",
+    "say": "make a living 是挣够过日子的钱，不是创造生活；放在名词前说 a living person。",
+    "text": "make a living 是挣够过日子的钱，不是创造生活；放在名词前说 a living person。",
+    "line": "make a living 是挣够过日子的钱，不是创造生活；放在名词前说 a living person。",
+    "desc": "make a living 是挣够过日子的钱，不是创造生活；放在名词前说 a living person。",
+    "diff": "make a living 是挣够过日子的钱，不是创造生活；放在名词前说 a living person。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "alive",
+    "word": "alive",
+    "en": "alive",
+    "m": "活着的",
+    "zh": "活着的",
+    "mean": "活着的",
+    "note": "活着的",
+    "say": "alive 一般不放在名词前，不说 an alive person，要说 The fish is alive。",
+    "text": "alive 一般不放在名词前，不说 an alive person，要说 The fish is alive。",
+    "line": "alive 一般不放在名词前，不说 an alive person，要说 The fish is alive。",
+    "desc": "alive 一般不放在名词前，不说 an alive person，要说 The fish is alive。",
+    "diff": "alive 一般不放在名词前，不说 an alive person，要说 The fish is alive。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/fishtank.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.7
+      },
+      {
+       "svg": "art/fish.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.2,
+       "go": [
+        0.6,
+        0.5
+       ],
+       "loop": true,
+       "dur": 2
+      }
+     ]
+    }
+   },
+   {
+    "w": "bread",
+    "word": "bread",
+    "en": "bread",
+    "m": "生计",
+    "zh": "生计",
+    "mean": "生计",
+    "note": "生计",
+    "say": "bread 本来是面包，口语里也指养家糊口的钱。",
+    "text": "bread 本来是面包，口语里也指养家糊口的钱。",
+    "line": "bread 本来是面包，口语里也指养家糊口的钱。",
+    "desc": "bread 本来是面包，口语里也指养家糊口的钱。",
+    "diff": "bread 本来是面包，口语里也指养家糊口的钱。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bread.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.62,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "lifestyle",
+    "word": "lifestyle",
+    "en": "lifestyle",
+    "m": "生活方式",
+    "zh": "生活方式",
+    "mean": "生活方式",
+    "note": "生活方式",
+    "say": "lifestyle 专说生活方式，可以有好几种：a healthy lifestyle。",
+    "text": "lifestyle 专说生活方式，可以有好几种：a healthy lifestyle。",
+    "line": "lifestyle 专说生活方式，可以有好几种：a healthy lifestyle。",
+    "desc": "lifestyle 专说生活方式，可以有好几种：a healthy lifestyle。",
+    "diff": "lifestyle 专说生活方式，可以有好几种：a healthy lifestyle。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bike.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.62,
+       "anim": "ride"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "living 是 live 加 ing，从过日子这件事来；alive 是在生命里；bread 借面包说饭碗；lifestyle 是生活加方式。",
+  "tip": "a living person 活着的人，不说 an alive person。",
+  "pics": {
+   "living": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sprout.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "alive": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/fishtank.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.7
+     },
+     {
+      "svg": "art/fish.svg",
+      "x": 0.4,
+      "y": 0.5,
+      "s": 0.2,
+      "go": [
+       0.6,
+       0.5
+      ],
+      "loop": true,
+      "dur": 2
+     }
+    ]
+   },
+   "bread": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bread.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.62,
+      "anim": "bob"
+     }
+    ]
+   },
+   "lifestyle": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bike.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.62,
+      "anim": "ride"
+     }
+    ]
+   }
+  }
+ },
+ "demo": {
+  "reading": {
+   "icons": [
+    "art/ic-openbook.svg",
+    "art/ic-ing.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/openbook.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.62,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "读这件事"
+  },
+  "action": {
+   "icons": [
+    "art/ic-clapper.svg",
+    "art/ic-ion.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/clapper.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "行动这件事"
+  },
+  "movement": {
+   "icons": [
+    "art/ic-footprints.svg",
+    "art/ic-ment.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/footprints.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.62,
+      "reveal": "right"
+     }
+    ]
+   },
+   "lit": "移动这件事"
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：他靠什么谋生？",
+    "listen": "He makes a living by selling fruit.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "开出租车",
+     "教书",
+     "种菜",
+     "卖水果"
+    ],
+    "ans": "D",
+    "why": "make a living 谋生。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "He makes a ______ by writing books.",
+    "opts": [
+     "living",
+     "live",
+     "life",
+     "lively"
+    ],
+    "ans": "A",
+    "why": "make a living 谋生，是固定短语。",
+    "kd": "短语"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 living、alive 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Is the old man still ______?",
+    "opts": [],
+    "ans": "alive",
+    "why": "作表语“活着的”用 alive；living 多放在名词前。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "She has ______ in Beijing for ten years. (live)",
+    "opts": [],
+    "ans": "lived",
+    "why": "has 加过去分词 lived。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "She is the oldest live person in the town.",
+    "opts": [],
+    "ans": "live → living",
+    "why": "名词前“活着的”人用 living。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "每个人都应该珍爱生命。",
+    "stem": "Everyone should love ______.",
+    "opts": [],
+    "ans": "life",
+    "why": "生命是 life。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "My grandma is very ______; she likes dancing.",
+    "opts": [
+     "living",
+     "alive",
+     "lively",
+     "live"
+    ],
+    "ans": "C",
+    "why": "活泼、有活力用 lively。",
+    "kd": "易混"
+   }
+  ]
+ }
+}
