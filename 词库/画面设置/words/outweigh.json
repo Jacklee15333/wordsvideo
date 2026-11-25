@@ -1,0 +1,674 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "比…重；比…更重要、超过"
+ },
+ "sylIpa": [
+  "aʊt",
+  "weɪ"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/farm-bg.svg",
+   "items": [
+    {
+     "svg": "art/car-blue.svg",
+     "x": 0.2,
+     "y": 0.86,
+     "s": 0.3,
+     "go": [
+      0.6,
+      0.86
+     ],
+     "dur": 4,
+     "loop": true,
+     "z": 2
+    },
+    {
+     "svg": "art/car-red.svg",
+     "x": 0.05,
+     "y": 0.74,
+     "s": 0.3,
+     "go": [
+      0.9,
+      0.74
+     ],
+     "dur": 2.5,
+     "loop": true,
+     "z": 3
+    },
+    {
+     "label": "超过",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.4
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/scale-kitchen.svg",
+     "x": 0.5,
+     "y": 0.55,
+     "s": 0.68,
+     "anim": "pulse"
+    },
+    {
+     "label": "有多重",
+     "x": 0.15,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.4
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-arr-out.svg",
+  "p1": "art/icon-scale-kitchen.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/classroom-bg.svg",
+  "items": [
+   {
+    "svg": "art/balance-tilt.svg",
+    "x": 0.5,
+    "y": 0.52,
+    "s": 0.72,
+    "anim": "sway"
+   },
+   {
+    "label": "比……更重",
+    "x": 0.15,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "比…重",
+   "pos": "动词",
+   "diff": "天平这一边沉了下去",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/balance-pros.svg",
+     "x": 0.45,
+     "y": 0.52,
+     "s": 0.72,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/suitcase.svg",
+     "x": 0.85,
+     "y": 0.66,
+     "s": 0.3
+    }
+   ],
+   "ex": "The box outweighs the bag.",
+   "exzh": "这个箱子比包重。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/balance-pros.svg",
+      "x": 0.4,
+      "y": 0.52,
+      "s": 0.74,
+      "when": "outweighs",
+      "anim": "sway"
+     },
+     {
+      "label": "box",
+      "x": 0.12,
+      "y": 0.62,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "box"
+     },
+     {
+      "label": "bag",
+      "x": 0.72,
+      "y": 0.4,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "bag"
+     },
+     {
+      "label": "outweighs",
+      "x": 0.85,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "outweighs"
+     },
+     {
+      "label": "比包重",
+      "x": 0.85,
+      "y": 0.28,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "比包重"
+     }
+    ]
+   }
+  },
+  {
+   "text": "比…更重要、超过",
+   "pos": "动词",
+   "diff": "这一边更有分量（多比较利弊）",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/balance-pros.svg",
+     "x": 0.42,
+     "y": 0.5,
+     "s": 0.7,
+     "anim": "sway"
+    },
+    {
+     "x": 0.84,
+     "y": 0.6,
+     "s": 0.64,
+     "z": 4,
+     "actor": "west-clerk-think",
+     "id": "p1"
+    }
+   ],
+   "ex": "The good points outweigh the bad ones.",
+   "exzh": "好处超过坏处。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/balance-pros.svg",
+      "x": 0.45,
+      "y": 0.5,
+      "s": 0.72,
+      "when": "outweigh",
+      "anim": "sway"
+     },
+     {
+      "x": 0.88,
+      "y": 0.6,
+      "s": 0.62,
+      "z": 4,
+      "when": "good points",
+      "actor": "cn-teacher-laugh",
+      "id": "p2"
+     },
+     {
+      "label": "good points",
+      "x": 0.15,
+      "y": 0.62,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "good points"
+     },
+     {
+      "label": "bad ones",
+      "x": 0.75,
+      "y": 0.22,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "bad ones"
+     },
+     {
+      "label": "好处",
+      "x": 0.15,
+      "y": 0.78,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "好处"
+     },
+     {
+      "label": "超过",
+      "x": 0.45,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "超过"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“比……更重”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/balance-tilt.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.72,
+      "anim": "sway"
+     },
+     {
+      "label": "更重",
+      "x": 0.15,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "天平这一边沉了下去",
+   "node": "① 比…重",
+   "pos": "动词",
+   "pic": 0,
+   "say": [
+    "out 是超过，weigh 是有多重，比别的更重。",
+    "天平两边各放一样东西，这一边沉了下去，就是比它重。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "out 超过",
+      "x": 0.2,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "out 是超过"
+     },
+     {
+      "label": "weigh 有多重",
+      "x": 0.8,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "有多重"
+     },
+     {
+      "svg": "art/balance-tilt.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.72,
+      "when": "天平",
+      "anim": "sway"
+     },
+     {
+      "label": "沉了下去",
+      "x": 0.15,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "沉了下去"
+     },
+     {
+      "label": "比它重",
+      "x": 0.8,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "比它重"
+     }
+    ]
+   }
+  },
+  {
+   "via": "两件事掂一掂分量",
+   "node": "② 比…更重要、超过",
+   "pos": "动词",
+   "pic": 1,
+   "say": [
+    "拿两件事掂一掂分量，这一边更有分量，就是更重要、超过。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "x": 0.84,
+      "y": 0.6,
+      "s": 0.62,
+      "z": 4,
+      "when": "两件事",
+      "actor": "cn-teacher-listen",
+      "id": "p3"
+     },
+     {
+      "svg": "art/balance-pros.svg",
+      "x": 0.42,
+      "y": 0.5,
+      "s": 0.7,
+      "when": "掂一掂",
+      "anim": "sway"
+     },
+     {
+      "label": "更有分量",
+      "x": 0.15,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "更有分量"
+     },
+     {
+      "label": "更重要、超过",
+      "x": 0.42,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "更重要"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "weigh",
+   "m": "称重",
+   "share": "weigh"
+  },
+  {
+   "w": "outrun",
+   "m": "跑得比…快",
+   "share": "out"
+  },
+  {
+   "w": "overweight",
+   "m": "超重的",
+   "share": "weight"
+  }
+ ],
+ "distinguish": {
+  "key": "超过",
+  "items": [
+   {
+    "w": "outweigh",
+    "word": "outweigh",
+    "m": "比…更重要、超过",
+    "mean": "比…更重要、超过",
+    "diff": "多用来比较利弊得失，哪一边更有分量：The benefits outweigh the costs.",
+    "say": "多用来比较利弊得失，哪一边更有分量：The benefits outweigh the costs.",
+    "text": "多用来比较利弊得失，哪一边更有分量：The benefits outweigh the costs.",
+    "note": "多用来比较利弊得失，哪一边更有分量：The benefits outweigh the costs.",
+    "line": "多用来比较利弊得失，哪一边更有分量：The benefits outweigh the costs.",
+    "desc": "多用来比较利弊得失，哪一边更有分量：The benefits outweigh the costs.",
+    "explain": "多用来比较利弊得失，哪一边更有分量：The benefits outweigh the costs.",
+    "talk": "多用来比较利弊得失，哪一边更有分量：The benefits outweigh the costs.",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/balance-pros.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "sway"
+      }
+     ]
+    }
+   },
+   {
+    "w": "exceed",
+    "word": "exceed",
+    "m": "超过（限度）",
+    "mean": "超过（限度）",
+    "diff": "数量、速度超过规定的限度：exceed the speed limit。",
+    "say": "数量、速度超过规定的限度：exceed the speed limit。",
+    "text": "数量、速度超过规定的限度：exceed the speed limit。",
+    "note": "数量、速度超过规定的限度：exceed the speed limit。",
+    "line": "数量、速度超过规定的限度：exceed the speed limit。",
+    "desc": "数量、速度超过规定的限度：exceed the speed limit。",
+    "explain": "数量、速度超过规定的限度：exceed the speed limit。",
+    "talk": "数量、速度超过规定的限度：exceed the speed limit。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/checkin-bg.svg",
+     "items": [
+      {
+       "svg": "art/scale-bag.svg",
+       "x": 0.5,
+       "y": 0.78,
+       "s": 0.36,
+       "z": 2
+      },
+      {
+       "svg": "art/suitcase.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 0.5,
+       "anim": "bob",
+       "z": 3
+      }
+     ]
+    }
+   },
+   {
+    "w": "top",
+    "word": "top",
+    "m": "超过、高于",
+    "mean": "超过、高于",
+    "diff": "口语：数字超过、排第一：Sales topped one million.",
+    "say": "口语：数字超过、排第一：Sales topped one million.",
+    "text": "口语：数字超过、排第一：Sales topped one million.",
+    "note": "口语：数字超过、排第一：Sales topped one million.",
+    "line": "口语：数字超过、排第一：Sales topped one million.",
+    "desc": "口语：数字超过、排第一：Sales topped one million.",
+    "explain": "口语：数字超过、排第一：Sales topped one million.",
+    "talk": "口语：数字超过、排第一：Sales topped one million.",
+    "pic": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/car-red.svg",
+       "x": 0.1,
+       "y": 0.74,
+       "s": 0.45,
+       "go": [
+        0.9,
+        0.74
+       ],
+       "dur": 2.5,
+       "loop": true,
+       "z": 3
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "outweigh 比的是分量；exceed 比的是数量和限度；top 说的是“到了顶上、更高”。",
+  "tip": "单说东西“比…重”，口语多用 be heavier than。",
+  "pics": {
+   "outweigh": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/balance-pros.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8,
+      "anim": "sway"
+     }
+    ]
+   },
+   "exceed": {
+    "bg": "blank",
+    "img": "art/checkin-bg.svg",
+    "items": [
+     {
+      "svg": "art/scale-bag.svg",
+      "x": 0.5,
+      "y": 0.78,
+      "s": 0.36,
+      "z": 2
+     },
+     {
+      "svg": "art/suitcase.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.5,
+      "anim": "bob",
+      "z": 3
+     }
+    ]
+   },
+   "top": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/car-red.svg",
+      "x": 0.1,
+      "y": 0.74,
+      "s": 0.45,
+      "go": [
+       0.9,
+       0.74
+      ],
+      "dur": 2.5,
+      "loop": true,
+      "z": 3
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人觉得怎么样？",
+    "listen": "The good points outweigh the bad ones.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "坏处多于好处",
+     "一样多",
+     "好处多于坏处",
+     "都没有"
+    ],
+    "ans": "C",
+    "why": "outweigh 超过。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The benefits of exercise ______ the costs.",
+    "opts": [
+     "outweighs",
+     "outweighed",
+     "weight",
+     "outweigh"
+    ],
+    "ans": "D",
+    "why": "主语 benefits 是复数，一般现在时用 outweigh。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 outweigh、weigh 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "How much does this bag ______?",
+    "opts": [],
+    "ans": "weigh",
+    "why": "问多重用 weigh；outweigh 是超过、比……更重要。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Last time the risks ______ the benefits. (outweigh)",
+    "opts": [],
+    "ans": "outweighed",
+    "why": "讲过去，用过去式 outweighed。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "His love for music outweigh everything else.",
+    "opts": [],
+    "ans": "outweigh → outweighs",
+    "why": "主语 his love 是单数，动词加 s。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这个箱子比那个重。",
+    "stem": "This box is ______ than that one.",
+    "opts": [],
+    "ans": "heavier",
+    "why": "单说“比……重”常用 be heavier than。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Health ______ money.",
+    "opts": [
+     "outweigh",
+     "outweighing",
+     "outweighs",
+     "outweighed"
+    ],
+    "ans": "C",
+    "why": "健康比金钱更重要，主语单数用 outweighs。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

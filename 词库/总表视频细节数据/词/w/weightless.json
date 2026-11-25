@@ -1,7 +1,600 @@
 {
  "单词": "weightless",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "失重的；极轻的"
+  },
+  "sylIpa": [
+   "weɪt",
+   "ləs"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/gym-bg.svg",
+    "items": [
+     {
+      "svg": "art/weight-kg.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.62,
+      "anim": "bob"
+     },
+     {
+      "label": "重量",
+      "x": 0.15,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.4
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/clinic-bg.svg",
+    "items": [
+     {
+      "svg": "art/scale-zero.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.55,
+      "anim": "pulse"
+     },
+     {
+      "label": "没有",
+      "x": 0.15,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "delay": 0.4
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-weight-kg.svg",
+   "p1": "art/icon-arr-not.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/space-bg.svg",
+   "items": [
+    {
+     "svg": "art/astronaut.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.75,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/weight-kg.svg",
+     "x": 0.82,
+     "y": 0.3,
+     "s": 0.2,
+     "anim": "spin"
+    },
+    {
+     "label": "没有重量的",
+     "x": 0.18,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "失重的",
+    "pos": "形容词",
+    "diff": "在太空里人和东西都飘起来",
+    "bg": "blank",
+    "img": "art/space-bg.svg",
+    "items": [
+     {
+      "svg": "art/astronaut.svg",
+      "x": 0.45,
+      "y": 0.5,
+      "s": 0.75,
+      "anim": "bob",
+      "rot": -10
+     },
+     {
+      "svg": "art/weight-kg.svg",
+      "x": 0.82,
+      "y": 0.3,
+      "s": 0.2,
+      "anim": "spin"
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.15,
+      "y": 0.3,
+      "s": 0.18,
+      "anim": "spin"
+     }
+    ],
+    "ex": "Astronauts are weightless in space.",
+    "exzh": "宇航员在太空中是失重的。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/space-bg.svg",
+     "items": [
+      {
+       "svg": "art/astronaut.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.7,
+       "when": "Astronauts",
+       "go": [
+        0.5,
+        0.45
+       ],
+       "dur": 3,
+       "loop": true
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.82,
+       "y": 0.3,
+       "s": 0.2,
+       "anim": "spin",
+       "when": "weightless"
+      },
+      {
+       "label": "weightless",
+       "x": 0.8,
+       "y": 0.7,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "weightless"
+      },
+      {
+       "label": "失重的",
+       "x": 0.8,
+       "y": 0.86,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "失重的"
+      }
+     ]
+    }
+   },
+   {
+    "text": "极轻的",
+    "pos": "形容词",
+    "diff": "轻得仿佛没有重量",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/feather.svg",
+      "x": 0.5,
+      "y": 0.45,
+      "s": 0.66,
+      "go": [
+       0.55,
+       0.55
+      ],
+      "dur": 2,
+      "loop": true,
+      "rot": 10
+     }
+    ],
+    "ex": "The feather is almost weightless.",
+    "exzh": "这根羽毛轻得几乎没有重量。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/feather.svg",
+       "x": 0.4,
+       "y": 0.3,
+       "s": 0.62,
+       "go": [
+        0.5,
+        0.55
+       ],
+       "dur": 3,
+       "when": "feather",
+       "rot": 10
+      },
+      {
+       "svg": "art/scale-zero.svg",
+       "x": 0.75,
+       "y": 0.8,
+       "s": 0.3
+      },
+      {
+       "label": "almost weightless",
+       "x": 0.75,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "almost weightless"
+      },
+      {
+       "label": "几乎没有重量",
+       "x": 0.75,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "几乎没有重量"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“没有重量的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/space-bg.svg",
+     "items": [
+      {
+       "svg": "art/astronaut.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "bob"
+      },
+      {
+       "label": "没有重量的",
+       "x": 0.18,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "在太空里人和东西都飘起来",
+    "node": "① 失重的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "weight 是重量，less 是没有，没有重量的。",
+     "在太空里，人和东西都飘起来，好像没了重量，就是失重的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/space-bg.svg",
+     "items": [
+      {
+       "label": "weight 重量",
+       "x": 0.2,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "weight 是重量"
+      },
+      {
+       "label": "less 没有",
+       "x": 0.8,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "less 是没有"
+      },
+      {
+       "svg": "art/astronaut.svg",
+       "x": 0.45,
+       "y": 0.55,
+       "s": 0.7,
+       "when": "飘起来",
+       "go": [
+        0.5,
+        0.45
+       ],
+       "dur": 3,
+       "loop": true
+      },
+      {
+       "svg": "art/weight-kg.svg",
+       "x": 0.82,
+       "y": 0.4,
+       "s": 0.2,
+       "anim": "spin",
+       "when": "东西"
+      },
+      {
+       "label": "失重的",
+       "x": 0.45,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "失重的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "轻得仿佛没有重量",
+    "node": "② 极轻的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "东西轻得仿佛没有重量，就是极轻的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/feather.svg",
+       "x": 0.45,
+       "y": 0.3,
+       "s": 0.62,
+       "go": [
+        0.5,
+        0.55
+       ],
+       "dur": 3,
+       "when": "东西轻得",
+       "rot": 10
+      },
+      {
+       "label": "极轻的",
+       "x": 0.8,
+       "y": 0.15,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "极轻的"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "weight",
+    "m": "重量",
+    "share": "weight"
+   },
+   {
+    "w": "careless",
+    "m": "粗心的",
+    "share": "less"
+   },
+   {
+    "w": "homeless",
+    "m": "无家可归的",
+    "share": "less"
+   }
+  ],
+  "distinguish": {
+   "key": "失重的",
+   "items": [
+    {
+     "w": "weightless",
+     "word": "weightless",
+     "m": "失重的",
+     "mean": "失重的",
+     "diff": "书面、航天常用；名词 weightlessness 是失重。",
+     "say": "书面、航天常用；名词 weightlessness 是失重。",
+     "text": "书面、航天常用；名词 weightlessness 是失重。",
+     "note": "书面、航天常用；名词 weightlessness 是失重。",
+     "line": "书面、航天常用；名词 weightlessness 是失重。",
+     "desc": "书面、航天常用；名词 weightlessness 是失重。",
+     "explain": "书面、航天常用；名词 weightlessness 是失重。",
+     "talk": "书面、航天常用；名词 weightlessness 是失重。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/space-bg.svg",
+      "items": [
+       {
+        "svg": "art/astronaut.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.85,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "zero-gravity",
+     "word": "zero-gravity",
+     "m": "零重力的",
+     "mean": "零重力的",
+     "diff": "说的是“没有重力”的环境，偏口语：a zero-gravity flight。",
+     "say": "说的是“没有重力”的环境，偏口语：a zero-gravity flight。",
+     "text": "说的是“没有重力”的环境，偏口语：a zero-gravity flight。",
+     "note": "说的是“没有重力”的环境，偏口语：a zero-gravity flight。",
+     "line": "说的是“没有重力”的环境，偏口语：a zero-gravity flight。",
+     "desc": "说的是“没有重力”的环境，偏口语：a zero-gravity flight。",
+     "explain": "说的是“没有重力”的环境，偏口语：a zero-gravity flight。",
+     "talk": "说的是“没有重力”的环境，偏口语：a zero-gravity flight。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/space-bg.svg",
+      "items": [
+       {
+        "svg": "art/ball.svg",
+        "x": 0.3,
+        "y": 0.4,
+        "s": 0.45,
+        "anim": "spin"
+       },
+       {
+        "svg": "art/mug.svg",
+        "x": 0.7,
+        "y": 0.55,
+        "s": 0.4,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/books.svg",
+        "x": 0.5,
+        "y": 0.75,
+        "s": 0.3,
+        "anim": "spin"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "weightless 说人和东西“没有重量”；zero-gravity 说环境“重力为零”。",
+   "tip": "航天课文里常见 weightlessness（失重），记住它是 weightless 加 -ness 变来的名词。",
+   "pics": {
+    "weightless": {
+     "bg": "blank",
+     "img": "art/space-bg.svg",
+     "items": [
+      {
+       "svg": "art/astronaut.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "bob"
+      }
+     ]
+    },
+    "zero-gravity": {
+     "bg": "blank",
+     "img": "art/space-bg.svg",
+     "items": [
+      {
+       "svg": "art/ball.svg",
+       "x": 0.3,
+       "y": 0.4,
+       "s": 0.45,
+       "anim": "spin"
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.7,
+       "y": 0.55,
+       "s": 0.4,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.75,
+       "s": 0.3,
+       "anim": "spin"
+      }
+     ]
+    }
+   }
+  },
+  "demo": {
+   "careful": {
+    "icons": [
+     "art/icon-heart.svg",
+     "art/icon-cupfull.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.82,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "anim": "bob",
+       "z": 3
+      }
+     ]
+    }
+   },
+   "careless": {
+    "icons": [
+     "art/icon-heart.svg",
+     "art/icon-arr-not.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.82,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.45,
+       "y": 0.5,
+       "s": 0.5,
+       "rot": 80,
+       "anim": "shake",
+       "z": 3
+      },
+      {
+       "svg": "art/drop.svg",
+       "x": 0.62,
+       "y": 0.62,
+       "s": 0.15,
+       "anim": "bob",
+       "z": 4
+      }
+     ]
+    }
+   },
+   "rainy": {
+    "icons": [
+     "art/icon-rain.svg",
+     "art/icon-arr-out.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/rain.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.6,
+       "go": [
+        0.6,
+        0.4
+       ],
+       "dur": 2,
+       "loop": true
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "weightlessai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：宇航员在太空中怎么样？\n听：Astronauts are weightless in space.\nA. 很重\nB. 处于失重状态\nC. 很累\nD. 很冷",
@@ -88,5 +681,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
