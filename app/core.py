@@ -1289,6 +1289,26 @@ def outbox_push(ipath, done=False):
         log("检查结果没写进中转仓库：%s" % mask(str(e))[:120])
 
 
+def report_grace(ipath, tid, secs=240):
+    """一份做完了：网页 AI 最后的汇报一般晚几秒才传上来——再等一会儿，收到就记进步骤记录、删掉。"""
+    ib = inbox_cfg()
+    br = urllib.parse.quote(ib.get("branch") or "main")
+    end = time.time() + secs
+    while time.time() < end:
+        time.sleep(10)
+        for suf in ("-report.json", "-stop.json"):
+            try:
+                st, d = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], urllib.parse.quote(ipath + suf), br), ib["token"])
+                if st == 200 and isinstance(d, dict):
+                    info = json.loads(base64.b64decode(d.get("content") or "").decode("utf-8"))
+                    info.setdefault("state", "stop" if suf == "-stop.json" else "")
+                    relay_ai_report(info, tid=tid)
+                    inbox_delete(ipath + suf, d.get("sha"))
+                    return
+            except Exception:
+                pass
+
+
 def outbox_clean():
     """中转仓库 outbox/ 里两个小时以前的检查结果删掉（文件名开头就是时间）。"""
     try:
@@ -1296,8 +1316,11 @@ def outbox_clean():
         br = urllib.parse.quote(ib.get("branch") or "main")
         st, d = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], OUTBOX, br), ib["token"])
         if st != 200 or not isinstance(d, list):
-            return
+            d = []
         cut = time.strftime("%Y%m%d-%H%M%S", time.localtime(time.time() - 7200))
+        st3, d3 = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], ib.get("dir") or "inbox", br), ib["token"])
+        if st3 == 200 and isinstance(d3, list):        # inbox/ 里两个小时以前的汇报（没人读的）也清掉
+            d = d + [x for x in d3 if str(x.get("name", "")).endswith(("-report.json", "-stop.json"))]
         for x in d:
             n = x.get("name") or ""
             if re.match(r"^\d{8}-\d{6}", n) and n[:15] < cut:
@@ -1305,6 +1328,32 @@ def outbox_clean():
                     {"message": "检查结果：清掉旧的 " + n, "sha": x.get("sha"), "branch": ib.get("branch") or "main"})
     except Exception:
         pass
+
+
+REPORT_TAG = re.compile(r"【单词工作台·汇报】\s*状态[:：]\s*(写完了|停下了|等检查结果)")
+
+
+def relay_ai_report(info, pasted=False, tid=None):
+    """v1.14.0：网页 AI 这一轮回复结束时的汇报（脚本传上来的，或者你粘贴的）：记下它说的进度，黄框照这个判断该不该“继续”。
+    tid 给了＝这一份已经结束了（它最后的汇报晚到几秒）：只记进那个任务的步骤记录，不动现在这一份。"""
+    state = str(info.get("state") or "")
+    text = mask(str(info.get("text") or ""))[:3000]
+    why = mask(str(info.get("why") or ""))[:300]
+    if tid is not None:
+        log("网页 AI 汇报（%s）：%s" % ({"done": "写完了", "stop": "停下了", "wait": "等检查结果"}.get(state, state or "说了一句"),
+                                    (text.split("\n", 1)[-1] if text.startswith("【单词工作台·汇报】") else text)[:600] or why), tid)
+        return
+    with _RELAY_LOCK:
+        RELAY["aiReport"] = {"t": time.time(), "state": state, "text": text, "why": why, "pasted": pasted,
+                             "done": list(info.get("done") or [])[:500], "left": list(info.get("left") or [])[:500]}
+        if state == "stop":
+            RELAY["aiStop"] = {"t": time.time(), "done": list(info.get("done") or [])[:500],
+                               "left": list(info.get("left") or [])[:500], "why": why}
+        elif state == "done":
+            RELAY["aiDone"] = True
+        tid = RELAY.get("tid")
+    log("网页 AI 汇报（%s%s）：%s" % ({"done": "写完了", "stop": "停下了", "wait": "等检查结果"}.get(state, state or "说了一句"),
+                                  "，你粘贴的" if pasted else "", (text.split("\n", 1)[-1] if text.startswith("【单词工作台·汇报】") else text)[:600] or why), tid)
 
 
 def relay_cont_msg():
@@ -1358,20 +1407,18 @@ def _inbox_parts(ipath, seen, pending, t0):
         raise RuntimeError("看收件箱出错（%s）：%s" % (st, str((d or {}).get("message", ""))[:120]))
     files = [x.get("path") for x in d if x.get("path")] if isinstance(d, list) else []
     INBOX_LAST.update(files=sorted(f.rsplit("/", 1)[-1] for f in files), ts=time.time())
-    for f in [f for f in files if f.rsplit("/", 1)[-1].startswith(base) and f.endswith("-stop.json")]:    # v1.11.4：网页 AI 停下了
-        files.remove(f)
+    for f in [f for f in files if f.rsplit("/", 1)[-1].startswith(base) and (f.endswith("-stop.json") or f.endswith("-report.json"))]:
+        files.remove(f)        # v1.11.4 停下了 / v1.14.0 这一轮回复结束时的汇报（写完了、停下了、等检查结果）
         try:
             st2, d2 = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], urllib.parse.quote(f), br), ib["token"])
             if st2 == 200 and isinstance(d2, dict):
                 info = json.loads(base64.b64decode(d2.get("content") or "").decode("utf-8"))
-                with _RELAY_LOCK:
-                    RELAY["aiStop"] = {"t": time.time(), "done": list(info.get("done") or [])[:500],
-                                       "left": list(info.get("left") or [])[:500], "why": mask(str(info.get("why") or ""))[:300]}
-                _say("网页 AI 停下了：已经传了 %d 个，还剩 %d 个%s——黄框里点「继续」" % (
-                    len(info.get("done") or []), len(info.get("left") or []), ("（%s）" % info["why"][:80]) if info.get("why") else ""))
+                if f.endswith("-stop.json"):
+                    info.setdefault("state", "stop")
+                relay_ai_report(info)
                 inbox_delete(f, d2.get("sha"))
         except Exception as e:
-            log("读网页 AI 的停下记录出错：%s" % str(e)[:120])
+            log("读网页 AI 的汇报出错：%s" % str(e)[:120])
     mine = [f for f in files if f.rsplit("/", 1)[-1].startswith(base) and f not in seen]
     others = [f for f in files if f not in seen and f not in mine]
     if others:
@@ -1535,6 +1582,8 @@ def relay_parts(prompt, words, kind, rnd):
                 outbox_push(ipath, done=True)
             except Exception:
                 pass
+        if ibox and RELAY["id"] == rid and RELAY.get("endReason") in ("all", "newchat", "resize", "skiprest"):
+            threading.Thread(target=report_grace, args=(ipath, tid), daemon=True).start()
         with _RELAY_LOCK:
             if RELAY["id"] == rid:
                 RELAY["status"] = ""
@@ -1594,6 +1643,29 @@ def _sent():
         return json.load(open(MEM, encoding="utf-8"))
     except Exception:
         return {"k": 0, "w": []}
+
+
+def _report(state, why="", text=""):   # 这一轮回复结束时告诉单词工作台：写完了 / 停下了 / 等检查结果（软件按这个判断进度）
+    s1 = _sent()
+    left = [w for w in WORDS if w not in s1["w"]]
+    tag = "【单词工作台·汇报】状态：%s｜已传 %d/%d 个%s%s" % (
+        {"done": "写完了", "stop": "停下了", "wait": "等检查结果"}.get(state, state), len(s1["w"]), len(WORDS),
+        "｜还剩 %d 个" % len(left) if left else "", ("｜" + why if state == "done" else "｜原因：" + why) if why else "")
+    print(tag)
+    try:
+        u = "https://api.github.com/repos/%s/contents/%s-report.json" % (REPO, NAME)
+        b = {"message": "接力：汇报 " + state, "branch": BRANCH, "content": base64.b64encode(json.dumps(
+            {"state": state, "done": s1["w"], "left": left, "why": why, "text": (tag + "\n" + text).strip()[:3000]},
+            ensure_ascii=False).encode()).decode()}
+        try:
+            with urllib.request.urlopen(urllib.request.Request(u + "?ref=" + BRANCH, headers=_H), timeout=60) as r:
+                b["sha"] = json.load(r)["sha"]
+        except urllib.error.HTTPError:
+            pass
+        urllib.request.urlopen(urllib.request.Request(u, data=json.dumps(b).encode(), headers=_H, method="PUT"), timeout=60)
+        print("（这几行也告诉单词工作台了）")
+    except Exception as e:
+        print("（没告诉上单词工作台：%s，不要紧）" % str(e)[:120])
 
 
 def _outbox():             # 单词工作台写回来的检查结果（每个词：过了没有、第几次、还要补什么）
@@ -1665,11 +1737,27 @@ def _next(s0, n):          # 传完（或者“看结果”）：打印检查结
         return
     if slow and not ob.get("done"):
         print("这一批都传完了，还有 %d 个在等检查结果：过一两分钟运行一次 python upload.py 看结果（或者把 MODE 改成 \"看结果\" 运行），照它说的做。" % len(slow))
+        print("要是这一轮回复只能先停在这里：把下面几行原样回在聊天里")
+        _report("wait", "", "还有 %d 个在等单词工作台的检查结果：%s" % (len(slow), "、".join(slow[:20])))
         return
+    bad = [w for w in WORDS if not (V.get(w) or {"ok": True}).get("ok")]
+    txt = REPORT.replace("{k}", str(s0["k"])).replace("{list}", "、".join(w + (" ✗" if w in bad else " ✓") for w in WORDS))
     print()
     print("【最后汇报：这一批全部传完了，把下面几行原样回在聊天里】")
-    print(REPORT.replace("{k}", str(s0["k"])).replace("{list}", "、".join(
-        w + (" ✓" if (V.get(w) or {"ok": True}).get("ok") else " ✗") for w in WORDS)))
+    _report("done", ("没过 %d 个：%s" % (len(bad), "、".join(bad))) if bad else "", txt)
+    print(txt)
+
+
+if PARTS and MODE == "汇报":
+    _s0 = _sent()
+    _left = [w for w in WORDS if w not in _s0["w"]]
+    _why = " ".join(a for a in _s.argv[1:] if a not in ("汇报", "report"))[:300]
+    _txt = (PARTIAL.replace("{cum}", str(len(_s0["w"]))).replace("{done}", "、".join(w + " ✓" for w in _s0["w"]) or "还没有")
+            .replace("{left}", str(len(_left))).replace("{rest}", "、".join(_left[:30]) + ("…" if len(_left) > 30 else "")))
+    print("【汇报：把下面几行原样回在聊天里】")
+    _report("stop", _why, _txt)
+    print(_txt)
+    raise SystemExit
 
 
 if PARTS and MODE == "看结果":
@@ -1681,28 +1769,7 @@ if PARTS and MODE == "看结果":
     raise SystemExit
 
 
-if PARTS and MODE == "汇报":
-    _s0 = _sent()
-    _left = [w for w in WORDS if w not in _s0["w"]]
-    print("【汇报：把下面几行原样回在聊天里】")
-    print(PARTIAL.replace("{cum}", str(len(_s0["w"]))).replace("{done}", "、".join(w + " ✓" for w in _s0["w"]) or "还没有")
-          .replace("{left}", str(len(_left))).replace("{rest}", "、".join(_left[:30]) + ("…" if len(_left) > 30 else "")))
-    try:                   # 也告诉单词工作台：停下了，写到哪儿、还剩哪些（它那边出“继续”的按钮）
-        _why = " ".join(a for a in _s.argv[1:] if a not in ("汇报", "report"))[:300]
-        _b = {"message": "接力：停下了", "branch": BRANCH, "content": base64.b64encode(json.dumps(
-            {"done": _s0["w"], "left": _left, "why": _why}, ensure_ascii=False).encode()).decode()}
-        _u = "https://api.github.com/repos/%s/contents/%s-stop.json" % (REPO, NAME)
-        _h = {"Authorization": "Bearer " + TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "wordsvideo-relay"}
-        try:
-            with urllib.request.urlopen(urllib.request.Request(_u + "?ref=" + BRANCH, headers=_h), timeout=60) as r:
-                _b["sha"] = json.load(r)["sha"]
-        except urllib.error.HTTPError:
-            pass
-        urllib.request.urlopen(urllib.request.Request(_u, data=json.dumps(_b).encode(), headers=_h, method="PUT"), timeout=60)
-        print("（已经告诉单词工作台停下了）")
-    except Exception as e:
-        print("（没告诉上单词工作台：%s，不要紧）" % str(e)[:120])
-    raise SystemExit
+
 FILE = "reply.txt"         # 你把回复写进的文件；放在别处就改成那个路径
 _c = [d + FILE for d in ("", "/home/claude/", "/mnt/user-data/outputs/", "/tmp/") if os.path.exists(d + FILE)]
 if _c:
@@ -2025,7 +2092,7 @@ def relay_partial(info):
     """写到一半对话写不下了、要停下时的汇报（{cum} {done} {left} {rest} 由上传脚本填）。"""
     n = len(info.get("words") or [])
     return ("⏸ 这一批 %d 个词：已经上传 {cum} 个（{done}），还没写 {left} 个：{rest}\n"
-            "→ 停下了：回到单词工作台点「继续」（同一个对话还能写就点「在这个对话里接着写」，写不下了点「开新对话继续」）" % n)
+            "→ 停下了：单词工作台黄框第 ③ 步会出「继续」——对话还能写，点「在原来的对话里接着写」；写不下了，点「开新对话」" % n)
 
 
 def inbox_prompt(name, info=None):
@@ -2055,7 +2122,9 @@ def inbox_prompt(name, info=None):
                 "✓ 的不用管；✗ 的**马上改**：照“还要补”的每一条改好，把这个词完整重写一遍，再写进 reply.txt 运行同一段脚本传上去（每个词最多改 %d 次）。"
                 "改好了再接着写下一个。这样每个词交出去就是过了检查的，老师不用回来补。\n"
                 "4. 上传好了、改好了都**不用在聊天里汇报**，一直写到这一批 %d 个词全部传完、都过了检查（不用等我说“继续”）。"
-                "全部做完时，脚本会打印【最后汇报】：这时才在聊天里把那几行原样回给我——整批只汇报这一次。\n"
+                "全部做完时，脚本会打印【最后汇报】（第一行是【单词工作台·汇报】）：这时才在聊天里把那几行原样回给我——整批只汇报这一次。"
+                "**每一轮回复结束前，最后一件事都是运行脚本、把它打印的【单词工作台·汇报】那几行原样回给我**（写完了脚本自己会打印；要停下就用下面第 5 条）；"
+                "脚本同时会把这几行告诉单词工作台，软件靠它知道你写到哪儿、是写完了还是停下了。\n"
                 "5. 写到一半对话太长、写不下了（或者这一次回复写不下了、要停下）：先把已经写好的传上去，再把脚本里的 MODE 改成 \"汇报\" 运行一次"
                 "（或者运行 python upload.py 汇报 一句话原因），它会告诉单词工作台你停在哪儿；把它打印的几行回给我。我会让你接着写，或者开新对话把剩下的词给你。\n"
                 "6. 没有代码执行工具、或者上传失败了：就照常把写好的完整回复直接写在聊天里（最后一行 %s），并说明上传失败的原因，我会点「复制」交回。"
@@ -2316,9 +2385,17 @@ def relay_submit(rid, reply, skip=False):
             RELAY["status"] = "跳过"
             RELAY_SKIP.update(RELAY["words"])
             return True, "跳过了这一批（这些词算没过，会进“没过的词”）"
-        if len((reply or "").strip()) < 50:
+        m = REPORT_TAG.search(reply or "")
+        is_report = bool(m) and not re.search(r"^[ \t>*#_]*[@＠]\s*[A-Za-z]", reply or "", re.M)
+        if not is_report and len((reply or "").strip()) < 50:
             return False, "交回来的太短了：要把网页 AI 的整段回复都复制过来"
-        RELAY.update(status="交回了", reply=reply)
+        if not is_report:
+            RELAY.update(status="交回了", reply=reply)
+    if is_report:
+        st = {"写完了": "done", "停下了": "stop", "等检查结果": "wait"}[m.group(1)]
+        w = re.search(r"原因[:：]\s*([^\n｜]+)", reply)
+        relay_ai_report({"state": st, "text": reply[m.start():].strip(), "why": w.group(1).strip() if w else ""}, pasted=True)
+        return True, "认出来了：这是网页 AI 的汇报（%s），黄框照这个判断进度" % m.group(1)
     return True, "收到了，程序在检查"
 
 
