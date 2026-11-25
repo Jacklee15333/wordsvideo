@@ -1,0 +1,1025 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "mɔː"
+ ],
+ "originPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/desk.svg",
+    "x": 0.5,
+    "y": 0.93,
+    "s": 0.34,
+    "z": 4
+   },
+   {
+    "svg": "art/apple-plate.svg",
+    "x": 0.26,
+    "y": 0.72,
+    "s": 0.28,
+    "z": 5
+   },
+   {
+    "ray": [
+     [
+      0.38,
+      0.6
+     ],
+     [
+      0.5,
+      0.6
+     ]
+    ],
+    "color": "#C9A85A",
+    "lw": 0.014,
+    "arrow": true,
+    "dur": 0.7,
+    "delay": 0.5
+   },
+   {
+    "svg": "art/apple-basket.svg",
+    "x": 0.66,
+    "y": 0.6,
+    "s": 0.3,
+    "s2": 0.58,
+    "grow": [
+     0.8,
+     2.0
+    ],
+    "z": 5,
+    "anim": "pulse"
+   },
+   {
+    "emit": true,
+    "svg": "art/star.svg",
+    "x": 0.66,
+    "y": 0.3,
+    "every": 0.9,
+    "life": 1.6,
+    "to": [
+     0,
+     -0.25
+    ],
+    "s": 0.08,
+    "spin": true,
+    "delay": 1.4
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "更多的",
+   "pos": "形容词",
+   "diff": "在原来那些上再添一些",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.93,
+     "s": 0.34,
+     "z": 4
+    },
+    {
+     "svg": "art/apple-plate.svg",
+     "x": 0.24,
+     "y": 0.72,
+     "s": 0.28,
+     "z": 5
+    },
+    {
+     "svg": "art/apple-basket.svg",
+     "x": 0.56,
+     "y": 0.6,
+     "s": 0.56,
+     "z": 5,
+     "anim": "pulse",
+     "shadow": true
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.56,
+     "y": 0.3,
+     "every": 0.9,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.25
+     ],
+     "s": 0.08,
+     "spin": true
+    },
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.84,
+     "y": 0.56,
+     "s": 0.92,
+     "z": 3
+    }
+   ],
+   "ex": "There are more apples in this basket.",
+   "exzh": "这个篮子里的苹果更多。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.3,
+      "z": 4
+     },
+     {
+      "svg": "art/apple-plate.svg",
+      "x": 0.24,
+      "y": 0.74,
+      "s": 0.3,
+      "z": 5,
+      "when": "apples"
+     },
+     {
+      "svg": "art/apple-basket.svg",
+      "x": 0.55,
+      "y": 0.6,
+      "s": 0.6,
+      "z": 5,
+      "when": "more",
+      "pop": true,
+      "shadow": true,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.55,
+      "y": 0.28,
+      "every": 0.9,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "spin": true,
+      "when": "more"
+     },
+     {
+      "actor": "west-man-point",
+      "x": 0.85,
+      "y": 0.56,
+      "s": 0.92,
+      "z": 3,
+      "id": "m",
+      "seq": "talk"
+     },
+     {
+      "label": "more apples",
+      "x": 0.55,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "more apples",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "更多",
+      "x": 0.24,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "更多"
+     }
+    ]
+   }
+  },
+  {
+   "text": "更",
+   "pos": "副词",
+   "diff": "放在形容词、副词前，程度再进一步",
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/sofa.svg",
+     "x": 0.5,
+     "y": 0.82,
+     "s": 0.38,
+     "z": 2
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.24,
+     "y": 0.7,
+     "s": 0.24,
+     "z": 4,
+     "anim": "bob"
+    },
+    {
+     "actor": "west-clerk-happy",
+     "x": 0.55,
+     "y": 0.55,
+     "s": 0.95,
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2
+    },
+    {
+     "svg": "art/bar-chart.svg",
+     "x": 0.84,
+     "y": 0.36,
+     "s": 0.34,
+     "z": 3,
+     "anim": "pulse"
+    }
+   ],
+   "ex": "This story is more interesting than that one.",
+   "exzh": "这个故事比那个更有趣。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.5,
+      "y": 0.84,
+      "s": 0.36,
+      "z": 2
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.18,
+      "y": 0.72,
+      "s": 0.3,
+      "z": 4,
+      "when": "that one"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.52,
+      "y": 0.56,
+      "s": 0.94,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2.5,
+      "when": "story"
+     },
+     {
+      "svg": "art/essay.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.48,
+      "z": 4,
+      "when": "This story",
+      "anim": "bob"
+     },
+     {
+      "label": "more interesting",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "more interesting",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "更有趣",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "更有趣"
+     }
+    ]
+   }
+  },
+  {
+   "text": "再、又",
+   "pos": "副词",
+   "diff": "已经有过一次，再添一次",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.36,
+     "y": 0.55,
+     "s": 0.95,
+     "z": 3,
+     "id": "t",
+     "seq": "talk"
+    },
+    {
+     "waves": true,
+     "on": "t",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#2F6FB3",
+     "with": "t"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 5
+    },
+    {
+     "svg": "art/essay.svg",
+     "x": 0.78,
+     "y": 0.45,
+     "s": 0.45,
+     "z": 4,
+     "anim": "bob"
+    }
+   ],
+   "ex": "Please read it once more.",
+   "exzh": "请再读一遍。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.25,
+      "y": 0.55,
+      "s": 0.92,
+      "z": 3,
+      "id": "t2",
+      "nodWith": "g",
+      "seq": "blink"
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.62,
+      "y": 0.56,
+      "s": 0.92,
+      "z": 3,
+      "id": "g",
+      "seq": "talk",
+      "talkWhen": "read"
+     },
+     {
+      "waves": true,
+      "on": "g",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#2F6FB3",
+      "with": "g"
+     },
+     {
+      "svg": "art/essay.svg",
+      "x": 0.86,
+      "y": 0.48,
+      "s": 0.42,
+      "z": 4,
+      "when": "read it",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.28,
+      "z": 5
+     },
+     {
+      "label": "once more",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "once more",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "再读一遍",
+      "x": 0.86,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "再读一遍"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“更大、更多”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.93,
+      "s": 0.34,
+      "z": 4
+     },
+     {
+      "svg": "art/apple-plate.svg",
+      "x": 0.26,
+      "y": 0.72,
+      "s": 0.28,
+      "z": 5
+     },
+     {
+      "ray": [
+       [
+        0.38,
+        0.6
+       ],
+       [
+        0.5,
+        0.6
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "delay": 0.6
+     },
+     {
+      "svg": "art/apple-basket.svg",
+      "x": 0.68,
+      "y": 0.6,
+      "s": 0.3,
+      "s2": 0.58,
+      "grow": [
+       0.9,
+       2.2
+      ],
+      "z": 5,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.68,
+      "y": 0.3,
+      "every": 0.9,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "spin": true,
+      "delay": 1.5
+     }
+    ]
+   }
+  },
+  {
+   "via": "在已有的那一堆上再添一些",
+   "node": "① 更多的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "在原来那一堆上，再添一些，东西就更多了，这就是更多的。",
+    "苹果这样数得清的，水这样数不清的，都能用 more。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.93,
+      "s": 0.34,
+      "z": 4
+     },
+     {
+      "svg": "art/apple-plate.svg",
+      "x": 0.26,
+      "y": 0.72,
+      "s": 0.3,
+      "z": 5,
+      "when": "原来那一堆",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/apple-basket.svg",
+      "x": 0.64,
+      "y": 0.6,
+      "s": 0.56,
+      "z": 5,
+      "when": "再添一些",
+      "pop": true,
+      "anim": "pulse",
+      "hideCue": 1
+     },
+     {
+      "label": "更多的",
+      "x": 0.64,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "更多的",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.42,
+      "z": 5,
+      "cue": 1,
+      "when": "苹果",
+      "anim": "bob"
+     },
+     {
+      "label": "数得清",
+      "x": 0.3,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "数得清"
+     },
+     {
+      "svg": "art/glass.svg",
+      "x": 0.7,
+      "y": 0.58,
+      "s": 0.5,
+      "z": 5,
+      "cue": 1,
+      "when": "水",
+      "anim": "bob"
+     },
+     {
+      "label": "数不清",
+      "x": 0.7,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "数不清"
+     },
+     {
+      "label": "more",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "都能用 more",
+      "bg": "#FFF6D8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "放在形容词前，程度再进一步",
+   "node": "② 更",
+   "pos": "副词",
+   "pic": 1,
+   "say": [
+    "more 放在形容词前面，说的就不是东西多了，是程度再往上走一步，这就是更。",
+    "interesting 是有趣，more interesting 就是更有趣。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "label": "形容词",
+      "x": 0.2,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "形容词",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/bar-chart.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.62,
+      "z": 3,
+      "when": "程度",
+      "pop": true,
+      "hideCue": 1
+     },
+     {
+      "label": "更",
+      "x": 0.82,
+      "y": 0.14,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "这就是更",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.42,
+      "z": 3,
+      "cue": 1,
+      "when": "interesting",
+      "anim": "bob"
+     },
+     {
+      "label": "有趣",
+      "x": 0.26,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "有趣",
+      "cue": 1
+     },
+     {
+      "ray": [
+       [
+        0.42,
+        0.55
+       ],
+       [
+        0.58,
+        0.55
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "more interesting",
+      "cue": 1
+     },
+     {
+      "svg": "art/essay.svg",
+      "x": 0.76,
+      "y": 0.55,
+      "s": 0.5,
+      "z": 3,
+      "cue": 1,
+      "when": "more interesting",
+      "anim": "pulse"
+     },
+     {
+      "label": "更有趣",
+      "x": 0.76,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "更有趣",
+      "cue": 1
+     }
+    ]
+   }
+  },
+  {
+   "via": "已经有过一次，再添一次",
+   "node": "③ 再、又",
+   "pos": "副词",
+   "pic": 2,
+   "say": [
+    "已经做过一次，再添一次，就是再、又。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/essay.svg",
+      "x": 0.28,
+      "y": 0.55,
+      "s": 0.5,
+      "z": 3,
+      "when": "做过一次"
+     },
+     {
+      "ray": [
+       [
+        0.44,
+        0.55
+       ],
+       [
+        0.56,
+        0.55
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "再添一次"
+     },
+     {
+      "svg": "art/essay.svg",
+      "x": 0.72,
+      "y": 0.55,
+      "s": 0.5,
+      "z": 3,
+      "when": "再添一次",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "label": "再",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "就是再"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "更多的、再",
+  "items": [
+   {
+    "w": "more",
+    "m": "更多的；再",
+    "say": "more 说数量多：在原来那些上面再添一些；once more 是再一次。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/apple-plate.svg",
+       "x": 0.3,
+       "y": 0.62,
+       "s": 0.5
+      },
+      {
+       "svg": "art/apple-basket.svg",
+       "x": 0.62,
+       "y": 0.55,
+       "s": 0.8,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.62,
+       "y": 0.25,
+       "every": 0.9,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "spin": true
+      }
+     ]
+    },
+    "text": "more 说数量多：在原来那些上面再添一些；once more 是再一次。",
+    "diff": "more 说数量多：在原来那些上面再添一些；once more 是再一次。",
+    "line": "more 说数量多：在原来那些上面再添一些；once more 是再一次。",
+    "word": "more"
+   },
+   {
+    "w": "further",
+    "m": "更远的、更进一步的",
+    "say": "further 说更远、更进一步：路再往前走，事再往深里做。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/street-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.15,
+       "y": 0.6,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.15,
+         0.6
+        ],
+        "to": [
+         0.95,
+         0.6
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "svg": "art/speed-sign.svg",
+       "x": 0.86,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "bob"
+      },
+      {
+       "ray": [
+        [
+         0.2,
+         0.18
+        ],
+        [
+         0.75,
+         0.18
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.7,
+       "delay": 0.4
+      }
+     ]
+    },
+    "text": "further 说更远、更进一步：路再往前走，事再往深里做。",
+    "diff": "further 说更远、更进一步：路再往前走，事再往深里做。",
+    "line": "further 说更远、更进一步：路再往前走，事再往深里做。",
+    "word": "further"
+   },
+   {
+    "w": "again",
+    "m": "再、又",
+    "say": "again 说同一件事又做一遍，重在重复。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/bedroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 6,
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.75
+      },
+      {
+       "waves": true,
+       "x": 0.62,
+       "y": 0.45,
+       "dir": 0,
+       "n": 3,
+       "period": 1.4,
+       "color": "#2F6FB3"
+      },
+      {
+       "waves": true,
+       "x": 0.38,
+       "y": 0.45,
+       "dir": 180,
+       "n": 3,
+       "period": 1.4,
+       "color": "#2F6FB3"
+      }
+     ]
+    },
+    "text": "again 说同一件事又做一遍，重在重复。",
+    "diff": "again 说同一件事又做一遍，重在重复。",
+    "line": "again 说同一件事又做一遍，重在重复。",
+    "word": "again"
+   }
+  ],
+  "logic": "逻辑不同：more 从“多”出发，further 从“远”出发，again 从“又一次”出发。",
+  "tip": "much 和 many 要分可数不可数，more 两样都管；更：more 和 still 都能说，still 多放在比较级前面加强语气。"
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人还想要什么？",
+    "listen": "Can I have some more rice, please?",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "再要一些汤",
+     "再要一些米饭",
+     "一杯水",
+     "一些水果"
+    ],
+    "ans": "B",
+    "why": "some more rice 再来一些米饭。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "There are ______ than 50 students in the hall.",
+    "opts": [
+     "more",
+     "most",
+     "much",
+     "many"
+    ],
+    "ans": "A",
+    "why": "more than 多于。",
+    "kd": "短语"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 more、most 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "______ of my friends like football.",
+    "opts": [],
+    "ans": "Most",
+    "why": "“大多数”用 most (of)。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "This is the ______ exciting game I've ever seen. (much)",
+    "opts": [],
+    "ans": "most",
+    "why": "the + 最高级 most。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Please say it once mores.",
+    "opts": [],
+    "ans": "mores → more",
+    "why": "once more 再一次，more 不加 s。",
+    "kd": "短语"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "天气越来越暖和了。",
+    "stem": "It's getting ______ and ______.",
+    "opts": [],
+    "ans": [
+     "warmer",
+     "warmer"
+    ],
+    "why": "“越来越……”用“比较级 and 比较级”。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "This bag is ______ expensive than that one.",
+    "opts": [
+     "more much",
+     "very more",
+     "much more",
+     "many more"
+    ],
+    "ans": "C",
+    "why": "much 修饰比较级，放在 more 前面：much more expensive。",
+    "kd": "用法"
+   }
+  ]
+ }
+}

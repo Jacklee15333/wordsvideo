@@ -1,7 +1,574 @@
 {
  "单词": "moreover",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "mɔːr",
+   "ˈəʊ",
+   "və"
+  ],
+  "kaodian": {
+   "rows": [
+    "【意思】moreover 而且、此外（书面语，引出更进一步的理由）",
+    "【位置】多放在句首，后面加逗号：The park is beautiful. Moreover, it is free.",
+    "【易混】moreover、furthermore 偏正式书面语；besides 口语常用，带“况且”的语气；in addition 中性"
+   ]
+  },
+  "pics": [
+   {
+    "text": "而且、此外",
+    "pos": "副词",
+    "diff": "说完一条理由，再叠一条更有分量的",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.93,
+      "s": 0.34,
+      "z": 4
+     },
+     {
+      "svg": "art/essay.svg",
+      "x": 0.42,
+      "y": 0.58,
+      "s": 0.6,
+      "z": 5,
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.8,
+      "y": 0.56,
+      "s": 0.9,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.14,
+      "y": 0.74,
+      "s": 0.22,
+      "z": 5,
+      "anim": "bob"
+     }
+    ]
+   }
+  ],
+  "flow": [
+   {
+    "node": "“在刚才说的上面，再多加一层”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.93,
+       "s": 0.34,
+       "z": 4
+      },
+      {
+       "svg": "art/essay.svg",
+       "x": 0.36,
+       "y": 0.58,
+       "s": 0.6,
+       "z": 5
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.78,
+       "y": 0.8,
+       "s": 0.2,
+       "go": [
+        0.78,
+        0.66
+       ],
+       "dur": 1.2,
+       "delay": 0.6,
+       "z": 5,
+       "pop": true
+      }
+     ]
+    }
+   },
+   {
+    "via": "两个小词合成一个新词",
+    "node": "“再多加一层”",
+    "rule": "两个小词合成一个新词，意思由两个小词合起来",
+    "ruleEx": "more + over → moreover      with + out → without",
+    "say": [
+     "两个小词合成一个新词，意思由两个小词合起来。",
+     "with 加 out，就是 without，没有。",
+     "more 加 over，就是在刚才说的上面，再多加一层。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/apple-basket.svg",
+       "x": 0.27,
+       "y": 0.55,
+       "s": 0.45,
+       "z": 3,
+       "when": "两个小词",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/over.svg",
+       "x": 0.73,
+       "y": 0.55,
+       "s": 0.48,
+       "z": 3,
+       "when": "合成一个新词",
+       "hideCue": 1
+      },
+      {
+       "label": "合起来",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "合起来",
+       "hideCue": 1
+      },
+      {
+       "label": "with",
+       "x": 0.2,
+       "y": 0.42,
+       "size": 0.1,
+       "color": "#7A3E00",
+       "border": "#7A3E00",
+       "when": "with",
+       "bg": "#FFF6D8",
+       "hideCue": 2
+      },
+      {
+       "label": "out",
+       "x": 0.42,
+       "y": 0.42,
+       "size": 0.1,
+       "color": "#7A3E00",
+       "border": "#7A3E00",
+       "when": "out",
+       "bg": "#FFF6D8",
+       "cue": 1,
+       "hideCue": 2
+      },
+      {
+       "ray": [
+        [
+         0.52,
+         0.42
+        ],
+        [
+         0.62,
+         0.42
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.7,
+       "when": "without",
+       "cue": 1,
+       "hideCue": 2
+      },
+      {
+       "label": "without",
+       "x": 0.78,
+       "y": 0.42,
+       "size": 0.1,
+       "color": "#7A3E00",
+       "border": "#7A3E00",
+       "when": "without",
+       "bg": "#FFF6D8",
+       "hideCue": 2
+      },
+      {
+       "label": "没有",
+       "x": 0.78,
+       "y": 0.62,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "没有",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/essay.svg",
+       "x": 0.3,
+       "y": 0.56,
+       "s": 0.56,
+       "z": 3,
+       "cue": 2,
+       "when": "刚才说的"
+      },
+      {
+       "svg": "art/over.svg",
+       "x": 0.72,
+       "y": 0.56,
+       "s": 0.48,
+       "z": 3,
+       "cue": 2,
+       "when": "over",
+       "anim": "pulse"
+      },
+      {
+       "label": "再多加一层",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "再多加一层"
+      }
+     ]
+    }
+   },
+   {
+    "via": "说完一条理由，又叠一条更有分量的",
+    "node": "而且、此外",
+    "pos": "副词",
+    "pic": 0,
+    "say": [
+     "说完一条理由，又往上叠一条更有分量的，就是而且、此外，多用在书面上。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.93,
+       "s": 0.34,
+       "z": 4
+      },
+      {
+       "svg": "art/essay.svg",
+       "x": 0.38,
+       "y": 0.58,
+       "s": 0.6,
+       "z": 5,
+       "when": "一条理由",
+       "pop": true
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.78,
+       "y": 0.8,
+       "s": 0.22,
+       "go": [
+        0.78,
+        0.66
+       ],
+       "dur": 1.0,
+       "when": "往上叠",
+       "z": 5
+      },
+      {
+       "label": "而且",
+       "x": 0.78,
+       "y": 0.14,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "而且"
+      },
+      {
+       "label": "书面",
+       "x": 0.38,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "书面"
+      }
+     ]
+    }
+   }
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.93,
+      "s": 0.34,
+      "z": 4
+     },
+     {
+      "svg": "art/apple-plate.svg",
+      "x": 0.24,
+      "y": 0.74,
+      "s": 0.24,
+      "z": 5
+     },
+     {
+      "svg": "art/apple-basket.svg",
+      "x": 0.6,
+      "y": 0.6,
+      "s": 0.3,
+      "s2": 0.56,
+      "grow": [
+       0.5,
+       1.8
+      ],
+      "z": 5,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/over.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.62,
+      "z": 3,
+      "anim": "pulse"
+     },
+     {
+      "ray": [
+       [
+        0.2,
+        0.8
+       ],
+       [
+        0.5,
+        0.15
+       ],
+       [
+        0.8,
+        0.8
+       ]
+      ],
+      "color": "#2F6FB3",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 1.4,
+      "delay": 0.4
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-apple-basket.svg",
+   "p1": "art/icon-over.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.93,
+     "s": 0.34,
+     "z": 4
+    },
+    {
+     "svg": "art/essay.svg",
+     "x": 0.38,
+     "y": 0.58,
+     "s": 0.58,
+     "z": 5
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.78,
+     "y": 0.82,
+     "s": 0.2,
+     "go": [
+      0.78,
+      0.66
+     ],
+     "dur": 1.2,
+     "delay": 0.4,
+     "z": 5
+    }
+   ]
+  },
+  "distinguish": {
+   "key": "此外、而且",
+   "items": [
+    {
+     "w": "moreover",
+     "m": "而且、此外",
+     "say": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/essay.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.85,
+        "anim": "pulse"
+       }
+      ]
+     },
+     "text": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "diff": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "line": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "note": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "desc": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "explain": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "sentence": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "talk": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "speech": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "zh": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "cn": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "why": "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。",
+     "lines": [
+      "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。"
+     ],
+     "says": [
+      "moreover 是而且、此外，偏正式，多在作文、文章里引出更进一步的理由。"
+     ],
+     "word": "moreover"
+    },
+    {
+     "w": "furthermore",
+     "m": "此外",
+     "say": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/park-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/way.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.85
+       },
+       {
+        "ray": [
+         [
+          0.3,
+          0.8
+         ],
+         [
+          0.7,
+          0.2
+         ]
+        ],
+        "color": "#C9A85A",
+        "lw": 0.014,
+        "arrow": true,
+        "dur": 0.7,
+        "delay": 0.3
+       }
+      ]
+     },
+     "text": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "diff": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "line": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "note": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "desc": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "explain": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "sentence": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "talk": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "speech": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "zh": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "cn": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "why": "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。",
+     "lines": [
+      "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。"
+     ],
+     "says": [
+      "furthermore 也是此外，比 moreover 还要正式，像是再往前推一步。"
+     ],
+     "word": "furthermore"
+    },
+    {
+     "w": "besides",
+     "m": "况且、此外",
+     "say": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/apple-plate.svg",
+        "x": 0.4,
+        "y": 0.55,
+        "s": 0.7
+       },
+       {
+        "svg": "art/apple.svg",
+        "x": 0.72,
+        "y": 0.5,
+        "s": 0.45,
+        "go": [
+         0.62,
+         0.5
+        ],
+        "dur": 1,
+        "delay": 0.5,
+        "pop": true
+       }
+      ]
+     },
+     "text": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "diff": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "line": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "note": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "desc": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "explain": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "sentence": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "talk": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "speech": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "zh": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "cn": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "why": "besides 口语常用，带着况且的语气，比如 Besides, it's too late.",
+     "lines": [
+      "besides 口语常用，带着况且的语气，比如 Besides, it's too late."
+     ],
+     "says": [
+      "besides 口语常用，带着况且的语气，比如 Besides, it's too late."
+     ],
+     "word": "besides"
+    }
+   ],
+   "logic": "逻辑不同：moreover 是 more 加 over，再加一层；furthermore 是 further 加 more，再往前推；besides 是放在旁边，再加一样。",
+   "tip": "in addition 语气中性；also、likewise 也能说而且。"
+  }
+ },
+ "插图": [
+  "moreoverai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人为什么喜欢这家店？\n听：The food is good. Moreover, it's cheap.\nA. 饭菜很贵\nB. 服务很慢\nC. 饭菜好吃而且便宜\nD. 店很远",
@@ -88,5 +655,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
