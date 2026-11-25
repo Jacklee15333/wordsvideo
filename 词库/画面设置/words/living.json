@@ -604,18 +604,42 @@
    "pos": "形容词",
    "pic": 2,
    "from": 0,
+   "rule": "动词加 -ing，也能放在名词前当形容词，说正在…的",
+   "ruleEx": "sleep 睡 → a sleeping baby 正在睡的宝宝      live 活 → a living fish 活鱼",
    "say": [
-    "当形容词，正活着的，就是活着的；石头雕像就不是 living。"
+    "动词加上 ing，也能放在名词前当形容词，说正在怎么样的：a sleeping baby，正在睡的宝宝。",
+    "living 也一样：正活着的，就是活着的；石头雕像就不是 living。"
    ],
    "fig": {
     "bg": "blank",
     "img": "art/room-bg.svg",
     "items": [
      {
+      "label": "sleep → a sleeping baby",
+      "x": 0.5,
+      "y": 0.4,
+      "size": 0.09,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "sleeping baby",
+      "hideCue": 1
+     },
+     {
+      "label": "正在睡的宝宝",
+      "x": 0.5,
+      "y": 0.6,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "正在睡的宝宝",
+      "hideCue": 1
+     },
+     {
       "svg": "art/sprout.svg",
       "x": 0.3,
       "y": 0.56,
       "s": 0.56,
+      "cue": 1,
       "when": "正活着",
       "anim": "pulse"
      },
@@ -634,6 +658,7 @@
       "size": 0.09,
       "color": "#2B8A3E",
       "border": "#2B8A3E",
+      "cue": 1,
       "when": "活着的"
      }
     ]
@@ -918,7 +943,8 @@
       "x": 0.5,
       "y": 0.55,
       "s": 0.62,
-      "reveal": "right"
+      "reveal": "right",
+      "anim": "pulse"
      }
     ]
    },

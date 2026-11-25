@@ -950,6 +950,68 @@
    }
   }
  },
+ "demo": {
+  "careful": {
+   "icons": [
+    "art/ic-heart.svg",
+    "art/ic-b_ful.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/glass.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "小心的"
+  },
+  "careless": {
+   "icons": [
+    "art/ic-heart.svg",
+    "art/ic-b_less.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/mess.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "粗心的"
+  },
+  "friendly": {
+   "icons": [
+    "art/ic-heart.svg",
+    "art/ic-b_ly.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/gift.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "bob"
+     }
+    ]
+   },
+   "lit": "友好的"
+  }
+ },
  "lianxi": {
   "qs": [
    {
