@@ -1,0 +1,897 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "运货马车；（英）铁路货车车皮；（美）旅行车；儿童小拉车"
+ },
+ "sylIpa": [
+  "ˈwæɡən"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/farm-bg.svg",
+   "items": [
+    {
+     "svg": "art/horse-wagon.svg",
+     "x": 0.3,
+     "y": 0.62,
+     "s": 0.5,
+     "go": [
+      0.7,
+      0.62
+     ],
+     "dur": 4,
+     "loop": true,
+     "anim": "ride"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-horse-wagon.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/farm-bg.svg",
+  "items": [
+   {
+    "svg": "art/horse-wagon.svg",
+    "x": 0.3,
+    "y": 0.62,
+    "s": 0.52,
+    "go": [
+     0.7,
+     0.62
+    ],
+    "dur": 4,
+    "loop": true,
+    "anim": "ride"
+   },
+   {
+    "label": "运东西的车",
+    "x": 0.15,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "运货马车",
+   "pos": "名词",
+   "diff": "马拉着的四轮大车",
+   "bg": "blank",
+   "img": "art/farm-bg.svg",
+   "items": [
+    {
+     "svg": "art/horse-wagon.svg",
+     "x": 0.3,
+     "y": 0.62,
+     "s": 0.55,
+     "go": [
+      0.7,
+      0.62
+     ],
+     "dur": 4,
+     "loop": true,
+     "anim": "ride"
+    }
+   ],
+   "ex": "The horse pulled a wagon of hay.",
+   "exzh": "马拉着一车干草。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/horse-wagon.svg",
+      "x": 0.25,
+      "y": 0.62,
+      "s": 0.55,
+      "go": [
+       0.7,
+       0.62
+      ],
+      "dur": 3.5,
+      "when": "pulled",
+      "anim": "ride"
+     },
+     {
+      "label": "a wagon of hay",
+      "x": 0.8,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "a wagon of hay"
+     },
+     {
+      "label": "一车干草",
+      "x": 0.8,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "一车干草"
+     }
+    ]
+   }
+  },
+  {
+   "text": "铁路货车车皮",
+   "pos": "名词",
+   "diff": "（英）铁路上装货的车厢",
+   "bg": "blank",
+   "img": "art/station-bg.svg",
+   "items": [
+    {
+     "svg": "art/freight-car.svg",
+     "x": 0.1,
+     "y": 0.72,
+     "s": 0.46,
+     "go": [
+      0.6,
+      0.72
+     ],
+     "dur": 4,
+     "loop": true
+    },
+    {
+     "y": 0.86,
+     "s": 0.46,
+     "actor": "walk-west-woman-case",
+     "x": -0.1,
+     "walk": {
+      "from": [
+       -0.1,
+       0.86
+      ],
+      "to": [
+       1.1,
+       0.86
+      ],
+      "offset": 0
+     },
+     "z": 5
+    }
+   ],
+   "ex": "The train has twenty wagons.",
+   "exzh": "这列火车有二十节车皮。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/freight-car.svg",
+      "x": -0.2,
+      "y": 0.75,
+      "s": 0.42,
+      "go": [
+       0.4,
+       0.75
+      ],
+      "dur": 3,
+      "when": "train"
+     },
+     {
+      "svg": "art/freight-car.svg",
+      "x": -0.8,
+      "y": 0.75,
+      "s": 0.42,
+      "go": [
+       -0.2,
+       0.75
+      ],
+      "dur": 3,
+      "when": "train"
+     },
+     {
+      "label": "twenty wagons",
+      "x": 0.78,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "twenty wagons"
+     },
+     {
+      "label": "二十节车皮",
+      "x": 0.78,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "二十节车皮"
+     }
+    ]
+   }
+  },
+  {
+   "text": "旅行车",
+   "pos": "名词",
+   "diff": "（美）后半截能装行李的汽车",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/station-wagon.svg",
+     "x": 0.45,
+     "y": 0.72,
+     "s": 0.46,
+     "anim": "ride"
+    },
+    {
+     "svg": "art/suitcase.svg",
+     "x": 0.85,
+     "y": 0.72,
+     "s": 0.3
+    },
+    {
+     "y": 0.86,
+     "s": 0.46,
+     "actor": "walk-cn-boy-pack",
+     "x": 1.1,
+     "walk": {
+      "from": [
+       1.1,
+       0.86
+      ],
+      "to": [
+       -0.1,
+       0.86
+      ],
+      "offset": 0
+     },
+     "z": 5
+    }
+   ],
+   "ex": "We put our bags in the station wagon.",
+   "exzh": "我们把包放进旅行车。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/station-wagon.svg",
+      "x": 0.4,
+      "y": 0.72,
+      "s": 0.48
+     },
+     {
+      "svg": "art/suitcase.svg",
+      "x": 0.9,
+      "y": 0.7,
+      "s": 0.3,
+      "go": [
+       0.62,
+       0.62
+      ],
+      "dur": 1.2,
+      "when": "put"
+     },
+     {
+      "x": 0.85,
+      "y": 0.6,
+      "s": 0.58,
+      "z": 4,
+      "when": "We",
+      "actor": "cn-teacher-laugh",
+      "id": "p1"
+     },
+     {
+      "label": "station wagon",
+      "x": 0.3,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "station wagon"
+     },
+     {
+      "label": "旅行车",
+      "x": 0.3,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "旅行车"
+     }
+    ]
+   }
+  },
+  {
+   "text": "儿童小拉车",
+   "pos": "名词",
+   "diff": "小孩拖着玩的四轮小车",
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/kid-wagon.svg",
+     "x": 0.4,
+     "y": 0.7,
+     "s": 0.5,
+     "go": [
+      0.6,
+      0.7
+     ],
+     "dur": 3,
+     "loop": true,
+     "anim": "ride"
+    },
+    {
+     "y": 0.86,
+     "s": 0.46,
+     "actor": "walk-west-man-case",
+     "x": -0.1,
+     "walk": {
+      "from": [
+       -0.1,
+       0.86
+      ],
+      "to": [
+       1.1,
+       0.86
+      ],
+      "offset": 0
+     },
+     "z": 5
+    }
+   ],
+   "ex": "The boy pulled his toy wagon.",
+   "exzh": "男孩拉着他的玩具小车。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/kid-wagon.svg",
+      "x": 0.2,
+      "y": 0.72,
+      "s": 0.5,
+      "go": [
+       0.55,
+       0.72
+      ],
+      "dur": 3,
+      "when": "pulled",
+      "anim": "ride"
+     },
+     {
+      "x": 0.8,
+      "y": 0.6,
+      "s": 0.62,
+      "z": 4,
+      "when": "boy",
+      "actor": "cn-boy-raise",
+      "id": "p2"
+     },
+     {
+      "label": "toy wagon",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "toy wagon"
+     },
+     {
+      "label": "玩具小车",
+      "x": 0.5,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "玩具小车"
+     },
+     {
+      "y": 0.86,
+      "s": 0.46,
+      "actor": "walk-cn-girl",
+      "x": 1.1,
+      "walk": {
+       "from": [
+        1.1,
+        0.86
+       ],
+       "to": [
+        -0.1,
+        0.86
+       ],
+       "offset": 0
+      },
+      "z": 5
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“运东西的车”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/horse-wagon.svg",
+      "x": 0.3,
+      "y": 0.62,
+      "s": 0.52,
+      "go": [
+       0.7,
+       0.62
+      ],
+      "dur": 4,
+      "loop": true,
+      "anim": "ride"
+     },
+     {
+      "label": "运东西的车",
+      "x": 0.15,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "马拉着四轮大车运重货",
+   "node": "① 运货马车",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "wagon 是用来运东西的车。",
+    "马拉着四轮大车，载着重货在土路上走，就是运货马车。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "label": "运东西的车",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "运东西的车"
+     },
+     {
+      "svg": "art/horse-wagon.svg",
+      "x": 0.25,
+      "y": 0.62,
+      "s": 0.55,
+      "go": [
+       0.7,
+       0.62
+      ],
+      "dur": 3.5,
+      "when": "马拉着",
+      "anim": "ride"
+     },
+     {
+      "label": "运货马车",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "运货马车"
+     }
+    ]
+   }
+  },
+  {
+   "via": "换成铁路上装货的车厢",
+   "node": "② 铁路货车车皮",
+   "pos": "名词",
+   "pic": 1,
+   "rule": "东西换了代，干的还是那件事，旧名字就接着用",
+   "ruleEx": "wagon 运货马车 → 铁路货车车皮      phone 电话 → 手机",
+   "say": [
+    "东西换了代，干的还是那件事，旧名字就接着用。",
+    "phone 原来是电话，现在也叫手机。",
+    "wagon 也一样：铁路上装货的车厢，英国人还叫车皮。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "label": "换了代",
+      "x": 0.2,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "换了代",
+      "hideCue": 1
+     },
+     {
+      "label": "干的还是那件事",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "干的还是那件事",
+      "hideCue": 1
+     },
+     {
+      "label": "旧名字",
+      "x": 0.82,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "旧名字",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/rotary-phone.svg",
+      "x": 0.28,
+      "y": 0.58,
+      "s": 0.4,
+      "when": "电话",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.72,
+      "y": 0.56,
+      "s": 0.46,
+      "when": "手机",
+      "hideCue": 2
+     },
+     {
+      "label": "phone",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "phone",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/freight-car.svg",
+      "x": -0.2,
+      "y": 0.72,
+      "s": 0.46,
+      "go": [
+       0.5,
+       0.72
+      ],
+      "dur": 2.5,
+      "when": "装货的车厢"
+     },
+     {
+      "label": "车皮",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "车皮"
+     }
+    ]
+   }
+  },
+  {
+   "via": "后半截能装行李的汽车",
+   "node": "③ 旅行车",
+   "pos": "名词",
+   "pic": 2,
+   "say": [
+    "后半截能装行李的汽车，美国人叫旅行车。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/station-wagon.svg",
+      "x": 0.45,
+      "y": 0.72,
+      "s": 0.48,
+      "when": "汽车"
+     },
+     {
+      "svg": "art/suitcase.svg",
+      "x": 0.88,
+      "y": 0.7,
+      "s": 0.3,
+      "go": [
+       0.65,
+       0.62
+      ],
+      "dur": 1.2,
+      "when": "装行李"
+     },
+     {
+      "label": "旅行车",
+      "x": 0.3,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "旅行车"
+     },
+     {
+      "y": 0.86,
+      "s": 0.46,
+      "actor": "walk-west-boy-pack",
+      "x": -0.1,
+      "walk": {
+       "from": [
+        -0.1,
+        0.86
+       ],
+       "to": [
+        1.1,
+        0.86
+       ],
+       "offset": 0
+      },
+      "z": 5
+     }
+    ]
+   }
+  },
+  {
+   "via": "小孩拖着玩的四轮小车",
+   "node": "④ 儿童小拉车",
+   "pos": "名词",
+   "pic": 3,
+   "say": [
+    "小孩拖着玩的四轮小车，就是儿童小拉车。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/kid-wagon.svg",
+      "x": 0.3,
+      "y": 0.72,
+      "s": 0.5,
+      "go": [
+       0.6,
+       0.72
+      ],
+      "dur": 3,
+      "when": "四轮小车",
+      "anim": "ride"
+     },
+     {
+      "label": "儿童小拉车",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "儿童小拉车"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "vehicle",
+   "m": "车辆",
+   "share": ""
+  },
+  {
+   "w": "wag",
+   "m": "摇",
+   "share": ""
+  },
+  {
+   "w": "way",
+   "m": "路",
+   "share": ""
+  }
+ ],
+ "distinguish": {
+  "key": "运货的车",
+  "items": [
+   {
+    "w": "wagon",
+    "word": "wagon",
+    "m": "四轮运输车",
+    "mean": "四轮运输车",
+    "diff": "结实、常带篷的四轮运输车。",
+    "say": "结实、常带篷的四轮运输车。",
+    "text": "结实、常带篷的四轮运输车。",
+    "note": "结实、常带篷的四轮运输车。",
+    "line": "结实、常带篷的四轮运输车。",
+    "desc": "结实、常带篷的四轮运输车。",
+    "explain": "结实、常带篷的四轮运输车。",
+    "talk": "结实、常带篷的四轮运输车。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/horse-wagon.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.7,
+       "anim": "ride"
+      }
+     ]
+    }
+   },
+   {
+    "w": "wain",
+    "word": "wain",
+    "m": "大敞车（旧）",
+    "mean": "大敞车（旧）",
+    "diff": "旧时装重货的大敞车，多用在农活上。",
+    "say": "旧时装重货的大敞车，多用在农活上。",
+    "text": "旧时装重货的大敞车，多用在农活上。",
+    "note": "旧时装重货的大敞车，多用在农活上。",
+    "line": "旧时装重货的大敞车，多用在农活上。",
+    "desc": "旧时装重货的大敞车，多用在农活上。",
+    "explain": "旧时装重货的大敞车，多用在农活上。",
+    "talk": "旧时装重货的大敞车，多用在农活上。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/kid-wagon.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.7,
+       "anim": "ride"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "wagon 和 wain 曾经分工：wagon 带篷、跑长路；wain 敞着、拉庄稼。",
+  "tip": "口语 on the wagon 是“戒酒中”；德语 Wagen 泛指车，Volkswagen 就是“人民的车”。",
+  "pics": {
+   "wagon": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/horse-wagon.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.7,
+      "anim": "ride"
+     }
+    ]
+   },
+   "wain": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/kid-wagon.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.7,
+      "anim": "ride"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：小男孩拉着什么？",
+    "listen": "The little boy is pulling a toy wagon.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "一个风筝",
+     "一辆玩具小拉车",
+     "一只小狗",
+     "一个书包"
+    ],
+    "ans": "B",
+    "why": "wagon 儿童的小拉车。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The kids put their toys in the ______ and pulled it.",
+    "opts": [
+     "wallet",
+     "window",
+     "wall",
+     "wagon"
+    ],
+    "ans": "D",
+    "why": "能装玩具、拉着走的是小拉车 wagon。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 wagon、bus 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "We go to school by ______.",
+    "opts": [],
+    "ans": "bus",
+    "why": "坐公交车上学 by bus；wagon 是小拉车。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "There are two red ______ in the yard. (wagon)",
+    "opts": [],
+    "ans": "wagons",
+    "why": "two 后面用复数 wagons。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He pull the wagon up the hill yesterday.",
+    "opts": [],
+    "ans": "pull → pulled",
+    "why": "yesterday 讲过去，用过去式 pulled。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "他正在拉一辆小车。",
+    "stem": "He is ______ a little wagon.",
+    "opts": [],
+    "ans": "pulling",
+    "why": "is 后面用现在分词 pulling。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Long ago, horses pulled big ______ full of goods.",
+    "opts": [
+     "wagon",
+     "cars",
+     "bikes",
+     "wagons"
+    ],
+    "ans": "D",
+    "why": "马拉的四轮运货车也叫 wagon，big 后面用复数 wagons。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

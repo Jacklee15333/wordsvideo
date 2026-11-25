@@ -1,0 +1,891 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "摇（尾巴）；摇（手指）；说闲话"
+ },
+ "sylIpa": [
+  "wæɡ"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/farm-bg.svg",
+   "items": [
+    {
+     "svg": "art/dog-wag_f0.svg",
+     "frames": [
+      "art/dog-wag_f0.svg",
+      "art/dog-wag_f1.svg"
+     ],
+     "fps": 4,
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-dog-wag_f0.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/farm-bg.svg",
+  "items": [
+   {
+    "svg": "art/dog-wag_f0.svg",
+    "frames": [
+     "art/dog-wag_f0.svg",
+     "art/dog-wag_f1.svg"
+    ],
+    "fps": 4,
+    "x": 0.5,
+    "y": 0.6,
+    "s": 0.62
+   },
+   {
+    "label": "来回地动",
+    "x": 0.15,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "摇（尾巴）",
+   "pos": "动词",
+   "diff": "狗见了主人摇尾巴",
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/dog-wag_f0.svg",
+     "frames": [
+      "art/dog-wag_f0.svg",
+      "art/dog-wag_f1.svg"
+     ],
+     "fps": 4,
+     "x": 0.45,
+     "y": 0.62,
+     "s": 0.56
+    },
+    {
+     "x": 0.82,
+     "y": 0.6,
+     "s": 0.64,
+     "z": 4,
+     "actor": "west-man-hello",
+     "id": "p1"
+    },
+    {
+     "y": 0.86,
+     "s": 0.46,
+     "actor": "walk-west-woman-case",
+     "x": -0.1,
+     "walk": {
+      "from": [
+       -0.1,
+       0.86
+      ],
+      "to": [
+       1.1,
+       0.86
+      ],
+      "offset": 0
+     },
+     "z": 5
+    }
+   ],
+   "ex": "The dog wagged its tail.",
+   "exzh": "小狗摇了摇尾巴。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/dog-wag_f0.svg",
+      "frames": [
+       "art/dog-wag_f0.svg",
+       "art/dog-wag_f1.svg"
+      ],
+      "fps": 4,
+      "x": 0.45,
+      "y": 0.62,
+      "s": 0.6,
+      "when": "wagged"
+     },
+     {
+      "x": 0.85,
+      "y": 0.6,
+      "s": 0.62,
+      "z": 4,
+      "when": "dog",
+      "actor": "cn-teacher-laugh",
+      "id": "p2"
+     },
+     {
+      "label": "wagged its tail",
+      "x": 0.15,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "wagged its tail"
+     },
+     {
+      "label": "摇了摇尾巴",
+      "x": 0.15,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "摇了摇尾巴"
+     }
+    ]
+   }
+  },
+  {
+   "text": "摇（手指）",
+   "pos": "动词",
+   "diff": "竖起手指来回摇，表示不同意",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "x": 0.45,
+     "y": 0.58,
+     "s": 0.78,
+     "z": 4,
+     "actor": "west-man-point",
+     "id": "p3"
+    },
+    {
+     "label": "No!",
+     "x": 0.75,
+     "y": 0.15,
+     "size": 0.075,
+     "color": "#7048E8",
+     "border": "#7048E8",
+     "delay": 0.6
+    }
+   ],
+   "ex": "She wagged her finger at me.",
+   "exzh": "她冲我摇了摇手指。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.74,
+      "z": 4,
+      "when": "She",
+      "id": "wg",
+      "actor": "cn-teacher-point"
+     },
+     {
+      "x": 0.78,
+      "y": 0.6,
+      "s": 0.64,
+      "z": 4,
+      "when": "me",
+      "actor": "west-girl-surprised",
+      "id": "p5",
+      "nodWith": "wg"
+     },
+     {
+      "label": "wagged her finger",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "wagged her finger"
+     },
+     {
+      "label": "摇了摇手指",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "摇了摇手指"
+     }
+    ]
+   }
+  },
+  {
+   "text": "说闲话",
+   "pos": "动词",
+   "diff": "（舌头）摆个不停",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.68,
+     "z": 4,
+     "id": "g1",
+     "turn": [
+      0,
+      2
+     ],
+     "actor": "west-man-speech"
+    },
+    {
+     "x": 0.7,
+     "y": 0.6,
+     "s": 0.66,
+     "z": 4,
+     "turn": [
+      1,
+      2
+     ],
+     "actor": "cn-teacher-listen",
+     "id": "p7"
+    },
+    {
+     "y": 0.86,
+     "s": 0.46,
+     "actor": "walk-cn-boy-pack",
+     "x": 1.1,
+     "walk": {
+      "from": [
+       1.1,
+       0.86
+      ],
+      "to": [
+       -0.1,
+       0.86
+      ],
+      "offset": 0
+     },
+     "z": 5
+    }
+   ],
+   "ex": "Tongues will wag.",
+   "exzh": "人们会说闲话的。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.68,
+      "z": 4,
+      "id": "g2",
+      "turn": [
+       0,
+       2
+      ],
+      "actor": "cn-boy-raise"
+     },
+     {
+      "x": 0.7,
+      "y": 0.6,
+      "s": 0.66,
+      "z": 4,
+      "turn": [
+       1,
+       2
+      ],
+      "actor": "west-girl-listen",
+      "id": "p9"
+     },
+     {
+      "waves": true,
+      "x": 0.42,
+      "y": 0.32,
+      "dir": 0,
+      "n": 3,
+      "color": "#1C7ED6",
+      "with": "g2"
+     },
+     {
+      "label": "Tongues will wag",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "Tongues will wag"
+     },
+     {
+      "label": "说闲话",
+      "x": 0.5,
+      "y": 0.26,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "说闲话"
+     },
+     {
+      "y": 0.86,
+      "s": 0.46,
+      "actor": "walk-west-man-case",
+      "x": -0.1,
+      "walk": {
+       "from": [
+        -0.1,
+        0.86
+       ],
+       "to": [
+        1.1,
+        0.86
+       ],
+       "offset": 0
+      },
+      "z": 5
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“来回地动”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/dog-wag_f0.svg",
+      "frames": [
+       "art/dog-wag_f0.svg",
+       "art/dog-wag_f1.svg"
+      ],
+      "fps": 4,
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.62
+     },
+     {
+      "label": "来回地动",
+      "x": 0.15,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "心里来回摇摆（13 世纪初）",
+   "node": "动摇（古义）",
+   "pos": "动词",
+   "say": [
+    "wag 从移动来，专指来回地动。",
+    "13 世纪初，心里来回摇摆，就是动摇。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "来回地动",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "来回地动"
+     },
+     {
+      "svg": "art/balance-level.svg",
+      "x": 0.4,
+      "y": 0.52,
+      "s": 0.62,
+      "when": "来回摇摆",
+      "anim": "sway"
+     },
+     {
+      "x": 0.82,
+      "y": 0.6,
+      "s": 0.62,
+      "z": 4,
+      "when": "心里",
+      "actor": "west-clerk-think",
+      "id": "p10"
+     },
+     {
+      "label": "动摇",
+      "x": 0.4,
+      "y": 0.92,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "就是动摇"
+     }
+    ]
+   }
+  },
+  {
+   "via": "后来专指狗摇尾巴（15 世纪中）",
+   "node": "① 摇（尾巴）",
+   "pos": "动词",
+   "pic": 0,
+   "rule": "一个词的意思越用越窄：从一大类专指其中一种",
+   "ruleEx": "wag 来回地动 → 摇尾巴      meat 一切食物 → 肉",
+   "say": [
+    "一个词的意思越用越窄，从一大类专指一种。",
+    "meat 原来指一切食物，后来专指肉。",
+    "wag 也一样：15 世纪中，专指狗见了主人摇尾巴。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "label": "一大类",
+      "x": 0.25,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "一大类",
+      "hideCue": 1
+     },
+     {
+      "ray": [
+       [
+        0.38,
+        0.2
+       ],
+       [
+        0.6,
+        0.2
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "when": "越用越窄",
+      "hideCue": 1
+     },
+     {
+      "label": "专指一种",
+      "x": 0.76,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "专指一种",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/bread.svg",
+      "x": 0.25,
+      "y": 0.55,
+      "s": 0.36,
+      "when": "一切食物",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/meat.svg",
+      "x": 0.72,
+      "y": 0.55,
+      "s": 0.4,
+      "when": "专指肉",
+      "anim": "pulse",
+      "hideCue": 2
+     },
+     {
+      "label": "meat",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "meat",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/dog-wag_f0.svg",
+      "frames": [
+       "art/dog-wag_f0.svg",
+       "art/dog-wag_f1.svg"
+      ],
+      "fps": 4,
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.6,
+      "when": "摇尾巴"
+     },
+     {
+      "label": "摇尾巴",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "摇尾巴"
+     }
+    ]
+   }
+  },
+  {
+   "via": "竖起手指来回摇",
+   "node": "② 摇（手指）",
+   "pos": "动词",
+   "pic": 1,
+   "say": [
+    "竖起手指来回摇，表示不同意，就是摇手指。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "x": 0.45,
+      "y": 0.58,
+      "s": 0.78,
+      "z": 4,
+      "when": "竖起手指",
+      "actor": "west-girl-raise",
+      "id": "p11"
+     },
+     {
+      "label": "不同意",
+      "x": 0.8,
+      "y": 0.15,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "不同意"
+     },
+     {
+      "label": "摇手指",
+      "x": 0.8,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "摇手指"
+     }
+    ]
+   }
+  },
+  {
+   "via": "舌头在嘴里摆个不停",
+   "node": "③ 说闲话",
+   "pos": "动词",
+   "pic": 2,
+   "say": [
+    "舌头在嘴里摆个不停，就是说闲话。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.68,
+      "z": 4,
+      "when": "舌头",
+      "id": "g3",
+      "actor": "west-girl-explain"
+     },
+     {
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.66,
+      "z": 4,
+      "when": "摆个不停",
+      "actor": "west-man-smile",
+      "id": "p13",
+      "nodWith": "g3"
+     },
+     {
+      "waves": true,
+      "x": 0.42,
+      "y": 0.32,
+      "dir": 0,
+      "n": 3,
+      "color": "#1C7ED6",
+      "with": "g3"
+     },
+     {
+      "label": "说闲话",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "说闲话"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "wagon",
+   "m": "运货马车",
+   "share": ""
+  },
+  {
+   "w": "way",
+   "m": "路",
+   "share": ""
+  },
+  {
+   "w": "weigh",
+   "m": "称重",
+   "share": ""
+  }
+ ],
+ "distinguish": {
+  "key": "摇",
+  "items": [
+   {
+    "w": "wag",
+    "word": "wag",
+    "m": "摇（尾巴、手指）",
+    "mean": "摇（尾巴、手指）",
+    "diff": "小幅、快速地来回摆：wag its tail 摇尾巴。",
+    "say": "小幅、快速地来回摆：wag its tail 摇尾巴。",
+    "text": "小幅、快速地来回摆：wag its tail 摇尾巴。",
+    "note": "小幅、快速地来回摆：wag its tail 摇尾巴。",
+    "line": "小幅、快速地来回摆：wag its tail 摇尾巴。",
+    "desc": "小幅、快速地来回摆：wag its tail 摇尾巴。",
+    "explain": "小幅、快速地来回摆：wag its tail 摇尾巴。",
+    "talk": "小幅、快速地来回摆：wag its tail 摇尾巴。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/farm-bg.svg",
+     "items": [
+      {
+       "svg": "art/dog-wag_f0.svg",
+       "frames": [
+        "art/dog-wag_f0.svg",
+        "art/dog-wag_f1.svg"
+       ],
+       "fps": 4,
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.75
+      }
+     ]
+    }
+   },
+   {
+    "w": "shake",
+    "word": "shake",
+    "m": "摇晃",
+    "mean": "摇晃",
+    "diff": "整个东西摇来摇去：shake your head 摇头。",
+    "say": "整个东西摇来摇去：shake your head 摇头。",
+    "text": "整个东西摇来摇去：shake your head 摇头。",
+    "note": "整个东西摇来摇去：shake your head 摇头。",
+    "line": "整个东西摇来摇去：shake your head 摇头。",
+    "desc": "整个东西摇来摇去：shake your head 摇头。",
+    "explain": "整个东西摇来摇去：shake your head 摇头。",
+    "talk": "整个东西摇来摇去：shake your head 摇头。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/clinic-bg.svg",
+     "items": [
+      {
+       "svg": "art/medicine.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "shake"
+      }
+     ]
+    }
+   },
+   {
+    "w": "wave",
+    "word": "wave",
+    "m": "挥动",
+    "mean": "挥动",
+    "diff": "举起手来回挥：wave goodbye 挥手告别。",
+    "say": "举起手来回挥：wave goodbye 挥手告别。",
+    "text": "举起手来回挥：wave goodbye 挥手告别。",
+    "note": "举起手来回挥：wave goodbye 挥手告别。",
+    "line": "举起手来回挥：wave goodbye 挥手告别。",
+    "desc": "举起手来回挥：wave goodbye 挥手告别。",
+    "explain": "举起手来回挥：wave goodbye 挥手告别。",
+    "talk": "举起手来回挥：wave goodbye 挥手告别。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 4,
+       "actor": "west-girl-music",
+       "id": "p14"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "wag 是一小截来回摆；shake 是整个摇晃；wave 是举起来挥。",
+  "tip": "the tail wagging the dog 尾巴摇狗：本末倒置。",
+  "pics": {
+   "wag": {
+    "bg": "blank",
+    "img": "art/farm-bg.svg",
+    "items": [
+     {
+      "svg": "art/dog-wag_f0.svg",
+      "frames": [
+       "art/dog-wag_f0.svg",
+       "art/dog-wag_f1.svg"
+      ],
+      "fps": 4,
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.75
+     }
+    ]
+   },
+   "shake": {
+    "bg": "blank",
+    "img": "art/clinic-bg.svg",
+    "items": [
+     {
+      "svg": "art/medicine.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.75,
+      "anim": "shake"
+     }
+    ]
+   },
+   "wave": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 4,
+      "actor": "west-girl-music",
+      "id": "p14"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：小狗高兴时会做什么？",
+    "listen": "The dog wags its tail when it's happy.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "叫",
+     "睡觉",
+     "摇尾巴",
+     "跑开"
+    ],
+    "ans": "C",
+    "why": "wag its tail 摇尾巴。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The puppy ______ its tail when it saw me. (wag)",
+    "opts": [],
+    "ans": "wagged",
+    "why": "讲过去，wag 双写 g 加 ed：wagged。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "My dog always ______ its tail at me.",
+    "opts": [
+     "wag",
+     "wagging",
+     "wags",
+     "wagged"
+    ],
+    "ans": "C",
+    "why": "主语单数、经常做，用 wags。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 wag、shake 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Don't ______ your head; nod if you agree.",
+    "opts": [],
+    "ans": "shake",
+    "why": "摇头用 shake your head；wag 是小幅快速地摆。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The dog is waging its tail.",
+    "opts": [],
+    "ans": "waging → wagging",
+    "why": "wag 加 ing 要双写 g。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "狗摇着尾巴跑了过来。",
+    "stem": "The dog ran over, ______ its tail.",
+    "opts": [],
+    "ans": "wagging",
+    "why": "伴随动作用现在分词，wag 双写 g 加 ing。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Dogs ______ their tails when they are happy.",
+    "opts": [
+     "wags",
+     "wagging",
+     "wag",
+     "wagged"
+    ],
+    "ans": "C",
+    "why": "主语 dogs 是复数，用 wag。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
