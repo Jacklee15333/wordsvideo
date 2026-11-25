@@ -1179,6 +1179,14 @@ def relay_size(kind, cfg=None):
     return max(1, int(cfg.get(a) or DEFAULT_CFG[a])), max(1, int(cfg.get(b) or DEFAULT_CFG[b]))
 
 
+def relay_url_set(url):
+    url = str(url or "").strip()
+    if not re.match(r"^https?://[^\s]+$", url):
+        return False, "要填 http:// 或 https:// 开头的网址"
+    save_cfg({"relayUrl": url})
+    return True, "存好了：点「手动发送」打开 " + url
+
+
 def relay_size_set(kind, chunk, rnd):
     if kind not in SIZE_KEYS:
         return False, "认不出是哪一步"
@@ -1217,7 +1225,32 @@ FAIL_LOG = DATA / "pic_fail_log.json"
 RELAY_SAVE = DATA / "relay_batch.json"     # v1.15.0：这一份叫什么、是哪些词、检查结果——软件重开了接着用同一份
 RELAY_RAW = []                             # 最近收到的网页 AI 原文（「看网页 AI 原文」用）
 SESSION = os.urandom(4).hex()              # 这一次开着的软件（重开以后就不一样了）
-_BASE_RE = re.compile(r"(\d{8}-\d{6}-[0-9a-f]{6})")
+_BASE_RE = re.compile(r"^(.+?)-\d{6}(?:-end)?\.(?:xlsx|txt)$|^(.+?)-(?:report|stop)\.json$")
+KIND_CODE = {"做画面": "pic", "补画面": "fix", "出题": "q"}
+CODE_KIND = {v: k for k, v in KIND_CODE.items()}
+
+
+def batch_name(kind, words):
+    """v1.16.0：这一份的名字一看就懂：哪一步-日期-时间-第一个词，比如 fix-20261125-131906-saturday（以前是 20261125-131906-be04d5）。"""
+    w = re.sub(r"[^a-z0-9]+", "-", str((words or [""])[0]).lower()).strip("-")[:16] or "x"
+    return "%s-%s-%s" % (KIND_CODE.get(kind, "ai"), time.strftime("%Y%m%d-%H%M%S"), w)
+
+
+def base_of(fname):
+    """中转仓库里一个文件是哪一份的（名字去掉后面的上传时间、-end、扩展名）。新旧两种名字都认。"""
+    m = _BASE_RE.match(str(fname).rsplit("/", 1)[-1])
+    return (m.group(1) or m.group(2)) if m else ""
+
+
+def batch_label(ipath):
+    """给人看的名字：fix-20261125-131906-saturday → 11月25日 13:19 · saturday；旧名字 → 11月25日 13:19。"""
+    b = str(ipath).rsplit("/", 1)[-1]
+    m = re.match(r"^(?:([a-z]+)-)?(\d{4})(\d{2})(\d{2})-(\d{2})(\d{2})\d{2}(?:-(.+))?$", b)
+    if not m:
+        return b
+    k, _, mo, d, hh, mm, rest = m.groups()
+    word = rest if k and rest and rest != "x" else ""
+    return "%d月%d日 %s:%s%s" % (int(mo), int(d), hh, mm, (" · " + word) if word else "")
 
 
 def _relay_load():
@@ -1356,7 +1389,8 @@ def outbox_clean():
             d = d + [x for x in d3 if str(x.get("name", "")).endswith(("-report.json", "-stop.json"))]
         for x in d:
             n = x.get("name") or ""
-            if re.match(r"^\d{8}-\d{6}", n) and n[:15] < cut:
+            mt = re.search(r"(\d{8}-\d{6})", n)
+            if mt and mt.group(1) < cut:
                 _gh("DELETE", "/repos/%s/contents/%s" % (ib["repo"], urllib.parse.quote(x.get("path") or "")), ib["token"],
                     {"message": "检查结果：清掉旧的 " + n, "sha": x.get("sha"), "branch": ib.get("branch") or "main"})
     except Exception:
@@ -1445,7 +1479,7 @@ def _inbox_parts(ipath, seen, pending, t0):
     files = [x.get("path") for x in d if x.get("path")] if isinstance(d, list) else []
     INBOX_LAST.update(files=sorted(f.rsplit("/", 1)[-1] for f in files), ts=time.time())
     names = (base,) + tuple(RELAY.get("aliases") or [])     # v1.15.0：网页 AI 认的名字（软件重开以前的也算）
-    for f in [f for f in files if f.rsplit("/", 1)[-1].startswith(names) and (f.endswith("-stop.json") or f.endswith("-report.json"))]:
+    for f in [f for f in files if base_of(f) in names and (f.endswith("-stop.json") or f.endswith("-report.json"))]:
         files.remove(f)        # v1.11.4 停下了 / v1.14.0 这一轮回复结束时的汇报（写完了、停下了、等检查结果）
         try:
             st2, d2 = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], urllib.parse.quote(f), br), ib["token"])
@@ -1457,7 +1491,7 @@ def _inbox_parts(ipath, seen, pending, t0):
                 inbox_delete(f, d2.get("sha"))
         except Exception as e:
             log("读网页 AI 的汇报出错：%s" % str(e)[:120])
-    mine = [f for f in files if f.rsplit("/", 1)[-1].startswith(names) and f not in seen]
+    mine = [f for f in files if base_of(f) in names and f not in seen]
     others = [f for f in files if f not in seen and f not in mine]
     if others:
         try:
@@ -1474,15 +1508,15 @@ def _inbox_parts(ipath, seen, pending, t0):
         if not got:
             continue
         text, sha, gpath = got
-        ours = f.rsplit("/", 1)[-1].startswith(base)          # 名字是这一份的：短一点、写坏了也收下，交给检查去判（会记“没做成”和原因）
+        ours = base_of(f) == base          # 名字是这一份的：短一点、写坏了也收下，交给检查去判（会记“没做成”和原因）
         if _looks_reply(text, pending) or (ours and END in text and any(
                 re.search(r"[@＠]\s*" + re.escape(w) + r"(?![A-Za-z'’\-])", text) for w in pending)):
             inbox_delete(gpath, sha)
-            m = _BASE_RE.match(f.rsplit("/", 1)[-1])
-            if not ours and m and m.group(1) not in (RELAY.get("aliases") or []):     # v1.15.0：网页 AI 用的是别的名字（软件重开以前的）
-                RELAY.setdefault("aliases", []).append(m.group(1))
+            ab = base_of(f)
+            if not ours and ab and ab != base and ab not in (RELAY.get("aliases") or []):     # v1.15.0：网页 AI 用的是别的名字（软件重开以前的）
+                RELAY.setdefault("aliases", []).append(ab)
                 try:                     # 那个名字下面原来的检查结果接过来（第几次、过没过），网页 AI 那边接着数
-                    st4, d4 = _gh("GET", "/repos/%s/contents/%s/%s.json?ref=%s" % (ib["repo"], OUTBOX, m.group(1), br), ib["token"])
+                    st4, d4 = _gh("GET", "/repos/%s/contents/%s/%s.json?ref=%s" % (ib["repo"], OUTBOX, ab, br), ib["token"])
                     if st4 == 200 and isinstance(d4, dict):
                         oldv = (json.loads(base64.b64decode(d4.get("content") or "").decode("utf-8")) or {}).get("words") or {}
                         with _RELAY_LOCK:
@@ -1490,14 +1524,14 @@ def _inbox_parts(ipath, seen, pending, t0):
                             for w, v in oldv.items():
                                 if int((v or {}).get("try") or 0) > int((V.get(w) or {}).get("try") or 0):
                                     V[w] = dict(v)
-                        RELAY.setdefault("outboxShas", {})[m.group(1)] = d4.get("sha") or ""
+                        RELAY.setdefault("outboxShas", {})[ab] = d4.get("sha") or ""
                 except Exception:
                     pass
                 sv = _relay_load()
                 if sv.get("ipath") == ipath:
                     sv["aliases"] = list(RELAY["aliases"])
                     _relay_store(sv)
-                log("网页 AI 用的是以前那份提示词（文件名以 %s 开头）：收下了，检查结果也写回那个名字，它那边看得到" % m.group(1),
+                log("网页 AI 用的是以前那份提示词（%s）：收下了，检查结果也写回那个名字，它那边看得到" % batch_label(ab),
                     RELAY.get("tid"))
             nm = gpath.rsplit("/", 1)[-1]
             out.append((text, gpath, nm.rsplit(".", 1)[0].endswith("-end") or "【这一批最后一个】" in text))
@@ -1519,7 +1553,7 @@ def relay_parts(prompt, words, kind, rnd):
     tid = (RUNNER.task or {}).get("id")
     ipath, resumed, sv = "", False, _relay_load()
     if ibox:
-        ipath = "%s/%s-%s" % (inbox_cfg(cfg)["dir"], time.strftime("%Y%m%d-%H%M%S"), os.urandom(3).hex())
+        ipath = "%s/%s" % (inbox_cfg(cfg)["dir"], batch_name(kind, words))
         if (sv.get("tid") == tid and sv.get("kind") == kind and sv.get("ipath") and set(words) <= set(sv.get("words") or [])
                 and time.time() - float(sv.get("t0") or 0) < 2 * 86400):
             ipath = sv["ipath"]                     # v1.15.0：同一份：网页 AI 原来的对话接着传就行，检查结果也写回它认的名字
@@ -2319,7 +2353,7 @@ def relay_wait(prompt, words):
             (RUNNER.task or {}).get("id"))
     ipath = ""
     if ibox:      # 每一批一个新文件名，旧回复不会被当成这一批的
-        ipath = "%s/%s-%s" % (inbox_cfg(cfg)["dir"], time.strftime("%Y%m%d-%H%M%S"), os.urandom(3).hex())
+        ipath = "%s/%s" % (inbox_cfg(cfg)["dir"], batch_name("", words))
         prompt = prompt.rstrip() + "\n\n" + inbox_prompt(ipath, batch_info(words, AI_LIVE.get("kind", "")))
     with _RELAY_LOCK:
         tid = (RUNNER.task or {}).get("id")

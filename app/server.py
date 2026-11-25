@@ -479,6 +479,7 @@ def api_relay_get(qs):
     r.pop("reply", None)
     cfg = C.load_cfg()
     r["url"] = cfg.get("relayUrl", "")
+    r["label"] = C.batch_label((r.get("inbox") or "").rsplit(".", 1)[0]) if r.get("inbox") else ""
     sk = C.KIND_SIZE.get(r.get("kind") or "", "")     # v1.11.2：黄框里能改一批几个词、每写完几个传一次
     r["sizeKind"] = sk
     if sk:
@@ -492,7 +493,7 @@ def api_open(b):
     """用你平时的浏览器打开网页 AI。软件自己的窗口用的是单独的浏览器资料夹，在那里打开没登录 zd87。"""
     url = (C.load_cfg().get("relayUrl") or "").strip()
     if not re.match(r"^https?://", url):
-        return {"ok": False, "msg": "网页 AI 地址要以 http:// 或 https:// 开头：任务页「⚙ 设置」里改"}
+        return {"ok": False, "msg": "网页 AI 地址要以 http:// 或 https:// 开头：黄框第 ② 步「手动发送」右边的齿轮里改"}
     try:
         if sys.platform == "win32":
             os.startfile(url)
@@ -506,6 +507,9 @@ def api_open(b):
 def api_relay_post(b):
     if b.get("op") == "pollnow":                     # v1.11.2：立即查看中转仓库
         ok, msg = C.relay_poll_now()
+        return {"ok": ok, "msg": msg}
+    if b.get("op") == "url":                         # v1.16.0：第 ② 步齿轮里改要打开的网页 AI
+        ok, msg = C.relay_url_set(b.get("url"))
         return {"ok": ok, "msg": msg}
     if b.get("op") == "contmsg":                     # v1.11.4：在同一个对话里接着写——一句短话
         t = C.relay_cont_msg()
