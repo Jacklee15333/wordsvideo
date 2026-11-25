@@ -1,7 +1,514 @@
 {
  "单词": "energy-saving",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "节能的"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/battery.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "能源",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/piggy.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.56,
+      "anim": "bob",
+      "shadow": true
+     },
+     {
+      "label": "节省",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/battery.svg",
+   "p1": "art/piggy.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/battery.svg",
+     "x": 0.34,
+     "y": 0.56,
+     "s": 0.46,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "svg": "art/piggy.svg",
+     "x": 0.7,
+     "y": 0.6,
+     "s": 0.42,
+     "anim": "bob",
+     "z": 2
+    },
+    {
+     "label": "节省能源的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "节能的",
+    "pos": "形容词",
+    "diff": "办同样的事，少用电、少烧油",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "id": "m",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "waves": true,
+      "on": "m",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "m"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "id": "k",
+      "x": 0.82,
+      "y": 0.62,
+      "s": 0.66,
+      "z": 3,
+      "nodWith": "m"
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.5,
+      "y": 0.44,
+      "s": 0.4,
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "label": "节能",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "We use energy-saving light bulbs.",
+    "exzh": "我们用节能灯泡。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-laugh",
+       "id": "t",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.72,
+       "z": 3,
+       "seq": "talk",
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "waves": true,
+       "on": "t",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "t"
+      },
+      {
+       "actor": "west-girl-explain",
+       "id": "g",
+       "x": 0.82,
+       "y": 0.62,
+       "s": 0.7,
+       "z": 3,
+       "turn": [
+        1,
+        2
+       ],
+       "nodWith": "t"
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.5,
+       "y": 0.46,
+       "s": 0.42,
+       "when": "light bulbs",
+       "pop": true,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "label": "energy-saving",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "energy-saving"
+      },
+      {
+       "label": "节能灯泡",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "节能灯泡"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“节省能源的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/battery.svg",
+       "x": 0.34,
+       "y": 0.56,
+       "s": 0.46,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "svg": "art/piggy.svg",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.42,
+       "anim": "bob",
+       "z": 2
+      },
+      {
+       "label": "节省能源的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "办同样的事，少用电、少烧油",
+    "node": "① 节能的",
+    "pos": "形容词",
+    "pic": 0,
+    "rule": "动词带着宾语合成一个词，宾语挪到前面，动词放在最后",
+    "ruleEx": "save energy → energy-saving      save lives → lifesaving",
+    "cap": "save energy → energy-saving",
+    "say": [
+     "动词带着宾语合成一个词时，宾语挪到前面，动词放在最后。",
+     "save lives 是救命，合起来 lifesaving，就是救命的。",
+     "save energy 是节约能源，合起来 energy-saving，就是节能的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "宾语挪到前面",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "宾语挪到前面",
+       "hideCue": 1
+      },
+      {
+       "label": "动词放在最后",
+       "x": 0.5,
+       "y": 0.6,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "动词放在最后",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/lifebuoy.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.5,
+       "cue": 1,
+       "when": "救命",
+       "anim": "spin",
+       "hideCue": 2
+      },
+      {
+       "label": "lifesaving",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "lifesaving",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.36,
+       "y": 0.54,
+       "s": 0.46,
+       "cue": 2,
+       "when": "节约能源",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/piggy.svg",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.36,
+       "cue": 2,
+       "when": "节约能源",
+       "anim": "bob"
+      },
+      {
+       "label": "节能的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "节能的"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "中文都能说“节能的”，看的角度不一样",
+   "items": [
+    {
+     "w": "energy-saving",
+     "word": "energy-saving",
+     "name": "energy-saving",
+     "en": "energy-saving",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/bulb.svg",
+        "x": 0.4,
+        "y": 0.54,
+        "s": 0.6,
+        "anim": "pulse",
+        "z": 2
+       },
+       {
+        "svg": "art/piggy.svg",
+        "x": 0.64,
+        "y": 0.6,
+        "s": 0.46,
+        "anim": "bob",
+        "z": 2
+       }
+      ]
+     },
+     "text": "energy-saving 强调“节约”这个目的：省下能源。",
+     "say": "energy-saving 强调“节约”这个目的：省下能源。",
+     "diff": "energy-saving 强调“节约”这个目的：省下能源。",
+     "note": "energy-saving 强调“节约”这个目的：省下能源。",
+     "desc": "energy-saving 强调“节约”这个目的：省下能源。",
+     "m": "energy-saving 强调“节约”这个目的：省下能源。",
+     "mean": "energy-saving 强调“节约”这个目的：省下能源。",
+     "line": "energy-saving 强调“节约”这个目的：省下能源。",
+     "explain": "energy-saving 强调“节约”这个目的：省下能源。",
+     "zh": "energy-saving 强调“节约”这个目的：省下能源。",
+     "def": "energy-saving 强调“节约”这个目的：省下能源。",
+     "gloss": "energy-saving 强调“节约”这个目的：省下能源。",
+     "sense": "energy-saving 强调“节约”这个目的：省下能源。",
+     "comment": "energy-saving 强调“节约”这个目的：省下能源。",
+     "hint": "energy-saving 强调“节约”这个目的：省下能源。",
+     "txt": "energy-saving 强调“节约”这个目的：省下能源。",
+     "talk": "energy-saving 强调“节约”这个目的：省下能源。",
+     "words": "energy-saving 强调“节约”这个目的：省下能源。",
+     "detail": "energy-saving 强调“节约”这个目的：省下能源。"
+    },
+    {
+     "w": "energy-efficient",
+     "word": "energy-efficient",
+     "name": "energy-efficient",
+     "en": "energy-efficient",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/gauge.svg",
+        "x": 0.5,
+        "y": 0.54,
+        "s": 0.6,
+        "anim": "pulse",
+        "z": 2
+       }
+      ]
+     },
+     "text": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "say": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "diff": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "note": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "desc": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "m": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "mean": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "line": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "explain": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "zh": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "def": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "gloss": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "sense": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "comment": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "hint": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "txt": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "talk": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "words": "energy-efficient 强调效率高：用同样的能源办更多的事。",
+     "detail": "energy-efficient 强调效率高：用同样的能源办更多的事。"
+    }
+   ],
+   "logic": "energy-saving 是 save energy 合起来；energy-efficient 是 energy + efficient“效率高的”。",
+   "tip": "说省电的灯泡两个都行；说机器效率高多用 energy-efficient。",
+   "pics": {
+    "energy-saving": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.4,
+       "y": 0.54,
+       "s": 0.6,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "svg": "art/piggy.svg",
+       "x": 0.64,
+       "y": 0.6,
+       "s": 0.46,
+       "anim": "bob",
+       "z": 2
+      }
+     ]
+    },
+    "energy-efficient": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/gauge.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.6,
+       "anim": "pulse",
+       "z": 2
+      }
+     ]
+    }
+   },
+   "notes": {
+    "energy-saving": "energy-saving 强调“节约”这个目的：省下能源。",
+    "energy-efficient": "energy-efficient 强调效率高：用同样的能源办更多的事。"
+   }
+  },
+  "kaodian": {
+   "rows": [
+    "意思：energy-saving 节能的（形容词，多放在名词前）",
+    "搭配：energy-saving light bulbs 节能灯泡；energy-saving products 节能产品",
+    "形近词：energy-efficient 能效高的；time-saving 省时的",
+    "写法：放在名词前要加连字符"
+   ]
+  }
+ },
+ "插图": [
+  "energy-savingai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他们买了什么样的灯？\n听：We bought some energy-saving lights.\nA. 节能灯\nB. 彩灯\nC. 台灯\nD. 路灯",
@@ -88,5 +595,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

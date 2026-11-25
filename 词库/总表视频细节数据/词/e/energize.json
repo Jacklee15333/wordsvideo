@@ -1,7 +1,789 @@
 {
  "单词": "energize",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "使充满活力；给…通电"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/battery.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "能量",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/ify.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "使…",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/battery.svg",
+   "p1": "art/ify.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/battery.svg",
+     "x": 0.32,
+     "y": 0.56,
+     "s": 0.46,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "ray": [
+      [
+       0.42,
+       0.5
+      ],
+      [
+       0.6,
+       0.5
+      ]
+     ],
+     "color": "#F7C531",
+     "lw": 0.016,
+     "arrow": true,
+     "glow": true,
+     "delay": 0.4,
+     "dur": 0.8
+    },
+    {
+     "svg": "art/bulb.svg",
+     "x": 0.72,
+     "y": 0.54,
+     "s": 0.46,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "label": "注入能量",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "使充满活力",
+    "pos": "动词",
+    "diff": "让人打起精神",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "id": "c",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2.5
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.34,
+      "z": 4
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.66,
+      "y": 0.76,
+      "s": 0.12,
+      "anim": "bob",
+      "z": 5
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.66,
+      "y": 0.66,
+      "every": 0.6,
+      "life": 1.4,
+      "to": [
+       0,
+       -0.2
+      ],
+      "s": 0.05
+     },
+     {
+      "label": "打起精神",
+      "x": 0.8,
+      "y": 0.14,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Music always energizes me.",
+    "exzh": "音乐总能让我充满活力。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-music",
+       "id": "g",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.72,
+       "z": 3,
+       "fps": 3.3
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.62,
+       "y": 0.92,
+       "s": 0.34,
+       "z": 4
+      },
+      {
+       "svg": "art/computer-music.svg",
+       "x": 0.66,
+       "y": 0.68,
+       "s": 0.3,
+       "z": 5
+      },
+      {
+       "eq": true,
+       "x": 0.66,
+       "y": 0.65,
+       "w": 0.12,
+       "h": 0.08,
+       "n": 5
+      },
+      {
+       "svg": "art/speaker.svg",
+       "x": 0.88,
+       "y": 0.72,
+       "s": 0.2,
+       "anim": "thump",
+       "z": 5
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "alt": [
+        "art/note2.svg"
+       ],
+       "x": 0.88,
+       "y": 0.6,
+       "every": 1.2,
+       "life": 2,
+       "to": [
+        -0.05,
+        -0.3
+       ],
+       "s": 0.08,
+       "when": "Music"
+      },
+      {
+       "waves": true,
+       "x": 0.94,
+       "y": 0.7,
+       "dir": 0,
+       "when": "Music"
+      },
+      {
+       "label": "energizes",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "energizes"
+      },
+      {
+       "label": "充满活力",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "充满活力"
+      }
+     ]
+    }
+   },
+   {
+    "text": "（电）给…通电、供能",
+    "pos": "动词",
+    "diff": "给机器、线路送上电",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/battery.svg",
+      "x": 0.3,
+      "y": 0.56,
+      "s": 0.46,
+      "anim": "pulse",
+      "z": 3
+     },
+     {
+      "ray": [
+       [
+        0.4,
+        0.5
+       ],
+       [
+        0.58,
+        0.5
+       ]
+      ],
+      "color": "#F7C531",
+      "lw": 0.016,
+      "arrow": true,
+      "glow": true,
+      "delay": 0.5,
+      "dur": 0.8
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.72,
+      "y": 0.52,
+      "s": 0.46,
+      "anim": "pulse",
+      "delay": 1.2,
+      "z": 3
+     },
+     {
+      "label": "通电",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Press the switch to energize the machine.",
+    "exzh": "按下开关给机器通电。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.32,
+       "z": 2
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.5,
+       "z": 3,
+       "anim": "bob"
+      },
+      {
+       "eq": true,
+       "x": 0.5,
+       "y": 0.54,
+       "w": 0.18,
+       "h": 0.14,
+       "n": 6,
+       "when": "energize"
+      },
+      {
+       "label": "switch",
+       "x": 0.18,
+       "y": 0.4,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "switch"
+      },
+      {
+       "label": "energize",
+       "x": 0.82,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "energize"
+      },
+      {
+       "label": "通电",
+       "x": 0.82,
+       "y": 0.42,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "通电"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“给…注入能量”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/battery.svg",
+       "x": 0.32,
+       "y": 0.56,
+       "s": 0.46,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "ray": [
+        [
+         0.42,
+         0.5
+        ],
+        [
+         0.6,
+         0.5
+        ]
+       ],
+       "color": "#F7C531",
+       "lw": 0.016,
+       "arrow": true,
+       "glow": true,
+       "delay": 0.4,
+       "dur": 0.8
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.72,
+       "y": 0.54,
+       "s": 0.46,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "label": "注入能量",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "给人注入精力，让人打起精神",
+    "node": "① 使充满活力",
+    "pos": "动词",
+    "pic": 0,
+    "say": [
+     "给人注入精力，让人打起精神，就是 energize，使充满活力。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.34,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.5,
+       "y": 0.7,
+       "s": 0.2,
+       "when": "注入精力",
+       "anim": "bob",
+       "z": 3
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "every": 0.6,
+       "life": 1.4,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.06,
+       "when": "打起精神"
+      },
+      {
+       "label": "使充满活力",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "使充满活力"
+      }
+     ]
+    }
+   },
+   {
+    "via": "给机器、线路送上能量",
+    "node": "② （电）通电、供能",
+    "pos": "动词",
+    "pic": 1,
+    "say": [
+     "给机器、线路送上电，也是 energize，就是通电、供能。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/battery.svg",
+       "x": 0.3,
+       "y": 0.56,
+       "s": 0.46,
+       "when": "送上电",
+       "anim": "pulse",
+       "z": 3
+      },
+      {
+       "ray": [
+        [
+         0.4,
+         0.5
+        ],
+        [
+         0.58,
+         0.5
+        ]
+       ],
+       "color": "#F7C531",
+       "lw": 0.016,
+       "arrow": true,
+       "glow": true,
+       "when": "送上电",
+       "dur": 0.8
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.72,
+       "y": 0.52,
+       "s": 0.46,
+       "when": "线路",
+       "anim": "pulse",
+       "z": 3
+      },
+      {
+       "label": "通电",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "通电"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "中文都能说“激励”，办法不一样",
+   "items": [
+    {
+     "w": "energize",
+     "word": "energize",
+     "name": "energize",
+     "en": "energize",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/battery.svg",
+        "x": 0.38,
+        "y": 0.56,
+        "s": 0.6,
+        "anim": "pulse",
+        "z": 2
+       },
+       {
+        "svg": "art/bulb.svg",
+        "x": 0.66,
+        "y": 0.54,
+        "s": 0.56,
+        "anim": "pulse",
+        "z": 2
+       }
+      ]
+     },
+     "text": "energize 侧重打起精神、激活，像给电池充上电。",
+     "say": "energize 侧重打起精神、激活，像给电池充上电。",
+     "diff": "energize 侧重打起精神、激活，像给电池充上电。",
+     "note": "energize 侧重打起精神、激活，像给电池充上电。",
+     "desc": "energize 侧重打起精神、激活，像给电池充上电。",
+     "m": "energize 侧重打起精神、激活，像给电池充上电。",
+     "mean": "energize 侧重打起精神、激活，像给电池充上电。",
+     "line": "energize 侧重打起精神、激活，像给电池充上电。",
+     "explain": "energize 侧重打起精神、激活，像给电池充上电。",
+     "zh": "energize 侧重打起精神、激活，像给电池充上电。",
+     "def": "energize 侧重打起精神、激活，像给电池充上电。",
+     "gloss": "energize 侧重打起精神、激活，像给电池充上电。",
+     "sense": "energize 侧重打起精神、激活，像给电池充上电。",
+     "comment": "energize 侧重打起精神、激活，像给电池充上电。",
+     "hint": "energize 侧重打起精神、激活，像给电池充上电。",
+     "txt": "energize 侧重打起精神、激活，像给电池充上电。",
+     "talk": "energize 侧重打起精神、激活，像给电池充上电。",
+     "words": "energize 侧重打起精神、激活，像给电池充上电。",
+     "detail": "energize 侧重打起精神、激活，像给电池充上电。"
+    },
+    {
+     "w": "motivate",
+     "word": "motivate",
+     "name": "motivate",
+     "en": "motivate",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/classroom-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/books.svg",
+        "x": 0.42,
+        "y": 0.58,
+        "s": 0.5,
+        "z": 2
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.66,
+        "y": 0.4,
+        "s": 0.3,
+        "anim": "spin",
+        "z": 3
+       }
+      ]
+     },
+     "text": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "say": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "diff": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "note": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "desc": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "m": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "mean": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "line": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "explain": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "zh": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "def": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "gloss": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "sense": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "comment": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "hint": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "txt": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "talk": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "words": "motivate 是给人一个动机、理由，让人愿意去做。",
+     "detail": "motivate 是给人一个动机、理由，让人愿意去做。"
+    }
+   ],
+   "logic": "energize 是 energy + ize“注入能量”；motivate 来自 motive“动机”，是给理由。",
+   "tip": "让人精神起来用 energize；让人有理由、有目标去做用 motivate。",
+   "pics": {
+    "energize": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/battery.svg",
+       "x": 0.38,
+       "y": 0.56,
+       "s": 0.6,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.66,
+       "y": 0.54,
+       "s": 0.56,
+       "anim": "pulse",
+       "z": 2
+      }
+     ]
+    },
+    "motivate": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.42,
+       "y": 0.58,
+       "s": 0.5,
+       "z": 2
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.66,
+       "y": 0.4,
+       "s": 0.3,
+       "anim": "spin",
+       "z": 3
+      }
+     ]
+    }
+   },
+   "notes": {
+    "energize": "energize 侧重打起精神、激活，像给电池充上电。",
+    "motivate": "motivate 是给人一个动机、理由，让人愿意去做。"
+   }
+  },
+  "demo": {
+   "widen": {
+    "icons": [
+     "art/big-small.svg",
+     "art/ify.svg"
+    ],
+    "lit": "使变宽",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/ify.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.66,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   "modernize": {
+    "icons": [
+     "art/smartphone.svg",
+     "art/ify.svg"
+    ],
+    "lit": "使现代化",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/rotary-phone.svg",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.4
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.72,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   "simplify": {
+    "icons": [
+     "art/books.svg",
+     "art/ify.svg"
+    ],
+    "lit": "使简单",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.6,
+       "s2": 0.3,
+       "grow": [
+        0.5,
+        1.6
+       ],
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "energizeai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：什么能让说话人早上有精神？\n听：Music always energizes me in the morning.\nA. 咖啡\nB. 跑步\nC. 音乐\nD. 洗澡",
@@ -89,5 +871,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
