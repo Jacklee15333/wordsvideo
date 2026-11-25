@@ -1,7 +1,704 @@
 {
  "单词": "thank",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "感谢；（反语）怪、归咎于"
+  },
+  "sylIpa": [
+   "θæŋk"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bubble.svg",
+      "x": 0.35,
+      "y": 0.35,
+      "s": 0.45,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/gift.svg",
+      "x": 0.36,
+      "y": 0.33,
+      "s": 0.2,
+      "z": 4
+     },
+     {
+      "svg": "art/card.svg",
+      "x": 0.75,
+      "y": 0.6,
+      "s": 0.4,
+      "anim": "pulse"
+     },
+     {
+      "label": "thank ≈ think 想着",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-card.svg"
+  },
+  "originPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bubble.svg",
+     "x": 0.3,
+     "y": 0.4,
+     "s": 0.5,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/gift.svg",
+     "x": 0.31,
+     "y": 0.38,
+     "s": 0.22,
+     "z": 4
+    },
+    {
+     "label": "think 想",
+     "x": 0.3,
+     "y": 0.85,
+     "size": 0.075,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.3
+    },
+    {
+     "ray": [
+      [
+       0.48,
+       0.45
+      ],
+      [
+       0.6,
+       0.45
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 0.7,
+     "delay": 0.8
+    },
+    {
+     "svg": "art/card.svg",
+     "x": 0.75,
+     "y": 0.45,
+     "s": 0.45,
+     "anim": "pulse",
+     "delay": 1
+    },
+    {
+     "label": "thank 感谢",
+     "x": 0.75,
+     "y": 0.85,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.2
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.75,
+     "y": 0.25,
+     "every": 0.9,
+     "life": 1.8,
+     "to": [
+      0,
+      -0.25
+     ],
+     "s": 0.08,
+     "wobble": 0.03,
+     "delay": 1.2
+    }
+   ]
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bubble.svg",
+     "x": 0.35,
+     "y": 0.4,
+     "s": 0.55,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/gift.svg",
+     "x": 0.36,
+     "y": 0.38,
+     "s": 0.24,
+     "z": 4
+    },
+    {
+     "label": "想着别人的好",
+     "x": 0.75,
+     "y": 0.5,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "感谢、道谢",
+    "pos": "动词",
+    "diff": "想着别人的好，再说出口",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.25,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "id": "g",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/flowers.svg",
+      "x": 0.52,
+      "y": 0.6,
+      "s": 0.35,
+      "anim": "bob",
+      "z": 5
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.8,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "nodWith": "g"
+     }
+    ],
+    "ex": "I want to thank you for your help.",
+    "exzh": "我想感谢你的帮助。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "I want",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/card.svg",
+       "x": 0.7,
+       "y": 0.45,
+       "s": 0.45,
+       "when": "thank you",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.7,
+       "y": 0.25,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "thank you"
+      },
+      {
+       "label": "感谢你的帮助",
+       "x": 0.7,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "感谢你的帮助"
+      },
+      {
+       "sound": "say:Thank you for your help!",
+       "when": "help",
+       "gap": true
+      }
+     ]
+    }
+   },
+   {
+    "text": "（反语）怪、归咎于",
+    "pos": "动词",
+    "diff": "把一件坏事“谢”给某人",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/vase-broken.svg",
+      "x": 0.72,
+      "y": 0.8,
+      "s": 0.25,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/spill.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.2,
+      "anim": "shake"
+     }
+    ],
+    "ex": "You only have yourself to thank.",
+    "exzh": "这只能怪你自己。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "x": 0.25,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "id": "m",
+       "seq": "talk",
+       "when": "You only"
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "x": 0.78,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "nodWith": "m",
+       "when": "You only"
+      },
+      {
+       "svg": "art/vase-broken.svg",
+       "x": 0.52,
+       "y": 0.85,
+       "s": 0.2,
+       "when": "yourself",
+       "anim": "shake"
+      },
+      {
+       "label": "只能怪你自己",
+       "x": 0.52,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "只能怪你自己"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“想着别人的好”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.35,
+       "y": 0.4,
+       "s": 0.55,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/gift.svg",
+       "x": 0.36,
+       "y": 0.38,
+       "s": 0.24,
+       "z": 4,
+       "delay": 0.5
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.36,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    }
+   },
+   {
+    "via": "别人帮了你，你一直想着这份好",
+    "node": "心怀感激",
+    "pos": "动词",
+    "cap": "thank ≈ think",
+    "say": [
+     "thank 和 think 是一家：别人帮了你，你一直想着这份好，就是心怀感激。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "thank ≈ think",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.1,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "是一家"
+      },
+      {
+       "actor": "west-man-smile",
+       "x": 0.3,
+       "y": 0.62,
+       "s": 0.85,
+       "z": 3,
+       "when": "一直想着",
+       "seq": "blink"
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.72,
+       "y": 0.38,
+       "s": 0.45,
+       "when": "想着这份好",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/gift.svg",
+       "x": 0.73,
+       "y": 0.36,
+       "s": 0.2,
+       "z": 4,
+       "when": "这份好"
+      },
+      {
+       "label": "心怀感激",
+       "x": 0.72,
+       "y": 0.85,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "心怀感激"
+      }
+     ]
+    }
+   },
+   {
+    "via": "想着，再说出口",
+    "node": "① 感谢、道谢",
+    "pos": "动词",
+    "pic": 0,
+    "cap": "约 1200 年：向人致谢",
+    "say": [
+     "把心里想着的说出口，就是感谢、道谢。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-hello",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "说出口",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/card.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.45,
+       "when": "感谢",
+       "anim": "pulse"
+      },
+      {
+       "label": "感谢、道谢",
+       "x": 0.72,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "感谢、道谢"
+      },
+      {
+       "sound": "say:Thank you!",
+       "when": "说出口",
+       "gap": true
+      }
+     ]
+    }
+   },
+   {
+    "via": "反过来用，把坏事“谢”给某人",
+    "node": "②（反语）怪、归咎于",
+    "pos": "动词",
+    "pic": 1,
+    "cap": "1550s：反语",
+    "say": [
+     "反过来用，把一件坏事谢给某人，就是怪他、归咎于他。",
+     "You only have yourself to thank，只能怪你自己。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/vase-broken.svg",
+       "x": 0.3,
+       "y": 0.75,
+       "s": 0.3,
+       "when": "一件坏事",
+       "anim": "shake"
+      },
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.72,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "怪他",
+       "seq": "talk"
+      },
+      {
+       "label": "归咎于",
+       "x": 0.3,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#E03131",
+       "bg": "#FFF5F5",
+       "when": "归咎于"
+      },
+      {
+       "label": "只能怪你自己",
+       "x": 0.4,
+       "y": 0.45,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "只能怪你自己"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "thanks",
+    "m": "谢谢",
+    "share": "thank"
+   },
+   {
+    "w": "thankful",
+    "m": "感激的",
+    "share": "thank"
+   },
+   {
+    "w": "think",
+    "m": "想",
+    "share": ""
+   }
+  ],
+  "distinguish": {
+   "key": "（感谢）",
+   "items": [
+    {
+     "w": "thank",
+     "word": "thank",
+     "name": "thank",
+     "zh": "感谢（动词）",
+     "m": "感谢（动词）",
+     "mean": "感谢（动词）",
+     "meaning": "感谢（动词）",
+     "say": "thank 后面直接跟人：thank him，不说 thank to him。",
+     "text": "thank 后面直接跟人：thank him，不说 thank to him。",
+     "line": "thank 后面直接跟人：thank him，不说 thank to him。",
+     "note": "thank 后面直接跟人：thank him，不说 thank to him。",
+     "desc": "thank 后面直接跟人：thank him，不说 thank to him。",
+     "diff": "thank 后面直接跟人：thank him，不说 thank to him。",
+     "explain": "thank 后面直接跟人：thank him，不说 thank to him。",
+     "detail": "thank 后面直接跟人：thank him，不说 thank to him。",
+     "sentence": "thank 后面直接跟人：thank him，不说 thank to him。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/card.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/flowers.svg",
+        "x": 0.8,
+        "y": 0.55,
+        "s": 0.6,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "thanks to",
+     "word": "thanks to",
+     "name": "thanks to",
+     "zh": "多亏、由于",
+     "m": "多亏、由于",
+     "mean": "多亏、由于",
+     "meaning": "多亏、由于",
+     "say": "thanks to 是多亏、由于，也可以用在坏事上：thanks to the rain，都怪这场雨。",
+     "text": "thanks to 是多亏、由于，也可以用在坏事上：thanks to the rain，都怪这场雨。",
+     "line": "thanks to 是多亏、由于，也可以用在坏事上：thanks to the rain，都怪这场雨。",
+     "note": "thanks to 是多亏、由于，也可以用在坏事上：thanks to the rain，都怪这场雨。",
+     "desc": "thanks to 是多亏、由于，也可以用在坏事上：thanks to the rain，都怪这场雨。",
+     "diff": "thanks to 是多亏、由于，也可以用在坏事上：thanks to the rain，都怪这场雨。",
+     "explain": "thanks to 是多亏、由于，也可以用在坏事上：thanks to the rain，都怪这场雨。",
+     "detail": "thanks to 是多亏、由于，也可以用在坏事上：thanks to the rain，都怪这场雨。",
+     "sentence": "thanks to 是多亏、由于，也可以用在坏事上：thanks to the rain，都怪这场雨。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/raincloud.svg",
+        "x": 0.4,
+        "y": 0.3,
+        "s": 0.5,
+        "anim": "bob"
+       },
+       {
+        "emit": true,
+        "svg": "art/drop.svg",
+        "x": 0.4,
+        "y": 0.45,
+        "every": 0.35,
+        "life": 1.2,
+        "to": [
+         0,
+         0.3
+        ],
+        "s": 0.07,
+        "wobble": 0.06
+       },
+       {
+        "svg": "art/umbrella.svg",
+        "x": 0.8,
+        "y": 0.55,
+        "s": 0.6,
+        "anim": "swing"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：thank 是人向人道谢的动作；thanks to 是把功劳或者责任记在某样东西头上。",
+   "tip": "向人道谢用 thank sb.；说多亏了、都怪用 thanks to。",
+   "pics": {
+    "thank": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/card.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/flowers.svg",
+       "x": 0.8,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "bob"
+      }
+     ]
+    },
+    "thanks to": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/raincloud.svg",
+       "x": 0.4,
+       "y": 0.3,
+       "s": 0.5,
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.4,
+       "y": 0.45,
+       "every": 0.35,
+       "life": 1.2,
+       "to": [
+        0,
+        0.3
+       ],
+       "s": 0.07,
+       "wobble": 0.06
+      },
+      {
+       "svg": "art/umbrella.svg",
+       "x": 0.8,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "swing"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "thankai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人为什么感谢对方？\n听：Thank you for helping me with my homework.\nA. 帮他做作业\nB. 送他礼物\nC. 请他吃饭\nD. 借他书",
@@ -90,5 +787,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

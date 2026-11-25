@@ -150,7 +150,8 @@
       "z": 3,
       "when": "thoughtless",
       "seq": "pingpong",
-      "fps": 2
+      "fps": 2,
+      "nodWith": "m"
      },
      {
       "label": "thoughtless 欠考虑",
@@ -506,6 +507,109 @@
    }
   }
  ],
+ "demo": {
+  "careful": {
+   "icons": [
+    "art/icon-glass.svg",
+    "art/icon-jar-full.svg"
+   ],
+   "lit": "满是小心的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/glass.svg",
+      "x": 0.45,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "bob"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.45,
+      "y": 0.25,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     }
+    ]
+   }
+  },
+  "careless": {
+   "icons": [
+    "art/icon-glass.svg",
+    "art/icon-jar-empty.svg"
+   ],
+   "lit": "没有小心的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/spill.svg",
+      "x": 0.45,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/vase-broken.svg",
+      "x": 0.8,
+      "y": 0.7,
+      "s": 0.3
+     }
+    ]
+   }
+  },
+  "rainy": {
+   "icons": [
+    "art/icon-raincloud.svg",
+    "art/icon-umbrella.svg"
+   ],
+   "lit": "下着雨的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.45,
+      "y": 0.3,
+      "s": 0.5,
+      "anim": "bob"
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.45,
+      "y": 0.45,
+      "every": 0.35,
+      "life": 1.2,
+      "to": [
+       0,
+       0.3
+      ],
+      "s": 0.07,
+      "wobble": 0.06
+     },
+     {
+      "svg": "art/umbrella.svg",
+      "x": 0.82,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "swing"
+     }
+    ]
+   }
+  }
+ },
  "extend": [
   {
    "w": "careless",

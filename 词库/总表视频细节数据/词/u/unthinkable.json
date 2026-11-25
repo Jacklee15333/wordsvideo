@@ -1,7 +1,1017 @@
 {
  "单词": "unthinkable",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "不可想象的；绝不可接受的"
+  },
+  "sylIpa": [
+   "ʌn",
+   "ˈθɪŋk",
+   "əbl"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/noentry.svg",
+      "x": 0.45,
+      "y": 0.5,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "un- 不",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/bubble.svg",
+      "x": 0.45,
+      "y": 0.42,
+      "s": 0.55,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.46,
+      "y": 0.4,
+      "s": 0.28,
+      "z": 4,
+      "anim": "pulse"
+     },
+     {
+      "label": "think 想",
+      "x": 0.45,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "p2": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/checkkey.svg",
+      "x": 0.45,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/tick.svg",
+      "x": 0.82,
+      "y": 0.3,
+      "s": 0.25,
+      "anim": "pulse"
+     },
+     {
+      "label": "-able 能被…的",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-noentry.svg",
+   "p1": "art/icon-bubble.svg",
+   "p2": "art/icon-checkkey.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bubble.svg",
+     "x": 0.4,
+     "y": 0.45,
+     "s": 0.6,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/noentry.svg",
+     "x": 0.42,
+     "y": 0.43,
+     "s": 0.3,
+     "z": 4,
+     "anim": "pulse"
+    },
+    {
+     "label": "想都不能想的",
+     "x": 0.8,
+     "y": 0.85,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "不可想象的、难以置信的",
+    "pos": "形容词",
+    "diff": "超出想象，根本想不到",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/rotary-phone.svg",
+      "x": 0.25,
+      "y": 0.6,
+      "s": 0.4
+     },
+     {
+      "ray": [
+       [
+        0.42,
+        0.55
+       ],
+       [
+        0.58,
+        0.55
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.72,
+      "y": 0.5,
+      "s": 0.55,
+      "anim": "bob"
+     },
+     {
+      "waves": true,
+      "x": 0.8,
+      "y": 0.35,
+      "dir": 0,
+      "n": 3
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.92,
+      "y": 0.65,
+      "s": 0.6,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     }
+    ],
+    "ex": "Twenty years ago, smartphones were unthinkable.",
+    "exzh": "二十年前，智能手机是不可想象的。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/rotary-phone.svg",
+       "x": 0.25,
+       "y": 0.6,
+       "s": 0.45,
+       "when": "Twenty years ago"
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.25,
+       "y": 0.22,
+       "s": 0.3,
+       "when": "Twenty years ago",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.7,
+       "y": 0.5,
+       "s": 0.6,
+       "when": "smartphones",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.78,
+       "y": 0.35,
+       "dir": 0,
+       "n": 3,
+       "when": "smartphones"
+      },
+      {
+       "label": "unthinkable",
+       "x": 0.7,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "unthinkable"
+      },
+      {
+       "label": "不可想象的",
+       "x": 0.7,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "不可想象的"
+      }
+     ]
+    }
+   },
+   {
+    "text": "绝不可接受的、绝不可能的",
+    "pos": "形容词",
+    "diff": "一想就觉得绝对不行",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.25,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "svg": "art/exam.svg",
+      "x": 0.6,
+      "y": 0.5,
+      "s": 0.45,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/noentry.svg",
+      "x": 0.82,
+      "y": 0.35,
+      "s": 0.3,
+      "anim": "pulse"
+     }
+    ],
+    "ex": "Cheating in exams is unthinkable for her.",
+    "exzh": "考试作弊对她来说是绝不可能的。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/exam.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "exams"
+      },
+      {
+       "svg": "art/cheatnote.svg",
+       "x": 0.45,
+       "y": 0.7,
+       "s": 0.2,
+       "when": "Cheating",
+       "anim": "shake"
+      },
+      {
+       "svg": "art/noentry.svg",
+       "x": 0.45,
+       "y": 0.7,
+       "s": 0.3,
+       "when": "unthinkable",
+       "pop": true,
+       "z": 5
+      },
+      {
+       "actor": "west-girl-explain",
+       "x": 0.78,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "for her",
+       "seq": "talk"
+      },
+      {
+       "label": "绝不可能的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "绝不可能的"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“想都不能想的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.4,
+       "y": 0.45,
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/noentry.svg",
+       "x": 0.42,
+       "y": 0.43,
+       "s": 0.3,
+       "z": 4,
+       "anim": "pulse",
+       "delay": 0.6
+      }
+     ]
+    }
+   },
+   {
+    "via": "不 + 想 + 能被…的",
+    "node": "un + think + able",
+    "pos": "形容词",
+    "rule": "动词 + -able → 形容词：能被…的；前面加 un- 变成相反",
+    "ruleEx": "believe → believable → unbelievable      think → thinkable → unthinkable",
+    "cap": "能被想到的 → 想都不能想的",
+    "say": [
+     "动词后面加 -able，就是能被…的，前面再加 un-，意思就反过来。",
+     "believe 是相信，unbelievable 就是不能相信的。",
+     "think 是想，unthinkable 就是想都不能想的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "-able 能被…的",
+       "x": 0.3,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "-able",
+       "hideCue": 1
+      },
+      {
+       "label": "un- 反过来",
+       "x": 0.7,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#E03131",
+       "bg": "#FFF5F5",
+       "when": "un-",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/checkkey.svg",
+       "x": 0.3,
+       "y": 0.55,
+       "s": 0.35,
+       "when": "能被…的",
+       "hideCue": 1,
+       "anim": "swing"
+      },
+      {
+       "svg": "art/noentry.svg",
+       "x": 0.7,
+       "y": 0.55,
+       "s": 0.35,
+       "when": "反过来",
+       "hideCue": 1,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/tick.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.35,
+       "when": "相信",
+       "hideCue": 2,
+       "anim": "pulse"
+      },
+      {
+       "label": "unbelievable 不能相信的",
+       "x": 0.68,
+       "y": 0.5,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "unbelievable",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.3,
+       "y": 0.45,
+       "s": 0.45,
+       "when": "think 是想",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/noentry.svg",
+       "x": 0.31,
+       "y": 0.43,
+       "s": 0.22,
+       "z": 4,
+       "when": "想都不能想的",
+       "anim": "pulse"
+      },
+      {
+       "label": "unthinkable",
+       "x": 0.72,
+       "y": 0.5,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "unthinkable"
+      }
+     ]
+    }
+   },
+   {
+    "via": "超出想象，根本想不到",
+    "node": "① 不可想象的、难以置信的",
+    "pos": "形容词",
+    "pic": 0,
+    "cap": "想不到",
+    "say": [
+     "一件事超出了想象，根本想不到会这样，就是不可想象的、难以置信的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-hello",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "超出了想象",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.7,
+       "y": 0.35,
+       "s": 0.45,
+       "when": "根本想不到",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.71,
+       "y": 0.33,
+       "s": 0.2,
+       "z": 4,
+       "when": "根本想不到"
+      },
+      {
+       "waves": true,
+       "x": 0.75,
+       "y": 0.3,
+       "dir": 0,
+       "n": 2,
+       "when": "根本想不到"
+      },
+      {
+       "label": "难以置信的",
+       "x": 0.7,
+       "y": 0.85,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "难以置信的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "一想就觉得绝对不行",
+    "node": "② 绝不可接受的、绝不可能的",
+    "pos": "形容词",
+    "pic": 1,
+    "from": 1,
+    "cap": "不能想 → 绝不能做",
+    "say": [
+     "有的事，一想就觉得绝对不行，在道理上、感情上都不能接受，也是 unthinkable：绝不可接受的、绝不可能的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/cheatnote.svg",
+       "x": 0.3,
+       "y": 0.55,
+       "s": 0.35,
+       "when": "一想",
+       "anim": "shake"
+      },
+      {
+       "svg": "art/noentry.svg",
+       "x": 0.3,
+       "y": 0.55,
+       "s": 0.45,
+       "when": "绝对不行",
+       "z": 5,
+       "anim": "pulse"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.75,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "不能接受",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "label": "绝不可接受的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "绝不可接受的"
+      }
+     ]
+    }
+   }
+  ],
+  "demo": {
+   "unhappy": {
+    "icons": [
+     "art/icon-noentry.svg",
+     "art/icon-balloons.svg"
+    ],
+    "lit": "不开心的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/raincloud.svg",
+       "x": 0.4,
+       "y": 0.3,
+       "s": 0.45,
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.4,
+       "y": 0.45,
+       "every": 0.35,
+       "life": 1.2,
+       "to": [
+        0,
+        0.3
+       ],
+       "s": 0.07,
+       "wobble": 0.06
+      },
+      {
+       "svg": "art/balloons.svg",
+       "x": 0.8,
+       "y": 0.6,
+       "s": 0.5,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   "unlock": {
+    "icons": [
+     "art/icon-turnarrow.svg",
+     "art/icon-checkkey.svg"
+    ],
+    "lit": "把锁打开",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/door.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.8
+      },
+      {
+       "svg": "art/checkkey.svg",
+       "x": 0.75,
+       "y": 0.5,
+       "s": 0.35,
+       "anim": "swing"
+      }
+     ]
+    }
+   },
+   "incorrect": {
+    "icons": [
+     "art/icon-noentry.svg",
+     "art/icon-tick.svg"
+    ],
+    "lit": "不对的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/exam.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.75
+      },
+      {
+       "svg": "art/bigx.svg",
+       "x": 0.78,
+       "y": 0.45,
+       "s": 0.4,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   "disagree": {
+    "icons": [
+     "art/icon-noentry.svg",
+     "art/icon-tick.svg"
+    ],
+    "lit": "不同意",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.4,
+       "y": 0.45,
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/bigx.svg",
+       "x": 0.41,
+       "y": 0.43,
+       "s": 0.3,
+       "z": 4,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   "active": {
+    "icons": [
+     "art/icon-footsteps.svg",
+     "art/icon-gears.svg"
+    ],
+    "lit": "活跃的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/footsteps.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.55,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/balloons.svg",
+       "x": 0.8,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   "usable": {
+    "icons": [
+     "art/icon-gears.svg",
+     "art/icon-checkkey.svg"
+    ],
+    "lit": "能用的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/wateringcan.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.55,
+       "anim": "swing"
+      },
+      {
+       "svg": "art/tick.svg",
+       "x": 0.8,
+       "y": 0.4,
+       "s": 0.4,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   "interesting": {
+    "icons": [
+     "art/icon-bulb.svg",
+     "art/icon-gears.svg"
+    ],
+    "lit": "有趣的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.55,
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.4,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.8,
+       "y": 0.45,
+       "s": 0.45,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  },
+  "extend": [
+   {
+    "w": "unbelievable",
+    "m": "难以置信的",
+    "share": "un…able"
+   },
+   {
+    "w": "think",
+    "m": "想",
+    "share": "think"
+   }
+  ],
+  "distinguish": {
+   "key": "不可能的",
+   "items": [
+    {
+     "w": "unthinkable",
+     "word": "unthinkable",
+     "name": "unthinkable",
+     "zh": "绝不可能的；不可想象的",
+     "m": "绝不可能的；不可想象的",
+     "mean": "绝不可能的；不可想象的",
+     "meaning": "绝不可能的；不可想象的",
+     "say": "unthinkable 常带道德上、情感上不能接受的意味。",
+     "text": "unthinkable 常带道德上、情感上不能接受的意味。",
+     "line": "unthinkable 常带道德上、情感上不能接受的意味。",
+     "note": "unthinkable 常带道德上、情感上不能接受的意味。",
+     "desc": "unthinkable 常带道德上、情感上不能接受的意味。",
+     "diff": "unthinkable 常带道德上、情感上不能接受的意味。",
+     "explain": "unthinkable 常带道德上、情感上不能接受的意味。",
+     "detail": "unthinkable 常带道德上、情感上不能接受的意味。",
+     "sentence": "unthinkable 常带道德上、情感上不能接受的意味。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/cheatnote.svg",
+        "x": 0.35,
+        "y": 0.55,
+        "s": 0.45,
+        "anim": "shake"
+       },
+       {
+        "svg": "art/noentry.svg",
+        "x": 0.35,
+        "y": 0.55,
+        "s": 0.6,
+        "z": 4,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "impossible",
+     "word": "impossible",
+     "name": "impossible",
+     "zh": "不可能的",
+     "m": "不可能的",
+     "mean": "不可能的",
+     "meaning": "不可能的",
+     "say": "impossible 只说做不到、不会发生，不带感情。",
+     "text": "impossible 只说做不到、不会发生，不带感情。",
+     "line": "impossible 只说做不到、不会发生，不带感情。",
+     "note": "impossible 只说做不到、不会发生，不带感情。",
+     "desc": "impossible 只说做不到、不会发生，不带感情。",
+     "diff": "impossible 只说做不到、不会发生，不带感情。",
+     "explain": "impossible 只说做不到、不会发生，不带感情。",
+     "detail": "impossible 只说做不到、不会发生，不带感情。",
+     "sentence": "impossible 只说做不到、不会发生，不带感情。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/bigx.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.6,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/house.svg",
+        "x": 0.78,
+        "y": 0.55,
+        "s": 0.5
+       }
+      ]
+     }
+    },
+    {
+     "w": "unimaginable",
+     "word": "unimaginable",
+     "name": "unimaginable",
+     "zh": "难以想象的",
+     "m": "难以想象的",
+     "mean": "难以想象的",
+     "meaning": "难以想象的",
+     "say": "unimaginable 偏程度大得超出想象，比如 unimaginable suffering。",
+     "text": "unimaginable 偏程度大得超出想象，比如 unimaginable suffering。",
+     "line": "unimaginable 偏程度大得超出想象，比如 unimaginable suffering。",
+     "note": "unimaginable 偏程度大得超出想象，比如 unimaginable suffering。",
+     "desc": "unimaginable 偏程度大得超出想象，比如 unimaginable suffering。",
+     "diff": "unimaginable 偏程度大得超出想象，比如 unimaginable suffering。",
+     "explain": "unimaginable 偏程度大得超出想象，比如 unimaginable suffering。",
+     "detail": "unimaginable 偏程度大得超出想象，比如 unimaginable suffering。",
+     "sentence": "unimaginable 偏程度大得超出想象，比如 unimaginable suffering。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/bubble.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "bob"
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.4,
+        "y": 0.3,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       },
+       {
+        "svg": "art/sun.svg",
+        "x": 0.8,
+        "y": 0.4,
+        "s": 0.5,
+        "anim": "spin"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：unthinkable 是连想都不该想；impossible 是做不到；unimaginable 是大到想象不出来。",
+   "tip": "道德上、感情上绝对不行用 unthinkable；做不到用 impossible；程度超出想象用 unimaginable。",
+   "pics": {
+    "unthinkable": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/cheatnote.svg",
+       "x": 0.35,
+       "y": 0.55,
+       "s": 0.45,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/noentry.svg",
+       "x": 0.35,
+       "y": 0.55,
+       "s": 0.6,
+       "z": 4,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "impossible": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bigx.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/house.svg",
+       "x": 0.78,
+       "y": 0.55,
+       "s": 0.5
+      }
+     ]
+    },
+    "unimaginable": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.4,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.8,
+       "y": 0.4,
+       "s": 0.5,
+       "anim": "spin"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "unthinkableai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：五十年前什么是不可想象的？\n听：Mobile phones were unthinkable fifty years ago.\nA. 手机\nB. 汽车\nC. 电视\nD. 自行车",
@@ -89,5 +1099,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

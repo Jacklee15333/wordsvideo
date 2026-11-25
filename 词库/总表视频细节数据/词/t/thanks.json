@@ -1,7 +1,752 @@
 {
  "单词": "thanks",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "谢谢；感谢、谢意；多亏"
+  },
+  "sylIpa": [
+   "θæŋk",
+   "s"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/card.svg",
+      "x": 0.4,
+      "y": 0.5,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.4,
+      "y": 0.25,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     },
+     {
+      "label": "thank 谢意",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/cards.svg",
+      "x": 0.45,
+      "y": 0.5,
+      "s": 0.6,
+      "anim": "bob"
+     },
+     {
+      "label": "-s 复数",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-card.svg",
+   "p1": "art/icon-cards.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/card.svg",
+     "x": 0.3,
+     "y": 0.5,
+     "s": 0.45,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/cards.svg",
+     "x": 0.72,
+     "y": 0.5,
+     "s": 0.45,
+     "anim": "bob"
+    },
+    {
+     "label": "一份份谢意",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "谢谢",
+    "pos": "感叹语",
+    "diff": "把“我向你献上谢意”省成一个词",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.25,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "id": "m",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/gift.svg",
+      "x": 0.52,
+      "y": 0.65,
+      "s": 0.3,
+      "anim": "pulse",
+      "z": 5
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.8,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "nodWith": "m"
+     }
+    ],
+    "ex": "Thanks for the gift!",
+    "exzh": "谢谢你的礼物！",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/gift.svg",
+       "x": 0.35,
+       "y": 0.6,
+       "s": 0.45,
+       "when": "the gift",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.75,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "Thanks",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.35,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "the gift"
+      },
+      {
+       "label": "谢谢你的礼物",
+       "x": 0.35,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "谢谢你的礼物"
+      },
+      {
+       "sound": "say:Thanks for the gift!",
+       "when": "gift",
+       "gap": true
+      }
+     ]
+    }
+   },
+   {
+    "text": "感谢、谢意",
+    "pos": "名词（总用复数）",
+    "diff": "一份份谢意",
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/podium.svg",
+      "x": 0.45,
+      "y": 0.78,
+      "s": 0.42,
+      "z": 4
+     },
+     {
+      "actor": "west-man-present",
+      "x": 0.45,
+      "y": 0.5,
+      "s": 0.8,
+      "z": 3,
+      "id": "p",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/flowers.svg",
+      "x": 0.78,
+      "y": 0.55,
+      "s": 0.45,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.24,
+      "z": 6,
+      "crowd": 9,
+      "nodWith": "p"
+     }
+    ],
+    "ex": "Please accept our thanks.",
+    "exzh": "请接受我们的谢意。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.28,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "Please",
+       "seq": "talk"
+      },
+      {
+       "svg": "art/card.svg",
+       "x": 0.7,
+       "y": 0.45,
+       "s": 0.4,
+       "when": "our thanks",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/flowers.svg",
+       "x": 0.85,
+       "y": 0.65,
+       "s": 0.35,
+       "when": "accept",
+       "anim": "bob"
+      },
+      {
+       "label": "我们的谢意",
+       "x": 0.6,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "我们的谢意"
+      }
+     ]
+    }
+   },
+   {
+    "text": "多亏、由于",
+    "pos": "短语 thanks to",
+    "diff": "把功劳“谢”给某样东西",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.72,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.72,
+      "y": 0.25,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     }
+    ],
+    "ex": "Thanks to your help, we won.",
+    "exzh": "多亏你的帮助，我们赢了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.25,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "id": "t",
+       "seq": "talk",
+       "when": "Thanks to"
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.8,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "nodWith": "t",
+       "when": "we won"
+      },
+      {
+       "svg": "art/trophy.svg",
+       "x": 0.52,
+       "y": 0.6,
+       "s": 0.35,
+       "when": "won",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "label": "多亏你的帮助",
+       "x": 0.52,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "多亏你的帮助"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“（一份份）谢意”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/card.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.45,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/cards.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.45,
+       "anim": "bob",
+       "delay": 0.5
+      }
+     ]
+    }
+   },
+   {
+    "via": "谢意加 -s，一份份的",
+    "node": "② 感谢、谢意",
+    "pos": "名词",
+    "pic": 1,
+    "rule": "名词 + -s → 复数",
+    "ruleEx": "card → cards      thank → thanks",
+    "cap": "13 世纪中：复数名词“谢意”",
+    "say": [
+     "thank 当名词是谢意，加上 -s，是一份份的谢意，就是感谢。",
+     "名词 thanks 总用复数，不说 a thank。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/card.svg",
+       "x": 0.25,
+       "y": 0.5,
+       "s": 0.4,
+       "when": "谢意",
+       "anim": "pulse"
+      },
+      {
+       "ray": [
+        [
+         0.4,
+         0.5
+        ],
+        [
+         0.52,
+         0.5
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.7,
+       "when": "加上 -s"
+      },
+      {
+       "svg": "art/cards.svg",
+       "x": 0.7,
+       "y": 0.5,
+       "s": 0.45,
+       "when": "一份份的谢意",
+       "anim": "bob"
+      },
+      {
+       "label": "感谢",
+       "x": 0.7,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "就是感谢"
+      },
+      {
+       "label": "总用复数",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "总用复数"
+      }
+     ]
+    }
+   },
+   {
+    "via": "“我向你献上谢意”省到只剩一个词",
+    "node": "① 谢谢",
+    "pos": "感叹语",
+    "pic": 0,
+    "cap": "1580s：单独当感叹语",
+    "say": [
+     "说我向你献上谢意，太长了，省到只剩一个词：Thanks，谢谢。",
+     "十六世纪起就这样说了。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.28,
+       "y": 0.6,
+       "s": 0.85,
+       "z": 3,
+       "when": "太长了",
+       "seq": "blink"
+      },
+      {
+       "label": "我向你献上谢意",
+       "x": 0.68,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "我向你献上谢意",
+       "hideWhen": "省到"
+      },
+      {
+       "svg": "art/card.svg",
+       "x": 0.68,
+       "y": 0.5,
+       "s": 0.4,
+       "when": "省到只剩一个词",
+       "anim": "pulse"
+      },
+      {
+       "label": "Thanks 谢谢",
+       "x": 0.68,
+       "y": 0.85,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "Thanks"
+      },
+      {
+       "label": "十六世纪",
+       "x": 0.2,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "十六世纪"
+      },
+      {
+       "sound": "say:Thanks!",
+       "when": "谢谢",
+       "gap": true
+      }
+     ]
+    }
+   },
+   {
+    "via": "把功劳“谢”给某样东西",
+    "node": "③ thanks to 多亏、由于",
+    "pos": "短语",
+    "pic": 2,
+    "from": 1,
+    "cap": "谢给人 → 谢给事",
+    "say": [
+     "把功劳谢给某样东西，就是 thanks to，多亏、由于。",
+     "坏事也能这样说：thanks to the rain，都怪这场雨。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/trophy.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.45,
+       "when": "功劳",
+       "anim": "pulse",
+       "hideCue": 1
+      },
+      {
+       "label": "thanks to 多亏",
+       "x": 0.3,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "多亏",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/raincloud.svg",
+       "x": 0.7,
+       "y": 0.3,
+       "s": 0.4,
+       "when": "坏事",
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.7,
+       "y": 0.42,
+       "every": 0.35,
+       "life": 1.2,
+       "to": [
+        0,
+        0.3
+       ],
+       "s": 0.07,
+       "wobble": 0.06,
+       "when": "the rain"
+      },
+      {
+       "svg": "art/umbrella.svg",
+       "x": 0.7,
+       "y": 0.7,
+       "s": 0.35,
+       "when": "the rain",
+       "anim": "swing"
+      },
+      {
+       "label": "都怪这场雨",
+       "x": 0.3,
+       "y": 0.5,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#E03131",
+       "bg": "#FFF5F5",
+       "when": "都怪这场雨"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "thank",
+    "m": "感谢",
+    "share": "thank"
+   },
+   {
+    "w": "thankful",
+    "m": "感激的",
+    "share": "thank"
+   }
+  ],
+  "distinguish": {
+   "key": "感谢",
+   "items": [
+    {
+     "w": "thanks",
+     "word": "thanks",
+     "name": "thanks",
+     "zh": "谢意（口头）",
+     "m": "谢意（口头）",
+     "mean": "谢意（口头）",
+     "meaning": "谢意（口头）",
+     "say": "Thanks 比 Thank you 随意；可说 Thanks a lot、Many thanks，但不说 Thank you a lot。thanks 偏口头的谢意。",
+     "text": "Thanks 比 Thank you 随意；可说 Thanks a lot、Many thanks，但不说 Thank you a lot。thanks 偏口头的谢意。",
+     "line": "Thanks 比 Thank you 随意；可说 Thanks a lot、Many thanks，但不说 Thank you a lot。thanks 偏口头的谢意。",
+     "note": "Thanks 比 Thank you 随意；可说 Thanks a lot、Many thanks，但不说 Thank you a lot。thanks 偏口头的谢意。",
+     "desc": "Thanks 比 Thank you 随意；可说 Thanks a lot、Many thanks，但不说 Thank you a lot。thanks 偏口头的谢意。",
+     "diff": "Thanks 比 Thank you 随意；可说 Thanks a lot、Many thanks，但不说 Thank you a lot。thanks 偏口头的谢意。",
+     "explain": "Thanks 比 Thank you 随意；可说 Thanks a lot、Many thanks，但不说 Thank you a lot。thanks 偏口头的谢意。",
+     "detail": "Thanks 比 Thank you 随意；可说 Thanks a lot、Many thanks，但不说 Thank you a lot。thanks 偏口头的谢意。",
+     "sentence": "Thanks 比 Thank you 随意；可说 Thanks a lot、Many thanks，但不说 Thank you a lot。thanks 偏口头的谢意。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/card.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/gift.svg",
+        "x": 0.8,
+        "y": 0.55,
+        "s": 0.5,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "gratitude",
+     "word": "gratitude",
+     "name": "gratitude",
+     "zh": "感激之情",
+     "m": "感激之情",
+     "mean": "感激之情",
+     "meaning": "感激之情",
+     "say": "gratitude 偏心里的感激之情，是名词，形容词用 grateful。",
+     "text": "gratitude 偏心里的感激之情，是名词，形容词用 grateful。",
+     "line": "gratitude 偏心里的感激之情，是名词，形容词用 grateful。",
+     "note": "gratitude 偏心里的感激之情，是名词，形容词用 grateful。",
+     "desc": "gratitude 偏心里的感激之情，是名词，形容词用 grateful。",
+     "diff": "gratitude 偏心里的感激之情，是名词，形容词用 grateful。",
+     "explain": "gratitude 偏心里的感激之情，是名词，形容词用 grateful。",
+     "detail": "gratitude 偏心里的感激之情，是名词，形容词用 grateful。",
+     "sentence": "gratitude 偏心里的感激之情，是名词，形容词用 grateful。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/bubble.svg",
+        "x": 0.4,
+        "y": 0.45,
+        "s": 0.65,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/flowers.svg",
+        "x": 0.8,
+        "y": 0.55,
+        "s": 0.6,
+        "anim": "bob"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：thanks 是说出口的一份份谢意；gratitude 是放在心里的那种感激。",
+   "tip": "口头道谢用 thanks；正式地表达心里的感激用 gratitude。",
+   "pics": {
+    "thanks": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/card.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/gift.svg",
+       "x": 0.8,
+       "y": 0.55,
+       "s": 0.5,
+       "anim": "bob"
+      }
+     ]
+    },
+    "gratitude": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bubble.svg",
+       "x": 0.4,
+       "y": 0.45,
+       "s": 0.65,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/flowers.svg",
+       "x": 0.8,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "thanksai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人在感谢什么？\n听：Thanks for the lovely flowers.\nA. 一本书\nB. 漂亮的花\nC. 一顿饭\nD. 一张卡片",
@@ -89,5 +834,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
