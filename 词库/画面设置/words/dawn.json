@@ -476,6 +476,35 @@
     "img": "art/castle-bg.svg",
     "items": [
      {
+      "label": "变成 day",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "cue": 0,
+      "when": "变成 day",
+      "hideCue": 1
+     },
+     {
+      "ray": [
+       [
+        0.06,
+        0.78
+       ],
+       [
+        0.94,
+        0.78
+       ]
+      ],
+      "color": "#FFE27A",
+      "lw": 0.04,
+      "glow": true,
+      "cue": 0,
+      "when": "天正在",
+      "dur": 1.4
+     },
+     {
       "svg": "art/moon.svg",
       "x": 0.2,
       "y": 0.2,
@@ -669,9 +698,6 @@
   "items": [
    {
     "w": "dawn",
-    "word": "dawn",
-    "name": "dawn",
-    "en": "dawn",
     "pic": {
      "bg": "blank",
      "items": [
@@ -697,6 +723,9 @@
       }
      ]
     },
+    "word": "dawn",
+    "name": "dawn",
+    "en": "dawn",
     "text": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
     "say": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
     "diff": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
@@ -715,13 +744,20 @@
     "txt": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
     "talk": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
     "words": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
-    "detail": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。"
+    "detail": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "sentence": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "speech": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "cn": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "why": "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。",
+    "lines": [
+     "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。"
+    ],
+    "says": [
+     "dawn 是天刚亮的那一刻，比 morning 早，daybreak 同义。"
+    ]
    },
    {
     "w": "daylight",
-    "word": "daylight",
-    "name": "daylight",
-    "en": "daylight",
     "pic": {
      "bg": "blank",
      "items": [
@@ -758,6 +794,9 @@
       }
      ]
     },
+    "word": "daylight",
+    "name": "daylight",
+    "en": "daylight",
     "text": "daylight 作“黎明”是天开始有光；平常更多指天光。",
     "say": "daylight 作“黎明”是天开始有光；平常更多指天光。",
     "diff": "daylight 作“黎明”是天开始有光；平常更多指天光。",
@@ -776,13 +815,20 @@
     "txt": "daylight 作“黎明”是天开始有光；平常更多指天光。",
     "talk": "daylight 作“黎明”是天开始有光；平常更多指天光。",
     "words": "daylight 作“黎明”是天开始有光；平常更多指天光。",
-    "detail": "daylight 作“黎明”是天开始有光；平常更多指天光。"
+    "detail": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "sentence": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "speech": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "cn": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "why": "daylight 作“黎明”是天开始有光；平常更多指天光。",
+    "lines": [
+     "daylight 作“黎明”是天开始有光；平常更多指天光。"
+    ],
+    "says": [
+     "daylight 作“黎明”是天开始有光；平常更多指天光。"
+    ]
    },
    {
     "w": "sunrise",
-    "word": "sunrise",
-    "name": "sunrise",
-    "en": "sunrise",
     "pic": {
      "bg": "blank",
      "items": [
@@ -808,6 +854,9 @@
       }
      ]
     },
+    "word": "sunrise",
+    "name": "sunrise",
+    "en": "sunrise",
     "text": "sunrise 是日出，太阳露出地平线那一刻。",
     "say": "sunrise 是日出，太阳露出地平线那一刻。",
     "diff": "sunrise 是日出，太阳露出地平线那一刻。",
@@ -826,7 +875,17 @@
     "txt": "sunrise 是日出，太阳露出地平线那一刻。",
     "talk": "sunrise 是日出，太阳露出地平线那一刻。",
     "words": "sunrise 是日出，太阳露出地平线那一刻。",
-    "detail": "sunrise 是日出，太阳露出地平线那一刻。"
+    "detail": "sunrise 是日出，太阳露出地平线那一刻。",
+    "sentence": "sunrise 是日出，太阳露出地平线那一刻。",
+    "speech": "sunrise 是日出，太阳露出地平线那一刻。",
+    "cn": "sunrise 是日出，太阳露出地平线那一刻。",
+    "why": "sunrise 是日出，太阳露出地平线那一刻。",
+    "lines": [
+     "sunrise 是日出，太阳露出地平线那一刻。"
+    ],
+    "says": [
+     "sunrise 是日出，太阳露出地平线那一刻。"
+    ]
    }
   ],
   "logic": "dawn 来自“变成白天”；daylight 是“白天的光”；sunrise 是“太阳升起”。",

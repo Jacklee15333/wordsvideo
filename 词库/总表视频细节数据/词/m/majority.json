@@ -331,8 +331,12 @@
        "s": 0.9,
        "z": 3,
        "id": "w",
-       "seq": "blink",
-       "when": "won"
+       "seq": "talk",
+       "when": "won",
+       "turn": [
+        0,
+        2
+       ]
       },
       {
        "waves": true,
@@ -371,7 +375,12 @@
        "s": 0.78,
        "z": 3,
        "nodWith": "w",
-       "seq": "blink"
+       "seq": "blink",
+       "id": "t",
+       "turn": [
+        1,
+        2
+       ]
       },
       {
        "label": "a large majority",
@@ -461,7 +470,22 @@
        "z": 3,
        "id": "h",
        "seq": "pingpong",
-       "fps": 2.5
+       "fps": 2.5,
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "waves": true,
+       "on": "h",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#2F6FB3",
+       "with": "h"
       },
       {
        "svg": "art/cake.svg",
@@ -480,7 +504,13 @@
        "s": 0.88,
        "z": 3,
        "seq": "pingpong",
-       "fps": 2.5
+       "fps": 2.5,
+       "id": "l",
+       "turn": [
+        1,
+        2
+       ],
+       "nodWith": "h"
       },
       {
        "sound": "say:Happy birthday!|bf_emma",
@@ -741,7 +771,6 @@
     {
      "w": "majority",
      "m": "大多数；成年",
-     "say": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
      "pic": {
       "bg": "blank",
       "items": [
@@ -761,16 +790,29 @@
        }
       ]
      },
+     "word": "majority",
+     "name": "majority",
+     "en": "majority",
      "text": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "say": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
      "diff": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
-     "line": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
      "note": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
      "desc": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "mean": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "line": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
      "explain": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
-     "sentence": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
-     "talk": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
-     "speech": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
      "zh": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "def": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "gloss": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "sense": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "comment": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "hint": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "txt": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "talk": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "words": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "detail": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "sentence": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+     "speech": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
      "cn": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
      "why": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
      "lines": [
@@ -778,13 +820,11 @@
      ],
      "says": [
       "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。"
-     ],
-     "word": "majority"
+     ]
     },
     {
      "w": "most",
      "m": "大部分",
-     "say": "most 只是大部分，没说一定过半，比如 most students。",
      "pic": {
       "bg": "blank",
       "items": [
@@ -804,16 +844,29 @@
        }
       ]
      },
+     "word": "most",
+     "name": "most",
+     "en": "most",
      "text": "most 只是大部分，没说一定过半，比如 most students。",
+     "say": "most 只是大部分，没说一定过半，比如 most students。",
      "diff": "most 只是大部分，没说一定过半，比如 most students。",
-     "line": "most 只是大部分，没说一定过半，比如 most students。",
      "note": "most 只是大部分，没说一定过半，比如 most students。",
      "desc": "most 只是大部分，没说一定过半，比如 most students。",
+     "mean": "most 只是大部分，没说一定过半，比如 most students。",
+     "line": "most 只是大部分，没说一定过半，比如 most students。",
      "explain": "most 只是大部分，没说一定过半，比如 most students。",
-     "sentence": "most 只是大部分，没说一定过半，比如 most students。",
-     "talk": "most 只是大部分，没说一定过半，比如 most students。",
-     "speech": "most 只是大部分，没说一定过半，比如 most students。",
      "zh": "most 只是大部分，没说一定过半，比如 most students。",
+     "def": "most 只是大部分，没说一定过半，比如 most students。",
+     "gloss": "most 只是大部分，没说一定过半，比如 most students。",
+     "sense": "most 只是大部分，没说一定过半，比如 most students。",
+     "comment": "most 只是大部分，没说一定过半，比如 most students。",
+     "hint": "most 只是大部分，没说一定过半，比如 most students。",
+     "txt": "most 只是大部分，没说一定过半，比如 most students。",
+     "talk": "most 只是大部分，没说一定过半，比如 most students。",
+     "words": "most 只是大部分，没说一定过半，比如 most students。",
+     "detail": "most 只是大部分，没说一定过半，比如 most students。",
+     "sentence": "most 只是大部分，没说一定过半，比如 most students。",
+     "speech": "most 只是大部分，没说一定过半，比如 most students。",
      "cn": "most 只是大部分，没说一定过半，比如 most students。",
      "why": "most 只是大部分，没说一定过半，比如 most students。",
      "lines": [
@@ -821,13 +874,11 @@
      ],
      "says": [
       "most 只是大部分，没说一定过半，比如 most students。"
-     ],
-     "word": "most"
+     ]
     },
     {
      "w": "adulthood",
      "m": "成年",
-     "say": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
      "pic": {
       "bg": "blank",
       "items": [
@@ -861,16 +912,29 @@
        }
       ]
      },
+     "word": "adulthood",
+     "name": "adulthood",
+     "en": "adulthood",
      "text": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "say": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
      "diff": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
-     "line": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
      "note": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
      "desc": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "mean": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "line": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
      "explain": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
-     "sentence": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
-     "talk": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
-     "speech": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
      "zh": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "def": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "gloss": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "sense": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "comment": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "hint": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "txt": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "talk": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "words": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "detail": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "sentence": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
+     "speech": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
      "cn": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
      "why": "adulthood 是成年以后的那段日子；majority 是法律上的成年。",
      "lines": [
@@ -878,12 +942,89 @@
      ],
      "says": [
       "adulthood 是成年以后的那段日子；majority 是法律上的成年。"
-     ],
-     "word": "adulthood"
+     ]
     }
    ],
    "logic": "逻辑不同：majority 是“更大的那种状态”，most 是“最多”，adulthood 是 adult（成年人）加 hood（时期）。",
-   "tip": "反义词 minority，少数；join the majority 委婉地说去世。"
+   "tip": "反义词 minority，少数；join the majority 委婉地说去世。",
+   "pics": {
+    "majority": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/pie-chart.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "most": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/apple-basket.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "adulthood": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/cake.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.8,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "spin": true
+      }
+     ]
+    }
+   },
+   "notes": {
+    "majority": "majority 强调过半，常说 the majority of 加复数名词，谓语多用复数。",
+    "most": "most 只是大部分，没说一定过半，比如 most students。",
+    "adulthood": "adulthood 是成年以后的那段日子；majority 是法律上的成年。"
+   }
   }
  },
  "插图": [
@@ -978,5 +1119,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

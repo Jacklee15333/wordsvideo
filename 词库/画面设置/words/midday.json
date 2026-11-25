@@ -315,9 +315,6 @@
   "items": [
    {
     "w": "midday",
-    "word": "midday",
-    "name": "midday",
-    "en": "midday",
     "pic": {
      "bg": "blank",
      "items": [
@@ -338,6 +335,9 @@
       }
      ]
     },
+    "word": "midday",
+    "name": "midday",
+    "en": "midday",
     "text": "midday 偏书面，说正午、中午。",
     "say": "midday 偏书面，说正午、中午。",
     "diff": "midday 偏书面，说正午、中午。",
@@ -356,13 +356,20 @@
     "txt": "midday 偏书面，说正午、中午。",
     "talk": "midday 偏书面，说正午、中午。",
     "words": "midday 偏书面，说正午、中午。",
-    "detail": "midday 偏书面，说正午、中午。"
+    "detail": "midday 偏书面，说正午、中午。",
+    "sentence": "midday 偏书面，说正午、中午。",
+    "speech": "midday 偏书面，说正午、中午。",
+    "cn": "midday 偏书面，说正午、中午。",
+    "why": "midday 偏书面，说正午、中午。",
+    "lines": [
+     "midday 偏书面，说正午、中午。"
+    ],
+    "says": [
+     "midday 偏书面，说正午、中午。"
+    ]
    },
    {
     "w": "noon",
-    "word": "noon",
-    "name": "noon",
-    "en": "noon",
     "pic": {
      "bg": "blank",
      "items": [
@@ -383,6 +390,9 @@
       }
      ]
     },
+    "word": "noon",
+    "name": "noon",
+    "en": "noon",
     "text": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。",
     "say": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。",
     "diff": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。",
@@ -401,7 +411,17 @@
     "txt": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。",
     "talk": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。",
     "words": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。",
-    "detail": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。"
+    "detail": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。",
+    "sentence": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。",
+    "speech": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。",
+    "cn": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。",
+    "why": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。",
+    "lines": [
+     "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。"
+    ],
+    "says": [
+     "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。"
+    ]
    }
   ],
   "logic": "midday 是 mid“中间的”+ day“白天”；noon 原来是“第九个钟头”，后来挪到了中午。",
@@ -451,6 +471,183 @@
   "notes": {
    "midday": "midday 偏书面，说正午、中午。",
    "noon": "noon 是“正午 12 点”，口语常说 at noon；lunchtime 是午饭时间。"
+  }
+ },
+ "demo": {
+  "international": {
+   "icons": [
+    "art/icon-between.svg",
+    "art/map.svg",
+    "art/icon-adj.svg"
+   ],
+   "lit": "国家之间的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/map.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.62,
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "ray": [
+       [
+        0.08,
+        0.3
+       ],
+       [
+        0.4,
+        0.48
+       ]
+      ],
+      "color": "#F59F00",
+      "lw": 0.025,
+      "arrow": true,
+      "dur": 0.8
+     },
+     {
+      "ray": [
+       [
+        0.92,
+        0.3
+       ],
+       [
+        0.6,
+        0.48
+       ]
+      ],
+      "color": "#3FA7D6",
+      "lw": 0.025,
+      "arrow": true,
+      "dur": 0.8
+     }
+    ]
+   }
+  },
+  "interact": {
+   "icons": [
+    "art/icon-between.svg",
+    "art/icon-act.svg"
+   ],
+   "lit": "互相作用",
+   "pic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "id": "a",
+      "x": 0.28,
+      "y": 0.62,
+      "s": 0.82,
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "west-girl-raise",
+      "id": "b",
+      "x": 0.74,
+      "y": 0.62,
+      "s": 0.82,
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "a"
+     }
+    ]
+   }
+  },
+  "transport": {
+   "icons": [
+    "art/icon-across.svg",
+    "art/icon-carry.svg"
+   ],
+   "lit": "运过去",
+   "pic": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.05,
+      "y": 0.78,
+      "s": 0.52,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.78
+       ],
+       "to": [
+        0.95,
+        0.78
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.95,
+      "y": 0.8,
+      "s": 0.48,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.95,
+        0.8
+       ],
+       "to": [
+        0.05,
+        0.8
+       ],
+       "offset": 1.2
+      }
+     }
+    ]
+   }
+  },
+  "midnight": {
+   "icons": [
+    "art/icon-mid.svg",
+    "art/icon-night.svg"
+   ],
+   "lit": "夜的正中间",
+   "pic": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/bed.svg",
+      "x": 0.42,
+      "y": 0.74,
+      "s": 0.46,
+      "z": 2
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 2,
+      "x": 0.8,
+      "y": 0.34,
+      "s": 0.32,
+      "z": 3
+     }
+    ]
+   }
   }
  },
  "lianxi": {
