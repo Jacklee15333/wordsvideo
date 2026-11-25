@@ -1,7 +1,514 @@
 {
  "单词": "Wednesday",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "星期三"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/odin-hat.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "沃登的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "日",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/odin-hat.svg",
+   "p1": "art/calendar.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/odin-hat.svg",
+     "x": 0.34,
+     "y": 0.5,
+     "s": 0.46,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "svg": "art/calendar.svg",
+     "x": 0.72,
+     "y": 0.56,
+     "s": 0.36,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "label": "沃登之日",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "星期三",
+    "pos": "名词",
+    "diff": "一周里的这一天",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "id": "a",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "waves": true,
+      "on": "a",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "a"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "id": "t",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.68,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "a"
+     },
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.52,
+      "y": 0.36,
+      "s": 0.3,
+      "anim": "pulse",
+      "z": 2
+     }
+    ],
+    "ex": "Our club meets every Wednesday.",
+    "exzh": "我们社团每周三活动。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-present",
+       "id": "m",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.72,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "waves": true,
+       "on": "m",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "m"
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "id": "b",
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.66,
+       "z": 3,
+       "nodWith": "m"
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.52,
+       "y": 0.38,
+       "s": 0.32,
+       "when": "every Wednesday",
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "svg": "art/together.svg",
+       "x": 0.52,
+       "y": 0.74,
+       "s": 0.16,
+       "when": "club",
+       "anim": "spin",
+       "z": 3
+      },
+      {
+       "label": "every Wednesday",
+       "x": 0.52,
+       "y": 0.1,
+       "size": 0.07,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "every Wednesday"
+      },
+      {
+       "label": "每周三",
+       "x": 0.52,
+       "y": 0.9,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "每周三"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“沃登之日”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/odin-hat.svg",
+       "x": 0.34,
+       "y": 0.5,
+       "s": 0.46,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.72,
+       "y": 0.56,
+       "s": 0.36,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "label": "沃登之日",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "罗马人把这一天归给墨丘利（水星）",
+    "node": "罗马人的说法",
+    "say": [
+     "古罗马人把这一天归给墨丘利，也就是水星。",
+     "日耳曼人换成了自家的主神沃登，也就是奥丁，这一天就是沃登之日。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/planet-mercury.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.46,
+       "when": "水星",
+       "pop": true,
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "svg": "art/odin-hat.svg",
+       "x": 0.5,
+       "y": 0.46,
+       "s": 0.46,
+       "cue": 1,
+       "when": "沃登",
+       "pop": true,
+       "anim": "bob",
+       "z": 3
+      },
+      {
+       "label": "沃登之日",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "沃登之日"
+      }
+     ]
+    }
+   },
+   {
+    "via": "日耳曼人换成自家的主神沃登（奥丁）",
+    "node": "① 星期三",
+    "pos": "名词",
+    "pic": 0,
+    "rule": "很老的合成词，用了上千年，读音、拼写磨损了，已经看不出是两个词",
+    "ruleEx": "沃登之日      window 窗户",
+    "cap": "Wednesday",
+    "say": [
+     "很老的合成词，用了上千年，读音、拼写都磨损了，已经看不出是两个词。",
+     "window 原来是“风的眼睛”，现在就是窗户。",
+     "Wednesday 也一样，现在就是星期三。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "磨损了",
+       "x": 0.5,
+       "y": 0.4,
+       "size": 0.08,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "磨损了",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/waves.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.3,
+       "cue": 1,
+       "when": "风的眼睛",
+       "anim": "pulse",
+       "hideCue": 2
+      },
+      {
+       "label": "window 窗户",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "窗户",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.46,
+       "cue": 2,
+       "when": "星期三",
+       "anim": "pulse"
+      },
+      {
+       "label": "Wednesday",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "Wednesday",
+       "cue": 2
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "中文都是“星期三”，写的地方不一样",
+   "items": [
+    {
+     "w": "Wednesday",
+     "word": "Wednesday",
+     "name": "Wednesday",
+     "en": "Wednesday",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/castle-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/odin-hat.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.6,
+        "anim": "bob",
+        "z": 2
+       }
+      ]
+     },
+     "text": "Wednesday 是完整的写法，句子里用它。",
+     "say": "Wednesday 是完整的写法，句子里用它。",
+     "diff": "Wednesday 是完整的写法，句子里用它。",
+     "note": "Wednesday 是完整的写法，句子里用它。",
+     "desc": "Wednesday 是完整的写法，句子里用它。",
+     "m": "Wednesday 是完整的写法，句子里用它。",
+     "mean": "Wednesday 是完整的写法，句子里用它。",
+     "line": "Wednesday 是完整的写法，句子里用它。",
+     "explain": "Wednesday 是完整的写法，句子里用它。",
+     "zh": "Wednesday 是完整的写法，句子里用它。",
+     "def": "Wednesday 是完整的写法，句子里用它。",
+     "gloss": "Wednesday 是完整的写法，句子里用它。",
+     "sense": "Wednesday 是完整的写法，句子里用它。",
+     "comment": "Wednesday 是完整的写法，句子里用它。",
+     "hint": "Wednesday 是完整的写法，句子里用它。",
+     "txt": "Wednesday 是完整的写法，句子里用它。",
+     "talk": "Wednesday 是完整的写法，句子里用它。",
+     "words": "Wednesday 是完整的写法，句子里用它。",
+     "detail": "Wednesday 是完整的写法，句子里用它。"
+    },
+    {
+     "w": "Wed.",
+     "word": "Wed.",
+     "name": "Wed.",
+     "en": "Wed.",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/calendar.svg",
+        "x": 0.5,
+        "y": 0.54,
+        "s": 0.6,
+        "anim": "pulse",
+        "z": 2
+       }
+      ]
+     },
+     "text": "Wed. 是缩写，用在日历、表格、日程里。",
+     "say": "Wed. 是缩写，用在日历、表格、日程里。",
+     "diff": "Wed. 是缩写，用在日历、表格、日程里。",
+     "note": "Wed. 是缩写，用在日历、表格、日程里。",
+     "desc": "Wed. 是缩写，用在日历、表格、日程里。",
+     "m": "Wed. 是缩写，用在日历、表格、日程里。",
+     "mean": "Wed. 是缩写，用在日历、表格、日程里。",
+     "line": "Wed. 是缩写，用在日历、表格、日程里。",
+     "explain": "Wed. 是缩写，用在日历、表格、日程里。",
+     "zh": "Wed. 是缩写，用在日历、表格、日程里。",
+     "def": "Wed. 是缩写，用在日历、表格、日程里。",
+     "gloss": "Wed. 是缩写，用在日历、表格、日程里。",
+     "sense": "Wed. 是缩写，用在日历、表格、日程里。",
+     "comment": "Wed. 是缩写，用在日历、表格、日程里。",
+     "hint": "Wed. 是缩写，用在日历、表格、日程里。",
+     "txt": "Wed. 是缩写，用在日历、表格、日程里。",
+     "talk": "Wed. 是缩写，用在日历、表格、日程里。",
+     "words": "Wed. 是缩写，用在日历、表格、日程里。",
+     "detail": "Wed. 是缩写，用在日历、表格、日程里。"
+    }
+   ],
+   "logic": "Wed. 就是 Wednesday 截取前三个字母加点。",
+   "tip": "写句子用 Wednesday；日历、课表上地方小用 Wed.。",
+   "pics": {
+    "Wednesday": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/odin-hat.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "anim": "bob",
+       "z": 2
+      }
+     ]
+    },
+    "Wed.": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.6,
+       "anim": "pulse",
+       "z": 2
+      }
+     ]
+    }
+   },
+   "notes": {
+    "Wednesday": "Wednesday 是完整的写法，句子里用它。",
+    "Wed.": "Wed. 是缩写，用在日历、表格、日程里。"
+   }
+  }
+ },
+ "插图": [
+  "Wednesdayai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他们哪天开会？\n听：The meeting is on Wednesday afternoon.\nA. 星期三下午\nB. 星期一上午\nC. 星期五下午\nD. 星期天",
@@ -90,5 +597,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

@@ -1,7 +1,373 @@
 {
  "单词": "Saturday",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "星期六"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/planet-saturn.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "土星",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "日",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/planet-saturn.svg",
+   "p1": "art/calendar.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/planet-saturn.svg",
+     "x": 0.34,
+     "y": 0.5,
+     "s": 0.46,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "svg": "art/calendar.svg",
+     "x": 0.72,
+     "y": 0.56,
+     "s": 0.36,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "label": "萨图恩之日",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "星期六",
+    "pos": "名词",
+    "diff": "一周里的这一天",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.74,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.74
+       ],
+       "to": [
+        0.95,
+        0.74
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.95,
+      "y": 0.76,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.95,
+        0.76
+       ],
+       "to": [
+        0.05,
+        0.76
+       ],
+       "offset": 1.5
+      }
+     },
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.5,
+      "y": 0.28,
+      "s": 0.22,
+      "anim": "pulse",
+      "z": 3
+     },
+     {
+      "label": "周末",
+      "x": 0.84,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "We play football on Saturday.",
+    "exzh": "我们星期六踢足球。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.05,
+       "y": 0.74,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.74
+        ],
+        "to": [
+         0.95,
+         0.74
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.95,
+       "y": 0.76,
+       "s": 0.48,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.95,
+         0.76
+        ],
+        "to": [
+         0.05,
+         0.76
+        ],
+        "offset": 1
+       }
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.5,
+       "y": 0.28,
+       "s": 0.24,
+       "when": "Saturday",
+       "anim": "pulse",
+       "z": 3
+      },
+      {
+       "label": "on Saturday",
+       "x": 0.2,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "on Saturday"
+      },
+      {
+       "label": "星期六",
+       "x": 0.8,
+       "y": 0.12,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "星期六"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“萨图恩之日”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/planet-saturn.svg",
+       "x": 0.34,
+       "y": 0.5,
+       "s": 0.46,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.72,
+       "y": 0.56,
+       "s": 0.36,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "label": "萨图恩之日",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "罗马人把这一天归给土星（农神萨图恩）",
+    "node": "罗马人的说法",
+    "say": [
+     "古罗马人把一周的每一天归给一颗星。",
+     "星期六归给土星，也就是农神萨图恩。",
+     "英语照着翻译，这一天就是萨图恩之日。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/planet-saturn.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.46,
+       "when": "土星",
+       "pop": true,
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "label": "萨图恩之日",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "萨图恩之日"
+      }
+     ]
+    }
+   },
+   {
+    "via": "英语照着翻译：萨图恩之日",
+    "node": "① 星期六",
+    "pos": "名词",
+    "pic": 0,
+    "rule": "很老的合成词，用了上千年，读音、拼写磨损了，已经看不出是两个词",
+    "ruleEx": "萨图恩之日      window 窗户",
+    "cap": "Saturday",
+    "say": [
+     "很老的合成词，用了上千年，读音、拼写都磨损了，已经看不出是两个词。",
+     "window 原来是“风的眼睛”，现在就是窗户。",
+     "Saturday 也一样，现在就是星期六。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "磨损了",
+       "x": 0.5,
+       "y": 0.4,
+       "size": 0.08,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "磨损了",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/waves.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.3,
+       "cue": 1,
+       "when": "风的眼睛",
+       "anim": "pulse",
+       "hideCue": 2
+      },
+      {
+       "label": "window 窗户",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "窗户",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.46,
+       "cue": 2,
+       "when": "星期六",
+       "anim": "pulse"
+      },
+      {
+       "label": "Saturday",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "Saturday",
+       "cue": 2
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "插图": [
+  "Saturdayai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他们哪天去公园？\n听：We will go to the park on Saturday.\nA. 星期天\nB. 星期五\nC. 星期一\nD. 星期六",
@@ -90,5 +456,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
