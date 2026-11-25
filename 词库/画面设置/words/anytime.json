@@ -1,0 +1,731 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "随时、在任何时候；随时效劳、不客气"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/clock.svg",
+     "x": 0.2,
+     "y": 0.46,
+     "s": 0.32,
+     "z": 3,
+     "delay": 0.2
+    },
+    {
+     "svg": "art/clock.svg",
+     "x": 0.5,
+     "y": 0.46,
+     "s": 0.32,
+     "z": 3,
+     "delay": 0.6
+    },
+    {
+     "svg": "art/clock.svg",
+     "x": 0.8,
+     "y": 0.46,
+     "s": 0.32,
+     "z": 3,
+     "delay": 1.0
+    },
+    {
+     "label": "早上",
+     "x": 0.2,
+     "y": 0.74,
+     "size": 0.07,
+     "delay": 0.3,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3"
+    },
+    {
+     "label": "中午",
+     "x": 0.5,
+     "y": 0.74,
+     "size": 0.07,
+     "delay": 0.7,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3"
+    },
+    {
+     "label": "晚上",
+     "x": 0.8,
+     "y": 0.74,
+     "size": 0.07,
+     "delay": 1.1,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3"
+    },
+    {
+     "label": "any：任何（哪一个都行）",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.075,
+     "delay": 1.4,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/clock_f0.svg",
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 1,
+     "x": 0.5,
+     "y": 0.46,
+     "s": 0.6,
+     "z": 3
+    },
+    {
+     "actor": "west-girl-listen",
+     "x": 0.15,
+     "y": 0.66,
+     "s": 0.72,
+     "z": 4
+    },
+    {
+     "label": "time：时候",
+     "x": 0.5,
+     "y": 0.9,
+     "size": 0.085,
+     "delay": 0.5,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-any.svg",
+  "p1": "art/clock.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/smartphone.svg",
+    "x": 0.46,
+    "y": 0.5,
+    "s": 0.6,
+    "z": 3,
+    "anim": "shake"
+   },
+   {
+    "waves": true,
+    "x": 0.46,
+    "y": 0.36,
+    "dir": 0,
+    "both": true,
+    "n": 3
+   },
+   {
+    "svg": "art/clock.svg",
+    "x": 0.82,
+    "y": 0.3,
+    "s": 0.26,
+    "z": 2
+   },
+   {
+    "label": "任何时候",
+    "x": 0.46,
+    "y": 0.92,
+    "size": 0.085,
+    "delay": 0.6,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "随时、在任何时候",
+   "pos": "副词",
+   "diff": "什么时候都行",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "id": "g",
+     "actor": "west-girl-explain",
+     "x": 0.24,
+     "y": 0.62,
+     "s": 0.86,
+     "z": 3
+    },
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.62,
+     "y": 0.5,
+     "s": 0.5,
+     "z": 4,
+     "anim": "shake"
+    },
+    {
+     "waves": true,
+     "x": 0.62,
+     "y": 0.34,
+     "dir": 0,
+     "both": true,
+     "n": 3
+    },
+    {
+     "svg": "art/clock_f0.svg",
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 1,
+     "x": 0.86,
+     "y": 0.24,
+     "s": 0.26,
+     "z": 2
+    },
+    {
+     "label": "随时打",
+     "x": 0.62,
+     "y": 0.88,
+     "size": 0.08,
+     "delay": 0.8,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ],
+   "ex": "You can call me anytime.",
+   "exzh": "你随时可以给我打电话。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "id": "g",
+      "actor": "west-girl-explain",
+      "x": 0.2,
+      "y": 0.62,
+      "s": 0.88,
+      "z": 3,
+      "talkWhen": "You"
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.52,
+      "y": 0.5,
+      "s": 0.54,
+      "z": 4,
+      "when": "call",
+      "anim": "shake"
+     },
+     {
+      "waves": true,
+      "x": 0.52,
+      "y": 0.34,
+      "dir": 0,
+      "both": true,
+      "n": 3,
+      "when": "call"
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.8,
+      "y": 0.3,
+      "s": 0.28,
+      "z": 2,
+      "when": "anytime",
+      "anim": "spin"
+     },
+     {
+      "label": "anytime",
+      "x": 0.8,
+      "y": 0.62,
+      "size": 0.085,
+      "when": "anytime",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "随时",
+      "x": 0.8,
+      "y": 0.78,
+      "size": 0.09,
+      "when": "随时",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "随时效劳、不客气",
+   "pos": "口语应答",
+   "diff": "别人道谢时的回答",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "id": "g",
+     "actor": "west-girl-explain",
+     "x": 0.26,
+     "y": 0.62,
+     "s": 0.86,
+     "z": 3,
+     "turn": [
+      0,
+      2
+     ]
+    },
+    {
+     "id": "t",
+     "actor": "cn-teacher-laugh",
+     "x": 0.74,
+     "y": 0.62,
+     "s": 0.86,
+     "z": 3,
+     "turn": [
+      1,
+      2
+     ]
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.5,
+     "y": 0.8,
+     "s": 0.24,
+     "z": 4
+    },
+    {
+     "label": "Anytime!",
+     "x": 0.74,
+     "y": 0.12,
+     "size": 0.085,
+     "delay": 1.2,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ],
+   "ex": "—Thanks for your help. —Anytime.",
+   "exzh": "——谢谢你的帮忙。——随时效劳。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "id": "g",
+      "actor": "west-girl-explain",
+      "x": 0.24,
+      "y": 0.62,
+      "s": 0.88,
+      "z": 3,
+      "talkWhen": "Thanks",
+      "talkUntil": "Anytime"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.26,
+      "z": 4,
+      "when": "help"
+     },
+     {
+      "label": "Thanks!",
+      "x": 0.24,
+      "y": 0.1,
+      "size": 0.08,
+      "when": "Thanks",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.76,
+      "y": 0.62,
+      "s": 0.88,
+      "z": 3,
+      "when": "Anytime"
+     },
+     {
+      "sound": "say:Anytime!",
+      "when": "Anytime",
+      "gap": true
+     },
+     {
+      "label": "Anytime!",
+      "x": 0.76,
+      "y": 0.1,
+      "size": 0.08,
+      "when": "Anytime",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "随时效劳",
+      "x": 0.5,
+      "y": 0.5,
+      "size": 0.09,
+      "when": "随时效劳",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“任何时候”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock.svg",
+      "x": 0.2,
+      "y": 0.46,
+      "s": 0.3,
+      "z": 3
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.3,
+      "z": 3,
+      "delay": 0.3
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.8,
+      "y": 0.46,
+      "s": 0.3,
+      "z": 3,
+      "delay": 0.6
+     },
+     {
+      "label": "任何时候",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.09,
+      "delay": 1.0,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "（副词）任何时候都行",
+   "node": "① 随时、在任何时候",
+   "pos": "副词",
+   "pic": 0,
+   "rule": "some、any、every、no 和后面的小词合成一个词，后一个是主体",
+   "ruleEx": "anytime 说的是 time：任何时候      sometime 某个时候",
+   "cap": "任何时候 → 随时",
+   "say": [
+    "any、some 这样的小词，可以和后面的词合成一个词，后面那个是主体。",
+    "sometime 说的是某个时候。",
+    "anytime 说的也是时候：任何时候都行，就是随时。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "any / some + 小词 = 一个词",
+      "x": 0.5,
+      "y": 0.36,
+      "size": 0.08,
+      "when": "合成一个词",
+      "hideCue": 1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "label": "后面那个是主体",
+      "x": 0.5,
+      "y": 0.56,
+      "size": 0.08,
+      "when": "主体",
+      "hideCue": 1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.44,
+      "z": 3,
+      "cue": 1,
+      "when": "某个时候",
+      "hideCue": 2
+     },
+     {
+      "shape": "circle",
+      "x": 0.5,
+      "y": 0.48,
+      "r": 0.24,
+      "stroke": "#FF7A1A",
+      "lw": 6,
+      "cue": 1,
+      "when": "某个时候",
+      "hideCue": 2,
+      "z": 4
+     },
+     {
+      "label": "sometime 某个时候",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "when": "sometime",
+      "hideCue": 2,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.2,
+      "y": 0.5,
+      "s": 0.3,
+      "z": 3,
+      "when": "任何时候都行"
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.3,
+      "z": 3,
+      "when": "任何时候都行",
+      "delay": 0.2
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.3,
+      "z": 3,
+      "when": "任何时候都行",
+      "delay": 0.4
+     },
+     {
+      "label": "anytime 随时",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.09,
+      "when": "随时",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     },
+     {
+      "label": "美式 anytime / 英式 any time",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.06,
+      "cue": 2,
+      "when": "anytime",
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   }
+  },
+  {
+   "via": "别人道谢时，回一句“任何时候都乐意帮忙”",
+   "node": "② 随时效劳、不客气",
+   "pos": "口语应答",
+   "pic": 1,
+   "say": [
+    "朋友帮了忙，她说了声谢谢。",
+    "老师笑着回一句 anytime，意思是任何时候都乐意帮你，也就是不客气。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.24,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "when": "谢谢"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.24,
+      "z": 4,
+      "when": "帮了忙"
+     },
+     {
+      "label": "Thanks!",
+      "x": 0.24,
+      "y": 0.1,
+      "size": 0.08,
+      "when": "谢谢",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.76,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "cue": 1,
+      "when": "老师笑着"
+     },
+     {
+      "label": "Anytime!",
+      "x": 0.76,
+      "y": 0.1,
+      "size": 0.08,
+      "when": "anytime",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "随时效劳、不客气",
+      "x": 0.5,
+      "y": 0.46,
+      "size": 0.085,
+      "when": "不客气",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "sometime",
+   "m": "某个时候",
+   "share": "time"
+  },
+  {
+   "w": "anywhere",
+   "m": "任何地方",
+   "share": "any"
+  },
+  {
+   "w": "anything",
+   "m": "任何事物",
+   "share": "any"
+  }
+ ],
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人说什么时候可以给他打电话？",
+    "listen": "Call me anytime if you need help.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "只在晚上",
+     "只在周末",
+     "随时",
+     "不要打"
+    ],
+    "ans": "C",
+    "why": "anytime 随时。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "You can come ______ you like.",
+    "opts": [
+     "however",
+     "whatever",
+     "whenever",
+     "wherever"
+    ],
+    "ans": "C",
+    "why": "“任何时候”用 whenever，和 anytime 意思相近。",
+    "kd": "易混"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 sometimes、anytime 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "I ______ go to the cinema with my friends.",
+    "opts": [],
+    "ans": "sometimes",
+    "why": "“有时”用 sometimes；anytime 是随时。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "I have been there many ______. (time)",
+    "opts": [],
+    "ans": "times",
+    "why": "次数可数，many times。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "You can borrow my book anytime you wants.",
+    "opts": [],
+    "ans": "wants → want",
+    "why": "主语 you，动词不加 s。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "我们下周找个时间见面吧。",
+    "stem": "Let's meet ______ next week.",
+    "opts": [],
+    "ans": "sometime",
+    "why": "将来某个时间用 sometime；anytime 是随时。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "“Thanks for your help.” “______.”",
+    "opts": [
+     "Sometime",
+     "Anyway",
+     "Sometimes",
+     "Anytime"
+    ],
+    "ans": "D",
+    "why": "别人道谢时可以说 Anytime（随时效劳）。",
+    "kd": "用法"
+   }
+  ]
+ }
+}

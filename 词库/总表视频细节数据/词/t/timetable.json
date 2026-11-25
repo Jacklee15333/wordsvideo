@@ -1,7 +1,758 @@
 {
  "单词": "timetable",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "时刻表；（英）课程表；进度表、时间安排"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1,
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.6,
+      "z": 3
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.15,
+      "y": 0.66,
+      "s": 0.72,
+      "z": 4
+     },
+     {
+      "label": "time：时间",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.085,
+      "delay": 0.5,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.4,
+      "z": 3
+     },
+     {
+      "svg": "art/class-table.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.6,
+      "z": 4,
+      "reveal": "down",
+      "rdur": 1.2
+     },
+     {
+      "label": "table：表格（一格一格）",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "delay": 0.6,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/clock.svg",
+   "p1": "art/class-table.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/station-bg.svg",
+   "items": [
+    {
+     "svg": "art/departure-board.svg",
+     "x": 0.5,
+     "y": 0.4,
+     "s": 0.6,
+     "z": 3
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "walk": {
+      "from": [
+       -0.05,
+       0.74
+      ],
+      "to": [
+       1.05,
+       0.74
+      ]
+     },
+     "x": -0.05,
+     "y": 0.74,
+     "s": 0.5,
+     "z": 4
+    },
+    {
+     "label": "时间表格",
+     "x": 0.5,
+     "y": 0.86,
+     "size": 0.085,
+     "delay": 0.6,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "时刻表",
+    "pos": "名词",
+    "diff": "车几点到、几点开的表",
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "svg": "art/departure-board.svg",
+      "x": 0.56,
+      "y": 0.38,
+      "s": 0.56,
+      "z": 3
+     },
+     {
+      "id": "m",
+      "actor": "west-man-point",
+      "x": 0.18,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 4
+     },
+     {
+      "actor": "walk-cn-girl",
+      "walk": {
+       "from": [
+        1.05,
+        0.74
+       ],
+       "to": [
+        -0.05,
+        0.74
+       ]
+      },
+      "x": 1.05,
+      "y": 0.74,
+      "s": 0.5,
+      "z": 3
+     },
+     {
+      "label": "火车时刻表",
+      "x": 0.56,
+      "y": 0.8,
+      "size": 0.08,
+      "delay": 0.8,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ],
+    "ex": "Let's check the train timetable.",
+    "exzh": "我们查一下火车时刻表吧。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "id": "m",
+       "actor": "west-man-point",
+       "x": 0.16,
+       "y": 0.62,
+       "s": 0.88,
+       "z": 4,
+       "talkWhen": "Let's"
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "x": 0.86,
+       "y": 0.62,
+       "s": 0.84,
+       "z": 4,
+       "nodWith": "m"
+      },
+      {
+       "svg": "art/departure-board.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.6,
+       "z": 3,
+       "when": "train timetable",
+       "pop": true,
+       "sfx": "dingdong"
+      },
+      {
+       "label": "train timetable",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.075,
+       "when": "timetable",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "火车时刻表",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.085,
+       "when": "火车时刻表",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "（英）课程表",
+    "pos": "名词",
+    "diff": "每节课几点上的表",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/class-table.svg",
+      "x": 0.54,
+      "y": 0.38,
+      "s": 0.56,
+      "z": 3
+     },
+     {
+      "id": "t",
+      "actor": "cn-teacher-point",
+      "x": 0.18,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 4
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.24,
+      "z": 5
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.84,
+      "y": 0.66,
+      "s": 0.74,
+      "z": 4,
+      "nodWith": "t"
+     }
+    ],
+    "ex": "Look at our class timetable.",
+    "exzh": "看看我们的课程表。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "id": "t",
+       "actor": "cn-teacher-point",
+       "x": 0.16,
+       "y": 0.6,
+       "s": 0.88,
+       "z": 4,
+       "talkWhen": "Look"
+      },
+      {
+       "svg": "art/class-table.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.6,
+       "z": 3,
+       "when": "class timetable",
+       "reveal": "down",
+       "rdur": 1
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.95,
+       "s": 0.24,
+       "z": 5
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.86,
+       "y": 0.66,
+       "s": 0.76,
+       "z": 4,
+       "nodWith": "t"
+      },
+      {
+       "label": "class timetable",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "when": "class timetable",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "课程表",
+       "x": 0.5,
+       "y": 0.78,
+       "size": 0.09,
+       "when": "课程表",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "进度表、时间安排",
+    "pos": "名词",
+    "diff": "一件事每一步什么时候做",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.4,
+      "z": 3
+     },
+     {
+      "svg": "art/plan-sheet.svg",
+      "x": 0.4,
+      "y": 0.48,
+      "s": 0.56,
+      "z": 4,
+      "shadow": true
+     },
+     {
+      "svg": "art/map.svg",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.3,
+      "z": 4,
+      "rot": 8
+     },
+     {
+      "actor": "west-man-present",
+      "x": 0.86,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 2
+     }
+    ],
+    "ex": "Here is the timetable for our trip.",
+    "exzh": "这是我们这次旅行的时间安排。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 3
+      },
+      {
+       "id": "m",
+       "actor": "west-man-present",
+       "x": 0.16,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 2,
+       "talkWhen": "Here"
+      },
+      {
+       "svg": "art/plan-sheet.svg",
+       "x": 0.46,
+       "y": 0.48,
+       "s": 0.58,
+       "z": 4,
+       "shadow": true,
+       "when": "timetable",
+       "pop": true
+      },
+      {
+       "svg": "art/map.svg",
+       "x": 0.72,
+       "y": 0.62,
+       "s": 0.3,
+       "z": 4,
+       "rot": 8,
+       "when": "trip"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.88,
+       "y": 0.64,
+       "s": 0.76,
+       "z": 2,
+       "nodWith": "m"
+      },
+      {
+       "label": "时间安排",
+       "x": 0.46,
+       "y": 0.08,
+       "size": 0.09,
+       "when": "时间安排",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“时间表格”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "svg": "art/departure-board.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.6,
+       "z": 3
+      },
+      {
+       "label": "时间表格",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.085,
+       "delay": 0.6,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "最早是火车几点到站、几点开出的表",
+    "node": "① 时刻表",
+    "pos": "名词",
+    "pic": 0,
+    "rule": "最后一个词是主体，前面的词说明它",
+    "ruleEx": "timetable 说的是 table：时间表格      worktable 工作台",
+    "cap": "时间表格 → 时刻表",
+    "say": [
+     "两个词合成一个词，最后一个是主体，前面的说明它。",
+     "worktable 说的是桌子：干活用的桌子，工作台。",
+     "timetable 说的是表格：时间表格。最早，它是火车站里写着火车几点到、几点开的表，这就是时刻表。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "label": "前面的词 + 主体",
+       "x": 0.5,
+       "y": 0.4,
+       "size": 0.09,
+       "when": "最后一个是主体",
+       "hideCue": 1,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.66,
+       "s": 0.4,
+       "z": 3,
+       "cue": 1,
+       "when": "worktable",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.2,
+       "z": 4,
+       "cue": 1,
+       "when": "干活用的桌子",
+       "hideCue": 2
+      },
+      {
+       "label": "worktable 工作台",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.08,
+       "when": "工作台",
+       "hideCue": 2,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "svg": "art/departure-board.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 0.6,
+       "z": 3,
+       "cue": 2,
+       "when": "时间表格",
+       "pop": true
+      },
+      {
+       "actor": "walk-west-man-case",
+       "walk": {
+        "from": [
+         -0.05,
+         0.76
+        ],
+        "to": [
+         1.05,
+         0.76
+        ]
+       },
+       "x": -0.05,
+       "y": 0.76,
+       "s": 0.48,
+       "z": 4,
+       "when": "火车站"
+      },
+      {
+       "label": "时刻表",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "when": "时刻表",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "学校里每节课的时间表",
+    "node": "② （英）课程表",
+    "pos": "名词",
+    "pic": 1,
+    "rule": "词的核心意思不变，换了场合，中文要换个说法",
+    "ruleEx": "timetable 时刻表 → 课程表      play 玩 → 踢（球）、演奏（乐器）",
+    "cap": "时刻表 → 课程表",
+    "say": [
+     "英语里，一个词的核心意思不变，换了场合，中文常常要换个说法。",
+     "play 是玩，说到球是踢球，说到乐器就是演奏。",
+     "timetable 用到学校里，一节节课排成的时间表，就是课程表。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "label": "核心意思不变",
+       "x": 0.3,
+       "y": 0.4,
+       "size": 0.08,
+       "when": "核心意思不变",
+       "hideCue": 1,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      },
+      {
+       "label": "换个说法",
+       "x": 0.7,
+       "y": 0.4,
+       "size": 0.08,
+       "when": "换个说法",
+       "hideCue": 1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "svg": "art/football.svg",
+       "x": 0.3,
+       "y": 0.52,
+       "s": 0.36,
+       "z": 3,
+       "cue": 1,
+       "when": "踢球",
+       "anim": "spin",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/drum.svg",
+       "x": 0.7,
+       "y": 0.52,
+       "s": 0.42,
+       "z": 3,
+       "cue": 1,
+       "when": "演奏",
+       "anim": "thump",
+       "hideCue": 2
+      },
+      {
+       "label": "play 玩",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.08,
+       "when": "play",
+       "hideCue": 2,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "svg": "art/class-table.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 0.6,
+       "z": 3,
+       "cue": 2,
+       "when": "学校里",
+       "reveal": "down",
+       "rdur": 1
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.95,
+       "s": 0.24,
+       "z": 5,
+       "cue": 2,
+       "when": "学校里"
+      },
+      {
+       "label": "课程表",
+       "x": 0.5,
+       "y": 0.82,
+       "size": 0.09,
+       "when": "课程表",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "一件事每一步的时间安排",
+    "node": "③ 进度表、时间安排",
+    "pos": "名词",
+    "pic": 2,
+    "say": [
+     "做一件大事，比如一次旅行，每一步什么时候做，也排成一张表。",
+     "这就是进度表、时间安排。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 3
+      },
+      {
+       "svg": "art/map.svg",
+       "x": 0.74,
+       "y": 0.6,
+       "s": 0.32,
+       "z": 4,
+       "rot": 8,
+       "when": "旅行"
+      },
+      {
+       "svg": "art/plan-sheet.svg",
+       "x": 0.42,
+       "y": 0.48,
+       "s": 0.58,
+       "z": 4,
+       "shadow": true,
+       "when": "排成一张表",
+       "reveal": "down",
+       "rdur": 1
+      },
+      {
+       "label": "进度表、时间安排",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.085,
+       "when": "进度表",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "timeline",
+    "m": "时间轴",
+    "share": "time"
+   },
+   {
+    "w": "worktable",
+    "m": "工作台",
+    "share": "table"
+   },
+   {
+    "w": "schedule",
+    "m": "日程表",
+    "share": ""
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "schedule": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.7,
+       "z": 3
+      },
+      {
+       "actor": "west-man-hello",
+       "x": 0.16,
+       "y": 0.62,
+       "s": 0.9,
+       "z": 2
+      },
+      {
+       "label": "schedule 美式多说（train schedule）",
+       "x": 0.76,
+       "y": 0.5,
+       "size": 0.08,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "timetableai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人在查看什么？\n听：Let me check the train timetable.\nA. 火车时刻表\nB. 菜单\nC. 地图\nD. 课本",
@@ -88,5 +839,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

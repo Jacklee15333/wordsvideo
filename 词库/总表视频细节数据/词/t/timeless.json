@@ -1,7 +1,485 @@
 {
  "单词": "timeless",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "永恒的、不受时间影响的、经典的"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1,
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.6,
+      "z": 3
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.15,
+      "y": 0.66,
+      "s": 0.72,
+      "z": 4
+     },
+     {
+      "label": "time：时间",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.085,
+      "delay": 0.5,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.56,
+      "z": 3
+     },
+     {
+      "ray": [
+       [
+        0.32,
+        0.24
+       ],
+       [
+        0.68,
+        0.72
+       ]
+      ],
+      "color": "#E8453C",
+      "lw": 0.03,
+      "delay": 0.6,
+      "dur": 0.4,
+      "z": 4
+     },
+     {
+      "ray": [
+       [
+        0.68,
+        0.24
+       ],
+       [
+        0.32,
+        0.72
+       ]
+      ],
+      "color": "#E8453C",
+      "lw": 0.03,
+      "delay": 1.0,
+      "dur": 0.4,
+      "z": 4
+     },
+     {
+      "label": "-less：没有…的",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.085,
+      "delay": 1.2,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "label": "home → homeless 没有家的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.06,
+      "delay": 1.6,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/clock.svg",
+   "p1": "art/icon-less.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/vase.svg",
+     "x": 0.4,
+     "y": 0.56,
+     "s": 0.66,
+     "z": 3,
+     "shadow": true
+    },
+    {
+     "svg": "art/clock.svg",
+     "x": 0.8,
+     "y": 0.28,
+     "s": 0.3,
+     "z": 2,
+     "anim": "spin"
+    },
+    {
+     "label": "不受时间限制",
+     "x": 0.78,
+     "y": 0.66,
+     "size": 0.075,
+     "delay": 0.8,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "永恒的、经典的",
+    "pos": "形容词",
+    "diff": "过多少年都不过时",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "id": "t",
+      "actor": "cn-teacher-point",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/storybook.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.42,
+      "z": 4,
+      "shadow": true
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.82,
+      "y": 0.64,
+      "s": 0.78,
+      "z": 3,
+      "nodWith": "t"
+     },
+     {
+      "svg": "art/vase.svg",
+      "x": 0.62,
+      "y": 0.24,
+      "s": 0.22,
+      "z": 2
+     },
+     {
+      "label": "永不过时",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.085,
+      "delay": 0.8,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ],
+    "ex": "Fairy tales are timeless.",
+    "exzh": "童话故事永不过时。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "id": "t",
+       "actor": "cn-teacher-point",
+       "x": 0.18,
+       "y": 0.6,
+       "s": 0.88,
+       "z": 3,
+       "talkWhen": "Fairy tales"
+      },
+      {
+       "waves": true,
+       "on": "t",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "t"
+      },
+      {
+       "svg": "art/storybook.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.46,
+       "z": 4,
+       "shadow": true,
+       "when": "Fairy tales",
+       "pop": true
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.84,
+       "y": 0.64,
+       "s": 0.8,
+       "z": 3,
+       "nodWith": "t"
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.66,
+       "y": 0.18,
+       "s": 0.22,
+       "z": 2,
+       "anim": "spin",
+       "when": "timeless"
+      },
+      {
+       "label": "timeless",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.085,
+       "when": "timeless",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "永不过时",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.09,
+       "when": "永不过时",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“不受时间限制的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/vase.svg",
+       "x": 0.4,
+       "y": 0.56,
+       "s": 0.66,
+       "z": 3,
+       "shadow": true
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.8,
+       "y": 0.28,
+       "s": 0.3,
+       "z": 2,
+       "anim": "spin"
+      },
+      {
+       "label": "不受时间限制的",
+       "x": 0.76,
+       "y": 0.66,
+       "size": 0.075,
+       "delay": 0.8,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "过了几十年、几百年再看，依然不过时",
+    "node": "永恒的、不受时间影响的、经典的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "一般的东西，时间一长，就旧了、过时了。",
+     "可有些故事、有些瓷器，几百年过去了，大家还是喜欢。",
+     "时间拿它们没办法，这就是永恒的、经典的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/rotary-phone.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.44,
+       "z": 3,
+       "when": "旧了",
+       "hideCue": 1
+      },
+      {
+       "label": "过时了",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.085,
+       "when": "过时了",
+       "hideCue": 1,
+       "color": "#C0392B",
+       "border": "#C0392B"
+      },
+      {
+       "svg": "art/storybook.svg",
+       "x": 0.3,
+       "y": 0.56,
+       "s": 0.38,
+       "z": 3,
+       "cue": 1,
+       "when": "故事",
+       "shadow": true
+      },
+      {
+       "svg": "art/vase.svg",
+       "x": 0.7,
+       "y": 0.54,
+       "s": 0.52,
+       "z": 3,
+       "cue": 1,
+       "when": "瓷器",
+       "shadow": true
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.5,
+       "y": 0.16,
+       "s": 0.22,
+       "z": 2,
+       "anim": "spin",
+       "when": "几百年"
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.92,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 4,
+       "when": "还是喜欢"
+      },
+      {
+       "label": "永恒的、经典的",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.09,
+       "when": "永恒的",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "careless",
+    "m": "粗心的",
+    "share": "less"
+   },
+   {
+    "w": "homeless",
+    "m": "无家可归的",
+    "share": "less"
+   },
+   {
+    "w": "timely",
+    "m": "及时的",
+    "share": "time"
+   }
+  ],
+  "distinguish": {
+   "pics": {
+    "eternal": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "shape": "rect",
+       "x": 0.5,
+       "y": 0.5,
+       "w": 1,
+       "h": 1,
+       "fill": "#0B1A3A",
+       "a": 0.6,
+       "z": 1
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.3,
+       "y": 0.3,
+       "s": 0.3,
+       "z": 2,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "s": 0.22,
+       "z": 2,
+       "anim": "pulse",
+       "delay": 0.4
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.6,
+       "y": 0.42,
+       "s": 0.18,
+       "z": 2,
+       "anim": "pulse",
+       "delay": 0.8
+      },
+      {
+       "label": "eternal 永远存在的",
+       "x": 0.8,
+       "y": 0.6,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    },
+    "classic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/vase.svg",
+       "x": 0.4,
+       "y": 0.52,
+       "s": 0.7,
+       "z": 3,
+       "shadow": true
+      },
+      {
+       "label": "classic 公认最好的、经典的",
+       "x": 0.76,
+       "y": 0.5,
+       "size": 0.09,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "timelessai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人怎么评价这首歌？\n听：This song is timeless; people still love it.\nA. 已经过时了\nB. 永不过时\nC. 太长了\nD. 很难唱",
@@ -89,5 +567,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
