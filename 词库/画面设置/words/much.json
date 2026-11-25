@@ -1,0 +1,597 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "许多的（接不可数名词）；很、非常；…得多"
+ },
+ "originPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/rice-heap.svg",
+    "x": 0.5,
+    "y": 0.6,
+    "s": 0.2,
+    "s2": 0.66,
+    "grow": [
+     0.3,
+     2
+    ],
+    "z": 3,
+    "shadow": true
+   },
+   {
+    "label": "（个头、数量）大",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.09,
+    "delay": 1.2,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "许多的、大量的",
+   "pos": "形容词（接不可数名词）",
+   "diff": "一大堆，数不清个数",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.9,
+     "s": 0.42,
+     "z": 3
+    },
+    {
+     "svg": "art/sugar-jar.svg",
+     "x": 0.54,
+     "y": 0.54,
+     "s": 0.46,
+     "z": 4,
+     "shadow": true
+    },
+    {
+     "id": "t",
+     "actor": "cn-teacher-point",
+     "x": 0.18,
+     "y": 0.6,
+     "s": 0.84,
+     "z": 2
+    },
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.86,
+     "y": 0.62,
+     "s": 0.76,
+     "z": 2,
+     "nodWith": "t"
+    },
+    {
+     "label": "太多糖",
+     "x": 0.54,
+     "y": 0.12,
+     "size": 0.085,
+     "delay": 0.8,
+     "color": "#C0392B",
+     "border": "#C0392B"
+    }
+   ],
+   "ex": "Don't eat too much sugar.",
+   "exzh": "别吃太多糖。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.42,
+      "z": 3
+     },
+     {
+      "id": "t",
+      "actor": "cn-teacher-point",
+      "x": 0.16,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 2,
+      "talkWhen": "Don't"
+     },
+     {
+      "svg": "art/sugar-jar.svg",
+      "x": 0.52,
+      "y": 0.54,
+      "s": 0.48,
+      "z": 4,
+      "shadow": true,
+      "when": "sugar",
+      "pop": true
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.86,
+      "y": 0.62,
+      "s": 0.78,
+      "z": 2,
+      "nodWith": "t",
+      "when": "too much"
+     },
+     {
+      "label": "too much sugar",
+      "x": 0.52,
+      "y": 0.1,
+      "size": 0.08,
+      "when": "too much",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "太多糖",
+      "x": 0.84,
+      "y": 0.2,
+      "size": 0.09,
+      "when": "太多糖",
+      "color": "#C0392B",
+      "border": "#C0392B"
+     }
+    ]
+   }
+  },
+  {
+   "text": "很、非常",
+   "pos": "副词",
+   "diff": "说程度大",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "id": "m",
+     "actor": "west-man-hello",
+     "x": 0.28,
+     "y": 0.62,
+     "s": 0.86,
+     "z": 3,
+     "turn": [
+      0,
+      2
+     ]
+    },
+    {
+     "id": "t",
+     "actor": "cn-teacher-laugh",
+     "x": 0.72,
+     "y": 0.62,
+     "s": 0.86,
+     "z": 3,
+     "turn": [
+      1,
+      2
+     ]
+    },
+    {
+     "svg": "art/box.svg",
+     "x": 0.5,
+     "y": 0.8,
+     "s": 0.2,
+     "z": 4
+    },
+    {
+     "label": "非常感谢",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.085,
+     "delay": 0.8,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ],
+   "ex": "Thank you very much.",
+   "exzh": "非常感谢你。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "id": "m",
+      "actor": "west-man-hello",
+      "x": 0.26,
+      "y": 0.62,
+      "s": 0.88,
+      "z": 3,
+      "talkWhen": "Thank you"
+     },
+     {
+      "waves": true,
+      "on": "m",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "m"
+     },
+     {
+      "sound": "say:Thank you very much!",
+      "when": "Thank you",
+      "gap": true
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.74,
+      "y": 0.62,
+      "s": 0.88,
+      "z": 3,
+      "nodWith": "m"
+     },
+     {
+      "svg": "art/box.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.2,
+      "z": 4
+     },
+     {
+      "label": "very much",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "when": "very much",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "非常感谢",
+      "x": 0.5,
+      "y": 0.28,
+      "size": 0.09,
+      "when": "非常感谢",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“（个头、数量）大”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/rice-heap.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.2,
+      "s2": 0.66,
+      "grow": [
+       0.3,
+       2
+      ],
+      "z": 3,
+      "shadow": true
+     },
+     {
+      "label": "大",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "delay": 1.2,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一大堆东西堆在那儿，分不出一个一个",
+   "node": "① 许多的、大量的（接不可数名词）",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "一大堆米堆在那儿，分不出一粒一粒，只觉得好大一片。",
+    "这就是 much：多的、大量的。所以它后面接数不清个数的东西，比如 sugar 糖。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/rice-heap.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.2,
+      "s2": 0.62,
+      "z": 3,
+      "shadow": true,
+      "when": "一大堆米",
+      "growWhen": "好大一片",
+      "growDur": 1.2,
+      "hideCue": 1
+     },
+     {
+      "label": "分不出一粒一粒",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.08,
+      "when": "分不出",
+      "hideCue": 1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "label": "much 多的、大量的",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "cue": 1,
+      "when": "much",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.42,
+      "z": 3,
+      "cue": 1,
+      "when": "数不清"
+     },
+     {
+      "svg": "art/sugar-jar.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.46,
+      "z": 4,
+      "shadow": true,
+      "when": "sugar",
+      "pop": true
+     },
+     {
+      "label": "much sugar",
+      "x": 0.82,
+      "y": 0.4,
+      "size": 0.08,
+      "when": "糖",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ]
+   }
+  },
+  {
+   "via": "不说东西，说程度“大”",
+   "node": "② 很、非常；（比较级前）…得多",
+   "pos": "副词",
+   "pic": 1,
+   "say": [
+    "不说东西多，说程度大，much 就成了副词：很、非常。",
+    "Thank you very much，就是非常感谢；放在比较级前面，much bigger，就是大得多。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "label": "东西多 → 程度大",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "when": "程度大",
+      "hideCue": 1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "actor": "west-man-hello",
+      "x": 0.26,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "when": "很、非常",
+      "hideWhen": "比较级"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.74,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "cue": 1,
+      "when": "非常感谢",
+      "hideWhen": "比较级"
+     },
+     {
+      "label": "very much 非常",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "when": "very much",
+      "hideWhen": "比较级",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "svg": "art/box.svg",
+      "x": 0.28,
+      "y": 0.76,
+      "s": 0.18,
+      "z": 3,
+      "when": "much bigger"
+     },
+     {
+      "svg": "art/box.svg",
+      "x": 0.62,
+      "y": 0.6,
+      "s": 0.56,
+      "z": 3,
+      "when": "much bigger",
+      "delay": 0.3,
+      "pop": true
+     },
+     {
+      "label": "much bigger 大得多",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "when": "大得多",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "many",
+   "m": "许多（可数）",
+   "share": ""
+  },
+  {
+   "w": "more",
+   "m": "更多",
+   "share": ""
+  },
+  {
+   "w": "most",
+   "m": "最多",
+   "share": ""
+  }
+ ],
+ "distinguish": {
+  "pics": {
+   "many": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/apples.svg",
+      "x": 0.34,
+      "y": 0.52,
+      "s": 0.7,
+      "z": 3,
+      "shadow": true
+     },
+     {
+      "label": "many + 可数复数（many apples）",
+      "x": 0.74,
+      "y": 0.5,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人要多少糖？",
+    "listen": "Not much sugar, please.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "一点点",
+     "很多",
+     "两勺",
+     "不要糖"
+    ],
+    "ans": "A",
+    "why": "not much 不多，一点点。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "How ______ water do you drink every day?",
+    "opts": [
+     "many",
+     "few",
+     "a few",
+     "much"
+    ],
+    "ans": "D",
+    "why": "water 不可数，问多少用 how much。",
+    "kd": "易混"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 many、much 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "There are too ______ people here.",
+    "opts": [],
+    "ans": "many",
+    "why": "people 是可数复数，用 many。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "I have ______ homework today than yesterday. (much)",
+    "opts": [],
+    "ans": "more",
+    "why": "有 than 用比较级 more。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He doesn't have many money.",
+    "opts": [],
+    "ans": "many → much",
+    "why": "money 不可数，用 much。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这个箱子比那个重得多。",
+    "stem": "This box is ______ ______ than that one.",
+    "opts": [],
+    "ans": [
+     "much",
+     "heavier"
+    ],
+    "why": "much 修饰比较级 heavier，表示“……得多”。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Which costs the ______, A, B or C?",
+    "opts": [
+     "more",
+     "most",
+     "much",
+     "many"
+    ],
+    "ans": "B",
+    "why": "三者之中用最高级 most。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
