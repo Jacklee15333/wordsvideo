@@ -1,7 +1,1183 @@
 {
  "单词": "show",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "originPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/photo.svg",
+     "x": 0.4,
+     "y": 0.5,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.76,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/lamp.svg",
+     "x": 0.1,
+     "y": 0.6,
+     "s": 0.5
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "给…看、出示",
+    "pos": "动词",
+    "diff": "把东西拿到别人眼前",
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.92,
+      "z": 3
+     },
+     {
+      "svg": "art/ticket.svg",
+      "x": 0.62,
+      "y": 0.5,
+      "s": 0.26,
+      "anim": "bob",
+      "z": 4
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.95,
+      "y": 0.72,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.95,
+        0.72
+       ],
+       "to": [
+        0.1,
+        0.72
+       ],
+       "offset": 0
+      }
+     }
+    ],
+    "ex": "Please show me your ticket.",
+    "exzh": "请给我看看你的车票。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "turn": [
+        1,
+        2
+       ]
+      },
+      {
+       "actor": "west-clerk-think",
+       "x": 0.72,
+       "y": 0.6,
+       "s": 0.88,
+       "z": 3,
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.42,
+       "y": 0.42,
+       "s": 0.24,
+       "when": "ticket",
+       "pop": true,
+       "go": [
+        0.56,
+        0.42
+       ],
+       "goWhen": "车票",
+       "dur": 0.8,
+       "z": 5
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.74,
+       "s": 0.42,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.05,
+         0.74
+        ],
+        "to": [
+         0.95,
+         0.74
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "label": "show",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "when": "show",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "给我看看",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.075,
+       "when": "给我看看",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "表明",
+    "pos": "动词",
+    "diff": "让人看清一个道理",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/chart.svg",
+      "x": 0.62,
+      "y": 0.42,
+      "s": 0.56,
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-man-point",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     }
+    ],
+    "ex": "The chart shows our class is getting better.",
+    "exzh": "图表表明我们班在进步。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/chart.svg",
+       "x": 0.4,
+       "y": 0.44,
+       "s": 0.5,
+       "when": "chart",
+       "pop": true
+      },
+      {
+       "ray": [
+        [
+         0.24,
+         0.6
+        ],
+        [
+         0.56,
+         0.3
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 1.0,
+       "when": "getting better",
+       "glow": true
+      },
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.78,
+       "y": 0.6,
+       "s": 0.88,
+       "z": 3
+      },
+      {
+       "label": "shows",
+       "x": 0.12,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "shows",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "表明",
+       "x": 0.4,
+       "y": 0.88,
+       "size": 0.075,
+       "when": "表明",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "带领（参观）",
+    "pos": "动词",
+    "diff": "领着人一处处看",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.1,
+      "y": 0.66,
+      "s": 0.7,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.1,
+        0.66
+       ],
+       "to": [
+        0.9,
+        0.66
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.0,
+      "y": 0.7,
+      "s": 0.6,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.0,
+        0.7
+       ],
+       "to": [
+        0.8,
+        0.7
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "svg": "art/flag.svg",
+      "x": 0.86,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "swing"
+     }
+    ],
+    "ex": "She showed me around the school.",
+    "exzh": "她带我参观了学校。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.88,
+       "z": 3,
+       "id": "g"
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "x": 0.72,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "nodWith": "g"
+      },
+      {
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.3,
+       "when": "school",
+       "pop": true,
+       "z": 5
+      },
+      {
+       "label": "showed me around",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.075,
+       "when": "showed me around",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "带我参观",
+       "x": 0.86,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "带我参观",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "演出、节目；展览",
+    "pos": "名词",
+    "diff": "摆出来给众人看的场面",
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "beat": 100,
+    "items": [
+     {
+      "beam": true,
+      "x": 0.25,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4
+     },
+     {
+      "beam": true,
+      "x": 0.75,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4.6
+     },
+     {
+      "actor": "west-girl-music",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/pa-speaker.svg",
+      "x": 0.14,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "thump"
+     },
+     {
+      "waves": true,
+      "x": 0.2,
+      "y": 0.36,
+      "dir": 180,
+      "n": 3
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9
+     }
+    ],
+    "ex": "We watched a show last night.",
+    "exzh": "我们昨晚看了一场演出。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "beat": 100,
+     "items": [
+      {
+       "beam": true,
+       "x": 0.25,
+       "y": 0.0,
+       "len": 0.8,
+       "width": 0.14,
+       "swing": 12,
+       "period": 4
+      },
+      {
+       "beam": true,
+       "x": 0.75,
+       "y": 0.0,
+       "len": 0.8,
+       "width": 0.14,
+       "swing": 12,
+       "period": 4.6
+      },
+      {
+       "actor": "west-man-hello",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.88,
+       "z": 3
+      },
+      {
+       "svg": "art/drum.svg",
+       "x": 0.18,
+       "y": 0.62,
+       "s": 0.3,
+       "anim": "thump",
+       "when": "show"
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "x": 0.2,
+       "y": 0.44,
+       "s": 0.1,
+       "every": 0.9,
+       "life": 2.2,
+       "to": [
+        0,
+        -0.35
+       ],
+       "wobble": 0.03,
+       "when": "show"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.3,
+       "z": 6,
+       "crowd": 9,
+       "when": "watched"
+      },
+      {
+       "label": "show",
+       "x": 0.86,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "show",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "演出",
+       "x": 0.86,
+       "y": 0.28,
+       "size": 0.075,
+       "when": "演出",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“看” → “让人看”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/photo.svg",
+       "x": 0.74,
+       "y": 0.44,
+       "s": 0.4,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "via": "把东西拿到别人眼前",
+    "node": "① 给…看、出示",
+    "pos": "动词",
+    "pic": 0,
+    "say": [
+     "show 最早的意思是看。后来掉了个头，变成让别人看。",
+     "把东西拿到别人眼前，就是给…看、出示，比如出示车票。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "看",
+       "x": 0.24,
+       "y": 0.16,
+       "size": 0.1,
+       "when": "最早的意思是看",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "ray": [
+        [
+         0.36,
+         0.16
+        ],
+        [
+         0.56,
+         0.16
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.7,
+       "when": "掉了个头"
+      },
+      {
+       "label": "让别人看",
+       "x": 0.74,
+       "y": 0.16,
+       "size": 0.09,
+       "when": "让别人看",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "svg": "art/photo.svg",
+       "x": 0.4,
+       "y": 0.56,
+       "s": 0.44,
+       "when": "让别人看",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.46,
+       "when": "出示车票",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "label": "出示",
+       "x": 0.84,
+       "y": 0.84,
+       "size": 0.075,
+       "when": "出示",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "让人看清一个道理",
+    "node": "② 表明",
+    "pos": "动词",
+    "pic": 1,
+    "say": [
+     "不光是东西，一个道理也可以拿给人看。",
+     "让人看清一个道理，就是表明、说明。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/photo.svg",
+       "x": 0.24,
+       "y": 0.5,
+       "s": 0.34,
+       "when": "东西"
+      },
+      {
+       "svg": "art/chart.svg",
+       "x": 0.62,
+       "y": 0.46,
+       "s": 0.56,
+       "when": "道理",
+       "pop": true
+      },
+      {
+       "label": "表明",
+       "x": 0.62,
+       "y": 0.88,
+       "size": 0.09,
+       "when": "表明",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "领着人一处一处地看",
+    "node": "③ 带领",
+    "pos": "动词",
+    "pic": 2,
+    "say": [
+     "领着人一处一处地看，就是带领、带人参观。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7,
+       "when": "一处一处"
+      },
+      {
+       "ray": [
+        [
+         0.3,
+         0.7
+        ],
+        [
+         0.42,
+         0.4
+        ],
+        [
+         0.6,
+         0.6
+        ],
+        [
+         0.72,
+         0.32
+        ]
+       ],
+       "color": "#E8344E",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 1.6,
+       "when": "领着人"
+      },
+      {
+       "label": "带人参观",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "when": "带人参观",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "动作也能当名词：摆出来给众人看的",
+    "node": "④ 演出、节目",
+    "pos": "名词",
+    "pic": 3,
+    "rule": "表示动作的词，也能直接当名词用，指这件事",
+    "ruleEx": "show 给…看 → 演出      walk 走 → 散步",
+    "say": [
+     "英语里，表示动作的词，也能直接当名词用，指这件事。",
+     "walk 是走，也指一次散步。",
+     "摆出来给众人看的场面，就是 show：演出、节目。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "beat": 100,
+     "items": [
+      {
+       "beam": true,
+       "x": 0.25,
+       "y": 0.0,
+       "len": 0.8,
+       "width": 0.14,
+       "swing": 12,
+       "period": 4
+      },
+      {
+       "beam": true,
+       "x": 0.75,
+       "y": 0.0,
+       "len": 0.8,
+       "width": 0.14,
+       "swing": 12,
+       "period": 4.6
+      },
+      {
+       "label": "表示动作的词",
+       "x": 0.3,
+       "y": 0.2,
+       "size": 0.075,
+       "when": "表示动作的词",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "hideCue": 1
+      },
+      {
+       "label": "名词",
+       "x": 0.7,
+       "y": 0.2,
+       "size": 0.075,
+       "when": "名词",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "hideCue": 1
+      },
+      {
+       "label": "walk",
+       "x": 0.3,
+       "y": 0.2,
+       "size": 0.09,
+       "when": "walk",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "hideCue": 2
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.1,
+       "y": 0.62,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.1,
+         0.62
+        ],
+        "to": [
+         0.9,
+         0.62
+        ],
+        "offset": 0
+       },
+       "when": "散步",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/drum.svg",
+       "x": 0.3,
+       "y": 0.62,
+       "s": 0.36,
+       "cue": 2,
+       "when": "众人",
+       "anim": "thump"
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "x": 0.3,
+       "y": 0.44,
+       "s": 0.1,
+       "every": 0.9,
+       "life": 2.2,
+       "to": [
+        0,
+        -0.35
+       ],
+       "wobble": 0.03,
+       "cue": 2,
+       "when": "演出"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.3,
+       "z": 6,
+       "crowd": 9,
+       "when": "众人"
+      },
+      {
+       "label": "演出、节目",
+       "x": 0.72,
+       "y": 0.4,
+       "size": 0.075,
+       "when": "演出、节目",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "shown",
+    "m": "show 的过去分词",
+    "share": "show"
+   },
+   {
+    "w": "showcase",
+    "m": "陈列柜；展示",
+    "share": "show"
+   },
+   {
+    "w": "showtime",
+    "m": "开演时间",
+    "share": "show"
+   }
+  ],
+  "distinguish": {
+   "key": "出示 / 表明 / 带领",
+   "items": [
+    {
+     "w": "show",
+     "word": "show",
+     "m": "给…看、表明、带领",
+     "say": "show 最常用：拿给人看、让人看见；也能说表明、带人参观。",
+     "text": "show 最常用：拿给人看、让人看见；也能说表明、带人参观。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/ticket.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/photo.svg",
+        "x": 0.84,
+        "y": 0.5,
+        "s": 0.5
+       }
+      ]
+     }
+    },
+    {
+     "w": "produce",
+     "word": "produce",
+     "m": "出示",
+     "say": "produce 是“拿出来”：从口袋、包里拿出证件、车票给人查看，比 show 正式。",
+     "text": "produce 是“拿出来”：从口袋、包里拿出证件、车票给人查看，比 show 正式。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/wallet.svg",
+        "x": 0.36,
+        "y": 0.6,
+        "s": 0.6
+       },
+       {
+        "svg": "art/idcard.svg",
+        "x": 0.64,
+        "y": 0.46,
+        "s": 0.66,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "display",
+     "word": "display",
+     "m": "陈列、展出",
+     "say": "display 是摆出来陈列、展出，让很多人来看。",
+     "text": "display 是摆出来陈列、展出，让很多人来看。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/showcase.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.9
+       },
+       {
+        "svg": "art/scroll.svg",
+        "x": 0.84,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "swing"
+       }
+      ]
+     }
+    },
+    {
+     "w": "indicate",
+     "word": "indicate",
+     "m": "表明",
+     "say": "indicate 是作为迹象表明，比 show 正式，常用于研究、数据。",
+     "text": "indicate 是作为迹象表明，比 show 正式，常用于研究、数据。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/chart.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/thermometer.svg",
+        "x": 0.84,
+        "y": 0.5,
+        "s": 0.7
+       }
+      ]
+     }
+    },
+    {
+     "w": "declare",
+     "word": "declare",
+     "m": "宣布、声明",
+     "say": "declare 是公开、正式地宣布出来。",
+     "text": "declare 是公开、正式地宣布出来。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "svg": "art/podium.svg",
+        "x": 0.5,
+        "y": 0.7,
+        "s": 0.6
+       },
+       {
+        "svg": "art/mic.svg",
+        "x": 0.56,
+        "y": 0.38,
+        "s": 0.4
+       },
+       {
+        "waves": true,
+        "x": 0.62,
+        "y": 0.3,
+        "dir": 0,
+        "n": 3
+       }
+      ]
+     }
+    },
+    {
+     "w": "suggest",
+     "word": "suggest",
+     "m": "暗示、似乎表明",
+     "say": "suggest 语气更弱：暗示、似乎表明，比如乌云似乎表明要下雨。",
+     "text": "suggest 语气更弱：暗示、似乎表明，比如乌云似乎表明要下雨。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/park-bg.svg",
+      "items": [
+       {
+        "svg": "art/cloud-dark.svg",
+        "x": 0.5,
+        "y": 0.42,
+        "s": 0.7,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/umbrella.svg",
+        "x": 0.84,
+        "y": 0.6,
+        "s": 0.5
+       }
+      ]
+     }
+    },
+    {
+     "w": "signal",
+     "word": "signal",
+     "m": "发信号表明",
+     "say": "signal 是用信号、动作表明，比如红灯一亮，车就要停。",
+     "text": "signal 是用信号、动作表明，比如红灯一亮，车就要停。",
+     "pic": {
+      "bg": "sky",
+      "items": [
+       {
+        "svg": "art/traffic-light.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.9,
+        "blink": 1.2
+       },
+       {
+        "svg": "art/bus.svg",
+        "x": 0.74,
+        "y": 0.62,
+        "s": 0.5,
+        "anim": "ride"
+       },
+       {
+        "svg": "art/sun.svg",
+        "x": 0.12,
+        "y": 0.24,
+        "s": 0.3,
+        "anim": "spin"
+       }
+      ]
+     }
+    },
+    {
+     "w": "speak",
+     "word": "speak",
+     "m": "说明、显示",
+     "say": "speak 在这里是不用说话也能说明问题，比如事实说明一切。",
+     "text": "speak 在这里是不用说话也能说明问题，比如事实说明一切。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/speaker.svg",
+        "x": 0.4,
+        "y": 0.55,
+        "s": 0.7,
+        "anim": "thump"
+       },
+       {
+        "waves": true,
+        "x": 0.52,
+        "y": 0.5,
+        "dir": 0,
+        "n": 3
+       }
+      ]
+     }
+    },
+    {
+     "w": "lead",
+     "word": "lead",
+     "m": "领路",
+     "say": "lead 是走在前面领路，后面的人跟着。",
+     "text": "lead 是走在前面领路，后面的人跟着。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/park-bg.svg",
+      "items": [
+       {
+        "svg": "art/flag.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "swing"
+       },
+       {
+        "svg": "art/road-arrow.svg",
+        "x": 0.74,
+        "y": 0.56,
+        "s": 0.7
+       }
+      ]
+     }
+    },
+    {
+     "w": "guide",
+     "word": "guide",
+     "m": "引导、导游",
+     "say": "guide 是熟悉路的人给你指引、讲解，像导游。",
+     "text": "guide 是熟悉路的人给你指引、讲解，像导游。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/park-bg.svg",
+      "items": [
+       {
+        "svg": "art/signpost.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.9
+       },
+       {
+        "svg": "art/map.svg",
+        "x": 0.76,
+        "y": 0.56,
+        "s": 0.5,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "shepherd",
+     "word": "shepherd",
+     "m": "像牧羊人一样带领",
+     "say": "shepherd 原来是牧羊人，像赶羊一样把一群人带到一处。",
+     "text": "shepherd 原来是牧羊人，像赶羊一样把一群人带到一处。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/park-bg.svg",
+      "items": [
+       {
+        "svg": "art/sheep.svg",
+        "x": 0.36,
+        "y": 0.66,
+        "s": 0.5,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/sheep.svg",
+        "x": 0.66,
+        "y": 0.68,
+        "s": 0.46,
+        "anim": "bob",
+        "flip": true
+       }
+      ]
+     }
+    },
+    {
+     "w": "conduct",
+     "word": "conduct",
+     "m": "带领、指挥",
+     "say": "conduct 是带领、指挥，比如带人参观，或指挥乐队。",
+     "text": "conduct 是带领、指挥，比如带人参观，或指挥乐队。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "svg": "art/baton.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "swing"
+       },
+       {
+        "emit": true,
+        "svg": "art/note.svg",
+        "x": 0.5,
+        "y": 0.4,
+        "s": 0.12,
+        "every": 0.9,
+        "life": 2.2,
+        "to": [
+         0,
+         -0.35
+        ],
+        "wobble": 0.03
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "show 是最普通的“让人看”；produce 强调“拿出来”，indicate、suggest 是“作为迹象表明”，lead、guide、conduct 是“走在前面带着人”。",
+   "tip": "出示证件：show / produce；数据表明：indicate；带人参观：show sb around。"
+  }
+ },
+ "插图": [
+  "showai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人要带客人做什么？\n听：Let me show you around our school.\nA. 带他们参观学校\nB. 给他们上课\nC. 送他们回家\nD. 请他们吃饭",
@@ -89,5 +1265,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

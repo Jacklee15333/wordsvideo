@@ -1,0 +1,718 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈθæŋks",
+  "ɡɪvɪŋ"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/thankcard.svg",
+     "x": 0.44,
+     "y": 0.5,
+     "s": 0.6,
+     "anim": "bob"
+    },
+    {
+     "emit": true,
+     "svg": "art/heart.svg",
+     "x": 0.44,
+     "y": 0.3,
+     "s": 0.12,
+     "every": 0.9,
+     "life": 2.2,
+     "to": [
+      0,
+      -0.35
+     ],
+     "wobble": 0.03
+    },
+    {
+     "svg": "art/pie.svg",
+     "x": 0.84,
+     "y": 0.76,
+     "s": 0.16
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-raise",
+     "x": 0.34,
+     "y": 0.6,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "svg": "art/gift.svg",
+     "x": 0.56,
+     "y": 0.6,
+     "s": 0.3,
+     "go": [
+      0.84,
+      0.6
+     ],
+     "dur": 1.6,
+     "loop": true,
+     "z": 4
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-thanks.svg",
+  "p1": "art/icon-giving.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/gift.svg",
+    "x": 0.36,
+    "y": 0.58,
+    "s": 0.56,
+    "anim": "pulse"
+   },
+   {
+    "svg": "art/thankcard.svg",
+    "x": 0.74,
+    "y": 0.42,
+    "s": 0.4,
+    "anim": "bob"
+   },
+   {
+    "emit": true,
+    "svg": "art/heart.svg",
+    "x": 0.74,
+    "y": 0.26,
+    "s": 0.1,
+    "every": 0.9,
+    "life": 2.2,
+    "to": [
+     0,
+     -0.35
+    ],
+    "wobble": 0.03
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "感恩节",
+   "pos": "名词",
+   "diff": "美国十一月、加拿大十月的节日",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-speech",
+     "x": 0.3,
+     "y": 0.52,
+     "s": 0.86,
+     "z": 2,
+     "id": "m"
+    },
+    {
+     "actor": "cn-teacher-listen",
+     "x": 0.72,
+     "y": 0.52,
+     "s": 0.82,
+     "z": 2,
+     "nodWith": "m"
+    },
+    {
+     "svg": "art/dining-table.svg",
+     "x": 0.5,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 4
+    },
+    {
+     "svg": "art/turkey.svg",
+     "x": 0.5,
+     "y": 0.7,
+     "s": 0.3,
+     "z": 5,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/pie.svg",
+     "x": 0.22,
+     "y": 0.74,
+     "s": 0.14,
+     "z": 5
+    },
+    {
+     "svg": "art/pumpkin.svg",
+     "x": 0.8,
+     "y": 0.72,
+     "s": 0.16,
+     "z": 5
+    }
+   ],
+   "ex": "We eat turkey on Thanksgiving.",
+   "exzh": "我们在感恩节吃火鸡。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.24,
+      "y": 0.52,
+      "s": 0.82,
+      "z": 2,
+      "id": "g"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.76,
+      "y": 0.54,
+      "s": 0.78,
+      "z": 2,
+      "nodWith": "g"
+     },
+     {
+      "svg": "art/dining-table.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 4
+     },
+     {
+      "svg": "art/turkey.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.4,
+      "when": "turkey",
+      "pop": true,
+      "z": 5
+     },
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.88,
+      "y": 0.2,
+      "s": 0.3,
+      "when": "Thanksgiving",
+      "anim": "bob"
+     },
+     {
+      "label": "Thanksgiving",
+      "x": 0.14,
+      "y": 0.12,
+      "size": 0.075,
+      "when": "Thanksgiving",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "感恩节",
+      "x": 0.36,
+      "y": 0.12,
+      "size": 0.075,
+      "when": "感恩节",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     },
+     {
+      "label": "火鸡",
+      "x": 0.62,
+      "y": 0.4,
+      "size": 0.075,
+      "when": "火鸡",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "感恩、感恩的祈祷",
+   "pos": "名词（小写）",
+   "diff": "向人、向神表达感激",
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-present",
+     "x": 0.34,
+     "y": 0.58,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "svg": "art/harvest.svg",
+     "x": 0.74,
+     "y": 0.64,
+     "s": 0.46,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/wheat.svg",
+     "x": 0.92,
+     "y": 0.56,
+     "s": 0.5,
+     "anim": "swing"
+    }
+   ],
+   "ex": "We said a few words of thanksgiving.",
+   "exzh": "我们说了几句感恩的话。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.3,
+      "y": 0.54,
+      "s": 0.86,
+      "z": 2,
+      "id": "t"
+     },
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.72,
+      "y": 0.54,
+      "s": 0.84,
+      "z": 2,
+      "nodWith": "t"
+     },
+     {
+      "svg": "art/dining-table.svg",
+      "x": 0.5,
+      "y": 0.88,
+      "s": 0.32,
+      "z": 4
+     },
+     {
+      "svg": "art/thankcard.svg",
+      "x": 0.5,
+      "y": 0.44,
+      "s": 0.34,
+      "when": "words",
+      "pop": true,
+      "anim": "bob",
+      "z": 5
+     },
+     {
+      "waves": true,
+      "x": 0.42,
+      "y": 0.3,
+      "dir": 0,
+      "n": 3,
+      "with": "t"
+     },
+     {
+      "label": "thanksgiving",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "when": "thanksgiving",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "感恩",
+      "x": 0.86,
+      "y": 0.12,
+      "size": 0.075,
+      "when": "感恩",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“献上感谢”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/gift.svg",
+      "x": 0.36,
+      "y": 0.58,
+      "s": 0.56,
+      "anim": "pulse",
+      "shadow": true
+     },
+     {
+      "svg": "art/thankcard.svg",
+      "x": 0.74,
+      "y": 0.42,
+      "s": 0.42,
+      "anim": "bob"
+     },
+     {
+      "emit": true,
+      "svg": "art/heart.svg",
+      "x": 0.74,
+      "y": 0.26,
+      "s": 0.1,
+      "every": 0.9,
+      "life": 2.2,
+      "to": [
+       0,
+       -0.35
+      ],
+      "wobble": 0.03
+     }
+    ]
+   }
+  },
+  {
+   "via": "give thanks 合成一个词：宾语挪到前面",
+   "node": "感恩",
+   "pos": "名词",
+   "pic": 1,
+   "rule": "动词带着宾语合成一个词：宾语挪到前面，动词放在最后",
+   "ruleEx": "give thanks → thanksgiving      give life → life-giving",
+   "say": [
+    "give thanks 是献上感谢。合成一个词，宾语 thanks 挪到前面，give 放在最后，变成 thanksgiving。",
+    "同样，give life 是给人生命，变成 life-giving，就是给人生命的。",
+    "向人、向神表达感激，就是感恩、感恩的祈祷。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "give thanks",
+      "x": 0.3,
+      "y": 0.2,
+      "size": 0.09,
+      "when": "give thanks",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/gift.svg",
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.36,
+      "when": "献上感谢",
+      "hideCue": 1
+     },
+     {
+      "ray": [
+       [
+        0.48,
+        0.5
+       ],
+       [
+        0.6,
+        0.5
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "挪到前面",
+      "hideCue": 1
+     },
+     {
+      "label": "thanksgiving",
+      "x": 0.76,
+      "y": 0.5,
+      "size": 0.09,
+      "when": "thanksgiving",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "hideCue": 1
+     },
+     {
+      "label": "give life",
+      "x": 0.3,
+      "y": 0.2,
+      "size": 0.09,
+      "when": "give life",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.3,
+      "y": 0.56,
+      "s": 0.4,
+      "when": "生命",
+      "hideCue": 2,
+      "anim": "sway"
+     },
+     {
+      "label": "life-giving",
+      "x": 0.74,
+      "y": 0.5,
+      "size": 0.09,
+      "when": "life-giving",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/thankcard.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.56,
+      "cue": 2,
+      "when": "感恩",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "label": "感恩的祈祷",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.075,
+      "when": "感恩的祈祷",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "收获以后，公开感谢",
+   "node": "感恩庆典",
+   "pos": "名词",
+   "say": [
+    "17 世纪，人们收获以后，会公开举行仪式，感谢一年的好收成。",
+    "北美传统上说，头一回是 1621 年，普利茅斯的移民庆祝第一次收获。"
+   ],
+   "fig": {
+    "bg": "sky",
+    "items": [
+     {
+      "svg": "art/wheat.svg",
+      "x": 0.2,
+      "y": 0.56,
+      "s": 0.6,
+      "when": "收获以后",
+      "anim": "swing"
+     },
+     {
+      "svg": "art/harvest.svg",
+      "x": 0.56,
+      "y": 0.62,
+      "s": 0.5,
+      "when": "好收成",
+      "pop": true
+     },
+     {
+      "label": "1621",
+      "x": 0.82,
+      "y": 0.2,
+      "size": 0.12,
+      "when": "1621",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "svg": "art/pumpkin.svg",
+      "x": 0.84,
+      "y": 0.72,
+      "s": 0.24,
+      "when": "第一次收获",
+      "pop": true
+     }
+    ]
+   }
+  },
+  {
+   "via": "固定成每年的节日",
+   "node": "感恩节",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "后来，这样的庆典固定成每年的节日，首字母大写，就是感恩节。",
+    "美国在十一月的第四个星期四，加拿大在十月的第二个星期一。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/dining-table.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 2
+     },
+     {
+      "svg": "art/turkey.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.42,
+      "when": "感恩节",
+      "pop": true,
+      "z": 3
+     },
+     {
+      "label": "首字母大写",
+      "x": 0.24,
+      "y": 0.14,
+      "size": 0.075,
+      "when": "首字母大写",
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.84,
+      "y": 0.36,
+      "s": 0.4,
+      "when": "每年的节日",
+      "anim": "bob"
+     },
+     {
+      "label": "十一月",
+      "x": 0.62,
+      "y": 0.14,
+      "size": 0.075,
+      "when": "十一月",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "十月",
+      "x": 0.84,
+      "y": 0.72,
+      "size": 0.075,
+      "when": "十月",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "thanks",
+   "m": "谢谢",
+   "share": "thanks"
+  },
+  {
+   "w": "life-giving",
+   "m": "给人生命的",
+   "share": "giving"
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：他们哪天吃火鸡？",
+    "listen": "We eat turkey on Thanksgiving.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "圣诞节",
+     "春节",
+     "生日",
+     "感恩节"
+    ],
+    "ans": "D",
+    "why": "Thanksgiving 感恩节。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "______ is in November in America.",
+    "opts": [
+     "Christmas",
+     "Easter",
+     "Thanksgiving",
+     "Halloween"
+    ],
+    "ans": "C",
+    "why": "美国的感恩节在十一月。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 Thanksgiving、Christmas 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "______ is on December 25th.",
+    "opts": [],
+    "ans": "Christmas",
+    "why": "圣诞节在 12 月 25 日。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "We ______ thanks to our parents. (Thanksgiving)",
+    "opts": [],
+    "ans": "give",
+    "why": "give thanks 表示感谢，主语 we 用 give。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "We have a big dinner in Thanksgiving Day.",
+    "opts": [],
+    "ans": "in → on",
+    "why": "具体的节日当天用 on。",
+    "kd": "用法"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "感恩节人们吃火鸡。",
+    "stem": "People eat ______ on Thanksgiving.",
+    "opts": [],
+    "ans": "turkey",
+    "why": "感恩节吃火鸡 turkey。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Families get ______ for Thanksgiving dinner.",
+    "opts": [
+     "up",
+     "off",
+     "together",
+     "over"
+    ],
+    "ans": "C",
+    "why": "get together 聚在一起。",
+    "kd": "短语"
+   }
+  ]
+ }
+}
