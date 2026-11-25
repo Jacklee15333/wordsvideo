@@ -1314,7 +1314,7 @@ def relay_parts(prompt, words, kind, rnd):
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=kind, reply="", ts=time.time(),
                      copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "", phase="send", tid=tid,
                      polls=0, lastPoll=0.0, stage="", multi=True, pending=list(words), doneIn=[], parts=0, endReason="", round=rnd,
-                     aiDone=False, pollNow=0.0, nextPoll=0.0, pollBy="", pollGot=0, qLeft=RELAY_QLEFT[0], aiStop=None)
+                     aiDone=False, pollNow=0.0, nextPoll=0.0, pollBy="", pollGot=0, qLeft=RELAY_QLEFT[0], aiStop=None, gotFiles=[])
         rid = RELAY["id"]
         RELAY_ACT.update(rid=0, act="")
         RELAY_HIST.clear()
@@ -1402,6 +1402,7 @@ def relay_parts(prompt, words, kind, rnd):
                     RELAY["parts"] += 1
                     k = RELAY["parts"]
                     RELAY.update(phase="checking", stage="收到第 %d 轮，在看、存…" % k)
+                    RELAY.setdefault("gotFiles", []).append({"t": time.time(), "f": src.rsplit("/", 1)[-1], "len": len(t)})   # v1.11.6：第 ③ 步的动态
                     if RELAY_HIST and not RELAY_HIST[-1]["got"]:
                         RELAY_HIST[-1].update(got=time.time(), glen=len(t))
                 log("网页 AI 交回了第 %d 轮（%s，%d 字），接着做" % (k, src.rsplit("/", 1)[-1], len(t)), tid)

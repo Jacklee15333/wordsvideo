@@ -25,9 +25,30 @@ body{font:14px/1.6 var(--ui);color:var(--ink);background:var(--paper);display:fl
 button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 nav{width:188px;flex:none;background:var(--ink);color:#DCE3EE;display:flex;flex-direction:column;padding:18px 0}
-nav h1{font:600 17px/1.3 var(--ui);margin:0 20px 22px;color:#fff;letter-spacing:.5px}
+nav h1{font:600 17px/1.3 var(--ui);margin:0;color:#fff;letter-spacing:.5px;flex:1;min-width:0}
+/* v1.11.6：左边栏能收起（左上角的按钮），收起来只剩图标；记住上次是收着还是开着 */
+nav{transition:width .18s ease;overflow:hidden}
+.nhead{position:relative;display:flex;align-items:flex-start;padding:0 6px 0 16px;margin-bottom:22px}
+nav h1 .tx{display:block;white-space:nowrap}
+.ntog{position:absolute;top:-3px;right:5px;width:26px;height:26px;border:0;border-radius:6px;background:transparent;color:#9FB0C8;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.ntog:hover{background:#28365A;color:#fff}
+.ntog:focus-visible{outline:2px solid #9FB0C8;outline-offset:1px}
+nav a{position:relative}
+.ni{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;margin-right:10px;flex:none;font-style:normal}
+body.navmini nav{width:60px}
+body.navmini .nhead{flex-direction:column;align-items:center;padding:0;gap:10px;margin-bottom:16px}
+body.navmini .ntog{position:static;width:30px;height:30px}
+body.navmini nav h1{flex:none}
+body.navmini nav h1 .logo{float:none;margin:0;display:block}
+body.navmini nav .tx,body.navmini nav .foot{display:none}
+body.navmini nav a{justify-content:center;padding:9px 0}
+body.navmini .sn,body.navmini .ni{margin-right:0}
+body.navmini nav a .n{position:absolute;top:5px;right:9px;width:9px;height:9px;padding:0;font-size:0;line-height:0;border-radius:5px;box-shadow:0 0 0 2px var(--ink)}
+body.navmini .snav::before{left:30px}
+body.navmini .navsep{margin:6px 12px 8px}
+@media (prefers-reduced-motion:reduce){nav{transition:none}}
 nav h1 .logo{width:34px;height:34px;float:left;margin:0 10px 0 0}
-nav h1 small{white-space:nowrap;font-size:11px;display:block;font:400 12px var(--en);color:#9FB0C8;font-style:italic;letter-spacing:0;margin-top:2px}
+nav h1 small{white-space:nowrap;display:block;font:400 11px var(--en);color:#9FB0C8;font-style:italic;letter-spacing:0;margin-top:2px}
 nav a{display:flex;justify-content:space-between;padding:9px 20px;color:#C9D3E2;text-decoration:none;cursor:pointer;border-left:3px solid transparent}
 nav a:hover{background:#28365A;color:#fff}
 nav a.on{background:#2C3B62;color:#fff;border-left-color:var(--base)}
@@ -306,6 +327,26 @@ tr.wdim td.w{color:var(--faint)}
 .rdone .chain i{font-style:normal;color:var(--pass);font-weight:700}
 .rdone .chain i.x{color:var(--red)}
 .rnow{font-size:13.5px;font-weight:600;margin:2px 0 6px}
+/* v1.11.6：第 ③ 步能点开（小三角），里面是现在的动态、中转仓库、这个任务 */
+.r3h{display:inline-flex;align-items:baseline;gap:6px;cursor:pointer;border-radius:3px}
+.r3h:hover #rT3{text-decoration:underline;text-decoration-color:#C9D2DC}
+.r3h:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.r3h .tri{display:inline-block;width:10px;color:var(--muted);font-size:11px;transition:transform .15s}
+.r3h[aria-expanded=true] .tri{transform:rotate(90deg)}
+.r3line{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px}
+.r3act .pr{font-size:12px;font-weight:600}.r3act .pr.ok{color:#2F7D4F}.r3act .pr.bad{color:#9B2C22}
+.r3body{margin:6px 0 2px;background:#fff;border:1px solid #F0D9B0;border-radius:4px;padding:8px 10px;font-size:12.5px}
+.r3hd{font-weight:600;color:var(--muted);font-size:12px;margin-bottom:2px}
+.r3feed{list-style:none;margin:0 0 6px;padding:0;max-height:180px;overflow:auto}
+.relay .steps .r3feed li{padding:2px 0;display:flex;gap:8px;line-height:1.55;counter-increment:none}
+.relay .steps .r3feed li::before{content:none;display:none}
+.r3line .rs{flex:0 1 auto}
+.r3feed li .tm{color:var(--faint);font-variant-numeric:tabular-nums;flex:none}
+.r3feed li.ok{color:var(--pass)}.r3feed li.bad{color:#9B2C22}.r3feed li.now{color:var(--blue)}
+.r3repo,.r3task{border-top:1px dashed #F0D9B0;padding-top:6px;margin-top:6px;color:var(--muted)}
+.r3repo b,.r3task b{color:var(--ink);font-weight:600}
+.r3task .btn{margin-left:4px}
+@media (prefers-reduced-motion:reduce){.r3h .tri{transition:none}}
 .rcont{border:1px solid #F0D9B0;background:#fff;border-radius:4px;padding:8px 10px;margin:0 0 8px}
 .rcont .hd{font-weight:600;font-size:13px;margin-bottom:6px}
 .rcont .rcb{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
@@ -400,7 +441,7 @@ details.adv>summary{cursor:pointer;color:var(--muted);padding:8px 0}
 @media (max-width:900px){.acts{grid-template-columns:1fr}}
 .days label{margin-right:8px;font-size:13px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-@media (max-width:820px){body{flex-direction:column}nav{width:auto;flex-direction:row;flex-wrap:wrap;padding:6px}nav h1,nav .foot{display:none}main{padding:16px}}
+@media (max-width:820px){body{flex-direction:column}nav,body.navmini nav{width:auto;flex-direction:row;flex-wrap:wrap;padding:6px}nav .nhead,nav .foot{display:none}main{padding:16px}}
 /* v1.11.0：出视频页——出片前检查一项一项打勾；批次一行一个，点开看正在做什么、电脑忙不忙；做完出汇报 */
 .phead code{font:13px var(--en);background:#fff;border:1px solid var(--rule2);border-radius:3px;padding:0 5px}
 .vtop{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:14px;align-items:start}
@@ -515,20 +556,22 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 </style>
 </head>
 <body>
+<script>try{if(localStorage.getItem('navMini')==='1')document.body.classList.add('navmini')}catch(e){}</script>
 <nav>
-  <h1><img src="/icon2-192.png?v=1.2.1" alt="" class="logo">单词工作台<small>words · questions · films</small></h1>
+  <div class="nhead"><h1><img src="/icon2-192.png?v=1.2.1" alt="" class="logo"><span class="tx">单词工作台<small>words · questions · films</small></span></h1>
+    <button type="button" class="ntog" id="navTog" aria-label="收起左边栏" title="收起左边栏"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M9 4v16"/></svg></button></div>
   <div class="snav">
-  <a data-p="ai"><span class="nl"><i class="sn">1</i>选 AI</span></a>
-  <a data-p="check" class="on"><span class="nl"><i class="sn">2</i>检测</span></a>
-  <a data-p="pick"><span class="nl"><i class="sn">3</i>选词</span></a>
-  <a data-p="q"><span class="nl"><i class="sn">4</i>出题</span><span class="n" data-nb="q" hidden></span></a>
-  <a data-p="pic"><span class="nl"><i class="sn">5</i>画面</span><span class="n" data-nb="pic" hidden></span></a>
-  <a data-p="video"><span class="nl"><i class="sn">6</i>出视频</span></a>
+  <a data-p="ai"><span class="nl"><i class="sn">1</i><span class="tx">选 AI</span></span></a>
+  <a data-p="check" class="on"><span class="nl"><i class="sn">2</i><span class="tx">检测</span></span></a>
+  <a data-p="pick"><span class="nl"><i class="sn">3</i><span class="tx">选词</span></span></a>
+  <a data-p="q"><span class="nl"><i class="sn">4</i><span class="tx">出题</span></span><span class="n" data-nb="q" hidden></span></a>
+  <a data-p="pic"><span class="nl"><i class="sn">5</i><span class="tx">画面</span></span><span class="n" data-nb="pic" hidden></span></a>
+  <a data-p="video"><span class="nl"><i class="sn">6</i><span class="tx">出视频</span></span></a>
   </div>
   <div class="navsep"></div>
-  <a data-p="home">总览</a>
-  <a data-p="done">成果</a>
-  <a data-p="settings">设置<span class="n" id="nSoft" hidden>新</span></a>
+  <a data-p="home"><span class="nl"><i class="ni"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></i><span class="tx">总览</span></span></a>
+  <a data-p="done"><span class="nl"><i class="ni"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></i><span class="tx">成果</span></span></a>
+  <a data-p="settings"><span class="nl"><i class="ni"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg></i><span class="tx">设置</span></span><span class="n" id="nSoft" hidden>新</span></a>
   <div class="foot" id="foot">正在连接…</div>
 </nav>
 <main>
@@ -658,17 +701,21 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
     <div class="rnow" id="rNow"></div>
     <div id="rMulti" class="rcont" hidden><div class="hd" id="rContHd">网页 AI 停住了、写不下了？点继续</div>
       <div class="rcb"><button class="btn sm" id="rContSame">继续：在这个对话里接着写</button> <button class="btn sm" id="rNewChat">继续：开新对话</button></div>
-      <div class="small muted" id="rContTip">对话还能写：点「在这个对话里接着写」，软件复制好一句话，粘贴到同一个对话里发送。对话太长写不下了：点「开新对话」，软件给剩下的词出一份新的提示词（自动复制），到网页 AI 开个新对话粘贴。</div>
+      <div class="small muted" id="rContTip">对话还能写，点左边；写不下了，点右边。</div>
       <div class="small" id="rContMsg"></div></div>
     <div id="rAuto">
     <ol class="steps rsteps">
       <li id="rS1"><b>提示词复制好了</b> <span class="small muted" id="rLen"></span> <button class="btn ghost sm" id="rCopy">再复制一次</button><div class="rs"></div></li>
-      <li id="rS2"><button class="btn sm" id="rOpen">打开网页 AI ↗</button> 粘贴、发送 <span class="small faint">（最好开一个新对话）</span><div class="rs"></div></li>
-      <li id="rStep3"><span id="rT3">等网页 AI 写完、自己传回来</span><div class="rs"></div></li>
+      <li id="rS2"><button class="btn sm" id="rOpen">打开网页 AI ↗</button> 粘贴、发送 <span class="small faint">（最好开新对话）</span><div class="rs"></div></li>
+      <li id="rStep3"><div class="r3h" id="r3H" role="button" tabindex="0" aria-expanded="false" aria-controls="r3Body"><span class="tri" aria-hidden="true">▸</span><span id="rT3">等网页 AI 写完、自己传回来</span></div>
+        <div class="r3line"><div class="rs"></div><span class="r3act" id="r3Act" hidden><button class="btn ghost sm" id="rPollNow">查看结果</button> <span class="pr" id="rPollRes"></span></span></div>
+        <div class="r3body" id="r3Body" hidden>
+          <div class="r3hd">现在的动态</div><ul class="r3feed" id="r3Feed"></ul>
+          <div class="r3repo" id="rPoll" hidden><b>中转仓库</b> <span id="rPollInfo"></span> <a href="#" id="rPollGh" target="_blank" rel="noopener">在 GitHub 上看 ↗</a></div>
+          <div class="r3task" id="r3Task" hidden></div>
+        </div></li>
       <li id="rStep4"><span>存好，这个词完成</span><div class="rs"></div></li>
     </ol>
-    <div class="rpoll" id="rPoll" hidden><b>中转仓库</b> <span class="pk" id="rPollInfo"></span>
-      <button class="btn sm" id="rPollNow">立即查看仓库</button> <span class="pr" id="rPollRes"></span> <a href="#" id="rPollGh" target="_blank" rel="noopener">在 GitHub 上看 ↗</a></div>
     <div id="rHint" class="small" style="color:var(--amber)"></div>
     </div>
     <details class="rmore"><summary>详细情况</summary>
@@ -769,7 +816,7 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 <section id="p-pic">
   <div class="phead"><div><h2><i class="sn">5</i>画面：视频里的画</h2>
     <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="on">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="picbulk" class="">批量</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="on">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="picbulk" class="">批量</a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0">这次给哪些词做画面 <span class="small faint" id="picPickN"></span></h3>
     <p class="small muted" style="margin:0 0 8px">就是第 3 步「选词」里选上的词。要先有题目才能做画面；已经有画面的不重做。</p>
@@ -783,12 +830,18 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
     <div class="sother" hidden></div>
     <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
   </div>
-  <div class="box" style="margin-top:22px">
+  <div class="pnext"><span class="small muted">画面做好了？</span><button class="btn" onclick="go('video')">下一步：出视频</button></div>
+</section>
+
+<section id="p-pichist">
+  <div class="phead"><div><h2><i class="sn">5</i>画面：生成历史</h2>
+    <p class="muted">做完一批，这里多一行：几点做的、哪些词、做好几个、没做成几个。点一行看这一批每个词，点词看它的画面。</p></div></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="picbulk" class="">批量</a><a data-go="pichist" class="on">生成历史</a></div>
+  <div class="box">
     <h3 style="margin-top:0">生成历史 <span class="small faint" id="ghN"></span></h3>
     <div class="small muted" id="picSave" style="margin:-4px 0 8px"></div>
     <div id="genHist"></div>
   </div>
-  <div class="pnext"><span class="small muted">画面做好了？</span><button class="btn" onclick="go('video')">下一步：出视频</button></div>
 </section>
 
 
@@ -797,7 +850,7 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 <section id="p-picfail">
   <div class="phead"><div><h2><i class="sn">5</i>画面：没做成的词</h2>
     <p class="muted">AI 改了几轮还没过检查的画面。看一下原因，点「这些再试一次」交给 AI 重做。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="picbulk" class="">批量</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="picbulk" class="">批量</a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><h3 style="margin-top:0">画面没做成的词</h3>
       <div id="picFail" class="small">—</div>
       <div class="line"><button class="btn ghost sm" id="tPicRedo">这些再试一次</button></div></div></div>
@@ -807,7 +860,7 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 <section id="p-picbulk">
   <div class="phead"><div><h2><i class="sn">5</i>画面：批量</h2>
     <p class="muted">不按选上的词，按总表顺序给已经有题目的词一口气做一批画面。做的过程在「画面」那一页下面。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="picbulk" class="on">批量</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="picbulk" class="on">批量</a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><div class="tally" id="picStats">—</div></div>
   <div class="box" style="margin-top:14px">
     <h3 style="margin-top:0">按总表顺序接着做</h3>
@@ -1070,12 +1123,17 @@ let WD_HOME=null;
 function wdHome(){const b=$('#wDetail');if(b&&WD_HOME&&b.parentElement!==WD_HOME)WD_HOME.appendChild(b)}
 function wordInModal(w,title){const b=$('#wDetail');if(!WD_HOME)WD_HOME=b.parentElement;modal((title||'改稿：')+w,'');$('#mBody').appendChild(b);openWord(w,true)}
 let page='check';
-const PARENT={words:'pick',qset:'q',history:'q',qfail:'q',qbulk:'q',picfail:'pic',picbulk:'pic'};
+const PARENT={words:'pick',qset:'q',history:'q',qfail:'q',qbulk:'q',picfail:'pic',picbulk:'pic',pichist:'pic'};
 function go(p){if(p==='manual')p='q';if(p==='run')p='q';page=p;const top=PARENT[p]||p;
   $$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===top));
   $$('main section').forEach(s=>s.classList.toggle('on',s.id==='p-'+p));
-  ({check:loadCheck,pick:loadPick,q:loadQ,qfail:loadManual,qbulk:loadQbulk,qset:loadQset,pic:loadPic,picfail:loadPicfail,picbulk:loadPicbulk,done:loadDone,ai:loadAI,video:loadVideo,words:loadWords,history:loadHistory,settings:loadSettings,home:loadHome}[p]||(()=>{}))()}
+  ({check:loadCheck,pick:loadPick,q:loadQ,qfail:loadManual,qbulk:loadQbulk,qset:loadQset,pic:loadPic,picfail:loadPicfail,picbulk:loadPicbulk,pichist:loadPichist,done:loadDone,ai:loadAI,video:loadVideo,words:loadWords,history:loadHistory,settings:loadSettings,home:loadHome}[p]||(()=>{}))()}
 $$('nav a').forEach(a=>a.onclick=()=>go(a.dataset.p));
+function navMini(on){document.body.classList.toggle('navmini',on);const b=$('#navTog'),t=on?'展开左边栏':'收起左边栏';b.title=t;b.setAttribute('aria-label',t);
+  $$('nav a').forEach(a=>{const x=a.querySelector('.tx');if(on&&x)a.title=x.textContent;else a.removeAttribute('title')});
+  try{localStorage.setItem('navMini',on?'1':'0')}catch(e){}}
+$('#navTog').onclick=()=>navMini(!document.body.classList.contains('navmini'));
+navMini(document.body.classList.contains('navmini'));
 $$('[data-go]').forEach(a=>a.onclick=e=>{e.preventDefault();go(a.dataset.go)});
 
 /* ───── 状态轮询 ───── */
@@ -1249,9 +1307,16 @@ async function stepTasks(step){TLt=Date.now();
   const live=mine.filter(t=>act.includes(t.status)),done=mine.filter(t=>!act.includes(t.status)).slice(0,10);
   if(step==='q'||step==='pic')repRender(step,d.tasks);
   const sig=live.map(t=>t.id+t.status).join()+'|'+done.length;if(SDONE[step]!==undefined&&SDONE[step]!==sig){if(step==='q')loadQ();if(step==='pic')loadPic()}SDONE[step]=sig;
-  sec.querySelector('.tlist').innerHTML=(live.length?live.map(taskRow).join(''):'<p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p>')+
-    (done.length?`<details class="tdone" ${TOPEN[step]?'open':''}><summary class="small muted">做完的 ${done.length} 个</summary>${done.map(taskRow).join('')}
+  // v1.11.6：正在做、黄框里等着的那个任务，并进黄框第 ③ 步（点小三角看），下面不再重复一张卡片
+  const LV=$('#tLive'),mid=RL&&RL.show&&RL.tid&&sec.contains(LV)&&!LV.hidden?RL.tid:0,mg=live.find(t=>t.id===mid&&t.status==='运行中'),rest=live.filter(t=>t!==mg);
+  if(sec.contains(LV)){const R3=$('#r3Task');R3.hidden=!mg;
+    if(mg){let p={};try{p=JSON.parse(mg.progress||'{}')}catch(e){}
+      R3.innerHTML=`<b>这个任务</b> #${mg.id} ${esc(mg.title)}<span class="faint"> · ${esc((mg.started||mg.created||'').slice(11,16))} 开始${p.processed!=null?` · 已处理 ${p.processed}${p.total?' / '+p.total:''} 个词`:''}</span>
+        <button class="btn ghost sm" onclick="taskOp(${mg.id},'pause')">暂停</button><button class="btn ghost sm" onclick="taskOp(${mg.id},'cancel')">取消</button><button class="btn ghost sm" onclick="taskLog(${mg.id})">详情</button>`}}
+  const th=(rest.length?rest.map(taskRow).join(''):mg?'':'<p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p>')+
+    (done.length?`<details class="tdone" ${TOPEN[step]?'open':''}><summary class="small muted">做完的 ${done.length} 个任务</summary>${done.map(taskRow).join('')}
       <div class="line"><button class="btn ghost sm" onclick="clearDone('${step}')">清掉这一步做完的记录</button></div></details>`:'');
+  const tl=sec.querySelector('.tlist');tl.innerHTML=th;tl.hidden=!th;
   const dt=sec.querySelector('.tdone');if(dt)dt.ontoggle=()=>{TOPEN[step]=dt.open}}
 /* 汇报：最近一次（点了「给这些词…」的）任务，跳过了哪些、这次做的每个词结果怎样 */
 function repRender(step,tasks){const box=$('#'+step+'Rep');if(!box)return;
@@ -1407,6 +1472,7 @@ async function loadPicfail(){tabCounts();
     $('#picFail').innerHTML=it.length?'<ul class="pfl" style="margin:0;padding-left:18px">'+it.slice(0,30).map(x=>`<li><b style="font-family:var(--en)">${esc(x.word)}</b> <span class="muted">${esc(why(x))}</span></li>`).join('')+'</ul>'+(it.length>30?`<div class="faint">…还有 ${it.length-30} 个</div>`:''):'没有画面没做成的词';
     $('#tPicRedo').disabled=!it.length}).catch(()=>{});
 }
+function loadPichist(){tabCounts();picRes()}
 function loadPicbulk(){tabCounts();
   api('/api/words?ready=').then(w=>{const c=w.counts||{};
     $('#picStats').innerHTML=`<div class="d"><b>${(c.ready||0).toLocaleString()}</b>个词能出视频了</div><div class="a"><b>${(c.needpic||0).toLocaleString()}</b>个词有题目、缺画面</div><div><b>${(c.video||0).toLocaleString()}</b>个词有视频</div>`}).catch(()=>{});
@@ -1446,7 +1512,7 @@ async function liveTick(){
   $('#lTitle').textContent='正在做：'+(t.title||'');
   $('#lTime').textContent=ai.started&&!ai.done?(d.relay?'等你操作，已经 ':'这一次已经等了 ')+secs(Date.now()/1000-ai.started):'';
   $('#lStage').textContent=d.relay?'轮到你了：照左边黄框做':(d.stage||'');
-  $('#lWho').textContent='用的是：'+d.provider;
+  $('#lWho').textContent='用的是：'+(d.pv==='relay'?String(d.provider||'').replace(/[（(].*$/,''):d.provider);
   const web=d.pv==='web';
   $('#lShotWrap').hidden=!web;$('#lBtns').style.display=web?'flex':'none';
   if(web){const w=d.web||{};
@@ -1749,14 +1815,13 @@ async function relayTick(){
   const cur=H[n-1]||{};
   rStep('rS1',d.copied||sent?'done':'you',d.copied||sent?'':'没复制上：点「再复制一次」');
   rStep('rS2',sent?'done':'you',sent?'':`等你粘贴、发送（已经 ${secs(Date.now()/1000-d.ts)}）`);
-  rStep('rStep3',ph==='send'?'run':'done',ph==='send'?(d.inbox?'软件每 '+d.pollSec+' 秒看一次，还没传回来':'它写完，点它回复下面的「复制」'):`收到了 ${hm(cur.got)}${cur.glen?`（${cur.glen.toLocaleString()} 字）`:''}`,ph==='send'?'':'ok');
+  rStep('rStep3',ph==='send'?'run':'done',ph==='send'?(d.inbox?'还没传回来 · <span id="r3Cd"></span>':'它写完，点它回复下面的「复制」'):`收到了 ${hm(cur.got)}${cur.glen?`（${cur.glen.toLocaleString()} 字）`:''}`,ph==='send'?'':'ok');
   rStep('rStep4',ph==='send'?'wait':ph==='checking'?'run':ph==='ok'?'done':'bad',ph==='send'?'':ph==='checking'?esc(d.stage||'在看能不能用、存下…'):ph==='ok'?'完成了':'没法用：'+esc((cur.detail||'').slice(0,60)),ph==='ok'?'ok':ph==='fail'?'bad':'');
   // 详细情况（收着）
   const ups=d.uploads||[],up=ups[0],base=x=>(x||'').replace(/\.(xlsx|txt)$/,'');
   $('#rHist').innerHTML=n>1?`<div class="rhist"><b>这个词前几轮</b><ul>${H.slice(0,-1).map((h,k)=>`<li>${h.res==='ok'?'<span class="ck-y">✓</span>':h.res==='fail'?'<span class="ck-bad">✗</span>':'<span class="ck-n">–</span>'}
     第 ${k+1} 轮 ${hm(h.t0).slice(0,5)}${h.got?` 收到 ${(h.glen||0).toLocaleString()} 字`:''}${h.res==='fail'?'：'+esc((h.detail||'').slice(0,120)):h.res==='gone'?'：软件重开了，没等到':''}</li>`).join('')}</ul></div>`:'';
-  $('#rMoreInfo').innerHTML=d.inbox?`这个词要的文件：<code>${esc(d.inbox)}</code>　看了 ${d.polls||0} 次${d.lastPoll?`（上次 ${hm(d.lastPoll)}）`:''}<br>inbox/ 里现在：${(d.inboxNow||[]).length?(d.inboxNow||[]).map(esc).join('、'):'空的'}<br>`+
-    (up?`网页 AI 最近一次上传：${hm(up.ts)} <code>${esc(up.path.split('/').pop())}</code>${base(up.path)===base(d.inbox)?'（就是这个词的）':'（是上一个词的，已经收下了）'}`:'网页 AI 还没上传过'):'';
+  $('#rMoreInfo').innerHTML=d.inbox?`这一份的文件名以 <code>${esc(base(d.inbox).split('/').pop())}</code> 开头（中转仓库的情况在第 ③ 步点开看）`:'';
   $('#rNew').hidden=true;
   $('#rManual').hidden=sent;$('#rSkip').hidden=sent;
   // v1.10.10：一批好几个词——网页 AI 写一个传一个，中间不在聊天里汇报；最后一个传上来，第 ④ 步打勾“这一批已经生成完”
@@ -1773,13 +1838,15 @@ async function relayTick(){
     const S=d.aiStop;$('#rMulti').classList.toggle('stop',!!S);
     $('#rContHd').textContent=S?`⏸ 网页 AI 停下了：已经传了 ${(S.done||[]).length} 个，还剩 ${pd.length} 个${S.why?'（'+S.why+'）':''}——点下面的「继续」`:(k?'网页 AI 停住了、写不下了？点继续':'网页 AI 写不下、或者停住不写了？点继续');
     rStep('rS2',k||sent?'done':'you',k||sent?'':`等你粘贴、发送（已经 ${secs(Date.now()/1000-d.ts)}）`);
-    $('#rT3').innerHTML=`网页 AI <b>写一个传一个</b>（每 ${d.round||1} 个传一次，中间不在聊天里汇报，接着写）`;
-    rStep('rStep3',k?'done':'run',k?`已经开始传回来了：收到 ${k} 个文件`:(d.inbox?'软件每 '+d.pollSec+' 秒看一次中转仓库，还没传回来':'它写完，点它回复下面的「复制」'),k?'ok':'');
+    $('#rT3').innerHTML=`网页 AI <b>写一个传一个</b>（每 ${d.round||1} 个传一次）`;
+    const cnt3=k?`收到 ${k} 个文件 · 做完 ${dn} 个 · 还剩 ${pd.length} 个`:'还没传回来';
+    if(!pd.length)rStep('rStep3','done',`全部传回来了：收到 ${k} 个文件`,'ok');
+    else if(d.aiStop)rStep('rStep3','you',`⏸ 网页 AI 停下了，还剩 ${pd.length} 个——点上面的「继续」`,'bad');
+    else if(d.aiDone)rStep('rStep3','you',`网页 AI 说写完了，但还差 ${pd.length} 个没收到——点上面的「继续」`,'bad');
+    else rStep('rStep3','run',ph==='checking'?`收到第 ${k} 个文件，在检查、存… · ${cnt3}`:cnt3+(d.inbox?' · <span id="r3Cd"></span>':''),'');
     $('#rStep4').querySelector('span').textContent='这一批生成完';
     if(!pd.length)rStep('rStep4','done','✓ 这一批已经生成完','ok');
-    else if(d.aiStop)rStep('rStep4','bad',`⏸ 网页 AI 停下了，还剩 ${pd.length} 个——点上面的「继续」`,'bad');
-    else if(d.aiDone)rStep('rStep4','bad',`网页 AI 说写完了，但还差 ${pd.length} 个没收到：${esc(pd.slice(0,10).join('、'))}${pd.length>10?'…':''}——点上面的「继续」`,'bad');
-    else rStep('rStep4','run',ph==='checking'?esc(d.stage||'在看、存…'):`还在生成：做完 ${dn} 个，还剩 ${pd.length} 个（${esc(pd.slice(0,6).join('、'))}${pd.length>6?'…':''}）。最后一个传上来，这里就打勾`,'');
+    else rStep('rStep4','wait','全部传回来就打勾','');
     if(showL&&L.multi){const ch=$('#rRes').querySelector('.chain');if(ch)ch.textContent=`这一批第 ${dn} 个做完的`}}
   else $('#rStep4').querySelector('span').textContent='存好，这个词完成';
   // v1.11.2：一批几个词、每写完几个传一次（这里直接改）
@@ -1788,16 +1855,38 @@ async function relayTick(){
   // v1.11.2：中转仓库：上次看、下次看、立即查看
   $('#rPoll').hidden=!d.inbox;
   if(d.inbox){RLOFF=(d.now||Date.now()/1000)-Date.now()/1000;$('#rPollGh').href=d.inboxUrl||'#';$('#rPollGh').hidden=!d.inboxUrl;pollInfo();
-    if(PWAIT&&(d.lastPoll||0)>PWAIT.t0){const fs=d.inboxNow||[];PWAIT=null;$('#rPollNow').disabled=false;$('#rPollNow').textContent='立即查看仓库';
-      const r=$('#rPollRes');r.className='pr '+(d.pollErr?'bad':'ok');
-      r.textContent=d.pollErr?'✗ '+d.pollErr:`✓ 刚看了（${hm(d.lastPoll)}）：${d.pollGot?`收下 ${d.pollGot} 个文件，在处理`:(fs.length?`inbox/ 里有 ${fs.length} 个文件，没有这一批的新文件`:'inbox/ 里是空的，还没传上来')}`}
-    else if(PWAIT&&Date.now()-PWAIT.ms>20000){PWAIT=null;$('#rPollNow').disabled=false;$('#rPollNow').textContent='立即查看仓库';$('#rPollRes').className='pr bad';$('#rPollRes').textContent='✗ 软件这会儿在处理收到的文件，等一下再点'}}
+    if(PWAIT&&(d.lastPoll||0)>PWAIT.t0){PWAIT=null;$('#rPollNow').disabled=false;$('#rPollNow').textContent='查看结果';
+      const r=$('#rPollRes');r.className='pr '+(d.pollErr?'bad':'ok');PRES=Date.now();
+      r.textContent=d.pollErr?'✗ '+d.pollErr:d.pollGot?`✓ 收到 ${d.pollGot} 个文件，在检查`:'✓ 看过了：还没有新的'}
+    else if(PWAIT&&Date.now()-PWAIT.ms>20000){PWAIT=null;$('#rPollNow').disabled=false;$('#rPollNow').textContent='查看结果';$('#rPollRes').className='pr bad';PRES=Date.now();$('#rPollRes').textContent='✗ 软件在检查收到的文件，等一下再点'}
+    if(!PWAIT&&PRES&&Date.now()-PRES>15000){PRES=0;$('#rPollRes').textContent=''}}
+  // v1.11.6：第 ③ 步——「查看结果」放在这一步；点小三角看现在的动态、中转仓库、这个任务
+  const s3=$('#rStep3').dataset.st;
+  $('#r3Act').hidden=!(d.inbox&&(s3==='run'||s3==='you'));
+  r3Feed(d);
 }
-let SZDIRTY=false,RLOFF=0,PWAIT=null;
-function pollInfo(){const d=RL;if(!d||!d.inbox||$('#rPoll').hidden)return;const now=Date.now()/1000+RLOFF;
+let SZDIRTY=false,RLOFF=0,PWAIT=null,PRES=0,R3OPEN=false;
+try{R3OPEN=localStorage.getItem('r3open')==='1'}catch(e){}
+function pollInfo(){const d=RL;if(!d||!d.inbox)return;const now=Date.now()/1000+RLOFF;
   const nx=Math.max(0,Math.round((d.nextPoll||0)-now)),fs=d.inboxNow||[];
-  $('#rPollInfo').innerHTML=(d.lastPoll?`上次看 ${hm(d.lastPoll)}（第 ${d.polls||0} 次${d.pollBy==='you'?'，你点的':''}）`:'还没看过')+
-    ` · ${PWAIT?'正在看…':d.nextPoll?(nx?`${nx} 秒后自动再看`:'马上自动再看'):`每 ${d.pollSec||15} 秒自动看一次`} · inbox/ 里：${fs.length?fs.length+' 个文件':'空的'}`}
+  const cd=$('#r3Cd');if(cd)cd.textContent=PWAIT?'正在看中转仓库…':d.nextPoll?(nx?`${nx} 秒后再看`:'马上再看'):`每 ${d.pollSec||15} 秒看一次`;
+  $('#rPollInfo').textContent=(d.lastPoll?`上次看 ${hm(d.lastPoll)}（第 ${d.polls||0} 次${d.pollBy==='you'?'，你点的':''}）`:'还没看过')+` · inbox/ 里：${fs.length?fs.length+' 个文件':'空的'}`}
+/* v1.11.6：第 ③ 步点开看“现在的动态”：提示词什么时候出的、每次看中转仓库、收到的文件、每个词存好没有，最新的在上面 */
+function r3Set(open){R3OPEN=open;$('#r3Body').hidden=!open;$('#r3H').setAttribute('aria-expanded',open?'true':'false');try{localStorage.setItem('r3open',open?'1':'0')}catch(e){}}
+$('#r3H').onclick=()=>r3Set(!R3OPEN);
+$('#r3H').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();r3Set(!R3OPEN)}};
+function r3Feed(d){if($('#r3Body').hidden!==!R3OPEN)r3Set(R3OPEN);
+  const t0=d.ts||0,it=[],ws=d.words||[];
+  if(t0)it.push({t:t0,x:`提示词出好了（${ws.length>1?ws.length+' 个词':esc(ws[0]||'')}），等你粘贴给网页 AI`});
+  for(const f of d.gotFiles||[])it.push({t:f.t,x:`收到文件 <code>${esc(f.f)}</code>${f.len?`（${f.len.toLocaleString()} 字）`:''}`});
+  if(!d.multi)for(const h of d.hist||[])if(h.got&&h.got>=t0)it.push({t:h.got,x:`收到回复${h.glen?`（${h.glen.toLocaleString()} 字）`:''}`});
+  for(const x of d.done||[])if((x.t||0)>=t0)it.push({t:x.t,c:x.ok?'ok':'bad',x:`${x.ok?'✓':'✗'} <b style="font-family:var(--en)">${esc((x.words||[])[0]||'')}</b> ${x.ok?'存好了':'没做成'}${!x.ok&&x.detail?'：'+esc(x.detail.slice(0,50)):''}`});
+  if(d.aiStop)it.push({t:d.aiStop.t,c:'bad',x:`⏸ 网页 AI 停下了${d.aiStop.why?'（'+esc(d.aiStop.why)+'）':''}`});
+  if(d.inbox&&d.lastPoll&&d.lastPoll>=t0)it.push({t:d.lastPoll,x:`看了中转仓库（第 ${d.polls||0} 次${d.pollBy==='you'?'，你点的':''}）：${d.pollErr?esc(d.pollErr):d.pollGot?`收到 ${d.pollGot} 个文件`:'还没有新的'}`});
+  it.sort((a,b)=>b.t-a.t);
+  if(d.phase==='checking')it.unshift({t:(d.now||Date.now()/1000),c:'now',x:esc(d.stage||'在检查、存…')});
+  const h=it.slice(0,14).map(i=>`<li class="${i.c||''}"><span class="tm">${i.c==='now'?'现在':hm(i.t)}</span><span>${i.x}</span></li>`).join('')||'<li class="faint">还没有动静</li>';
+  const F=$('#r3Feed');if(F.dataset.h!==h){F.innerHTML=h;F.dataset.h=h}}
 setInterval(pollInfo,1000);
 $('#rSzChunk').oninput=$('#rSzRound').oninput=()=>{SZDIRTY=true;$('#rSzSave').disabled=false;$('#rSzSave').textContent='保存';$('#rSzMsg').textContent='改了还没保存';$('#rSzMsg').style.color='var(--amber)'};
 $('#rSzSave').onclick=async()=>{const c=Math.round(+$('#rSzChunk').value),r=Math.round(+$('#rSzRound').value);
@@ -1808,7 +1897,7 @@ $('#rSzSave').onclick=async()=>{const c=Math.round(+$('#rSzChunk').value),r=Math
   else{$('#rSzSave').disabled=false;$('#rSzSave').textContent='保存';$('#rSzMsg').textContent='✗ '+d.msg}
   for(let i=0;i<6;i++){await new Promise(z=>setTimeout(z,700));await relayTick()}};
 $('#rPollNow').onclick=async()=>{const d=await api('/api/relay',{op:'pollnow'});
-  if(!d.ok){$('#rPollRes').className='pr bad';$('#rPollRes').textContent='✗ '+d.msg;return}
+  if(!d.ok){$('#rPollRes').className='pr bad';PRES=Date.now();$('#rPollRes').textContent='✗ '+d.msg;return}
   PWAIT={t0:(RL.lastPoll||0),ms:Date.now()};$('#rPollNow').disabled=true;$('#rPollNow').textContent='正在看…';$('#rPollRes').textContent='';pollInfo();
   for(let i=0;i<16&&PWAIT;i++){await new Promise(r=>setTimeout(r,700));await relayTick()}};
 setInterval(relayTick,2500);
