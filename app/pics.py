@@ -179,6 +179,56 @@ def _mat_short(word, budget):
     return m
 
 
+# v1.12.0：交之前自己对一遍——最常漏的几条（一直放），加上最近起草检查最常说的“还要补”（单词工作台统计）
+ALWAYS_CHECK = [
+    "用到的每张插图（art/名字.svg）：要么在“现成的插图”里，要么在这次回复里画出来（写成 SVG 块）；只写名字不画，程序找不到，整个词作废",
+    "同义词辨析：每张卡都要配一幅画（prefs.distinguish.pics 里每个词写一幅），还要写辨析的话（key / items / logic / tip）",
+    "同一个人物动作、表情，一个词里只用一次：每幅画换一个动作和表情（动作名只能用列出来的）",
+    "读音拆分：要一块一块念的，在 prefs 写 sylIpa（每一块的音标），和拆分一一对上",
+    "场景背景要画细：生活场景至少 150 个图形，不能只有几块色块",
+]
+
+
+def _fail_key(it):
+    a, _, b = it.partition("：")
+    b = re.sub(r"[A-Za-z][A-Za-z0-9'’\-\._/]*", "X", b)
+    b = re.sub(r"\d+", "N", b)
+    return (a[:30] + "：" + b[:14]) if b else a[:40]
+
+
+def common_fails(n=6):
+    """最近最常没过的地方：[(这一类, 几次, 一个例子)]。"""
+    items = []
+    try:
+        L = json.loads(C.FAIL_LOG.read_text(encoding="utf-8")) if C.FAIL_LOG.exists() else []
+    except Exception:
+        L = []
+    for x in L[-300:]:
+        items += _items(x.get("todo", "")) or [x.get("todo", "")]
+    for line in todo_all().values():
+        items += _items(line)
+    cnt, ex = {}, {}
+    for it in items:
+        it = (it or "").strip()
+        if not it or it.startswith("你点了"):
+            continue
+        k = _fail_key(it)
+        cnt[k] = cnt.get(k, 0) + 1
+        ex.setdefault(k, it)
+    return [(k, cnt[k], ex[k]) for k in sorted(cnt, key=lambda k: -cnt[k])[:n] if cnt[k] >= 2]
+
+
+def self_check():
+    """提示词里的一段：交之前每个词自己对一遍。"""
+    out = ["【交之前每个词自己对一遍（这几条最容易没过起草检查；交上去软件马上检查，没过的要回来改）】"]
+    out += ["%d. %s" % (i + 1, t) for i, t in enumerate(ALWAYS_CHECK)]
+    top = common_fails()
+    if top:
+        out.append("最近起草检查最常说的“还要补”（单词工作台统计的，后面是次数）：")
+        out += ["- %s（%d 次）" % (e[:150], c) for k, c, e in top]
+    return "\n".join(out)
+
+
 def build_prompt_multi(words, rnd):
     """手动接力：一份好几个词的画面提示词。规矩、pictures.md、范例只放一次，每个词一段材料。"""
     rules, pm, ex = docs()
@@ -192,6 +242,7 @@ def build_prompt_multi(words, rnd):
     return "\n\n".join([
         head,
         "【这一批的词（按这个顺序做）】\n" + "\n".join("%d. %s" % (i + 1, w) for i, w in enumerate(words)),
+        self_check(),
         "【每个词的总表材料】\n" + "\n\n".join("@%s\n%s" % (w, _mat_short(w, budget)) for w in words),
         "【视频技能 %s（%s）里和画面有关的规矩：每个词每一条都要做到】\n" % (ver, ed) + rules,
         "【画面怎么画、画面设置怎么写（视频技能 %s 的 pictures.md 全文）】\n" % ver + pm,
@@ -258,30 +309,51 @@ def do_pics_relay(R, tid, total, only):
         while pend:
             C.RELAY_QLEFT[0] = len(queue)
             for part in R.ask_parts(tid, "做画面", build_prompt_multi(pend, min(rnd, len(pend))), pend, min(rnd, len(pend))):
-                got = parse_multi(part, pend)        # v1.11.2：以前这里用 res，把这一批前几个词的结果冲掉了（生成历史里算成没做成）
+                fx = [w for w in (C.RELAY.get("fixing") or []) if w in chunk and w not in pend]   # v1.12.0：没过、网页 AI 在改的
+                got = parse_multi(part, pend + fx)   # v1.11.2：以前这里用 res，把这一批前几个词的结果冲掉了（生成历史里算成没做成）
                 if not got:
                     C.RELAY["hint"] = "交回的这个文件里没认出这一批还没做的词（每个词要先写一行 @单词）"
                     continue
                 for w, (P, raw, svgs, errs) in got.items():
-                    if w not in pend:
+                    first = w in pend
+                    if not first and w not in fx:
                         continue
                     _DONE.add(w)
-                    ok, why, errs2 = _accept(R, tid, w, P, svgs, errs)
-                    if ok:
+                    info = {}
+                    ok, why, errs2 = _accept(R, tid, w, P, svgs, errs, info)
+                    st, line = info.get("st"), info.get("line") or ""
+                    good = ok and st != "todo"            # v1.12.0：起草检查说还要补的，不算做好——告诉网页 AI 马上改
+                    k = int(((C.RELAY.get("verdict") or {}).get(w) or {}).get("try") or 0) + 1
+                    if ok and w not in batch:
                         batch.append(w)
-                        C.log("  %s 的画面做好了%s" % (w, "（%s）" % why if why else ""), tid)
+                    if good:
+                        C.log("  %s 的画面做好了%s" % (w, "（改了 %d 次）" % (k - 1) if k > 1 else ""), tid)
+                    elif ok:
+                        C.log("  %s 存下了，起草检查说还要补 %d 处（第 %d 次）：%s" % (w, ntodo(line), k, line[:160]), tid)
                     else:
                         C.x("INSERT OR REPLACE INTO picfail(word, errors, ts) VALUES(?,?,?)", (w, json.dumps(errs2, ensure_ascii=False), C.now()))
-                        C.log("  %s 的画面没做成：%s" % (w, why), tid)
-                    C.relay_word(w, ok, why)
-                    res[w] = {"ok": ok, "detail": why or ("做好了" if ok else "没做成")}
-                    pend.remove(w)
-                    done += 1
-                    R.progress(tid, processed=done, total=len(todo))
+                        C.log("  %s 的画面没做成（第 %d 次）：%s" % (w, k, why), tid)
+                    gave = C.relay_verdict(w, good, line if ok else "；".join(errs2 or []) or why)
+                    if not good and w in (C.RELAY.get("fixing") or []):
+                        why = (why or "没过") + "，网页 AI 在改"
+                    elif gave and ok:
+                        later_op({"op": "add", "words": [w]})     # 改够次数了还没过：先攒着，以后一起补
+                        why = (why or "") + "（改了 %d 次，先攒着）" % k
+                    C.relay_word(w, good, why or ("做好了" if good else "没做成"))
+                    res[w] = {"ok": good, "detail": why or ("做好了" if good else "没做成")}
+                    if first:
+                        pend.remove(w)
+                        done += 1
+                        R.progress(tid, processed=done, total=len(todo))
                     if len(batch) >= 5:
                         _commit(tid, batch)
                         batch = []
             why = C.RELAY.get("endReason")
+            fx = [w for w in (C.RELAY.get("fixing") or []) if w in chunk and w not in pend]
+            if why in ("newchat", "resize") and fx:             # 在改的词也放进新的提示词
+                pend += fx
+            elif why == "skiprest" and fx:
+                later_op({"op": "add", "words": fx})
             if pend and why in ("newchat", "resize"):
                 N2, rnd = C.relay_size("pic")
                 if len(pend) > N2:                  # 一批改小了：多出来的放回去，排到下一份
@@ -1044,6 +1116,7 @@ def build_prompt_fix_multi(words, todos, rnd):
     return "\n\n".join([
         head,
         "【这一批的词（按这个顺序做）】\n" + "\n".join("%d. %s" % (i + 1, w) for i, w in enumerate(words)),
+        self_check(),
         "【每个词：还要补什么、上次的画面设置】\n" + "\n\n".join(segs),
         "【视频技能 %s（%s）里和画面有关的规矩：每个词每一条都要做到】\n" % (ver, ed) + rules,
         "【画面怎么画、画面设置怎么写（视频技能 %s 的 pictures.md 全文）】\n" % ver + pm,
@@ -1147,12 +1220,14 @@ def _fix_relay(R, tid, words, todos, batch):
         while pend:
             C.RELAY_QLEFT[0] = len(queue)
             for part in R.ask_parts(tid, "补画面", build_prompt_fix_multi(pend, todos, min(rnd, len(pend))), pend, min(rnd, len(pend))):
-                got = parse_multi(part, pend)
+                fx = [w for w in (C.RELAY.get("fixing") or []) if w in chunk and w not in pend]   # v1.12.0：没过、网页 AI 在改的
+                got = parse_multi(part, pend + fx)
                 if not got:
                     C.RELAY["hint"] = "交回的这个文件里没认出这一批还没补的词（每个词要先写一行 @单词）"
                     continue
                 for w, (P, raw, svgs, errs) in got.items():
-                    if w not in pend:
+                    first = w in pend
+                    if not first and w not in fx:
                         continue
                     old, old_line = _unchecked(w), todos.get(w, "")
                     info = {}
@@ -1163,25 +1238,44 @@ def _fix_relay(R, tid, words, todos, batch):
                         todo_note(w, old_line)
                         ok, why = False, "改完反而要补 %d 处（上次 %d 处）" % (ntodo(line), ntodo(old_line))
                     good = ok and st != "todo"
+                    k = int(((C.RELAY.get("verdict") or {}).get(w) or {}).get("try") or 0) + 1
                     if good:
-                        saved.append(w)
-                        C.log("  %s 补好了%s" % (w, "（起草检查：都齐了）" if st == "ok" else "（这台电脑起草检查不了，出片时再查）"), tid)
+                        if w not in saved:
+                            saved.append(w)
+                        C.log("  %s 补好了%s%s" % (w, "（起草检查：都齐了）" if st == "ok" else "（这台电脑起草检查不了，出片时再查）",
+                                                "（改了 %d 次）" % (k - 1) if k > 1 else ""), tid)
                         _after_fix(tid, w, batch)
                     elif ok:
-                        saved.append(w)
+                        if w not in saved:
+                            saved.append(w)
                         todos[w] = line
                         why = "改了，还要补 %d 处" % ntodo(line)
-                        C.log("  %s 改了，可起草检查说还要补 %d 处：%s" % (w, ntodo(line), line[:160]), tid)
+                        C.log("  %s 改了，可起草检查说还要补 %d 处（第 %d 次）：%s" % (w, ntodo(line), k, line[:160]), tid)
                     else:
-                        C.log("  %s 这次没补成：%s（上次的画面留着）" % (w, why), tid)
+                        C.log("  %s 这次没补成（第 %d 次）：%s（上次的画面留着）" % (w, k, why), tid)
+                    tell = line if (st == "todo" and line) else ("；".join(errs2 or []) or why)
+                    if why.startswith("改完反而"):
+                        tell = "%s（%s，上次的留着；照下面这几条改）：%s" % (why, "比上次缺得多", line)
+                    gave = C.relay_verdict(w, good, tell)
+                    if not good and w in (C.RELAY.get("fixing") or []):
+                        why = (why or "没补好") + "，网页 AI 在改"
+                    elif gave:
+                        later_op({"op": "add", "words": [w]})     # 改够次数了还没过：先攒着，以后一起补
+                        why = (why or "") + "（改了 %d 次，先攒着）" % k
                     C.relay_word(w, good, why or "补好了")
                     res[w] = {"ok": good, "detail": why or "补好了"}
-                    pend.remove(w)
-                    done += 1
-                    R.progress(tid, processed=done, total=len(words))
+                    if first:
+                        pend.remove(w)
+                        done += 1
+                        R.progress(tid, processed=done, total=len(words))
                     if len(saved) >= 5:
                         _commit(tid, saved, "补画面")
                         saved = []
+            fx = [w for w in (C.RELAY.get("fixing") or []) if w in chunk and w not in pend]
+            if C.RELAY.get("endReason") in ("newchat", "resize") and fx:    # 在改的词也放进新的提示词（带着最新的“还要补”）
+                pend += fx
+            elif C.RELAY.get("endReason") == "skiprest" and fx:
+                later_op({"op": "add", "words": fx})
             if pend and C.RELAY.get("endReason") in ("newchat", "resize"):
                 N2, rnd = C.relay_size("fix")
                 if len(pend) > N2:                  # 一批改小了：多出来的放回去，排到下一份

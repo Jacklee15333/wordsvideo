@@ -56,6 +56,7 @@ DEFAULT_CFG = {
     "relayPicRound": 1,          # 手动接力·画面：网页 AI 每写完几个词上传一次（一个词三四万字，一个一个传最稳）
     "relayFixChunk": 8,          # 手动接力·补画面：一份几个词（带着上次的画面设置，提示词长，一份少一些）
     "relayFixRound": 1,          # 手动接力·补画面：每写完几个词上传一次
+    "relayTries": 3,             # v1.12.0：画面没过起草检查，网页 AI 在同一个对话里最多改几次（含第一次）
     "relayUrl": "https://zd87.com/ai-fleet/claude",
     "relayClipboard": True,      # 手动接力：自动把提示词放进剪贴板；你在网页里点“复制”回复，软件看到就自己接着做
     # 手动接力 · 收件箱：网页 AI 写完自己把回复传到 GitHub（不用你复制）；软件隔一会儿去看，看到就接着做。
@@ -1208,14 +1209,117 @@ def relay_size_set(kind, chunk, rnd):
     return True, "已保存：一批 %d 个词，每写完 %d 个传一次" % (chunk, rnd)
 
 
+# ═══════════ v1.12.0：检查结果送回给网页 AI——它在同一个对话里马上改，不用你回来补 ═══════════
+# 软件每检查完一个词，把结果写进中转仓库的 outbox/<这一份的名字>.json；网页 AI 的上传脚本传完就等这个文件，
+# 打印【起草检查结果】：✓ 的不用管，✗ 的照“还要补”改好再传一次（每个词最多 relayTries 次），改好了再接着写。
+OUTBOX = "outbox"
+FAIL_LOG = DATA / "pic_fail_log.json"
+
+
+def relay_tries(cfg=None):
+    return max(1, min(9, int((cfg or load_cfg()).get("relayTries") or 3)))
+
+
+def relay_verdict(w, ok, todo=""):
+    """一个词检查完（第一次，或者网页 AI 改过再交的）：记下结果；没过、还能改的放进“在改”。返回 True＝改够次数了还没过（先放着）。"""
+    mx = relay_tries()
+    with _RELAY_LOCK:
+        V = RELAY.setdefault("verdict", {})
+        v = dict(V.get(w) or {"try": 0})
+        v["try"] = int(v.get("try") or 0) + 1
+        v.update(ok=bool(ok), todo="" if ok else mask(str(todo or ""))[:1500], t=time.time())
+        V[w] = v
+        fx = RELAY.setdefault("fixing", [])
+        loop = bool(RELAY.get("loop"))
+        if ok or not loop or v["try"] >= mx:
+            if w in fx:
+                fx.remove(w)
+        elif w not in fx:
+            fx.append(w)
+        RELAY["vdirty"] = True
+        gave = (not ok) and loop and v["try"] >= mx
+    if not ok and todo:
+        _fail_log(w, todo)
+    return gave
+
+
+def _fail_log(w, todo):
+    """没过的原因记一笔（最近 400 条）：出提示词时统计“最容易没过的地方”。"""
+    try:
+        L = json.loads(FAIL_LOG.read_text(encoding="utf-8")) if FAIL_LOG.exists() else []
+    except Exception:
+        L = []
+    L.append({"t": time.time(), "w": w, "todo": str(todo)[:600]})
+    try:
+        FAIL_LOG.write_text(json.dumps(L[-400:], ensure_ascii=False), encoding="utf-8")
+    except Exception:
+        pass
+
+
+def outbox_push(ipath, done=False):
+    """把这一份到现在的检查结果写进中转仓库 outbox/<名字>.json（网页 AI 的上传脚本读它）。出错不要紧，下次再写。"""
+    if not ipath:
+        return
+    ib = inbox_cfg()
+    base = ipath.rsplit("/", 1)[-1]
+    path = "%s/%s.json" % (OUTBOX, base)
+    with _RELAY_LOCK:
+        body = {"name": base, "max": relay_tries(), "words": {k: dict(v) for k, v in (RELAY.get("verdict") or {}).items()},
+                "done": bool(done), "t": time.time()}
+        RELAY["vdirty"] = False
+        sha = RELAY.get("outboxSha") or ""
+    data = {"message": "检查结果 " + base, "branch": ib.get("branch") or "main",
+            "content": base64.b64encode(json.dumps(body, ensure_ascii=False).encode("utf-8")).decode()}
+    url = "/repos/%s/contents/%s" % (ib["repo"], urllib.parse.quote(path))
+    try:
+        for k in range(2):
+            if sha:
+                data["sha"] = sha
+            st, d = _gh("PUT", url, ib["token"], data)
+            if st in (200, 201) and isinstance(d, dict):
+                RELAY["outboxSha"] = ((d.get("content") or {}).get("sha")) or ""
+                return
+            if st in (409, 422) and k == 0:          # sha 对不上：先读一下现在的再写
+                st2, d2 = _gh("GET", url + "?ref=" + urllib.parse.quote(ib.get("branch") or "main"), ib["token"])
+                sha = (d2 or {}).get("sha", "") if st2 == 200 and isinstance(d2, dict) else ""
+                continue
+            log("检查结果没写进中转仓库（%s）：%s" % (st, str((d or {}).get("message", ""))[:120] if isinstance(d, dict) else ""))
+            return
+    except Exception as e:
+        log("检查结果没写进中转仓库：%s" % mask(str(e))[:120])
+
+
+def outbox_clean():
+    """中转仓库 outbox/ 里两个小时以前的检查结果删掉（文件名开头就是时间）。"""
+    try:
+        ib = inbox_cfg()
+        br = urllib.parse.quote(ib.get("branch") or "main")
+        st, d = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], OUTBOX, br), ib["token"])
+        if st != 200 or not isinstance(d, list):
+            return
+        cut = time.strftime("%Y%m%d-%H%M%S", time.localtime(time.time() - 7200))
+        for x in d:
+            n = x.get("name") or ""
+            if re.match(r"^\d{8}-\d{6}", n) and n[:15] < cut:
+                _gh("DELETE", "/repos/%s/contents/%s" % (ib["repo"], urllib.parse.quote(x.get("path") or "")), ib["token"],
+                    {"message": "检查结果：清掉旧的 " + n, "sha": x.get("sha"), "branch": ib.get("branch") or "main"})
+    except Exception:
+        pass
+
+
 def relay_cont_msg():
     """「在这个对话里接着写」：一句短话，粘贴到同一个对话里（不用再贴整份提示词）。"""
     with _RELAY_LOCK:
         pend = list(RELAY.get("pending") or [])
         rnd = int(RELAY.get("round") or 1)
-    if not pend:
+        fx = [(w, (RELAY.get("verdict") or {}).get(w, {}).get("todo", "")) for w in (RELAY.get("fixing") or [])]
+    if not pend and not fx:
         return ""
-    return ("继续：接着写这一批还没写的 %d 个词，按顺序：%s。\n"
+    fix = ("先改这 %d 个没过起草检查的词（照“还要补”的每一条改，把这个词完整重写一遍，插图只写新画的），改好一个传一个：\n%s\n"
+           % (len(fx), "\n".join("- %s：%s" % (w, t[:400]) for w, t in fx))) if fx else ""
+    if not pend:
+        return fix + "改完运行同一段上传脚本（MODE 保持 \"上传\"），它会告诉你检查结果。"
+    return fix + ("继续：接着写这一批还没写的 %d 个词，按顺序：%s。\n"
             "规矩和上面一样：每写完 %d 个就写进 reply.txt、运行同一段上传脚本（MODE 保持 \"上传\"）；中间不用在聊天里汇报，一直写到全部传完，"
             "脚本打印【最后汇报】时再汇报一次。这次回复写不下了，就先传好已经写的，运行 python upload.py 汇报 停下。"
             % (len(pend), "、".join(pend), rnd))
@@ -1226,14 +1330,17 @@ def relay_word(w, ok, detail=""):
     with _RELAY_LOCK:
         if w in (RELAY.get("pending") or []):
             RELAY["pending"].remove(w)
-        RELAY.setdefault("doneIn", []).append(w)
+        if w not in (RELAY.get("doneIn") or []):
+            RELAY.setdefault("doneIn", []).append(w)
         tid = RELAY.get("tid")
         RELAY["last"] = {"words": [w], "ok": bool(ok), "detail": mask(str(detail or ""))[:200], "t": time.time(),
                          "got": time.time(), "glen": 0, "multi": True}
         if RELAY.get("doneTid") != tid:
             RELAY["done"], RELAY["doneTid"] = [], tid
-        RELAY.setdefault("done", []).append(dict(RELAY["last"]))
-        del RELAY["done"][:-2000]
+        D = RELAY.setdefault("done", [])
+        D[:] = [x for x in D if x.get("words") != [w]]      # v1.12.0：改过再交的词，换掉上一次的结果（不算两次）
+        D.append(dict(RELAY["last"]))
+        del D[:-2000]
     _say("  %s %s%s" % (w, "✓ 做好了" if ok else "✗ 没做成", ("：" + str(detail)[:120]) if detail else ""))
 
 
@@ -1314,7 +1421,8 @@ def relay_parts(prompt, words, kind, rnd):
         RELAY.update(id=RELAY["id"] + 1, status="等你操作", prompt=prompt, words=list(words), kind=kind, reply="", ts=time.time(),
                      copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "", phase="send", tid=tid,
                      polls=0, lastPoll=0.0, stage="", multi=True, pending=list(words), doneIn=[], parts=0, endReason="", round=rnd,
-                     aiDone=False, pollNow=0.0, nextPoll=0.0, pollBy="", pollGot=0, qLeft=RELAY_QLEFT[0], aiStop=None, gotFiles=[])
+                     aiDone=False, pollNow=0.0, nextPoll=0.0, pollBy="", pollGot=0, qLeft=RELAY_QLEFT[0], aiStop=None, gotFiles=[],
+                     verdict={}, fixing=[], vdirty=False, outboxSha="", loop=bool(ibox), tries=relay_tries(cfg))
         rid = RELAY["id"]
         RELAY_ACT.update(rid=0, act="")
         RELAY_HIST.clear()
@@ -1330,6 +1438,8 @@ def relay_parts(prompt, words, kind, rnd):
         log("要你操作：复制提示词到网页 AI 发送（%s：一份 %d 个词，%s … %s）；%s" % (kind, len(words), words[0], words[-1], after), tid)
     _say("━━━━ 手动接力：%s 一份 %d 个词（%s … %s），网页 AI 每写完 %d 个上传一次 ━━━━" % (kind, len(words), words[0], words[-1], rnd))
     clip.beep()
+    if ibox:
+        threading.Thread(target=outbox_clean, daemon=True).start()
     last = clip.seq() if use_clip else 0
     poll = max(5, int(inbox_cfg(cfg).get("pollSec") or 15))
     next_ib, ib_err, seen = time.time() + poll, 0, set()
@@ -1338,7 +1448,7 @@ def relay_parts(prompt, words, kind, rnd):
     try:
         while time.time() < end:
             with _RELAY_LOCK:
-                if not RELAY["pending"]:          # 这一批都收到、都做完了
+                if not RELAY["pending"] and not RELAY.get("fixing"):     # 这一批都收到、都做完了（没过的也改好了，或者改够次数了）
                     RELAY["endReason"] = "all"
                     res = {x["words"][0]: x["ok"] for x in (RELAY.get("done") or []) if x.get("words")}
                     nok = len([w for w in words if res.get(w)])
@@ -1358,7 +1468,7 @@ def relay_parts(prompt, words, kind, rnd):
                 RELAY["pollNow"] = 0.0
                 perr = ""
                 try:
-                    texts += _inbox_parts(ipath, seen, list(RELAY["pending"]), t0)
+                    texts += _inbox_parts(ipath, seen, list(RELAY["pending"]) + list(RELAY.get("fixing") or []), t0)
                     ib_err = 0
                 except ExcelBad as e:
                     RELAY["hint"] = perr = str(e) + "：在网页里叫它把这一轮重新传一次，或者照常把全文写在聊天里、点「复制」"
@@ -1408,8 +1518,10 @@ def relay_parts(prompt, words, kind, rnd):
                 log("网页 AI 交回了第 %d 轮（%s，%d 字），接着做" % (k, src.rsplit("/", 1)[-1], len(t)), tid)
                 AI_LIVE["reply"] = t
                 yield t
+                if ibox and RELAY.get("vdirty"):         # v1.12.0：检查结果马上送回给网页 AI
+                    outbox_push(ipath)
                 with _RELAY_LOCK:
-                    RELAY["phase"] = "send" if RELAY["pending"] else "ok"
+                    RELAY["phase"] = "send" if (RELAY["pending"] or RELAY.get("fixing")) else "ok"
                     RELAY["stage"] = ""
                     miss = list(RELAY["pending"]) if RELAY.get("aiDone") else []
                 if miss:                         # 网页 AI 说这一批写完了，可还有词没收到
@@ -1418,6 +1530,11 @@ def relay_parts(prompt, words, kind, rnd):
             time.sleep(1)
         raise Fatal("等了 24 小时，先停下")
     finally:
+        if ibox and RELAY["id"] == rid and RELAY.get("verdict"):    # v1.12.0：告诉网页 AI 这一份结束了（脚本别再等）
+            try:
+                outbox_push(ipath, done=True)
+            except Exception:
+                pass
         with _RELAY_LOCK:
             if RELAY["id"] == rid:
                 RELAY["status"] = ""
@@ -1461,11 +1578,15 @@ PARTS = __PARTS__          # 一份好几个词、写完一轮传一轮
 ROUND = __ROUND__          # 每一轮几个词
 LASTONE = __LASTONE__      # 这一批是不是这次的最后一批
 PARTIAL = __PARTIAL__      # 写不下了、要停下时的汇报
-MODE = "上传"              # 对话太长写不下、要停下的时候：把这里改成 "汇报" 再运行一次（只打印汇报，不上传）
+MODE = "上传"              # 对话太长写不下、要停下的时候：把这里改成 "汇报" 再运行一次（只打印汇报，不上传）；"看结果"：只看检查结果
 import sys as _s
 if any(a in ("汇报", "report") for a in _s.argv[1:]):
     MODE = "汇报"
+if any(a in ("看结果", "check") for a in _s.argv[1:]):
+    MODE = "看结果"
 MEM = "." + NAME.rsplit("/", 1)[-1] + ".done.json"   # 这一批已经传了哪些词（记在你这边）
+_H = {"Authorization": "Bearer " + TOKEN, "Accept": "application/vnd.github+json", "User-Agent": "wordsvideo-relay"}
+_OB = "https://api.github.com/repos/%s/contents/outbox/%s.json?ref=%s" % (REPO, NAME.rsplit("/", 1)[-1], BRANCH)
 
 
 def _sent():
@@ -1473,6 +1594,91 @@ def _sent():
         return json.load(open(MEM, encoding="utf-8"))
     except Exception:
         return {"k": 0, "w": []}
+
+
+def _outbox():             # 单词工作台写回来的检查结果（每个词：过了没有、第几次、还要补什么）
+    try:
+        with urllib.request.urlopen(urllib.request.Request(_OB, headers=_H), timeout=30) as r:
+            return json.loads(base64.b64decode(json.load(r)["content"]).decode("utf-8"))
+    except Exception:
+        return None
+
+
+def _need(V, mx, w, n):    # 这个词传上去的最新一次，还没有检查结果
+    v = (V or {}).get(w) or {}
+    k = int(v.get("try") or 0)
+    if v.get("ok") or k >= mx:
+        return False
+    return k < n.get(w, 0)
+
+
+def _wait(words, n, limit=150):
+    import time as _tm
+    t0, said, ob = _tm.time(), 0, None
+    print("等单词工作台检查（在老师的电脑上用视频技能起草检查，一般半分钟到两分钟）…")
+    while True:
+        ob = _outbox() or ob
+        V, mx = (ob or {}).get("words") or {}, int((ob or {}).get("max") or 3)
+        left = [w for w in words if _need(V, mx, w, n)]
+        if not left or (ob or {}).get("done") or _tm.time() - t0 > limit:
+            return ob or {}, left
+        if _tm.time() - t0 > said + 30:
+            said += 30
+            print("  还在等：%s（已经 %d 秒）" % ("、".join(left[:8]), _tm.time() - t0))
+        _tm.sleep(6)
+
+
+def _next(s0, n):          # 传完（或者“看结果”）：打印检查结果，告诉你接下来做什么
+    ob, slow = _wait([w for w in WORDS if n.get(w)], n)
+    V, mx = ob.get("words") or {}, int(ob.get("max") or 3)
+    seen = s0.setdefault("seen", {})
+    new = [w for w in WORDS if int((V.get(w) or {}).get("try") or 0) > int(seen.get(w) or 0)]
+    out = []
+    for w in new:
+        v = V[w]
+        k = int(v.get("try") or 0)
+        seen[w] = k
+        if v.get("ok"):
+            out.append("✓ %s：都齐了%s" % (w, "（改了 %d 次）" % (k - 1) if k > 1 else ""))
+        elif k >= mx:
+            out.append("✗ %s：改了 %d 次还没过，先放着（单词工作台记下了，以后一起补；不用再改）" % (w, k))
+        else:
+            out.append("✗ %s（第 %d 次没过，还能改 %d 次）：%s" % (w, k, mx - k, v.get("todo") or "照规矩每一条再对一遍"))
+    json.dump(s0, open(MEM, "w", encoding="utf-8"), ensure_ascii=False)
+    if out:
+        print()
+        print("【起草检查结果】（单词工作台检查的）")
+        print("\n".join(out))
+    fixes = [w for w in WORDS if V.get(w) and not V[w].get("ok") and int(V[w].get("try") or 0) < mx
+             and n.get(w, 0) <= int(V[w].get("try") or 0)]
+    left = [w for w in WORDS if w not in s0["w"]]
+    if slow and not ob.get("done"):
+        print("（%s 还没检查完：先接着做；下次上传完会一起告诉你结果）" % "、".join(slow[:8]))
+    if fixes:
+        print()
+        print("→ 先改上面 ✗ 的 %d 个：%s。照“还要补”的每一条改，把这个词的 @单词 那一段完整重写一遍（JSON 写全；插图只写新画的、要重画的），"
+              "写进 reply.txt，运行同一段脚本传上去（几个词可以写在一起传）。改好了再接着写%s。不用在聊天里汇报。"
+              % (len(fixes), "、".join(fixes), ("下一个：" + "、".join(left[:ROUND])) if left else "（这一批别的词都传完了）"))
+        return
+    if left:
+        print("不用在聊天里汇报，直接接着写下一个：%s" % "、".join(left[:ROUND]))
+        return
+    if slow and not ob.get("done"):
+        print("这一批都传完了，还有 %d 个在等检查结果：过一两分钟运行一次 python upload.py 看结果（或者把 MODE 改成 \"看结果\" 运行），照它说的做。" % len(slow))
+        return
+    print()
+    print("【最后汇报：这一批全部传完了，把下面几行原样回在聊天里】")
+    print(REPORT.replace("{k}", str(s0["k"])).replace("{list}", "、".join(
+        w + (" ✓" if (V.get(w) or {"ok": True}).get("ok") else " ✗") for w in WORDS)))
+
+
+if PARTS and MODE == "看结果":
+    _s1 = _sent()
+    _n1 = _s1.setdefault("n", {})
+    for _w in _s1["w"]:
+        _n1.setdefault(_w, 1)
+    _next(_s1, _n1)
+    raise SystemExit
 
 
 if PARTS and MODE == "汇报":
@@ -1635,19 +1841,16 @@ try:
     with urllib.request.urlopen(urllib.request.Request(url, data=json.dumps(body).encode(), headers=H, method="PUT"), timeout=120) as r:
         nq = len(qs) - 1 if len(qs) > 1 and qs[1][1:] else 0
         print("上传好了", r.status, path, ("（%d 道题）" % nq) if nq else "")
-    if PARTS:              # 记下传到第几个；没传完不汇报，接着写；全部传完才打印【最后汇报】
+    if PARTS:              # 记下传到第几个；等单词工作台检查，没过的马上改；全部传完、都检查过才打印【最后汇报】
         s0["k"] += 1
         s0["w"] = after
+        n0 = s0.setdefault("n", {})
+        for w in here:
+            n0[w] = int(n0.get(w) or 0) + 1
         json.dump(s0, open(MEM, "w", encoding="utf-8"), ensure_ascii=False)
-        left = [w for w in WORDS if w not in after]
-        if left:
-            print("上传好了（第 %d 次）：这次 %s；这一批已经传了 %d/%d 个。不用在聊天里汇报，直接接着写下一个：%s"
-                  % (s0["k"], "、".join(w + " ✓" for w in here) or "（没认出词：每个词前面要有 @单词 那一行）",
-                     len(after), len(WORDS), "、".join(left[:ROUND])))
-        else:
-            print()
-            print("【最后汇报：这一批全部传完了，把下面几行原样回在聊天里】")
-            print(REPORT.replace("{k}", str(s0["k"])).replace("{list}", "、".join(w + " ✓" for w in after)))
+        print("上传好了（第 %d 次）：这次 %s；这一批已经传了 %d/%d 个。"
+              % (s0["k"], "、".join(here) or "（没认出词：每个词前面要有 @单词 那一行）", len(after), len(WORDS)))
+        _next(s0, n0)
         raise SystemExit
     found = [w for w in WORDS if w in text]
     miss = [w for w in WORDS if w not in text]
@@ -1848,12 +2051,15 @@ def inbox_prompt(name, info=None):
                 "2. 用代码执行工具运行下面这段 Python（只用标准库，不用装任何东西）：它把 reply.txt 整理成 Excel 传到 GitHub，自己记着传到第几个了；"
                 "传的是这一批最后一个词时，它会自动告诉单词工作台“这一批写完了”。文件名、记数都不用你管。\n"
                 "```python\n%s```\n"
-                "3. 上传好了**不用在聊天里汇报**，直接接着写下一个，一直写到这一批 %d 个词全部传完（不用等我说“继续”）。\n"
-                "4. 全部传完时，脚本会打印【最后汇报】：这时才在聊天里把【最后汇报】那几行原样回给我——整批只汇报这一次。\n"
+                "3. 传完以后，脚本会等单词工作台检查（它在老师的电脑上用视频技能起草检查，一般半分钟到两分钟），打印【起草检查结果】："
+                "✓ 的不用管；✗ 的**马上改**：照“还要补”的每一条改好，把这个词完整重写一遍，再写进 reply.txt 运行同一段脚本传上去（每个词最多改 %d 次）。"
+                "改好了再接着写下一个。这样每个词交出去就是过了检查的，老师不用回来补。\n"
+                "4. 上传好了、改好了都**不用在聊天里汇报**，一直写到这一批 %d 个词全部传完、都过了检查（不用等我说“继续”）。"
+                "全部做完时，脚本会打印【最后汇报】：这时才在聊天里把那几行原样回给我——整批只汇报这一次。\n"
                 "5. 写到一半对话太长、写不下了（或者这一次回复写不下了、要停下）：先把已经写好的传上去，再把脚本里的 MODE 改成 \"汇报\" 运行一次"
                 "（或者运行 python upload.py 汇报 一句话原因），它会告诉单词工作台你停在哪儿；把它打印的几行回给我。我会让你接着写，或者开新对话把剩下的词给你。\n"
                 "6. 没有代码执行工具、或者上传失败了：就照常把写好的完整回复直接写在聊天里（最后一行 %s），并说明上传失败的原因，我会点「复制」交回。"
-                % (len(ws), rnd, rnd, END, script, len(ws), END))
+                % (len(ws), rnd, rnd, END, script, relay_tries(), len(ws), END))
     return ("【写完以后：你自己把回复整理成 Excel 传到 GitHub，不用在聊天里贴全文】\n"
             "1. 把上面要求的完整回复（格式完全一样，最后一行 %s）写进文本文件 reply.txt（用你的建文件工具）。\n"
             "2. 用代码执行工具运行下面这段 Python（只用标准库，不用装任何东西）：它会把 reply.txt 整理成 Excel（.xlsx）传到 GitHub。\n"
