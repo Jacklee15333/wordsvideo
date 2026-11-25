@@ -1,7 +1,747 @@
 {
  "单词": "showcase",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ˈʃəʊ",
+   "keɪs"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "x": 0.36,
+      "y": 0.6,
+      "s": 0.92,
+      "z": 3
+     },
+     {
+      "svg": "art/photo.svg",
+      "x": 0.68,
+      "y": 0.46,
+      "s": 0.3,
+      "anim": "bob",
+      "z": 4
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/showcase.svg",
+      "x": 0.46,
+      "y": 0.52,
+      "s": 0.82,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/lamp.svg",
+      "x": 0.84,
+      "y": 0.6,
+      "s": 0.5
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-show.svg",
+   "p1": "art/icon-case.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/showcase.svg",
+     "x": 0.44,
+     "y": 0.52,
+     "s": 0.84,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/lamp.svg",
+     "x": 0.84,
+     "y": 0.6,
+     "s": 0.5
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "陈列柜",
+    "pos": "名词",
+    "diff": "让人隔着玻璃看的柜子",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/showcase.svg",
+      "x": 0.42,
+      "y": 0.52,
+      "s": 0.8,
+      "shadow": true
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.8,
+      "y": 0.62,
+      "s": 0.84,
+      "z": 3
+     }
+    ],
+    "ex": "The vase is in a glass showcase.",
+    "exzh": "花瓶放在玻璃陈列柜里。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/showcase.svg",
+       "x": 0.36,
+       "y": 0.52,
+       "s": 0.86,
+       "when": "showcase",
+       "pop": true
+      },
+      {
+       "svg": "art/vase.svg",
+       "x": 0.36,
+       "y": 0.5,
+       "s": 0.3,
+       "when": "vase",
+       "z": 4,
+       "anim": "pulse"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.76,
+       "y": 0.62,
+       "s": 0.86,
+       "z": 3
+      },
+      {
+       "label": "showcase",
+       "x": 0.12,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "showcase",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "陈列柜",
+       "x": 0.62,
+       "y": 0.12,
+       "size": 0.075,
+       "when": "陈列柜",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "展示的平台、舞台",
+    "pos": "名词",
+    "diff": "让优点被大家看见的场合",
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "beam": true,
+      "x": 0.25,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4
+     },
+     {
+      "beam": true,
+      "x": 0.75,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4.6
+     },
+     {
+      "actor": "west-girl-music",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/mic.svg",
+      "x": 0.62,
+      "y": 0.5,
+      "s": 0.3
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9
+     }
+    ],
+    "ex": "The contest is a showcase for young singers.",
+    "exzh": "这场比赛是年轻歌手展示的舞台。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "beam": true,
+       "x": 0.25,
+       "y": 0.0,
+       "len": 0.8,
+       "width": 0.14,
+       "swing": 12,
+       "period": 4
+      },
+      {
+       "beam": true,
+       "x": 0.75,
+       "y": 0.0,
+       "len": 0.8,
+       "width": 0.14,
+       "swing": 12,
+       "period": 4.6
+      },
+      {
+       "svg": "art/banner-speech.svg",
+       "x": 0.5,
+       "y": 0.14,
+       "s": 0.18,
+       "when": "contest"
+      },
+      {
+       "actor": "west-man-hello",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.86,
+       "z": 3
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.08,
+       "every": 0.9,
+       "life": 2.2,
+       "to": [
+        0,
+        -0.35
+       ],
+       "wobble": 0.03,
+       "when": "singers"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.3,
+       "z": 6,
+       "crowd": 9
+      },
+      {
+       "label": "showcase",
+       "x": 0.14,
+       "y": 0.3,
+       "size": 0.075,
+       "when": "showcase",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "展示的舞台",
+       "x": 0.86,
+       "y": 0.3,
+       "size": 0.075,
+       "when": "展示的舞台",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "展示、展现",
+    "pos": "动词",
+    "diff": "把好东西摆到台前给人看",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/scroll.svg",
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/vase.svg",
+      "x": 0.56,
+      "y": 0.6,
+      "s": 0.46,
+      "anim": "pulse"
+     },
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3
+     }
+    ],
+    "ex": "The museum showcases Chinese art.",
+    "exzh": "博物馆展示中国艺术。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/showcase.svg",
+       "x": 0.24,
+       "y": 0.52,
+       "s": 0.8,
+       "when": "museum"
+      },
+      {
+       "svg": "art/scroll.svg",
+       "x": 0.56,
+       "y": 0.48,
+       "s": 0.66,
+       "when": "Chinese art",
+       "pop": true,
+       "anim": "swing"
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.84,
+       "z": 3
+      },
+      {
+       "label": "showcases",
+       "x": 0.56,
+       "y": 0.08,
+       "size": 0.075,
+       "when": "showcases",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "展示",
+       "x": 0.56,
+       "y": 0.9,
+       "size": 0.075,
+       "when": "展示",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“展示用的柜子”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/showcase.svg",
+       "x": 0.44,
+       "y": 0.52,
+       "s": 0.84,
+       "shadow": true,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/lamp.svg",
+       "x": 0.82,
+       "y": 0.6,
+       "s": 0.5
+      }
+     ]
+    }
+   },
+   {
+    "via": "合成词：最后一个词是主体",
+    "node": "① 陈列柜",
+    "pos": "名词",
+    "pic": 0,
+    "rule": "最后一个词是主体，前面的词说明它",
+    "ruleEx": "showcase 展示用的柜子      suitcase 手提箱",
+    "say": [
+     "合成词里，最后一个词是主体，前面的词说明它。",
+     "suitcase 说的是箱子：手提箱。",
+     "showcase 说的是柜子：博物馆、珠宝店里的玻璃柜，就是陈列柜。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "最后一个词是主体",
+       "x": 0.5,
+       "y": 0.2,
+       "size": 0.075,
+       "when": "主体",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "hideCue": 1
+      },
+      {
+       "label": "前面的词说明它",
+       "x": 0.5,
+       "y": 0.36,
+       "size": 0.075,
+       "when": "说明它",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/suitcase.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "suitcase",
+       "hideCue": 2
+      },
+      {
+       "label": "手提箱",
+       "x": 0.82,
+       "y": 0.8,
+       "size": 0.075,
+       "when": "手提箱",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/showcase.svg",
+       "x": 0.44,
+       "y": 0.52,
+       "s": 0.8,
+       "when": "玻璃柜",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "label": "陈列柜",
+       "x": 0.82,
+       "y": 0.8,
+       "size": 0.075,
+       "when": "陈列柜",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "让人或作品集中亮相的场合",
+    "node": "② 展示的平台、舞台",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "后来，能让人或作品集中亮相、优点被大家看见的场合，也叫 showcase。",
+     "这就是展示的平台、舞台。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "beam": true,
+       "x": 0.25,
+       "y": 0.0,
+       "len": 0.8,
+       "width": 0.14,
+       "swing": 12,
+       "period": 4
+      },
+      {
+       "beam": true,
+       "x": 0.75,
+       "y": 0.0,
+       "len": 0.8,
+       "width": 0.14,
+       "swing": 12,
+       "period": 4.6
+      },
+      {
+       "svg": "art/mic.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "集中亮相"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.08,
+       "every": 0.9,
+       "life": 2.2,
+       "to": [
+        0,
+        -0.35
+       ],
+       "wobble": 0.03,
+       "when": "优点"
+      },
+      {
+       "label": "舞台",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.1,
+       "when": "舞台",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "表示东西的词，也能当动词",
+    "node": "③ 展示、展现",
+    "pos": "动词",
+    "pic": 2,
+    "rule": "表示东西、性质的词，也能直接当动词用",
+    "ruleEx": "showcase 舞台 → 展示      water 水 → 浇水",
+    "say": [
+     "表示东西的词，也能直接当动词用。",
+     "water 是水，也能说浇水。",
+     "把好东西摆到台前给人看，showcase 就是展示、展现。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "当动词用",
+       "x": 0.5,
+       "y": 0.16,
+       "size": 0.075,
+       "when": "动词",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "hideCue": 1
+      },
+      {
+       "label": "water",
+       "x": 0.5,
+       "y": 0.16,
+       "size": 0.075,
+       "when": "water",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/plant.svg",
+       "x": 0.42,
+       "y": 0.58,
+       "s": 0.5,
+       "when": "浇水",
+       "hideCue": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.06,
+       "every": 0.9,
+       "life": 2.2,
+       "to": [
+        0,
+        0.3
+       ],
+       "wobble": 0.03,
+       "when": "浇水",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/vase.svg",
+       "x": 0.4,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "好东西",
+       "pop": true
+      },
+      {
+       "svg": "art/scroll.svg",
+       "x": 0.7,
+       "y": 0.5,
+       "s": 0.6,
+       "cue": 2,
+       "when": "展示"
+      },
+      {
+       "label": "展示、展现",
+       "x": 0.5,
+       "y": 0.92,
+       "size": 0.075,
+       "when": "展示、展现",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "suitcase",
+    "m": "手提箱",
+    "share": "case"
+   },
+   {
+    "w": "staircase",
+    "m": "楼梯",
+    "share": "case"
+   }
+  ],
+  "distinguish": {
+   "key": "舞台 / 展示",
+   "items": [
+    {
+     "w": "showcase",
+     "word": "showcase",
+     "m": "舞台；展示",
+     "diff": "showcase 比 show 多了集中亮相、让优点被看见的意思，常带褒义。",
+     "say": "showcase 比 show 多了集中亮相、让优点被看见的意思，常带褒义。",
+     "line": "showcase 比 show 多了集中亮相、让优点被看见的意思，常带褒义。",
+     "note": "showcase 比 show 多了集中亮相、让优点被看见的意思，常带褒义。",
+     "desc": "showcase 比 show 多了集中亮相、让优点被看见的意思，常带褒义。",
+     "explain": "showcase 比 show 多了集中亮相、让优点被看见的意思，常带褒义。",
+     "zh": "showcase 比 show 多了集中亮相、让优点被看见的意思，常带褒义。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "svg": "art/mic.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.7
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.5,
+        "y": 0.3,
+        "s": 0.1,
+        "every": 0.9,
+        "life": 2.2,
+        "to": [
+         0,
+         -0.35
+        ],
+        "wobble": 0.03
+       }
+      ]
+     }
+    },
+    {
+     "w": "stage",
+     "word": "stage",
+     "m": "舞台",
+     "diff": "stage 就是演出的那块台子，是个地方。",
+     "say": "stage 就是演出的那块台子，是个地方。",
+     "line": "stage 就是演出的那块台子，是个地方。",
+     "note": "stage 就是演出的那块台子，是个地方。",
+     "desc": "stage 就是演出的那块台子，是个地方。",
+     "explain": "stage 就是演出的那块台子，是个地方。",
+     "zh": "stage 就是演出的那块台子，是个地方。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "svg": "art/drum.svg",
+        "x": 0.36,
+        "y": 0.6,
+        "s": 0.5,
+        "anim": "thump"
+       },
+       {
+        "svg": "art/pa-speaker.svg",
+        "x": 0.7,
+        "y": 0.5,
+        "s": 0.7
+       },
+       {
+        "waves": true,
+        "x": 0.76,
+        "y": 0.4,
+        "dir": 0,
+        "n": 3
+       }
+      ]
+     }
+    },
+    {
+     "w": "display",
+     "word": "display",
+     "m": "陈列、展出",
+     "diff": "display 是把东西摆出来陈列，不一定是最好的、出彩的。",
+     "say": "display 是把东西摆出来陈列，不一定是最好的、出彩的。",
+     "line": "display 是把东西摆出来陈列，不一定是最好的、出彩的。",
+     "note": "display 是把东西摆出来陈列，不一定是最好的、出彩的。",
+     "desc": "display 是把东西摆出来陈列，不一定是最好的、出彩的。",
+     "explain": "display 是把东西摆出来陈列，不一定是最好的、出彩的。",
+     "zh": "display 是把东西摆出来陈列，不一定是最好的、出彩的。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/rack.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.8
+       },
+       {
+        "svg": "art/vase.svg",
+        "x": 0.82,
+        "y": 0.6,
+        "s": 0.5,
+        "anim": "pulse"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "showcase 是 show 加 case，“展示的柜子”，带着“让好东西被看见”；stage 只是台子；display 只是摆出来。",
+   "tip": "为人才提供平台：a showcase for…；商店陈列：display。"
+  }
+ },
+ "插图": [
+  "showcaseai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：这次比赛对年轻歌手来说是什么？\n听：The contest is a showcase for young singers.\nA. 展示自己的平台\nB. 普通的比赛\nC. 唱歌课\nD. 演唱会门票",
@@ -89,5 +829,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

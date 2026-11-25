@@ -1,0 +1,720 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈʃəʊ",
+  "taɪm"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "beat": 100,
+   "items": [
+    {
+     "beam": true,
+     "x": 0.25,
+     "y": 0.0,
+     "len": 0.8,
+     "width": 0.14,
+     "swing": 12,
+     "period": 4
+    },
+    {
+     "beam": true,
+     "x": 0.75,
+     "y": 0.0,
+     "len": 0.8,
+     "width": 0.14,
+     "swing": 12,
+     "period": 4.6
+    },
+    {
+     "actor": "west-girl-music",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 6,
+     "crowd": 9
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/clock.svg",
+     "x": 0.46,
+     "y": 0.48,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/lamp.svg",
+     "x": 0.84,
+     "y": 0.6,
+     "s": 0.5
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-show.svg",
+  "p1": "art/icon-time.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/stage-bg.svg",
+  "items": [
+   {
+    "beam": true,
+    "x": 0.25,
+    "y": 0.0,
+    "len": 0.8,
+    "width": 0.14,
+    "swing": 12,
+    "period": 4
+   },
+   {
+    "beam": true,
+    "x": 0.75,
+    "y": 0.0,
+    "len": 0.8,
+    "width": 0.14,
+    "swing": 12,
+    "period": 4.6
+   },
+   {
+    "svg": "art/clock.svg",
+    "x": 0.5,
+    "y": 0.46,
+    "s": 0.6,
+    "anim": "pulse"
+   },
+   {
+    "svg": "art/audience-wide.svg",
+    "x": 0.5,
+    "y": 0.92,
+    "s": 0.3,
+    "z": 6,
+    "crowd": 9
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "开演时间",
+   "pos": "名词",
+   "diff": "灯光暗下、大幕拉开的时刻",
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "beam": true,
+     "x": 0.25,
+     "y": 0.0,
+     "len": 0.8,
+     "width": 0.14,
+     "swing": 12,
+     "period": 4
+    },
+    {
+     "beam": true,
+     "x": 0.75,
+     "y": 0.0,
+     "len": 0.8,
+     "width": 0.14,
+     "swing": 12,
+     "period": 4.6
+    },
+    {
+     "svg": "art/clock.svg",
+     "x": 0.5,
+     "y": 0.44,
+     "s": 0.56,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/ticket.svg",
+     "x": 0.84,
+     "y": 0.6,
+     "s": 0.24,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 6,
+     "crowd": 9
+    }
+   ],
+   "ex": "Showtime is at eight o'clock.",
+   "exzh": "演出八点开始。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "beam": true,
+      "x": 0.25,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4
+     },
+     {
+      "beam": true,
+      "x": 0.75,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4.6
+     },
+     {
+      "svg": "art/ticket.svg",
+      "x": 0.22,
+      "y": 0.5,
+      "s": 0.3,
+      "when": "Showtime",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.56,
+      "y": 0.44,
+      "s": 0.56,
+      "when": "eight o'clock",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9,
+      "when": "演出"
+     },
+     {
+      "label": "Showtime",
+      "x": 0.22,
+      "y": 0.12,
+      "size": 0.075,
+      "when": "Showtime",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "八点",
+      "x": 0.84,
+      "y": 0.2,
+      "size": 0.075,
+      "when": "八点",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "text": "大显身手的时刻",
+   "pos": "名词（口语）",
+   "diff": "关键时刻到了，该上场了",
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "beam": true,
+     "x": 0.25,
+     "y": 0.0,
+     "len": 0.8,
+     "width": 0.14,
+     "swing": 12,
+     "period": 4
+    },
+    {
+     "beam": true,
+     "x": 0.75,
+     "y": 0.0,
+     "len": 0.8,
+     "width": 0.14,
+     "swing": 12,
+     "period": 4.6
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.34,
+     "y": 0.58,
+     "s": 0.86,
+     "z": 3,
+     "id": "b"
+    },
+    {
+     "actor": "west-girl-raise",
+     "x": 0.68,
+     "y": 0.58,
+     "s": 0.84,
+     "z": 3,
+     "nodWith": "b"
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.5,
+     "y": 0.36,
+     "s": 0.08,
+     "every": 0.9,
+     "life": 2.2,
+     "to": [
+      0,
+      -0.35
+     ],
+     "wobble": 0.03
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 6,
+     "crowd": 9
+    }
+   ],
+   "ex": "It's showtime! Let's do our best.",
+   "exzh": "该上场了！我们全力以赴吧。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "beam": true,
+      "x": 0.25,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4
+     },
+     {
+      "beam": true,
+      "x": 0.75,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4.6
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3,
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.7,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ]
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.34,
+      "s": 0.09,
+      "every": 0.9,
+      "life": 2.2,
+      "to": [
+       0,
+       -0.35
+      ],
+      "wobble": 0.03,
+      "when": "showtime"
+     },
+     {
+      "svg": "art/mic.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.3,
+      "when": "best",
+      "pop": true,
+      "z": 5
+     },
+     {
+      "label": "It's showtime!",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "when": "showtime",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "该上场了",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.075,
+      "when": "该上场了",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“演出的时刻”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "beam": true,
+      "x": 0.25,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4
+     },
+     {
+      "beam": true,
+      "x": 0.75,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4.6
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9
+     }
+    ]
+   }
+  },
+  {
+   "via": "合成词：最后一个词是主体",
+   "node": "① 开演时间",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "最后一个词是主体，前面的词说明它",
+   "ruleEx": "showtime 演出的时刻      lifetime 一生",
+   "say": [
+    "合成词里，最后一个词是主体：showtime 说的是 time，演出的时刻。",
+    "lifetime 也一样，说的是 time：一生的时间。",
+    "灯光暗下、大幕拉开，演出开始，就是开演时间。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "label": "time",
+      "x": 0.7,
+      "y": 0.16,
+      "size": 0.1,
+      "when": "time",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.4,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "演出的时刻",
+      "anim": "pulse",
+      "hideCue": 1
+     },
+     {
+      "label": "lifetime",
+      "x": 0.5,
+      "y": 0.16,
+      "size": 0.1,
+      "when": "lifetime",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "when": "一生",
+      "anim": "sway",
+      "hideCue": 2
+     },
+     {
+      "beam": true,
+      "x": 0.25,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4,
+      "cue": 2,
+      "when": "灯光暗下"
+     },
+     {
+      "beam": true,
+      "x": 0.75,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4.6,
+      "cue": 2,
+      "when": "大幕拉开"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6,
+      "crowd": 9,
+      "cue": 2,
+      "when": "演出开始"
+     },
+     {
+      "label": "开演时间",
+      "x": 0.5,
+      "y": 0.4,
+      "size": 0.1,
+      "when": "开演时间",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  {
+   "via": "关键时刻到了，该拿出真本事",
+   "node": "② 大显身手的时刻",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "后来，关键时刻到了，该把真本事拿出来给人看，也说 It's showtime。",
+    "这就是大显身手、该上场的时刻。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "beam": true,
+      "x": 0.25,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4
+     },
+     {
+      "beam": true,
+      "x": 0.75,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.14,
+      "swing": 12,
+      "period": 4.6
+     },
+     {
+      "svg": "art/mic.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.56,
+      "when": "关键时刻",
+      "pop": true
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.09,
+      "every": 0.9,
+      "life": 2.2,
+      "to": [
+       0,
+       -0.35
+      ],
+      "wobble": 0.03,
+      "when": "真本事"
+     },
+     {
+      "label": "It's showtime",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "when": "It's showtime",
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800"
+     },
+     {
+      "label": "该上场",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.1,
+      "when": "该上场",
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "lifetime",
+   "m": "一生",
+   "share": "time"
+  },
+  {
+   "w": "show",
+   "m": "演出",
+   "share": "show"
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：演出几点开始？",
+    "listen": "Showtime is at seven thirty.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "七点",
+     "七点半",
+     "八点",
+     "八点半"
+    ],
+    "ans": "B",
+    "why": "showtime 开演时间。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Hurry up! It's ______!",
+    "opts": [
+     "showcase",
+     "show-off",
+     "showtime",
+     "showroom"
+    ],
+    "ans": "C",
+    "why": "开演时间到了，It's showtime!",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 showtime、show 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "We enjoyed the ______ very much.",
+    "opts": [],
+    "ans": "show",
+    "why": "喜欢的是演出 show；showtime 是开演时间。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The cinema changed its ______. (showtime)",
+    "opts": [],
+    "ans": "showtimes",
+    "why": "电影院有好几个开场时间，用复数 showtimes。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The showtime are at 6:00 and 9:00.",
+    "opts": [],
+    "ans": "showtime → showtimes",
+    "why": "两个开场时间，用复数 showtimes。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "电影几点开始？",
+    "stem": "What time does the film ______?",
+    "opts": [],
+    "ans": "start",
+    "why": "问几点开始用 start。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Check the ______ on the cinema website.",
+    "opts": [
+     "showtime",
+     "showtimes",
+     "show",
+     "showcase"
+    ],
+    "ans": "B",
+    "why": "电影的各个开场时间，用复数 showtimes。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
