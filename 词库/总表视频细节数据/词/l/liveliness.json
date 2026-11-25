@@ -1,7 +1,1022 @@
 {
  "单词": "liveliness",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "活泼、活力；热闹；生动"
+  },
+  "sylIpa": [
+   "ˈlaɪvli",
+   "nəs"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/balloons.svg",
+      "x": 0.35,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/lantern.svg",
+      "x": 0.75,
+      "y": 0.42,
+      "s": 0.5,
+      "anim": "swing"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.55,
+      "y": 0.3,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     },
+     {
+      "label": "lively 活泼的",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/nountag.svg",
+      "x": 0.5,
+      "y": 0.45,
+      "s": 0.45,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.25,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     },
+     {
+      "label": "-ness …的状态",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-balloons.svg",
+   "p1": "art/icon-nountag.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/balloons.svg",
+     "x": 0.3,
+     "y": 0.5,
+     "s": 0.65,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/nountag.svg",
+     "x": 0.72,
+     "y": 0.5,
+     "s": 0.3,
+     "anim": "pulse"
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.3,
+     "y": 0.3,
+     "every": 0.9,
+     "life": 1.8,
+     "to": [
+      0,
+      -0.25
+     ],
+     "s": 0.08,
+     "wobble": 0.03
+    },
+    {
+     "label": "活泼的状态",
+     "x": 0.72,
+     "y": 0.85,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "活泼、活力",
+    "pos": "名词",
+    "diff": "人有说有笑、有精神的样子",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "id": "g",
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.75,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "nodWith": "g"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 6
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.3,
+      "y": 0.2,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     }
+    ],
+    "ex": "I like the liveliness of the children.",
+    "exzh": "我喜欢孩子们的活泼劲儿。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "id": "b",
+       "when": "children",
+       "turn": [
+        0,
+        2
+       ]
+      },
+      {
+       "actor": "west-girl-explain",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "when": "children",
+       "turn": [
+        1,
+        2
+       ]
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.94,
+       "s": 0.28,
+       "z": 6
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "liveliness"
+      },
+      {
+       "label": "liveliness 活泼劲儿",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "活泼劲儿"
+      }
+     ]
+    }
+   },
+   {
+    "text": "热闹",
+    "pos": "名词",
+    "diff": "一个地方人多、有说有笑",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/lantern.svg",
+      "x": 0.2,
+      "y": 0.25,
+      "s": 0.35,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/lantern.svg",
+      "x": 0.8,
+      "y": 0.25,
+      "s": 0.35,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/balloons.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.4,
+      "anim": "bob"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.05,
+      "y": 0.66,
+      "s": 0.6,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.05,
+        0.66
+       ],
+       "to": [
+        0.9,
+        0.66
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.95,
+      "y": 0.7,
+      "s": 0.55,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.95,
+        0.7
+       ],
+       "to": [
+        0.1,
+        0.7
+       ],
+       "offset": 1.5
+      }
+     }
+    ],
+    "ex": "The liveliness of the market surprised me.",
+    "exzh": "集市的热闹让我很惊讶。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/lantern.svg",
+       "x": 0.15,
+       "y": 0.25,
+       "s": 0.35,
+       "anim": "swing",
+       "when": "market"
+      },
+      {
+       "svg": "art/lantern.svg",
+       "x": 0.45,
+       "y": 0.22,
+       "s": 0.3,
+       "anim": "swing",
+       "when": "market"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.05,
+       "y": 0.68,
+       "s": 0.55,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.05,
+         0.68
+        ],
+        "to": [
+         0.6,
+         0.68
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.65,
+       "y": 0.7,
+       "s": 0.55,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.65,
+         0.7
+        ],
+        "to": [
+         0.1,
+         0.7
+        ],
+        "offset": 1.2
+       }
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.82,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 3,
+       "when": "surprised",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "label": "集市的热闹",
+       "x": 0.3,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "集市的热闹"
+      }
+     ]
+    }
+   },
+   {
+    "text": "生动、鲜明",
+    "pos": "名词",
+    "diff": "文字、色彩里的那股活气",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/painting.svg",
+      "x": 0.4,
+      "y": 0.45,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/balloons.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.4,
+      "anim": "bob"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.4,
+      "y": 0.2,
+      "every": 0.9,
+      "life": 1.8,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "wobble": 0.03
+     }
+    ],
+    "ex": "Her paintings are full of liveliness.",
+    "exzh": "她的画色彩鲜明，非常生动。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/painting.svg",
+       "x": 0.35,
+       "y": 0.45,
+       "s": 0.6,
+       "when": "paintings",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "actor": "west-man-smile",
+       "x": 0.75,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "when": "paintings",
+       "seq": "blink"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.35,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "liveliness"
+      },
+      {
+       "label": "非常生动",
+       "x": 0.35,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "非常生动"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“活泼的状态”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/balloons.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/nountag.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.3,
+       "anim": "pulse",
+       "delay": 0.5
+      }
+     ]
+    }
+   },
+   {
+    "via": "形容词加 -ness 变名词",
+    "node": "① 活泼、活力",
+    "pos": "名词",
+    "pic": 0,
+    "rule": "形容词 + -ness → 名词：说这种样子、这种状态",
+    "ruleEx": "kind → kindness      lively → liveliness",
+    "cap": "活泼的 → 活泼",
+    "say": [
+     "形容词后面加 -ness，就变成名词，说这种样子、这种状态。",
+     "kind 是善良的，kindness 是善良。",
+     "lively 是活泼的，liveliness 就是活泼、活力。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "形容词",
+       "x": 0.3,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "形容词",
+       "hideCue": 1
+      },
+      {
+       "label": "-ness",
+       "x": 0.55,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "-ness",
+       "hideCue": 1
+      },
+      {
+       "label": "名词",
+       "x": 0.8,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "变成名词",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/nountag.svg",
+       "x": 0.55,
+       "y": 0.55,
+       "s": 0.4,
+       "when": "这种状态",
+       "hideCue": 1,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/gift.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.45,
+       "when": "kind",
+       "hideCue": 2,
+       "anim": "bob"
+      },
+      {
+       "label": "kindness 善良",
+       "x": 0.7,
+       "y": 0.5,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "kindness",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/balloons.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.6,
+       "when": "lively",
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.3,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "lively"
+      },
+      {
+       "label": "liveliness 活泼、活力",
+       "x": 0.7,
+       "y": 0.5,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "liveliness"
+      }
+     ]
+    }
+   },
+   {
+    "via": "一个地方人多、有活力",
+    "node": "② 热闹",
+    "pos": "名词",
+    "pic": 1,
+    "cap": "人的活力 → 地方的活力",
+    "say": [
+     "一个地方，人来人往，到处有说有笑，也很有活力，这就是热闹。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.66,
+       "s": 0.6,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.05,
+         0.66
+        ],
+        "to": [
+         0.9,
+         0.66
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.95,
+       "y": 0.7,
+       "s": 0.55,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.95,
+         0.7
+        ],
+        "to": [
+         0.1,
+         0.7
+        ],
+        "offset": 1
+       }
+      },
+      {
+       "svg": "art/lantern.svg",
+       "x": 0.5,
+       "y": 0.25,
+       "s": 0.35,
+       "anim": "swing",
+       "when": "有说有笑"
+      },
+      {
+       "label": "人来人往",
+       "x": 0.2,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "人来人往"
+      },
+      {
+       "label": "热闹",
+       "x": 0.8,
+       "y": 0.12,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "热闹"
+      }
+     ]
+    }
+   },
+   {
+    "via": "文字、色彩里的那股活气",
+    "node": "③ 生动、鲜明",
+    "pos": "名词",
+    "pic": 2,
+    "from": 1,
+    "cap": "人的活气 → 画里的活气",
+    "say": [
+     "一幅画、一段文字，也会有一股活气。",
+     "颜色亮，读着像活的一样，就是生动、鲜明。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/painting.svg",
+       "x": 0.3,
+       "y": 0.45,
+       "s": 0.55,
+       "when": "一幅画",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.72,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "一段文字",
+       "anim": "bob"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.3,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03,
+       "when": "活气"
+      },
+      {
+       "label": "生动、鲜明",
+       "x": 0.72,
+       "y": 0.15,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "生动、鲜明"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "lively",
+    "m": "活泼的",
+    "share": "lively"
+   },
+   {
+    "w": "kindness",
+    "m": "善良",
+    "share": "ness"
+   },
+   {
+    "w": "happiness",
+    "m": "幸福",
+    "share": "ness"
+   }
+  ],
+  "distinguish": {
+   "key": "活力",
+   "items": [
+    {
+     "w": "liveliness",
+     "word": "liveliness",
+     "name": "liveliness",
+     "zh": "活泼、热闹",
+     "m": "活泼、热闹",
+     "mean": "活泼、热闹",
+     "meaning": "活泼、热闹",
+     "say": "liveliness 偏热闹、有生气，常说人、地方、画面。",
+     "text": "liveliness 偏热闹、有生气，常说人、地方、画面。",
+     "line": "liveliness 偏热闹、有生气，常说人、地方、画面。",
+     "note": "liveliness 偏热闹、有生气，常说人、地方、画面。",
+     "desc": "liveliness 偏热闹、有生气，常说人、地方、画面。",
+     "diff": "liveliness 偏热闹、有生气，常说人、地方、画面。",
+     "explain": "liveliness 偏热闹、有生气，常说人、地方、画面。",
+     "detail": "liveliness 偏热闹、有生气，常说人、地方、画面。",
+     "sentence": "liveliness 偏热闹、有生气，常说人、地方、画面。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/balloons.svg",
+        "x": 0.3,
+        "y": 0.5,
+        "s": 0.75,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/lantern.svg",
+        "x": 0.7,
+        "y": 0.45,
+        "s": 0.6,
+        "anim": "swing"
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.5,
+        "y": 0.3,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       }
+      ]
+     }
+    },
+    {
+     "w": "vitality",
+     "word": "vitality",
+     "name": "vitality",
+     "zh": "生命力、精力",
+     "m": "生命力、精力",
+     "mean": "生命力、精力",
+     "meaning": "生命力、精力",
+     "say": "vitality 偏生命力、精力旺盛，常说身体、经济、一座城市。",
+     "text": "vitality 偏生命力、精力旺盛，常说身体、经济、一座城市。",
+     "line": "vitality 偏生命力、精力旺盛，常说身体、经济、一座城市。",
+     "note": "vitality 偏生命力、精力旺盛，常说身体、经济、一座城市。",
+     "desc": "vitality 偏生命力、精力旺盛，常说身体、经济、一座城市。",
+     "diff": "vitality 偏生命力、精力旺盛，常说身体、经济、一座城市。",
+     "explain": "vitality 偏生命力、精力旺盛，常说身体、经济、一座城市。",
+     "detail": "vitality 偏生命力、精力旺盛，常说身体、经济、一座城市。",
+     "sentence": "vitality 偏生命力、精力旺盛，常说身体、经济、一座城市。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/sprout.svg",
+        "x": 0.4,
+        "y": 0.55,
+        "s": 0.75,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/sun.svg",
+        "x": 0.75,
+        "y": 0.35,
+        "s": 0.5,
+        "anim": "spin"
+       }
+      ]
+     }
+    },
+    {
+     "w": "energy",
+     "word": "energy",
+     "name": "energy",
+     "zh": "精力、能量",
+     "m": "精力、能量",
+     "mean": "精力、能量",
+     "meaning": "精力、能量",
+     "say": "energy 是干事的劲头、能量，做事有力气用 energy。",
+     "text": "energy 是干事的劲头、能量，做事有力气用 energy。",
+     "line": "energy 是干事的劲头、能量，做事有力气用 energy。",
+     "note": "energy 是干事的劲头、能量，做事有力气用 energy。",
+     "desc": "energy 是干事的劲头、能量，做事有力气用 energy。",
+     "diff": "energy 是干事的劲头、能量，做事有力气用 energy。",
+     "explain": "energy 是干事的劲头、能量，做事有力气用 energy。",
+     "detail": "energy 是干事的劲头、能量，做事有力气用 energy。",
+     "sentence": "energy 是干事的劲头、能量，做事有力气用 energy。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/bulb.svg",
+        "x": 0.45,
+        "y": 0.5,
+        "s": 0.75,
+        "anim": "pulse"
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.45,
+        "y": 0.3,
+        "every": 0.9,
+        "life": 1.8,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "wobble": 0.03
+       },
+       {
+        "svg": "art/gears.svg",
+        "x": 0.8,
+        "y": 0.55,
+        "s": 0.45,
+        "anim": "spin"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "逻辑不同：liveliness 从 lively 来，说活泼热闹的样子；vitality 从“生命”来，说生命力；energy 说干事的劲头。",
+   "tip": "热闹、有生气用 liveliness；生命力旺盛用 vitality；有劲头、有能量用 energy。",
+   "pics": {
+    "liveliness": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/balloons.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/lantern.svg",
+       "x": 0.7,
+       "y": 0.45,
+       "s": 0.6,
+       "anim": "swing"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    },
+    "vitality": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/sprout.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.75,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.75,
+       "y": 0.35,
+       "s": 0.5,
+       "anim": "spin"
+      }
+     ]
+    },
+    "energy": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.45,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.45,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      },
+      {
+       "svg": "art/gears.svg",
+       "x": 0.8,
+       "y": 0.55,
+       "s": 0.45,
+       "anim": "spin"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "livelinessai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人喜欢这座城市的什么？\n听：I love the liveliness of the city.\nA. 城市的安静\nB. 城市的天气\nC. 城市的大小\nD. 城市的热闹",
@@ -90,5 +1105,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
