@@ -52,7 +52,103 @@
      "z": 5,
      "anim": "bob"
     }
-   ]
+   ],
+   "ex": "The park is beautiful. Moreover, it is free.",
+   "exzh": "这个公园很美，而且是免费的。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.05,
+      "y": 0.7,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.7
+       ],
+       "to": [
+        0.9,
+        0.7
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.95,
+      "y": 0.72,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.95,
+        0.72
+       ],
+       "to": [
+        0.1,
+        0.72
+       ],
+       "offset": 0.8
+      }
+     },
+     {
+      "svg": "art/mountain.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.5,
+      "z": 2,
+      "when": "beautiful",
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.2,
+      "every": 0.9,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "spin": true,
+      "when": "beautiful"
+     },
+     {
+      "label": "Moreover",
+      "x": 0.25,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "Moreover",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "free 免费",
+      "x": 0.78,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "free"
+     },
+     {
+      "label": "而且",
+      "x": 0.25,
+      "y": 0.88,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "而且"
+     }
+    ]
+   }
   }
  ],
  "flow": [
@@ -328,7 +424,7 @@
   },
   "p1": {
    "bg": "blank",
-   "img": "art/park-bg.svg",
+   "img": "art/classroom-bg.svg",
    "items": [
     {
      "svg": "art/over.svg",
@@ -453,7 +549,7 @@
      "bg": "blank",
      "items": [
       {
-       "svg": "art/park-bg.svg",
+       "svg": "art/classroom-bg.svg",
        "x": 0.5,
        "y": 0.5,
        "s": 1.7,
@@ -463,7 +559,8 @@
        "svg": "art/way.svg",
        "x": 0.5,
        "y": 0.52,
-       "s": 0.85
+       "s": 0.85,
+       "anim": "pulse"
       },
       {
        "ray": [

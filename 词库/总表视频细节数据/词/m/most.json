@@ -724,7 +724,7 @@
     ],
     "fig": {
      "bg": "blank",
-     "img": "art/park-bg.svg",
+     "img": "art/room-bg.svg",
      "items": [
       {
        "svg": "art/rank1.svg",
@@ -734,6 +734,7 @@
        "z": 3,
        "when": "到了顶",
        "pop": true,
+       "anim": "pulse",
        "hideCue": 1
       },
       {
@@ -813,7 +814,8 @@
        "s": 0.6,
        "z": 3,
        "when": "程度高",
-       "pop": true
+       "pop": true,
+       "anim": "pulse"
       },
       {
        "label": "a most",
@@ -881,6 +883,21 @@
      "text": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
      "diff": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
      "line": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
+     "note": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
+     "desc": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
+     "explain": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
+     "sentence": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
+     "talk": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
+     "speech": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
+     "zh": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
+     "cn": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
+     "why": "a most 加形容词，是非常、极其，书面语，听起来很客气。",
+     "lines": [
+      "a most 加形容词，是非常、极其，书面语，听起来很客气。"
+     ],
+     "says": [
+      "a most 加形容词，是非常、极其，书面语，听起来很客气。"
+     ],
      "word": "most"
     },
     {
@@ -932,6 +949,21 @@
      "text": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
      "diff": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
      "line": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
+     "note": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
+     "desc": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
+     "explain": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
+     "sentence": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
+     "talk": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
+     "speech": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
+     "zh": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
+     "cn": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
+     "why": "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。",
+     "lines": [
+      "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。"
+     ],
+     "says": [
+      "highly 是高度地，多跟评价、重视连用：highly praised 评价很高。"
+     ],
      "word": "highly"
     },
     {
@@ -942,14 +974,14 @@
       "bg": "blank",
       "items": [
        {
-        "svg": "art/street-bg.svg",
+        "svg": "art/room-bg.svg",
         "x": 0.5,
         "y": 0.5,
         "s": 1.7,
         "z": -5
        },
        {
-        "svg": "art/speed-sign.svg",
+        "svg": "art/gauge.svg",
         "x": 0.5,
         "y": 0.52,
         "s": 0.85,
@@ -957,7 +989,7 @@
        },
        {
         "waves": true,
-        "x": 0.6,
+        "x": 0.7,
         "y": 0.35,
         "dir": 0,
         "n": 2,
@@ -969,6 +1001,21 @@
      "text": "extremely 是极其，程度推到了尽头，语气最重。",
      "diff": "extremely 是极其，程度推到了尽头，语气最重。",
      "line": "extremely 是极其，程度推到了尽头，语气最重。",
+     "note": "extremely 是极其，程度推到了尽头，语气最重。",
+     "desc": "extremely 是极其，程度推到了尽头，语气最重。",
+     "explain": "extremely 是极其，程度推到了尽头，语气最重。",
+     "sentence": "extremely 是极其，程度推到了尽头，语气最重。",
+     "talk": "extremely 是极其，程度推到了尽头，语气最重。",
+     "speech": "extremely 是极其，程度推到了尽头，语气最重。",
+     "zh": "extremely 是极其，程度推到了尽头，语气最重。",
+     "cn": "extremely 是极其，程度推到了尽头，语气最重。",
+     "why": "extremely 是极其，程度推到了尽头，语气最重。",
+     "lines": [
+      "extremely 是极其，程度推到了尽头，语气最重。"
+     ],
+     "says": [
+      "extremely 是极其，程度推到了尽头，语气最重。"
+     ],
      "word": "extremely"
     }
    ],
@@ -1069,5 +1116,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
