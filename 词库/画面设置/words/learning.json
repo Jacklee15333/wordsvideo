@@ -1,0 +1,712 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈlɜː",
+  "nɪŋ"
+ ],
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.9,
+     "s": 0.32,
+     "z": 1
+    },
+    {
+     "svg": "art/openbook.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.46,
+     "shadow": true,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "svg": "art/lamp.svg",
+     "x": 0.16,
+     "y": 0.5,
+     "s": 0.5
+    },
+    {
+     "svg": "art/clock_f0.svg",
+     "x": 0.86,
+     "y": 0.22,
+     "s": 0.24,
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 2
+    },
+    {
+     "label": "learning 学习",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "text": "学习",
+   "pos": "名词",
+   "diff": "学的这件事、学的过程",
+   "ex": "Learning English is fun.",
+   "exzh": "学英语很有趣。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 5
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.26,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "g",
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.74,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "t",
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "g"
+     },
+     {
+      "svg": "art/textbook.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.3,
+      "when": "English",
+      "pop": true,
+      "z": 6
+     },
+     {
+      "label": "Learning English",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "Learning English"
+     },
+     {
+      "label": "学英语",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "学英语",
+      "delay": 0.1
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/rack.svg",
+     "x": 0.78,
+     "y": 0.5,
+     "s": 0.7,
+     "z": 1
+    },
+    {
+     "svg": "art/scholar.svg",
+     "x": 0.38,
+     "y": 0.58,
+     "s": 0.5,
+     "shadow": true,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "label": "学问",
+     "x": 0.38,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "text": "学问、学识",
+   "pos": "名词",
+   "diff": "学了多年，积攒在肚子里的东西",
+   "ex": "He is a man of great learning.",
+   "exzh": "他是一个很有学问的人。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/rack.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.66,
+      "z": 1
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.24,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "c",
+      "seq": "talk"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.78,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "id": "b",
+      "nodWith": "c"
+     },
+     {
+      "svg": "art/scholar.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.26,
+      "z": 5,
+      "when": "great learning",
+      "pop": true
+     },
+     {
+      "label": "great learning",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "great learning"
+     },
+     {
+      "label": "很有学问",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "很有学问",
+      "delay": 0.1
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/textbook.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "label": "学",
+     "x": 0.82,
+     "y": 0.14,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.5
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.9,
+     "s": 0.32,
+     "z": 1
+    },
+    {
+     "svg": "art/openbook.svg",
+     "x": 0.5,
+     "y": 0.55,
+     "s": 0.5,
+     "shadow": true,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/clock_f0.svg",
+     "x": 0.85,
+     "y": 0.22,
+     "s": 0.26,
+     "frames": [
+      "art/clock_f0.svg",
+      "art/clock_f1.svg"
+     ],
+     "fps": 2
+    },
+    {
+     "label": "这件事",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.5
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-learn.svg",
+  "p1": "art/icon-ing.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/desk.svg",
+    "x": 0.5,
+    "y": 0.9,
+    "s": 0.32,
+    "z": 1
+   },
+   {
+    "svg": "art/textbook.svg",
+    "x": 0.32,
+    "y": 0.5,
+    "s": 0.48,
+    "shadow": true
+   },
+   {
+    "svg": "art/plus.svg",
+    "x": 0.52,
+    "y": 0.55,
+    "s": 0.12,
+    "delay": 0.4
+   },
+   {
+    "svg": "art/openbook.svg",
+    "x": 0.74,
+    "y": 0.58,
+    "s": 0.4,
+    "shadow": true,
+    "pop": true,
+    "delay": 0.8,
+    "anim": "pulse"
+   },
+   {
+    "label": "学这件事",
+    "x": 0.5,
+    "y": 0.12,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 1.0
+   }
+  ]
+ },
+ "flow": [
+  {
+   "node": "“学这件事”",
+   "say": [
+    "learn 是学，加上 ing 表示这件事，合起来就是学这件事。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.32,
+      "z": 1
+     },
+     {
+      "svg": "art/textbook.svg",
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.48,
+      "shadow": true,
+      "when": "learn"
+     },
+     {
+      "svg": "art/openbook.svg",
+      "x": 0.72,
+      "y": 0.56,
+      "s": 0.42,
+      "shadow": true,
+      "when": "ing",
+      "anim": "pulse"
+     },
+     {
+      "label": "学这件事",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "学这件事"
+     }
+    ]
+   }
+  },
+  {
+   "via": "动词加 -ing，当名词说这件事",
+   "node": "① 学习",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "动词加 -ing，就能当名词，说这件事",
+   "ruleEx": "swim 游泳 → swimming 游泳这项运动      learn 学 → learning 学习",
+   "say": [
+    "动词加上 ing，就能当名词，说这件事。",
+    "swim 是游，swimming 就是游泳这项运动。",
+    "learn 也一样：learning 就是学习这件事，是名词。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.32,
+      "z": 1
+     },
+     {
+      "label": "动词 + ing = 名词",
+      "x": 0.5,
+      "y": 0.4,
+      "size": 0.1,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "动词加上 ing",
+      "hideCue": 1
+     },
+     {
+      "label": "swim → swimming",
+      "x": 0.5,
+      "y": 0.4,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "cue": 1,
+      "when": "swimming",
+      "hideCue": 2
+     },
+     {
+      "label": "游泳这项运动",
+      "x": 0.5,
+      "y": 0.62,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "游泳这项运动",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/openbook.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "shadow": true,
+      "cue": 2,
+      "when": "learning",
+      "anim": "pulse"
+     },
+     {
+      "label": "学习",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "学习这件事"
+     },
+     {
+      "label": "名词",
+      "x": 0.88,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "cue": 2,
+      "when": "名词"
+     }
+    ]
+   }
+  },
+  {
+   "via": "学了多年，积攒在肚子里的东西",
+   "node": "② 学问、学识",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "一年年学下来，积攒在肚子里的东西，就是学问、学识。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/rack.svg",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.66,
+      "when": "积攒"
+     },
+     {
+      "svg": "art/scholar.svg",
+      "x": 0.36,
+      "y": 0.58,
+      "s": 0.5,
+      "shadow": true,
+      "when": "一年年",
+      "anim": "pulse"
+     },
+     {
+      "label": "学问、学识",
+      "x": 0.4,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "学问"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "学问",
+  "items": [
+   {
+    "w": "learning",
+    "word": "learning",
+    "en": "learning",
+    "m": "学问",
+    "zh": "学问",
+    "mean": "学问",
+    "note": "学问",
+    "say": "learning 作学问讲，不可数，偏书面，说一个人读书多、懂得深。",
+    "text": "learning 作学问讲，不可数，偏书面，说一个人读书多、懂得深。",
+    "line": "learning 作学问讲，不可数，偏书面，说一个人读书多、懂得深。",
+    "desc": "learning 作学问讲，不可数，偏书面，说一个人读书多、懂得深。",
+    "diff": "learning 作学问讲，不可数，偏书面，说一个人读书多、懂得深。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/rack.svg",
+       "x": 0.7,
+       "y": 0.5,
+       "s": 0.75
+      },
+      {
+       "svg": "art/scholar.svg",
+       "x": 0.32,
+       "y": 0.55,
+       "s": 0.55,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "knowledge",
+    "word": "knowledge",
+    "en": "knowledge",
+    "m": "知识",
+    "zh": "知识",
+    "mean": "知识",
+    "note": "知识",
+    "say": "knowledge 是知识的通称，知道的东西都可以说 knowledge。",
+    "text": "knowledge 是知识的通称，知道的东西都可以说 knowledge。",
+    "line": "knowledge 是知识的通称，知道的东西都可以说 knowledge。",
+    "desc": "knowledge 是知识的通称，知道的东西都可以说 knowledge。",
+    "diff": "knowledge 是知识的通称，知道的东西都可以说 knowledge。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.66,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "learning 是 learn 加 ing，从学这件事来，指学出来的学问；knowledge 是知道的东西。",
+  "tip": "learning 作学问时没有复数，不说 learnings。",
+  "pics": {
+   "learning": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/rack.svg",
+      "x": 0.7,
+      "y": 0.5,
+      "s": 0.75
+     },
+     {
+      "svg": "art/scholar.svg",
+      "x": 0.32,
+      "y": 0.55,
+      "s": 0.55,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "knowledge": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/map.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.66,
+      "anim": "pulse"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人觉得什么很有趣？",
+    "listen": "Learning a new language is fun.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "做运动",
+     "学一门新语言",
+     "看电影",
+     "旅行"
+    ],
+    "ans": "B",
+    "why": "learning 学习。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "______ English is not easy, but it's fun.",
+    "opts": [
+     "Learn",
+     "Learnt",
+     "Learning",
+     "Learner"
+    ],
+    "ans": "C",
+    "why": "作主语用动名词 learning。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 learning、knowledge 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Books give us ______ about the world.",
+    "opts": [],
+    "ans": "knowledge",
+    "why": "“知识”通称用 knowledge；learning 偏“学问、学习”。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "She is a fast ______. (learning)",
+    "opts": [],
+    "ans": "learner",
+    "why": "a fast learner 学得快的人，用名词 learner。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "There are many learnings in this book.",
+    "opts": [],
+    "ans": "learnings → learning",
+    "why": "learning 作“学问”不可数，不加 s。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "学习永远不嫌晚。",
+    "stem": "It's never too late to ______.",
+    "opts": [],
+    "ans": "learn",
+    "why": "to 后面用动词原形 learn。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "I ______ a lot at the camp last summer.",
+    "opts": [
+     "learn",
+     "learnt",
+     "learning",
+     "learns"
+    ],
+    "ans": "B",
+    "why": "last summer 讲过去，用过去式 learnt。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

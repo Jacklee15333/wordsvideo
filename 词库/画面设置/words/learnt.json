@@ -1,0 +1,657 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "lɜːnt"
+ ],
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/bike.svg",
+     "x": 0.36,
+     "y": 0.66,
+     "s": 0.48,
+     "go": [
+      0.7,
+      0.66
+     ],
+     "dur": 2.5,
+     "loop": true,
+     "anim": "ride",
+     "z": 3
+    },
+    {
+     "label": "学会了",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": -0.1,
+     "y": 0.7,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       -0.1,
+       0.7
+      ],
+      "to": [
+       1.1,
+       0.7
+      ],
+      "offset": 0.8
+     }
+    }
+   ],
+   "text": "学过、学会了；得知了",
+   "pos": "动词",
+   "diff": "在过去学了、已经结束了",
+   "ex": "I learnt to ride a bike last year.",
+   "exzh": "我去年学会了骑自行车。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/bike.svg",
+      "x": 0.3,
+      "y": 0.68,
+      "s": 0.46,
+      "when": "ride a bike",
+      "go": [
+       0.62,
+       0.68
+      ],
+      "dur": 2.2,
+      "anim": "ride",
+      "z": 3
+     },
+     {
+      "actor": "west-man-hello",
+      "x": 0.82,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "seq": "pingpong"
+     },
+     {
+      "label": "learnt to ride",
+      "x": 0.45,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "learnt"
+     },
+     {
+      "label": "学会了骑自行车",
+      "x": 0.45,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "学会了"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 1.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        1.1,
+        0.7
+       ],
+       "to": [
+        -0.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/board-words.svg",
+     "x": 0.5,
+     "y": 0.45,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.94,
+     "s": 0.24,
+     "z": 5
+    },
+    {
+     "label": "已经学会了",
+     "x": 0.5,
+     "y": 0.86,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8,
+     "z": 6
+    }
+   ],
+   "text": "已经学会了；被学会",
+   "pos": "动词",
+   "diff": "过去分词：跟在 have、be 后面",
+   "ex": "Have you learnt the new words?",
+   "exzh": "你学会这些新单词了吗？",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/board-words.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.56,
+      "when": "new words"
+     },
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.16,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "id": "t",
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.84,
+      "y": 0.62,
+      "s": 0.86,
+      "z": 3,
+      "id": "g",
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "t"
+     },
+     {
+      "label": "Have you learnt",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "Have you learnt",
+      "z": 6
+     },
+     {
+      "label": "学会……了吗",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "学会",
+      "z": 6
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.28,
+     "z": 1
+    },
+    {
+     "svg": "art/word-learnt.svg",
+     "x": 0.5,
+     "y": 0.45,
+     "s": 0.5,
+     "shadow": true,
+     "anim": "pulse"
+    },
+    {
+     "label": "learned",
+     "x": 0.5,
+     "y": 0.86,
+     "size": 0.08,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-learnt.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/desk.svg",
+    "x": 0.5,
+    "y": 0.92,
+    "s": 0.28,
+    "z": 1
+   },
+   {
+    "svg": "art/word-learnt.svg",
+    "x": 0.5,
+    "y": 0.45,
+    "s": 0.5,
+    "anim": "pulse"
+   },
+   {
+    "label": "学了",
+    "x": 0.5,
+    "y": 0.12,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "flow": [
+  {
+   "node": "“学了；被学会了”",
+   "say": [
+    "learn 是学，learnt 是它的过去式和过去分词，也写成 learned。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.28,
+      "z": 1
+     },
+     {
+      "svg": "art/word-learnt.svg",
+      "x": 0.5,
+      "y": 0.34,
+      "s": 0.36,
+      "when": "learnt",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/word-learned.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.36,
+      "when": "learned"
+     },
+     {
+      "label": "过去式",
+      "x": 0.14,
+      "y": 0.34,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "过去式"
+     },
+     {
+      "label": "过去分词",
+      "x": 0.14,
+      "y": 0.66,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "过去分词"
+     }
+    ]
+   }
+  },
+  {
+   "via": "过去式：这件事在过去发生、已经结束了",
+   "node": "① 学过、学会了；得知了",
+   "pos": "动词",
+   "pic": 0,
+   "say": [
+    "当过去式，说这件事在过去发生、已经结束了。",
+    "去年学骑车，现在会了，就是学会了；听到了消息，就是得知了。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/clock_f0.svg",
+      "x": 0.16,
+      "y": 0.22,
+      "s": 0.26,
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 2,
+      "when": "在过去"
+     },
+     {
+      "svg": "art/bike.svg",
+      "x": 0.36,
+      "y": 0.66,
+      "s": 0.46,
+      "cue": 1,
+      "when": "学骑车",
+      "go": [
+       0.66,
+       0.66
+      ],
+      "dur": 2,
+      "anim": "ride"
+     },
+     {
+      "svg": "art/message-phone.svg",
+      "x": 0.86,
+      "y": 0.5,
+      "s": 0.42,
+      "when": "消息",
+      "pop": true
+     },
+     {
+      "label": "学会了",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "学会了"
+     },
+     {
+      "label": "得知了",
+      "x": 0.86,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "得知了"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": -0.1,
+      "y": 0.7,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        -0.1,
+        0.7
+       ],
+       "to": [
+        1.1,
+        0.7
+       ],
+       "offset": 0.8
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "过去分词：跟在 have 后面是已经，跟在 be 后面是被",
+   "node": "② 已经学会了；被学会",
+   "pos": "动词",
+   "pic": 1,
+   "say": [
+    "当过去分词，跟在 have 后面，是已经学会了。",
+    "跟在 be 后面，是被学会：The words are learnt. 这些词被学会了。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/board-words.svg",
+      "x": 0.5,
+      "y": 0.45,
+      "s": 0.6,
+      "when": "have",
+      "anim": "pulse"
+     },
+     {
+      "label": "have learnt 已经学会了",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "已经学会了",
+      "z": 6
+     },
+     {
+      "label": "be learnt 被学会",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "cue": 1,
+      "when": "被学会",
+      "z": 6
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "得知",
+  "items": [
+   {
+    "w": "learnt",
+    "word": "learnt",
+    "en": "learnt",
+    "m": "得知",
+    "zh": "得知",
+    "mean": "得知",
+    "note": "得知",
+    "say": "learnt 是听说、打听以后知道了一件事；美式几乎只用 learned，英式两个都用。",
+    "text": "learnt 是听说、打听以后知道了一件事；美式几乎只用 learned，英式两个都用。",
+    "line": "learnt 是听说、打听以后知道了一件事；美式几乎只用 learned，英式两个都用。",
+    "desc": "learnt 是听说、打听以后知道了一件事；美式几乎只用 learned，英式两个都用。",
+    "diff": "learnt 是听说、打听以后知道了一件事；美式几乎只用 learned，英式两个都用。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/message-phone.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "shake"
+      }
+     ]
+    }
+   },
+   {
+    "w": "discover",
+    "word": "discover",
+    "en": "discover",
+    "m": "得知、发现",
+    "zh": "得知、发现",
+    "mean": "得知、发现",
+    "note": "得知、发现",
+    "say": "discover 是自己找出来、发现了本来不知道的事。",
+    "text": "discover 是自己找出来、发现了本来不知道的事。",
+    "line": "discover 是自己找出来、发现了本来不知道的事。",
+    "desc": "discover 是自己找出来、发现了本来不知道的事。",
+    "diff": "discover 是自己找出来、发现了本来不知道的事。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/magnifier.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.72,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "learnt 是听来的、学来的；discover 是自己找到的。",
+  "tip": "形容词有学问的一律写 learned，读 /ˈlɜːnɪd/：a learned man。",
+  "pics": {
+   "learnt": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/message-phone.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.75,
+      "anim": "shake"
+     }
+    ]
+   },
+   "discover": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/magnifier.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.72,
+      "anim": "bob"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人从这次旅行中得到了什么？",
+    "listen": "I learnt a lot from this trip.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "什么也没学到",
+     "交了朋友",
+     "买了东西",
+     "学到了很多"
+    ],
+    "ans": "D",
+    "why": "learnt 是 learn 的过去式。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She ______ to ride a bike when she was six.",
+    "opts": [
+     "learns",
+     "learning",
+     "learn",
+     "learnt"
+    ],
+    "ans": "D",
+    "why": "when she was six 讲过去，用 learnt。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 learn、learnt 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "We ______ English every day.",
+    "opts": [],
+    "ans": "learn",
+    "why": "every day 说经常的事，用一般现在时 learn。",
+    "kd": "变形"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He is ______ how to cook. (learnt)",
+    "opts": [],
+    "ans": "learning",
+    "why": "is 后面用现在分词 learning。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "I have learnt to swim last year.",
+    "opts": [],
+    "ans": "have learnt → learnt",
+    "why": "有 last year 用一般过去时，不用现在完成时。",
+    "kd": "用法"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "美式英语里，learn 的过去式只写 learned。",
+    "stem": "In American English, the past form of learn is ______.",
+    "opts": [],
+    "ans": "learned",
+    "why": "美式几乎只用 learned；英式 learnt、learned 都用。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "He is a ______ man; he knows a lot.",
+    "opts": [
+     "learnt",
+     "learning",
+     "learned",
+     "learner"
+    ],
+    "ans": "C",
+    "why": "形容词“有学问的”一律写 learned。",
+    "kd": "易混"
+   }
+  ]
+ }
+}
