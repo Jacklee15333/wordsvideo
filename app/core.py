@@ -1214,6 +1214,29 @@ def relay_size_set(kind, chunk, rnd):
 # 打印【起草检查结果】：✓ 的不用管，✗ 的照“还要补”改好再传一次（每个词最多 relayTries 次），改好了再接着写。
 OUTBOX = "outbox"
 FAIL_LOG = DATA / "pic_fail_log.json"
+RELAY_SAVE = DATA / "relay_batch.json"     # v1.15.0：这一份叫什么、是哪些词、检查结果——软件重开了接着用同一份
+RELAY_RAW = []                             # 最近收到的网页 AI 原文（「看网页 AI 原文」用）
+SESSION = os.urandom(4).hex()              # 这一次开着的软件（重开以后就不一样了）
+_BASE_RE = re.compile(r"(\d{8}-\d{6}-[0-9a-f]{6})")
+
+
+def _relay_load():
+    try:
+        return json.loads(RELAY_SAVE.read_text(encoding="utf-8")) if RELAY_SAVE.exists() else {}
+    except Exception:
+        return {}
+
+
+def _relay_store(d):
+    try:
+        RELAY_SAVE.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+    except Exception:
+        pass
+
+
+def relay_raw_add(f, text):
+    RELAY_RAW.append({"t": time.time(), "f": str(f).rsplit("/", 1)[-1], "text": str(text)[:400000]})
+    del RELAY_RAW[:-12]
 
 
 def relay_tries(cfg=None):
@@ -1261,13 +1284,23 @@ def outbox_push(ipath, done=False):
     if not ipath:
         return
     ib = inbox_cfg()
-    base = ipath.rsplit("/", 1)[-1]
-    path = "%s/%s.json" % (OUTBOX, base)
+    base0 = ipath.rsplit("/", 1)[-1]
     with _RELAY_LOCK:
-        body = {"name": base, "max": relay_tries(), "words": {k: dict(v) for k, v in (RELAY.get("verdict") or {}).items()},
-                "done": bool(done), "t": time.time()}
+        names = [base0] + [a for a in (RELAY.get("aliases") or []) if a != base0]
+        V = {k: dict(v) for k, v in (RELAY.get("verdict") or {}).items()}
         RELAY["vdirty"] = False
-        sha = RELAY.get("outboxSha") or ""
+    sv = _relay_load()
+    if sv.get("ipath") == ipath:
+        sv["verdict"] = V
+        _relay_store(sv)
+    for base in names:                       # v1.15.0：网页 AI 用的是哪个名字（软件重开以前的也算），就写在哪个名字下
+        _outbox_put(ib, base, {"name": base, "max": relay_tries(), "words": V, "done": bool(done), "t": time.time()})
+
+
+def _outbox_put(ib, base, body):
+    path = "%s/%s.json" % (OUTBOX, base)
+    shas = RELAY.setdefault("outboxShas", {})
+    sha = shas.get(base, "")
     data = {"message": "检查结果 " + base, "branch": ib.get("branch") or "main",
             "content": base64.b64encode(json.dumps(body, ensure_ascii=False).encode("utf-8")).decode()}
     url = "/repos/%s/contents/%s" % (ib["repo"], urllib.parse.quote(path))
@@ -1277,7 +1310,7 @@ def outbox_push(ipath, done=False):
                 data["sha"] = sha
             st, d = _gh("PUT", url, ib["token"], data)
             if st in (200, 201) and isinstance(d, dict):
-                RELAY["outboxSha"] = ((d.get("content") or {}).get("sha")) or ""
+                shas[base] = ((d.get("content") or {}).get("sha")) or ""
                 return
             if st in (409, 422) and k == 0:          # sha 对不上：先读一下现在的再写
                 st2, d2 = _gh("GET", url + "?ref=" + urllib.parse.quote(ib.get("branch") or "main"), ib["token"])
@@ -1362,10 +1395,14 @@ def relay_cont_msg():
         pend = list(RELAY.get("pending") or [])
         rnd = int(RELAY.get("round") or 1)
         fx = [(w, (RELAY.get("verdict") or {}).get(w, {}).get("todo", "")) for w in (RELAY.get("fixing") or [])]
+    waiting = (RELAY.get("aiReport") or {}).get("state") == "wait"
     if not pend and not fx:
-        return ""
+        return ("看结果：单词工作台的检查结果已经写好了。运行 python upload.py 看结果（或者把 MODE 改成 \"看结果\" 运行），照它说的做："
+                "没过的照“还要补”改好再传，全部过了再把【单词工作台·汇报】那几行回给我。") if waiting else ""
     fix = ("先改这 %d 个没过起草检查的词（照“还要补”的每一条改，把这个词完整重写一遍，插图只写新画的），改好一个传一个：\n%s\n"
            % (len(fx), "\n".join("- %s：%s" % (w, t[:400]) for w, t in fx))) if fx else ""
+    if waiting:
+        fix = "先运行一次 python upload.py 看结果（单词工作台的检查结果已经写好了），照它说的改。\n" + fix
     if not pend:
         return fix + "改完运行同一段上传脚本（MODE 保持 \"上传\"），它会告诉你检查结果。"
     return fix + ("继续：接着写这一批还没写的 %d 个词，按顺序：%s。\n"
@@ -1407,7 +1444,8 @@ def _inbox_parts(ipath, seen, pending, t0):
         raise RuntimeError("看收件箱出错（%s）：%s" % (st, str((d or {}).get("message", ""))[:120]))
     files = [x.get("path") for x in d if x.get("path")] if isinstance(d, list) else []
     INBOX_LAST.update(files=sorted(f.rsplit("/", 1)[-1] for f in files), ts=time.time())
-    for f in [f for f in files if f.rsplit("/", 1)[-1].startswith(base) and (f.endswith("-stop.json") or f.endswith("-report.json"))]:
+    names = (base,) + tuple(RELAY.get("aliases") or [])     # v1.15.0：网页 AI 认的名字（软件重开以前的也算）
+    for f in [f for f in files if f.rsplit("/", 1)[-1].startswith(names) and (f.endswith("-stop.json") or f.endswith("-report.json"))]:
         files.remove(f)        # v1.11.4 停下了 / v1.14.0 这一轮回复结束时的汇报（写完了、停下了、等检查结果）
         try:
             st2, d2 = _gh("GET", "/repos/%s/contents/%s?ref=%s" % (ib["repo"], urllib.parse.quote(f), br), ib["token"])
@@ -1419,7 +1457,7 @@ def _inbox_parts(ipath, seen, pending, t0):
                 inbox_delete(f, d2.get("sha"))
         except Exception as e:
             log("读网页 AI 的汇报出错：%s" % str(e)[:120])
-    mine = [f for f in files if f.rsplit("/", 1)[-1].startswith(base) and f not in seen]
+    mine = [f for f in files if f.rsplit("/", 1)[-1].startswith(names) and f not in seen]
     others = [f for f in files if f not in seen and f not in mine]
     if others:
         try:
@@ -1440,6 +1478,27 @@ def _inbox_parts(ipath, seen, pending, t0):
         if _looks_reply(text, pending) or (ours and END in text and any(
                 re.search(r"[@＠]\s*" + re.escape(w) + r"(?![A-Za-z'’\-])", text) for w in pending)):
             inbox_delete(gpath, sha)
+            m = _BASE_RE.match(f.rsplit("/", 1)[-1])
+            if not ours and m and m.group(1) not in (RELAY.get("aliases") or []):     # v1.15.0：网页 AI 用的是别的名字（软件重开以前的）
+                RELAY.setdefault("aliases", []).append(m.group(1))
+                try:                     # 那个名字下面原来的检查结果接过来（第几次、过没过），网页 AI 那边接着数
+                    st4, d4 = _gh("GET", "/repos/%s/contents/%s/%s.json?ref=%s" % (ib["repo"], OUTBOX, m.group(1), br), ib["token"])
+                    if st4 == 200 and isinstance(d4, dict):
+                        oldv = (json.loads(base64.b64decode(d4.get("content") or "").decode("utf-8")) or {}).get("words") or {}
+                        with _RELAY_LOCK:
+                            V = RELAY.setdefault("verdict", {})
+                            for w, v in oldv.items():
+                                if int((v or {}).get("try") or 0) > int((V.get(w) or {}).get("try") or 0):
+                                    V[w] = dict(v)
+                        RELAY.setdefault("outboxShas", {})[m.group(1)] = d4.get("sha") or ""
+                except Exception:
+                    pass
+                sv = _relay_load()
+                if sv.get("ipath") == ipath:
+                    sv["aliases"] = list(RELAY["aliases"])
+                    _relay_store(sv)
+                log("网页 AI 用的是以前那份提示词（文件名以 %s 开头）：收下了，检查结果也写回那个名字，它那边看得到" % m.group(1),
+                    RELAY.get("tid"))
             nm = gpath.rsplit("/", 1)[-1]
             out.append((text, gpath, nm.rsplit(".", 1)[0].endswith("-end") or "【这一批最后一个】" in text))
         elif ours:
@@ -1458,9 +1517,20 @@ def relay_parts(prompt, words, kind, rnd):
     use_clip = clip.WIN and cfg.get("relayClipboard", True)
     ibox = inbox_on(cfg)
     tid = (RUNNER.task or {}).get("id")
-    ipath = ""
+    ipath, resumed, sv = "", False, _relay_load()
     if ibox:
         ipath = "%s/%s-%s" % (inbox_cfg(cfg)["dir"], time.strftime("%Y%m%d-%H%M%S"), os.urandom(3).hex())
+        if (sv.get("tid") == tid and sv.get("kind") == kind and sv.get("ipath") and set(words) <= set(sv.get("words") or [])
+                and time.time() - float(sv.get("t0") or 0) < 2 * 86400):
+            ipath = sv["ipath"]                     # v1.15.0：同一份：网页 AI 原来的对话接着传就行，检查结果也写回它认的名字
+            resumed = sv.get("session") != SESSION  # 软件重开过（同一次开着里“开新对话”也用同一个名字，但不用提醒）
+            sv["session"] = SESSION
+            _relay_store(sv)
+            sv["_same"] = True
+        else:
+            sv = {"tid": tid, "kind": kind, "ipath": ipath, "words": list(words), "t0": time.time(), "verdict": {}, "aliases": [],
+                  "session": SESSION}
+            _relay_store(sv)
         info = batch_info(words, kind)
         info["round"] = rnd
         prompt = prompt.rstrip() + "\n\n" + inbox_prompt(ipath, info)
@@ -1469,7 +1539,9 @@ def relay_parts(prompt, words, kind, rnd):
                      copied=False, hint="", clip=use_clip, inbox=(ipath + ".xlsx") if ipath else "", phase="send", tid=tid,
                      polls=0, lastPoll=0.0, stage="", multi=True, pending=list(words), doneIn=[], parts=0, endReason="", round=rnd,
                      aiDone=False, pollNow=0.0, nextPoll=0.0, pollBy="", pollGot=0, qLeft=RELAY_QLEFT[0], aiStop=None, gotFiles=[],
-                     verdict={}, fixing=[], vdirty=False, outboxSha="", loop=bool(ibox), tries=relay_tries(cfg))
+                     verdict=dict(sv.get("verdict") or {}) if sv.get("_same") else {}, fixing=[], vdirty=False, outboxShas={},
+                     loop=bool(ibox), tries=relay_tries(cfg), resumed=resumed, aliases=list(sv.get("aliases") or []) if sv.get("_same") else [],
+                     turn=1, aiReport=None)
         rid = RELAY["id"]
         RELAY_ACT.update(rid=0, act="")
         RELAY_HIST.clear()
@@ -1484,6 +1556,9 @@ def relay_parts(prompt, words, kind, rnd):
     else:
         log("要你操作：复制提示词到网页 AI 发送（%s：一份 %d 个词，%s … %s）；%s" % (kind, len(words), words[0], words[-1], after), tid)
     _say("━━━━ 手动接力：%s 一份 %d 个词（%s … %s），网页 AI 每写完 %d 个上传一次 ━━━━" % (kind, len(words), words[0], words[-1], rnd))
+    if resumed:
+        log("接着上次那一份（文件名以 %s 开头，还剩 %d 个词）：网页 AI 原来的对话接着写、接着传就行，不用重新粘贴；那个对话没了，再粘贴这份提示词"
+            % (ipath.rsplit("/", 1)[-1], len(words)), tid)
     clip.beep()
     if ibox:
         threading.Thread(target=outbox_clean, daemon=True).start()
@@ -1552,6 +1627,11 @@ def relay_parts(prompt, words, kind, rnd):
                         texts.append((t, "剪贴板", "【这一批最后一个】" in t))
             if texts:
                 RELAY["aiStop"] = None          # 又传上来了：它接着写了
+                RELAY["aiDone"] = False         # v1.15.0：“说写完了”以后又传了，就不算写完；这一回带 -end 再算
+                rep0 = RELAY.get("aiReport") or {}
+                if rep0.get("state") in ("stop", "wait") and rep0.get("t", 0) > max([0] + [g.get("t", 0) for g in RELAY.get("gotFiles") or []]):
+                    RELAY["turn"] = int(RELAY.get("turn") or 1) + 1
+                    log("网页 AI 接着写了（第 %d 轮对话）" % RELAY["turn"], tid)
             for t, src, lastp in texts:
                 if lastp:
                     RELAY["aiDone"] = True
@@ -1562,6 +1642,7 @@ def relay_parts(prompt, words, kind, rnd):
                     RELAY.setdefault("gotFiles", []).append({"t": time.time(), "f": src.rsplit("/", 1)[-1], "len": len(t)})   # v1.11.6：第 ③ 步的动态
                     if RELAY_HIST and not RELAY_HIST[-1]["got"]:
                         RELAY_HIST[-1].update(got=time.time(), glen=len(t))
+                relay_raw_add(src, t)
                 log("网页 AI 交回了第 %d 轮（%s，%d 字），接着做" % (k, src.rsplit("/", 1)[-1], len(t)), tid)
                 AI_LIVE["reply"] = t
                 yield t
@@ -1577,11 +1658,14 @@ def relay_parts(prompt, words, kind, rnd):
             time.sleep(1)
         raise Fatal("等了 24 小时，先停下")
     finally:
-        if ibox and RELAY["id"] == rid and RELAY.get("verdict"):    # v1.12.0：告诉网页 AI 这一份结束了（脚本别再等）
+        fin = RELAY.get("endReason") in ("all", "skiprest")
+        if ibox and RELAY["id"] == rid and RELAY.get("verdict") and fin:    # v1.12.0：告诉网页 AI 这一份结束了（脚本别再等）
             try:
                 outbox_push(ipath, done=True)
             except Exception:
                 pass
+        if ibox and RELAY["id"] == rid and fin and _relay_load().get("ipath") == ipath:
+            _relay_store({})
         if ibox and RELAY["id"] == rid and RELAY.get("endReason") in ("all", "newchat", "resize", "skiprest"):
             threading.Thread(target=report_grace, args=(ipath, tid), daemon=True).start()
         with _RELAY_LOCK:

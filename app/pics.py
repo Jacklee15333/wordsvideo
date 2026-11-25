@@ -306,6 +306,14 @@ def do_pics_relay(R, tid, total, only):
     if not todo:
         C.log("没有要做画面的词了（要先有题目；做不出来的在“画面没做成”里）", tid)
         return
+    if only is None:               # v1.15.0：“做 N 个词”记下挑的是哪 N 个——软件重开了接着做同一批，网页 AI 原来的对话也对得上
+        try:
+            row = C.q("SELECT params FROM tasks WHERE id=?", (tid,), one=True)
+            pp = json.loads((row or {}).get("params") or "{}")
+            pp["words"] = list(todo)
+            C.x("UPDATE tasks SET params=? WHERE id=?", (json.dumps(pp, ensure_ascii=False), tid))
+        except Exception:
+            pass
     nb = (len(todo) + N - 1) // N
     C.log("画面（手动接力）：一共 %d 个词，一份 %d 个，分 %d 份；网页 AI 每写完 %d 个上传一次" % (len(todo), N, nb, rnd), tid)
     done, batch, queue, k = 0, [], list(todo), 0

@@ -445,6 +445,12 @@ def api_live(qs):
 
 
 def api_relay_get(qs):
+    if qs.get("raw"):                          # v1.15.0：看网页 AI 原文：最近收到的文件、它最后的汇报
+        return {"files": [{"t": x["t"], "f": x["f"], "len": len(x["text"])} for x in C.RELAY_RAW][::-1],
+                "text": next((x["text"] for x in reversed(C.RELAY_RAW) if x["f"] == qs["raw"]), "") if qs["raw"] != "1" else
+                (C.RELAY_RAW[-1]["text"] if C.RELAY_RAW else ""),
+                "f": qs["raw"] if qs["raw"] != "1" else (C.RELAY_RAW[-1]["f"] if C.RELAY_RAW else ""),
+                "report": C.RELAY.get("aiReport")}
     r = dict(C.RELAY)
     t = C.RUNNER.task
     r["show"] = bool(t and t["id"] == r.get("tid") and r.get("phase") in ("send", "checking", "ok", "fail"))
