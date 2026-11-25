@@ -1,7 +1,768 @@
 {
  "单词": "high-energy",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "高能的；劲头十足的"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/high.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.62,
+      "anim": "bob"
+     },
+     {
+      "label": "高的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/battery.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "能量",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/high.svg",
+   "p1": "art/battery.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/high.svg",
+     "x": 0.34,
+     "y": 0.58,
+     "s": 0.5,
+     "anim": "bob",
+     "z": 2
+    },
+    {
+     "svg": "art/battery.svg",
+     "x": 0.7,
+     "y": 0.58,
+     "s": 0.46,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "label": "能量高的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "（物）高能的",
+    "pos": "形容词",
+    "diff": "粒子、射线带的能量很高",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/battery.svg",
+      "x": 0.24,
+      "y": 0.56,
+      "s": 0.44,
+      "anim": "pulse",
+      "z": 3
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.12,
+      "go": [
+       0.92,
+       0.3
+      ],
+      "dur": 0.7,
+      "loop": true,
+      "z": 3
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.1,
+      "go": [
+       0.92,
+       0.7
+      ],
+      "dur": 0.6,
+      "loop": true,
+      "delay": 0.3,
+      "z": 3
+     },
+     {
+      "label": "高能",
+      "x": 0.7,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Scientists study high-energy particles.",
+    "exzh": "科学家研究高能粒子。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-present",
+       "id": "m",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.72,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "waves": true,
+       "on": "m",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "m"
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "id": "t",
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.68,
+       "z": 3,
+       "nodWith": "m"
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.42,
+       "y": 0.4,
+       "s": 0.1,
+       "when": "particles",
+       "go": [
+        0.66,
+        0.3
+       ],
+       "dur": 0.6,
+       "loop": true,
+       "z": 3
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.42,
+       "y": 0.56,
+       "s": 0.08,
+       "when": "particles",
+       "go": [
+        0.66,
+        0.62
+       ],
+       "dur": 0.5,
+       "loop": true,
+       "z": 3
+      },
+      {
+       "label": "high-energy",
+       "x": 0.52,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "high-energy"
+      },
+      {
+       "label": "高能粒子",
+       "x": 0.52,
+       "y": 0.84,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "高能粒子"
+      }
+     ]
+    }
+   },
+   {
+    "text": "劲头十足的",
+    "pos": "形容词",
+    "diff": "人、表演活力很足",
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/banner-speech.svg",
+      "x": 0.5,
+      "y": 0.12,
+      "s": 0.16,
+      "z": 1
+     },
+     {
+      "actor": "west-man-speech",
+      "id": "s",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "svg": "art/podium.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.36,
+      "z": 4
+     },
+     {
+      "svg": "art/mic.svg",
+      "x": 0.56,
+      "y": 0.6,
+      "s": 0.2,
+      "z": 5
+     },
+     {
+      "waves": true,
+      "x": 0.62,
+      "y": 0.45,
+      "dir": 0,
+      "with": "s"
+     },
+     {
+      "beam": true,
+      "x": 0.2,
+      "y": 0.0,
+      "len": 0.5,
+      "width": 0.18,
+      "swing": 6,
+      "period": 4
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.93,
+      "s": 0.24,
+      "z": 6,
+      "crowd": 9,
+      "nodWith": "s"
+     }
+    ],
+    "ex": "It was a high-energy show.",
+    "exzh": "那是一场劲头十足的演出。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-music",
+       "id": "g",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.72,
+       "z": 3,
+       "fps": 3.3
+      },
+      {
+       "svg": "art/drum.svg",
+       "x": 0.66,
+       "y": 0.68,
+       "s": 0.36,
+       "anim": "thump",
+       "z": 3
+      },
+      {
+       "svg": "art/pa-speaker.svg",
+       "x": 0.9,
+       "y": 0.6,
+       "s": 0.4,
+       "anim": "thump",
+       "z": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "alt": [
+        "art/note2.svg"
+       ],
+       "x": 0.86,
+       "y": 0.4,
+       "every": 1.2,
+       "life": 2,
+       "to": [
+        -0.05,
+        -0.3
+       ],
+       "s": 0.08,
+       "when": "show"
+      },
+      {
+       "beam": true,
+       "x": 0.5,
+       "y": 0.0,
+       "len": 0.5,
+       "width": 0.18,
+       "swing": 6,
+       "period": 4
+      },
+      {
+       "label": "high-energy",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "high-energy"
+      },
+      {
+       "label": "劲头十足",
+       "x": 0.66,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "劲头十足"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“能量高的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/high.svg",
+       "x": 0.34,
+       "y": 0.58,
+       "s": 0.5,
+       "anim": "bob",
+       "z": 2
+      },
+      {
+       "svg": "art/battery.svg",
+       "x": 0.7,
+       "y": 0.58,
+       "s": 0.46,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "label": "能量高的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "说粒子、射线：带的能量很高",
+    "node": "① （物）高能的",
+    "pos": "形容词",
+    "pic": 0,
+    "rule": "一个短语整个当一个词用，放在名词前当形容词",
+    "ruleEx": "high energy → high-energy physics      low energy → a low-energy house",
+    "cap": "high energy → high-energy",
+    "say": [
+     "一个短语可以整个当一个词用，放在名词前当形容词。",
+     "low energy 是能量低，a low-energy house 就是低能耗住宅。",
+     "high energy 也一样：粒子带的能量很高，就是 high-energy，高能的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "label": "短语 → 形容词",
+       "x": 0.5,
+       "y": 0.2,
+       "size": 0.08,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "形容词",
+       "hideCue": 1
+      },
+      {
+       "label": "放在名词前",
+       "x": 0.5,
+       "y": 0.5,
+       "size": 0.08,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "放在名词前",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/low.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.5,
+       "cue": 1,
+       "when": "能量低",
+       "anim": "bob",
+       "hideCue": 2
+      },
+      {
+       "label": "低能耗住宅",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "低能耗住宅",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.14,
+       "cue": 2,
+       "when": "粒子",
+       "go": [
+        0.9,
+        0.4
+       ],
+       "dur": 0.7,
+       "loop": true
+      },
+      {
+       "svg": "art/high.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.36,
+       "cue": 2,
+       "when": "能量很高",
+       "anim": "bob"
+      },
+      {
+       "label": "高能的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "高能的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "说人、表演：活力很足",
+    "node": "② 劲头十足的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "说人、说表演，活力很足，也叫 high-energy，劲头十足的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/drum.svg",
+       "x": 0.5,
+       "y": 0.66,
+       "s": 0.4,
+       "when": "表演",
+       "anim": "thump",
+       "z": 3
+      },
+      {
+       "beam": true,
+       "x": 0.3,
+       "y": 0.0,
+       "len": 0.5,
+       "width": 0.18,
+       "swing": 6,
+       "period": 4
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "every": 0.6,
+       "life": 1.6,
+       "to": [
+        0.1,
+        -0.18
+       ],
+       "s": 0.06,
+       "x": 0.5,
+       "y": 0.4,
+       "when": "活力很足"
+      },
+      {
+       "label": "劲头十足的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "劲头十足的"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "中文都能说“劲头大”，褒贬不一样",
+   "items": [
+    {
+     "w": "high-energy",
+     "word": "high-energy",
+     "name": "high-energy",
+     "en": "high-energy",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/stage-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/drum.svg",
+        "x": 0.5,
+        "y": 0.6,
+        "s": 0.6,
+        "anim": "thump",
+        "z": 2
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "every": 0.6,
+        "life": 1.6,
+        "to": [
+         0.1,
+         -0.18
+        ],
+        "s": 0.06,
+        "x": 0.66,
+        "y": 0.3
+       }
+      ]
+     },
+     "text": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "say": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "diff": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "note": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "desc": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "m": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "mean": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "line": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "explain": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "zh": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "def": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "gloss": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "sense": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "comment": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "hint": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "txt": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "talk": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "words": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+     "detail": "high-energy 作“活力十足”是褒义，夸人、夸表演。"
+    },
+    {
+     "w": "hyper",
+     "word": "hyper",
+     "name": "hyper",
+     "en": "hyper",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.3,
+        "anim": "spin",
+        "z": 2
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.62,
+        "y": 0.5,
+        "s": 0.24,
+        "anim": "spin",
+        "z": 2
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.8,
+        "y": 0.5,
+        "s": 0.18,
+        "anim": "shake",
+        "z": 2
+       }
+      ]
+     },
+     "text": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "say": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "diff": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "note": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "desc": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "m": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "mean": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "line": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "explain": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "zh": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "def": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "gloss": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "sense": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "comment": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "hint": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "txt": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "talk": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "words": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。",
+     "detail": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。"
+    }
+   ],
+   "logic": "high-energy 是 high energy“能量高”合起来；hyper 来自希腊语“超过”，是“过头了”。",
+   "tip": "夸演出有劲用 high-energy；说小孩兴奋过头用 hyper。",
+   "pics": {
+    "high-energy": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/stage-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/drum.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.6,
+       "anim": "thump",
+       "z": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "every": 0.6,
+       "life": 1.6,
+       "to": [
+        0.1,
+        -0.18
+       ],
+       "s": 0.06,
+       "x": 0.66,
+       "y": 0.3
+      }
+     ]
+    },
+    "hyper": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.3,
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.62,
+       "y": 0.5,
+       "s": 0.24,
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.8,
+       "y": 0.5,
+       "s": 0.18,
+       "anim": "shake",
+       "z": 2
+      }
+     ]
+    }
+   },
+   "notes": {
+    "high-energy": "high-energy 作“活力十足”是褒义，夸人、夸表演。",
+    "hyper": "hyper 是口语“过度兴奋、亢奋”，有点停不下来的意思。"
+   }
+  },
+  "kaodian": {
+   "rows": [
+    "意思：① （物）高能的 ② （人、表演）劲头十足的",
+    "搭配：high-energy physics 高能物理；a high-energy show",
+    "形近词：low-energy 低能耗的；hyper 亢奋的",
+    "写法：放在名词前加连字符"
+   ]
+  }
+ },
+ "插图": [
+  "high-energyai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人觉得这场音乐会怎么样？\n听：It was a high-energy concert.\nA. 很安静\nB. 活力十足\nC. 很无聊\nD. 很短",
@@ -88,5 +849,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

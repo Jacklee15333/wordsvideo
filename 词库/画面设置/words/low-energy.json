@@ -1,0 +1,734 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "低能耗的；没精神的"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/low.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.62,
+     "anim": "bob"
+    },
+    {
+     "label": "低的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/battery.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "label": "能量",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/low.svg",
+  "p1": "art/battery.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/low.svg",
+    "x": 0.34,
+    "y": 0.58,
+    "s": 0.5,
+    "anim": "bob",
+    "z": 2
+   },
+   {
+    "svg": "art/battery.svg",
+    "x": 0.7,
+    "y": 0.58,
+    "s": 0.46,
+    "anim": "pulse",
+    "z": 2
+   },
+   {
+    "label": "能量低的",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.1,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.8
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "低能耗的",
+   "pos": "形容词",
+   "diff": "机器、房子用掉的能量少",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bulb.svg",
+     "x": 0.34,
+     "y": 0.5,
+     "s": 0.46,
+     "anim": "pulse",
+     "z": 3
+    },
+    {
+     "svg": "art/gauge.svg",
+     "x": 0.72,
+     "y": 0.54,
+     "s": 0.42,
+     "anim": "pulse",
+     "z": 3
+    },
+    {
+     "label": "低能耗",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "We live in a low-energy house.",
+   "exzh": "我们住在一栋低能耗的房子里。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/big-small.svg",
+      "x": 0.36,
+      "y": 0.56,
+      "s": 0.6,
+      "when": "house",
+      "z": 3,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/gauge.svg",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.36,
+      "when": "low-energy",
+      "anim": "pulse",
+      "z": 3
+     },
+     {
+      "label": "low-energy",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "low-energy"
+     },
+     {
+      "label": "低能耗",
+      "x": 0.76,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "低能耗"
+     }
+    ]
+   }
+  },
+  {
+   "text": "没精神的、蔫蔫的",
+   "pos": "形容词",
+   "diff": "说人、气氛：精力不足",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "id": "t",
+     "x": 0.24,
+     "y": 0.6,
+     "s": 0.72,
+     "z": 3,
+     "seq": "talk"
+    },
+    {
+     "waves": true,
+     "on": "t",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "with": "t"
+    },
+    {
+     "actor": "west-clerk-think",
+     "id": "c",
+     "x": 0.8,
+     "y": 0.62,
+     "s": 0.68,
+     "z": 3,
+     "nodWith": "t"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.94,
+     "s": 0.28,
+     "z": 4
+    },
+    {
+     "svg": "art/clock.svg",
+     "x": 0.52,
+     "y": 0.16,
+     "s": 0.18,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "label": "没精神",
+     "x": 0.8,
+     "y": 0.16,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "The class felt low-energy after lunch.",
+   "exzh": "午饭后全班都没精神。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-listen",
+      "id": "g",
+      "x": 0.3,
+      "y": 0.62,
+      "s": 0.7,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "id": "k",
+      "x": 0.74,
+      "y": 0.64,
+      "s": 0.66,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.3,
+      "z": 4
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.52,
+      "y": 0.16,
+      "s": 0.18,
+      "when": "after lunch",
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "label": "low-energy",
+      "x": 0.52,
+      "y": 0.42,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "low-energy"
+     },
+     {
+      "label": "没精神",
+      "x": 0.52,
+      "y": 0.6,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "没精神"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“能量低的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/low.svg",
+      "x": 0.34,
+      "y": 0.58,
+      "s": 0.5,
+      "anim": "bob",
+      "z": 2
+     },
+     {
+      "svg": "art/battery.svg",
+      "x": 0.7,
+      "y": 0.58,
+      "s": 0.46,
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "label": "能量低的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "说机器、房子：用掉的能量少",
+   "node": "① 低能耗的",
+   "pos": "形容词",
+   "pic": 0,
+   "rule": "一个短语整个当一个词用，放在名词前当形容词",
+   "ruleEx": "low energy → a low-energy house      high energy → high-energy physics",
+   "cap": "low energy → low-energy",
+   "say": [
+    "一个短语可以整个当一个词用，放在名词前当形容词。",
+    "high energy 是能量高，high-energy physics 就是高能物理。",
+    "low energy 也一样：一栋房子用掉的能量少，就是 a low-energy house，低能耗的房子。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "短语 → 形容词",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "形容词",
+      "hideCue": 1
+     },
+     {
+      "label": "放在名词前",
+      "x": 0.5,
+      "y": 0.5,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "放在名词前",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/high.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.5,
+      "cue": 1,
+      "when": "能量高",
+      "anim": "bob",
+      "hideCue": 2
+     },
+     {
+      "label": "高能物理",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "高能物理",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/big-small.svg",
+      "x": 0.34,
+      "y": 0.56,
+      "s": 0.5,
+      "cue": 2,
+      "when": "一栋房子",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/low.svg",
+      "x": 0.72,
+      "y": 0.56,
+      "s": 0.4,
+      "cue": 2,
+      "when": "能量少",
+      "anim": "bob"
+     },
+     {
+      "label": "低能耗的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "低能耗的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "说人、气氛：精力不足",
+   "node": "② 没精神的、蔫蔫的",
+   "pos": "形容词",
+   "pic": 1,
+   "say": [
+    "说人、说气氛，精力不足，也叫 low-energy，没精神的、蔫蔫的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 4
+     },
+     {
+      "svg": "art/battery.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.36,
+      "when": "精力不足",
+      "s2": 0.2,
+      "growWhen": "没精神的",
+      "anim": "pulse",
+      "z": 3
+     },
+     {
+      "label": "没精神的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "没精神的"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "中文都和“省能源”有关，说的不一样",
+  "items": [
+   {
+    "w": "low-energy",
+    "word": "low-energy",
+    "name": "low-energy",
+    "en": "low-energy",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/low.svg",
+       "x": 0.4,
+       "y": 0.56,
+       "s": 0.6,
+       "anim": "bob",
+       "z": 2
+      },
+      {
+       "svg": "art/battery.svg",
+       "x": 0.62,
+       "y": 0.56,
+       "s": 0.5,
+       "anim": "pulse",
+       "z": 2
+      }
+     ]
+    },
+    "text": "low-energy 说用的能量少，也能说人没劲儿。",
+    "say": "low-energy 说用的能量少，也能说人没劲儿。",
+    "diff": "low-energy 说用的能量少，也能说人没劲儿。",
+    "note": "low-energy 说用的能量少，也能说人没劲儿。",
+    "desc": "low-energy 说用的能量少，也能说人没劲儿。",
+    "m": "low-energy 说用的能量少，也能说人没劲儿。",
+    "mean": "low-energy 说用的能量少，也能说人没劲儿。",
+    "line": "low-energy 说用的能量少，也能说人没劲儿。",
+    "explain": "low-energy 说用的能量少，也能说人没劲儿。",
+    "zh": "low-energy 说用的能量少，也能说人没劲儿。",
+    "def": "low-energy 说用的能量少，也能说人没劲儿。",
+    "gloss": "low-energy 说用的能量少，也能说人没劲儿。",
+    "sense": "low-energy 说用的能量少，也能说人没劲儿。",
+    "comment": "low-energy 说用的能量少，也能说人没劲儿。",
+    "hint": "low-energy 说用的能量少，也能说人没劲儿。",
+    "txt": "low-energy 说用的能量少，也能说人没劲儿。",
+    "talk": "low-energy 说用的能量少，也能说人没劲儿。",
+    "words": "low-energy 说用的能量少，也能说人没劲儿。",
+    "detail": "low-energy 说用的能量少，也能说人没劲儿。"
+   },
+   {
+    "w": "energy-saving",
+    "word": "energy-saving",
+    "name": "energy-saving",
+    "en": "energy-saving",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.42,
+       "y": 0.54,
+       "s": 0.6,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "svg": "art/piggy.svg",
+       "x": 0.64,
+       "y": 0.6,
+       "s": 0.42,
+       "anim": "bob",
+       "z": 2
+      }
+     ]
+    },
+    "text": "energy-saving 强调节约这个目的：特意省下能源。",
+    "say": "energy-saving 强调节约这个目的：特意省下能源。",
+    "diff": "energy-saving 强调节约这个目的：特意省下能源。",
+    "note": "energy-saving 强调节约这个目的：特意省下能源。",
+    "desc": "energy-saving 强调节约这个目的：特意省下能源。",
+    "m": "energy-saving 强调节约这个目的：特意省下能源。",
+    "mean": "energy-saving 强调节约这个目的：特意省下能源。",
+    "line": "energy-saving 强调节约这个目的：特意省下能源。",
+    "explain": "energy-saving 强调节约这个目的：特意省下能源。",
+    "zh": "energy-saving 强调节约这个目的：特意省下能源。",
+    "def": "energy-saving 强调节约这个目的：特意省下能源。",
+    "gloss": "energy-saving 强调节约这个目的：特意省下能源。",
+    "sense": "energy-saving 强调节约这个目的：特意省下能源。",
+    "comment": "energy-saving 强调节约这个目的：特意省下能源。",
+    "hint": "energy-saving 强调节约这个目的：特意省下能源。",
+    "txt": "energy-saving 强调节约这个目的：特意省下能源。",
+    "talk": "energy-saving 强调节约这个目的：特意省下能源。",
+    "words": "energy-saving 强调节约这个目的：特意省下能源。",
+    "detail": "energy-saving 强调节约这个目的：特意省下能源。"
+   }
+  ],
+  "logic": "low-energy 是 low energy“能量低”合起来，说结果；energy-saving 是 save energy“节约能源”合起来，说目的。",
+  "tip": "说房子、电器耗能低两个都行；说人没精神只能用 low-energy。",
+  "pics": {
+   "low-energy": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/low.svg",
+      "x": 0.4,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "bob",
+      "z": 2
+     },
+     {
+      "svg": "art/battery.svg",
+      "x": 0.62,
+      "y": 0.56,
+      "s": 0.5,
+      "anim": "pulse",
+      "z": 2
+     }
+    ]
+   },
+   "energy-saving": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 2.2,
+      "z": -5
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.42,
+      "y": 0.54,
+      "s": 0.6,
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "svg": "art/piggy.svg",
+      "x": 0.64,
+      "y": 0.6,
+      "s": 0.42,
+      "anim": "bob",
+      "z": 2
+     }
+    ]
+   }
+  },
+  "notes": {
+   "low-energy": "low-energy 说用的能量少，也能说人没劲儿。",
+   "energy-saving": "energy-saving 强调节约这个目的：特意省下能源。"
+  }
+ },
+ "kaodian": {
+  "rows": [
+   "意思：① 低能耗的 ② （人、气氛）没精神的、蔫蔫的",
+   "搭配：a low-energy house 低能耗住宅；low-energy light bulbs",
+   "形近词：energy-saving 节能的；high-energy 高能的、劲头十足的",
+   "写法：放在名词前加连字符"
+  ]
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：这台冰箱有什么特点？",
+    "listen": "This fridge is low-energy.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "很费电",
+     "很省电",
+     "很大",
+     "很旧"
+    ],
+    "ans": "B",
+    "why": "low-energy 低能耗的。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "We changed to ______ lights to save money.",
+    "opts": [
+     "high-energy",
+     "low-energy",
+     "energetic",
+     "energize"
+    ],
+    "ans": "B",
+    "why": "省钱要换耗能少的灯 low-energy。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 low-energy、high-energy 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The kids are so ______; they never stop running.",
+    "opts": [],
+    "ans": "high-energy",
+    "why": "活力十足用 high-energy；low-energy 是耗能少或没劲儿。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "She is an ______ girl; she loves sports. (energy)",
+    "opts": [],
+    "ans": "energetic",
+    "why": "修饰名词 girl 用形容词 energetic。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "These low-energy light are cheap to use.",
+    "opts": [],
+    "ans": "light → lights",
+    "why": "these 后面用复数 lights。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这种灯耗电很少。",
+    "stem": "This kind of light uses very ______ power.",
+    "opts": [],
+    "ans": "little",
+    "why": "power 不可数，“很少”用 little。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The new light uses ______ energy than the old one.",
+    "opts": [
+     "fewer",
+     "little",
+     "less",
+     "more"
+    ],
+    "ans": "C",
+    "why": "energy 不可数，“更少”用 less。",
+    "kd": "用法"
+   }
+  ]
+ }
+}
