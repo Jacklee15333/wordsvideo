@@ -1878,7 +1878,7 @@ async function relayTick(){
     // 网页 AI 是不是停了：它自己说停了 / 说写完了可还缺 / 好久没传了 / 你点了「网页 AI 停了？」——这时才出「继续」
     const lastAct=Math.max(d.ts||0,...(d.gotFiles||[]).map(f=>f.t||0)),idle=now-lastAct;
     if(PDN){if(d.aiStop)cont='stop';else if(d.aiDone&&pd.length)cont='miss';
-      else if(idle>(k?600:1200)&&RCDISMISS!==lastAct)cont='quiet';else if(RCMAN===d.id)cont='man'}
+      else if(idle>quietAfter(d,k,lastAct)&&RCDISMISS!==lastAct)cont='quiet';else if(RCMAN===d.id)cont='man'}
     const ok3=done.filter(x=>x.ok&&ws.includes((x.words||[])[0])).length,bad3=done.filter(x=>!x.ok&&ws.includes((x.words||[])[0])&&!FX0.has((x.words||[])[0]));
     const cnt3=(k?`收到 ${k} 个文件 · 做完 ${dn} 个 · 还剩 ${pd.length} 个`:'还没传回来')+(FXW.length?` · <b style="color:var(--amber)">没过检查、网页 AI 在改 ${FXW.length} 个</b>`:'');
     if(!PDN)rStep('rStep3','done',`全部传回来了：收到 ${k} 个文件`,'ok');
@@ -1930,6 +1930,8 @@ function r3Set(open){R3OPEN=open;$('#r3Body').hidden=!open;$('#r3H').setAttribut
 $('#r3H').onclick=()=>r3Set(!R3OPEN);
 $('#r3H').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();r3Set(!R3OPEN)}};
 let RCMAN=0,RCDISMISS=0;const R3ROW=new Set();
+/* 多久没传算“好久”：照它自己的速度——平均传一次要多久的 2.5 倍，最少 15 分钟；还没传过两次的，等 30 分钟 */
+function quietAfter(d,k,lastAct){if(k<2)return 1800;const avg=(lastAct-(d.ts||lastAct))/k;return Math.max(900,2.5*avg)}
 function r3Feed(d){if($('#r3Body').hidden!==!R3OPEN)r3Set(R3OPEN);
   const FX=new Set(d.fixing||[]),rows=[],wre=/^([A-Za-z][A-Za-z'’\-. ]*?) (的画面|补好了|改了|存下了|这次没补成)/;
   for(const l of d.rows||[]){const m=String(l.msg||'').trim();if(!m||/^━━━━ 手动接力/.test(m))continue;
