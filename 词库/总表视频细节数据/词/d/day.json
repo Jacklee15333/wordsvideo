@@ -1,7 +1,791 @@
 {
  "单词": "day",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "白天；一天、日；时代"
+  },
+  "originPic": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/sun.svg",
+     "x": 0.82,
+     "y": 0.22,
+     "s": 0.24,
+     "anim": "spin",
+     "z": 2
+    },
+    {
+     "label": "太阳在天上",
+     "x": 0.3,
+     "y": 0.14,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "白天",
+    "pos": "名词",
+    "diff": "太阳升起到落下，天是亮的",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/sun.svg",
+      "x": 0.82,
+      "y": 0.22,
+      "s": 0.24,
+      "anim": "spin",
+      "z": 2
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.05,
+      "y": 0.74,
+      "s": 0.48,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.74
+       ],
+       "to": [
+        0.95,
+        0.74
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.95,
+      "y": 0.76,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.95,
+        0.76
+       ],
+       "to": [
+        0.05,
+        0.76
+       ],
+       "offset": 1.5
+      }
+     },
+     {
+      "label": "白天",
+      "x": 0.18,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Cats sleep during the day.",
+    "exzh": "猫白天睡觉。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/cat-sit_f0.svg",
+       "x": 0.5,
+       "y": 0.7,
+       "s": 0.36,
+       "frames": [
+        "art/cat-sit_f0.svg",
+        "art/cat-sit_f1.svg",
+        "art/cat-sit_f2.svg"
+       ],
+       "fps": 1.5,
+       "when": "Cats",
+       "z": 3
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.82,
+       "y": 0.22,
+       "s": 0.24,
+       "anim": "spin",
+       "z": 2,
+       "when": "the day"
+      },
+      {
+       "label": "during the day",
+       "x": 0.3,
+       "y": 0.12,
+       "size": 0.07,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "during the day"
+      },
+      {
+       "label": "白天",
+       "x": 0.3,
+       "y": 0.32,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "白天"
+      }
+     ]
+    }
+   },
+   {
+    "text": "一天、日",
+    "pos": "名词",
+    "diff": "白天连着一个黑夜，凑成一轮",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "id": "m",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "waves": true,
+      "on": "m",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "m"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "id": "k",
+      "x": 0.84,
+      "y": 0.64,
+      "s": 0.64,
+      "z": 3,
+      "nodWith": "m"
+     },
+     {
+      "svg": "art/calendar.svg",
+      "x": 0.52,
+      "y": 0.36,
+      "s": 0.36,
+      "anim": "pulse",
+      "z": 2
+     }
+    ],
+    "ex": "There are seven days in a week.",
+    "exzh": "一个星期有七天。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "id": "t",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.72,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "waves": true,
+       "on": "t",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "t"
+      },
+      {
+       "actor": "west-girl-listen",
+       "id": "g",
+       "x": 0.84,
+       "y": 0.62,
+       "s": 0.66,
+       "z": 3,
+       "nodWith": "t"
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.52,
+       "y": 0.4,
+       "s": 0.4,
+       "when": "seven days",
+       "pop": true,
+       "anim": "pulse",
+       "z": 2
+      },
+      {
+       "label": "seven days",
+       "x": 0.52,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "seven days"
+      },
+      {
+       "label": "七天",
+       "x": 0.52,
+       "y": 0.78,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "七天"
+      }
+     ]
+    }
+   },
+   {
+    "text": "时代、时期",
+    "pos": "名词",
+    "diff": "一个人、一代人过的那些日子",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-clerk-happy",
+      "id": "c",
+      "x": 0.24,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "waves": true,
+      "on": "c",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "c"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "id": "t",
+      "x": 0.8,
+      "y": 0.6,
+      "s": 0.7,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "c"
+     },
+     {
+      "svg": "art/photo.svg",
+      "x": 0.52,
+      "y": 0.34,
+      "s": 0.26,
+      "anim": "bob",
+      "z": 2
+     },
+     {
+      "svg": "art/rotary-phone.svg",
+      "x": 0.52,
+      "y": 0.7,
+      "s": 0.16,
+      "z": 3
+     }
+    ],
+    "ex": "In my grandpa's day, there were no phones.",
+    "exzh": "在我爷爷那个年代，没有手机。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/rotary-phone.svg",
+       "x": 0.36,
+       "y": 0.56,
+       "s": 0.36,
+       "when": "grandpa's day",
+       "anim": "bob",
+       "z": 3
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.7,
+       "y": 0.56,
+       "s": 0.3,
+       "when": "no phones",
+       "a": 0.4,
+       "z": 3
+      },
+      {
+       "label": "grandpa's day",
+       "x": 0.36,
+       "y": 0.12,
+       "size": 0.07,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "grandpa's day"
+      },
+      {
+       "label": "那个年代",
+       "x": 0.7,
+       "y": 0.12,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "那个年代"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“太阳在天上的那一段”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/sun.svg",
+       "x": 0.82,
+       "y": 0.22,
+       "s": 0.24,
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "label": "太阳在天上",
+       "x": 0.3,
+       "y": 0.14,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "via": "太阳升起到落下，天是亮的",
+    "node": "① 白天",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "太阳升起到落下，天是亮的，这段时间就是 day，白天。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/sun.svg",
+       "x": 0.1,
+       "y": 0.7,
+       "s": 0.2,
+       "go": [
+        0.9,
+        0.7
+       ],
+       "path": [
+        [
+         0,
+         0.1,
+         0.7
+        ],
+        [
+         1.5,
+         0.5,
+         0.15
+        ],
+        [
+         3,
+         0.9,
+         0.7
+        ]
+       ],
+       "when": "太阳升起",
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "label": "白天",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "白天"
+      }
+     ]
+    }
+   },
+   {
+    "via": "白天连着一个黑夜，凑成一轮",
+    "node": "② 一天、日",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "白天连着一个黑夜，凑成一轮，就是一天。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/sun.svg",
+       "x": 0.3,
+       "y": 0.4,
+       "s": 0.3,
+       "when": "白天",
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "svg": "art/moon.svg",
+       "x": 0.7,
+       "y": 0.4,
+       "s": 0.3,
+       "when": "黑夜",
+       "anim": "bob",
+       "z": 2
+      },
+      {
+       "svg": "art/calendar.svg",
+       "x": 0.5,
+       "y": 0.78,
+       "s": 0.22,
+       "when": "一天",
+       "anim": "pulse",
+       "z": 3
+      },
+      {
+       "label": "一天",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "一天"
+      }
+     ]
+    }
+   },
+   {
+    "via": "一个人、一代人过的那些日子",
+    "node": "③ 时代、时期",
+    "pos": "名词",
+    "pic": 2,
+    "say": [
+     "一个人、一代人过的那些日子，就是他的时代，in my day 就是我那个年代。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/photo.svg",
+       "x": 0.36,
+       "y": 0.46,
+       "s": 0.34,
+       "when": "一代人",
+       "anim": "bob",
+       "z": 2
+      },
+      {
+       "svg": "art/rotary-phone.svg",
+       "x": 0.7,
+       "y": 0.6,
+       "s": 0.26,
+       "when": "那些日子",
+       "anim": "bob",
+       "z": 3
+      },
+      {
+       "label": "in my day",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "in my day"
+      },
+      {
+       "label": "时代",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "时代"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "中文都能说“白天、时代”，范围不一样",
+   "items": [
+    {
+     "w": "day",
+     "word": "day",
+     "name": "day",
+     "en": "day",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/castle-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/sun.svg",
+        "x": 0.5,
+        "y": 0.44,
+        "s": 0.56,
+        "anim": "spin",
+        "z": 2
+       }
+      ]
+     },
+     "text": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "say": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "diff": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "note": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "desc": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "m": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "mean": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "line": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "explain": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "zh": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "def": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "gloss": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "sense": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "comment": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "hint": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "txt": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "talk": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "words": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+     "detail": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。"
+    },
+    {
+     "w": "daytime",
+     "word": "daytime",
+     "name": "daytime",
+     "en": "daytime",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/park-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/sun.svg",
+        "x": 0.5,
+        "y": 0.4,
+        "s": 0.5,
+        "anim": "spin",
+        "z": 2
+       },
+       {
+        "actor": "walk-cn-teacher-case",
+        "x": 0.1,
+        "y": 0.7,
+        "s": 0.6,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.1,
+          0.7
+         ],
+         "to": [
+          0.9,
+          0.7
+         ],
+         "offset": 0
+        }
+       }
+      ]
+     },
+     "text": "daytime 只指白天这段时间，和 night-time 相对。",
+     "say": "daytime 只指白天这段时间，和 night-time 相对。",
+     "diff": "daytime 只指白天这段时间，和 night-time 相对。",
+     "note": "daytime 只指白天这段时间，和 night-time 相对。",
+     "desc": "daytime 只指白天这段时间，和 night-time 相对。",
+     "m": "daytime 只指白天这段时间，和 night-time 相对。",
+     "mean": "daytime 只指白天这段时间，和 night-time 相对。",
+     "line": "daytime 只指白天这段时间，和 night-time 相对。",
+     "explain": "daytime 只指白天这段时间，和 night-time 相对。",
+     "zh": "daytime 只指白天这段时间，和 night-time 相对。",
+     "def": "daytime 只指白天这段时间，和 night-time 相对。",
+     "gloss": "daytime 只指白天这段时间，和 night-time 相对。",
+     "sense": "daytime 只指白天这段时间，和 night-time 相对。",
+     "comment": "daytime 只指白天这段时间，和 night-time 相对。",
+     "hint": "daytime 只指白天这段时间，和 night-time 相对。",
+     "txt": "daytime 只指白天这段时间，和 night-time 相对。",
+     "talk": "daytime 只指白天这段时间，和 night-time 相对。",
+     "words": "daytime 只指白天这段时间，和 night-time 相对。",
+     "detail": "daytime 只指白天这段时间，和 night-time 相对。"
+    },
+    {
+     "w": "era",
+     "word": "era",
+     "name": "era",
+     "en": "era",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/castle-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 2.2,
+        "z": -5
+       },
+       {
+        "svg": "art/photo.svg",
+        "x": 0.5,
+        "y": 0.54,
+        "s": 0.56,
+        "anim": "bob",
+        "z": 2
+       }
+      ]
+     },
+     "text": "era 是一个时代、纪元，多说大的历史时期。",
+     "say": "era 是一个时代、纪元，多说大的历史时期。",
+     "diff": "era 是一个时代、纪元，多说大的历史时期。",
+     "note": "era 是一个时代、纪元，多说大的历史时期。",
+     "desc": "era 是一个时代、纪元，多说大的历史时期。",
+     "m": "era 是一个时代、纪元，多说大的历史时期。",
+     "mean": "era 是一个时代、纪元，多说大的历史时期。",
+     "line": "era 是一个时代、纪元，多说大的历史时期。",
+     "explain": "era 是一个时代、纪元，多说大的历史时期。",
+     "zh": "era 是一个时代、纪元，多说大的历史时期。",
+     "def": "era 是一个时代、纪元，多说大的历史时期。",
+     "gloss": "era 是一个时代、纪元，多说大的历史时期。",
+     "sense": "era 是一个时代、纪元，多说大的历史时期。",
+     "comment": "era 是一个时代、纪元，多说大的历史时期。",
+     "hint": "era 是一个时代、纪元，多说大的历史时期。",
+     "txt": "era 是一个时代、纪元，多说大的历史时期。",
+     "talk": "era 是一个时代、纪元，多说大的历史时期。",
+     "words": "era 是一个时代、纪元，多说大的历史时期。",
+     "detail": "era 是一个时代、纪元，多说大的历史时期。"
+    }
+   ],
+   "logic": "day 是最小的单位，意思从“太阳在天上的那一段”往外长；daytime 是 day + time；era 本来是“计年的起点”。",
+   "tip": "说白天、一天都用 day；只强调白天用 daytime；大的历史时代用 era 或 age。",
+   "pics": {
+    "day": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.5,
+       "y": 0.44,
+       "s": 0.56,
+       "anim": "spin",
+       "z": 2
+      }
+     ]
+    },
+    "daytime": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/park-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/sun.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.5,
+       "anim": "spin",
+       "z": 2
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.1,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.1,
+         0.7
+        ],
+        "to": [
+         0.9,
+         0.7
+        ],
+        "offset": 0
+       }
+      }
+     ]
+    },
+    "era": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 2.2,
+       "z": -5
+      },
+      {
+       "svg": "art/photo.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.56,
+       "anim": "bob",
+       "z": 2
+      }
+     ]
+    }
+   },
+   "notes": {
+    "day": "day 既是和 night 相对的白天，也是一整天；a day off 是休息日。",
+    "daytime": "daytime 只指白天这段时间，和 night-time 相对。",
+    "era": "era 是一个时代、纪元，多说大的历史时期。"
+   }
+  }
+ },
+ "插图": [
+  "dayai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人每天几点起床？\n听：I get up at six every day.\nA. 七点\nB. 五点\nC. 八点\nD. 六点",
@@ -90,5 +874,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

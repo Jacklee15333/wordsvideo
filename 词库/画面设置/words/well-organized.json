@@ -1,0 +1,612 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "组织得好的；井井有条的"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/star.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.5,
+     "anim": "spin"
+    },
+    {
+     "label": "好好地",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/rack.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.6,
+     "z": 2
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.5,
+     "y": 0.42,
+     "s": 0.2,
+     "anim": "bob",
+     "z": 3
+    },
+    {
+     "label": "被组织好的",
+     "x": 0.84,
+     "y": 0.1,
+     "size": 0.08,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/star.svg",
+  "p1": "art/rack.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/bedroom-bg.svg",
+  "items": [
+   {
+    "svg": "art/rack.svg",
+    "x": 0.5,
+    "y": 0.56,
+    "s": 0.6,
+    "z": 2
+   },
+   {
+    "svg": "art/books.svg",
+    "x": 0.5,
+    "y": 0.42,
+    "s": 0.2,
+    "anim": "bob",
+    "z": 3
+   },
+   {
+    "svg": "art/star.svg",
+    "x": 0.82,
+    "y": 0.3,
+    "s": 0.2,
+    "anim": "spin",
+    "z": 3
+   },
+   {
+    "label": "被好好组织过的",
+    "x": 0.2,
+    "y": 0.1,
+    "size": 0.08,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.8
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "组织得好的",
+   "pos": "形容词",
+   "diff": "活动、计划安排得周到",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "id": "t",
+     "x": 0.2,
+     "y": 0.6,
+     "s": 0.72,
+     "z": 3,
+     "seq": "talk"
+    },
+    {
+     "waves": true,
+     "on": "t",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "with": "t"
+    },
+    {
+     "actor": "west-girl-listen",
+     "id": "g",
+     "x": 0.84,
+     "y": 0.62,
+     "s": 0.66,
+     "z": 3,
+     "nodWith": "t"
+    },
+    {
+     "svg": "art/map.svg",
+     "x": 0.52,
+     "y": 0.34,
+     "s": 0.38,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "svg": "art/star.svg",
+     "x": 0.66,
+     "y": 0.2,
+     "s": 0.12,
+     "anim": "spin",
+     "z": 3
+    }
+   ],
+   "ex": "It was a well-organized trip.",
+   "exzh": "那是一次组织得很好的旅行。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "id": "m",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "waves": true,
+      "on": "m",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "m"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "id": "k",
+      "x": 0.84,
+      "y": 0.64,
+      "s": 0.64,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "m"
+     },
+     {
+      "svg": "art/map.svg",
+      "x": 0.52,
+      "y": 0.38,
+      "s": 0.42,
+      "when": "trip",
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.7,
+      "y": 0.2,
+      "s": 0.14,
+      "when": "well-organized",
+      "anim": "spin",
+      "z": 3
+     },
+     {
+      "label": "well-organized",
+      "x": 0.52,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "well-organized"
+     },
+     {
+      "label": "组织得很好",
+      "x": 0.52,
+      "y": 0.82,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "组织得很好"
+     }
+    ]
+   }
+  },
+  {
+   "text": "井井有条的",
+   "pos": "形容词",
+   "diff": "人做事有章法",
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/rack.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.6,
+     "z": 2
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.5,
+     "y": 0.42,
+     "s": 0.2,
+     "anim": "bob",
+     "z": 3
+    },
+    {
+     "svg": "art/clock.svg",
+     "x": 0.86,
+     "y": 0.3,
+     "s": 0.16,
+     "anim": "pulse",
+     "z": 2
+    },
+    {
+     "label": "井井有条",
+     "x": 0.16,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "My sister is very well-organized.",
+   "exzh": "我姐姐做事井井有条。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "id": "a",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "waves": true,
+      "on": "a",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "a"
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.66,
+      "y": 0.92,
+      "s": 0.34,
+      "z": 4
+     },
+     {
+      "svg": "art/organizer-box.svg",
+      "x": 0.66,
+      "y": 0.74,
+      "s": 0.22,
+      "when": "well-organized",
+      "anim": "bob",
+      "z": 5
+     },
+     {
+      "label": "well-organized",
+      "x": 0.66,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "well-organized"
+     },
+     {
+      "label": "井井有条",
+      "x": 0.66,
+      "y": 0.32,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "井井有条"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“被好好组织过的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/rack.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "z": 2
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.2,
+      "anim": "bob",
+      "z": 3
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.82,
+      "y": 0.3,
+      "s": 0.2,
+      "anim": "spin",
+      "z": 3
+     },
+     {
+      "label": "被好好组织过的",
+      "x": 0.2,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "活动、计划安排得周到",
+   "node": "① 组织得好的",
+   "pos": "形容词",
+   "pic": 0,
+   "rule": "动词带着副词合成形容词，副词挪到前面，动词放在最后",
+   "ruleEx": "organize well → well-organized      keep well → well-kept",
+   "cap": "organize well → well-organized",
+   "say": [
+    "动词带着副词合成形容词时，副词挪到前面，动词放在最后。",
+    "keep well 是保管得好，合起来 well-kept，就是保养得好的。",
+    "organize well 是组织得好，合起来 well-organized，就是组织得好的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "label": "副词挪到前面",
+      "x": 0.5,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "副词挪到前面",
+      "hideCue": 1
+     },
+     {
+      "label": "动词放在最后",
+      "x": 0.5,
+      "y": 0.6,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "动词放在最后",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/organizer-box.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.46,
+      "cue": 1,
+      "when": "保管得好",
+      "anim": "bob",
+      "hideCue": 2
+     },
+     {
+      "label": "well-kept",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "well-kept",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/map.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.46,
+      "cue": 2,
+      "when": "组织得好",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.74,
+      "y": 0.26,
+      "s": 0.14,
+      "cue": 2,
+      "when": "组织得好的",
+      "anim": "spin"
+     },
+     {
+      "label": "组织得好的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "组织得好的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "人做事有章法",
+   "node": "② 井井有条的",
+   "pos": "形容词",
+   "pic": 1,
+   "say": [
+    "说人做事有章法，也用 well-organized，井井有条的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/rack.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "z": 2
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.2,
+      "anim": "bob",
+      "z": 3,
+      "when": "有章法"
+     },
+     {
+      "label": "井井有条的",
+      "x": 0.84,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "井井有条的"
+     }
+    ]
+   }
+  }
+ ],
+ "kaodian": {
+  "rows": [
+   "意思：① 组织得好的 ② 井井有条的",
+   "搭配：a well-organized trip / event / student",
+   "形近词：organized 有条理的；well-kept 保养得好的",
+   "写法：放在名词前加连字符（a well-organized trip）；放在 be 后面常分开写（The trip was well organized.）"
+  ]
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人觉得运动会怎么样？",
+    "listen": "The sports meeting was well-organized.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "组织得很好",
+     "很乱",
+     "被取消了",
+     "很无聊"
+    ],
+    "ans": "A",
+    "why": "well-organized 组织得好的。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "It was a ______ trip; everything went smoothly.",
+    "opts": [
+     "well-organized",
+     "badly organized",
+     "organizing",
+     "organization"
+    ],
+    "ans": "A",
+    "why": "一切顺利，说明组织得好。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 organize、organized 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Who will ______ the class trip?",
+    "opts": [],
+    "ans": "organize",
+    "why": "will 后面用动词原形 organize。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Her room is always ______ and clean. (organize)",
+    "opts": [],
+    "ans": "organized",
+    "why": "be 后面用形容词 organized（有条理的）。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The party was good organized.",
+    "opts": [],
+    "ans": "good → well",
+    "why": "修饰过去分词 organized 用副词 well。",
+    "kd": "用法"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这次会议组织得很差。",
+    "stem": "The meeting was ______ organized.",
+    "opts": [],
+    "ans": "badly",
+    "why": "“组织得差”用副词 badly，和 well 相反。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Her desk is very ______; everything is in its place.",
+    "opts": [
+     "dirty",
+     "tidy",
+     "messy",
+     "untidy"
+    ],
+    "ans": "B",
+    "why": "东西都在原位，是整齐 tidy，和 well-organized 意思相近。",
+    "kd": "易混"
+   }
+  ]
+ }
+}
