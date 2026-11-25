@@ -1409,6 +1409,9 @@ def relay_ai_report(info, pasted=False, tid=None):
     if tid is not None:
         log("网页 AI 汇报（%s）：%s" % ({"done": "写完了", "stop": "停下了", "wait": "等检查结果"}.get(state, state or "说了一句"),
                                     (text.split("\n", 1)[-1] if text.startswith("【单词工作台·汇报】") else text)[:600] or why), tid)
+        F = RELAY.get("final") or {}
+        if F.get("tid") == tid:                  # v1.18.0：“本轮任务完成”那张卡片写上：网页 AI 也汇报了
+            F["aiSaid"] = {"t": time.time(), "state": state}
         return
     with _RELAY_LOCK:
         RELAY["aiReport"] = {"t": time.time(), "state": state, "text": text, "why": why, "pasted": pasted,
@@ -1548,8 +1551,8 @@ def relay_parts(prompt, words, kind, rnd):
     import clip
     words = list(words)        # 自己留一份：调用方做完一个词会从它的列表里删，不能跟着变（v1.10.10：以前一批做完会出错停下）
     cfg = load_cfg()
-    use_clip = clip.WIN and cfg.get("relayClipboard", True)
     ibox = inbox_on(cfg)
+    use_clip = clip.WIN and cfg.get("relayClipboard", True) and not ibox   # v1.18.0：网页 AI 自己上传时不看剪贴板（复制提示词会被当成回复）
     tid = (RUNNER.task or {}).get("id")
     ipath, resumed, sv = "", False, _relay_load()
     if ibox:
@@ -2332,8 +2335,8 @@ def _looks_reply(text, words):
     t = text or ""
     if END not in t or len(t) < 80:
         return False
-    if "【做画面】" in t or "【改软件】" in t or "【出题规矩】" in t:     # 复制的是提示词本身
-        return False
+    if any(k in t for k in ("【做画面", "【补画面", "【改软件】", "【出题规矩】", "【这一段就是要你复制", "【写完一个就上传一个", 'NAME = "inbox/')):
+        return False             # 复制的是提示词本身（v1.18.0：以前只认“【做画面】”，提示词开头其实是“【做画面 · 这一批…】”，被当成了回复）
     return any(("@" + w) in t or ("＠" + w) in t for w in words) or '"pics"' in t
 
 
@@ -2345,8 +2348,8 @@ def relay_wait(prompt, words):
     RELAY_SKIP.clear()
     import clip
     cfg = load_cfg()
-    use_clip = clip.WIN and cfg.get("relayClipboard", True)
     ibox = inbox_on(cfg)
+    use_clip = clip.WIN and cfg.get("relayClipboard", True) and not ibox   # v1.18.0：网页 AI 自己上传时不看剪贴板（复制提示词会被当成回复）
     ib0 = inbox_cfg(cfg)
     if not ibox and cfg.get("provider") == "relay" and ib0.get("enabled") and ib0["token"]:
         log("收件箱令牌像是万能令牌，没写进提示词（这一批照旧要你点「复制」）：「⚙ 设置」里换成「收件箱用」小令牌，点「检测收件箱」",

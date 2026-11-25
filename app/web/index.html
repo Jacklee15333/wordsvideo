@@ -390,6 +390,7 @@ tr.wdim td.w{color:var(--faint)}
 .rcont .rcb{align-items:center}
 .rcont .btn.ghost{background:#fff}
 .rfinal{margin-bottom:12px;border-left:4px solid var(--pass)}
+.pgate{font-size:13px;background:#FFF4E0;border:1px solid #F0D2A0;color:#7A4B00;border-radius:4px;padding:7px 12px;margin:8px 0 2px;line-height:1.7}
 .rfinal .hd{font-weight:600;font-size:14.5px;color:var(--pass)}
 .rfinal ul{margin:4px 0 6px;padding-left:18px;font-size:12.5px;color:var(--muted)}
 .rcont{border:1px solid #F0D9B0;background:#fff;border-radius:4px;padding:8px 10px;margin:0 0 8px}
@@ -864,13 +865,14 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 <section id="p-pic">
   <div class="phead"><div><h2><i class="sn">5</i>画面：视频里的画</h2>
     <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="picbulk" class="">批量</a><a data-go="pic" class="on">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="on">画面</a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0">这次给哪些词做画面 <span class="small faint" id="picPickN"></span></h3>
     <p class="small muted" style="margin:0 0 8px">就是第 3 步「选词」里选上的词。要先有题目才能做画面；已经有画面的不重做。</p>
     <div class="rep" id="picCheck" hidden></div>
     <details class="pickbox" id="picPickBox"><summary id="picPickSum">选上的词（点开看每个词）</summary><div class="plist" id="picPick"></div></details>
-    <div class="pgo"><button class="btn kbig" id="tPics">给要做的词做画面 ▶</button><button class="btn kbig" id="picNext" hidden onclick="go('video')">下一步：出视频 ▶</button><button class="btn ghost kbig" id="picMore" title="选上的词做完了，再多做一些：按总表顺序接着做，或者自己输入单词">接着做…</button><span class="small muted" id="picMsg">只做画面，不出题。一个词几分钟，做的过程就在下面。</span></div>
+    <div class="pgate" id="picGate" hidden></div>
+    <div class="pgo"><button class="btn kbig" id="picResume" hidden>继续未完成 ▶</button><button class="btn ghost" id="picCancelOld" hidden>取消它</button><button class="btn kbig" id="tPics">做画面 ▶</button><button class="btn kbig" id="picNext" hidden onclick="go('video')">出视频 ▶</button><button class="btn ghost kbig" id="picMore" title="选上的词做完了，再多做一些：按总表顺序接着做，或者自己输入单词">接着做…</button><span class="small muted" id="picMsg">只做画面，不出题。一个词几分钟，做的过程就在下面。</span></div>
   </div>
   <div class="sprog" data-step="pic">
     <h3>这一步的进度</h3>
@@ -881,11 +883,12 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 </section>
 
 <section id="p-pichist">
-  <div class="phead"><div><h2><i class="sn">5</i>画面：生成历史</h2>
-    <p class="muted">做完一批，这里多一行：几点做的、哪些词、做好几个、没做成几个。点一行看这一批每个词，点词看它的画面。</p></div></div>
-  <div class="mtabs stabs"><a data-go="picbulk" class="">批量</a><a data-go="pic" class="">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="on">生成历史</a></div>
+  <div class="phead"><div><h2><i class="sn">5</i>画面：视频里的画</h2>
+    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="on">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0">生成历史 <span class="small faint" id="ghN"></span></h3>
+    <p class="small muted" style="margin:-4px 0 6px">做完一批，这里多一行：几点做的、哪些词、做好几个、没做成几个。点一行看这一批每个词，点词看它的画面。</p>
     <div class="small muted" id="picSave" style="margin:-4px 0 8px"></div>
     <div id="genHist"></div>
   </div>
@@ -899,22 +902,23 @@ details.vwl>summary{font-size:12.5px;color:var(--muted);cursor:pointer;padding:3
 
 
 <section id="p-picfail">
-  <div class="phead"><div><h2><i class="sn">5</i>画面：没做成的词</h2>
-    <p class="muted">AI 改了几轮还没过检查的画面。看一下原因，点「这些再试一次」交给 AI 重做。</p></div></div>
-  <div class="mtabs stabs"><a data-go="picbulk" class="">批量</a><a data-go="pic" class="">画面</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
-  <div class="box"><h3 style="margin-top:0">画面没做成的词</h3>
+  <div class="phead"><div><h2><i class="sn">5</i>画面：视频里的画</h2>
+    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="box"><h3 style="margin-top:0">画面没做成的词</h3><p class="small muted" style="margin:-4px 0 8px">AI 改了几轮还没过检查的画面。看一下原因，点「这些再试一次」交给 AI 重做。</p>
       <div id="picFail" class="small">—</div>
       <div class="line"><button class="btn ghost sm" id="tPicRedo">这些再试一次</button></div></div></div>
 </div>
 </section>
 
 <section id="p-picbulk">
-  <div class="phead"><div><h2><i class="sn">5</i>画面：批量</h2>
-    <p class="muted">不按选上的词，按总表顺序给已经有题目的词一口气做一批画面。做的过程在「画面」那一页下面。</p></div></div>
-  <div class="mtabs stabs"><a data-go="picbulk" class="on">批量</a><a data-go="pic" class="">画面</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="phead"><div><h2><i class="sn">5</i>画面：视频里的画</h2>
+    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picbulk" class="on">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><div class="tally" id="picStats">—</div></div>
   <div class="box" style="margin-top:14px">
     <h3 style="margin-top:0">按总表顺序接着做</h3>
+    <p class="small muted" style="margin:-4px 0 8px">不按选上的词，按总表顺序给已经有题目的词一口气做一批画面。做的过程在「画面」那一页下面。</p>
     <div class="line">接着做 <input type="number" id="tPCount" value="20" min="0" style="width:76px"> 个词 <span class="small faint">只做已经有题目的；一个词几分钟</span></div>
     <div class="pgo"><button class="btn" id="tPicsNext">开始做这一批</button><span class="small muted" id="pbMsg"></span></div>
   </div>
@@ -1382,6 +1386,9 @@ async function stepTasks(step){TLt=Date.now();
   const sec=document.querySelector(`.sprog[data-step="${step}"]`);if(!sec)return;
   let d;try{d=await api('/api/tasks')}catch(e){return}
   const mine=d.tasks.filter(t=>stepOf(t)===step),act=['运行中','排队','已暂停'];
+  {const u=d.tasks.filter(t=>act.includes(t.status)&&['q','pic'].includes(stepOf(t))&&!(t.status==='排队'&&t.run_after>Date.now()/1000)).sort((a,b)=>a.id-b.id)[0];
+   let p={};try{p=JSON.parse((u||{}).progress||'{}')}catch(e){}
+   PGATE=u?{id:u.id,title:u.title,status:u.status,done:p.processed,total:p.total}:null;picGate()}
   const live=mine.filter(t=>act.includes(t.status)),done=mine.filter(t=>!act.includes(t.status)).slice(0,10);
   if(step==='q'||step==='pic')repRender(step,d.tasks);
   const sig=live.map(t=>t.id+t.status).join()+'|'+done.length;if(SDONE[step]!==undefined&&SDONE[step]!==sig){if(step==='q')loadQ();if(step==='pic')loadPic()}SDONE[step]=sig;
@@ -1513,10 +1520,22 @@ function picPickRender(){const pk=picked();picCheckRender();
       const act=fin?'<span class="ck-y">✓ 做好了</span>':lost?'<span class="ck-bad">✗ 没做成</span>':doing?'<span class="pst pst-doing">正在做</span>':will?'<span class="pst pst-will">能做</span>':i.pic?'<span class="small faint">不用做（有了）</span>':'<span class="small" style="color:var(--amber)">不能做：先出题</span>';
       return `<tr class="${will||doing?'':'dim'}"><td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,30)}</td><td>${i.q?'<span class="ck-y">有</span>':'<span class="ck-n">没有</span>'}</td><td>${now}</td><td>${act}</td></tr>`}).join('')+'</table>'
     :'<div class="pempty">还没有选上的词。到第 3 步「选词」勾上要做画面的词。</div>';
-  $('#tPics').textContent=PP.length?`给这 ${PP.length} 个词做画面 ▶`:'给要做的词做画面 ▶';$('#tPics').disabled=!PP.length;
+  $('#tPics').textContent=PP.length?`做画面（${PP.length} 个）▶`:'做画面 ▶';$('#tPics').disabled=!PP.length;
   const allP=pk.length&&!PP.length&&pk.every(i=>i.pic);$('#picNext').hidden=!allP;
-  if(allP)$('#picMsg').textContent='选上的词都有画面了，点「下一步：出视频」去出视频。';
-  else if($('#picMsg').textContent.startsWith('选上的词都有画面了'))$('#picMsg').textContent='只做画面，不出题。一个词几分钟，做的过程就在下面。'}
+  if(allP)$('#picMsg').textContent='选上的词都有画面了，可以去出视频。';
+  else if($('#picMsg').textContent.startsWith('选上的词都有画面了'))$('#picMsg').textContent='只做画面，不出题。一个词几分钟，做的过程就在下面。';
+  picGate()}
+/* v1.18.0：一次只能有一个没做完的任务——有暂停着的，最前面是「继续未完成」；在做、暂停着的时候，新的开始不了（免得网页 AI 传上来的混在一起） */
+let PGATE=null;
+function picGate(){const t=PGATE,on=!!t,paused=on&&t.status==='已暂停';
+  $('#picResume').hidden=!paused;$('#picCancelOld').hidden=!paused;$('#picGate').hidden=!on;
+  if(on)$('#picGate').innerHTML=paused?`<b>有没做完的任务</b>：#${t.id} ${esc(t.title)}（暂停了${t.done!=null?`，做了 ${t.done}${t.total?' / '+t.total:''} 个`:''}）。点「继续未完成」接着做；不要了就点「取消它」。做完或者取消以后，才能开始新的。`
+    :`正在做任务 #${t.id}：${esc(t.title)}。它做完了才能开始新的（免得网页 AI 传上来的混在一起）。`;
+  for(const id of ['tPics','picMore']){const b=$('#'+id);if(on){b.disabled=true;b.title='先做完或者取消没做完的任务'}else{b.title=id==='picMore'?'选上的词做完了，再多做一些：按总表顺序接着做，或者自己输入单词':'';if(id==='picMore')b.disabled=false}}}
+$('#picResume').onclick=async()=>{const t=PGATE;if(!t)return;$('#picResume').disabled=true;await api('/api/task/op',{id:t.id,op:'resume'});
+  toast('接着做了：做的过程在下面',5000);setTimeout(()=>{$('#picResume').disabled=false;poll();stepTasks('pic');stepScroll()},600)};
+$('#picCancelOld').onclick=async()=>{const t=PGATE;if(!t||!confirm(`取消没做完的任务 #${t.id}（${t.title}）？\n已经做好的画面留着；没做完的词，以后再做。`))return;
+  await api('/api/task/op',{id:t.id,op:'cancel'});PGATE=null;picGate();toast('取消了：现在可以开始新的了',5000);setTimeout(()=>{poll();stepTasks('pic');loadPic()},600)};
 const picImg=(w,f)=>`<figure><img loading="lazy" src="/api/res/file?p=${encodeURIComponent('画面/'+w+'/'+f)}" alt="${esc(f)}"><figcaption>${esc(f.replace(/\.svg$/,''))}</figcaption></figure>`;
 const fmtT=t=>{if(!t)return '';const d=new Date(t*1000),z=n=>String(n).padStart(2,'0');return `${z(d.getMonth()+1)}-${z(d.getDate())} ${z(d.getHours())}:${z(d.getMinutes())}`};
 let GHALL=false;
@@ -2020,11 +2039,15 @@ $('#rView').onclick=async()=>{let f;try{f=await api('/api/relay?full=1')}catch(e
 function rFinalRender(d){const F=d.final,el=$('#rFinal');let seen=0;try{seen=+localStorage.getItem('rfinalSeen')||0}catch(e){}
   const on=!!F&&!d.show&&page==='pic'&&F.t>(Date.now()/1000-6*3600)&&seen!==F.t&&['做画面','补画面'].includes(F.kind);
   if(on){const sl=document.querySelector('.sprog[data-step="pic"] .tslot');if(sl&&el.parentElement!==sl)sl.insertBefore(el,sl.firstChild)}
-  el.hidden=!on;if(!on)return;const bad=F.bad||[],sig=F.t+'|'+bad.length;if(el.dataset.s===sig)return;el.dataset.s=sig;
+  el.hidden=!on;if(!on)return;const bad=F.bad||[],sig=F.t+'|'+bad.length+'|'+!!F.aiSaid;
+  const aiLine=()=>{const a=$('#rFinalAi');if(!a)return;a.textContent=F.aiSaid?`网页 AI 也汇报了：${{done:'写完了',stop:'停下了',wait:'等检查结果'}[F.aiSaid.state]||'说了一句'}（${hm(F.aiSaid.t).slice(0,5)}）`:
+    (Date.now()/1000-F.t<600?'网页 AI 那边还在收尾（等检查结果、写最后的汇报，一般一两分钟），不用管它：画面都存好了':'')};
+  if(el.dataset.s===sig){aiLine();return}el.dataset.s=sig;
   el.innerHTML=`<div class="hd">✓ 本轮任务完成</div><div>${esc(F.kind)}：一共 ${F.n} 个词，做好 <b>${F.ok}</b> 个${bad.length?`，没做成 <b>${bad.length}</b> 个`:''} <span class="faint">· ${hm(F.t0).slice(0,5)} → ${hm(F.t).slice(0,5)}，用了 ${secs(F.t-F.t0)}</span></div>
     ${bad.length?`<ul>${bad.slice(0,30).map(([w,why])=>`<li><a href="#" onclick="picWordModal('${esc(w)}');return false">${esc(w)}</a>：${esc(why)}</li>`).join('')}</ul><div class="small muted">没做成的在「画面」页上面「补画面…」里，攒够了一起补。</div>`:''}
+    <div class="small muted" id="rFinalAi" style="margin-top:4px"></div>
     <div class="line" style="margin-top:6px"><button class="btn ghost sm" onclick="go('pichist')">看生成历史</button> <button class="btn ghost sm" id="rFinalX">知道了</button></div>`;
-  $('#rFinalX').onclick=()=>{try{localStorage.setItem('rfinalSeen',String(F.t))}catch(e){}el.hidden=true}}
+  aiLine();$('#rFinalX').onclick=()=>{try{localStorage.setItem('rfinalSeen',String(F.t))}catch(e){}el.hidden=true}}
 setInterval(pollInfo,1000);
 $('#rSzChunk').oninput=$('#rSzRound').oninput=()=>{SZDIRTY=true;$('#rSzSave').disabled=false;$('#rSzSave').textContent='保存';$('#rSzMsg').textContent='改了还没保存';$('#rSzMsg').style.color='var(--amber)'};
 $('#rSzSave').onclick=async()=>{const c=Math.round(+$('#rSzChunk').value),r=Math.round(+$('#rSzRound').value);
