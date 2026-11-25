@@ -1,0 +1,892 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "不假思索地、轻率地；不体谅人地"
+ },
+ "sylIpa": [
+  "ˈθɔːtləs",
+  "li"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/bubble.svg",
+     "x": 0.35,
+     "y": 0.42,
+     "s": 0.5,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/jar-empty.svg",
+     "x": 0.75,
+     "y": 0.55,
+     "s": 0.45,
+     "anim": "shake"
+    },
+    {
+     "label": "thoughtless 没有考虑的",
+     "x": 0.5,
+     "y": 0.9,
+     "size": 0.08,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/footsteps.svg",
+     "x": 0.45,
+     "y": 0.5,
+     "s": 0.55,
+     "anim": "bob"
+    },
+    {
+     "label": "-ly …地",
+     "x": 0.5,
+     "y": 0.9,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-jar-empty.svg",
+  "p1": "art/icon-footsteps.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/jar-empty.svg",
+    "x": 0.3,
+    "y": 0.55,
+    "s": 0.5,
+    "anim": "shake"
+   },
+   {
+    "svg": "art/footsteps.svg",
+    "x": 0.72,
+    "y": 0.55,
+    "s": 0.4,
+    "anim": "bob"
+   },
+   {
+    "label": "不加考虑地",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.1,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "不假思索地、轻率地",
+   "pos": "副词",
+   "diff": "做事前没动脑子",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.35,
+     "y": 0.6,
+     "s": 0.85,
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2
+    },
+    {
+     "svg": "art/bigx.svg",
+     "x": 0.72,
+     "y": 0.35,
+     "s": 0.3,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.93,
+     "s": 0.28,
+     "z": 6
+    }
+   ],
+   "ex": "She answered thoughtlessly and got it wrong.",
+   "exzh": "她不假思索地回答，结果答错了。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "when": "answered",
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/bigx.svg",
+      "x": 0.68,
+      "y": 0.4,
+      "s": 0.4,
+      "when": "wrong",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "label": "不假思索地",
+      "x": 0.68,
+      "y": 0.85,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "不假思索地"
+     }
+    ]
+   }
+  },
+  {
+   "text": "不体谅人地",
+   "pos": "副词",
+   "diff": "没替别人想一想（往往不是故意的）",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/litter.svg",
+     "x": 0.45,
+     "y": 0.86,
+     "s": 0.15,
+     "anim": "shake"
+    },
+    {
+     "svg": "art/trashbin.svg",
+     "x": 0.85,
+     "y": 0.65,
+     "s": 0.35
+    },
+    {
+     "actor": "walk-west-boy-pack",
+     "x": 0.05,
+     "y": 0.66,
+     "s": 0.6,
+     "z": 4,
+     "walk": {
+      "from": [
+       0.05,
+       0.66
+      ],
+      "to": [
+       0.7,
+       0.66
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.2,
+     "y": 0.62,
+     "s": 0.7,
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2
+    }
+   ],
+   "ex": "He thoughtlessly dropped litter on the street.",
+   "exzh": "他不顾别人，随手把垃圾扔在街上。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.05,
+      "y": 0.66,
+      "s": 0.6,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.05,
+        0.66
+       ],
+       "to": [
+        0.7,
+        0.66
+       ],
+       "offset": 0
+      },
+      "when": "He"
+     },
+     {
+      "svg": "art/litter.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.18,
+      "when": "dropped litter",
+      "pop": true,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/trashbin.svg",
+      "x": 0.88,
+      "y": 0.62,
+      "s": 0.35,
+      "when": "street"
+     },
+     {
+      "label": "随手扔在街上",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "随手"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“不加考虑地”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/jar-empty.svg",
+      "x": 0.3,
+      "y": 0.55,
+      "s": 0.5,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/footsteps.svg",
+      "x": 0.72,
+      "y": 0.55,
+      "s": 0.4,
+      "anim": "bob",
+      "delay": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "via": "形容词加 -ly 变副词",
+   "node": "thoughtless + ly",
+   "pos": "副词",
+   "rule": "形容词 + -ly → 副词：…地",
+   "ruleEx": "careless → carelessly      thoughtless → thoughtlessly",
+   "cap": "没有考虑的 → 不加考虑地",
+   "say": [
+    "形容词后面加 -ly，就变成副词，说怎么做事。",
+    "careless 是粗心的，carelessly 就是粗心地。",
+    "thoughtless 加上 -ly，就是 thoughtlessly，不加考虑地。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "形容词 + -ly",
+      "x": 0.3,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "-ly",
+      "hideCue": 1
+     },
+     {
+      "label": "副词",
+      "x": 0.72,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "变成副词",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/footsteps.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.4,
+      "when": "怎么做事",
+      "hideCue": 1,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/spill.svg",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.35,
+      "when": "粗心的",
+      "hideCue": 2,
+      "anim": "shake"
+     },
+     {
+      "label": "carelessly 粗心地",
+      "x": 0.72,
+      "y": 0.55,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "carelessly",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/jar-empty.svg",
+      "x": 0.3,
+      "y": 0.55,
+      "s": 0.4,
+      "when": "thoughtless 加上",
+      "anim": "shake"
+     },
+     {
+      "label": "thoughtlessly",
+      "x": 0.72,
+      "y": 0.45,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "thoughtlessly"
+     },
+     {
+      "label": "不加考虑地",
+      "x": 0.72,
+      "y": 0.68,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "不加考虑地"
+     }
+    ]
+   }
+  },
+  {
+   "via": "做事前没动脑子",
+   "node": "① 不假思索地、轻率地",
+   "pos": "副词",
+   "pic": 0,
+   "cap": "没考虑 → 不假思索",
+   "say": [
+    "做事前没动脑子，张口就说、伸手就做，就是不假思索地、轻率地。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-smile",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.85,
+      "z": 3,
+      "when": "没动脑子",
+      "seq": "blink"
+     },
+     {
+      "svg": "art/jar-empty.svg",
+      "x": 0.68,
+      "y": 0.3,
+      "s": 0.3,
+      "when": "没动脑子",
+      "anim": "shake"
+     },
+     {
+      "svg": "art/vase-broken.svg",
+      "x": 0.7,
+      "y": 0.8,
+      "s": 0.22,
+      "when": "伸手就做",
+      "anim": "shake"
+     },
+     {
+      "label": "不假思索地",
+      "x": 0.68,
+      "y": 0.6,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "不假思索地"
+     }
+    ]
+   }
+  },
+  {
+   "via": "没替别人想一想",
+   "node": "② 不体谅人地",
+   "pos": "副词",
+   "pic": 1,
+   "from": 1,
+   "cap": "没替别人想",
+   "say": [
+    "没替别人想一想，就是不体谅人地。",
+    "它往往不是故意的，只是没想到。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.95,
+      "y": 0.66,
+      "s": 0.6,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.95,
+        0.66
+       ],
+       "to": [
+        0.4,
+        0.66
+       ],
+       "offset": 0
+      },
+      "when": "没替别人想一想"
+     },
+     {
+      "svg": "art/litter.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.15,
+      "when": "不体谅人地",
+      "anim": "shake"
+     },
+     {
+      "label": "不体谅人地",
+      "x": 0.3,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "不体谅人地"
+     },
+     {
+      "label": "不是故意的",
+      "x": 0.75,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "不是故意的"
+     }
+    ]
+   }
+  }
+ ],
+ "demo": {
+  "sadly": {
+   "icons": [
+    "art/icon-raincloud.svg",
+    "art/icon-footsteps.svg"
+   ],
+   "lit": "难过地",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.45,
+      "y": 0.35,
+      "s": 0.55,
+      "anim": "bob"
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.45,
+      "y": 0.5,
+      "every": 0.35,
+      "life": 1.2,
+      "to": [
+       0,
+       0.3
+      ],
+      "s": 0.07,
+      "wobble": 0.06
+     }
+    ]
+   }
+  },
+  "basically": {
+   "icons": [
+    "art/icon-cards.svg",
+    "art/icon-footsteps.svg"
+   ],
+   "lit": "从根本上",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/house.svg",
+      "x": 0.45,
+      "y": 0.5,
+      "s": 0.65,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/cards.svg",
+      "x": 0.85,
+      "y": 0.7,
+      "s": 0.3
+     }
+    ]
+   }
+  },
+  "forward": {
+   "icons": [
+    "art/icon-turnarrow.svg",
+    "art/icon-footsteps.svg"
+   ],
+   "lit": "向前",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/footsteps.svg",
+      "x": 0.35,
+      "y": 0.55,
+      "s": 0.55,
+      "anim": "bob",
+      "go": [
+       0.65,
+       0.55
+      ],
+      "loop": true,
+      "dur": 2.5
+     },
+     {
+      "svg": "art/afterarrow.svg",
+      "x": 0.82,
+      "y": 0.3,
+      "s": 0.3,
+      "anim": "pulse"
+     }
+    ]
+   }
+  }
+ },
+ "extend": [
+  {
+   "w": "carelessly",
+   "m": "粗心地",
+   "share": "ly"
+  },
+  {
+   "w": "thoughtfully",
+   "m": "体贴地",
+   "share": "ly"
+  }
+ ],
+ "kaodian": {
+  "rows": [
+   "【搭配】act thoughtlessly 轻率行事；speak thoughtlessly 说话不经大脑",
+   "【反义】thoughtlessly ↔ thoughtfully 体贴地",
+   "【易混】thoughtlessly / deliberately：一个是没想到，一个是故意地"
+  ]
+ },
+ "distinguish": {
+  "key": "不假思索地",
+  "items": [
+   {
+    "w": "thoughtlessly",
+    "word": "thoughtlessly",
+    "name": "thoughtlessly",
+    "zh": "不假思索地、轻率地",
+    "m": "不假思索地、轻率地",
+    "mean": "不假思索地、轻率地",
+    "meaning": "不假思索地、轻率地",
+    "say": "thoughtlessly 往往不是故意的，只是没想到。",
+    "text": "thoughtlessly 往往不是故意的，只是没想到。",
+    "line": "thoughtlessly 往往不是故意的，只是没想到。",
+    "note": "thoughtlessly 往往不是故意的，只是没想到。",
+    "desc": "thoughtlessly 往往不是故意的，只是没想到。",
+    "diff": "thoughtlessly 往往不是故意的，只是没想到。",
+    "explain": "thoughtlessly 往往不是故意的，只是没想到。",
+    "detail": "thoughtlessly 往往不是故意的，只是没想到。",
+    "sentence": "thoughtlessly 往往不是故意的，只是没想到。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/jar-empty.svg",
+       "x": 0.35,
+       "y": 0.55,
+       "s": 0.6,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/vase-broken.svg",
+       "x": 0.75,
+       "y": 0.7,
+       "s": 0.4,
+       "anim": "shake"
+      }
+     ]
+    }
+   },
+   {
+    "w": "deliberately",
+    "word": "deliberately",
+    "name": "deliberately",
+    "zh": "故意地",
+    "m": "故意地",
+    "mean": "故意地",
+    "meaning": "故意地",
+    "say": "deliberately 才是故意地、有意地，想好了才做。",
+    "text": "deliberately 才是故意地、有意地，想好了才做。",
+    "line": "deliberately 才是故意地、有意地，想好了才做。",
+    "note": "deliberately 才是故意地、有意地，想好了才做。",
+    "desc": "deliberately 才是故意地、有意地，想好了才做。",
+    "diff": "deliberately 才是故意地、有意地，想好了才做。",
+    "explain": "deliberately 才是故意地、有意地，想好了才做。",
+    "detail": "deliberately 才是故意地、有意地，想好了才做。",
+    "sentence": "deliberately 才是故意地、有意地，想好了才做。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/chess.svg",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.5
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.8,
+       "y": 0.45,
+       "s": 0.55,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "instinctively",
+    "word": "instinctively",
+    "name": "instinctively",
+    "zh": "本能地",
+    "m": "本能地",
+    "mean": "本能地",
+    "meaning": "本能地",
+    "say": "instinctively 是本能地、下意识地，来不及想身体就动了。",
+    "text": "instinctively 是本能地、下意识地，来不及想身体就动了。",
+    "line": "instinctively 是本能地、下意识地，来不及想身体就动了。",
+    "note": "instinctively 是本能地、下意识地，来不及想身体就动了。",
+    "desc": "instinctively 是本能地、下意识地，来不及想身体就动了。",
+    "diff": "instinctively 是本能地、下意识地，来不及想身体就动了。",
+    "explain": "instinctively 是本能地、下意识地，来不及想身体就动了。",
+    "detail": "instinctively 是本能地、下意识地，来不及想身体就动了。",
+    "sentence": "instinctively 是本能地、下意识地，来不及想身体就动了。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/umbrella.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "swing"
+      },
+      {
+       "svg": "art/raincloud.svg",
+       "x": 0.8,
+       "y": 0.3,
+       "s": 0.4,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "逻辑不同：thoughtlessly 是该想没想；deliberately 是想好了才做；instinctively 是不用想、天生会这样。",
+  "tip": "没想到、欠考虑用 thoughtlessly；故意用 deliberately；本能地、下意识用 instinctively。",
+  "pics": {
+   "thoughtlessly": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/jar-empty.svg",
+      "x": 0.35,
+      "y": 0.55,
+      "s": 0.6,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/vase-broken.svg",
+      "x": 0.75,
+      "y": 0.7,
+      "s": 0.4,
+      "anim": "shake"
+     }
+    ]
+   },
+   "deliberately": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/chess.svg",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.5
+     },
+     {
+      "svg": "art/bulb.svg",
+      "x": 0.8,
+      "y": 0.45,
+      "s": 0.55,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "instinctively": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/umbrella.svg",
+      "x": 0.4,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/raincloud.svg",
+      "x": 0.8,
+      "y": 0.3,
+      "s": 0.4,
+      "anim": "bob"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：他是怎么说话的？",
+    "listen": "He spoke thoughtlessly and hurt her feelings.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "很温柔",
+     "不假思索",
+     "很小声",
+     "很有礼貌"
+    ],
+    "ans": "B",
+    "why": "thoughtlessly 不假思索地。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She ______ threw the paper on the floor.",
+    "opts": [
+     "thoughtless",
+     "thoughtlessly",
+     "thoughtful",
+     "thought"
+    ],
+    "ans": "B",
+    "why": "修饰动词 threw 用副词 thoughtlessly。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 thoughtless、thoughtlessly 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "It was ______ of you to be so late.",
+    "opts": [],
+    "ans": "thoughtless",
+    "why": "It was + 形容词 + of you，用 thoughtless。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He always acts ______ and helps others. (thoughtlessly)",
+    "opts": [],
+    "ans": "thoughtfully",
+    "why": "总帮助别人，是体贴地 thoughtfully。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He answered thoughtless without reading the question.",
+    "opts": [],
+    "ans": "thoughtless → thoughtlessly",
+    "why": "修饰动词 answered 要用副词 thoughtlessly。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "他说话前总是先想一想。",
+    "stem": "He always thinks ______ he speaks.",
+    "opts": [],
+    "ans": "before",
+    "why": "before 在……之前。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Don't act ______; think first.",
+    "opts": [
+     "careful",
+     "carefully",
+     "caring",
+     "carelessly"
+    ],
+    "ans": "D",
+    "why": "别轻率地做事，carelessly 和 thoughtlessly 意思相近。",
+    "kd": "易混"
+   }
+  ]
+ }
+}

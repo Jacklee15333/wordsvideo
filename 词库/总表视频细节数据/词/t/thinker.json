@@ -458,6 +458,104 @@
     }
    }
   ],
+  "demo": {
+   "driver": {
+    "icons": [
+     "art/icon-bus.svg",
+     "art/icon-badge.svg"
+    ],
+    "lit": "开车的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/bus.svg",
+       "x": 0.45,
+       "y": 0.55,
+       "s": 0.55,
+       "anim": "ride"
+      },
+      {
+       "svg": "art/badge.svg",
+       "x": 0.85,
+       "y": 0.3,
+       "s": 0.3,
+       "anim": "swing"
+      }
+     ]
+    }
+   },
+   "actor": {
+    "icons": [
+     "art/icon-footsteps.svg",
+     "art/icon-badge.svg"
+    ],
+    "lit": "演戏的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/mic.svg",
+       "x": 0.45,
+       "y": 0.55,
+       "s": 0.65,
+       "anim": "swing"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.3,
+       "crowd": 9,
+       "z": 6
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.45,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.8,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "wobble": 0.03
+      }
+     ]
+    }
+   },
+   "artist": {
+    "icons": [
+     "art/icon-painting.svg",
+     "art/icon-badge.svg"
+    ],
+    "lit": "搞艺术的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/painting.svg",
+       "x": 0.45,
+       "y": 0.5,
+       "s": 0.65,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/badge.svg",
+       "x": 0.85,
+       "y": 0.65,
+       "s": 0.3,
+       "anim": "swing"
+      }
+     ]
+    }
+   }
+  },
   "extend": [
    {
     "w": "teacher",
@@ -690,5 +788,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
