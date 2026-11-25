@@ -1,7 +1,787 @@
 {
  "单词": "mistaken",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "mɪˈsteɪk",
+   "ən"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/umbrella.svg",
+      "x": 0.3,
+      "y": 0.56,
+      "s": 0.5,
+      "anim": "swing"
+     },
+     {
+      "svg": "art/umbrella-blue.svg",
+      "x": 0.72,
+      "y": 0.56,
+      "s": 0.5
+     },
+     {
+      "svg": "art/hand-grab.svg",
+      "x": 0.9,
+      "y": 0.2,
+      "s": 0.3,
+      "go": [
+       0.36,
+       0.3
+      ],
+      "dur": 1.6,
+      "wait": 0.4
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.34
+     },
+     {
+      "svg": "art/exam-v.svg",
+      "x": 0.46,
+      "y": 0.5,
+      "s": 0.56,
+      "anim": "pulse",
+      "z": 3
+     },
+     {
+      "svg": "art/pen.svg",
+      "x": 0.74,
+      "y": 0.66,
+      "s": 0.2,
+      "z": 4
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-mistake.svg",
+   "p1": "art/icon-en.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/exam-x.svg",
+     "x": 0.42,
+     "y": 0.5,
+     "s": 0.6,
+     "anim": "shake"
+    },
+    {
+     "svg": "art/question.svg",
+     "x": 0.8,
+     "y": 0.36,
+     "s": 0.34,
+     "anim": "bob"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "（人）弄错了的、误会了的",
+    "pos": "形容词",
+    "diff": "人把事情想错了",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3,
+      "id": "t"
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.72,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 3,
+      "nodWith": "t"
+     },
+     {
+      "svg": "art/sum-wrong.svg",
+      "x": 0.5,
+      "y": 0.26,
+      "s": 0.3,
+      "anim": "pulse",
+      "z": 4
+     }
+    ],
+    "ex": "If I'm not mistaken, the bus leaves at six.",
+    "exzh": "如果我没记错，公交车六点开。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/bus.svg",
+       "x": 0.95,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "bus",
+       "go": [
+        0.56,
+        0.56
+       ],
+       "goWhen": "bus",
+       "dur": 1.4,
+       "anim": "ride"
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.16,
+       "y": 0.3,
+       "s": 0.34,
+       "when": "six",
+       "anim": "pulse"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.05,
+       "y": 0.74,
+       "s": 0.46,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.05,
+         0.74
+        ],
+        "to": [
+         0.5,
+         0.74
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "label": "not mistaken",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "when": "mistaken",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "没记错",
+       "x": 0.84,
+       "y": 0.1,
+       "size": 0.075,
+       "when": "没记错",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "错误的",
+    "pos": "形容词",
+    "diff": "想法、判断本身是错的",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.28,
+      "y": 0.58,
+      "s": 0.88,
+      "z": 3
+     },
+     {
+      "svg": "art/question.svg",
+      "x": 0.66,
+      "y": 0.36,
+      "s": 0.44,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/exam-x.svg",
+      "x": 0.86,
+      "y": 0.66,
+      "s": 0.3,
+      "anim": "shake"
+     }
+    ],
+    "ex": "That was a mistaken idea.",
+    "exzh": "那是个错误的想法。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.26,
+       "y": 0.58,
+       "s": 0.86,
+       "z": 3
+      },
+      {
+       "svg": "art/question.svg",
+       "x": 0.6,
+       "y": 0.36,
+       "s": 0.44,
+       "when": "idea",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/sum-wrong.svg",
+       "x": 0.82,
+       "y": 0.7,
+       "s": 0.3,
+       "when": "mistaken"
+      },
+      {
+       "label": "mistaken",
+       "x": 0.6,
+       "y": 0.08,
+       "size": 0.075,
+       "when": "mistaken",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "错误的",
+       "x": 0.6,
+       "y": 0.66,
+       "size": 0.075,
+       "when": "错误的",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "text": "认错了人（mistaken identity）",
+    "pos": "短语",
+    "diff": "把人认错了",
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.34,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3
+     },
+     {
+      "svg": "art/photo.svg",
+      "x": 0.62,
+      "y": 0.3,
+      "s": 0.26,
+      "anim": "bob",
+      "z": 4
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.95,
+      "y": 0.74,
+      "s": 0.44,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.95,
+        0.74
+       ],
+       "to": [
+        0.4,
+        0.74
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.05,
+      "y": 0.78,
+      "s": 0.4,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.05,
+        0.78
+       ],
+       "to": [
+        0.9,
+        0.78
+       ],
+       "offset": 1.6
+      }
+     }
+    ],
+    "ex": "It was a case of mistaken identity.",
+    "exzh": "这是一次认错人的事。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.3,
+       "y": 0.58,
+       "s": 0.86,
+       "z": 3
+      },
+      {
+       "svg": "art/photo.svg",
+       "x": 0.62,
+       "y": 0.34,
+       "s": 0.3,
+       "when": "identity",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/question.svg",
+       "x": 0.8,
+       "y": 0.24,
+       "s": 0.24,
+       "when": "认错人",
+       "pop": true
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.95,
+       "y": 0.78,
+       "s": 0.42,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.95,
+         0.78
+        ],
+        "to": [
+         0.4,
+         0.78
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "label": "mistaken identity",
+       "x": 0.3,
+       "y": 0.08,
+       "size": 0.075,
+       "when": "mistaken identity",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "认错人",
+       "x": 0.86,
+       "y": 0.5,
+       "size": 0.075,
+       "when": "认错人",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“弄错了的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/exam-x.svg",
+       "x": 0.42,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/question.svg",
+       "x": 0.8,
+       "y": 0.36,
+       "s": 0.34,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "via": "人把事情想错了",
+    "node": "① （人）弄错了的",
+    "pos": "形容词",
+    "pic": 0,
+    "rule": "动词加 en（过去分词），变成形容词",
+    "ruleEx": "mistake 弄错 → mistaken 弄错了的      take 拿 → taken 有人的",
+    "say": [
+     "mistake 是弄错，加上 en，变成形容词 mistaken：弄错了的。",
+     "人把事情想错了，就说 You are mistaken，比 You are wrong 客气。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "label": "加上 en",
+       "x": 0.3,
+       "y": 0.14,
+       "size": 0.09,
+       "when": "加上 en",
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "label": "形容词",
+       "x": 0.72,
+       "y": 0.14,
+       "size": 0.09,
+       "when": "形容词",
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "svg": "art/exam-x.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "弄错了的",
+       "anim": "shake"
+      },
+      {
+       "label": "You are mistaken",
+       "x": 0.3,
+       "y": 0.86,
+       "size": 0.075,
+       "when": "You are mistaken",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "label": "You are wrong",
+       "x": 0.74,
+       "y": 0.86,
+       "size": 0.075,
+       "when": "You are wrong",
+       "color": "#C92A2A",
+       "border": "#C92A2A"
+      }
+     ]
+    }
+   },
+   {
+    "via": "想法、判断本身是错的",
+    "node": "② 错误的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "后来，想法、判断本身是错的，也说 mistaken：错误的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/question.svg",
+       "x": 0.36,
+       "y": 0.44,
+       "s": 0.5,
+       "when": "想法",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/sum-wrong.svg",
+       "x": 0.72,
+       "y": 0.5,
+       "s": 0.4,
+       "when": "判断"
+      },
+      {
+       "label": "错误的",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.1,
+       "when": "错误的",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   },
+   {
+    "via": "把人认错了",
+    "node": "③ 认错了人",
+    "pos": "短语",
+    "pic": 2,
+    "say": [
+     "mistaken identity，就是把人认错了。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/photo.svg",
+       "x": 0.36,
+       "y": 0.46,
+       "s": 0.46,
+       "when": "identity",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/question.svg",
+       "x": 0.7,
+       "y": 0.36,
+       "s": 0.4,
+       "when": "认错了",
+       "pop": true
+      },
+      {
+       "label": "认错了",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.1,
+       "when": "认错了",
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "mistakenly",
+    "m": "错误地",
+    "share": "mistaken"
+   },
+   {
+    "w": "taken",
+    "m": "take 的过去分词",
+    "share": "taken"
+   }
+  ],
+  "demo": {
+   "active": {
+    "icons": [
+     "art/icon-act.svg",
+     "art/icon-ive.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/ball.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.82,
+       "anim": "bob"
+      }
+     ]
+    },
+    "lit": "爱活动的"
+   },
+   "usable": {
+    "icons": [
+     "art/icon-use.svg",
+     "art/icon-able.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/pen.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "anim": "swing"
+      }
+     ]
+    },
+    "lit": "能用的"
+   },
+   "interested": {
+    "icons": [
+     "art/icon-interest.svg",
+     "art/icon-ed.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/scroll.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.84
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.76,
+       "y": 0.36,
+       "s": 0.3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "感兴趣的"
+   }
+  },
+  "distinguish": {
+   "key": "错误的",
+   "items": [
+    {
+     "w": "mistaken",
+     "word": "mistaken",
+     "m": "弄错了的；错误的",
+     "diff": "mistaken 多说人弄错了、想法判断错了，语气委婉客气。",
+     "say": "mistaken 多说人弄错了、想法判断错了，语气委婉客气。",
+     "line": "mistaken 多说人弄错了、想法判断错了，语气委婉客气。",
+     "note": "mistaken 多说人弄错了、想法判断错了，语气委婉客气。",
+     "desc": "mistaken 多说人弄错了、想法判断错了，语气委婉客气。",
+     "explain": "mistaken 多说人弄错了、想法判断错了，语气委婉客气。",
+     "zh": "mistaken 多说人弄错了、想法判断错了，语气委婉客气。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/question.svg",
+        "x": 0.46,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/photo.svg",
+        "x": 0.84,
+        "y": 0.6,
+        "s": 0.4
+       }
+      ]
+     }
+    },
+    {
+     "w": "wrong",
+     "word": "wrong",
+     "m": "错的",
+     "diff": "wrong 最普通、最直接：不对、错了，什么都能说。",
+     "say": "wrong 最普通、最直接：不对、错了，什么都能说。",
+     "line": "wrong 最普通、最直接：不对、错了，什么都能说。",
+     "note": "wrong 最普通、最直接：不对、错了，什么都能说。",
+     "desc": "wrong 最普通、最直接：不对、错了，什么都能说。",
+     "explain": "wrong 最普通、最直接：不对、错了，什么都能说。",
+     "zh": "wrong 最普通、最直接：不对、错了，什么都能说。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/exam-x.svg",
+        "x": 0.46,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "shake"
+       },
+       {
+        "svg": "art/pen.svg",
+        "x": 0.82,
+        "y": 0.62,
+        "s": 0.36
+       }
+      ]
+     }
+    },
+    {
+     "w": "false",
+     "word": "false",
+     "m": "假的、不真实的",
+     "diff": "false 是不真实、假的，和 true 相对，比如判断题里的 F。",
+     "say": "false 是不真实、假的，和 true 相对，比如判断题里的 F。",
+     "line": "false 是不真实、假的，和 true 相对，比如判断题里的 F。",
+     "note": "false 是不真实、假的，和 true 相对，比如判断题里的 F。",
+     "desc": "false 是不真实、假的，和 true 相对，比如判断题里的 F。",
+     "explain": "false 是不真实、假的，和 true 相对，比如判断题里的 F。",
+     "zh": "false 是不真实、假的，和 true 相对，比如判断题里的 F。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/tf-card.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/pen.svg",
+        "x": 0.84,
+        "y": 0.62,
+        "s": 0.36
+       }
+      ]
+     }
+    },
+    {
+     "w": "incorrect",
+     "word": "incorrect",
+     "m": "不正确的",
+     "diff": "incorrect 是不正确，比 wrong 正式，多说答案、计算、用法。",
+     "say": "incorrect 是不正确，比 wrong 正式，多说答案、计算、用法。",
+     "line": "incorrect 是不正确，比 wrong 正式，多说答案、计算、用法。",
+     "note": "incorrect 是不正确，比 wrong 正式，多说答案、计算、用法。",
+     "desc": "incorrect 是不正确，比 wrong 正式，多说答案、计算、用法。",
+     "explain": "incorrect 是不正确，比 wrong 正式，多说答案、计算、用法。",
+     "zh": "incorrect 是不正确，比 wrong 正式，多说答案、计算、用法。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/sum-wrong.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/books.svg",
+        "x": 0.86,
+        "y": 0.66,
+        "s": 0.3
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "mistaken 是 mistake 加 en，“弄错了的”，客气；wrong 直接；false 是假的；incorrect 正式的不正确。",
+   "tip": "客气地说对方错了：I'm afraid you are mistaken。"
+  }
+ },
+ "插图": [
+  "mistakenai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人认为对方怎么样？\n听：I'm afraid you are mistaken.\nA. 弄错了\nB. 说对了\nC. 迟到了\nD. 累了",
@@ -89,5 +869,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

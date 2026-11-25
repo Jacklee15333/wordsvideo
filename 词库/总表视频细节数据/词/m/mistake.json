@@ -285,15 +285,15 @@
      {
       "svg": "art/salt.svg",
       "x": 0.34,
-      "y": 0.6,
-      "s": 0.4,
+      "y": 0.56,
+      "s": 0.5,
       "z": 3
      },
      {
       "svg": "art/sugar.svg",
       "x": 0.66,
-      "y": 0.6,
-      "s": 0.4,
+      "y": 0.56,
+      "s": 0.5,
       "z": 3
      },
      {
@@ -360,7 +360,7 @@
        "when": "错当成"
       },
       {
-       "label": "mistake A for B",
+       "label": "mistake",
        "x": 0.5,
        "y": 0.1,
        "size": 0.075,
@@ -668,6 +668,84 @@
     "share": "take"
    }
   ],
+  "demo": {
+   "unhappy": {
+    "icons": [
+     "art/icon-un.svg",
+     "art/icon-happy.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/wilted.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.82,
+       "anim": "swing"
+      }
+     ]
+    },
+    "lit": "不高兴的"
+   },
+   "unlock": {
+    "icons": [
+     "art/icon-un.svg",
+     "art/icon-lock.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/padlock.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.82,
+       "anim": "shake"
+      }
+     ]
+    },
+    "lit": "打开锁"
+   },
+   "incorrect": {
+    "icons": [
+     "art/icon-in-not.svg",
+     "art/icon-correct.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/sum-wrong.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "不正确的"
+   },
+   "misunderstand": {
+    "icons": [
+     "art/icon-mis.svg",
+     "art/icon-understand.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/question.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.82,
+       "anim": "bob"
+      }
+     ]
+    },
+    "lit": "理解错"
+   }
+  },
   "distinguish": {
    "key": "错误 / 误解",
    "items": [
@@ -924,5 +1002,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
