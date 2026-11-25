@@ -22,7 +22,7 @@
      "z": 3
     },
     {
-     "actor": "west-girl-listen",
+     "actor": "west-girl-raise",
      "x": 0.15,
      "y": 0.66,
      "s": 0.72,
@@ -77,6 +77,38 @@
      "color": "#7A3E00",
      "bg": "#FFF6D8",
      "border": "#E0A800"
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "walk": {
+      "from": [
+       1.05,
+       0.88
+      ],
+      "to": [
+       -0.05,
+       0.88
+      ],
+      "offset": 0.1
+     },
+     "s": 0.32,
+     "z": 1
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "walk": {
+      "from": [
+       -0.05,
+       0.9
+      ],
+      "to": [
+       1.05,
+       0.9
+      ],
+      "offset": 0.6
+     },
+     "s": 0.32,
+     "z": 1
     }
    ]
   }
@@ -104,7 +136,7 @@
     "wobble": 0.4
    },
    {
-    "actor": "west-girl-surprised",
+    "actor": "west-girl-listen",
     "x": 0.4,
     "y": 0.64,
     "s": 0.82,
@@ -127,6 +159,38 @@
     "delay": 1.2,
     "color": "#2B8A3E",
     "border": "#2B8A3E"
+   },
+   {
+    "actor": "walk-west-woman-case",
+    "walk": {
+     "from": [
+      1.05,
+      0.88
+     ],
+     "to": [
+      -0.05,
+      0.88
+     ],
+     "offset": 0.1
+    },
+    "s": 0.32,
+    "z": 1
+   },
+   {
+    "actor": "walk-cn-boy-pack",
+    "walk": {
+     "from": [
+      -0.05,
+      0.9
+     ],
+     "to": [
+      1.05,
+      0.9
+     ],
+     "offset": 0.6
+    },
+    "s": 0.32,
+    "z": 1
    }
   ]
  },
@@ -161,7 +225,7 @@
      "z": 3
     },
     {
-     "actor": "cn-boy-raise",
+     "actor": "cn-teacher-laugh",
      "x": 0.7,
      "y": 0.64,
      "s": 0.8,
@@ -185,6 +249,38 @@
      "delay": 1.0,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "walk": {
+      "from": [
+       1.05,
+       0.88
+      ],
+      "to": [
+       -0.05,
+       0.88
+      ],
+      "offset": 0.1
+     },
+     "s": 0.32,
+     "z": 1
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "walk": {
+      "from": [
+       -0.05,
+       0.9
+      ],
+      "to": [
+       1.05,
+       0.9
+      ],
+      "offset": 0.6
+     },
+     "s": 0.32,
+     "z": 1
     }
    ],
    "ex": "Thanks for your timely help.",
@@ -213,7 +309,9 @@
       "x": 0.3,
       "y": 0.64,
       "s": 0.84,
-      "z": 3
+      "z": 3,
+      "talkWhen": "Thanks",
+      "seq": "talk"
      },
      {
       "actor": "cn-boy-raise",
@@ -221,7 +319,8 @@
       "y": 0.64,
       "s": 0.82,
       "z": 3,
-      "when": "help"
+      "when": "help",
+      "nodWith": "g"
      },
      {
       "svg": "art/umbrella.svg",
@@ -255,6 +354,38 @@
       "when": "及时的帮助",
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.88
+       ],
+       "to": [
+        -0.05,
+        0.88
+       ],
+       "offset": 0.1
+      },
+      "s": 0.32,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "walk": {
+       "from": [
+        -0.05,
+        0.9
+       ],
+       "to": [
+        1.05,
+        0.9
+       ],
+       "offset": 0.6
+      },
+      "s": 0.32,
+      "z": 1
      }
     ]
    }
@@ -282,7 +413,7 @@
       "wobble": 0.4
      },
      {
-      "actor": "west-girl-surprised",
+      "actor": "west-girl-listen",
       "x": 0.4,
       "y": 0.64,
       "s": 0.82,
@@ -305,6 +436,38 @@
       "delay": 1.2,
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.88
+       ],
+       "to": [
+        -0.05,
+        0.88
+       ],
+       "offset": 0.1
+      },
+      "s": 0.32,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "walk": {
+       "from": [
+        -0.05,
+        0.9
+       ],
+       "to": [
+        1.05,
+        0.9
+       ],
+       "offset": 0.6
+      },
+      "s": 0.32,
+      "z": 1
      }
     ]
    }
@@ -339,12 +502,14 @@
       "when": "下起了雨"
      },
      {
-      "actor": "west-girl-surprised",
+      "actor": "west-girl-explain",
       "x": 0.3,
       "y": 0.64,
       "s": 0.82,
       "z": 3,
-      "when": "没带伞"
+      "when": "没带伞",
+      "id": "g",
+      "seq": "talk"
      },
      {
       "actor": "cn-boy-raise",
@@ -353,7 +518,8 @@
       "s": 0.82,
       "z": 3,
       "cue": 1,
-      "when": "同学"
+      "when": "同学",
+      "nodWith": "g"
      },
      {
       "svg": "art/umbrella.svg",
@@ -386,6 +552,38 @@
       "when": "及时的",
       "color": "#2B8A3E",
       "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.88
+       ],
+       "to": [
+        -0.05,
+        0.88
+       ],
+       "offset": 0.1
+      },
+      "s": 0.32,
+      "z": 1
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "walk": {
+       "from": [
+        -0.05,
+        0.9
+       ],
+       "to": [
+        1.05,
+        0.9
+       ],
+       "offset": 0.6
+      },
+      "s": 0.32,
+      "z": 1
      }
     ]
    }
@@ -423,7 +621,7 @@
       "z": 3
      },
      {
-      "actor": "cn-boy-raise",
+      "actor": "west-girl-raise",
       "x": 0.5,
       "y": 0.64,
       "s": 0.86,
@@ -473,6 +671,180 @@
      }
     ]
    }
+  },
+  "key": "及时的",
+  "items": [
+   {
+    "w": "timely",
+    "gloss": "及时的、适时的",
+    "note": "来得正是时候，不早也不晚（timely help）"
+   },
+   {
+    "w": "prompt",
+    "gloss": "迅速的、立刻的",
+    "note": "一叫就马上做，强调快（a prompt answer）"
+   },
+   {
+    "w": "on time",
+    "gloss": "准时",
+    "note": "照约好的时间，不早不晚（The bus came on time.）；是短语，不是形容词"
+   }
+  ],
+  "logic": "timely 是 time + ly：“合乎时候的”，重在时机对；prompt 重在动作快；on time 重在和约好的钟点对上"
+ },
+ "demo": {
+  "careful": {
+   "icons": [
+    "art/plant.svg",
+    "art/star.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "z": 3,
+      "anim": "bob"
+     },
+     {
+      "label": "小心的",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.12,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "lit": "满是小心的"
+  },
+  "careless": {
+   "icons": [
+    "art/plant.svg",
+    "art/icon-ly.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.46,
+      "y": 0.6,
+      "s": 0.46,
+      "rot": 50,
+      "z": 3,
+      "anim": "shake"
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.6,
+      "y": 0.62,
+      "every": 0.25,
+      "life": 0.9,
+      "to": [
+       0.1,
+       0.3
+      ],
+      "s": 0.06
+     },
+     {
+      "label": "粗心的",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.12,
+      "color": "#C0392B",
+      "border": "#C0392B"
+     }
+    ]
+   },
+   "lit": "没有小心的"
+  },
+  "friendly": {
+   "icons": [
+    "art/star.svg",
+    "art/icon-ly.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "every": 0.5,
+      "life": 1.4,
+      "to": [
+       0.1,
+       -0.2
+      ],
+      "s": 0.07,
+      "spin": true
+     },
+     {
+      "actor": "walk-cn-girl",
+      "walk": {
+       "from": [
+        -0.05,
+        0.84
+       ],
+       "to": [
+        1.05,
+        0.84
+       ],
+       "offset": 0.0
+      },
+      "s": 0.34,
+      "z": 1
+     },
+     {
+      "actor": "walk-west-man-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.5
+      },
+      "s": 0.34,
+      "z": 1
+     },
+     {
+      "label": "友好的",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.12,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "lit": "像朋友那样的"
   }
  },
  "lianxi": {

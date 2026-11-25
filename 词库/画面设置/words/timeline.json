@@ -45,11 +45,12 @@
    "items": [
     {
      "id": "t",
-     "actor": "cn-teacher-point",
+     "actor": "west-man-present",
      "x": 0.18,
      "y": 0.6,
      "s": 0.86,
-     "z": 3
+     "z": 3,
+     "seq": "talk"
     },
     {
      "ray": [
@@ -96,11 +97,12 @@
     "z": 3
    },
    {
-    "actor": "cn-teacher-point",
+    "actor": "cn-boy-raise",
     "x": 0.14,
     "y": 0.62,
     "s": 0.8,
-    "z": 4
+    "z": 4,
+    "seq": "blink"
    },
    {
     "label": "时间线",
@@ -430,7 +432,17 @@
       "x": 0.5,
       "y": 0.42,
       "s": 0.56,
-      "z": 3
+      "z": 3,
+      "reveal": "right",
+      "rdur": 1.4
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.14,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 4,
+      "seq": "blink"
      },
      {
       "label": "时间线",
@@ -511,7 +523,7 @@
       "rdur": 1.4
      },
      {
-      "actor": "cn-teacher-point",
+      "actor": "west-man-point",
       "x": 0.1,
       "y": 0.66,
       "s": 0.7,

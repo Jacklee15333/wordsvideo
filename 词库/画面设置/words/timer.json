@@ -220,6 +220,15 @@
       "sfx": "bell"
      },
      {
+      "waves": true,
+      "x": 0.8,
+      "y": 0.44,
+      "dir": 0,
+      "both": true,
+      "n": 3,
+      "when": "定时器"
+     },
+     {
       "label": "定时器",
       "x": 0.8,
       "y": 0.72,
@@ -484,6 +493,15 @@
       "z": 4,
       "when": "叮铃铃",
       "sfx": "bell"
+     },
+     {
+      "waves": true,
+      "x": 0.78,
+      "y": 0.56,
+      "dir": 0,
+      "both": true,
+      "n": 3,
+      "when": "叮铃铃"
      }
     ]
    }
@@ -591,6 +609,144 @@
    "share": "er"
   }
  ],
+ "demo": {
+  "driver": {
+   "icons": [
+    "art/street-bg.svg",
+    "art/icon-er.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "label": "开车的人",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.12,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "walk": {
+       "from": [
+        -0.05,
+        0.84
+       ],
+       "to": [
+        1.05,
+        0.84
+       ],
+       "offset": 0.0
+      },
+      "s": 0.32,
+      "z": 1
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "walk": {
+       "from": [
+        1.05,
+        0.86
+       ],
+       "to": [
+        -0.05,
+        0.86
+       ],
+       "offset": 0.5
+      },
+      "s": 0.32,
+      "z": 1
+     }
+    ]
+   },
+   "lit": "开车的人"
+  },
+  "actor": {
+   "icons": [
+    "art/stage-bg.svg",
+    "art/icon-er.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "id": "a",
+      "actor": "west-man-speech",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.7,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 6,
+      "crowd": 9,
+      "nodWith": "a"
+     },
+     {
+      "label": "演戏的人",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.12,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "lit": "表演的人"
+  },
+  "artist": {
+   "icons": [
+    "art/photo.svg",
+    "art/icon-er.svg"
+   ],
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/photo.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.56,
+      "z": 3,
+      "rot": -4,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "every": 0.6,
+      "life": 1.4,
+      "to": [
+       0.1,
+       -0.2
+      ],
+      "s": 0.06,
+      "spin": true
+     },
+     {
+      "label": "搞艺术的人",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.12,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "lit": "搞艺术的人"
+  }
+ },
  "lianxi": {
   "qs": [
    {

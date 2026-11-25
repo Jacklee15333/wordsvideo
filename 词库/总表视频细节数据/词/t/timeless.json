@@ -24,7 +24,7 @@
       "z": 3
      },
      {
-      "actor": "west-girl-listen",
+      "actor": "west-girl-raise",
       "x": 0.15,
       "y": 0.66,
       "s": 0.72,
@@ -46,11 +46,16 @@
     "img": "art/room-bg.svg",
     "items": [
      {
-      "svg": "art/clock.svg",
+      "svg": "art/clock_f0.svg",
       "x": 0.5,
       "y": 0.48,
       "s": 0.56,
-      "z": 3
+      "z": 3,
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1
      },
      {
       "ray": [
@@ -321,6 +326,18 @@
        "s": 0.44,
        "z": 3,
        "when": "旧了",
+       "hideCue": 1,
+       "anim": "shake",
+       "sfx": "ring"
+      },
+      {
+       "waves": true,
+       "x": 0.5,
+       "y": 0.4,
+       "dir": 0,
+       "both": true,
+       "n": 3,
+       "when": "旧了",
        "hideCue": 1
       },
       {
@@ -363,7 +380,7 @@
        "when": "几百年"
       },
       {
-       "actor": "west-girl-listen",
+       "actor": "west-man-smile",
        "x": 0.92,
        "y": 0.7,
        "s": 0.6,
@@ -474,6 +491,164 @@
       }
      ]
     }
+   },
+   "key": "永恒的、经典的",
+   "items": [
+    {
+     "w": "timeless",
+     "gloss": "永恒的、经典的",
+     "note": "多夸作品、风格：过多少年都不过时（Fairy tales are timeless.）"
+    },
+    {
+     "w": "eternal",
+     "gloss": "永恒的、永远存在的",
+     "note": "说没有开始也没有结束，多用在宗教、哲学（eternal life）"
+    },
+    {
+     "w": "classic",
+     "gloss": "经典的、公认最好的",
+     "note": "说一类东西里的代表作、标准样子（a classic film）"
+    }
+   ],
+   "logic": "timeless 是 time + less：“时间管不着它”，重在不过时；eternal 重在永远存在；classic 从“头等的”来，重在公认最好"
+  },
+  "demo": {
+   "careful": {
+    "icons": [
+     "art/plant.svg",
+     "art/star.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.5,
+       "z": 3,
+       "anim": "bob"
+      },
+      {
+       "label": "小心的",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      }
+     ]
+    },
+    "lit": "满是小心的"
+   },
+   "careless": {
+    "icons": [
+     "art/plant.svg",
+     "art/icon-less.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.46,
+       "y": 0.6,
+       "s": 0.46,
+       "rot": 50,
+       "z": 3,
+       "anim": "shake"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.6,
+       "y": 0.62,
+       "every": 0.25,
+       "life": 0.9,
+       "to": [
+        0.1,
+        0.3
+       ],
+       "s": 0.06
+      },
+      {
+       "label": "粗心的",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.12,
+       "color": "#C0392B",
+       "border": "#C0392B"
+      }
+     ]
+    },
+    "lit": "没有小心的"
+   },
+   "rainy": {
+    "icons": [
+     "art/drop.svg",
+     "art/star.svg"
+    ],
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.02,
+       "every": 0.12,
+       "life": 1.1,
+       "to": [
+        0,
+        0.9
+       ],
+       "s": 0.05,
+       "wobble": 0.45
+      },
+      {
+       "actor": "walk-west-man-case",
+       "walk": {
+        "from": [
+         1.05,
+         0.84
+        ],
+        "to": [
+         -0.05,
+         0.84
+        ],
+        "offset": 0.0
+       },
+       "s": 0.34,
+       "z": 1
+      },
+      {
+       "label": "下雨的",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.12,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    },
+    "lit": "有雨的"
    }
   }
  },
