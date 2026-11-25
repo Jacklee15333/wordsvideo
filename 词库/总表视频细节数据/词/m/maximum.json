@@ -1,7 +1,748 @@
 {
  "单词": "maximum",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ˈmæks",
+   "ɪ",
+   "məm"
+  ],
+  "pics": [
+   {
+    "text": "最大量、最大限度",
+    "pos": "名词",
+    "diff": "能达到的最大数量、最高程度",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.93,
+      "s": 0.34,
+      "z": 4
+     },
+     {
+      "svg": "art/glass.svg",
+      "x": 0.42,
+      "y": 0.6,
+      "s": 0.55,
+      "z": 5,
+      "anim": "pulse"
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.36,
+      "y": 0.42,
+      "every": 0.8,
+      "life": 1.2,
+      "to": [
+       0.04,
+       0.3
+      ],
+      "s": 0.07
+     },
+     {
+      "svg": "art/gauge.svg",
+      "x": 0.82,
+      "y": 0.44,
+      "s": 0.3,
+      "z": 4,
+      "anim": "shake"
+     }
+    ],
+    "ex": "We can borrow a maximum of three books.",
+    "exzh": "我们最多能借三本书。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.24,
+       "y": 0.56,
+       "s": 0.9,
+       "z": 3,
+       "id": "e",
+       "seq": "talk"
+      },
+      {
+       "waves": true,
+       "on": "e",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#2F6FB3",
+       "with": "e"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.5,
+       "y": 0.7,
+       "s": 0.3,
+       "z": 4,
+       "when": "three books",
+       "delay": 0.0,
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.62,
+       "y": 0.7,
+       "s": 0.3,
+       "z": 4,
+       "when": "three books",
+       "delay": 0.3,
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.74,
+       "y": 0.7,
+       "s": 0.3,
+       "z": 4,
+       "when": "three books",
+       "delay": 0.6,
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.88,
+       "y": 0.58,
+       "s": 0.8,
+       "z": 3,
+       "nodWith": "e",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "label": "a maximum of",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#7A3E00",
+       "when": "a maximum of",
+       "bg": "#FFF6D8"
+      },
+      {
+       "label": "最多",
+       "x": 0.62,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "最多"
+      }
+     ]
+    }
+   },
+   {
+    "text": "最大的、最高的",
+    "pos": "形容词",
+    "diff": "放在名词前",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/speed-sign.svg",
+      "x": 0.5,
+      "y": 0.45,
+      "s": 0.6,
+      "z": 3,
+      "anim": "bob"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.05,
+      "y": 0.72,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.72
+       ],
+       "to": [
+        0.95,
+        0.72
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.95,
+      "y": 0.76,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.95,
+        0.76
+       ],
+       "to": [
+        0.1,
+        0.76
+       ],
+       "offset": 0.7
+      }
+     }
+    ],
+    "ex": "The maximum speed on this road is 60.",
+    "exzh": "这条路上的最高时速是 60。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/speed-sign.svg",
+       "x": 0.5,
+       "y": 0.45,
+       "s": 0.6,
+       "z": 3,
+       "when": "maximum speed",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.74,
+       "s": 0.48,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.74
+        ],
+        "to": [
+         0.95,
+         0.74
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.95,
+       "y": 0.76,
+       "s": 0.46,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.95,
+         0.76
+        ],
+        "to": [
+         0.1,
+         0.76
+        ],
+        "offset": 0.8
+       }
+      },
+      {
+       "label": "maximum speed",
+       "x": 0.2,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#7A3E00",
+       "when": "maximum speed",
+       "bg": "#FFF6D8"
+      },
+      {
+       "label": "最高时速",
+       "x": 0.82,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "最高时速"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“最大的那个量”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.93,
+       "s": 0.34,
+       "z": 4
+      },
+      {
+       "svg": "art/glass.svg",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.55,
+       "z": 5,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.34,
+       "y": 0.42,
+       "every": 0.8,
+       "life": 1.2,
+       "to": [
+        0.04,
+        0.3
+       ],
+       "s": 0.07,
+       "delay": 0.5
+      },
+      {
+       "svg": "art/gauge.svg",
+       "x": 0.8,
+       "y": 0.44,
+       "s": 0.3,
+       "z": 4,
+       "delay": 0.6,
+       "anim": "shake"
+      }
+     ]
+    }
+   },
+   {
+    "via": "能达到的最大数量、最高程度",
+    "node": "① 最大量、最大限度",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "能达到的最大数量、最高程度，就是最大量、最大限度。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.93,
+       "s": 0.34,
+       "z": 4
+      },
+      {
+       "svg": "art/glass.svg",
+       "x": 0.32,
+       "y": 0.6,
+       "s": 0.55,
+       "z": 5,
+       "when": "最大数量",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.26,
+       "y": 0.42,
+       "every": 0.8,
+       "life": 1.2,
+       "to": [
+        0.04,
+        0.3
+       ],
+       "s": 0.07,
+       "when": "最大数量"
+      },
+      {
+       "svg": "art/gauge.svg",
+       "x": 0.76,
+       "y": 0.46,
+       "s": 0.4,
+       "z": 4,
+       "when": "最高程度",
+       "pop": true,
+       "anim": "shake"
+      },
+      {
+       "label": "最大限度",
+       "x": 0.76,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "最大限度"
+      }
+     ]
+    }
+   },
+   {
+    "via": "放在名词前",
+    "node": "② 最大的、最高的",
+    "pos": "形容词",
+    "pic": 1,
+    "rule": "名词放在别的名词前面，也能当形容词用",
+    "ruleEx": "maximum speed 最高速度      stone wall 石墙",
+    "say": [
+     "名词放在别的名词前面，也能当形容词用。",
+     "stone 是石头，stone wall 就是石墙。",
+     "maximum 放在 speed 前面，maximum speed 就是最高速度，maximum 就是最大的、最高的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/tag-noun.svg",
+       "x": 0.25,
+       "y": 0.5,
+       "s": 0.42,
+       "z": 3,
+       "when": "名词",
+       "anim": "pulse",
+       "hideCue": 1
+      },
+      {
+       "ray": [
+        [
+         0.42,
+         0.5
+        ],
+        [
+         0.58,
+         0.5
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.7,
+       "when": "形容词",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/tag-adj.svg",
+       "x": 0.75,
+       "y": 0.5,
+       "s": 0.42,
+       "z": 3,
+       "when": "形容词",
+       "anim": "pulse",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/over.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.55,
+       "z": 3,
+       "cue": 1,
+       "when": "stone wall",
+       "anim": "pulse",
+       "hideCue": 2
+      },
+      {
+       "label": "stone wall",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#7A3E00",
+       "when": "stone wall",
+       "hideCue": 2,
+       "bg": "#FFF6D8"
+      },
+      {
+       "label": "石墙",
+       "x": 0.84,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "石墙",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/speed-sign.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "z": 3,
+       "pop": true,
+       "anim": "bob",
+       "cue": 2,
+       "when": "speed"
+      },
+      {
+       "label": "maximum speed",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#7A3E00",
+       "when": "maximum speed",
+       "bg": "#FFF6D8"
+      },
+      {
+       "label": "最高速度",
+       "x": 0.84,
+       "y": 0.86,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "最高速度"
+      }
+     ]
+    }
+   }
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/gauge.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "z": 3,
+      "anim": "shake"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.7,
+      "y": 0.25,
+      "every": 0.9,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.25
+      ],
+      "s": 0.08,
+      "spin": true
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/tag-noun.svg",
+      "x": 0.45,
+      "y": 0.5,
+      "s": 0.56,
+      "z": 3,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/gauge.svg",
+      "x": 0.84,
+      "y": 0.66,
+      "s": 0.26,
+      "z": 3,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-gauge.svg",
+   "p1": "art/icon-tag-noun.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.93,
+     "s": 0.34,
+     "z": 4
+    },
+    {
+     "svg": "art/glass.svg",
+     "x": 0.4,
+     "y": 0.6,
+     "s": 0.52,
+     "z": 5,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/gauge.svg",
+     "x": 0.8,
+     "y": 0.44,
+     "s": 0.3,
+     "z": 4,
+     "anim": "shake"
+    }
+   ]
+  },
+  "distinguish": {
+   "key": "最大的、最高的",
+   "items": [
+    {
+     "w": "maximum",
+     "m": "最大的、最高的",
+     "say": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/gauge.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.8,
+        "anim": "shake"
+       }
+      ]
+     },
+     "text": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "diff": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "line": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "note": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "desc": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "explain": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "sentence": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "talk": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "speech": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "zh": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "cn": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "why": "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。",
+     "lines": [
+      "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。"
+     ],
+     "says": [
+      "maximum 说数量、程度能达到的最大值，比如 maximum speed 最高速度。"
+     ],
+     "word": "maximum"
+    },
+    {
+     "w": "supreme",
+     "m": "至高的",
+     "say": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/castle-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/crown.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.7,
+        "anim": "bob"
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.5,
+        "y": 0.2,
+        "every": 0.9,
+        "life": 1.6,
+        "to": [
+         0,
+         -0.25
+        ],
+        "s": 0.08,
+        "spin": true
+       }
+      ]
+     },
+     "text": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "diff": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "line": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "note": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "desc": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "explain": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "sentence": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "talk": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "speech": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "zh": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "cn": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "why": "supreme 是至高无上的，说地位、权力、品质最高。",
+     "lines": [
+      "supreme 是至高无上的，说地位、权力、品质最高。"
+     ],
+     "says": [
+      "supreme 是至高无上的，说地位、权力、品质最高。"
+     ],
+     "word": "supreme"
+    },
+    {
+     "w": "top",
+     "m": "最高的、顶尖的",
+     "say": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/classroom-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/rank1.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.8,
+        "anim": "pulse"
+       }
+      ]
+     },
+     "text": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "diff": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "line": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "note": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "desc": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "explain": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "sentence": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "talk": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "speech": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "zh": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "cn": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "why": "top 是最高的、顶尖的，口语常用，比如 top speed、top student。",
+     "lines": [
+      "top 是最高的、顶尖的，口语常用，比如 top speed、top student。"
+     ],
+     "says": [
+      "top 是最高的、顶尖的，口语常用，比如 top speed、top student。"
+     ],
+     "word": "top"
+    }
+   ],
+   "logic": "逻辑不同：maximum 来自拉丁语的“最大”，supreme 来自“最上面的”，top 本是“顶端”。",
+   "tip": "maximum 的复数是 maximums；反义词 minimum，最小量。"
+  }
+ },
+ "插图": [
+  "maximumai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：这辆车最多能坐几个人？\n听：The car can carry a maximum of five people.\nA. 四个人\nB. 五个人\nC. 六个人\nD. 七个人",
@@ -88,5 +829,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

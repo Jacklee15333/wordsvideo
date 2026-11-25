@@ -1,0 +1,783 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈmæks",
+  "ɪ",
+  "maɪz"
+ ],
+ "pics": [
+  {
+   "text": "使最大化",
+   "pos": "动词",
+   "diff": "把数量、效果往上推到顶",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.93,
+     "s": 0.34,
+     "z": 4
+    },
+    {
+     "svg": "art/bar-chart.svg",
+     "x": 0.42,
+     "y": 0.56,
+     "s": 0.56,
+     "z": 5,
+     "s2": 0.62,
+     "grow": [
+      0.3,
+      2.0
+     ]
+    },
+    {
+     "actor": "west-clerk-happy",
+     "x": 0.82,
+     "y": 0.56,
+     "s": 0.88,
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2.5
+    }
+   ],
+   "ex": "We should maximize our use of time.",
+   "exzh": "我们应该最大限度地利用时间。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.24,
+      "y": 0.55,
+      "s": 0.9,
+      "z": 3,
+      "id": "t",
+      "seq": "talk"
+     },
+     {
+      "waves": true,
+      "on": "t",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#2F6FB3",
+      "with": "t"
+     },
+     {
+      "svg": "art/clock_f0.svg",
+      "frames": [
+       "art/clock_f0.svg",
+       "art/clock_f1.svg"
+      ],
+      "fps": 1,
+      "x": 0.56,
+      "y": 0.42,
+      "s": 0.46,
+      "z": 4,
+      "when": "time"
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.86,
+      "y": 0.58,
+      "s": 0.82,
+      "z": 3,
+      "nodWith": "t",
+      "seq": "blink"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.24,
+      "z": 5
+     },
+     {
+      "label": "maximize",
+      "x": 0.24,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "maximize",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "最大限度地利用",
+      "x": 0.56,
+      "y": 0.86,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "最大限度地利用"
+     }
+    ]
+   }
+  },
+  {
+   "text": "最大化（窗口）",
+   "pos": "动词",
+   "diff": "把电脑窗口拉到最大、占满屏幕",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.93,
+     "s": 0.34,
+     "z": 4
+    },
+    {
+     "svg": "art/laptop-small.svg",
+     "x": 0.45,
+     "y": 0.62,
+     "s": 0.5,
+     "z": 5,
+     "hide": 1.6
+    },
+    {
+     "svg": "art/laptop-max.svg",
+     "x": 0.45,
+     "y": 0.62,
+     "s": 0.5,
+     "z": 5,
+     "delay": 1.6,
+     "pop": true,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/lamp.svg",
+     "x": 0.86,
+     "y": 0.6,
+     "s": 0.36,
+     "z": 5,
+     "anim": "pulse"
+    }
+   ],
+   "ex": "Click here to maximize the window.",
+   "exzh": "点这里把窗口最大化。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.3,
+      "z": 4
+     },
+     {
+      "actor": "west-man-point",
+      "x": 0.22,
+      "y": 0.56,
+      "s": 0.9,
+      "z": 3,
+      "id": "p",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/laptop-small.svg",
+      "x": 0.6,
+      "y": 0.64,
+      "s": 0.48,
+      "z": 5,
+      "hideWhen": "maximize"
+     },
+     {
+      "svg": "art/laptop-max.svg",
+      "x": 0.6,
+      "y": 0.64,
+      "s": 0.48,
+      "z": 5,
+      "when": "maximize",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "label": "maximize the window",
+      "x": 0.6,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "maximize the window",
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "最大化",
+      "x": 0.88,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "最大化"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“使达到最大”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.93,
+      "s": 0.34,
+      "z": 4
+     },
+     {
+      "svg": "art/bar-chart.svg",
+      "x": 0.42,
+      "y": 0.56,
+      "s": 0.3,
+      "z": 5,
+      "s2": 0.6,
+      "grow": [
+       0.3,
+       2.0
+      ]
+     },
+     {
+      "svg": "art/gauge.svg",
+      "x": 0.82,
+      "y": 0.44,
+      "s": 0.28,
+      "z": 4,
+      "delay": 1.6,
+      "pop": true,
+      "anim": "shake"
+     }
+    ]
+   }
+  },
+  {
+   "via": "把数量、效果往上推到顶",
+   "node": "① 使最大化",
+   "pos": "动词",
+   "pic": 0,
+   "say": [
+    "把数量、效果往上推，一直推到顶，就是使最大化。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.93,
+      "s": 0.34,
+      "z": 4
+     },
+     {
+      "svg": "art/bar-chart.svg",
+      "x": 0.38,
+      "y": 0.56,
+      "s": 0.3,
+      "z": 5,
+      "s2": 0.6,
+      "when": "往上推",
+      "growWhen": "往上推",
+      "growDur": 1.4
+     },
+     {
+      "svg": "art/gauge.svg",
+      "x": 0.8,
+      "y": 0.44,
+      "s": 0.34,
+      "z": 4,
+      "when": "推到顶",
+      "pop": true,
+      "anim": "shake"
+     },
+     {
+      "label": "最大化",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "最大化"
+     }
+    ]
+   }
+  },
+  {
+   "via": "把电脑窗口拉到最大",
+   "node": "② 最大化（窗口）",
+   "pos": "动词",
+   "pic": 1,
+   "rule": "词的核心意思不变，换了对象、场合，中文要换个说法",
+   "ruleEx": "maximize 窗口 → 最大化      play 鼓 → 打鼓",
+   "say": [
+    "词的核心意思不变，换了对象、场合，中文要换个说法。",
+    "play 是玩，play the drum 就是打鼓。",
+    "maximize 用在电脑上，把窗口拉到最大、占满屏幕，就是最大化窗口。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "核心意思不变",
+      "x": 0.28,
+      "y": 0.4,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "核心意思不变",
+      "hideCue": 1
+     },
+     {
+      "ray": [
+       [
+        0.48,
+        0.4
+       ],
+       [
+        0.58,
+        0.4
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.7,
+      "when": "换了对象",
+      "hideCue": 1
+     },
+     {
+      "label": "换个说法",
+      "x": 0.76,
+      "y": 0.4,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "换个说法",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/bar-chart.svg",
+      "x": 0.5,
+      "y": 0.7,
+      "s": 0.36,
+      "z": 3,
+      "when": "核心意思",
+      "anim": "pulse",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/drum.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.55,
+      "z": 3,
+      "cue": 1,
+      "when": "play the drum",
+      "anim": "shake",
+      "hideCue": 2
+     },
+     {
+      "label": "play the drum",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#7A3E00",
+      "when": "play the drum",
+      "hideCue": 2,
+      "bg": "#FFF6D8"
+     },
+     {
+      "label": "打鼓",
+      "x": 0.84,
+      "y": 0.84,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "打鼓",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/laptop-small.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.55,
+      "z": 3,
+      "cue": 2,
+      "when": "电脑",
+      "hideWhen": "拉到最大"
+     },
+     {
+      "svg": "art/laptop-max.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.55,
+      "z": 3,
+      "cue": 2,
+      "when": "拉到最大",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "label": "最大化窗口",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "最大化窗口"
+     }
+    ]
+   }
+  }
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/gauge.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.6,
+     "z": 3,
+     "anim": "shake"
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.7,
+     "y": 0.25,
+     "every": 0.9,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.25
+     ],
+     "s": 0.08,
+     "spin": true
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/tag-verb.svg",
+     "x": 0.45,
+     "y": 0.5,
+     "s": 0.56,
+     "z": 3,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/bar-chart.svg",
+     "x": 0.84,
+     "y": 0.66,
+     "s": 0.26,
+     "z": 3,
+     "anim": "bob"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-gauge.svg",
+  "p1": "art/icon-tag-verb.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/desk.svg",
+    "x": 0.5,
+    "y": 0.93,
+    "s": 0.34,
+    "z": 4
+   },
+   {
+    "svg": "art/bar-chart.svg",
+    "x": 0.45,
+    "y": 0.56,
+    "s": 0.3,
+    "z": 5,
+    "s2": 0.58,
+    "grow": [
+     0.3,
+     2.0
+    ]
+   },
+   {
+    "svg": "art/gauge.svg",
+    "x": 0.84,
+    "y": 0.44,
+    "s": 0.26,
+    "z": 4,
+    "anim": "shake"
+   }
+  ]
+ },
+ "distinguish": {
+  "key": "使…更多",
+  "items": [
+   {
+    "w": "maximize",
+    "m": "使最大化",
+    "say": "maximize 是把量推到最大，推到不能再大为止。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/gauge.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.8,
+       "anim": "shake"
+      }
+     ]
+    },
+    "text": "maximize 是把量推到最大，推到不能再大为止。",
+    "diff": "maximize 是把量推到最大，推到不能再大为止。",
+    "line": "maximize 是把量推到最大，推到不能再大为止。",
+    "note": "maximize 是把量推到最大，推到不能再大为止。",
+    "desc": "maximize 是把量推到最大，推到不能再大为止。",
+    "explain": "maximize 是把量推到最大，推到不能再大为止。",
+    "sentence": "maximize 是把量推到最大，推到不能再大为止。",
+    "talk": "maximize 是把量推到最大，推到不能再大为止。",
+    "speech": "maximize 是把量推到最大，推到不能再大为止。",
+    "zh": "maximize 是把量推到最大，推到不能再大为止。",
+    "cn": "maximize 是把量推到最大，推到不能再大为止。",
+    "why": "maximize 是把量推到最大，推到不能再大为止。",
+    "lines": [
+     "maximize 是把量推到最大，推到不能再大为止。"
+    ],
+    "says": [
+     "maximize 是把量推到最大，推到不能再大为止。"
+    ],
+    "word": "maximize"
+   },
+   {
+    "w": "increase",
+    "m": "增加",
+    "say": "increase 只是增加，多一点也算。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/bar-chart.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "text": "increase 只是增加，多一点也算。",
+    "diff": "increase 只是增加，多一点也算。",
+    "line": "increase 只是增加，多一点也算。",
+    "note": "increase 只是增加，多一点也算。",
+    "desc": "increase 只是增加，多一点也算。",
+    "explain": "increase 只是增加，多一点也算。",
+    "sentence": "increase 只是增加，多一点也算。",
+    "talk": "increase 只是增加，多一点也算。",
+    "speech": "increase 只是增加，多一点也算。",
+    "zh": "increase 只是增加，多一点也算。",
+    "cn": "increase 只是增加，多一点也算。",
+    "why": "increase 只是增加，多一点也算。",
+    "lines": [
+     "increase 只是增加，多一点也算。"
+    ],
+    "says": [
+     "increase 只是增加，多一点也算。"
+    ],
+    "word": "increase"
+   },
+   {
+    "w": "optimize",
+    "m": "使最优化",
+    "say": "optimize 是调到最优，最优不一定是最大。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/laptop-max.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.8,
+       "anim": "pulse"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.7,
+       "y": 0.25,
+       "every": 0.9,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.25
+       ],
+       "s": 0.08,
+       "spin": true
+      }
+     ]
+    },
+    "text": "optimize 是调到最优，最优不一定是最大。",
+    "diff": "optimize 是调到最优，最优不一定是最大。",
+    "line": "optimize 是调到最优，最优不一定是最大。",
+    "note": "optimize 是调到最优，最优不一定是最大。",
+    "desc": "optimize 是调到最优，最优不一定是最大。",
+    "explain": "optimize 是调到最优，最优不一定是最大。",
+    "sentence": "optimize 是调到最优，最优不一定是最大。",
+    "talk": "optimize 是调到最优，最优不一定是最大。",
+    "speech": "optimize 是调到最优，最优不一定是最大。",
+    "zh": "optimize 是调到最优，最优不一定是最大。",
+    "cn": "optimize 是调到最优，最优不一定是最大。",
+    "why": "optimize 是调到最优，最优不一定是最大。",
+    "lines": [
+     "optimize 是调到最优，最优不一定是最大。"
+    ],
+    "says": [
+     "optimize 是调到最优，最优不一定是最大。"
+    ],
+    "word": "optimize"
+   }
+  ],
+  "logic": "逻辑不同：maximize 是 maximum 加 ize，使最大；increase 是往上长；optimize 是 optimum（最好）加 ize，使最好。",
+  "tip": "反义词 minimize，使最小化。"
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：公司想做什么？",
+    "listen": "The company wants to maximize its profits.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "降低价格",
+     "招更多工人",
+     "开新店",
+     "让利润最大化"
+    ],
+    "ans": "D",
+    "why": "maximize 使最大化。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He ______ his free time by planning well. (maximize)",
+    "opts": [],
+    "ans": "maximizes",
+    "why": "主语 he 是单数、说经常的事，加 s。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Click here to ______ the window.",
+    "opts": [
+     "maximize",
+     "maximum",
+     "most",
+     "more"
+    ],
+    "ans": "A",
+    "why": "把窗口放到最大用动词 maximize。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 maximize、increase 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "We need to ______ the number of buses a little.",
+    "opts": [],
+    "ans": "increase",
+    "why": "只是“增加一点”用 increase；maximize 是推到最大。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "They are maximizeing their chances.",
+    "opts": [],
+    "ans": "maximizeing → maximizing",
+    "why": "maximize 加 ing 要先去 e。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "他上学期充分利用了时间。",
+    "stem": "He ______ his time last term.",
+    "opts": [],
+    "ans": "maximized",
+    "why": "last term 讲过去，maximize 去 e 加 d。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "What is the ______ number of students in a class?",
+    "opts": [
+     "maximize",
+     "maximized",
+     "maximizing",
+     "maximum"
+    ],
+    "ans": "D",
+    "why": "修饰名词 number 用 maximum（最大的）。",
+    "kd": "词性转换"
+   }
+  ]
+ }
+}

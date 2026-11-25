@@ -4,6 +4,72 @@
  "sylIpa": [
   "mɪz"
  ],
+ "originPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/nametag-miss.svg",
+    "x": 0.2,
+    "y": 0.36,
+    "s": 0.28,
+    "z": 3,
+    "anim": "bob"
+   },
+   {
+    "svg": "art/nametag-mrs.svg",
+    "x": 0.8,
+    "y": 0.36,
+    "s": 0.28,
+    "z": 3,
+    "anim": "bob"
+   },
+   {
+    "ray": [
+     [
+      0.3,
+      0.5
+     ],
+     [
+      0.42,
+      0.62
+     ]
+    ],
+    "color": "#C9A85A",
+    "lw": 0.014,
+    "arrow": true,
+    "dur": 0.7,
+    "delay": 0.5
+   },
+   {
+    "ray": [
+     [
+      0.7,
+      0.5
+     ],
+     [
+      0.58,
+      0.62
+     ]
+    ],
+    "color": "#C9A85A",
+    "lw": 0.014,
+    "arrow": true,
+    "dur": 0.7,
+    "delay": 0.5
+   },
+   {
+    "svg": "art/nametag-ms.svg",
+    "x": 0.5,
+    "y": 0.7,
+    "s": 0.46,
+    "z": 4,
+    "delay": 1.0,
+    "pop": true,
+    "anim": "pulse"
+   }
+  ]
+ },
  "pics": [
   {
    "text": "女士",

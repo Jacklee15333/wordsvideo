@@ -1,7 +1,571 @@
 {
  "单词": "mayor",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "meə"
+  ],
+  "pics": [
+   {
+    "text": "市长、镇长",
+    "pos": "名词",
+    "diff": "坐镇市政厅、管着全城的人",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/city-hall.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.62,
+      "z": 2,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.05,
+      "y": 0.74,
+      "s": 0.48,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.05,
+        0.74
+       ],
+       "to": [
+        0.9,
+        0.74
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.95,
+      "y": 0.78,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.95,
+        0.78
+       ],
+       "to": [
+        0.1,
+        0.78
+       ],
+       "offset": 0.8
+      }
+     }
+    ],
+    "ex": "The mayor cut the ribbon at the new park.",
+    "exzh": "市长在新公园的开园仪式上剪了彩。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-hello",
+       "x": 0.3,
+       "y": 0.55,
+       "s": 0.9,
+       "z": 3,
+       "id": "m",
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "mayor"
+      },
+      {
+       "waves": true,
+       "on": "m",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#2F6FB3",
+       "with": "m"
+      },
+      {
+       "svg": "art/ribbon.svg",
+       "x": 0.62,
+       "y": 0.62,
+       "s": 0.42,
+       "z": 4,
+       "when": "ribbon",
+       "anim": "shake"
+      },
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.88,
+       "y": 0.58,
+       "s": 0.82,
+       "z": 3,
+       "nodWith": "m",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.95,
+       "y": 0.74,
+       "s": 0.4,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.95,
+         0.74
+        ],
+        "to": [
+         0.5,
+         0.74
+        ],
+        "offset": 1.0
+       }
+      },
+      {
+       "label": "The mayor",
+       "x": 0.3,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#7A3E00",
+       "when": "mayor",
+       "bg": "#FFF6D8"
+      },
+      {
+       "label": "市长",
+       "x": 0.62,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "市长"
+      }
+     ]
+    }
+   }
+  ],
+  "originPic": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/city-hall.svg",
+     "x": 0.42,
+     "y": 0.45,
+     "s": 0.6,
+     "z": 2,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/bigger.svg",
+     "x": 0.84,
+     "y": 0.6,
+     "s": 0.3,
+     "z": 3,
+     "anim": "bob"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.05,
+     "y": 0.78,
+     "s": 0.42,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.05,
+       0.78
+      ],
+      "to": [
+       0.6,
+       0.78
+      ],
+      "offset": 0
+     }
+    }
+   ]
+  },
+  "flow": [
+   {
+    "node": "“（一座城里）更大的那位”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/city-hall.svg",
+       "x": 0.45,
+       "y": 0.45,
+       "s": 0.6,
+       "z": 2,
+       "anim": "pulse"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.05,
+       "y": 0.78,
+       "s": 0.44,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.78
+        ],
+        "to": [
+         0.95,
+         0.78
+        ],
+        "offset": 0
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "maior 更大的 → maire → mayor",
+    "node": "“更大的那位”",
+    "say": [
+     "拉丁语里，maior 是更大的，到了古法语变成 maire，传进英语写成 mayor。",
+     "一座城里，更大的那位，就是管事的头儿。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bigger.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.5,
+       "z": 3,
+       "when": "更大的",
+       "anim": "pulse",
+       "hideCue": 1
+      },
+      {
+       "label": "maior",
+       "x": 0.18,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#7A3E00",
+       "when": "maior",
+       "bg": "#FFF6D8",
+       "hideCue": 1
+      },
+      {
+       "label": "maire",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#7A3E00",
+       "when": "maire",
+       "bg": "#FFF6D8",
+       "hideCue": 1
+      },
+      {
+       "label": "mayor",
+       "x": 0.82,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#7A3E00",
+       "when": "mayor",
+       "bg": "#FFF6D8",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/city-hall.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.62,
+       "z": 3,
+       "cue": 1,
+       "when": "一座城里",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "label": "管事的头儿",
+       "x": 0.84,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "管事的头儿"
+      }
+     ]
+    }
+   },
+   {
+    "via": "坐镇市政厅、管着全城",
+    "node": "市长、镇长",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "坐镇市政厅、管着全城的人，就是市长、镇长。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/city-hall.svg",
+       "x": 0.36,
+       "y": 0.5,
+       "s": 0.58,
+       "z": 3,
+       "when": "市政厅",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/door-mayor.svg",
+       "x": 0.8,
+       "y": 0.3,
+       "s": 0.2,
+       "z": 3,
+       "when": "管着全城",
+       "anim": "bob"
+      },
+      {
+       "label": "市长",
+       "x": 0.8,
+       "y": 0.7,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "市长"
+      }
+     ]
+    }
+   }
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/city-hall.svg",
+      "x": 0.42,
+      "y": 0.5,
+      "s": 0.58,
+      "z": 3,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/bigger.svg",
+      "x": 0.84,
+      "y": 0.6,
+      "s": 0.3,
+      "z": 3,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-city-hall.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/city-hall.svg",
+     "x": 0.45,
+     "y": 0.5,
+     "s": 0.6,
+     "z": 3,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/door-mayor.svg",
+     "x": 0.84,
+     "y": 0.3,
+     "s": 0.16,
+     "z": 3
+    }
+   ]
+  },
+  "distinguish": {
+   "key": "首长",
+   "items": [
+    {
+     "w": "mayor",
+     "m": "市长、镇长",
+     "say": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/street-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/city-hall.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "pulse"
+       },
+       {
+        "actor": "walk-cn-teacher-case",
+        "x": 0.1,
+        "y": 0.7,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.1,
+          0.7
+         ],
+         "to": [
+          0.9,
+          0.7
+         ],
+         "offset": 0
+        }
+       }
+      ]
+     },
+     "text": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "diff": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "line": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "note": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "desc": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "explain": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "sentence": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "talk": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "speech": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "zh": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "cn": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "why": "mayor 是城市、市镇的首长，比如 the mayor of London。",
+     "lines": [
+      "mayor 是城市、市镇的首长，比如 the mayor of London。"
+     ],
+     "says": [
+      "mayor 是城市、市镇的首长，比如 the mayor of London。"
+     ],
+     "word": "mayor"
+    },
+    {
+     "w": "governor",
+     "m": "州长、省长、总督",
+     "say": "governor 是州长、省长、总督，管的地方比城市大。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/map.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.8,
+        "anim": "pulse"
+       }
+      ]
+     },
+     "text": "governor 是州长、省长、总督，管的地方比城市大。",
+     "diff": "governor 是州长、省长、总督，管的地方比城市大。",
+     "line": "governor 是州长、省长、总督，管的地方比城市大。",
+     "note": "governor 是州长、省长、总督，管的地方比城市大。",
+     "desc": "governor 是州长、省长、总督，管的地方比城市大。",
+     "explain": "governor 是州长、省长、总督，管的地方比城市大。",
+     "sentence": "governor 是州长、省长、总督，管的地方比城市大。",
+     "talk": "governor 是州长、省长、总督，管的地方比城市大。",
+     "speech": "governor 是州长、省长、总督，管的地方比城市大。",
+     "zh": "governor 是州长、省长、总督，管的地方比城市大。",
+     "cn": "governor 是州长、省长、总督，管的地方比城市大。",
+     "why": "governor 是州长、省长、总督，管的地方比城市大。",
+     "lines": [
+      "governor 是州长、省长、总督，管的地方比城市大。"
+     ],
+     "says": [
+      "governor 是州长、省长、总督，管的地方比城市大。"
+     ],
+     "word": "governor"
+    },
+    {
+     "w": "president",
+     "m": "总统、会长",
+     "say": "president 是总统、会长，管一个国家或一个组织。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/stage-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/podium.svg",
+        "x": 0.5,
+        "y": 0.75,
+        "s": 0.5
+       },
+       {
+        "actor": "west-man-speech",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.9,
+        "z": 3,
+        "seq": "talk"
+       },
+       {
+        "beam": true,
+        "x": 0.5,
+        "y": 0.0,
+        "len": 0.9,
+        "width": 0.25,
+        "swing": 12,
+        "period": 4
+       }
+      ]
+     },
+     "text": "president 是总统、会长，管一个国家或一个组织。",
+     "diff": "president 是总统、会长，管一个国家或一个组织。",
+     "line": "president 是总统、会长，管一个国家或一个组织。",
+     "note": "president 是总统、会长，管一个国家或一个组织。",
+     "desc": "president 是总统、会长，管一个国家或一个组织。",
+     "explain": "president 是总统、会长，管一个国家或一个组织。",
+     "sentence": "president 是总统、会长，管一个国家或一个组织。",
+     "talk": "president 是总统、会长，管一个国家或一个组织。",
+     "speech": "president 是总统、会长，管一个国家或一个组织。",
+     "zh": "president 是总统、会长，管一个国家或一个组织。",
+     "cn": "president 是总统、会长，管一个国家或一个组织。",
+     "why": "president 是总统、会长，管一个国家或一个组织。",
+     "lines": [
+      "president 是总统、会长，管一个国家或一个组织。"
+     ],
+     "says": [
+      "president 是总统、会长，管一个国家或一个组织。"
+     ],
+     "word": "president"
+    }
+   ],
+   "logic": "逻辑不同：mayor 是城里更大的那位，governor 本是掌舵的人，president 是坐在前面主持的人。",
+   "tip": "市政厅英语叫 city hall；mayor 和 major 拼写相近，别写混。"
+  }
+ },
+ "插图": [
+  "mayorai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：谁来给新图书馆开馆？\n听：The mayor came to open the new library.\nA. 校长\nB. 市长\nC. 作家\nD. 医生",
@@ -88,5 +652,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
