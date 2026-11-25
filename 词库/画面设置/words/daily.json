@@ -613,9 +613,6 @@
   "items": [
    {
     "w": "daily",
-    "word": "daily",
-    "name": "daily",
-    "en": "daily",
     "pic": {
      "bg": "blank",
      "items": [
@@ -644,6 +641,9 @@
       }
      ]
     },
+    "word": "daily",
+    "name": "daily",
+    "en": "daily",
     "text": "daily 能作形容词“每天的”，也能作副词“每天地”。",
     "say": "daily 能作形容词“每天的”，也能作副词“每天地”。",
     "diff": "daily 能作形容词“每天的”，也能作副词“每天地”。",
@@ -662,13 +662,20 @@
     "txt": "daily 能作形容词“每天的”，也能作副词“每天地”。",
     "talk": "daily 能作形容词“每天的”，也能作副词“每天地”。",
     "words": "daily 能作形容词“每天的”，也能作副词“每天地”。",
-    "detail": "daily 能作形容词“每天的”，也能作副词“每天地”。"
+    "detail": "daily 能作形容词“每天的”，也能作副词“每天地”。",
+    "sentence": "daily 能作形容词“每天的”，也能作副词“每天地”。",
+    "speech": "daily 能作形容词“每天的”，也能作副词“每天地”。",
+    "cn": "daily 能作形容词“每天的”，也能作副词“每天地”。",
+    "why": "daily 能作形容词“每天的”，也能作副词“每天地”。",
+    "lines": [
+     "daily 能作形容词“每天的”，也能作副词“每天地”。"
+    ],
+    "says": [
+     "daily 能作形容词“每天的”，也能作副词“每天地”。"
+    ]
    },
    {
     "w": "everyday",
-    "word": "everyday",
-    "name": "everyday",
-    "en": "everyday",
     "pic": {
      "bg": "blank",
      "items": [
@@ -696,6 +703,9 @@
       }
      ]
     },
+    "word": "everyday",
+    "name": "everyday",
+    "en": "everyday",
     "text": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。",
     "say": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。",
     "diff": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。",
@@ -714,7 +724,17 @@
     "txt": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。",
     "talk": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。",
     "words": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。",
-    "detail": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。"
+    "detail": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。",
+    "sentence": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。",
+    "speech": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。",
+    "cn": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。",
+    "why": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。",
+    "lines": [
+     "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。"
+    ],
+    "says": [
+     "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。"
+    ]
    }
   ],
   "logic": "daily 是 day + ly“每天的”；everyday 是 every + day 合成的形容词。",
@@ -779,6 +799,134 @@
   "notes": {
    "daily": "daily 能作形容词“每天的”，也能作副词“每天地”。",
    "everyday": "everyday 一个词，只是形容词“日常的”：everyday clothes；every day 两个词才是“每天”。"
+  }
+ },
+ "demo": {
+  "careful": {
+   "icons": [
+    "art/icon-care.svg",
+    "art/icon-ful.svg"
+   ],
+   "lit": "充满小心的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.46,
+      "y": 0.62,
+      "s": 0.46,
+      "anim": "bob",
+      "shadow": true,
+      "z": 3
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.8,
+      "y": 0.72,
+      "s": 0.22,
+      "z": 3
+     }
+    ]
+   }
+  },
+  "careless": {
+   "icons": [
+    "art/icon-care.svg",
+    "art/icon-less.svg"
+   ],
+   "lit": "不上心的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.34,
+      "y": 0.72,
+      "s": 0.3,
+      "anim": "shake",
+      "z": 3
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.66,
+      "y": 0.6,
+      "s": 0.42,
+      "rot": -30,
+      "anim": "shake",
+      "z": 3
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.74,
+      "y": 0.62,
+      "every": 0.4,
+      "life": 1,
+      "to": [
+       0.05,
+       0.2
+      ],
+      "s": 0.05
+     }
+    ]
+   }
+  },
+  "friendly": {
+   "icons": [
+    "art/icon-friend.svg",
+    "art/icon-adj.svg"
+   ],
+   "lit": "像朋友一样的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "id": "a",
+      "x": 0.28,
+      "y": 0.62,
+      "s": 0.82,
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "west-man-hello",
+      "id": "b",
+      "x": 0.74,
+      "y": 0.62,
+      "s": 0.82,
+      "z": 3,
+      "seq": "talk",
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "a"
+     }
+    ]
+   }
   }
  },
  "lianxi": {
