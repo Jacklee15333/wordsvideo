@@ -1,0 +1,522 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "组织者；收纳盒、整理架（英式）"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/together.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.6,
+     "anim": "spin"
+    },
+    {
+     "label": "组织",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/helmet.svg",
+     "x": 0.42,
+     "y": 0.58,
+     "s": 0.4,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/organizer-box.svg",
+     "x": 0.72,
+     "y": 0.62,
+     "s": 0.3,
+     "anim": "bob",
+     "shadow": true,
+     "z": 3
+    },
+    {
+     "label": "人或东西",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/together.svg",
+  "p1": "art/organizer-box.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/map.svg",
+    "x": 0.3,
+    "y": 0.4,
+    "s": 0.36,
+    "anim": "pulse",
+    "z": 2
+   },
+   {
+    "svg": "art/organizer-box.svg",
+    "x": 0.72,
+    "y": 0.62,
+    "s": 0.4,
+    "anim": "bob",
+    "shadow": true,
+    "z": 3
+   },
+   {
+    "label": "组织的人；整理用的东西",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.07,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.8
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "组织者",
+   "pos": "名词",
+   "diff": "把活动张罗起来的人（英式拼写）",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-speech",
+     "id": "m",
+     "x": 0.22,
+     "y": 0.6,
+     "s": 0.72,
+     "z": 3,
+     "seq": "talk"
+    },
+    {
+     "waves": true,
+     "on": "m",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "with": "m"
+    },
+    {
+     "actor": "cn-teacher-listen",
+     "id": "t",
+     "x": 0.84,
+     "y": 0.62,
+     "s": 0.66,
+     "z": 3,
+     "nodWith": "m"
+    },
+    {
+     "svg": "art/map.svg",
+     "x": 0.52,
+     "y": 0.34,
+     "s": 0.36,
+     "anim": "pulse",
+     "z": 2
+    }
+   ],
+   "ex": "The organisers thanked all the volunteers.",
+   "exzh": "组织者感谢了所有志愿者。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/banner-speech.svg",
+      "x": 0.5,
+      "y": 0.12,
+      "s": 0.16,
+      "z": 1
+     },
+     {
+      "actor": "west-girl-explain",
+      "id": "a",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "svg": "art/podium.svg",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.36,
+      "z": 4
+     },
+     {
+      "svg": "art/mic.svg",
+      "x": 0.56,
+      "y": 0.6,
+      "s": 0.2,
+      "z": 5
+     },
+     {
+      "waves": true,
+      "x": 0.62,
+      "y": 0.45,
+      "dir": 0,
+      "with": "a"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.93,
+      "s": 0.24,
+      "z": 6,
+      "crowd": 9,
+      "nodWith": "a"
+     },
+     {
+      "label": "organisers",
+      "x": 0.16,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "organisers"
+     },
+     {
+      "label": "组织者",
+      "x": 0.84,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "组织者"
+     }
+    ]
+   }
+  },
+  {
+   "text": "收纳盒、整理架",
+   "pos": "名词",
+   "diff": "帮你把东西分门别类放好的（英式拼写）",
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/nightstand.svg",
+     "x": 0.5,
+     "y": 0.82,
+     "s": 0.3,
+     "z": 2
+    },
+    {
+     "svg": "art/organizer-box.svg",
+     "x": 0.5,
+     "y": 0.62,
+     "s": 0.36,
+     "anim": "bob",
+     "shadow": true,
+     "z": 3
+    },
+    {
+     "label": "收纳盒",
+     "x": 0.84,
+     "y": 0.14,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "Put your cables in the organiser.",
+   "exzh": "把你的线放进收纳盒里。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.36,
+      "z": 2
+     },
+     {
+      "svg": "art/organizer-box.svg",
+      "x": 0.5,
+      "y": 0.64,
+      "s": 0.42,
+      "anim": "bob",
+      "shadow": true,
+      "z": 3,
+      "when": "organiser"
+     },
+     {
+      "label": "organiser",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "organiser"
+     },
+     {
+      "label": "收纳盒",
+      "x": 0.86,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "收纳盒"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“组织的人；整理用的东西”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/map.svg",
+      "x": 0.3,
+      "y": 0.4,
+      "s": 0.36,
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "svg": "art/organizer-box.svg",
+      "x": 0.72,
+      "y": 0.62,
+      "s": 0.4,
+      "anim": "bob",
+      "shadow": true,
+      "z": 3
+     },
+     {
+      "label": "组织的人；整理用的东西",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.07,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "via": "同 organizer：组织者（英式拼写）",
+   "node": "① 组织者",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "organiser 和 organizer 是同一个词，英式常写 s。",
+    "把活动张罗起来的人，就是组织者。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "label": "organizer 美式",
+      "x": 0.3,
+      "y": 0.24,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "organizer"
+     },
+     {
+      "label": "organiser 英式",
+      "x": 0.7,
+      "y": 0.24,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "英式"
+     },
+     {
+      "svg": "art/map.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.36,
+      "cue": 1,
+      "when": "张罗起来",
+      "anim": "pulse",
+      "z": 2
+     },
+     {
+      "label": "组织者",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "组织者"
+     }
+    ]
+   }
+  },
+  {
+   "via": "同 organizer：收纳盒、整理架（英式拼写）",
+   "node": "② 收纳盒、整理架",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "帮你把东西分门别类放好的，也是 organiser，收纳盒、整理架。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.36,
+      "z": 2
+     },
+     {
+      "svg": "art/organizer-box.svg",
+      "x": 0.5,
+      "y": 0.64,
+      "s": 0.42,
+      "anim": "bob",
+      "shadow": true,
+      "z": 3,
+      "when": "分门别类"
+     },
+     {
+      "label": "收纳盒",
+      "x": 0.16,
+      "y": 0.14,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "收纳盒"
+     }
+    ]
+   }
+  }
+ ],
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：他是什么人？",
+    "listen": "He is the main organiser of the event.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "参加者",
+     "活动的主要组织者",
+     "观众",
+     "记者"
+    ],
+    "ans": "B",
+    "why": "organiser 组织者（英式拼写）。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The ______ of the trip gave us a map.",
+    "opts": [
+     "organise",
+     "organiser",
+     "organised",
+     "organisation"
+    ],
+    "ans": "B",
+    "why": "组织旅行的人是 organiser。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 organise、organiser 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Who is going to ______ the dance?",
+    "opts": [],
+    "ans": "organise",
+    "why": "be going to 后面用动词原形 organise。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "There were four ______ for the event. (organiser)",
+    "opts": [],
+    "ans": "organisers",
+    "why": "four 后面用复数 organisers。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The organiser are very busy now.",
+    "opts": [],
+    "ans": "are → is",
+    "why": "主语 the organiser 是单数，用 is。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "美式英语把 organiser 写成 organizer。",
+    "stem": "In American English, organiser is spelled ______.",
+    "opts": [],
+    "ans": "organizer",
+    "why": "美式拼写用 z：organizer。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The ______ asked us to arrive at nine.",
+    "opts": [
+     "organiser's",
+     "organisers",
+     "organise",
+     "organisation"
+    ],
+    "ans": "B",
+    "why": "the 后面要人，复数 organisers 作主语。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
