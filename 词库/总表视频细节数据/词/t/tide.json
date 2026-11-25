@@ -472,7 +472,12 @@
      "img": "art/room-bg.svg",
      "items": [
       {
-       "svg": "art/clock.svg",
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2,
        "x": 0.5,
        "y": 0.46,
        "s": 0.6,
@@ -498,6 +503,20 @@
        "delay": 1,
        "color": "#2B8A3E",
        "border": "#2B8A3E"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.8,
+       "every": 0.5,
+       "life": 1.2,
+       "to": [
+        0.2,
+        -0.1
+       ],
+       "s": 0.04,
+       "z": 2
       }
      ]
     }
@@ -784,23 +803,311 @@
    }
   ],
   "distinguish": {
+   "key": "潮流、趋势",
+   "items": [
+    {
+     "w": "tide",
+     "gloss": "潮流、趋势",
+     "note": "像潮水一样一大片涌来、挡也挡不住的势头（a rising tide of online shopping）",
+     "pic": {
+      "bg": "blank",
+      "img": "art/beach-bg.svg",
+      "items": [
+       {
+        "svg": "art/tide-water.svg",
+        "x": 0.4,
+        "y": 0.9,
+        "s": 0.4,
+        "z": 3,
+        "go": [
+         0.4,
+         0.7
+        ],
+        "dur": 2.4,
+        "loop": true
+       },
+       {
+        "actor": "walk-cn-teacher-case",
+        "x": -0.05,
+        "y": 0.6,
+        "s": 0.44,
+        "z": 4,
+        "walk": {
+         "from": [
+          -0.05,
+          0.6
+         ],
+         "to": [
+          1.05,
+          0.6
+         ],
+         "offset": 0.2
+        }
+       },
+       {
+        "label": "tide 一大片涌来的势头",
+        "x": 0.78,
+        "y": 0.3,
+        "size": 0.09,
+        "color": "#2F6FB3",
+        "border": "#2F6FB3"
+       }
+      ]
+     }
+    },
+    {
+     "w": "trend",
+     "gloss": "趋势、潮流",
+     "note": "数字、风气慢慢往一个方向变，最常用（a new trend in fashion）",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/trend-chart.svg",
+        "x": 0.32,
+        "y": 0.5,
+        "s": 0.72,
+        "z": 3,
+        "anim": "pulse"
+       },
+       {
+        "ray": [
+         [
+          0.12,
+          0.8
+         ],
+         [
+          0.32,
+          0.6
+         ],
+         [
+          0.52,
+          0.3
+         ]
+        ],
+        "color": "#E8453C",
+        "lw": 0.02,
+        "arrow": true,
+        "dur": 1.4,
+        "z": 4
+       },
+       {
+        "actor": "walk-west-boy-pack",
+        "x": 1.05,
+        "y": 0.86,
+        "s": 0.36,
+        "z": 2,
+        "walk": {
+         "from": [
+          1.05,
+          0.86
+         ],
+         "to": [
+          -0.05,
+          0.86
+         ],
+         "offset": 0.3
+        }
+       },
+       {
+        "label": "trend 往哪个方向走",
+        "x": 0.78,
+        "y": 0.3,
+        "size": 0.09,
+        "color": "#2F6FB3",
+        "border": "#2F6FB3"
+       }
+      ]
+     }
+    },
+    {
+     "w": "current",
+     "gloss": "水流、气流；思潮",
+     "note": "本义是正在流的水、空气；也说一股风气、思潮（currents of opinion）",
+     "pic": {
+      "bg": "blank",
+      "img": "art/beach-bg.svg",
+      "items": [
+       {
+        "ray": [
+         [
+          0.08,
+          0.5
+         ],
+         [
+          0.56,
+          0.5
+         ]
+        ],
+        "color": "#FFFFFF",
+        "lw": 0.03,
+        "arrow": true,
+        "dur": 1.2,
+        "z": 3
+       },
+       {
+        "ray": [
+         [
+          0.12,
+          0.66
+         ],
+         [
+          0.6,
+          0.66
+         ]
+        ],
+        "color": "#FFFFFF",
+        "lw": 0.03,
+        "arrow": true,
+        "dur": 1.2,
+        "delay": 0.4,
+        "z": 3
+       },
+       {
+        "emit": true,
+        "svg": "art/drop.svg",
+        "x": 0.1,
+        "y": 0.58,
+        "every": 0.3,
+        "life": 1.4,
+        "to": [
+         0.5,
+         0
+        ],
+        "s": 0.04,
+        "wobble": 0.3,
+        "z": 4
+       },
+       {
+        "svg": "art/fish.svg",
+        "x": 0.14,
+        "y": 0.78,
+        "s": 0.12,
+        "z": 4,
+        "go": [
+         0.56,
+         0.78
+        ],
+        "dur": 2.6,
+        "loop": true
+       },
+       {
+        "label": "current 正在流的那一股",
+        "x": 0.8,
+        "y": 0.4,
+        "size": 0.085,
+        "color": "#2F6FB3",
+        "border": "#2F6FB3"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "tide 从潮水来，重在“一大片涌来”；trend 本义“转向”，重在“往哪个方向走”；current 从“流动”来，重在“正在流的那一股”",
+   "tip": "涌来用 tide，走向用 trend，一股流用 current",
    "pics": {
+    "tide": {
+     "bg": "blank",
+     "img": "art/beach-bg.svg",
+     "items": [
+      {
+       "svg": "art/tide-water.svg",
+       "x": 0.4,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 3,
+       "go": [
+        0.4,
+        0.7
+       ],
+       "dur": 2.4,
+       "loop": true
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": -0.05,
+       "y": 0.6,
+       "s": 0.44,
+       "z": 4,
+       "walk": {
+        "from": [
+         -0.05,
+         0.6
+        ],
+        "to": [
+         1.05,
+         0.6
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "label": "tide 一大片涌来的势头",
+       "x": 0.78,
+       "y": 0.3,
+       "size": 0.09,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    },
     "trend": {
      "bg": "blank",
-     "img": "art/room-bg.svg",
+     "img": "art/street-bg.svg",
      "items": [
       {
        "svg": "art/trend-chart.svg",
-       "x": 0.34,
+       "x": 0.32,
        "y": 0.5,
-       "s": 0.76,
-       "z": 3
+       "s": 0.72,
+       "z": 3,
+       "anim": "pulse"
       },
       {
-       "label": "trend 趋势（数字、风气的走向）",
-       "x": 0.74,
-       "y": 0.5,
-       "size": 0.08,
+       "ray": [
+        [
+         0.12,
+         0.8
+        ],
+        [
+         0.32,
+         0.6
+        ],
+        [
+         0.52,
+         0.3
+        ]
+       ],
+       "color": "#E8453C",
+       "lw": 0.02,
+       "arrow": true,
+       "dur": 1.4,
+       "z": 4
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 1.05,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.05,
+         0.86
+        ],
+        "to": [
+         -0.05,
+         0.86
+        ],
+        "offset": 0.3
+       }
+      },
+      {
+       "label": "trend 往哪个方向走",
+       "x": 0.78,
+       "y": 0.3,
+       "size": 0.09,
        "color": "#2F6FB3",
        "border": "#2F6FB3"
       }
@@ -846,10 +1153,38 @@
        "z": 3
       },
       {
-       "label": "current 水流、气流；当前的风气",
-       "x": 0.78,
-       "y": 0.5,
-       "size": 0.075,
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.1,
+       "y": 0.58,
+       "every": 0.3,
+       "life": 1.4,
+       "to": [
+        0.5,
+        0
+       ],
+       "s": 0.04,
+       "wobble": 0.3,
+       "z": 4
+      },
+      {
+       "svg": "art/fish.svg",
+       "x": 0.14,
+       "y": 0.78,
+       "s": 0.12,
+       "z": 4,
+       "go": [
+        0.56,
+        0.78
+       ],
+       "dur": 2.6,
+       "loop": true
+      },
+      {
+       "label": "current 正在流的那一股",
+       "x": 0.8,
+       "y": 0.4,
+       "size": 0.085,
        "color": "#2F6FB3",
        "border": "#2F6FB3"
       }
@@ -950,5 +1285,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

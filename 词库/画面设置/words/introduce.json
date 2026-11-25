@@ -647,13 +647,14 @@
      },
      {
       "id": "h",
-      "actor": "west-man-present",
+      "actor": "west-man-speech",
       "x": 0.24,
       "y": 0.6,
       "s": 0.88,
       "z": 5,
       "cue": 0,
-      "when": "主人"
+      "when": "主人",
+      "seq": "talk"
      },
      {
       "actor": "west-girl-listen",
@@ -987,6 +988,72 @@
  "icons": {
   "p0": "art/icon-intro.svg",
   "p1": "art/icon-duce.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "id": "d",
+    "svg": "art/doorway.svg",
+    "x": 0.6,
+    "y": 0.52,
+    "s": 0.88,
+    "z": 1
+   },
+   {
+    "actor": "walk-cn-teacher-case",
+    "x": 0.02,
+    "y": 0.72,
+    "s": 0.5,
+    "z": 3,
+    "walk": {
+     "from": [
+      0.02,
+      0.72
+     ],
+     "to": [
+      0.6,
+      0.72
+     ],
+     "offset": 0.0
+    }
+   },
+   {
+    "ray": [
+     [
+      0.1,
+      0.9
+     ],
+     [
+      0.36,
+      0.84
+     ],
+     [
+      0.58,
+      0.7
+     ]
+    ],
+    "color": "#FFB300",
+    "lw": 0.02,
+    "glow": true,
+    "arrow": true,
+    "delay": 0.4,
+    "dur": 1.2,
+    "z": 4
+   },
+   {
+    "label": "领进来",
+    "x": 0.3,
+    "y": 0.1,
+    "size": 0.09,
+    "delay": 0.8,
+    "color": "#7A3E00",
+    "bg": "#FFF6D8",
+    "border": "#E0A800",
+    "z": 5
+   }
+  ]
  },
  "lianxi": {
   "qs": [

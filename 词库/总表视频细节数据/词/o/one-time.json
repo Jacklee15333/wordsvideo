@@ -709,25 +709,115 @@
   ],
   "distinguish": {
    "pics": {
+    "one-time": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "id": "pay",
+       "actor": "cn-teacher-laugh",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/pos-machine.svg",
+       "x": 0.46,
+       "y": 0.56,
+       "s": 0.5,
+       "z": 4,
+       "shadow": true,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.46,
+       "y": 0.2,
+       "s": 0.18,
+       "z": 5,
+       "go": [
+        0.46,
+        0.32
+       ],
+       "dur": 1.2,
+       "loop": true
+      },
+      {
+       "label": "one-time 只付一次",
+       "x": 0.78,
+       "y": 0.4,
+       "size": 0.09,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 1.05,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         1.05,
+         0.86
+        ],
+        "to": [
+         -0.05,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      }
+     ]
+    },
     "disposable": {
      "bg": "blank",
      "img": "art/street-bg.svg",
      "items": [
       {
        "svg": "art/paper-cup.svg",
-       "x": 0.36,
-       "y": 0.52,
-       "s": 0.7,
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.6,
        "z": 3,
-       "shadow": true
+       "shadow": true,
+       "go": [
+        0.54,
+        0.8
+       ],
+       "arc": 0.2,
+       "dur": 1.8,
+       "loop": true,
+       "anim": "spin"
       },
       {
        "label": "disposable 用完就扔的",
-       "x": 0.74,
-       "y": 0.5,
+       "x": 0.76,
+       "y": 0.4,
        "size": 0.09,
        "color": "#2F6FB3",
        "border": "#2F6FB3"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": -0.05,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         -0.05,
+         0.86
+        ],
+        "to": [
+         1.05,
+         0.86
+        ],
+        "offset": 0.4
+       }
       }
      ]
     },
@@ -736,18 +826,36 @@
      "img": "art/classroom-bg.svg",
      "items": [
       {
-       "svg": "art/photo.svg",
-       "x": 0.34,
-       "y": 0.48,
-       "s": 0.66,
-       "z": 3,
-       "rot": -4
+       "id": "f",
+       "actor": "west-man-point",
+       "x": 0.18,
+       "y": 0.6,
+       "s": 0.88,
+       "z": 4,
+       "seq": "talk"
       },
       {
-       "label": "former 从前的（＝one-time 的第二个意思）",
-       "x": 0.74,
-       "y": 0.5,
-       "size": 0.075,
+       "svg": "art/photo.svg",
+       "x": 0.44,
+       "y": 0.44,
+       "s": 0.6,
+       "z": 3,
+       "rot": -4,
+       "anim": "swing"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.66,
+       "y": 0.64,
+       "s": 0.78,
+       "z": 4,
+       "nodWith": "f"
+      },
+      {
+       "label": "former 从前的",
+       "x": 0.86,
+       "y": 0.3,
+       "size": 0.09,
        "color": "#2F6FB3",
        "border": "#2F6FB3"
       }
@@ -759,17 +867,169 @@
     {
      "w": "one-time",
      "gloss": "一次性的；从前的",
-     "note": "只发生一次、只付一次（a one-time payment）；也指从前的"
+     "note": "只发生一次、只付一次（a one-time payment）；也指从前的",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "id": "pay",
+        "actor": "cn-teacher-laugh",
+        "x": 0.2,
+        "y": 0.6,
+        "s": 0.86,
+        "z": 3,
+        "seq": "pingpong",
+        "fps": 2
+       },
+       {
+        "svg": "art/pos-machine.svg",
+        "x": 0.46,
+        "y": 0.56,
+        "s": 0.5,
+        "z": 4,
+        "shadow": true,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/ticket.svg",
+        "x": 0.46,
+        "y": 0.2,
+        "s": 0.18,
+        "z": 5,
+        "go": [
+         0.46,
+         0.32
+        ],
+        "dur": 1.2,
+        "loop": true
+       },
+       {
+        "label": "one-time 只付一次",
+        "x": 0.78,
+        "y": 0.4,
+        "size": 0.09,
+        "color": "#2F6FB3",
+        "border": "#2F6FB3"
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 1.05,
+        "y": 0.86,
+        "s": 0.36,
+        "z": 1,
+        "walk": {
+         "from": [
+          1.05,
+          0.86
+         ],
+         "to": [
+          -0.05,
+          0.86
+         ],
+         "offset": 0.2
+        }
+       }
+      ]
+     }
     },
     {
      "w": "disposable",
      "gloss": "一次性的、用完就扔的",
-     "note": "说东西：用一回就扔掉（disposable cups 一次性杯子）"
+     "note": "说东西：用一回就扔掉（disposable cups 一次性杯子）",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/paper-cup.svg",
+        "x": 0.3,
+        "y": 0.5,
+        "s": 0.6,
+        "z": 3,
+        "shadow": true,
+        "go": [
+         0.54,
+         0.8
+        ],
+        "arc": 0.2,
+        "dur": 1.8,
+        "loop": true,
+        "anim": "spin"
+       },
+       {
+        "label": "disposable 用完就扔的",
+        "x": 0.76,
+        "y": 0.4,
+        "size": 0.09,
+        "color": "#2F6FB3",
+        "border": "#2F6FB3"
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": -0.05,
+        "y": 0.86,
+        "s": 0.36,
+        "z": 1,
+        "walk": {
+         "from": [
+          -0.05,
+          0.86
+         ],
+         "to": [
+          1.05,
+          0.86
+         ],
+         "offset": 0.4
+        }
+       }
+      ]
+     }
     },
     {
      "w": "former",
      "gloss": "从前的",
-     "note": "和 one-time 的第二个意思一样，更常用（a former teacher）"
+     "note": "和 one-time 的第二个意思一样，更常用（a former teacher）",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "id": "f",
+        "actor": "west-man-point",
+        "x": 0.18,
+        "y": 0.6,
+        "s": 0.88,
+        "z": 4,
+        "seq": "talk"
+       },
+       {
+        "svg": "art/photo.svg",
+        "x": 0.44,
+        "y": 0.44,
+        "s": 0.6,
+        "z": 3,
+        "rot": -4,
+        "anim": "swing"
+       },
+       {
+        "actor": "west-girl-surprised",
+        "x": 0.66,
+        "y": 0.64,
+        "s": 0.78,
+        "z": 4,
+        "nodWith": "f"
+       },
+       {
+        "label": "former 从前的",
+        "x": 0.86,
+        "y": 0.3,
+        "size": 0.09,
+        "color": "#2F6FB3",
+        "border": "#2F6FB3"
+       }
+      ]
+     }
     }
    ],
    "logic": "one-time 是“一 + 次”合成的形容词，说事情的次数；disposable 是 dispose（扔掉）+ able（能…的），说东西能扔掉"
@@ -886,5 +1146,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-25 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

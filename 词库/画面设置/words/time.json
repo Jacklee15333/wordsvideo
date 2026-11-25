@@ -1193,7 +1193,7 @@
       "border": "#E0A800"
      },
      {
-      "actor": "west-man-point",
+      "actor": "west-man-smile",
       "x": 0.2,
       "y": 0.62,
       "s": 0.86,
@@ -1271,6 +1271,15 @@
     "img": "art/room-bg.svg",
     "items": [
      {
+      "id": "ph",
+      "actor": "west-girl-surprised",
+      "x": 0.16,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 2,
+      "seq": "blink"
+     },
+     {
       "svg": "art/camera.svg",
       "x": 0.4,
       "y": 0.52,
@@ -1304,6 +1313,14 @@
     "img": "art/classroom-bg.svg",
     "items": [
      {
+      "actor": "cn-teacher-listen",
+      "x": 0.14,
+      "y": 0.62,
+      "s": 0.8,
+      "z": 2,
+      "seq": "blink"
+     },
+     {
       "svg": "art/clock_f0.svg",
       "frames": [
        "art/clock_f0.svg",
@@ -1322,6 +1339,17 @@
       "size": 0.1,
       "color": "#2F6FB3",
       "border": "#2F6FB3"
+     },
+     {
+      "shape": "circle",
+      "x": 0.4,
+      "y": 0.5,
+      "r": 0.34,
+      "stroke": "#FF7A1A",
+      "lw": 6,
+      "reveal": "right",
+      "rdur": 2.0,
+      "z": 4
      }
     ]
    },
@@ -1410,22 +1438,188 @@
    {
     "w": "time",
     "gloss": "时间；时刻；时代",
-    "note": "什么都能说：一段时间、几点钟、一个时代（What time is it? / in ancient times）"
+    "note": "什么都能说：一段时间、几点钟、一个时代（What time is it? / in ancient times）",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.36,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 3
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.36,
+       "y": 0.7,
+       "s": 0.2,
+       "z": 4
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.16,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 2,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 2,
+       "x": 0.56,
+       "y": 0.36,
+       "s": 0.5,
+       "z": 3
+      },
+      {
+       "label": "time 一段时间",
+       "x": 0.82,
+       "y": 0.5,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
    },
    {
     "w": "moment",
     "gloss": "一瞬间、片刻",
-    "note": "只说一眨眼的那一下（Wait a moment.）"
+    "note": "只说一眨眼的那一下（Wait a moment.）",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "id": "ph",
+       "actor": "west-girl-surprised",
+       "x": 0.16,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 2,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/camera.svg",
+       "x": 0.4,
+       "y": 0.52,
+       "s": 0.6,
+       "z": 3,
+       "shadow": true,
+       "anim": "click",
+       "at": 1
+      },
+      {
+       "svg": "art/flash.svg",
+       "x": 0.58,
+       "y": 0.32,
+       "s": 0.3,
+       "z": 4,
+       "delay": 1,
+       "hide": 1.6
+      },
+      {
+       "label": "moment 一瞬间",
+       "x": 0.8,
+       "y": 0.5,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
    },
    {
     "w": "hour",
     "gloss": "小时、钟头",
-    "note": "六十分钟这么长；“两点钟”不说 hour，说 two o'clock"
+    "note": "六十分钟这么长；“两点钟”不说 hour，说 two o'clock",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-listen",
+       "x": 0.14,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 2,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/clock_f0.svg",
+       "frames": [
+        "art/clock_f0.svg",
+        "art/clock_f1.svg"
+       ],
+       "fps": 1,
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.7,
+       "z": 3
+      },
+      {
+       "label": "two hours 两个钟头",
+       "x": 0.78,
+       "y": 0.5,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "shape": "circle",
+       "x": 0.4,
+       "y": 0.5,
+       "r": 0.34,
+       "stroke": "#FF7A1A",
+       "lw": 6,
+       "reveal": "right",
+       "rdur": 2.0,
+       "z": 4
+      }
+     ]
+    }
    },
    {
     "w": "era",
     "gloss": "时代、纪元",
-    "note": "有名字、有特点的一大段历史（the digital era）"
+    "note": "有名字、有特点的一大段历史（the digital era）",
+    "pic": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/bamboo.svg",
+       "x": 0.4,
+       "y": 0.56,
+       "s": 0.6,
+       "z": 3,
+       "shadow": true
+      },
+      {
+       "svg": "art/brush.svg",
+       "x": 0.6,
+       "y": 0.5,
+       "s": 0.5,
+       "rot": 20,
+       "z": 4,
+       "anim": "swing"
+      },
+      {
+       "label": "era 时代、纪元",
+       "x": 0.82,
+       "y": 0.5,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      }
+     ]
+    }
    }
   ],
   "logic": "time 是“切出来的一段”，长短都能说，所以意思最宽；moment、hour、era 各管一种：最短的一下、正好一小时、最长的一个时代"
