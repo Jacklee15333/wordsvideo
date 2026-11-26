@@ -178,14 +178,25 @@
       "x": 0.3,
       "y": 0.55,
       "s": 0.8,
-      "z": 2
+      "z": 2,
+      "id": "c",
+      "turn": [
+       0,
+       2
+      ],
+      "seq": "talk"
      },
      {
       "actor": "cn-teacher-listen",
       "x": 0.72,
       "y": 0.55,
       "s": 0.8,
-      "z": 2
+      "z": 2,
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "c"
      },
      {
       "svg": "art/bubble-unsaid.svg",
@@ -214,6 +225,15 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "不说为好"
+     },
+     {
+      "waves": true,
+      "on": "c",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "c",
+      "hideWhen": "unsaid"
      }
     ]
    }
@@ -258,8 +278,8 @@
      "z": 5
     }
    ],
-   "ex": "There was an unsaid agreement between them.",
-   "exzh": "他们之间有一种心照不宣的默契。",
+   "ex": "We both knew it, but it went unsaid.",
+   "exzh": "我们俩都明白，只是心照不宣。",
    "exPic": {
     "bg": "blank",
     "img": "art/stage-bg.svg",
@@ -285,28 +305,37 @@
       "x": 0.5,
       "y": 0.25,
       "s": 0.32,
-      "when": "unsaid agreement",
+      "when": "unsaid",
       "pop": true,
       "anim": "pulse"
      },
      {
-      "label": "unsaid agreement",
+      "label": "went unsaid",
       "x": 0.5,
       "y": 0.06,
       "size": 0.075,
       "color": "#7A3E00",
       "border": "#E0A800",
       "bg": "#FFF6D8",
-      "when": "unsaid agreement"
+      "when": "unsaid"
      },
      {
-      "label": "心照不宣的默契",
+      "label": "心照不宣",
       "x": 0.5,
       "y": 0.9,
       "size": 0.075,
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "when": "心照不宣"
+     },
+     {
+      "label": "both knew",
+      "x": 0.18,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "both knew"
      }
     ]
    }
@@ -457,6 +486,84 @@
   }
  ],
  "distinguish": false,
+ "demo": {
+  "unhappy": {
+   "icons": [
+    "art/icon-un.svg",
+    "art/icon-happy.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/icecream-drop.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "不快乐的"
+  },
+  "unlock": {
+   "icons": [
+    "art/icon-un.svg",
+    "art/icon-lock.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/lock-open.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.82,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "把锁打开"
+  },
+  "incorrect": {
+   "icons": [
+    "art/icon-in.svg",
+    "art/icon-correct.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/paper-x.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.84,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "不正确的"
+  },
+  "disagree": {
+   "icons": [
+    "art/icon-dis.svg",
+    "art/icon-agree.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/cards-yesno.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "bob"
+     }
+    ]
+   },
+   "lit": "不同意"
+  }
+ },
  "lianxi": {
   "qs": [
    {
