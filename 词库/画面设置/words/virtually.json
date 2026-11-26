@@ -1,0 +1,695 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/throne.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "label": "就作用而言的",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/progress-99.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.36,
+     "anim": "pulse"
+    },
+    {
+     "label": "以…的方式",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-virtue.svg",
+  "p1": "art/icon-ly.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/progress-99.svg",
+    "x": 0.5,
+    "y": 0.5,
+    "s": 0.36,
+    "anim": "pulse"
+   },
+   {
+    "label": "就作用而言地",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "几乎、差不多",
+   "pos": "副词",
+   "diff": "效果上差不多就是了（最常用）",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/progress-99.svg",
+     "x": 0.5,
+     "y": 0.42,
+     "s": 0.32,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/glass-nearly.svg",
+     "x": 0.5,
+     "y": 0.72,
+     "s": 0.4,
+     "anim": "bob"
+    },
+    {
+     "actor": "west-clerk-happy",
+     "x": 0.84,
+     "y": 0.6,
+     "s": 0.52,
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2
+    }
+   ],
+   "ex": "My homework is virtually finished.",
+   "exzh": "我的作业基本写完了。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.18,
+      "y": 0.56,
+      "s": 0.62,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "My homework"
+     },
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.4,
+      "when": "homework",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/progress-99.svg",
+      "x": 0.66,
+      "y": 0.3,
+      "s": 0.24,
+      "when": "virtually finished",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     },
+     {
+      "label": "virtually",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "virtually"
+     },
+     {
+      "label": "基本写完了",
+      "x": 0.84,
+      "y": 0.5,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "基本写完了"
+     }
+    ]
+   }
+  },
+  {
+   "text": "以虚拟方式、在线上",
+   "pos": "副词",
+   "diff": "跟着 virtual 的新意思走",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/online-class.svg",
+     "x": 0.46,
+     "y": 0.5,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/vr-headset.svg",
+     "x": 0.86,
+     "y": 0.72,
+     "s": 0.24,
+     "anim": "bob"
+    }
+   ],
+   "ex": "We met virtually last night.",
+   "exzh": "我们昨晚在线上见了面。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/online-class.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "when": "met virtually",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.12,
+      "y": 0.6,
+      "s": 0.5,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "We met"
+     },
+     {
+      "label": "met virtually",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "met virtually"
+     },
+     {
+      "label": "在线上",
+      "x": 0.88,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "在线上"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“就作用而言地”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/gears.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.56,
+      "anim": "spin"
+     },
+     {
+      "label": "virtual + ly",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "效果上差不多就是了",
+   "node": "① 几乎、差不多",
+   "pos": "副词",
+   "pic": 0,
+   "say": [
+    "就效果来说，差不多就是了，只差一点点，就是几乎、差不多。",
+    "It's virtually finished 就是基本完工了。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/progress-99.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.34,
+      "when": "只差一点点",
+      "anim": "pulse"
+     },
+     {
+      "label": "几乎",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "几乎"
+     },
+     {
+      "label": "virtually finished",
+      "x": 0.5,
+      "y": 0.78,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "cue": 1,
+      "when": "virtually finished"
+     }
+    ]
+   }
+  },
+  {
+   "via": "跟着 virtual 的新意思走",
+   "node": "② 以虚拟方式、在线上",
+   "pos": "副词",
+   "pic": 1,
+   "from": 0,
+   "say": [
+    "virtual 有了虚拟、线上的意思，virtually 也跟着有了在线上的意思。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/online-class.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "when": "在线上",
+      "anim": "pulse"
+     },
+     {
+      "label": "在线上",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "在线上"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "几乎；差不多",
+  "items": [
+   {
+    "w": "virtually",
+    "word": "virtually",
+    "m": "几乎、差不多（效果上就是）",
+    "zh": "几乎、差不多（效果上就是）",
+    "say": "virtually 是效果上就是了：It's virtually finished。",
+    "text": "virtually 是效果上就是了：It's virtually finished。",
+    "note": "virtually 是效果上就是了：It's virtually finished。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/progress-99.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "nearly",
+    "word": "nearly",
+    "m": "将近、差一点",
+    "zh": "将近、差一点",
+    "say": "nearly 是离目标很近：I nearly fell 我差点摔倒。",
+    "text": "nearly 是离目标很近：I nearly fell 我差点摔倒。",
+    "note": "nearly 是离目标很近：I nearly fell 我差点摔倒。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/glass-nearly.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "almost",
+    "word": "almost",
+    "m": "几乎（最常用）",
+    "zh": "几乎（最常用）",
+    "say": "almost 最常用，几乎都能说：almost every day。",
+    "text": "almost 最常用，几乎都能说：almost every day。",
+    "note": "almost 最常用，几乎都能说：almost every day。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "practically",
+    "word": "practically",
+    "m": "实际上、几乎（口语）",
+    "zh": "实际上、几乎（口语）",
+    "say": "practically 偏口语，意思和 virtually 很像。",
+    "text": "practically 偏口语，意思和 virtually 很像。",
+    "note": "practically 偏口语，意思和 virtually 很像。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "almost、nearly 是“离那里很近”；virtually、practically 是“实际效果上已经是了”。",
+  "tip": "virtually 最常用的意思是“几乎”，不是“虚拟地”。",
+  "pics": {
+   "virtually": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/progress-99.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "nearly": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/glass-nearly.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.85,
+      "anim": "bob"
+     }
+    ]
+   },
+   "almost": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "practically": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "bob"
+     }
+    ]
+   }
+  }
+ },
+ "demo": {
+  "sadly": {
+   "icons": [
+    "art/icon-sad.svg",
+    "art/icon-ly.svg"
+   ],
+   "lit": "难过地",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/flower-droop.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "sway"
+     }
+    ]
+   }
+  },
+  "basically": {
+   "icons": [
+    "art/icon-basic.svg",
+    "art/icon-ly.svg"
+   ],
+   "lit": "从根本上",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/blocks.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "forward": {
+   "icons": [
+    "art/icon-fore.svg",
+    "art/icon-ward.svg"
+   ],
+   "lit": "朝前面",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/road-forward.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "pulse"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人说工作怎么样了？",
+    "listen": "The work is virtually finished now.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "基本完成了",
+     "刚开始",
+     "停了",
+     "失败了"
+    ],
+    "ans": "A",
+    "why": "virtually 几乎、差不多。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "______ everyone in our class can swim.",
+    "opts": [
+     "Virtually",
+     "Virtual",
+     "Virtue",
+     "Virtues"
+    ],
+    "ans": "A",
+    "why": "修饰 everyone 用副词 virtually。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "We had a ______ party online. (virtually)",
+    "opts": [],
+    "ans": "virtual",
+    "why": "修饰名词 party 用形容词 virtual。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 virtually、nearly 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Hurry up; it's ______ ten o'clock.",
+    "opts": [],
+    "ans": "nearly",
+    "why": "说钟点“快到了”用 nearly。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The town was virtual empty after the storm.",
+    "opts": [],
+    "ans": "virtual → virtually",
+    "why": "修饰形容词 empty 用副词。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "\"Virtually\" usually means ______.",
+    "opts": [
+     "almost",
+     "really",
+     "slowly",
+     "never"
+    ],
+    "ans": "A",
+    "why": "virtually 最常用的意思是“几乎”。",
+    "kd": "用法"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "She is a ______ stranger to me. (virtually)",
+    "opts": [],
+    "ans": "virtual",
+    "why": "修饰名词 stranger 用形容词 virtual。",
+    "kd": "词性转换"
+   }
+  ]
+ }
+}

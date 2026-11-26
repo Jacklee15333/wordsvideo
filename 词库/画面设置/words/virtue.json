@@ -1,0 +1,832 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/roman-soldier.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.66,
+     "anim": "bob"
+    },
+    {
+     "label": "男人",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.11,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/medal.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.56,
+     "anim": "sway"
+    },
+    {
+     "label": "…的品质",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-man2.svg",
+  "p1": "art/icon-tue.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/castle-bg.svg",
+  "items": [
+   {
+    "svg": "art/roman-soldier.svg",
+    "x": 0.4,
+    "y": 0.52,
+    "s": 0.66,
+    "anim": "bob"
+   },
+   {
+    "svg": "art/medal.svg",
+    "x": 0.78,
+    "y": 0.5,
+    "s": 0.36,
+    "anim": "sway"
+   },
+   {
+    "label": "男人身上的那股东西",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.085,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "美德、德行",
+   "pos": "名词",
+   "diff": "受人敬重的好品质",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.36,
+     "y": 0.56,
+     "s": 0.66,
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2,
+     "id": "b"
+    },
+    {
+     "actor": "cn-teacher-laugh",
+     "x": 0.66,
+     "y": 0.58,
+     "s": 0.6,
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2,
+     "nodWith": "b"
+    },
+    {
+     "svg": "art/heart.svg",
+     "x": 0.5,
+     "y": 0.24,
+     "s": 0.2,
+     "anim": "pulse"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ],
+   "ex": "Honesty is a virtue.",
+   "exzh": "诚实是一种美德。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.22,
+      "y": 0.56,
+      "s": 0.64,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "Honesty"
+     },
+     {
+      "svg": "art/heart.svg",
+      "x": 0.6,
+      "y": 0.44,
+      "s": 0.44,
+      "when": "virtue",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     },
+     {
+      "label": "a virtue",
+      "x": 0.6,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "a virtue"
+     },
+     {
+      "label": "美德",
+      "x": 0.88,
+      "y": 0.3,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "美德"
+     }
+    ]
+   }
+  },
+  {
+   "text": "优点、长处",
+   "pos": "名词",
+   "diff": "一件东西身上好的地方",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.44,
+     "y": 0.52,
+     "s": 0.56,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/star.svg",
+     "x": 0.8,
+     "y": 0.34,
+     "s": 0.22,
+     "anim": "bob"
+    }
+   ],
+   "ex": "One virtue of this phone is its long battery life.",
+   "exzh": "这款手机的一个优点是电池续航长。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.4,
+      "y": 0.52,
+      "s": 0.56,
+      "when": "this phone",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/progress-99.svg",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.2,
+      "when": "battery life",
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.9,
+      "y": 0.62,
+      "s": 0.44,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "One virtue"
+     },
+     {
+      "label": "virtue",
+      "x": 0.4,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "virtue"
+     },
+     {
+      "label": "优点",
+      "x": 0.76,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "优点"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“男人身上的那股东西”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/roman-soldier.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "bob"
+     },
+     {
+      "label": "vir 男人 + tue",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "男人最受敬重的品质，后来不分男女",
+   "node": "① 美德、德行",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "一个词的意思越用越宽",
+   "ruleEx": "virtue 男子气概 → 美德      grow 草木生长 → 人长大",
+   "say": [
+    "古罗马人眼里，一个男人最受敬重的，是勇气，叫男子气概。",
+    "后来不分男女，泛指一切好品质，就是品德、美德。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/roman-soldier.svg",
+      "x": 0.4,
+      "y": 0.52,
+      "s": 0.64,
+      "when": "古罗马人",
+      "anim": "bob",
+      "hideCue": 1
+     },
+     {
+      "label": "勇气",
+      "x": 0.78,
+      "y": 0.2,
+      "size": 0.09,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "勇气",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/heart.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.44,
+      "cue": 1,
+      "when": "好品质",
+      "anim": "pulse"
+     },
+     {
+      "label": "美德",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "美德"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一件东西身上好的地方",
+   "node": "② 优点、长处",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "一件东西身上好的地方，也叫 virtue，就是优点、长处。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.46,
+      "y": 0.52,
+      "s": 0.56,
+      "when": "好的地方",
+      "anim": "pulse"
+     },
+     {
+      "label": "优点",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "优点"
+     }
+    ]
+   }
+  },
+  {
+   "via": "东西本身的力量、作用",
+   "node": "效力：by virtue of 凭借",
+   "from": 0,
+   "say": [
+    "中古英语里 virtue 还指东西本身的力量、效力；这个意思今天留在 by virtue of，凭借、由于。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/gears.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "效力",
+      "anim": "spin"
+     },
+     {
+      "label": "by virtue of",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "by virtue of"
+     },
+     {
+      "label": "凭借",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "凭借"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "美德；优点",
+  "items": [
+   {
+    "w": "virtue",
+    "word": "virtue",
+    "m": "美德；优点",
+    "zh": "美德；优点",
+    "say": "virtue 是品德、优点，可数时指一项项优点：Patience is a virtue。",
+    "text": "virtue 是品德、优点，可数时指一项项优点：Patience is a virtue。",
+    "note": "virtue 是品德、优点，可数时指一项项优点：Patience is a virtue。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/street-bg.svg",
+       "x": 0.5,
+       "y": 0.45,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "pulse"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "w": "goodness",
+    "word": "goodness",
+    "m": "善良、好心",
+    "zh": "善良、好心",
+    "say": "goodness 是人心地好、善良，不可数。",
+    "text": "goodness 是人心地好、善良，不可数。",
+    "note": "goodness 是人心地好、善良，不可数。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "strength",
+    "word": "strength",
+    "m": "长处、强项",
+    "zh": "长处、强项",
+    "say": "strength 是一个人、一件东西的强项：Math is my strength。",
+    "text": "strength 是一个人、一件东西的强项：Math is my strength。",
+    "note": "strength 是一个人、一件东西的强项：Math is my strength。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/park-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/strong-arm.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "pulse"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "virtue 重在“好品质、好地方”；goodness 重在“心善”；strength 重在“力量、强项”。",
+  "tip": "merit 偏“值得称道之处、功劳”。",
+  "pics": {
+   "virtue": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/street-bg.svg",
+      "x": 0.5,
+      "y": 0.45,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/heart.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.46,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.46,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   },
+   "goodness": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7,
+      "anim": "bob"
+     }
+    ]
+   },
+   "strength": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/park-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/strong-arm.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.46,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.46,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人觉得最重要的是什么？",
+    "listen": "Honesty is the most important virtue.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "诚实",
+     "金钱",
+     "名声",
+     "运气"
+    ],
+    "ans": "A",
+    "why": "virtue 美德。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Patience is one of her many ______.",
+    "opts": [
+     "virtues",
+     "virtue",
+     "virtual",
+     "virtually"
+    ],
+    "ans": "A",
+    "why": "one of 后接复数 virtues。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 virtue、merit 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He got the job by ______ of his good English.",
+    "opts": [],
+    "ans": "virtue",
+    "why": "by virtue of 凭借、由于。",
+    "kd": "短语"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Honesty are a virtue.",
+    "opts": [],
+    "ans": "are → is",
+    "why": "honesty 不可数，谓语用 is。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "诚实是一种美德。",
+    "stem": "Honesty ______ a ______.",
+    "opts": [],
+    "ans": [
+     "is",
+     "virtue"
+    ],
+    "why": "一种美德 a virtue。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "\"Virtue\" is closest in meaning to ______.",
+    "opts": [
+     "badness",
+     "weakness",
+     "goodness",
+     "laziness"
+    ],
+    "ans": "C",
+    "why": "virtue 美德 ≈ goodness。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Being honest and kind are two important ______. (virtue)",
+    "opts": [],
+    "ans": "virtues",
+    "why": "two 后接复数。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
