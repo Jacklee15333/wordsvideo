@@ -1535,11 +1535,11 @@ def relay_auto(qs):
     ev = qs.get("ev")
     if ev == "continue":
         HELPER["clicks"] += 1
-        log("网页 AI 的回复中断了：小助手自动点了「Continue」（这一份第 %d 次）" % HELPER["clicks"], tid)
+        log("网页 AI 的回复中断了：软件自动点了「Continue」（这一份第 %d 次）" % HELPER["clicks"], tid)
         return {"ok": True}
     if ev == "send":
         HELPER["sends"] += 1
-        log("网页 AI 停下了、这一份还没写完：小助手自动发了「继续」那段话（这一份第 %d 次）" % HELPER["sends"], tid)
+        log("网页 AI 停下了、这一份还没写完：软件自动发了「继续」那段话（这一份第 %d 次）" % HELPER["sends"], tid)
         return {"ok": True}
     cont = relay_cont_msg() if (on and active and not checking) else ""
     need = bool(cont) and HELPER["sends"] < AUTO_MAX_SENDS

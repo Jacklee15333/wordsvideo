@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core as C
 import video as V
 import selfup as SU
+import relay_browser as RB                     # v1.23.0：软件自己控制网页 AI 的浏览器窗口
 import check as CK
 import pool as PL
 import results as RS
@@ -494,7 +495,8 @@ def api_relay_get(qs):
     r.pop("reply", None)
     cfg = C.load_cfg()
     r["url"] = cfg.get("relayUrl", "")
-    r["helper"] = C.helper_info()                     # v1.22.0：自动继续的小助手
+    r["helper"] = C.helper_info()                     # v1.22.0：自动继续点了几次、发了几次
+    r["browser"] = RB.status()                        # v1.23.0：软件控制的网页 AI 窗口
     r["label"] = C.batch_label((r.get("inbox") or "").rsplit(".", 1)[0]) if r.get("inbox") else ""
     sk = C.KIND_SIZE.get(r.get("kind") or "", "")     # v1.11.2：黄框里能改一批几个词、每写完几个传一次
     r["sizeKind"] = sk
@@ -508,8 +510,12 @@ def api_relay_get(qs):
 def api_open(b):
     """用你平时的浏览器打开网页 AI。软件自己的窗口用的是单独的浏览器资料夹，在那里打开没登录 zd87。"""
     url = (C.load_cfg().get("relayUrl") or "").strip()
+    if re.match(r"^https?://", url) and not b.get("plain"):     # v1.23.0：先用软件自己控制的窗口开（能自己贴、自己点「继续」）
+        ok, msg = RB.open_ai(url)
+        if ok:
+            return {"ok": True, "msg": msg}
     if not re.match(r"^https?://", url):
-        return {"ok": False, "msg": "网页 AI 地址要以 http:// 或 https:// 开头：黄框第 ② 步「手动发送」右边的齿轮里改"}
+        return {"ok": False, "msg": "网页 AI 地址要以 http:// 或 https:// 开头：黄框第 ② 步「发到网页 AI」右边的齿轮里改"}
     try:
         if sys.platform == "win32":
             os.startfile(url)
@@ -532,6 +538,18 @@ def helper_script(port):
 
 
 def api_relay_post(b):
+    if b.get("op") == "bsend":                       # v1.23.0：发到网页 AI——软件自己开窗口、开新对话、贴提示词、发送
+        url = (C.load_cfg().get("relayUrl") or "").strip()
+        p = C.RELAY.get("prompt") or ""
+        if C.RELAY.get("status") != "等你操作" or not p:
+            return {"ok": False, "msg": "现在没有要交给网页 AI 的提示词"}
+        if not re.match(r"^https?://", url):
+            return {"ok": False, "msg": "网页 AI 地址要以 http:// 或 https:// 开头：黄框第 ② 步右边的齿轮里改"}
+        ok, msg = RB.send(url, p)
+        if ok:
+            return {"ok": True, "msg": msg}
+        r = api_open({"plain": True})
+        return {"ok": r.get("ok"), "msg": "软件控制不了浏览器（%s）：%s，提示词在剪贴板里，粘贴、发送" % (msg, r.get("msg") or "")}
     if b.get("op") == "autocont":                    # v1.22.0：自动继续开 / 关
         C.save_cfg({"autoCont": bool(b.get("on"))})
         return {"ok": True, "msg": "自动继续打开了" if b.get("on") else "自动继续关了：网页 AI 停下来要你自己点「继续」"}
@@ -819,6 +837,7 @@ def main():
     C.RUNNER.start()
     V.startup()                                    # v1.11.0：有批次正在出片，就接着记电脑占用
     threading.Timer(20, check_update_bg).start()
+    threading.Timer(6, RB.attach_if_running).start()       # v1.23.0：上次开的网页 AI 窗口还在，就再连上
     url = "http://127.0.0.1:%d" % port
     print("单词工作台已启动：%s （关掉这个窗口就退出）" % url, flush=True)
     threading.Timer(1.0, open_window, args=(url,)).start()
