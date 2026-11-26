@@ -1,0 +1,374 @@
+{
+ "style": "core",
+ "board": true,
+ "originPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/salt-shaker.svg",
+    "x": 0.3,
+    "y": 0.52,
+    "s": 0.5,
+    "anim": "shake"
+   },
+   {
+    "ray": [
+     [
+      0.42,
+      0.52
+     ],
+     [
+      0.56,
+      0.52
+     ]
+    ],
+    "color": "#E8590C",
+    "lw": 0.014,
+    "arrow": true,
+    "dur": 0.8
+   },
+   {
+    "svg": "art/sauce-bottle.svg",
+    "x": 0.72,
+    "y": 0.52,
+    "s": 0.56,
+    "anim": "bob"
+   },
+   {
+    "label": "拉丁 salsa：加了盐的",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.08,
+    "color": "#7A3E00",
+    "border": "#E0A800",
+    "bg": "#FFF6D8"
+   }
+  ]
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/salt-shaker.svg",
+    "x": 0.3,
+    "y": 0.52,
+    "s": 0.5,
+    "anim": "shake"
+   },
+   {
+    "svg": "art/sauce-bottle.svg",
+    "x": 0.72,
+    "y": 0.52,
+    "s": 0.56,
+    "anim": "bob"
+   },
+   {
+    "label": "加了盐的（东西）",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.085,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "酱汁、调味汁",
+   "pos": "名词",
+   "diff": "浇、蘸着吃的汁",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/pasta.svg",
+     "x": 0.46,
+     "y": 0.6,
+     "s": 0.46,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/sauce-bottle.svg",
+     "x": 0.84,
+     "y": 0.54,
+     "s": 0.46,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.97,
+     "s": 0.22,
+     "z": -1
+    }
+   ],
+   "ex": "Put some tomato sauce on the noodles.",
+   "exzh": "在面条上浇点番茄酱汁。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "x": 0.16,
+      "y": 0.56,
+      "s": 0.62,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "Put"
+     },
+     {
+      "svg": "art/pasta.svg",
+      "x": 0.52,
+      "y": 0.62,
+      "s": 0.44,
+      "when": "the noodles",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/sauce-bottle.svg",
+      "x": 0.82,
+      "y": 0.44,
+      "s": 0.4,
+      "when": "tomato sauce",
+      "rot": -30,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.97,
+      "s": 0.22,
+      "z": -1
+     },
+     {
+      "label": "tomato sauce",
+      "x": 0.52,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "tomato sauce"
+     },
+     {
+      "label": "番茄酱汁",
+      "x": 0.52,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "番茄酱汁"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "salsa：加了盐的（东西）",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/salt-shaker.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.56,
+      "anim": "shake"
+     },
+     {
+      "label": "sauce ≈ salt",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "用盐、卤水调出来，浇在肉和鱼上",
+   "node": "给肉、鱼调味的咸汁",
+   "say": [
+    "最早，人们用盐和卤水调出一种咸汁，浇在肉和鱼上调味。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/salt-shaker.svg",
+      "x": 0.3,
+      "y": 0.52,
+      "s": 0.44,
+      "when": "盐和卤水",
+      "anim": "shake"
+     },
+     {
+      "svg": "art/fish.svg",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.26,
+      "when": "肉和鱼",
+      "anim": "bob"
+     },
+     {
+      "label": "咸汁",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "咸汁"
+     }
+    ]
+   }
+  },
+  {
+   "via": "不论咸不咸，浇、蘸着吃的汁都算",
+   "node": "酱汁、调味汁",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "一个词的意思越用越宽",
+   "ruleEx": "sauce 咸汁 → 各种酱汁      grow 草木生长 → 人长大",
+   "say": [
+    "后来不论咸不咸，凡是浇着、蘸着吃的汁，都叫 sauce，就是酱汁、调味汁。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/pasta.svg",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.44,
+      "when": "浇着",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/sauce-bottle.svg",
+      "x": 0.8,
+      "y": 0.52,
+      "s": 0.44,
+      "when": "蘸着",
+      "anim": "sway"
+     },
+     {
+      "label": "酱汁",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "酱汁"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人想在面条上加什么？",
+    "listen": "I'd like some tomato sauce on my noodles.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "醋",
+     "盐",
+     "糖",
+     "番茄酱汁"
+    ],
+    "ans": "D",
+    "why": "tomato sauce 番茄酱汁。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "We need two different ______ for the dinner.",
+    "opts": [
+     "sauce",
+     "sauces",
+     "saucy",
+     "saucer"
+    ],
+    "ans": "B",
+    "why": "two different 后接复数 sauces。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 sauce、dressing 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Put some ______ on the salad before eating.",
+    "opts": [],
+    "ans": "dressing",
+    "why": "拌沙拉的调味汁用 dressing。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "This sauce taste a little sweet.",
+    "opts": [],
+    "ans": "taste → tastes",
+    "why": "主语单数，一般现在时加 s。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "请把酱汁递给我。",
+    "stem": "Please pass me the ______.",
+    "opts": [],
+    "ans": "sauce",
+    "why": "酱汁 sauce。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "______ is a thick red sauce made from tomatoes.",
+    "opts": [
+     "Sugar",
+     "Salt",
+     "Vinegar",
+     "Ketchup"
+    ],
+    "ans": "D",
+    "why": "ketchup 专指番茄酱。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Mix all the ______ together in a bowl. (sauce)",
+    "opts": [],
+    "ans": "sauces",
+    "why": "all the 后接复数。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

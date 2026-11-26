@@ -1,7 +1,287 @@
 {
  "单词": "salad",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/salt-shaker.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.6,
+      "anim": "shake"
+     },
+     {
+      "label": "盐",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.11,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/lettuce.svg",
+      "x": 0.36,
+      "y": 0.56,
+      "s": 0.44,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/salt-crystals.svg",
+      "x": 0.74,
+      "y": 0.62,
+      "s": 0.3,
+      "anim": "pulse"
+     },
+     {
+      "label": "被…了的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-salt.svg",
+   "p1": "art/icon-ad.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/lettuce.svg",
+     "x": 0.36,
+     "y": 0.56,
+     "s": 0.46,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/salt-shaker.svg",
+     "x": 0.74,
+     "y": 0.5,
+     "s": 0.4,
+     "anim": "shake"
+    },
+    {
+     "label": "加了盐的（菜）",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "沙拉、凉拌菜",
+    "pos": "名词",
+    "diff": "生菜、水果、肉丁拌在一起",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/salad-bowl.svg",
+      "x": 0.46,
+      "y": 0.58,
+      "s": 0.54,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.97,
+      "s": 0.22,
+      "z": -1
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.86,
+      "y": 0.56,
+      "s": 0.56,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     }
+    ],
+    "ex": "I made a fruit salad for lunch.",
+    "exzh": "我做了一份水果沙拉当午饭。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-raise",
+       "x": 0.18,
+       "y": 0.56,
+       "s": 0.64,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "I made"
+      },
+      {
+       "svg": "art/salad-bowl.svg",
+       "x": 0.56,
+       "y": 0.6,
+       "s": 0.5,
+       "when": "fruit salad",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.86,
+       "y": 0.3,
+       "s": 0.24,
+       "when": "lunch",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.97,
+       "s": 0.22,
+       "z": -1
+      },
+      {
+       "label": "fruit salad",
+       "x": 0.56,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "fruit salad"
+      },
+      {
+       "label": "水果沙拉",
+       "x": 0.56,
+       "y": 0.2,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "水果沙拉"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“加了盐的（菜）”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/lettuce.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.5,
+       "anim": "bob"
+      },
+      {
+       "label": "sal 盐 + ad",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "罗马人把生菜撒上盐拌着吃",
+    "node": "拌好的生菜",
+    "say": [
+     "古罗马人把生菜切好，撒上盐、浇上卤汁拌着吃。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/lettuce.svg",
+       "x": 0.4,
+       "y": 0.56,
+       "s": 0.46,
+       "when": "生菜",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/salt-shaker.svg",
+       "x": 0.76,
+       "y": 0.48,
+       "s": 0.38,
+       "when": "撒上盐",
+       "anim": "shake"
+      },
+      {
+       "label": "拌着吃",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "拌着吃"
+      }
+     ]
+    }
+   },
+   {
+    "via": "肉丁、水果也照这个办法拌",
+    "node": "沙拉、凉拌菜",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "后来不只是生菜，肉丁、水果也照这个办法拌，就是沙拉、凉拌菜。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/salad-bowl.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.54,
+       "when": "水果",
+       "anim": "bob"
+      },
+      {
+       "label": "沙拉",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "沙拉"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "saladai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人午饭吃了什么？\n听：I had a fruit salad for lunch.\nA. 水果沙拉\nB. 面条\nC. 米饭\nD. 汉堡",
@@ -92,5 +372,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

@@ -1,0 +1,385 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/salt-shaker.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.6,
+     "anim": "shake"
+    },
+    {
+     "label": "盐",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.11,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/wallet.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "anim": "bob"
+    },
+    {
+     "label": "与…有关的东西",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.09,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-salt.svg",
+  "p1": "art/icon-ary.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/castle-bg.svg",
+  "items": [
+   {
+    "svg": "art/roman-soldier.svg",
+    "x": 0.4,
+    "y": 0.52,
+    "s": 0.66,
+    "anim": "bob"
+   },
+   {
+    "svg": "art/salt-crystals.svg",
+    "x": 0.78,
+    "y": 0.66,
+    "s": 0.28,
+    "anim": "pulse"
+   },
+   {
+    "label": "与盐有关的（钱）",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.085,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "薪水、薪金",
+   "pos": "名词",
+   "diff": "按月、按年发的固定的钱",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/payslip.svg",
+     "x": 0.46,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/wallet.svg",
+     "x": 0.84,
+     "y": 0.64,
+     "s": 0.32,
+     "anim": "bob"
+    },
+    {
+     "actor": "west-clerk-happy",
+     "x": 0.12,
+     "y": 0.6,
+     "s": 0.5,
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2
+    }
+   ],
+   "ex": "She gets her salary every month.",
+   "exzh": "她每个月领一次工资。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.18,
+      "y": 0.56,
+      "s": 0.64,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "She gets"
+     },
+     {
+      "svg": "art/payslip.svg",
+      "x": 0.56,
+      "y": 0.48,
+      "s": 0.48,
+      "when": "salary",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.86,
+      "y": 0.3,
+      "s": 0.22,
+      "when": "every month",
+      "anim": "pulse"
+     },
+     {
+      "label": "salary",
+      "x": 0.56,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "salary"
+     },
+     {
+      "label": "工资",
+      "x": 0.56,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "工资"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“与盐有关的（钱）”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/salt-crystals.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.4,
+      "anim": "pulse"
+     },
+     {
+      "label": "sal 盐 + ary",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "罗马人发给人的一笔津贴",
+   "node": "报酬",
+   "say": [
+    "古罗马人把发给人的一笔津贴叫 salarium。",
+    "有人说是给士兵买盐的钱，可古书里找不到依据，只能算一种说法。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/roman-soldier.svg",
+      "x": 0.4,
+      "y": 0.52,
+      "s": 0.66,
+      "when": "古罗马人",
+      "anim": "bob"
+     },
+     {
+      "label": "salarium",
+      "x": 0.78,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "salarium"
+     },
+     {
+      "svg": "art/salt-crystals.svg",
+      "x": 0.78,
+      "y": 0.64,
+      "s": 0.26,
+      "cue": 1,
+      "when": "买盐的钱",
+      "anim": "pulse"
+     },
+     {
+      "label": "一种说法",
+      "x": 0.78,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "cue": 1,
+      "when": "一种说法"
+     }
+    ]
+   }
+  },
+  {
+   "via": "定期、按月按年发的一笔钱",
+   "node": "薪水、薪金",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "后来，定期、按月按年发的一笔固定的钱，就叫 salary，薪水。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/payslip.svg",
+      "x": 0.46,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "按月",
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/wallet.svg",
+      "x": 0.84,
+      "y": 0.64,
+      "s": 0.3,
+      "when": "固定的钱",
+      "anim": "bob"
+     },
+     {
+      "label": "薪水",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "薪水"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人的工资什么时候发？",
+    "listen": "My salary is paid at the end of each month.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "每天",
+     "月底",
+     "每周",
+     "年初"
+    ],
+    "ans": "B",
+    "why": "salary 按月发的固定薪水。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Teachers' ______ have gone up this year.",
+    "opts": [
+     "salary",
+     "salarys",
+     "salaries",
+     "salaried"
+    ],
+    "ans": "C",
+    "why": "have 前用复数，y 变 i 加 es。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 salary、wage 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The farm worker gets a ______ of 20 dollars an hour.",
+    "opts": [],
+    "ans": "wage",
+    "why": "按小时算的工钱用 wage。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Her salary are higher than mine.",
+    "opts": [],
+    "ans": "are → is",
+    "why": "salary 单数，用 is。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "她每个月领一次薪水。",
+    "stem": "She is paid a ______ every ______.",
+    "opts": [],
+    "ans": [
+     "salary",
+     "month"
+    ],
+    "why": "按月发的固定薪水是 salary。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Salary, wage and ______ are all money from work.",
+    "opts": [
+     "pay",
+     "price",
+     "cost",
+     "tax"
+    ],
+    "ans": "A",
+    "why": "pay 是工资报酬的统称。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Many workers asked for higher ______. (salary)",
+    "opts": [],
+    "ans": "salaries",
+    "why": "泛指复数，y 变 i 加 es。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

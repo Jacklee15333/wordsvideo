@@ -1,7 +1,296 @@
 {
  "单词": "salty-tasting",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/chips.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.56,
+      "anim": "bob"
+     },
+     {
+      "label": "咸的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.11,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/tongue-salt.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.56,
+      "anim": "pulse"
+     },
+     {
+      "label": "尝起来…的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-salty.svg",
+   "p1": "art/icon-taste.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/tongue-salt.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.56,
+     "anim": "pulse"
+    },
+    {
+     "label": "尝起来咸的",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "咸味的、吃起来发咸的",
+    "pos": "形容词",
+    "diff": "尝一口就是咸的",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/chips.svg",
+      "x": 0.4,
+      "y": 0.54,
+      "s": 0.56,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/tongue-salt.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.36,
+      "anim": "pulse"
+     }
+    ],
+    "ex": "I don't like salty-tasting snacks.",
+    "exzh": "我不喜欢咸味的零食。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-listen",
+       "x": 0.2,
+       "y": 0.56,
+       "s": 0.64,
+       "z": 3,
+       "seq": "blink",
+       "fps": 2,
+       "when": "I don't like"
+      },
+      {
+       "svg": "art/chips.svg",
+       "x": 0.58,
+       "y": 0.54,
+       "s": 0.5,
+       "when": "snacks",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/salt-crystals.svg",
+       "x": 0.84,
+       "y": 0.66,
+       "s": 0.24,
+       "when": "salty-tasting",
+       "anim": "pulse"
+      },
+      {
+       "label": "salty-tasting",
+       "x": 0.58,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "salty-tasting"
+      },
+      {
+       "label": "咸味的",
+       "x": 0.84,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "咸味的"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“尝起来咸的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/tongue-salt.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.56,
+       "anim": "pulse"
+      },
+      {
+       "label": "salty + tasting",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "taste salty → salty-tasting",
+    "node": "咸味的",
+    "pos": "形容词",
+    "pic": 0,
+    "rule": "动词带着副词合成形容词：副词挪到前面，动词放在最后",
+    "ruleEx": "taste salty → salty-tasting      look good → good-looking",
+    "say": [
+     "taste salty，尝起来咸。",
+     "把 salty 挪到前面，taste 加 ing 放在最后，中间加连字符，就成了 salty-tasting。",
+     "同样，look good 好看，就成了 good-looking。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "taste salty",
+       "x": 0.5,
+       "y": 0.2,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "taste salty",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/tongue-salt.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.4,
+       "when": "尝起来咸",
+       "anim": "pulse",
+       "hideCue": 1
+      },
+      {
+       "label": "salty-tasting",
+       "x": 0.5,
+       "y": 0.56,
+       "size": 0.1,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "cue": 1,
+       "when": "salty-tasting",
+       "hideCue": 2
+      },
+      {
+       "ray": [
+        [
+         0.3,
+         0.3
+        ],
+        [
+         0.3,
+         0.46
+        ]
+       ],
+       "color": "#E8590C",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "cue": 1,
+       "when": "挪到前面",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/mirror.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "cue": 2,
+       "when": "good-looking",
+       "anim": "pulse"
+      },
+      {
+       "label": "good-looking",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "cue": 2,
+       "when": "good-looking"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false,
+  "kaodian": {
+   "rows": [
+    [
+     "考意思",
+     "salty-tasting = 咸味的、吃起来发咸的"
+    ],
+    [
+     "考写法",
+     "放在名词前加连字符：salty-tasting snacks；放在 be 后常分开说：It tastes salty."
+    ],
+    [
+     "考构词",
+     "taste salty → salty-tasting（同 good-looking、sweet-smelling）"
+    ],
+    [
+     "考形近词",
+     "salty 咸的 / salt 盐 / saltwater 海水"
+    ]
+   ]
+  }
+ },
+ "插图": [
+  "salty-tastingai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人说这种零食怎么样？\n听：These snacks are salty-tasting but very nice.\nA. 吃起来甜\nB. 吃起来咸\nC. 很贵\nD. 很硬",
@@ -89,5 +378,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
