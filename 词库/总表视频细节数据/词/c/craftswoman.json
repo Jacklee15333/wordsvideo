@@ -1,7 +1,295 @@
 {
  "单词": "craftswoman",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/workbench.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.6,
+      "anim": "bob"
+     },
+     {
+      "label": "手艺的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/silk-fan.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.44,
+      "anim": "sway"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-tools.svg",
+   "p1": "art/icon-woman.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.3,
+     "y": 0.55,
+     "s": 0.66,
+     "z": 3,
+     "seq": "talk",
+     "fps": 2
+    },
+    {
+     "svg": "art/silk-fan.svg",
+     "x": 0.72,
+     "y": 0.5,
+     "s": 0.44,
+     "anim": "sway"
+    },
+    {
+     "label": "手艺的女人",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "女工匠、女手艺人",
+    "pos": "名词",
+    "diff": "做手艺的女人（复数 craftswomen）",
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.26,
+      "y": 0.56,
+      "s": 0.66,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "id": "g"
+     },
+     {
+      "svg": "art/silk-fan.svg",
+      "x": 0.58,
+      "y": 0.5,
+      "s": 0.44,
+      "anim": "sway"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.86,
+      "y": 0.6,
+      "s": 0.52,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "nodWith": "g"
+     }
+    ],
+    "ex": "My aunt is a craftswoman.",
+    "exzh": "我姑姑是一位女手艺人。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.24,
+       "y": 0.56,
+       "s": 0.66,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "My aunt"
+      },
+      {
+       "svg": "art/silk-fan.svg",
+       "x": 0.6,
+       "y": 0.5,
+       "s": 0.44,
+       "when": "craftswoman",
+       "pop": true,
+       "anim": "sway"
+      },
+      {
+       "svg": "art/papercut.svg",
+       "x": 0.86,
+       "y": 0.5,
+       "s": 0.34,
+       "when": "craftswoman",
+       "delay": 0.3,
+       "anim": "pulse"
+      },
+      {
+       "label": "craftswoman",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "craftswoman"
+      },
+      {
+       "label": "女手艺人",
+       "x": 0.6,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "女手艺人"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“手艺的女人”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/silk-fan.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "anim": "sway"
+      },
+      {
+       "label": "crafts + woman",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "最后一个词是主体",
+    "node": "女工匠、女手艺人",
+    "pos": "名词",
+    "pic": 0,
+    "rule": "最后一个词是主体，前面的词说明它",
+    "ruleEx": "craftswoman 手艺的女人      businesswoman 女商人",
+    "say": [
+     "合成词里，最后一个词是主体：craftswoman 说的是 woman。",
+     "什么女人？手艺的女人，就是女工匠、女手艺人；复数是 craftswomen。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.62,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "woman"
+      },
+      {
+       "label": "主体",
+       "x": 0.8,
+       "y": 0.2,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "主体"
+      },
+      {
+       "svg": "art/silk-fan.svg",
+       "x": 0.22,
+       "y": 0.5,
+       "s": 0.36,
+       "cue": 1,
+       "when": "手艺的女人",
+       "anim": "sway"
+      },
+      {
+       "label": "craftswomen",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "cue": 1,
+       "when": "craftswomen"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "craftswomanai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人的姑姑是做什么的？\n听：My aunt is a craftswoman who makes silk flowers.\nA. 女手艺人\nB. 女医生\nC. 女老师\nD. 女司机",
@@ -89,5 +377,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

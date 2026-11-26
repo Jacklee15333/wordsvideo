@@ -1,7 +1,601 @@
 {
  "单词": "craftwork",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/workbench.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.6,
+      "anim": "bob"
+     },
+     {
+      "label": "手艺",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/basket-woven.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.56,
+      "anim": "bob"
+     },
+     {
+      "label": "活儿；作品",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-tools.svg",
+   "p1": "art/icon-work.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/hands-craft.svg",
+     "x": 0.5,
+     "y": 0.54,
+     "s": 0.6,
+     "anim": "bob"
+    },
+    {
+     "label": "手艺活儿",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "手工艺（活动）",
+    "pos": "名词",
+    "diff": "做手艺这种活儿",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.22,
+      "y": 0.55,
+      "s": 0.66,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "id": "t"
+     },
+     {
+      "svg": "art/hands-craft.svg",
+      "x": 0.58,
+      "y": 0.5,
+      "s": 0.44,
+      "anim": "bob"
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.88,
+      "y": 0.62,
+      "s": 0.5,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "nodWith": "t"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     }
+    ],
+    "ex": "We do craftwork every Friday.",
+    "exzh": "我们每周五做手工。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.18,
+       "y": 0.58,
+       "s": 0.62,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "We do",
+       "id": "b"
+      },
+      {
+       "svg": "art/hands-craft.svg",
+       "x": 0.52,
+       "y": 0.5,
+       "s": 0.46,
+       "when": "craftwork",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "actor": "west-man-smile",
+       "x": 0.86,
+       "y": 0.6,
+       "s": 0.52,
+       "z": 3,
+       "seq": "blink",
+       "fps": 2,
+       "when": "every Friday",
+       "nodWith": "b"
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.96,
+       "s": 0.28,
+       "z": 5
+      },
+      {
+       "label": "craftwork",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "craftwork"
+      },
+      {
+       "label": "做手工",
+       "x": 0.5,
+       "y": 0.82,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "做手工"
+      }
+     ]
+    }
+   },
+   {
+    "text": "手工艺品",
+    "pos": "名词",
+    "diff": "做出来的成品",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/basket-woven.svg",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.4,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/cn-knot.svg",
+      "x": 0.62,
+      "y": 0.46,
+      "s": 0.46,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/pottery.svg",
+      "x": 0.86,
+      "y": 0.5,
+      "s": 0.4
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ],
+    "ex": "The shop is full of craftwork.",
+    "exzh": "这家店里摆满了手工艺品。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/basket-woven.svg",
+       "x": 0.3,
+       "y": 0.58,
+       "s": 0.38,
+       "when": "craftwork",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/cn-knot.svg",
+       "x": 0.56,
+       "y": 0.46,
+       "s": 0.42,
+       "when": "craftwork",
+       "delay": 0.3,
+       "anim": "sway"
+      },
+      {
+       "svg": "art/pottery.svg",
+       "x": 0.82,
+       "y": 0.5,
+       "s": 0.4,
+       "when": "full of",
+       "pop": true
+      },
+      {
+       "label": "craftwork",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "craftwork"
+      },
+      {
+       "label": "手工艺品",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "手工艺品"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“手艺活儿”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/hands-craft.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.6,
+       "anim": "bob"
+      },
+      {
+       "label": "craft + work",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "做手艺这种活儿",
+    "node": "① 手工艺（活动）",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "做手艺这种活儿，就是手工艺。这里直接把两个名词拼起来，不带 s，像 woodwork 木工。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/hands-craft.svg",
+       "x": 0.4,
+       "y": 0.54,
+       "s": 0.5,
+       "when": "做手艺",
+       "anim": "bob"
+      },
+      {
+       "label": "woodwork",
+       "x": 0.8,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "woodwork"
+      },
+      {
+       "label": "不带 s",
+       "x": 0.8,
+       "y": 0.7,
+       "size": 0.08,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "不带 s"
+      },
+      {
+       "label": "手工艺",
+       "x": 0.4,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "手工艺"
+      }
+     ]
+    }
+   },
+   {
+    "via": "做出来的成品",
+    "node": "② 手工艺品",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "这种活儿做出来的成品，就是手工艺品。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/basket-woven.svg",
+       "x": 0.34,
+       "y": 0.58,
+       "s": 0.4,
+       "when": "成品",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/cn-knot.svg",
+       "x": 0.68,
+       "y": 0.46,
+       "s": 0.44,
+       "when": "手工艺品",
+       "anim": "sway"
+      },
+      {
+       "label": "手工艺品",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "手工艺品"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "手工艺",
+   "items": [
+    {
+     "w": "craftwork",
+     "word": "craftwork",
+     "m": "手工艺（活动）；手工艺品",
+     "zh": "手工艺（活动）；手工艺品",
+     "say": "craftwork 是 craft 加 work，重在手艺活儿和做出来的成品。",
+     "text": "craftwork 是 craft 加 work，重在手艺活儿和做出来的成品。",
+     "note": "craftwork 是 craft 加 work，重在手艺活儿和做出来的成品。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/basket-woven.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.8,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "handicraft",
+     "word": "handicraft",
+     "m": "手工艺（品）",
+     "zh": "手工艺（品）",
+     "say": "handicraft 重在“手”，常用复数说一件件手工艺品。",
+     "text": "handicraft 重在“手”，常用复数说一件件手工艺品。",
+     "note": "handicraft 重在“手”，常用复数说一件件手工艺品。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/hands-craft.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.85,
+        "anim": "bob"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "craftwork 是“手艺 + 活儿”；handicraft 是“手 + 手艺”，强调全凭手做。",
+   "tip": "craftwork 不带属格 s，直接把两个名词拼起来（同 metalwork、woodwork）。",
+   "pics": {
+    "craftwork": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/basket-woven.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "anim": "bob"
+      }
+     ]
+    },
+    "handicraft": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/hands-craft.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.85,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "craftworkai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人今天在学校做了什么？\n听：We did some craftwork at school today.\nA. 做手工\nB. 做实验\nC. 打篮球\nD. 唱歌",
@@ -93,5 +687,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

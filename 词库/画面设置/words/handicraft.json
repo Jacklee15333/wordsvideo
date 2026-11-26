@@ -1,0 +1,793 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/hands-craft.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.6,
+     "anim": "bob"
+    },
+    {
+     "label": "手",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.11,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/hands-craft.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.56,
+     "anim": "pulse"
+    }
+   ]
+  },
+  "p2": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/workbench.svg",
+     "x": 0.5,
+     "y": 0.62,
+     "s": 0.6,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/cn-knot.svg",
+     "x": 0.86,
+     "y": 0.42,
+     "s": 0.34,
+     "anim": "sway"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-hand.svg",
+  "p1": "art/icon-i.svg",
+  "p2": "art/icon-tools.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/hands-craft.svg",
+    "x": 0.5,
+    "y": 0.54,
+    "s": 0.62,
+    "anim": "bob"
+   },
+   {
+    "label": "手的技艺",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "手工艺",
+   "pos": "名词",
+   "diff": "不靠机器、全凭两只手做东西的本事",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.22,
+     "y": 0.55,
+     "s": 0.66,
+     "z": 3,
+     "seq": "talk",
+     "fps": 2,
+     "id": "t"
+    },
+    {
+     "svg": "art/hands-craft.svg",
+     "x": 0.6,
+     "y": 0.5,
+     "s": 0.46,
+     "anim": "bob"
+    },
+    {
+     "actor": "west-girl-listen",
+     "x": 0.88,
+     "y": 0.62,
+     "s": 0.5,
+     "z": 3,
+     "seq": "blink",
+     "fps": 2,
+     "nodWith": "t"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.96,
+     "s": 0.28,
+     "z": 5
+    }
+   ],
+   "ex": "Paper cutting is a Chinese handicraft.",
+   "exzh": "剪纸是一门中国手工艺。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/papercut.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.6,
+      "when": "Paper cutting",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-man-point",
+      "x": 0.14,
+      "y": 0.58,
+      "s": 0.6,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "Chinese"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     },
+     {
+      "label": "handicraft",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "handicraft"
+     },
+     {
+      "label": "手工艺",
+      "x": 0.86,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "手工艺"
+     }
+    ]
+   }
+  },
+  {
+   "text": "手工艺品（常用复数）",
+   "pos": "名词",
+   "diff": "用手做出来的一件件东西",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/cn-knot.svg",
+     "x": 0.2,
+     "y": 0.46,
+     "s": 0.5,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/basket-woven.svg",
+     "x": 0.5,
+     "y": 0.58,
+     "s": 0.4,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/pottery.svg",
+     "x": 0.8,
+     "y": 0.5,
+     "s": 0.46,
+     "anim": "sway"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ],
+   "ex": "She sells handicrafts at the market.",
+   "exzh": "她在市场上卖手工艺品。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.16,
+      "y": 0.58,
+      "s": 0.6,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "She sells"
+     },
+     {
+      "svg": "art/cn-knot.svg",
+      "x": 0.42,
+      "y": 0.46,
+      "s": 0.44,
+      "when": "handicrafts",
+      "pop": true,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/basket-woven.svg",
+      "x": 0.64,
+      "y": 0.6,
+      "s": 0.36,
+      "when": "handicrafts",
+      "delay": 0.3,
+      "pop": true
+     },
+     {
+      "svg": "art/pottery.svg",
+      "x": 0.86,
+      "y": 0.52,
+      "s": 0.42,
+      "when": "market",
+      "pop": true
+     },
+     {
+      "label": "handicrafts",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "handicrafts"
+     },
+     {
+      "label": "手工艺品",
+      "x": 0.64,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "手工艺品"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“手的技艺”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/hands-craft.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.6,
+      "anim": "bob"
+     },
+     {
+      "label": "hand + i + craft",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "全凭两只手做东西的本事",
+   "node": "① 手工艺",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "不靠机器，全凭两只手做东西的本事，就是手工艺，比如剪纸。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/hands-craft.svg",
+      "x": 0.34,
+      "y": 0.54,
+      "s": 0.5,
+      "when": "两只手",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/papercut.svg",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.4,
+      "when": "剪纸",
+      "pop": true
+     },
+     {
+      "label": "手工艺",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "手工艺"
+     }
+    ]
+   }
+  },
+  {
+   "via": "动作、本事拿来叫做出来的东西",
+   "node": "② 手工艺品",
+   "pos": "名词",
+   "pic": 1,
+   "rule": "表示动作的词，也拿来叫做出来的东西",
+   "ruleEx": "handicraft 手工艺 → 手工艺品      invention 发明 → 发明物",
+   "say": [
+    "表示动作的词，也常拿来叫做出来的东西：invention 是发明，也是发明出来的东西。",
+    "用手工艺做出来的一件件东西，就是手工艺品，常用复数。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/crystal-ball.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.46,
+      "when": "invention",
+      "anim": "pulse",
+      "hideCue": 1
+     },
+     {
+      "label": "发明物",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "发明出来的东西",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/cn-knot.svg",
+      "x": 0.22,
+      "y": 0.46,
+      "s": 0.46,
+      "cue": 1,
+      "when": "一件件",
+      "anim": "sway"
+     },
+     {
+      "svg": "art/basket-woven.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.38,
+      "cue": 1,
+      "when": "一件件",
+      "delay": 0.3
+     },
+     {
+      "svg": "art/pottery.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.42,
+      "cue": 1,
+      "when": "手工艺品"
+     },
+     {
+      "label": "handicrafts",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "复数"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "工艺；手工艺",
+  "items": [
+   {
+    "w": "handicraft",
+    "word": "handicraft",
+    "m": "手工艺（品）",
+    "zh": "手工艺（品）",
+    "say": "handicraft 指手工做的这一类东西和本事，常用复数说手工艺品。",
+    "text": "handicraft 指手工做的这一类东西和本事，常用复数说手工艺品。",
+    "note": "handicraft 指手工做的这一类东西和本事，常用复数说手工艺品。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/cn-knot.svg",
+       "x": 0.36,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "sway"
+      },
+      {
+       "svg": "art/papercut.svg",
+       "x": 0.66,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "craft",
+    "word": "craft",
+    "m": "手艺；工艺行业（更宽）",
+    "zh": "手艺；工艺行业（更宽）",
+    "say": "craft 更宽，可以是任何手艺、行业：the craft of writing 写作的技巧。",
+    "text": "craft 更宽，可以是任何手艺、行业：the craft of writing 写作的技巧。",
+    "note": "craft 更宽，可以是任何手艺、行业：the craft of writing 写作的技巧。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/pottery.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "sway"
+      }
+     ]
+    }
+   },
+   {
+    "w": "craftwork",
+    "word": "craftwork",
+    "m": "手工艺（活动）；手工艺品",
+    "zh": "手工艺（活动）；手工艺品",
+    "say": "craftwork 是 craft 加 work，手艺活儿和做出来的成品。",
+    "text": "craftwork 是 craft 加 work，手艺活儿和做出来的成品。",
+    "note": "craftwork 是 craft 加 work，手艺活儿和做出来的成品。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/basket-woven.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "handicraft 强调“手”，craft 是一切手艺，craftwork 强调“活儿、成品”。handmade 是形容词“手工制作的”。",
+  "tip": "handicraft 是名词，handmade 是形容词：handmade toys 手工玩具。",
+  "pics": {
+   "handicraft": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/cn-knot.svg",
+      "x": 0.36,
+      "y": 0.5,
+      "s": 0.85,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/papercut.svg",
+      "x": 0.66,
+      "y": 0.5,
+      "s": 0.75,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "craft": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/pottery.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.85,
+      "anim": "sway"
+     }
+    ]
+   },
+   "craftwork": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/basket-woven.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "bob"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人在集市上买了什么？",
+    "listen": "I bought some handicrafts at the market.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "水果",
+     "手工艺品",
+     "衣服",
+     "书"
+    ],
+    "ans": "B",
+    "why": "handicrafts 手工艺品。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "This shop sells many local ______.",
+    "opts": [
+     "handicrafts",
+     "handicraft",
+     "handmade",
+     "handy"
+    ],
+    "ans": "A",
+    "why": "many 后接复数 handicrafts。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 handicraft、handmade 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "This ______ bag was made by my grandma.",
+    "opts": [],
+    "ans": "handmade",
+    "why": "修饰名词 bag 用形容词 handmade（手工制作的）。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Paper cutting is a traditional Chinese handmade.",
+    "opts": [],
+    "ans": "handmade → handicraft",
+    "why": "a 后面要名词 handicraft；handmade 是形容词。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这些手工艺品都是手工做的。",
+    "stem": "These ______ are all ______.",
+    "opts": [],
+    "ans": [
+     "handicrafts",
+     "handmade"
+    ],
+    "why": "名词复数 handicrafts；表语用形容词 handmade。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Knitting is a ______ my mother loves.",
+    "opts": [
+     "handmade",
+     "handicrafts",
+     "handicraft",
+     "handy"
+    ],
+    "ans": "C",
+    "why": "a 后面接单数名词 handicraft。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "\"Craft\" is a ______ word than \"handicraft\"; it covers any skill.",
+    "opts": [
+     "smaller",
+     "wider",
+     "newer",
+     "older"
+    ],
+    "ans": "B",
+    "why": "craft 更宽，可以是任何手艺、行业。",
+    "kd": "易混"
+   }
+  ]
+ }
+}

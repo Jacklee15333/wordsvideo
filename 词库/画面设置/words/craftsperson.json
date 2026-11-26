@@ -154,27 +154,28 @@
      "nodWith": "t"
     }
    ],
-   "ex": "Every craftsperson at the fair sold out.",
-   "exzh": "集市上每个手艺人的东西都卖光了。",
+   "ex": "My aunt is a craftsperson.",
+   "exzh": "我姑姑是个手艺人。",
    "exPic": {
     "bg": "blank",
     "img": "art/street-bg.svg",
     "items": [
      {
-      "svg": "art/pottery.svg",
-      "x": 0.3,
-      "y": 0.5,
-      "s": 0.4,
-      "when": "craftsperson",
-      "pop": true,
-      "anim": "sway"
+      "actor": "west-girl-music",
+      "x": 0.22,
+      "y": 0.56,
+      "s": 0.62,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "My aunt"
      },
      {
       "svg": "art/basket-woven.svg",
       "x": 0.58,
       "y": 0.56,
       "s": 0.34,
-      "when": "the fair",
+      "when": "craftsperson",
       "pop": true,
       "anim": "bob"
      },
@@ -183,12 +184,13 @@
       "x": 0.84,
       "y": 0.44,
       "s": 0.4,
-      "when": "sold out",
+      "when": "craftsperson",
+      "delay": 0.3,
       "anim": "sway"
      },
      {
       "label": "craftsperson",
-      "x": 0.4,
+      "x": 0.5,
       "y": 0.08,
       "size": 0.08,
       "color": "#7A3E00",
@@ -197,13 +199,13 @@
       "when": "craftsperson"
      },
      {
-      "label": "卖光了",
+      "label": "手艺人",
       "x": 0.84,
       "y": 0.86,
       "size": 0.08,
       "color": "#2B8A3E",
       "border": "#2B8A3E",
-      "when": "卖光了"
+      "when": "手艺人"
      },
      {
       "actor": "walk-cn-girl",
@@ -328,7 +330,8 @@
       "seq": "pingpong",
       "fps": 2,
       "cue": 2,
-      "when": "手艺人"
+      "when": "手艺人",
+      "id": "r"
      },
      {
       "actor": "west-man-hello",
@@ -339,7 +342,8 @@
       "seq": "pingpong",
       "fps": 2,
       "cue": 2,
-      "when": "男女都能说"
+      "when": "男女都能说",
+      "nodWith": "r"
      },
      {
       "label": "craftsperson",
