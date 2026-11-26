@@ -1251,7 +1251,7 @@ window.addEventListener('error',e=>{try{toast('✗ 页面出错了：'+(e.messag
 window.addEventListener('unhandledrejection',e=>{try{toast('✗ 出错了：'+((e.reason&&e.reason.message)||e.reason),8000)}catch(_){}});
 function toast(m,ms=3500){const t=$('#toast');t.textContent=m;t.style.display='block';clearTimeout(t._h);t._h=setTimeout(()=>t.style.display='none',ms)}
 function modal(title,html){wdHome();$('#mTitle').textContent=title;$('#mBody').innerHTML=html;$('#modal').style.display='flex'}
-function closeModal(){wdHome();$('#modal').style.display='none';if(page==='q')loadManual()}
+function closeModal(){wdHome();$('#mBody').querySelectorAll('video').forEach(v=>v.pause());$('#modal').style.display='none';if(page==='q')loadManual()}
 $('#modal').onclick=e=>{if(e.target.id==='modal')closeModal()};
 let WD_HOME=null;
 function wdHome(){const b=$('#wDetail');if(b&&WD_HOME&&b.parentElement!==WD_HOME)WD_HOME.appendChild(b)}
@@ -2629,24 +2629,36 @@ function vMachineSum(M){const p=[];
   if(M.wslGB)p.push(`出片的 Linux 最多用了 ${M.wslGB.max}${M.wslTotal?' / '+M.wslTotal:''} GB`);
   const warn=[];if(M.mem&&M.mem.max>=95)warn.push('内存到过 95%，出片进程可能被系统停掉：下次关掉不用的程序');if(M.gtemp&&M.gtemp.max>=85)warn.push('显卡到过 85°C：看看机箱通风');
   return p.join('；')+`<span class="faint">（软件开着时记的，约 ${Math.max(1,M.mins||0)} 分钟）</span>`+(warn.length?`<br><span class="ck-bad">⚠ ${warn.join('；')}</span>`:'')}
+/* v1.25.0：汇报里每个词一行——做好的：▶ 播放（就在软件里放）、在文件夹里找出来；退回去的、没做成的、跳过的：写原因 */
+function vWordRows(b,out){
+  const vs=((typeof VW!=='undefined'&&VW&&VW.videos)||[]).filter(v=>v.batch===b.name);
+  const rows=(b.words||[]).map(w=>Object.assign({},w));
+  Object.values(out).forEach(o=>{if(!rows.find(w=>w.word===o.word))rows.push({word:o.word,stage:'skipped'})});
+  rows.sort((x,y)=>(parseInt(x.no)||999)-(parseInt(y.no)||999));
+  const st=w=>{const o=out[w.word];
+    if(w.stage==='done'){const v=vs.find(x=>x.word===w.word||x.word===vWn(w.word)),f=v?v.file:`${b.name}\\${w.no?w.no+' ':''}${vWn(w.word)}.mp4`;
+      return [`<span style="color:var(--pass);font-weight:600">✓ 做好了</span>`,`<a href="#" class="vlink" onclick="vPlay(this.dataset.f,this.dataset.w);return false" data-f="${esc(f)}" data-w="${esc(vWn(w.word))}">▶ 播放</a>　<a href="#" class="small" data-open="vfile" data-word="${esc(f)}">在文件夹里找出来</a>　<span class="small faint">${esc(f.split(/[\\\/]/).pop())}</span>`]}
+    if(o)return [`<span style="color:var(--amber);font-weight:600">↩ 退回${o.to==='q'?'「出题」':'「画面」'}</span>`,`${esc(o.why||'')}<span class="small faint">（${o.when==='check'?'开工前检测时':'出片时'}）</span>`];
+    if(['blocked','failed','qa'].includes(w.status))return [`<span class="ck-bad">✗ 没做成</span>`,`${esc(VSTN[w.stage]||'')}：${vIsPic(w)?vPicLab(w):esc(w.msg||'没写原因')}`];
+    if(w.stage==='skipped')return [`<span class="faint">跳过</span>`,esc(w.msg||'')];
+    if(w.status==='running')return [`<span>正在做</span>`,esc(VSTN[w.stage]||'')];
+    return [`<span class="faint">还没做</span>`,''];};
+  return `<table class="vwrows" style="width:100%;border-collapse:collapse">${rows.map(w=>{const [a,c]=st(w);
+    return `<tr style="border-top:1px solid var(--rule)"><td style="padding:4px 8px 4px 0;white-space:nowrap" class="small faint">${esc(w.no||'')}</td><td style="padding:4px 10px 4px 0;white-space:nowrap"><span class="w">${esc(vWn(w.word))}</span></td><td style="padding:4px 10px 4px 0;white-space:nowrap">${a}</td><td style="padding:4px 0">${c}</td></tr>`}).join('')}</table>`}
+function vPlay(f,w){modal(w||'播放',`<video src="/api/video/file?p=${encodeURIComponent(f)}" controls autoplay style="width:100%;max-height:72vh;background:#000;border-radius:6px"></video>
+  <div class="small faint" style="margin-top:6px">${esc(f)}　<a href="#" data-open="vfile" data-word="${esc(f)}">在文件夹里找出来</a></div>`)}
 function vReport(b){
   const c=b.counts||{},left=(c.waiting||0)+(c.running||0),kind={done:'ok',stopped:'stop',stuck:'bad',halted:'halt'}[b.state];
   const title={done:'✓ 这一批做完了',stopped:'■ 这一批停止了',stuck:`! 停下了：${c.todo} 个词要你处理`,halted:'停下了，还没做完'}[b.state];
   const out=(b.rep||{}).out||{},ov=Object.values(out),oc=ov.filter(o=>o.when==='check').length,orun=ov.length-oc,sk0=(c.skipped||0)-ov.length;
-  const parts=[`做好 <b>${c.done||0}</b> 个`];if(ov.length)parts.push(`退回去 <b>${ov.length}</b> 个（${[oc?`检测时 ${oc} 个`:'',orun?`出片时 ${orun} 个`:''].filter(Boolean).join('，')}，原因看最上面）`);
+  const parts=[`做好 <b>${c.done||0}</b> 个`];if(ov.length)parts.push(`退回去 <b>${ov.length}</b> 个（${[oc?`检测时 ${oc} 个`:'',orun?`出片时 ${orun} 个`:''].filter(Boolean).join('，')}，原因写在下面每个词那一行）`);
   if(sk0>0)parts.push(`跳过 ${sk0} 个`);if(c.todo)parts.push(`<span class="ck-bad">没做成 ${c.todo} 个</span>`);if(left)parts.push(`没做 ${left} 个`);
   let h=`<div class="vrep ${kind}"><div class="hd">${title}</div><dl><dt>结果</dt><dd>放进 ${b.n} 个词：${parts.join('，')}</dd>`;
-  const okw=(b.words||[]).filter(w=>w.stage==='done');                          // v1.24.0：做好的一个词一行：文件名、播放、在文件夹里找出来
-  if(okw.length){const vs=((typeof VW!=='undefined'&&VW&&VW.videos)||[]).filter(v=>v.batch===b.name);
-    h+=`<dt>做好的</dt><dd>${okw.map(w=>{const v=vs.find(x=>x.word===w.word||x.word===vWn(w.word)),f=v?v.file:`${b.name}\\${w.no?w.no+' ':''}${vWn(w.word)}.mp4`;
-      return `<div style="padding:2px 0"><span class="w">${esc(vWn(w.word))}</span>　<span class="small faint">${esc(f.split(/[\\\/]/).pop())}</span>　<a class="vlink" href="/api/video/file?p=${encodeURIComponent(f)}" target="_blank">播放</a>　<a href="#" class="small" data-open="vfile" data-word="${esc(f)}">在文件夹里找出来</a></div>`}).join('')}</dd>`}
+  h+=`<dt>每个词</dt><dd>${vWordRows(b,out)}</dd>`;                               // v1.25.0：放进去的每个词一行：做好了能播放，没做成写原因
   if(b.state==='halted')h+=`<dt>为什么</dt><dd>流水线停了（电脑重启、WSL 关了，或者在别处停的）。点「接着做」从停下的地方接着做。</dd>`;
   if(b.active)h+=`<dt>用时</dt><dd>${b.first?fmtT(b.first)+' 开工，':''}出片一共 ${vDur(b.active)}${b.per?`，平均 ${vDur(b.per)}出一个`:''}</dd>`;
   const sa=VSTG.filter(s=>(b.stageAvg||{})[s]!=null);if(sa.length)h+=`<dt>每一步</dt><dd>平均一个词：${sa.map(s=>VSTN[s]+' '+vClock(b.stageAvg[s])).join('、')}</dd>`;
   if(b.machine)h+=`<dt>电脑</dt><dd>${vMachineSum(b.machine)}</dd>`;
-  if(ov.length)h+=`<dt>退回去</dt><dd>${ov.map(o=>`<span class="w">${esc(o.word)}</span>（${o.to==='q'?'「出题」':'「画面」'}：${esc(vShort(o.why,30))}）`).join('；')}</dd>`;
-  if(b.todo&&b.todo.length)h+=`<dt>没做成</dt><dd>${b.todo.map(w=>`<span class="w">${esc(vWn(w.word))}</span>（${vIsPic(w)?vPicLab(w):(VSTN[w.stage]||'')+'：'+esc(vShort(w.msg||'没写原因',50))}）`).join('；')}</dd>`;
-  const sk=(b.words||[]).filter(w=>w.stage==='skipped'&&!out[w.word]);if(sk.length)h+=`<dt>跳过</dt><dd>${sk.map(w=>`<span class="w">${esc(vWn(w.word))}</span>`+(w.msg?`<span title="${esc(w.msg)}">（${esc(vShort(w.msg,40))}）</span>`:'')).join('、')}</dd>`;
   if(b.notes&&b.notes.length)h+=`<dt>处理记录</dt><dd>${b.notes.map(esc).join('<br>')}</dd>`;
   if(b.res)h+=`<dt>分工</dt><dd class="small muted">${esc(b.res)}</dd>`;
   return h+`<dt>视频</dt><dd><code>${esc(b.winDir)}</code> <button class="btn ghost sm" data-open="vbatch" data-word="${esc(b.name)}">打开文件夹</button></dd></dl></div>`}

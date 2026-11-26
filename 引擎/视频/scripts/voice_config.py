@@ -5,8 +5,8 @@
 
 参考录音（ref.wav + ref.txt，另有 noise.wav 是录音里的底噪样本）按这个顺序找，找到就用：
   1. 环境变量 $WORDFILM_VOICE 指的文件夹
-  2. ~/wordfilm-voice（voice_prep.py 默认写到这里；技能目录只读时换声音就靠它）
-  3. 技能自带的 assets/voice（用户本人的声音；6.9 起取自用户的“音色音频1 / 2”）
+  2. 技能自带的 assets/voice（用户本人的声音；6.45 起取自仓库「素材/音色/5音色.m4a」第 41.7～49.5 秒，6音色是同一次讲课）
+  3. ~/wordfilm-voice（voice_prep.py 默认写到这里）
 """
 import hashlib
 import os
@@ -43,15 +43,15 @@ EN_LEXICON = os.path.join(MODELS, 'lexicon-en-us.txt')     # 没有它，sherpa-
 #   默认 4 步 + 1.0：总分 2.62、背景噪声 3.12；8 步 + 1.0：2.73、3.47
 #   4 步 + 3.0 + 参考录音先降噪：总分 3.27、背景噪声 4.08（8 步反而不更好，还慢一倍）
 STEPS = 4
-GUIDANCE = 3.0
+GUIDANCE = 2.0               # 6.45：3.0 → 2.0（实测音质分高一点，声音没那么“电子”）
 # 6.10 起（第四十七版）中文语速 0.95（以前 1.0）。用户：“声音有点快，不是很自然，让我的声音慢一点点，再自然一点”。
 # 换了参考录音（见 assets/voice、SKILL.md“这一版改了什么（6.10.0）”）以后，三句讲解实测每秒 5.9 字（1.0）/ 5.3 字（0.93）；
 # 第四十六版是 6.25 字。0.95 约 5.5 字，慢一成多，又不至于拖。plan.json 的 zvSpeed 照旧可以整段改，一句单独的写 {"t": "…", "zvSpeed": 0.9}
 SPEED = 0.95
 VERSION = '6.25-a'            # 改了合成设置或清理做法就改这里：run.py 会把旧配音重新合成（6.25：英文换成干净念法）
-REF_DENOISE = 0.9            # 6.44：参考录音先用 noise.wav 的底噪降噪（0 不降）
-OUT_DENOISE = 0.75           # 6.44：合成出来的句子降噪（以前 0.5）
-CLONE_VERSION = '6.44-a'     # 只管中文克隆那部分：没变就复用缓存里念好的中文（audio/cache），不重念
+REF_DENOISE = 0              # 6.45：不再给参考录音二次降噪（6.44 的 0.9 让声音发“电子”、不像本人：像不像本人 0.80 → 0.74）；新参考录音做的时候已经轻降过
+OUT_DENOISE = 0.25           # 6.45：合成出来的句子轻降噪（6.44 的 0.75 太重；以前 0.5）
+CLONE_VERSION = '6.45-a'     # 只管中文克隆那部分：没变就复用缓存里念好的中文（audio/cache），不重念
 
 # 5.7 起配音分三种声音（用户定的）：
 #   1. 中文讲解：用户本人的声音（ZipVoice 声音克隆，上面那些设置）
@@ -94,7 +94,8 @@ def threads():
 
 
 def voice_dir():
-    for d in (os.environ.get('WORDFILM_VOICE'), os.path.expanduser('~/wordfilm-voice'), os.path.join(SKILL, 'assets', 'voice')):
+    # 6.45：技能自带的（仓库「素材/音色」里的录音做的）排在 ~/wordfilm-voice 前面：仓库里换了声音，同步到 WSL 就生效
+    for d in (os.environ.get('WORDFILM_VOICE'), os.path.join(SKILL, 'assets', 'voice'), os.path.expanduser('~/wordfilm-voice')):
         if d and os.path.exists(os.path.join(d, 'ref.wav')) and os.path.exists(os.path.join(d, 'ref.txt')):
             return d
     return None

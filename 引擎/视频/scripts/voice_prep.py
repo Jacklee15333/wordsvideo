@@ -11,7 +11,7 @@
 会挑没有“呃、嗯、啊”、不夹英文的一段（英文现在由英文声音念，参考录音里不需要英文）。
 
 写到 ~/wordfilm-voice（或 --out）：ref.wav（参考片段）、ref.txt（片段里说的话）、noise.wav（录音的底噪样本，合成后降噪用）。
-synth.py 优先用 ~/wordfilm-voice，所以做完马上生效。想长期保存：把这三个文件放进技能的 assets/voice/ 再打包。
+6.45 起 synth.py 先用技能的 assets/voice（仓库里的声音），~/wordfilm-voice 排在后面：做好的三个文件要放进技能的 assets/voice/ 才生效（或者设 WORDFILM_VOICE）。
 
 录音要求：只有一个人说话，安静的屋子，离麦克风一拳多远（别顶满音量），语气就用讲课的语气——合成出来的语气会跟着参考录音走。
 ref.txt 必须和录音一字不差：识别模型偶尔会听错，打印出来以后对着录音核一遍，有错就直接改 ref.txt。
