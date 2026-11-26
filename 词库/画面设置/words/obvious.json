@@ -1,0 +1,1149 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈɒb",
+  "vi",
+  "əs"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "actor": "walk-cn-teacher-case",
+     "x": 0.02,
+     "y": 0.72,
+     "s": 0.54,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.02,
+       0.72
+      ],
+      "to": [
+       0.6,
+       0.72
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.98,
+     "y": 0.74,
+     "s": 0.54,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.98,
+       0.74
+      ],
+      "to": [
+       0.4,
+       0.74
+      ],
+      "offset": 0.1
+     }
+    },
+    {
+     "label": "迎着",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "ray": [
+      [
+       0.15,
+       0.28
+      ],
+      [
+       0.45,
+       0.28
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 0.8,
+     "delay": 0.4
+    },
+    {
+     "ray": [
+      [
+       0.85,
+       0.28
+      ],
+      [
+       0.55,
+       0.28
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 0.8,
+     "delay": 0.4
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/countryside-bg.svg",
+   "items": [
+    {
+     "svg": "art/road.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.62,
+     "shadow": true
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.02,
+     "y": 0.84,
+     "s": 0.42,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.02,
+       0.84
+      ],
+      "to": [
+       0.98,
+       0.84
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "label": "vi = 路",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    }
+   ]
+  },
+  "p2": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/tag.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.5,
+     "anim": "pulse",
+     "shadow": true
+    },
+    {
+     "label": "…的",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "label": "名词 → 形容词",
+     "x": 0.5,
+     "y": 0.88,
+     "size": 0.075,
+     "color": "#7048E8",
+     "border": "#7048E8",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-ob.svg",
+  "p1": "art/icon-road.svg",
+  "p2": "art/icon-ous.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/countryside-bg.svg",
+  "items": [
+   {
+    "svg": "art/road.svg",
+    "x": 0.5,
+    "y": 0.62,
+    "s": 0.6
+   },
+   {
+    "svg": "art/rock.svg",
+    "x": 0.5,
+    "y": 0.62,
+    "s": 0.36,
+    "pop": true,
+    "delay": 0.6,
+    "anim": "shake"
+   },
+   {
+    "actor": "walk-west-boy-pack",
+    "x": 0.02,
+    "y": 0.86,
+    "s": 0.4,
+    "z": 2,
+    "walk": {
+     "from": [
+      0.02,
+      0.86
+     ],
+     "to": [
+      0.98,
+      0.86
+     ],
+     "offset": 0.3
+    }
+   },
+   {
+    "label": "在路上迎面碰到的",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "明显的、显而易见的",
+   "pos": "形容词",
+   "diff": "一眼就看得出",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/stain-shirt.svg",
+     "x": 0.4,
+     "y": 0.52,
+     "s": 0.62,
+     "shadow": true,
+     "anim": "pulse"
+    },
+    {
+     "actor": "west-girl-surprised",
+     "x": 0.8,
+     "y": 0.6,
+     "s": 0.76,
+     "z": 3,
+     "seq": "blink"
+    },
+    {
+     "label": "一眼就看得出",
+     "x": 0.4,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.8
+    }
+   ],
+   "ex": "The mistake is obvious.",
+   "exzh": "这个错误很明显。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.84,
+      "z": 3,
+      "id": "t",
+      "seq": "talk"
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.82,
+      "y": 0.62,
+      "s": 0.78,
+      "z": 3,
+      "nodWith": "t",
+      "seq": "blink"
+     },
+     {
+      "svg": "art/paper-x.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.56,
+      "when": "mistake",
+      "pop": true
+     },
+     {
+      "label": "obvious",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "obvious"
+     },
+     {
+      "label": "很明显",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "很明显"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.2,
+      "z": 6
+     }
+    ]
+   }
+  },
+  {
+   "text": "过于直白的",
+   "pos": "形容词",
+   "diff": "（贬）太明显，一点也不含蓄",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-point",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.84,
+     "z": 3,
+     "seq": "talk"
+    },
+    {
+     "svg": "art/cal-20.svg",
+     "x": 0.72,
+     "y": 0.44,
+     "s": 0.5,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/heart.svg",
+     "x": 0.86,
+     "y": 0.22,
+     "s": 0.16,
+     "anim": "bob"
+    },
+    {
+     "label": "太直白",
+     "x": 0.72,
+     "y": 0.86,
+     "size": 0.075,
+     "color": "#C92A2A",
+     "border": "#C92A2A",
+     "delay": 0.8
+    }
+   ],
+   "ex": "His hint was too obvious.",
+   "exzh": "他的暗示太直白了。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-speech",
+      "x": 0.22,
+      "y": 0.6,
+      "s": 0.84,
+      "z": 3,
+      "id": "m",
+      "turn": [
+       0,
+       2
+      ],
+      "seq": "talk"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.8,
+      "y": 0.6,
+      "s": 0.84,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ]
+     },
+     {
+      "svg": "art/cal-20.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.36,
+      "when": "hint",
+      "pop": true
+     },
+     {
+      "svg": "art/heart.svg",
+      "x": 0.5,
+      "y": 0.14,
+      "s": 0.12,
+      "when": "too obvious",
+      "anim": "pulse"
+     },
+     {
+      "label": "too obvious",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "too obvious"
+     },
+     {
+      "label": "太直白",
+      "x": 0.86,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "太直白"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“在路上迎面碰到的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/countryside-bg.svg",
+    "items": [
+     {
+      "svg": "art/road.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.66
+     },
+     {
+      "svg": "art/rock.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.34,
+      "anim": "shake"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.4,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "label": "ob 迎着 + vi 路 + ous 的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "路上天天迎面碰到",
+   "node": "常见的（今已不用）",
+   "say": [
+    "ob 是迎着，vi 是路。",
+    "路上天天迎面碰到的东西，随处可见，就是常见的。",
+    "这是英语刚借进来时的意思，今天已经不用了。"
+   ],
+   "from": 0,
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "label": "ob 迎着",
+      "x": 0.3,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "迎着"
+     },
+     {
+      "label": "vi 路",
+      "x": 0.7,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "路"
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.02,
+      "y": 0.74,
+      "s": 0.52,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.74
+       ],
+       "to": [
+        0.98,
+        0.74
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "label": "常见的",
+      "x": 0.5,
+      "y": 0.4,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "常见的"
+     },
+     {
+      "label": "今天已不用",
+      "x": 0.5,
+      "y": 0.56,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "不用了"
+     }
+    ]
+   }
+  },
+  {
+   "via": "东西横在路中间，想看不见都难",
+   "node": "① 明显的、显而易见的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "一块大石头横在你要走的路中间，",
+    "想看不见都难，这就是明显的、显而易见的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/countryside-bg.svg",
+    "items": [
+     {
+      "svg": "art/road.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.62
+     },
+     {
+      "svg": "art/rock.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.5,
+      "when": "大石头",
+      "pop": true,
+      "anim": "shake"
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.16,
+      "y": 0.6,
+      "s": 0.6,
+      "z": 3,
+      "when": "你要走的路",
+      "seq": "blink"
+     },
+     {
+      "label": "明显的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "明显的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "太明显，一眼就看穿",
+   "node": "② 过于直白的",
+   "pos": "形容词",
+   "pic": 1,
+   "say": [
+    "太明显了，别人一眼就看穿，",
+    "说话做事一点也不含蓄，就是过于直白的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/cal-20.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.5,
+      "when": "太明显",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/heart.svg",
+      "x": 0.72,
+      "y": 0.24,
+      "s": 0.16,
+      "when": "一眼就看穿",
+      "pop": true
+     },
+     {
+      "label": "一眼就看穿",
+      "x": 0.24,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "一眼就看穿"
+     },
+     {
+      "label": "不含蓄",
+      "x": 0.24,
+      "y": 0.4,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "不含蓄"
+     },
+     {
+      "label": "过于直白",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "过于直白"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "明显的",
+  "items": [
+   {
+    "w": "obvious",
+    "word": "obvious",
+    "m": "一眼就看得出",
+    "say": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "text": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "diff": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "d": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "desc": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "line": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "talk": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "note": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "explain": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "zh": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "sent": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "mean": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "svg": "art/road.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.6
+      },
+      {
+       "svg": "art/rock.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.4,
+       "anim": "shake"
+      }
+     ]
+    }
+   },
+   {
+    "w": "distinct",
+    "word": "distinct",
+    "m": "清楚的、有区别的",
+    "say": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "text": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "diff": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "d": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "desc": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "line": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "talk": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "note": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "explain": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "zh": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "sent": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "mean": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/apple1.svg",
+       "x": 0.36,
+       "y": 0.52,
+       "s": 0.5,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/orange.svg",
+       "x": 0.64,
+       "y": 0.52,
+       "s": 0.46,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "noticeable",
+    "word": "noticeable",
+    "m": "引人注意的",
+    "say": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "text": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "diff": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "d": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "desc": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "line": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "talk": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "note": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "explain": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "zh": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "sent": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "mean": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/stain-shirt.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "gross",
+    "word": "gross",
+    "m": "严重明显的",
+    "say": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "text": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "diff": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "d": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "desc": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "line": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "talk": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "note": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "explain": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "zh": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "sent": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "mean": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/paper-x.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.66,
+       "anim": "shake"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.82,
+       "y": 0.62,
+       "s": 0.66,
+       "z": 3,
+       "seq": "blink"
+      }
+     ]
+    }
+   },
+   {
+    "w": "visible",
+    "word": "visible",
+    "m": "能被看见的",
+    "say": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "text": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "diff": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "d": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "desc": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "line": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "talk": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "note": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "explain": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "zh": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "sent": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "mean": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/harbor-bg.svg",
+     "items": [
+      {
+       "svg": "art/ship.svg",
+       "x": 0.6,
+       "y": 0.6,
+       "s": 0.42,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "patent",
+    "word": "patent",
+    "m": "明显的",
+    "say": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "text": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "diff": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "d": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "desc": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "line": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "talk": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "note": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "explain": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "zh": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "sent": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "mean": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/door-open.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.7,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  ],
+  "pics": {
+   "obvious": {
+    "bg": "blank",
+    "img": "art/countryside-bg.svg",
+    "items": [
+     {
+      "svg": "art/road.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.6
+     },
+     {
+      "svg": "art/rock.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.4,
+      "anim": "shake"
+     }
+    ]
+   },
+   "distinct": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/apple1.svg",
+      "x": 0.36,
+      "y": 0.52,
+      "s": 0.5,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/orange.svg",
+      "x": 0.64,
+      "y": 0.52,
+      "s": 0.46,
+      "anim": "bob"
+     }
+    ]
+   },
+   "noticeable": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/stain-shirt.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "gross": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/paper-x.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.66,
+      "anim": "shake"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.82,
+      "y": 0.62,
+      "s": 0.66,
+      "z": 3,
+      "seq": "blink"
+     }
+    ]
+   },
+   "visible": {
+    "bg": "blank",
+    "img": "art/harbor-bg.svg",
+    "items": [
+     {
+      "svg": "art/ship.svg",
+      "x": 0.6,
+      "y": 0.6,
+      "s": 0.42,
+      "anim": "bob"
+     }
+    ]
+   },
+   "patent": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/door-open.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.7,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "logic": "obvious 是 ob 迎着 + vi 路：东西挡在路上迎面碰到，所以一眼就看得出、一看就明白；visible 只说能被看见；evident 是有证据可见；apparent 是表面看来，实际未必如此。",
+  "tip": "一看就明白用 obvious；能看得见用 visible；有证据表明用 evident；看起来好像用 apparent。",
+  "say": {
+   "obvious": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+   "distinct": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+   "noticeable": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+   "gross": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+   "visible": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+   "patent": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。"
+  },
+  "lines": {
+   "obvious": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+   "distinct": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+   "noticeable": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+   "gross": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+   "visible": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+   "patent": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。"
+  },
+  "talk": {
+   "obvious": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+   "distinct": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+   "noticeable": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+   "gross": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+   "visible": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+   "patent": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。"
+  },
+  "text": {
+   "obvious": "obvious 是一眼就看得出的：东西就挡在眼前，谁都明白，The answer is obvious。",
+   "distinct": "distinct 是清楚的、明显不同的：两样东西分得清清楚楚，a distinct difference。",
+   "noticeable": "noticeable 是引人注意的：显眼到让人一下子注意到，a noticeable stain。",
+   "gross": "gross 是严重而明显的：多说错误、不公，a gross error 严重的错误。",
+   "visible": "visible 是能被看见的：只说眼睛看得见这个客观事实，The ship is visible。",
+   "patent": "patent 是明显的：保留着敞开的本义，像敞开的门，patently obvious 再明显不过。"
+  }
+ },
+ "demo": {
+  "careful": {
+   "icons": [
+    "art/icon-dcare.svg",
+    "art/icon-dful.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/eggs.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "充满小心的"
+  },
+  "careless": {
+   "icons": [
+    "art/icon-dcare.svg",
+    "art/icon-dless.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/spill2.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.72,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "没有小心的"
+  },
+  "dangerous": {
+   "icons": [
+    "art/icon-ddanger.svg",
+    "art/icon-dous.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/warnsign.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.86,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "有危险的"
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人觉得答案怎么样？",
+    "listen": "The answer is obvious.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "很难",
+     "很明显",
+     "不对",
+     "不知道"
+    ],
+    "ans": "B",
+    "why": "obvious 明显的。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "It's ______ that he is tired; he keeps yawning.",
+    "opts": [
+     "obviously",
+     "obvious",
+     "hidden",
+     "secret"
+    ],
+    "ans": "B",
+    "why": "他一直打哈欠，累了是很明显的，用 obvious。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 obvious、visible 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The stars are ______ only at night.",
+    "opts": [],
+    "ans": "visible",
+    "why": "“能被看见”用 visible；obvious 是一看就明白。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "______, he didn't do his homework. (obvious)",
+    "opts": [],
+    "ans": "Obviously",
+    "why": "句首修饰整句用副词 Obviously。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "It's obviously that she likes music.",
+    "opts": [],
+    "ans": "obviously → obvious",
+    "why": "It's + 形容词 + that…，用 obvious。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这是最明显的答案。",
+    "stem": "It's the ______ ______ answer.",
+    "opts": [],
+    "ans": [
+     "most",
+     "obvious"
+    ],
+    "why": "最高级 the most obvious。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The answer is ______ to everyone; nobody needs to explain it.",
+    "opts": [
+     "unclear",
+     "hidden",
+     "clear",
+     "secret"
+    ],
+    "ans": "C",
+    "why": "一目了然用 clear，和 obvious 意思相近。",
+    "kd": "易混"
+   }
+  ]
+ }
+}

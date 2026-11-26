@@ -1,7 +1,957 @@
 {
  "单词": "via",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ˈvaɪ",
+   "ə"
+  ],
+  "pics": [
+   {
+    "text": "经由、取道",
+    "pos": "介词",
+    "diff": "沿着一条路经过某地",
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "svg": "art/routemap.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.62,
+      "id": "m",
+      "shadow": true
+     },
+     {
+      "label": "北京",
+      "x": 80,
+      "y": 30,
+      "size": 0.06,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "on": "m"
+     },
+     {
+      "label": "武汉",
+      "x": 200,
+      "y": 118,
+      "size": 0.07,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "on": "m",
+      "delay": 0.6
+     },
+     {
+      "label": "广州",
+      "x": 300,
+      "y": 285,
+      "size": 0.06,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "on": "m",
+      "delay": 1.0
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.02,
+      "y": 0.9,
+      "s": 0.34,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.9
+       ],
+       "to": [
+        0.98,
+        0.9
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.98,
+      "y": 0.9,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.9
+       ],
+       "to": [
+        0.02,
+        0.9
+       ],
+       "offset": 0.6
+      }
+     }
+    ],
+    "ex": "We went to Guangzhou via Wuhan.",
+    "exzh": "我们经由武汉去了广州。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "svg": "art/train.svg",
+       "x": 0.12,
+       "y": 0.6,
+       "s": 0.32,
+       "go": [
+        0.88,
+        0.6
+       ],
+       "dur": 4,
+       "wait": 0.2,
+       "when": "We went"
+      },
+      {
+       "label": "Wuhan",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "via Wuhan"
+      },
+      {
+       "label": "Guangzhou",
+       "x": 0.86,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "Guangzhou"
+      },
+      {
+       "ray": [
+        [
+         0.14,
+         0.42
+        ],
+        [
+         0.5,
+         0.42
+        ],
+        [
+         0.86,
+         0.42
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 1.2,
+       "when": "via Wuhan"
+      },
+      {
+       "label": "经由武汉",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "经由武汉"
+      }
+     ]
+    }
+   },
+   {
+    "text": "通过、借助",
+    "pos": "介词",
+    "diff": "借某种手段把东西、消息传过去",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.3
+     },
+     {
+      "svg": "art/computer.svg",
+      "x": 0.34,
+      "y": 0.52,
+      "s": 0.5,
+      "shadow": true
+     },
+     {
+      "svg": "art/envelope.svg",
+      "x": 0.42,
+      "y": 0.36,
+      "s": 0.16,
+      "go": [
+       0.8,
+       0.36
+      ],
+      "dur": 2,
+      "wait": 0.6,
+      "loop": true
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.82,
+      "y": 0.5,
+      "s": 0.4,
+      "anim": "bob"
+     },
+     {
+      "label": "via email",
+      "x": 0.6,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "delay": 0.8
+     },
+     {
+      "waves": true,
+      "x": 0.8899999999999999,
+      "y": 0.38,
+      "dir": 0,
+      "n": 3,
+      "color": "#22B8CF"
+     }
+    ],
+    "ex": "I sent the photos via email.",
+    "exzh": "我通过电子邮件发了照片。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.88,
+       "s": 0.28
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.14,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.38,
+       "y": 0.54,
+       "s": 0.46,
+       "when": "sent"
+      },
+      {
+       "svg": "art/photo.svg",
+       "x": 0.38,
+       "y": 0.48,
+       "s": 0.2,
+       "when": "photos",
+       "pop": true
+      },
+      {
+       "svg": "art/envelope.svg",
+       "x": 0.44,
+       "y": 0.36,
+       "s": 0.16,
+       "when": "via email",
+       "go": [
+        0.82,
+        0.36
+       ],
+       "goWhen": "via email",
+       "dur": 1.6
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.84,
+       "y": 0.52,
+       "s": 0.4
+      },
+      {
+       "label": "via email",
+       "x": 0.64,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "via email"
+      },
+      {
+       "label": "电子邮件",
+       "x": 0.84,
+       "y": 0.86,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "电子邮件"
+      },
+      {
+       "waves": true,
+       "x": 0.9099999999999999,
+       "y": 0.4,
+       "dir": 0,
+       "n": 3,
+       "color": "#22B8CF"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "via：拉丁语的“路”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "svg": "art/road.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.64
+      },
+      {
+       "svg": "art/signpost.svg",
+       "x": 0.18,
+       "y": 0.55,
+       "s": 0.48,
+       "anim": "sway"
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.02,
+       "y": 0.82,
+       "s": 0.42,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.82
+        ],
+        "to": [
+         0.98,
+         0.82
+        ],
+        "offset": 0.3
+       }
+      },
+      {
+       "label": "via = 路",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "沿着一条路经过某地",
+    "node": "① 经由、取道",
+    "pos": "介词",
+    "pic": 0,
+    "say": [
+     "via 在拉丁语里就是路。",
+     "从北京去广州，走的是中途穿过武汉的那条路。",
+     "这就是 via Wuhan，经由武汉。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "svg": "art/road.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.62,
+       "when": "路",
+       "hideCue": 1,
+       "anim": "bob"
+      },
+      {
+       "label": "via = 路",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "路",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/routemap.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7,
+       "id": "m",
+       "cue": 1,
+       "when": "北京"
+      },
+      {
+       "label": "北京",
+       "x": 80,
+       "y": 30,
+       "size": 0.06,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "on": "m",
+       "when": "北京"
+      },
+      {
+       "label": "广州",
+       "x": 300,
+       "y": 285,
+       "size": 0.06,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "on": "m",
+       "when": "广州"
+      },
+      {
+       "label": "武汉",
+       "x": 200,
+       "y": 118,
+       "size": 0.07,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "on": "m",
+       "when": "武汉"
+      },
+      {
+       "label": "via Wuhan",
+       "x": 0.82,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "via Wuhan"
+      }
+     ]
+    }
+   },
+   {
+    "via": "从实在的路到看不见的路",
+    "node": "② 通过、借助",
+    "pos": "介词",
+    "pic": 1,
+    "say": [
+     "英语里，具体的意思，慢慢会用到看不见、摸不着的事上。",
+     "grasp 是用手抓住，后来也说脑子里抓住了，就是理解。",
+     "via 也一样：消息沿着网络这条路传过去，就是通过、借助。"
+    ],
+    "rule": "具体的意思，慢慢用到看不见、摸不着的事上",
+    "ruleEx": "via 经由、取道 → 通过、借助      grasp 抓住 → 理解",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "具体的意思",
+       "x": 0.24,
+       "y": 0.45,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "具体的意思",
+       "hideCue": 1
+      },
+      {
+       "ray": [
+        [
+         0.42,
+         0.45
+        ],
+        [
+         0.56,
+         0.45
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "when": "慢慢会用到",
+       "hideCue": 1
+      },
+      {
+       "label": "看不见、摸不着",
+       "x": 0.76,
+       "y": 0.45,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "看不见",
+       "hideCue": 1
+      },
+      {
+       "label": "grasp",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "grasp",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/hand.svg",
+       "x": 0.24,
+       "y": 0.5,
+       "s": 0.42,
+       "when": "用手抓住",
+       "hideCue": 2
+      },
+      {
+       "ray": [
+        [
+         0.42,
+         0.5
+        ],
+        [
+         0.58,
+         0.5
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "when": "后来也说",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/bulb.svg",
+       "x": 0.76,
+       "y": 0.48,
+       "s": 0.46,
+       "when": "理解",
+       "hideCue": 2,
+       "anim": "pulse"
+      },
+      {
+       "label": "理解",
+       "x": 0.76,
+       "y": 0.86,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "理解",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.26,
+       "y": 0.54,
+       "s": 0.46,
+       "cue": 2,
+       "when": "消息"
+      },
+      {
+       "svg": "art/envelope.svg",
+       "x": 0.34,
+       "y": 0.36,
+       "s": 0.16,
+       "cue": 2,
+       "when": "传过去",
+       "go": [
+        0.76,
+        0.36
+       ],
+       "dur": 1.4
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.78,
+       "y": 0.54,
+       "s": 0.4,
+       "cue": 2,
+       "when": "消息"
+      },
+      {
+       "label": "via email",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "通过"
+      },
+      {
+       "waves": true,
+       "x": 0.8500000000000001,
+       "y": 0.42000000000000004,
+       "dir": 0,
+       "n": 3,
+       "color": "#22B8CF",
+       "cue": 2,
+       "when": "消息"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "经由、通过",
+   "items": [
+    {
+     "w": "via",
+     "word": "via",
+     "m": "经由、通过",
+     "say": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "text": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "diff": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "d": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "desc": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "line": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "talk": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "note": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "explain": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "zh": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "sent": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "mean": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/countryside-bg.svg",
+      "items": [
+       {
+        "svg": "art/train.svg",
+        "x": 0.14,
+        "y": 0.6,
+        "s": 0.36,
+        "go": [
+         0.86,
+         0.6
+        ],
+        "dur": 4,
+        "wait": 0,
+        "loop": true
+       },
+       {
+        "label": "via Wuhan",
+        "x": 0.5,
+        "y": 0.2,
+        "size": 0.075,
+        "color": "#7A3E00",
+        "border": "#E0A800",
+        "bg": "#FFF6D8"
+       }
+      ]
+     }
+    },
+    {
+     "w": "per",
+     "word": "per",
+     "m": "经由、按照",
+     "say": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "text": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "diff": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "d": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "desc": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "line": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "talk": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "note": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "explain": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "zh": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "sent": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "mean": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/mailbox.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.62,
+        "shadow": true
+       },
+       {
+        "svg": "art/envelope.svg",
+        "x": 0.62,
+        "y": 0.3,
+        "s": 0.2,
+        "anim": "bob"
+       },
+       {
+        "actor": "west-clerk-happy",
+        "x": 0.8,
+        "y": 0.6,
+        "s": 0.7,
+        "z": 3,
+        "seq": "pingpong",
+        "fps": 2
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.98,
+        "y": 0.9,
+        "s": 0.36,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.98,
+          0.9
+         ],
+         "to": [
+          0.02,
+          0.9
+         ],
+         "offset": 0.5
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "through",
+     "word": "through",
+     "m": "通过、穿过",
+     "say": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "text": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "diff": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "d": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "desc": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "line": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "talk": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "note": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "explain": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "zh": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "sent": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "mean": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/countryside-bg.svg",
+      "items": [
+       {
+        "svg": "art/tunnel.svg",
+        "x": 0.5,
+        "y": 0.56,
+        "s": 0.66
+       },
+       {
+        "svg": "art/car.svg",
+        "x": 0.2,
+        "y": 0.72,
+        "s": 0.2,
+        "go": [
+         0.5,
+         0.7
+        ],
+        "s2": 0.1,
+        "dur": 2.4,
+        "wait": 0.2,
+        "loop": true
+       }
+      ]
+     }
+    }
+   ],
+   "pics": {
+    "via": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "svg": "art/train.svg",
+       "x": 0.14,
+       "y": 0.6,
+       "s": 0.36,
+       "go": [
+        0.86,
+        0.6
+       ],
+       "dur": 4,
+       "wait": 0,
+       "loop": true
+      },
+      {
+       "label": "via Wuhan",
+       "x": 0.5,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8"
+      }
+     ]
+    },
+    "per": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/mailbox.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.62,
+       "shadow": true
+      },
+      {
+       "svg": "art/envelope.svg",
+       "x": 0.62,
+       "y": 0.3,
+       "s": 0.2,
+       "anim": "bob"
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.8,
+       "y": 0.6,
+       "s": 0.7,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.9,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.9
+        ],
+        "to": [
+         0.02,
+         0.9
+        ],
+        "offset": 0.5
+       }
+      }
+     ]
+    },
+    "through": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "svg": "art/tunnel.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.66
+      },
+      {
+       "svg": "art/car.svg",
+       "x": 0.2,
+       "y": 0.72,
+       "s": 0.2,
+       "go": [
+        0.5,
+        0.7
+       ],
+       "s2": 0.1,
+       "dur": 2.4,
+       "wait": 0.2,
+       "loop": true
+      }
+     ]
+    }
+   },
+   "logic": "via 本来就是拉丁语的“路”，所以说的是走哪条路线、用哪种渠道；through 是从里面穿过去；per 是正式文书里的“经由、按照”。",
+   "tip": "说路线、渠道用 via（via Wuhan、via email）；平时说“通过、穿过”用 through；口语说方式也常用 by（by email）。",
+   "say": {
+    "via": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+    "per": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+    "through": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。"
+   },
+   "lines": {
+    "via": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+    "per": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+    "through": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。"
+   },
+   "talk": {
+    "via": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+    "per": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+    "through": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。"
+   },
+   "text": {
+    "via": "via 是经由、通过：偏书面，常说路线和传送方式，via Wuhan 经由武汉、via email 通过邮件。",
+    "per": "per 是经由、按照：很正式，多见于公文和商务信件，per post 通过邮寄。",
+    "through": "through 是通过、穿过：口语最常用，还能说从里面穿过去，through the tunnel 穿过隧道。"
+   }
+  },
+  "kaodian": {
+   "rows": [
+    [
+     "意思",
+     "prep. 经由、取道（某地）；通过、借助（某种手段）"
+    ],
+    [
+     "搭配",
+     "via + 地点：go to Guangzhou via Wuhan；via + 方式：via email / via the Internet"
+    ],
+    [
+     "区别",
+     "via 偏书面；口语说方式多用 through / by（by email）"
+    ],
+    [
+     "形近词",
+     "via（经由）≠ visa（签证）"
+    ]
+   ]
+  },
+  "originPic": {
+   "bg": "blank",
+   "img": "art/countryside-bg.svg",
+   "items": [
+    {
+     "svg": "art/roman-road.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.66,
+     "shadow": true
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.02,
+     "y": 0.84,
+     "s": 0.42,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.02,
+       0.84
+      ],
+      "to": [
+       0.98,
+       0.84
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "label": "拉丁语 via：路、道路",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.085,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    }
+   ]
+  }
+ },
+ "插图": [
+  "viaai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他们是怎么去伦敦的？\n听：We flew to London via Paris.\nA. 直飞伦敦\nB. 坐火车\nC. 坐船\nD. 经巴黎飞到伦敦",
@@ -88,5 +1038,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

@@ -701,6 +701,13 @@
      "diff": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
      "d": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
      "desc": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
+     "line": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
+     "talk": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
+     "note": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
+     "explain": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
+     "zh": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
+     "sent": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
+     "mean": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
      "pic": {
       "bg": "blank",
       "img": "art/station-bg.svg",
@@ -748,6 +755,13 @@
      "diff": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。",
      "d": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。",
      "desc": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。",
+     "line": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。",
+     "talk": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。",
+     "note": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。",
+     "explain": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。",
+     "zh": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。",
+     "sent": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。",
+     "mean": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。",
      "pic": {
       "bg": "blank",
       "img": "art/classroom-bg.svg",
@@ -850,7 +864,89 @@
     }
    },
    "logic": "ago 以“现在”为准往回数；previously、before 都可以以过去某个时刻为准；previously 是 previous 加 ly，更正式，before 最常用、还能当介词带名词。",
-   "tip": "从现在往回数用 ago；从过去某天往回数用 previously 或 before；“上课前”说 before class。"
+   "tip": "从现在往回数用 ago；从过去某天往回数用 previously 或 before；“上课前”说 before class。",
+   "say": {
+    "previously": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
+    "before": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。"
+   },
+   "lines": {
+    "previously": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
+    "before": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。"
+   },
+   "talk": {
+    "previously": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
+    "before": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。"
+   },
+   "text": {
+    "previously": "previously 是以前、先前：常以过去某个时刻为准，three days previously 那三天之前。",
+    "before": "before 是以前、之前：最常用，口语书面都行，还能直接带名词，before class 上课前。"
+   }
+  },
+  "demo": {
+   "sadly": {
+    "icons": [
+     "art/icon-dsad.svg",
+     "art/icon-dly.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/wilted.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.86,
+       "anim": "sway"
+      }
+     ]
+    },
+    "lit": "伤心地"
+   },
+   "basically": {
+    "icons": [
+     "art/icon-dbasic.svg",
+     "art/icon-dal.svg",
+     "art/icon-dly.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/bricks.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "基本上"
+   },
+   "forward": {
+    "icons": [
+     "art/icon-dfore3.svg",
+     "art/icon-dward.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/road.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8
+      },
+      {
+       "svg": "art/arrow-fwd.svg",
+       "x": 0.5,
+       "y": 0.22,
+       "s": 0.22,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "朝前"
+   }
   }
  },
  "插图": [
@@ -944,5 +1040,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

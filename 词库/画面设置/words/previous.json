@@ -731,6 +731,13 @@
     "diff": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
     "d": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
     "desc": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
+    "line": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
+    "talk": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
+    "note": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
+    "explain": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
+    "zh": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
+    "sent": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
+    "mean": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
     "pic": {
      "bg": "blank",
      "img": "art/classroom-bg.svg",
@@ -770,6 +777,13 @@
     "diff": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。",
     "d": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。",
     "desc": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。",
+    "line": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。",
+    "talk": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。",
+    "note": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。",
+    "explain": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。",
+    "zh": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。",
+    "sent": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。",
+    "mean": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。",
     "pic": {
      "bg": "blank",
      "img": "art/room-bg.svg",
@@ -864,7 +878,183 @@
    }
   },
   "logic": "previous 讲的是时间顺序：pre 在前，走在路前面的，就是在这之前的；former 讲的是身份：原来当过、现在不当了，就是前任的。",
-  "tip": "说“前一页、前一天”用 previous；说“前任校长、原来的同学”用 former。"
+  "tip": "说“前一页、前一天”用 previous；说“前任校长、原来的同学”用 former。",
+  "say": {
+   "previous": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
+   "former": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。"
+  },
+  "lines": {
+   "previous": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
+   "former": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。"
+  },
+  "talk": {
+   "previous": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
+   "former": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。"
+  },
+  "text": {
+   "previous": "previous 是在这之前的：按时间排，排在前面的那一个，previous page 前一页。",
+   "former": "former 是前任的、原先的：说一个人以前的身份，the former president 前任校长。"
+  }
+ },
+ "demo": {
+  "preschool": {
+   "icons": [
+    "art/icon-dpre1.svg",
+    "art/icon-dschool.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/school.svg",
+      "x": 0.62,
+      "y": 0.52,
+      "s": 0.6
+     },
+     {
+      "svg": "art/blocks.svg",
+      "x": 0.22,
+      "y": 0.66,
+      "s": 0.4,
+      "anim": "bob"
+     }
+    ]
+   },
+   "lit": "上学以前的"
+  },
+  "predict": {
+   "icons": [
+    "art/icon-dpre2.svg",
+    "art/icon-dsay.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/scoreboard.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.8,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "预先说出"
+  },
+  "progress": {
+   "icons": [
+    "art/icon-dpro.svg",
+    "art/icon-dwalk.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/stairs.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.82,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "向前走"
+  },
+  "forehead": {
+   "icons": [
+    "art/icon-dfore1.svg",
+    "art/icon-dhead.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/headside.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.86,
+      "anim": "bob"
+     }
+    ]
+   },
+   "lit": "头的前部"
+  },
+  "forecast": {
+   "icons": [
+    "art/icon-dfore2.svg",
+    "art/icon-dcast.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/weather.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.82,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "预先算出"
+  },
+  "careful": {
+   "icons": [
+    "art/icon-dcare.svg",
+    "art/icon-dful.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/eggs.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "充满小心的"
+  },
+  "careless": {
+   "icons": [
+    "art/icon-dcare.svg",
+    "art/icon-dless.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/spill2.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.72,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "没有小心的"
+  },
+  "dangerous": {
+   "icons": [
+    "art/icon-ddanger.svg",
+    "art/icon-dous.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/warnsign.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.86,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "有危险的"
+  }
  },
  "lianxi": {
   "qs": [
