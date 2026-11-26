@@ -1,0 +1,939 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈləʊn",
+  "li"
+ ],
+ "lexicon": {
+  "lone": "l ˈ əʊ n"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.1,
+     "y": 0.72,
+     "s": 0.5,
+     "z": 3,
+     "walk": {
+      "from": [
+       0.05,
+       0.72
+      ],
+      "to": [
+       0.95,
+       0.72
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "label": "lone 孤零零的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/mirror.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.62,
+     "anim": "pulse",
+     "shadow": true
+    },
+    {
+     "label": "ly：…样子的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-lone.svg",
+  "p1": "art/icon-ly.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/park-bg.svg",
+  "items": [
+   {
+    "actor": "walk-west-man-case",
+    "x": 0.9,
+    "y": 0.72,
+    "s": 0.52,
+    "z": 3,
+    "walk": {
+     "from": [
+      0.95,
+      0.72
+     ],
+     "to": [
+      0.05,
+      0.72
+     ],
+     "offset": 0
+    }
+   },
+   {
+    "label": "孤零零样子的",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.085,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "孤独的、寂寞的",
+   "pos": "形容词",
+   "diff": "心里空落落的，盼着有人陪",
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-listen",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.82,
+     "z": 3,
+     "seq": "blink"
+    },
+    {
+     "svg": "art/nightstand.svg",
+     "x": 0.68,
+     "y": 0.8,
+     "s": 0.3,
+     "z": 2
+    },
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.64,
+     "y": 0.6,
+     "s": 0.18,
+     "z": 4,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/mug.svg",
+     "x": 0.76,
+     "y": 0.62,
+     "s": 0.12,
+     "z": 4
+    },
+    {
+     "label": "lonely 孤独的",
+     "x": 0.72,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.8
+    }
+   ],
+   "ex": "She felt lonely in the new city.",
+   "exzh": "在新城市里，她觉得很孤独。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.8,
+      "z": 3,
+      "seq": "blink",
+      "when": "She"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.9,
+      "y": 0.82,
+      "s": 0.44,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.98,
+        0.82
+       ],
+       "to": [
+        0.02,
+        0.82
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.1,
+      "y": 0.84,
+      "s": 0.44,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.02,
+        0.84
+       ],
+       "to": [
+        0.98,
+        0.84
+       ],
+       "offset": 0.5
+      }
+     },
+     {
+      "label": "new city 新城市",
+      "x": 0.2,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "new city"
+     },
+     {
+      "label": "lonely",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "lonely"
+     },
+     {
+      "label": "孤独",
+      "x": 0.82,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "孤独"
+     }
+    ]
+   }
+  },
+  {
+   "text": "偏僻的",
+   "pos": "形容词",
+   "diff": "孤零零的地方，很少有人去",
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/map.svg",
+     "x": 0.45,
+     "y": 0.52,
+     "s": 0.66,
+     "shadow": true
+    },
+    {
+     "svg": "art/star.svg",
+     "x": 0.62,
+     "y": 0.4,
+     "s": 0.12,
+     "anim": "pulse",
+     "z": 3
+    },
+    {
+     "label": "lonely 偏僻的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.8
+    }
+   ],
+   "ex": "They live in a lonely village.",
+   "exzh": "他们住在一个偏僻的村子里。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/map.svg",
+      "x": 0.42,
+      "y": 0.52,
+      "s": 0.74,
+      "shadow": true,
+      "when": "live"
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.6,
+      "y": 0.38,
+      "s": 0.12,
+      "anim": "pulse",
+      "z": 3,
+      "when": "village",
+      "pop": true
+     },
+     {
+      "label": "lonely village",
+      "x": 0.82,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "lonely village"
+     },
+     {
+      "label": "偏僻的村子",
+      "x": 0.82,
+      "y": 0.8,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "偏僻的村子"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“孤零零样子的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.1,
+      "y": 0.72,
+      "s": 0.5,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.05,
+        0.72
+       ],
+       "to": [
+        0.95,
+        0.72
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "lone 孤零零的 + ly 样子的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "人孤零零的，身边没人",
+   "node": "孤单的",
+   "say": [
+    "lone 是孤零零的，ly 是……样子的。",
+    "一个人孤零零的，身边没有人，就是孤单的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "label": "lone 孤零零的",
+      "x": 0.28,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "lone"
+     },
+     {
+      "label": "ly 样子的",
+      "x": 0.72,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "ly"
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.9,
+      "y": 0.72,
+      "s": 0.56,
+      "z": 3,
+      "cue": 1,
+      "when": "一个人",
+      "walk": {
+       "from": [
+        0.95,
+        0.72
+       ],
+       "to": [
+        0.05,
+        0.72
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "孤单的",
+      "x": 0.5,
+      "y": 0.3,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "孤单的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一个人吃饭，心里空落落的",
+   "node": "① 孤独的、寂寞的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "一个人吃饭，一个人过节，心里空落落的。",
+    "盼着有人来说说话，这就是孤独的、寂寞的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.88,
+      "s": 0.32,
+      "z": 2
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.8,
+      "z": 1,
+      "seq": "blink",
+      "when": "一个人吃饭"
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.7,
+      "y": 0.74,
+      "s": 0.12,
+      "z": 3,
+      "when": "吃饭"
+     },
+     {
+      "label": "空落落的",
+      "x": 0.2,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "空落落的"
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.3,
+      "y": 0.74,
+      "s": 0.14,
+      "z": 3,
+      "cue": 1,
+      "when": "有人来说说话",
+      "anim": "pulse"
+     },
+     {
+      "label": "孤独的、寂寞的",
+      "x": 0.74,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "孤独的、寂寞的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "地方孤零零的，少有人去",
+   "node": "② 偏僻的",
+   "pos": "形容词",
+   "pic": 1,
+   "from": 0,
+   "say": [
+    "不光是人，地方也会孤零零的。",
+    "一个村子离城很远，很少有人去，就是偏僻的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/map.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.7,
+      "when": "地方",
+      "shadow": true,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.68,
+      "y": 0.36,
+      "s": 0.12,
+      "cue": 1,
+      "when": "一个村子",
+      "pop": true,
+      "anim": "pulse",
+      "z": 3
+     },
+     {
+      "label": "离城很远",
+      "x": 0.3,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "cue": 1,
+      "when": "离城很远"
+     },
+     {
+      "label": "偏僻的",
+      "x": 0.72,
+      "y": 0.88,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "偏僻的"
+     }
+    ]
+   }
+  }
+ ],
+ "kaodian": {
+  "rows": [
+   [
+    "意思",
+    "adj. 孤独的、寂寞的；偏僻的"
+   ],
+   [
+    "变形",
+    "lonelier、loneliest（y 变 i）；名词 loneliness"
+   ],
+   [
+    "短语",
+    "feel lonely 感到孤独；lonely heart 寂寞的人"
+   ],
+   [
+    "区别",
+    "alone 独自（客观）≠ lonely 孤独（感觉）"
+   ]
+  ]
+ },
+ "distinguish": {
+  "key": "孤独的；偏僻的",
+  "items": [
+   {
+    "w": "lonely",
+    "m": "孤独的；偏僻的",
+    "say": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+    "word": "lonely",
+    "text": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+    "diff": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+    "d": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+    "desc": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+    "line": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+    "talk": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+    "note": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+    "explain": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+    "sent": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+    "mean": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.86,
+       "s": 0.5,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.62,
+       "y": 0.6,
+       "s": 0.22,
+       "z": 3
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.4,
+       "y": 0.58,
+       "s": 0.3,
+       "z": 3,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "alone",
+    "m": "独自",
+    "say": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+    "word": "alone",
+    "text": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+    "diff": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+    "d": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+    "desc": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+    "line": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+    "talk": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+    "note": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+    "explain": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+    "sent": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+    "mean": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.95,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.74,
+       "y": 0.66,
+       "s": 0.4,
+       "z": 4,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "isolated",
+    "m": "隔开的",
+    "say": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+    "word": "isolated",
+    "text": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+    "diff": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+    "d": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+    "desc": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+    "line": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+    "talk": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+    "note": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+    "explain": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+    "sent": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+    "mean": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/fishtank.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "z": 2
+      },
+      {
+       "svg": "art/fish.svg",
+       "x": 0.42,
+       "y": 0.55,
+       "s": 0.2,
+       "z": 3,
+       "go": [
+        0.58,
+        0.55
+       ],
+       "dur": 2.5,
+       "loop": true
+      }
+     ]
+    }
+   },
+   {
+    "w": "remote",
+    "m": "偏远的",
+    "say": "remote 是遥远的、偏远的：离城市很远，a remote area。",
+    "word": "remote",
+    "text": "remote 是遥远的、偏远的：离城市很远，a remote area。",
+    "diff": "remote 是遥远的、偏远的：离城市很远，a remote area。",
+    "d": "remote 是遥远的、偏远的：离城市很远，a remote area。",
+    "desc": "remote 是遥远的、偏远的：离城市很远，a remote area。",
+    "line": "remote 是遥远的、偏远的：离城市很远，a remote area。",
+    "talk": "remote 是遥远的、偏远的：离城市很远，a remote area。",
+    "note": "remote 是遥远的、偏远的：离城市很远，a remote area。",
+    "explain": "remote 是遥远的、偏远的：离城市很远，a remote area。",
+    "sent": "remote 是遥远的、偏远的：离城市很远，a remote area。",
+    "mean": "remote 是遥远的、偏远的：离城市很远，a remote area。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.2,
+       "anim": "pulse",
+       "z": 3
+      }
+     ]
+    }
+   }
+  ],
+  "pics": {
+   "lonely": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.5,
+      "z": 2
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.62,
+      "y": 0.6,
+      "s": 0.22,
+      "z": 3
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.4,
+      "y": 0.58,
+      "s": 0.3,
+      "z": 3,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "alone": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.95,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.74,
+      "y": 0.66,
+      "s": 0.4,
+      "z": 4,
+      "anim": "bob"
+     }
+    ]
+   },
+   "isolated": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/fishtank.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "z": 2
+     },
+     {
+      "svg": "art/fish.svg",
+      "x": 0.42,
+      "y": 0.55,
+      "s": 0.2,
+      "z": 3,
+      "go": [
+       0.58,
+       0.55
+      ],
+      "dur": 2.5,
+      "loop": true
+     }
+    ]
+   },
+   "remote": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.2,
+      "anim": "pulse",
+      "z": 3
+     }
+    ]
+   }
+  },
+  "logic": "lonely 是 lone + ly，孤零零样子的：说人是心里孤单，说地方是偏僻；alone 只说一个人；isolated 说和外界隔开；remote 说离得远。",
+  "tip": "心里寂寞用 lonely；一个人（不带情绪）用 alone；地方偏远用 remote 或 lonely。",
+  "say": {
+   "lonely": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+   "alone": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+   "isolated": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+   "remote": "remote 是遥远的、偏远的：离城市很远，a remote area。"
+  },
+  "lines": {
+   "lonely": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+   "alone": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+   "isolated": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+   "remote": "remote 是遥远的、偏远的：离城市很远，a remote area。"
+  },
+  "talk": {
+   "lonely": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+   "alone": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+   "isolated": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+   "remote": "remote 是遥远的、偏远的：离城市很远，a remote area。"
+  },
+  "text": {
+   "lonely": "lonely 说的是心里的感受：孤单、寂寞，想有人陪；说地方时是偏僻的。",
+   "alone": "alone 只说一个人、没人陪，不带情绪：I live alone, but I'm not lonely。",
+   "isolated": "isolated 说的是处境：和外界隔开了，an isolated village；an isolated incident 是个别事件。",
+   "remote": "remote 是遥远的、偏远的：离城市很远，a remote area。"
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：老人在家感觉怎么样？",
+    "listen": "The old man feels lonely at home.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "开心",
+     "生气",
+     "孤独",
+     "害怕"
+    ],
+    "ans": "C",
+    "why": "lonely 孤独的。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She lives alone, but she never feels ______.",
+    "opts": [
+     "alone",
+     "lone",
+     "only",
+     "lonely"
+    ],
+    "ans": "D",
+    "why": "心里的孤独感用 lonely。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 alone、lonely 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He likes to walk ______ in the park.",
+    "opts": [],
+    "ans": "alone",
+    "why": "客观上“独自”用 alone。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He was the ______ boy in the school. (lonely)",
+    "opts": [],
+    "ans": "loneliest",
+    "why": "最高级 y 变 i 加 est：loneliest。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "She felt lonelyer after moving to the city.",
+    "opts": [],
+    "ans": "lonelyer → lonelier",
+    "why": "y 变 i 加 er。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "孤独会让人难过。",
+    "stem": "______ can make people sad.",
+    "opts": [],
+    "ans": "Loneliness",
+    "why": "名词“孤独”是 loneliness，作主语。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The village is far from everything; it's a ______ place.",
+    "opts": [
+     "crowded",
+     "remote",
+     "busy",
+     "noisy"
+    ],
+    "ans": "B",
+    "why": "偏僻的地方用 remote，和 lonely（偏僻的）意思相近。",
+    "kd": "易混"
+   }
+  ]
+ }
+}

@@ -1,0 +1,670 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈləʊn",
+  "li",
+  "nəs"
+ ],
+ "lexicon": {
+  "lone": "l ˈ əʊ n",
+  "ness": "n ə s"
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/nightstand.svg",
+     "x": 0.5,
+     "y": 0.76,
+     "s": 0.4,
+     "z": 2
+    },
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.3,
+     "z": 3,
+     "anim": "pulse",
+     "shadow": true
+    },
+    {
+     "label": "lonely 孤独的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-explain",
+     "x": 0.32,
+     "y": 0.58,
+     "s": 0.86,
+     "z": 3,
+     "seq": "talk",
+     "id": "g"
+    },
+    {
+     "waves": true,
+     "on": "g",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "with": "g",
+     "n": 3
+    },
+    {
+     "label": "ness：…的状态",
+     "x": 0.72,
+     "y": 0.2,
+     "size": 0.085,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.95,
+     "s": 0.26,
+     "z": 6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-lonely.svg",
+  "p1": "art/icon-ness.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/bedroom-bg.svg",
+  "items": [
+   {
+    "svg": "art/bed.svg",
+    "x": 0.4,
+    "y": 0.66,
+    "s": 0.5,
+    "z": 2
+   },
+   {
+    "svg": "art/nightstand.svg",
+    "x": 0.78,
+    "y": 0.76,
+    "s": 0.32,
+    "z": 2
+   },
+   {
+    "svg": "art/smartphone.svg",
+    "x": 0.78,
+    "y": 0.56,
+    "s": 0.16,
+    "z": 3,
+    "anim": "pulse"
+   },
+   {
+    "label": "孤独的状态",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "孤独、寂寞",
+   "pos": "名词",
+   "diff": "想有人陪却没有，心里难受",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.9,
+     "s": 0.3,
+     "z": 2
+    },
+    {
+     "actor": "west-clerk-think",
+     "x": 0.42,
+     "y": 0.58,
+     "s": 0.82,
+     "z": 1,
+     "seq": "blink"
+    },
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.68,
+     "y": 0.76,
+     "s": 0.14,
+     "z": 3,
+     "anim": "pulse"
+    },
+    {
+     "label": "loneliness 孤独",
+     "x": 0.76,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.8
+    }
+   ],
+   "ex": "Music helps her forget her loneliness.",
+   "exzh": "音乐帮她忘掉孤独。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "beat": 100,
+    "items": [
+     {
+      "actor": "west-girl-music",
+      "x": 0.24,
+      "y": 0.6,
+      "s": 0.86,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 3.3
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.66,
+      "y": 0.9,
+      "s": 0.3,
+      "z": 2
+     },
+     {
+      "svg": "art/computer-music.svg",
+      "x": 0.66,
+      "y": 0.64,
+      "s": 0.34,
+      "z": 3,
+      "when": "Music"
+     },
+     {
+      "eq": true,
+      "x": 0.66,
+      "y": 0.6,
+      "w": 0.12,
+      "h": 0.08,
+      "n": 5,
+      "when": "Music"
+     },
+     {
+      "svg": "art/speaker.svg",
+      "x": 0.88,
+      "y": 0.7,
+      "s": 0.22,
+      "z": 3,
+      "anim": "thump",
+      "when": "Music"
+     },
+     {
+      "waves": true,
+      "x": 0.93,
+      "y": 0.66,
+      "dir": 0,
+      "n": 3,
+      "color": "#3FA7D6",
+      "when": "Music"
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "alt": [
+       "art/note2.svg"
+      ],
+      "x": 0.88,
+      "y": 0.56,
+      "to": [
+       0.04,
+       -0.2
+      ],
+      "s": 0.07,
+      "life": 1.6,
+      "when": "Music"
+     },
+     {
+      "sound": "music",
+      "when": "Music"
+     },
+     {
+      "label": "loneliness",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "loneliness"
+     },
+     {
+      "label": "忘掉孤独",
+      "x": 0.5,
+      "y": 0.26,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "忘掉孤独"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“孤独的状态”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/nightstand.svg",
+      "x": 0.5,
+      "y": 0.76,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.24,
+      "z": 3,
+      "anim": "pulse"
+     },
+     {
+      "label": "lonely + ness",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一个人待着，想有人陪却没有",
+   "node": "① 孤独、寂寞",
+   "pos": "名词",
+   "pic": 0,
+   "rule": "形容词后面加 -ness，变成名词，指这种状态",
+   "ruleEx": "lonely 孤独的 → loneliness 孤独      kind 善良的 → kindness 善良",
+   "say": [
+    "英语里，形容词后面加上 ness，就变成名词，指这种状态。",
+    "kind 是善良的，kindness 就是善良。",
+    "lonely 加上 ness：一个人待着，想有人陪却没有，心里难受，这就是孤独、寂寞。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "形容词 + ness = 名词",
+      "x": 0.5,
+      "y": 0.3,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "变成名词",
+      "hideCue": 1
+     },
+     {
+      "actor": "west-man-hello",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "cue": 1,
+      "when": "kind",
+      "hideCue": 2,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.62,
+      "y": 0.6,
+      "s": 0.16,
+      "z": 4,
+      "cue": 1,
+      "when": "kind",
+      "pop": true,
+      "hideCue": 2
+     },
+     {
+      "label": "kind → kindness",
+      "x": 0.7,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "cue": 1,
+      "when": "kindness",
+      "hideCue": 2
+     },
+     {
+      "label": "lonely + ness",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "cue": 2,
+      "when": "lonely"
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "cue": 2,
+      "when": "一个人待着",
+      "seq": "blink"
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.7,
+      "y": 0.62,
+      "s": 0.2,
+      "z": 4,
+      "cue": 2,
+      "when": "想有人陪",
+      "anim": "pulse"
+     },
+     {
+      "label": "孤独、寂寞",
+      "x": 0.72,
+      "y": 0.88,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 2,
+      "when": "孤独、寂寞"
+     }
+    ]
+   }
+  }
+ ],
+ "kaodian": {
+  "rows": [
+   [
+    "意思",
+    "n. 孤独、寂寞（不可数）"
+   ],
+   [
+    "构词",
+    "lonely + ness，y 变 i"
+   ],
+   [
+    "搭配",
+    "a feeling of loneliness 孤独感；fight loneliness 对抗孤独"
+   ],
+   [
+    "区别",
+    "loneliness 孤单的难受 ≠ solitude 中性的独处"
+   ]
+  ]
+ },
+ "distinguish": {
+  "key": "孤独、独处",
+  "items": [
+   {
+    "w": "loneliness",
+    "m": "孤独、寂寞",
+    "say": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+    "word": "loneliness",
+    "text": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+    "diff": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+    "d": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+    "desc": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+    "line": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+    "talk": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+    "note": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+    "explain": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+    "sent": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+    "mean": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/nightstand.svg",
+       "x": 0.5,
+       "y": 0.76,
+       "s": 0.5,
+       "z": 2
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.3,
+       "z": 3,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "solitude",
+    "m": "独处",
+    "say": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。",
+    "word": "solitude",
+    "text": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。",
+    "diff": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。",
+    "d": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。",
+    "desc": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。",
+    "line": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。",
+    "talk": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。",
+    "note": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。",
+    "explain": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。",
+    "sent": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。",
+    "mean": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.95,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.72,
+       "y": 0.68,
+       "s": 0.4,
+       "z": 4,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  ],
+  "pics": {
+   "loneliness": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/nightstand.svg",
+      "x": 0.5,
+      "y": 0.76,
+      "s": 0.5,
+      "z": 2
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.3,
+      "z": 3,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "solitude": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.95,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.72,
+      "y": 0.68,
+      "s": 0.4,
+      "z": 4,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "logic": "loneliness 是 lonely + ness，孤独的状态，带着难受；solitude 是中性的独处，常是自己选的。",
+  "tip": "享受独处说 enjoy solitude，不说 enjoy loneliness。",
+  "say": {
+   "loneliness": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+   "solitude": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。"
+  },
+  "lines": {
+   "loneliness": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+   "solitude": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。"
+  },
+  "talk": {
+   "loneliness": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+   "solitude": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。"
+  },
+  "text": {
+   "loneliness": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
+   "solitude": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。"
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：老人常常为什么而苦恼？",
+    "listen": "Old people often suffer from loneliness.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "生病",
+     "寒冷",
+     "孤独",
+     "噪音"
+    ],
+    "ans": "C",
+    "why": "loneliness 孤独、寂寞。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Reading helps her forget her ______.",
+    "opts": [
+     "lonely",
+     "alone",
+     "loneliness",
+     "lone"
+    ],
+    "ans": "C",
+    "why": "her 后面要名词 loneliness。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 loneliness、solitude 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He enjoys ______; he likes being alone to think.",
+    "opts": [],
+    "ans": "solitude",
+    "why": "自己选的、中性的“独处”用 solitude；loneliness 带难受。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The new student felt ______ at first. (loneliness)",
+    "opts": [],
+    "ans": "lonely",
+    "why": "felt 后面用形容词 lonely。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "His lonelinesses made him sad.",
+    "opts": [],
+    "ans": "lonelinesses → loneliness",
+    "why": "loneliness 不可数，不加 es。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "她一个人在家，但并不孤独。",
+    "stem": "She is ______ at home, but she isn't lonely.",
+    "opts": [],
+    "ans": "alone",
+    "why": "“一个人”客观状态用 alone。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Loneliness ______ a big problem for old people.",
+    "opts": [
+     "are",
+     "be",
+     "were",
+     "is"
+    ],
+    "ans": "D",
+    "why": "loneliness 不可数，谓语用单数 is。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

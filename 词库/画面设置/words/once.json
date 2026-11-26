@@ -46,7 +46,26 @@
      "fps": 4,
      "x": 0.5,
      "y": 0.5,
-     "s": 0.5
+     "s": 0.5,
+     "sfx": "bell"
+    },
+    {
+     "waves": true,
+     "x": 0.66,
+     "y": 0.46,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#3FA7D6"
+    },
+    {
+     "waves": true,
+     "x": 0.34,
+     "y": 0.46,
+     "dir": 180,
+     "n": 3,
+     "period": 1.2,
+     "color": "#3FA7D6"
     },
     {
      "label": "ce：变成副词",
@@ -55,15 +74,6 @@
      "size": 0.1,
      "color": "#2B8A3E",
      "border": "#2B8A3E"
-    },
-    {
-     "label": "…次、…回",
-     "x": 0.5,
-     "y": 0.88,
-     "size": 0.075,
-     "color": "#7048E8",
-     "border": "#7048E8",
-     "delay": 0.6
     }
    ]
   }
@@ -92,6 +102,15 @@
     "x": 0.74,
     "y": 0.36,
     "s": 0.26
+   },
+   {
+    "waves": true,
+    "x": 0.82,
+    "y": 0.34,
+    "dir": 0,
+    "n": 3,
+    "period": 1.2,
+    "color": "#3FA7D6"
    },
    {
     "label": "一回",
@@ -127,6 +146,15 @@
      "x": 0.7,
      "y": 0.36,
      "s": 0.3
+    },
+    {
+     "waves": true,
+     "x": 0.79,
+     "y": 0.34,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#3FA7D6"
     },
     {
      "label": "once 一次",
@@ -172,6 +200,26 @@
       "s": 0.28,
       "when": "bell",
       "sfx": "bell"
+     },
+     {
+      "waves": true,
+      "x": 0.93,
+      "y": 0.32,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6",
+      "when": "bell"
+     },
+     {
+      "waves": true,
+      "x": 0.79,
+      "y": 0.32,
+      "dir": 180,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6",
+      "when": "bell"
      },
      {
       "label": "once",
@@ -504,6 +552,15 @@
       "s": 0.26
      },
      {
+      "waves": true,
+      "x": 0.82,
+      "y": 0.34,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6"
+     },
+     {
       "label": "one 一 + ce 次",
       "x": 0.5,
       "y": 0.08,
@@ -565,6 +622,16 @@
       "s": 0.28,
       "when": "叮咚",
       "sfx": "bell"
+     },
+     {
+      "waves": true,
+      "x": 0.83,
+      "y": 0.34,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6",
+      "when": "叮咚"
      },
      {
       "label": "一次",
@@ -780,14 +847,34 @@
    }
   }
  ],
+ "kaodian": {
+  "rows": [
+   [
+    "意思",
+    "adv. 一次；曾经；conj. 一旦…就…"
+   ],
+   [
+    "短语",
+    "at once 立刻、马上；同时；once more / again 再一次；all at once 突然"
+   ],
+   [
+    "次数",
+    "一次 once、两次 twice、三次以上 three times"
+   ],
+   [
+    "区别",
+    "肯定句说“曾经”用 once；疑问、否定句多用 ever"
+   ]
+  ]
+ },
  "distinguish": {
   "key": "曾经、同时",
   "items": [
    {
     "w": "once",
-    "word": "once",
     "m": "曾经、同时",
     "say": "once 是曾经：用在肯定句里说过去某一回，I once lived there；at once 还能说同时、立刻。",
+    "word": "once",
     "text": "once 是曾经：用在肯定句里说过去某一回，I once lived there；at once 还能说同时、立刻。",
     "diff": "once 是曾经：用在肯定句里说过去某一回，I once lived there；at once 还能说同时、立刻。",
     "d": "once 是曾经：用在肯定句里说过去某一回，I once lived there；at once 还能说同时、立刻。",
@@ -796,7 +883,6 @@
     "talk": "once 是曾经：用在肯定句里说过去某一回，I once lived there；at once 还能说同时、立刻。",
     "note": "once 是曾经：用在肯定句里说过去某一回，I once lived there；at once 还能说同时、立刻。",
     "explain": "once 是曾经：用在肯定句里说过去某一回，I once lived there；at once 还能说同时、立刻。",
-    "zh": "once 是曾经：用在肯定句里说过去某一回，I once lived there；at once 还能说同时、立刻。",
     "sent": "once 是曾经：用在肯定句里说过去某一回，I once lived there；at once 还能说同时、立刻。",
     "mean": "once 是曾经：用在肯定句里说过去某一回，I once lived there；at once 还能说同时、立刻。",
     "pic": {
@@ -815,9 +901,9 @@
    },
    {
     "w": "ever",
-    "word": "ever",
     "m": "曾经",
     "say": "ever 是曾经：多用在疑问句、否定句里，Have you ever been to Beijing?",
+    "word": "ever",
     "text": "ever 是曾经：多用在疑问句、否定句里，Have you ever been to Beijing?",
     "diff": "ever 是曾经：多用在疑问句、否定句里，Have you ever been to Beijing?",
     "d": "ever 是曾经：多用在疑问句、否定句里，Have you ever been to Beijing?",
@@ -826,7 +912,6 @@
     "talk": "ever 是曾经：多用在疑问句、否定句里，Have you ever been to Beijing?",
     "note": "ever 是曾经：多用在疑问句、否定句里，Have you ever been to Beijing?",
     "explain": "ever 是曾经：多用在疑问句、否定句里，Have you ever been to Beijing?",
-    "zh": "ever 是曾经：多用在疑问句、否定句里，Have you ever been to Beijing?",
     "sent": "ever 是曾经：多用在疑问句、否定句里，Have you ever been to Beijing?",
     "mean": "ever 是曾经：多用在疑问句、否定句里，Have you ever been to Beijing?",
     "pic": {
@@ -852,9 +937,9 @@
    },
    {
     "w": "together",
-    "word": "together",
     "m": "一起、同时",
     "say": "together 是一起、同时：几个人或几件事凑在一块儿，sing together。",
+    "word": "together",
     "text": "together 是一起、同时：几个人或几件事凑在一块儿，sing together。",
     "diff": "together 是一起、同时：几个人或几件事凑在一块儿，sing together。",
     "d": "together 是一起、同时：几个人或几件事凑在一块儿，sing together。",
@@ -863,7 +948,6 @@
     "talk": "together 是一起、同时：几个人或几件事凑在一块儿，sing together。",
     "note": "together 是一起、同时：几个人或几件事凑在一块儿，sing together。",
     "explain": "together 是一起、同时：几个人或几件事凑在一块儿，sing together。",
-    "zh": "together 是一起、同时：几个人或几件事凑在一块儿，sing together。",
     "sent": "together 是一起、同时：几个人或几件事凑在一块儿，sing together。",
     "mean": "together 是一起、同时：几个人或几件事凑在一块儿，sing together。",
     "pic": {
