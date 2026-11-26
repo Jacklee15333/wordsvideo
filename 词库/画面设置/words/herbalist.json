@@ -1,0 +1,568 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/herbs.svg",
+     "x": 0.4,
+     "y": 0.52,
+     "s": 0.6,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/herb-jars.svg",
+     "x": 0.76,
+     "y": 0.6,
+     "s": 0.36,
+     "anim": "bob"
+    },
+    {
+     "label": "草药的",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.5,
+     "y": 0.55,
+     "s": 0.7,
+     "z": 3,
+     "seq": "talk",
+     "fps": 2
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.95,
+     "s": 0.28,
+     "z": 5
+    },
+    {
+     "label": "做…的人",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-herb.svg",
+  "p1": "art/icon-person.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/herb-cabinet.svg",
+    "x": 0.56,
+    "y": 0.5,
+    "s": 0.66,
+    "anim": "pulse"
+   },
+   {
+    "svg": "art/herbs.svg",
+    "x": 0.16,
+    "y": 0.6,
+    "s": 0.44,
+    "anim": "sway"
+   },
+   {
+    "label": "搞草药的人",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "草药医生",
+   "pos": "名词",
+   "diff": "用草药给人治病的人",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/herb-cabinet.svg",
+     "x": 0.62,
+     "y": 0.5,
+     "s": 0.66
+    },
+    {
+     "actor": "west-man-present",
+     "x": 0.24,
+     "y": 0.56,
+     "s": 0.7,
+     "z": 3,
+     "seq": "talk",
+     "fps": 2,
+     "id": "d"
+    },
+    {
+     "svg": "art/herbs.svg",
+     "x": 0.88,
+     "y": 0.72,
+     "s": 0.3,
+     "anim": "sway"
+    }
+   ],
+   "ex": "The herbalist gave me some herbal tea.",
+   "exzh": "草药医生给了我一些草药茶。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/herb-cabinet.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.56
+     },
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.2,
+      "y": 0.58,
+      "s": 0.68,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "The herbalist",
+      "id": "h"
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.56,
+      "y": 0.78,
+      "s": 0.22,
+      "when": "herbal tea",
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.84,
+      "y": 0.6,
+      "s": 0.62,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "me",
+      "nodWith": "h"
+     },
+     {
+      "label": "herbalist",
+      "x": 0.2,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "herbalist"
+     },
+     {
+      "label": "草药茶",
+      "x": 0.56,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "草药茶"
+     }
+    ]
+   }
+  },
+  {
+   "text": "草药研究者、草药商",
+   "pos": "名词",
+   "diff": "研究或买卖草药的人",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/herb-jars.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.5,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/herbs.svg",
+     "x": 0.16,
+     "y": 0.58,
+     "s": 0.4,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/herbs.svg",
+     "x": 0.84,
+     "y": 0.58,
+     "s": 0.4,
+     "anim": "sway",
+     "flip": true
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ],
+   "ex": "My uncle sells herbs; he is an herbalist.",
+   "exzh": "我叔叔卖草药，他是个草药商。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-smile",
+      "x": 0.22,
+      "y": 0.56,
+      "s": 0.68,
+      "z": 3,
+      "seq": "blink",
+      "fps": 2,
+      "when": "My uncle"
+     },
+     {
+      "svg": "art/herb-jars.svg",
+      "x": 0.62,
+      "y": 0.6,
+      "s": 0.46,
+      "when": "sells herbs",
+      "pop": true
+     },
+     {
+      "svg": "art/herbs.svg",
+      "x": 0.88,
+      "y": 0.58,
+      "s": 0.36,
+      "when": "herbs",
+      "anim": "sway"
+     },
+     {
+      "label": "herbalist",
+      "x": 0.6,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "an herbalist"
+     },
+     {
+      "label": "草药商",
+      "x": 0.6,
+      "y": 0.88,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "草药商"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“搞草药的人”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/herbs.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.56,
+      "anim": "sway"
+     },
+     {
+      "label": "herbal + ist",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "用草药给人治病",
+   "node": "① 草药医生",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "用草药给人看病、治病的人，就是草药医生。",
+    "这个词到十六世纪末才有，以前这种人叫 herb-man。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/herb-cabinet.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.62,
+      "when": "草药",
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.14,
+      "y": 0.6,
+      "s": 0.5,
+      "z": 3,
+      "seq": "blink",
+      "fps": 2,
+      "when": "看病"
+     },
+     {
+      "label": "草药医生",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "草药医生",
+      "hideCue": 1
+     },
+     {
+      "label": "herb-man",
+      "x": 0.86,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "cue": 1,
+      "when": "herb-man"
+     }
+    ]
+   }
+  },
+  {
+   "via": "研究、买卖草药",
+   "node": "② 草药研究者、草药商",
+   "pos": "名词",
+   "pic": 1,
+   "from": 0,
+   "say": [
+    "研究草药、或者买卖草药的人，也叫 herbalist，就是草药研究者、草药商。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/herb-jars.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "when": "买卖草药",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.16,
+      "y": 0.6,
+      "s": 0.4,
+      "when": "研究草药"
+     },
+     {
+      "label": "草药商",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "草药商"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人的爷爷是做什么的？",
+    "listen": "My grandpa is a herbalist who uses plants to cure people.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "外科医生",
+     "农民",
+     "草药医生",
+     "厨师"
+    ],
+    "ans": "C",
+    "why": "herbalist 草药医生。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "A ______ gave me some tea made from herbs.",
+    "opts": [
+     "herbalists",
+     "herb",
+     "herbalist",
+     "herbal"
+    ],
+    "ans": "C",
+    "why": "A 后接单数，给茶的是人，用 herbalist。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "She drinks ______ tea every night. (herb)",
+    "opts": [],
+    "ans": "herbal",
+    "why": "修饰名词 tea 用形容词 herbal（草药的）。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 herbalist、herb 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Mint is a ______ that smells nice.",
+    "opts": [],
+    "ans": "herb",
+    "why": "薄荷是一种植物 herb；herbalist 是人。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The herbalist sell herbs in a small shop.",
+    "opts": [],
+    "ans": "sell → sells",
+    "why": "主语单数，一般现在时动词加 s。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "A herbalist mainly uses ______ to treat illness.",
+    "opts": [
+     "metals",
+     "machines",
+     "plants",
+     "stones"
+    ],
+    "ans": "C",
+    "why": "草药医生主要用植物治病。",
+    "kd": "用法"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "There are two ______ in this old street. (herbalist)",
+    "opts": [],
+    "ans": "herbalists",
+    "why": "two 后面接复数 herbalists。",
+    "kd": "变形"
+   }
+  ]
+ }
+}
