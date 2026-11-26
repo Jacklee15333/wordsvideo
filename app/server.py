@@ -669,11 +669,12 @@ GET = {
     "/api/find": api_find,
     "/api/genhist": lambda qs: {"items": C.gen_hist_list(qs.get("kind") or "pic")[:300], "dirs": RS.dirs()},
     "/api/qres": lambda qs: {"items": RS.q_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
+    "/api/qhist": lambda qs: {"items": C.q_hist(), "dirs": RS.dirs()},
     "/api/pres": lambda qs: {"items": RS.p_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
     "/api/pool": lambda qs: PL.summary() if qs.get("brief") else PL.items(),
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
-NEED_REPO = {"/api/next", "/api/pool", "/api/find", "/api/results", "/api/qres", "/api/pres", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
+NEED_REPO = {"/api/qhist", "/api/next", "/api/pool", "/api/find", "/api/results", "/api/qres", "/api/pres", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
 POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/task/op": api_task_op,
         "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
         "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,

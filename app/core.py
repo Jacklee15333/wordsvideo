@@ -1137,6 +1137,62 @@ def gen_hist_list(kind):
     return sorted(h, key=lambda x: x.get("t") or 0, reverse=True)
 
 
+def q_hist():
+    """v1.20.1：出题的记录——一个任务一行：任务名、哪些词、出好几个、没过几个（照每一组的结果；没轮到的写“没做到”），
+    开始时跳过的（已经有题目）。和「画面」的生成历史一样，新的在前。"""
+    def fam(kind, p):
+        return kind in ("chuti", "redo") or (kind == "words" and "chuti" in (p.get("steps") or ["chuti", "pics"]))
+    man = {r["word"]: r["errors"] for r in q("SELECT word, errors FROM manual")}
+    try:
+        _, rows = read_index()
+        hasq = {}
+        for r in rows:
+            hasq[r[2]] = hasq.get(r[2], True) and r[4] != "缺"
+    except Exception:
+        hasq = {}
+    groups = {}
+    for g in q("SELECT task_id, words, saved, fixed, failed, ts FROM groups ORDER BY id"):
+        groups.setdefault(g["task_id"], []).append(g)
+    L = lambda s: json.loads(s or "[]") if isinstance(s, str) else (s or [])
+    out = []
+    for t in q("SELECT id, kind, title, params, status, created, started, finished, error FROM tasks ORDER BY id DESC LIMIT 300"):
+        try:
+            p = json.loads(t["params"] or "{}")
+        except Exception:
+            p = {}
+        if not fam(t["kind"], p):
+            continue
+        words, res = [], {}
+        for g in groups.get(t["id"], []):
+            ok = set(L(g["saved"])) | set(L(g["fixed"]))
+            bad = set(L(g["failed"]))
+            for w in L(g["words"]):
+                if w not in words:
+                    words.append(w)
+                if w in ok:
+                    res[w] = {"ok": True, "detail": "出好了" + ("（改过再存）" if w in set(L(g["fixed"])) else "")}
+                elif w in bad or w in man:
+                    try:
+                        e = L(man.get(w)) if w in man else []
+                    except Exception:
+                        e = [str(man.get(w))]
+                    res[w] = {"ok": False, "detail": ("没过：" + "；".join(map(str, e)))[:200] if e else "没过检查（在「没过的词」里）"}
+        for w in p.get("words") or []:                 # 点了名、没轮到的词
+            if w not in words and w not in ((p.get("skipped") or {}).get("q") or []):
+                words.append(w)
+                res[w] = {"ok": bool(hasq.get(w)), "detail": "出好了" if hasq.get(w) else
+                          ("没做到（任务%s）" % t["status"].replace("已", "") if t["status"] in ("已取消", "失败", "已暂停") else "还没做到")}
+        tt = t["finished"] or t["started"] or t["created"] or ""
+        try:
+            ts = time.mktime(time.strptime(tt[:19], "%Y-%m-%d %H:%M:%S"))
+        except Exception:
+            ts = 0.0
+        out.append({"tid": t["id"], "title": t["title"] or "出题", "status": t["status"], "t": ts, "started": t["started"] or "",
+                    "finished": t["finished"] or "", "words": words, "res": res, "error": (t["error"] or "")[:300],
+                    "skipped": list((p.get("skipped") or {}).get("q") or [])[:300]})
+    return out
+
+
 def group_size():
     """出题一组几个词：手动接力时一组至少一份那么大（一份 300 个就一组 300 个，不再切成 25 个一份）。"""
     cfg = load_cfg()

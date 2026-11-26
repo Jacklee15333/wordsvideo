@@ -650,6 +650,7 @@ details.vgk>.vgo{margin-top:6px}
 .vsay{font-family:var(--en);font-size:13px;color:var(--ink)} .vsay mark{background:#FFE89A;padding:0 2px;border-radius:2px}
 .vro .vs{margin:3px 0 3px 14px;font-size:12.5px;line-height:1.7}
 .vpl{padding:2px 0 0}
+.qmore>summary{cursor:pointer}.qmore[open]>summary{margin-bottom:6px}
 .sprev{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 10px}.sbkall summary{cursor:pointer}
 </style>
 </head>
@@ -838,13 +839,6 @@ details.vgk>.vgo{margin-top:6px}
     <div class="sother" hidden></div>
     <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
   </div>
-  <div class="box rep-box" id="qRep" hidden style="margin-top:22px"><h3 style="margin-top:0">出题汇报（最近一次）</h3><div id="qRepBody"></div></div>
-  <div class="box" style="margin-top:22px">
-    <h3 style="margin-top:0">出题结果（选上的词的题目）</h3>
-    <div class="rsave" id="qSave">—</div>
-    <div id="qRes"></div>
-  </div>
-  <div class="pnext"><span class="small muted">题目有了？</span><button class="btn" onclick="go('pic')">下一步：画面</button></div>
 </section>
 
 <section id="p-qfail">
@@ -1155,16 +1149,24 @@ details.vgk>.vgo{margin-top:6px}
 
 
 <section id="p-history">
-  <div class="phead"><div><h2><i class="sn">4</i>出题：记录</h2>
-    <p class="muted">每一组出了哪些词、发给 AI 的每一次（出题、改错、画面）、AI 指出的总表问题。</p></div></div>
+  <div class="phead"><div><h2><i class="sn">4</i>出题：每个词 7 道练习题</h2>
+    <p class="muted">视频最后的练习和答案。AI 写，软件按规矩检查，过了才存进词库、上传；没过的退回给 AI 改，改几次还不过就放进“待人工”。</p></div></div>
   <div class="mtabs stabs"><a data-go="q" class="">出题</a><a data-go="qfail" class="">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="">批量和定时</a><a data-go="qset" class="">规矩和时间</a><a data-go="history" class="on">记录</a></div>
-
-  <h3 style="margin-top:0">每一组</h3>
-  <div class="box"><table id="gTable"></table></div>
-  <h3>发给 AI 的每一次</h3>
-  <div class="box"><table id="cTable"></table></div>
-  <h3>总表问题（README 里记的）</h3>
-  <div class="box"><div id="iList" class="small"></div></div>
+  <div class="box">
+    <h3 style="margin-top:0">出题记录 <span class="small faint" id="qhN"></span></h3>
+    <p class="small muted" style="margin:-4px 0 6px">做完一个任务，这里多一行：几点做的、哪些词、出好几个、没过几个。点「出题结果」看这个任务的每个词，点词看它的 7 道题。</p>
+    <div class="small muted" id="qSave" style="margin:-4px 0 8px"></div>
+    <div id="qHist"><p class="small muted">正在读…</p></div>
+  </div>
+  <div class="box" style="margin-top:14px">
+    <h3 style="margin-top:0">做完的任务 <span class="small faint" id="qdtN"></span></h3>
+    <div id="qDoneTasks"><p class="muted" style="margin:0">还没有。</p></div>
+  </div>
+  <details class="box qmore" style="margin-top:14px"><summary class="small muted">更细的记录：每一组、发给 AI 的每一次、总表问题</summary>
+    <h3>每一组</h3><div class="plist"><table id="gTable"></table></div>
+    <h3>发给 AI 的每一次</h3><div class="plist"><table id="cTable"></table></div>
+    <h3>总表问题（README 里记的）</h3><div id="iList" class="small"></div>
+  </details>
 </section>
 
 
@@ -1459,9 +1461,9 @@ async function stepTasks(step){TLt=Date.now();
   if(sec.contains(LV)){const R3=$('#r3Task');R3.hidden=!mg;
     if(mg){let p={};try{p=JSON.parse(mg.progress||'{}')}catch(e){}
       R3.innerHTML=`<span class="faint" title="${esc(mg.title)}（${esc((mg.started||mg.created||'').slice(11,16))} 开始）">任务 #${mg.id}</span><button class="btn ghost sm" onclick="taskOp(${mg.id},'pause')">暂停</button><button class="btn ghost sm" onclick="taskOp(${mg.id},'cancel')">取消</button><button class="btn ghost sm" onclick="taskLog(${mg.id})">详情</button>`}}
-  const toHist=step==='pic';     // v1.16.0：画面做完的任务放在「生成历史」那个标签里
-  if(toHist){const all=mine.filter(t=>!act.includes(t.status)).slice(0,30);$('#pdtN').textContent=all.length?`（${all.length} 个）`:'';
-    $('#picDoneTasks').innerHTML=all.length?all.map(taskRow).join('')+`<div class="line"><button class="btn ghost sm" onclick="clearDone('pic')">清掉做完的记录</button></div>`:'<p class="muted" style="margin:0">还没有。</p>'}
+  const toHist=step==='pic'||step==='q';     // v1.16.0：画面做完的任务放在「生成历史」；v1.20.1：出题的放在「记录」
+  if(toHist){const all=mine.filter(t=>!act.includes(t.status)).slice(0,30),P=step==='q'?'q':'pic';$('#'+(P==='q'?'qdtN':'pdtN')).textContent=all.length?`（${all.length} 个）`:'';
+    $('#'+(P==='q'?'qDoneTasks':'picDoneTasks')).innerHTML=all.length?all.map(taskRow).join('')+`<div class="line"><button class="btn ghost sm" onclick="clearDone('${step}')">清掉做完的记录</button></div>`:'<p class="muted" style="margin:0">还没有。</p>'}
   const th=(rest.length?rest.map(taskRow).join(''):(mg||toHist)?'':'<p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p>')+
     (done.length&&!toHist?`<details class="tdone" ${TOPEN[step]?'open':''}><summary class="small muted">做完的 ${done.length} 个任务</summary>${done.map(taskRow).join('')}
       <div class="line"><button class="btn ghost sm" onclick="clearDone('${step}')">清掉这一步做完的记录</button></div></details>`:'');
@@ -1495,7 +1497,7 @@ const picked=()=>(PL.items||[]).filter(i=>i.picked);
 function tabCounts(){const s=ST.stats||{};$$('[data-tc="qfail"]').forEach(e=>e.textContent=s.manual||'');
   api('/api/picfail').then(f=>{const n=(f.items||[]).length;$$('[data-tc="picfail"]').forEach(e=>e.textContent=n||'')}).catch(()=>{})}
 /* ④ 出题：这次给哪些词（选上的）、做的过程、出题结果（题目、存在哪儿） */
-async function loadQ(){await poolNeed();qPickRender();qRes();stepTasks('q');liveTick();tabCounts()}
+async function loadQ(){await poolNeed();qPickRender();stepTasks('q');liveTick();tabCounts()}
 /* v1.20.0：只列要出题的词：出好一个少一个，都出好了列表就空了；已经有题目的不列（开始时写进汇报） */
 function qPickRender(){const pk=picked(),list=pk.filter(i=>!i.q||i.manual);
   $('#qPickN').textContent=list.length?`（${list.length} 个）`:'';
@@ -1508,19 +1510,37 @@ function qPickRender(){const pk=picked(),list=pk.filter(i=>!i.q||i.manual);
   const allQ=pk.length&&!list.length;$('#qNext').hidden=!allQ;
   if(allQ)$('#qMsg').textContent='选上的词都有题目了，点「下一步：画面」去做画面。';
   else if($('#qMsg').textContent.startsWith('选上的词都有题目了'))$('#qMsg').textContent='只出题，不做画面。做的过程就在下面。'}
-async function qRes(){const pk=picked().map(i=>i.word);
-  let d;try{d=await api('/api/qres?w='+encodeURIComponent(pk.join('|')))}catch(e){return}
-  if(d.notReady)return;const D=d.dirs||{};
-  $('#qSave').innerHTML=`<div><b>Excel 文件</b>（每个词一个，出好题目就自动存）：<code>${esc(D.q||'')}</code><button class="btn ghost sm" data-open="qdir">打开文件夹</button><button class="btn ghost sm" id="qExport">把选上的词合成一个 Excel</button></div>
-    <div><b>词库里的原件</b>（会上传到 GitHub）：<code>${esc(D.qrepo||'')}</code><button class="btn ghost sm" data-open="qrepo">打开文件夹</button></div>`;
-  $('#qExport').onclick=()=>busy($('#qExport'),null,'正在存',()=>api('/api/qres',{op:'export',words:pk}));
-  const has=d.items.filter(i=>i.has);
-  const firstQ=(has[0]||{}).word;
-  $('#qRes').innerHTML=!pk.length?'<div class="pempty">还没有选上的词。</div>':d.items.map(i=>i.has?`<details class="res" ${has.length<=2||i.word===firstQ?'open':''}>
-      <summary><span class="w">${esc(i.word)}</span><span class="small muted">${esc(i.meaning).slice(0,30)}</span><span class="pst pst-done">7 道题</span>
-        <span class="small faint">${esc(i.gen)}</span>${i.xlsx?`<button class="btn ghost sm" data-open="qfile" data-word="${esc(i.word)}">打开 Excel</button>`:''}</summary>
-      ${renderQs(i.rec)}<p class="small faint">原件：${esc(i.rel)}${i.xlsx?`　Excel：${esc(i.xlsx)}`:''}</p></details>`
-    :`<div class="rnone"><b>${esc(i.word)}</b>${i.manual?'<span style="color:var(--red)">出题没过，在「没过的词」里</span>':'还没有题目'}</div>`).join('')}
+/* v1.20.1「记录」：出题的记录，一个任务一行（和「画面」的生成历史一样）：几点、任务名、出好几个、没过几个；
+   点「出题结果」看这个任务的每个词，点词看它的 7 道题 */
+let QHALL=false,QHOPEN=new Set();
+async function qHistRender(){
+  let d;try{d=await api('/api/qhist')}catch(e){$('#qHist').innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
+  if(d.notReady){$('#qHist').innerHTML=`<p class="small muted">${esc(d.msg||'词库还没准备好')}</p>`;return}
+  const D=d.dirs||{};
+  $('#qSave').innerHTML=`题目的 Excel 存在 <code>${esc(D.q||'')}</code> <button class="btn ghost sm" data-open="qdir">打开文件夹</button> <button class="btn ghost sm" id="qExport" title="把第 3 步选上的词的题目合成一个 Excel">把选上的词合成一个 Excel</button>
+    <span class="faint">· 词库里的原件（会上传到 GitHub）：<code>${esc(D.qrepo||'')}</code></span> <button class="btn ghost sm" data-open="qrepo">打开文件夹</button>`;
+  $('#qExport').onclick=()=>busy($('#qExport'),null,'正在存',()=>api('/api/qres',{op:'export',words:picked().map(i=>i.word)}));
+  const it=d.items||[],show=QHALL?it:it.slice(0,10);
+  $('#qhN').textContent=it.length?`（${it.length} 个任务）`:'';
+  const ST2={'运行中':'正在做','排队':'排队中','已暂停':'暂停了','已取消':'取消了','失败':'没做成'};
+  $('#qHist').innerHTML=it.length?'<table class="gh"><tr><th>时间</th><th>任务</th><th>结果</th><th></th></tr>'+show.map(x=>{
+    const ws=x.words||[],r=x.res||{},ok=ws.filter(w=>(r[w]||{}).ok).length,bad=ws.length-ok,o=QHOPEN.has(x.tid),tag=ST2[x.status];
+    return `<tr class="ghrow" data-qh="${x.tid}"><td class="n small">${x.t?fmtT(x.t):''}</td><td><b>${esc(x.title)}</b>${tag?` <span class="tag t-${esc(x.status)}">${tag}</span>`:''}<div class="small muted">${ws.length?`${ws.length} 个词：<span style="font-family:var(--en)">${esc(ws.slice(0,4).join('、'))}${ws.length>4?' …':''}</span>`:'没有出题的词'}${(x.skipped||[]).length?` · 已经有题目，跳过 ${x.skipped.length} 个`:''}</div></td>
+      <td class="n"><span class="ck-y">✓ ${ok}</span>${bad?` <span class="ck-bad">✗ ${bad}</span>`:''}</td><td class="n"><a href="#">${o?'收起 ▾':'出题结果 ▸'}</a></td></tr>
+      <tr class="ghd" ${o?'':'hidden'}><td colspan="4"><div class="small muted" style="margin-bottom:4px">点词看它的 7 道题</div>${ws.map(w=>{const v=r[w]||{};return `<a href="#" class="wchip ${v.ok?'ok':'bad'}" title="${esc(v.detail||'')}" onclick="qWordModal('${esc(w)}');return false">${v.ok?'✓':'✗'} ${esc(w)}</a>`}).join('')||'<span class="small muted">这个任务没有出题的词</span>'}
+        ${bad?`<div class="small" style="margin-top:6px;color:#9B2C22">没出好：${ws.filter(w=>!(r[w]||{}).ok).map(w=>`${esc(w)}（${esc(((r[w]||{}).detail||'').slice(0,50))}）`).join('；')}</div>`:''}
+        ${(x.skipped||[]).length?`<div class="small muted" style="margin-top:6px">已经有题目，跳过 ${x.skipped.length} 个：${esc(x.skipped.slice(0,40).join('、'))}${x.skipped.length>40?' …':''}</div>`:''}
+        ${x.error?`<div class="small" style="margin-top:6px;color:var(--red)">${esc(x.error.split('\n')[0])}</div>`:''}</td></tr>`}).join('')+'</table>'+
+    (it.length>10?`<div style="margin-top:6px"><button class="btn ghost sm" onclick="QHALL=!QHALL;qHistRender()">${QHALL?'收起':'看全部 '+it.length+' 个任务'}</button></div>`:'')
+    :'<div class="pempty">还没有出题记录。出完一个任务，这里就多一行。</div>';
+  $$('#qHist .ghrow').forEach(tr=>tr.onclick=e=>{e.preventDefault();const n=tr.nextElementSibling,id=+tr.dataset.qh;n.hidden=!n.hidden;n.hidden?QHOPEN.delete(id):QHOPEN.add(id);tr.querySelector('a').textContent=n.hidden?'出题结果 ▸':'收起 ▾'})}
+/* 一个词的题目：弹出来看 */
+async function qWordModal(w){modal(w+' 的题目','<p class="muted">正在读…</p>');
+  let d;try{d=await api('/api/qres?w='+encodeURIComponent(w))}catch(e){$('#mBody').textContent=e.message;return}
+  if(d.notReady){$('#mBody').innerHTML=`<p class="ck-bad">现在看不了：${esc(d.msg||'词库还没准备好')}</p>`;return}
+  const i=(d.items||[])[0];if(!i){$('#mBody').textContent='总表里没有这个词';return}
+  if(!i.has){$('#mBody').innerHTML=`<p>${i.manual?'<span class="ck-bad">出题没过</span>：在「没过的词」里，点单词自己改，或者交给 AI 重做。':'还没有题目。'}</p>${i.manual?'<button class="btn sm" onclick="closeModal();go(\'qfail\')">去「没过的词」</button>':''}`;return}
+  $('#mBody').innerHTML=`<p class="small muted" style="margin-top:0">${esc(i.meaning||'')}　${esc(i.gen||'')}${i.xlsx?`　<button class="btn ghost sm" data-open="qfile" data-word="${esc(w)}">打开 Excel</button>`:''}</p>${renderQs(i.rec)}<p class="small faint">原件：${esc(i.rel)}${i.xlsx?`　Excel：${esc(i.xlsx)}`:''}</p>`}
 async function loadQbulk(){
   const s=ST.stats||{};
   $('#qStats').innerHTML=s.total?`<div class="d"><b>${s.done.toLocaleString()}</b>行有题目</div><div><b>${s.missing.toLocaleString()}</b>行还缺</div>
@@ -1893,15 +1913,7 @@ let RL={};
 function rStep(id,st,detail,cls){const li=$('#'+id);li.dataset.st=st;const d=li.querySelector('.rs');d.innerHTML=detail||'';d.className='rs'+(cls?' '+cls:'')}
 const hm=t=>t?new Date(t*1000).toTimeString().slice(0,8):'';
 /* 「查看详情」：在这一页下面的“结果”里把这个词打开 */
-async function showRes(w){const st=stepOf((ST.runner||{}).task)||page,isQ=st==='q';
-  if(!isQ)return picWordModal(w);
-  if(page!==(isQ?'q':'pic'))go(isQ?'q':'pic');
-  await poolNeed();if(isQ){qPickRender();await qRes()}else{picPickRender();await picRes()}
-  const box=$('#qRes'),d=[...box.querySelectorAll('details.res')].find(x=>(x.querySelector('summary .w')||{}).textContent===w);
-  if(!d){const n=[...box.querySelectorAll('.rnone')].find(x=>(x.querySelector('b')||{}).textContent===w);
-    if(n){n.scrollIntoView({behavior:'smooth',block:'center'});return}
-    return toast(`「${w}」不在下面的结果里（不是选上的词）`)}
-  d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});d.classList.add('flash');setTimeout(()=>d.classList.remove('flash'),2200)}
+async function showRes(w){const st=stepOf((ST.runner||{}).task)||page;return st==='q'?qWordModal(w):picWordModal(w)}
 let RLLAST=null,RLBATCH=null;
 async function relayTick(){
   let d;try{d=await api('/api/relay')}catch(e){return}
@@ -1916,7 +1928,7 @@ async function relayTick(){
   if(RLBATCH===null)RLBATCH=lbt;else if(lbt!==RLBATCH){RLBATCH=lbt;const B=d.lastBatch;toast(`✓ 这一批 ${B.words.length} 个词已经生成完：做好了 ${B.ok} 个${B.bad?`，没做成 ${B.bad} 个`:''}`,10000)}
   const lt=(L&&L.t)||0;
   if(RLLAST===null)RLLAST=lt;                       // 打开页面时先记下现在的，之后有词做完就刷新
-  else if(lt!==RLLAST){RLLAST=lt;await poolNeed();if(page==='pic'){picPickRender();picRes()}else if(page==='q'){qPickRender();qRes()}}
+  else if(lt!==RLLAST){RLLAST=lt;await poolNeed();if(page==='pic'){picPickRender();picRes()}else if(page==='q')qPickRender();else if(page==='history')qHistRender()}
   rFinalRender(d);
   if(!d.show)return;
   const ph=d.phase,H=d.hist||[],n=H.length,ws=d.words||[],sent=ph!=='send',done=d.done||[];
@@ -2707,7 +2719,7 @@ $('#mRedo').onclick=()=>{const s=sel();if(!s.length)return toast('先勾选词')
 $('#mRemove').onclick=()=>{const s=sel();if(!s.length)return toast('先勾选词');manualOp('remove',s)};
 
 /* ───── 记录 ───── */
-async function loadHistory(){
+async function loadHistory(){qHistRender();stepTasks('q');tabCounts();
   const [g,c,i]=await Promise.all([api('/api/groups'),api('/api/calls'),api('/api/issues')]);
   const L=s=>JSON.parse(s||'[]');
   $('#gTable').innerHTML='<tr><th>组</th><th>时间</th><th>存了</th><th>改过再存</th><th>待人工</th><th>提交</th></tr>'+(g.items.map(x=>{const w=L(x.words);
