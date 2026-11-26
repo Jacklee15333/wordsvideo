@@ -1,7 +1,1274 @@
 {
  "单词": "theory",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.64,
+      "z": 3,
+      "seq": "blink",
+      "fps": 2
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.3,
+      "z": 5,
+      "crowd": 9
+     },
+     {
+      "label": "旁观者",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/board-formula.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.28,
+      "z": 5
+     },
+     {
+      "label": "…的事",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-eye.svg",
+   "p1": "art/icon-board.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "actor": "west-clerk-think",
+     "x": 0.4,
+     "y": 0.55,
+     "s": 0.74,
+     "z": 3,
+     "seq": "blink",
+     "fps": 2
+    },
+    {
+     "svg": "art/magnifier.svg",
+     "x": 0.78,
+     "y": 0.5,
+     "s": 0.4,
+     "anim": "sway"
+    },
+    {
+     "label": "旁观、静静地看",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.085,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "理论、学说",
+    "pos": "名词",
+    "diff": "根据观察和推理给出的系统解释",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.24,
+      "y": 0.55,
+      "s": 0.7,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "id": "t"
+     },
+     {
+      "svg": "art/board-formula.svg",
+      "x": 0.62,
+      "y": 0.44,
+      "s": 0.56,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     }
+    ],
+    "ex": "Einstein's theory changed science.",
+    "exzh": "爱因斯坦的理论改变了科学。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/board-formula.svg",
+       "x": 0.5,
+       "y": 0.44,
+       "s": 0.62,
+       "when": "theory",
+       "pop": true
+      },
+      {
+       "actor": "west-man-point",
+       "x": 0.14,
+       "y": 0.58,
+       "s": 0.66,
+       "z": 3,
+       "seq": "talk",
+       "fps": 2,
+       "when": "Einstein"
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.96,
+       "s": 0.28,
+       "z": 5
+      },
+      {
+       "label": "theory",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "theory"
+      },
+      {
+       "label": "理论",
+       "x": 0.88,
+       "y": 0.2,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "理论"
+      }
+     ]
+    }
+   },
+   {
+    "text": "原理",
+    "pos": "名词",
+    "diff": "一门学问的道理（和实践相对）",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/piano-theory.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.62,
+      "shadow": true
+     },
+     {
+      "emit": true,
+      "svg": "art/note.svg",
+      "alt": [
+       "art/note2.svg"
+      ],
+      "x": 0.5,
+      "y": 0.4,
+      "every": 0.8,
+      "life": 2,
+      "to": [
+       0.2,
+       -0.3
+      ],
+      "s": 0.08
+     }
+    ],
+    "ex": "We learn music theory on Fridays.",
+    "exzh": "我们每周五学乐理。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/piano-theory.svg",
+       "x": 0.56,
+       "y": 0.5,
+       "s": 0.6,
+       "when": "music theory",
+       "pop": true
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.16,
+       "y": 0.58,
+       "s": 0.66,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "We learn"
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "x": 0.56,
+       "y": 0.4,
+       "every": 0.9,
+       "life": 2,
+       "to": [
+        0.2,
+        -0.3
+       ],
+       "s": 0.08,
+       "when": "music"
+      },
+      {
+       "label": "music theory",
+       "x": 0.56,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "music theory"
+      },
+      {
+       "label": "乐理",
+       "x": 0.88,
+       "y": 0.2,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "乐理"
+      }
+     ]
+    }
+   },
+   {
+    "text": "看法、推测",
+    "pos": "名词",
+    "diff": "日常口语：自己的一种解释",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/broken-vase.svg",
+      "x": 0.36,
+      "y": 0.78,
+      "s": 0.28
+     },
+     {
+      "svg": "art/cat-sit_f0.svg",
+      "x": 0.68,
+      "y": 0.62,
+      "s": 0.5,
+      "frames": [
+       "art/cat-sit_f0.svg",
+       "art/cat-sit_f1.svg",
+       "art/cat-sit_f2.svg"
+      ],
+      "fps": 2
+     },
+     {
+      "svg": "art/question.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.3,
+      "anim": "bob"
+     }
+    ],
+    "ex": "My theory is that the cat broke the vase.",
+    "exzh": "我猜是猫打碎了花瓶。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.18,
+       "y": 0.56,
+       "s": 0.7,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "My theory",
+       "id": "b"
+      },
+      {
+       "svg": "art/magnifier.svg",
+       "x": 0.36,
+       "y": 0.4,
+       "s": 0.26,
+       "when": "theory",
+       "anim": "sway"
+      },
+      {
+       "svg": "art/cat-sit_f0.svg",
+       "x": 0.62,
+       "y": 0.62,
+       "s": 0.48,
+       "when": "the cat",
+       "frames": [
+        "art/cat-sit_f0.svg",
+        "art/cat-sit_f1.svg",
+        "art/cat-sit_f2.svg"
+       ],
+       "fps": 2,
+       "pop": true
+      },
+      {
+       "svg": "art/broken-vase.svg",
+       "x": 0.86,
+       "y": 0.8,
+       "s": 0.26,
+       "when": "broke the vase",
+       "pop": true,
+       "sfx": "crash"
+      },
+      {
+       "label": "theory",
+       "x": 0.4,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "theory"
+      },
+      {
+       "label": "我猜",
+       "x": 0.62,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "我猜"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“旁观、静静地看”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-listen",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.72,
+       "z": 3,
+       "seq": "blink",
+       "fps": 2
+      },
+      {
+       "svg": "art/magnifier.svg",
+       "x": 0.78,
+       "y": 0.5,
+       "s": 0.4,
+       "anim": "sway"
+      },
+      {
+       "label": "theor 旁观者 + y",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "先看清，再想明白",
+    "node": "沉思、思辨",
+    "say": [
+     "站在一旁看，先把事情看清楚，再在脑子里想明白。",
+     "这就是沉思、思辨。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/magnifier.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.42,
+       "when": "看清楚",
+       "anim": "sway"
+      },
+      {
+       "ray": [
+        [
+         0.45,
+         0.5
+        ],
+        [
+         0.58,
+         0.5
+        ]
+       ],
+       "color": "#E8590C",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "when": "再在脑子里"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.76,
+       "y": 0.55,
+       "s": 0.7,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "想明白"
+      },
+      {
+       "label": "沉思",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "沉思"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "想明白以后形成的一套道理",
+    "node": "① 原理",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "想明白以后，形成一套道理，就是一门学问的原理，比如乐理。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/piano-theory.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "when": "一套道理",
+       "anim": "bob"
+      },
+      {
+       "label": "原理",
+       "x": 0.3,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "原理"
+      },
+      {
+       "label": "乐理",
+       "x": 0.72,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "乐理"
+      }
+     ]
+    }
+   },
+   {
+    "via": "根据观察和推理给出的系统解释",
+    "node": "② 理论、学说",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "根据大量观察和推理，给出一整套解释，就是理论、学说，比如相对论。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/board-formula.svg",
+       "x": 0.5,
+       "y": 0.44,
+       "s": 0.6,
+       "when": "一整套解释",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "label": "理论",
+       "x": 0.18,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "理论"
+      },
+      {
+       "label": "相对论",
+       "x": 0.82,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "相对论"
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.96,
+       "s": 0.28,
+       "z": 5
+      }
+     ]
+    }
+   },
+   {
+    "via": "日常口语里只是自己的一种解释",
+    "node": "③ 看法、推测",
+    "pos": "名词",
+    "pic": 2,
+    "from": 1,
+    "say": [
+     "日常口语里，theory 常常只是自己的一种解释，就是看法、推测。",
+     "但科学上的理论，是经过大量证据检验的，不是猜测。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/question.svg",
+       "x": 0.3,
+       "y": 0.4,
+       "s": 0.4,
+       "when": "一种解释",
+       "anim": "bob",
+       "hideCue": 1
+      },
+      {
+       "label": "推测",
+       "x": 0.3,
+       "y": 0.82,
+       "size": 0.09,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "推测",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/board-formula.svg",
+       "x": 0.66,
+       "y": 0.44,
+       "s": 0.5,
+       "cue": 1,
+       "when": "科学上的理论"
+      },
+      {
+       "label": "证据检验",
+       "x": 0.66,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "cue": 1,
+       "when": "证据"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "原理；看法；推测",
+   "items": [
+    {
+     "w": "theory",
+     "word": "theory",
+     "m": "理论；原理；（口语）看法、推测",
+     "zh": "理论；原理；（口语）看法、推测",
+     "say": "theory 是看清楚、想明白之后的一套解释；日常口语里常只是猜想。",
+     "text": "theory 是看清楚、想明白之后的一套解释；日常口语里常只是猜想。",
+     "note": "theory 是看清楚、想明白之后的一套解释；日常口语里常只是猜想。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/classroom-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/board-formula.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.9,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "principle",
+     "word": "principle",
+     "m": "原理、原则",
+     "zh": "原理、原则",
+     "say": "principle 是一条最基本的道理、规则，比如物理原理。",
+     "text": "principle 是一条最基本的道理、规则，比如物理原理。",
+     "note": "principle 是一条最基本的道理、规则，比如物理原理。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/classroom-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/piano-theory.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.9,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "opinion",
+     "word": "opinion",
+     "m": "看法、意见",
+     "zh": "看法、意见",
+     "say": "opinion 是个人觉得好不好、对不对，in my opinion 我认为。",
+     "text": "opinion 是个人觉得好不好、对不对，in my opinion 我认为。",
+     "note": "opinion 是个人觉得好不好、对不对，in my opinion 我认为。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/question.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "outlook",
+     "word": "outlook",
+     "m": "观点、前景",
+     "zh": "观点、前景",
+     "say": "outlook 是看待事情的总的眼光，也指前景。",
+     "text": "outlook 是看待事情的总的眼光，也指前景。",
+     "note": "outlook 是看待事情的总的眼光，也指前景。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/park-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/magnifier.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "sway"
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.02,
+        "y": 0.86,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.02,
+          0.86
+         ],
+         "to": [
+          0.98,
+          0.86
+         ],
+         "offset": 0.2
+        }
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.98,
+        "y": 0.88,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.98,
+          0.88
+         ],
+         "to": [
+          0.02,
+          0.88
+         ],
+         "offset": 0.65
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "attitude",
+     "word": "attitude",
+     "m": "态度",
+     "zh": "态度",
+     "say": "attitude 是对一件事的态度，愿意不愿意。",
+     "text": "attitude 是对一件事的态度，愿意不愿意。",
+     "note": "attitude 是对一件事的态度，愿意不愿意。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/mirror.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.9,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "viewpoint",
+     "word": "viewpoint",
+     "m": "观点、立场",
+     "zh": "观点、立场",
+     "say": "viewpoint 是从哪个角度看。",
+     "text": "viewpoint 是从哪个角度看。",
+     "note": "viewpoint 是从哪个角度看。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/park-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/map.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.9
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.02,
+        "y": 0.86,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.02,
+          0.86
+         ],
+         "to": [
+          0.98,
+          0.86
+         ],
+         "offset": 0.2
+        }
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.98,
+        "y": 0.88,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.98,
+          0.88
+         ],
+         "to": [
+          0.02,
+          0.88
+         ],
+         "offset": 0.65
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "sentiment",
+     "word": "sentiment",
+     "m": "情绪、看法",
+     "zh": "情绪、看法",
+     "say": "sentiment 带着感情的看法。",
+     "text": "sentiment 带着感情的看法。",
+     "note": "sentiment 带着感情的看法。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/icon-care.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "supposition",
+     "word": "supposition",
+     "m": "假定、推测",
+     "zh": "假定、推测",
+     "say": "supposition 是没有证据、只是假设的推想。",
+     "text": "supposition 是没有证据、只是假设的推想。",
+     "note": "supposition 是没有证据、只是假设的推想。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/broken-vase.svg",
+        "x": 0.4,
+        "y": 0.6,
+        "s": 0.6
+       },
+       {
+        "svg": "art/question.svg",
+        "x": 0.7,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "bob"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "theory 有一套道理撑着；opinion、attitude、sentiment 偏个人感受；supposition 只是假设。",
+   "tip": "科学上的 theory 是经过大量证据检验的系统解释，不是“猜测”。",
+   "pics": {
+    "theory": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/board-formula.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.9,
+       "anim": "bob"
+      }
+     ]
+    },
+    "principle": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/piano-theory.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.9,
+       "anim": "bob"
+      }
+     ]
+    },
+    "opinion": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/question.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "bob"
+      }
+     ]
+    },
+    "outlook": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/park-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/magnifier.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "sway"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    },
+    "attitude": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/mirror.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.9,
+       "anim": "bob"
+      }
+     ]
+    },
+    "viewpoint": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/park-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.9
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    },
+    "sentiment": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/icon-care.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "supposition": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/broken-vase.svg",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.6
+      },
+      {
+       "svg": "art/question.svg",
+       "x": 0.7,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "theoryai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人对这个想法怎么说？\n听：It's just a theory; we need more facts.\nA. 已被证实\nB. 只是推测\nC. 完全错误\nD. 很有名",
@@ -89,5 +1356,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

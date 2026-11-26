@@ -7,12 +7,12 @@
    "img": "art/stage-bg.svg",
    "items": [
     {
-     "actor": "west-girl-surprised",
+     "actor": "west-man-speech",
      "x": 0.5,
      "y": 0.5,
      "s": 0.62,
      "z": 3,
-     "seq": "pingpong",
+     "seq": "talk",
      "fps": 2,
      "id": "g"
     },
@@ -551,6 +551,42 @@
        "y": 0.45,
        "s": 0.8,
        "anim": "shake"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
       }
      ]
     }
@@ -601,6 +637,104 @@
       "y": 0.45,
       "s": 0.8,
       "anim": "shake"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.46,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.46,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ },
+ "demo": {
+  "sadly": {
+   "icons": [
+    "art/icon-sad.svg",
+    "art/icon-ly.svg"
+   ],
+   "lit": "难过地",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/flower-droop.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "sway"
+     }
+    ]
+   }
+  },
+  "basically": {
+   "icons": [
+    "art/icon-basic.svg",
+    "art/icon-ly.svg"
+   ],
+   "lit": "从根本上",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/blocks.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "forward": {
+   "icons": [
+    "art/icon-fore.svg",
+    "art/icon-ward.svg"
+   ],
+   "lit": "朝前面",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/road-forward.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "pulse"
      }
     ]
    }
