@@ -642,6 +642,7 @@ echo "WVVER:$(grep -m1 '^当前' "$S/SKILL.md" 2>/dev/null | sed 's/（.*//; s/^
 mkdir -p "$W" ~/kit-extra
 @MAKE@
 rm -rf "$WK/@SAFE@"
+@LINK@
 cd "$S/scripts" && timeout 600 python3 run.py --table "$T" ${SY:+--syl "$SY"} --words @W@ --number 1 --out /tmp/wv-draft --edits "$E" \
   --edition brief --draft-only --no-preview --work "$WK" > "$LOG" 2>&1
 line=$(grep -a '还要补' "$LOG" | tail -1 | sed 's/^ *//')
@@ -676,6 +677,10 @@ def wsl_draft(word, pre=False):
     else:
         make = MAKE_FULL.replace("@SRC@", V.q(V.to_wsl(C.REPO / EXTRA)))
     sh = DRAFT_SH.replace("@MAKE@", make)
+    # v1.19.0：和流水线“准备”一样，把这个词画好图的文件夹连过去（~/wf-jobs/<词>/<词> → ~/wordfilm-work/<词>）。
+    #   以前没连：起草检查找不到画好的图，“场景画得太简单”“还是写实画法”这些就查不出来，说“都齐了”，
+    #   到了出视频“准备”那一步才卡住（make 的 factory-bg.svg 只有 49 个图形就是这样漏过去的）
+    sh = sh.replace("@LINK@", "" if pre else 'mkdir -p "$WK"; ln -sfn "$W/@F@" "$WK/@SAFE@"')
     for k, v in (("@TABLE@", V.q(table)), ("@F@", f), ("@W@", V.q(word)),
                  ("@SAFE@", re.sub(r'[\\/:*?"<>|\s]+', "_", word).strip("._") or "word")):
         sh = sh.replace(k, v)
@@ -754,14 +759,37 @@ def _unchecked(word):
     return P, svgs
 
 
-def _try(R, tid, w, rounds, force=False):
+def _saved(word):
+    """v1.19.0：词库/画面设置 里现在存着的这个词的画面（不管起草检查记的是什么）：(P, svgs)，没有就 None。
+    补画面要在“上次的画面”上改：以前只认记着没过起草检查的，可开工前单词检测查出来的词，记着的是“都齐了”（例句听不清、
+    以前的起草检查看不到画好的图），拿不到上次的画面——补画面中途停下会把它整个删掉。"""
+    f = V.folder_of(word)
+    pj = C.REPO / EXTRA / "words" / (f + ".json")
+    if not pj.exists():
+        return None
+    try:
+        P = json.loads(pj.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    P.pop("lianxi", None)
+    return P, _old_svgs(word)
+
+
+def _try(R, tid, w, rounds, force=False, need=""):
     """做一个词的画面。返回 (做好了吗, 最后的问题)。
     存着还没过检查的画面先拿去起草检查（不用问 AI）；没有就先起草一遍看要画什么，再问 AI；没过带着问题退回去改。
     起草检查本身没跑成（WSL、文件的问题）不算 AI 的错：本机检查过了就先存下，出片时再起草检查。
-    中途停下：临时存的、没过检查的画面清掉，不留下“看着做好了”的半成品。"""
+    中途停下：临时存的、没过检查的画面清掉，不留下“看着做好了”的半成品。
+    v1.19.0：补画面（force）时 need 是查出来的“还要补”（开工前单词检测、批次里卡住的）：带着上次的画面和这几条直接交给 AI；
+    中途停下、改不好，上次的画面放回去，不删。"""
     temp, fix, old = False, None, None
+    orig = _saved(w) if force else None
     try:
         old = _unchecked(w)
+        if force and _items(need) and orig:
+            old = None
+            fix = (json.dumps(orig[0], ensure_ascii=False), ["还要补：" + x for x in _items(need)])
+            C.log("  %s 交给 AI 改：%s" % (w, "；".join(_items(need))[:200]), tid)
         if old:
             P, svgs = old
             errs = check(w, P, svgs)
@@ -784,7 +812,8 @@ def _try(R, tid, w, rounds, force=False):
                 errs = ["视频技能起草检查没过：" + line]
             fix = (json.dumps(P, ensure_ascii=False), errs)
             C.log("  %s 存着的画面没过：%s；交给 AI 改" % (w, "；".join(errs)[:200]), tid)
-        R.stage = "%s：先起草一遍，看要画什么（在 WSL 里，几秒到一两分钟）" % w
+        if not fix:
+            R.stage = "%s：先起草一遍，看要画什么（在 WSL 里，几秒到一两分钟）" % w
         todo = "" if fix else draft_todo(w)
         if todo:
             C.log("  %s 先起草了一遍：要画齐的已经写进提示词" % w, tid)
@@ -792,8 +821,8 @@ def _try(R, tid, w, rounds, force=False):
         for rnd in range(rounds + 1):
             rep = R.ask(tid, "做画面" if not (rnd or old) else "画面改第 %d 次" % (rnd + (1 if old else 0)), build_prompt(w, fix, todo), [w])
             P, raw, svgs, errs = parse(rep)
-            if old and force:                        # 补画面：没重画的插图用上次的
-                svgs = dict(old[1], **(svgs or {}))
+            if (old or orig) and force:              # 补画面：没重画的插图用上次的
+                svgs = dict((old or orig)[1], **(svgs or {}))
             C.relay_stage("检查画面设置、插图…")
             errs = errs or check(w, P, svgs)
             checked, left = False, ""
@@ -823,8 +852,8 @@ def _try(R, tid, w, rounds, force=False):
             C.log("  %s 的画面没过：%s" % (w, "；".join(errs)[:200]), tid)
         return False, errs
     except BaseException:
-        if temp and old and force:                   # 补画面中途停下：上次的画面放回去，不删
-            save(w, old[0], old[1], False)
+        if temp and force and (old or orig):         # 补画面中途停下：上次的画面放回去，不删
+            save(w, (old or orig)[0], (old or orig)[1], False)
         elif temp:
             unsave(w)
             C.log("  %s 停下了：临时存的画面（还没过检查）清掉了" % w, tid)
@@ -1145,7 +1174,7 @@ def build_prompt_fix_multi(words, todos, rnd):
     rules, pm, ex = docs()
     ver, ed = skill_version()
     n = len(words)
-    head = ("【补画面 · 这一批 %d 个词】这些词的“画面设置”以前做好、存下了，可视频技能 %s（%s）的起草检查说还缺东西，出视频时卡在“准备”这一步。"
+    head = ("【补画面 · 这一批 %d 个词】这些词的“画面设置”以前做好、存下了，可视频技能 %s（%s）检查出来还缺东西（起草检查，或者例句配音听不清），出视频时会卡住。"
             "请在上次的基础上，把每个词“还要补”的每一条都改好：\n"
             "- 每个词把改好的 JSON 完整写一遍（没问题的地方照抄上次的）；\n"
             "- 插图只写新画的、要重画的（比如“画得太简单”的场景，用同一个名字重画得详细些）；上次的、不改的不用再写，程序会留着；\n"
@@ -1161,7 +1190,7 @@ def build_prompt_fix_multi(words, todos, rnd):
         P.pop("lianxi", None)
         arts = sorted(_old_svgs(w))
         items = _items(todos.get(w, ""))
-        segs.append("@%s\n还要补（视频技能起草检查说的，每一条都要做到）：\n%s\n总表材料：%s\n上次已经画好的插图：%s\n上次的画面设置：\n```json\n%s\n```" % (
+        segs.append("@%s\n还要补（视频技能检查出来的，每一条都要做到）：\n%s\n总表材料：%s\n上次已经画好的插图：%s\n上次的画面设置：\n```json\n%s\n```" % (
             w, "\n".join("- " + x for x in items) if items else "- 没记下具体缺什么：照规矩每一条再对一遍，缺的补上",
             _mat_short(w, 500), "、".join("art/" + a for a in arts) or "没有",
             json.dumps(P, ensure_ascii=False, separators=(",", ":"))[:14000]))
@@ -1177,12 +1206,14 @@ def build_prompt_fix_multi(words, todos, rnd):
 
 
 def _after_fix(tid, w, batch):
-    """补好的词：画面设置拷进 WSL（流水线读的那一份），批次里让它从卡住的地方接着做。"""
+    """补好的词：画面设置拷进 WSL（流水线读的那一份），批次里让它从“准备”重做（v1.19.0：以前是从卡住的那一步接着做，
+    可例句听不清卡在“配音”的，换了例句要重新起草配音稿，从“配音”接着做还是旧的那一句）。还没开工的批次只记下，不替你开工。"""
     if not batch:
         return
     try:
         V.sync_pics()
-        ok, msg = V.batch_op(batch, "retry", V.folder_of(w))
+        V.wc_fixed(batch, w)
+        ok, msg = V.batch_op(batch, "retry", V.folder_of(w), "准备")
         C.log("  %s 补好了 → 批次 %s：%s" % (w, batch, msg), tid)
     except Exception as e:
         C.log("  %s 补好了，可批次 %s 没接上（%s）：到「出视频」页点「再试一次」" % (w, batch, str(e)[:100]), tid)
@@ -1201,6 +1232,7 @@ def do_pics_fix(R, tid, p):
             todos.update({w: l for w, l in V.prep_todo(batch, words).items() if l})
         except Exception as e:
             C.log("读批次 %s 的起草检查记录没成功（%s）：用画面那一步记下的" % (batch, str(e)[:100]), tid)
+    todos.update({w: l for w, l in (p.get("todos") or {}).items() if l and w in words})    # v1.19.0：开工前单词检测查出来的
     ask, fine = [], []
     for w in words:                                  # 没记下缺什么的：先在 WSL 里起草检查一遍（几秒钟），过了就不用问 AI
         R.check_stop()
@@ -1237,8 +1269,8 @@ def do_pics_fix(R, tid, p):
     hist, t0, done, saved = {}, time.time(), 0, []
     for w in ask:
         R.check_stop()
-        old, old_line = _unchecked(w), todos.get(w, "")
-        ok, errs = _try(R, tid, w, rounds, force=True)
+        old, old_line = _unchecked(w) or _saved(w), todos.get(w, "")
+        ok, errs = _try(R, tid, w, rounds, force=True, need=old_line)
         left = todo_all().get(w, "")
         if not ok and old:                           # 改不好：上次的留着（不删）
             save(w, old[0], old[1], False)
@@ -1282,7 +1314,7 @@ def _fix_relay(R, tid, words, todos, batch):
                     first = w in pend
                     if not first and w not in fx:
                         continue
-                    old, old_line = _unchecked(w), todos.get(w, "")
+                    old, old_line = _unchecked(w) or _saved(w), todos.get(w, "")
                     info = {}
                     ok, why, errs2 = _accept(R, tid, w, P, dict(_old_svgs(w), **(svgs or {})), errs, info)
                     st, line = info.get("st"), info.get("line") or ""
