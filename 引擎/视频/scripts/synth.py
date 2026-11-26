@@ -185,14 +185,30 @@ def gen_voice(text, speed=None, role=None, fresh=True, keys=None):
         x = sf.read(p, dtype='float32')[0]
     else:
         x0, sr0, ptext = ref_voice(role)
-        a = zipvoice().generate(text, ptext, x0.tolist(), sr0, speed=float(speed or VC.SPEED), num_steps=VC.STEPS)
-        x = np.array(a.samples, dtype=np.float32)
-        if a.sample_rate != SR:
-            from math import gcd
-            from scipy.signal import resample_poly
-            g = gcd(a.sample_rate, SR)
-            x = resample_poly(x, SR // g, a.sample_rate // g).astype(np.float32)
-        x = clean_out(x)
+        from voice_clean import final_rough, tail_tame
+
+        def once():
+            a = zipvoice().generate(text, ptext, x0.tolist(), sr0, speed=float(speed or VC.SPEED), num_steps=VC.STEPS)
+            y = np.array(a.samples, dtype=np.float32)
+            if a.sample_rate != SR:
+                from math import gcd
+                from scipy.signal import resample_poly
+                g = gcd(a.sample_rate, SR)
+                y = resample_poly(y, SR // g, a.sample_rate // g).astype(np.float32)
+            return clean_out(y)
+        # 6.49（用户：“结尾一句话说完了结尾最后一个字还是有点尖，有震动的音”）：声音克隆每次念都不一样，约两成句子
+        #   最后一个字的尾巴发颤——发颤分超过 ROUGH_MAX 就再念，最多 ROUGH_RETRY 遍，挑最不颤的；再把最后一个字落下去的尾巴淡出
+        x = once()
+        best = final_rough(x, SR)
+        for _ in range(int(VC.ROUGH_RETRY or 0)):
+            if best <= VC.ROUGH_MAX:
+                break
+            y = once()
+            r = final_rough(y, SR)
+            if r < best:
+                x, best = y, r
+        if VC.TAIL_TAME:
+            x = tail_tame(x, SR, *VC.TAIL_TAME)
     if keys is not None:
         keys.append((key, x))
     return x

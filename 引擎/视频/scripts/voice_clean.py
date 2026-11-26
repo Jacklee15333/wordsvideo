@@ -154,3 +154,75 @@ def match_eq(x, sr, bands, taps=1023):
     y = np.convolve(x, h, mode='same').astype(np.float32)
     r0, r1 = float(np.sqrt(np.mean(x ** 2))), float(np.sqrt(np.mean(y ** 2)))
     return (y * (r0 / r1) if r1 > 1e-9 else y).astype(np.float32)
+
+
+def _last_syllable(x, sr):
+    """最后一个字：从最后一个能量低谷（比全句最响低 12 dB 以上）到声音落到全句最响 -30 dB 的地方。返回 (开头, 结尾) 样本号"""
+    fr = int(0.01 * sr)
+    n = len(x) // fr
+    if n < 12:
+        return None
+    e = 20 * np.log10(np.sqrt((x[:n * fr].reshape(n, fr) ** 2).mean(1)) + 1e-9)
+    end = np.where(e > e.max() - 30)[0][-1]
+    es = np.convolve(e, np.ones(3) / 3, 'same')
+    i = end - 5
+    while i > 5 and not (es[i] < es[i - 1] and es[i] < es[i + 1] and es[i] < e.max() - 12):
+        i -= 1
+    return max(0, i) * fr, (end + 1) * fr
+
+
+def final_rough(x, sr):
+    """6.49：最后一个字后一半“发颤”的分数——周期乱（%）+ 3 ×（一顿一顿的 dB − 0.7）。
+    实测（同六句话念多遍）：多数句子 0～2，发颤的 3 以上（约两成），最怪的 13、27。0 = 量不出来"""
+    x = np.asarray(x, dtype=np.float32)
+    ab = _last_syllable(x, sr)
+    if not ab:
+        return 0.0
+    a, b = ab
+    seg = x[a + (b - a) // 2:b]
+    fr, hop = int(0.03 * sr), int(0.005 * sr)
+    if len(seg) < fr + 4 * hop:
+        return 0.0
+    per, amp = [], []
+    lo, hi = int(sr / 350), int(sr / 60)
+    for i in range(0, len(seg) - fr, hop):
+        w = seg[i:i + fr]
+        r = float(np.sqrt(np.mean(w ** 2)))
+        if r < 1e-3:
+            continue
+        ac = np.correlate(w, w, 'full')[fr - 1:]
+        ac = ac / (ac[0] + 1e-9)
+        k = lo + int(np.argmax(ac[lo:hi]))
+        if ac[k] > 0.4:
+            per.append(k)
+            amp.append(r)
+    if len(per) < 4:
+        return 0.0
+    per, amp = np.array(per, float), np.array(amp)
+    jit = float(np.median(np.abs(np.diff(per)) / per[1:]) * 100)
+    shim = float(np.median(np.abs(np.diff(20 * np.log10(amp + 1e-9)))))
+    return jit + 3 * max(0.0, shim - 0.7)
+
+
+def tail_tame(x, sr, drop_db=12.0, fade_ms=80):
+    """6.49：最后一个字念到尾巴上会发颤（实测后一半的周期乱比前一半高一倍多）：从最后一个字最响的地方往后，
+    落下 drop_db 的地方开始升余弦淡出 fade_ms，后面静音（长度不变）"""
+    x = np.asarray(x, dtype=np.float32)
+    fr = int(0.01 * sr)
+    n = len(x) // fr
+    if n < 12:
+        return x
+    e = 20 * np.log10(np.sqrt((x[:n * fr].reshape(n, fr) ** 2).mean(1)) + 1e-9)
+    end = np.where(e > e.max() - 30)[0][-1]
+    a = max(0, end - 25)
+    pk = a + int(np.argmax(e[a:end + 1]))
+    after = np.where(e[pk:end + 1] < e[pk] - drop_db)[0]
+    if not len(after):
+        return x
+    s = (pk + int(after[0])) * fr
+    k = min(int(fade_ms / 1000 * sr), len(x) - s)
+    y = x.copy()
+    if k > 1:
+        y[s:s + k] *= (0.5 + 0.5 * np.cos(np.linspace(0, np.pi, k))).astype(np.float32)
+    y[s + k:] = 0
+    return y
