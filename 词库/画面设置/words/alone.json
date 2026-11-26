@@ -1,0 +1,928 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ə",
+  "ˈləʊn"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.78,
+     "s": 0.5,
+     "z": 5,
+     "crowd": 9
+    },
+    {
+     "label": "all 全部、完全",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.88,
+     "s": 0.3,
+     "z": 2
+    },
+    {
+     "svg": "art/mug.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.46,
+     "z": 3,
+     "anim": "bob",
+     "shadow": true
+    },
+    {
+     "label": "one 一个",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.09,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-all.svg",
+  "p1": "art/icon-one.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/park-bg.svg",
+  "items": [
+   {
+    "actor": "walk-cn-girl",
+    "x": 0.1,
+    "y": 0.72,
+    "s": 0.52,
+    "z": 3,
+    "walk": {
+     "from": [
+      0.05,
+      0.72
+     ],
+     "to": [
+      0.95,
+      0.72
+     ],
+     "offset": 0
+    }
+   },
+   {
+    "label": "完完全全一个",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.085,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "独自、单独",
+   "pos": "副词",
+   "diff": "身边一个同伴也没有，不带情绪",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/sofa.svg",
+     "x": 0.46,
+     "y": 0.74,
+     "s": 0.44,
+     "z": 2
+    },
+    {
+     "actor": "west-man-smile",
+     "x": 0.42,
+     "y": 0.56,
+     "s": 0.8,
+     "z": 1,
+     "seq": "blink"
+    },
+    {
+     "svg": "art/cat-lick_f0.svg",
+     "frames": [
+      "art/cat-lick_f0.svg",
+      "art/cat-lick_f1.svg",
+      "art/cat-lick_f2.svg",
+      "art/cat-lick_f3.svg"
+     ],
+     "fps": 3,
+     "x": 0.82,
+     "y": 0.78,
+     "s": 0.26,
+     "z": 3
+    },
+    {
+     "label": "alone 独自",
+     "x": 0.78,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.8
+    }
+   ],
+   "ex": "He lives alone with his cat.",
+   "exzh": "他和他的猫独自住在一起。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.4,
+      "y": 0.76,
+      "s": 0.44,
+      "z": 2
+     },
+     {
+      "actor": "west-clerk-happy",
+      "x": 0.36,
+      "y": 0.56,
+      "s": 0.82,
+      "z": 1,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "He"
+     },
+     {
+      "svg": "art/cat-sit_f0.svg",
+      "frames": [
+       "art/cat-sit_f0.svg",
+       "art/cat-sit_f1.svg",
+       "art/cat-sit_f2.svg"
+      ],
+      "fps": 2,
+      "x": 0.72,
+      "y": 0.78,
+      "s": 0.28,
+      "z": 3,
+      "when": "cat",
+      "pop": true
+     },
+     {
+      "sound": "meow",
+      "when": "cat"
+     },
+     {
+      "label": "lives alone",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "alone"
+     },
+     {
+      "label": "独自",
+      "x": 0.84,
+      "y": 0.26,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "独自"
+     }
+    ]
+   }
+  },
+  {
+   "text": "仅、单单",
+   "pos": "副词",
+   "diff": "放在名词、代词后面：只有这一个",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-raise",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.7,
+     "z": 3,
+     "seq": "blink"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.95,
+     "s": 0.26,
+     "z": 6
+    },
+    {
+     "label": "she alone 只有她",
+     "x": 0.82,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.8
+    }
+   ],
+   "ex": "She alone knew the answer.",
+   "exzh": "只有她知道答案。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.18,
+      "y": 0.56,
+      "s": 0.82,
+      "z": 3,
+      "seq": "talk",
+      "id": "t"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.64,
+      "y": 0.56,
+      "s": 0.74,
+      "z": 3,
+      "when": "She alone",
+      "seq": "blink"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.64,
+      "y": 0.9,
+      "s": 0.32,
+      "z": 5,
+      "crowd": 7,
+      "nodWith": "t"
+     },
+     {
+      "label": "She alone",
+      "x": 0.64,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "She alone"
+     },
+     {
+      "label": "只有她",
+      "x": 0.88,
+      "y": 0.26,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "只有她"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“完完全全一个”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.1,
+      "y": 0.72,
+      "s": 0.5,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.05,
+        0.72
+       ],
+       "to": [
+        0.95,
+        0.72
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "all 完全 + one 一个",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "很老的合成词，连写时掉了一个 l",
+   "node": "alone",
+   "rule": "很老的合成词，读音、拼写磨损了，看不出是两个词",
+   "ruleEx": "all + one → alone      wind + eye → window",
+   "say": [
+    "很老的合成词，用了上千年，读音、拼写都磨损了，看不出是两个词。",
+    "window 原来是 wind eye：风的眼睛，就是窗户。",
+    "alone 也一样：all one，完完全全一个，连写时掉了一个 l。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/plant.svg",
+      "x": 0.8,
+      "y": 0.66,
+      "s": 0.4,
+      "z": 2,
+      "anim": "sway"
+     },
+     {
+      "label": "用了上千年",
+      "x": 0.4,
+      "y": 0.3,
+      "size": 0.09,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "用了上千年",
+      "hideCue": 1
+     },
+     {
+      "label": "wind eye 风的眼睛",
+      "x": 0.36,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "cue": 1,
+      "when": "wind eye",
+      "hideCue": 2
+     },
+     {
+      "ray": [
+       [
+        0.36,
+        0.24
+       ],
+       [
+        0.36,
+        0.42
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "cue": 1,
+      "when": "窗户",
+      "dur": 0.5,
+      "hideCue": 2
+     },
+     {
+      "label": "window 窗户",
+      "x": 0.36,
+      "y": 0.5,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "窗户",
+      "hideCue": 2
+     },
+     {
+      "label": "all one",
+      "x": 0.36,
+      "y": 0.2,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "cue": 2,
+      "when": "all one"
+     },
+     {
+      "label": "完完全全一个",
+      "x": 0.36,
+      "y": 0.4,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "cue": 2,
+      "when": "完完全全一个"
+     },
+     {
+      "label": "alone：掉了一个 l",
+      "x": 0.36,
+      "y": 0.62,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 2,
+      "when": "掉了一个 l"
+     }
+    ]
+   }
+  },
+  {
+   "via": "从头到脚全是自己，身边没有同伴",
+   "node": "① 独自、单独",
+   "pos": "副词",
+   "pic": 0,
+   "say": [
+    "从头到脚全是自己，身边一个同伴也没有，就是独自、单独。",
+    "alone 只说一个人，不带寂寞的情绪；寂寞要说 lonely。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.9,
+      "y": 0.72,
+      "s": 0.56,
+      "z": 3,
+      "when": "全是自己",
+      "walk": {
+       "from": [
+        0.95,
+        0.72
+       ],
+       "to": [
+        0.05,
+        0.72
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "独自、单独",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "独自、单独"
+     },
+     {
+      "label": "alone 一个人",
+      "x": 0.28,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "cue": 1,
+      "when": "一个人"
+     },
+     {
+      "label": "lonely 寂寞",
+      "x": 0.72,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "cue": 1,
+      "when": "lonely"
+     }
+    ]
+   }
+  },
+  {
+   "via": "只有这一个，没有别的",
+   "node": "② 仅、单单",
+   "pos": "副词",
+   "pic": 1,
+   "say": [
+    "只有这一个、没有别的，放在名词、代词后面，就是仅、单单。",
+    "She alone knew the answer，只有她知道答案。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.32,
+      "z": 5,
+      "crowd": 7,
+      "when": "只有这一个"
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "z": 3,
+      "seq": "talk",
+      "when": "只有这一个"
+     },
+     {
+      "label": "仅、单单",
+      "x": 0.2,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "仅、单单"
+     },
+     {
+      "label": "She alone",
+      "x": 0.8,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "cue": 1,
+      "when": "She alone"
+     },
+     {
+      "label": "只有她",
+      "x": 0.8,
+      "y": 0.3,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "只有她"
+     }
+    ]
+   }
+  }
+ ],
+ "kaodian": {
+  "rows": [
+   [
+    "意思",
+    "adv./adj. 独自、单独；（名词、代词后）仅、单单"
+   ],
+   [
+    "用法",
+    "只作表语或副词：live alone；不放名词前（要说 a lone man）"
+   ],
+   [
+    "短语",
+    "leave sb. alone 别打扰某人；let alone 更不用说"
+   ],
+   [
+    "区别",
+    "alone 独自（客观）≠ lonely 孤独（感觉）"
+   ]
+  ]
+ },
+ "distinguish": {
+  "key": "一个人",
+  "items": [
+   {
+    "w": "alone",
+    "m": "独自",
+    "say": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+    "word": "alone",
+    "text": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+    "diff": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+    "d": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+    "desc": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+    "line": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+    "talk": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+    "note": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+    "explain": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+    "sent": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+    "mean": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.1,
+       "y": 0.66,
+       "s": 0.56,
+       "z": 3,
+       "walk": {
+        "from": [
+         0.05,
+         0.66
+        ],
+        "to": [
+         0.95,
+         0.66
+        ],
+        "offset": 0
+       }
+      }
+     ]
+    }
+   },
+   {
+    "w": "lonely",
+    "m": "孤独的、寂寞的",
+    "say": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+    "word": "lonely",
+    "text": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+    "diff": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+    "d": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+    "desc": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+    "line": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+    "talk": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+    "note": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+    "explain": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+    "sent": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+    "mean": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-listen",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.95,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.72,
+       "y": 0.6,
+       "s": 0.26,
+       "z": 4,
+       "anim": "pulse"
+      },
+      {
+       "waves": true,
+       "x": 0.78,
+       "y": 0.6,
+       "dir": 0,
+       "n": 2,
+       "period": 1.2,
+       "color": "#3FA7D6"
+      }
+     ]
+    }
+   },
+   {
+    "w": "lone",
+    "m": "孤零零的",
+    "say": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。",
+    "word": "lone",
+    "text": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。",
+    "diff": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。",
+    "d": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。",
+    "desc": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。",
+    "line": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。",
+    "talk": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。",
+    "note": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。",
+    "explain": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。",
+    "sent": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。",
+    "mean": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.56,
+       "z": 3,
+       "walk": {
+        "from": [
+         0.95,
+         0.66
+        ],
+        "to": [
+         0.05,
+         0.66
+        ],
+        "offset": 0
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "pics": {
+   "alone": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.1,
+      "y": 0.66,
+      "s": 0.56,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.05,
+        0.66
+       ],
+       "to": [
+        0.95,
+        0.66
+       ],
+       "offset": 0
+      }
+     }
+    ]
+   },
+   "lonely": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-listen",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.95,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.26,
+      "z": 4,
+      "anim": "pulse"
+     },
+     {
+      "waves": true,
+      "x": 0.78,
+      "y": 0.6,
+      "dir": 0,
+      "n": 2,
+      "period": 1.2,
+      "color": "#3FA7D6"
+     }
+    ]
+   },
+   "lone": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.9,
+      "y": 0.66,
+      "s": 0.56,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.95,
+        0.66
+       ],
+       "to": [
+        0.05,
+        0.66
+       ],
+       "offset": 0
+      }
+     }
+    ]
+   }
+  },
+  "logic": "alone 是 all + one，完完全全一个：只说一个人；lonely 是 lone + ly，加上了心里的感受；lone 只放在名词前。",
+  "tip": "名词前用 lone，表语、副词用 alone，说寂寞用 lonely。",
+  "say": {
+   "alone": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+   "lonely": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+   "lone": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。"
+  },
+  "lines": {
+   "alone": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+   "lonely": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+   "lone": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。"
+  },
+  "talk": {
+   "alone": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+   "lonely": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+   "lone": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。"
+  },
+  "text": {
+   "alone": "alone 是独自：只作表语或副词，不说 an alone man；不带情绪。",
+   "lonely": "lonely 是孤独、寂寞：说的是心里的感觉，I feel lonely。",
+   "lone": "lone 是孤零零的：只放在名词前，a lone man 一个孤零零的人。"
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：他是怎么旅行的？",
+    "listen": "He travelled alone around China.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "和家人",
+     "和朋友",
+     "跟团",
+     "独自"
+    ],
+    "ans": "D",
+    "why": "alone 独自。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Don't leave the baby ______ at home.",
+    "opts": [
+     "lonely",
+     "lone",
+     "alone",
+     "only"
+    ],
+    "ans": "C",
+    "why": "leave sb. alone 把某人单独留下。",
+    "kd": "用法"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 alone、lonely 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He felt ______ without any friends.",
+    "opts": [],
+    "ans": "lonely",
+    "why": "心里感到孤独用 lonely；alone 是客观上独自。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The old man lives a ______ life. (alone)",
+    "opts": [],
+    "ans": "lonely",
+    "why": "修饰名词 life 的“孤独的”用 lonely；alone 不放名词前。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He is an alone man.",
+    "opts": [],
+    "ans": "an alone → a lone",
+    "why": "名词前用 lone，不说 an alone man。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "她独自完成了作业。",
+    "stem": "She finished her homework by ______.",
+    "opts": [],
+    "ans": "herself",
+    "why": "by oneself 独自。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "He is tired. Let him ______.",
+    "opts": [
+     "is",
+     "be",
+     "being",
+     "to be"
+    ],
+    "ans": "B",
+    "why": "let sb. be 别去打扰某人（= leave sb. alone）。",
+    "kd": "用法"
+   }
+  ]
+ }
+}

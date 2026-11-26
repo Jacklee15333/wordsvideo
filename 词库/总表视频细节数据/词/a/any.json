@@ -1,7 +1,893 @@
 {
  "单词": "any",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ˈe",
+   "ni"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/fishtank.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "z": 2,
+      "shadow": true
+     },
+     {
+      "svg": "art/fish.svg",
+      "x": 0.42,
+      "y": 0.56,
+      "s": 0.16,
+      "z": 3,
+      "go": [
+       0.58,
+       0.56
+      ],
+      "dur": 2.5,
+      "loop": true
+     },
+     {
+      "label": "one 一",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.6
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/mirror.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.6,
+      "anim": "pulse",
+      "shadow": true
+     },
+     {
+      "label": "y：…样的",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-one.svg",
+   "p1": "art/icon-y.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.88,
+     "s": 0.32,
+     "z": 2
+    },
+    {
+     "svg": "art/mug.svg",
+     "x": 0.3,
+     "y": 0.68,
+     "s": 0.2,
+     "z": 3
+    },
+    {
+     "svg": "art/mug.svg",
+     "x": 0.5,
+     "y": 0.68,
+     "s": 0.2,
+     "z": 3
+    },
+    {
+     "svg": "art/mug.svg",
+     "x": 0.7,
+     "y": 0.68,
+     "s": 0.2,
+     "z": 3
+    },
+    {
+     "svg": "art/star.svg",
+     "x": 0.3,
+     "y": 0.46,
+     "s": 0.12,
+     "z": 4,
+     "go": [
+      0.7,
+      0.46
+     ],
+     "dur": 2,
+     "loop": true,
+     "anim": "spin"
+    },
+    {
+     "label": "一个似的：不指定哪一个",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "任何、随便哪个",
+    "pos": "形容词",
+    "diff": "哪一个都行",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.3,
+      "z": 2
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.46,
+      "z": 3,
+      "shadow": true
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.36,
+      "y": 0.36,
+      "s": 0.1,
+      "z": 4,
+      "go": [
+       0.64,
+       0.36
+      ],
+      "dur": 2,
+      "loop": true,
+      "anim": "spin"
+     },
+     {
+      "label": "any book 随便哪本",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Take any book you like.",
+    "exzh": "随便拿一本你喜欢的书。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-present",
+       "x": 0.2,
+       "y": 0.58,
+       "s": 0.84,
+       "z": 3,
+       "seq": "talk",
+       "id": "m"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.84,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "nodWith": "m",
+       "seq": "blink"
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.52,
+       "y": 0.92,
+       "s": 0.28,
+       "z": 4
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.52,
+       "y": 0.66,
+       "s": 0.36,
+       "z": 5,
+       "when": "book",
+       "pop": true
+      },
+      {
+       "label": "any book",
+       "x": 0.52,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "any book"
+      },
+      {
+       "label": "随便拿一本",
+       "x": 0.52,
+       "y": 0.3,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "随便拿一本"
+      }
+     ]
+    }
+   },
+   {
+    "text": "一些、一点",
+    "pos": "形容词",
+    "diff": "用在疑问句、否定句里",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.84,
+      "s": 0.42,
+      "z": 5,
+      "crowd": 9
+     },
+     {
+      "label": "any questions? 有问题吗",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Do you have any questions?",
+    "exzh": "你们有什么问题吗？",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.2,
+       "y": 0.56,
+       "s": 0.82,
+       "z": 3,
+       "seq": "talk",
+       "id": "t"
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.72,
+       "y": 0.56,
+       "s": 0.72,
+       "z": 3,
+       "when": "questions",
+       "seq": "blink"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.62,
+       "y": 0.9,
+       "s": 0.32,
+       "z": 5,
+       "crowd": 7,
+       "nodWith": "t"
+      },
+      {
+       "label": "any questions",
+       "x": 0.62,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "any questions"
+      },
+      {
+       "label": "什么问题",
+       "x": 0.9,
+       "y": 0.26,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "什么问题"
+      }
+     ]
+    }
+   },
+   {
+    "text": "丝毫",
+    "pos": "副词",
+    "diff": "放在比较级前：哪怕一点点",
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/bed.svg",
+      "x": 0.42,
+      "y": 0.66,
+      "s": 0.5,
+      "z": 2
+     },
+     {
+      "svg": "art/thermometer_f0.svg",
+      "frames": [
+       "art/thermometer_f0.svg",
+       "art/thermometer_f1.svg",
+       "art/thermometer_f2.svg",
+       "art/thermometer_f3.svg"
+      ],
+      "fps": 2,
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.4,
+      "z": 3
+     },
+     {
+      "label": "any better 好一点",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Do you feel any better?",
+    "exzh": "你觉得好点了吗？",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bed.svg",
+       "x": 0.62,
+       "y": 0.7,
+       "s": 0.5,
+       "z": 2
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.62,
+       "y": 0.52,
+       "s": 0.7,
+       "z": 1,
+       "nodWith": "p",
+       "seq": "blink"
+      },
+      {
+       "actor": "west-man-point",
+       "x": 0.18,
+       "y": 0.58,
+       "s": 0.82,
+       "z": 3,
+       "seq": "talk",
+       "id": "p"
+      },
+      {
+       "svg": "art/thermometer_f0.svg",
+       "frames": [
+        "art/thermometer_f0.svg",
+        "art/thermometer_f1.svg",
+        "art/thermometer_f2.svg",
+        "art/thermometer_f3.svg"
+       ],
+       "fps": 2,
+       "x": 0.9,
+       "y": 0.5,
+       "s": 0.34,
+       "z": 3,
+       "when": "better"
+      },
+      {
+       "label": "any better",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "any better"
+      },
+      {
+       "label": "好点了",
+       "x": 0.9,
+       "y": 0.86,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "好点了"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“一个似的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.88,
+       "s": 0.32,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.34,
+       "y": 0.68,
+       "s": 0.2,
+       "z": 3
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.66,
+       "y": 0.68,
+       "s": 0.2,
+       "z": 3
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.34,
+       "y": 0.46,
+       "s": 0.12,
+       "z": 4,
+       "go": [
+        0.66,
+        0.46
+       ],
+       "dur": 2,
+       "loop": true,
+       "anim": "spin"
+      },
+      {
+       "label": "one 一 + y 样的",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "随你挑，哪一个都行",
+    "node": "① 任何、随便哪个",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "one 是一，y 是……样的：一个似的，不指定是哪一个。",
+     "一桌子书随你挑，哪一本都行，这就是任何、随便哪个。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "one 一",
+       "x": 0.28,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "one"
+      },
+      {
+       "label": "y 样的",
+       "x": 0.72,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "y"
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.6,
+       "y": 0.9,
+       "s": 0.3,
+       "z": 2,
+       "cue": 1,
+       "when": "一桌子书"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.6,
+       "y": 0.64,
+       "s": 0.4,
+       "z": 3,
+       "cue": 1,
+       "when": "一桌子书"
+      },
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.2,
+       "y": 0.58,
+       "s": 0.8,
+       "z": 3,
+       "cue": 1,
+       "when": "随你挑",
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "label": "任何、随便哪个",
+       "x": 0.6,
+       "y": 0.3,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "cue": 1,
+       "when": "任何、随便哪个"
+      }
+     ]
+    }
+   },
+   {
+    "via": "问有没有、说没有：哪怕一个",
+    "node": "② 一些、一点",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "问有没有、说没有的时候，不管多少，哪怕一个也算。",
+     "Do you have any questions? 这就是一些、一点。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.24,
+       "y": 0.56,
+       "s": 0.8,
+       "z": 3,
+       "turn": [
+        0,
+        2
+       ],
+       "id": "e",
+       "when": "问有没有"
+      },
+      {
+       "actor": "cn-teacher-listen",
+       "x": 0.76,
+       "y": 0.56,
+       "s": 0.8,
+       "z": 3,
+       "turn": [
+        1,
+        2
+       ],
+       "nodWith": "e",
+       "when": "说没有"
+      },
+      {
+       "label": "哪怕一个",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.085,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "哪怕一个"
+      },
+      {
+       "label": "any questions?",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "cue": 1,
+       "when": "any questions"
+      },
+      {
+       "label": "一些、一点",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "cue": 1,
+       "when": "一些、一点"
+      }
+     ]
+    }
+   },
+   {
+    "via": "放在比较级前：哪怕一点点",
+    "node": "③ 丝毫",
+    "pos": "副词",
+    "pic": 2,
+    "rule": "表示数量的词，放在比较级前，也能当副词用",
+    "ruleEx": "any 一点 → any better 好一点      much 许多 → much better 好得多",
+    "say": [
+     "英语里，表示数量的词，放在比较级前面，也能当副词用。",
+     "much 是许多，much better 就是好得多。",
+     "any 也一样：any better，哪怕好一点点，这就是丝毫。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "label": "数量 + 比较级",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "比较级",
+       "hideCue": 1
+      },
+      {
+       "label": "much better 好得多",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "cue": 1,
+       "when": "much better",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/thermometer_f0.svg",
+       "frames": [
+        "art/thermometer_f0.svg",
+        "art/thermometer_f1.svg",
+        "art/thermometer_f2.svg",
+        "art/thermometer_f3.svg"
+       ],
+       "fps": 2,
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.5,
+       "z": 3,
+       "cue": 1,
+       "when": "好得多"
+      },
+      {
+       "label": "any better",
+       "x": 0.3,
+       "y": 0.12,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "cue": 2,
+       "when": "any better"
+      },
+      {
+       "label": "丝毫",
+       "x": 0.74,
+       "y": 0.12,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "cue": 2,
+       "when": "丝毫"
+      }
+     ]
+    }
+   }
+  ],
+  "kaodian": {
+   "rows": [
+    [
+     "意思",
+     "adj. 任何；（疑问、否定句）一些、一点；adv. 丝毫"
+    ],
+    [
+     "用法",
+     "肯定句用 some，疑问、否定句用 any；肯定句里的 any 是“随便哪个”"
+    ],
+    [
+     "短语",
+     "not … any longer = no longer 不再；any better 好一点"
+    ],
+    [
+     "区别",
+     "some / any：Would you like some tea?（请求用 some）"
+    ]
+   ]
+  },
+  "distinguish": {
+   "key": "一些",
+   "items": [
+    {
+     "w": "any",
+     "m": "一些；任何",
+     "say": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+     "word": "any",
+     "text": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+     "diff": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+     "d": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+     "desc": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+     "line": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+     "talk": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+     "note": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+     "explain": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+     "sent": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+     "mean": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/audience-wide.svg",
+        "x": 0.5,
+        "y": 0.74,
+        "s": 0.6,
+        "z": 5,
+        "crowd": 9
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.5,
+        "y": 0.3,
+        "s": 0.2,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "some",
+     "m": "一些",
+     "say": "some 用在肯定句和请求里说一些，Would you like some tea?",
+     "word": "some",
+     "text": "some 用在肯定句和请求里说一些，Would you like some tea?",
+     "diff": "some 用在肯定句和请求里说一些，Would you like some tea?",
+     "d": "some 用在肯定句和请求里说一些，Would you like some tea?",
+     "desc": "some 用在肯定句和请求里说一些，Would you like some tea?",
+     "line": "some 用在肯定句和请求里说一些，Would you like some tea?",
+     "talk": "some 用在肯定句和请求里说一些，Would you like some tea?",
+     "note": "some 用在肯定句和请求里说一些，Would you like some tea?",
+     "explain": "some 用在肯定句和请求里说一些，Would you like some tea?",
+     "sent": "some 用在肯定句和请求里说一些，Would you like some tea?",
+     "mean": "some 用在肯定句和请求里说一些，Would you like some tea?",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/desk.svg",
+        "x": 0.5,
+        "y": 0.86,
+        "s": 0.5,
+        "z": 2
+       },
+       {
+        "svg": "art/mug.svg",
+        "x": 0.4,
+        "y": 0.6,
+        "s": 0.26,
+        "z": 3,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/mug.svg",
+        "x": 0.6,
+        "y": 0.6,
+        "s": 0.26,
+        "z": 3,
+        "anim": "bob"
+       }
+      ]
+     }
+    }
+   ],
+   "pics": {
+    "any": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.74,
+       "s": 0.6,
+       "z": 5,
+       "crowd": 9
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.2,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "some": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.86,
+       "s": 0.5,
+       "z": 2
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.26,
+       "z": 3,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.6,
+       "y": 0.6,
+       "s": 0.26,
+       "z": 3,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   "logic": "any 是 one + y，一个似的，不指定哪一个：所以问有没有、说没有时用它；some 说的是确实有一些。",
+   "tip": "肯定句、请求用 some；疑问句、否定句用 any。",
+   "say": {
+    "any": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+    "some": "some 用在肯定句和请求里说一些，Would you like some tea?"
+   },
+   "lines": {
+    "any": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+    "some": "some 用在肯定句和请求里说一些，Would you like some tea?"
+   },
+   "talk": {
+    "any": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+    "some": "some 用在肯定句和请求里说一些，Would you like some tea?"
+   },
+   "text": {
+    "any": "any 用在疑问句、否定句里说一些；肯定句里是随便哪个，Take any book。",
+    "some": "some 用在肯定句和请求里说一些，Would you like some tea?"
+   }
+  }
+ },
+ "插图": [
+  "anyai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人问冰箱里有没有什么？\n听：Is there any milk in the fridge?\nA. 牛奶多少钱\nB. 买了几瓶牛奶\nC. 牛奶是谁的\nD. 有没有牛奶",
@@ -90,5 +976,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

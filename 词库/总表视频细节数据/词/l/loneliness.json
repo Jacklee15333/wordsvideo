@@ -34,6 +34,15 @@
       "shadow": true
      },
      {
+      "waves": true,
+      "x": 0.56,
+      "y": 0.5,
+      "dir": 0,
+      "n": 2,
+      "period": 1.2,
+      "color": "#3FA7D6"
+     },
+     {
       "label": "lonely 孤独的",
       "x": 0.5,
       "y": 0.1,
@@ -117,6 +126,15 @@
      "anim": "pulse"
     },
     {
+     "waves": true,
+     "x": 0.84,
+     "y": 0.56,
+     "dir": 0,
+     "n": 2,
+     "period": 1.2,
+     "color": "#3FA7D6"
+    },
+    {
      "label": "孤独的状态",
      "x": 0.5,
      "y": 0.1,
@@ -157,6 +175,15 @@
       "s": 0.14,
       "z": 3,
       "anim": "pulse"
+     },
+     {
+      "waves": true,
+      "x": 0.74,
+      "y": 0.76,
+      "dir": 0,
+      "n": 2,
+      "period": 1.2,
+      "color": "#3FA7D6"
      },
      {
       "label": "loneliness 孤独",
@@ -293,6 +320,15 @@
        "anim": "pulse"
       },
       {
+       "waves": true,
+       "x": 0.56,
+       "y": 0.52,
+       "dir": 0,
+       "n": 2,
+       "period": 1.2,
+       "color": "#3FA7D6"
+      },
+      {
        "label": "lonely + ness",
        "x": 0.5,
        "y": 0.1,
@@ -339,7 +375,8 @@
        "when": "kind",
        "hideCue": 2,
        "seq": "pingpong",
-       "fps": 2
+       "fps": 2,
+       "id": "h"
       },
       {
        "svg": "art/mug.svg",
@@ -382,7 +419,8 @@
        "z": 3,
        "cue": 2,
        "when": "一个人待着",
-       "seq": "blink"
+       "seq": "blink",
+       "nodWith": "h"
       },
       {
        "svg": "art/smartphone.svg",
@@ -393,6 +431,17 @@
        "cue": 2,
        "when": "想有人陪",
        "anim": "pulse"
+      },
+      {
+       "waves": true,
+       "x": 0.76,
+       "y": 0.62,
+       "dir": 0,
+       "n": 2,
+       "period": 1.2,
+       "color": "#3FA7D6",
+       "when": "想有人陪",
+       "cue": 2
       },
       {
        "label": "孤独、寂寞",
@@ -464,6 +513,15 @@
         "s": 0.3,
         "z": 3,
         "anim": "pulse"
+       },
+       {
+        "waves": true,
+        "x": 0.56,
+        "y": 0.48,
+        "dir": 0,
+        "n": 2,
+        "period": 1.2,
+        "color": "#3FA7D6"
        }
       ]
      }
@@ -503,6 +561,24 @@
         "s": 0.4,
         "z": 4,
         "anim": "bob"
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.9,
+        "y": 0.8,
+        "s": 0.4,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.98,
+          0.8
+         ],
+         "to": [
+          0.02,
+          0.8
+         ],
+         "offset": 0.3
+        }
        }
       ]
      }
@@ -527,6 +603,15 @@
        "s": 0.3,
        "z": 3,
        "anim": "pulse"
+      },
+      {
+       "waves": true,
+       "x": 0.56,
+       "y": 0.48,
+       "dir": 0,
+       "n": 2,
+       "period": 1.2,
+       "color": "#3FA7D6"
       }
      ]
     },
@@ -550,6 +635,24 @@
        "s": 0.4,
        "z": 4,
        "anim": "bob"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.9,
+       "y": 0.8,
+       "s": 0.4,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.8
+        ],
+        "to": [
+         0.02,
+         0.8
+        ],
+        "offset": 0.3
+       }
       }
      ]
     }
@@ -571,6 +674,99 @@
    "text": {
     "loneliness": "loneliness 是孤单带来的难受：想有人陪，却没有人。",
     "solitude": "solitude 是中性的独处，常是自己选的，enjoy solitude 享受独处。"
+   }
+  },
+  "demo": {
+   "happiness": {
+    "icons": [
+     "art/icon-happy.svg",
+     "art/icon-ness.svg"
+    ],
+    "lit": "快乐的状态",
+    "pic": {
+     "bg": "studio",
+     "tint": "warm",
+     "diagram": true,
+     "items": [
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "anim": "pulse",
+       "shadow": true
+      },
+      {
+       "emit": true,
+       "svg": "art/note.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "to": [
+        0.1,
+        -0.2
+       ],
+       "s": 0.12,
+       "life": 1.4
+      }
+     ]
+    }
+   },
+   "popularity": {
+    "icons": [
+     "art/icon-popular.svg",
+     "art/icon-ity.svg"
+    ],
+    "lit": "受欢迎的状态",
+    "pic": {
+     "bg": "studio",
+     "tint": "pink",
+     "diagram": true,
+     "items": [
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.6,
+       "crowd": 6
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.24,
+       "s": 0.3,
+       "anim": "spin"
+      }
+     ]
+    }
+   },
+   "importance": {
+    "icons": [
+     "art/icon-important.svg",
+     "art/icon-ance.svg"
+    ],
+    "lit": "重要的状态",
+    "pic": {
+     "bg": "studio",
+     "tint": "blue",
+     "diagram": true,
+     "items": [
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.6,
+       "anim": "pulse",
+       "shadow": true
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.78,
+       "y": 0.24,
+       "s": 0.2,
+       "anim": "spin"
+      }
+     ]
+    }
    }
   }
  },
@@ -667,5 +863,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
