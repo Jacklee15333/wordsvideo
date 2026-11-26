@@ -470,7 +470,105 @@
     }
    }
   ],
-  "distinguish": false
+  "distinguish": false,
+  "demo": {
+   "driver": {
+    "icons": [
+     "art/icon-wheel.svg",
+     "art/icon-person.svg"
+    ],
+    "lit": "开车的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/wheel.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "sway"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   "actor": {
+    "icons": [
+     "art/icon-masks.svg",
+     "art/icon-person.svg"
+    ],
+    "lit": "演戏的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/masks.svg",
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.7,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   "artist": {
+    "icons": [
+     "art/icon-palette.svg",
+     "art/icon-person.svg"
+    ],
+    "lit": "搞艺术的人",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/canvas.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.76,
+       "anim": "sway"
+      }
+     ]
+    }
+   }
+  }
  },
  "插图": [
   "herbalistai"
@@ -563,5 +661,5 @@
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
