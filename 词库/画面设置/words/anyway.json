@@ -1,0 +1,890 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈe",
+  "ni",
+  "weɪ"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.88,
+     "s": 0.32,
+     "z": 2
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.46,
+     "z": 3,
+     "shadow": true
+    },
+    {
+     "svg": "art/star.svg",
+     "x": 0.34,
+     "y": 0.32,
+     "s": 0.1,
+     "z": 4,
+     "go": [
+      0.66,
+      0.32
+     ],
+     "dur": 2,
+     "loop": true,
+     "anim": "spin"
+    },
+    {
+     "label": "any 任何",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.1,
+     "y": 0.72,
+     "s": 0.52,
+     "z": 3,
+     "walk": {
+      "from": [
+       0.05,
+       0.72
+      ],
+      "to": [
+       0.95,
+       0.72
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "label": "way 路、方式",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-any.svg",
+  "p1": "art/icon-way.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/street-bg.svg",
+  "items": [
+   {
+    "actor": "walk-west-man-case",
+    "x": 0.9,
+    "y": 0.72,
+    "s": 0.5,
+    "z": 3,
+    "walk": {
+     "from": [
+      0.98,
+      0.72
+     ],
+     "to": [
+      0.02,
+      0.72
+     ],
+     "offset": 0
+    }
+   },
+   {
+    "actor": "walk-cn-boy-pack",
+    "x": 0.1,
+    "y": 0.8,
+    "s": 0.5,
+    "z": 3,
+    "walk": {
+     "from": [
+      0.02,
+      0.8
+     ],
+     "to": [
+      0.98,
+      0.8
+     ],
+     "offset": 0.4
+    }
+   },
+   {
+    "label": "不管用哪种方式",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.085,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 0.6
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "无论如何、反正",
+   "pos": "副词",
+   "diff": "不管怎样，结果都一样",
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.1,
+     "y": 0.72,
+     "s": 0.52,
+     "z": 3,
+     "walk": {
+      "from": [
+       0.05,
+       0.72
+      ],
+      "to": [
+       0.95,
+       0.72
+      ],
+      "offset": 0
+     }
+    },
+    {
+     "emit": true,
+     "svg": "art/drop.svg",
+     "x": 0.5,
+     "y": 0.05,
+     "every": 0.25,
+     "life": 1.2,
+     "to": [
+      0,
+      0.7
+     ],
+     "s": 0.05,
+     "wobble": 0.4,
+     "z": 5
+    },
+    {
+     "label": "anyway 反正",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.075,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.8
+    }
+   ],
+   "ex": "It was raining, but we went out anyway.",
+   "exzh": "下着雨，但我们还是出去了。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.5,
+      "y": 0.05,
+      "every": 0.2,
+      "life": 1.2,
+      "to": [
+       0,
+       0.7
+      ],
+      "s": 0.05,
+      "wobble": 0.5,
+      "z": 6,
+      "when": "raining"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.1,
+      "y": 0.74,
+      "s": 0.52,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.05,
+        0.74
+       ],
+       "to": [
+        0.95,
+        0.74
+       ],
+       "offset": 0
+      },
+      "when": "went out"
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.1,
+      "y": 0.78,
+      "s": 0.52,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.05,
+        0.78
+       ],
+       "to": [
+        0.95,
+        0.78
+       ],
+       "offset": 0.08
+      },
+      "when": "went out"
+     },
+     {
+      "label": "raining",
+      "x": 0.2,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "raining"
+     },
+     {
+      "label": "anyway",
+      "x": 0.56,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "anyway"
+     },
+     {
+      "label": "还是出去了",
+      "x": 0.84,
+      "y": 0.28,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "还是出去了"
+     }
+    ]
+   }
+  },
+  {
+   "text": "总之、话说回来",
+   "pos": "副词",
+   "diff": "口语：把话题拉回来",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-present",
+     "x": 0.4,
+     "y": 0.5,
+     "s": 0.76,
+     "z": 3,
+     "seq": "talk",
+     "id": "m"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.95,
+     "s": 0.28,
+     "z": 6
+    },
+    {
+     "label": "Anyway, … 话说回来",
+     "x": 0.78,
+     "y": 0.14,
+     "size": 0.075,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.8
+    }
+   ],
+   "ex": "Anyway, let's get back to the lesson.",
+   "exzh": "好了，话说回来，我们接着上课吧。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.22,
+      "y": 0.54,
+      "s": 0.8,
+      "z": 3,
+      "seq": "talk",
+      "id": "t"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.6,
+      "y": 0.9,
+      "s": 0.32,
+      "z": 5,
+      "crowd": 9,
+      "nodWith": "t"
+     },
+     {
+      "label": "Anyway",
+      "x": 0.6,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "when": "Anyway"
+     },
+     {
+      "label": "lesson 上课",
+      "x": 0.84,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "lesson"
+     },
+     {
+      "label": "话说回来",
+      "x": 0.6,
+      "y": 0.3,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "话说回来"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“不管用哪种方式”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.1,
+      "y": 0.72,
+      "s": 0.5,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.05,
+        0.72
+       ],
+       "to": [
+        0.95,
+        0.72
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "label": "any 任何 + way 方式",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "走哪条路都能到",
+   "node": "① 无论如何、反正",
+   "pos": "副词",
+   "pic": 0,
+   "rule": "连写成一个词和分开写，意思不一样",
+   "ruleEx": "any way 任何方式 → anyway 反正      any one 任何一个 → anyone 任何人",
+   "say": [
+    "英语里，连写成一个词和分开写成两个词，意思常常不一样。",
+    "any one 是任何一个，anyone 是任何人。",
+    "any way 是任何方式；连写的 anyway，路有很多条，走哪条都一样能到，就是无论如何、反正。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "label": "连写 ≠ 分开写",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "连写",
+      "hideCue": 1
+     },
+     {
+      "label": "any one 任何一个",
+      "x": 0.3,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "cue": 1,
+      "when": "任何一个",
+      "hideCue": 2
+     },
+     {
+      "label": "anyone 任何人",
+      "x": 0.72,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "cue": 1,
+      "when": "任何人",
+      "hideCue": 2
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.9,
+      "y": 0.72,
+      "s": 0.5,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.98,
+        0.72
+       ],
+       "to": [
+        0.02,
+        0.72
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.1,
+      "y": 0.8,
+      "s": 0.5,
+      "z": 3,
+      "cue": 2,
+      "when": "路有很多条",
+      "walk": {
+       "from": [
+        0.02,
+        0.8
+       ],
+       "to": [
+        0.98,
+        0.8
+       ],
+       "offset": 0.3
+      }
+     },
+     {
+      "label": "无论如何、反正",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 2,
+      "when": "无论如何、反正"
+     }
+    ]
+   }
+  },
+  {
+   "via": "不管扯到哪儿，一把拉回正题",
+   "node": "② 总之、话说回来",
+   "pos": "副词",
+   "pic": 1,
+   "say": [
+    "说话时，不管前面扯到哪儿，一把拉回正题，口语里就是总之、话说回来。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.28,
+      "y": 0.56,
+      "s": 0.8,
+      "z": 3,
+      "seq": "talk",
+      "id": "e",
+      "when": "说话时"
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.74,
+      "y": 0.58,
+      "s": 0.78,
+      "z": 3,
+      "nodWith": "e",
+      "seq": "blink"
+     },
+     {
+      "ray": [
+       [
+        0.8,
+        0.2
+       ],
+       [
+        0.5,
+        0.12
+       ],
+       [
+        0.22,
+        0.22
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "when": "拉回正题",
+      "dur": 0.8
+     },
+     {
+      "label": "总之、话说回来",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "总之、话说回来"
+     }
+    ]
+   }
+  }
+ ],
+ "kaodian": {
+  "rows": [
+   [
+    "意思",
+    "adv. 无论如何、反正；（口）总之、话说回来"
+   ],
+   [
+    "写法",
+    "anyway 反正 ≠ any way 任何方式（Is there any way to fix it?）"
+   ],
+   [
+    "口语",
+    "anyways 是口语写法"
+   ],
+   [
+    "同义",
+    "anyway ≈ anyhow；regardless 更正式"
+   ]
+  ]
+ },
+ "distinguish": {
+  "key": "无论如何",
+  "items": [
+   {
+    "w": "anyway",
+    "m": "反正、无论如何",
+    "say": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+    "word": "anyway",
+    "text": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+    "diff": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+    "d": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+    "desc": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+    "line": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+    "talk": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+    "note": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+    "explain": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+    "sent": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+    "mean": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.1,
+       "y": 0.66,
+       "s": 0.56,
+       "z": 3,
+       "walk": {
+        "from": [
+         0.05,
+         0.66
+        ],
+        "to": [
+         0.95,
+         0.66
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.05,
+       "every": 0.2,
+       "life": 1.0,
+       "to": [
+        0,
+        0.7
+       ],
+       "s": 0.06,
+       "wobble": 0.5,
+       "z": 5
+      }
+     ]
+    }
+   },
+   {
+    "w": "regardless",
+    "m": "不管怎样",
+    "say": "regardless 是不管怎样：更正式，常说 regardless of the weather。",
+    "word": "regardless",
+    "text": "regardless 是不管怎样：更正式，常说 regardless of the weather。",
+    "diff": "regardless 是不管怎样：更正式，常说 regardless of the weather。",
+    "d": "regardless 是不管怎样：更正式，常说 regardless of the weather。",
+    "desc": "regardless 是不管怎样：更正式，常说 regardless of the weather。",
+    "line": "regardless 是不管怎样：更正式，常说 regardless of the weather。",
+    "talk": "regardless 是不管怎样：更正式，常说 regardless of the weather。",
+    "note": "regardless 是不管怎样：更正式，常说 regardless of the weather。",
+    "explain": "regardless 是不管怎样：更正式，常说 regardless of the weather。",
+    "sent": "regardless 是不管怎样：更正式，常说 regardless of the weather。",
+    "mean": "regardless 是不管怎样：更正式，常说 regardless of the weather。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-speech",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.95,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "svg": "art/thermometer_f0.svg",
+       "frames": [
+        "art/thermometer_f0.svg",
+        "art/thermometer_f1.svg",
+        "art/thermometer_f2.svg",
+        "art/thermometer_f3.svg"
+       ],
+       "fps": 2,
+       "x": 0.78,
+       "y": 0.56,
+       "s": 0.6,
+       "z": 2
+      }
+     ]
+    }
+   }
+  ],
+  "pics": {
+   "anyway": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.1,
+      "y": 0.66,
+      "s": 0.56,
+      "z": 3,
+      "walk": {
+       "from": [
+        0.05,
+        0.66
+       ],
+       "to": [
+        0.95,
+        0.66
+       ],
+       "offset": 0
+      }
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.5,
+      "y": 0.05,
+      "every": 0.2,
+      "life": 1.0,
+      "to": [
+       0,
+       0.7
+      ],
+      "s": 0.06,
+      "wobble": 0.5,
+      "z": 5
+     }
+    ]
+   },
+   "regardless": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-speech",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 0.95,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "svg": "art/thermometer_f0.svg",
+      "frames": [
+       "art/thermometer_f0.svg",
+       "art/thermometer_f1.svg",
+       "art/thermometer_f2.svg",
+       "art/thermometer_f3.svg"
+      ],
+      "fps": 2,
+      "x": 0.78,
+      "y": 0.56,
+      "s": 0.6,
+      "z": 2
+     }
+    ]
+   }
+  },
+  "logic": "anyway 是 any + way，不管用哪种方式，所以是反正、无论如何；regardless 是不管、不顾，书面一点。",
+  "tip": "日常说反正用 anyway；正式文章说不管怎样用 regardless (of)。",
+  "say": {
+   "anyway": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+   "regardless": "regardless 是不管怎样：更正式，常说 regardless of the weather。"
+  },
+  "lines": {
+   "anyway": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+   "regardless": "regardless 是不管怎样：更正式，常说 regardless of the weather。"
+  },
+  "talk": {
+   "anyway": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+   "regardless": "regardless 是不管怎样：更正式，常说 regardless of the weather。"
+  },
+  "text": {
+   "anyway": "anyway 是反正、无论如何：口语常用，放在句末，we went out anyway。",
+   "regardless": "regardless 是不管怎样：更正式，常说 regardless of the weather。"
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：下雨了，他们怎么做的？",
+    "listen": "It was raining, but we went out anyway.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "待在家里",
+     "还是出去了",
+     "等雨停",
+     "打车"
+    ],
+    "ans": "B",
+    "why": "anyway 反正、无论如何。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Is there ______ to get there faster?",
+    "opts": [
+     "anyway",
+     "anyways",
+     "any way",
+     "anywhere"
+    ],
+    "ans": "C",
+    "why": "“任何方法”是 any way（两个词）；anyway 是“反正”。",
+    "kd": "易混"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 anyway、any way 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "It's raining, but let's go ______.",
+    "opts": [],
+    "ans": "anyway",
+    "why": "“无论如何、反正”用 anyway。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Thank you any way for your help.",
+    "opts": [],
+    "ans": "any way → anyway",
+    "why": "“无论如何、总之”是一个词 anyway。",
+    "kd": "易混"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这本书反正值得一读。",
+    "stem": "The book is ______ reading anyway.",
+    "opts": [],
+    "ans": "worth",
+    "why": "be worth doing 值得做。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "______ hard he tried, he couldn't open it.",
+    "opts": [
+     "However",
+     "Anyway",
+     "Whatever",
+     "Although"
+    ],
+    "ans": "A",
+    "why": "“无论多么……”用 However + 形容词或副词。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "I don't like it, ______ I'll eat it.",
+    "opts": [
+     "but",
+     "and",
+     "so",
+     "or"
+    ],
+    "ans": "A",
+    "why": "前后转折用 but。",
+    "kd": "用法"
+   }
+  ]
+ }
+}
