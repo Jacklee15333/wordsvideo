@@ -882,6 +882,87 @@
    "some": "some 用在肯定句和请求里说一些，Would you like some tea?"
   }
  },
+ "demo": {
+  "careful": {
+   "icons": [
+    "art/icon-care.svg",
+    "art/icon-full.svg"
+   ],
+   "lit": "满是小心的",
+   "pic": {
+    "bg": "studio",
+    "tint": "warm",
+    "diagram": true,
+    "items": [
+     {
+      "svg": "art/mug.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.62,
+      "anim": "bob",
+      "shadow": true
+     }
+    ]
+   }
+  },
+  "careless": {
+   "icons": [
+    "art/icon-care.svg",
+    "art/icon-empty.svg"
+   ],
+   "lit": "没有小心的",
+   "pic": {
+    "bg": "studio",
+    "tint": "pink",
+    "diagram": true,
+    "items": [
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.66,
+      "anim": "shake",
+      "shadow": true
+     }
+    ]
+   }
+  },
+  "rainy": {
+   "icons": [
+    "art/icon-rain.svg",
+    "art/icon-y.svg"
+   ],
+   "lit": "有雨的样子",
+   "pic": {
+    "bg": "studio",
+    "tint": "blue",
+    "diagram": true,
+    "items": [
+     {
+      "svg": "art/plant.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.56,
+      "anim": "sway"
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.5,
+      "y": 0.1,
+      "every": 0.3,
+      "life": 1.0,
+      "to": [
+       0,
+       0.6
+      ],
+      "s": 0.07,
+      "wobble": 0.3
+     }
+    ]
+   }
+  }
+ },
  "lianxi": {
   "qs": [
    {

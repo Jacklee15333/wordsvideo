@@ -1,7 +1,734 @@
 {
  "单词": "anywhere",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ˈe",
+   "ni",
+   "weə"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.88,
+      "s": 0.32,
+      "z": 2
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.46,
+      "z": 3,
+      "shadow": true
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.34,
+      "y": 0.32,
+      "s": 0.1,
+      "z": 4,
+      "go": [
+       0.66,
+       0.32
+      ],
+      "dur": 2,
+      "loop": true,
+      "anim": "spin"
+     },
+     {
+      "label": "any 任何",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.6
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/map.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.66,
+      "z": 2,
+      "shadow": true
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.6,
+      "y": 0.44,
+      "s": 0.12,
+      "z": 3,
+      "anim": "pulse"
+     },
+     {
+      "label": "where 地方",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-any.svg",
+   "p1": "art/icon-where.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/map.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.68,
+     "z": 2,
+     "shadow": true
+    },
+    {
+     "svg": "art/star.svg",
+     "x": 0.3,
+     "y": 0.44,
+     "s": 0.12,
+     "z": 3,
+     "anim": "spin",
+     "path": [
+      [
+       0,
+       0.3,
+       0.44
+      ],
+      [
+       1,
+       0.62,
+       0.4
+      ],
+      [
+       2,
+       0.48,
+       0.66
+      ],
+      [
+       3,
+       0.7,
+       0.62
+      ],
+      [
+       4,
+       0.3,
+       0.44
+      ]
+     ],
+     "loop": true
+    },
+    {
+     "label": "随便哪个地方",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.085,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 0.6
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "任何地方",
+    "pos": "副词",
+    "diff": "哪儿都行",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.4,
+      "z": 5
+     },
+     {
+      "svg": "art/star.svg",
+      "x": 0.2,
+      "y": 0.66,
+      "s": 0.1,
+      "z": 6,
+      "go": [
+       0.8,
+       0.66
+      ],
+      "dur": 2.4,
+      "loop": true,
+      "anim": "spin"
+     },
+     {
+      "label": "anywhere 哪儿都行",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Sit anywhere you like.",
+    "exzh": "你想坐哪儿就坐哪儿。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.18,
+       "y": 0.56,
+       "s": 0.82,
+       "z": 3,
+       "seq": "talk",
+       "id": "t"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.98,
+       "y": 0.74,
+       "s": 0.5,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.98,
+         0.74
+        ],
+        "to": [
+         0.4,
+         0.74
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.6,
+       "y": 0.94,
+       "s": 0.3,
+       "z": 6,
+       "when": "Sit"
+      },
+      {
+       "label": "anywhere",
+       "x": 0.6,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "anywhere"
+      },
+      {
+       "label": "坐哪儿都行",
+       "x": 0.86,
+       "y": 0.26,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "坐哪儿"
+      }
+     ]
+    }
+   },
+   {
+    "text": "哪儿都（不）",
+    "pos": "副词",
+    "diff": "用在否定句、疑问句里",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.6,
+      "y": 0.76,
+      "s": 0.44,
+      "z": 2
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.22,
+      "y": 0.58,
+      "s": 0.82,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "label": "not anywhere 哪儿都不",
+      "x": 0.62,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.8
+     }
+    ],
+    "ex": "I can't find my cat anywhere.",
+    "exzh": "我哪儿都找不到我的猫。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.2,
+       "y": 0.58,
+       "s": 0.84,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/sofa.svg",
+       "x": 0.6,
+       "y": 0.76,
+       "s": 0.42,
+       "z": 2,
+       "when": "find"
+      },
+      {
+       "svg": "art/plant.svg",
+       "x": 0.88,
+       "y": 0.66,
+       "s": 0.4,
+       "z": 2,
+       "anim": "sway",
+       "when": "cat"
+      },
+      {
+       "label": "can't find … anywhere",
+       "x": 0.56,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "anywhere"
+      },
+      {
+       "label": "哪儿都找不到",
+       "x": 0.6,
+       "y": 0.3,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "哪儿都找不到"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“随便哪个地方”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.66,
+       "z": 2
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.3,
+       "y": 0.44,
+       "s": 0.12,
+       "z": 3,
+       "go": [
+        0.7,
+        0.6
+       ],
+       "dur": 2,
+       "loop": true,
+       "anim": "spin"
+      },
+      {
+       "label": "any 任何 + where 地方",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "哪儿都行",
+    "node": "① 任何地方",
+    "pos": "副词",
+    "pic": 0,
+    "rule": "some、any、every、no 和后面的小词合成一个词，后一个是主体",
+    "ruleEx": "any + where → anywhere      some + where → somewhere",
+    "say": [
+     "英语里，some、any、every、no 常和后面的小词合成一个词，后一个是主体。",
+     "some 加 where，就是 somewhere，在某个地方。",
+     "any 加 where，说的是随便哪个地方，哪儿都行，就是任何地方。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "some · any · every · no",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "some、any、every、no",
+       "hideCue": 1
+      },
+      {
+       "label": "+ 小词 = 一个词",
+       "x": 0.5,
+       "y": 0.34,
+       "size": 0.085,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "合成一个词",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.56,
+       "z": 2,
+       "cue": 1,
+       "when": "somewhere"
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.6,
+       "y": 0.52,
+       "s": 0.12,
+       "z": 3,
+       "cue": 1,
+       "when": "某个地方",
+       "anim": "pulse",
+       "hideCue": 2
+      },
+      {
+       "label": "somewhere 某个地方",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "cue": 1,
+       "when": "某个地方",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.32,
+       "y": 0.5,
+       "s": 0.12,
+       "z": 3,
+       "cue": 2,
+       "when": "随便哪个地方",
+       "go": [
+        0.7,
+        0.66
+       ],
+       "dur": 1.8,
+       "loop": true,
+       "anim": "spin"
+      },
+      {
+       "label": "任何地方",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "cue": 2,
+       "when": "任何地方"
+      }
+     ]
+    }
+   },
+   {
+    "via": "用在否定、疑问句里",
+    "node": "② 哪儿都（不）",
+    "pos": "副词",
+    "pic": 1,
+    "say": [
+     "用在否定句、疑问句里，就是哪儿都不、在什么地方。",
+     "找遍了屋子，哪儿都找不到。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "哪儿都不",
+       "x": 0.3,
+       "y": 0.12,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "哪儿都不"
+      },
+      {
+       "svg": "art/sofa.svg",
+       "x": 0.6,
+       "y": 0.76,
+       "s": 0.44,
+       "z": 2,
+       "cue": 1,
+       "when": "找遍了屋子"
+      },
+      {
+       "actor": "west-girl-explain",
+       "x": 0.2,
+       "y": 0.58,
+       "s": 0.82,
+       "z": 3,
+       "cue": 1,
+       "when": "找遍了屋子",
+       "seq": "talk"
+      },
+      {
+       "label": "找不到",
+       "x": 0.7,
+       "y": 0.3,
+       "size": 0.085,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "cue": 1,
+       "when": "找不到"
+      }
+     ]
+    }
+   }
+  ],
+  "kaodian": {
+   "rows": [
+    [
+     "意思",
+     "adv. 任何地方；（否定、疑问）哪儿都（不）"
+    ],
+    [
+     "用法",
+     "not anywhere = nowhere"
+    ],
+    [
+     "短语",
+     "anywhere near（否定）远远不：not anywhere near enough 远远不够"
+    ],
+    [
+     "区别",
+     "肯定句说“某处”用 somewhere；否定、疑问用 anywhere"
+    ]
+   ]
+  },
+  "distinguish": {
+   "key": "哪儿也不",
+   "items": [
+    {
+     "w": "anywhere",
+     "m": "任何地方",
+     "say": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+     "word": "anywhere",
+     "text": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+     "diff": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+     "d": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+     "desc": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+     "line": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+     "talk": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+     "note": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+     "explain": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+     "sent": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+     "mean": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/map.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.8,
+        "z": 2
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.3,
+        "y": 0.5,
+        "s": 0.16,
+        "z": 3,
+        "go": [
+         0.7,
+         0.5
+        ],
+        "dur": 2,
+        "loop": true,
+        "anim": "spin"
+       }
+      ]
+     }
+    },
+    {
+     "w": "nowhere",
+     "m": "哪儿也不",
+     "say": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。",
+     "word": "nowhere",
+     "text": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。",
+     "diff": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。",
+     "d": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。",
+     "desc": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。",
+     "line": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。",
+     "talk": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。",
+     "note": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。",
+     "explain": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。",
+     "sent": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。",
+     "mean": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "actor": "west-man-point",
+        "x": 0.4,
+        "y": 0.6,
+        "s": 0.95,
+        "z": 3,
+        "seq": "talk"
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.9,
+        "y": 0.8,
+        "s": 0.46,
+        "z": 4,
+        "walk": {
+         "from": [
+          0.98,
+          0.8
+         ],
+         "to": [
+          0.02,
+          0.8
+         ],
+         "offset": 0.2
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "pics": {
+    "anywhere": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/map.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "z": 2
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.3,
+       "y": 0.5,
+       "s": 0.16,
+       "z": 3,
+       "go": [
+        0.7,
+        0.5
+       ],
+       "dur": 2,
+       "loop": true,
+       "anim": "spin"
+      }
+     ]
+    },
+    "nowhere": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "x": 0.4,
+       "y": 0.6,
+       "s": 0.95,
+       "z": 3,
+       "seq": "talk"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.9,
+       "y": 0.8,
+       "s": 0.46,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.98,
+         0.8
+        ],
+        "to": [
+         0.02,
+         0.8
+        ],
+        "offset": 0.2
+       }
+      }
+     ]
+    }
+   },
+   "logic": "anywhere 是 any + where，随便哪个地方，加上 not 就成了哪儿都不；nowhere 是 no + where，自己就是否定。",
+   "tip": "一个否定就够：说 I can't go anywhere 或 I can go nowhere，不说 can't go nowhere。",
+   "say": {
+    "anywhere": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+    "nowhere": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。"
+   },
+   "lines": {
+    "anywhere": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+    "nowhere": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。"
+   },
+   "talk": {
+    "anywhere": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+    "nowhere": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。"
+   },
+   "text": {
+    "anywhere": "anywhere 是任何地方；和 not 连用，not anywhere 就是哪儿都不。",
+    "nowhere": "nowhere 一个词就是哪儿也不，等于 not anywhere：I have nowhere to go。"
+   }
+  }
+ },
+ "插图": [
+  "anywhereai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人找不到什么？\n听：I can't find my glasses anywhere.\nA. 钥匙\nB. 手机\nC. 书包\nD. 眼镜",
@@ -89,5 +816,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
