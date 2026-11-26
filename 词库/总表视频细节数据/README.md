@@ -183,6 +183,7 @@
 | 2026-11-20 | 题目第 66 批第 2 组 | 16 | theoretically … installation（体检通过的都存了；theater、theatrical、theatrically、theatergoer、theory、theoretical、pronoun、nominate、renown 改了 3 次仍没过，没存，留待人工；出题：DeepSeek（本地接力））。累计 6215 个词有题目 |
 | 2026-11-21 | 题目第 66 批第 3 组 | 17 | stall … excavation（体检通过的都存了；herbalist、tough、carrot-colored、carroty、bone、malfunction、mall、jeans 改了 3 次仍没过，没存，留待人工；出题：DeepSeek（本地接力））。累计 6232 个词有题目 |
 | 2026-11-21 | 题目第 66 批第 4 组 | 7 | cage … sparkle（体检通过的都存了；sparkle 体检没过、改过再存；caged、lane、crafty、craftsmanship、craftsman、craftsmen、craftsperson、handicraft、craftspeople、craftswoman、craftwork、slip、slippery、sparkly、salt、salty、saltwater、salty-tasting 改了 3 次仍没过，没存，留待人工；出题：DeepSeek（本地接力））。累计 6239 个词有题目 |
+| 2026-11-26 | 题目第 67 批第 1 组 | 60 | theater … convince（体检全部 0 个问题；convict 体检没过、改过再存；出题：网页 AI 手动接力（单词工作台））。累计 6299 个词有题目 |
 | 2026-11-19 | 试做 truly | 0 | 只用自带素材加表情图拼画面：起草检查不通过（表情图要换成写实插图、每幅画都要动、小图标要自己画）。结论：多数词要专门画插图，每个词的工作量和 7A-U4 一样；全表 9299 个词做不完，要先定先做哪些（等用户定） |
 
 ## 总表里看着不对的地方（出题时绕开了，以后用维护技能核对）
@@ -616,6 +617,16 @@
 - craftspeople：总表写复数 craftspeoples 不对，craftspeople 本身就是复数，正确应是 craftspeople
 - craftswoman：总表写复数 craftswomans 不对，正确应是 craftswomen
 - craftwork：总表写复数 craftworks 不对，作“手工艺”讲不可数，没有复数形式
+- theatrical：词性转换写的是英式 theatre，和本表 theater（美式）不一致。
+- tough：易混说明里 “a hard mattres” 拼写残缺，应是 a hard mattress。
+- mall：初中含义只写“林荫步行道”，现在最常用的是“（美）购物中心”。
+- crafty：辨析最后一句“crafty 也是狡猾，偏“”残缺。
+- craftsmen：变形写“一般不可数，不加 s”不对，craftsmen 是可数名词 craftsman 的复数。
+- craftspeople：变形写“复数 craftspeoples”不对，craftspeople 本身就是复数（单数 craftsperson）。
+- craftswoman：变形写“复数 craftswomans”不对，应是 craftswomen。
+- craftwork：变形写“复数 craftworks”，实际 craftwork 多作不可数名词，说几件用 pieces of craftwork。
+- saltwater：初中含义写 adj.，变形却按名词写“不可数，没有复数”，词性前后不一致。
+- salsa：初中含义只写“萨尔萨舞”，漏了更常见的“莎莎酱、辣番茄酱”。
 
 ## 总表里出现两次的词（细节数据按单词存一份，两行共用；出题时两个意思都要考到）
 
