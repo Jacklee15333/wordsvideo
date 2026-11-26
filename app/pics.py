@@ -979,6 +979,20 @@ def do_pics(R, tid, p):
     """任务：给有题目、还没有画面的词做画面。R 是 core.RUNNER。"""
     total = int(p.get("count") or 0)
     only = set(p.get("words") or []) or None
+    extra = [w for w in (p.get("extra") or []) if isinstance(w, str) and w]
+    if extra and only is None and not p.get("fix"):     # v1.20.4：按总表顺序接着做 N 个，再加上勾的补画面的词，一起做
+        new = pick(total, None) if total else []
+        words = new + [w for w in extra if w not in new]
+        C.log("这一批：按总表顺序 %d 个新词，加上补画面的 %d 个：%s" % (len(new), len(words) - len(new), "、".join(w for w in words if w not in new)[:200]), tid)
+        try:                                             # 记下是哪些词：软件重开了，接着做的还是这些
+            row = C.q("SELECT params FROM tasks WHERE id=?", (tid,), one=True)
+            pp = json.loads((row or {}).get("params") or "{}")
+            pp["words"] = words
+            pp.pop("extra", None)
+            C.x("UPDATE tasks SET params=? WHERE id=?", (json.dumps(pp, ensure_ascii=False), tid))
+        except Exception:
+            pass
+        only, total = set(words), len(words)
     sk = p.get("skipped") or {}                          # v1.10.0：开始时跳过的，记一笔汇报
     for k, why in (("pic", "已经有画面，跳过 %d 个（不重做）：%s"), ("noq", "还没有题目，跳过 %d 个（先到「出题」出题）：%s")):
         if sk.get(k):
