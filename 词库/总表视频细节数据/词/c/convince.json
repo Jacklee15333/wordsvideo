@@ -1,7 +1,1212 @@
 {
  "单词": "convince",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "使确信；说服"
+  },
+  "sylIpa": [
+   "kən",
+   "ˈvɪns"
+  ],
+  "lexicon": {
+   "vince": "v ˈ ɪ n s"
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.32,
+      "z": 2
+     },
+     {
+      "svg": "art/jar.svg",
+      "x": 0.5,
+      "y": 0.47,
+      "s": 0.66,
+      "shadow": true,
+      "z": 3
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.42,
+      "y": 0.2,
+      "every": 0.8,
+      "life": 1.2,
+      "to": [
+       0.04,
+       0.25
+      ],
+      "s": 0.07,
+      "z": 4
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.58,
+      "y": 0.22,
+      "every": 0.8,
+      "life": 1.2,
+      "to": [
+       0.04,
+       0.25
+      ],
+      "s": 0.07,
+      "offset": 0.4,
+      "z": 4
+     },
+     {
+      "label": "彻底",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.8
+     },
+     {
+      "label": "con 彻底、完全",
+      "x": 0.82,
+      "y": 0.55,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "delay": 1.6,
+      "z": 5
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.34,
+      "z": 4
+     },
+     {
+      "svg": "art/chess.svg",
+      "x": 0.5,
+      "y": 0.7,
+      "s": 0.36,
+      "z": 5
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.2,
+      "y": 0.56,
+      "s": 0.86,
+      "z": 3,
+      "id": "w"
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.8,
+      "y": 0.57,
+      "s": 0.84,
+      "z": 3,
+      "nodWith": "w"
+     },
+     {
+      "waves": true,
+      "on": "w",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "w",
+      "n": 3
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.3,
+      "delay": 1.2,
+      "pop": true,
+      "z": 6
+     },
+     {
+      "label": "vince 征服、赢",
+      "x": 0.5,
+      "y": 0.07,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 1.6,
+      "z": 6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-con.svg",
+   "p1": "art/icon-vince.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "beam": true,
+     "x": 0.25,
+     "y": 0.0,
+     "len": 0.95,
+     "width": 0.13,
+     "swing": 12,
+     "period": 4.5
+    },
+    {
+     "beam": true,
+     "x": 0.75,
+     "y": 0.0,
+     "len": 0.95,
+     "width": 0.13,
+     "swing": 12,
+     "period": 4.5
+    },
+    {
+     "svg": "art/banner-speech.svg",
+     "x": 0.5,
+     "y": 0.13,
+     "s": 0.16,
+     "z": 1
+    },
+    {
+     "actor": "west-man-speech",
+     "x": 0.38,
+     "y": 0.5,
+     "s": 0.82,
+     "z": 3,
+     "id": "s"
+    },
+    {
+     "svg": "art/podium.svg",
+     "x": 0.38,
+     "y": 0.84,
+     "s": 0.4,
+     "z": 4
+    },
+    {
+     "svg": "art/mic.svg",
+     "x": 0.45,
+     "y": 0.6,
+     "s": 0.24,
+     "z": 5
+    },
+    {
+     "waves": true,
+     "on": "s",
+     "x": 452,
+     "y": 186,
+     "dir": 0,
+     "with": "s",
+     "n": 3
+    },
+    {
+     "svg": "art/trophy.svg",
+     "x": 0.8,
+     "y": 0.62,
+     "s": 0.4,
+     "delay": 1.4,
+     "pop": true,
+     "shadow": true,
+     "z": 4
+    },
+    {
+     "label": "彻底战胜对方的看法",
+     "x": 0.72,
+     "y": 0.27,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.9,
+     "z": 6
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.95,
+     "s": 0.28,
+     "z": 7,
+     "crowd": 9,
+     "nodWith": "s"
+    },
+    {
+     "sound": "say:I win this debate!",
+     "delay": 1.0,
+     "gap": true
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "使确信、使信服",
+    "pos": "动词",
+    "diff": "摆出证据和道理，让人心里认了",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.27,
+      "y": 0.57,
+      "s": 0.88,
+      "z": 3,
+      "id": "g"
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.74,
+      "y": 0.58,
+      "s": 0.86,
+      "z": 3,
+      "id": "t",
+      "nodWith": "g"
+     },
+     {
+      "waves": true,
+      "on": "g",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "g",
+      "n": 3
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.26,
+      "delay": 0.6,
+      "pop": true,
+      "z": 5
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.74,
+      "y": 0.22,
+      "every": 0.9,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.14
+      ],
+      "s": 0.08,
+      "spin": true,
+      "delay": 1.4,
+      "z": 6
+     },
+     {
+      "label": "信了！",
+      "x": 0.78,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 1.8,
+      "z": 6
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.24,
+      "z": 4
+     }
+    ],
+    "ex": "The photo convinced me she was right.",
+    "exzh": "这张照片让我确信她是对的。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-listen",
+       "x": 0.24,
+       "y": 0.58,
+       "s": 0.9,
+       "z": 3,
+       "id": "l"
+      },
+      {
+       "svg": "art/smartphone.svg",
+       "x": 0.56,
+       "y": 0.52,
+       "s": 0.56,
+       "when": "photo",
+       "pop": true,
+       "z": 4
+      },
+      {
+       "svg": "art/photo.svg",
+       "x": 0.8,
+       "y": 0.46,
+       "s": 0.42,
+       "when": "photo",
+       "delay": 0.4,
+       "z": 5,
+       "rot": 6
+      },
+      {
+       "label": "photo 照片",
+       "x": 0.56,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "photo"
+      },
+      {
+       "label": "convinced 确信了",
+       "x": 0.24,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "convinced"
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.24,
+       "y": 0.25,
+       "every": 0.9,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.14
+       ],
+       "s": 0.08,
+       "spin": true,
+       "when": "convinced",
+       "z": 6
+      },
+      {
+       "label": "她是对的",
+       "x": 0.8,
+       "y": 0.86,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "对的",
+       "z": 6
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.96,
+       "s": 0.2,
+       "z": 3
+      }
+     ]
+    }
+   },
+   {
+    "text": "说服某人做",
+    "pos": "动词",
+    "diff": "让人信服以后，再让他去做一件事",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/poster.svg",
+      "x": 0.12,
+      "y": 0.4,
+      "s": 0.5,
+      "z": 2
+     },
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.38,
+      "y": 0.56,
+      "s": 0.88,
+      "z": 3,
+      "id": "t"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.76,
+      "y": 0.6,
+      "s": 0.8,
+      "z": 3,
+      "nodWith": "t"
+     },
+     {
+      "waves": true,
+      "on": "t",
+      "x": 452,
+      "y": 186,
+      "dir": 0,
+      "with": "t",
+      "n": 3
+     },
+     {
+      "label": "去参加吧！",
+      "x": 0.4,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "delay": 1.2
+     },
+     {
+      "label": "好，我去！",
+      "x": 0.78,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 2.2
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.26,
+      "z": 6
+     }
+    ],
+    "ex": "The teacher convinced me to join the club.",
+    "exzh": "老师说服我加入了俱乐部。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/poster.svg",
+       "x": 0.8,
+       "y": 0.42,
+       "s": 0.6,
+       "when": "club",
+       "pop": true,
+       "z": 2
+      },
+      {
+       "actor": "west-man-hello",
+       "x": 0.58,
+       "y": 0.56,
+       "s": 0.86,
+       "z": 3,
+       "id": "m",
+       "when": "club"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.1,
+       "y": 0.62,
+       "s": 0.8,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.42,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "label": "convinced 说服",
+       "x": 0.2,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "convinced"
+      },
+      {
+       "label": "join the club",
+       "x": 0.55,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "join the club"
+      },
+      {
+       "label": "加入俱乐部",
+       "x": 0.8,
+       "y": 0.88,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "加入了俱乐部",
+       "z": 6
+      },
+      {
+       "sound": "say:Welcome to the club!",
+       "when": "club",
+       "gap": true
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.96,
+       "s": 0.22,
+       "z": 6
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“彻底战胜”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "beam": true,
+       "x": 0.3,
+       "y": 0.0,
+       "len": 0.95,
+       "width": 0.13,
+       "swing": 12,
+       "period": 4.5
+      },
+      {
+       "beam": true,
+       "x": 0.7,
+       "y": 0.0,
+       "len": 0.95,
+       "width": 0.13,
+       "swing": 12,
+       "period": 4.5
+      },
+      {
+       "svg": "art/podium.svg",
+       "x": 0.5,
+       "y": 0.82,
+       "s": 0.42,
+       "z": 2
+      },
+      {
+       "svg": "art/trophy.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 0.6,
+       "z": 3,
+       "pop": true
+      },
+      {
+       "label": "con 彻底",
+       "x": 0.18,
+       "y": 0.3,
+       "size": 0.085,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "delay": 0.3
+      },
+      {
+       "label": "vince 征服",
+       "x": 0.82,
+       "y": 0.3,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "delay": 0.8
+      },
+      {
+       "label": "彻底战胜",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "delay": 1.4
+      }
+     ]
+    }
+   },
+   {
+    "via": "辩论里把对方驳得无话可说",
+    "node": "驳倒",
+    "say": [
+     "最早，convince 用在辩论里：把对方驳得无话可说，这叫驳倒。",
+     "这是 1520 年代的意思。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "beam": true,
+       "x": 0.5,
+       "y": 0.0,
+       "len": 0.95,
+       "width": 0.13,
+       "swing": 12,
+       "period": 4.5
+      },
+      {
+       "actor": "west-man-point",
+       "x": 0.28,
+       "y": 0.56,
+       "s": 0.86,
+       "z": 3,
+       "id": "p",
+       "talkWhen": "辩论"
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.74,
+       "y": 0.58,
+       "s": 0.84,
+       "z": 3
+      },
+      {
+       "waves": true,
+       "on": "p",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "p",
+       "n": 3
+      },
+      {
+       "label": "辩论",
+       "x": 0.28,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "辩论"
+      },
+      {
+       "label": "无话可说",
+       "x": 0.74,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "无话可说"
+      },
+      {
+       "label": "驳倒",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "驳倒",
+       "z": 6
+      },
+      {
+       "label": "1520s",
+       "x": 0.5,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "cue": 1,
+       "when": "1520"
+      }
+     ]
+    }
+   },
+   {
+    "via": "不光说不过，心里也认了",
+    "node": "① 使确信、使信服",
+    "pos": "动词",
+    "pic": 0,
+    "say": [
+     "后来，对方不光嘴上说不过你，心里也认了你的道理。",
+     "从驳倒对方的嘴，到说服对方的心，这就是使确信、使信服。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.32,
+       "z": 2
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.3,
+       "y": 0.66,
+       "s": 0.3,
+       "when": "道理",
+       "z": 3
+      },
+      {
+       "label": "嘴上说不过",
+       "x": 0.28,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "嘴上"
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.66,
+       "y": 0.48,
+       "s": 0.5,
+       "when": "心里",
+       "pop": true,
+       "z": 4,
+       "anim": "pulse"
+      },
+      {
+       "label": "心里也认了",
+       "x": 0.68,
+       "y": 0.86,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "心里",
+       "delay": 0.3,
+       "z": 5
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.66,
+       "y": 0.2,
+       "every": 0.9,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.14
+       ],
+       "s": 0.08,
+       "spin": true,
+       "when": "说服对方的心",
+       "z": 5
+      },
+      {
+       "label": "使确信、使信服",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "使确信",
+       "z": 6
+      }
+     ]
+    }
+   },
+   {
+    "via": "信服之后，去做某事",
+    "node": "② 说服某人做",
+    "pos": "动词",
+    "pic": 1,
+    "say": [
+     "再往后，让人信服之后，还让他去做一件事，就是说服某人做。",
+     "这层意思美式英语常见；传统上，劝人去做，多用 persuade。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/poster.svg",
+       "x": 0.5,
+       "y": 0.46,
+       "s": 0.66,
+       "when": "去做一件事",
+       "pop": true,
+       "z": 3,
+       "anim": "bob"
+      },
+      {
+       "label": "信服",
+       "x": 0.16,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "信服"
+      },
+      {
+       "label": "去做一件事",
+       "x": 0.84,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "去做一件事"
+      },
+      {
+       "ray": [
+        [
+         0.24,
+         0.2
+        ],
+        [
+         0.72,
+         0.2
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "when": "还让他",
+       "dur": 0.7
+      },
+      {
+       "label": "说服某人做",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "说服某人做",
+       "z": 5
+      },
+      {
+       "label": "persuade sb. to do",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "cue": 1,
+       "when": "persuade",
+       "z": 6
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "使确信",
+   "items": [
+    {
+     "w": "convince",
+     "m": "使确信",
+     "say": "convince 打动的是理智：摆出证据和道理，让人相信一件事是真的。",
+     "text": "convince 打动的是理智：摆出证据和道理，让人相信一件事是真的。",
+     "diff": "convince 打动的是理智：摆出证据和道理，让人相信一件事是真的。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/desk.svg",
+        "x": 0.5,
+        "y": 0.9,
+        "s": 0.5,
+        "z": 2
+       },
+       {
+        "svg": "art/desk-papers.svg",
+        "x": 0.32,
+        "y": 0.6,
+        "s": 0.5,
+        "z": 3
+       },
+       {
+        "svg": "art/photo.svg",
+        "x": 0.62,
+        "y": 0.55,
+        "s": 0.55,
+        "z": 4,
+        "rot": -5
+       },
+       {
+        "emit": true,
+        "svg": "art/star.svg",
+        "x": 0.62,
+        "y": 0.3,
+        "every": 0.9,
+        "life": 1.6,
+        "to": [
+         0,
+         -0.14
+        ],
+        "s": 0.08,
+        "spin": true,
+        "z": 5
+       },
+       {
+        "label": "证据 → 相信",
+        "x": 0.84,
+        "y": 0.2,
+        "size": 0.12,
+        "color": "#2B8A3E",
+        "border": "#2B8A3E",
+        "z": 6
+       }
+      ]
+     }
+    },
+    {
+     "w": "persuade",
+     "m": "说服（去做）",
+     "say": "persuade 打动的是意志：劝人去做一件事，说劝某人去做，persuade sb. to do 更规范。",
+     "text": "persuade 打动的是意志：劝人去做一件事，说劝某人去做，persuade sb. to do 更规范。",
+     "diff": "persuade 打动的是意志：劝人去做一件事，说劝某人去做，persuade sb. to do 更规范。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/poster.svg",
+        "x": 0.78,
+        "y": 0.48,
+        "s": 0.8,
+        "z": 2
+       },
+       {
+        "actor": "walk-west-boy-pack",
+        "x": 0.2,
+        "y": 0.6,
+        "s": 0.86,
+        "z": 4,
+        "walk": {
+         "from": [
+          0.05,
+          0.6
+         ],
+         "to": [
+          0.62,
+          0.6
+         ],
+         "offset": 0
+        }
+       },
+       {
+        "label": "去做",
+        "x": 0.45,
+        "y": 0.14,
+        "size": 0.13,
+        "color": "#2B8A3E",
+        "border": "#2B8A3E",
+        "z": 6
+       }
+      ]
+     }
+    },
+    {
+     "w": "assure",
+     "m": "向…保证",
+     "say": "assure 是向人保证，让人放心，靠的是你说的话。",
+     "text": "assure 是向人保证，让人放心，靠的是你说的话。",
+     "diff": "assure 是向人保证，让人放心，靠的是你说的话。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "actor": "west-clerk-happy",
+        "x": 0.4,
+        "y": 0.58,
+        "s": 0.95,
+        "z": 3,
+        "id": "c"
+       },
+       {
+        "waves": true,
+        "on": "c",
+        "x": 452,
+        "y": 186,
+        "dir": 0,
+        "with": "c",
+        "n": 3
+       },
+       {
+        "svg": "art/sofa.svg",
+        "x": 0.75,
+        "y": 0.8,
+        "s": 0.45,
+        "z": 2
+       },
+       {
+        "label": "放心吧，我保证！",
+        "x": 0.75,
+        "y": 0.16,
+        "size": 0.12,
+        "color": "#2B8A3E",
+        "border": "#2B8A3E",
+        "z": 6
+       }
+      ]
+     }
+    },
+    {
+     "w": "satisfy",
+     "m": "使确信、使满意",
+     "say": "satisfy 是证据、条件够了，让人满意、放下心来。",
+     "text": "satisfy 是证据、条件够了，让人满意、放下心来。",
+     "diff": "satisfy 是证据、条件够了，让人满意、放下心来。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/desk.svg",
+        "x": 0.5,
+        "y": 0.9,
+        "s": 0.5,
+        "z": 2
+       },
+       {
+        "svg": "art/computer.svg",
+        "x": 0.42,
+        "y": 0.52,
+        "s": 0.62,
+        "z": 3
+       },
+       {
+        "svg": "art/mug.svg",
+        "x": 0.7,
+        "y": 0.68,
+        "s": 0.28,
+        "z": 4,
+        "anim": "pulse"
+       },
+       {
+        "label": "满意、放心",
+        "x": 0.8,
+        "y": 0.2,
+        "size": 0.12,
+        "color": "#2B8A3E",
+        "border": "#2B8A3E",
+        "z": 6
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "convince 是彻底战胜对方的看法，让人心里信；persuade 是让人动起来去做。",
+   "tip": "如今 convince 和 persuade 常混用，但劝人去做，写 persuade sb. to do 更稳妥。"
+  },
+  "kaodian": {
+   "rows": [
+    [
+     "convince sb. of sth.",
+     "使某人确信某事"
+    ],
+    [
+     "convince sb. that…",
+     "使某人相信……"
+    ],
+    [
+     "convince sb. to do sth.",
+     "说服某人做某事（persuade sb. to do 更规范）"
+    ],
+    [
+     "convinced / convincing",
+     "确信的 / 令人信服的"
+    ]
+   ]
+  },
+  "extend": [
+   {
+    "w": "convincing",
+    "m": "令人信服的",
+    "share": "convinc"
+   },
+   {
+    "w": "convinced",
+    "m": "确信的",
+    "share": "convinc"
+   },
+   {
+    "w": "convict",
+    "m": "判…有罪",
+    "share": "con"
+   }
+  ],
+  "demo": {
+   "combine": {
+    "icons": [
+     "art/icon-together.svg",
+     "art/icon-two.svg"
+    ],
+    "lit": "两个放到一起",
+    "pic": {
+     "bg": "studio",
+     "tint": "warm",
+     "diagram": true,
+     "items": [
+      {
+       "svg": "art/puzzle.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.66,
+       "anim": "pulse",
+       "shadow": true
+      }
+     ]
+    }
+   },
+   "connect": {
+    "icons": [
+     "art/icon-together.svg",
+     "art/icon-knot.svg"
+    ],
+    "lit": "绑在一起",
+    "pic": {
+     "bg": "studio",
+     "tint": "blue",
+     "diagram": true,
+     "items": [
+      {
+       "svg": "art/plug.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "pulse",
+       "shadow": true
+      }
+     ]
+    }
+   },
+   "cooperate": {
+    "icons": [
+     "art/icon-together.svg",
+     "art/icon-gear.svg"
+    ],
+    "lit": "一起干活",
+    "pic": {
+     "bg": "studio",
+     "tint": "green",
+     "diagram": true,
+     "items": [
+      {
+       "svg": "art/gears.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.72,
+       "anim": "spin"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "convinceai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人说他做到了什么？\n听：He finally convinced me that he was right.\nA. 骗了我\nB. 和我吵架\nC. 让我相信他是对的\nD. 离开了我",
@@ -90,5 +1295,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
