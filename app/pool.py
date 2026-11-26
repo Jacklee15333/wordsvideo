@@ -225,6 +225,8 @@ def items():
         it = {"word": w, "tag": r["tag"] or "", "ts": (r["ts"] or "")[:10], "picked": bool(r["picked"]), "meaning": (rs[0][3] if rs and len(rs[0]) > 3 else ""),
               "q": has_q, "manual": w in man, "pic": f in pw, "video": f in vd, "picfail": w in pf, "inTable": bool(rs)}
         it["picTodo"] = it["pic"] and w in unc
+        it["done"] = has_q and it["pic"] and not it["picTodo"] and w not in man      # v1.20.2：题目、画面都好了（选词列表不再列）
+        it["tsFull"] = r["ts"] or ""
         if it["picTodo"] and todo.get(w):         # v1.20.0：还要补什么（「画面」页鼠标停上去看）
             it["todo"] = todo[w][:1500]
             it["todoN"] = len([x for x in re.split(r"[；;]", todo[w].split("：", 1)[-1]) if x.strip()])
@@ -245,6 +247,51 @@ def items():
     counts["picked"] = sum(1 for i in out if i["picked"])
     tags = sorted({i["tag"] for i in out if i["tag"]})
     return {"items": out, "counts": counts, "tags": tags}
+
+
+TASK_DONE = C.DATA / "pick_done.json"       # 每一次导入（一个选词任务）什么时候全部做好的
+
+
+def tasks():
+    """v1.20.2：选词的任务＝一次导入的词（同一批名、同一分钟加进来的）。题目、画面都好了，这个任务就做完了，放进「历史」，带汇报。
+    返回 {active: 还没做完的, hist: 做完的（新的在前）}。"""
+    d = items()
+    g = {}
+    for i in d["items"]:
+        k = (i["tag"], (i.get("tsFull") or "")[:16])
+        g.setdefault(k, []).append(i)
+    try:
+        seen = json.loads(TASK_DONE.read_text(encoding="utf-8")) if TASK_DONE.exists() else {}
+    except Exception:
+        seen = {}
+    changed, active, hist = False, [], []
+    for (tag, ts), ws in g.items():
+        key = "%s|%s" % (tag, ts)
+        n = len(ws)
+        done = [i["word"] for i in ws if i.get("done")]
+        x = {"key": key, "tag": tag, "ts": ts, "n": n, "words": [i["word"] for i in ws], "done": len(done),
+             "video": [i["word"] for i in ws if i.get("video")], "noq": [i["word"] for i in ws if not i.get("q") or i.get("manual")],
+             "nopic": [i["word"] for i in ws if i.get("q") and not i.get("manual") and not i.get("done")],
+             "picked": sum(1 for i in ws if i.get("picked"))}
+        if n and len(done) == n:
+            if key not in seen:
+                seen[key] = time.strftime("%Y-%m-%d %H:%M:%S")
+                changed = True
+            x["finished"] = seen[key]
+            hist.append(x)
+        else:
+            if key in seen:                       # 又有词要重做（比如出视频退回「画面」）：回到没做完的
+                seen.pop(key)
+                changed = True
+            active.append(x)
+    if changed:
+        try:
+            TASK_DONE.write_text(json.dumps(seen, ensure_ascii=False), encoding="utf-8")
+        except Exception:
+            pass
+    hist.sort(key=lambda x: x.get("finished") or "", reverse=True)
+    active.sort(key=lambda x: x["ts"], reverse=True)
+    return {"active": active, "hist": hist}
 
 
 def summary():
