@@ -145,12 +145,14 @@ def ref_voice(role=None):
 
 def clean_out(x):
     """合成出来的句子再清理一遍：轻度降噪（非平稳）、去低频嗡声、压 7 kHz 以上的刺耳高频、切掉 10.5 kHz 以上的假音"""
-    from voice_clean import denoise, high_shelf, lpf, gate
+    from voice_clean import denoise, high_shelf, lpf, gate, match_eq
     try:
         x = denoise(x, SR, None, VC.OUT_DENOISE, stationary=False)     # 6.44：0.5 → 0.75
     except Exception as e:                      # 没装 noisereduce 也能出声音，只是少一道降噪
         print('提醒：降噪没做（%s）' % e)
-    return gate(lpf(high_shelf(x, SR, 7000.0, -4.0), SR, 10500), SR)      # 6.44：字和字之间的底噪压下去
+    x = lpf(high_shelf(x, SR, 7000.0, -4.0), SR, 10500)
+    x = match_eq(x, SR, VC.EQ_BANDS)            # 6.46：音色往真人录音上靠（不那么闷、不那么尖）
+    return gate(x, SR)                          # 6.44：字和字之间的底噪压下去
 
 
 CACHE = None            # synth() 设成 <输出文件夹>/cache：念好的中文按（文字、参考录音、设置）存下来，稿子改一句只重念那一句

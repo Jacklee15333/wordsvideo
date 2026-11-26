@@ -138,3 +138,19 @@ def gate(x, sr, depth_db=-20.0):
     gs = np.repeat(g, fr)
     gs = np.concatenate([gs, np.full(len(x) - len(gs), gs[-1])])
     return (x * gs).astype(np.float32)
+
+
+def match_eq(x, sr, bands, taps=1023):
+    """6.46：音色校正——把合成出来的声音的高低音比例往真人录音（仓库「素材/音色」）上靠。
+    bands：[(中心频率 Hz, 增益 dB)]，在对数频率上连成一条线；线性相位 FIR，不挪时间；做完音量调回原来那么响。"""
+    from scipy.signal import firwin2
+    x = np.asarray(x, dtype=np.float32)
+    if not bands or len(x) < taps:
+        return x
+    fs, gs = [b[0] for b in bands], [b[1] for b in bands]
+    grid = np.linspace(0, sr / 2, 1025)
+    gi = np.interp(np.log10(np.maximum(grid, 20.0)), np.log10(fs), gs)        # 两头按最边上的那一档
+    h = firwin2(taps, grid, 10 ** (gi / 20.0), fs=sr)
+    y = np.convolve(x, h, mode='same').astype(np.float32)
+    r0, r1 = float(np.sqrt(np.mean(x ** 2))), float(np.sqrt(np.mean(y ** 2)))
+    return (y * (r0 / r1) if r1 > 1e-9 else y).astype(np.float32)
