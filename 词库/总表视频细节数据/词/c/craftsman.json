@@ -1,7 +1,626 @@
 {
  "单词": "craftsman",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/workbench.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.6,
+      "anim": "bob"
+     },
+     {
+      "label": "手艺的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "label": "人",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-tools.svg",
+   "p1": "art/icon-man.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-present",
+     "x": 0.3,
+     "y": 0.55,
+     "s": 0.66,
+     "z": 3,
+     "seq": "talk",
+     "fps": 2
+    },
+    {
+     "svg": "art/workbench.svg",
+     "x": 0.68,
+     "y": 0.68,
+     "s": 0.46,
+     "anim": "bob"
+    },
+    {
+     "label": "手艺的人",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "工匠、手艺人",
+    "pos": "名词",
+    "diff": "靠一门手艺吃饭的人",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.26,
+      "y": 0.55,
+      "s": 0.66,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2
+     },
+     {
+      "svg": "art/workbench.svg",
+      "x": 0.66,
+      "y": 0.68,
+      "s": 0.5,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/wood-chair.svg",
+      "x": 0.9,
+      "y": 0.56,
+      "s": 0.36
+     }
+    ],
+    "ex": "The craftsman made this chair by hand.",
+    "exzh": "这位工匠亲手做了这把椅子。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-point",
+       "x": 0.22,
+       "y": 0.56,
+       "s": 0.68,
+       "z": 3,
+       "seq": "talk",
+       "fps": 2,
+       "when": "The craftsman"
+      },
+      {
+       "svg": "art/wood-chair.svg",
+       "x": 0.6,
+       "y": 0.54,
+       "s": 0.56,
+       "when": "this chair",
+       "pop": true,
+       "anim": "sway"
+      },
+      {
+       "svg": "art/workbench.svg",
+       "x": 0.86,
+       "y": 0.74,
+       "s": 0.3,
+       "when": "by hand",
+       "anim": "bob"
+      },
+      {
+       "label": "craftsman",
+       "x": 0.4,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "craftsman"
+      },
+      {
+       "label": "工匠",
+       "x": 0.86,
+       "y": 0.3,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "工匠"
+      }
+     ]
+    }
+   },
+   {
+    "text": "（比喻）技艺精湛的人",
+    "pos": "名词",
+    "diff": "把手艺做到精的人",
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-music",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.62,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.32,
+      "z": 5,
+      "crowd": 9
+     },
+     {
+      "svg": "art/medal.svg",
+      "x": 0.86,
+      "y": 0.4,
+      "s": 0.28,
+      "anim": "sway"
+     }
+    ],
+    "ex": "As a writer, she is a real craftsman.",
+    "exzh": "作为作家，她是真正的语言大师。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.3,
+       "y": 0.56,
+       "s": 0.7,
+       "z": 3,
+       "seq": "talk",
+       "fps": 2,
+       "when": "she"
+      },
+      {
+       "svg": "art/books.svg",
+       "x": 0.7,
+       "y": 0.62,
+       "s": 0.44,
+       "when": "writer",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/medal.svg",
+       "x": 0.86,
+       "y": 0.34,
+       "s": 0.26,
+       "when": "real craftsman",
+       "anim": "sway"
+      },
+      {
+       "label": "a real craftsman",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "a real craftsman"
+      },
+      {
+       "label": "大师",
+       "x": 0.86,
+       "y": 0.66,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "大师"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“手艺的人”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/workbench.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.56,
+       "anim": "bob"
+      },
+      {
+       "label": "crafts + man",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "合成规律：最后一个词是主体；中间的 s 是古英语的“的”",
+    "node": "“手艺的人”",
+    "rule": "最后一个词是主体，前面的词说明它",
+    "ruleEx": "craftsman 手艺的人      businessman 商人",
+    "say": [
+     "合成词里，最后一个词是主体，前面的词说明它。",
+     "craftsman 说的是 man，什么人？手艺的人。",
+     "中间这个 s，是古英语表示“的”的词尾留下来的，古时写作 craftes man。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "前面说明 + 主体",
+       "x": 0.5,
+       "y": 0.14,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "主体",
+       "hideCue": 1
+      },
+      {
+       "actor": "west-man-smile",
+       "x": 0.66,
+       "y": 0.54,
+       "s": 0.6,
+       "z": 3,
+       "seq": "blink",
+       "fps": 2,
+       "cue": 1,
+       "when": "man",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/workbench.svg",
+       "x": 0.28,
+       "y": 0.66,
+       "s": 0.4,
+       "cue": 1,
+       "when": "手艺的人",
+       "anim": "bob",
+       "hideCue": 2
+      },
+      {
+       "label": "craftes man",
+       "x": 0.5,
+       "y": 0.5,
+       "size": 0.11,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "cue": 2,
+       "when": "craftes man"
+      },
+      {
+       "label": "s = 的",
+       "x": 0.5,
+       "y": 0.76,
+       "size": 0.09,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "cue": 2,
+       "when": "的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "靠一门手艺吃饭的人",
+    "node": "① 工匠、手艺人",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "靠一门手艺吃饭的人，就是工匠、手艺人。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/workbench.svg",
+       "x": 0.4,
+       "y": 0.66,
+       "s": 0.5,
+       "when": "手艺",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/wood-chair.svg",
+       "x": 0.8,
+       "y": 0.54,
+       "s": 0.4,
+       "when": "吃饭"
+      },
+      {
+       "label": "工匠",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "工匠"
+      }
+     ]
+    }
+   },
+   {
+    "via": "把手艺做到精",
+    "node": "② 技艺精湛的人",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "写文章、做音乐，把本事做到精的人，也可以比喻成 craftsman。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/books.svg",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "写文章",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/piano-theory.svg",
+       "x": 0.7,
+       "y": 0.56,
+       "s": 0.44,
+       "when": "做音乐"
+      },
+      {
+       "label": "做到精",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "做到精"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "工匠；手艺人",
+   "items": [
+    {
+     "w": "craftsman",
+     "word": "craftsman",
+     "m": "工匠、手艺人（重手艺好）",
+     "zh": "工匠、手艺人（重手艺好）",
+     "say": "craftsman 重在手艺好，复数是 craftsmen。",
+     "text": "craftsman 重在手艺好，复数是 craftsmen。",
+     "note": "craftsman 重在手艺好，复数是 craftsmen。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/workbench.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.85,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "artisan",
+     "word": "artisan",
+     "m": "工匠（偏书面，带艺术味）",
+     "zh": "工匠（偏书面，带艺术味）",
+     "say": "artisan 也是工匠，偏书面，常带点艺术味：artisan bread 手工面包。",
+     "text": "artisan 也是工匠，偏书面，常带点艺术味：artisan bread 手工面包。",
+     "note": "artisan 也是工匠，偏书面，常带点艺术味：artisan bread 手工面包。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/castle-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/pottery.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.85,
+        "anim": "sway"
+       }
+      ]
+     }
+    },
+    {
+     "w": "craftsperson",
+     "word": "craftsperson",
+     "m": "手艺人（不分男女）",
+     "zh": "手艺人（不分男女）",
+     "say": "craftsperson 不分男女，避开 man，复数常说 craftspeople。",
+     "text": "craftsperson 不分男女，避开 man，复数常说 craftspeople。",
+     "note": "craftsperson 不分男女，避开 man，复数常说 craftspeople。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/wood-chair.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.85,
+        "anim": "sway"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "craftsman 带 man，artisan 从“艺术”来，craftsperson 换成 person 不分男女。worker 只是干活的人。",
+   "tip": "复数只把 man 改成 men：craftsmen。",
+   "pics": {
+    "craftsman": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/workbench.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.85,
+       "anim": "bob"
+      }
+     ]
+    },
+    "artisan": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/pottery.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "sway"
+      }
+     ]
+    },
+    "craftsperson": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/wood-chair.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "sway"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "craftsmanai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人的爸爸是做什么的？\n听：My father is a craftsman who makes wooden chairs.\nA. 司机\nB. 老师\nC. 医生\nD. 手艺人",
@@ -94,5 +713,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

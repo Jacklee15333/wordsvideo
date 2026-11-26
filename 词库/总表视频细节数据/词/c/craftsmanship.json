@@ -570,6 +570,132 @@
      ]
     }
    }
+  },
+  "demo": {
+   "friendship": {
+    "icons": [
+     "art/icon-friend.svg",
+     "art/icon-ship.svg"
+    ],
+    "lit": "朋友之间的关系",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/mug.svg",
+       "x": 0.38,
+       "y": 0.6,
+       "s": 0.4,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.62,
+       "y": 0.6,
+       "s": 0.4,
+       "anim": "bob",
+       "flip": true
+      }
+     ]
+    }
+   },
+   "childhood": {
+    "icons": [
+     "art/icon-child.svg",
+     "art/icon-hood.svg"
+    ],
+    "lit": "当孩子的时期",
+    "pic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/teddy.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.62,
+       "anim": "sway"
+      }
+     ]
+    }
+   },
+   "kingdom": {
+    "icons": [
+     "art/icon-crown.svg",
+     "art/icon-dom.svg"
+    ],
+    "lit": "国王管的地方",
+    "pic": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/crown.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.56,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   "freedom": {
+    "icons": [
+     "art/icon-free.svg",
+     "art/icon-dom.svg"
+    ],
+    "lit": "自由的状态",
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/bird-free.svg",
+       "x": 0.5,
+       "y": 0.44,
+       "s": 0.56,
+       "anim": "bob"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   }
   }
  },
  "插图": [
@@ -664,5 +790,5 @@
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
