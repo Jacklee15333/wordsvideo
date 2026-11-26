@@ -1,7 +1,592 @@
 {
  "单词": "lone",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ləʊn"
+  ],
+  "originPic": {
+   "bg": "blank",
+   "img": "art/wild-bg.svg",
+   "items": [
+    {
+     "svg": "art/lonetree.svg",
+     "x": 0.46,
+     "y": 0.52,
+     "s": 0.66,
+     "anim": "sway"
+    },
+    {
+     "label": "one → alone → lone",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.085,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/wild-bg.svg",
+    "items": [
+     {
+      "svg": "art/lonetree.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "sway"
+     },
+     {
+      "label": "lone 孤零零",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/wild-bg.svg",
+    "items": [
+     {
+      "svg": "art/wolf.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.44,
+      "anim": "bob"
+     },
+     {
+      "label": "alone 截掉 a",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-lone.svg",
+   "p1": "art/icon-alone.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/wild-bg.svg",
+   "items": [
+    {
+     "svg": "art/lonetree.svg",
+     "x": 0.4,
+     "y": 0.52,
+     "s": 0.6,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/wolf.svg",
+     "x": 0.76,
+     "y": 0.7,
+     "s": 0.26,
+     "anim": "bob"
+    },
+    {
+     "label": "孤零零一个",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "单独的、独自的",
+    "pos": "形容词",
+    "diff": "只用在名词前",
+    "bg": "blank",
+    "img": "art/wild-bg.svg",
+    "items": [
+     {
+      "svg": "art/lonetree.svg",
+      "x": 0.46,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "sway"
+     },
+     {
+      "label": "a lone tree",
+      "x": 0.8,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "delay": 0.8
+     }
+    ],
+    "ex": "A lone tree stands on the hill.",
+    "exzh": "山坡上孤零零地立着一棵树。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/wild-bg.svg",
+     "items": [
+      {
+       "svg": "art/lonetree.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.66,
+       "when": "lone tree",
+       "pop": true,
+       "anim": "sway"
+      },
+      {
+       "label": "a lone tree",
+       "x": 0.18,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "lone tree"
+      },
+      {
+       "label": "孤零零",
+       "x": 0.82,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "孤零零"
+      }
+     ]
+    }
+   },
+   {
+    "text": "lone wolf 独来独往的人",
+    "pos": "短语",
+    "diff": "像离群独行的狼",
+    "bg": "blank",
+    "img": "art/wild-bg.svg",
+    "items": [
+     {
+      "svg": "art/wolf.svg",
+      "x": 0.46,
+      "y": 0.62,
+      "s": 0.5,
+      "go": [
+       0.7,
+       0.62
+      ],
+      "dur": 6,
+      "anim": "bob"
+     },
+     {
+      "label": "lone wolf",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "delay": 0.8
+     }
+    ],
+    "ex": "He is a lone wolf.",
+    "exzh": "他是个独来独往的人。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.76,
+       "s": 0.56,
+       "z": 3,
+       "walk": {
+        "from": [
+         0.98,
+         0.76
+        ],
+        "to": [
+         0.02,
+         0.76
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.72,
+       "s": 0.44,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.72
+        ],
+        "to": [
+         0.98,
+         0.72
+        ],
+        "offset": 0.0
+       }
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.02,
+       "y": 0.72,
+       "s": 0.44,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.72
+        ],
+        "to": [
+         0.98,
+         0.72
+        ],
+        "offset": 0.5
+       }
+      },
+      {
+       "svg": "art/wolf.svg",
+       "x": 0.2,
+       "y": 0.3,
+       "s": 0.22,
+       "when": "lone wolf",
+       "pop": true
+      },
+      {
+       "label": "a lone wolf",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "lone wolf"
+      },
+      {
+       "label": "独来独往",
+       "x": 0.84,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "独来独往"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "one → alone → lone",
+    "fig": {
+     "bg": "blank",
+     "img": "art/wild-bg.svg",
+     "items": [
+      {
+       "svg": "art/lonetree.svg",
+       "x": 0.46,
+       "y": 0.52,
+       "s": 0.6,
+       "anim": "sway"
+      },
+      {
+       "label": "one → alone → lone",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "荒野里只有一棵树",
+    "node": "① 单独的、独自的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "one 先变成 alone，完完全全一个；再截掉开头的 a，就是 lone。",
+     "荒野里只有一棵树、一匹狼，孤零零一个，就是单独的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/wild-bg.svg",
+     "items": [
+      {
+       "label": "one → alone",
+       "x": 0.3,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "alone"
+      },
+      {
+       "label": "→ lone",
+       "x": 0.7,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "截掉"
+      },
+      {
+       "svg": "art/lonetree.svg",
+       "x": 0.4,
+       "y": 0.52,
+       "s": 0.6,
+       "when": "一棵树",
+       "anim": "sway"
+      },
+      {
+       "svg": "art/wolf.svg",
+       "x": 0.76,
+       "y": 0.7,
+       "s": 0.26,
+       "when": "一匹狼"
+      },
+      {
+       "label": "单独的",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "单独的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "离群独行的狼，比喻人",
+    "node": "② 独来独往的人",
+    "pos": "短语",
+    "pic": 1,
+    "say": [
+     "一匹离群独行的狼，叫 lone wolf。",
+     "用来比喻人，就是独来独往的人。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/wild-bg.svg",
+     "items": [
+      {
+       "svg": "art/wolf.svg",
+       "x": 0.46,
+       "y": 0.62,
+       "s": 0.5,
+       "when": "离群独行",
+       "go": [
+        0.7,
+        0.62
+       ],
+       "dur": 4
+      },
+      {
+       "label": "lone wolf",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "lone wolf"
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.98,
+       "y": 0.86,
+       "s": 0.32,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.3
+       }
+      },
+      {
+       "label": "独来独往的人",
+       "x": 0.5,
+       "y": 0.28,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "独来独往"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "单独的",
+   "items": [
+    {
+     "w": "lone",
+     "word": "lone",
+     "m": "单独的",
+     "say": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "text": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "diff": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "d": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "desc": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "line": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "talk": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "note": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "explain": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "zh": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "sent": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "mean": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/wild-bg.svg",
+      "items": [
+       {
+        "svg": "art/lonetree.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.66,
+        "anim": "sway"
+       }
+      ]
+     }
+    },
+    {
+     "w": "alone",
+     "word": "alone",
+     "m": "独自",
+     "say": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "text": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "diff": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "d": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "desc": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "line": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "talk": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "note": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "explain": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "zh": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "sent": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "mean": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/countryside-bg.svg",
+      "items": [
+       {
+        "svg": "art/road.svg",
+        "x": 0.5,
+        "y": 0.6,
+        "s": 0.6
+       },
+       {
+        "actor": "walk-west-boy-pack",
+        "x": 0.02,
+        "y": 0.84,
+        "s": 0.42,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.02,
+          0.84
+         ],
+         "to": [
+          0.98,
+          0.84
+         ],
+         "offset": 0.2
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "pics": {
+    "lone": {
+     "bg": "blank",
+     "img": "art/wild-bg.svg",
+     "items": [
+      {
+       "svg": "art/lonetree.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66,
+       "anim": "sway"
+      }
+     ]
+    },
+    "alone": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "svg": "art/road.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.6
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.02,
+       "y": 0.84,
+       "s": 0.42,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.84
+        ],
+        "to": [
+         0.98,
+         0.84
+        ],
+        "offset": 0.2
+       }
+      }
+     ]
+    }
+   },
+   "logic": "lone 和 alone 本来是同一个词：alone 截掉开头的 a 就是 lone；后来分了工，名词前用 lone，动词后、句子后用 alone。",
+   "tip": "名词前说“孤零零的”用 lone；放在后面说“独自”用 alone。",
+   "say": {
+    "lone": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+    "alone": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。"
+   },
+   "lines": {
+    "lone": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+    "alone": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。"
+   },
+   "talk": {
+    "lone": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+    "alone": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。"
+   },
+   "text": {
+    "lone": "lone 是单独的：只放在名词前，a lone traveller 一个独行的旅人。",
+    "alone": "alone 是独自：只放在动词后、句子后面，He travels alone 他独自旅行。"
+   }
+  }
+ },
+ "插图": [
+  "loneai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：山上有什么？\n听：I saw a lone tree on the hill.\nA. 一片森林\nB. 一棵孤零零的树\nC. 一群羊\nD. 一座房子",
@@ -90,5 +675,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
