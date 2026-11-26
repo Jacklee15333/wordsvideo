@@ -1392,6 +1392,9 @@ $('#picMore').onclick=()=>{modal('接着做画面',`
   <div class="box" style="margin:0 0 12px"><h3 style="margin-top:0">按总表顺序接着做</h3>
     <div class="line">接着做 <input type="number" id="pmN" value="${+$('#tPCount').value||20}" min="1" style="width:76px"> 个词 <span class="small faint">只做有题目、还没画面的</span></div>
     <div class="line"><button class="btn" id="pmBulk">开始做这一批</button> <a href="#" class="small" id="pmGoBulk">去「批量」页看看 →</a></div></div>
+  <div class="box" style="margin:0 0 12px"><h3 style="margin-top:0"><span class="hv" title="词库里画面还要补的词：出视频退回来的、起草检查没过的，不管选没选上。勾上的加进「画面」的列表（选上），交给 AI 在上次的画面上改；做好一个，列表少一个">补画面的词</span> <span class="small faint" id="pmFixN"></span></h3>
+    <div class="plist" id="pmFix" style="max-height:190px"><div class="pempty">正在读…</div></div>
+    <div class="line" style="margin-top:8px"><button class="btn" id="pmFixGo" disabled>开始补画面</button> <span class="small" id="pmFixMsg"></span></div></div>
   <div class="box" style="margin:0"><h3 style="margin-top:0">自己输入单词</h3>
     <textarea id="pmWords" rows="5" style="width:100%" placeholder="一行一个，或者用逗号、空格隔开，比如：apple, banana, orange"></textarea>
     <div class="small" id="pmCheck" style="margin:6px 0;line-height:1.7"></div>
@@ -1403,7 +1406,24 @@ $('#picMore').onclick=()=>{modal('接着做画面',`
   $('#pmTyped').onclick=async()=>{if(!PMOK.length)return;$('#pmTyped').disabled=true;const ws=PMOK.slice();
     await api('/api/task',{kind:'pics',params:{words:ws},title:`做画面：${ws.slice(0,4).join('、')}${ws.length>4?' 等 '+ws.length+' 个':''}`});
     closeModal();toast(`开始了：做 ${ws.length} 个词的画面，做的过程在下面`,6000);poll();setTimeout(()=>{loadPic();stepScroll()},700)};
+  pmFixLoad();
   setTimeout(()=>$('#pmWords').focus(),50)};
+/* v1.20.3「补画面的词」：词库里画面还要补的词，勾上的加进「画面」的列表一起补（不用单独攒着做） */
+async function pmFixLoad(){let d;try{d=await api('/api/fixwords')}catch(e){$('#pmFix').innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
+  const it=d.items||[];$('#pmFixN').textContent=it.length?`（库里 ${it.length} 个）`:'';
+  $('#pmFix').innerHTML=it.length?'<table><tr><th style="width:26px"><input type="checkbox" id="pmFixAll" checked title="全选 / 全不选"></th><th>单词</th><th>还要补</th></tr>'+it.map(x=>`<tr><td><input type="checkbox" class="pmfx" value="${esc(x.word)}" checked></td><td class="w">${esc(x.word)}</td>
+      <td class="small"><span class="hv" title="${esc((x.todo||'').replace(/^还要补[:：]/,'').split(/[；;]/).filter(s=>s.trim()).map(s=>'· '+s.trim()).join('\n')||'画面还没过起草检查：先在 WSL 里查一遍，还要补的交给 AI 改')}">${x.n?`${x.n} 处`:'还没过起草检查'}</span>${x.listed?' <span class="faint">· 已经在列表里</span>':''}</td></tr>`).join('')+'</table>'
+    :'<div class="pempty">库里没有要补画面的词</div>';
+  const upd=()=>{const n=$$('.pmfx:checked').length,a=$('#pmFixAll');if(a){a.checked=n===it.length;a.indeterminate=n>0&&n<it.length}
+    $('#pmFixGo').disabled=!n;$('#pmFixGo').textContent=n?`开始补这 ${n} 个`:'开始补画面'};
+  if($('#pmFixAll'))$('#pmFixAll').onchange=e=>{$$('.pmfx').forEach(c=>c.checked=e.target.checked);upd()};
+  $$('.pmfx').forEach(c=>c.onchange=upd);upd();
+  $('#pmFixGo').onclick=async()=>{const ws=$$('.pmfx:checked').map(c=>c.value);if(!ws.length)return;$('#pmFixGo').disabled=true;$('#pmFixMsg').textContent='正在安排…';
+    try{await api('/api/pool',{op:'add',text:ws.join('\n'),tag:'补画面',pick:true});
+      const r=await api('/api/task',{kind:'pics',params:{words:ws},title:`补画面：${ws.slice(0,4).join('、')}${ws.length>4?' 等 '+ws.length+' 个':''}`});
+      if(r.error){$('#pmFixMsg').textContent='✗ '+r.error;$('#pmFixGo').disabled=false;return}
+      closeModal();toast(`开始了：补 ${ws.length} 个词的画面（加进了上面的列表），做的过程在下面`,6000);poll();setTimeout(()=>{loadPic();stepScroll()},700)}
+    catch(e){$('#pmFixMsg').textContent='✗ '+e.message;$('#pmFixGo').disabled=false}}}
 async function pmCheck(){const t=$('#pmWords').value;if(!t.trim()){$('#pmCheck').textContent='';PMOK=[];return}
   let d;try{d=await api('/api/pictyped',{text:t})}catch(e){$('#pmCheck').textContent='✗ 对不了总表（词库还没准备好？）';return}
   if($('#pmWords').value!==t)return;PMOK=d.ok||[];const L=a=>esc(a.slice(0,12).join('、'))+(a.length>12?` 等 ${a.length} 个`:'');

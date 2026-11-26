@@ -662,6 +662,7 @@ GET = {
     "/api/live": api_live,
     "/api/relay": api_relay_get,
     "/api/fixlater": lambda qs: __import__("pics").later_get(),
+    "/api/fixwords": lambda qs: __import__("pics").fix_list(),
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
     "/api/next": lambda qs: {"words": next_unready(int(qs.get("n", 5)))},
     "/api/check": lambda qs: CK.snapshot(watch=qs.get("watch") == "1"),
@@ -674,7 +675,7 @@ GET = {
     "/api/pool": lambda qs: PL.summary() if qs.get("brief") else PL.tasks() if qs.get("tasks") else PL.items(),
     "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
 }
-NEED_REPO = {"/api/qhist", "/api/next", "/api/pool", "/api/find", "/api/results", "/api/qres", "/api/pres", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
+NEED_REPO = {"/api/fixwords", "/api/qhist", "/api/next", "/api/pool", "/api/find", "/api/results", "/api/qres", "/api/pres", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
 POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/task/op": api_task_op,
         "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
         "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,

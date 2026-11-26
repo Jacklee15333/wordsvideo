@@ -1569,3 +1569,19 @@ def send_back(back, src=""):
         except Exception as e:
             C.log("退回「画面」记下了，提交没成功（%s）：下次一起传" % str(e)[:120])
     return done
+
+
+def fix_list():
+    """v1.20.3「接着做 → 补画面的词」：词库里画面还要补的词（出视频退回来的、起草检查没过的），每个词还要补几处、在不在「画面」的列表里。"""
+    import pool
+    todo = todo_all()
+    try:
+        have = {i["word"]: i for i in pool.items()["items"]}
+    except Exception:
+        have = {}
+    out = []
+    for w in sorted(unchecked_words(), key=str.lower):
+        ln = todo.get(w, "")
+        out.append({"word": w, "n": len(_items(ln)), "todo": ln[:1500], "listed": bool((have.get(w) or {}).get("picked"))})
+    out.sort(key=lambda x: (x["listed"], x["word"].lower()))     # 还不在列表里的放前面
+    return {"items": out}
