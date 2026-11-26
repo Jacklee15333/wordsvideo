@@ -1,7 +1,1020 @@
 {
  "单词": "voyage",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ˈvɔɪ",
+   "ɪdʒ"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/countryside-bg.svg",
+    "items": [
+     {
+      "svg": "art/road.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.62,
+      "shadow": true
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.02,
+      "y": 0.84,
+      "s": 0.42,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.84
+       ],
+       "to": [
+        0.98,
+        0.84
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "label": "voy = via 路",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sack.svg",
+      "x": 0.5,
+      "y": 0.54,
+      "s": 0.56,
+      "shadow": true,
+      "anim": "bob"
+     },
+     {
+      "label": "age：…的东西",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     },
+     {
+      "label": "动词 → 名词",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-voy.svg",
+   "p1": "art/icon-age.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/countryside-bg.svg",
+   "items": [
+    {
+     "svg": "art/road.svg",
+     "x": 0.5,
+     "y": 0.62,
+     "s": 0.56
+    },
+    {
+     "svg": "art/sack.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.4,
+     "anim": "bob",
+     "pop": true,
+     "delay": 0.4
+    },
+    {
+     "label": "路上用的东西",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "（长途）航行、航海",
+    "pos": "名词",
+    "diff": "坐船出海远行",
+    "bg": "blank",
+    "img": "art/harbor-bg.svg",
+    "items": [
+     {
+      "svg": "art/ship.svg",
+      "x": 0.4,
+      "y": 0.64,
+      "s": 0.5,
+      "go": [
+       0.7,
+       0.64
+      ],
+      "dur": 6,
+      "wait": 0.3,
+      "anim": "bob"
+     },
+     {
+      "label": "a long voyage",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "delay": 0.8
+     }
+    ],
+    "ex": "The voyage took three months.",
+    "exzh": "这次航行花了三个月。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/harbor-bg.svg",
+     "items": [
+      {
+       "svg": "art/ship.svg",
+       "x": 0.2,
+       "y": 0.66,
+       "s": 0.5,
+       "when": "voyage",
+       "go": [
+        0.62,
+        0.66
+       ],
+       "dur": 4,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/cal-20.svg",
+       "x": 0.86,
+       "y": 0.3,
+       "s": 0.36,
+       "when": "three months",
+       "pop": true
+      },
+      {
+       "label": "voyage",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "voyage"
+      },
+      {
+       "label": "三个月",
+       "x": 0.86,
+       "y": 0.6,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "三个月"
+      },
+      {
+       "sound": "say:All aboard!",
+       "when": "voyage",
+       "gap": true
+      }
+     ]
+    }
+   },
+   {
+    "text": "太空旅行",
+    "pos": "名词",
+    "diff": "飞向太空的远行",
+    "bg": "blank",
+    "img": "art/space-bg.svg",
+    "items": [
+     {
+      "svg": "art/rocket.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.6,
+      "go": [
+       0.62,
+       0.44
+      ],
+      "dur": 4,
+      "wait": 0.3,
+      "anim": "shake"
+     },
+     {
+      "label": "space voyage",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "delay": 0.8
+     }
+    ],
+    "ex": "They made a voyage to the moon.",
+    "exzh": "他们完成了一次飞往月球的太空旅行。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/space-bg.svg",
+     "items": [
+      {
+       "svg": "art/rocket.svg",
+       "x": 0.2,
+       "y": 0.74,
+       "s": 0.5,
+       "when": "voyage",
+       "go": [
+        0.5,
+        0.22
+       ],
+       "goWhen": "to the moon",
+       "dur": 2.4,
+       "rot": 40,
+       "anim": "shake"
+      },
+      {
+       "label": "a voyage to the moon",
+       "x": 0.68,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "voyage"
+      },
+      {
+       "label": "太空旅行",
+       "x": 0.7,
+       "y": 0.86,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "太空旅行"
+      }
+     ]
+    }
+   },
+   {
+    "text": "（比喻）探索之旅",
+    "pos": "名词",
+    "diff": "人生、求知像一趟远航",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/openbook.svg",
+      "x": 0.42,
+      "y": 0.6,
+      "s": 0.5,
+      "shadow": true
+     },
+     {
+      "svg": "art/ship.svg",
+      "x": 0.42,
+      "y": 0.3,
+      "s": 0.22,
+      "go": [
+       0.6,
+       0.24
+      ],
+      "dur": 4,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/globe.svg",
+      "x": 0.84,
+      "y": 0.56,
+      "s": 0.4,
+      "anim": "spin"
+     },
+     {
+      "label": "探索之旅",
+      "x": 0.42,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Reading is a voyage of discovery.",
+    "exzh": "读书是一次探索之旅。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-music",
+       "x": 0.16,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/openbook.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.44,
+       "when": "Reading"
+      },
+      {
+       "svg": "art/ship.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.2,
+       "when": "voyage",
+       "go": [
+        0.7,
+        0.24
+       ],
+       "dur": 2.4,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/globe.svg",
+       "x": 0.86,
+       "y": 0.56,
+       "s": 0.36,
+       "when": "discovery",
+       "anim": "spin"
+      },
+      {
+       "label": "a voyage of discovery",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "voyage"
+      },
+      {
+       "label": "探索之旅",
+       "x": 0.86,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "探索之旅"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“路上用的东西”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "svg": "art/road.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.6
+      },
+      {
+       "svg": "art/sack.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.4,
+       "anim": "bob"
+      },
+      {
+       "label": "voy 路 + age 东西",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "远行前备好的干粮、盘缠",
+    "node": "旅途的干粮、盘缠（拉丁语）",
+    "say": [
+     "voy 就是 via，路；age 表示……的东西。",
+     "路上用的东西，就是远行前备好的干粮和盘缠。"
+    ],
+    "from": 0,
+    "fig": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "label": "voy = via 路",
+       "x": 0.3,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "路"
+      },
+      {
+       "label": "age 东西",
+       "x": 0.7,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "age"
+      },
+      {
+       "svg": "art/road.svg",
+       "x": 0.5,
+       "y": 0.64,
+       "s": 0.56,
+       "when": "via"
+      },
+      {
+       "svg": "art/sack.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "干粮",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "label": "干粮、盘缠",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "盘缠"
+      }
+     ]
+    }
+   },
+   {
+    "via": "后来指这一趟远行本身",
+    "node": "旅程",
+    "say": [
+     "后来，不说路上带的东西，说的是这一趟远行本身，就是旅程。"
+    ],
+    "from": 1,
+    "fig": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "svg": "art/road.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.6,
+       "when": "远行"
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.02,
+       "y": 0.84,
+       "s": 0.42,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.84
+        ],
+        "to": [
+         0.98,
+         0.84
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.98,
+       "y": 0.86,
+       "s": 0.44,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.86
+        ],
+        "to": [
+         0.02,
+         0.86
+        ],
+        "offset": 0.6
+       }
+      },
+      {
+       "label": "旅程",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "旅程"
+      }
+     ]
+    }
+   },
+   {
+    "via": "越用越窄：专指坐船远行",
+    "node": "① （长途）航行、航海",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "英语里，一个词的意思，常常越用越窄：从一大类，专指其中一种。",
+     "meat 原来指一切食物，后来专指肉。",
+     "voyage 也一样：最早水路、陆路都算，后来专指坐船远行，就是航行、航海。"
+    ],
+    "rule": "一个词的意思越用越窄：从一大类专指其中一种",
+    "ruleEx": "voyage 旅行 → 航海      meat 一切食物 → 肉",
+    "fig": {
+     "bg": "blank",
+     "img": "art/harbor-bg.svg",
+     "items": [
+      {
+       "label": "越用越窄",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "越用越窄",
+       "hideCue": 1
+      },
+      {
+       "shape": "ellipse",
+       "x": 0.5,
+       "y": 0.52,
+       "w": 0.7,
+       "h": 0.6,
+       "fill": "rgba(255,255,255,.75)",
+       "stroke": "#7F8FA3",
+       "lw": 4,
+       "when": "一大类",
+       "hideCue": 1
+      },
+      {
+       "label": "其中一种",
+       "x": 0.6,
+       "y": 0.6,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "其中一种",
+       "hideCue": 1
+      },
+      {
+       "label": "meat",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "meat",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/foods.svg",
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.4,
+       "when": "一切食物",
+       "hideWhen": "专指肉"
+      },
+      {
+       "svg": "art/meat.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "专指肉",
+       "hideCue": 2,
+       "pop": true
+      },
+      {
+       "svg": "art/ship.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.5,
+       "cue": 2,
+       "when": "坐船远行",
+       "anim": "bob"
+      },
+      {
+       "label": "航行、航海",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "航行"
+      }
+     ]
+    }
+   },
+   {
+    "via": "飞向太空的远行",
+    "node": "② 太空旅行",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "飞向太空的远行，也是一趟 voyage，就是太空旅行。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/space-bg.svg",
+     "items": [
+      {
+       "svg": "art/rocket.svg",
+       "x": 0.4,
+       "y": 0.7,
+       "s": 0.56,
+       "when": "飞向太空",
+       "go": [
+        0.6,
+        0.4
+       ],
+       "dur": 2.4,
+       "anim": "shake"
+      },
+      {
+       "label": "太空旅行",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "太空旅行"
+      }
+     ]
+    }
+   },
+   {
+    "via": "人生、求知像一趟远航",
+    "node": "③ （比喻）探索之旅",
+    "pos": "名词",
+    "pic": 2,
+    "say": [
+     "人生、读书求知，就像一趟远航，这就是比喻里的探索之旅。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/openbook.svg",
+       "x": 0.44,
+       "y": 0.6,
+       "s": 0.5,
+       "when": "读书"
+      },
+      {
+       "svg": "art/ship.svg",
+       "x": 0.44,
+       "y": 0.34,
+       "s": 0.24,
+       "when": "远航",
+       "go": [
+        0.62,
+        0.24
+       ],
+       "dur": 2.4,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/globe.svg",
+       "x": 0.84,
+       "y": 0.56,
+       "s": 0.4,
+       "when": "探索之旅",
+       "anim": "spin"
+      },
+      {
+       "actor": "west-clerk-think",
+       "x": 0.14,
+       "y": 0.6,
+       "s": 0.6,
+       "z": 3,
+       "when": "人生",
+       "seq": "blink"
+      },
+      {
+       "label": "探索之旅",
+       "x": 0.44,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "探索之旅"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "旅行",
+   "items": [
+    {
+     "w": "voyage",
+     "word": "voyage",
+     "m": "航行、远行",
+     "say": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "text": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "diff": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "d": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "desc": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "line": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "talk": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "note": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "explain": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "zh": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "sent": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "mean": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/harbor-bg.svg",
+      "items": [
+       {
+        "svg": "art/ship.svg",
+        "x": 0.4,
+        "y": 0.64,
+        "s": 0.56,
+        "go": [
+         0.7,
+         0.64
+        ],
+        "dur": 6,
+        "loop": true,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "journey",
+     "word": "journey",
+     "m": "一段路程",
+     "say": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "text": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "diff": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "d": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "desc": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "line": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "talk": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "note": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "explain": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "zh": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "sent": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "mean": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/countryside-bg.svg",
+      "items": [
+       {
+        "svg": "art/train.svg",
+        "x": 0.14,
+        "y": 0.62,
+        "s": 0.34,
+        "go": [
+         0.86,
+         0.62
+        ],
+        "dur": 4,
+        "wait": 0,
+        "loop": true
+       }
+      ]
+     }
+    },
+    {
+     "w": "travel",
+     "word": "travel",
+     "m": "旅行",
+     "say": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "text": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "diff": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "d": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "desc": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "line": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "talk": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "note": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "explain": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "zh": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "sent": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "mean": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/station-bg.svg",
+      "items": [
+       {
+        "actor": "walk-west-woman-case",
+        "x": 0.02,
+        "y": 0.74,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.02,
+          0.74
+         ],
+         "to": [
+          0.98,
+          0.74
+         ],
+         "offset": 0.1
+        }
+       },
+       {
+        "actor": "walk-cn-boy-pack",
+        "x": 0.98,
+        "y": 0.76,
+        "s": 0.5,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.98,
+          0.76
+         ],
+         "to": [
+          0.02,
+          0.76
+         ],
+         "offset": 0.5
+        }
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.02,
+        "y": 0.8,
+        "s": 0.54,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.02,
+          0.8
+         ],
+         "to": [
+          0.98,
+          0.8
+         ],
+         "offset": 0.7
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "pics": {
+    "voyage": {
+     "bg": "blank",
+     "img": "art/harbor-bg.svg",
+     "items": [
+      {
+       "svg": "art/ship.svg",
+       "x": 0.4,
+       "y": 0.64,
+       "s": 0.56,
+       "go": [
+        0.7,
+        0.64
+       ],
+       "dur": 6,
+       "loop": true,
+       "anim": "bob"
+      }
+     ]
+    },
+    "journey": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "svg": "art/train.svg",
+       "x": 0.14,
+       "y": 0.62,
+       "s": 0.34,
+       "go": [
+        0.86,
+        0.62
+       ],
+       "dur": 4,
+       "wait": 0,
+       "loop": true
+      }
+     ]
+    },
+    "travel": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.02,
+       "y": 0.74,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.74
+        ],
+        "to": [
+         0.98,
+         0.74
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.98,
+       "y": 0.76,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.76
+        ],
+        "to": [
+         0.02,
+         0.76
+        ],
+        "offset": 0.5
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.02,
+       "y": 0.8,
+       "s": 0.54,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.8
+        ],
+        "to": [
+         0.98,
+         0.8
+        ],
+        "offset": 0.7
+       }
+      }
+     ]
+    }
+   },
+   "logic": "voyage 是 voy 路 + age 东西：从路上带的干粮变成远行本身，后来专指坐船、去太空的长途远行；journey 是一段路程；trip 是短途、有往返的出行；travel 是泛称。",
+   "tip": "坐船远航、太空旅行用 voyage；一段路程用 journey；短途出游用 trip；泛说旅行用 travel。",
+   "say": {
+    "voyage": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+    "journey": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+    "travel": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。"
+   },
+   "lines": {
+    "voyage": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+    "journey": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+    "travel": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。"
+   },
+   "talk": {
+    "voyage": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+    "journey": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+    "travel": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。"
+   },
+   "text": {
+    "voyage": "voyage 是长途的远行：多走水路，也说太空旅行，a voyage across the sea。",
+    "journey": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
+    "travel": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。"
+   }
+  }
+ },
+ "插图": [
+  "voyageai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：去火星的太空旅行要多久？\n听：The voyage to Mars will take many months.\nA. 一天\nB. 一周\nC. 十年\nD. 好几个月",
@@ -88,5 +1101,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

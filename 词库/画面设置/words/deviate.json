@@ -1,0 +1,986 @@
+{
+ "style": "core",
+ "board": true,
+ "sylIpa": [
+  "ˈdiː",
+  "vi",
+  "eɪt"
+ ],
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/countryside-bg.svg",
+   "items": [
+    {
+     "svg": "art/road.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.6
+    },
+    {
+     "svg": "art/car.svg",
+     "x": 0.5,
+     "y": 0.72,
+     "s": 0.2,
+     "go": [
+      0.88,
+      0.82
+     ],
+     "dur": 2,
+     "wait": 0.6,
+     "loop": true
+    },
+    {
+     "label": "de = 离开",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#C92A2A",
+     "border": "#C92A2A"
+    },
+    {
+     "ray": [
+      [
+       0.5,
+       0.62
+      ],
+      [
+       0.86,
+       0.72
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 0.8,
+     "delay": 0.4
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/countryside-bg.svg",
+   "items": [
+    {
+     "svg": "art/road.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.62,
+     "shadow": true
+    },
+    {
+     "actor": "walk-cn-boy-pack",
+     "x": 0.02,
+     "y": 0.84,
+     "s": 0.42,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.02,
+       0.84
+      ],
+      "to": [
+       0.98,
+       0.84
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "label": "vi = 路",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    }
+   ]
+  },
+  "p2": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/gear.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.52,
+     "anim": "spin"
+    },
+    {
+     "label": "ate：做…",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "label": "变成动词",
+     "x": 0.5,
+     "y": 0.88,
+     "size": 0.075,
+     "color": "#7048E8",
+     "border": "#7048E8",
+     "delay": 0.6
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-de.svg",
+  "p1": "art/icon-road.svg",
+  "p2": "art/icon-ate.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/countryside-bg.svg",
+  "items": [
+   {
+    "svg": "art/road.svg",
+    "x": 0.5,
+    "y": 0.6,
+    "s": 0.62
+   },
+   {
+    "svg": "art/car.svg",
+    "x": 0.5,
+    "y": 0.62,
+    "s": 0.22,
+    "go": [
+     0.84,
+     0.8
+    ],
+    "dur": 2,
+    "wait": 0.6
+   },
+   {
+    "label": "离开道路",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.075,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "偏离、背离",
+   "pos": "动词",
+   "diff": "离开原来的路线、计划",
+   "bg": "blank",
+   "img": "art/countryside-bg.svg",
+   "items": [
+    {
+     "svg": "art/road.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.6
+    },
+    {
+     "svg": "art/car.svg",
+     "x": 0.48,
+     "y": 0.66,
+     "s": 0.26,
+     "go": [
+      0.82,
+      0.82
+     ],
+     "dur": 2.4,
+     "wait": 0.8,
+     "loop": true
+    },
+    {
+     "svg": "art/signpost.svg",
+     "x": 0.14,
+     "y": 0.56,
+     "s": 0.46,
+     "anim": "sway"
+    },
+    {
+     "label": "deviate from the road",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8",
+     "delay": 1.2
+    }
+   ],
+   "ex": "Don't deviate from the plan.",
+   "exzh": "不要偏离计划。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.16,
+      "y": 0.6,
+      "s": 0.84,
+      "z": 3,
+      "id": "t",
+      "seq": "talk"
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.86,
+      "y": 0.62,
+      "s": 0.76,
+      "z": 3,
+      "nodWith": "t",
+      "seq": "blink"
+     },
+     {
+      "svg": "art/routemap.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.5,
+      "when": "plan",
+      "id": "m"
+     },
+     {
+      "ray": [
+       [
+        200,
+        150
+       ],
+       [
+        340,
+        90
+       ]
+      ],
+      "color": "#C92A2A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "on": "m",
+      "when": "deviate"
+     },
+     {
+      "label": "deviate from the plan",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "deviate"
+     },
+     {
+      "label": "偏离计划",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "偏离计划"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“离开道路”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/countryside-bg.svg",
+    "items": [
+     {
+      "svg": "art/road.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.64
+     },
+     {
+      "svg": "art/car.svg",
+      "x": 0.5,
+      "y": 0.64,
+      "s": 0.24,
+      "go": [
+       0.84,
+       0.82
+      ],
+      "dur": 2,
+      "wait": 0.4
+     },
+     {
+      "label": "de 离开 + vi 路 + ate 做",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "走着走着离开了原来的路",
+   "node": "① 偏离、背离",
+   "pos": "动词",
+   "pic": 0,
+   "say": [
+    "de 是离开，vi 是路，ate 表示去做这件事。",
+    "走着走着，离开了原来的路，就是偏离。",
+    "常和 from 连用：deviate from the road。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/countryside-bg.svg",
+    "items": [
+     {
+      "label": "de 离开",
+      "x": 0.2,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "离开"
+     },
+     {
+      "label": "vi 路",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "路"
+     },
+     {
+      "label": "ate 做",
+      "x": 0.8,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "ate"
+     },
+     {
+      "svg": "art/road.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.6,
+      "when": "走着走着"
+     },
+     {
+      "svg": "art/car.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.24,
+      "when": "走着走着",
+      "go": [
+       0.84,
+       0.84
+      ],
+      "goWhen": "离开了原来的路",
+      "dur": 1.6
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.4,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "label": "deviate from",
+      "x": 0.5,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "from"
+     }
+    ]
+   }
+  },
+  {
+   "via": "不按常规、标准来",
+   "node": "越出常规",
+   "say": [
+    "不按常规、标准来做事，也是偏离，就是越出常规。"
+   ],
+   "from": 1,
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/routemap.svg",
+      "x": 0.46,
+      "y": 0.5,
+      "s": 0.6,
+      "id": "m",
+      "when": "常规"
+     },
+     {
+      "ray": [
+       [
+        200,
+        150
+       ],
+       [
+        350,
+        80
+       ]
+      ],
+      "color": "#C92A2A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8,
+      "on": "m",
+      "when": "不按常规"
+     },
+     {
+      "actor": "west-man-present",
+      "x": 0.84,
+      "y": 0.6,
+      "s": 0.72,
+      "z": 3,
+      "when": "标准",
+      "seq": "talk"
+     },
+     {
+      "label": "越出常规",
+      "x": 0.46,
+      "y": 0.9,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "越出常规"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "偏离、背离",
+  "items": [
+   {
+    "w": "deviate",
+    "word": "deviate",
+    "m": "偏离",
+    "say": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "text": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "diff": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "d": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "desc": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "line": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "talk": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "note": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "explain": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "zh": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "sent": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "mean": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/countryside-bg.svg",
+     "items": [
+      {
+       "svg": "art/road.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.6
+      },
+      {
+       "svg": "art/car.svg",
+       "x": 0.5,
+       "y": 0.64,
+       "s": 0.26,
+       "go": [
+        0.82,
+        0.82
+       ],
+       "dur": 2,
+       "wait": 0.4,
+       "loop": true
+      }
+     ]
+    }
+   },
+   {
+    "w": "stray",
+    "word": "stray",
+    "m": "走失、乱跑",
+    "say": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "text": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "diff": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "d": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "desc": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "line": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "talk": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "note": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "explain": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "zh": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "sent": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "mean": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/cat-sit_f0.svg",
+       "frames": [
+        "art/cat-sit_f0.svg",
+        "art/cat-sit_f1.svg",
+        "art/cat-sit_f2.svg"
+       ],
+       "fps": 2,
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.5
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.02,
+       "y": 0.9,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.9
+        ],
+        "to": [
+         0.98,
+         0.9
+        ],
+        "offset": 0.4
+       }
+      }
+     ]
+    }
+   },
+   {
+    "w": "wander",
+    "word": "wander",
+    "m": "闲逛、走神",
+    "say": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "text": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "diff": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "d": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "desc": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "line": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "talk": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "note": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "explain": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "zh": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "sent": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "mean": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.02,
+       "y": 0.78,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.78
+        ],
+        "to": [
+         0.98,
+         0.78
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "svg": "art/bench.svg",
+       "x": 0.3,
+       "y": 0.74,
+       "s": 0.26
+      }
+     ]
+    }
+   },
+   {
+    "w": "depart",
+    "word": "depart",
+    "m": "离开、背离",
+    "say": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "text": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "diff": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "d": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "desc": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "line": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "talk": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "note": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "explain": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "zh": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "sent": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "mean": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "svg": "art/train.svg",
+       "x": 0.4,
+       "y": 0.66,
+       "s": 0.32,
+       "go": [
+        1.0,
+        0.66
+       ],
+       "dur": 3,
+       "wait": 0.6,
+       "loop": true
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.98,
+       "y": 0.9,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.9
+        ],
+        "to": [
+         0.02,
+         0.9
+        ],
+        "offset": 0.3
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "pics": {
+   "deviate": {
+    "bg": "blank",
+    "img": "art/countryside-bg.svg",
+    "items": [
+     {
+      "svg": "art/road.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.6
+     },
+     {
+      "svg": "art/car.svg",
+      "x": 0.5,
+      "y": 0.64,
+      "s": 0.26,
+      "go": [
+       0.82,
+       0.82
+      ],
+      "dur": 2,
+      "wait": 0.4,
+      "loop": true
+     }
+    ]
+   },
+   "stray": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/cat-sit_f0.svg",
+      "frames": [
+       "art/cat-sit_f0.svg",
+       "art/cat-sit_f1.svg",
+       "art/cat-sit_f2.svg"
+      ],
+      "fps": 2,
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.5
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.02,
+      "y": 0.9,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.9
+       ],
+       "to": [
+        0.98,
+        0.9
+       ],
+       "offset": 0.4
+      }
+     }
+    ]
+   },
+   "wander": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.02,
+      "y": 0.78,
+      "s": 0.5,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.78
+       ],
+       "to": [
+        0.98,
+        0.78
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "svg": "art/bench.svg",
+      "x": 0.3,
+      "y": 0.74,
+      "s": 0.26
+     }
+    ]
+   },
+   "depart": {
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "svg": "art/train.svg",
+      "x": 0.4,
+      "y": 0.66,
+      "s": 0.32,
+      "go": [
+       1.0,
+       0.66
+      ],
+      "dur": 3,
+      "wait": 0.6,
+      "loop": true
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.98,
+      "y": 0.9,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.9
+       ],
+       "to": [
+        0.02,
+        0.9
+       ],
+       "offset": 0.3
+      }
+     }
+    ]
+   }
+  },
+  "logic": "deviate 是 de 离开 + vi 路：离开定好的那条路，所以偏离路线、计划、标准；stray、wander 是走着走着乱跑、闲逛；depart 是从一个地方出发离开。",
+  "tip": "偏离计划、标准用 deviate from；流浪的动物用 stray；闲逛用 wander；出发用 depart。",
+  "say": {
+   "deviate": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+   "stray": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+   "wander": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+   "depart": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。"
+  },
+  "lines": {
+   "deviate": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+   "stray": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+   "wander": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+   "depart": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。"
+  },
+  "talk": {
+   "deviate": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+   "stray": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+   "wander": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+   "depart": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。"
+  },
+  "text": {
+   "deviate": "deviate 是偏离：离开原来定好的路线、计划、标准，常说 deviate from。",
+   "stray": "stray 是走失、乱跑：漫无目的地离开该待的地方，a stray cat 流浪猫。",
+   "wander": "wander 是闲逛、溜达：没有目的地慢慢走，也说思想走神。",
+   "depart": "depart 是离开、出发：火车出发用它，depart from 也说背离传统、习惯。"
+  }
+ },
+ "demo": {
+  "widen": {
+   "icons": [
+    "art/icon-dwide.svg",
+    "art/icon-den.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/road-widen.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.82,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "使变宽"
+  },
+  "modernize": {
+   "icons": [
+    "art/icon-dmodern.svg",
+    "art/icon-dize.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/modern.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.84,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "使现代化"
+  },
+  "create": {
+   "icons": [
+    "art/icon-dcre.svg",
+    "art/icon-date.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/easel.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.86,
+      "anim": "bob"
+     }
+    ]
+   },
+   "lit": "造出来"
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：飞机怎么了？",
+    "listen": "The plane deviated from its course.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "准时降落了",
+     "起飞了",
+     "坏了",
+     "偏离了航线"
+    ],
+    "ans": "D",
+    "why": "deviate from 偏离。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Don't ______ from the plan.",
+    "opts": [
+     "deviation",
+     "deviated",
+     "deviate",
+     "deviating"
+    ],
+    "ans": "C",
+    "why": "Don't 后面用动词原形 deviate。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 deviate、follow 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Please ______ the rules carefully.",
+    "opts": [],
+    "ans": "follow",
+    "why": "遵守规则用 follow；deviate 是偏离。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The ship ______ from its route last night. (deviate)",
+    "opts": [],
+    "ans": "deviated",
+    "why": "讲过去，deviate 去 e 加 d。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He never deviates of his plan.",
+    "opts": [],
+    "ans": "of → from",
+    "why": "deviate from 偏离、背离。",
+    "kd": "用法"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这里没有一点偏差。",
+    "stem": "There is no ______ here.",
+    "opts": [],
+    "ans": "deviation",
+    "why": "名词“偏差”是 deviation。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The car is ______ from the road.",
+    "opts": [
+     "deviating",
+     "deviateing",
+     "deviated",
+     "deviates"
+    ],
+    "ans": "A",
+    "why": "is 后面用现在分词，deviate 去 e 加 ing。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

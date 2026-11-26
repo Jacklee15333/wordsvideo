@@ -1,7 +1,1152 @@
 {
  "单词": "trivial",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "ˈtrɪ",
+   "vi",
+   "əl"
+  ],
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/crossroad.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "shadow": true
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.02,
+      "y": 0.9,
+      "s": 0.36,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.9
+       ],
+       "to": [
+        0.98,
+        0.9
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.98,
+      "y": 0.92,
+      "s": 0.38,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.98,
+        0.92
+       ],
+       "to": [
+        0.02,
+        0.92
+       ],
+       "offset": 0.6
+      }
+     },
+     {
+      "label": "tri = 三",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/countryside-bg.svg",
+    "items": [
+     {
+      "svg": "art/road.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.62,
+      "shadow": true
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.02,
+      "y": 0.84,
+      "s": 0.42,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.02,
+        0.84
+       ],
+       "to": [
+        0.98,
+        0.84
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "label": "vi = 路",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "p2": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/tag.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.5,
+      "anim": "pulse",
+      "shadow": true
+     },
+     {
+      "label": "…的",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     },
+     {
+      "label": "名词 → 形容词",
+      "x": 0.5,
+      "y": 0.88,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "delay": 0.6
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-tri.svg",
+   "p1": "art/icon-road.svg",
+   "p2": "art/icon-al.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/crossroad.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.02,
+     "y": 0.9,
+     "s": 0.36,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.02,
+       0.9
+      ],
+      "to": [
+       0.98,
+       0.9
+      ],
+      "offset": 0.3
+     }
+    },
+    {
+     "label": "三岔路口的",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.075,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "琐碎的、不重要的",
+    "pos": "形容词",
+    "diff": "不值一提的小事",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.88,
+      "s": 0.3
+     },
+     {
+      "svg": "art/trinkets.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.48,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/paperclip.svg",
+      "x": 0.84,
+      "y": 0.56,
+      "s": 0.24,
+      "anim": "sway"
+     },
+     {
+      "label": "不值一提",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Don't worry about trivial things.",
+    "exzh": "别为琐碎的小事担心。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-teacher-point",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.84,
+       "z": 3,
+       "id": "t",
+       "seq": "talk"
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.82,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "nodWith": "t",
+       "seq": "blink"
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.26,
+       "z": 1
+      },
+      {
+       "svg": "art/trinkets.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "trivial things",
+       "pop": true
+      },
+      {
+       "label": "trivial things",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "trivial things"
+      },
+      {
+       "label": "琐碎的小事",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "琐碎的小事"
+      }
+     ]
+    }
+   },
+   {
+    "text": "平凡的、平常的",
+    "pos": "形容词",
+    "diff": "到处都有，不稀奇",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.88,
+      "s": 0.3
+     },
+     {
+      "svg": "art/breakfast.svg",
+      "x": 0.42,
+      "y": 0.56,
+      "s": 0.46,
+      "shadow": true
+     },
+     {
+      "svg": "art/toothbrush.svg",
+      "x": 0.82,
+      "y": 0.56,
+      "s": 0.32,
+      "anim": "bob"
+     },
+     {
+      "label": "平平常常",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "These are trivial, everyday things.",
+    "exzh": "这些都是平平常常的日常小事。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.16,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.56,
+       "y": 0.9,
+       "s": 0.26,
+       "z": 1
+      },
+      {
+       "svg": "art/breakfast.svg",
+       "x": 0.46,
+       "y": 0.6,
+       "s": 0.4,
+       "when": "everyday"
+      },
+      {
+       "svg": "art/toothbrush.svg",
+       "x": 0.76,
+       "y": 0.6,
+       "s": 0.3,
+       "when": "things",
+       "anim": "bob"
+      },
+      {
+       "label": "trivial",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "trivial"
+      },
+      {
+       "label": "平平常常",
+       "x": 0.84,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "平平常常"
+      }
+     ]
+    }
+   },
+   {
+    "text": "（数学）平凡的",
+    "pos": "形容词",
+    "diff": "一看就有、最简单的那个解",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.42,
+      "y": 0.6,
+      "s": 0.5,
+      "anim": "bob"
+     },
+     {
+      "label": "x · 5 = 0",
+      "x": 0.42,
+      "y": 0.16,
+      "size": 0.1,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     },
+     {
+      "label": "x = 0 平凡解",
+      "x": 0.8,
+      "y": 0.4,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.8
+     }
+    ],
+    "ex": "Zero is the trivial answer.",
+    "exzh": "零是那个平凡解。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-think",
+       "x": 0.18,
+       "y": 0.6,
+       "s": 0.8,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.5,
+       "y": 0.62,
+       "s": 0.46,
+       "when": "answer"
+      },
+      {
+       "label": "x = 0",
+       "x": 0.5,
+       "y": 0.16,
+       "size": 0.12,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "Zero"
+      },
+      {
+       "label": "trivial answer",
+       "x": 0.82,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "trivial answer"
+      },
+      {
+       "label": "平凡解",
+       "x": 0.82,
+       "y": 0.5,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "平凡解"
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.96,
+       "s": 0.2,
+       "z": 6
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“三岔路口的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/crossroad.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.66
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.02,
+       "y": 0.9,
+       "s": 0.36,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.9
+        ],
+        "to": [
+         0.98,
+         0.9
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "label": "tri 三 + vi 路 + al 的",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "路口人来人往、谁都能到",
+    "node": "公共的（拉丁语）",
+    "say": [
+     "tri 是三，vi 是路，三条路交汇的地方，就是三岔路口。",
+     "路口人来人往，谁都能到，在拉丁语里就是公共的。"
+    ],
+    "from": 0,
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/crossroad.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "when": "三岔路口"
+      },
+      {
+       "label": "tri 三",
+       "x": 0.2,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "三"
+      },
+      {
+       "label": "vi 路",
+       "x": 0.8,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "路"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.98,
+       "y": 0.9,
+       "s": 0.36,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.9
+        ],
+        "to": [
+         0.02,
+         0.9
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "label": "公共的",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "公共的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "到处都是，也就不稀奇",
+    "node": "② 平凡的、平常的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "人人都有、到处都是的东西，也就不稀奇了。",
+     "这就是平凡的、平常的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/toothbrush.svg",
+       "x": 0.3,
+       "y": 0.52,
+       "s": 0.4,
+       "when": "人人都有",
+       "anim": "bob"
+      },
+      {
+       "svg": "art/breakfast.svg",
+       "x": 0.66,
+       "y": 0.54,
+       "s": 0.46,
+       "when": "到处都是"
+      },
+      {
+       "label": "不稀奇",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "不稀奇"
+      },
+      {
+       "label": "平常的",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "平常的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "太普通了，不值一提",
+    "node": "① 琐碎的、不重要的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "太普通了，就不值一提。",
+     "这就是琐碎的、不重要的，trivial things 就是琐事。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/trinkets.svg",
+       "x": 0.42,
+       "y": 0.54,
+       "s": 0.5,
+       "when": "太普通了"
+      },
+      {
+       "svg": "art/paperclip.svg",
+       "x": 0.82,
+       "y": 0.54,
+       "s": 0.28,
+       "when": "不值一提",
+       "anim": "sway"
+      },
+      {
+       "label": "不值一提",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "不值一提"
+      },
+      {
+       "label": "trivial things",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "trivial things"
+      }
+     ]
+    }
+   },
+   {
+    "via": "换个场合：数学里最简单的那个解",
+    "node": "③ （数学）平凡的",
+    "pos": "形容词",
+    "pic": 2,
+    "say": [
+     "英语里，一个词的核心意思不变，换了场合，中文就要换个说法。",
+     "play 是玩，玩球就是踢球，玩乐器就是演奏。",
+     "trivial 也一样：到了数学里，一看就有、最简单的那个解，叫平凡解。"
+    ],
+    "rule": "词的核心意思不变，换了对象、场合，中文要换个说法，英语还是这个词",
+    "ruleEx": "trivial 不重要的 → （数学）平凡的      play 玩 → 踢（球）、演奏（乐器）",
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "label": "核心意思不变",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "核心意思不变",
+       "hideCue": 1
+      },
+      {
+       "label": "换个说法",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "换个说法",
+       "hideCue": 1
+      },
+      {
+       "label": "play",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "play",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/ball.svg",
+       "x": 0.28,
+       "y": 0.52,
+       "s": 0.4,
+       "when": "踢球",
+       "hideCue": 2,
+       "anim": "spin"
+      },
+      {
+       "svg": "art/guitar.svg",
+       "x": 0.72,
+       "y": 0.52,
+       "s": 0.56,
+       "when": "演奏",
+       "hideCue": 2,
+       "anim": "sway"
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.42,
+       "y": 0.6,
+       "s": 0.5,
+       "cue": 2,
+       "when": "数学里"
+      },
+      {
+       "label": "x = 0",
+       "x": 0.8,
+       "y": 0.3,
+       "size": 0.1,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "最简单的"
+      },
+      {
+       "label": "平凡解",
+       "x": 0.8,
+       "y": 0.56,
+       "size": 0.075,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "平凡解"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "不重要的、平常的",
+   "items": [
+    {
+     "w": "trivial",
+     "word": "trivial",
+     "m": "琐碎的、平常的",
+     "say": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "text": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "diff": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "d": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "desc": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "line": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "talk": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "note": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "explain": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "zh": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "sent": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "mean": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/trinkets.svg",
+        "x": 0.5,
+        "y": 0.54,
+        "s": 0.6,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "unimportant",
+     "word": "unimportant",
+     "m": "不重要的",
+     "say": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "text": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "diff": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "d": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "desc": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "line": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "talk": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "note": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "explain": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "zh": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "sent": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "mean": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/paperclip.svg",
+        "x": 0.5,
+        "y": 0.52,
+        "s": 0.6,
+        "anim": "sway"
+       }
+      ]
+     }
+    },
+    {
+     "w": "usual",
+     "word": "usual",
+     "m": "通常的",
+     "say": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "text": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "diff": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "d": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "desc": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "line": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "talk": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "note": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "explain": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "zh": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "sent": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "mean": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/breakfast.svg",
+        "x": 0.5,
+        "y": 0.54,
+        "s": 0.6
+       },
+       {
+        "svg": "art/clock.svg",
+        "x": 0.84,
+        "y": 0.4,
+        "s": 0.3,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "normal",
+     "word": "normal",
+     "m": "正常的",
+     "say": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "text": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "diff": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "d": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "desc": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "line": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "talk": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "note": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "explain": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "zh": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "sent": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "mean": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/thermometer.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "everyday",
+     "word": "everyday",
+     "m": "日常的",
+     "say": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "text": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "diff": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "d": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "desc": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "line": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "talk": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "note": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "explain": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "zh": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "sent": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "mean": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/toothbrush.svg",
+        "x": 0.5,
+        "y": 0.54,
+        "s": 0.62,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "ordinary",
+     "word": "ordinary",
+     "m": "普通的",
+     "say": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "text": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "diff": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "d": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "desc": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "line": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "talk": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "note": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "explain": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "zh": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "sent": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "mean": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/mug.svg",
+        "x": 0.5,
+        "y": 0.56,
+        "s": 0.6,
+        "anim": "bob"
+       }
+      ]
+     }
+    }
+   ],
+   "pics": {
+    "trivial": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/trinkets.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.6,
+       "anim": "bob"
+      }
+     ]
+    },
+    "unimportant": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/paperclip.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "anim": "sway"
+      }
+     ]
+    },
+    "usual": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/breakfast.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.6
+      },
+      {
+       "svg": "art/clock.svg",
+       "x": 0.84,
+       "y": 0.4,
+       "s": 0.3,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "normal": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/thermometer.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "everyday": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/toothbrush.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.62,
+       "anim": "bob"
+      }
+     ]
+    },
+    "ordinary": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/mug.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.6,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   "logic": "trivial 来自三岔路口：谁都能到、到处都是，所以平常，再到不值一提；unimportant、minor 只说不重要、次要；usual、normal、everyday、ordinary 只说平常，不带“不值一提”。",
+   "tip": "说“琐事、鸡毛蒜皮”用 trivial；只说不重要用 unimportant；说平常用 usual、ordinary、everyday。",
+   "say": {
+    "trivial": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+    "unimportant": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+    "usual": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+    "normal": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+    "everyday": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+    "ordinary": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。"
+   },
+   "lines": {
+    "trivial": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+    "unimportant": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+    "usual": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+    "normal": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+    "everyday": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+    "ordinary": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。"
+   },
+   "talk": {
+    "trivial": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+    "unimportant": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+    "usual": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+    "normal": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+    "everyday": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+    "ordinary": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。"
+   },
+   "text": {
+    "trivial": "trivial 是琐碎的、不值一提的：带点“小事一桩、不值得费心”的味道，trivial things 琐事。",
+    "unimportant": "unimportant 是不重要的：un 不 + important 重要的，只是说不重要，没有“琐碎”的意思。",
+    "usual": "usual 是通常的、惯常的：平时一直这样，as usual 和往常一样。",
+    "normal": "normal 是正常的：合乎标准、没有异常，normal temperature 正常体温。",
+    "everyday": "everyday 是日常的：每天都用、每天都做，everyday life 日常生活。",
+    "ordinary": "ordinary 是普通的：不特别、和大家一样，an ordinary cup 一只普通的杯子。"
+   }
+  },
+  "demo": {
+   "careful": {
+    "icons": [
+     "art/icon-dcare.svg",
+     "art/icon-dful.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/eggs.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "充满小心的"
+   },
+   "careless": {
+    "icons": [
+     "art/icon-dcare.svg",
+     "art/icon-dless.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/spill2.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.72,
+       "anim": "shake"
+      }
+     ]
+    },
+    "lit": "没有小心的"
+   },
+   "national": {
+    "icons": [
+     "art/icon-dnation.svg",
+     "art/icon-dal.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/flag.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.86,
+       "anim": "sway"
+      }
+     ]
+    },
+    "lit": "国家的"
+   }
+  }
+ },
+ "插图": [
+  "trivialai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：他们为什么吵架？\n听：They argued about a trivial thing.\nA. 一件大事\nB. 一件小事\nC. 钱\nD. 考试",
@@ -88,5 +1233,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
