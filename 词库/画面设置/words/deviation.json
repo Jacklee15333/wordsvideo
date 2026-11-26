@@ -1019,6 +1019,65 @@
    "error": "error 是错误：做错、算错了，强调“不对”，a spelling error 拼写错误。"
   }
  },
+ "demo": {
+  "reading": {
+   "icons": [
+    "art/icon-dread.svg",
+    "art/icon-ding.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/openbook.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.8,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "lit": "读这件事"
+  },
+  "action": {
+   "icons": [
+    "art/icon-dact.svg",
+    "art/icon-dion.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/clapper.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.86,
+      "anim": "shake"
+     }
+    ]
+   },
+   "lit": "做这件事"
+  },
+  "movement": {
+   "icons": [
+    "art/icon-dmove.svg",
+    "art/icon-dment.svg"
+   ],
+   "pic": {
+    "bg": "studio",
+    "items": [
+     {
+      "svg": "art/movebox.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.8,
+      "anim": "bob"
+     }
+    ]
+   },
+   "lit": "移动这件事"
+  }
+ },
  "lianxi": {
   "qs": [
    {

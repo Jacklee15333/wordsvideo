@@ -1010,6 +1010,65 @@
     "journey": "journey 是一段路程：从一个地方到另一个地方，常是陆路，a long journey 长途跋涉。",
     "travel": "travel 是旅行的泛称：到处走走看看，love to travel 喜欢旅行。"
    }
+  },
+  "demo": {
+   "reading": {
+    "icons": [
+     "art/icon-dread.svg",
+     "art/icon-ding.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/openbook.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "读这件事"
+   },
+   "action": {
+    "icons": [
+     "art/icon-dact.svg",
+     "art/icon-dion.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/clapper.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.86,
+       "anim": "shake"
+      }
+     ]
+    },
+    "lit": "做这件事"
+   },
+   "pressure": {
+    "icons": [
+     "art/icon-dpress.svg",
+     "art/icon-dure.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/pressbtn.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.84,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "压这件事"
+   }
   }
  },
  "插图": [
@@ -1103,5 +1162,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

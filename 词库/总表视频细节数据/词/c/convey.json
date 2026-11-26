@@ -1390,6 +1390,65 @@
     "phrase": "phrase 是措辞：挑什么词、怎么组织句子，phrase it politely 说得客气些。",
     "voice": "voice 是说出：把意见、不满公开说出来，voice an opinion 表达意见。"
    }
+  },
+  "demo": {
+   "combine": {
+    "icons": [
+     "art/icon-dcom.svg",
+     "art/icon-dbine.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/puzzle.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "两个合在一起"
+   },
+   "connect": {
+    "icons": [
+     "art/icon-dcon.svg",
+     "art/icon-dnect.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/plug.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "lit": "系在一起"
+   },
+   "cooperate": {
+    "icons": [
+     "art/icon-dco.svg",
+     "art/icon-doperate.svg"
+    ],
+    "pic": {
+     "bg": "studio",
+     "items": [
+      {
+       "svg": "art/teamlift.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.82,
+       "anim": "bob"
+      }
+     ]
+    },
+    "lit": "一起干活"
+   }
   }
  },
  "插图": [
@@ -1484,5 +1543,5 @@
  "题目生成": "2026-11-19 Claude（云端）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
