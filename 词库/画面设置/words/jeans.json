@@ -1,0 +1,537 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/denim-roll.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.56,
+     "anim": "sway"
+    },
+    {
+     "label": "热那亚布",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/jeans.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.66,
+     "anim": "sway"
+    },
+    {
+     "label": "两条裤腿",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-cloth.svg",
+  "p1": "art/icon-two.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/bedroom-bg.svg",
+  "items": [
+   {
+    "svg": "art/denim-roll.svg",
+    "x": 0.3,
+    "y": 0.56,
+    "s": 0.4,
+    "anim": "bob"
+   },
+   {
+    "ray": [
+     [
+      0.46,
+      0.56
+     ],
+     [
+      0.58,
+      0.56
+     ]
+    ],
+    "color": "#E8590C",
+    "lw": 0.014,
+    "arrow": true,
+    "dur": 0.8
+   },
+   {
+    "svg": "art/jeans.svg",
+    "x": 0.74,
+    "y": 0.5,
+    "s": 0.62,
+    "anim": "sway"
+   },
+   {
+    "label": "用热那亚布做的裤子",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.08,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "牛仔裤",
+   "pos": "名词",
+   "diff": "用 denim 粗斜纹布做的裤子，总是复数",
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/jeans.svg",
+     "x": 0.44,
+     "y": 0.5,
+     "s": 0.66,
+     "anim": "sway"
+    },
+    {
+     "actor": "west-girl-raise",
+     "x": 0.82,
+     "y": 0.58,
+     "s": 0.6,
+     "z": 3,
+     "seq": "pingpong",
+     "fps": 2
+    }
+   ],
+   "ex": "I bought a new pair of jeans.",
+   "exzh": "我买了一条新牛仔裤。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.2,
+      "y": 0.58,
+      "s": 0.66,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "I bought"
+     },
+     {
+      "svg": "art/jeans.svg",
+      "x": 0.56,
+      "y": 0.48,
+      "s": 0.56,
+      "when": "jeans",
+      "pop": true,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/shopbags.svg",
+      "x": 0.84,
+      "y": 0.7,
+      "s": 0.28,
+      "when": "bought",
+      "anim": "bob"
+     },
+     {
+      "label": "a pair of jeans",
+      "x": 0.56,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "a pair of jeans"
+     },
+     {
+      "label": "牛仔裤",
+      "x": 0.84,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "牛仔裤"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "热那亚（Genoa）",
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/ship-genoa.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "anim": "bob"
+     },
+     {
+      "label": "Gene 热那亚",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "地名变成布名",
+   "node": "热那亚布",
+   "say": [
+    "意大利的热那亚出一种结实的粗斜纹棉布，用船运到各地。",
+    "地名就变成了布名，叫 jean。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/ship-genoa.svg",
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.46,
+      "when": "热那亚",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/denim-roll.svg",
+      "x": 0.74,
+      "y": 0.52,
+      "s": 0.4,
+      "when": "粗斜纹棉布",
+      "pop": true
+     },
+     {
+      "label": "jean",
+      "x": 0.74,
+      "y": 0.86,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "cue": 1,
+      "when": "jean"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "用这种布做的裤子，按裤子的习惯用复数",
+   "node": "牛仔裤",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "用这种布做的裤子有两条裤腿，英语说裤子习惯用复数，像 trousers。",
+    "所以叫 jeans，就是牛仔裤，一条要说 a pair of jeans。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/jeans.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.66,
+      "when": "两条裤腿",
+      "anim": "sway"
+     },
+     {
+      "label": "trousers",
+      "x": 0.16,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "trousers"
+     },
+     {
+      "label": "a pair of jeans",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "cue": 1,
+      "when": "a pair of jeans"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人今天买了什么？",
+    "listen": "I bought a new pair of jeans today.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "一条牛仔裤",
+     "一件衬衫",
+     "一双鞋",
+     "一顶帽子"
+    ],
+    "ans": "A",
+    "why": "a pair of jeans 一条牛仔裤。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "My jeans ______ too short now.",
+    "opts": [
+     "is",
+     "be",
+     "am",
+     "are"
+    ],
+    "ans": "D",
+    "why": "jeans 只用复数，作主语时动词用 are。",
+    "kd": "用法"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 jeans、jacket 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "It's cold; put on your ______ over your shirt.",
+    "opts": [],
+    "ans": "jacket",
+    "why": "套在衬衫外面的是夹克 jacket。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "These jeans is too big for me.",
+    "opts": [],
+    "ans": "is → are",
+    "why": "主语 jeans 是复数，用 are。",
+    "kd": "用法"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "我想买两条牛仔裤。",
+    "stem": "I want to buy ______ ______ of jeans.",
+    "opts": [],
+    "ans": [
+     "two",
+     "pairs"
+    ],
+    "why": "“两条”说 two pairs of jeans。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "A pair of jeans ______ 200 yuan in that shop.",
+    "opts": [
+     "costs",
+     "cost",
+     "costing",
+     "are costing"
+    ],
+    "ans": "A",
+    "why": "主语是 a pair，谓语用单数 costs。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Jeans are usually made of ______.",
+    "opts": [
+     "silk",
+     "paper",
+     "denim",
+     "glass"
+    ],
+    "ans": "C",
+    "why": "今天的 jeans 一般用 denim 布做。",
+    "kd": "用法"
+   }
+  ]
+ }
+}

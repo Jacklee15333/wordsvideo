@@ -1,7 +1,668 @@
 {
  "单词": "mall",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "originPic": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/pallmall.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.6,
+     "anim": "sway"
+    },
+    {
+     "label": "pall-mall 球 + 木槌",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.085,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ]
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/pallmall.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.6,
+     "anim": "sway"
+    },
+    {
+     "label": "打球的那条道",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "（美）购物中心",
+    "pos": "名词",
+    "diff": "一大片店铺集中在一个屋顶下",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/shopfront.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.62,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/shopbags.svg",
+      "x": 0.86,
+      "y": 0.74,
+      "s": 0.24,
+      "anim": "sway"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ],
+    "ex": "Let's go shopping at the mall.",
+    "exzh": "我们去购物中心买东西吧。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/shopfront.svg",
+       "x": 0.5,
+       "y": 0.44,
+       "s": 0.6,
+       "when": "the mall",
+       "pop": true
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.14,
+       "y": 0.6,
+       "s": 0.6,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "Let's go"
+      },
+      {
+       "svg": "art/shopbags.svg",
+       "x": 0.86,
+       "y": 0.72,
+       "s": 0.26,
+       "when": "shopping",
+       "pop": true,
+       "anim": "sway"
+      },
+      {
+       "label": "mall",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "mall"
+      },
+      {
+       "label": "购物中心",
+       "x": 0.86,
+       "y": 0.2,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "购物中心"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "text": "林荫步行道",
+    "pos": "名词",
+    "diff": "两边种树、只走行人的路（老意思，留在地名里）",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/plant.svg",
+      "x": 0.2,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "sway",
+      "flip": true
+     },
+     {
+      "label": "The Mall",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ],
+    "ex": "We walked along the mall under the trees.",
+    "exzh": "我们在树荫下沿着林荫步行道散步。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/plant.svg",
+       "x": 0.16,
+       "y": 0.5,
+       "s": 0.5,
+       "anim": "sway",
+       "when": "trees"
+      },
+      {
+       "svg": "art/plant.svg",
+       "x": 0.84,
+       "y": 0.5,
+       "s": 0.5,
+       "anim": "sway",
+       "flip": true,
+       "when": "trees"
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.02,
+       "y": 0.84,
+       "s": 0.4,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.84
+        ],
+        "to": [
+         0.98,
+         0.84
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.4,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.5
+       }
+      },
+      {
+       "label": "the mall",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "the mall"
+      },
+      {
+       "label": "林荫步行道",
+       "x": 0.5,
+       "y": 0.2,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "林荫步行道"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "pall-mall：一种木槌打球的游戏",
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/pallmall.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.6,
+       "anim": "sway"
+      },
+      {
+       "label": "pall-mall",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "不打球了，平整的球道成了散步的地方",
+    "node": "② 林荫步行道",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "后来不打这种球了，那条平整的球道，种上树，成了人们散步的地方。",
+     "这就是林荫步行道。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/pallmall.svg",
+       "x": 0.5,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "不打这种球了",
+       "anim": "sway",
+       "hideWhen": "种上树"
+      },
+      {
+       "svg": "art/plant.svg",
+       "x": 0.2,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "种上树",
+       "anim": "sway"
+      },
+      {
+       "svg": "art/plant.svg",
+       "x": 0.8,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "种上树",
+       "anim": "sway",
+       "flip": true
+      },
+      {
+       "label": "林荫步行道",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "cue": 1,
+       "when": "林荫步行道"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "只走行人的商业街，再盖上屋顶",
+    "node": "① （美）购物中心",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "后来，只走行人、两边是商店的街，也叫 mall。",
+     "再把一大片店铺盖到一个屋顶下，就成了购物中心。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/shopbags.svg",
+       "x": 0.3,
+       "y": 0.6,
+       "s": 0.36,
+       "when": "商店",
+       "anim": "sway",
+       "hideCue": 1
+      },
+      {
+       "label": "只走行人",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.08,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "只走行人",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/shopfront.svg",
+       "x": 0.5,
+       "y": 0.46,
+       "s": 0.6,
+       "cue": 1,
+       "when": "一个屋顶下",
+       "pop": true
+      },
+      {
+       "label": "购物中心",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "cue": 1,
+       "when": "购物中心"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false
+ },
+ "插图": [
+  "mallai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人周六要去哪儿？\n听：We're going to the shopping mall on Saturday.\nA. 学校\nB. 购物中心\nC. 医院\nD. 机场",
@@ -92,5 +753,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

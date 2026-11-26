@@ -1,0 +1,761 @@
+{
+ "style": "core",
+ "board": true,
+ "originPic": {
+  "bg": "blank",
+  "img": "art/park-bg.svg",
+  "items": [
+   {
+    "svg": "art/pallmall.svg",
+    "x": 0.5,
+    "y": 0.56,
+    "s": 0.6,
+    "anim": "sway"
+   },
+   {
+    "label": "pall-mall 球 + 木槌",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.085,
+    "color": "#7A3E00",
+    "border": "#E0A800",
+    "bg": "#FFF6D8"
+   },
+   {
+    "actor": "walk-cn-girl",
+    "x": 0.02,
+    "y": 0.86,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.02,
+      0.86
+     ],
+     "to": [
+      0.98,
+      0.86
+     ],
+     "offset": 0.2
+    }
+   },
+   {
+    "actor": "walk-west-man-case",
+    "x": 0.98,
+    "y": 0.88,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.98,
+      0.88
+     ],
+     "to": [
+      0.02,
+      0.88
+     ],
+     "offset": 0.65
+    }
+   }
+  ]
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/park-bg.svg",
+  "items": [
+   {
+    "svg": "art/pallmall.svg",
+    "x": 0.5,
+    "y": 0.56,
+    "s": 0.6,
+    "anim": "sway"
+   },
+   {
+    "label": "打球的那条道",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   },
+   {
+    "actor": "walk-cn-girl",
+    "x": 0.02,
+    "y": 0.86,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.02,
+      0.86
+     ],
+     "to": [
+      0.98,
+      0.86
+     ],
+     "offset": 0.2
+    }
+   },
+   {
+    "actor": "walk-west-man-case",
+    "x": 0.98,
+    "y": 0.88,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.98,
+      0.88
+     ],
+     "to": [
+      0.02,
+      0.88
+     ],
+     "offset": 0.65
+    }
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "（美）购物中心",
+   "pos": "名词",
+   "diff": "一大片店铺集中在一个屋顶下",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/shopfront.svg",
+     "x": 0.5,
+     "y": 0.46,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/shopbags.svg",
+     "x": 0.86,
+     "y": 0.74,
+     "s": 0.24,
+     "anim": "sway"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ],
+   "ex": "Let's go shopping at the mall.",
+   "exzh": "我们去购物中心买东西吧。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/shopfront.svg",
+      "x": 0.5,
+      "y": 0.44,
+      "s": 0.6,
+      "when": "the mall",
+      "pop": true
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.14,
+      "y": 0.6,
+      "s": 0.6,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "Let's go"
+     },
+     {
+      "svg": "art/shopbags.svg",
+      "x": 0.86,
+      "y": 0.72,
+      "s": 0.26,
+      "when": "shopping",
+      "pop": true,
+      "anim": "sway"
+     },
+     {
+      "label": "mall",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "mall"
+     },
+     {
+      "label": "购物中心",
+      "x": 0.86,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "购物中心"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "林荫步行道",
+   "pos": "名词",
+   "diff": "两边种树、只走行人的路（老意思，留在地名里）",
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/plant.svg",
+     "x": 0.2,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/plant.svg",
+     "x": 0.8,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "sway",
+     "flip": true
+    },
+    {
+     "label": "The Mall",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.08,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ],
+   "ex": "We walked along the mall under the trees.",
+   "exzh": "我们在树荫下沿着林荫步行道散步。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/plant.svg",
+      "x": 0.16,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "sway",
+      "when": "trees"
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.84,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "sway",
+      "flip": true,
+      "when": "trees"
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.02,
+      "y": 0.84,
+      "s": 0.4,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.84
+       ],
+       "to": [
+        0.98,
+        0.84
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.4,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.5
+      }
+     },
+     {
+      "label": "the mall",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "the mall"
+     },
+     {
+      "label": "林荫步行道",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "林荫步行道"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "pall-mall：一种木槌打球的游戏",
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/pallmall.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.6,
+      "anim": "sway"
+     },
+     {
+      "label": "pall-mall",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "不打球了，平整的球道成了散步的地方",
+   "node": "② 林荫步行道",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "后来不打这种球了，那条平整的球道，种上树，成了人们散步的地方。",
+    "这就是林荫步行道。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/pallmall.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.5,
+      "when": "不打这种球了",
+      "anim": "sway",
+      "hideWhen": "种上树"
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.2,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "种上树",
+      "anim": "sway"
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "种上树",
+      "anim": "sway",
+      "flip": true
+     },
+     {
+      "label": "林荫步行道",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "林荫步行道"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "只走行人的商业街，再盖上屋顶",
+   "node": "① （美）购物中心",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "后来，只走行人、两边是商店的街，也叫 mall。",
+    "再把一大片店铺盖到一个屋顶下，就成了购物中心。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/shopbags.svg",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.36,
+      "when": "商店",
+      "anim": "sway",
+      "hideCue": 1
+     },
+     {
+      "label": "只走行人",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "只走行人",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/shopfront.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.6,
+      "cue": 1,
+      "when": "一个屋顶下",
+      "pop": true
+     },
+     {
+      "label": "购物中心",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "购物中心"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人周六要去哪儿？",
+    "listen": "We're going to the shopping mall on Saturday.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "学校",
+     "购物中心",
+     "医院",
+     "机场"
+    ],
+    "ans": "B",
+    "why": "mall 购物中心。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "There are two big ______ near my home.",
+    "opts": [
+     "malls",
+     "mall",
+     "malling",
+     "malled"
+    ],
+    "ans": "A",
+    "why": "two 后接复数 malls。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 mall、market 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "We buy fresh fish at the farmers' ______.",
+    "opts": [],
+    "ans": "market",
+    "why": "farmers' market 农贸市场。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "There are many shop in the new mall.",
+    "opts": [],
+    "ans": "shop → shops",
+    "why": "many 后接可数名词复数。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "我们在购物中心见吧。",
+    "stem": "Let's meet at the shopping ______.",
+    "opts": [],
+    "ans": "mall",
+    "why": "shopping mall 购物中心。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "A \"mall rat\" is a young person who ______.",
+    "opts": [
+     "keeps rats",
+     "works in a lab",
+     "hates shopping",
+     "hangs out in malls"
+    ],
+    "ans": "D",
+    "why": "mall rat 指整天泡在商场里的年轻人。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "In the UK, a mall is often called a shopping ______.",
+    "opts": [
+     "street",
+     "bag",
+     "centre",
+     "list"
+    ],
+    "ans": "C",
+    "why": "英国常说 shopping centre。",
+    "kd": "用法"
+   }
+  ]
+ }
+}
