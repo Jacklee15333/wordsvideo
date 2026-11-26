@@ -771,9 +771,12 @@ def _env_verdict(res):
         txt("skill").split("，")[0], txt("models").replace("装好了", ""), "开了" if st("gpu") == "ok" else "没开（可选）"), ""
 
 
-def env_check(say):
-    """开始页「② 检测」的出片环境：v1.11.0 起和「出视频」页的检查是同一套，一项一句。返回 (状态, 一句话, 去哪儿修)。"""
+def env_check(say, acts=None):
+    """开始页「② 检测」的出片环境：v1.11.0 起和「出视频」页的检查是同一套，一项一句。返回 (状态, 一句话, 去哪儿修)。
+    v1.21.1：acts 给了一个列表，就把没好的几项能自动修的办法（sync、boot、models、gpu）按先后记进去（「一键修复」用）"""
     def on_item(k, st, text, fix):
+        if st == "bad" and fix in FIX_NAME and acts is not None and fix not in acts:
+            acts.append(fix)
         if st in ("ok", "bad", "opt"):
             say("%s：%s" % (EC_NAME[k], text), True if st == "ok" else False if st == "bad" else None)
     res, meta = _probe_env(on_item)

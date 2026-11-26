@@ -712,7 +712,7 @@ details.vgk>.vgo{margin-top:6px}
     <p class="muted">出题、画画面要用 AI 和词库，出视频要用这台电脑的出片环境。点「一键检测」，三样都打 ✓ 就可以往下做。</p></div>
     <button class="btn ghost sm" id="tHelp">怎么用？</button></div>
   <div class="box kready" id="kBox">
-    <div class="khead"><button class="btn" id="kAll">一键检测</button><span id="kAllMsg" class="small muted">三样一起测，每一步都写在下面的「检测详情」里</span></div>
+    <div class="khead"><button class="btn" id="kAll">一键检测</button><button class="btn" id="kFix" hidden title="检测出来没好、软件自己能修的（同步到 WSL、装系统软件、装声音模型、重新同步词库），在这一页就修，修完自己再检测一遍">一键修复</button><span id="kAllMsg" class="small muted">三样一起测，每一步都写在下面的「检测详情」里</span></div>
     <div class="krow"><span class="kok" id="kAIOk">–</span><span class="kname">AI</span>
       <div class="kmid"><div class="who" id="tWho">用的是：<b>—</b> <a href="#" onclick="gearOpen();return false">换一个</a><span id="tOpen" hidden> · <a href="#" onclick="openRelay();return false"><b>打开网页 AI ↗</b></a></span></div>
         <div class="ksum" id="kAI">—</div></div>
@@ -1747,12 +1747,16 @@ function kRender(){
     if(b)b.disabled=!!it&&it.state==='running';
     if(!it||it.state==='idle'){kPassive(k);continue}
     const ok=$('#'+KID[k]+'Ok'),sum=$('#'+KID[k]);kIcon(ok,it.state);sum.className='ksum'+(it.state==='running'?'':' '+it.state);
-    if(it.state==='running'){const last=(it.steps||[]).slice(-1)[0];sum.textContent=`正在检测（${secs(it.secs)}）`+(last?'：'+last.msg:'')}
-    else sum.innerHTML=esc(it.summary)+(it.fix&&it.state!=='ok'&&KFIX[it.fix]?'　'+KFIX[it.fix]:'')+`<span class="faint">　${hhmm(it.finished)} 检测</span>`}
+    if(it.state==='running'){const last=(it.steps||[]).slice(-1)[0];sum.textContent=`${it.fixing?'正在修复':'正在检测'}（${secs(it.secs)}）`+(last?'：'+last.msg:'')}
+    else sum.innerHTML=esc(it.summary)+(it.fix&&it.state!=='ok'&&KFIX[it.fix]&&!(it.acts||[]).length?'　'+KFIX[it.fix]:'')+`<span class="faint">　${hhmm(it.finished)} 检测</span>`}
   const run=CK?KK.filter(k=>CK[k]&&CK[k].state==='running'):[],done=CK?KK.filter(k=>CK[k]&&['ok','bad','warn'].includes(CK[k].state)):[];
   $('#kAll').disabled=run.length===3;
+  const fixable=CK?KK.filter(k=>CK[k]&&CK[k].state==='bad'&&(CK[k].acts||[]).length):[],fixing=run.filter(k=>CK[k].fixing);
+  $('#kFix').hidden=!fixable.length||run.length>0;                 // v1.21.1：有能自动修的才出来
   const m=$('#kAllMsg');m.style.color='';
-  if(run.length)m.textContent='正在检测：'+run.map(k=>KN[k]).join('、')+'（每一步写在下面的「检测详情」里）';
+  if(run.length)m.textContent=(fixing.length?'正在修复：'+fixing.map(k=>KN[k]).join('、')+(run.length>fixing.length?'；正在检测：'+run.filter(k=>!CK[k].fixing).map(k=>KN[k]).join('、'):''):'正在检测：'+run.map(k=>KN[k]).join('、'))+'（每一步写在下面的「检测详情」里）';
+  else if(fixable.length){const bad=KK.filter(k=>CK[k].state==='bad'),self=bad.filter(k=>!fixable.includes(k));m.style.color='var(--red)';
+    m.textContent=`✗ ${fixable.map(k=>KN[k]).join('、')} 没好：点「一键修复」`+(self.length?`；${self.map(k=>KN[k]).join('、')} 要你自己改，看它后面那句`:'')}
   else if(done.length===3){const bad=KK.filter(k=>CK[k].state==='bad'),warn=KK.filter(k=>CK[k].state==='warn');
     m.style.color=bad.length?'var(--red)':warn.length?'var(--amber)':'var(--pass)';
     m.textContent=bad.length?`✗ ${bad.map(k=>KN[k]).join('、')} 没好：看它后面那句，点「详情」看是哪一步`:warn.length?`! ${warn.map(k=>KN[k]).join('、')} 要留意，其余都好了`:'✓ 三样都好了：填词，点「开始准备」'}
@@ -1760,7 +1764,7 @@ function kRender(){
 function kSec(k){
   const it=(CK||{})[k]||{state:'idle',steps:[],run:0},sec=$('#ks-'+k);
   kIcon(sec.querySelector('.kok'),it.state);
-  sec.querySelector('.kst .small').textContent=it.state==='running'?`正在检测，已经 ${secs(it.secs)}`:it.state==='idle'?'':
+  sec.querySelector('.kst .small').textContent=it.state==='running'?`${it.fixing?'正在修复':'正在检测'}，已经 ${secs(it.secs)}`:it.state==='idle'?'':
     `${{ok:'好了',bad:'没好',warn:'要留意'}[it.state]||''}　${hhmm(it.finished)} 检测，用了 ${secs(it.secs)}`;
   const steps=it.steps||[],em=sec.querySelector('.kempty');
   em.hidden=steps.length>0;if(!steps.length)em.textContent=k==='ai'?(KEMPTY.ai[KPV]||KEMPTY.ai.web):KEMPTY[k];
@@ -1801,13 +1805,17 @@ async function chkTick(force){
   if(!CKshown&&KK.some(k=>d[k]&&d[k].state==='running'))kShow();   // 在别处（设置里）点的检测，也打开详情
   kRender();
   if(CKshown){KK.forEach(kSec);kShot();const run=KK.filter(k=>d[k]&&d[k].state==='running');
-    $('#kDetLive').innerHTML=run.length?`<span class="dot"></span> 正在检测：${run.map(k=>KN[k]).join('、')}`:''}}
+    $('#kDetLive').innerHTML=run.length?`<span class="dot"></span> ${run.every(k=>CK[k].fixing)?'正在修复':'正在检测'}：${run.map(k=>KN[k]).join('、')}`:''}}
 setInterval(chkTick,1000);
 async function kTick(d){
   KPV=d.pv||KPV;
   if(Date.now()-KENV.t>600000){KENV.t=Date.now();try{KENV.d=await api('/api/video?what=env')}catch(e){KENV.d={msg:e.message}}}
   kRender()}
 $('#kAll').onclick=()=>kRun('all',$('#kAll'));
+$('#kFix').onclick=async()=>{const b=$('#kFix');b.disabled=true;kShow();kUnfold();       // v1.21.1：一键修复，在这一页修、修完自己再检测
+  try{const d=await api('/api/check',{op:'fix'});toast((d.ok?'':'✗ ')+d.msg,d.ok?5000:8000)}catch(e){toast('✗ 没开始修复：'+e.message,8000)}
+  finally{b.disabled=false}
+  await chkTick(true);const k=KK.find(x=>CK&&CK[x]&&CK[x].fixing);if(k)kFocus(k)};
 $$('[data-kc]').forEach(b=>b.onclick=()=>kRun(b.dataset.kc,b));
 $$('[data-kd]').forEach(b=>b.onclick=()=>kOpen(b.dataset.kd));
 function loadPick(){loadPool()}

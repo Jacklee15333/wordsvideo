@@ -688,7 +688,7 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/open": api_open,
         "/api/words-task": api_words_task,
         "/api/prep": api_prep,
-        "/api/check": lambda b: CK.start(b.get("what") or "all"),
+        "/api/check": lambda b: CK.fix_all() if b.get("op") == "fix" else CK.start(b.get("what") or "all"),      # v1.21.1：一键修复
         "/api/qres": lambda b: RS.export_words(b.get("words") or []),
         "/api/pres": lambda b: RS.draw(b.get("word") or ""),
         "/api/open-path": lambda b: RS.open_path(b.get("what") or "", b.get("word") or ""),

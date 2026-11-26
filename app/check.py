@@ -4,6 +4,8 @@
 每样在自己的后台线程里一步一步检测，每一步马上写进 CHECK；界面每秒来取一次，所以能看到正在检测的实时情况。
 用网页镜像 ChatGPT 时，界面还会带上浏览器画面（/api/ai/shot）。
 检测只看、不改：不提交、不上传、不同步、不装东西（令牌的“真试写入”只建一个不挂在任何提交上的小数据块，仓库里看不到）。
+v1.21.1：「一键修复」是另一件事（fix_all）：检测出来没好、软件自己能修的（出片环境同步到 WSL、装系统软件、装声音模型；词库重新同步），
+在这一页就修，修完自己再检测一遍。要你自己填的（AI 设置、GitHub 令牌）修不了，照旧写着去哪儿改。
 """
 import json, re, threading, time, traceback, urllib.error, urllib.request
 from pathlib import Path
@@ -14,7 +16,7 @@ import video as V
 ITEMS = ("ai", "repo", "env")
 NAMES = {"ai": "AI", "repo": "词库", "env": "出片环境"}
 _LOCK = threading.Lock()
-CHECK = {k: {"state": "idle", "summary": "", "fix": "", "steps": [], "started": 0.0, "finished": 0.0, "run": 0}
+CHECK = {k: {"state": "idle", "summary": "", "fix": "", "acts": [], "fixing": False, "steps": [], "started": 0.0, "finished": 0.0, "run": 0}
          for k in ITEMS}
 # state：idle 还没测 / running 正在测 / ok 好了 / bad 没好 / warn 能用但要留意（或者这次没法测）
 # fix：没好时去哪儿修——gear（AI 设置）、settings（左边「设置」）、video（「出视频」页）
@@ -29,14 +31,17 @@ def _say(k, msg, ok=None):
 def _run(k, fn):
     def say(msg, ok=None):
         _say(k, msg, ok)
+    acts = []
     try:
-        state, summary, fix = fn(say)
+        r = fn(say)
+        state, summary, fix = r[:3]
+        acts = list(r[3]) if len(r) > 3 and state == "bad" else []        # v1.21.1：软件自己能修的办法（一键修复）
     except Exception as e:
         traceback.print_exc()
         say("检测本身出错了：%s" % e, False)
         state, summary, fix = "bad", "检测本身出错了：%s" % str(e)[:120], ""
     with _LOCK:
-        CHECK[k].update(state=state, summary=C.mask(summary)[:300], fix=fix or "", finished=time.time())
+        CHECK[k].update(state=state, summary=C.mask(summary)[:300], fix=fix or "", acts=acts, fixing=False, finished=time.time())
     C.log("检测%s：%s %s" % (NAMES[k], {"ok": "✓", "bad": "✗", "warn": "!"}.get(state, ""), C.mask(summary)))
 
 
@@ -51,7 +56,7 @@ def start(what="all"):
             if it["state"] == "running":
                 busy.append(NAMES[k])
                 continue
-            it.update(state="running", summary="正在检测…", fix="", steps=[], started=time.time(), finished=0.0,
+            it.update(state="running", summary="正在检测…", fix="", acts=[], fixing=False, steps=[], started=time.time(), finished=0.0,
                       run=it["run"] + 1)
             new.append(k)
     for k in new:
@@ -66,7 +71,7 @@ def reset(k):
     with _LOCK:
         it = CHECK[k]
         if it["state"] != "running":
-            it.update(state="idle", summary="", fix="", steps=[], started=0.0, finished=0.0, run=it["run"] + 1)
+            it.update(state="idle", summary="", fix="", acts=[], fixing=False, steps=[], started=0.0, finished=0.0, run=it["run"] + 1)
 
 
 def snapshot(watch=False):
@@ -304,7 +309,7 @@ def check_repo(say):
     st = C.STATE
     br = cfg.get("branch") or "main"
     say("词库在 GitHub 仓库 %s（%s 分支）" % (C._main_repo(cfg) or cfg.get("repoUrl"), br))
-    bad, notes = [], []
+    bad, notes, tok_ok = [], [], False
     if not (cfg.get("githubToken") or "").strip():
         say("还没填 GitHub 令牌：左边「设置 → GitHub 仓库」里填，保存后软件自己克隆", False)
         bad.append("没填 GitHub 令牌")
@@ -312,12 +317,13 @@ def check_repo(say):
         say("检测 GitHub 令牌：真试一次写入（不会改仓库里的东西）…")
         ok, msg = C.check_token()
         say("GitHub 令牌：" + msg, ok)
+        tok_ok = ok
         if not ok:
             bad.append("GitHub 令牌" + ("写不进仓库" if "写不进" in msg else "没测通"))
     rs, err = st.get("repo") or "", st.get("repoError") or ""
     if not (C.REPO / ".git").exists():
         say("本机还没有词库副本（%s）%s" % (rs, "：" + err[:160] if err else ""), False)
-        return "bad", "本机还没有词库：" + (err[:120] or rs), "settings"
+        return "bad", "本机还没有词库：" + (err[:120] or rs), "settings", (["repo"] if tok_ok else [])
     say("本机词库副本：%s" % C.REPO, True)
     say("软件里的状态：%s%s" % (rs, "（%s）" % err[:160] if err else ""), True if rs == "就绪" else (None if rs == "正在同步" else False))
     if rs not in ("就绪", "正在同步"):
@@ -396,7 +402,8 @@ def check_repo(say):
     say("%d 处修改还没上传：做完一组会自己上传，也可以在「更多」里点「现在上传」" % n if n else "本机没有没上传的修改",
         None if n else True)
     if bad:
-        return "bad", "；".join(dict.fromkeys(bad)), "settings"
+        fixable = tok_ok and rs not in ("就绪", "正在同步", "等令牌", "要人工处理")
+        return "bad", "；".join(dict.fromkeys(bad)), "settings", (["repo"] if fixable else [])
     summ = "就绪：总表%s" % ver
     if s.get("total"):
         summ += "，题目 %s 行有、%s 行还缺" % (format(s["done"], ","), format(s["missing"], ","))
@@ -407,7 +414,84 @@ def check_repo(say):
 
 # ═══════════════════════ ③ 出片环境 ═══════════════════════
 def check_env(say):
-    return V.env_check(say)
+    acts = []
+    st, summ, fix = V.env_check(say, acts)
+    if st == "bad" and acts:                       # v1.21.1：在这一页就能修，不用再跑到「出视频」页
+        summ = re.sub(r"（「出视频」页[^）]*）", "", summ) + "：点「一键修复」"
+    return st, summ, fix, acts
+
+
+# ═══════════════════════ v1.21.1：一键修复 ═══════════════════════
+FIX_CN = {"sync": "同步到 WSL（视频技能、出片脚本、总表，一两分钟）", "boot": "装系统软件（10–20 分钟）", "models": "装声音模型（约 1.6 GB）",
+          "gpu": "开显卡", "repo": "重新同步词库"}
+
+
+def fix_all():
+    """检测出来没好、软件自己能修的，一样一样修，修完那一样自己再检测一遍。"""
+    todo = {}
+    with _LOCK:
+        busy = [NAMES[k] for k in ITEMS if CHECK[k]["state"] == "running"]
+        if busy:
+            return {"ok": False, "msg": "%s正在检测或修复，等它做完再点" % "、".join(busy)}
+        for k in ITEMS:
+            it = CHECK[k]
+            if it["state"] == "bad" and it.get("acts"):
+                todo[k] = list(it["acts"])
+                it.update(state="running", fixing=True, summary="正在修复…", steps=[], started=time.time(), finished=0.0, run=it["run"] + 1)
+    if not todo:
+        return {"ok": False, "msg": "没有能自动修的：看那一行后面那句话，照着改"}
+    for k, acts in todo.items():
+        threading.Thread(target=_fix_run, args=(k, acts), daemon=True, name="fix-" + k).start()
+    what = [FIX_CN.get(a, a).split("（")[0] for v in todo.values() for a in v]
+    C.log("一键修复：" + "、".join(what))
+    return {"ok": True, "msg": "开始修复：" + "、".join(what) + "。修完会自己再检测一遍"}
+
+
+def _do_fix(a, say, k):
+    """修一样，返回 (修好了没, 一句话)。"""
+    if a == "repo":
+        C.ensure_repo()
+        rs = C.STATE.get("repo") or ""
+        return rs == "就绪", "词库：" + (rs or "没准备好") + ("（%s）" % C.STATE.get("repoError", "")[:120] if rs != "就绪" and C.STATE.get("repoError") else "")
+    r = V.envfix(a)
+    if not r.get("ok"):
+        return False, r.get("msg") or "没开始"
+    last, t0 = "", time.time()
+    while time.time() - t0 < 3 * 3600:
+        time.sleep(2)
+        with V._EC_LOCK:
+            f = dict(V.EC["fix"].get(a) or {})
+        if f.get("msg") and f["msg"] != last and f.get("state") == "running":
+            last = f["msg"]
+            say(last)
+            with _LOCK:
+                CHECK[k]["summary"] = "正在修复：" + last[:80]
+        if f.get("state") != "running":
+            return f.get("state") == "ok", f.get("msg") or ("好了" if f.get("state") == "ok" else "没成")
+    return False, "等了三个小时还没做完：到「出视频」的「出片环境」里看看"
+
+
+def _fix_run(k, acts):
+    def say(msg, ok=None):
+        _say(k, msg, ok)
+    allok = True
+    for a in acts:
+        say("一键修复：" + FIX_CN.get(a, a) + "…")
+        with _LOCK:
+            CHECK[k]["summary"] = "正在修复：" + FIX_CN.get(a, a)
+        try:
+            ok, msg = _do_fix(a, say, k)
+        except Exception as e:
+            traceback.print_exc()
+            ok, msg = False, "修复出错了：%s" % e
+        say(msg, ok)
+        allok = allok and ok
+        if not ok:
+            break                                  # 这一样没修好，后面的先不做（多半要先修好它）
+    say("修好了，再检测一遍…" if allok else "没修好，再检测一遍看现在怎样…")
+    with _LOCK:
+        CHECK[k]["fixing"] = False
+    _run(k, FUNCS[k])
 
 
 FUNCS = {"ai": check_ai, "repo": check_repo, "env": check_env}
