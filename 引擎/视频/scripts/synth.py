@@ -177,6 +177,58 @@ def cache_put(key, x):
         os.replace(tmp, p)
 
 
+_PY = None
+
+
+def _pinyin(t):
+    """6.50：汉字 → 拼音（不带声调），用声音克隆模型自己的 lexicon.txt（词优先、再单字），不用另装东西"""
+    global _PY
+    if _PY is None:
+        _PY = {}
+        try:
+            for l in open(os.path.join(VC.ZIPVOICE_DIR, 'lexicon.txt'), encoding='utf-8'):
+                p = l.split()
+                if len(p) >= 3 and re.fullmatch(r'[\u4e00-\u9fff]+', p[0]) and p[0] not in _PY:
+                    syl = [re.sub(r'\d', '', p[j] + p[j + 1]) for j in range(1, len(p) - 1, 2)]
+                    if len(syl) == len(p[0]):
+                        _PY[p[0]] = syl
+        except Exception as e:
+            print('提醒：拼音表没读到（%s），不核字了' % e)
+    t = ''.join(re.findall(r'[\u4e00-\u9fff]', t))
+    out, i, ml = [], 0, 6
+    while i < len(t):
+        for L in range(min(ml, len(t) - i), 0, -1):
+            if t[i:i + L] in _PY:
+                out += _PY[t[i:i + L]]
+                i += L
+                break
+        else:
+            out.append(t[i])
+            i += 1
+    return out
+
+
+def pron_miss(text, x):
+    """6.50：识别模型听一遍，和原文按拼音（不算声调）比，差几个音节（少的、错的、多的都算）。
+    听出来的有阿拉伯数字（识别把“五千”写成 5000）、或者识别出错，就不算（0）"""
+    try:
+        if not re.search(r'[\u4e00-\u9fff]', text) or not _pinyin(text):
+            return 0
+        pad = np.zeros(int(0.3 * SR), np.float32)
+        heard = transcribe_array(np.concatenate([pad, np.asarray(x, np.float32), pad]), SR)
+        if re.search(r'\d', heard):
+            return 0
+        a, b = _pinyin(text), _pinyin(heard)
+        d = list(range(len(b) + 1))
+        for i in range(1, len(a) + 1):
+            p, d[0] = d[0], i
+            for j in range(1, len(b) + 1):
+                p, d[j] = d[j], min(d[j] + 1, d[j - 1] + 1, p + (a[i - 1] != b[j - 1]))
+        return d[-1]
+    except Exception:
+        return 0
+
+
 def gen_voice(text, speed=None, role=None, fresh=True, keys=None):
     """用参考录音的嗓音念一句中文（24 kHz），已经清理过。fresh=False 时先看缓存；keys 收集（缓存名, 声音）"""
     key = _ckey(text, speed, role) if CACHE else None
@@ -198,15 +250,18 @@ def gen_voice(text, speed=None, role=None, fresh=True, keys=None):
             return clean_out(y)
         # 6.49（用户：“结尾一句话说完了结尾最后一个字还是有点尖，有震动的音”）：声音克隆每次念都不一样，约两成句子
         #   最后一个字的尾巴发颤——发颤分超过 ROUGH_MAX 就再念，最多 ROUGH_RETRY 遍，挑最不颤的；再把最后一个字落下去的尾巴淡出
+        # 6.50（用户：“还有一些汉字读的不是很标准，没有发音发全”）：再加一道——识别模型对着拼音核（不算声调），少了字、念成别的字就再念
+        def grade(y):
+            return (pron_miss(text, y), final_rough(y, SR))
         x = once()
-        best = final_rough(x, SR)
-        for _ in range(int(VC.ROUGH_RETRY or 0)):
-            if best <= VC.ROUGH_MAX:
+        best = grade(x)
+        for _ in range(max(int(VC.ROUGH_RETRY or 0), int(getattr(VC, 'PRON_RETRY', 0) or 0))):
+            if best[0] == 0 and best[1] <= VC.ROUGH_MAX:
                 break
             y = once()
-            r = final_rough(y, SR)
-            if r < best:
-                x, best = y, r
+            g = grade(y)
+            if (g[0], g[1] > VC.ROUGH_MAX, g[1]) < (best[0], best[1] > VC.ROUGH_MAX, best[1]):
+                x, best = y, g
         if VC.TAIL_TAME:
             x = tail_tame(x, SR, *VC.TAIL_TAME)
     if keys is not None:
