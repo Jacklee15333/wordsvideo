@@ -1,7 +1,547 @@
 {
  "单词": "victory",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/podium.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.62,
+      "anim": "pulse"
+     },
+     {
+      "label": "胜利者",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/fireworks.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.56,
+      "anim": "pulse"
+     },
+     {
+      "label": "…的状态",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-victor.svg",
+   "p1": "art/icon-state.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/castle-flag.svg",
+     "x": 0.4,
+     "y": 0.5,
+     "s": 0.6,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/v-sign.svg",
+     "x": 0.8,
+     "y": 0.5,
+     "s": 0.4,
+     "anim": "bob"
+    },
+    {
+     "label": "征服者所处的状态",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.085,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "胜利、获胜",
+    "pos": "名词",
+    "diff": "战斗、比赛中赢了",
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/fireworks.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.44,
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.36,
+      "y": 0.56,
+      "s": 0.6,
+      "z": 3,
+      "seq": "blink",
+      "fps": 2,
+      "id": "m"
+     },
+     {
+      "svg": "art/v-sign.svg",
+      "x": 0.7,
+      "y": 0.56,
+      "s": 0.4,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 5,
+      "crowd": 9,
+      "nodWith": "m"
+     }
+    ],
+    "ex": "Our team won a big victory.",
+    "exzh": "我们队取得了一场大胜。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.26,
+       "y": 0.52,
+       "s": 0.62,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "Our team",
+       "id": "b"
+      },
+      {
+       "actor": "west-girl-raise",
+       "x": 0.6,
+       "y": 0.52,
+       "s": 0.6,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "won",
+       "nodWith": "b"
+      },
+      {
+       "svg": "art/fireworks.svg",
+       "x": 0.86,
+       "y": 0.3,
+       "s": 0.3,
+       "when": "victory",
+       "anim": "pulse"
+      },
+      {
+       "sound": "applause",
+       "when": "victory"
+      },
+      {
+       "label": "a big victory",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "a big victory"
+      },
+      {
+       "label": "大胜",
+       "x": 0.86,
+       "y": 0.66,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "大胜"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“征服者所处的状态”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/castle-flag.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.62,
+       "anim": "sway"
+      },
+      {
+       "label": "victor + y",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "赢的站着、输的倒下",
+    "node": "在战斗中取胜",
+    "say": [
+     "战场上压倒对方，赢的站着、输的倒下，就是在战斗中取胜。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/castle-flag.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "when": "压倒对方",
+       "anim": "sway"
+      },
+      {
+       "label": "取胜",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "取胜"
+      }
+     ]
+    }
+   },
+   {
+    "via": "比赛、竞争压倒对方都算",
+    "node": "胜利、获胜",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "后来不只是打仗，比赛、竞争，和困难较量，压倒对方都算 victory，胜利。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/podium.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.6,
+       "when": "比赛",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/fireworks.svg",
+       "x": 0.84,
+       "y": 0.3,
+       "s": 0.3,
+       "when": "胜利",
+       "anim": "pulse"
+      },
+      {
+       "label": "胜利",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "胜利"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "胜利",
+   "items": [
+    {
+     "w": "victory",
+     "word": "victory",
+     "m": "胜利（结果）",
+     "zh": "胜利（结果）",
+     "say": "victory 说战斗、比赛取胜这个结果，比较正式。",
+     "text": "victory 说战斗、比赛取胜这个结果，比较正式。",
+     "note": "victory 说战斗、比赛取胜这个结果，比较正式。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/park-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/v-sign.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "bob"
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.02,
+        "y": 0.86,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.02,
+          0.86
+         ],
+         "to": [
+          0.98,
+          0.86
+         ],
+         "offset": 0.2
+        }
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.98,
+        "y": 0.88,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.98,
+          0.88
+         ],
+         "to": [
+          0.02,
+          0.88
+         ],
+         "offset": 0.65
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "win",
+     "word": "win",
+     "m": "赢（一场比赛）",
+     "zh": "赢（一场比赛）",
+     "say": "win 偏口语，多指赢一场比赛：three wins in a row 三连胜。",
+     "text": "win 偏口语，多指赢一场比赛：three wins in a row 三连胜。",
+     "note": "win 偏口语，多指赢一场比赛：three wins in a row 三连胜。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/stage-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/scoreboard.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "triumph",
+     "word": "triumph",
+     "m": "大获全胜、凯旋",
+     "zh": "大获全胜、凯旋",
+     "say": "triumph 是巨大的胜利，带着强烈的喜悦和荣耀。",
+     "text": "triumph 是巨大的胜利，带着强烈的喜悦和荣耀。",
+     "note": "triumph 是巨大的胜利，带着强烈的喜悦和荣耀。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/castle-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/triumph-arch.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.85,
+        "anim": "pulse"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "victory 是“胜利”这个结果；win 是口语的“赢一场”；triumph 是“大胜、凯旋”。conquest 是征服土地。",
+   "tip": "罗马的胜利女神叫 Victoria。",
+   "pics": {
+    "victory": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/park-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/v-sign.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "bob"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    },
+    "win": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/stage-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/scoreboard.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "triumph": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/triumph-arch.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "victoryai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人说球队昨晚怎样？\n听：Our team won a big victory last night.\nA. 输了\nB. 打平了\nC. 取得大胜\nD. 没参赛",
@@ -94,5 +634,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

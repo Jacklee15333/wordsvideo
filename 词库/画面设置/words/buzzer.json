@@ -1,0 +1,822 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/bee.svg",
+     "x": 0.5,
+     "y": 0.46,
+     "s": 0.4,
+     "anim": "shake"
+    },
+    {
+     "waves": true,
+     "x": 0.6,
+     "y": 0.42,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#3FA7D6"
+    },
+    {
+     "label": "嗡嗡响",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/quiz-buzzer.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.46,
+     "anim": "pulse"
+    },
+    {
+     "label": "…的东西",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-buzz.svg",
+  "p1": "art/icon-thing.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/street-bg.svg",
+  "items": [
+   {
+    "svg": "art/intercom.svg",
+    "x": 0.5,
+    "y": 0.48,
+    "s": 0.56,
+    "anim": "pulse"
+   },
+   {
+    "waves": true,
+    "x": 0.58,
+    "y": 0.4,
+    "dir": 0,
+    "n": 3,
+    "period": 1.2,
+    "color": "#3FA7D6"
+   },
+   {
+    "label": "嗡嗡响的东西",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   },
+   {
+    "actor": "walk-cn-girl",
+    "x": 0.02,
+    "y": 0.86,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.02,
+      0.86
+     ],
+     "to": [
+      0.98,
+      0.86
+     ],
+     "offset": 0.2
+    }
+   },
+   {
+    "actor": "walk-west-man-case",
+    "x": 0.98,
+    "y": 0.88,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.98,
+      0.88
+     ],
+     "to": [
+      0.02,
+      0.88
+     ],
+     "offset": 0.65
+    }
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "蜂鸣器、电铃",
+   "pos": "名词",
+   "diff": "通电就“嗡嗡”响的小装置",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/intercom.svg",
+     "x": 0.46,
+     "y": 0.48,
+     "s": 0.56,
+     "anim": "pulse"
+    },
+    {
+     "waves": true,
+     "x": 0.54,
+     "y": 0.4,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#3FA7D6"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ],
+   "ex": "Press the buzzer at the door.",
+   "exzh": "按一下门口的电铃。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/intercom.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.56,
+      "when": "the buzzer",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "waves": true,
+      "x": 0.58,
+      "y": 0.4,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6",
+      "when": "Press",
+      "sfx": "buzz"
+     },
+     {
+      "actor": "west-man-point",
+      "x": 0.16,
+      "y": 0.58,
+      "s": 0.58,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "Press"
+     },
+     {
+      "label": "the buzzer",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "the buzzer"
+     },
+     {
+      "label": "电铃",
+      "x": 0.84,
+      "y": 0.3,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "电铃"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "（比赛）终场鸣笛、抢答器",
+   "pos": "名词",
+   "diff": "比赛里按下就响的那个装置",
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "svg": "art/quiz-buzzer.svg",
+     "x": 0.3,
+     "y": 0.6,
+     "s": 0.4,
+     "anim": "pulse"
+    },
+    {
+     "waves": true,
+     "x": 0.36,
+     "y": 0.5,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#3FA7D6"
+    },
+    {
+     "svg": "art/scoreboard.svg",
+     "x": 0.72,
+     "y": 0.42,
+     "s": 0.44,
+     "anim": "pulse"
+    }
+   ],
+   "ex": "She hit the buzzer first.",
+   "exzh": "她第一个按下了抢答器。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "x": 0.26,
+      "y": 0.52,
+      "s": 0.6,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "She"
+     },
+     {
+      "svg": "art/quiz-buzzer.svg",
+      "x": 0.58,
+      "y": 0.66,
+      "s": 0.36,
+      "when": "the buzzer",
+      "anim": "pulse",
+      "sfx": "buzz"
+     },
+     {
+      "waves": true,
+      "x": 0.64,
+      "y": 0.56,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6",
+      "when": "hit"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 5,
+      "crowd": 9
+     },
+     {
+      "label": "the buzzer",
+      "x": 0.58,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "the buzzer"
+     },
+     {
+      "label": "抢答器",
+      "x": 0.86,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "抢答器"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“嗡嗡响的东西”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/bee.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.4,
+      "anim": "shake"
+     },
+     {
+      "waves": true,
+      "x": 0.6,
+      "y": 0.42,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6"
+     },
+     {
+      "label": "buzz + er",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "通电就嗡嗡响的小装置",
+   "node": "① 蜂鸣器、电铃",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "最早 buzzer 说嗡嗡叫的虫子。",
+    "后来，一通电就嗡嗡响的小装置，就叫蜂鸣器、电铃。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/bee.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.36,
+      "when": "嗡嗡叫的虫子",
+      "anim": "shake",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/intercom.svg",
+      "x": 0.46,
+      "y": 0.48,
+      "s": 0.56,
+      "cue": 1,
+      "when": "通电",
+      "anim": "pulse"
+     },
+     {
+      "waves": true,
+      "x": 0.54,
+      "y": 0.4,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6",
+      "cue": 1,
+      "when": "嗡嗡响"
+     },
+     {
+      "label": "蜂鸣器",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "蜂鸣器"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "比赛里按下就响",
+   "node": "② 终场鸣笛、抢答器",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "比赛里按下就响的装置，是抢答器；比赛结束时那一声，是终场鸣笛。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/quiz-buzzer.svg",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.4,
+      "when": "抢答器",
+      "anim": "pulse"
+     },
+     {
+      "waves": true,
+      "x": 0.36,
+      "y": 0.5,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6",
+      "when": "按下就响"
+     },
+     {
+      "svg": "art/scoreboard.svg",
+      "x": 0.72,
+      "y": 0.42,
+      "s": 0.42,
+      "when": "终场鸣笛",
+      "anim": "pulse"
+     },
+     {
+      "label": "抢答器",
+      "x": 0.3,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "抢答器"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": false,
+ "demo": {
+  "driver": {
+   "icons": [
+    "art/icon-wheel.svg",
+    "art/icon-person.svg"
+   ],
+   "lit": "开车的人",
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/wheel.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "sway"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  "actor": {
+   "icons": [
+    "art/icon-masks.svg",
+    "art/icon-person.svg"
+   ],
+   "lit": "演戏的人",
+   "pic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/masks.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.7,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "artist": {
+   "icons": [
+    "art/icon-palette.svg",
+    "art/icon-person.svg"
+   ],
+   "lit": "搞艺术的人",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/canvas.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.76,
+      "anim": "sway"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人说门口怎么了？",
+    "listen": "Someone pressed the buzzer at the door.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "有人按了门铃",
+     "有人敲窗",
+     "有人打电话",
+     "有人喊人"
+    ],
+    "ans": "A",
+    "why": "buzzer 蜂鸣器、电铃。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The ______ went off at the end of the game.",
+    "opts": [
+     "buzz",
+     "buzzer",
+     "buzzes",
+     "buzzed"
+    ],
+    "ans": "B",
+    "why": "the 后要名词，终场鸣笛的是 buzzer。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Each team has two ______ in the quiz. (buzzer)",
+    "opts": [],
+    "ans": "buzzers",
+    "why": "two 后接复数 buzzers。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 buzzer、bell 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The church ______ rang \"ding-dong\".",
+    "opts": [],
+    "ans": "bell",
+    "why": "“叮当”响的是铃 bell；buzzer 是“嗡嗡”响的。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He press the buzzer first and answered the question.",
+    "opts": [],
+    "ans": "press → pressed",
+    "why": "和 answered 并列，用过去式。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "火灾警报响了。",
+    "stem": "The fire ______ went off.",
+    "opts": [],
+    "ans": "alarm",
+    "why": "警报用 alarm，不是 buzzer。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "A buzzer makes a ______ sound.",
+    "opts": [
+     "singing",
+     "barking",
+     "ringing",
+     "buzzing"
+    ],
+    "ans": "D",
+    "why": "buzzer 发出的是“嗡嗡”声；bell 才是 ringing。",
+    "kd": "用法"
+   }
+  ]
+ }
+}
