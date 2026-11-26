@@ -1,0 +1,912 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/chess-knight.svg",
+     "x": 0.36,
+     "y": 0.52,
+     "s": 0.56,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/canvas.svg",
+     "x": 0.72,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "sway"
+    },
+    {
+     "label": "本事",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/trickbox.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.56,
+     "anim": "shake"
+    },
+    {
+     "label": "满是…的",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-craft.svg",
+  "p1": "art/icon-full2.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/chess-knight.svg",
+    "x": 0.5,
+    "y": 0.52,
+    "s": 0.6,
+    "anim": "bob"
+   },
+   {
+    "label": "满是本事的",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "狡猾的、诡计多端的",
+   "pos": "形容词",
+   "diff": "本事用来算计人",
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/fox.svg",
+     "x": 0.46,
+     "y": 0.6,
+     "s": 0.56,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/cheese.svg",
+     "x": 0.84,
+     "y": 0.7,
+     "s": 0.24,
+     "anim": "sway"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ],
+   "ex": "The crafty fox stole the cheese.",
+   "exzh": "狡猾的狐狸偷走了奶酪。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/fox.svg",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.56,
+      "when": "crafty fox",
+      "pop": true,
+      "go": [
+       0.56,
+       0.6
+      ],
+      "goWhen": "stole",
+      "dur": 1.2
+     },
+     {
+      "svg": "art/cheese.svg",
+      "x": 0.74,
+      "y": 0.68,
+      "s": 0.22,
+      "when": "cheese",
+      "hideWhen": "偷走了"
+     },
+     {
+      "label": "crafty fox",
+      "x": 0.3,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "crafty fox"
+     },
+     {
+      "label": "狡猾的",
+      "x": 0.8,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "狡猾的"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“满是本事的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/chess-knight.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.6,
+      "anim": "bob"
+     },
+     {
+      "label": "craft + y",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "身上有力、有本事",
+   "node": "强壮的；灵巧的、能干的",
+   "say": [
+    "古英语里，craft 是身上的力气和本事，crafty 先说强壮有力。",
+    "后来说有本事、有学问，就是灵巧的、能干的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "x": 0.36,
+      "y": 0.56,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "力气"
+     },
+     {
+      "svg": "art/canvas.svg",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.46,
+      "cue": 1,
+      "when": "灵巧的",
+      "anim": "sway"
+     },
+     {
+      "label": "强壮",
+      "x": 0.36,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "强壮有力"
+     },
+     {
+      "label": "能干",
+      "x": 0.76,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "cue": 1,
+      "when": "能干的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "本事用来算计人",
+   "node": "狡猾的、诡计多端的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "本事用在正道上是巧，用来算计人就成了狡。",
+    "所以今天 crafty 是狡猾的、诡计多端的，夸人手巧不用它。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/canvas.svg",
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.44,
+      "when": "正道上",
+      "anim": "sway",
+      "hideCue": 1
+     },
+     {
+      "label": "巧",
+      "x": 0.3,
+      "y": 0.88,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "是巧",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/fox.svg",
+      "x": 0.7,
+      "y": 0.6,
+      "s": 0.5,
+      "when": "算计人",
+      "anim": "bob"
+     },
+     {
+      "label": "狡",
+      "x": 0.7,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "成了狡"
+     },
+     {
+      "label": "狡猾的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "狡猾的"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "狡猾的；诡计多端的",
+  "items": [
+   {
+    "w": "crafty",
+    "word": "crafty",
+    "m": "狡猾的（手法巧、老谋深算）",
+    "zh": "狡猾的（手法巧、老谋深算）",
+    "say": "crafty 重在手法巧妙、老谋深算。",
+    "text": "crafty 重在手法巧妙、老谋深算。",
+    "note": "crafty 重在手法巧妙、老谋深算。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/chess-knight.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "sly",
+    "word": "sly",
+    "m": "狡黠的、不露声色的",
+    "zh": "狡黠的、不露声色的",
+    "say": "sly 重在藏着心思、不露声色，常带点调皮：a sly wink。",
+    "text": "sly 重在藏着心思、不露声色，常带点调皮：a sly wink。",
+    "note": "sly 重在藏着心思、不露声色，常带点调皮：a sly wink。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/wink.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "foxy",
+    "word": "foxy",
+    "m": "像狐狸一样狡猾的",
+    "zh": "像狐狸一样狡猾的",
+    "say": "foxy 就是像狐狸一样狡猾，口语。",
+    "text": "foxy 就是像狐狸一样狡猾，口语。",
+    "note": "foxy 就是像狐狸一样狡猾，口语。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/park-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/fox.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.8,
+       "anim": "bob"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "w": "cunning",
+    "word": "cunning",
+    "m": "狡诈的、会算计的",
+    "zh": "狡诈的、会算计的",
+    "say": "cunning 重在会算计、会钻空子，偏贬义。",
+    "text": "cunning 重在会算计、会钻空子，偏贬义。",
+    "note": "cunning 重在会算计、会钻空子，偏贬义。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/maze.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "tricky",
+    "word": "tricky",
+    "m": "狡猾的；（事情）难办的",
+    "zh": "狡猾的；（事情）难办的",
+    "say": "tricky 是爱耍花招，也常说事情棘手难办。",
+    "text": "tricky 是爱耍花招，也常说事情棘手难办。",
+    "note": "tricky 是爱耍花招，也常说事情棘手难办。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/trickbox.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "shake"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "crafty 从“本事”来，sly 从“藏着”来，foxy 从“狐狸”来，cunning 从“知道”来，tricky 从“花招”来。",
+  "tip": "夸人手巧要说 skilful、good with one's hands，不说 crafty。",
+  "pics": {
+   "crafty": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/chess-knight.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.85,
+      "anim": "bob"
+     }
+    ]
+   },
+   "sly": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/wink.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "foxy": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/park-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/fox.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "bob"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.46,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.46,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   },
+   "cunning": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/maze.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "tricky": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/trickbox.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8,
+      "anim": "shake"
+     }
+    ]
+   }
+  }
+ },
+ "demo": {
+  "careful": {
+   "icons": [
+    "art/icon-care.svg",
+    "art/icon-full.svg"
+   ],
+   "lit": "满是小心的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/cup-carry.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "careless": {
+   "icons": [
+    "art/icon-care.svg",
+    "art/icon-empty.svg"
+   ],
+   "lit": "没有小心的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/cup-spill.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.66,
+      "anim": "shake"
+     }
+    ]
+   }
+  },
+  "rainy": {
+   "icons": [
+    "art/icon-rain.svg",
+    "art/icon-y.svg"
+   ],
+   "lit": "有雨的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/storm-cloud.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.6,
+      "anim": "shake"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人说那只狐狸怎样？",
+    "listen": "The crafty fox tricked the crow out of its meat.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "很笨",
+     "很狡猾",
+     "很饿",
+     "很友好"
+    ],
+    "ans": "B",
+    "why": "crafty 狡猾的。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "He is the ______ player on our team.",
+    "opts": [
+     "craftier",
+     "craftiest",
+     "crafty",
+     "craftily"
+    ],
+    "ans": "B",
+    "why": "the … on our team 用最高级，y 变 i 加 est。",
+    "kd": "变形"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "She is even ______ than her brother. (crafty)",
+    "opts": [],
+    "ans": "craftier",
+    "why": "than 前用比较级，y 变 i 加 er。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 crafty、skilful 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Grandma is very ______; she makes beautiful toys by hand.",
+    "opts": [],
+    "ans": "skilful",
+    "why": "夸人手巧用 skilful；crafty 是狡猾的。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The crafty man always tells the truth.",
+    "opts": [],
+    "ans": "always → never",
+    "why": "狡猾的人从不说实话。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "She makes a living by her ______. (crafty)",
+    "opts": [],
+    "ans": "craft",
+    "why": "her 后面要名词 craft（手艺）。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Don't trust him; he is ______ and full of tricks.",
+    "opts": [
+     "crafty",
+     "crafts",
+     "craft",
+     "craftily"
+    ],
+    "ans": "A",
+    "why": "be 后面用形容词 crafty（狡猾的）。",
+    "kd": "用法"
+   }
+  ]
+ }
+}
