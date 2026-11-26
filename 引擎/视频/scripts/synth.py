@@ -318,8 +318,25 @@ def gen_en_checked(text, sid=None):
     return first
 
 
+def _soft(x, fin=8, fout=60):
+    """6.48：剪过的一段两头加一点淡入淡出（升余弦，进 8 毫秒、出 60 毫秒，短的最多四分之一长）。
+    用户：“把结尾的尖尖的回音去掉”——实测剪口处声音没落到 0 就切断，剪口那一下的高频比前面还响（最多 +5 dB），听着是“尖尖的”一下；
+    淡出以后剪口处的高频低了 60 dB"""
+    x = np.asarray(x, dtype=np.float32)
+    a = min(len(x) // 4, int(fin / 1000 * SR))
+    b = min(len(x) // 4, int(fout / 1000 * SR))
+    if a < 2 and b < 2:
+        return x
+    x = x.copy()
+    if a >= 2:
+        x[:a] *= (0.5 - 0.5 * np.cos(np.linspace(0, np.pi, a))).astype(np.float32)
+    if b >= 2:
+        x[-b:] *= (0.5 + 0.5 * np.cos(np.linspace(0, np.pi, b))).astype(np.float32)
+    return x
+
+
 def _edge_trim(x, keep=0.04):
-    """剪掉一段中文前后的空白（只剪真正安静的地方，留一点气口）"""
+    """剪掉一段中文前后的空白（只剪真正安静的地方，留一点气口）；6.48 起剪完两头淡入淡出（_soft）"""
     k = int(0.01 * SR)
     if len(x) < 4 * k:
         return x
@@ -328,7 +345,7 @@ def _edge_trim(x, keep=0.04):
     if not len(on):
         return x
     a, b = max(0, on[0] * k - int(keep * SR)), min(len(x), (on[-1] + 1) * k + int(keep * SR))
-    return x[a:b]
+    return _soft(x[a:b])
 
 
 def _level(x):
@@ -689,7 +706,7 @@ def trim_end(x, keep=0.06):
     if fr.max() <= 0:
         return x
     b = (np.where(fr > fr.max() * 0.05)[0][-1] + 1) * k
-    return x[:min(len(x), b + int(keep * SR * 1.5))]
+    return _soft(x[:min(len(x), b + int(keep * SR * 1.5))], fin=0)          # 6.48：剪口淡出
 
 
 def trim(x, keep=0.06):
@@ -704,7 +721,7 @@ def trim(x, keep=0.06):
     core = np.where(fr > fr.max() * 0.25)[0][0]                # 声音最响的那段从哪儿起
     a = max(np.where(fr > fr.max() * 0.09)[0][0], core - int(0.12 / 0.005)) * k   # 往前最多 0.12 秒（辅音的开头），再前面的气声不要
     b = (np.where(fr > fr.max() * 0.05)[0][-1] + 1) * k
-    return x[max(0, a - int(keep * SR)): min(len(x), b + int(keep * SR * 1.5))]
+    return _soft(x[max(0, a - int(keep * SR)): min(len(x), b + int(keep * SR * 1.5))])     # 6.48：剪口淡入淡出
 
 
 _BASE = None
