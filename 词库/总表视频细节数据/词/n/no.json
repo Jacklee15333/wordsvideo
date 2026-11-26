@@ -1,7 +1,893 @@
 {
  "单词": "no",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "sylIpa": [
+   "nəʊ"
+  ],
+  "originPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "label": "none 一个也没有",
+     "x": 0.28,
+     "y": 0.3,
+     "size": 0.08,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.3
+    },
+    {
+     "label": "ne + a 永远不",
+     "x": 0.72,
+     "y": 0.3,
+     "size": 0.08,
+     "color": "#7A3E00",
+     "bg": "#FFF6D8",
+     "border": "#E0A800",
+     "delay": 0.8
+    },
+    {
+     "ray": [
+      [
+       0.28,
+       0.4
+      ],
+      [
+       0.5,
+       0.64
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "delay": 1.2,
+     "dur": 0.6
+    },
+    {
+     "ray": [
+      [
+       0.72,
+       0.4
+      ],
+      [
+       0.5,
+       0.64
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "delay": 1.2,
+     "dur": 0.6
+    },
+    {
+     "label": "no",
+     "x": 0.5,
+     "y": 0.74,
+     "size": 0.12,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E",
+     "delay": 1.8
+    },
+    {
+     "svg": "art/plant.svg",
+     "x": 0.9,
+     "y": 0.7,
+     "s": 0.3,
+     "anim": "sway"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "没有",
+    "pos": "形容词",
+    "diff": "一个也没有",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/fishtank.svg",
+      "x": 0.46,
+      "y": 0.56,
+      "s": 0.66,
+      "z": 2,
+      "shadow": true
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.46,
+      "y": 0.7,
+      "every": 0.8,
+      "life": 1.2,
+      "to": [
+       0,
+       -0.3
+      ],
+      "s": 0.04,
+      "wobble": 0.3,
+      "z": 3
+     },
+     {
+      "label": "no fish 没有鱼",
+      "x": 0.82,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.8
+     }
+    ],
+    "ex": "There are no fish in the tank.",
+    "exzh": "鱼缸里没有鱼。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.2,
+       "y": 0.58,
+       "s": 0.84,
+       "z": 3,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/fishtank.svg",
+       "x": 0.6,
+       "y": 0.58,
+       "s": 0.6,
+       "z": 2,
+       "when": "tank",
+       "pop": true
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.6,
+       "y": 0.72,
+       "every": 0.8,
+       "life": 1.2,
+       "to": [
+        0,
+        -0.3
+       ],
+       "s": 0.04,
+       "wobble": 0.3,
+       "z": 3,
+       "when": "tank"
+      },
+      {
+       "label": "no fish",
+       "x": 0.6,
+       "y": 0.1,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "no fish"
+      },
+      {
+       "label": "没有鱼",
+       "x": 0.88,
+       "y": 0.26,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "没有鱼"
+      }
+     ]
+    }
+   },
+   {
+    "text": "不；一点也不",
+    "pos": "副词",
+    "diff": "回答、否定；放在比较级前",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.84,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.62,
+      "y": 0.9,
+      "s": 0.3,
+      "z": 4
+     },
+     {
+      "svg": "art/mug.svg",
+      "x": 0.66,
+      "y": 0.7,
+      "s": 0.16,
+      "z": 5
+     },
+     {
+      "label": "No, thank you. 不用了",
+      "x": 0.66,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "bg": "#FFF6D8",
+      "border": "#E0A800",
+      "delay": 0.8
+     }
+    ],
+    "ex": "No, thank you. I'm full.",
+    "exzh": "不用了，谢谢。我吃饱了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.2,
+       "y": 0.58,
+       "s": 0.82,
+       "z": 1,
+       "seq": "pingpong",
+       "fps": 2,
+       "id": "c"
+      },
+      {
+       "actor": "west-man-smile",
+       "x": 0.8,
+       "y": 0.58,
+       "s": 0.82,
+       "z": 1,
+       "nodWith": "c",
+       "seq": "talk"
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.3,
+       "z": 3
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.5,
+       "y": 0.7,
+       "s": 0.16,
+       "z": 4,
+       "when": "thank you"
+      },
+      {
+       "sound": "say:No, thank you.",
+       "when": "No",
+       "gap": true
+      },
+      {
+       "label": "No",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.1,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "No"
+      },
+      {
+       "label": "不用了",
+       "x": 0.5,
+       "y": 0.28,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "不用了"
+      }
+     ]
+    }
+   },
+   {
+    "text": "否定；反对票",
+    "pos": "名词",
+    "diff": "说“不”、投“不”",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.84,
+      "s": 0.42,
+      "z": 5,
+      "crowd": 9
+     },
+     {
+      "label": "yes 10",
+      "x": 0.3,
+      "y": 0.3,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "delay": 0.6
+     },
+     {
+      "label": "no 2",
+      "x": 0.7,
+      "y": 0.3,
+      "size": 0.09,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "delay": 1.0
+     }
+    ],
+    "ex": "There were ten yeses and two noes.",
+    "exzh": "有十张赞成票、两张反对票。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-present",
+       "x": 0.18,
+       "y": 0.54,
+       "s": 0.8,
+       "z": 3,
+       "seq": "talk",
+       "id": "m"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.6,
+       "y": 0.9,
+       "s": 0.34,
+       "z": 5,
+       "crowd": 9,
+       "nodWith": "m"
+      },
+      {
+       "label": "ten yeses",
+       "x": 0.46,
+       "y": 0.2,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "ten yeses"
+      },
+      {
+       "label": "two noes",
+       "x": 0.78,
+       "y": 0.2,
+       "size": 0.08,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "two noes"
+      },
+      {
+       "label": "反对票",
+       "x": 0.78,
+       "y": 0.4,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "反对票"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "两个来源",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "none 一个也没有",
+       "x": 0.28,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3"
+      },
+      {
+       "label": "ne + a 永远不",
+       "x": 0.72,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800"
+      },
+      {
+       "ray": [
+        [
+         0.28,
+         0.4
+        ],
+        [
+         0.5,
+         0.64
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.6
+      },
+      {
+       "ray": [
+        [
+         0.72,
+         0.4
+        ],
+        [
+         0.5,
+         0.64
+        ]
+       ],
+       "color": "#C9A85A",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.6
+      },
+      {
+       "label": "no",
+       "x": 0.5,
+       "y": 0.74,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E"
+      },
+      {
+       "svg": "art/plant.svg",
+       "x": 0.9,
+       "y": 0.7,
+       "s": 0.3,
+       "anim": "sway"
+      }
+     ]
+    }
+   },
+   {
+    "via": "none 在辅音前读掉了 n",
+    "node": "① 没有",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "第一个来源是 none，一个也没有。",
+     "它在辅音前面读掉了 n，就成了 no：没有。鱼缸里一条鱼都没有，就是 no fish。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "none 一个也没有",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.085,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "none",
+       "hideCue": 1
+      },
+      {
+       "label": "none → no",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "cue": 1,
+       "when": "读掉了 n"
+      },
+      {
+       "svg": "art/fishtank.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 0.56,
+       "z": 2,
+       "cue": 1,
+       "when": "鱼缸里"
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.72,
+       "every": 0.8,
+       "life": 1.2,
+       "to": [
+        0,
+        -0.3
+       ],
+       "s": 0.04,
+       "z": 3,
+       "cue": 1,
+       "when": "鱼缸里"
+      },
+      {
+       "label": "no fish",
+       "x": 0.84,
+       "y": 0.3,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "cue": 1,
+       "when": "no fish"
+      }
+     ]
+    }
+   },
+   {
+    "via": "告示上写“没有…”",
+    "node": "禁止…",
+    "say": [
+     "告示上写着“没有……”，意思就是不许有：禁止。No smoking，禁止吸烟。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.9,
+       "y": 0.76,
+       "s": 0.46,
+       "z": 3,
+       "walk": {
+        "from": [
+         0.98,
+         0.76
+        ],
+        "to": [
+         0.02,
+         0.76
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "label": "告示",
+       "x": 0.24,
+       "y": 0.14,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "告示"
+      },
+      {
+       "label": "No smoking",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.1,
+       "color": "#C92A2A",
+       "bg": "#FFFFFF",
+       "border": "#C92A2A",
+       "when": "No smoking"
+      },
+      {
+       "label": "禁止吸烟",
+       "x": 0.5,
+       "y": 0.5,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "禁止吸烟"
+      }
+     ]
+    }
+   },
+   {
+    "via": "ne（不）+ a（永远）",
+    "node": "② 不；一点也不",
+    "pos": "副词",
+    "pic": 1,
+    "from": 0,
+    "say": [
+     "第二个来源是 ne 加 a：永远不，后来就是不。",
+     "放在比较级前面，no better，就是一点也不更好。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "label": "ne 不 + a 永远",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "bg": "#FFF6D8",
+       "border": "#E0A800",
+       "when": "ne"
+      },
+      {
+       "actor": "cn-teacher-laugh",
+       "x": 0.3,
+       "y": 0.56,
+       "s": 0.8,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "就是不"
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.95,
+       "s": 0.26,
+       "z": 6
+      },
+      {
+       "label": "no better",
+       "x": 0.72,
+       "y": 0.36,
+       "size": 0.085,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "cue": 1,
+       "when": "no better"
+      },
+      {
+       "label": "一点也不",
+       "x": 0.72,
+       "y": 0.56,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "cue": 1,
+       "when": "一点也不"
+      }
+     ]
+    }
+   },
+   {
+    "via": "说“不”、投“不”",
+    "node": "③ 否定；反对票",
+    "pos": "名词",
+    "pic": 2,
+    "rule": "表示“是、不”的词，也能当名词用：一次“不”",
+    "ruleEx": "no 不 → a no 一张反对票      yes 是 → a yes 一张赞成票",
+    "say": [
+     "英语里，表示是、不的小词，也能当名词用。",
+     "yes 是是，当名词就是一张赞成票。",
+     "no 也一样：说一声不、投一张不，就是否定、反对票。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "label": "小词 → 名词",
+       "x": 0.5,
+       "y": 0.3,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "当名词用",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.86,
+       "s": 0.4,
+       "z": 5,
+       "crowd": 9
+      },
+      {
+       "label": "a yes 赞成票",
+       "x": 0.3,
+       "y": 0.3,
+       "size": 0.085,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "cue": 1,
+       "when": "赞成票"
+      },
+      {
+       "label": "a no 反对票",
+       "x": 0.72,
+       "y": 0.3,
+       "size": 0.085,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "cue": 2,
+       "when": "反对票"
+      }
+     ]
+    }
+   }
+  ],
+  "kaodian": {
+   "rows": [
+    [
+     "意思",
+     "adj. 没有；adv. 不、一点也不；n. 否定、反对票"
+    ],
+    [
+     "告示",
+     "No + 名词 / -ing：禁止（No smoking）"
+    ],
+    [
+     "回答否定问句",
+     "按事实答：Don't you like it? — No（不喜欢）/ Yes（喜欢）"
+    ],
+    [
+     "复数",
+     "noes 反对票"
+    ]
+   ]
+  },
+  "distinguish": {
+   "key": "反对票",
+   "items": [
+    {
+     "w": "no",
+     "m": "反对票；不",
+     "say": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+     "word": "no",
+     "text": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+     "diff": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+     "d": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+     "desc": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+     "line": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+     "talk": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+     "note": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+     "explain": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+     "sent": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+     "mean": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/audience-wide.svg",
+        "x": 0.5,
+        "y": 0.74,
+        "s": 0.6,
+        "z": 5,
+        "crowd": 9
+       },
+       {
+        "svg": "art/star.svg",
+        "x": 0.5,
+        "y": 0.3,
+        "s": 0.2,
+        "anim": "shake"
+       }
+      ]
+     }
+    },
+    {
+     "w": "con",
+     "m": "反对意见",
+     "say": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。",
+     "word": "con",
+     "text": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。",
+     "diff": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。",
+     "d": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。",
+     "desc": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。",
+     "line": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。",
+     "talk": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。",
+     "note": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。",
+     "explain": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。",
+     "sent": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。",
+     "mean": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "actor": "west-clerk-think",
+        "x": 0.36,
+        "y": 0.6,
+        "s": 0.95,
+        "z": 1,
+        "seq": "blink"
+       },
+       {
+        "svg": "art/desk.svg",
+        "x": 0.6,
+        "y": 0.9,
+        "s": 0.4,
+        "z": 2
+       },
+       {
+        "svg": "art/desk-papers.svg",
+        "x": 0.64,
+        "y": 0.7,
+        "s": 0.26,
+        "z": 3,
+        "anim": "pulse"
+       }
+      ]
+     }
+    }
+   ],
+   "pics": {
+    "no": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.74,
+       "s": 0.6,
+       "z": 5,
+       "crowd": 9
+      },
+      {
+       "svg": "art/star.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.2,
+       "anim": "shake"
+      }
+     ]
+    },
+    "con": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-think",
+       "x": 0.36,
+       "y": 0.6,
+       "s": 0.95,
+       "z": 1,
+       "seq": "blink"
+      },
+      {
+       "svg": "art/desk.svg",
+       "x": 0.6,
+       "y": 0.9,
+       "s": 0.4,
+       "z": 2
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.64,
+       "y": 0.7,
+       "s": 0.26,
+       "z": 3,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   "logic": "no 是最常用的“不”，当名词就是一张反对票；con 是书面一点的“反对理由”，和 pro 成对用。",
+   "tip": "投票说 yeses and noes；讨论利弊说 pros and cons。",
+   "say": {
+    "no": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+    "con": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。"
+   },
+   "lines": {
+    "no": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+    "con": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。"
+   },
+   "talk": {
+    "no": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+    "con": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。"
+   },
+   "text": {
+    "no": "no 当名词是反对票，日常就是不；回答否定问句，按事实说 No。",
+    "con": "con 是反对的理由、反对票，常和 pro 成对说：pros and cons 利和弊。"
+   }
+  }
+ },
+ "插图": [
+  "noai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人要不要糖？\n听：No sugar, thanks.\nA. 要两勺糖\nB. 不要糖\nC. 要很多糖\nD. 要一点糖",
@@ -94,5 +980,7 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
