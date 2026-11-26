@@ -105,8 +105,16 @@ def to_ipa(ph):
     return ' '.join(MISAKI.get(p, p) for p in str(ph).split())
 
 
-def zipvoice():
+_ZVS = {}
+
+
+def zipvoice(guidance=None):
+    """6.51：按引导各建一个（引导是建模型时定的，改 VC.GUIDANCE 不会改已经建好的）"""
     global _zv
+    g = float(guidance if guidance is not None else VC.GUIDANCE)
+    if g in _ZVS:
+        return _ZVS[g]
+    _zv = None
     if _zv is None:
         Z = VC.ZIPVOICE_DIR
         cfg = sherpa_onnx.OfflineTtsConfig(
@@ -114,10 +122,11 @@ def zipvoice():
                 zipvoice=sherpa_onnx.OfflineTtsZipvoiceModelConfig(
                     tokens=Z + 'tokens.txt', encoder=Z + VC.ZV_ENCODER, decoder=Z + VC.ZV_DECODER, vocoder=VC.VOCODER,
                     data_dir=Z + 'espeak-ng-data', lexicon=','.join(EXTRA_ZLEX + [Z + 'lexicon.txt', VC.EN_LEXICON]),
-                    guidance_scale=VC.GUIDANCE),
+                    guidance_scale=g),
                 num_threads=VC.threads(), provider=VC.provider('zv')),
             max_num_sentences=1)
         _zv = sherpa_onnx.OfflineTts(cfg)
+        _ZVS[g] = _zv
     return _zv
 
 
@@ -208,14 +217,29 @@ def _pinyin(t):
     return out
 
 
+def _pink(n, seed=1):
+    r = np.random.default_rng(seed)
+    f = np.fft.rfft(r.standard_normal(n))
+    k = np.arange(len(f))
+    k[0] = 1
+    return np.fft.irfft(f / np.sqrt(k), n).astype(np.float32)
+
+
 def pron_miss(text, x):
     """6.50：识别模型听一遍，和原文按拼音（不算声调）比，差几个音节（少的、错的、多的都算）。
+    6.51：先混进同样响的粉红噪声（VC.PRON_SNR dB，固定种子）再听：含糊的字在噪声下最先听错。
     听出来的有阿拉伯数字（识别把“五千”写成 5000）、或者识别出错，就不算（0）"""
     try:
         if not re.search(r'[\u4e00-\u9fff]', text) or not _pinyin(text):
             return 0
         pad = np.zeros(int(0.3 * SR), np.float32)
-        heard = transcribe_array(np.concatenate([pad, np.asarray(x, np.float32), pad]), SR)
+        y = np.concatenate([pad, np.asarray(x, np.float32), pad])
+        snr = getattr(VC, 'PRON_SNR', None)
+        if snr is not None and len(y):
+            sp = y[np.abs(y) > np.abs(y).max() * 0.05]
+            nz = _pink(len(y))
+            y = y + nz * (np.sqrt(np.mean(sp ** 2)) / (np.sqrt(np.mean(nz ** 2)) + 1e-9) / 10 ** (snr / 20))
+        heard = transcribe_array(y.astype(np.float32), SR)
         if re.search(r'\d', heard):
             return 0
         a, b = _pinyin(text), _pinyin(heard)
@@ -239,15 +263,19 @@ def gen_voice(text, speed=None, role=None, fresh=True, keys=None):
         x0, sr0, ptext = ref_voice(role)
         from voice_clean import final_rough, tail_tame
 
-        def once():
-            a = zipvoice().generate(text, ptext, x0.tolist(), sr0, speed=float(speed or VC.SPEED), num_steps=VC.STEPS)
+        def once(gd=None):
+            a = zipvoice(gd).generate(text, ptext, x0.tolist(), sr0, speed=float(speed or VC.SPEED), num_steps=VC.STEPS)
             y = np.array(a.samples, dtype=np.float32)
             if a.sample_rate != SR:
                 from math import gcd
                 from scipy.signal import resample_poly
                 g = gcd(a.sample_rate, SR)
                 y = resample_poly(y, SR // g, a.sample_rate // g).astype(np.float32)
-            return clean_out(y)
+            y = clean_out(y)
+            if gd is not None and gd != VC.GUIDANCE and getattr(VC, 'EQ_CLEAR_DELTA', None):     # 6.51：引导 3.0 念的亮一点，压回去
+                from voice_clean import match_eq
+                y = match_eq(y, SR, VC.EQ_CLEAR_DELTA)
+            return y
         # 6.49（用户：“结尾一句话说完了结尾最后一个字还是有点尖，有震动的音”）：声音克隆每次念都不一样，约两成句子
         #   最后一个字的尾巴发颤——发颤分超过 ROUGH_MAX 就再念，最多 ROUGH_RETRY 遍，挑最不颤的；再把最后一个字落下去的尾巴淡出
         # 6.50（用户：“还有一些汉字读的不是很标准，没有发音发全”）：再加一道——识别模型对着拼音核（不算声调），少了字、念成别的字就再念
@@ -255,13 +283,17 @@ def gen_voice(text, speed=None, role=None, fresh=True, keys=None):
             return (pron_miss(text, y), final_rough(y, SR))
         x = once()
         best = grade(x)
-        for _ in range(max(int(VC.ROUGH_RETRY or 0), int(getattr(VC, 'PRON_RETRY', 0) or 0))):
-            if best[0] == 0 and best[1] <= VC.ROUGH_MAX:
-                break
+        if int(getattr(VC, 'PRON_RETRY', 0) or 0) and best[0] > getattr(VC, 'PRON_MAX', 0):
+            gc = getattr(VC, 'GUIDANCE_CLEAR', None)                      # 6.51：没念清楚 → 换引导 3.0 再念，挑听错少的（平局留 2.0 的）
+            y = once(gc if gc and gc != VC.GUIDANCE else None)
+            gy = grade(y)
+            if (gy[0], gy[1] > VC.ROUGH_MAX) < (best[0], best[1] > VC.ROUGH_MAX):
+                x, best = y, gy
+        elif int(VC.ROUGH_RETRY or 0) and best[1] > VC.ROUGH_MAX:          # 念清楚了、只是最后一个字发颤 → 同样的引导再念
             y = once()
-            g = grade(y)
-            if (g[0], g[1] > VC.ROUGH_MAX, g[1]) < (best[0], best[1] > VC.ROUGH_MAX, best[1]):
-                x, best = y, g
+            gy = grade(y)
+            if gy[0] <= max(best[0], getattr(VC, 'PRON_MAX', 0)) and gy[1] < best[1]:
+                x, best = y, gy
         if VC.TAIL_TAME:
             x = tail_tame(x, SR, *VC.TAIL_TAME)
     if keys is not None:
