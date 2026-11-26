@@ -327,6 +327,19 @@ def draw(word):
 
 # ═══════════════════════ 打开文件夹、给界面读文件 ═══════════════════════
 def open_path(what, word=""):
+    if what == "vfile":                                   # v1.24.0：在文件夹里找出这个视频（选中它）
+        root = Path(V.vcfg()["winDir"]).resolve()
+        p = (root / word.replace("\\", "/")).resolve()
+        if root not in p.parents or not p.is_file():
+            return {"ok": False, "msg": "没找到这个视频：%s" % word}
+        try:
+            if sys.platform == "win32":
+                import subprocess
+                subprocess.Popen(["explorer", "/select,", str(p)])
+                return {"ok": True, "msg": "在文件夹里选中了 %s" % p.name}
+            return {"ok": True, "msg": "在这台电脑上的位置：%s" % p}
+        except Exception as e:
+            return {"ok": False, "msg": "没打开（%s）：%s" % (str(e)[:80], p)}
     p = {"qdir": qdir(), "pdir": pdir(), "root": out_root(), "qrepo": C.REPO / C.D / "词",
          "prepo": C.REPO / V.EXTRA, "pword": pdir() / fname(word), "qfile": qdir() / (fname(word) + ".xlsx"),
          "vbatch": out_root() / fname(word)}.get(what)

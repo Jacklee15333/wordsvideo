@@ -116,3 +116,25 @@ def flatten_syllable(x, sr, keep=0.5, target=230.0, maxshift=4.0, fall=-3.0):
         call(pt, 'Add point', float(t), float(f))
     call([pt, man], 'Replace pitch tier')
     return np.array(call(man, 'Get resynthesis (overlap-add)').values[0], dtype=np.float32)
+
+
+def gate(x, sr, depth_db=-20.0):
+    """6.44：静音门——字和字、句子前后的停顿里只剩底噪的地方压低 20 dB（提前 20 ms 打开、慢慢 100 ms 关上，不切字尾）。
+    门限：最静的 15% 再高 8 dB，和最响的往下 42 dB，取高的。"""
+    x = np.asarray(x, dtype=np.float32)
+    fr = int(0.01 * sr)
+    n = len(x) // fr
+    if n < 5:
+        return x
+    e = np.sqrt(np.mean(x[:n * fr].reshape(n, fr) ** 2, axis=1)) + 1e-9
+    db = 20 * np.log10(e)
+    thr = max(np.percentile(db, 15) + 8, np.max(db) - 42)
+    g = np.where(db > thr, 1.0, 10 ** (depth_db / 20))
+    for i in range(1, n):
+        if g[i] < g[i - 1]:
+            g[i] = max(g[i], g[i - 1] * 0.9)
+    for i in range(n - 2, -1, -1):
+        g[i] = max(g[i], g[i + 1] * 0.6)
+    gs = np.repeat(g, fr)
+    gs = np.concatenate([gs, np.full(len(x) - len(gs), gs[-1])])
+    return (x * gs).astype(np.float32)

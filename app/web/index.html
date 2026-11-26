@@ -2636,6 +2636,10 @@ function vReport(b){
   const parts=[`做好 <b>${c.done||0}</b> 个`];if(ov.length)parts.push(`退回去 <b>${ov.length}</b> 个（${[oc?`检测时 ${oc} 个`:'',orun?`出片时 ${orun} 个`:''].filter(Boolean).join('，')}，原因看最上面）`);
   if(sk0>0)parts.push(`跳过 ${sk0} 个`);if(c.todo)parts.push(`<span class="ck-bad">没做成 ${c.todo} 个</span>`);if(left)parts.push(`没做 ${left} 个`);
   let h=`<div class="vrep ${kind}"><div class="hd">${title}</div><dl><dt>结果</dt><dd>放进 ${b.n} 个词：${parts.join('，')}</dd>`;
+  const okw=(b.words||[]).filter(w=>w.stage==='done');                          // v1.24.0：做好的一个词一行：文件名、播放、在文件夹里找出来
+  if(okw.length){const vs=((typeof VW!=='undefined'&&VW&&VW.videos)||[]).filter(v=>v.batch===b.name);
+    h+=`<dt>做好的</dt><dd>${okw.map(w=>{const v=vs.find(x=>x.word===w.word||x.word===vWn(w.word)),f=v?v.file:`${b.name}\\${w.no?w.no+' ':''}${vWn(w.word)}.mp4`;
+      return `<div style="padding:2px 0"><span class="w">${esc(vWn(w.word))}</span>　<span class="small faint">${esc(f.split(/[\\\/]/).pop())}</span>　<a class="vlink" href="/api/video/file?p=${encodeURIComponent(f)}" target="_blank">播放</a>　<a href="#" class="small" data-open="vfile" data-word="${esc(f)}">在文件夹里找出来</a></div>`}).join('')}</dd>`}
   if(b.state==='halted')h+=`<dt>为什么</dt><dd>流水线停了（电脑重启、WSL 关了，或者在别处停的）。点「接着做」从停下的地方接着做。</dd>`;
   if(b.active)h+=`<dt>用时</dt><dd>${b.first?fmtT(b.first)+' 开工，':''}出片一共 ${vDur(b.active)}${b.per?`，平均 ${vDur(b.per)}出一个`:''}</dd>`;
   const sa=VSTG.filter(s=>(b.stageAvg||{})[s]!=null);if(sa.length)h+=`<dt>每一步</dt><dd>平均一个词：${sa.map(s=>VSTN[s]+' '+vClock(b.stageAvg[s])).join('、')}</dd>`;

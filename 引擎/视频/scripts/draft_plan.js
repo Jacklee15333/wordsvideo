@@ -412,7 +412,18 @@ function distinguishScene() {
   const D = film.dist, ws = D.items.map(x => x.w);
   // 6.43（第八十七版，用户：“同义词辨析部分直接把单词画面画出来，然后说哪个单词，哪个单词给特写就可以了”）：精简版每个词一句、只念这个词
   //   （纯英文，美式女声）；念完停 1.4 秒看特写（waits），最后缩回去一起看（hold）
-  if (prefs.lean) { const waits = {}; ws.forEach((w, i) => { waits[String(i)] = 1.4; }); return { marks: true, segs: ws.map(w => w + '.'), waits, hold: 1.2 }; }
+  // 6.44（第八十八版，用户：“并没有说区别，我希望要简单说出区别，同时要举个例子”）：每个词先一句“X 这个词，一句话的区别”（老师的声音），
+  //   有例句再念例句（纯英文，美式女声）；每个词念完停 1 秒看特写
+  if (prefs.lean) {
+    const segs = [], waits = {};
+    D.items.forEach(it => {
+      const d0 = String(it.diff || it.gloss || '').replace(/[。.，,；;]+$/, '');
+      segs.push(d0 ? it.w + ' 这个词，' + d0 + '。' : it.w + '.');
+      if (it.ex) segs.push(/[.!?]["”’)]?$/.test(it.ex.trim()) ? it.ex.trim() : it.ex.trim() + '.');
+      waits[String(segs.length - 1)] = 1.0;
+    });
+    return { marks: true, segs, waits, hold: 1.2 };
+  }
   const list = ws.length > 1 ? ws.slice(0, -1).join('、') + ' 和 ' + ws[ws.length - 1] : ws[0];
   const segs = [D.key ? list + '，中文都可以说' + say(D.key) + '，区别在哪儿呢？' : list + '，这几个词容易混，区别在哪儿呢？'];
   D.items.forEach(it => {
@@ -626,6 +637,7 @@ if (!prefs.flow) todo.push('演变链 flow（现在是按总表自动拼的）')
   const syn = bx ? String(bx.t).split('\n').filter(x => x.startsWith('【同义词】')) : [];
   if (film.dist) {
     film.dist.items.forEach(it => { if (!it.pic) todo.push('同义词辨析：' + it.w + ' 那张卡配一幅画（prefs.distinguish.pics 里写 "' + it.w + '": 画）'); if (!it.note) todo.push('同义词辨析：' + it.w + ' 的区别还没有话（prefs.distinguish.items 手写）'); });
+    film.dist.items.forEach(it => { if (!it.ex) todo.push('同义词辨析：' + it.w + ' 还没有例句（prefs.distinguish.items 里给这个词写 ex：一句用到它的简单英文例句，exZh：例句的中文；精简版视频里要念）'); });      // 6.44
     if (!film.dist.logic && !film.dist.tip) todo.push('同义词辨析：最后一句“逻辑不同 / 一句话记法”（prefs.distinguish.logic 或 tip；总表辨析列可以加一行“逻辑不同：…”）');
   } else if (syn.length && prefs.distinguish !== false) {
     todo.push('同义词辨析：总表有同义词组（' + syn[0].replace('【同义词】', '') + '），辨析的话却没讲它们的区别——在 prefs.distinguish 里手写 key、items（每个词的 gloss、note），或者写 "distinguish": false 不要这一部分');

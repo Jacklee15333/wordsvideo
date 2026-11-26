@@ -1384,7 +1384,18 @@
     if (prefs.distinguish === false) return null;
     const word = String(d.w || ''), syn = d.syn || {};
     const lit1 = l => { const e = parseEquation(String(l || '').replace(/^【构词逻辑】/, '').replace(/；\s*词性变化.*$/, '')); return e && e.literal ? e.literal : ''; };
-    const norm = it => ({ w: String(it.w || ''), gloss: String(it.gloss || ''), note: String(it.note || ''), ex: String(it.ex || ''), literal: String(it.literal || ''), pos: String(it.pos || ''), pic: it.pic ? normPic(it.pic) : null, me: String(it.w || '').toLowerCase() === word.toLowerCase() });
+    // 6.44（第八十八版，用户：“只把这两个单词列出来了，但是并没有说区别，我希望要简单说出区别，同时要举个例子”）：
+    //   卡上的意思没写 gloss 的拿 m（去掉括号）；一句话的区别 diff：m 括号里那句（“偏当下的庆幸、口头致谢”），没有就取 note 的第一句；例句 ex / exZh
+    const shortM = m => String(m || '').replace(/（[^（）]*）|\([^()]*\)/g, '').trim();
+    const diffOf = it => {
+      const pm = /（([^（）]+)）|\(([^()]+)\)/.exec(String(it.m || ''));
+      if (pm) return (pm[1] || pm[2]).trim();
+      let t = String(it.note || '').trim().replace(new RegExp('^' + String(it.w || '').replace(/[-()]/g, '\\$&') + '\\s*(是|指)?\\s*', 'i'), '');
+      t = t.split(/[。！]/)[0];
+      if (t.length > 36) { const k = t.lastIndexOf('，', 36); t = k > 10 ? t.slice(0, k) : t.slice(0, 36); }
+      return t;
+    };
+    const norm = it => ({ w: String(it.w || ''), gloss: String(it.gloss || shortM(it.m) || ''), note: String(it.note || ''), diff: diffOf(it), ex: String(it.ex || it.example || ''), exZh: String(it.exZh || it.ex_zh || ''), literal: String(it.literal || ''), pos: String(it.pos || ''), pic: it.pic ? normPic(it.pic) : null, me: String(it.w || '').toLowerCase() === word.toLowerCase() });
     if (prefs.distinguish && Array.isArray(prefs.distinguish.items) && prefs.distinguish.items.length >= 2) {
       const pd = prefs.distinguish;
       return { key: String(pd.key || ''), items: pd.items.slice(0, 3).map(norm), logic: String(pd.logic || ''), tip: String(pd.tip || ''), manual: true };
@@ -1962,7 +1973,7 @@
     if (film.family && film.family.words.length) add('family', 3.6);
     if (film.dist) {                                                         // 6.0：三、同义词辨析
       add('sec', 1.9, { i: secI('同义词辨析') });
-      add('distinguish', film.lean ? 2.4 + 2.6 * film.dist.items.length : 2.6 + 3.4 * film.dist.items.length + (film.dist.logic ? 4.2 : 0));      // 6.43：精简版只念单词、给特写
+      add('distinguish', film.lean ? 2.4 + film.dist.items.reduce((a, it) => a + (it.ex ? 8 : 5), 0) : 2.6 + 3.4 * film.dist.items.length + (film.dist.logic ? 4.2 : 0));      // 6.43：精简版只念单词、给特写
     }
     if (film.kd) {                                                           // 6.11：考点（总结前面）
       add('sec', 1.9, { i: secI('考点') });
@@ -4956,23 +4967,71 @@
     if (it.me) chip(ctx, '这个词', r.x + r.w - 14 * k, r.y + 32 * k, { size: 18 * k, align: 'right', bg: col, color: '#FFFFFF' });
     ctx.restore();
   }
+  // 6.44：特写换成横的大卡（左边画，右边单词、意思、一句话的区别、例句），和词缀词根的特写卡一样大；例句念到时才出来
+  function distWide(ctx, it, i, r, alpha, lt, qEx) {
+    const k = r.h / 592, col = it.me ? '#D9480F' : PART[(i + 2) % PART.length];
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.save(); ctx.shadowColor = 'rgba(60,50,20,.14)'; ctx.shadowBlur = 24 * k; ctx.shadowOffsetY = 6 * k;
+    rr(ctx, r.x, r.y, r.w, r.h, 22 * k); ctx.fillStyle = C.card; ctx.fill(); ctx.restore();
+    ctx.globalAlpha = alpha;
+    rr(ctx, r.x, r.y, r.w, r.h, 22 * k); ctx.lineWidth = (it.me ? 5 : 2.5) * k; ctx.strokeStyle = it.me ? col : C.line; ctx.stroke();
+    rr(ctx, r.x, r.y, r.w, 12 * k, 6 * k); ctx.fillStyle = col; ctx.fill();
+    const pw = it.pic ? Math.min(r.w * 0.46, r.h * 1.05) : 0;
+    if (it.pic) drawPic(ctx, it.pic, r.x + 26 * k, r.y + 40 * k, pw - 26 * k, r.h - 80 * k, { q: 1, lt: Math.max(0, lt) });
+    ctx.globalAlpha = alpha;
+    const tx = r.x + pw + 44 * k, tw = r.x + r.w - 40 * k - tx;
+    let y = r.y + 112 * k;
+    txt(ctx, it.w, tx, y, { size: fit(ctx, it.w, EN, 'bold', 78 * k, tw, 30 * k), family: EN, weight: 'bold', color: col });
+    if (it.me) chip(ctx, '这个词', r.x + r.w - 26 * k, r.y + 46 * k, { size: 20 * k, align: 'right', bg: col, color: '#FFFFFF' });
+    if (it.gloss) { y += 60 * k; txt(ctx, it.gloss, tx, y, { size: fit(ctx, it.gloss, ZH, 'bold', 36 * k, tw, 18 * k), weight: 'bold', color: C.ink }); }
+    if (it.diff) {
+      setFont(ctx, 29 * k, ZH, 'bold');
+      const L = wrap(ctx, it.diff, tw - 40 * k, 3), lh = 42 * k, bh = L.length * lh + 30 * k;
+      y += 34 * k;
+      rr(ctx, tx, y, tw, bh, 14 * k); ctx.fillStyle = '#FFF4D6'; ctx.fill();
+      rr(ctx, tx, y, 7 * k, bh, 3 * k); ctx.fillStyle = '#E8A317'; ctx.fill();
+      L.forEach((l, j) => txt(ctx, l, tx + 24 * k, y + 15 * k + 30 * k + j * lh, { size: 29 * k, weight: 'bold', color: C.ink }));
+      y += bh;
+    }
+    if (it.ex && qEx > 0) {
+      ctx.globalAlpha = alpha * qEx;
+      y += 40 * k;
+      txt(ctx, '例', tx, y + 6 * k, { size: 24 * k, weight: 'bold', color: col });
+      setFont(ctx, 30 * k, EN, '');
+      const E2 = wrap(ctx, it.ex, tw - 44 * k, 3);
+      E2.forEach((l, j) => txt(ctx, l, tx + 44 * k, y + 6 * k + j * 40 * k, { size: 30 * k, family: EN, color: C.ink }));
+      y += (E2.length - 1) * 40 * k;
+      if (it.exZh) {
+        setFont(ctx, 24 * k, ZH, '');
+        const Z = wrap(ctx, it.exZh, tw - 44 * k, 2);
+        Z.forEach((l, j) => txt(ctx, l, tx + 44 * k, y + 46 * k + j * 34 * k, { size: 24 * k, color: '#6B6B6B' }));
+      }
+    }
+    ctx.restore();
+  }
   function distLean(ctx, film, p, sc) {
     const D = film.dist, items = D.items, n = items.length, f = fadeOf(sc, p), tl = sc.tl != null ? sc.tl : p * sc.dur, dur = sc.dur || 8;
     header(ctx, film, '同义词辨析', f, '同义词辨析');
-    const mk = sc.marks && sc.marks.length >= n ? sc.marks : null;
-    const start = i => (mk ? mk[i] : 0.9 + i * Math.max(1.6, (dur - 2.4) / n));          // 念这个词的时候（没配音的预览按比例）
-    const stop = i => (i + 1 < n ? start(i + 1) : Math.max(start(i) + 1.4, dur - 1.4));   // 下一个词开始念；最后一个留 1.4 秒一起看
-    const T = 0.45;                                                                      // 放大、缩回各 0.45 秒
+    const per = items.map(it => (it.ex ? 2 : 1)), first = [];                       // 每个词念几句：区别一句，有例句再一句
+    let acc = 0;
+    per.forEach(c => { first.push(acc); acc += c; });
+    const mk = sc.marks && sc.marks.length >= acc ? sc.marks : null, slot = Math.max(2.4, (dur - 2.4) / n);
+    const start = i => (mk ? mk[first[i]] : 0.9 + i * slot);
+    const exAt = i => (mk && per[i] > 1 ? mk[first[i] + 1] : start(i) + slot * 0.5);
+    const stop = i => (i + 1 < n ? start(i + 1) : Math.max(start(i) + 2.0, dur - 1.4));
+    const T = 0.5;
     const zoom = i => Math.min(easeInOut(clamp((tl - start(i) + 0.15) / T)), 1 - easeInOut(clamp((tl - stop(i) + 0.2) / T)));
     const gap = 30, cw = Math.min(n <= 2 ? 440 : 340, (W - 140 - gap * (n - 1)) / n), ch = 340;
-    const x0 = (W - cw * n - gap * (n - 1)) / 2, y0 = 230;
-    const s = Math.min((W - 112) / cw, 592 / ch), bw = cw * s, bh = ch * s, bx = (W - bw) / 2, by = 104;      // 特写：和词缀词根的特写卡一样高（592）
+    const x0 = (W - cw * n - gap * (n - 1)) / 2, y0 = 230, big = { x: 56, y: 104, w: W - 112, h: 592 };
     const qIn = easeOut(clamp(tl / 0.5));
     const zs = items.map((it, i) => zoom(i)), zmax = Math.max(0, ...zs);
-    items.map((it, i) => i).sort((a, b) => zs[a] - zs[b]).forEach(i => {              // 放大的那张画在最上面；别的淡一点
+    items.map((it, i) => i).sort((a, b) => zs[a] - zs[b]).forEach(i => {
       const z = zs[i], r0 = { x: x0 + i * (cw + gap), y: y0, w: cw, h: ch };
-      const r = { x: r0.x + (bx - r0.x) * z, y: r0.y + (by - r0.y) * z, w: cw + (bw - cw) * z, h: ch + (bh - ch) * z };
-      distCard(ctx, items[i], i, r, f * qIn * (1 - 0.6 * (zmax - z)), tl - start(i));
+      const r = { x: r0.x + (big.x - r0.x) * z, y: r0.y + (big.y - r0.y) * z, w: cw + (big.w - cw) * z, h: ch + (big.h - ch) * z };
+      const a = f * qIn * (1 - 0.6 * (zmax - z)), e = clamp((z - 0.35) / 0.5);
+      if (e < 1) distCard(ctx, items[i], i, r, a * (1 - e), tl - start(i));
+      if (e > 0) distWide(ctx, items[i], i, r, a * e, tl - start(i), easeOut(clamp((tl - exAt(i)) / 0.45)));
     });
   }
   S.distinguish = (ctx, film, p, sc) => {
