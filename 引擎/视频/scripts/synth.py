@@ -551,16 +551,62 @@ def lev(a, b):
 
 _ONES = 'zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen'.split()
 _TENS = {2: 'twenty', 3: 'thirty', 4: 'forty', 5: 'fifty', 6: 'sixty', 7: 'seventy', 8: 'eighty', 9: 'ninety'}
+_ORD = {'one': 'first', 'two': 'second', 'three': 'third', 'five': 'fifth', 'eight': 'eighth', 'nine': 'ninth', 'twelve': 'twelfth'}
+
+
+def _say_int(n):
+    """6.42：整数念成英文（到十亿以内）：5000 → five thousand，2024 → two thousand twenty four"""
+    if n < 20:
+        return _ONES[n]
+    if n < 100:
+        return _TENS[n // 10] + ('' if n % 10 == 0 else ' ' + _ONES[n % 10])
+    if n < 1000:
+        return _ONES[n // 100] + ' hundred' + ('' if n % 100 == 0 else ' ' + _say_int(n % 100))
+    for k, name in ((10 ** 9, 'billion'), (10 ** 6, 'million'), (1000, 'thousand')):
+        if n >= k:
+            return _say_int(n // k) + ' ' + name + ('' if n % k == 0 else ' ' + _say_int(n % k))
+    return str(n)
+
+
+def _ordinal(words):
+    head, _, last = words.rpartition(' ')
+    last = _ORD.get(last) or (last[:-1] + 'ieth' if last.endswith('y') else last + 'th')
+    return (head + ' ' + last).strip()
+
+
 def _num_words(m):
-    n = int(m.group(0))
-    if n < 20: return ' ' + _ONES[n] + ' '
-    if n < 100: return ' ' + _TENS[n // 10] + ('' if n % 10 == 0 else _ONES[n % 10]) + ' '
-    return m.group(0)
+    """识别结果里的一串数字 → 英文：5,000、3rd、50%、$5、3.5 都换"""
+    cur, num, dec, suf, pct = m.group(1), m.group(2).replace(',', ''), m.group(3), (m.group(4) or '').lower(), m.group(5)
+    try:
+        n = int(num)
+    except ValueError:
+        return m.group(0)
+    if n >= 10 ** 12:
+        return m.group(0)
+    w = _say_int(n)
+    if suf in ('st', 'nd', 'rd', 'th') and not dec:
+        w = _ordinal(w)
+    if dec:
+        w += ' point ' + ' '.join(_ONES[int(c)] for c in dec[1:])
+    if pct:
+        w += ' percent'
+    if cur:
+        w += ' dollars' if n != 1 else ' dollar'
+    return ' ' + w + ' '
+
+
+_NUM_RE = re.compile(r'(\$)?(\d{1,3}(?:,\d{3})+|\d+)(\.\d+)?(st|nd|rd|th)?(%)?', re.I)
+
+
+def spell_numbers(heard):
+    return _NUM_RE.sub(_num_words, heard)
 
 def heard_ok(w, heard):
     """识别结果里有这个词就算听清：同音的拼法（tailor / taylor）、差一两个字母也算。
-    5.1 起：识别模型把念出来的数字写成阿拉伯数字（“three and four is twelve”→“3 and 4 is 12”），先换回英文再比"""
-    heard = re.sub(r'\d{1,2}', _num_words, heard)
+    5.1 起：识别模型把念出来的数字写成阿拉伯数字（“three and four is twelve”→“3 and 4 is 12”），先换回英文再比。
+    6.42 起：大数、带逗号的数（five thousand → 5,000）、3rd、50%、$5、3.5 也换回英文（以前只换一两位的数，publisher 的例句
+    “printed five thousand copies” 被算成 thousand 没听清，卡在配音）"""
+    heard = spell_numbers(heard)
     flat = heard.lower().replace(' ', '')
     if w in flat:
         return True

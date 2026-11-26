@@ -229,12 +229,14 @@ def self_check():
     return "\n".join(out)
 
 
-def relay_final(tid, kind, allres, t0):
-    """v1.13.0：这一轮（这个任务）做完了：一共几个、做好几个、没做成的和原因——黄框没了以后，「这一步的进度」里还看得到。"""
-    if not allres:
+def relay_final(tid, kind, allres, t0, skipped=None):
+    """v1.13.0：这一轮（这个任务）做完了：一共几个、做好几个、没做成的和原因——黄框没了以后，「这一步的进度」里还看得到。
+    v1.20.0：开始时跳过的（本来就做好了、还没题目）也写上。"""
+    sk = {k: list(v)[:200] for k, v in (skipped or {}).items() if v}
+    if not allres and not sk:
         return
     bad = [[w, (r.get("detail") or "没做成")[:120]] for w, r in allres.items() if not r.get("ok")]
-    C.RELAY["final"] = {"t": time.time(), "t0": t0, "tid": tid, "kind": kind, "n": len(allres), "ok": len(allres) - len(bad), "bad": bad}
+    C.RELAY["final"] = {"t": time.time(), "t0": t0, "tid": tid, "kind": kind, "n": len(allres), "ok": len(allres) - len(bad), "bad": bad, "skip": sk}
     C.log("━━ 本轮任务完成（%s）：一共 %d 个词，做好 %d 个，没做成 %d 个%s ━━" % (
         kind, len(allres), len(allres) - len(bad), len(bad), ("：" + "、".join(w for w, _ in bad[:20])) if bad else ""), tid)
 
@@ -299,13 +301,47 @@ def _accept(R, tid, w, P, svgs, errs, info=None):
     return True, ("出片前还要补 %d 处" % ntodo(left)) if left else "", []
 
 
-def do_pics_relay(R, tid, total, only):
-    """手动接力做画面：选的词按设置分成一份一份（一份 N 个），网页 AI 一轮一轮交回，收到一轮做一轮。"""
+def do_pics_relay(R, tid, total, only, skipped=None):
+    """手动接力做画面：选的词按设置分成一份一份（一份 N 个），网页 AI 一轮一轮交回，收到一轮做一轮。
+    v1.20.0：画面还要补的词（出视频退回来的、起草检查没过的）和新词放在同一份里：补的带着上次的画面和“还要补”。"""
     N, rnd = C.relay_size("pic")
     todo = pick(total or 10 ** 6, only)
     if not todo:
         C.log("没有要做画面的词了（要先有题目；做不出来的在“画面没做成”里）", tid)
+        relay_final(tid, "做画面", {}, time.time(), skipped)
         return
+    pw0 = V.pic_words()
+    fixset = {w for w in todo if V.folder_of(w) in pw0}
+    todos = todo_all()
+    allres, t_all = {}, time.time()
+    for w in sorted(fixset):                    # 补画面的词没记下缺什么：先在 WSL 里起草检查一遍，过了就不用问 AI
+        if _items(todos.get(w, "")):
+            continue
+        old = _unchecked(w)
+        if not old:
+            fixset.discard(w)
+            todo.remove(w)
+            continue
+        R.check_stop()
+        R.stage = "%s：起草检查（在 WSL 里）" % w
+        st, line = wsl_draft_safe(w, *old)
+        if st == "ok":
+            save(w, old[0], old[1], True)
+            todo_note(w, "")
+            todo.remove(w)
+            fixset.discard(w)
+            allres[w] = {"ok": True, "detail": "存着的画面过了检查，不用改"}
+            C.log("  %s 存着的画面过了起草检查，不用改" % w, tid)
+        else:
+            save(w, old[0], old[1], False)
+            if st == "todo":
+                todo_note(w, line)
+                todos[w] = line
+    if not todo:
+        relay_final(tid, "做画面", allres, t_all, skipped)
+        return
+    if fixset:
+        C.log("其中 %d 个是补画面（在上次的画面上改）：%s" % (len(fixset), "、".join(sorted(fixset)[:20])), tid)
     if only is None:               # v1.15.0：“做 N 个词”记下挑的是哪 N 个——软件重开了接着做同一批，网页 AI 原来的对话也对得上
         try:
             row = C.q("SELECT params FROM tasks WHERE id=?", (tid,), one=True)
@@ -317,7 +353,6 @@ def do_pics_relay(R, tid, total, only):
     nb = (len(todo) + N - 1) // N
     C.log("画面（手动接力）：一共 %d 个词，一份 %d 个，分 %d 份；网页 AI 每写完 %d 个上传一次" % (len(todo), N, nb, rnd), tid)
     done, batch, queue, k = 0, [], list(todo), 0
-    allres, t_all = {}, time.time()
     while queue:                    # v1.11.2：每一份开始时按现在的设置分（黄框里改了，下一份就按新的）
         N, rnd = C.relay_size("pic")
         pend, queue = queue[:N], queue[N:]
@@ -327,7 +362,7 @@ def do_pics_relay(R, tid, total, only):
         C.log("第 %d 份（共 %d 份）：%s … %s，%d 个词" % (k, nb, pend[0], pend[-1], len(pend)), tid)
         while pend:
             C.RELAY_QLEFT[0] = len(queue)
-            for part in R.ask_parts(tid, "做画面", build_prompt_multi(pend, min(rnd, len(pend))), pend, min(rnd, len(pend))):
+            for part in R.ask_parts(tid, "做画面", build_prompt_mixed(pend, fixset, todos, min(rnd, len(pend))), pend, min(rnd, len(pend))):
                 fx = [w for w in (C.RELAY.get("fixing") or []) if w in chunk and w not in pend]   # v1.12.0：没过、网页 AI 在改的
                 got = parse_multi(part, pend + fx)   # v1.11.2：以前这里用 res，把这一批前几个词的结果冲掉了（生成历史里算成没做成）
                 if not got:
@@ -339,8 +374,18 @@ def do_pics_relay(R, tid, total, only):
                         continue
                     _DONE.add(w)
                     info = {}
+                    isfix = w in fixset
+                    if isfix:                             # 补画面：没重画的插图用上次的；改完反而缺得更多，留着上次的
+                        old, old_line = _unchecked(w) or _saved(w), todos.get(w, "")
+                        svgs = dict(_old_svgs(w), **(svgs or {}))
                     ok, why, errs2 = _accept(R, tid, w, P, svgs, errs, info)
                     st, line = info.get("st"), info.get("line") or ""
+                    if isfix and ok and st == "todo" and old and old_line and ntodo(line) > ntodo(old_line):
+                        save(w, old[0], old[1], False)
+                        todo_note(w, old_line)
+                        why = "改完反而要补 %d 处（上次 %d 处），上次的留着" % (ntodo(line), ntodo(old_line))
+                    if isfix and ok and st == "todo":
+                        todos[w] = line
                     good = ok and st != "todo"            # v1.12.0：起草检查说还要补的，不算做好——告诉网页 AI 马上改
                     k = int(((C.RELAY.get("verdict") or {}).get(w) or {}).get("try") or 0) + 1
                     if ok and w not in batch:
@@ -349,15 +394,17 @@ def do_pics_relay(R, tid, total, only):
                         C.log("  %s 的画面做好了%s" % (w, "（改了 %d 次）" % (k - 1) if k > 1 else ""), tid)
                     elif ok:
                         C.log("  %s 存下了，起草检查说还要补 %d 处（第 %d 次）：%s" % (w, ntodo(line), k, line[:160]), tid)
+                    elif isfix:
+                        C.log("  %s 这次没补成（第 %d 次）：%s（上次的画面留着）" % (w, k, why), tid)
                     else:
                         C.x("INSERT OR REPLACE INTO picfail(word, errors, ts) VALUES(?,?,?)", (w, json.dumps(errs2, ensure_ascii=False), C.now()))
                         C.log("  %s 的画面没做成（第 %d 次）：%s" % (w, k, why), tid)
                     gave = C.relay_verdict(w, good, line if ok else "；".join(errs2 or []) or why)
                     if not good and w in (C.RELAY.get("fixing") or []):
                         why = (why or "没过") + "，网页 AI 在改"
-                    elif gave and ok:
-                        later_op({"op": "add", "words": [w]})     # 改够次数了还没过：先攒着，以后一起补
-                        why = (why or "") + "（改了 %d 次，先攒着）" % k
+                    elif gave and not good:
+                        # v1.20.0：改够次数了还没过——不再“先攒着”：留在「画面」的列表里，下次「做画面」再做
+                        why = (why or "还要补 %d 处" % ntodo(line)) + "（改了 %d 次还没过，留在「画面」的列表里）" % k
                     C.relay_word(w, good, why or ("做好了" if good else "没做成"))
                     res[w] = {"ok": good, "detail": why or ("做好了" if good else "没做成")}
                     if first:
@@ -371,8 +418,6 @@ def do_pics_relay(R, tid, total, only):
             fx = [w for w in (C.RELAY.get("fixing") or []) if w in chunk and w not in pend]
             if why in ("newchat", "resize") and fx:             # 在改的词也放进新的提示词
                 pend += fx
-            elif why == "skiprest" and fx:
-                later_op({"op": "add", "words": fx})
             if pend and why in ("newchat", "resize"):
                 N2, rnd = C.relay_size("pic")
                 if len(pend) > N2:                  # 一批改小了：多出来的放回去，排到下一份
@@ -385,10 +430,11 @@ def do_pics_relay(R, tid, total, only):
                 C.log("  剩下的 %d 个另开对话：出一份新的提示词" % len(pend), tid)
                 continue
             for w in pend:                      # 你点了「剩下的先跳过」
-                C.x("INSERT OR REPLACE INTO picfail(word, errors, ts) VALUES(?,?,?)",
-                    (w, json.dumps(["你点了「剩下的先跳过」"], ensure_ascii=False), C.now()))
+                if w not in fixset:
+                    C.x("INSERT OR REPLACE INTO picfail(word, errors, ts) VALUES(?,?,?)",
+                        (w, json.dumps(["你点了「剩下的先跳过」"], ensure_ascii=False), C.now()))
                 C.relay_word(w, False, "跳过了")
-                res[w] = {"ok": False, "detail": "你点了「剩下的先跳过」"}
+                res[w] = {"ok": False, "detail": "你点了「剩下的先跳过」" + ("（上次的画面留着）" if w in fixset else "")}
                 done += 1
             if pend:
                 C.log("  剩下的 %d 个先跳过了：%s" % (len(pend), "、".join(pend[:20])), tid)
@@ -398,7 +444,8 @@ def do_pics_relay(R, tid, total, only):
         _commit(tid, batch)
         batch = []
     _commit(tid, batch)
-    relay_final(tid, "做画面", allres, t_all)
+    _UC["t"] = 0.0
+    relay_final(tid, "做画面", allres, t_all, skipped)
 
 
 def parse(reply):
@@ -699,12 +746,80 @@ def wsl_draft(word, pre=False):
     if line.startswith("还要补"):
         rest = line.split("：", 1)[1] if "：" in line else line
         rest = re.sub(r"练习题 lianxi（[^）]*）[；;]?", "", rest).strip("；; ")       # 练习题归出题那一步管，画面改不了
-        if not rest or "都齐了" in rest:
+        if "都齐了" in rest:
+            rest = ""
+        vi = [] if pre else voice_items(word)                    # v1.20.0：例句念一遍、听一遍，听不清的也算“还要补”
+        if vi:
+            C.log("  %s 的例句试听：%d 句要学的单词没听清" % (word, len(vi)))
+        if not rest and not vi:
             return "ok", "还要补：都齐了"
-        return "todo", "还要补：" + rest
+        return "todo", "还要补：" + "；".join([x for x in [rest] if x] + vi)
     if line.startswith("画面设置的程序跑不起来"):
         return ("env" if any(k in line for k in ENV_ERR) else "todo"), line
     return "env", line
+
+
+# v1.20.0：起草检查以后，例句（纯英文的句子）当场念一遍、听一遍——网页 AI 换了例句，还听不清就马上退回去让它再改，
+# 不用等到出视频才发现（和开工前的单词检测、配音那一步用同一个声音、同一个识别模型）
+VOICE_SH = r"""GPU=0; . ~/lwb/scripts/wsl/bcommon.sh 2>/dev/null
+P=@PLAN@
+[ -f "$P" ] || { echo '@@VOICE@@ {"skip": "没有起草出来的配音稿"}'; exit 0; }
+[ -d "$WORDFILM_MODELS" ] || { echo '@@VOICE@@ {"skip": "没装声音模型"}'; exit 0; }
+cd ~/skills/word-construction-video/scripts && PYTHONUNBUFFERED=1 python3 - "$P" @W@ <<'PYV'
+import json, os, re, sys, tempfile
+plan_p, word = sys.argv[1], sys.argv[2]
+try:
+    import synth
+except BaseException as e:
+    print('@@VOICE@@ ' + json.dumps({"skip": "配音的程序打不开（%s）" % str(e)[:200]}, ensure_ascii=False)); sys.exit(0)
+plan = json.load(open(plan_p, encoding='utf-8'))
+wl = re.sub(r'[^a-z]', '', word.lower())
+segs = {}
+for sc, spec in (plan.get('scenes') or {}).items():
+    if sc.startswith(('lianxi', 'daan')):
+        continue                                   # 练习题、答案的句子是题目里的，画面改不了
+    items = ([('intro', spec['intro'])] if spec.get('intro') else []) + [('seg%d' % i, s) for i, s in enumerate(spec.get('segs') or [])]
+    for name, seg in items:
+        t = str(seg.get('t', '')) if isinstance(seg, dict) else str(seg)
+        if synth.PHON_ONLY.match(t) or synth.CJK.search(t) or not re.search(r'[A-Za-z]{5,}', t):
+            continue                               # 只查纯英文的句子（例句）；中英混着的配音时会自己换念法
+        segs['%s@@%s' % (sc, name)] = {'segs': [seg]}
+out = []
+if segs:
+    base = {k: v for k, v in plan.items() if k not in ('scenes', 'word')}
+    od = tempfile.mkdtemp(prefix='wv-voice-')
+    try:
+        man, _ = synth.synth(dict(base, word='', scenes=segs), od)
+    except BaseException as e:
+        print('@@VOICE@@ ' + json.dumps({"skip": "没能念一遍（%s）" % str(e)[:200]}, ensure_ascii=False)); sys.exit(0)
+    for key, ss in (man or {}).items():
+        sc = key.split('@@')[0]
+        for s in ss:
+            if s.get('miss'):
+                out.append({'scene': sc, 'text': s.get('text') or '', 'heard': s.get('heard') or '', 'miss': list(s['miss'])})
+print('@@VOICE@@ ' + json.dumps({"n": len(segs), "miss": out}, ensure_ascii=False))
+PYV
+"""
+
+
+def voice_items(word):
+    """刚起草的这个词：例句念一遍、听一遍。返回“还要补”的几条（都听清了、或者这台电脑查不了，返回 []）。"""
+    try:
+        if not env_ready():
+            return []
+        safe = re.sub(r'[\\/:*?"<>|\s]+', "_", word).strip("._") or "word"
+        plan = "/tmp/wv-draft-%s/%s/brief/plan.json" % (V.folder_of(word), safe)
+        rc, t = V.wsl(VOICE_SH.replace("@PLAN@", V.q(plan)).replace("@W@", V.q(word)), 600)
+        line = next((l for l in reversed((t or "").splitlines()) if l.startswith("@@VOICE@@")), "")
+        d = json.loads(line[9:].strip()) if line else {}
+        if d.get("skip") or not line:
+            if d.get("skip") not in (None, "没有起草出来的配音稿"):
+                C.log("  %s 的例句没能先试听（%s），出视频前的单词检测还会再查" % (word, d.get("skip")))
+            return []
+        return [V._wc_voice(m)[1] for m in d.get("miss") or []]
+    except Exception as e:
+        C.log("  %s 的例句试听出错（%s），出视频前的单词检测还会再查" % (word, str(e)[:120]))
+        return []
 
 
 def draft_todo(word):
@@ -877,7 +992,7 @@ def do_pics(R, tid, p):
     if p.get("fix"):                                      # v1.11.1：补画面
         return do_pics_fix(R, tid, p)
     if C.load_cfg().get("provider") == "relay":           # v1.10.9：一份好几个词，一轮一轮交回
-        return do_pics_relay(R, tid, total, only)
+        return do_pics_relay(R, tid, total, only, sk)
     done = 0
     batch = []
     hist, t0h = {}, time.time()
@@ -897,7 +1012,8 @@ def do_pics(R, tid, p):
             break
         w = ws[0]
         _DONE.add(w)
-        ok, errs = _try(R, tid, w, rounds)
+        need = todo_all().get(w, "") if V.folder_of(w) in V.pic_words() else ""
+        ok, errs = _try(R, tid, w, rounds, force=bool(_items(need)), need=need)   # v1.20.0：退回来的词带着“还要补”改
         hist[w] = {"ok": ok, "detail": "" if ok else short_why(errs)}
         if ok:
             batch.append(w)
@@ -915,6 +1031,8 @@ def do_pics(R, tid, p):
     if hist:
         C.gen_hist_add("pic", list(hist), hist, tid, C.provider_name(), t0h)
     _commit(tid, batch)
+    _UC["t"] = 0.0
+    relay_final(tid, "做画面", hist, t0h, sk)
 
 
 def unsave(word):
@@ -1169,6 +1287,54 @@ OUT_FIX = """【输出格式（程序按这个格式自动读，请严格照做�
 5. 每次上传的内容，最后单独一行写：%s"""
 
 
+def _fix_seg(w, todos):
+    f = V.folder_of(w)
+    try:
+        P = json.loads((C.REPO / EXTRA / "words" / (f + ".json")).read_text(encoding="utf-8"))
+    except Exception:
+        P = {}
+    P.pop("lianxi", None)
+    arts = sorted(_old_svgs(w))
+    items = _items(todos.get(w, ""))
+    return "@%s\n还要补（视频技能检查出来的，每一条都要做到）：\n%s\n总表材料：%s\n上次已经画好的插图：%s\n上次的画面设置：\n```json\n%s\n```" % (
+        w, "\n".join("- " + x for x in items) if items else "- 没记下具体缺什么：照规矩每一条再对一遍，缺的补上",
+        _mat_short(w, 500), "、".join("art/" + a for a in arts) or "没有",
+        json.dumps(P, ensure_ascii=False, separators=(",", ":"))[:14000])
+
+
+def build_prompt_mixed(words, fixset, todos, rnd):
+    """v1.20.0：新做的词和要补画面的词放在同一份提示词里（一个「做画面」做完）。只有一种的，照原来的提示词。"""
+    new = [w for w in words if w not in fixset]
+    fix = [w for w in words if w in fixset]
+    if not fix:
+        return build_prompt_multi(words, rnd)
+    if not new:
+        return build_prompt_fix_multi(words, todos, rnd)
+    rules, pm, ex = docs()
+    ver, ed = skill_version()
+    n = len(words)
+    budget = max(250, min(1200, 120000 // max(1, n)))
+    head = ("【做画面 · 这一批 %d 个词】你在帮一位中学英语老师给单词做构词动画视频的“画面设置”（视频技能 %s，%s）。视频的讲解稿由程序从总表生成，"
+            "你只管画面：每个意思一幅生活场景、例句和例句动画、各部分卡片的画（partPics）和小图标（icons）、拼起来那一格的画（comboPic）、"
+            "同义词辨析、意思怎么一步步变过来的示意图。练习题不用写，程序会把出好的 7 道题放进去。\n"
+            "这一批有两种词：\n"
+            "- 新做的 %d 个（标着“新做”）：从头做一份；\n"
+            "- 补画面的 %d 个（标着“补画面”）：以前做过，视频技能检查出来还缺东西（起草检查，或者例句配音听不清）。在上次的基础上把“还要补”的每一条改好，"
+            "JSON 完整写一遍（没问题的地方照抄上次的），插图只写新画的、要重画的，上次的、不改的程序会留着。\n"
+            "按顺序一个接一个写：每写完 %d 个词就上传一次（怎么传看最后），中间不用在聊天里汇报，接着写下一个；这一批全部传完再汇报一次。"
+            % (n, ver, ed, len(new), len(fix), rnd))
+    return "\n\n".join([
+        head,
+        "【这一批的词（按这个顺序做）】\n" + "\n".join("%d. %s（%s）" % (i + 1, w, "补画面" if w in fixset else "新做") for i, w in enumerate(words)),
+        self_check(),
+        "【新做的词：总表材料】\n" + "\n\n".join("@%s\n%s" % (w, _mat_short(w, budget)) for w in new),
+        "【补画面的词：还要补什么、上次的画面设置】\n" + "\n\n".join(_fix_seg(w, todos) for w in fix),
+        "【视频技能 %s（%s）里和画面有关的规矩：每个词每一条都要做到】\n" % (ver, ed) + rules,
+        "【画面怎么画、画面设置怎么写（视频技能 %s 的 pictures.md 全文）】\n" % ver + pm,
+        "【范例：%s 的画面设置（视频技能 %s kit 里过了起草检查的，写法和你要交的一样；里面的 art/… 插图是那个词自己画的）】\n" % (EXAMPLE_WORD, ed) + ex,
+        OUT_FIX % (words[0], "、".join(motions()), "、".join("art/" + x for x in scenes()), END)])
+
+
 def build_prompt_fix_multi(words, todos, rnd):
     """补画面的提示词：每个词写清楚“还要补什么”、附上次的画面设置；规矩、pictures.md、范例只放一次。"""
     rules, pm, ex = docs()
@@ -1180,20 +1346,7 @@ def build_prompt_fix_multi(words, todos, rnd):
             "- 插图只写新画的、要重画的（比如“画得太简单”的场景，用同一个名字重画得详细些）；上次的、不改的不用再写，程序会留着；\n"
             "- 改的时候照着后面的规矩、pictures.md 和范例做。\n"
             "按顺序一个接一个写：每写完 %d 个词就上传一次（怎么传看最后），中间不用在聊天里汇报，接着写下一个；这一批全部传完再汇报一次。" % (n, ver, ed, rnd))
-    segs = []
-    for w in words:
-        f = V.folder_of(w)
-        try:
-            P = json.loads((C.REPO / EXTRA / "words" / (f + ".json")).read_text(encoding="utf-8"))
-        except Exception:
-            P = {}
-        P.pop("lianxi", None)
-        arts = sorted(_old_svgs(w))
-        items = _items(todos.get(w, ""))
-        segs.append("@%s\n还要补（视频技能检查出来的，每一条都要做到）：\n%s\n总表材料：%s\n上次已经画好的插图：%s\n上次的画面设置：\n```json\n%s\n```" % (
-            w, "\n".join("- " + x for x in items) if items else "- 没记下具体缺什么：照规矩每一条再对一遍，缺的补上",
-            _mat_short(w, 500), "、".join("art/" + a for a in arts) or "没有",
-            json.dumps(P, ensure_ascii=False, separators=(",", ":"))[:14000]))
+    segs = [_fix_seg(w, todos) for w in words]
     return "\n\n".join([
         head,
         "【这一批的词（按这个顺序做）】\n" + "\n".join("%d. %s" % (i + 1, w) for i, w in enumerate(words)),
@@ -1345,8 +1498,7 @@ def _fix_relay(R, tid, words, todos, batch):
                     if not good and w in (C.RELAY.get("fixing") or []):
                         why = (why or "没补好") + "，网页 AI 在改"
                     elif gave:
-                        later_op({"op": "add", "words": [w]})     # 改够次数了还没过：先攒着，以后一起补
-                        why = (why or "") + "（改了 %d 次，先攒着）" % k
+                        why = (why or "") + "（改了 %d 次还没过，留在「画面」的列表里）" % k
                     C.relay_word(w, good, why or "补好了")
                     res[w] = {"ok": good, "detail": why or "补好了"}
                     if first:
@@ -1359,8 +1511,6 @@ def _fix_relay(R, tid, words, todos, batch):
             fx = [w for w in (C.RELAY.get("fixing") or []) if w in chunk and w not in pend]
             if C.RELAY.get("endReason") in ("newchat", "resize") and fx:    # 在改的词也放进新的提示词（带着最新的“还要补”）
                 pend += fx
-            elif C.RELAY.get("endReason") == "skiprest" and fx:
-                later_op({"op": "add", "words": fx})
             if pend and C.RELAY.get("endReason") in ("newchat", "resize"):
                 N2, rnd = C.relay_size("fix")
                 if len(pend) > N2:                  # 一批改小了：多出来的放回去，排到下一份
@@ -1385,3 +1535,37 @@ def _fix_relay(R, tid, words, todos, batch):
         _commit(tid, saved, "补画面")
         saved = []
     relay_final(tid, "补画面", allres, t_all)
+
+
+# ═══════════ v1.20.0：出视频退回来的词——画面那一步记成“还要补”，补画面时 AI 拿到这几条 ═══════════
+def send_back(back, src=""):
+    """back：{单词: [还要补的几条]}。细节数据里这个词的「检查」改成“还要补：…”（出视频选词就不再算它能出视频，
+    「画面」页的列表里多出这个词），本机 pic_todo.json 记下这几条（补画面的提示词用），提交、上传。"""
+    done = []
+    for w, items in (back or {}).items():
+        items = [re.sub(r"\s+", " ", str(x)).replace("；", "，").strip() for x in items or [] if str(x).strip()]
+        if not items or not (C.REPO / EXTRA / "words" / (V.folder_of(w) + ".json")).exists():
+            continue
+        line = "还要补：" + "；".join(items)
+        with C.REPO_LOCK:
+            p = _rec_path(w)
+            try:
+                rec = json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+            except Exception:
+                rec = None
+            if rec is not None:
+                rec["检查"] = line[:2000] + ("（%s退回）" % src if src else "")
+                p.write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
+        todo_note(w, line)
+        done.append(w)
+    _UC["t"] = 0.0
+    if done:
+        C.log("退回「画面」%d 个词（%s）：%s" % (len(done), src or "出视频", "、".join(done[:20])))
+        try:
+            cid = C.commit_pending("词库：%s 退回「画面」，画面还要补（%s）" % ("、".join(done[:6]) + (" 等 %d 个" % len(done) if len(done) > 6 else ""), src or "出视频"))
+            if cid and C.load_cfg().get("autoPush", True):
+                import threading
+                threading.Thread(target=lambda: C.log(C.push()), daemon=True).start()
+        except Exception as e:
+            C.log("退回「画面」记下了，提交没成功（%s）：下次一起传" % str(e)[:120])
+    return done

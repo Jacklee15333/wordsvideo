@@ -6,6 +6,7 @@
   3. 选词建批次 → 开工 → 看进度 → 做好的视频拷到 D 盘、登记进「词库/视频清单.tsv」。
 v1.11.0：出片前检查一项一项打勾（有问题的那一行就能修）；批次能暂停、停止、删除；在跑的批次实时看每个词、电脑忙不忙；做完出汇报。
 v1.19.0：开工分三步——① 出片前检查 ② 单词检测（照“准备”起草检查、纯英文句子先念一遍听一遍）③ 开工；有问题的词说清楚怎么办。
+v1.20.0：能做的就做，不能做的退回去——选词只列能出视频的；单词检测、出片中画面有问题的词自动拿出这一批、退回「画面」，别的照常做；每一批一份汇报。
 视频文件很大（一个 20–45 MB），不进 git，只登记。"""
 import base64, json, os, re, subprocess, sys, threading, time, traceback
 from pathlib import Path
@@ -330,39 +331,19 @@ def _check_lines(t):
 
 
 def batch_new(name, words):
-    """建批次。返回 {ok, msg, n, probs（体检有问题的词）, check（体检那一句）, notes（没放进批次的词）}。"""
+    """建批次。words：选词列表里勾上的词。v1.20.0：只放现在就能出视频的；选上的别的词（已经有视频、在别的批次里、
+    要退回「画面」「出题」的）写进这一批的汇报。返回 {ok, msg, n}。"""
     if not NAME_RE.fullmatch(name or ""):
         return {"ok": False, "msg": "批次名只用字母、数字、汉字、- 和 _（40 个字以内）"}
     pw = pic_words()
-    hasq = {}                                     # v1.10.0：出视频要题目、画面都有：缺哪样就不放进批次，说去哪一步补
-    try:
-        for r in C.read_index()[1]:
-            hasq[r[2]] = hasq.get(r[2], True) and r[4] != "缺"
-    except Exception:
-        pass
-    try:                                          # v1.11.1：画面还没过起草检查的，放进去也会卡在“准备”
-        import pics
-        unc = pics.unchecked_words()
-    except Exception:
-        unc = set()
-    rows, noq, nopic, nofix = [], [], [], []
-    for w in words:
-        f = folder_of(w)
-        if not hasq.get(w):
-            noq.append(w)
-            continue
-        if f not in pw:
-            nopic.append(w)
-            continue
-        if w in unc:
-            nofix.append(w)
-            continue
-        rows.append("%02d\t%s\t%s\t出自单词工作台" % (len(rows) + 1, f, pw[f]))
-    notes = ([("没有题目、没放进批次（先到「出题」）：" + "、".join(noq[:30]))] if noq else []) + \
-            ([("没有画面、没放进批次（先到「画面」）：" + "、".join(nopic[:30]))] if nopic else []) + \
-            ([("画面还没过起草检查、没放进批次（先点「补画面」）：" + "、".join(nofix[:30]))] if nofix else [])
-    if not rows:
-        return {"ok": False, "msg": "这些词都还不能出视频：" + "；".join(notes)}
+    info = pick_info()
+    ready = [r["word"] for r in info["ready"]]
+    want = set(words or [])
+    put = [w for w in ready if w in want and folder_of(w) in pw]
+    if not put:
+        return {"ok": False, "msg": "勾上的词现在都不能出视频了（刚刚有变化）：页面刷新一下再勾"}
+    rows = ["%02d\t%s\t%s\t出自单词工作台" % (i + 1, folder_of(w), pw[folder_of(w)]) for i, w in enumerate(put)]
+    pre = {"video": info["video"], "inb": info["inb"], "pic": info["pic"], "q": info["q"], "left": [w for w in ready if w not in put]}
     sync_pics()                                   # v1.11.1：流水线用最新的画面设置
     lst = C.DATA / "batches" / (name + ".tsv")
     lst.parent.mkdir(exist_ok=True)
@@ -378,16 +359,22 @@ def batch_new(name, words):
             last = "批次 %s 已经有了：换个名字，或者先在下面把那一批删掉" % name
         elif rc == 127 or "No such file" in t:
             last = "WSL 里还没有出片脚本：先到「出片环境」里点「同步到 WSL」"
-        return {"ok": False, "msg": C.mask(last)[:300], "notes": notes}
+        return {"ok": False, "msg": C.mask(last)[:300]}
     sets = ["UPLOAD=0", "WIN_DIR=" + windir, "HOLD_QA=%d" % (1 if v["holdQA"] else 0), "GPU=%d" % (1 if v["gpu"] else 0)]
     batch_cmd(["set", name] + sets, 60)
     with _RS["lock"]:
         _runs().pop(name, None)
     ack_set(name, False)
     probs, summ = _check_lines(t)
+    rep_drop(name)
+
+    def setup(r):
+        r.update(t=time.time(), picked=info["n"], put=[folder_of(w) for w in put], pre=pre, out={}, lx=[])
+    rep_edit(name, setup)
+    with _INB["lock"]:                            # 选词列表马上不再列这些词（不用等下一次读 WSL）
+        _inb()[name] = [[folder_of(w), "prep", "waiting"] for w in put]
     C.log("建了批次 %s：%d 个词%s" % (name, len(rows), "；" + summ if summ else ""))
-    return {"ok": True, "msg": "建好了：批次 %s，%d 个词" % (name, len(rows)), "n": len(rows), "probs": probs,
-            "check": summ, "notes": notes}
+    return {"ok": True, "msg": "建好了：批次 %s，%d 个词" % (name, len(rows)), "n": len(rows), "probs": probs, "check": summ}
 
 
 def batch_list():
@@ -488,6 +475,9 @@ def batch_op(name, op, word="", stage="", why=""):
             _runs_save()
             go_clear(name)
             ack_set(name, False)
+            rep_drop(name)
+            with _INB["lock"]:
+                _inb().pop(name, None)
             C.log("删掉了批次 %s" % name)
             return True, "删掉了批次 %s（做好的视频还在出片文件夹里）" % name
         return False, C.mask(_last_line(t, "没删掉（%s）" % rc))[:300]
@@ -1064,6 +1054,7 @@ def _sampler():
 def startup():
     """软件打开时：WSL 开着、有批次在出片，就接着记电脑占用（不为这个去开 WSL）。"""
     def go():
+        watch_start()                              # v1.20.0：每分钟看一次有没有卡在画面问题上的词（WSL 没开着就不看）
         try:
             if not has_wsl():
                 return
@@ -1184,13 +1175,14 @@ for d in sorted(glob.glob(os.path.join(B, "*", ""))):
         cnt = {"done": 0, "skipped": 0, "todo": 0, "running": 0, "waiting": 0, "pic": 0}
         for w in ws:
             s, x = w.get("stage"), w.get("status")
-            if s == "prep" and x == "blocked" and (w.get("msg") or "").lstrip("\u26a0\u274c\u2705 ").startswith("起草检查没过"):
+            if s == "prep" and x == "blocked":     # v1.20.0：准备卡住的都是画面的事（起草检查没过、没有画面设置、图没画出来）
                 cnt["pic"] += 1
             elif s == "voice" and x == "blocked" and "没听清" in (w.get("msg") or ""):
                 cnt["pic"] += 1                    # v1.19.0：例句配音听不清——也是画面设置的事（换例句）
             cnt["done" if s == "done" else "skipped" if s == "skipped" else "todo" if x in ("blocked", "failed", "qa")
                 else "running" if x == "running" else "waiting"] += 1
         b["counts"] = cnt
+        b["ws"] = [[w.get("word", ""), w.get("stage", ""), w.get("status", "")] for w in ws]   # v1.20.0：每个词在哪一步（选词列表用）
         b["res"] = (st or {}).get("resources")
         b["updated"] = (st or {}).get("updated")
         cm = []
@@ -1297,7 +1289,8 @@ def _bview(b, now):
         state = "stuck"
     v = {"name": name, "n": n, "state": state, "counts": c, "created": b.get("created"), "cfg": b.get("cfg") or {},
          "cmds": b.get("cmds") or [], "winDir": _win_dir((b.get("cfg") or {}).get("WIN_DIR"), name),
-         "ack": name in _acks()}                   # v1.19.0：做完、停止的点了「知道了」，收进「生成历史」
+         "ack": name in _acks(),                   # v1.19.0：做完、停止的点了「知道了」，收进「生成历史」
+         "rep": rep_get(name)}                     # v1.20.0：这一批的汇报（建批次时没放进去的、退回去的）
     words = b.get("words")
     if words is None:
         return v
@@ -1366,8 +1359,9 @@ def _scan_bg():
         _LV["scan"].start()
 
 
-def live(open_names=()):
-    """出视频页每隔几秒来取一次：每个批次的情况（展开的、在跑的带上每个词），电脑占用，出片的 Linux 用了多少。"""
+def live(open_names=(), auto=True):
+    """出视频页每隔几秒来取一次：每个批次的情况（展开的、在跑的带上每个词），电脑占用，出片的 Linux 用了多少。
+    v1.20.0：顺便记下每个批次里每个词在哪一步（选词列表用）；有卡在画面问题上的词，后台退回「画面」。"""
     out = {"wsl": has_wsl(), "machine": machine(), "batches": []}
     try:
         out["videosN"] = len(videos())
@@ -1398,7 +1392,12 @@ def live(open_names=()):
         w["cpu"] = round(max(0.0, min(100.0, 100.0 * (1 - (cp[1] - prev[1]) / (cp[0] - prev[0])))))
     out["wslSys"] = w
     now = d.get("now") or time.time()
+    _inb_note(d.get("batches") or [])
     bs = [_bview(b, now) for b in d.get("batches") or []]
+    if auto:
+        stuck = [b["name"] for b in bs if (b.get("counts") or {}).get("pic")]
+        if stuck:
+            _auto_back_bg(stuck)
     bs.sort(key=lambda b: -(b.get("created") or 0))
     out["batches"] = bs
     running = {b["name"] for b in bs if b["state"] in ("running", "pausing", "stopping")}
@@ -1608,35 +1607,25 @@ def _go_run(name, tok, nocheck):
             return
         if not nocheck:                          # ② 单词检测
             _go_set(tok, state="words", step="words")
-            r = _wordchk(name, tok, alive)
+            for rnd in range(2):                 # v1.20.0：有问题的词自动处理，不停下来等你：练习题对不上的自动更新、再查一遍
+                skip = set(rep_get(name).get("out") or {})
+                r = _wordchk(name, tok, alive, skip)
+                if not alive():
+                    return
+                if r.get("error"):
+                    _go_set(tok, state="bad", step="words", msg=r["error"])
+                    return
+                again = _wc_settle(name, tok, rnd)      # 画面的问题退回「画面」，练习题配音听不清退回「出题」
+                if not again or not alive():
+                    break
             if not alive():
                 return
-            if r.get("error"):
-                _go_set(tok, state="bad", step="words", msg=r["error"])
-                return
-            if r.get("bad"):
-                _go_set(tok, state="bad", step="words", msg="%d 个词要先处理" % r["bad"])
-                return
+        left = _left_words(name)
+        if left is not None and not left:
+            _go_set(tok, state="ok", step="start", msg="这一批的词都退回去了，没有要出片的词", end=time.time())
+            ack_set(name, False)
+            return
         _go_set(tok, state="start", step="start")    # ③ 开工
-        ok, msg = batch_op(name, "start")
-        _go_set(tok, state="ok" if ok else "err", step="start", msg=msg, end=time.time())
-    except Exception as e:
-        traceback.print_exc()
-        _go_set(tok, state="err", msg="开工出错了：%s" % str(e)[:200], end=time.time())
-
-
-def _go_skip_start(name, tok, words):
-    """「这几个先不做，开工」：有问题的词在这一批里标成不做（改好了会自己回到这一批），再开工。"""
-    try:
-        for f in words:
-            it = (WC["items"].get(f) or {})
-            why = "单词检测没过，先不做：" + ((it.get("probs") or [{}])[0].get("short") or "")[:80]
-            ok, msg = batch_op(name, "skip", f, why=why)
-            if ok:
-                with _WC_LOCK:
-                    if f in WC["items"]:
-                        WC["items"][f]["st"] = "skipped"
-        _go_set(tok, state="start", step="start")
         ok, msg = batch_op(name, "start")
         _go_set(tok, state="ok" if ok else "err", step="start", msg=msg, end=time.time())
     except Exception as e:
@@ -1699,30 +1688,36 @@ def _wc_short(text, n=70):
     return t if len(t) <= n else t[:n] + "…"
 
 
-def _wc_prob(kind, text, short=""):
+def _wc_prob(kind, text, short="", extra=None):
     kind = kind if kind in ("pic", "lianxi", "voice", "qvoice", "err") else "pic"
     t = re.sub(r"\s+", " ", str(text or "")).replace("；", "，").strip()[:900]
-    return {"kind": kind, "text": t, "short": short or _wc_short(t)}
+    d = {"kind": kind, "text": t, "short": short or _wc_short(t)}
+    if extra:
+        d.update(extra)                         # v1.20.0：听不清的句子：原句 said、听成了 heard、没听出来的词 miss（界面上显示）
+    return d
 
 
 def _wc_voice(m):
-    """一句“没听清”→ (种类, 交给 AI 的一条“还要补”, 界面上的一句话)。例句、句子里的词是画面设置写的；听力题是题目里的。"""
+    """一句“没听清”→ (种类, 交给 AI 的一条“还要补”, 界面上的一句话, {原句, 听成了, 没听出来的词})。
+    例句、句子里的词是画面设置写的；听力题是题目里的。
+    v1.20.0：界面上写成“第 1 个例句没听出 populous”；交给 AI 的不再说“别把单词放在句末”（不准：放在句中也会听不清，要换说法）"""
     sc = str(m.get("scene") or "")
     text = re.sub(r"\s+", " ", str(m.get("text") or "")).strip()
-    heard = re.sub(r"\s+", " ", str(m.get("heard") or "")).strip() or "（什么都没听出来）"
+    heard = re.sub(r"\s+", " ", str(m.get("heard") or "")).strip()
     miss = [str(x) for x in m.get("miss") or []]
     mw = "、".join(miss) or "要学的单词"
+    hd = heard or "（什么都没听出来）"
+    ex = {"said": text[:300], "heard": heard[:300], "miss": miss[:6]}
     if sc.startswith("example"):
         k = int(re.sub(r"\D", "", sc) or 0) + 1
-        return ("voice", "第 %d 个例句配音听不清：“%s”念出来，语音识别听成了“%s”，%s 没听出来（要学的单词必须念得清，英文是美式女声念的，"
-                "同一句每次念得都一样，再念也不行）。换一个例句：%s 别放在句末，换个更常见、更短的说法，英文 ex、中文 exzh 和例句动画跟着改"
-                % (k, text, heard, mw, miss[0] if miss else "这个词"),
-                "第 %d 个例句听不清：“%s”听成了“%s”" % (k, text[:60], heard[:60]))
+        return ("voice", "第 %d 个例句配音听不清：“%s”念出来，语音识别听成了“%s”，%s 没听出来（英文是美式女声念的，同一句每次念得都一样，"
+                "再念也不行）。换一个例句：用更常见、更简短的说法，让 %s 念得清楚，英文 ex、中文 exzh 和例句动画也跟着改"
+                % (k, text, hd, mw, miss[0] if miss else "这个词"), "第 %d 个例句没听出 %s" % (k, mw), ex)
     if sc.startswith(("lianxi", "daan")):
-        return ("qvoice", "练习题里的英文句子配音听不清：“%s”，语音识别听成了“%s”，%s 没听出来。要改题目里的这一句" % (text, heard, mw),
-                "练习题的英文句子听不清：“%s”听成了“%s”" % (text[:60], heard[:60]))
-    return ("voice", "配音里这一句听不清：“%s”，语音识别听成了“%s”，%s 没听出来。换个说法（意思不变）" % (text, heard, mw),
-            "“%s”听成了“%s”" % (text[:60], heard[:60]))
+        return ("qvoice", "练习题里的英文句子配音听不清：“%s”，语音识别听成了“%s”，%s 没听出来。要改题目里的这一句" % (text, hd, mw),
+                "练习题的英文句子没听出 %s" % mw, ex)
+    return ("voice", "配音里这一句听不清：“%s”，语音识别听成了“%s”，%s 没听出来。换个说法（意思不变）" % (text, hd, mw),
+            "有一句没听出 %s" % mw, ex)
 
 
 def _wc_line(tok, tag, b, seen_end):
@@ -1743,8 +1738,8 @@ def _wc_line(tok, tag, b, seen_end):
         elif tag == "VW" and it is not None:
             seen = {p["text"] for p in it["probs"]}
             for m in b.get("miss") or []:
-                k, t, sh = _wc_voice(m)
-                p = _wc_prob(k, t, sh)
+                k, t, sh, ex = _wc_voice(m)
+                p = _wc_prob(k, t, sh, ex)
                 if p["text"] not in seen:               # 听力题那一句念两遍：只记一次
                     seen.add(p["text"])
                     it["probs"].append(p)
@@ -1757,8 +1752,8 @@ def _wc_line(tok, tag, b, seen_end):
             seen_end.append(1)
 
 
-def _wordchk(name, tok, alive=lambda: True):
-    """② 单词检测。返回 {bad: 有问题的词数, error: 检测本身没跑成的原因}。"""
+def _wordchk(name, tok, alive=lambda: True, skip=()):
+    """② 单词检测。返回 {bad: 有问题的词数, error: 检测本身没跑成的原因}。skip：已经退回去的词（不再查）。"""
     try:
         d = live([name])
     except Exception as e:
@@ -1767,9 +1762,10 @@ def _wordchk(name, tok, alive=lambda: True):
     if not b or b.get("state") == "error" or b.get("words") is None:
         return {"error": "读不了批次 %s 的词：%s" % (name, (b or {}).get("error") or d.get("error") or d.get("msg") or "WSL 里没有这一批")}
     arts = _list_arts(name)
-    pw = [w["word"] for w in b["words"] if w.get("stage") == "prep"]            # 还没做过“准备”的：从头查
-    vw = [w["word"] for w in b["words"] if w.get("stage") == "voice"]           # 准备好了、还没配音的：只试听
-    order = [w["word"] for w in b["words"] if w.get("stage") in ("prep", "voice")]
+    skip = set(skip or ())
+    pw = [w["word"] for w in b["words"] if w.get("stage") == "prep" and w["word"] not in skip]     # 还没做过“准备”的：从头查
+    vw = [w["word"] for w in b["words"] if w.get("stage") == "voice" and w["word"] not in skip]    # 准备好了、还没配音的：只试听
+    order = [w["word"] for w in b["words"] if w["word"] in pw or w["word"] in vw]
     # 别的批次正在做的同一个词：画图的文件夹是同一个，这次先不查（查的时候要重画，会打扰它）
     busy = {w["word"] for x in d.get("batches") or [] if x.get("name") != name and x.get("state") in ("running", "pausing", "stopping")
             for w in x.get("words") or [] if w.get("stage") not in ("done", "skipped")}
@@ -1872,26 +1868,6 @@ def wc_fixed(batch, word):
     wc_mark(batch, [folder_of(word)], "fixed", note="改好了")
 
 
-def wc_problems(name, words):
-    """交给 AI 重新做画面用的：{单词: “还要补：…；…”}（单词检测查出来的、画面设置能改的那几条）。"""
-    fm = {}
-    try:
-        for r in C.read_index()[1]:
-            fm.setdefault(folder_of(r[2]), r[2])
-    except Exception:
-        pass
-    out = {}
-    with _WC_LOCK:
-        if WC["name"] != name:
-            return {}
-        for f in words:
-            it = WC["items"].get(f) or {}
-            items = [p["text"] for p in it.get("probs") or [] if p.get("kind") in ("pic", "voice")]
-            if items:
-                out[fm.get(f, f.replace("_", " "))] = "还要补：" + "；".join(items)
-    return out
-
-
 def wc_lianxi(name, words):
     """「更新练习题」：题目已经出好了，画面设置里的练习题还是旧的（或者没写进去）——换成题目里的那几道，提交、拷进 WSL。"""
     import pics
@@ -1925,34 +1901,6 @@ def wc_lianxi(name, words):
     if noq:
         msg += ("；" if msg else "") + "%s 的题目还不全：先到「出题」把题目出好" % "、".join(noq)
     return {"ok": bool(done), "msg": msg}
-
-
-def wc_skip(name, words):
-    """「不做这个词」：这一批里标成不做（批次还没开工的话，开工时生效）。"""
-    n, msg = 0, ""
-    for f in words:
-        it = (WC["items"].get(f) or {}) if WC["name"] == name else {}
-        why = "单词检测没过，不做了：" + ((it.get("probs") or [{}])[0].get("short") or "")[:80]
-        ok, msg = batch_op(name, "skip", f, why=why)
-        if ok:
-            n += 1
-            wc_mark(name, [f], "skipped")
-    return {"ok": n > 0, "msg": ("%d 个词这一批不做了" % n) if n else msg}
-
-
-def wc_go_skip(name):
-    """「这几个先不做，开工」"""
-    with _WC_LOCK:
-        if WC["name"] != name:
-            return {"ok": False, "msg": "单词检测的结果没了：再点一次「开工」"}
-        bad = [w for w in WC["order"] if (WC["items"].get(w) or {}).get("st") in ("bad", "err", "fixing")]
-    with _EC_LOCK:
-        if GO["name"] != name or GO["state"] != "bad":
-            return {"ok": False, "msg": "现在不在等你处理：再点一次「开工」"}
-        tok = GO["tok"] + 1
-        GO.update(state="start", step="start", tok=tok, msg="")
-    threading.Thread(target=_go_skip_start, args=(name, tok, bad), daemon=True).start()
-    return {"ok": True, "msg": "%d 个词先不做，开工" % len(bad)}
 
 
 WC_SH = r"""BD="$HOME/wf-batch/{NAME}"
@@ -2168,3 +2116,385 @@ if PW:
 voice([w for w in PW + VW if w in good])
 say('END')
 '''
+
+
+# ═══════════ v1.20.0：能做的就做，不能做的退回去——没有“等你选”的中间状态 ═══════════
+# 选词：只列现在就能出视频的词（选上的、题目画面都好了、还没有视频、也不在别的批次里）。别的写进建批次时的汇报。
+# 开工前单词检测、出片中卡在“准备”“配音”（画面的问题）：自动从这一批拿掉、退回「画面」（或「出题」），别的词照常做。
+# 每一批一份汇报（data/video_reports.json）：建批次时没放进去的词、检测时和出片时退回去的词，一个一行写原因。
+REP_P = C.DATA / "video_reports.json"
+INB_P = C.DATA / "video_inbatch.json"        # {批次: [[文件夹名, 阶段, 状态], ...]}：最近一次读到的每个批次里每个词在哪一步
+_REP = {"lock": threading.RLock(), "d": None}
+_INB = {"lock": threading.Lock(), "d": None}
+
+
+def _reps():
+    if _REP["d"] is None:
+        try:
+            _REP["d"] = json.loads(REP_P.read_text(encoding="utf-8"))
+        except Exception:
+            _REP["d"] = {}
+    return _REP["d"]
+
+
+def rep_get(name):
+    with _REP["lock"]:
+        return json.loads(json.dumps(_reps().get(name) or {}, ensure_ascii=False))
+
+
+def rep_edit(name, fn):
+    with _REP["lock"]:
+        r = _reps().setdefault(name, {"t": time.time(), "out": {}})
+        r.setdefault("out", {})
+        fn(r)
+        try:
+            REP_P.write_text(json.dumps(_reps(), ensure_ascii=False), encoding="utf-8")
+        except Exception:
+            pass
+
+
+def rep_drop(name):
+    with _REP["lock"]:
+        if _reps().pop(name, None) is not None:
+            try:
+                REP_P.write_text(json.dumps(_reps(), ensure_ascii=False), encoding="utf-8")
+            except Exception:
+                pass
+
+
+def _inb():
+    if _INB["d"] is None:
+        try:
+            _INB["d"] = json.loads(INB_P.read_text(encoding="utf-8"))
+        except Exception:
+            _INB["d"] = {}
+    return _INB["d"]
+
+
+def _inb_note(raw_batches):
+    """live() 每次读到所有批次：记下每个批次里每个词在哪一步（WSL 没开时，选词列表照最后一次的算）。"""
+    d = {b["name"]: b.get("ws") or [] for b in raw_batches if b.get("name") and "ws" in b}
+    with _INB["lock"]:
+        if d != _inb():
+            _INB["d"] = d
+            try:
+                INB_P.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+            except Exception:
+                pass
+
+
+def inbatch():
+    """(在批次里、还没做完的词 {文件夹名: 批次}, 在批次里做好了的词 {文件夹名})"""
+    pend, done = {}, set()
+    with _INB["lock"]:
+        d = dict(_inb())
+    for name, ws in d.items():
+        for x in ws:
+            f, st = x[0], x[1] if len(x) > 1 else ""
+            if st == "done":
+                done.add(f)
+            elif st != "skipped":
+                pend.setdefault(f, name)
+    return pend, done
+
+
+def pick_info():
+    """出视频的选词：ready 现在就能出视频的（列出来、默认全勾）；别的分好类，建批次时写进汇报。"""
+    import pool
+    try:
+        import pics
+        todo = pics.todo_all()
+    except Exception:
+        todo = {}
+    items = [i for i in pool.items()["items"] if i.get("picked")]
+    pend, done = inbatch()
+    out = {"n": len(items), "ready": [], "video": [], "inb": [], "pic": [], "q": []}
+    for i in items:
+        w, f = i["word"], folder_of(i["word"])
+        if i.get("video") or f in done:
+            out["video"].append(w)
+        elif f in pend:
+            out["inb"].append([w, pend[f]])
+        elif not i.get("q"):
+            out["q"].append([w, "出题没过" if i.get("manual") else "还没有题目"])
+        elif i.get("manual"):
+            out["q"].append([w, "题目要改（在「出题」的「没过的词」里）"])
+        elif not i.get("pic"):
+            out["pic"].append([w, "上次没做成" if i.get("picfail") else "还没有画面"])
+        elif i.get("picTodo"):
+            ln = todo.get(w, "")
+            n = len([x for x in re.split(r"[；;]", ln.split("：", 1)[-1]) if x.strip()]) if ln else 0
+            out["pic"].append([w, ("画面还要补 %d 处" % n) if n else "画面还没过起草检查"])
+        else:
+            out["ready"].append({"word": w, "meaning": (i.get("meaning") or "")[:40]})
+    return out
+
+
+def _real_words():
+    fm = {}
+    try:
+        for r in C.read_index()[1]:
+            fm.setdefault(folder_of(r[2]), r[2])
+    except Exception:
+        pass
+    return fm
+
+
+_MARK_PY = r'''
+import json, os, sys, time
+bd, data = sys.argv[1], json.loads(sys.argv[2])
+def alive():
+    try:
+        os.kill(int(open(os.path.join(bd, "pipeline.pid")).read().strip()), 0)
+        return True
+    except Exception:
+        return False
+if alive():
+    os.makedirs(os.path.join(bd, "cmd"), exist_ok=True)
+    for i, (w, why) in enumerate(data.items()):
+        open(os.path.join(bd, "cmd", "%d.json" % (time.time_ns() + i)), "w", encoding="utf-8").write(
+            json.dumps({"op": "skip", "word": w, "why": why}, ensure_ascii=False))
+    print("MARKED cmd")
+else:
+    sp = os.path.join(bd, "state.json")
+    if os.path.exists(sp):
+        st = json.load(open(sp, encoding="utf-8"))
+    else:
+        rows = []
+        for l in open(os.path.join(bd, "list.tsv"), encoding="utf-8"):
+            if not l.strip() or l.lstrip().startswith("#"):
+                continue
+            c = l.rstrip("\n").replace("\r", "").split("\t")
+            if len(c) >= 3 and c[1].strip():
+                rows.append({"no": c[0].strip(), "word": c[1].strip(), "arts": c[2].strip(), "note": c[3].strip() if len(c) > 3 else ""})
+        st = {"words": [dict(r, stage="prep", status="waiting", msg="", tries={}, t={}) for r in rows]}
+    for w in st["words"]:
+        if w["word"] in data:
+            w["stage"], w["status"], w["msg"] = "skipped", "", data[w["word"]]
+    st["updated"] = time.time()
+    json.dump(st, open(sp + ".tmp", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    os.replace(sp + ".tmp", sp)
+    print("MARKED state")
+'''
+
+
+def _mark_out(name, whys):
+    """这一批里这些词不做了（{文件夹名: 为什么}）：流水线在跑就发指令，没在跑就直接写进 state.json（没开过工的也建一份）。"""
+    if not whys:
+        return True
+    rc, t = wsl("BD=\"$HOME/wf-batch/%s\"; [ -d \"$BD\" ] || exit 3\npython3 - \"$BD\" %s <<'PYMARK'\n%s\nPYMARK\n"
+                % (name, q(json.dumps(whys, ensure_ascii=False)), _MARK_PY), 90)
+    return rc == 0 and "MARKED" in t
+
+
+def send_out(name, groups, when):
+    """把词从批次 name 里拿掉、退回去。groups：[(文件夹名, 去哪儿 pic/q, 界面上一句话, 交给 AI 的几条, 卡在哪一步)]。
+    pic：画面那一步记成“还要补”（补画面时 AI 拿到这几条）；q：放进「出题」的「没过的词」（写清原因）。"""
+    if not groups:
+        return
+    fm = _real_words()
+    groups = [tuple(g) + ((),) * (6 - len(g)) for g in groups]
+    whys, back = {}, {}
+    for f, to, short, items, stage, voice in groups:
+        w = fm.get(f, f.replace("_", " "))
+        whys[f] = ("退回「画面」：" if to == "pic" else "退回「出题」：") + short[:160]
+        if to == "pic":
+            back[w] = list(dict.fromkeys(items or [short]))
+        else:
+            try:
+                C.x("INSERT OR REPLACE INTO manual(word,errors,draft,attempts,ts,source) VALUES(?,?,?,?,?,?)",
+                    (w, json.dumps(items or [short], ensure_ascii=False), "", 0, C.now(), "出视频退回"))
+            except Exception:
+                pass
+    if back:
+        try:
+            import pics
+            pics.send_back(back, "批次 %s %s" % (name, "单词检测" if when == "check" else "出片时"))
+        except Exception as e:
+            C.log("退回「画面」没记上（%s）" % str(e)[:120])
+    _mark_out(name, whys)
+
+    def upd(r):
+        for f, to, short, items, stage, voice in groups:
+            r["out"][f] = {"word": fm.get(f, f.replace("_", " ")), "to": to, "why": short[:200], "when": when,
+                           "stage": stage, "t": time.time(), "items": list(dict.fromkeys(str(x)[:400] for x in (items or [])))[:8],
+                           "voice": [{"said": v.get("said", ""), "heard": v.get("heard", ""), "miss": v.get("miss") or []}
+                                     for v in (voice or []) if v.get("said")][:6]}
+    rep_edit(name, upd)
+    C.log("批次 %s：%d 个词退回去了（%s）：%s" % (name, len(groups), "单词检测" if when == "check" else "出片时卡住",
+                                          "；".join("%s %s" % (fm.get(g[0], g[0]), g[2][:40]) for g in groups[:12])))
+
+
+def _prob_route(probs):
+    """单词检测查出来的问题 → (去哪儿 pic / q / lx（练习题自动更新） / None（检测没跑成，开工后照常查）, 一句话, 交给 AI 的几条, 听不清的句子)"""
+    kinds = {p.get("kind") for p in probs}
+    pic = [p for p in probs if p.get("kind") in ("pic", "voice")]
+    if pic:
+        return "pic", pic[0].get("short") or _wc_short(pic[0]["text"]), [p["text"] for p in pic], [p for p in pic if p.get("said")]
+    qv = [p for p in probs if p.get("kind") == "qvoice"]
+    if qv:
+        return "q", qv[0].get("short") or "练习题的英文句子听不清", [p["text"] for p in qv], qv
+    if "lianxi" in kinds:
+        return "lx", "练习题和题目对不上", [p["text"] for p in probs if p.get("kind") == "lianxi"], []
+    return None, "", [], []
+
+
+def _wc_settle(name, tok, rnd):
+    """单词检测完了：练习题对不上、题目有了的——自动更新练习题、再查一遍；画面的问题——退回「画面」；练习题配音听不清——退回「出题」。
+    返回要再查一遍的词（练习题刚更新的）。"""
+    fm = _real_words()
+    with _WC_LOCK:
+        if WC["tok"] != tok:
+            return []
+        bad = [(f, list(it.get("probs") or [])) for f, it in WC["items"].items() if it.get("st") in ("bad", "err")]
+    groups, lx, again, noq = [], [], [], []
+    import pics
+    for f, probs in bad:
+        to, short, items, voice = _prob_route(probs)
+        if to is None:
+            wc_mark(name, [f], "ok", unv=True, note="检测没跑成（%s），开工后照常检查" % _wc_short(probs[0]["text"] if probs else "", 40))
+            continue
+        if to == "lx":
+            w = fm.get(f, f.replace("_", " "))
+            if rnd == 0 and pics.lianxi_qs(w):
+                lx.append(w)
+                again.append(f)
+                continue
+            to, short = "q", "题目还不全：先把题目出好" if not pics.lianxi_qs(w) else "练习题更新了还是对不上"
+        groups.append((f, to, short, items, "", voice))
+    if lx:
+        for w in lx:
+            pics.refresh_lianxi(w)
+        try:
+            cid = C.commit_pending("词库：练习题换成题目里的 %s（%d 个词，开工前单词检测自动更新）" % ("、".join(lx[:6]), len(lx)))
+            if cid and C.load_cfg().get("autoPush", True):
+                threading.Thread(target=lambda: C.log(C.push()), daemon=True).start()
+        except Exception as e:
+            C.log("练习题改好了，提交没成功（%s）：下次一起传" % str(e)[:120])
+        rep_edit(name, lambda r: r.__setitem__("lx", sorted(set((r.get("lx") or []) + lx))))
+        C.log("批次 %s：练习题和题目对不上，自动换成题目里的：%s；再查一遍" % (name, "、".join(lx)))
+    if groups:
+        send_out(name, groups, "check")
+        wc_mark(name, [g[0] for g in groups], "out")
+    return again
+
+
+def _left_words(name):
+    """这一批还要做的词（不算做好的、退回去的）。读不了返回 None。"""
+    try:
+        d = live([name])
+    except Exception:
+        return None
+    b = next((x for x in d.get("batches") or [] if x.get("name") == name), None)
+    if not b or b.get("words") is None:
+        return None
+    out = set(rep_get(name).get("out") or {})
+    return [w["word"] for w in b["words"] if w.get("stage") not in ("done", "skipped") and w["word"] not in out]
+
+
+# 出片中卡住、是画面的问题（准备卡住；配音时例句听不清）：自动拿出这一批、退回「画面」，别的词接着做
+_AB = {"lock": threading.Lock(), "busy": False, "thread": None}
+
+
+def _pic_stuck(w):
+    m = w.get("msg") or ""
+    return w.get("status") == "blocked" and (w.get("stage") == "prep" or (w.get("stage") == "voice" and "没听清" in m))
+
+
+def auto_back(batches):
+    """batches：live() 给界面的批次（带 words）。卡在画面问题上的词退回去。"""
+    for b in batches:
+        ws = [w for w in b.get("words") or [] if _pic_stuck(w)]
+        if not ws:
+            continue
+        name = b["name"]
+        done = set(rep_get(name).get("out") or {})
+        ws = [w for w in ws if w["word"] not in done]
+        if not ws:
+            continue
+        try:
+            todo = prep_todo(name, [w["word"] for w in ws])
+        except Exception:
+            todo = {}
+        fm = _real_words()
+        groups = []
+        for w in ws:
+            f, real = w["word"], fm.get(w["word"], w["word"].replace("_", " "))
+            stage = STG_CN.get(w.get("stage"), "")
+            if w.get("stage") == "voice":
+                ms = w.get("miss") or []
+                vs = [_wc_voice(m) for m in ms]
+                if vs and all(v[0] == "qvoice" for v in vs):
+                    groups.append((f, "q", vs[0][2], [v[1] for v in vs], stage, [v[3] for v in vs]))
+                    continue
+                items = [v[1] for v in vs if v[0] != "qvoice"] or pics_items(todo.get(real, "")) or ["例句配音有要学的单词没听清：换一个说法"]
+                short = (vs[0][2] if vs else "例句配音没听清")
+            else:
+                vs = []
+                line = todo.get(real, "")
+                items = pics_items(line)
+                msg = _plain(w.get("msg"))
+                if not items:
+                    items = [re.sub(r"^起草检查没过[:：]\s*", "", msg)[:400] or "准备那一步卡住了"]
+                short = ("画面还要补 %d 处" % len(items)) if msg.startswith("起草检查没过") else _wc_short(msg, 60)
+            groups.append((f, "pic", short, items, stage, [v[3] for v in vs if v[0] != "qvoice"]))
+        send_out(name, groups, "run")
+
+
+def pics_items(line):
+    try:
+        import pics
+        return pics._items(line)
+    except Exception:
+        return []
+
+
+def _auto_back_bg(names):
+    with _AB["lock"]:
+        if _AB["busy"]:
+            return
+        _AB["busy"] = True
+
+    def go():
+        try:
+            d = live(names, auto=False)
+            auto_back([b for b in d.get("batches") or [] if b.get("name") in names])
+        except Exception:
+            traceback.print_exc()
+        finally:
+            with _AB["lock"]:
+                _AB["busy"] = False
+    threading.Thread(target=go, daemon=True, name="video-autoback").start()
+
+
+def _wsl_up():
+    """WSL 里出片的 Linux 现在开着没有（不为这个去开它）。"""
+    if not has_wsl():
+        return False
+    try:
+        r = subprocess.run(["wsl", "-l", "--running", "-q"], capture_output=True, timeout=20, creationflags=NOWIN)
+        return vcfg()["distro"] in [l.strip().strip("\x00").strip() for l in _dec(r.stdout).splitlines()]
+    except Exception:
+        return False
+
+
+def _watcher():
+    """你不在「出视频」页时，软件自己每分钟看一次：有卡在画面问题上的词就退回去。"""
+    while True:
+        time.sleep(60)
+        try:
+            with _INB["lock"]:
+                have = bool(_inb())
+            if have and _wsl_up():
+                live([])
+        except Exception:
+            pass
+
+
+def watch_start():
+    with _AB["lock"]:
+        t = _AB["thread"]
+        if t and t.is_alive():
+            return
+        _AB["thread"] = threading.Thread(target=_watcher, daemon=True, name="video-watch")
+        _AB["thread"].start()

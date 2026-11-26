@@ -290,6 +290,8 @@ def api_video_get(qs):
         return {"items": V.batch_list()}
     if what == "setup":
         return {"text": V.setup_status(qs.get("step", "boot"))}
+    if what == "pick":                                    # v1.20.0：选词列表——只列现在就能出视频的
+        return V.pick_info()
     if what == "words":
         pw, vd = V.pic_words(), V.videos()
         idx = {}
@@ -328,29 +330,6 @@ def api_video_post(b):
     elif op == "ack":                                      # v1.19.0：做完、停止的批次「知道了」→ 收进「生成历史」
         V.ack_set((b.get("name") or "").strip(), b.get("on", True) is not False)
         return {"ok": True}
-    elif op == "wc":                                       # v1.19.0：单词检测查出来的词怎么办
-        bn, act = (b.get("name") or "").strip(), b.get("act")
-        ws = [str(w) for w in (b.get("words") or []) if w][:200]
-        if act == "skip":
-            return V.wc_skip(bn, ws)
-        if act == "lianxi":
-            return V.wc_lianxi(bn, ws)
-        if act == "goskip":
-            return V.wc_go_skip(bn)
-        if act == "pics":
-            todos = V.wc_problems(bn, ws)
-            if not todos:
-                return {"ok": False, "msg": "这几个词没有画面能改的问题"}
-            words = list(todos)
-            r = api_task_add({"kind": "pics", "params": {"words": words, "fix": True, "batch": bn, "todos": todos},
-                              "title": "重新做画面：%s%s" % ("、".join(words[:4]), " 等 %d 个" % len(words) if len(words) > 4 else "")})
-            if r.get("error"):
-                return {"ok": False, "msg": r["error"]}
-            V.wc_mark(bn, [V.folder_of(w) for w in words], "fixing", tid=r.get("id"))
-            relay = C.load_cfg().get("provider") == "relay"
-            return {"ok": True, "n": len(words), "msg": "交给 AI 重新做画面：%d 个词。%s" % (
-                len(words), "到「画面」页，把提示词粘贴给网页 AI" if relay else "AI 自己改，过程在「画面」页")}
-        return {"ok": False, "msg": "不认识的操作"}
     elif op == "fixpics":                                  # v1.11.1：补画面（起草检查没过的交给 AI 改；补好的批次里接着做）
         bn = (b.get("name") or "").strip()
         ws = V.fix_words(bn, b.get("words") or [])
