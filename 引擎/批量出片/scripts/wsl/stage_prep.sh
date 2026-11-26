@@ -20,8 +20,10 @@ done
 python3 "$wp" "$WORK/edits_$w.json" >> "$J/prep_art.log" 2>&1 || { tail -5 "$J/prep_art.log"; die "words/$w.py 出错"; }
 python3 "$LWB/scripts/wsl/missing_art.py" "$w" || need "画面设置里用到的图没画出来：照上面的提示改清单里 $w 的画图脚本（按先后），再 retry"
 say "【起草检查】"
+# 第八十七版：每次准备都按最新的视频技能重新起草（--redraft）。expand.py、已知的配音修正会改精简版的稿子，不加的话下次不重新起草，
+#   旧视频按新版重做时用的还是旧稿子
 python3 run.py --table "$TABLE" --syl "$SYL" --words "$word" --number "$n" --out "$OUT" --edits "$WORK/edits_$w.json" \
-    --edition brief --draft-only --no-preview --work "$J" > "$J/draft.log" 2>&1 || { tail -15 "$J/draft.log"; die "起草出错（$J/draft.log）"; }
+    --edition brief --draft-only --no-preview --redraft --work "$J" > "$J/draft.log" 2>&1 || { tail -15 "$J/draft.log"; die "起草出错（$J/draft.log）"; }
 # 第八十一版：起草时不出预览图（一个词省几十秒）；起草检查没过才补一张给人看（见下面 preview_for_people）
 preview_for_people() {
   python3 run.py --table "$TABLE" --syl "$SYL" --words "$word" --number "$n" --out "$OUT" --edits "$WORK/edits_$w.json" \

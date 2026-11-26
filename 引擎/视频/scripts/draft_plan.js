@@ -94,13 +94,18 @@ function sameAs(sub) {
 // 念“英语本族词 / 英语本族前缀 / 英语本族后缀 / 英语本族词根”，和总表（维护技能第 125 条）一样
 const BZ_KIND = { pre: '前缀', suf: '后缀', word: '词', root: '词根' };
 const fromPhrase = (f, k) => (!f ? '' : f === '英语本族' ? '英语本族' + (BZ_KIND[k] || '词根') + '，' : '来自' + f + '，');
+// 6.43（第八十七版）：精简版直接说“英语前缀是 un-”“拉丁语词根是 port”，不说“来自…”（用户：“直接说英语前后缀，词根；拉丁语前后缀，词根就可以了，不用说来自”）。
+// 英文照旧放在“是”后面念（实测最清楚，见 narration-guide 第五节）
+const LEAN_K = { pre: '前缀', suf: '后缀', word: '单词', root: '词根' };
+const leanFrom = f => { const s = String(f || '').replace(/（[^（）]*）|\([^()]*\)/g, '').trim(); return /^(英语本族|英语本来就有|古英语)$/.test(s) ? '英语' : s; };
+const leadIn = (p, k, sp) => (prefs.lean ? (k === 'word' ? '' : leanFrom(p.from)) + LEAN_K[k] + '是 ' + sp + '，' : LEAN_K[k] + '是 ' + sp + '，' + fromPhrase(p.from, k));
 // 5.1 起：总表那一行末尾的“记：stat ≈ stand（站）：……”念成“记法：stat，约等于 stand，站。……”
 // ≈ 念“约等于”（真的是一家），∽ 念“长得像”（只帮助记忆），← 念“来自”
 function memoLine(p) {
   const m = p.memo;
   if (!m) return '';
   const link = m.sym === '≈' ? ' 约等于 ' : m.sym === '←' ? ' 来自 ' : ' 长得像 ';
-  const why = m.why ? say(m.why).replace(/[。]+$/, '') : '';
+  const why = m.why && !prefs.lean ? say(m.why).replace(/[。]+$/, '') : '';      // 6.43：精简版“记”只念关键的一句，下面的解释不念
   // 5.11：词根和单独的词写法一样（port ≈ port 港口）：不说“port 约等于 port”
   if (m.same) return '记法：' + m.b + ' 单独用也是一个词，意思是' + say(m.zh) + '。' + (why ? why + '。' : '');
   // 5.1 实测：“长得像 roar，吼叫”这种英文后面紧跟逗号的念不清，改成“X 这个词，意思是…”
@@ -131,11 +136,11 @@ function howSay(p) {
 function partSegs(p) {
   const segs = [];
   if (p.xt) {                                       // 6.8：总表“词根形态版”：先说词根本身 duc 和意思，写法不一样的再说“在这里写成 duce”
-    segs.push('词根是 ' + spoken(p.xt.root) + '，' + fromPhrase(p.from, 'root') + '意思是：' + say(p.xt.gloss) + '。');
+    segs.push(leadIn(p, 'root', spoken(p.xt.root)) + '意思是：' + say(p.xt.gloss) + '。');
     if (p.xt.spelled) segs.push('在这里写成 ' + spoken(p.text) + '。' + (p.xt.short ? letters(say(p.xt.short)).replace(/[。]+$/, '') + '。' : ''));
   } else if (p.base && !p.pp && (p.kind === 'root' || p.kind === 'word')) {
     const g = glossSay(p.rootGloss || p.gloss), sp = spoken(p.base);
-    segs.push('词根是 ' + sp + '，' + fromPhrase(p.from, 'root') + (g.t ? g.verb + g.t : say(p.text)) + '。');
+    segs.push(leadIn(p, 'root', sp) + (g.t ? g.verb + g.t : say(p.text)) + '。');
     const hereG = p.gloss && p.rootGloss && !p.rootGloss.includes(p.gloss) && !p.gloss.includes(p.rootGloss) ? '，是' + say(p.gloss) : '';
     const hs = howSay(p);
     // 6.4：后面有“身份和分工”那一幕的（p.varInFg），字母怎么变的挪到那一幕讲，这里只说“在这里写成 duce”
@@ -153,9 +158,9 @@ function partLine(p) { return partSegs(p).join(''); }
 function partLine0(p) {
   const g = glossSay(p.gloss), sp = spokenAs(p.head || p.text, p.kind);
   const gl = g.t ? g.verb + g.t : '';
-  if (p.kind === 'pre') return '前缀是 ' + sp + '，' + fromPhrase(p.from, 'pre') + (gl || say(p.role)) + '。';
+  if (p.kind === 'pre') return leadIn(p, 'pre', sp) + (gl || say(p.role)) + '。';
   if (p.kind === 'suf') {
-    let s = '后缀是 ' + sp + '，' + fromPhrase(p.from, 'suf') + (p.role ? say(p.role) + '。' : '');
+    let s = leadIn(p, 'suf', sp) + (p.role ? say(p.role) + '。' : '');
     // 总表各部分解释里“在这里：…”讲的词性变化；母词意思有过渡的，先讲本义怎么变成这个意思
     if (p.here) return s + '在这里，' + (p.bridge ? p.bridge.w + ' 本义是' + say(p.bridge.orig) + '，' + say(p.bridge.why) + '，就成了' + say(p.bridge.best) + '。' : '') + say(p.here) + '。';
     const zh = [...(g.t || '')].filter(c => /[\u3400-\u9fff]/.test(c));
@@ -166,8 +171,8 @@ function partLine0(p) {
     return s;
   }
   if (p.pp && (p.kind === 'root' || p.kind === 'word')) return '词根是 ' + sp + '，就是 ' + spoken(p.pp) + (/由词根|的另一种写法/.test(p.sub || '') ? ' 在过去分词里的样子，' : ' 的过去分词形式，') + (gl || say(p.text)) + '。';   // 4.0 起：competit(=compete)
-  if (p.kind === 'word') return '单词是 ' + sp + '，' + fromPhrase(p.from, 'word') + (gl || say(p.text)) + '。';   // 总表「单词部分」列里的词（make、up）
-  return '词根是 ' + sp + '，' + fromPhrase(p.from, 'root') + (gl || say(p.text)) + '。';
+  if (p.kind === 'word') return leadIn(p, 'word', sp) + (gl || say(p.text)) + '。';   // 总表「单词部分」列里的词（make、up）
+  return leadIn(p, 'root', sp) + (gl || say(p.text)) + '。';
 }
 // 几个意思的区别：“第一个是动词，指把人或货物运到别的地方；”（pics 里的 pos、diff）
 function diffLine(x, i, n) {
@@ -259,6 +264,13 @@ function duyinScene(x) {
 }
 function sylScene() {
   const pr = film.pron, real = pr.chunks.filter(c => !c.sep), nb = real.length;
+  // 6.43（第八十七版，用户：“直接拆分读，不要有男生的解释，把解释部分去掉；比如 unusual：u nu su al 几个部分读完就可以了，最后标出重音部分”）：
+  //   精简版只念一块一块（美式女声），不说“分成几块来读”“连起来”“重音在第几块”；合成整词、标重音不说话，hold 留出这几秒
+  if (prefs.lean) {
+    if (!pr.ok) return { marks: true, segs: [d.w + '。'], hold: pr.stress >= 0 && nb > 1 ? 1.2 : 0.4 };
+    const blocks = pr.read.map(ci => pr.chunks[ci].key);
+    return nb > 1 ? { marks: true, segs: blocks, hold: pr.stress >= 0 && pr.read.length > 1 ? 1.7 : 1.1 } : { marks: true, segs: blocks };
+  }
   if (!pr.ok) return { marks: true, intro: nb > 1 ? '分成' + CNB[nb] + '块：' : '', segs: [d.w + '。'] };
   const segs = pr.read.map(ci => pr.chunks[ci].key);              // 一块一块念：正常语速（放慢了前面会带出气声）
   if (nb > 1) segs.push('连起来：' + pr.key + '。');
@@ -398,6 +410,9 @@ function fengongScene(p) {
 // 6.0：第三部分“同义词辨析”。第 1 句提出问题；每个词一句（英文放句首，后面接“这个词”念得清楚）；最后一句讲逻辑差在哪儿
 function distinguishScene() {
   const D = film.dist, ws = D.items.map(x => x.w);
+  // 6.43（第八十七版，用户：“同义词辨析部分直接把单词画面画出来，然后说哪个单词，哪个单词给特写就可以了”）：精简版每个词一句、只念这个词
+  //   （纯英文，美式女声）；念完停 1.4 秒看特写（waits），最后缩回去一起看（hold）
+  if (prefs.lean) { const waits = {}; ws.forEach((w, i) => { waits[String(i)] = 1.4; }); return { marks: true, segs: ws.map(w => w + '.'), waits, hold: 1.2 }; }
   const list = ws.length > 1 ? ws.slice(0, -1).join('、') + ' 和 ' + ws[ws.length - 1] : ws[0];
   const segs = [D.key ? list + '，中文都可以说' + say(D.key) + '，区别在哪儿呢？' : list + '，这几个词容易混，区别在哪儿呢？'];
   D.items.forEach(it => {

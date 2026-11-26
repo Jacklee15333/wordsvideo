@@ -260,8 +260,99 @@ def videos():
         for l in p.read_text(encoding="utf-8").splitlines()[1:]:
             f = l.split("\t")
             if len(f) >= 5:
-                out[f[0]] = {"word": f[0], "batch": f[1], "file": f[2], "size": f[3], "ts": f[4]}
+                ver = f[5].strip() if len(f) >= 6 else ""
+                out[f[0]] = {"word": f[0], "batch": f[1], "file": f[2], "size": f[3], "ts": f[4], "ver": ver, "old": is_old(ver)}
     return out
+
+
+# v1.21.0：视频技能 6.43.0 起精简版再精简（读音拆分只念一块一块、词缀词根直接说“英语前缀”、同义词辨析只念单词给特写）。
+#   这以前做的视频叫“旧版”：「做好的视频」里标出来，能一起删掉、按新版重做。登记时记下当时的视频技能版本（视频清单第 6 列；以前的行没有＝旧版）
+LEAN_VER = (6, 43, 0)
+VDEL_P = C.DATA / "video_deleted.json"     # 删掉了旧版视频的词 {文件夹名: {t 几点删的, b 当时“做好了”的批次}}：这些批次里的“做好了”不再算数（见 inbatch）
+
+
+def _vt(v):
+    return tuple(int(x) for x in re.findall(r"\d+", v or "")[:3])
+
+
+def is_old(ver):
+    t = _vt(ver)
+    return not t or t < LEAN_VER
+
+
+def _cur_skill():
+    try:
+        import pics
+        return pics.skill_version()[0]
+    except Exception:
+        return ""
+
+
+def _write_vlist(have):
+    rows = ["单词\t批次\t文件（相对出片文件夹）\t大小\t时间\t视频技能"] + [
+        "\t".join([v["word"], v["batch"], v["file"], v["size"], v["ts"], v.get("ver", "")]) for v in sorted(have.values(), key=lambda v: v["ts"])]
+    with C.REPO_LOCK:
+        (C.REPO / VLIST).write_text("\n".join(rows) + "\n", encoding="utf-8")
+
+
+def _vdel():
+    try:
+        d = json.loads(VDEL_P.read_text(encoding="utf-8"))
+        return d if isinstance(d, dict) else {}
+    except Exception:
+        return {}
+
+
+def _vdel_save(d):
+    VDEL_P.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def _try_wsl(sh):
+    try:
+        wsl(sh, 120)
+    except Exception:
+        pass
+
+
+def delete_old(words=None):
+    """v1.21.0：删掉旧版视频（视频技能 6.43.0 以前做的）——出片文件夹里的 mp4 和关键画面图、视频清单里的登记，WSL 里的成片也删。
+    这些词回到「出视频」的选词列表（当时批次里“做好了”的记号不再算数）；批次的生成历史留着。words 不给就删全部旧版。"""
+    have = videos()
+    pick = [k for k, v in have.items() if v.get("old") and (not words or k in words)]
+    if not pick:
+        return {"ok": False, "msg": "没有旧版视频了"}
+    root = Path(vcfg()["winDir"])
+    with _INB["lock"]:
+        inb = {n: [x[0] for x in ws if len(x) > 1 and x[1] == "done"] for n, ws in _inb().items()}
+    gone, bad, rm = [], [], []
+    bat = {k: have[k]["batch"] for k in pick}
+    for k in pick:
+        v = have[k]
+        mp4 = root / v["file"].replace("\\", "/")
+        try:
+            sib = [x for x in mp4.parent.iterdir() if x.is_file() and x.name.startswith(mp4.stem + "_")] if mp4.parent.is_dir() else []
+            for x in [mp4] + sib:
+                x.unlink(missing_ok=True)
+        except Exception as e:
+            bad.append("%s（%s）" % (k, str(e)[:80]))
+            continue
+        gone.append(k)
+        have.pop(k, None)
+        rm.append("%s/%s" % (mp4.parent.name, mp4.stem))
+    if gone:
+        _write_vlist(have)
+        d, now = _vdel(), time.strftime("%Y-%m-%d %H:%M")
+        for k in gone:
+            f = k.replace("（详解版）", "")
+            d[f] = {"t": now, "b": sorted({bat[k]} | {n for n, ws in inb.items() if f in ws})}
+        _vdel_save(d)
+        sh = "; ".join("rm -f -- ~/wordfilm-out/%s ~/wordfilm-out/%s" % (q(x + ".mp4"), q(x + "_关键画面.jpg")) for x in rm)
+        threading.Thread(target=_try_wsl, args=(sh,), daemon=True).start()      # WSL 里的成片也删（不等它）
+        C.log("删掉了 %d 个旧版视频（%s）：这些词回到「出视频」的选词列表" % (len(gone), "、".join(gone[:6]) + (" 等" if len(gone) > 6 else "")))
+    msg = ("删掉了 %d 个旧版视频：这些词回到「出视频」的选词列表了，建批次、开工就是新版" % len(gone)) if gone else ""
+    if bad:
+        msg += ("；" if msg else "") + "%d 个没删掉（可能正在播放）：%s" % (len(bad), "、".join(bad[:3]))
+    return {"ok": bool(gone) and not bad, "n": len(gone), "msg": msg}
 
 
 def scan_videos():
@@ -270,6 +361,7 @@ def scan_videos():
     if not root.exists():
         return 0
     have = videos()
+    cur, vd = _cur_skill(), _vdel()
     n = 0
     for mp4 in root.rglob("*.mp4"):
         m = re.match(r"^(?:\d+\s+)?(.+?)(?:_精简版|_详解版)?$", mp4.stem)
@@ -279,14 +371,13 @@ def scan_videos():
         if have.get(key, {}).get("file") == rel:
             continue
         have[key] = {"word": key, "batch": mp4.parent.name, "file": rel,
-                     "size": "%.1f MB" % (mp4.stat().st_size / 1e6), "ts": time.strftime("%Y-%m-%d %H:%M", time.localtime(mp4.stat().st_mtime))}
+                     "size": "%.1f MB" % (mp4.stat().st_size / 1e6), "ts": time.strftime("%Y-%m-%d %H:%M", time.localtime(mp4.stat().st_mtime)), "ver": cur}
+        vd.pop(key, None)                         # v1.21.0：删过旧版的词又有了新视频
         n += 1
     if n:
-        p = C.REPO / VLIST
-        rows = ["单词\t批次\t文件（相对出片文件夹）\t大小\t时间"] + [
-            "\t".join([v["word"], v["batch"], v["file"], v["size"], v["ts"]]) for v in sorted(have.values(), key=lambda v: v["ts"])]
-        with C.REPO_LOCK:
-            p.write_text("\n".join(rows) + "\n", encoding="utf-8")
+        _write_vlist(have)
+        if vd != _vdel():
+            _vdel_save(vd)
         C.log("登记了 %d 个新视频（%s）" % (n, VLIST))
     return n
 
@@ -2188,11 +2279,13 @@ def inbatch():
     pend, done = {}, set()
     with _INB["lock"]:
         d = dict(_inb())
+    ign = _vdel()                                   # v1.21.0：旧版视频删掉了的词，当时那几个批次里的“做好了”不算数
     for name, ws in d.items():
         for x in ws:
             f, st = x[0], x[1] if len(x) > 1 else ""
             if st == "done":
-                done.add(f)
+                if name not in ((ign.get(f) or {}).get("b") or []):
+                    done.add(f)
             elif st != "skipped":
                 pend.setdefault(f, name)
     return pend, done

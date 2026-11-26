@@ -323,6 +323,8 @@ def api_video_post(b):
         d = V.batch_new(b.get("name", "").strip(), words)
         d["msg"] = C.mask(d.get("msg", ""))
         return d
+    elif op == "vdel":                                     # v1.21.0：删掉旧版视频（这些词回到选词列表，按新版重做）
+        return V.delete_old(b.get("words") or None)
     elif op == "envchk":
         return V.envchk_start()
     elif op == "go":                                       # v1.19.0：开工（继续、接着做）——① 出片前检查 ② 单词检测 ③ 开工

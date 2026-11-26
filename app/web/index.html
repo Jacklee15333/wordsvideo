@@ -2386,10 +2386,24 @@ $('#p-video').addEventListener('change',e=>{if(e.target.id==='vAll')$$('#vReady 
 /* 做好的视频 */
 function vVideos(vs){const all=vs.slice().reverse(),show=VALLV?all:all.slice(0,12);
   $('#vListN').textContent=all.length?`（${all.length} 个）`:'';$$('[data-tn="vdone"]').forEach(e=>e.textContent=all.length||'');
-  $('#vList').innerHTML=all.length?'<table><tr><th>单词</th><th>批次</th><th>大小</th><th>时间</th><th></th></tr>'+show.map(v=>`<tr><td style="font-family:var(--en);font-size:14px">${esc(v.word)}</td><td>${esc(v.batch)}</td><td>${esc(v.size)}</td><td>${esc(v.ts)}</td>
+  const old=all.filter(v=>v.old);
+  $('#vList').innerHTML=(old.length?vOldBar(old.length):'')+(all.length?'<table><tr><th>单词</th><th>批次</th><th>大小</th><th>时间</th><th></th></tr>'+show.map(v=>`<tr><td style="font-family:var(--en);font-size:14px">${esc(v.word)}${v.old?' <span class="tag hv" title="视频技能 6.43 以前做的">旧版</span>':''}</td><td>${esc(v.batch)}</td><td>${esc(v.size)}</td><td>${esc(v.ts)}</td>
     <td><a href="/api/video/file?p=${encodeURIComponent(v.file)}" target="_blank">播放</a></td></tr>`).join('')+'</table>'+
     (all.length>12?`<div style="margin-top:6px"><button class="btn ghost sm" onclick="VALLV=!VALLV;vVideos((VW&&VW.videos)||[])">${VALLV?'收起':'看全部 '+all.length+' 个'}</button></div>`:'')
-    :'<div class="pempty">还没有做好的视频</div>'}
+    :'<div class="pempty">还没有做好的视频</div>')}
+/* v1.21.0：旧版视频（视频技能 6.43 以前做的）一起删掉：这些词回到「出视频」的选词列表，建批次开工就是新版 */
+function vOldBar(n){return `<div class="line" style="margin-bottom:8px;align-items:center;gap:10px"><span class="small muted hv" title="视频技能 6.43 起精简版再精简：读音拆分只念一块一块、词缀词根直接说“英语前缀”、同义词辨析只念单词给特写。这以前做的是旧版">旧版 ${n} 个</span><button class="btn warn sm" onclick="vDelOld(${n})">删掉旧版</button></div>`}
+function vDelOld(n){
+  modal('删掉 '+n+' 个旧版视频？',`<ul class="small" style="line-height:1.8;padding-left:18px;margin-top:0">
+      <li>出片文件夹里这 ${n} 个视频和它们的关键画面图删掉，<b>删了找不回来</b></li>
+      <li>「词库/视频清单.tsv」里的登记一起删掉，WSL 里的成片也删掉</li>
+      <li>这些词回到「出视频」的选词列表：建批次、开工，做出来就是新版</li>
+      <li>批次的生成历史留着</li></ul>
+    <div class="line" style="margin-top:12px"><button class="btn warn" id="vdYes">确定删掉</button><button class="btn ghost" id="vdNo">不删了</button></div>`);
+  $('#vdNo').onclick=closeModal;
+  $('#vdYes').onclick=async()=>{const b=$('#vdYes');b.disabled=true;$('#vdNo').disabled=true;b.textContent='正在删…';
+    let d;try{d=await api('/api/video',{op:'vdel'})}catch(e){d={ok:false,msg:e.message}}
+    closeModal();toast((d.ok?'✓ ':'✗ ')+(d.msg||''),d.ok?6000:9000);vVideosLoad();if(typeof vWordsLoad==='function')vWordsLoad()}}
 async function vVideosLoad(){try{const d=await api('/api/video?what=words');VW=d;vVideos(d.videos||[]);VVN=(d.videos||[]).length}catch(e){}}
 $('#vScan').onclick=async e=>{const b=e.currentTarget;b.disabled=true;try{const d=await api('/api/video',{op:'scan'});toast((d.ok?'✓ ':'✗ ')+d.msg)}catch(x){toast('✗ '+x.message)}b.disabled=false;vVideosLoad()};
 

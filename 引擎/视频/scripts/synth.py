@@ -622,6 +622,8 @@ def check(text, heard, word='', known=()):
     warn —— 短词、一个个念的字母没听清（多半是识别模型听不准短的英文，画面上有字，可以不管）
     音素词（qz 开头）：念一块的不查；整词的（qzcamera）按 camera 查"""
     miss, warn = [], []
+    # 6.43：单独念的一个英文词（精简版同义词辨析只念单词）：识别模型听单个词常听岔，没听清只提醒、不卡（同一个词在别的句子里照样查）
+    single = re.fullmatch(r"\s*[A-Za-z][A-Za-z'’-]*\s*[.!?。！？]?\s*", text or '') is not None
     for w in re.findall(r"[A-Za-z][A-Za-z'’-]*", text):
         k = re.sub(r"['’]s$", '', w.lower()).replace('-', '')
         if k.startswith('qz'):
@@ -632,7 +634,7 @@ def check(text, heard, word='', known=()):
             continue
         if len(k) < 3 or heard_ok(k, heard):
             continue
-        (miss if len(k) >= 5 else warn).append(k)
+        (miss if len(k) >= 5 and not single else warn).append(k)
     for m in re.findall(r'\b(?:[a-z] ){1,5}[a-z]\b', text):
         k = m.replace(' ', '')
         if k[:1] not in heard.lower():

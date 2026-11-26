@@ -132,6 +132,7 @@ def brief_prefs(p):
         b = dict(q['board']) if isinstance(q.get('board'), dict) else {}
         b['verb'] = False
         q['board'] = b
+    q['lean'] = True      # 6.43（第八十七版）：精简版再精简——读音拆分只念块、词缀词根直接说“英语前缀”、同义词辨析只念单词给特写；某个词想要原来的精简版，prefs 写 "brief": {"lean": false}
     q.update(over)
     if q.get('kaodian') is False:                       # 6.31（第七十五版，用户：“我希望能在做精简版的视频时，也要把考点给加上去”）：精简版固定带考点
         q.pop('kaodian')

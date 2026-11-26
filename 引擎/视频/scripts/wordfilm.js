@@ -1543,6 +1543,7 @@
     film.comp = comp;
     film.gouci = gouci;
     film.brief = !!prefs.brief;          // 6.19：精简版（run.py 的 --edition）：卡片上不画音变那一行；不要的几幕在 prefs 里写成 false
+    film.lean = !!(prefs.brief && prefs.lean);      // 6.43（第八十七版）：精简版再精简（run.py 的 brief_prefs 写 lean: true）——读音拆分只念块、词缀词根直接说哪种语言的、同义词辨析只念单词给特写
     // 5.0 起：读音拆分（视频的第一部分）。run.py 按音节划分表算好放在 d.pron：每一块的字母和标注、音标、配音用的音素词；
     // prefs.pron === false 不要这一部分
     film.pron = d.pron && prefs.pron !== false && Array.isArray(d.pron.chunks) && d.pron.chunks.length ? normPron(d.pron) : null;
@@ -1923,8 +1924,9 @@
       const nr = Math.max(1, film.pron.read.length);
       add('sec', 1.9, { i: 0 });
       add('syl', 1.6 + 1.1 * nr + (nr > 1 ? 2.2 : 0.6) + (film.pron.stress >= 0 && nr > 1 ? 1.4 : 0));
-      if (film.pron.note.length) add('sylnote', 1.2 + 3.4 * film.pron.note.length);
-      film.duyin.forEach((x, i) => add('duyin', film.brief ? 4.5 : 9, { i }));      // 6.33：精简版只讲现象，短一些               // 6.26：读音现象，一个一幕
+      // 6.43（第八十七版，用户：“直接拆分读，不要有男生的解释……读音现象的解释去掉，不要了”）：精简版不要“关键解释”“读音现象”这几幕
+      if (film.pron.note.length && !film.lean) add('sylnote', 1.2 + 3.4 * film.pron.note.length);
+      if (!film.lean) film.duyin.forEach((x, i) => add('duyin', film.brief ? 4.5 : 9, { i }));      // 6.33：精简版只讲现象，短一些               // 6.26：读音现象，一个一幕
       add('sec', 1.9, { i: 1 });                                             // 二、含义拆分
     } else if (film.showSec) add('sec', 1.9, { i: secI('含义拆分') });
     if (film.parts) {
@@ -1960,7 +1962,7 @@
     if (film.family && film.family.words.length) add('family', 3.6);
     if (film.dist) {                                                         // 6.0：三、同义词辨析
       add('sec', 1.9, { i: secI('同义词辨析') });
-      add('distinguish', 2.6 + 3.4 * film.dist.items.length + (film.dist.logic ? 4.2 : 0));
+      add('distinguish', film.lean ? 2.4 + 2.6 * film.dist.items.length : 2.6 + 3.4 * film.dist.items.length + (film.dist.logic ? 4.2 : 0));      // 6.43：精简版只念单词、给特写
     }
     if (film.kd) {                                                           // 6.11：考点（总结前面）
       add('sec', 1.9, { i: secI('考点') });
@@ -3370,11 +3372,15 @@
     const pr = film.pron, f = fadeOf(sc, p), tl = sc.tl != null ? sc.tl : p * sc.dur;
     const R = pr.read, nr = R.length, real = pr.chunks.filter(c => !c.sep).length, multi = real > 1;
     const hasStress = pr.stress >= 0 && nr > 1;
-    const nItems = (pr.ok ? nr : 0) + (multi || !pr.ok ? 1 : 0) + (hasStress ? 1 : 0);
+    // 6.43（第八十七版，用户：“直接拆分读，不要有男生的解释……u nu su al 几个部分读完就可以了，最后标出重音部分”）：
+    //   精简版只念一块一块，不说“连起来”“重音在第几块”：最后一块念完，几块合成整词、写音标，再标出重音（不说话，配音稿的 hold 留出时间）
+    const lean = !!film.lean;
+    const nItems = lean ? (pr.ok ? Math.max(1, nr) : 1) : (pr.ok ? nr : 0) + (multi || !pr.ok ? 1 : 0) + (hasStress ? 1 : 0);
     const mk = sc.marks && sc.marks.length >= nItems ? sc.marks : null;
     const at = i => (mk ? mk[i] : 1.0 + i * 1.1);
-    const tMerge = !multi ? 1e9 : pr.ok ? at(nr) : at(0);
-    const tStress = hasStress ? at(nr + 1) : 1e9;
+    const endOf = i => (mk && Array.isArray(sc.ends) && sc.ends[i] != null ? sc.ends[i] : at(i) + 0.75);
+    const tMerge = !multi ? 1e9 : lean ? (pr.ok ? endOf(nr - 1) + 0.3 : at(0)) : pr.ok ? at(nr) : at(0);
+    const tStress = !hasStress ? 1e9 : lean ? tMerge + 0.8 : at(nr + 1);
     const kSplit = multi ? easeInOut(clamp((tl - 0.25) / 0.5)) : 0;
     const kJoin = multi ? easeInOut(clamp((tl - tMerge) / 0.6)) : 0;
     const k = kSplit * (1 - kJoin);
@@ -3767,15 +3773,17 @@
     const here = vr && part.gloss && part.gloss !== gl && !String(gl || '').includes(part.gloss) ? '在这里：' + part.gloss : '';
     const idc = affix && part.bx && part.idt ? idCard(part.sub) : part.xt ? { main: part.xt.src, small: '', here: part.xt.here } : null;      // 6.8：词根的蓝框：来源 + “在这个词里 duce（原形，英语加不发音的 e）”           // 6.5：前缀、后缀的身份框：“来自拉丁语介词 pro；表示“向前”；也可以表示“预先””
     const idMain = idc && idc.main ? idc.main : '';
-    const idRest = idMain ? idc.small : '';                                        // 小字：介绍里别的话
-    const idHere = idMain ? idc.here : '';                                         // 6.6：“这里是…”单独一行、醒目（用户：“这里是“向前、到前面来”变醒目一点，因为是当前词的解释”）
-    const more0 = part.sub || part.role, more = !idMain && !vr && more0 && oneLine(more0) !== part.gloss ? String(more0) : '';
+    const lean = !!film.lean, showId = !!idMain && !lean;      // 6.43（用户：“把身份部分去掉，直接说出来，然后图中标出来就可以了”）：精简版不画蓝框“身份”
+    const idRest = showId ? idc.small : '';                                        // 小字：介绍里别的话
+    const idHere = showId ? idc.here : '';                                         // 6.6：“这里是…”单独一行、醒目（用户：“这里是“向前、到前面来”变醒目一点，因为是当前词的解释”）
+    const more0 = part.sub || part.role, more = !idMain && !vr && !lean && more0 && oneLine(more0) !== part.gloss ? String(more0) : '';
     // 6.5：前缀、后缀（新写法）：意思和这一部分写在一行，“前缀 / 后缀”牌子在右上角，不写“来自拉丁语”牌子（用户：“身份里面已经说了”）
     const aNew = !!idMain;
     const kindZh = part.kind === 'pre' ? '前缀' : part.kind === 'suf' ? '后缀' : part.kind === 'word' ? '单词' : '词根';
+    const kindTag = lean ? originKind(part.from, part.kind) : kindZh;      // 6.43：精简版牌子直接写“英语前缀”“拉丁语词根”（不写“来自…”）
     const tags = [];
-    if (part.from && !aNew) tags.push([part.from === '英语本族' ? '英语本族' : '来自' + part.from, '#E3EEFA', '#2F6FB3']);
-    if (!aNew) tags.push([kindZh, '#F1E6CC', '#6E5520']);
+    if (part.from && !aNew && !lean) tags.push([part.from === '英语本族' ? '英语本族' : '来自' + part.from, '#E3EEFA', '#2F6FB3']);
+    if (!aNew) tags.push([kindTag, '#F1E6CC', '#6E5520']);
     if (part.tag) tags.push([part.tag, '#E2F3E5', '#2B7A3E']);
     if (vr) tags.push(['同一个词根', '#E2F3E5', '#2B7A3E']);
     const shText = shift ? shift.text.replace(/（[^（）]*）/g, '') : '';
@@ -3789,7 +3797,7 @@
         setFont(ctx, o.hz, EN, 'bold');
         const hw = ctx.measureText(head).width;
         setFont(ctx, 22 * z, ZH, 'bold');
-        o.gx = hw + 8 * z + ctx.measureText(kindZh).width + 22 * z * 1.1 + 24 * z;
+        o.gx = hw + 8 * z + ctx.measureText(kindTag).width + 22 * z * 1.1 + 24 * z;
         o.gz = fit(ctx, gl, ZH, 'bold', 60 * z, tw - o.gx, 26);
         o.gIn = o.gz >= 40 * z;
       }
@@ -3806,7 +3814,7 @@
       }
       if (tags.length) hgt += 18 * z + 37 * z;
       if (showVar) hgt += 16 * z + 42 * z;
-      if (idMain) {
+      if (showId) {
         setFont(ctx, 27 * z, ZH, 'bold');
         o.idm = wrapSegs(ctx, idMain, tw - 128 * z, 2);                          // 6.5：折行先在“；”处折，不把“也可以表示”拆开                               // 第一句长的（最基本的意思是“在…之间”，来自拉丁语介词 inter）折成两行，不缩成小字
         setFont(ctx, 22 * z, ZH, 'normal');
@@ -3825,7 +3833,7 @@
       if (more) { setFont(ctx, 24 * z, ZH, 'normal'); o.more = wrap(ctx, more, tw - 26 * z, 3); hgt += 16 * z + o.more.length * 35 * z; }
       if (memo) {
         setFont(ctx, 22 * z, ZH, 'normal');
-        o.why = memo.why ? wrap(ctx, memo.why, tw - 60 * z, whyMax) : [];
+        o.why = memo.why && !lean ? wrap(ctx, memo.why, tw - 60 * z, whyMax) : [];      // 6.43：精简版“记”框只写一行（用户：“只要写出关键的信息就可以了，下面的解释不用说了”）
         o.memoH = 60 * z + o.why.length * 31 * z + 12 * z;
         if (shift) {
           o.shIn = shiftRowW(ctx, shift, z) + 16 * z + (setFont(ctx, 20 * z, ZH, 'normal'), ctx.measureText(shText).width) <= tw - 44 * z;      // 那一句和“p → f”写得下一行
@@ -3849,7 +3857,7 @@
     if (aNew) {                                                                    // 6.5：“前缀”牌子在右上角，意思紧跟在右边（同一行）
       setFont(ctx, L.hz, EN, 'bold');
       const hw = ctx.measureText(head).width;
-      chip(ctx, kindZh, tx + hw + 8 * z, y + L.hz * 0.3, { size: 22 * z, bg: '#F1E6CC', color: '#6E5520', alpha: s1(0.3, 0.22, 0.42) });
+      chip(ctx, kindTag, tx + hw + 8 * z, y + L.hz * 0.3, { size: 22 * z, bg: '#F1E6CC', color: '#6E5520', alpha: s1(0.3, 0.22, 0.42) });
       if (L.gIn) txt(ctx, gl, tx + L.gx, y + L.hz * 0.8, { size: L.gz, weight: 'bold', color: C.ink, alpha: s1(0.6, 0.15, 0.35) });
     }
     if (vr) {                                                                      // duct = 词根 duc：同一个词根，写法变了
@@ -3887,7 +3895,7 @@
       y += 42 * z;
     }
     // 身份（前缀、后缀）：蓝框，第一行是开头的介绍的第一句和来历，下面小字是介绍里后面的话
-    if (idMain) {
+    if (showId) {
       y += 20 * z;
       ctx.globalAlpha = f * s1(0.85, 0.28, 0.48);
       rr(ctx, tx, y, tw, L.idH, 16 * z); ctx.fillStyle = '#EEF5FF'; ctx.fill(); ctx.lineWidth = 2; ctx.strokeStyle = '#9CC3EE'; ctx.stroke();
@@ -4102,6 +4110,13 @@
   // 6.6：身份框第一行写成“来自拉丁语介词 pro；表示“向前”和“预先””（用户：“也可以表示这几个字去掉，省点字”）——介绍里“也表示“预先””这种只是一个意思的，
   //   并到“表示…”后面用“和”连上；不只是一个意思的（也表示“完全”或“反着来”）照写“也表示…”，不加“可以”。
   //   “这里是“向前、到前面来””单拿出来（here），卡片上单独一行、醒目；别的话（small）还是小字
+  // 6.43（第八十七版，用户：“直接说英语前后缀，词根；拉丁语前后缀，词根就可以了，不用说来自”）：精简版的牌子写“英语前缀”“拉丁语词根”
+  function originKind(from, kind) {
+    const k = kind === 'pre' ? '前缀' : kind === 'suf' ? '后缀' : kind === 'word' ? '单词' : '词根';
+    const f = String(from || '').replace(/（[^（）]*）|\([^()]*\)/g, '').trim();
+    if (kind === 'word') return k;                                   // 组合词里的整词（usual、make）：本来就是英语单词，不写哪种语言
+    return (/^(英语本族|英语本来就有|古英语)$/.test(f) ? '英语' : f) + k;
+  }
   function idCard(intro) {
     const segs = splitTop(String(intro || '').trim(), '；').map(x => x.trim()).filter(Boolean);
     if (!segs.length) return { main: '', small: '', here: '' };
@@ -4916,7 +4931,52 @@
   };
   // 6.0：第三部分“同义词辨析”。上面一句：中文都说“产品”；中间每个词一张卡（词、中文意思、画、区别、字面意思），讲到哪个词哪张卡出来；
   // 下面一条：逻辑不同在哪儿（或者一句话记法）
+  // 6.43（第八十七版，用户：“同义词辨析部分直接把单词画面画出来，然后说哪个单词，哪个单词给特写就可以了”）：精简版——
+  //   几个词一张卡（画 + 单词 + 中文意思）并排出来；配音一个词一句、只念单词（美式女声），念到哪个，那张卡放大成特写（和词缀词根的特写卡一样高），
+  //   下一个词时缩回去、下一张放大；都念完缩回去一起看一眼。不提问、不讲区别、不画“逻辑不同”
+  function distCard(ctx, it, i, r, alpha, lt) {
+    const k = r.h / 340, col = it.me ? '#D9480F' : PART[(i + 2) % PART.length];
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.save(); ctx.shadowColor = 'rgba(60,50,20,.12)'; ctx.shadowBlur = 18 * k; ctx.shadowOffsetY = 5 * k;
+    rr(ctx, r.x, r.y, r.w, r.h, 18 * k); ctx.fillStyle = C.card; ctx.fill(); ctx.restore();
+    ctx.globalAlpha = alpha;
+    rr(ctx, r.x, r.y, r.w, r.h, 18 * k); ctx.lineWidth = (it.me ? 4 : 2) * Math.min(1.6, k); ctx.strokeStyle = it.me ? col : C.line; ctx.stroke();
+    rr(ctx, r.x, r.y, r.w, 10 * k, 5 * k); ctx.fillStyle = col; ctx.fill();
+    const ph = it.pic ? r.h * 0.56 : 0;
+    if (it.pic) drawPic(ctx, it.pic, r.x + 14 * k, r.y + 18 * k, r.w - 28 * k, ph, { q: 1, lt: Math.max(0, lt) });
+    ctx.globalAlpha = alpha;
+    const wy = it.pic ? r.y + 18 * k + ph + 52 * k : r.y + r.h * 0.5;
+    const wz = fit(ctx, it.w, EN, 'bold', (it.pic ? 46 : 66) * k, r.w - 36 * k, 18 * k);
+    txt(ctx, it.w, r.x + r.w / 2, wy, { size: wz, family: EN, weight: 'bold', color: col, align: 'center' });
+    if (it.gloss) {
+      const gz = fit(ctx, it.gloss, ZH, 'bold', 28 * k, r.w - 36 * k, 14 * k);
+      txt(ctx, it.gloss, r.x + r.w / 2, wy + 44 * k, { size: gz, weight: 'bold', color: C.ink, align: 'center' });
+    }
+    if (it.me) chip(ctx, '这个词', r.x + r.w - 14 * k, r.y + 32 * k, { size: 18 * k, align: 'right', bg: col, color: '#FFFFFF' });
+    ctx.restore();
+  }
+  function distLean(ctx, film, p, sc) {
+    const D = film.dist, items = D.items, n = items.length, f = fadeOf(sc, p), tl = sc.tl != null ? sc.tl : p * sc.dur, dur = sc.dur || 8;
+    header(ctx, film, '同义词辨析', f, '同义词辨析');
+    const mk = sc.marks && sc.marks.length >= n ? sc.marks : null;
+    const start = i => (mk ? mk[i] : 0.9 + i * Math.max(1.6, (dur - 2.4) / n));          // 念这个词的时候（没配音的预览按比例）
+    const stop = i => (i + 1 < n ? start(i + 1) : Math.max(start(i) + 1.4, dur - 1.4));   // 下一个词开始念；最后一个留 1.4 秒一起看
+    const T = 0.45;                                                                      // 放大、缩回各 0.45 秒
+    const zoom = i => Math.min(easeInOut(clamp((tl - start(i) + 0.15) / T)), 1 - easeInOut(clamp((tl - stop(i) + 0.2) / T)));
+    const gap = 30, cw = Math.min(n <= 2 ? 440 : 340, (W - 140 - gap * (n - 1)) / n), ch = 340;
+    const x0 = (W - cw * n - gap * (n - 1)) / 2, y0 = 230;
+    const s = Math.min((W - 112) / cw, 592 / ch), bw = cw * s, bh = ch * s, bx = (W - bw) / 2, by = 104;      // 特写：和词缀词根的特写卡一样高（592）
+    const qIn = easeOut(clamp(tl / 0.5));
+    const zs = items.map((it, i) => zoom(i)), zmax = Math.max(0, ...zs);
+    items.map((it, i) => i).sort((a, b) => zs[a] - zs[b]).forEach(i => {              // 放大的那张画在最上面；别的淡一点
+      const z = zs[i], r0 = { x: x0 + i * (cw + gap), y: y0, w: cw, h: ch };
+      const r = { x: r0.x + (bx - r0.x) * z, y: r0.y + (by - r0.y) * z, w: cw + (bw - cw) * z, h: ch + (bh - ch) * z };
+      distCard(ctx, items[i], i, r, f * qIn * (1 - 0.6 * (zmax - z)), tl - start(i));
+    });
+  }
   S.distinguish = (ctx, film, p, sc) => {
+    if (film.lean) return distLean(ctx, film, p, sc);
     const D = film.dist, f = fadeOf(sc, p), tl = sc.tl != null ? sc.tl : p * sc.dur;
     header(ctx, film, '同义词辨析', f, '同义词辨析');
     const items = D.items, n = items.length;
