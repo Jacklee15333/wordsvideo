@@ -633,6 +633,7 @@ details.vgk>.vgo{margin-top:6px}
 .wcf{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
 @media (max-width:760px){.wcr{grid-template-columns:minmax(0,1fr)}.wcr .acts{justify-content:flex-start}.vgd{margin-left:0}}
 @media (prefers-reduced-motion:reduce){.spin,.kok.spin{animation:none;border-top-color:#C9D2DC}.vb,.vbbar i,.vm .mb i{transition:none}}
+.sprev{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 10px}.sbkall summary{cursor:pointer}
 </style>
 </head>
 <body>
@@ -1203,7 +1204,9 @@ details.vgk>.vgo{margin-top:6px}
     <div class="box"><h3 style="margin-top:0">改动</h3><table id="sChanges"></table></div>
   </div>
   <div class="col">
-    <div class="box"><h3 style="margin-top:0">版本备份</h3><div id="sBk" class="small"></div></div>
+    <div class="box"><h3 style="margin-top:0">版本备份</h3>
+      <div class="sprev" id="sPrev" hidden><button class="btn warn sm" id="sPrevBtn">退回上个版本</button><span class="small muted" id="sPrevTxt"></span></div>
+      <details class="sbkall"><summary class="small muted" id="sBkN">全部备份</summary><div id="sBk" class="small"></div></details></div>
     <div class="box"><h3 style="margin-top:0">更新记录</h3><pre id="sLog" class="small" style="white-space:pre-wrap;max-height:520px;overflow:auto;margin:0;font-family:var(--ui)"></pre></div>
   </div>
   </div>
@@ -2692,6 +2695,10 @@ async function loadSoft(check){
   $('#sUpd').hidden=!u.newer;
   $('#sLog').textContent=(u.newer&&u.log)?u.log:(d.changelog||'还没有更新记录');
   $('#sBk').innerHTML=d.backups.length?d.backups.map(b=>`<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--rule2)"><span style="font-family:var(--en)">${esc(b)}</span><button class="btn ghost sm" onclick="rollback('${esc(b)}')">回退到这个版本</button></div>`).join(''):'<span class="muted">还没有备份（发布第一个新版本时会自动备份旧的）</span>';
+  $('#sBkN').textContent=d.backups.length?`全部备份（${d.backups.length} 个，点开可以退回到任意一个）`:'全部备份（还没有）';
+  SVER=d.version;$('#sPrev').hidden=!d.prev||!d.clone;
+  if(d.prev){$('#sPrevBtn').textContent=`退回上个版本（${d.prev}）`;$('#sPrevBtn').onclick=()=>rollback(d.prev);
+    $('#sPrevTxt').textContent=`新版本不好用时点这里，换回 ${d.prev} 的样子`}
   $('#sChanges').innerHTML=d.changes.length?'<tr><th>要改什么</th><th>状态</th><th></th></tr>'+d.changes.map(c=>`<tr><td>${esc(c.request).slice(0,80)}<div class="small faint">${esc(c.ts||'')}${c.error?` · <span style="color:var(--red)">${esc(c.error).slice(0,160)}</span>`:''}</div></td>
     <td><span class="tag ${c.status==='已发布'?'t-done':c.status==='待确认'?'t-已暂停':c.status==='没改成'?'t-manual':'t-missing'}">${esc(c.status)}</span></td>
     <td style="white-space:nowrap">${c.status==='待确认'||c.status==='已发布'?`<button class="btn ghost sm" onclick="showChange(${c.id})">看改动</button>`:''}
@@ -2702,7 +2709,21 @@ async function selfOp(op,id,name){
   if(op==='update'&&!confirm('更新到 GitHub 上的新版本？'))return;
   toast('正在做…',8000);
   try{const d=await api('/api/self',{op,id,name});modal(d.ok?'好了':'没成功',`<p>${esc(d.msg)}</p>`)}catch(e){modal('出错了',`<p>${esc(e.message)}</p>`)}loadSoft()}
-function rollback(name){if(confirm(`回退到 ${name}？现在的版本会先备份，回退也算一个新版本。`))selfOp('rollback',0,name)}
+/* v1.19.1：退回版本前先弹一个确认框，说清楚会发生什么、怎么再回来 */
+let SVER='';
+function rollback(name){
+  modal('退回到 '+name+'？',`<p style="margin-top:0">现在是 <b style="font-family:var(--en)">v${esc(SVER)}</b>，要把软件换回 <b style="font-family:var(--en)">${esc(name)}</b> 的样子。</p>
+    <ul class="small" style="line-height:1.8;padding-left:18px">
+      <li>先把现在的 v${esc(SVER)} 整个备份到「版本备份/v${esc(SVER)}」，一起上传到 GitHub，不会丢</li>
+      <li>退回也算一个新版本（版本号加一点），上传到 GitHub</li>
+      <li>做好以后关掉黑色窗口，再双击「启动.bat」才生效</li>
+      <li>想再回来：在这里的「全部备份」里点 v${esc(SVER)}「回退到这个版本」</li>
+      <li>词库（题目、画面、视频清单）不动，只换软件本身</li></ul>
+    <div class="line" style="margin-top:12px"><button class="btn warn" id="rbYes">确定退回</button><button class="btn ghost" id="rbNo">不退了</button></div>`);
+  $('#rbNo').onclick=closeModal;
+  $('#rbYes').onclick=async()=>{const b=$('#rbYes');b.disabled=true;$('#rbNo').disabled=true;b.textContent='正在退回…（备份、上传，一两分钟）';
+    let d;try{d=await api('/api/self',{op:'rollback',name})}catch(e){d={ok:false,msg:e.message}}
+    modal(d.ok?'退回好了':'没退回',`<p>${esc(d.msg||'')}</p>`);loadSoft()}}
 async function showChange(id){const c=await api('/api/self/change?id='+id);
   const lines=(c.diff||'').split('\n').map(l=>`<span style="color:${l.startsWith('+')&&!l.startsWith('+++')?'var(--pass)':l.startsWith('-')&&!l.startsWith('---')?'var(--red)':'inherit'}">${esc(l)}</span>`).join('\n');
   modal('改动：'+c.request.slice(0,40),`<p class="small">${JSON.parse(c.notes||'[]').map(esc).join('<br>')}</p><pre>${lines||'（没有改动）'}</pre>`)}

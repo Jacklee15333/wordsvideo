@@ -421,7 +421,7 @@ def api_self_get(qs):
     if qs.get("check"):
         check_update_bg()
     p = SU.ROOT / "CHANGELOG.md"
-    return {"version": SU.version(), "clone": SU.is_clone(), "update": UPD["info"], "backups": SU.backups(),
+    return {"version": SU.version(), "clone": SU.is_clone(), "update": UPD["info"], "backups": SU.backups(), "prev": SU.prev_backup(),
             "changelog": p.read_text(encoding="utf-8")[:20000] if p.exists() else "",
             "changes": C.q("SELECT id,request,status,files,notes,error,ts,task_id FROM changes ORDER BY id DESC LIMIT 50"),
             "files": SU.app_files()}

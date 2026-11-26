@@ -135,6 +135,12 @@ def backups():
     return sorted([p.name for p in d.iterdir() if p.is_dir()], key=vt, reverse=True)
 
 
+def prev_backup():
+    """v1.19.1：「退回上个版本」退到哪一个——版本号比现在小的备份里最新的那个（没有就空）。"""
+    cur = vt(version())
+    return next((b for b in backups() if vt(b) < cur), "")
+
+
 def rollback(name):
     src = ROOT / BACKUP / name / "app"
     if not src.exists() and (ROOT / BACKUP / name / "core.py").exists():
