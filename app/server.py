@@ -494,6 +494,7 @@ def api_relay_get(qs):
     r.pop("reply", None)
     cfg = C.load_cfg()
     r["url"] = cfg.get("relayUrl", "")
+    r["helper"] = C.helper_info()                     # v1.22.0：自动继续的小助手
     r["label"] = C.batch_label((r.get("inbox") or "").rsplit(".", 1)[0]) if r.get("inbox") else ""
     sk = C.KIND_SIZE.get(r.get("kind") or "", "")     # v1.11.2：黄框里能改一批几个词、每写完几个传一次
     r["sizeKind"] = sk
@@ -519,7 +520,31 @@ def api_open(b):
         return {"ok": False, "msg": "没打开（%s）：请把地址复制到浏览器 %s" % (str(e)[:80], url)}
 
 
+def helper_script(port):
+    """v1.22.0：按现在的端口和网页 AI 地址填好小助手脚本。"""
+    t = (WEB / "autocont.tpl.js").read_text(encoding="utf-8")
+    hosts = ["https://zd87.com/*", "https://claude.ai/*"]
+    m = re.match(r"^(https?://[^/]+)", (C.load_cfg().get("relayUrl") or "").strip())
+    if m and m.group(1) + "/*" not in hosts:
+        hosts.insert(0, m.group(1) + "/*")
+    ver = (Path(__file__).parent / "VERSION").read_text(encoding="utf-8").strip()
+    return t.replace("__PORT__", str(port)).replace("__VER__", ver).replace("__MATCHES__", "\n".join("// @match        " + h for h in hosts))
+
+
 def api_relay_post(b):
+    if b.get("op") == "autocont":                    # v1.22.0：自动继续开 / 关
+        C.save_cfg({"autoCont": bool(b.get("on"))})
+        return {"ok": True, "msg": "自动继续打开了" if b.get("on") else "自动继续关了：网页 AI 停下来要你自己点「继续」"}
+    if b.get("op") == "helper":                      # v1.22.0：用你平时的浏览器打开小助手的安装页
+        url = "http://127.0.0.1:%d/autocont.user.js" % int(os.environ.get("CHUTI_PORT") or C.load_cfg().get("port", 8766))
+        try:
+            if sys.platform == "win32":
+                os.startfile(url)
+            else:
+                webbrowser.open(url, new=2)
+            return {"ok": True, "msg": "用你平时的浏览器打开了安装页：在 Tampermonkey 的页面上点「安装」"}
+        except Exception as e:
+            return {"ok": False, "msg": "没打开（%s）：把 %s 复制到浏览器" % (str(e)[:80], url)}
     if b.get("op") == "pollnow":                     # v1.11.2：立即查看中转仓库
         ok, msg = C.relay_poll_now()
         return {"ok": ok, "msg": msg}
@@ -663,6 +688,7 @@ GET = {
     "/api/self": api_self_get,
     "/api/live": api_live,
     "/api/relay": api_relay_get,
+    "/api/relay/auto": lambda qs: C.relay_auto(qs),                # v1.22.0：浏览器小助手来问
     "/api/fixlater": lambda qs: __import__("pics").later_get(),
     "/api/fixwords": lambda qs: __import__("pics").fix_list(),
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
@@ -730,6 +756,8 @@ class H(BaseHTTPRequestHandler):
                 m = wm()
                 data = m.live_shot()[0] if m else b""
                 return self._send(200, data or b"", "image/jpeg")
+            if u.path == "/autocont.user.js":                  # v1.22.0：浏览器小助手（Tampermonkey 打开这个地址就会装）
+                return self._send(200, helper_script(self.server.server_address[1]).encode("utf-8"), "text/javascript; charset=utf-8")
             p = WEB / ("index.html" if u.path in ("/", "") else u.path.lstrip("/"))
             if p.resolve().parent == WEB.resolve() and p.exists():
                 return self._send(200, p.read_bytes(), MIME.get(p.suffix, "application/octet-stream"))

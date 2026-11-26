@@ -58,6 +58,7 @@ DEFAULT_CFG = {
     "relayFixRound": 1,          # 手动接力·补画面：每写完几个词上传一次
     "relayTries": 3,             # v1.12.0：画面没过起草检查，网页 AI 在同一个对话里最多改几次（含第一次）
     "relayUrl": "https://zd87.com/ai-fleet/claude",
+    "autoCont": True,          # v1.22.0：浏览器小助手自动点「Continue」、自动发「继续」
     "relayClipboard": True,      # 手动接力：自动把提示词放进剪贴板；你在网页里点“复制”回复，软件看到就自己接着做
     # 手动接力 · 收件箱：网页 AI 写完自己把回复传到 GitHub（不用你复制）；软件隔一会儿去看，看到就接着做。
     # 收件箱就用中转仓库 files-transfer-and-receive 的 inbox/ 文件夹。令牌会写进发给网页 AI 的提示词里，
@@ -1502,6 +1503,56 @@ def relay_cont_msg():
             "规矩和上面一样：每写完 %d 个就写进 reply.txt、运行同一段上传脚本（MODE 保持 \"上传\"）；中间不用在聊天里汇报，一直写到全部传完，"
             "脚本打印【最后汇报】时再汇报一次。这次回复写不下了，就先传好已经写的，运行 python upload.py 汇报 停下。"
             % (len(pend), "、".join(pend), rnd))
+
+
+
+# ═══════════════════════ v1.22.0：自动继续（浏览器小助手） ═══════════════════════
+# 网页 AI 那一页里装的用户脚本（app/web/autocont.tpl.js，Tampermonkey 装）每几秒来问一次 /api/relay/auto：
+# 开没开、这一份还要不要网页 AI 接着写、发什么、这个对话里认哪几个文件名；它点了「Continue」、发了「继续」也来说一声，写进步骤记录。
+HELPER = {"seen": 0.0, "host": "", "rid": 0, "clicks": 0, "sends": 0}
+AUTO_MAX_SENDS = 15          # 一份最多自动发几次「继续」（防止来回空转）
+
+
+def _bare(n):
+    n = n if isinstance(n, str) else (n or {}).get("inbox", "") if isinstance(n, dict) else ""
+    return n.rsplit("/", 1)[-1].rsplit(".", 1)[0] if n else ""
+
+
+def relay_auto(qs):
+    on = load_cfg().get("autoCont", True) is not False
+    with _RELAY_LOCK:
+        rid = RELAY.get("id", 0)
+        if HELPER["rid"] != rid:
+            HELPER.update(rid=rid, clicks=0, sends=0)
+        HELPER.update(seen=time.time(), host=str(qs.get("host") or HELPER["host"])[:80])
+        active = RELAY.get("status") == "等你操作" and bool(RELAY.get("inbox"))
+        names = []
+        if active:
+            names = [_bare(RELAY["inbox"])] + [_bare(a) for a in (RELAY.get("aliases") or [])] + [_bare(h) for h in RELAY_HIST]
+        key = "%s-%d-%d-%s-%d" % (rid, len(RELAY.get("pending") or []), len(RELAY.get("fixing") or []),
+                                  (RELAY.get("aiReport") or {}).get("state", ""), len(RELAY.get("gotFiles") or []))
+        checking, tid = RELAY.get("phase") == "checking", RELAY.get("tid")
+    ev = qs.get("ev")
+    if ev == "continue":
+        HELPER["clicks"] += 1
+        log("网页 AI 的回复中断了：小助手自动点了「Continue」（这一份第 %d 次）" % HELPER["clicks"], tid)
+        return {"ok": True}
+    if ev == "send":
+        HELPER["sends"] += 1
+        log("网页 AI 停下了、这一份还没写完：小助手自动发了「继续」那段话（这一份第 %d 次）" % HELPER["sends"], tid)
+        return {"ok": True}
+    cont = relay_cont_msg() if (on and active and not checking) else ""
+    need = bool(cont) and HELPER["sends"] < AUTO_MAX_SENDS
+    return {"on": on, "active": active, "need": need, "cont": cont if need else "", "key": key,
+            "names": [n for n in dict.fromkeys(names) if len(n) >= 6], "idleSec": 20, "coolSec": 60, "maxClicks": 40}
+
+
+def helper_info():
+    """黄框里那一行：小助手来没来过、这一份点了几次、发了几次。"""
+    h = dict(HELPER)
+    return {"on": load_cfg().get("autoCont", True) is not False, "ago": (time.time() - h["seen"]) if h["seen"] else None,
+            "clicks": h["clicks"] if h["rid"] == RELAY.get("id") else 0, "sends": h["sends"] if h["rid"] == RELAY.get("id") else 0,
+            "host": h["host"]}
 
 
 def relay_word(w, ok, detail=""):

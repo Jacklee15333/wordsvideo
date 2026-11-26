@@ -817,7 +817,7 @@ details.vgk>.vgo{margin-top:6px}
       <li id="rS2"><button class="btn sm" id="rOpen" title="用你平时的浏览器打开网页 AI，把提示词粘贴进去、发送（最好开一个新对话：同一个对话太长，它会写不下）">手动发送</button><span class="rgear"><button type="button" class="gearbtn" id="rGear" aria-label="要打开的网页 AI" title="要打开的网页 AI" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
         <div class="gearpop" id="rGearPop" hidden><div class="small muted" style="margin-bottom:4px">点「手动发送」打开这个网页（用你平时的浏览器）：</div>
           <div style="display:flex;gap:6px"><input type="text" id="rUrl" style="flex:1;min-width:0" spellcheck="false"><button class="btn sm" id="rUrlSave">保存</button></div>
-          <div class="small" id="rUrlMsg" style="margin-top:4px"></div></div></span><span id="rS2t" hidden></span><span class="small" id="rMsg" hidden></span><div class="rs"></div></li>
+          <div class="small" id="rUrlMsg" style="margin-top:4px"></div></div></span><span id="rS2t" hidden></span><span class="small" id="rMsg" hidden></span><div class="small rhelp" id="rHelper" style="margin-top:4px"></div><div class="rs"></div></li>
       <li id="rStep3"><div class="r3top"><div class="r3h" id="r3H" role="button" tabindex="0" aria-expanded="false" aria-controls="r3Body"><span class="tri" aria-hidden="true">▸</span><span id="rT3">AI 生成</span></div><span class="r3act" id="r3Act" hidden><button class="btn sm" id="rPollNow">查看上传</button> <span class="pr" id="rPollRes"></span></span><a href="#" class="r3stop" id="r3Stop" hidden title="网页 AI 好久没动静了？点这里：接着写、把聊天里的结果粘贴过来、或者先跳过">没反应？</a></div>
         <div class="r3line"><div class="rs"></div></div>
         <div id="rMulti" class="rcont" hidden><div class="hd" id="rContHd"></div><div class="small" id="rContTip"></div>
@@ -1981,7 +1981,7 @@ async function relayTick(){
   $('#rBox').hidden=!d.show;
   RL.status=d.status;navBadges();
   if(on&&d.id!==RL.id){$('#rReply').value='';$('#rMsg').textContent='';const rs=stepOf((ST.runner||{}).task);if(page!==rs)toast('有一个词等你交给网页 AI：在左边「'+(STEPNAME[rs]||'')+'」那一步',8000);else setTimeout(()=>$('#tLive').scrollIntoView({behavior:'smooth',block:'start'}),300)}
-  RL=d;
+  RL=d;rHelperRender(d.helper||{});
   // 一个词做完了：这一页的表和结果马上刷新（画面那一列变“有”）
   const L=d.last;
   const lbt=((d.lastBatch||{}).t)||0;
@@ -2182,6 +2182,21 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#rGearPop').hid
 $('#rUrlSave').onclick=async()=>{const d=await api('/api/relay',{op:'url',url:$('#rUrl').value});$('#rUrlMsg').style.color=d.ok?'var(--pass)':'#9B2C22';$('#rUrlMsg').textContent=(d.ok?'✓ ':'✗ ')+d.msg;if(d.ok){RL.url=$('#rUrl').value.trim();setTimeout(()=>gearSet(false),1200)}};
 $('#rSend').onclick=async()=>{const d=await api('/api/relay',{id:RL.id,reply:$('#rReply').value});$('#rContMsg').textContent=(d.ok?'✓ ':'✗ ')+d.msg;if(d.ok){$('#rReply').value='';$('#rManual').open=false;setTimeout(relayTick,800)}};
 $('#rNewChat').onclick=()=>busy($('#rNewChat'),$('#rContMsg'),'正在出新的提示词',()=>api('/api/relay',{op:'newchat',id:RL.id}));
+/* v1.22.0：自动继续——网页 AI 那一页装一个小助手（Tampermonkey 用户脚本）：回复中断自动点「Continue」，这一份没写完、它停下来自动发「继续」 */
+function rHelperRender(h){const el=$('#rHelper');if(!el)return;const live=h.ago!=null&&h.ago<60;
+  if(h.on===false){el.innerHTML='自动继续关着：网页 AI 停下来要你自己点「继续」　<a href="#" onclick="rAutoSet(true);return false">打开</a>';return}
+  el.innerHTML=live?`<span style="color:var(--pass)">✓ 自动继续开着</span>：<span class="hv" title="网页 AI 回复中断（This response ended early）会自己点「Continue」；这一份还没写完、它停下来等你时，会自己把「继续」那段话发过去（只在这一份的对话里发）">网页 AI 停下来，小助手自己点「继续」</span>${h.clicks||h.sends?`（这一份点了 ${h.clicks||0} 次、发了 ${h.sends||0} 次）`:''}　<a href="#" onclick="rAutoSet(false);return false">关掉</a>`
+    :`自动继续：<span class="hv" title="浏览器里装一个小助手（装一次就行）：网页 AI 回复中断、或者停下来等你发「继续」时，它自己点、自己发">网页 AI 停下来不用你点「继续」</span>　<a href="#" onclick="rHelperHow();return false">装小助手</a>${h.ago!=null?`<span class="faint">　小助手 ${Math.max(1,Math.round(h.ago/60))} 分钟前来过：网页 AI 那一页开着吗？</span>`:''}`}
+async function rAutoSet(on){const d=await api('/api/relay',{op:'autocont',on});toast((d.ok?'':'✗ ')+d.msg,4000);relayTick()}
+function rHelperHow(){modal('装小助手：网页 AI 停下来自己点「继续」',`<p class="small" style="margin-top:0">装一次就行，装在你平时打开网页 AI 的浏览器里：</p>
+  <ol class="small" style="line-height:1.9;padding-left:20px;margin:0">
+   <li>装「<b>Tampermonkey</b>」（篡改猴）扩展：Edge 在「扩展 → 获取 Microsoft Edge 扩展」里搜；Chrome 在应用商店里搜</li>
+   <li>Edge：打开 <code>edge://extensions</code>，左边打开「开发人员模式」。Chrome：打开 <code>chrome://extensions</code>，点 Tampermonkey 的「详细信息」，打开「允许用户脚本」</li>
+   <li>点下面「打开安装页」：浏览器里出来 Tampermonkey 的页面，点「安装」</li>
+   <li>回到网页 AI 刷新一下。连上以后，黄框这里写“✓ 自动继续开着”</li></ol>
+  <div class="line" style="margin-top:12px;gap:8px;align-items:center"><button class="btn" id="hpOpen">打开安装页</button><span class="small faint">打不开就把这个地址复制到浏览器：<code>${location.origin}/autocont.user.js</code></span></div>
+  <p class="small muted" style="margin-bottom:0">它只在这一份任务的对话里发「继续」（对话里要有这一份的文件名），同一件事最多发两次；黄框这一行随时能关掉。</p>`);
+  $('#hpOpen').onclick=async()=>{const d=await api('/api/relay',{op:'helper'});toast((d.ok?'':'✗ ')+d.msg,7000)}}
 $('#rContSame').onclick=async()=>{const d=await api('/api/relay',{op:'contmsg'});
   if(!d.ok){$('#rContMsg').textContent='✗ '+d.msg;return}
   const ok=await copyText(d.text);$('#rContMsg').innerHTML=ok?'✓ 复制好了：到网页 AI <b>同一个对话</b>里粘贴、发送。它又传上来，这里就接着打勾':'没复制上，请再点一次'};
