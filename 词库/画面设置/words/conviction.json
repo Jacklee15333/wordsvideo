@@ -1,0 +1,636 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/courtroom.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "label": "彻底驳倒",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/evict-notice.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "sway"
+    },
+    {
+     "label": "…这件事",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-convict.svg",
+  "p1": "art/icon-ion.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/scales.svg",
+    "x": 0.5,
+    "y": 0.5,
+    "s": 0.6,
+    "anim": "sway"
+   },
+   {
+    "label": "彻底驳倒这件事",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "定罪、有罪判决",
+   "pos": "名词",
+   "diff": "被法庭驳倒、判定有罪",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/courtroom.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.66,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/gavel.svg",
+     "x": 0.84,
+     "y": 0.72,
+     "s": 0.24,
+     "anim": "shake"
+    }
+   ],
+   "ex": "He has no previous convictions.",
+   "exzh": "他以前没有犯罪记录。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/courtroom.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.62,
+      "when": "convictions"
+     },
+     {
+      "actor": "west-man-hello",
+      "x": 0.14,
+      "y": 0.6,
+      "s": 0.46,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "He"
+     },
+     {
+      "label": "no convictions",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "convictions"
+     },
+     {
+      "label": "没有犯罪记录",
+      "x": 0.8,
+      "y": 0.86,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "没有犯罪记录"
+     }
+    ]
+   }
+  },
+  {
+   "text": "坚定的信念",
+   "pos": "名词",
+   "diff": "被道理彻底说服、深信不疑",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/candle.svg",
+     "x": 0.46,
+     "y": 0.5,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/heart.svg",
+     "x": 0.82,
+     "y": 0.4,
+     "s": 0.26,
+     "anim": "pulse"
+    }
+   ],
+   "ex": "She has strong religious convictions.",
+   "exzh": "她有坚定的宗教信念。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.2,
+      "y": 0.56,
+      "s": 0.62,
+      "z": 3,
+      "seq": "blink",
+      "fps": 2,
+      "when": "She"
+     },
+     {
+      "svg": "art/candle.svg",
+      "x": 0.56,
+      "y": 0.5,
+      "s": 0.56,
+      "when": "convictions",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "label": "strong convictions",
+      "x": 0.56,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "convictions"
+     },
+     {
+      "label": "坚定的信念",
+      "x": 0.86,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "坚定的信念"
+     }
+    ]
+   }
+  },
+  {
+   "text": "说服力、底气",
+   "pos": "名词",
+   "diff": "说话时那股确信的劲儿",
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-speech",
+     "x": 0.5,
+     "y": 0.48,
+     "s": 0.6,
+     "z": 3,
+     "seq": "talk",
+     "fps": 2,
+     "id": "m"
+    },
+    {
+     "waves": true,
+     "x": 0.6,
+     "y": 0.34,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#3FA7D6",
+     "with": "m"
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 5,
+     "crowd": 9,
+     "nodWith": "m"
+    }
+   ],
+   "ex": "She spoke with conviction.",
+   "exzh": "她说话很有底气。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.6,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "She spoke",
+      "id": "s"
+     },
+     {
+      "waves": true,
+      "x": 0.6,
+      "y": 0.34,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6",
+      "with": "s"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.3,
+      "z": 5,
+      "crowd": 9,
+      "nodWith": "s"
+     },
+     {
+      "label": "with conviction",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "with conviction"
+     },
+     {
+      "label": "很有底气",
+      "x": 0.86,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "很有底气"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“彻底驳倒这件事”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/scales.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "anim": "sway"
+     },
+     {
+      "label": "convict + ion",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "落在被告身上：被法庭驳倒",
+   "node": "① 定罪、有罪判决",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "彻底驳倒，落在被告身上：被法庭驳倒、判定有罪，就是定罪、有罪判决。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/courtroom.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.64,
+      "when": "被法庭驳倒",
+      "anim": "pulse"
+     },
+     {
+      "label": "定罪",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "定罪"
+     }
+    ]
+   }
+  },
+  {
+   "via": "落在自己心里：被道理彻底说服",
+   "node": "② 坚定的信念",
+   "pos": "名词",
+   "pic": 1,
+   "from": 0,
+   "say": [
+    "落在自己心里：被道理彻底说服，再没有反驳的余地，就是深信不疑、坚定的信念。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/candle.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "when": "彻底说服",
+      "anim": "pulse"
+     },
+     {
+      "label": "坚定的信念",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "坚定的信念"
+     }
+    ]
+   }
+  },
+  {
+   "via": "说话时那股确信的劲儿",
+   "node": "③ 说服力、底气",
+   "pos": "名词",
+   "pic": 2,
+   "say": [
+    "心里有了坚定的信念，说话时就有一股确信的劲儿，就是说服力、底气。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "说话时",
+      "id": "b"
+     },
+     {
+      "waves": true,
+      "x": 0.6,
+      "y": 0.36,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6",
+      "with": "b"
+     },
+     {
+      "label": "底气",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "底气"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "信念",
+  "items": [
+   {
+    "w": "conviction",
+    "word": "conviction",
+    "m": "坚定的信念（确信无疑）",
+    "zh": "坚定的信念（确信无疑）",
+    "say": "conviction 是确信无疑、坚定不移的那种信念。",
+    "text": "conviction 是确信无疑、坚定不移的那种信念。",
+    "note": "conviction 是确信无疑、坚定不移的那种信念。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/candle.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "pulse"
+      }
+     ]
+    }
+   },
+   {
+    "w": "belief",
+    "word": "belief",
+    "m": "相信、信念（一般）",
+    "zh": "相信、信念（一般）",
+    "say": "belief 是一般的相信、看法，可强可弱。",
+    "text": "belief 是一般的相信、看法，可强可弱。",
+    "note": "belief 是一般的相信、看法，可强可弱。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/heart.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "conviction 是被彻底说服后的“深信”；belief 只是“相信”。一个 conviction 两个意思，正好对上 convict（定罪）和 convince（使确信）。",
+  "tip": "conviction 一词两义：定罪；坚定的信念。",
+  "pics": {
+   "conviction": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/candle.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.85,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "belief": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/heart.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.8,
+      "anim": "pulse"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人说她讲话怎样？",
+    "listen": "She spoke with great conviction.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "很害怕",
+     "很有底气",
+     "很小声",
+     "很快"
+    ],
+    "ans": "B",
+    "why": "with conviction 有说服力、有底气。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "He has a strong ______ that hard work pays.",
+    "opts": [
+     "convict",
+     "conviction",
+     "convince",
+     "convinced"
+    ],
+    "ans": "B",
+    "why": "a strong 后接名词 conviction（坚定的信念）。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The court ______ the man last year. (conviction)",
+    "opts": [],
+    "ans": "convicted",
+    "why": "last year 用过去式，“定罪” convict。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 conviction、belief 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "It's an old ______ that black cats bring bad luck.",
+    "opts": [],
+    "ans": "belief",
+    "why": "一般说法用 belief；conviction 是坚定不移的信念。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "He had two convict for stealing.",
+    "opts": [],
+    "ans": "convict → convictions",
+    "why": "“两次定罪”用名词复数 convictions。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "他的话让我们相信了。",
+    "stem": "His words ______ us.",
+    "opts": [],
+    "ans": "convinced",
+    "why": "使确信用 convince，过去式 convinced。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "He has had three ______ for driving too fast. (conviction)",
+    "opts": [],
+    "ans": "convictions",
+    "why": "three 后接复数。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

@@ -1,0 +1,501 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/evicted-house.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "label": "依法赶出去",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/evict-notice.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.56,
+     "anim": "sway"
+    },
+    {
+     "label": "…这件事",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-evict.svg",
+  "p1": "art/icon-ion.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/street-bg.svg",
+  "items": [
+   {
+    "svg": "art/evicted-house.svg",
+    "x": 0.44,
+    "y": 0.5,
+    "s": 0.6,
+    "anim": "pulse"
+   },
+   {
+    "svg": "art/evict-notice.svg",
+    "x": 0.84,
+    "y": 0.46,
+    "s": 0.34,
+    "anim": "sway"
+   },
+   {
+    "label": "赶出去这件事",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   },
+   {
+    "actor": "walk-cn-girl",
+    "x": 0.02,
+    "y": 0.86,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.02,
+      0.86
+     ],
+     "to": [
+      0.98,
+      0.86
+     ],
+     "offset": 0.2
+    }
+   },
+   {
+    "actor": "walk-west-man-case",
+    "x": 0.98,
+    "y": 0.88,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.98,
+      0.88
+     ],
+     "to": [
+      0.02,
+      0.88
+     ],
+     "offset": 0.65
+    }
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "驱逐、逐出",
+   "pos": "名词",
+   "diff": "把租户依法赶出去这件事",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/evicted-house.svg",
+     "x": 0.44,
+     "y": 0.5,
+     "s": 0.6,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/evict-notice.svg",
+     "x": 0.84,
+     "y": 0.46,
+     "s": 0.34,
+     "anim": "shake"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ],
+   "ex": "The family faced eviction.",
+   "exzh": "这家人面临被赶出去的处境。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/evicted-house.svg",
+      "x": 0.44,
+      "y": 0.5,
+      "s": 0.6,
+      "when": "The family"
+     },
+     {
+      "svg": "art/evict-notice.svg",
+      "x": 0.84,
+      "y": 0.46,
+      "s": 0.34,
+      "when": "eviction",
+      "pop": true,
+      "anim": "shake"
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.12,
+      "y": 0.62,
+      "s": 0.46,
+      "z": 3,
+      "seq": "blink",
+      "fps": 2,
+      "when": "faced"
+     },
+     {
+      "label": "eviction",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "eviction"
+     },
+     {
+      "label": "被赶出去",
+      "x": 0.84,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "被赶出去"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“赶出去这件事”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/evicted-house.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "evict + ion",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "依判决收回财产、把租户赶出去",
+   "node": "驱逐、逐出",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "依法院判决，把财产收回来，把租户赶出去，这件事就叫 eviction，驱逐、逐出。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/gavel.svg",
+      "x": 0.3,
+      "y": 0.56,
+      "s": 0.46,
+      "when": "判决",
+      "anim": "shake"
+     },
+     {
+      "svg": "art/evict-notice.svg",
+      "x": 0.74,
+      "y": 0.5,
+      "s": 0.44,
+      "when": "赶出去",
+      "anim": "sway"
+     },
+     {
+      "label": "驱逐",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "驱逐"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人今早收到了什么？",
+    "listen": "We got an eviction notice this morning.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "驱逐通知",
+     "生日卡",
+     "账单",
+     "录取信"
+    ],
+    "ans": "A",
+    "why": "eviction 驱逐。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "There were three ______ on this street last year.",
+    "opts": [
+     "eviction",
+     "evictions",
+     "evicts",
+     "evicted"
+    ],
+    "ans": "B",
+    "why": "three 后接复数 evictions。",
+    "kd": "变形"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "They tried to ______ the old man. (eviction)",
+    "opts": [],
+    "ans": "evict",
+    "why": "to 后接动词原形 evict。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 eviction、evict 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The ______ made the family very sad.",
+    "opts": [],
+    "ans": "eviction",
+    "why": "the 后要名词 eviction。",
+    "kd": ""
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The family was eviction from the house.",
+    "opts": [],
+    "ans": "eviction → evicted",
+    "why": "被动语态用过去分词 evicted。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "An eviction means people must ______ their home.",
+    "opts": [
+     "leave",
+     "clean",
+     "buy",
+     "paint"
+    ],
+    "ans": "A",
+    "why": "eviction 是被赶出住处。",
+    "kd": "用法"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "There have been many ______ this year. (eviction)",
+    "opts": [],
+    "ans": "evictions",
+    "why": "many 后接复数。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

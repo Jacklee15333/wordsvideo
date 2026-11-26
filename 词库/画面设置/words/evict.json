@@ -452,6 +452,124 @@
   }
  ],
  "distinguish": false,
+ "demo": {
+  "outside": {
+   "icons": [
+    "art/icon-out.svg",
+    "art/icon-side.svg"
+   ],
+   "lit": "外面那一边",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/door-ajar.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "sway"
+     }
+    ]
+   }
+  },
+  "outrun": {
+   "icons": [
+    "art/icon-out.svg",
+    "art/icon-run.svg"
+   ],
+   "lit": "跑得超过",
+   "pic": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/race-lead.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  "export": {
+   "icons": [
+    "art/icon-out.svg",
+    "art/icon-port.svg"
+   ],
+   "lit": "运出港口",
+   "pic": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/ship-genoa.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "effect": {
+   "icons": [
+    "art/icon-out.svg",
+    "art/icon-make.svg"
+   ],
+   "lit": "做出来的结果",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/gears.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.66,
+      "anim": "spin"
+     }
+    ]
+   }
+  }
+ },
  "lianxi": {
   "qs": [
    {

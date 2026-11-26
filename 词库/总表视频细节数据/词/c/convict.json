@@ -1,7 +1,454 @@
 {
  "单词": "convict",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/scales.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "anim": "sway"
+     },
+     {
+      "label": "彻底",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.11,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/castle-flag.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.62,
+      "anim": "sway"
+     },
+     {
+      "label": "征服、驳倒",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-con.svg",
+   "p1": "art/icon-conquer.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/courtroom.svg",
+     "x": 0.5,
+     "y": 0.52,
+     "s": 0.66,
+     "anim": "pulse"
+    },
+    {
+     "label": "彻底驳倒",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "判…有罪",
+    "pos": "动词",
+    "diff": "法庭定罪",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/courtroom.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/gavel.svg",
+      "x": 0.84,
+      "y": 0.72,
+      "s": 0.24,
+      "anim": "shake"
+     }
+    ],
+    "ex": "The man was convicted of theft.",
+    "exzh": "那个男人被判犯有盗窃罪。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/courtroom.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.62,
+       "when": "convicted"
+      },
+      {
+       "svg": "art/gavel.svg",
+       "x": 0.82,
+       "y": 0.72,
+       "s": 0.26,
+       "when": "convicted",
+       "anim": "shake",
+       "sfx": "knock"
+      },
+      {
+       "actor": "west-clerk-think",
+       "x": 0.14,
+       "y": 0.6,
+       "s": 0.46,
+       "z": 3,
+       "seq": "blink",
+       "fps": 2,
+       "when": "The man"
+      },
+      {
+       "label": "convicted",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "convicted"
+      },
+      {
+       "label": "盗窃罪",
+       "x": 0.84,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "盗窃罪"
+      }
+     ]
+    }
+   },
+   {
+    "text": "已决犯、囚犯",
+    "pos": "名词",
+    "diff": "被法庭判定有罪的人（重音在前）",
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/jail-bars.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.66,
+      "anim": "pulse"
+     }
+    ],
+    "ex": "The convict escaped from prison.",
+    "exzh": "那名囚犯越狱了。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/jail-bars.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.62,
+       "when": "prison"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.5,
+       "y": 0.86,
+       "s": 0.4,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.5,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.0
+       }
+      },
+      {
+       "label": "convict",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "convict"
+      },
+      {
+       "label": "越狱",
+       "x": 0.86,
+       "y": 0.3,
+       "size": 0.09,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "越狱"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“彻底驳倒”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/scales.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "sway"
+      },
+      {
+       "label": "con 彻底 + vict 驳倒",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "证据摆出来，被告再也辩不过",
+    "node": "① 判…有罪",
+    "pos": "动词",
+    "pic": 0,
+    "say": [
+     "法庭上证据摆出来，被告再也辩不过，被彻底驳倒，就是判他有罪。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/courtroom.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.64,
+       "when": "法庭上",
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/gavel.svg",
+       "x": 0.84,
+       "y": 0.72,
+       "s": 0.24,
+       "when": "判他有罪",
+       "anim": "shake"
+      },
+      {
+       "label": "判有罪",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "判他有罪"
+      }
+     ]
+    }
+   },
+   {
+    "via": "动作拿来叫人",
+    "node": "② 已决犯、囚犯",
+    "pos": "名词",
+    "pic": 1,
+    "rule": "表示动作的词，也能直接当名词用",
+    "ruleEx": "convict 判有罪 → 囚犯      walk 走 → 散步",
+    "say": [
+     "表示动作的词，也能直接当名词：walk 是走，也是散步。",
+     "convict 当名词，就是被判定有罪的人，已决犯、囚犯；名词重音在前，CONvict。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/castle-bg.svg",
+     "items": [
+      {
+       "svg": "art/road-forward.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.5,
+       "when": "散步",
+       "anim": "pulse",
+       "hideCue": 1
+      },
+      {
+       "label": "walk",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "walk",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/jail-bars.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.62,
+       "cue": 1,
+       "when": "囚犯",
+       "anim": "pulse"
+      },
+      {
+       "label": "CONvict",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "cue": 1,
+       "when": "CONvict"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "囚犯",
+   "items": [
+    {
+     "w": "convict",
+     "word": "convict",
+     "m": "已决犯（被判定有罪的人）",
+     "zh": "已决犯（被判定有罪的人）",
+     "say": "convict 是法庭已经定罪的人，口语截短成 con。",
+     "text": "convict 是法庭已经定罪的人，口语截短成 con。",
+     "note": "convict 是法庭已经定罪的人，口语截短成 con。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/courtroom.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.85,
+        "anim": "pulse"
+       }
+      ]
+     }
+    },
+    {
+     "w": "prisoner",
+     "word": "prisoner",
+     "m": "囚犯；俘虏",
+     "zh": "囚犯；俘虏",
+     "say": "prisoner 是关在监狱里的人，也指战俘，不一定已经定罪。",
+     "text": "prisoner 是关在监狱里的人，也指战俘，不一定已经定罪。",
+     "note": "prisoner 是关在监狱里的人，也指战俘，不一定已经定罪。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/castle-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/jail-bars.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.85,
+        "anim": "pulse"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "convict 重在“被定了罪”；prisoner 重在“被关着”。",
+   "tip": "convict 是定罪，sentence 是判刑；accuse、charge 只是指控。",
+   "pics": {
+    "convict": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/courtroom.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "pulse"
+      }
+     ]
+    },
+    "prisoner": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/jail-bars.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "convictai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人说那个人怎么了？\n听：The man was convicted of stealing a car.\nA. 被判偷车罪\nB. 买了车\nC. 修了车\nD. 卖了车",
@@ -94,5 +541,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }
