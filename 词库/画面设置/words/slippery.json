@@ -1,0 +1,796 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/banana-peel.svg",
+     "x": 0.5,
+     "y": 0.6,
+     "s": 0.3,
+     "anim": "shake"
+    },
+    {
+     "svg": "art/wet-sign.svg",
+     "x": 0.8,
+     "y": 0.46,
+     "s": 0.4,
+     "anim": "sway"
+    },
+    {
+     "label": "滑的",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/soap.svg",
+     "x": 0.5,
+     "y": 0.56,
+     "s": 0.46,
+     "anim": "shake"
+    },
+    {
+     "label": "…的",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.11,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-slip.svg",
+  "p1": "art/icon-y.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/soap.svg",
+    "x": 0.36,
+    "y": 0.56,
+    "s": 0.44,
+    "anim": "shake"
+   },
+   {
+    "svg": "art/eel.svg",
+    "x": 0.72,
+    "y": 0.52,
+    "s": 0.3,
+    "anim": "sway"
+   },
+   {
+    "label": "滑溜溜的",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "滑的",
+   "pos": "形容词",
+   "diff": "踩上去站不住、拿在手里抓不牢",
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/ice.svg",
+     "x": 0.5,
+     "y": 0.8,
+     "s": 0.3
+    },
+    {
+     "svg": "art/wet-sign.svg",
+     "x": 0.5,
+     "y": 0.46,
+     "s": 0.5,
+     "anim": "sway"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ],
+   "ex": "The floor is wet and slippery.",
+   "exzh": "地板又湿又滑。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/wet-sign.svg",
+      "x": 0.42,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "wet",
+      "pop": true,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/ice.svg",
+      "x": 0.5,
+      "y": 0.86,
+      "s": 0.26,
+      "when": "The floor"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.8,
+      "y": 0.56,
+      "s": 0.62,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "slippery"
+     },
+     {
+      "label": "slippery",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "slippery"
+     },
+     {
+      "label": "又湿又滑",
+      "x": 0.18,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "又湿又滑"
+     }
+    ]
+   }
+  },
+  {
+   "text": "（人）狡猾的、靠不住的",
+   "pos": "形容词",
+   "diff": "人像泥鳅一样抓不住",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/eel.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.36,
+     "anim": "sway"
+    },
+    {
+     "actor": "west-clerk-think",
+     "x": 0.84,
+     "y": 0.6,
+     "s": 0.52,
+     "z": 3,
+     "seq": "blink",
+     "fps": 2
+    }
+   ],
+   "ex": "Don't trust him; he is slippery.",
+   "exzh": "别相信他，他这个人很滑头。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.2,
+      "y": 0.56,
+      "s": 0.66,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "Don't trust",
+      "id": "t"
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.8,
+      "y": 0.58,
+      "s": 0.6,
+      "z": 3,
+      "seq": "blink",
+      "fps": 2,
+      "when": "slippery",
+      "nodWith": "t"
+     },
+     {
+      "svg": "art/eel.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.2,
+      "when": "slippery",
+      "anim": "sway"
+     },
+     {
+      "label": "slippery",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "slippery"
+     },
+     {
+      "label": "滑头",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "滑头"
+     }
+    ]
+   }
+  },
+  {
+   "text": "难以把握的",
+   "pos": "形容词",
+   "diff": "意思、事情抓不牢、说不准",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/question.svg",
+     "x": 0.4,
+     "y": 0.42,
+     "s": 0.4,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/soap.svg",
+     "x": 0.7,
+     "y": 0.56,
+     "s": 0.36,
+     "anim": "shake"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.96,
+     "s": 0.28,
+     "z": 5
+    }
+   ],
+   "ex": "\"Fair\" is a slippery word.",
+   "exzh": "“公平”是个很难说清的词。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/question.svg",
+      "x": 0.36,
+      "y": 0.42,
+      "s": 0.4,
+      "when": "Fair",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/soap.svg",
+      "x": 0.68,
+      "y": 0.56,
+      "s": 0.34,
+      "when": "slippery word",
+      "anim": "shake"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.12,
+      "y": 0.6,
+      "s": 0.5,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "Fair"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     },
+     {
+      "label": "slippery word",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "slippery word"
+     },
+     {
+      "label": "很难说清",
+      "x": 0.68,
+      "y": 0.84,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "很难说清"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“滑溜溜的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/soap.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.46,
+      "anim": "shake"
+     },
+     {
+      "label": "sliper + y",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "表面滑",
+   "node": "① 滑的",
+   "pos": "形容词",
+   "pic": 0,
+   "say": [
+    "地面、东西表面滑，踩上去站不住、拿在手里抓不牢，就是滑的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/ice.svg",
+      "x": 0.4,
+      "y": 0.76,
+      "s": 0.28,
+      "when": "地面"
+     },
+     {
+      "svg": "art/soap.svg",
+      "x": 0.74,
+      "y": 0.56,
+      "s": 0.3,
+      "when": "抓不牢",
+      "anim": "shake"
+     },
+     {
+      "label": "滑的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "滑的"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "人像泥鳅一样抓不住",
+   "node": "② （人）狡猾的",
+   "pos": "形容词",
+   "pic": 1,
+   "say": [
+    "人像泥鳅一样抓不住，说话不算数，就是狡猾的、靠不住的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/eel.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.36,
+      "when": "泥鳅",
+      "anim": "sway"
+     },
+     {
+      "label": "靠不住",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "靠不住"
+     }
+    ]
+   }
+  },
+  {
+   "via": "意思、事情抓不牢",
+   "node": "③ 难以把握的",
+   "pos": "形容词",
+   "pic": 2,
+   "from": 1,
+   "say": [
+    "一个词的意思、一件事抓不牢、说不准，就是难以把握的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/question.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.44,
+      "when": "说不准",
+      "anim": "bob"
+     },
+     {
+      "label": "难以把握",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "难以把握"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": false,
+ "kaodian": {
+  "rows": [
+   [
+    "考意思",
+    "slippery = 滑的；（人）靠不住的；难以把握的"
+   ],
+   [
+    "考搭配",
+    "a slippery road 滑的路；a slippery slope 滑坡（比喻一步步滑向坏结果）"
+   ],
+   [
+    "考形近词",
+    "slip 滑倒（动词）/ slippery 滑的（形容词）/ slipper 拖鞋"
+   ],
+   [
+    "考拼写",
+    "双写 p：slippery"
+   ]
+  ]
+ },
+ "demo": {
+  "careful": {
+   "icons": [
+    "art/icon-care.svg",
+    "art/icon-full.svg"
+   ],
+   "lit": "满是小心的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/cup-carry.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "careless": {
+   "icons": [
+    "art/icon-care.svg",
+    "art/icon-empty.svg"
+   ],
+   "lit": "没有小心的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/cup-spill.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.66,
+      "anim": "shake"
+     }
+    ]
+   }
+  },
+  "rainy": {
+   "icons": [
+    "art/icon-rain.svg",
+    "art/icon-y.svg"
+   ],
+   "lit": "有雨的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/storm-cloud.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.6,
+      "anim": "shake"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人提醒什么？",
+    "listen": "Be careful! The road is slippery after the rain.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "路很窄",
+     "路很滑",
+     "路很远",
+     "路很干"
+    ],
+    "ans": "B",
+    "why": "slippery 滑的。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Walk carefully; the floor is ______.",
+    "opts": [
+     "slip",
+     "slipped",
+     "slippery",
+     "slippers"
+    ],
+    "ans": "C",
+    "why": "be 后接形容词 slippery。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "This floor is even ______ than that one. (slippery)",
+    "opts": [],
+    "ans": "more slippery",
+    "why": "多音节形容词比较级用 more。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 slippery、sleepy 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "I stayed up late, so I'm ______ now.",
+    "opts": [],
+    "ans": "sleepy",
+    "why": "熬夜了所以困 sleepy；slippery 是滑的，形近。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Don't run on the slippery floor, or you won't fall.",
+    "opts": [],
+    "ans": "won't → will",
+    "why": "祈使句 + or 表示“否则会摔倒”。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "A \"slippery slope\" means a small step that ______.",
+    "opts": [
+     "makes you rich",
+     "leads to bigger trouble",
+     "is very safe",
+     "helps you climb"
+    ],
+    "ans": "B",
+    "why": "slippery slope 比喻开了小口子就一步步滑向麻烦。",
+    "kd": "短语"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Be careful not to ______ on the wet steps. (slippery)",
+    "opts": [],
+    "ans": "slip",
+    "why": "not to 后接动词原形 slip（滑倒）。",
+    "kd": "词性转换"
+   }
+  ]
+ }
+}

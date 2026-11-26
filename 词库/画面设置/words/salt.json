@@ -1,0 +1,932 @@
+{
+ "style": "core",
+ "board": true,
+ "originPic": {
+  "bg": "blank",
+  "img": "art/park-bg.svg",
+  "items": [
+   {
+    "svg": "art/sea.svg",
+    "x": 0.5,
+    "y": 0.5,
+    "s": 0.62,
+    "anim": "bob"
+   },
+   {
+    "svg": "art/salt-crystals.svg",
+    "x": 0.5,
+    "y": 0.82,
+    "s": 0.24
+   },
+   {
+    "label": "古英语 sealt",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.085,
+    "color": "#7A3E00",
+    "border": "#E0A800",
+    "bg": "#FFF6D8"
+   },
+   {
+    "actor": "walk-cn-girl",
+    "x": 0.02,
+    "y": 0.86,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.02,
+      0.86
+     ],
+     "to": [
+      0.98,
+      0.86
+     ],
+     "offset": 0.2
+    }
+   },
+   {
+    "actor": "walk-west-man-case",
+    "x": 0.98,
+    "y": 0.88,
+    "s": 0.36,
+    "z": 1,
+    "walk": {
+     "from": [
+      0.98,
+      0.88
+     ],
+     "to": [
+      0.02,
+      0.88
+     ],
+     "offset": 0.65
+    }
+   }
+  ]
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/salt-shaker.svg",
+    "x": 0.5,
+    "y": 0.52,
+    "s": 0.62,
+    "anim": "shake"
+   },
+   {
+    "label": "盐",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.1,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "盐",
+   "pos": "名词",
+   "diff": "海水晒干后留下的白色晶粒",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/salt-shaker.svg",
+     "x": 0.42,
+     "y": 0.52,
+     "s": 0.62,
+     "anim": "shake"
+    },
+    {
+     "svg": "art/salt-crystals.svg",
+     "x": 0.78,
+     "y": 0.66,
+     "s": 0.3,
+     "anim": "pulse"
+    }
+   ],
+   "ex": "Pass me the salt, please.",
+   "exzh": "请把盐递给我。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.2,
+      "y": 0.56,
+      "s": 0.66,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "Pass me",
+      "id": "b"
+     },
+     {
+      "svg": "art/salt-shaker.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.4,
+      "when": "the salt",
+      "go": [
+       0.62,
+       0.6
+      ],
+      "goWhen": "please",
+      "dur": 1
+     },
+     {
+      "actor": "west-man-hello",
+      "x": 0.84,
+      "y": 0.58,
+      "s": 0.62,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "please",
+      "nodWith": "b"
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.24,
+      "z": -1
+     },
+     {
+      "label": "salt",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "salt"
+     },
+     {
+      "label": "盐",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "盐"
+     }
+    ]
+   }
+  },
+  {
+   "text": "（化学）盐类",
+   "pos": "名词",
+   "diff": "酸碱中和后得到的一类东西",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/flask-salt.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.62,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.96,
+     "s": 0.28,
+     "z": 5
+    }
+   ],
+   "ex": "Salt is formed when an acid meets a base.",
+   "exzh": "酸和碱相遇就生成盐。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/flask-salt.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.6,
+      "when": "Salt",
+      "anim": "bob"
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.16,
+      "y": 0.58,
+      "s": 0.6,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "acid"
+     },
+     {
+      "label": "acid 酸",
+      "x": 0.82,
+      "y": 0.3,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "acid"
+     },
+     {
+      "label": "base 碱",
+      "x": 0.82,
+      "y": 0.5,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "a base"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     },
+     {
+      "label": "盐",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "盐"
+     }
+    ]
+   }
+  },
+  {
+   "text": "加盐、腌",
+   "pos": "动词",
+   "diff": "往食物里放盐，或用盐腌住不坏",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/salted-fish.svg",
+     "x": 0.5,
+     "y": 0.42,
+     "s": 0.56,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/salt-shaker.svg",
+     "x": 0.84,
+     "y": 0.66,
+     "s": 0.3,
+     "anim": "shake"
+    }
+   ],
+   "ex": "Grandma salts fish for the winter.",
+   "exzh": "奶奶腌鱼过冬。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.18,
+      "y": 0.56,
+      "s": 0.64,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "Grandma"
+     },
+     {
+      "svg": "art/salted-fish.svg",
+      "x": 0.56,
+      "y": 0.42,
+      "s": 0.5,
+      "when": "fish",
+      "pop": true,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/salt-shaker.svg",
+      "x": 0.82,
+      "y": 0.66,
+      "s": 0.3,
+      "when": "salts",
+      "anim": "shake"
+     },
+     {
+      "label": "salts fish",
+      "x": 0.56,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "salts fish"
+     },
+     {
+      "label": "腌鱼",
+      "x": 0.82,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "腌鱼"
+     }
+    ]
+   }
+  },
+  {
+   "text": "咸的（多在固定搭配里）",
+   "pos": "形容词",
+   "diff": "salt water、salt fish",
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/sea.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.62,
+     "anim": "bob"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ],
+   "ex": "Fish in the sea live in salt water.",
+   "exzh": "海里的鱼生活在咸水里。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/sea.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.64,
+      "when": "the sea",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/fish.svg",
+      "x": 0.42,
+      "y": 0.66,
+      "s": 0.16,
+      "when": "Fish",
+      "go": [
+       0.62,
+       0.66
+      ],
+      "loop": true,
+      "dur": 3
+     },
+     {
+      "label": "salt water",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "salt water"
+     },
+     {
+      "label": "咸水",
+      "x": 0.82,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "咸水"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "盐",
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/salt-shaker.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.6,
+      "anim": "shake"
+     },
+     {
+      "label": "salt",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "海水晒干后留下的白色晶粒",
+   "node": "① 盐",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "海水晒干以后，留下白色的晶粒，就是盐。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/sea.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.56,
+      "when": "海水",
+      "anim": "bob"
+     },
+     {
+      "svg": "art/salt-crystals.svg",
+      "x": 0.5,
+      "y": 0.82,
+      "s": 0.28,
+      "when": "白色的晶粒",
+      "pop": true
+     },
+     {
+      "label": "盐",
+      "x": 0.86,
+      "y": 0.1,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "盐"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "意思越用越宽：一大类",
+   "node": "② 盐类",
+   "pos": "名词",
+   "pic": 1,
+   "rule": "一个词的意思越用越宽：从一种说到一大类",
+   "ruleEx": "salt 食盐 → 盐类      grow 草木生长 → 人长大",
+   "say": [
+    "一个词的意思常常越用越宽，grow 原来说草木生长，后来人长大也说 grow。",
+    "化学家把酸碱中和后得到的这一大类东西，都叫盐，就是盐类。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/plant.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "草木生长",
+      "anim": "sway",
+      "hideCue": 1
+     },
+     {
+      "label": "grow",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "grow",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/flask-salt.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "cue": 1,
+      "when": "酸碱中和",
+      "anim": "bob"
+     },
+     {
+      "label": "盐类",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "盐类"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     }
+    ]
+   }
+  },
+  {
+   "via": "表示东西的词直接当动词",
+   "node": "③ 加盐、腌",
+   "pos": "动词",
+   "pic": 2,
+   "from": 1,
+   "rule": "表示东西的词，也能直接当动词用",
+   "ruleEx": "salt 盐 → 加盐、腌      water 水 → 浇水",
+   "say": [
+    "表示东西的词，也能直接当动词：water 是水，也是浇水。",
+    "salt 当动词，就是往食物里放盐，或者用盐把鱼、肉腌住，不让它坏。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/plant.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "浇水",
+      "anim": "sway",
+      "hideCue": 1
+     },
+     {
+      "label": "浇水",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "浇水",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/salted-fish.svg",
+      "x": 0.46,
+      "y": 0.42,
+      "s": 0.5,
+      "cue": 1,
+      "when": "腌住",
+      "anim": "sway"
+     },
+     {
+      "svg": "art/salt-shaker.svg",
+      "x": 0.82,
+      "y": 0.66,
+      "s": 0.3,
+      "cue": 1,
+      "when": "放盐",
+      "anim": "shake"
+     },
+     {
+      "label": "加盐、腌",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "不让它坏"
+     }
+    ]
+   }
+  },
+  {
+   "via": "名词放在名词前当形容词",
+   "node": "④ 咸的",
+   "pos": "形容词",
+   "pic": 3,
+   "from": 1,
+   "say": [
+    "salt 放在别的名词前面，就当形容词用，咸的，比如 salt water 咸水；日常说咸，用 salty。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/sea.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6,
+      "when": "salt water",
+      "anim": "bob"
+     },
+     {
+      "label": "salt water",
+      "x": 0.3,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "salt water"
+     },
+     {
+      "label": "salty",
+      "x": 0.76,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "salty"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "咸的",
+  "items": [
+   {
+    "w": "salt",
+    "word": "salt",
+    "m": "咸的（只在固定搭配里）",
+    "zh": "咸的（只在固定搭配里）",
+    "say": "salt 当形容词只在固定搭配里，放在名词前：salt water、salt fish。",
+    "text": "salt 当形容词只在固定搭配里，放在名词前：salt water、salt fish。",
+    "note": "salt 当形容词只在固定搭配里，放在名词前：salt water、salt fish。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/castle-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/sea.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   {
+    "w": "salty",
+    "word": "salty",
+    "m": "咸的（日常说味道）",
+    "zh": "咸的（日常说味道）",
+    "say": "日常说味道咸用 salty：The soup is too salty。",
+    "text": "日常说味道咸用 salty：The soup is too salty。",
+    "note": "日常说味道咸用 salty：The soup is too salty。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/salt-shaker.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.8,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/salted-fish.svg",
+       "x": 0.7,
+       "y": 0.5,
+       "s": 0.75,
+       "anim": "sway"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "salt 是名词直接放在名词前；salty 是 salt 加 y，真正的形容词，能放在 be 后面。",
+  "tip": "take it with a pinch of salt：对这话半信半疑、别全信。",
+  "pics": {
+   "salt": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/castle-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/sea.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.85,
+      "anim": "bob"
+     }
+    ]
+   },
+   "salty": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/room-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/salt-shaker.svg",
+      "x": 0.4,
+      "y": 0.55,
+      "s": 0.8,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/salted-fish.svg",
+      "x": 0.7,
+      "y": 0.5,
+      "s": 0.75,
+      "anim": "sway"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人让对方递什么？",
+    "listen": "Could you pass me the salt, please?",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "糖",
+     "盐",
+     "胡椒",
+     "酱油"
+    ],
+    "ans": "B",
+    "why": "salt 盐。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "There is too much ______ in the soup.",
+    "opts": [
+     "salt",
+     "salts",
+     "salty",
+     "saltier"
+    ],
+    "ans": "A",
+    "why": "too much 后接不可数名词 salt。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The soup tastes too ______. (salt)",
+    "opts": [],
+    "ans": "salty",
+    "why": "taste 后接形容词 salty。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 salt、sugar 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The cake is sweet because I added some ______.",
+    "opts": [],
+    "ans": "sugar",
+    "why": "甜是因为加了糖 sugar。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "Please add a few salt to the soup.",
+    "opts": [],
+    "ans": "a few → a little",
+    "why": "salt 不可数，用 a little。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "\"Take it with a pinch of salt\" means ______.",
+    "opts": [
+     "add more salt",
+     "eat it quickly",
+     "cook it well",
+     "don't fully believe it"
+    ],
+    "ans": "D",
+    "why": "with a pinch of salt 对……半信半疑。",
+    "kd": "短语"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "海水是咸的。",
+    "stem": "Sea water is ______.",
+    "opts": [],
+    "ans": "salty",
+    "why": "日常说“咸”用 salty。",
+    "kd": "用法"
+   }
+  ]
+ }
+}
