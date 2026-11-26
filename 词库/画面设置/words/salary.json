@@ -283,6 +283,104 @@
   }
  ],
  "distinguish": false,
+ "demo": {
+  "careful": {
+   "icons": [
+    "art/icon-care.svg",
+    "art/icon-full.svg"
+   ],
+   "lit": "满是小心的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/cup-carry.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.7,
+      "anim": "bob"
+     }
+    ]
+   }
+  },
+  "careless": {
+   "icons": [
+    "art/icon-care.svg",
+    "art/icon-empty.svg"
+   ],
+   "lit": "没有小心的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/cup-spill.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.66,
+      "anim": "shake"
+     }
+    ]
+   }
+  },
+  "rainy": {
+   "icons": [
+    "art/icon-rain.svg",
+    "art/icon-y.svg"
+   ],
+   "lit": "有雨的",
+   "pic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/storm-cloud.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.6,
+      "anim": "shake"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ]
+   }
+  }
+ },
  "lianxi": {
   "qs": [
    {

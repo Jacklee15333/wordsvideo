@@ -1,7 +1,625 @@
 {
  "单词": "dusty",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sunbeam-dust.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.66,
+      "anim": "pulse"
+     },
+     {
+      "label": "灰尘",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/dusty-shelf.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.6,
+      "anim": "pulse"
+     },
+     {
+      "label": "满是…的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-dust.svg",
+   "p1": "art/icon-full2.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/old-book.svg",
+     "x": 0.5,
+     "y": 0.54,
+     "s": 0.5,
+     "anim": "pulse"
+    },
+    {
+     "label": "满是灰的",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "满是灰尘的",
+    "pos": "形容词",
+    "diff": "落满了灰、尘土飞扬",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/old-book.svg",
+      "x": 0.46,
+      "y": 0.56,
+      "s": 0.5,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/sunbeam-dust.svg",
+      "x": 0.84,
+      "y": 0.4,
+      "s": 0.44,
+      "anim": "pulse"
+     }
+    ],
+    "ex": "I found a dusty old box.",
+    "exzh": "我找到了一个满是灰尘的旧箱子。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.2,
+       "y": 0.56,
+       "s": 0.64,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "I found"
+      },
+      {
+       "svg": "art/carved-box.svg",
+       "x": 0.58,
+       "y": 0.6,
+       "s": 0.44,
+       "when": "old box",
+       "pop": true,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/sunbeam-dust.svg",
+       "x": 0.86,
+       "y": 0.4,
+       "s": 0.4,
+       "when": "dusty",
+       "anim": "pulse"
+      },
+      {
+       "label": "dusty",
+       "x": 0.58,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "dusty"
+      },
+      {
+       "label": "满是灰尘的",
+       "x": 0.58,
+       "y": 0.88,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "满是灰尘的"
+      }
+     ]
+    }
+   },
+   {
+    "text": "灰扑扑的",
+    "pos": "形容词",
+    "diff": "颜色像蒙了一层灰",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/dusty-road.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.66,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ],
+    "ex": "The car was dusty after the trip.",
+    "exzh": "旅行回来，车子灰扑扑的。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/dusty-road.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.66,
+       "when": "The car",
+       "anim": "pulse"
+      },
+      {
+       "label": "dusty",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "dusty"
+      },
+      {
+       "label": "灰扑扑的",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "灰扑扑的"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "text": "（比喻）枯燥陈旧的",
+    "pos": "形容词",
+    "diff": "放久了没人碰，才会落灰",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/old-book.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-clerk-think",
+      "x": 0.86,
+      "y": 0.6,
+      "s": 0.5,
+      "z": 3,
+      "seq": "blink",
+      "fps": 2
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     }
+    ],
+    "ex": "Nobody reads these dusty rules.",
+    "exzh": "没人看这些陈旧的规定。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/old-book.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "dusty rules",
+       "anim": "pulse"
+      },
+      {
+       "actor": "west-girl-listen",
+       "x": 0.16,
+       "y": 0.58,
+       "s": 0.58,
+       "z": 3,
+       "seq": "blink",
+       "fps": 2,
+       "when": "Nobody"
+      },
+      {
+       "svg": "art/class-desks.svg",
+       "x": 0.5,
+       "y": 0.96,
+       "s": 0.28,
+       "z": 5
+      },
+      {
+       "label": "dusty rules",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "dusty rules"
+      },
+      {
+       "label": "陈旧的规定",
+       "x": 0.84,
+       "y": 0.24,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "陈旧的规定"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“满是灰的”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/old-book.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.5,
+       "anim": "pulse"
+      },
+      {
+       "label": "dust + y",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "落满了灰",
+    "node": "① 满是灰尘的",
+    "pos": "形容词",
+    "pic": 0,
+    "say": [
+     "东西上落满了灰，就是满是灰尘的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/dusty-shelf.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "when": "落满了灰",
+       "anim": "pulse"
+      },
+      {
+       "label": "满是灰尘的",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "满是灰尘的"
+      }
+     ]
+    }
+   },
+   {
+    "via": "颜色像蒙了一层灰",
+    "node": "② 灰扑扑的",
+    "pos": "形容词",
+    "pic": 1,
+    "say": [
+     "颜色看着像蒙了一层灰，就是灰扑扑的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/dusty-road.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.64,
+       "when": "蒙了一层灰",
+       "anim": "pulse"
+      },
+      {
+       "label": "灰扑扑的",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "灰扑扑的"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "放久了没人碰才会落灰",
+    "node": "③ 枯燥陈旧的",
+    "pos": "形容词",
+    "pic": 2,
+    "from": 1,
+    "say": [
+     "东西放久了、没人碰，才会落灰，所以 dusty 也比喻枯燥陈旧的。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/old-book.svg",
+       "x": 0.5,
+       "y": 0.54,
+       "s": 0.5,
+       "when": "放久了",
+       "anim": "pulse"
+      },
+      {
+       "label": "陈旧",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "陈旧"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": false,
+  "demo": {
+   "careful": {
+    "icons": [
+     "art/icon-care.svg",
+     "art/icon-full.svg"
+    ],
+    "lit": "满是小心的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/cup-carry.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "bob"
+      }
+     ]
+    }
+   },
+   "careless": {
+    "icons": [
+     "art/icon-care.svg",
+     "art/icon-empty.svg"
+    ],
+    "lit": "没有小心的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/cup-spill.svg",
+       "x": 0.5,
+       "y": 0.58,
+       "s": 0.66,
+       "anim": "shake"
+      }
+     ]
+    }
+   },
+   "rainy": {
+    "icons": [
+     "art/icon-rain.svg",
+     "art/icon-y.svg"
+    ],
+    "lit": "有雨的",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/storm-cloud.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.6,
+       "anim": "shake"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "dustyai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人说那个旧箱子怎样？\n听：The old box in the attic is very dusty.\nA. 很新\nB. 很重\nC. 满是灰尘\nD. 很香",
@@ -90,5 +708,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
