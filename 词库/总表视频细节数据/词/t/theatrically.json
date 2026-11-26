@@ -1,7 +1,617 @@
 {
  "单词": "theatrically",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.62,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "id": "g"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.32,
+      "z": 5,
+      "crowd": 9,
+      "nodWith": "g"
+     },
+     {
+      "label": "戏剧的；做作的",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/costume.svg",
+      "x": 0.32,
+      "y": 0.5,
+      "s": 0.54,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/masks.svg",
+      "x": 0.7,
+      "y": 0.44,
+      "s": 0.44,
+      "anim": "bob"
+     },
+     {
+      "label": "以…的方式",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     },
+     {
+      "ray": [
+       [
+        0.2,
+        0.86
+       ],
+       [
+        0.8,
+        0.86
+       ]
+      ],
+      "color": "#C9A85A",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 0.8
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-masks.svg",
+   "p1": "art/icon-ly.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "actor": "west-man-present",
+     "x": 0.5,
+     "y": 0.48,
+     "s": 0.62,
+     "z": 3,
+     "seq": "talk",
+     "fps": 2,
+     "id": "m"
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.9,
+     "s": 0.32,
+     "z": 5,
+     "crowd": 9,
+     "nodWith": "m"
+    },
+    {
+     "label": "以演戏的方式",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.085,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "戏剧上、在演出方面",
+    "pos": "副词",
+    "diff": "从演出这方面来看",
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/costume.svg",
+      "x": 0.28,
+      "y": 0.5,
+      "s": 0.56,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/masks.svg",
+      "x": 0.55,
+      "y": 0.4,
+      "s": 0.4,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.32,
+      "z": 5,
+      "crowd": 9
+     },
+     {
+      "beam": true,
+      "x": 0.5,
+      "y": 0.0,
+      "len": 0.8,
+      "width": 0.25,
+      "swing": 12,
+      "period": 4
+     },
+     {
+      "svg": "art/ticket.svg",
+      "x": 0.84,
+      "y": 0.6,
+      "s": 0.26,
+      "rot": 8,
+      "anim": "bob"
+     }
+    ],
+    "ex": "Theatrically, the show was a great success.",
+    "exzh": "从演出方面看，这场表演非常成功。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-hello",
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.6,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "the show",
+       "id": "m"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.92,
+       "s": 0.34,
+       "z": 5,
+       "crowd": 9,
+       "when": "success",
+       "nodWith": "m"
+      },
+      {
+       "sound": "applause",
+       "when": "success"
+      },
+      {
+       "label": "Theatrically",
+       "x": 0.2,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "Theatrically"
+      },
+      {
+       "label": "非常成功",
+       "x": 0.82,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "非常成功"
+      }
+     ]
+    }
+   },
+   {
+    "text": "夸张地、做作地",
+    "pos": "副词",
+    "diff": "像在台上演给人看",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.38,
+      "y": 0.55,
+      "s": 0.72,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "id": "g"
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.74,
+      "y": 0.56,
+      "s": 0.62,
+      "z": 3,
+      "seq": "blink",
+      "fps": 2,
+      "nodWith": "g"
+     },
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.56,
+      "y": 0.9,
+      "s": 0.3,
+      "z": 4
+     },
+     {
+      "label": "夸张地",
+      "x": 0.38,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#C92A2A",
+      "border": "#C92A2A"
+     }
+    ],
+    "ex": "She sighed theatrically and closed her eyes.",
+    "exzh": "她夸张地叹了口气，闭上了眼睛。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-listen",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.72,
+       "z": 3,
+       "seq": "blink",
+       "fps": 2,
+       "when": "She",
+       "id": "s"
+      },
+      {
+       "waves": true,
+       "x": 0.48,
+       "y": 0.34,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#3FA7D6",
+       "when": "sighed"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.78,
+       "y": 0.56,
+       "s": 0.62,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "theatrically",
+       "nodWith": "s"
+      },
+      {
+       "svg": "art/sofa.svg",
+       "x": 0.55,
+       "y": 0.9,
+       "s": 0.3,
+       "z": 4
+      },
+      {
+       "label": "theatrically",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "theatrically"
+      },
+      {
+       "label": "夸张地",
+       "x": 0.84,
+       "y": 0.2,
+       "size": 0.08,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "夸张地"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“以演戏的方式”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/masks.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 0.5,
+       "anim": "sway"
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.34,
+       "z": 5,
+       "crowd": 9
+      },
+      {
+       "label": "theatrical + ly",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "在演出这方面",
+    "node": "① 戏剧上、在演出方面",
+    "pos": "副词",
+    "pic": 0,
+    "say": [
+     "说一场演出的布景、服装、灯光，就是在演出这方面来说，也就是戏剧上。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/costume.svg",
+       "x": 0.3,
+       "y": 0.52,
+       "s": 0.56,
+       "when": "服装",
+       "pop": true
+      },
+      {
+       "beam": true,
+       "x": 0.6,
+       "y": 0.0,
+       "len": 0.8,
+       "width": 0.25,
+       "swing": 12,
+       "period": 4,
+       "when": "灯光"
+      },
+      {
+       "label": "布景",
+       "x": 0.15,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "布景"
+      },
+      {
+       "label": "服装",
+       "x": 0.3,
+       "y": 0.92,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "服装"
+      },
+      {
+       "label": "灯光",
+       "x": 0.62,
+       "y": 0.2,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "灯光"
+      },
+      {
+       "label": "戏剧上",
+       "x": 0.8,
+       "y": 0.5,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "戏剧上"
+      }
+     ]
+    }
+   },
+   {
+    "via": "像在台上演给人看",
+    "node": "② 夸张地、做作地",
+    "pos": "副词",
+    "pic": 1,
+    "from": 0,
+    "say": [
+     "做事像在台上演戏一样，动作放得很大，演给别人看。",
+     "这就是夸张地、做作地。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.7,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "演戏",
+       "id": "g"
+      },
+      {
+       "actor": "west-clerk-think",
+       "x": 0.76,
+       "y": 0.56,
+       "s": 0.6,
+       "z": 3,
+       "seq": "blink",
+       "fps": 2,
+       "when": "演给别人看",
+       "nodWith": "g"
+      },
+      {
+       "label": "放得很大",
+       "x": 0.4,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "放得很大"
+      },
+      {
+       "label": "夸张地",
+       "x": 0.76,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "夸张地"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "夸张地",
+   "items": [
+    {
+     "w": "theatrically",
+     "word": "theatrically",
+     "m": "夸张地、做作地（演给人看）",
+     "zh": "夸张地、做作地（演给人看）",
+     "say": "theatrically 是像在台上演戏，故意做给人看，带点“不真诚”。",
+     "text": "theatrically 是像在台上演戏，故意做给人看，带点“不真诚”。",
+     "note": "theatrically 是像在台上演戏，故意做给人看，带点“不真诚”。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/stage-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/masks.svg",
+        "x": 0.4,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "sway"
+       },
+       {
+        "svg": "art/costume.svg",
+        "x": 0.7,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "dramatically",
+     "word": "dramatically",
+     "m": "戏剧性地、大幅度地",
+     "zh": "戏剧性地、大幅度地",
+     "say": "dramatically 多说变化大、来得突然，prices rose dramatically 是价格猛涨，不一定是演。",
+     "text": "dramatically 多说变化大、来得突然，prices rose dramatically 是价格猛涨，不一定是演。",
+     "note": "dramatically 多说变化大、来得突然，prices rose dramatically 是价格猛涨，不一定是演。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/park-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/storm-cloud.svg",
+        "x": 0.5,
+        "y": 0.45,
+        "s": 0.8,
+        "anim": "shake"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "theatrically 从剧院来，重在“演”；dramatically 从 drama 来，重在“起伏大”。",
+   "tip": "说人做作用 theatrically；说变化大用 dramatically。",
+   "pics": {
+    "theatrically": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/stage-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/masks.svg",
+       "x": 0.4,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "sway"
+      },
+      {
+       "svg": "art/costume.svg",
+       "x": 0.7,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "bob"
+      }
+     ]
+    },
+    "dramatically": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/park-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/storm-cloud.svg",
+       "x": 0.5,
+       "y": 0.45,
+       "s": 0.8,
+       "anim": "shake"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "theatricallyai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人说她是怎么哭的？\n听：She cried theatrically, but nobody believed her.\nA. 安静地\nB. 伤心地\nC. 夸张地\nD. 偷偷地",
@@ -90,5 +700,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

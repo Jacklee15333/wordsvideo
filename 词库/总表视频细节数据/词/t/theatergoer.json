@@ -1,7 +1,702 @@
 {
  "单词": "theatergoer",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/masks.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.5,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.34,
+      "z": 5,
+      "crowd": 9
+     },
+     {
+      "label": "剧院",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E"
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.98,
+      "y": 0.8,
+      "s": 0.6,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.8
+       ],
+       "to": [
+        0.02,
+        0.8
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.56,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.5
+      }
+     },
+     {
+      "label": "去…的人",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.1,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-place.svg",
+   "p1": "art/icon-go.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "items": [
+    {
+     "svg": "art/ticket.svg",
+     "x": 0.5,
+     "y": 0.4,
+     "s": 0.4,
+     "anim": "sway"
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.84,
+     "s": 0.56,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.84
+      ],
+      "to": [
+       0.02,
+       0.84
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.56,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.6
+     }
+    },
+    {
+     "label": "去剧院的人",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.09,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "常看戏的人、戏迷",
+    "pos": "名词",
+    "diff": "经常去剧院看戏的人",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-music",
+      "x": 0.36,
+      "y": 0.55,
+      "s": 0.74,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/tickets.svg",
+      "x": 0.74,
+      "y": 0.46,
+      "s": 0.46,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/masks.svg",
+      "x": 0.74,
+      "y": 0.82,
+      "s": 0.24,
+      "anim": "sway"
+     }
+    ],
+    "ex": "My aunt is a keen theatergoer.",
+    "exzh": "我姑姑是个铁杆戏迷。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-girl-explain",
+       "x": 0.3,
+       "y": 0.55,
+       "s": 0.74,
+       "z": 3,
+       "seq": "talk",
+       "fps": 2,
+       "when": "My aunt"
+      },
+      {
+       "svg": "art/tickets.svg",
+       "x": 0.66,
+       "y": 0.46,
+       "s": 0.46,
+       "when": "theatergoer",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/masks.svg",
+       "x": 0.86,
+       "y": 0.72,
+       "s": 0.26,
+       "when": "keen",
+       "pop": true
+      },
+      {
+       "label": "theatergoer",
+       "x": 0.62,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "theatergoer"
+      },
+      {
+       "label": "戏迷",
+       "x": 0.86,
+       "y": 0.3,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "戏迷"
+      }
+     ]
+    }
+   },
+   {
+    "text": "看戏的观众",
+    "pos": "名词",
+    "diff": "去看一场戏的人",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/ticket.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.44,
+      "anim": "sway"
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.98,
+      "y": 0.82,
+      "s": 0.56,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.82
+       ],
+       "to": [
+        0.02,
+        0.82
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-teacher-case",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.58,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.5
+      }
+     }
+    ],
+    "ex": "Theatergoers lined up for tickets.",
+    "exzh": "看戏的观众排队买票。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.5,
+       "y": 0.34,
+       "s": 0.4,
+       "when": "tickets",
+       "pop": true,
+       "anim": "sway"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.98,
+       "y": 0.84,
+       "s": 0.56,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.84
+        ],
+        "to": [
+         0.02,
+         0.84
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.56,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.9,
+       "y": 0.88,
+       "s": 0.5,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.9,
+         0.88
+        ],
+        "to": [
+         0.1,
+         0.88
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "label": "Theatergoers",
+       "x": 0.2,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "Theatergoers"
+      },
+      {
+       "label": "排队买票",
+       "x": 0.8,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "排队买票"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“去剧院的人”",
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.4,
+       "anim": "sway"
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.56,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.3
+       }
+      },
+      {
+       "label": "theater + go + er",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "合成规律：名词挪到前面，动词放在最后",
+    "node": "“去剧院的人”",
+    "rule": "动词带着在哪儿合成一个词：名词挪到前面，介词省掉，动词放在最后",
+    "ruleEx": "go to the theater → theatergoer      go to concerts → concertgoer",
+    "say": [
+     "go to the theater，是去看戏。",
+     "把 theater 挪到前面，to 省掉，go 放在最后，再加 er，就成了 theatergoer。",
+     "同样，go to concerts 去听音乐会，就成了 concertgoer。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "label": "go to the theater",
+       "x": 0.5,
+       "y": 0.2,
+       "size": 0.09,
+       "color": "#2F6FB3",
+       "border": "#2F6FB3",
+       "when": "go to the theater",
+       "hideCue": 1
+      },
+      {
+       "label": "theater + go + er",
+       "x": 0.5,
+       "y": 0.45,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "cue": 1,
+       "when": "theater",
+       "hideCue": 2
+      },
+      {
+       "ray": [
+        [
+         0.3,
+         0.32
+        ],
+        [
+         0.3,
+         0.42
+        ]
+       ],
+       "color": "#E8590C",
+       "lw": 0.014,
+       "arrow": true,
+       "dur": 0.8,
+       "cue": 1,
+       "when": "挪到前面",
+       "hideCue": 2
+      },
+      {
+       "label": "theatergoer",
+       "x": 0.5,
+       "y": 0.7,
+       "size": 0.1,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "cue": 1,
+       "when": "theatergoer",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/piano-theory.svg",
+       "x": 0.5,
+       "y": 0.45,
+       "s": 0.5,
+       "cue": 2,
+       "when": "concerts"
+      },
+      {
+       "label": "concertgoer",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "cue": 2,
+       "when": "concertgoer"
+      }
+     ]
+    }
+   },
+   {
+    "via": "经常去剧院的人",
+    "node": "① 常看戏的人、戏迷",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "经常去剧院、一有新戏就去看的人，就是戏迷。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-man-smile",
+       "x": 0.36,
+       "y": 0.55,
+       "s": 0.72,
+       "z": 3,
+       "seq": "blink",
+       "fps": 2,
+       "when": "经常去剧院"
+      },
+      {
+       "svg": "art/tickets.svg",
+       "x": 0.74,
+       "y": 0.46,
+       "s": 0.46,
+       "when": "一有新戏",
+       "pop": true,
+       "anim": "bob"
+      },
+      {
+       "label": "戏迷",
+       "x": 0.74,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "戏迷"
+      }
+     ]
+    }
+   },
+   {
+    "via": "也泛指去看戏的人",
+    "node": "② 看戏的观众",
+    "pos": "名词",
+    "pic": 1,
+    "from": 0,
+    "say": [
+     "也泛指去看一场戏的人，就是看戏的观众。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.86,
+       "s": 0.44,
+       "crowd": 9,
+       "when": "看一场戏"
+      },
+      {
+       "svg": "art/masks.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.4,
+       "anim": "sway"
+      },
+      {
+       "label": "观众",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "观众"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "观众",
+   "items": [
+    {
+     "w": "theatergoer",
+     "word": "theatergoer",
+     "m": "去看戏的人（一个个的人）",
+     "zh": "去看戏的人（一个个的人）",
+     "say": "theatergoer 说的是一个个去剧院看戏的人，常常是爱看戏的人。",
+     "text": "theatergoer 说的是一个个去剧院看戏的人，常常是爱看戏的人。",
+     "note": "theatergoer 说的是一个个去剧院看戏的人，常常是爱看戏的人。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/street-bg.svg",
+        "x": 0.5,
+        "y": 0.4,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/ticket.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "sway"
+       }
+      ]
+     }
+    },
+    {
+     "w": "audience",
+     "word": "audience",
+     "m": "一场演出的观众（总称）",
+     "zh": "一场演出的观众（总称）",
+     "say": "audience 是一场演出台下的全体观众，是一个整体：a large audience。",
+     "text": "audience 是一场演出台下的全体观众，是一个整体：a large audience。",
+     "note": "audience 是一场演出台下的全体观众，是一个整体：a large audience。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/stage-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/audience-wide.svg",
+        "x": 0.5,
+        "y": 0.6,
+        "s": 1.0,
+        "crowd": 9
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "theatergoer 是“去剧院的人”，一个一个数；audience 是台下那一群人的总称。",
+   "tip": "-goer 可以接各种场所和活动：churchgoer、moviegoer、partygoer。",
+   "pics": {
+    "theatergoer": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/street-bg.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "sway"
+      }
+     ]
+    },
+    "audience": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/stage-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.6,
+       "s": 1.0,
+       "crowd": 9
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "theatergoerai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人的奶奶是什么样的人？\n听：My grandma is a theatergoer; she sees a play every month.\nA. 演员\nB. 导演\nC. 售票员\nD. 常看戏的人",
@@ -90,5 +785,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "本机检查通过，出片时再起草检查"
 }

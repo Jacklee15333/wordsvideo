@@ -1,0 +1,1098 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "actor": "west-girl-explain",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.62,
+     "z": 3,
+     "seq": "talk",
+     "fps": 2,
+     "id": "g"
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.9,
+     "s": 0.3,
+     "z": 5,
+     "crowd": 9,
+     "nodWith": "g"
+    },
+    {
+     "label": "看",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.11,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3"
+    },
+    {
+     "svg": "art/waves.svg",
+     "x": 0.62,
+     "y": 0.36,
+     "s": 0.14,
+     "a": 0.8
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "svg": "art/masks.svg",
+     "x": 0.5,
+     "y": 0.45,
+     "s": 0.48,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.9,
+     "s": 0.32,
+     "z": 5,
+     "crowd": 9
+    },
+    {
+     "label": "…的地方",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "ray": [
+      [
+       0.2,
+       0.62
+      ],
+      [
+       0.8,
+       0.62
+      ]
+     ],
+     "color": "#C9A85A",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 0.8,
+     "dash": true
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-eye.svg",
+  "p1": "art/icon-place.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/stage-bg.svg",
+  "items": [
+   {
+    "actor": "west-man-speech",
+    "x": 0.5,
+    "y": 0.48,
+    "s": 0.6,
+    "z": 3,
+    "seq": "talk",
+    "fps": 2,
+    "id": "m"
+   },
+   {
+    "waves": true,
+    "x": 0.6,
+    "y": 0.34,
+    "dir": 0,
+    "n": 3,
+    "period": 1.2,
+    "color": "#3FA7D6",
+    "with": "m"
+   },
+   {
+    "svg": "art/audience-wide.svg",
+    "x": 0.5,
+    "y": 0.9,
+    "s": 0.34,
+    "z": 5,
+    "crowd": 9,
+    "nodWith": "m"
+   },
+   {
+    "label": "看的地方",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "剧院",
+   "pos": "名词",
+   "diff": "坐在台下看演出的地方",
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.36,
+     "y": 0.5,
+     "s": 0.6,
+     "z": 3,
+     "seq": "talk",
+     "fps": 2,
+     "id": "t"
+    },
+    {
+     "actor": "west-girl-listen",
+     "x": 0.66,
+     "y": 0.52,
+     "s": 0.56,
+     "z": 3,
+     "seq": "blink",
+     "fps": 2,
+     "nodWith": "t"
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.32,
+     "z": 5,
+     "crowd": 9,
+     "nodWith": "t"
+    },
+    {
+     "beam": true,
+     "x": 0.5,
+     "y": 0.0,
+     "len": 0.8,
+     "width": 0.25,
+     "swing": 12,
+     "period": 4
+    }
+   ],
+   "ex": "We went to the theater last night.",
+   "exzh": "我们昨晚去了剧院。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/ticket.svg",
+      "x": 0.5,
+      "y": 0.45,
+      "s": 0.46,
+      "when": "theater",
+      "pop": true,
+      "anim": "sway"
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.98,
+      "y": 0.86,
+      "s": 0.4,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.86
+       ],
+       "to": [
+        0.02,
+        0.86
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.02,
+      "y": 0.88,
+      "s": 0.4,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.88
+       ],
+       "to": [
+        0.98,
+        0.88
+       ],
+       "offset": 0.5
+      }
+     },
+     {
+      "label": "theater",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "theater"
+     },
+     {
+      "label": "剧院",
+      "x": 0.82,
+      "y": 0.2,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "剧院"
+     },
+     {
+      "label": "last night 昨晚",
+      "x": 0.2,
+      "y": 0.2,
+      "size": 0.065,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "last night"
+     }
+    ]
+   }
+  },
+  {
+   "text": "戏剧",
+   "pos": "名词",
+   "diff": "台上演的戏，也指演戏这门艺术",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/masks.svg",
+     "x": 0.5,
+     "y": 0.46,
+     "s": 0.52,
+     "anim": "sway",
+     "shadow": true
+    },
+    {
+     "svg": "art/script.svg",
+     "x": 0.84,
+     "y": 0.62,
+     "s": 0.36,
+     "anim": "bob"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.95,
+     "s": 0.3,
+     "z": 5
+    }
+   ],
+   "ex": "She studies theater at college.",
+   "exzh": "她在大学学戏剧。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-raise",
+      "x": 0.3,
+      "y": 0.55,
+      "s": 0.7,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "She"
+     },
+     {
+      "svg": "art/masks.svg",
+      "x": 0.62,
+      "y": 0.42,
+      "s": 0.46,
+      "when": "theater",
+      "pop": true,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/script.svg",
+      "x": 0.86,
+      "y": 0.5,
+      "s": 0.36,
+      "when": "studies",
+      "pop": true
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.3,
+      "z": 5
+     },
+     {
+      "label": "theater",
+      "x": 0.62,
+      "y": 0.1,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "theater"
+     },
+     {
+      "label": "戏剧",
+      "x": 0.62,
+      "y": 0.82,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "戏剧"
+     }
+    ]
+   }
+  },
+  {
+   "text": "电影院",
+   "pos": "名词",
+   "diff": "美式英语：看电影的地方（英式说 cinema）",
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "items": [
+    {
+     "svg": "art/cinema-screen.svg",
+     "x": 0.5,
+     "y": 0.42,
+     "s": 0.62,
+     "anim": "pulse"
+    },
+    {
+     "svg": "art/audience-wide.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.32,
+     "z": 5,
+     "crowd": 9
+    },
+    {
+     "svg": "art/popcorn.svg",
+     "x": 0.88,
+     "y": 0.7,
+     "s": 0.3,
+     "anim": "bob",
+     "z": 6
+    }
+   ],
+   "ex": "The movie theater is full tonight.",
+   "exzh": "今晚电影院坐满了人。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/cinema-screen.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.6,
+      "when": "movie theater",
+      "pop": true
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.34,
+      "z": 5,
+      "crowd": 9,
+      "when": "full"
+     },
+     {
+      "svg": "art/popcorn.svg",
+      "x": 0.12,
+      "y": 0.72,
+      "s": 0.28,
+      "when": "tonight",
+      "anim": "bob",
+      "z": 6
+     },
+     {
+      "label": "movie theater",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "movie theater"
+     },
+     {
+      "label": "坐满了人",
+      "x": 0.85,
+      "y": 0.2,
+      "size": 0.075,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "坐满了人"
+     }
+    ]
+   }
+  },
+  {
+   "text": "战区",
+   "pos": "名词",
+   "diff": "打仗的一大片地方",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/map-war.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.62,
+     "shadow": true
+    },
+    {
+     "ray": [
+      [
+       0.34,
+       0.46
+      ],
+      [
+       0.52,
+       0.4
+      ]
+     ],
+     "color": "#E8590C",
+     "lw": 0.014,
+     "arrow": true,
+     "dur": 1.2,
+     "delay": 0.6
+    },
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.97,
+     "s": 0.22,
+     "z": 4
+    }
+   ],
+   "ex": "The soldiers were sent to the theater of war.",
+   "exzh": "士兵们被派往战区。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.22,
+      "y": 0.56,
+      "s": 0.74,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "soldiers"
+     },
+     {
+      "svg": "art/map-war.svg",
+      "x": 0.62,
+      "y": 0.48,
+      "s": 0.66,
+      "when": "theater of war",
+      "pop": true
+     },
+     {
+      "ray": [
+       [
+        0.5,
+        0.5
+       ],
+       [
+        0.66,
+        0.42
+       ]
+      ],
+      "color": "#E8590C",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 1.0,
+      "when": "sent"
+     },
+     {
+      "label": "theater of war",
+      "x": 0.62,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "theater of war"
+     },
+     {
+      "label": "战区",
+      "x": 0.88,
+      "y": 0.82,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "战区"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“看的地方”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/masks.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.5,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.34,
+      "z": 5,
+      "crowd": 9
+     },
+     {
+      "label": "thea 看 + ter 地方",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "看演出的地方",
+   "node": "① 剧院",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "看的地方，就是人们坐在台下，看台上演出的地方。",
+    "这就是剧院。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-present",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.58,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "id": "m",
+      "when": "台上演出"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.34,
+      "z": 5,
+      "crowd": 9,
+      "when": "坐在台下",
+      "nodWith": "m"
+     },
+     {
+      "label": "台下",
+      "x": 0.15,
+      "y": 0.7,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "坐在台下"
+     },
+     {
+      "label": "台上",
+      "x": 0.15,
+      "y": 0.4,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "台上演出"
+     },
+     {
+      "label": "剧院",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "剧院"
+     }
+    ]
+   }
+  },
+  {
+   "via": "在剧院里演的东西",
+   "node": "② 戏剧",
+   "pos": "名词",
+   "pic": 1,
+   "from": 1,
+   "say": [
+    "在剧院里演的，就是一出出的戏。",
+    "所以 theater 也指戏剧，也指演戏这门艺术。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/masks.svg",
+      "x": 0.42,
+      "y": 0.44,
+      "s": 0.5,
+      "when": "一出出的戏",
+      "anim": "sway"
+     },
+     {
+      "svg": "art/script.svg",
+      "x": 0.78,
+      "y": 0.5,
+      "s": 0.4,
+      "when": "一出出的戏",
+      "delay": 0.4
+     },
+     {
+      "label": "戏剧",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "戏剧"
+     },
+     {
+      "label": "艺术",
+      "x": 0.78,
+      "y": 0.86,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "艺术"
+     }
+    ]
+   }
+  },
+  {
+   "via": "美国人也在这种地方看电影",
+   "node": "③ 电影院",
+   "pos": "名词",
+   "pic": 2,
+   "from": 1,
+   "say": [
+    "后来有了电影，美国人也在这种地方看电影。",
+    "所以美式英语里，theater 也指电影院；英式英语说 cinema。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/cinema-screen.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.6,
+      "when": "看电影",
+      "pop": true
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.32,
+      "z": 5,
+      "crowd": 9
+     },
+     {
+      "label": "电影院",
+      "x": 0.2,
+      "y": 0.08,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "电影院"
+     },
+     {
+      "label": "cinema（英）",
+      "x": 0.8,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "cinema"
+     }
+    ]
+   }
+  },
+  {
+   "via": "打仗的一大片地方，像一个大舞台",
+   "node": "④ 战区",
+   "pos": "名词",
+   "pic": 3,
+   "from": 1,
+   "say": [
+    "打仗的时候，一大片地方就像一个大舞台，各方在上面摆兵布阵。",
+    "这片地方就叫战区。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/map-war.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.66,
+      "when": "一大片地方"
+     },
+     {
+      "label": "大舞台",
+      "x": 0.2,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "大舞台"
+     },
+     {
+      "ray": [
+       [
+        0.32,
+        0.44
+       ],
+       [
+        0.52,
+        0.38
+       ]
+      ],
+      "color": "#E8590C",
+      "lw": 0.014,
+      "arrow": true,
+      "dur": 1.0,
+      "when": "摆兵布阵"
+     },
+     {
+      "label": "战区",
+      "x": 0.8,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "战区"
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": {
+  "key": "戏剧",
+  "items": [
+   {
+    "w": "theater",
+    "word": "theater",
+    "m": "戏剧（演戏这门艺术、演出这一行）",
+    "zh": "戏剧（演戏这门艺术、演出这一行）",
+    "say": "theater 是从“看的地方”来的，说戏剧时，多指舞台演出这门艺术、这一行。",
+    "text": "theater 是从“看的地方”来的，说戏剧时，多指舞台演出这门艺术、这一行。",
+    "note": "theater 是从“看的地方”来的，说戏剧时，多指舞台演出这门艺术、这一行。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/stage-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/audience-wide.svg",
+       "x": 0.5,
+       "y": 0.82,
+       "s": 0.5,
+       "crowd": 9
+      },
+      {
+       "svg": "art/ticket.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.6,
+       "anim": "sway"
+      }
+     ]
+    }
+   },
+   {
+    "w": "drama",
+    "word": "drama",
+    "m": "戏剧（剧本、剧种）；戏剧性的事",
+    "zh": "戏剧（剧本、剧种）；戏剧性的事",
+    "say": "drama 来自希腊语的“动作”，说的是戏这种文学、剧种，也说生活里戏剧性的事。",
+    "text": "drama 来自希腊语的“动作”，说的是戏这种文学、剧种，也说生活里戏剧性的事。",
+    "note": "drama 来自希腊语的“动作”，说的是戏这种文学、剧种，也说生活里戏剧性的事。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/stage-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/masks.svg",
+       "x": 0.42,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "sway"
+      },
+      {
+       "svg": "art/storm-cloud.svg",
+       "x": 0.8,
+       "y": 0.45,
+       "s": 0.6,
+       "anim": "shake"
+      }
+     ]
+    }
+   },
+   {
+    "w": "play",
+    "word": "play",
+    "m": "一出戏、一部剧（可数）",
+    "zh": "一出戏、一部剧（可数）",
+    "say": "play 是一出一出的戏，可以数：a play，two plays。",
+    "text": "play 是一出一出的戏，可以数：a play，two plays。",
+    "note": "play 是一出一出的戏，可以数：a play，two plays。",
+    "pic": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/stage-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/script.svg",
+       "x": 0.38,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "bob"
+      },
+      {
+       "svg": "art/masks.svg",
+       "x": 0.7,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "bob"
+      }
+     ]
+    }
+   }
+  ],
+  "logic": "theater 从地方来，drama 从动作来，play 从“玩、演”来。",
+  "tip": "美国剧院的名字里有时仍写 Theatre，也许是图个高雅。",
+  "pics": {
+   "theater": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/stage-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.82,
+      "s": 0.5,
+      "crowd": 9
+     },
+     {
+      "svg": "art/ticket.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.6,
+      "anim": "sway"
+     }
+    ]
+   },
+   "drama": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/stage-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/masks.svg",
+      "x": 0.42,
+      "y": 0.5,
+      "s": 0.8,
+      "anim": "sway"
+     },
+     {
+      "svg": "art/storm-cloud.svg",
+      "x": 0.8,
+      "y": 0.45,
+      "s": 0.6,
+      "anim": "shake"
+     }
+    ]
+   },
+   "play": {
+    "bg": "blank",
+    "items": [
+     {
+      "svg": "art/stage-bg.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 1.7,
+      "z": -5
+     },
+     {
+      "svg": "art/script.svg",
+      "x": 0.38,
+      "y": 0.5,
+      "s": 0.8,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/masks.svg",
+      "x": 0.7,
+      "y": 0.5,
+      "s": 0.7,
+      "anim": "bob"
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人上周末去了哪里？",
+    "listen": "We watched a play at the theater last weekend.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "剧院",
+     "公园",
+     "图书馆",
+     "体育馆"
+    ],
+    "ans": "A",
+    "why": "at the theater 在剧院看戏。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "We went to the ______ to see a play yesterday.",
+    "opts": [
+     "hospital",
+     "library",
+     "station",
+     "theater"
+    ],
+    "ans": "D",
+    "why": "看戏（see a play）要去剧院 theater。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 theater、theatergoer 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Every ______ in the hall clapped loudly.",
+    "opts": [],
+    "ans": "theatergoer",
+    "why": "在大厅里鼓掌的是人，用 theatergoer（看戏的人）；theater 是剧院。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "She loves plays, so she seldom goes to the theater.",
+    "opts": [],
+    "ans": "seldom → often",
+    "why": "喜欢戏剧，所以常去剧院，seldom 要改成 often。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这部戏在剧院上演了一个月。",
+    "stem": "The play was on at the ______ for a ______.",
+    "opts": [],
+    "ans": [
+     "theater",
+     "month"
+    ],
+    "why": "在剧院 at the theater；一个月 for a month。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Our city built two new ______ this year. (theater)",
+    "opts": [],
+    "ans": "theaters",
+    "why": "two 后面接复数 theaters。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "In British English, \"theater\" is spelled ______.",
+    "opts": [
+     "theator",
+     "theatre",
+     "theatar",
+     "thaeter"
+    ],
+    "ans": "B",
+    "why": "英式拼写是 theatre，美式是 theater。",
+    "kd": "易混"
+   }
+  ]
+ }
+}
