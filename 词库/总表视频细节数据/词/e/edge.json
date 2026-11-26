@@ -1,7 +1,1082 @@
 {
  "单词": "edge",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "originPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/knife-1edge.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "pulse"
+    },
+    {
+     "label": "古英语 ecg：刀刃",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.085,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    }
+   ]
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/knife-1edge.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "pulse"
+    },
+    {
+     "label": "刀刃上最薄的那条线",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.085,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "边、边缘",
+    "pos": "名词",
+    "diff": "东西到头的那条线",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/cliff-edge.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.66,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ],
+    "ex": "Don't stand near the edge of the cliff.",
+    "exzh": "别站在悬崖边上。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/cliff-edge.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.66,
+       "when": "the cliff"
+      },
+      {
+       "actor": "west-man-point",
+       "x": 0.86,
+       "y": 0.56,
+       "s": 0.5,
+       "z": 3,
+       "seq": "talk",
+       "fps": 2,
+       "when": "Don't stand"
+      },
+      {
+       "label": "the edge",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "the edge"
+      },
+      {
+       "label": "悬崖边上",
+       "x": 0.3,
+       "y": 0.9,
+       "size": 0.08,
+       "color": "#C92A2A",
+       "border": "#C92A2A",
+       "when": "悬崖边上"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "text": "（刀）刃、刃口",
+    "pos": "名词",
+    "diff": "刀剑上锋利的那条线",
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/knife-1edge.svg",
+      "x": 0.48,
+      "y": 0.5,
+      "s": 0.5,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.97,
+      "s": 0.22,
+      "z": -1
+     }
+    ],
+    "ex": "This knife has a sharp edge.",
+    "exzh": "这把刀刃口很锋利。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/knife-1edge.svg",
+       "x": 0.5,
+       "y": 0.48,
+       "s": 0.5,
+       "when": "This knife",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "actor": "west-girl-explain",
+       "x": 0.12,
+       "y": 0.6,
+       "s": 0.5,
+       "z": 3,
+       "seq": "talk",
+       "fps": 2,
+       "when": "sharp"
+      },
+      {
+       "label": "sharp edge",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "sharp edge"
+      },
+      {
+       "label": "刃口",
+       "x": 0.5,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "刃口"
+      }
+     ]
+    }
+   },
+   {
+    "text": "优势",
+    "pos": "名词",
+    "diff": "比别人多出的那一点",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/race-lead.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.62,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ],
+    "ex": "Practice gives you an edge.",
+    "exzh": "多练习让你占优势。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/race-lead.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "when": "an edge",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.12,
+       "y": 0.6,
+       "s": 0.5,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "Practice"
+      },
+      {
+       "label": "an edge",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "an edge"
+      },
+      {
+       "label": "优势",
+       "x": 0.88,
+       "y": 0.3,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "优势"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "text": "侧着身慢慢挪",
+    "pos": "动词",
+    "diff": "贴着边一点点移动",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/ledge-wall.svg",
+      "x": 0.5,
+      "y": 0.46,
+      "s": 0.62,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ],
+    "ex": "He edged along the narrow wall.",
+    "exzh": "他沿着窄墙侧着身慢慢挪。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/ledge-wall.svg",
+       "x": 0.5,
+       "y": 0.44,
+       "s": 0.62,
+       "when": "narrow wall"
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.2,
+       "y": 0.62,
+       "s": 0.4,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.2,
+         0.62
+        ],
+        "to": [
+         0.8,
+         0.62
+        ],
+        "offset": 0.0
+       }
+      },
+      {
+       "label": "edged along",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "edged along"
+      },
+      {
+       "label": "慢慢挪",
+       "x": 0.86,
+       "y": 0.86,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "慢慢挪"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "刀刃上最薄、最快的那条线",
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/knife-1edge.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "anim": "pulse"
+      },
+      {
+       "label": "edge",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      }
+     ]
+    }
+   },
+   {
+    "via": "刀剑上锋利的那条线",
+    "node": "② 刃、刃口",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "刀剑上锋利的那条线，就是刀刃、刃口。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/knife-1edge.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.5,
+       "when": "锋利的那条线",
+       "anim": "pulse"
+      },
+      {
+       "label": "刀刃",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "刀刃"
+      }
+     ]
+    }
+   },
+   {
+    "via": "东西到头的那条线",
+    "node": "① 边、边缘",
+    "pos": "名词",
+    "pic": 0,
+    "say": [
+     "东西到头的那条线，和刃口一样，是最外面的一条边，就是边、边缘。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/cliff-edge.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.64,
+       "when": "到头的那条线",
+       "anim": "pulse"
+      },
+      {
+       "label": "边缘",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "边缘"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "刃口锋利才能胜过别人",
+    "node": "③ 优势",
+    "pos": "名词",
+    "pic": 2,
+    "from": 1,
+    "say": [
+     "刃口锋利，才能胜过别人，这多出来的一点锋芒，就是优势。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/race-lead.svg",
+       "x": 0.5,
+       "y": 0.52,
+       "s": 0.6,
+       "when": "胜过别人",
+       "anim": "pulse"
+      },
+      {
+       "label": "优势",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "优势"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "表示东西的词直接当动词：贴着边挪",
+    "node": "④ 侧着身慢慢挪",
+    "pos": "动词",
+    "pic": 3,
+    "from": 2,
+    "say": [
+     "edge 当动词，就是贴着边、侧着身，一点点地挪。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/ledge-wall.svg",
+       "x": 0.5,
+       "y": 0.44,
+       "s": 0.6,
+       "when": "贴着边"
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.2,
+       "y": 0.62,
+       "s": 0.4,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.2,
+         0.62
+        ],
+        "to": [
+         0.8,
+         0.62
+        ],
+        "offset": 0.0
+       }
+      },
+      {
+       "label": "慢慢挪",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "一点点地挪"
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "边缘；边；刀刃",
+   "items": [
+    {
+     "w": "edge",
+     "word": "edge",
+     "m": "边、边缘；刃",
+     "zh": "边、边缘；刃",
+     "say": "edge 是边线、刃，强调锋利、到头：the edge of the table。",
+     "text": "edge 是边线、刃，强调锋利、到头：the edge of the table。",
+     "note": "edge 是边线、刃，强调锋利、到头：the edge of the table。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/park-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/cliff-edge.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.85,
+        "anim": "pulse"
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.02,
+        "y": 0.86,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.02,
+          0.86
+         ],
+         "to": [
+          0.98,
+          0.86
+         ],
+         "offset": 0.2
+        }
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.98,
+        "y": 0.88,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.98,
+          0.88
+         ],
+         "to": [
+          0.02,
+          0.88
+         ],
+         "offset": 0.65
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "border",
+     "word": "border",
+     "m": "边界、边境",
+     "zh": "边界、边境",
+     "say": "border 是两块区域的分界，国家之间是 border。",
+     "text": "border 是两块区域的分界，国家之间是 border。",
+     "note": "border 是两块区域的分界，国家之间是 border。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/park-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/border-line.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.85,
+        "anim": "pulse"
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.02,
+        "y": 0.86,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.02,
+          0.86
+         ],
+         "to": [
+          0.98,
+          0.86
+         ],
+         "offset": 0.2
+        }
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.98,
+        "y": 0.88,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.98,
+          0.88
+         ],
+         "to": [
+          0.02,
+          0.88
+         ],
+         "offset": 0.65
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "side",
+     "word": "side",
+     "m": "（一）边、侧面",
+     "zh": "（一）边、侧面",
+     "say": "side 是东西的一面、一侧：the left side。",
+     "text": "side 是东西的一面、一侧：the left side。",
+     "note": "side 是东西的一面、一侧：the left side。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/box-side.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.85,
+        "anim": "bob"
+       }
+      ]
+     }
+    },
+    {
+     "w": "blade",
+     "word": "blade",
+     "m": "刀片、刀身",
+     "zh": "刀片、刀身",
+     "say": "blade 是整片刀身，edge 只是刀身上锋利的那条线。",
+     "text": "blade 是整片刀身，edge 只是刀身上锋利的那条线。",
+     "note": "blade 是整片刀身，edge 只是刀身上锋利的那条线。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/room-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/knife-1edge.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.6,
+        "anim": "pulse"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "edge 是一条线；border 分开两块地方；side 是一个面；blade 是整个刀身。",
+   "tip": "on edge 是紧张不安；set one's teeth on edge 是让人牙酸、刺耳。",
+   "pics": {
+    "edge": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/park-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/cliff-edge.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "pulse"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    },
+    "border": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/park-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/border-line.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "pulse"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    },
+    "side": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/box-side.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "anim": "bob"
+      }
+     ]
+    },
+    "blade": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/room-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/knife-1edge.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "edgeai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人说杯子放在哪儿？\n听：The cup is too close to the edge of the table.\nA. 桌子中间\nB. 地上\nC. 桌子边上\nD. 柜子里",
@@ -89,5 +1164,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

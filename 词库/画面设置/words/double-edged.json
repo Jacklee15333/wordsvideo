@@ -1,0 +1,622 @@
+{
+ "style": "core",
+ "board": true,
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/coin-two.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.5,
+     "anim": "bob"
+    },
+    {
+     "label": "双的",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.11,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/knife-1edge.svg",
+     "x": 0.5,
+     "y": 0.5,
+     "s": 0.46,
+     "anim": "pulse"
+    },
+    {
+     "label": "有刃的",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.11,
+     "color": "#7048E8",
+     "border": "#7048E8"
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-double.svg",
+  "p1": "art/icon-edge.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/castle-bg.svg",
+  "items": [
+   {
+    "svg": "art/sword-2edge.svg",
+    "x": 0.5,
+    "y": 0.52,
+    "s": 0.76,
+    "anim": "sway"
+   },
+   {
+    "label": "两面都有刃的",
+    "x": 0.5,
+    "y": 0.08,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E"
+   }
+  ]
+ },
+ "pics": [
+  {
+   "text": "双刃的",
+   "pos": "形容词",
+   "diff": "刀剑两边都开了刃",
+   "bg": "blank",
+   "img": "art/castle-bg.svg",
+   "items": [
+    {
+     "svg": "art/sword-2edge.svg",
+     "x": 0.46,
+     "y": 0.52,
+     "s": 0.76,
+     "anim": "sway"
+    },
+    {
+     "svg": "art/knife-1edge.svg",
+     "x": 0.84,
+     "y": 0.6,
+     "s": 0.2,
+     "anim": "pulse"
+    }
+   ],
+   "ex": "This sword is double-edged.",
+   "exzh": "这把剑是双刃的。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/sword-2edge.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.76,
+      "when": "This sword",
+      "pop": true,
+      "anim": "sway"
+     },
+     {
+      "actor": "west-man-present",
+      "x": 0.16,
+      "y": 0.58,
+      "s": 0.58,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "This sword"
+     },
+     {
+      "label": "double-edged",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "double-edged"
+     },
+     {
+      "label": "双刃的",
+      "x": 0.86,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "双刃的"
+     }
+    ]
+   }
+  },
+  {
+   "text": "（比喻）有利也有弊的",
+   "pos": "形容词",
+   "diff": "砍敌人时也可能伤到自己",
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/smartphone.svg",
+     "x": 0.4,
+     "y": 0.52,
+     "s": 0.5,
+     "anim": "pulse"
+    },
+    {
+     "waves": true,
+     "x": 0.48,
+     "y": 0.4,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#3FA7D6"
+    },
+    {
+     "svg": "art/coin-two.svg",
+     "x": 0.8,
+     "y": 0.52,
+     "s": 0.36,
+     "anim": "bob"
+    }
+   ],
+   "ex": "Phones are a double-edged sword for kids.",
+   "exzh": "手机对孩子来说是一把双刃剑。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.36,
+      "y": 0.52,
+      "s": 0.5,
+      "when": "Phones",
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "waves": true,
+      "x": 0.44,
+      "y": 0.4,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6",
+      "when": "Phones"
+     },
+     {
+      "svg": "art/coin-two.svg",
+      "x": 0.72,
+      "y": 0.52,
+      "s": 0.36,
+      "when": "double-edged sword",
+      "anim": "bob"
+     },
+     {
+      "actor": "cn-boy-raise",
+      "x": 0.92,
+      "y": 0.62,
+      "s": 0.4,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2,
+      "when": "kids"
+     },
+     {
+      "label": "a double-edged sword",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "double-edged sword"
+     },
+     {
+      "label": "双刃剑",
+      "x": 0.72,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "双刃剑"
+     }
+    ]
+   }
+  },
+  {
+   "text": "（话）有双重含义的、话里带刺的",
+   "pos": "形容词",
+   "diff": "听着是夸，其实带刺",
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/thorny-bubble.svg",
+     "x": 0.5,
+     "y": 0.42,
+     "s": 0.5,
+     "anim": "shake"
+    },
+    {
+     "actor": "west-girl-listen",
+     "x": 0.14,
+     "y": 0.62,
+     "s": 0.5,
+     "z": 3,
+     "seq": "blink",
+     "fps": 2
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.96,
+     "s": 0.28,
+     "z": 5
+    }
+   ],
+   "ex": "Her double-edged words hurt me.",
+   "exzh": "她那句话里带刺，伤到了我。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.22,
+      "y": 0.56,
+      "s": 0.64,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "when": "Her",
+      "id": "g"
+     },
+     {
+      "svg": "art/thorny-bubble.svg",
+      "x": 0.52,
+      "y": 0.32,
+      "s": 0.34,
+      "when": "double-edged words",
+      "anim": "shake"
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.82,
+      "y": 0.58,
+      "s": 0.6,
+      "z": 3,
+      "seq": "blink",
+      "fps": 2,
+      "when": "hurt me",
+      "nodWith": "g"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     },
+     {
+      "label": "double-edged words",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "double-edged words"
+     },
+     {
+      "label": "话里带刺",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 0.08,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "话里带刺"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "“两面都有刃的”",
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/sword-2edge.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.76,
+      "anim": "sway"
+     },
+     {
+      "label": "double + edged",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8"
+     }
+    ]
+   }
+  },
+  {
+   "via": "名词加 -ed：有着这样东西的",
+   "node": "① 双刃的",
+   "pos": "形容词",
+   "pic": 0,
+   "rule": "名词带上 -ed 和前面的形容词连起来，说的是有着这样东西的",
+   "ruleEx": "double-edged 两面有刃的      kind-hearted 好心的",
+   "say": [
+    "edge 是刃，加上 ed，edged 是有刃的；kind-hearted 是有一颗好心的。",
+    "double-edged 就是两面都有刃的，双刃的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/heart.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.36,
+      "when": "kind-hearted",
+      "anim": "pulse",
+      "hideCue": 1
+     },
+     {
+      "label": "edged",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "有刃的",
+      "hideCue": 1
+     },
+     {
+      "svg": "art/sword-2edge.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.76,
+      "cue": 1,
+      "when": "两面都有刃",
+      "anim": "sway"
+     },
+     {
+      "label": "双刃的",
+      "x": 0.82,
+      "y": 0.2,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "双刃的"
+     }
+    ]
+   }
+  },
+  {
+   "via": "砍敌人也可能伤到自己",
+   "node": "② 有利也有弊的",
+   "pos": "形容词",
+   "pic": 1,
+   "say": [
+    "双刃剑砍敌人的同时，也可能伤到握剑的自己。",
+    "所以一件事有利也有弊，就说它是 double-edged。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/castle-bg.svg",
+    "items": [
+     {
+      "svg": "art/sword-2edge.svg",
+      "x": 0.4,
+      "y": 0.52,
+      "s": 0.7,
+      "when": "双刃剑",
+      "anim": "shake"
+     },
+     {
+      "svg": "art/coin-two.svg",
+      "x": 0.8,
+      "y": 0.5,
+      "s": 0.36,
+      "cue": 1,
+      "when": "有利也有弊",
+      "anim": "bob"
+     },
+     {
+      "label": "有利也有弊",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 1,
+      "when": "有利也有弊"
+     }
+    ]
+   }
+  },
+  {
+   "via": "一句话两面都能“割”",
+   "node": "③ 话里带刺的",
+   "pos": "形容词",
+   "pic": 2,
+   "from": 1,
+   "say": [
+    "一句话两面都能割人，听着是夸，其实带刺，就是有双重含义的、话里带刺的。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/thorny-bubble.svg",
+      "x": 0.5,
+      "y": 0.42,
+      "s": 0.5,
+      "when": "带刺",
+      "anim": "shake"
+     },
+     {
+      "label": "话里带刺",
+      "x": 0.5,
+      "y": 0.08,
+      "size": 0.09,
+      "color": "#C92A2A",
+      "border": "#C92A2A",
+      "when": "话里带刺"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     }
+    ]
+   }
+  }
+ ],
+ "distinguish": false,
+ "kaodian": {
+  "rows": [
+   [
+    "考意思",
+    "double-edged = 双刃的；有利也有弊的；（话）话里带刺的"
+   ],
+   [
+    "考搭配",
+    "a double-edged sword 双刃剑（比喻有利有弊的事）"
+   ],
+   [
+    "考写法",
+    "放在名词前加连字符：a double-edged sword"
+   ],
+   [
+    "考构词",
+    "double + edge + ed（同 kind-hearted 好心的）"
+   ]
+  ]
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：说话人提醒这把刀怎样？",
+    "listen": "This is a double-edged knife, so be careful.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "很钝",
+     "很短",
+     "很旧",
+     "两边都有刃"
+    ],
+    "ans": "D",
+    "why": "double-edged 双刃的。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The Internet is a ______ sword.",
+    "opts": [
+     "double-edge",
+     "doubly-edged",
+     "double-edged",
+     "double-edging"
+    ],
+    "ans": "C",
+    "why": "a double-edged sword 双刃剑。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "A knife with two sharp ______ is double-edged. (edge)",
+    "opts": [],
+    "ans": "edges",
+    "why": "two 后接复数 edges。",
+    "kd": "变形"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 double-edged、two-faced 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Don't trust him; he is ______.",
+    "opts": [],
+    "ans": "two-faced",
+    "why": "说人两面派用 two-faced；double-edged 说事物有利有弊。",
+    "kd": "易混"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "His words were double-edged, so they had one meaning.",
+    "opts": [],
+    "ans": "one → two",
+    "why": "double-edged 的话有双重含义。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "手机有利也有弊，是一把双刃剑。",
+    "stem": "Mobile phones are a ______ ______.",
+    "opts": [],
+    "ans": [
+     "double-edged",
+     "sword"
+    ],
+    "why": "a double-edged sword 双刃剑，比喻有利也有弊。",
+    "kd": "用法"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "A double-edged plan has both good and ______ sides.",
+    "opts": [
+     "good",
+     "sharp",
+     "bad",
+     "long"
+    ],
+    "ans": "C",
+    "why": "double-edged 有利也有弊。",
+    "kd": "用法"
+   }
+  ]
+ }
+}

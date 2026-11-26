@@ -1,7 +1,1641 @@
 {
  "单词": "buzz",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "originPic": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/bee.svg",
+     "x": 0.5,
+     "y": 0.46,
+     "s": 0.4,
+     "anim": "shake",
+     "sfx": "buzz"
+    },
+    {
+     "waves": true,
+     "x": 0.6,
+     "y": 0.42,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#3FA7D6"
+    },
+    {
+     "label": "拟声：嗡嗡",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 0.085,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ]
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "items": [
+    {
+     "svg": "art/bee.svg",
+     "x": 0.5,
+     "y": 0.46,
+     "s": 0.4,
+     "anim": "shake"
+    },
+    {
+     "waves": true,
+     "x": 0.6,
+     "y": 0.42,
+     "dir": 0,
+     "n": 3,
+     "period": 1.2,
+     "color": "#3FA7D6"
+    },
+    {
+     "label": "嗡嗡",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 0.1,
+     "color": "#2B8A3E",
+     "border": "#2B8A3E"
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.86,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.86
+      ],
+      "to": [
+       0.98,
+       0.86
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-west-man-case",
+     "x": 0.98,
+     "y": 0.88,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.88
+      ],
+      "to": [
+       0.02,
+       0.88
+      ],
+      "offset": 0.65
+     }
+    }
+   ]
+  },
+  "pics": [
+   {
+    "text": "嗡嗡响；嗡嗡声",
+    "pos": "动词 / 名词",
+    "diff": "昆虫振翅的声音",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/bee.svg",
+      "x": 0.4,
+      "y": 0.42,
+      "s": 0.36,
+      "anim": "shake",
+      "go": [
+       0.6,
+       0.38
+      ],
+      "dur": 2,
+      "loop": true
+     },
+     {
+      "waves": true,
+      "x": 0.5,
+      "y": 0.4,
+      "dir": 0,
+      "n": 3,
+      "period": 1.2,
+      "color": "#3FA7D6"
+     },
+     {
+      "svg": "art/flower.svg",
+      "x": 0.76,
+      "y": 0.62,
+      "s": 0.5,
+      "anim": "sway"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ],
+    "ex": "A bee is buzzing around the flowers.",
+    "exzh": "一只蜜蜂围着花嗡嗡地飞。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/flower.svg",
+       "x": 0.6,
+       "y": 0.62,
+       "s": 0.5,
+       "when": "the flowers",
+       "anim": "sway"
+      },
+      {
+       "svg": "art/bee.svg",
+       "x": 0.3,
+       "y": 0.4,
+       "s": 0.3,
+       "when": "A bee",
+       "go": [
+        0.6,
+        0.32
+       ],
+       "arc": true,
+       "dur": 2,
+       "loop": true,
+       "sfx": "buzz"
+      },
+      {
+       "waves": true,
+       "x": 0.4,
+       "y": 0.4,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#3FA7D6",
+       "when": "buzzing"
+      },
+      {
+       "label": "buzzing",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "buzzing"
+      },
+      {
+       "label": "嗡嗡地飞",
+       "x": 0.86,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "嗡嗡地飞"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "text": "（地方）热闹、人声嘈杂",
+    "pos": "动词",
+    "diff": "一屋子人说话，像蜂群一样",
+    "bg": "blank",
+    "img": "art/station-bg.svg",
+    "items": [
+     {
+      "svg": "art/chatter.svg",
+      "x": 0.5,
+      "y": 0.36,
+      "s": 0.5,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ],
+    "ex": "The station was buzzing with people.",
+    "exzh": "车站里人声鼎沸。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "svg": "art/chatter.svg",
+       "x": 0.5,
+       "y": 0.34,
+       "s": 0.46,
+       "when": "buzzing",
+       "anim": "pulse"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.98,
+       "y": 0.84,
+       "s": 0.4,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.84
+        ],
+        "to": [
+         0.02,
+         0.84
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-teacher-case",
+       "x": 0.02,
+       "y": 0.88,
+       "s": 0.4,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.5
+       }
+      },
+      {
+       "label": "buzzing with people",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.075,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "buzzing with people"
+      },
+      {
+       "label": "人声鼎沸",
+       "x": 0.86,
+       "y": 0.6,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "人声鼎沸"
+      }
+     ]
+    }
+   },
+   {
+    "text": "按蜂鸣器叫人、开门",
+    "pos": "动词",
+    "diff": "门口按一下，屋里“嗡”一声",
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/intercom.svg",
+      "x": 0.5,
+      "y": 0.48,
+      "s": 0.56,
+      "anim": "pulse"
+     },
+     {
+      "waves": true,
+      "x": 0.58,
+      "y": 0.4,
+      "dir": 0,
+      "n": 2,
+      "period": 1.2,
+      "color": "#3FA7D6"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ],
+    "ex": "Buzz me when you arrive.",
+    "exzh": "你到了就按门铃叫我。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/intercom.svg",
+       "x": 0.46,
+       "y": 0.48,
+       "s": 0.56,
+       "when": "Buzz me",
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "waves": true,
+       "x": 0.54,
+       "y": 0.4,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#3FA7D6",
+       "when": "Buzz me",
+       "sfx": "buzz"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.82,
+       "y": 0.58,
+       "s": 0.58,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "when": "you arrive"
+      },
+      {
+       "label": "Buzz me",
+       "x": 0.46,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "Buzz me"
+      },
+      {
+       "label": "按门铃叫我",
+       "x": 0.46,
+       "y": 0.88,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "按门铃叫我"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "text": "传闻、热议",
+    "pos": "名词",
+    "diff": "消息在人群里“嗡嗡”地传开",
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-explain",
+      "x": 0.26,
+      "y": 0.55,
+      "s": 0.62,
+      "z": 3,
+      "seq": "talk",
+      "fps": 2,
+      "id": "g"
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.74,
+      "y": 0.56,
+      "s": 0.6,
+      "z": 3,
+      "seq": "blink",
+      "fps": 2,
+      "nodWith": "g"
+     },
+     {
+      "svg": "art/chatter.svg",
+      "x": 0.5,
+      "y": 0.24,
+      "s": 0.3,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.5,
+      "y": 0.96,
+      "s": 0.28,
+      "z": 5
+     }
+    ],
+    "ex": "There is a lot of buzz about the new film.",
+    "exzh": "大家都在热议这部新电影。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/cinema-screen.svg",
+       "x": 0.5,
+       "y": 0.4,
+       "s": 0.46,
+       "when": "the new film",
+       "pop": true
+      },
+      {
+       "svg": "art/chatter.svg",
+       "x": 0.5,
+       "y": 0.78,
+       "s": 0.3,
+       "when": "buzz",
+       "anim": "pulse"
+      },
+      {
+       "label": "a lot of buzz",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "a lot of buzz"
+      },
+      {
+       "label": "热议",
+       "x": 0.86,
+       "y": 0.3,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "热议"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "text": "（口）一阵兴奋",
+    "pos": "名词",
+    "diff": "心里“嗡”地一下",
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.44,
+      "y": 0.55,
+      "s": 0.7,
+      "z": 3,
+      "seq": "pingpong",
+      "fps": 2
+     },
+     {
+      "svg": "art/glitter.svg",
+      "x": 0.78,
+      "y": 0.3,
+      "s": 0.3,
+      "anim": "pulse"
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.86,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.86
+       ],
+       "to": [
+        0.98,
+        0.86
+       ],
+       "offset": 0.2
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.98,
+      "y": 0.88,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.88
+       ],
+       "to": [
+        0.02,
+        0.88
+       ],
+       "offset": 0.65
+      }
+     }
+    ],
+    "ex": "I get a buzz from riding fast.",
+    "exzh": "骑得飞快让我一阵兴奋。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.02,
+       "y": 0.8,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.8
+        ],
+        "to": [
+         0.98,
+         0.8
+        ],
+        "offset": 0.0
+       }
+      },
+      {
+       "svg": "art/glitter.svg",
+       "x": 0.5,
+       "y": 0.3,
+       "s": 0.3,
+       "when": "a buzz",
+       "anim": "pulse"
+      },
+      {
+       "label": "a buzz",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "a buzz"
+      },
+      {
+       "label": "一阵兴奋",
+       "x": 0.84,
+       "y": 0.3,
+       "size": 0.08,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "一阵兴奋"
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "“嗡嗡”声",
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/bee.svg",
+       "x": 0.5,
+       "y": 0.46,
+       "s": 0.4,
+       "anim": "shake"
+      },
+      {
+       "waves": true,
+       "x": 0.6,
+       "y": 0.42,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#3FA7D6"
+      },
+      {
+       "label": "buzz",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#7048E8",
+       "border": "#7048E8"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "昆虫振翅的声音",
+    "node": "① 嗡嗡响；嗡嗡声",
+    "pos": "动词 / 名词",
+    "pic": 0,
+    "say": [
+     "蜜蜂振翅，嗡嗡地响，这就是 buzz：嗡嗡响，也指嗡嗡声。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/bee.svg",
+       "x": 0.46,
+       "y": 0.46,
+       "s": 0.4,
+       "when": "蜜蜂",
+       "anim": "shake"
+      },
+      {
+       "waves": true,
+       "x": 0.56,
+       "y": 0.42,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#3FA7D6",
+       "when": "嗡嗡地响"
+      },
+      {
+       "label": "嗡嗡响",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "嗡嗡响"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "一屋子人说话，像蜂群",
+    "node": "② 热闹、人声嘈杂",
+    "pos": "动词",
+    "pic": 1,
+    "say": [
+     "一屋子人小声说话，也像蜂群一样嗡嗡的，就是热闹、人声嘈杂。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "svg": "art/chatter.svg",
+       "x": 0.5,
+       "y": 0.36,
+       "s": 0.5,
+       "when": "小声说话",
+       "anim": "pulse"
+      },
+      {
+       "label": "热闹",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "热闹"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "消息在人群里传开",
+    "node": "③ 传闻、热议",
+    "pos": "名词",
+    "pic": 3,
+    "from": 2,
+    "say": [
+     "消息在人群里嗡嗡地传开，就是传闻、热议。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/chatter.svg",
+       "x": 0.5,
+       "y": 0.42,
+       "s": 0.5,
+       "when": "传开",
+       "anim": "pulse"
+      },
+      {
+       "label": "传闻",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "传闻"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "心里“嗡”地一下",
+    "node": "④ 一阵兴奋",
+    "pos": "名词",
+    "pic": 4,
+    "from": 1,
+    "rule": "具体的意思，慢慢用到心里的事",
+    "ruleEx": "buzz 嗡嗡声 → 一阵兴奋      grasp 抓住 → 理解",
+    "say": [
+     "具体的意思也会用到心里的事：grasp 是抓住，后来是理解。",
+     "心里、脑子里嗡地一下，就是一阵兴奋。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "label": "grasp",
+       "x": 0.5,
+       "y": 0.2,
+       "size": 0.1,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "grasp",
+       "hideCue": 1
+      },
+      {
+       "label": "理解",
+       "x": 0.5,
+       "y": 0.5,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "理解",
+       "hideCue": 1
+      },
+      {
+       "actor": "west-girl-surprised",
+       "x": 0.44,
+       "y": 0.55,
+       "s": 0.68,
+       "z": 3,
+       "seq": "pingpong",
+       "fps": 2,
+       "cue": 1,
+       "when": "嗡地一下"
+      },
+      {
+       "svg": "art/glitter.svg",
+       "x": 0.78,
+       "y": 0.3,
+       "s": 0.3,
+       "cue": 1,
+       "when": "一阵兴奋",
+       "anim": "pulse"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   },
+   {
+    "via": "电话、门铃的蜂鸣",
+    "node": "⑤ 按蜂鸣器叫人、开门",
+    "pos": "动词",
+    "pic": 2,
+    "from": 1,
+    "say": [
+     "老式电话、门铃响起来也是嗡嗡的蜂鸣，所以按蜂鸣器叫人、开门也叫 buzz；give sb. a buzz 就是给某人打个电话。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/intercom.svg",
+       "x": 0.36,
+       "y": 0.48,
+       "s": 0.5,
+       "when": "门铃",
+       "anim": "pulse"
+      },
+      {
+       "waves": true,
+       "x": 0.44,
+       "y": 0.4,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#3FA7D6",
+       "when": "蜂鸣"
+      },
+      {
+       "svg": "art/rotary-phone.svg",
+       "x": 0.76,
+       "y": 0.6,
+       "s": 0.3,
+       "when": "老式电话",
+       "anim": "shake"
+      },
+      {
+       "waves": true,
+       "x": 0.84,
+       "y": 0.5,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#3FA7D6",
+       "when": "老式电话"
+      },
+      {
+       "label": "give sb. a buzz",
+       "x": 0.5,
+       "y": 0.08,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "give sb. a buzz"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.36,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "distinguish": {
+   "key": "嗡嗡声；传闻",
+   "items": [
+    {
+     "w": "buzz",
+     "word": "buzz",
+     "m": "嗡嗡声；传闻、热议",
+     "zh": "嗡嗡声；传闻、热议",
+     "say": "buzz 是一下一下的嗡嗡声，也说大家都在议论的热门话题。",
+     "text": "buzz 是一下一下的嗡嗡声，也说大家都在议论的热门话题。",
+     "note": "buzz 是一下一下的嗡嗡声，也说大家都在议论的热门话题。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/park-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/bee.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.6,
+        "anim": "shake"
+       },
+       {
+        "waves": true,
+        "x": 0.62,
+        "y": 0.46,
+        "dir": 0,
+        "n": 3,
+        "period": 1.2,
+        "color": "#3FA7D6"
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.02,
+        "y": 0.86,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.02,
+          0.86
+         ],
+         "to": [
+          0.98,
+          0.86
+         ],
+         "offset": 0.2
+        }
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.98,
+        "y": 0.88,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.98,
+          0.88
+         ],
+         "to": [
+          0.02,
+          0.88
+         ],
+         "offset": 0.65
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "drone",
+     "word": "drone",
+     "m": "（持续低沉的）嗡嗡声",
+     "zh": "（持续低沉的）嗡嗡声",
+     "say": "drone 是又低又长、一直不停的嗡嗡声，像远处的发动机。",
+     "text": "drone 是又低又长、一直不停的嗡嗡声，像远处的发动机。",
+     "note": "drone 是又低又长、一直不停的嗡嗡声，像远处的发动机。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/park-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/storm-cloud.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.7,
+        "anim": "bob"
+       },
+       {
+        "waves": true,
+        "x": 0.62,
+        "y": 0.5,
+        "dir": 0,
+        "n": 4,
+        "period": 2.4,
+        "color": "#3FA7D6"
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.02,
+        "y": 0.86,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.02,
+          0.86
+         ],
+         "to": [
+          0.98,
+          0.86
+         ],
+         "offset": 0.2
+        }
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.98,
+        "y": 0.88,
+        "s": 0.46,
+        "z": 1,
+        "walk": {
+         "from": [
+          0.98,
+          0.88
+         ],
+         "to": [
+          0.02,
+          0.88
+         ],
+         "offset": 0.65
+        }
+       }
+      ]
+     }
+    },
+    {
+     "w": "rumor",
+     "word": "rumor",
+     "m": "谣言、传闻",
+     "zh": "谣言、传闻",
+     "say": "rumor 是没证实的传言，可能是假的。",
+     "text": "rumor 是没证实的传言，可能是假的。",
+     "note": "rumor 是没证实的传言，可能是假的。",
+     "pic": {
+      "bg": "blank",
+      "items": [
+       {
+        "svg": "art/classroom-bg.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.7,
+        "z": -5
+       },
+       {
+        "svg": "art/chatter.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.8,
+        "anim": "pulse"
+       }
+      ]
+     }
+    }
+   ],
+   "logic": "buzz 重在“热闹、被议论”；drone 重在“低沉不停”；rumor 重在“没证实”。",
+   "tip": "buzz off 是“走开”；buzzword 是时髦词。",
+   "pics": {
+    "buzz": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/park-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/bee.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "shake"
+      },
+      {
+       "waves": true,
+       "x": 0.62,
+       "y": 0.46,
+       "dir": 0,
+       "n": 3,
+       "period": 1.2,
+       "color": "#3FA7D6"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    },
+    "drone": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/park-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/storm-cloud.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.7,
+       "anim": "bob"
+      },
+      {
+       "waves": true,
+       "x": 0.62,
+       "y": 0.5,
+       "dir": 0,
+       "n": 4,
+       "period": 2.4,
+       "color": "#3FA7D6"
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.02,
+       "y": 0.86,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.02,
+         0.86
+        ],
+        "to": [
+         0.98,
+         0.86
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.98,
+       "y": 0.88,
+       "s": 0.46,
+       "z": 1,
+       "walk": {
+        "from": [
+         0.98,
+         0.88
+        ],
+        "to": [
+         0.02,
+         0.88
+        ],
+        "offset": 0.65
+       }
+      }
+     ]
+    },
+    "rumor": {
+     "bg": "blank",
+     "items": [
+      {
+       "svg": "art/classroom-bg.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 1.7,
+       "z": -5
+      },
+      {
+       "svg": "art/chatter.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.8,
+       "anim": "pulse"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "buzzai"
+ ],
  "总表版本": "第八十五版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：说话人听到了什么声音？\n听：I can hear a bee buzzing near the window.\nA. 狗叫声\nB. 门铃声\nC. 雷声\nD. 蜜蜂嗡嗡声",
@@ -89,5 +1723,7 @@
   }
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
