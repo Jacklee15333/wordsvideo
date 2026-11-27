@@ -245,6 +245,7 @@ nav a.on .sn{background:var(--base);border-color:var(--base);color:#fff}
 .nl{display:inline-flex;align-items:center}
 .navsep{height:1px;background:#33416A;margin:6px 20px 8px}
 .lbask{display:flex;gap:8px;align-items:stretch;margin-bottom:8px}.lbask textarea{flex:1;min-height:40px;resize:vertical}.lbaskb{display:flex;flex-direction:column;gap:6px}
+.lbver{font-size:12.5px;margin:0 0 8px;padding:7px 10px;border:1px solid var(--rule);border-radius:6px;background:#FAFBFC}.lbmk.lite{color:#9AA5B5;font-weight:400}.lbmk.lite:hover{color:var(--amber)}.lbmk.old{color:#9A6A12;font-weight:500;font-size:11px}.lbbh{font-size:12px;white-space:nowrap}
 .lblook{margin:-2px 0 8px;padding:6px 10px;background:#EEF3FB;border-radius:6px}.lbmk{color:var(--amber);font-weight:600;white-space:nowrap}
 .lbf{font-size:13px;padding:4px 11px;border:1px solid var(--rule);border-radius:14px;color:var(--muted);text-decoration:none;background:#fff}.lbf b{font-weight:600;color:var(--ink);margin-left:2px}.lbf.on{background:var(--base);border-color:var(--base);color:#fff}.lbf.on b{color:#fff}
 .ngrp{font-size:11.5px;color:#8C9CB8;letter-spacing:.05em;padding:10px 20px 4px;white-space:nowrap}
@@ -785,9 +786,9 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-pick">
-  <div class="phead"><div><h2><i class="sn">1</i>总表 · 选上的词：这一阵要做哪些词</h2>
+  <div class="phead"><div><h2><i class="sn">1</i>总表 · 这次要做的词：讲稿、题目、画面几步做哪些词</h2>
     <p class="muted">这一步只管选词：把要做的词导进「备选单词」，勾上就是“选上”了（软件记着，关了再开也在）。选好了，到「出题」「画面」两步去做。每个词做到哪一步每次现查，不会忘了哪些还没处理。</p></div></div>
-  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="on">选上的词</a><a data-go="imp" class="">核对总表内容</a><a data-go="pickhist" class="">选词历史 <b class="tn" data-tn="pickhist"></b></a></div>
+  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="on">这次要做的词</a><a data-go="imp" class="">核对总表内容</a></div>
   <div class="box">
     <h3 style="margin-top:0"><span class="hv" title="导进来的词，还没做好的列在这里：没题目的去「出题」，有题目、没画面（或画面还要补）的去「画面」。题目、画面都好了，这个词就不在这里了；一次导入的词都做好了，这个任务放进「历史」，有汇报。">备选单词</span> <span class="small faint" id="kPoolN"></span></h3>
     <div class="pbar">
@@ -810,9 +811,9 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-pickhist">
-  <div class="phead"><div><h2><i class="sn">1</i>总表 · 选上的词：这一阵要做哪些词</h2>
+  <div class="phead"><div><h2><i class="sn">1</i>总表 · 这次要做的词：讲稿、题目、画面几步做哪些词</h2>
     <p class="muted">这一步只管选词：把要做的词导进「备选单词」，勾上就是“选上”了（软件记着，关了再开也在）。选好了，到「出题」「画面」两步去做。每个词做到哪一步每次现查，不会忘了哪些还没处理。</p></div></div>
-  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="">选上的词</a><a data-go="imp" class="">核对总表内容</a><a data-go="pickhist" class="on">选词历史 <b class="tn" data-tn="pickhist"></b></a></div>
+  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="">这次要做的词</a><a data-go="imp" class="">核对总表内容</a></div>
   <div class="box">
     <h3 style="margin-top:0">做完的选词任务 <span class="small faint" id="phN"></span></h3>
     <p class="small muted" style="margin:-4px 0 6px">一次导入的词是一个任务。这些词的题目、画面都做好了，这个任务就放到这里：几点导入、几点做完、几个词、有视频几个。点一行看每个词。</p>
@@ -1057,15 +1058,15 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-imp">
   <div class="phead"><div><h2><i class="sn">1</i>总表 · 核对内容：不用 AI 的几块</h2>
     <p class="muted">片头的意思、词根词缀卡上的字（拆分）、考点、辨析从总表来，读音拆分从音节表来，都不用 AI 做。这里看选上的每个词总表里有没有、缺什么（缺的到总表补）。勾几个点「让 AI 核对」，AI 核对这些对不对，结果写在最后一栏。</p></div></div>
-  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="">选上的词</a><a data-go="imp" class="on">核对总表内容</a><a data-go="pickhist" class="">选词历史 <b class="tn" data-tn="pickhist"></b></a></div>
+  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="">这次要做的词</a><a data-go="imp" class="on">核对总表内容</a></div>
   
   <div class="box"><div id="impBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
 <section id="p-lib">
   <div class="phead"><div><h2><i class="sn">1</i>总表：每个词的素材做好了没</h2>
-    <p class="muted">总表里所有的词一张表：讲稿写过没、题目、画面好了没、有没有视频。缺哪一样，点那一格的「做 ▸」，这个词就选上、到那一步去做；也可以勾几个「选上做素材」，在讲稿、题目、画面几步里一起做。题目、画面都好了（画面过了起草检查）就“能出片”。点单词看它的单词简历。</p></div></div>
-  <div class="mtabs stabs"><a data-go="lib" class="on">总表</a><a data-go="pick" class="">选上的词</a><a data-go="imp" class="">核对总表内容</a><a data-go="pickhist" class="">选词历史 <b class="tn" data-tn="pickhist"></b></a></div>
+    <p class="muted">总表里所有的词一张表：讲稿、题目，画面按块分开（词根词缀卡、拼起来、意思场景、意思演变、例句动画、同义词辨析），还有视频。缺哪一样，点那一格的「做 ▸」就到那一步去做；勾几个词，点「写讲稿 ▸」「出题 ▸」「做画面 ▸」一起做。素材是旧版视频技能做的，那一格标「旧版 ▸」。题目、画面都好了就“能出片”。点单词看它的单词简历。</p></div></div>
+  <div class="mtabs stabs"><a data-go="lib" class="on">总表</a><a data-go="pick" class="">这次要做的词</a><a data-go="imp" class="">核对总表内容</a></div>
   <div class="box"><div id="libBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
@@ -1122,7 +1123,7 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-words">
   <div class="phead"><div><h2><i class="sn">1</i>总表 · 从总表里找</h2>
     <p class="muted">在整张总表里搜单词、按准备情况筛，勾几个点「加进备选单词」，它们就进了备选单词、并且选上了。点一个词看它的题目和准备情况。</p></div></div>
-  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="on">选上的词</a><a data-go="imp" class="">核对总表内容</a><a data-go="pickhist" class="">选词历史 <b class="tn" data-tn="pickhist"></b></a></div>
+  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="on">这次要做的词</a><a data-go="imp" class="">核对总表内容</a></div>
   <div class="row">
     <div style="width:196px;flex:none"><div class="cats wmode" id="wChips">
       <div class="hd">找哪种词</div>
@@ -2828,44 +2829,52 @@ async function dpLoop(pg,reload){clearTimeout(DPT);const box=$('#'+pg+'Box .dpro
 
 /* v1.39.0：素材库、出片挑词 */
 const LIBS={lib:{words:'',q:'',f:'all',b:'',page:1,size:20,sel:new Set()},fplib:{q:'',f:'ready',b:'',page:1,size:20,sel:new Set()}};
-const LIBF=[['all','全部'],['sel','选上的'],['ready','能出片'],['noq','缺题目'],['nopic','缺画面'],['fix','画面还要补'],['inb','在批次里'],['video','有视频']];
+const LIBF=[['all','全部'],['old','旧版技能做的'],['ready','能出片'],['noq','缺题目'],['nopic','缺画面'],['fix','画面还要补'],['inb','在批次里'],['video','有视频']];
 const libMk=(ok,t,col)=>ok?`<span style="color:var(--pass)">✓</span>${t?` <span class="faint" style="font-size:11px">${esc(t)}</span>`:''}`:t?`<span style="color:${col||'var(--amber)'}">${esc(t)}</span>`:'<span class="faint">—</span>';
 const LIBGO={draft:'impdraft',q:'q',pic:'pic'};
+const BLKS=[['parts','词根词缀卡'],['combo','拼起来'],['scene','意思场景'],['evolve','意思演变'],['example','例句动画'],['dist','同义词辨析']];
 async function libLoad(mode){const L=LIBS[mode],el=$(mode==='lib'?'#libBox':'#fplibBox');if(!el)return;let d;
-  const qs=new URLSearchParams({what:'lib',q:L.q,f:L.f,b:L.b,page:L.page,size:L.size});if(mode==='fplib')qs.set('notpicked','1');if(L.words)qs.set('words',L.words);
+  const qs=new URLSearchParams({what:'lib',q:L.q,f:L.f,page:L.page,size:L.size});if(mode==='fplib')qs.set('notpicked','1');if(L.words)qs.set('words',L.words);
   try{d=await api('/api/film?'+qs)}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
   if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
   L.page=d.page;const n=L.sel.size,c=d.counts,isLib=mode==='lib';
-  const ask=isLib?`<div class="lbask"><textarea class="lbw" rows="2" placeholder="查看：输入一个单词；或者输入几个单词（空格、逗号、换行隔开），按你输入的顺序批量查看">${esc(L.words)}</textarea>
+  const ask=isLib?`<div class="lbver">现在的视频技能：<b>${esc(d.skill||'?')}</b>（${esc(d.skillEd||'')}）${c.old?`　<a href="#" class="lbf2" data-f="old" style="color:var(--amber)">⚠ ${c.old} 个词有素材是旧版技能做的</a>`:'　<span style="color:var(--pass)">✓ 素材都是按这一版做的</span>'}
+      <span class="faint">　技能换了不一定都要重做：看这一版改了什么，要重做的点那一格的「旧版 ▸」</span></div>
+    <div class="lbask"><textarea class="lbw" rows="2" placeholder="查看：输入一个单词；或者输入几个单词（空格、逗号、换行隔开），按你输入的顺序批量查看">${esc(L.words)}</textarea>
       <div class="lbaskb"><button class="btn sm lbgo">查看</button>${L.words?'<button class="btn ghost sm lbclr">回到全部</button>':''}</div></div>
     ${d.look||(L.words&&d.notFound.length)?`<div class="small lblook">按你输入的顺序：找到 <b>${d.total}</b> 个${d.notFound.length?`；<span style="color:var(--red)">总表里没有：${d.notFound.map(esc).join('、')}</span>`:''}</div>`:''}`:'';
   const fl=isLib&&!d.look?`<div class="line" style="gap:6px;flex-wrap:wrap;margin-bottom:8px">${LIBF.map(([k,t])=>`<a href="#" class="lbf ${L.f===k?'on':''}" data-f="${k}">${t} <b>${(c[k]||0).toLocaleString()}</b></a>`).join('')}</div>`:'';
-  const acts=isLib?`<button class="btn sm lbSel" ${n?'':'disabled'}>选上做素材${n?' '+n+' 个':''}</button><button class="btn ghost sm lbUnsel" ${n?'':'disabled'}>不选了</button><button class="btn ghost sm lbAdd" ${n?'':'disabled'}>挑进出片</button><span class="small faint">选上 ${(c.sel||0)} 个 · 挑进出片 ${d.picked} 个</span>`
+  const acts=isLib?`<span class="small muted">勾的词：</span><button class="btn ghost sm lbDo" data-part="draft" ${n?'':'disabled'}>写讲稿 ▸</button><button class="btn ghost sm lbDo" data-part="q" ${n?'':'disabled'}>出题 ▸</button><button class="btn ghost sm lbDo" data-part="pic" ${n?'':'disabled'}>做画面 ▸</button>`
     :`<button class="btn sm lbAdd" ${n?'':'disabled'}>挑进来${n?' '+n+' 个':''}</button>`;
-  const mk=(i,part,txt)=>isLib?`<a href="#" class="lbmk" data-w="${esc(i.word)}" data-part="${part}" title="选上这个词，到「${{draft:'讲稿',q:'题目',pic:'画面'}[part]}」去做">${txt||'做'} ▸</a>`:`<span style="color:var(--amber)">${esc(txt||'—')}</span>`;
+  const mk=(i,part,txt,cls)=>isLib?`<a href="#" class="lbmk ${cls||''}" data-w="${esc(i.word)}" data-part="${part}">${txt||'做'} ▸</a>`:`<span style="color:var(--amber)">${esc(txt||'—')}</span>`;
+  const blkCell=(i,id)=>{if(!i.q||i.manual)return '<span class="faint">先出题</span>';
+    if(!i.pic)return mk(i,'pic','做','lite');const b=(i.blk||{})[id];
+    if(!b)return '<span style="color:var(--pass)" title="视频技能自带的画面">✓</span><span class="faint" style="font-size:10.5px"> 自带</span>';
+    if(b.st==='na')return '<span class="faint">不用</span>';
+    if(b.st==='none')return mk(i,'b_'+id,'做');
+    if(b.st==='fix')return mk(i,'b_'+id,'补 '+b.n+' 处');
+    return b.old?`<span style="color:var(--pass)">✓</span> ${mk(i,'b_'+id,'旧版 '+b.ver,'old')}`:`<span style="color:var(--pass)" title="视频技能 ${esc(b.ver)} 做的">✓</span>`};
+  const cols=isLib?BLKS.map(([id,nm])=>`<th class="lbbh">${nm}</th>`).join(''):'<th>画面</th>';
+  const colw=isLib?BLKS.map(()=>'<col style="width:74px">').join(''):'<col style="width:110px">';
   el.innerHTML=ask+fl+`<div class="line" style="gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px">
-      ${d.look?'':`<input class="lbq" placeholder="搜单词或意思，回车" value="${esc(L.q)}" style="width:180px">
-      <select class="lbb"><option value="">总表全部批次</option>${d.batches.map(b=>`<option value="${esc(b)}" ${L.b===b?'selected':''}>总表第 ${esc(b)} 批</option>`).join('')}</select>`}
+      ${d.look?'':`<input class="lbq" placeholder="搜单词或意思，回车" value="${esc(L.q)}" style="width:180px">`}
       <select class="lbs">${[10,20,50,100].map(k=>`<option value="${k}" ${L.size==k?'selected':''}>每页 ${k} 个</option>`).join('')}</select>
       <span style="flex:1"></span>${acts}</div>
-    <table style="width:100%;table-layout:fixed"><colgroup><col style="width:28px"><col><col style="width:64px"><col style="width:100px"><col style="width:90px"><col style="width:110px"><col style="width:100px"><col style="width:150px">${isLib?'<col style="width:70px">':''}</colgroup>
-    <tr><th><input type="checkbox" class="lball"></th><th>单词</th><th>总表批次</th><th>讲稿</th><th>题目</th><th>画面</th><th>视频</th><th>素材</th>${isLib?'<th>选上</th>':''}</tr>
+    <div class="rzw"><table style="width:100%;table-layout:fixed;min-width:${isLib?980:720}px"><colgroup><col style="width:28px"><col style="width:${isLib?150:200}px"><col style="width:84px"><col style="width:70px">${colw}<col style="width:56px"><col style="width:${isLib?150:170}px"></colgroup>
+    <tr><th><input type="checkbox" class="lball"></th><th>单词</th><th>讲稿</th><th>题目</th>${cols}<th>视频</th><th>素材</th></tr>
     ${d.items.length?d.items.map(i=>`<tr style="vertical-align:top"><td><input type="checkbox" class="lbck" value="${esc(i.word)}" ${L.sel.has(i.word)?'checked':''}></td>
-      <td><a href="#" class="w wpo" data-w="${esc(i.word)}">${esc(i.word)}</a> <span class="small faint">${esc(i.meaning)}</span></td>
-      <td class="small">${esc(i.batch)}</td>
-      <td class="small">${i.draft?libMk(true,i.draft.slice(5,10)):mk(i,'draft','写')}</td>
-      <td class="small">${i.q&&!i.manual?libMk(true):mk(i,'q',i.manual?'出题没过，改':'出题')}</td>
-      <td class="small">${i.pic&&!i.picTodo?libMk(true):!i.q||i.manual?'<span class="faint">先出题</span>':mk(i,'pic',i.picTodo?'还要补':i.picfail?'没做成，重做':'做画面')}</td>
-      <td class="small">${i.video?libMk(true,'有了'):i.inb?libMk(false,'在批次 '+i.inb,'var(--blue)'):libMk(false)}</td>
-      <td class="small">${i.st==='ready'?'<b style="color:var(--pass)">✓ 齐了，能出片</b>':i.st==='video'?'<span style="color:var(--pass)">✓ 视频做好了</span>':i.st==='inb'?'<span class="faint">正在出片</span>':`<span style="color:var(--amber)">缺：${esc(i.miss.join('、').replace(/还没有/g,''))}</span>`}</td>
-      ${isLib?`<td class="small">${i.sel?'<span style="color:var(--blue)">✓ 选上了</span>':'<span class="faint">—</span>'}</td>`:''}</tr>`).join('')
-      :`<tr><td colspan="${isLib?9:8}" class="pempty">${mode==='fplib'?'没有能挑的了：素材齐了的词都挑进来了，或者还没有素材齐了的词（到素材那边做题目、画面）':'没有符合的词'}</td></tr>`}</table>
+      <td><a href="#" class="w wpo" data-w="${esc(i.word)}">${esc(i.word)}</a><div class="small faint">${esc(i.meaning)}</div></td>
+      <td class="small">${i.draft?(i.old.includes('讲稿')?`<span style="color:var(--pass)">✓</span> ${mk(i,'draft','旧版 '+i.draftVer,'old')}`:libMk(true,i.draft.slice(5,10))):mk(i,'draft','写')}</td>
+      <td class="small">${i.q&&!i.manual?libMk(true):mk(i,'q',i.manual?'没过，改':'出题')}</td>
+      ${isLib?BLKS.map(([id])=>`<td class="small">${blkCell(i,id)}</td>`).join(''):`<td class="small">${i.pic&&!i.picTodo?libMk(true):!i.q?'<span class="faint">先出题</span>':mk(i,'pic',i.picTodo?'还要补':'做画面')}</td>`}
+      <td class="small">${i.video?libMk(true,'有了'):i.inb?libMk(false,'在出片','var(--blue)'):libMk(false)}</td>
+      <td class="small">${i.st==='ready'?`<b style="color:var(--pass)">✓ 齐了，能出片</b>`:i.st==='video'?'<span style="color:var(--pass)">✓ 视频做好了</span>':i.st==='inb'?'<span class="faint">正在出片</span>':`<span style="color:var(--amber)">缺：${esc(i.miss.join('、').replace(/还没有/g,''))}</span>`}${i.old.length?`<div style="color:var(--amber);font-size:11px" title="${esc(i.old.join('、'))}">${i.old.length} 块是旧版技能做的</div>`:''}</td></tr>`).join('')
+      :`<tr><td colspan="${isLib?11:7}" class="pempty">${mode==='fplib'?'没有能挑的了：素材齐了的词都挑进来了，或者还没有素材齐了的词（到素材那边做题目、画面）':'没有符合的词'}</td></tr>`}</table></div>
     <div class="line" style="gap:10px;align-items:center;justify-content:center;margin-top:8px"><button class="btn ghost sm lbp" ${d.page>1?'':'disabled'}>上一页</button><span class="small">第 ${d.page} / ${d.pages} 页 · 共 ${d.total.toLocaleString()} 个</span><button class="btn ghost sm lbn" ${d.page<d.pages?'':'disabled'}>下一页</button></div>`;
-  rzInit(el.querySelector('table'),'lib2_'+mode);
+  rzInit(el.querySelector('table'),'lib3_'+mode);
   const re=()=>libLoad(mode),q1=s=>el.querySelector(s);
-  el.querySelectorAll('.lbf').forEach(a=>a.onclick=e=>{e.preventDefault();L.f=a.dataset.f;L.page=1;L.sel.clear();re()});
+  el.querySelectorAll('.lbf,.lbf2').forEach(a=>a.onclick=e=>{e.preventDefault();L.f=a.dataset.f;L.words='';L.page=1;L.sel.clear();re()});
   if(q1('.lbq'))q1('.lbq').onkeydown=e=>{if(e.key==='Enter'){L.q=e.target.value.trim();L.page=1;re()}};
-  if(q1('.lbb'))q1('.lbb').onchange=e=>{L.b=e.target.value;L.page=1;re()};
   q1('.lbs').onchange=e=>{L.size=+e.target.value;L.page=1;re()};
   q1('.lbp').onclick=()=>{L.page--;re()};q1('.lbn').onclick=()=>{L.page++;re()};
   if(q1('.lbgo')){q1('.lbgo').onclick=()=>{L.words=q1('.lbw').value.trim();L.page=1;L.sel.clear();re()};
@@ -2873,10 +2882,10 @@ async function libLoad(mode){const L=LIBS[mode],el=$(mode==='lib'?'#libBox':'#fp
   if(q1('.lbclr'))q1('.lbclr').onclick=()=>{L.words='';L.page=1;L.sel.clear();re()};
   q1('.lball').onchange=e=>{el.querySelectorAll('.lbck').forEach(c=>e.target.checked?L.sel.add(c.value):L.sel.delete(c.value));re()};
   el.querySelectorAll('.lbck').forEach(c=>c.onchange=()=>{c.checked?L.sel.add(c.value):L.sel.delete(c.value);re()});
-  el.querySelectorAll('.lbmk').forEach(a=>a.onclick=e=>{e.preventDefault();filmOp('make',[a.dataset.w],r=>{if(r.ok)go(LIBGO[a.dataset.part])})});
-  if(q1('.lbAdd'))q1('.lbAdd').onclick=()=>filmOp('add',[...L.sel],()=>{L.sel.clear();mode==='fplib'?loadFpick():re()});
-  if(q1('.lbSel'))q1('.lbSel').onclick=()=>filmOp('sel',[...L.sel],()=>{L.sel.clear();re()});
-  if(q1('.lbUnsel'))q1('.lbUnsel').onclick=()=>filmOp('unsel',[...L.sel],()=>{L.sel.clear();re()})}
+  const goPart=p=>go(LIBGO[p]||p);
+  el.querySelectorAll('.lbmk').forEach(a=>a.onclick=e=>{e.preventDefault();filmOp('make',[a.dataset.w],r=>{if(r.ok)goPart(a.dataset.part)})});
+  el.querySelectorAll('.lbDo').forEach(bt=>bt.onclick=()=>filmOp('make',[...L.sel],r=>{if(r.ok){L.sel.clear();goPart(bt.dataset.part)}}));
+  if(q1('.lbAdd'))q1('.lbAdd').onclick=()=>filmOp('add',[...L.sel],()=>{L.sel.clear();mode==='fplib'?loadFpick():re()})}
 async function filmOp(op,words,after,extra){let r;try{r=await api('/api/film',Object.assign({op,words},extra||{}))}catch(e){r={ok:false,msg:e.message}}toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);if(after)after(r)}
 const FPSEL=new Set();
 async function loadFpick(){const el=$('#fpickBox');if(!el)return;let d;try{d=await api('/api/film?what=pick')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}

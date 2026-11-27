@@ -34,6 +34,14 @@ def _save(words):
     return out
 
 
+BLKS = ("parts", "combo", "scene", "evolve", "example", "dist")      # v1.41.0：画面按块列
+
+
+def _vnum(t):
+    m = re.search(r"(\d+)\.(\d+)\.(\d+)", str(t or ""))
+    return tuple(int(x) for x in m.groups()) if m else None
+
+
 def _ctx():
     """算素材情况要用的几样，10 秒内用同一份（素材库有六七千个词）"""
     if _LOCK_T["v"] and time.time() - _LOCK_T["t"] < 10:
@@ -61,7 +69,15 @@ def _ctx():
         sel = {r["word"] for r in C.q("SELECT word FROM pool WHERE picked=1")}
     except Exception:
         sel = set()
-    v = {"sel": sel, "by_low": by_low, "by_word": by_word, "pw": V.pic_words(), "vd": V.videos(), "man": set(C.manual_words()),
+    try:
+        sv = pics.skill_version()
+    except Exception:
+        sv = ("", "")
+    try:
+        C.load_table()
+    except Exception:
+        pass
+    v = {"sv": sv, "cur": _vnum(sv[0]), "sel": sel, "by_low": by_low, "by_word": by_word, "pw": V.pic_words(), "vd": V.videos(), "man": set(C.manual_words()),
          "pf": pf, "unc": unc, "todo": todo, "dr": dr, "pend": pend, "done": done}
     _LOCK_T.update(t=time.time(), v=v)
     return v
@@ -77,6 +93,15 @@ def _one(w, X):
           "picTodo": pic and w in X["unc"], "sel": w in X["sel"], "video": f in X["vd"] or f in X["done"], "inb": X["pend"].get(f, "")}
     d = X["dr"].get(f) or {}
     it["draft"] = d.get("ts", "") if d.get("rc") == 0 else ""
+    it["draftVer"] = d.get("ver", "") if it["draft"] else ""
+    old = []
+    if it["draftVer"] and X["cur"] and _vnum(it["draftVer"]) and _vnum(it["draftVer"]) < X["cur"]:
+        old.append("讲稿")
+    it["blk"] = _blocks(w, rs, X) if pic else {}
+    for sid, b in it["blk"].items():
+        if b.get("old"):
+            old.append(b["name"])
+    it["old"] = old
     miss = []
     if not rs:
         miss.append("总表里没有")
@@ -96,12 +121,38 @@ def _one(w, X):
     return it
 
 
+def _blocks(w, rs, X):
+    """有画面的词：画面里每一块的情况——ok 做好了 / fix 还要补 / none 还没有 / na 这个词不用；版本比现在的视频技能旧就标 old"""
+    import sections as SEC
+    _, P = SEC._prefs(w)
+    if P is None:
+        return {}
+    rec = SEC._rec_of(w, [r for r in rs])
+    todo = SEC._todo_of(rec)
+    trow = ((C.TABLE.get("words") or {}).get(w) or [{}])[0]
+    out = {}
+    for sid in BLKS:
+        sec = SEC.BY_ID[sid]
+        issues = [t for t in todo if SEC._sec_of(t) == sid]
+        st = "fix" if issues else ("ok" if SEC._has(SEC._slice(P, sec)) else "none")
+        if st == "none" and sid in ("combo", "parts") and "+" not in (trow.get("拆分") or ""):
+            st = "na"
+        if st == "none" and sid == "dist" and not (trow.get("辨析") or "").strip():
+            st = "na"                                 # 总表里没有同义词的词：不用辨析
+        b = ((rec or {}).get("板块") or {}).get(sid) or {}
+        ver = b.get("版本") or str((rec or {}).get("画面技能版本") or "")
+        vn = _vnum(ver)
+        out[sid] = {"name": sec["name"], "st": st, "ver": "%d.%d.%d" % vn if vn else "", "n": len(issues),
+                    "old": bool(st in ("ok", "fix") and vn and X["cur"] and vn < X["cur"])}
+    return out
+
+
 def info(words):
     X = _ctx()
     return [_one(w, X) for w in words]
 
 
-FILTERS = {"all": lambda i: True, "sel": lambda i: i["sel"], "ready": lambda i: i["st"] == "ready", "need": lambda i: i["st"] == "need",
+FILTERS = {"all": lambda i: True, "old": lambda i: bool(i["old"]), "ready": lambda i: i["st"] == "ready", "need": lambda i: i["st"] == "need",
            "noq": lambda i: not i["q"] or i["manual"], "nopic": lambda i: not i["pic"], "fix": lambda i: i["picTodo"],
            "video": lambda i: i["video"], "inb": lambda i: bool(i["inb"])}
 
@@ -179,7 +230,8 @@ def lib(qs):
     pages = max(1, (total + size - 1) // size)
     page = min(page, pages)
     return {"ok": True, "items": items[(page - 1) * size: page * size], "total": total, "page": page, "pages": pages,
-            "size": size, "counts": counts, "batches": batches, "picked": len(picked()), "look": bool(look), "notFound": nf}
+            "size": size, "counts": counts, "batches": batches, "picked": len(picked()), "look": bool(look), "notFound": nf,
+            "skill": X["sv"][0], "skillEd": X["sv"][1]}
 
 
 def pick_info_items():
@@ -223,7 +275,7 @@ def op(b):
         _LOCK_T["v"] = None
         if not r.get("ok"):
             return r
-        return {"ok": True, "msg": ("选上了 %d 个，在讲稿、题目、画面几步里做" % len(words)) if o == "sel" else ("选上了 %s，去做" % "、".join(words))}
+        return {"ok": True, "msg": ("%d 个加进了这次要做的词，在讲稿、题目、画面几步里做" % len(words)) if o == "sel" else ("%s 加进了这次要做的词，去做" % "、".join(words))}
     if o == "unsel":
         import pool
         pool.pick(words, False)
@@ -233,5 +285,5 @@ def op(b):
         import pool
         r = pool.add("\n".join(words), "出片送回来补", True)
         _LOCK_T["v"] = None
-        return {"ok": r.get("ok"), "msg": "送回素材那边、在「总表」里选上了 %d 个：到题目、画面那几步补齐，齐了再来挑" % len(words) if r.get("ok") else r.get("msg")}
+        return {"ok": r.get("ok"), "msg": "送回素材那边、加进这次要做的词 %d 个：到题目、画面那几步补齐，齐了再来挑" % len(words) if r.get("ok") else r.get("msg")}
     return {"ok": False, "msg": "不认识的操作"}

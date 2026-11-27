@@ -288,8 +288,10 @@ def _run(words):
             rest = out[i + 1:] if i is not None else out
             code = int(parts[1]) if len(parts) > 1 and parts[1].lstrip("-").isdigit() else rc
             line = (rest[0] if rest else "") if code == 0 else ("出错：" + " ".join(rest[-3:])[:300])
+            pv = next((x.get("result", "") for x in pr.w["steps"] if x["key"] == "prep"), "")
+            m = re.search(r"视频技能 (\d+\.\d+\.\d+)", pv)
             res[f] = {"ts": time.strftime("%Y-%m-%d %H:%M"), "rc": code, "line": line[:1500],
-                      "pic": len(parts) > 2 and parts[2] == "有画面"}
+                      "pic": len(parts) > 2 and parts[2] == "有画面", "ver": m.group(1) if m else ""}     # v1.41.0：用的哪一版视频技能
             _RES().write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
             SEC._PL.pop(f, None)                      # 配音稿换了，下次重读
             todo = _todo(line) if code == 0 else []
