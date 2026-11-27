@@ -1026,15 +1026,22 @@ details.vgk>.vgo{margin-top:6px}
   <div class="phead"><div><h2><i class="sn">4</i>导入：不用 AI 的几块</h2>
     <p class="muted">片头的意思、词根词缀卡上的字（拆分）、考点、辨析从总表来，读音拆分从音节表来，都不用 AI 做。这里看选上的每个词总表里有没有、缺什么（缺的到总表补）。勾几个点「让 AI 核对」，AI 核对这些对不对，结果写在最后一栏。</p></div></div>
   
-  <div class="mtabs stabs"><a data-go="imp" class="on">总表</a><a data-go="impdraft" class="">配音稿（起草） <b class="tc" data-tc="impdraft"></b></a></div>
+  <div class="mtabs stabs"><a data-go="imp" class="on">总表</a><a data-go="impdraft" class="">讲稿 <b class="tc" data-tc="impdraft"></b></a></div>
   <div class="box"><div id="impBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
+<section id="p-dfinal">
+  <div class="phead"><div><h2><i class="sn">5</i>画面设计 · 定稿</h2>
+    <p class="muted">定稿＝出题、含义拆分、同义词辨析都做好以后，把画上的话（例句、意思场景……）也写进讲稿，成为出视频念的那一份配音稿，顺便对一遍：画和话对不对得上、还要补什么。不用 AI，在 WSL 里跑。
+      还要补的按块列出来，点块名去那一块重做；画面改过（比定稿的时候新）标“要重新定稿”。</p></div></div>
+  <div class="box"><div id="dfinalBox"><p class="small muted">正在读…</p></div></div>
+</section>
+
 <section id="p-impdraft">
-  <div class="phead"><div><h2><i class="sn">4</i>导入：配音稿（起草）</h2>
-    <p class="muted">“起草”＝视频技能按总表和画面设置写出这个词视频里要念的话（精简版配音稿），顺便做一遍起草检查（还要补什么）。不用 AI，在 WSL 里跑，一个词几秒到十几秒。
-      各块页面里“视频里说的”就是这里起草出来的。没做画面的词也能起草：总表来的几块先写出来；画面设置改过以后标“要重新起草”。</p></div></div>
-  <div class="mtabs stabs"><a data-go="imp" class="">总表</a><a data-go="impdraft" class="on">配音稿（起草） <b class="tc" data-tc="impdraft"></b></a></div>
+  <div class="phead"><div><h2><i class="sn">4</i>导入：讲稿</h2>
+    <p class="muted">讲稿＝视频里要念的话，这里先写总表来的几块：读音拆分、词根词缀卡、拼起来、意思、意思演变、同义词辨析、考点。视频技能按固定的写法从总表里挑出要讲的句子编好，不用 AI，在 WSL 里跑，一个词几秒到十几秒。
+      写好了在这里看一遍说得对不对；总表改过（比写讲稿的时候新）标“要重写”。画上的话（例句、场景）等做好画面，到「画面设计 → 定稿」再写进去。</p></div></div>
+  <div class="mtabs stabs"><a data-go="imp" class="">总表</a><a data-go="impdraft" class="on">讲稿 <b class="tc" data-tc="impdraft"></b></a></div>
   <div class="box"><div id="impdraftBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
@@ -1340,9 +1347,9 @@ function wordInModal(w,title){const b=$('#wDetail');if(!WD_HOME)WD_HOME=b.parent
 let page='check';
 const PARENT={impdraft:'imp',pickhist:'pick',words:'pick',vdone:'video',vhist:'video',venv:'video'};
 /* v1.36.0：出题、含义拆分、同义词辨析合成一步「画面设计」——页面、功能都不变，只是挂到同一步下面，上面多一排「出题 · 含义拆分 · 同义词辨析」 */
-const DGRP={q:'q',qdone:'q',qfail:'q',qbulk:'q',qset:'q',history:'q',pic:'pic',pichist:'pic',picdone:'pic',b_parts:'pic',b_combo:'pic',b_scene:'pic',b_evolve:'pic',b_example:'pic',picfail:'pic',picbulk:'pic',b_dist:'dist'};
+const DGRP={q:'q',qdone:'q',qfail:'q',qbulk:'q',qset:'q',history:'q',pic:'pic',pichist:'pic',picdone:'pic',b_parts:'pic',b_combo:'pic',b_scene:'pic',b_evolve:'pic',b_example:'pic',picfail:'pic',picbulk:'pic',b_dist:'dist',dfinal:'final'};
 Object.keys(DGRP).forEach(k=>PARENT[k]='design');
-const DGT=[['q','出题','先出题：做画面要先有题目（练习题会放进画面设置）','q'],['pic','含义拆分','词根词缀卡、拼起来、意思场景、意思演变、例句动画','pic'],['b_dist','同义词辨析','几个意思相近的词，每个一幅画、一句区别、一句例句','']];
+const DGT=[['q','出题','先出题：做画面要先有题目（练习题会放进画面设置）','q'],['pic','含义拆分','词根词缀卡、拼起来、意思场景、意思演变、例句动画','pic'],['b_dist','同义词辨析','几个意思相近的词，每个一幅画、一句区别、一句例句',''],['dfinal','定稿','画面都做好了：把画上的话也写进配音稿，对一遍还要补什么','']];
 Object.entries(DGRP).forEach(([id,g])=>{const sec=document.getElementById('p-'+id),ph=sec&&sec.querySelector('.phead');if(!ph)return;
   const d=document.createElement('div');d.className='gtabs';
   d.innerHTML='<span class="gl">画面设计</span>'+DGT.map(([p,n,t,nb],i)=>`<a data-go="${p}" title="${t}" class="${(DGRP[p]===g)?'on':''}"><i>${i+1}</i>${n}${nb?`<span class="n" data-nb="${nb}" hidden></span>`:''}</a>`).join('<span class="ga">›</span>');
@@ -1351,7 +1358,7 @@ let DLAST='q';try{DLAST=localStorage.getItem('designLast')||'q';if(!DGRP[DLAST])
 function go(p){if(p==='manual')p='q';if(p==='run')p='q';if(p==='design')p=DLAST;if(DGRP[p]){DLAST=p;try{localStorage.setItem('designLast',p)}catch(e){}}page=p;const top=PARENT[p]||p;
   $$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===top));
   $$('main section').forEach(s=>s.classList.toggle('on',s.id==='p-'+p));
-  ({check:loadCheck,pick:loadPick,q:loadQ,qdone:()=>doneLoad('q'),picdone:()=>doneLoad('p'),b_parts:()=>blkLoad('parts'),b_combo:()=>blkLoad('combo'),b_scene:()=>blkLoad('scene'),b_evolve:()=>blkLoad('evolve'),b_example:()=>blkLoad('example'),b_dist:()=>blkLoad('dist'),imp:loadImp,impdraft:loadDraft,qfail:loadManual,qbulk:loadQbulk,qset:loadQset,pic:loadPic,picfail:loadPicfail,picbulk:loadPicbulk,pichist:loadPichist,pickhist:loadPickhist,done:loadDone,ai:loadAI,video:loadVideo,vdone:loadVdone,vhist:loadVhist,venv:loadVenv,words:loadWords,history:loadHistory,settings:loadSettings,home:loadHome}[p]||(()=>{}))()}
+  ({check:loadCheck,pick:loadPick,q:loadQ,qdone:()=>doneLoad('q'),picdone:()=>doneLoad('p'),b_parts:()=>blkLoad('parts'),b_combo:()=>blkLoad('combo'),b_scene:()=>blkLoad('scene'),b_evolve:()=>blkLoad('evolve'),b_example:()=>blkLoad('example'),b_dist:()=>blkLoad('dist'),imp:loadImp,impdraft:loadDraft,dfinal:loadFinal,qfail:loadManual,qbulk:loadQbulk,qset:loadQset,pic:loadPic,picfail:loadPicfail,picbulk:loadPicbulk,pichist:loadPichist,pickhist:loadPickhist,done:loadDone,ai:loadAI,video:loadVideo,vdone:loadVdone,vhist:loadVhist,venv:loadVenv,words:loadWords,history:loadHistory,settings:loadSettings,home:loadHome}[p]||(()=>{}))()}
 $$('nav a').forEach(a=>a.onclick=()=>go(a.dataset.p));
 function navMini(on){document.body.classList.toggle('navmini',on);const b=$('#navTog'),t=on?'展开左边栏':'收起左边栏';b.title=t;b.setAttribute('aria-label',t);
   $$('nav a').forEach(a=>{const x=a.querySelector('.tx');if(on&&x)a.title=x.textContent;else a.removeAttribute('title')});
@@ -2634,8 +2641,8 @@ const PICREG=[];
 function picLinks(w,list){return (list||[]).map(p=>{const k=PICREG.push({w,p})-1;
   const its=p.items.map(it=>it.src?`<a href="#" class="artA" data-w="${esc(w)}" data-p="${esc(it.src)}">${esc(it.name)}</a>`:`<span>${esc(it.emoji||it.name)}</span>`).join('、');
   return `<div><b>${esc(p.label)}</b>：${p.bg?`背景 ${p.bgSrc?`<a href="#" class="artA" data-w="${esc(w)}" data-p="${esc(p.bgSrc)}">${esc(p.bg)}</a>`:esc(p.bg)}；`:''}${its?`画了 ${p.items.length} 样：${its}`:''}${p.text?`；字：${esc(p.text)}`:''}　<a href="#" class="picFull" data-k="${k}">看整幅</a></div>`}).join('')}
-function sayLines(x){if(!(x.say||[]).length)return '';return `<div class="faint" style="font-size:11px">视频里说的（精简版配音稿${x.sayTs?' · 起草于 '+esc(x.sayTs):''}）</div>`+x.say.map(g=>`<div>${g.label?`<b>${esc(g.label)}</b>：`:''}${g.say.map(esc).join('　')}</div>`).join('')}
-function noSay(){return '<div class="faint" style="font-size:11px">还没起草——到 <a href="#" onclick="go(\'impdraft\');return false">「导入 → 配音稿」</a>起草了，这里就写视频里说的；先看总表的头一句：</div>'}
+function sayLines(x){if(!(x.say||[]).length)return '';return `<div class="faint" style="font-size:11px">视频里说的（精简版配音稿${x.sayTs?' · 写于 '+esc(x.sayTs):''}）</div>`+x.say.map(g=>`<div>${g.label?`<b>${esc(g.label)}</b>：`:''}${g.say.map(esc).join('　')}</div>`).join('')}
+function noSay(){return '<div class="faint" style="font-size:11px">配音稿还没写——总表那几块到 <a href="#" onclick="go(\'impdraft\');return false">「导入 → 讲稿」</a>写，画上的话到 <a href="#" onclick="go(\'dfinal\');return false">「画面设计 → 定稿」</a>写；写了这里就是视频里说的。先看总表的头一句：</div>'}
 /* v1.34.0：表格的列宽能左右拉，拉好了记住（这台电脑上），下次还是这样；双击拉手恢复原样 */
 function rzInit(tb,key){if(!tb)return;const cols=[...tb.querySelectorAll('col')],ths=[...tb.querySelectorAll('tr:first-child th')];if(!cols.length||cols.length!==ths.length)return;
   if(!tb.parentElement.classList.contains('rzw')){const w=document.createElement('div');w.className='rzw';tb.parentElement.insertBefore(w,tb);w.appendChild(tb)}
@@ -2715,33 +2722,65 @@ function blkAsk(id,name,words){if(!words.length)return;
 const ISEL=new Set();
 /* v1.35.0：「导入 → 配音稿（起草）」：给选上的词起草精简版配音稿（不用 AI，在 WSL 里跑视频技能），看哪些还没起草、哪些画面改过要重新起草 */
 const DRSEL=new Set();let DRT=null;
-const DRST={none:['— 还没起草','var(--red)'],stale:['⚠ 画面改过，要重新起草','var(--amber)'],ok:['✓ 起草了','var(--pass)']};
-async function loadDraft(){const el=$('#impdraftBox');if(!el)return;let d;try{d=await api('/api/drafts')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
+const DRST={none:['— 还没写','var(--red)'],stale:['⚠ 总表改过，要重写','var(--amber)'],ok:['✓ 写好了','var(--pass)']};
+const DFST={nopic:['还没做画面','var(--faint,#9AA5B5)'],none:['— 还没定稿','var(--red)'],stale:['⚠ 画面改过，要重新定稿','var(--amber)'],err:['✗ 定稿出错','var(--red)'],fix:['⚠ 还要补','var(--amber)'],ok:['✓ 定稿了','var(--pass)']};
+let DRD=null;const DFSEL=new Set(),DROPEN=new Set();
+function drRunBar(run,sel,todo,verb,cls){return run.running?`<span class="small"><span class="spin"></span> 正在写配音稿 ${run.done+1} / ${run.total}：<b>${esc(run.cur)}</b></span><button class="btn ghost sm drStop">停</button>`
+  :`<button class="btn sm ${cls}Sel" ${sel?'':'disabled'}>${verb}选中的${sel?' '+sel+' 个':''}</button><button class="btn ghost sm ${cls}Todo" ${todo?'':'disabled'}>${verb==='写'?'写还没写的和要重写的':'定稿还没定稿的和要重新定稿的'} ${todo} 个</button>`}
+async function drFetch(){try{DRD=await api('/api/drafts')}catch(e){DRD={ok:false,msg:e.message}}return DRD}
+async function drGo(ws,again){let r;try{r=await api('/api/drafts',{words:ws})}catch(e){r={ok:false,msg:e.message}}toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?5000:9000);if(r.ok){DRSEL.clear();DFSEL.clear()}again()}
+function drWire(el,SEL,todo,cls,again){
+  const all=el.querySelector('.drall');if(all)all.onchange=e=>{el.querySelectorAll('.drck').forEach(c=>e.target.checked?SEL.add(c.value):SEL.delete(c.value));again()};
+  el.querySelectorAll('.drck').forEach(c=>c.onchange=()=>{c.checked?SEL.add(c.value):SEL.delete(c.value);again()});
+  el.querySelectorAll('.drOne').forEach(a=>a.onclick=e=>{e.preventDefault();drGo([a.dataset.w],again)});
+  const s1=el.querySelector('.'+cls+'Sel');if(s1)s1.onclick=()=>drGo([...SEL],again);
+  const s2=el.querySelector('.'+cls+'Todo');if(s2)s2.onclick=()=>drGo(todo,again);
+  const sp=el.querySelector('.drStop');if(sp)sp.onclick=async()=>{const r=await api('/api/drafts',{op:'stop'});toast((r.ok?'✓ ':'✗ ')+(r.msg||''),4000)}}
+/* v1.37.0「导入 → 讲稿」：总表来的几块要说的话（不用画面） */
+async function loadDraft(){const el=$('#impdraftBox');if(!el)return;const d=await drFetch();
   if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
-  const it=d.items,run=d.run,todo=it.filter(x=>x.status!=='ok'),n=DRSEL.size;
+  const it=[...d.items].sort((x,y)=>({none:0,stale:1,ok:2}[x.sstatus]-{none:0,stale:1,ok:2}[y.sstatus])),run=d.run,todo=it.filter(x=>x.sstatus!=='ok'),n=DRSEL.size;
   $$('[data-tc="impdraft"]').forEach(e=>e.textContent=todo.length||'');
   if(!it.length){el.innerHTML='<p class="small muted" style="margin:0">「选词」里还没有选上的词。</p>';return}
   el.innerHTML=`<div class="line" style="gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px">
-    <span class="small">选上的 ${it.length} 个词：起草了 ${it.length-todo.length} 个${todo.length?`，<b style="color:var(--amber)">${todo.length} 个还没起草或者要重新起草</b>（排前面）`:''}</span><span style="flex:1"></span>
-    ${run.running?`<span class="small"><span class="spin"></span> 正在起草 ${run.done+1} / ${run.total}：<b>${esc(run.cur)}</b></span><button class="btn ghost sm drStop">停</button>`
-      :`<button class="btn sm drSel" ${n?'':'disabled'}>起草选中的${n?' '+n+' 个':''}</button><button class="btn ghost sm drTodo" ${todo.length?'':'disabled'}>起草没起草的和要重新起草的 ${todo.length} 个</button>`}</div>
+    <span class="small">选上的 ${it.length} 个词：讲稿写好了 ${it.length-todo.length} 个${todo.length?`，<b style="color:var(--amber)">${todo.length} 个还没写或者要重写</b>（排前面）`:''}</span><span style="flex:1"></span>${drRunBar(run,n,todo.length,'写','drs')}</div>
   ${run.msg&&!run.running?`<p class="small" style="margin:0 0 8px">上一次：${esc(run.msg)}</p>`:''}
-  <table style="width:100%;table-layout:fixed"><colgroup><col style="width:28px"><col style="width:150px"><col style="width:170px"><col><col style="width:110px"></colgroup>
-  <tr><th><input type="checkbox" class="drall"></th><th>单词</th><th>配音稿</th><th>起草检查（还要补什么）</th><th>操作</th></tr>
-  ${it.map(x=>{const [t,col]=DRST[x.status]||['',''];return `<tr style="vertical-align:top"><td><input type="checkbox" class="drck" value="${esc(x.word)}" ${DRSEL.has(x.word)?'checked':''}></td>
-    <td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a><div class="small faint">${x.pic?'有画面设置':'还没做画面'}</div></td>
-    <td class="small"><span style="color:${col};font-weight:600">${t}</span>${x.ts?`<div class="faint">起草于 ${esc(x.ts)} · 念 ${x.segs} 句</div>`:''}${x.status==='stale'?`<div class="faint">画面改于 ${esc(x.picTs)}</div>`:''}</td>
-    <td class="small" style="word-break:break-word">${x.line?esc(x.line):'<span class="faint">'+(x.ts?'（这一次起草不是在这里做的，结果看「含义拆分」各块）':'—')+'</span>'}${x.rts?`<div class="faint" style="font-size:11px">${esc(x.rts)}</div>`:''}</td>
-    <td class="small"><a href="#" class="drOne" data-w="${esc(x.word)}">${x.status==='ok'?'重新起草':'起草'}</a></td></tr>`}).join('')}</table>`;
-  rzInit(el.querySelector('table'),'draft');
-  const go2=async ws=>{let r;try{r=await api('/api/drafts',{words:ws})}catch(e){r={ok:false,msg:e.message}}toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?5000:9000);if(r.ok)DRSEL.clear();loadDraft()};
-  el.querySelector('.drall').onchange=e=>{el.querySelectorAll('.drck').forEach(c=>e.target.checked?DRSEL.add(c.value):DRSEL.delete(c.value));loadDraft()};
-  el.querySelectorAll('.drck').forEach(c=>c.onchange=()=>{c.checked?DRSEL.add(c.value):DRSEL.delete(c.value);loadDraft()});
-  el.querySelectorAll('.drOne').forEach(a=>a.onclick=e=>{e.preventDefault();go2([a.dataset.w])});
-  const s1=el.querySelector('.drSel');if(s1)s1.onclick=()=>go2([...DRSEL]);
-  const s2=el.querySelector('.drTodo');if(s2)s2.onclick=()=>go2(todo.map(x=>x.word));
-  const sp=el.querySelector('.drStop');if(sp)sp.onclick=async()=>{const r=await api('/api/drafts',{op:'stop'});toast((r.ok?'✓ ':'✗ ')+(r.msg||''),4000)};
+  <table style="width:100%;table-layout:fixed"><colgroup><col style="width:28px"><col style="width:130px"><col><col style="width:130px"><col style="width:80px"></colgroup>
+  <tr><th><input type="checkbox" class="drall"></th><th>单词</th><th>讲稿（视频里说的：总表来的几块）</th><th>写的时间</th><th>操作</th></tr>
+  ${it.map(x=>{const [t,col]=DRST[x.sstatus]||['',''],op=DROPEN.has(x.word),sh=op?x.say:x.say.slice(0,2);
+    return `<tr style="vertical-align:top"><td><input type="checkbox" class="drck" value="${esc(x.word)}" ${DRSEL.has(x.word)?'checked':''}></td>
+    <td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a><div class="small" style="color:${col};font-weight:600">${t}</div></td>
+    <td class="small" style="line-height:1.7;word-break:break-word">${x.say.length?sh.map(g=>`<div><b>${esc(g.name)}</b>：${g.lines.map(l=>(l.label?`<span class="faint">${esc(l.label)}</span> `:'')+l.say.map(esc).join('　')).join('　｜　')}</div>`).join('')
+      +(x.say.length>2?`<a href="#" class="drMore" data-w="${esc(x.word)}">${op?'收起':'展开全部 '+x.say.length+' 块'}</a>`:''):'<span class="faint">—</span>'}</td>
+    <td class="small">${x.ts?esc(x.ts)+` · 念 ${x.segs} 句`:'—'}${x.sstatus==='stale'?`<div class="faint">总表改于 ${esc(x.tableTs)}</div>`:''}</td>
+    <td class="small"><a href="#" class="drOne" data-w="${esc(x.word)}">${x.sstatus==='ok'?'重写':'写讲稿'}</a></td></tr>`}).join('')}</table>`;
+  rzInit(el.querySelector('table'),'draft2');
+  el.querySelectorAll('.drMore').forEach(a=>a.onclick=e=>{e.preventDefault();const w=a.dataset.w;DROPEN.has(w)?DROPEN.delete(w):DROPEN.add(w);loadDraft()});
+  drWire(el,DRSEL,todo.map(x=>x.word),'drs',loadDraft);
   clearTimeout(DRT);if(run.running&&page==='impdraft')DRT=setTimeout(loadDraft,3000)}
+/* v1.37.0「画面设计 → 定稿」：画面做好以后，把画上的话也写进配音稿，对一遍还要补什么 */
+const DF_ORD={none:0,stale:1,err:2,fix:3,ok:4,nopic:5};
+async function loadFinal(){const el=$('#dfinalBox');if(!el)return;const d=await drFetch();
+  if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
+  const it=[...d.items].sort((x,y)=>DF_ORD[x.fstatus]-DF_ORD[y.fstatus]),run=d.run,todo=it.filter(x=>['none','stale','err'].includes(x.fstatus)),
+    fix=it.filter(x=>x.fstatus==='fix').length,np=it.filter(x=>x.fstatus==='nopic').length,n=DFSEL.size;
+  if(!it.length){el.innerHTML='<p class="small muted" style="margin:0">「选词」里还没有选上的词。</p>';return}
+  const blk=t=>{const pg=t.sec&&document.getElementById('p-b_'+t.sec)?'b_'+t.sec:'';return (t.name?(pg?`<a href="#" onclick="go('${pg}');return false"><b>【${esc(t.name)}】</b></a>`:`<b>【${esc(t.name)}】</b>`):'')+esc(t.text)};
+  el.innerHTML=`<div class="line" style="gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px">
+    <span class="small">选上的 ${it.length} 个词：定稿了 ${it.length-todo.length-np} 个${fix?`（<b style="color:var(--amber)">${fix} 个还要补</b>）`:''}${todo.length?`，<b style="color:var(--red)">${todo.length} 个还没定稿或者要重新定稿</b>（排前面）`:''}${np?`，${np} 个还没做画面`:''}</span><span style="flex:1"></span>${drRunBar(run,n,todo.length,'定稿','dfs')}</div>
+  ${run.msg&&!run.running?`<p class="small" style="margin:0 0 8px">上一次：${esc(run.msg)}</p>`:''}
+  <table style="width:100%;table-layout:fixed"><colgroup><col style="width:28px"><col style="width:130px"><col style="width:170px"><col><col style="width:90px"></colgroup>
+  <tr><th><input type="checkbox" class="drall"></th><th>单词</th><th>定稿</th><th>还要补什么（点块名去那一块）</th><th>操作</th></tr>
+  ${it.map(x=>{const [t,col]=DFST[x.fstatus]||['',''],can=x.fstatus!=='nopic';
+    return `<tr style="vertical-align:top"><td>${can?`<input type="checkbox" class="drck" value="${esc(x.word)}" ${DFSEL.has(x.word)?'checked':''}>`:''}</td>
+    <td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a></td>
+    <td class="small"><span style="color:${col};font-weight:600">${t}</span>${x.ts&&x.fstatus!=='none'&&can?`<div class="faint">定稿于 ${esc(x.ts)} · 念 ${x.segs} 句</div>`:''}${x.fstatus==='stale'?`<div class="faint">画面改于 ${esc(x.picTs)}</div>`:''}</td>
+    <td class="small" style="line-height:1.7;word-break:break-word">${x.fstatus==='nopic'?'<span class="faint">先到 <a href="#" onclick="go(\'pic\');return false">含义拆分</a> 做画面</span>'
+      :x.fstatus==='err'?esc(x.line):x.todo.length?x.todo.map(t=>`<div>${blk(t)}</div>`).join(''):x.fstatus==='ok'?'<span style="color:var(--pass)">都齐了</span>':'<span class="faint">—</span>'}</td>
+    <td class="small">${can?`<a href="#" class="drOne" data-w="${esc(x.word)}">${['none'].includes(x.fstatus)?'定稿':'重新定稿'}</a>`:''}</td></tr>`}).join('')}</table>`;
+  rzInit(el.querySelector('table'),'dfinal');
+  drWire(el,DFSEL,todo.map(x=>x.word),'dfs',loadFinal);
+  clearTimeout(DRT);if(run.running&&page==='dfinal')DRT=setTimeout(loadFinal,3000)}
 async function loadImp(){const el=$('#impBox');if(!el)return;let d;try{d=await api('/api/imp')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
   if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
   if(!d.items.length){el.innerHTML='<p class="small muted" style="margin:0">「选词」里还没有选上的词。</p>';return}

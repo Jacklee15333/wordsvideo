@@ -9,6 +9,7 @@
 不用 AI，在 WSL 里跑视频技能（要先「检测 → 一键修复」同步过），一个词几秒到十几秒。"""
 import json
 import os
+import re
 import threading
 import time
 
@@ -36,13 +37,42 @@ def _pic_mtime(word):
         return ""
 
 
+SAY_SECS = ("pron", "parts", "combo", "scene", "evolve", "dist", "kaodian")      # v1.37.0 讲稿：总表来的几块
+
+
+def _table_mtime():
+    try:
+        p = C.REPO / C.STATE["xlsx"] if C.STATE.get("xlsx") else None
+        return time.strftime("%Y-%m-%d %H:%M", time.localtime(p.stat().st_mtime)) if p else ""
+    except Exception:
+        return ""
+
+
+def _todo(line):
+    """“还要补：【意思场景】…；【例句动画】…” → [{sec, name, text}]（练习题归出题，不算）"""
+    import pics as P
+    out = []
+    for t in P._items(line or ""):
+        sid = SEC._sec_of(t)
+        out.append({"sec": sid, "name": (SEC.BY_ID.get(sid) or {}).get("name", ""), "text": re.sub(r"^\s*【[^】]+】", "", t)})
+    return out
+
+
 def status():
+    """v1.37.0：一份配音稿，两处看——
+    「导入 → 讲稿」：总表来的几块要说的话（不用画面）；「画面设计 → 定稿」：画面做好以后，把画上的话也写进去，对一遍还要补什么。"""
+    import pics as P
     words = SEC._picked()
     try:
         pl = SEC.plans(words)
     except Exception:
         pl = {}
     res = _res_load()
+    tm = _table_mtime()
+    try:
+        ptodo = P.todo_all()
+    except Exception:
+        ptodo = {}
     items = []
     for w in words:
         f = V.folder_of(w)
@@ -51,8 +81,28 @@ def status():
         r = res.get(f) or {}
         st = "none" if not plan else ("stale" if pm and ts and pm > ts else "ok")
         n = sum(len(sc.get("segs") or []) for sc in ((plan or {}).get("scenes") or {}).values())
+        # 讲稿：总表改过（比写讲稿的时候新）要重写
+        ss = "none" if not plan else ("stale" if tm and ts and tm > ts else "ok")
+        say = [{"sec": sid, "name": SEC.BY_ID[sid]["name"], "lines": SEC.plan_lines(sid, plan)} for sid in SAY_SECS]
+        say = [x for x in say if x["lines"]]
+        # 定稿：要有画面；这份稿是带着画面写的才算（在这里写的记着有没有画面；做画面、出片准备时写的都带画面）
+        mine = bool(r.get("ts")) and (not ts or r.get("ts", "") >= ts)
+        full = bool(plan) and (r.get("pic", True) if mine else bool(pm))
+        line = r.get("line", "") if mine else (ptodo.get(w) or "")
+        todo = _todo(line) if (r.get("rc") in (0, None) or not mine) else []
+        if not pm:
+            fs = "nopic"
+        elif not full:
+            fs = "none"
+        elif ts and pm > ts:
+            fs = "stale"
+        elif mine and r.get("rc") not in (0, None):
+            fs = "err"
+        else:
+            fs = "fix" if todo else "ok"
         items.append({"word": w, "status": st, "ts": ts, "pic": bool(pm), "picTs": pm, "segs": n,
-                      "line": r.get("line", ""), "rc": r.get("rc"), "rts": r.get("ts", "")})
+                      "line": r.get("line", ""), "rc": r.get("rc"), "rts": r.get("ts", ""),
+                      "sstatus": ss, "say": say, "tableTs": tm, "fstatus": fs, "todo": todo, "mine": mine})
     order = {"none": 0, "stale": 1, "ok": 2}
     items.sort(key=lambda x: order[x["status"]])
     with _LOCK:
@@ -67,7 +117,15 @@ cd "$S/scripts" 2>/dev/null || { echo "@@ERR 视频技能不在 WSL 里：先在
 w=%(f)s; word="${w//_/ }"; J=$JOBS/$w
 mkdir -p "$WORK/$w" "$J" "$HOME/wordfilm-out/draft"; ln -sfn "$WORK/$w" "$J/$w"
 E=""
-if wp=$(kitfile "words/$w.py"); then python3 "$wp" "$WORK/edits_$w.json" >/dev/null 2>&1 && E="--edits $WORK/edits_$w.json"; fi
+# v1.37.0：先拿仓库里最新的画面设置；有画面设置就像出片“准备”那样先把图画好再读（以前没画图：没出过片的词读不了画面设置，悄悄当成“没画面”写了）
+[ -d %(src)s ] && { cp -r %(src)s/. ~/kit-extra/ 2>/dev/null; find ~/kit-extra -name '*.py' -exec sed -i 's/\r$//' {} + 2>/dev/null; }
+if wp=$(kitfile "words/$w.py"); then
+  A="$WORK/$w/art"; ERR="$J/draft_art.err"; rm -rf "$A"; mkdir -p "$A"; cp "$S/references/scenes/"*.svg "$A/" 2>/dev/null
+  python3 poses.py "$A" --motion >/dev/null 2>"$ERR"
+  { ! ap=$(kitfile "${w}ai_art.py") || python3 "$ap" "$A" >/dev/null 2>>"$ERR"; } && python3 "$wp" "$WORK/edits_$w.json" >/dev/null 2>>"$ERR" \
+    || { printf '@@%%s 9 有画面\n' "$w"; echo "画面设置的程序跑不起来：$(tail -3 "$ERR" | tr '\n' ' ')"; exit 0; }
+  E="--edits $WORK/edits_$w.json"
+fi
 python3 run.py --table "$TABLE" --syl "$SYL" --words "$word" --number 1 --out "$HOME/wordfilm-out/draft" $E \
     --edition brief --draft-only --no-preview --redraft --work "$J" > "$J/draft.log" 2>&1
 rc=$?
@@ -83,11 +141,11 @@ def _run(words):
         for w in words:
             with _LOCK:
                 if ST["stop"]:
-                    ST["msg"] = "停了：起草了 %d 个" % ST["done"]
+                    ST["msg"] = "停了：写了 %d 个" % ST["done"]
                     break
                 ST["cur"] = w
             f = V.folder_of(w)
-            rc, out = V.wsl(SH % {"f": V.q(f)}, 300)
+            rc, out = V.wsl(SH % {"f": V.q(f), "src": V.q(V.to_wsl(C.REPO / V.EXTRA))}, 300)
             if "@@ERR" in out:
                 with _LOCK:
                     ST["msg"] = out.split("@@ERR", 1)[1].strip().splitlines()[0]
@@ -97,15 +155,16 @@ def _run(words):
             parts = lines[i][2:].split() if i is not None else []
             rest = lines[i + 1:] if i is not None else lines
             code = int(parts[1]) if len(parts) > 1 and parts[1].lstrip("-").isdigit() else rc
-            line = (rest[0] if rest else "") if code == 0 else ("起草出错：" + " ".join(rest[-3:])[:300])
-            res[f] = {"ts": time.strftime("%Y-%m-%d %H:%M"), "rc": code, "line": line[:1500]}
+            line = (rest[0] if rest else "") if code == 0 else ("出错：" + " ".join(rest[-3:])[:300])
+            res[f] = {"ts": time.strftime("%Y-%m-%d %H:%M"), "rc": code, "line": line[:1500],
+                      "pic": len(parts) > 2 and parts[2] == "有画面"}
             _RES().write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
             SEC._PL.pop(f, None)                      # 配音稿换了，下次重读
             with _LOCK:
                 ST["done"] += 1
         else:
             with _LOCK:
-                ST["msg"] = "起草好了 %d 个词" % ST["done"]
+                ST["msg"] = "写好了 %d 个词" % ST["done"]
     except Exception as e:
         with _LOCK:
             ST["msg"] = "起草出错：%s" % str(e)[:200]
@@ -123,10 +182,10 @@ def start(words):
         return {"ok": False, "msg": "这台电脑没有 WSL：起草要在 WSL 里跑视频技能"}
     with _LOCK:
         if ST["running"]:
-            return {"ok": False, "msg": "正在起草（%d / %d）：等它做完，或者先点「停」" % (ST["done"], ST["total"])}
+            return {"ok": False, "msg": "正在写配音稿（%d / %d）：等它做完，或者先点「停」" % (ST["done"], ST["total"])}
         ST.update(running=True, stop=False, done=0, total=len(words), cur="", started=time.time(), msg="")
     threading.Thread(target=_run, args=(words,), daemon=True).start()
-    return {"ok": True, "msg": "开始起草 %d 个词的配音稿（不用 AI，在 WSL 里跑，一个词几秒到十几秒）" % len(words)}
+    return {"ok": True, "msg": "开始写 %d 个词的配音稿（不用 AI，在 WSL 里跑，一个词几秒到十几秒）" % len(words)}
 
 
 def stop():

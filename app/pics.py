@@ -768,7 +768,7 @@ def wsl_draft(word, pre=False):
         return "env", "WSL 没有回应（%s）：%s" % (rc, " ".join(t.split())[-160:])
     if line.startswith("还要补"):
         rest = line.split("：", 1)[1] if "：" in line else line
-        rest = re.sub(r"练习题 lianxi（[^）]*）[；;]?", "", rest).strip("；; ")       # 练习题归出题那一步管，画面改不了
+        rest = re.sub(r"(【练习题】)?练习题 lianxi（[^）]*）[；;]?", "", rest).strip("；; ")       # 练习题归出题那一步管，画面改不了
         if "都齐了" in rest:
             rest = ""
         vi = [] if pre else voice_items(word)                    # v1.20.0：例句念一遍、听一遍，听不清的也算“还要补”
@@ -1302,7 +1302,7 @@ def _items(line):
     """“还要补：a；b；c” → [a, b, c]（练习题归出题那一步管，不算）。"""
     line = line or ""
     rest = line.split("：", 1)[1] if line.startswith("还要补") and "：" in line else line
-    rest = re.sub(r"练习题 lianxi（[^）]*）[；;]?", "", rest)
+    rest = re.sub(r"(【练习题】)?练习题 lianxi（[^）]*）[；;]?", "", rest)
     return [x.strip() for x in re.split(r"[；;]", rest) if x.strip() and "都齐了" not in x]
 
 
