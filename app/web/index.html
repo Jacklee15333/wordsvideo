@@ -56,7 +56,7 @@ nav a .n{font-size:12px;background:var(--base);color:#fff;border-radius:9px;padd
 nav .foot{margin-top:auto;padding:14px 20px 0;font-size:12px;color:#9FB0C8;border-top:1px solid #33416A;line-height:1.7}
 nav .foot b{color:#fff;font-weight:500}
 main{flex:1;overflow:auto;padding:22px 30px 40px}
-section{display:none;max-width:1240px}
+section{display:none;max-width:none}
 section.on{display:block}
 h2{font:600 20px var(--ui);margin:0 0 16px}
 h3{font:600 15px var(--ui);margin:22px 0 10px}
@@ -2470,8 +2470,8 @@ $('#p-video').addEventListener('change',e=>{if(e.target.id==='vAll')$$('#vReady 
 /* 做好的视频 */
 function vVideos(vs){const all=vs.slice().reverse();
   $('#vListN').textContent=all.length?`（${all.length} 个）`:'';$$('[data-tn="vdone"]').forEach(e=>e.textContent=all.length||'');
-  const old=all.filter(v=>v.old);DONE.v=all.map(v=>({word:v.word,ts:v.ts,ver:v.ver?'视频技能 '+v.ver:'',batch:v.batch,file:v.file,old:v.old,size:v.size}));
-  $('#vList').innerHTML=(old.length?vOldBar(old.length):'')+'<div id="vListT"></div>';doneRender('v')}
+  const old=all.filter(v=>v.old);
+  $('#vList').innerHTML=(old.length?vOldBar(old.length):'')+'<div id="vListT"></div>';doneLoad('v')}
 /* v1.21.0：旧版视频（视频技能 6.43 以前做的）一起删掉：这些词回到「出视频」的选词列表，建批次开工就是新版 */
 function vOldBar(n){return `<div class="line" style="margin-bottom:8px;align-items:center;gap:10px"><span class="small muted hv" title="视频技能 6.43 起精简版再精简：读音拆分只念一块一块、词缀词根直接说“英语前缀”、同义词辨析只念单词给特写。这以前做的是旧版">旧版 ${n} 个</span><button class="btn warn sm" onclick="vDelOld(${n})">删掉旧版</button></div>`}
 function vDelOld(n){
@@ -2504,47 +2504,68 @@ async function clrOpen(w){let d;try{d=await api('/api/clear?what='+w)}catch(e){t
     let r;try{r=await api('/api/clear',{what:w,words:ws})}catch(e){r={ok:false,msg:e.message}}
     closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);
     try{if(w==='v')vVideosLoad();if(typeof vWordsLoad==='function')vWordsLoad();if(typeof loadPage==='function')loadPage(page)}catch(_){}}}
-/* v1.28.0：「做好的」标签——出题、画面、出视频三步一样：看每个词哪天做的、用的哪个版本；单个或者勾几个重做、删除，或者清空 */
-const DN={q:{name:'题目',page:'出题',box:'#qdoneBox',tn:'qdone'},p:{name:'画面',page:'画面',box:'#picdoneBox',tn:'picdone'},v:{name:'视频',page:'出视频',box:'#vListT',tn:'vdone'}};
-const DONE={q:[],p:[],v:[]},DSEL={q:new Set(),p:new Set(),v:new Set()},DFILT={q:'',p:'',v:''};
-async function doneLoad(w){const el=$(DN[w].box);if(!el)return;let d;try{d=await api('/api/done?what='+w)}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
+/* v1.28.0 / v1.31.0：「做好的」——单词（和意思）、内容（能展开、能改）、做好的时间、用的版本、备注、操作（改、重做、删除）；分页、搜索、只看选上的 */
+const DN={q:{name:'题目',page:'出题',box:'#qdoneBox',tn:'qdone'},p:{name:'画面',page:'含义拆分',box:'#picdoneBox',tn:'picdone'},v:{name:'视频',page:'出视频',box:'#vListT',tn:'vdone'}};
+const DONE={q:null,p:null,v:null},DSEL={q:new Set(),p:new Set(),v:new Set()},DFILT={q:'',p:'',v:''},DPG={q:1,p:1,v:1},DPICK={q:false,p:false,v:false},DOPEN={q:new Set(),p:new Set(),v:new Set()};
+let DFT=null;
+async function doneLoad(w){const el=$(DN[w].box);if(!el)return;let d;
+  try{d=await api(`/api/done?what=${w}&page=${DPG[w]}&size=50&find=${encodeURIComponent(DFILT[w])}&picked=${DPICK[w]?1:0}`)}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
   if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
-  DONE[w]=d.items||[];$$(`[data-tn="${DN[w].tn}"]`).forEach(e=>e.textContent=DONE[w].length||'');doneRender(w)}
-function doneRender(w){const el=$(DN[w].box);if(!el)return;const all=DONE[w],f=DFILT[w].trim().toLowerCase();
-  [...DSEL[w]].forEach(k=>{if(!all.find(x=>x.word===k))DSEL[w].delete(k)});
-  if(!all.length){el.innerHTML=`<p class="small muted" style="margin:0">还没有做好的${DN[w].name}。</p>`;return}
-  const it=f?all.filter(x=>((x.show||x.word)+' '+(x.meaning||'')).toLowerCase().includes(f)):all,n=DSEL[w].size;
+  DONE[w]=d;DPG[w]=d.page;$$(`[data-tn="${DN[w].tn}"]`).forEach(e=>e.textContent=d.all||'');doneRender(w)}
+function doneRender(w){const el=$(DN[w].box),d=DONE[w];if(!el||!d)return;const it=d.items,n=DSEL[w].size;
+  if(!d.all){el.innerHTML=`<p class="small muted" style="margin:0">还没有做好的${DN[w].name}。</p>`;return}
+  const nm=x=>x.show||x.word,more=(x,k)=>`<a href="#" class="dMore" data-w="${esc(x.word)}">${DOPEN[w].has(x.word)?'收起':'展开全部 '+k+' 行'}</a>`;
   el.innerHTML=`<div class="line" style="gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap">
-    <input class="dfilt" placeholder="找词…" value="${esc(DFILT[w])}" style="width:150px">
+    <input class="dfilt" placeholder="找词或意思…" value="${esc(DFILT[w])}" style="width:180px">
+    <label class="small" style="display:flex;gap:4px;align-items:center"><input type="checkbox" class="dpick" ${DPICK[w]?'checked':''}>只看「选词」里选上的</label>
     <button class="btn sm dRedo" ${n?'':'disabled'}>重做选中的${n?' '+n+' 个':''}</button>
     <button class="btn ghost sm dDel" ${n?'':'disabled'}>删除选中的${n?' '+n+' 个':''}</button>
-    <button class="btn warn sm dClr">清空（全部 ${all.length} 个）</button>
-    <span class="small faint">${f?'找到 '+it.length+' 个':'一共 '+all.length+' 个'}${n?'，选了 '+n+' 个':''}</span></div>
-  <div style="max-height:62vh;overflow:auto"><table style="width:100%"><tr><th style="width:28px"><input type="checkbox" class="dall" ${it.length&&it.every(x=>DSEL[w].has(x.word))?'checked':''}></th><th>单词</th><th>做好的时间</th><th>用的版本</th><th>${w==='v'?'批次':'备注'}</th><th></th></tr>
-  ${it.map(x=>`<tr><td><input type="checkbox" class="dck" value="${esc(x.word)}" ${DSEL[w].has(x.word)?'checked':''}></td>
-    <td><a href="#" class="w wpo" data-w="${esc(x.show||x.word)}" title="点开看这个词的单词简历">${esc(x.show||x.word)}</a>${x.meaning?`<div class="small faint">${esc(x.meaning)}</div>`:''}</td>
-    <td class="small" style="white-space:nowrap">${esc(x.ts||'')}</td>
-    <td class="small">${x.ver?esc(x.ver):'<span class="faint">没记（v1.28 以前做的）</span>'}${x.old?' <span class="tag">旧版</span>':''}</td>
-    <td class="small faint">${esc(w==='v'?(x.batch||''):(x.note||''))}</td>
-    <td style="white-space:nowrap">${w==='v'&&x.file?`<a href="#" class="dPlay" data-f="${esc(x.file)}" data-w="${esc(x.word)}">▶ 播放</a>　`:''}<a href="#" class="dOne" data-op="redo" data-w="${esc(x.word)}">重做</a>　<a href="#" class="dOne" data-op="delete" data-w="${esc(x.word)}" style="color:var(--red)">删除</a></td></tr>`).join('')}</table></div>`;
-  const fi=el.querySelector('.dfilt');fi.oninput=()=>{DFILT[w]=fi.value;const p=fi.selectionStart;doneRender(w);const g=$(DN[w].box).querySelector('.dfilt');g.focus();g.setSelectionRange(p,p)};
+    <button class="btn warn sm dClr">清空${DFILT[w]||DPICK[w]?'找到的':'全部'} ${d.total} 个</button>
+    <span style="flex:1"></span><span class="small faint">${d.total===d.all?'一共 '+d.all+' 个':'找到 '+d.total+' 个（一共 '+d.all+'）'}${n?'，选了 '+n+' 个':''}　第 ${d.page} / ${d.pages} 页</span>
+    <button class="btn ghost sm dPrev" ${d.page>1?'':'disabled'}>上一页</button><button class="btn ghost sm dNext" ${d.page<d.pages?'':'disabled'}>下一页</button></div>
+  <table class="dtab" style="width:100%;table-layout:fixed"><colgroup><col style="width:30px"><col style="width:180px"><col><col style="width:150px"><col style="width:170px"><col style="width:180px"><col style="width:${w==='v'?160:130}px"></colgroup>
+  <tr><th><input type="checkbox" class="dall" ${it.length&&it.every(x=>DSEL[w].has(x.word))?'checked':''}></th><th>单词</th><th>${w==='q'?'题目内容':w==='p'?'画面的各块':'视频'}</th><th>做好的时间</th><th>用的版本</th><th>备注</th><th>操作</th></tr>
+  ${it.map(x=>{const L=x.lines||[],op=DOPEN[w].has(x.word),show=op?L:L.slice(0,3);return `<tr style="vertical-align:top"><td><input type="checkbox" class="dck" value="${esc(x.word)}" ${DSEL[w].has(x.word)?'checked':''}></td>
+    <td><a href="#" class="w wpo" data-w="${esc(nm(x))}" title="点开看单词简历">${esc(nm(x))}</a>${x.meaning?`<div class="small faint">${esc(x.meaning)}</div>`:''}</td>
+    <td class="small" style="line-height:1.65;word-break:break-word">${show.map(esc).join('<br>')||'<span class="faint">—</span>'}${L.length>3?'<div>'+more(x,L.length)+'</div>':''}<div class="dEd" data-w="${esc(x.word)}"></div></td>
+    <td class="small">${esc(x.ts||'')}</td><td class="small">${x.ver?esc(x.ver):'<span class="faint">没记（v1.28 以前做的）</span>'}${x.old?' <span class="tag">旧版</span>':''}</td>
+    <td class="small faint" style="word-break:break-word">${esc(x.note||'')}</td>
+    <td style="white-space:nowrap;line-height:1.9">${w==='v'&&x.file?`<a href="#" class="dPlay" data-f="${esc(x.file)}" data-w="${esc(x.word)}">▶ 播放</a><br>`:''}${w!=='v'?`<a href="#" class="dEdit" data-w="${esc(x.word)}">改</a>　`:''}<a href="#" class="dOne" data-op="redo" data-w="${esc(x.word)}">重做</a>　<a href="#" class="dOne" data-op="delete" data-w="${esc(x.word)}" style="color:var(--red)">删除</a></td></tr>`}).join('')}</table>`;
+  const fi=el.querySelector('.dfilt');fi.oninput=()=>{DFILT[w]=fi.value;DPG[w]=1;clearTimeout(DFT);DFT=setTimeout(async()=>{await doneLoad(w);const g=$(DN[w].box).querySelector('.dfilt');if(g){g.focus();g.setSelectionRange(g.value.length,g.value.length)}},350)};
+  el.querySelector('.dpick').onchange=e=>{DPICK[w]=e.target.checked;DPG[w]=1;doneLoad(w)};
+  el.querySelector('.dPrev').onclick=()=>{DPG[w]--;doneLoad(w)};el.querySelector('.dNext').onclick=()=>{DPG[w]++;doneLoad(w)};
   el.querySelector('.dall').onchange=e=>{it.forEach(x=>e.target.checked?DSEL[w].add(x.word):DSEL[w].delete(x.word));doneRender(w)};
   el.querySelectorAll('.dck').forEach(c=>c.onchange=()=>{c.checked?DSEL[w].add(c.value):DSEL[w].delete(c.value);doneRender(w)});
+  el.querySelectorAll('.dMore').forEach(a=>a.onclick=e=>{e.preventDefault();DOPEN[w].has(a.dataset.w)?DOPEN[w].delete(a.dataset.w):DOPEN[w].add(a.dataset.w);doneRender(w)});
   el.querySelector('.dRedo').onclick=()=>doneAsk(w,'redo',[...DSEL[w]]);
   el.querySelector('.dDel').onclick=()=>doneAsk(w,'delete',[...DSEL[w]]);
-  el.querySelector('.dClr').onclick=()=>doneAsk(w,'delete',all.map(x=>x.word),true);
+  el.querySelector('.dClr').onclick=()=>doneAsk(w,'clearall',[],d.total);
   el.querySelectorAll('.dOne').forEach(a=>a.onclick=e=>{e.preventDefault();doneAsk(w,a.dataset.op,[a.dataset.w])});
-  el.querySelectorAll('.dPlay').forEach(a=>a.onclick=e=>{e.preventDefault();vPlay(a.dataset.f,a.dataset.w)})}
-function doneAsk(w,op,words,isAll){if(!words.length)return;const nm=DN[w].name,n=words.length,show=words.map(k=>{const x=DONE[w].find(y=>y.word===k);return x&&x.show||k});
-  const t=op==='redo'?`重做 ${n} 个词的${nm}？`:isAll?`清空全部 ${n} 个做好的${nm}？`:`删除 ${n} 个词的${nm}？`;
+  el.querySelectorAll('.dPlay').forEach(a=>a.onclick=e=>{e.preventDefault();vPlay(a.dataset.f,a.dataset.w)});
+  el.querySelectorAll('.dEdit').forEach(a=>a.onclick=e=>{e.preventDefault();const x=it.find(y=>y.word===a.dataset.w);if(w==='p'){wpOpen(nm(x));return}
+    const box=el.querySelector(`.dEd[data-w="${CSS.escape(x.word)}"]`);if(box.innerHTML){box.innerHTML='';return}
+    box.innerHTML=`<p class="small muted" style="margin:8px 0 4px">7 道题的原稿（一行一道题，格式和「没过的词」里改稿一样）。改好先点「检查」，没问题再「保存」：保存时按出题的规矩体检，过了才存进词库、上传。</p>
+      <textarea style="width:100%;height:220px;font-family:var(--mono,monospace);font-size:12px">${esc(x.draft||'')}</textarea>
+      <div class="line" style="gap:8px;margin-top:6px"><button class="btn ghost sm qChk">检查</button><button class="btn sm qSave">保存</button><button class="btn ghost sm qNo">不改了</button><span class="small qMsg"></span></div>`;
+    const ta=box.querySelector('textarea'),msg=box.querySelector('.qMsg');box.querySelector('.qNo').onclick=()=>box.innerHTML='';
+    const go=async save=>{msg.textContent='正在检查…';let r;try{r=await api('/api/word/check',{word:x.word,draft:ta.value,save})}catch(err){msg.textContent='✗ '+err.message;return}
+      if(r.errors&&r.errors.length){msg.innerHTML='<span style="color:var(--red)">✗ '+r.errors.map(esc).join('；')+'</span>';return}
+      if(save){toast('✓ 保存了 '+x.word+' 的题目（体检过了）',5000);doneLoad(w)}else msg.innerHTML='<span style="color:var(--pass)">✓ 体检通过，可以保存</span>'};
+    box.querySelector('.qChk').onclick=()=>go(false);box.querySelector('.qSave').onclick=()=>go(true)})}
+function doneAsk(w,op,words,total){const all=op==='clearall',n=all?total:words.length;if(!n)return;const nm=DN[w].name;
+  const show=all?[]:words.map(k=>{const x=(DONE[w].items||[]).find(y=>y.word===k);return x&&x.show||k});
+  const big=all||n>50;
+  const t=op==='redo'?`重做 ${n} 个词的${nm}？`:all?`清空 ${n} 个做好的${nm}？`:`删除 ${n} 个词的${nm}？`;
   const what=op==='redo'?`现在的${nm}删掉，这些词回到「${DN[w].page}」要做的列表（自动选上），按新的技能重做。`:`现在的${nm}删掉。`;
   modal(t,`<p class="small" style="margin-top:0">${what}${w==='v'?'<b>视频文件会从出片文件夹里删掉，删了找不回来。</b>':'词库的改动会上传 GitHub，以前的在 GitHub 历史里还找得到。'}</p>
-    <p class="small faint" style="max-height:22vh;overflow:auto;margin:0">${show.slice(0,80).map(esc).join('、')}${n>80?' 等':''}</p>
-    <div class="line" style="gap:8px;margin-top:12px"><button class="btn ${op==='redo'?'':'warn'}" id="dnGo">${op==='redo'?'重做':isAll?'清空':'删除'}${n>1?' '+n+' 个':''}</button><button class="btn ghost" id="dnNo">不了</button></div>`);
+    ${all?`<p class="small" style="margin:0">${DFILT[w]||DPICK[w]?'按现在找的、筛的这 '+n+' 个':'<b>全部 '+n+' 个</b>'}</p>`:`<p class="small faint" style="max-height:22vh;overflow:auto;margin:0">${show.slice(0,80).map(esc).join('、')}${n>80?' 等':''}</p>`}
+    ${big?`<p class="small" style="margin:10px 0 4px;color:var(--red)">数量多，请在下面打“确定”两个字再点按钮：</p><input id="dnSure" style="width:120px">`:''}
+    <div class="line" style="gap:8px;margin-top:12px"><button class="btn ${op==='redo'?'':'warn'}" id="dnGo" ${big?'disabled':''}>${op==='redo'?'重做':all?'清空':'删除'} ${n} 个</button><button class="btn ghost" id="dnNo">不了</button></div>`);
+  if(big)$('#dnSure').oninput=e=>{$('#dnGo').disabled=e.target.value.trim()!=='确定'};
   $('#dnNo').onclick=closeModal;
-  $('#dnGo').onclick=async()=>{const b=$('#dnGo');b.disabled=true;b.textContent='正在处理…';let r;try{r=await api('/api/done',{op,what:w,words})}catch(e){r={ok:false,msg:e.message}}
-    closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);words.forEach(x=>DSEL[w].delete(x));
-    if(w==='v'){vVideosLoad();if(typeof vWordsLoad==='function')vWordsLoad()}else doneLoad(w)}}
+  $('#dnGo').onclick=async()=>{const b=$('#dnGo');b.disabled=true;b.textContent='正在处理…';let r;try{r=await api('/api/done',{op,what:w,words,find:DFILT[w],picked:DPICK[w]})}catch(e){r={ok:false,msg:e.message}}
+    closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);(all?[...DSEL[w]]:words).forEach(x=>DSEL[w].delete(x));
+    doneLoad(w);if(w==='v'&&typeof vWordsLoad==='function')vWordsLoad()}}
 /* v1.29.0：单词简历——一个词的视频分成哪几块、每块从哪来、做好没、什么时候用哪个版本做的；能看、能改（画面设置那几块）、能单独重做 */
 document.addEventListener('click',e=>{const a=e.target.closest('.wpo');if(!a)return;e.preventDefault();e.stopPropagation();wpOpen(a.dataset.w)});
 const WPST={ok:['✓ 做好了','var(--pass)'],fix:['⚠ 要补','var(--amber)'],none:['— 还没有','var(--faint,#999)'],nopic:['— 还没做画面','var(--faint,#999)']};
@@ -2585,18 +2606,36 @@ function blkRender(id,d){const el=$('#b_'+id+'Box'),sel=BSEL[id]=BSEL[id]||new S
   if(!d.items.length){el.innerHTML='<p class="small muted" style="margin:0">「选词」里还没有选上的词。</p>';return}
   const chip=(k,t)=>`<a href="#" class="bfc" data-f="${k}" style="${f===k?'font-weight:700;text-decoration:underline':''}">${t}</a>`;
   el.innerHTML=`<div class="line" style="gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:8px">${chip('','全部 '+d.items.length)}${chip('fix','要补 '+(c.fix||0))}${chip('none','还没有 '+(c.none||0))}${chip('ok','做好了 '+(c.ok||0))}${c.nopic?chip('nopic','还没做画面 '+c.nopic):''}${c.na?chip('na','这个词不用 '+c.na):''}
-    <span style="flex:1"></span><button class="btn sm bRedo" ${n?'':'disabled'}>只重做这一块${n?'（'+n+' 个）':''}</button><button class="btn ghost sm" onclick="go('pic')">去补画面 ▶</button></div>
-  <div style="max-height:64vh;overflow:auto"><table style="width:100%"><tr><th style="width:28px"><input type="checkbox" class="ball"></th><th>单词</th><th>这一块</th><th>内容</th><th></th></tr>
-  ${it.map(x=>{const [t,col]=BST[x.status]||['',''],can=x.status!=='nopic'&&x.status!=='na';return `<tr><td>${can?`<input type="checkbox" class="bck" value="${esc(x.word)}" ${sel.has(x.word)?'checked':''}>`:''}</td>
-    <td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a><div class="small faint">${esc(x.meaning||'')}</div></td>
-    <td style="white-space:nowrap"><span style="color:${col};font-weight:600" class="small">${t}</span>${x.ts?`<div class="small faint">${esc(x.ts.slice(0,10))}${x.ver?' · '+esc(x.ver):''}</div>`:''}</td>
-    <td class="small">${x.lines.map(esc).join('<br>')}${x.issues.length?`<div style="color:var(--red)">要补：${x.issues.map(esc).join('；')}</div>`:''}</td>
-    <td style="white-space:nowrap">${can?`<a href="#" class="bOne" data-w="${esc(x.word)}">只重做这一块</a>`:''}</td></tr>`}).join('')}</table></div>`;
+    <span style="flex:1"></span><button class="btn sm bRedo" ${n?'':'disabled'}>只重做这一块${n?'（'+n+' 个）':''}</button><button class="btn ghost sm bClr" ${n?'':'disabled'}>删掉这一块${n?'（'+n+' 个）':''}</button><button class="btn ghost sm" onclick="go('pic')">去补画面 ▶</button></div>
+  <table style="width:100%;table-layout:fixed"><colgroup><col style="width:30px"><col style="width:170px"><col><col style="width:150px"><col style="width:160px"><col style="width:200px"><col style="width:170px"></colgroup>
+  <tr><th><input type="checkbox" class="ball"></th><th>单词</th><th>${esc(d.name)}的内容</th><th>做好的时间</th><th>用的版本</th><th>备注</th><th>操作</th></tr>
+  ${it.map(x=>{const [t,col]=BST[x.status]||['',''],can=x.status!=='nopic'&&x.status!=='na';return `<tr style="vertical-align:top"><td>${can?`<input type="checkbox" class="bck" value="${esc(x.word)}" ${sel.has(x.word)?'checked':''}>`:''}</td>
+    <td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a><div class="small faint">${esc(x.meaning||'')}</div><div class="small" style="color:${col};font-weight:600">${t}</div></td>
+    <td class="small" style="line-height:1.65;word-break:break-word">${x.lines.map(esc).join('<br>')||'<span class="faint">—</span>'}<div class="bEd" data-w="${esc(x.word)}"></div></td>
+    <td class="small">${esc((x.ts||'').slice(0,10))}</td><td class="small">${x.ver?esc(x.ver):(x.ts?'<span class="faint">没记（v1.28 以前做的）</span>':'')}</td>
+    <td class="small" style="word-break:break-word;color:${x.issues.length?'var(--red)':'inherit'}">${x.issues.length?'要补：'+x.issues.map(esc).join('；'):''}</td>
+    <td style="white-space:nowrap;line-height:1.9">${can?`<a href="#" class="bEdit" data-w="${esc(x.word)}">改</a>　<a href="#" class="bOne" data-w="${esc(x.word)}">只重做</a>　<a href="#" class="bDel" data-w="${esc(x.word)}" style="color:var(--red)">删掉</a>`:''}</td></tr>`}).join('')}</table>`;
   el.querySelectorAll('.bfc').forEach(a=>a.onclick=e=>{e.preventDefault();BF[id]=a.dataset.f;blkRender(id,d)});
   el.querySelector('.ball').onchange=e=>{el.querySelectorAll('.bck').forEach(c=>e.target.checked?sel.add(c.value):sel.delete(c.value));blkRender(id,d)};
   el.querySelectorAll('.bck').forEach(c=>c.onchange=()=>{c.checked?sel.add(c.value):sel.delete(c.value);blkRender(id,d)});
   el.querySelector('.bRedo').onclick=()=>blkAsk(id,d.name,[...sel]);
-  el.querySelectorAll('.bOne').forEach(a=>a.onclick=e=>{e.preventDefault();blkAsk(id,d.name,[a.dataset.w])})}
+  el.querySelector('.bClr').onclick=()=>blkClr(id,d.name,[...sel]);
+  el.querySelectorAll('.bOne').forEach(a=>a.onclick=e=>{e.preventDefault();blkAsk(id,d.name,[a.dataset.w])});
+  el.querySelectorAll('.bDel').forEach(a=>a.onclick=e=>{e.preventDefault();blkClr(id,d.name,[a.dataset.w])});
+  el.querySelectorAll('.bEdit').forEach(a=>a.onclick=async e=>{e.preventDefault();const box=el.querySelector(`.bEd[data-w="${CSS.escape(a.dataset.w)}"]`);if(box.innerHTML){box.innerHTML='';return}
+    let p;try{p=await api('/api/profile?word='+encodeURIComponent(a.dataset.w))}catch(err){toast('✗ '+err.message,8000);return}
+    const s=(p.sections||[]).find(z=>z.id===id);if(!s||!s.editable){toast('✗ 这一块不能在这里改',6000);return}
+    box.innerHTML=`<p class="small muted" style="margin:8px 0 4px">这一块在画面设置里的样子（JSON）。改好点「保存」：写回画面设置，出片前再做一次起草检查。</p><textarea style="width:100%;height:240px;font-family:var(--mono,monospace);font-size:12px">${esc(JSON.stringify(s.data||{},null,1))}</textarea>
+      <div class="line" style="gap:8px;margin-top:6px"><button class="btn sm bSave">保存</button><button class="btn ghost sm bNo">不改了</button><span class="small bMsg"></span></div>`;
+    box.querySelector('.bNo').onclick=()=>box.innerHTML='';
+    box.querySelector('.bSave').onclick=async()=>{let data;try{data=JSON.parse(box.querySelector('textarea').value)}catch(err){box.querySelector('.bMsg').textContent='✗ JSON 格式不对：'+err.message;return}
+      const r=await api('/api/profile',{op:'save',word:a.dataset.w,sec:id,data});toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?5000:9000);if(r.ok)blkLoad(id)}})}
+function blkClr(id,name,words){if(!words.length)return;
+  modal(`删掉「${name}」（${words.length} 个词）？`,`<p class="small" style="margin-top:0">这几个词画面设置里的「${esc(name)}」清空，退回去等着重做这一块（别的块不动）。词库的改动会上传 GitHub，以前的在 GitHub 历史里还找得到。</p>
+    <p class="small faint" style="max-height:16vh;overflow:auto;margin:0">${words.map(esc).join('、')}</p>
+    <div class="line" style="gap:8px;margin-top:12px"><button class="btn warn" id="bcGo">删掉这一块</button><button class="btn ghost" id="bcNo">不了</button></div>`);
+  $('#bcNo').onclick=closeModal;
+  $('#bcGo').onclick=async()=>{let r;try{r=await api('/api/blocks',{op:'clear',sec:id,words})}catch(e){r={ok:false,msg:e.message}}closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?7000:9000);(BSEL[id]||new Set()).clear();blkLoad(id)}}
 function blkAsk(id,name,words){if(!words.length)return;
   modal(`只重做「${name}」（${words.length} 个词）？`,`<p class="small" style="margin-top:0">这几个词退回去：补画面时只交给 AI 重做「${esc(name)}」这一块，别的块不动。退回以后到「含义拆分 → 一次做全」点「补画面」。</p>
     <p class="small faint" style="max-height:16vh;overflow:auto;margin:0 0 8px">${words.map(esc).join('、')}</p>

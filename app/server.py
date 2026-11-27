@@ -710,7 +710,7 @@ GET = {
     "/api/relay": api_relay_get,
     "/api/relay/auto": lambda qs: C.relay_auto(qs),
     "/api/clear": lambda qs: CL.listing(qs.get("what", "")),          # v1.27.0
-    "/api/done": lambda qs: CL.done_list(qs.get("what", "")),         # v1.28.0：「做好的」标签
+    "/api/done": lambda qs: CL.done_page(qs.get("what", ""), qs.get("find", ""), int(qs.get("page") or 1), int(qs.get("size") or 50), qs.get("picked") == "1"),         # v1.28.0 / v1.31.0：分页
     "/api/profile": lambda qs: SEC.profile(qs.get("word", "")),      # v1.29.0：单词简历
     "/api/blocks": lambda qs: SEC.blocks(qs.get("sec", "")),          # v1.30.0：按块的步骤
     "/api/imp": lambda qs: SEC.imp_list(),                            # v1.30.0：导入（不用 AI 的几块）                # v1.22.0：浏览器小助手来问
@@ -740,8 +740,8 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/words-task": api_words_task,
         "/api/prep": api_prep,
         "/api/clear": lambda b: CL.clear(b.get("what"), b.get("words") or []),      # v1.27.0
-        "/api/done": lambda b: CL.done_op(b.get("op"), b.get("what"), b.get("words") or []),      # v1.28.0
-        "/api/blocks": lambda b: SEC.redo_many(b.get("sec", ""), b.get("words") or [], b.get("note", "")),      # v1.30.0
+        "/api/done": lambda b: CL.done_op(b.get("op"), b.get("what"), b.get("words") or [], b.get("find", ""), bool(b.get("picked"))),      # v1.28.0
+        "/api/blocks": lambda b: SEC.clear_block(b.get("sec", ""), b.get("words") or []) if b.get("op") == "clear" else SEC.redo_many(b.get("sec", ""), b.get("words") or [], b.get("note", "")),      # v1.30.0 / v1.31.0
         "/api/profile": lambda b: SEC.save(b.get("word", ""), b.get("sec", ""), b.get("data")) if b.get("op") == "save" else SEC.redo(b.get("word", ""), b.get("sec", ""), b.get("note", "")),      # v1.29.0
         "/api/check": lambda b: CK.fix_all() if b.get("op") == "fix" else CK.start(b.get("what") or "all"),      # v1.21.1：一键修复
         "/api/qres": lambda b: RS.export_words(b.get("words") or []),

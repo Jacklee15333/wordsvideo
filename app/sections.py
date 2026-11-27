@@ -72,6 +72,23 @@ def _has(v):
     return v not in (None, "", False)
 
 
+def _pic(p):
+    """一幅画（{bg, img, items, text…}）说成一句话"""
+    if not isinstance(p, dict):
+        return str(p)[:60]
+    bits = []
+    img = str(p.get("img") or p.get("bg") or "")
+    if img:
+        bits.append("背景 " + img.split("/")[-1].replace(".svg", ""))
+    its = [str(i.get("svg") or i.get("emoji") or i.get("text") or "").split("/")[-1].replace(".svg", "") for i in (p.get("items") or []) if isinstance(i, dict)]
+    its = [i for i in its if i]
+    if its:
+        bits.append("画了 %d 样：%s" % (len(its), "、".join(its[:6]) + ("…" if len(its) > 6 else "")))
+    if p.get("text"):
+        bits.append("字：" + str(p["text"])[:30])
+    return "；".join(bits) or "（空的）"
+
+
 def _brief(sec, part, trow, rec):
     """给人看的几行"""
     L = []
@@ -84,19 +101,23 @@ def _brief(sec, part, trow, rec):
         elif sid == "parts":
             L.append("拆分（总表）：" + (trow.get("拆分") or "—"))
             for k in ("partPics", "icons"):
-                if part.get(k):
-                    L.append("%s：%s" % ({"partPics": "每一部分的画", "icons": "小图标"}[k], "、".join(map(str, (part[k].keys() if isinstance(part[k], dict) else part[k])))[:200]))
+                v = part.get(k)
+                if isinstance(v, dict):
+                    for pk, pv in list(v.items())[:4]:
+                        L.append("%s %s：%s" % ({"partPics": "画", "icons": "图标"}[k], pk, _pic(pv) if isinstance(pv, dict) else str(pv)[:40]))
+                elif v:
+                    L.append("%s：%s" % ({"partPics": "每一部分的画", "icons": "小图标"}[k], str(v)[:120]))
         elif sid == "combo":
             L.append("组合 → 现在的含义（总表）：" + (trow.get("组合 → 现在的含义") or "—")[:160])
             if part.get("comboPic"):
-                L.append("拼起来那一格的画：" + str(part["comboPic"])[:120])
+                L.append("拼起来那一格的画：" + _pic(part["comboPic"]))
         elif sid == "scene":
             for i, x in enumerate(part.get("pics") or []):
-                L.append("第 %d 个意思：%s%s" % (i + 1, str(x.get("text") or "")[:60], ("（背景 %s）" % x["bg"]) if x.get("bg") else ""))
+                L.append("第 %d 个意思：%s" % (i + 1, _pic(x)))
         elif sid == "example":
             for i, x in enumerate(part.get("pics") or []):
                 if x.get("ex"):
-                    L.append("第 %d 个意思的例句：%s　%s" % (i + 1, x.get("ex"), x.get("exzh") or ""))
+                    L.append("第 %d 个意思的例句：%s　%s%s" % (i + 1, x.get("ex"), x.get("exzh") or "", ("　动画：" + _pic(x["exPic"])) if isinstance(x.get("exPic"), dict) else ""))
         elif sid == "evolve":
             for i, x in enumerate(part.get("flow") or []):
                 L.append("%d. %s" % (i + 1, (x.get("node") or x.get("say") or "") if isinstance(x, dict) else x))
@@ -348,3 +369,33 @@ def imp_list():
                       "flags": flags, "rows": len(rs)})
     items.sort(key=lambda x: (not x["flags"], x["word"].lower()))
     return {"ok": True, "items": items, "version": C.STATE.get("version") or ""}
+
+
+
+def clear_block(sid, words):
+    """v1.31.0：删掉这几个词的这一块（画面设置里这一块清空），退回「画面」等着重做"""
+    s = BY_ID.get(sid)
+    if not s or sid not in AI_EDIT:
+        return {"ok": False, "msg": "这一块不能在这里删"}
+    words = [w for w in (words or []) if isinstance(w, str) and w.strip()]
+    done = []
+    with C.REPO_LOCK:
+        for w in words:
+            pp, P = _prefs(w)
+            if P is None:
+                continue
+            for k in s["keys"]:
+                if k == "pics" and s.get("fields"):
+                    for x in P.get("pics") or []:
+                        if isinstance(x, dict):
+                            for f in s["fields"]:
+                                x.pop(f, None)
+                else:
+                    P.pop(k, None)
+            pp.write_text(json.dumps(P, ensure_ascii=False, indent=1), encoding="utf-8")
+            done.append(w)
+    if not done:
+        return {"ok": False, "msg": "选的词还没有画面设置"}
+    import pics
+    pics.send_back({w: ["用户删掉了「%s」这一块，要按最新的视频技能重做这一块，别的照旧" % s["name"]] for w in done}, src="「%s」删掉" % s["name"])
+    return {"ok": True, "n": len(done), "msg": "删掉了 %d 个词的「%s」：退回去了，到「一次做全」点「补画面」重做这一块" % (len(done), s["name"])}

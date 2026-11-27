@@ -217,7 +217,9 @@ def done_list(what):
     return {"ok": False, "msg": "不认识要列什么"}
 
 
-def done_op(op, what, words):
+def done_op(op, what, words, find="", picked=False):
+    if op == "clearall":                                 # v1.31.0：清空（按现在的搜索、筛选，服务器上算出是哪些词）
+        words, op = done_all_words(what, find, picked), "delete"
     words = [w for w in (words or []) if isinstance(w, str) and w.strip()]
     if op not in ("redo", "delete"):
         return {"ok": False, "msg": "不认识要做什么"}
@@ -233,3 +235,90 @@ def done_op(op, what, words):
         page = {"q": "出题", "p": "画面", "v": "出视频"}[what]
         r["msg"] = "重做 %d 个：现在的%s删掉了，这些词回到「%s」要做的列表（选上了），按新的技能做" % (r.get("n", len(real)), NAMES[what], page)
     return r
+
+
+
+# ═══════════════ v1.31.0：「做好的」列表——单词、内容（能改）、时间、版本、备注、操作；分页、搜索 ═══════════════
+# 用户：“我希望每个列表都要有具体的内容……单词：显示单词和含义；题目内容……还可以进行修改；做好的时间，用的版本，备注这些放后面去……所有做好的界面都要这样”
+def _q_lines(qs):
+    out = []
+    for i, q in enumerate(qs or []):
+        if not isinstance(q, dict):
+            continue
+        stem = str(q.get("stem") or q.get("zh") or "").replace("\n", " / ")
+        lis = str(q.get("listen") or "")
+        opts = q.get("opts") or []
+        ans = q.get("answer") or q.get("ans") or ""
+        t = "%d. %s%s%s%s" % (i + 1, ("（%s）" % q["type"]) if q.get("type") else "", ("听：" + lis + "　") if lis else "", stem,
+                              ("　" + "　".join("%s. %s" % ("ABCD"[j] if j < 4 else j + 1, o) for j, o in enumerate(opts))) if opts else "")
+        if ans:
+            t += "　答案：%s" % ans
+        out.append(t)
+    return out
+
+
+def done_page(what, find="", page=1, size=50, picked=False):
+    r = done_list(what)
+    if not r.get("ok"):
+        return r
+    items = r["items"]
+    if picked:
+        try:
+            import pool
+            pool._db()
+            ps = {x["word"] for x in C.q("SELECT word FROM pool WHERE picked=1")}
+            items = [x for x in items if x.get("show", x["word"]) in ps or x["word"] in ps or V.folder_of(x.get("show", x["word"])) in {V.folder_of(p) for p in ps}]
+        except Exception:
+            pass
+    f = (find or "").strip().lower()
+    if f:
+        items = [x for x in items if f in (str(x.get("show") or x["word"]) + " " + str(x.get("meaning") or "")).lower()]
+    total = len(items)
+    size = max(10, min(200, int(size or 50)))
+    pages = max(1, (total + size - 1) // size)
+    page = max(1, min(pages, int(page or 1)))
+    cut = items[(page - 1) * size: page * size]
+    meaning, rel, _ = _index_maps()
+    if what == "q":
+        for x in cut:
+            rec = _rec(rel[x["word"]])[1] if rel.get(x["word"]) else None
+            qs = (rec or {}).get("题目原稿") or []
+            x["lines"] = _q_lines(qs)
+            try:
+                x["draft"] = "\n".join(C.to_compact(qs) or [])
+            except Exception:
+                x["draft"] = ""
+    elif what == "p":
+        import sections as SEC
+        for x in cut:
+            w = x.get("show") or x["word"]
+            _, P = SEC._prefs(w)
+            rec = _rec(rel[w])[1] if rel.get(w) else None
+            todo = SEC._todo_of(rec)
+            line = []
+            for s in SEC.SECTIONS:
+                if s["id"] not in ("parts", "combo", "scene", "evolve", "example", "dist"):
+                    continue
+                part = SEC._slice(P, s) if P else {}
+                iss = [t for t in todo if SEC._sec_of(t) == s["id"]]
+                line.append("%s %s" % (s["name"], "⚠" if iss else ("✓" if SEC._has(part) else "—")))
+            x["lines"] = ["　".join(line)] + (["要补：" + "；".join(todo)[:300]] if todo else [])
+    elif what == "v":
+        for x in cut:
+            x["meaning"] = meaning.get(x["word"].replace("_", " "), "") or meaning.get(x["word"], "")
+            x["lines"] = ["批次 %s · %s" % (x.get("batch", ""), str(x.get("file", "")).replace("\\", "/").split("/")[-1])]
+    return {"ok": True, "items": cut, "total": total, "page": page, "pages": pages, "size": size, "all": len(r["items"])}
+
+
+def done_all_words(what, find="", picked=False):
+    r = done_page(what, find, 1, 200, picked)
+    if not r.get("ok"):
+        return []
+    out, pg = [], 1
+    while True:
+        out += [x["word"] for x in r["items"]]
+        if pg >= r["pages"]:
+            break
+        pg += 1
+        r = done_page(what, find, pg, 200, picked)
+    return out
