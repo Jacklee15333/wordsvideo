@@ -1020,7 +1020,16 @@ details.vgk>.vgo{margin-top:6px}
   <div class="phead"><div><h2><i class="sn">4</i>导入：不用 AI 的几块</h2>
     <p class="muted">片头的意思、词根词缀卡上的字（拆分）、考点、辨析从总表来，读音拆分从音节表来，都不用 AI 做。这里看选上的每个词总表里有没有、缺什么（缺的到总表补）。勾几个点「让 AI 核对」，AI 核对这些对不对，结果写在最后一栏。</p></div></div>
   
+  <div class="mtabs stabs"><a data-go="imp" class="on">总表</a><a data-go="impdraft" class="">配音稿（起草） <b class="tc" data-tc="impdraft"></b></a></div>
   <div class="box"><div id="impBox"><p class="small muted">正在读…</p></div></div>
+</section>
+
+<section id="p-impdraft">
+  <div class="phead"><div><h2><i class="sn">4</i>导入：配音稿（起草）</h2>
+    <p class="muted">“起草”＝视频技能按总表和画面设置写出这个词视频里要念的话（精简版配音稿），顺便做一遍起草检查（还要补什么）。不用 AI，在 WSL 里跑，一个词几秒到十几秒。
+      各块页面里“视频里说的”就是这里起草出来的。没做画面的词也能起草：总表来的几块先写出来；画面设置改过以后标“要重新起草”。</p></div></div>
+  <div class="mtabs stabs"><a data-go="imp" class="">总表</a><a data-go="impdraft" class="on">配音稿（起草） <b class="tc" data-tc="impdraft"></b></a></div>
+  <div class="box"><div id="impdraftBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
 <section id="p-picfail">
@@ -1323,11 +1332,11 @@ let WD_HOME=null;
 function wdHome(){const b=$('#wDetail');if(b&&WD_HOME&&b.parentElement!==WD_HOME)WD_HOME.appendChild(b)}
 function wordInModal(w,title){const b=$('#wDetail');if(!WD_HOME)WD_HOME=b.parentElement;modal((title||'改稿：')+w,'');$('#mBody').appendChild(b);openWord(w,true)}
 let page='check';
-const PARENT={qdone:'q',picdone:'pic',b_parts:'pic',b_combo:'pic',b_scene:'pic',b_evolve:'pic',b_example:'pic',pickhist:'pick',words:'pick',qset:'q',history:'q',qfail:'q',qbulk:'q',picfail:'pic',picbulk:'pic',pichist:'pic',vdone:'video',vhist:'video',venv:'video'};
+const PARENT={impdraft:'imp',qdone:'q',picdone:'pic',b_parts:'pic',b_combo:'pic',b_scene:'pic',b_evolve:'pic',b_example:'pic',pickhist:'pick',words:'pick',qset:'q',history:'q',qfail:'q',qbulk:'q',picfail:'pic',picbulk:'pic',pichist:'pic',vdone:'video',vhist:'video',venv:'video'};
 function go(p){if(p==='manual')p='q';if(p==='run')p='q';page=p;const top=PARENT[p]||p;
   $$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===top));
   $$('main section').forEach(s=>s.classList.toggle('on',s.id==='p-'+p));
-  ({check:loadCheck,pick:loadPick,q:loadQ,qdone:()=>doneLoad('q'),picdone:()=>doneLoad('p'),b_parts:()=>blkLoad('parts'),b_combo:()=>blkLoad('combo'),b_scene:()=>blkLoad('scene'),b_evolve:()=>blkLoad('evolve'),b_example:()=>blkLoad('example'),b_dist:()=>blkLoad('dist'),imp:loadImp,qfail:loadManual,qbulk:loadQbulk,qset:loadQset,pic:loadPic,picfail:loadPicfail,picbulk:loadPicbulk,pichist:loadPichist,pickhist:loadPickhist,done:loadDone,ai:loadAI,video:loadVideo,vdone:loadVdone,vhist:loadVhist,venv:loadVenv,words:loadWords,history:loadHistory,settings:loadSettings,home:loadHome}[p]||(()=>{}))()}
+  ({check:loadCheck,pick:loadPick,q:loadQ,qdone:()=>doneLoad('q'),picdone:()=>doneLoad('p'),b_parts:()=>blkLoad('parts'),b_combo:()=>blkLoad('combo'),b_scene:()=>blkLoad('scene'),b_evolve:()=>blkLoad('evolve'),b_example:()=>blkLoad('example'),b_dist:()=>blkLoad('dist'),imp:loadImp,impdraft:loadDraft,qfail:loadManual,qbulk:loadQbulk,qset:loadQset,pic:loadPic,picfail:loadPicfail,picbulk:loadPicbulk,pichist:loadPichist,pickhist:loadPickhist,done:loadDone,ai:loadAI,video:loadVideo,vdone:loadVdone,vhist:loadVhist,venv:loadVenv,words:loadWords,history:loadHistory,settings:loadSettings,home:loadHome}[p]||(()=>{}))()}
 $$('nav a').forEach(a=>a.onclick=()=>go(a.dataset.p));
 function navMini(on){document.body.classList.toggle('navmini',on);const b=$('#navTog'),t=on?'展开左边栏':'收起左边栏';b.title=t;b.setAttribute('aria-label',t);
   $$('nav a').forEach(a=>{const x=a.querySelector('.tx');if(on&&x)a.title=x.textContent;else a.removeAttribute('title')});
@@ -2611,7 +2620,7 @@ function picLinks(w,list){return (list||[]).map(p=>{const k=PICREG.push({w,p})-1
   const its=p.items.map(it=>it.src?`<a href="#" class="artA" data-w="${esc(w)}" data-p="${esc(it.src)}">${esc(it.name)}</a>`:`<span>${esc(it.emoji||it.name)}</span>`).join('、');
   return `<div><b>${esc(p.label)}</b>：${p.bg?`背景 ${p.bgSrc?`<a href="#" class="artA" data-w="${esc(w)}" data-p="${esc(p.bgSrc)}">${esc(p.bg)}</a>`:esc(p.bg)}；`:''}${its?`画了 ${p.items.length} 样：${its}`:''}${p.text?`；字：${esc(p.text)}`:''}　<a href="#" class="picFull" data-k="${k}">看整幅</a></div>`}).join('')}
 function sayLines(x){if(!(x.say||[]).length)return '';return `<div class="faint" style="font-size:11px">视频里说的（精简版配音稿${x.sayTs?' · 起草于 '+esc(x.sayTs):''}）</div>`+x.say.map(g=>`<div>${g.label?`<b>${esc(g.label)}</b>：`:''}${g.say.map(esc).join('　')}</div>`).join('')}
-function noSay(){return '<div class="faint" style="font-size:11px">还没起草（出片前的起草检查以后，这里写视频里说的）；先看总表的头一句：</div>'}
+function noSay(){return '<div class="faint" style="font-size:11px">还没起草——到 <a href="#" onclick="go(\'impdraft\');return false">「导入 → 配音稿」</a>起草了，这里就写视频里说的；先看总表的头一句：</div>'}
 /* v1.34.0：表格的列宽能左右拉，拉好了记住（这台电脑上），下次还是这样；双击拉手恢复原样 */
 function rzInit(tb,key){if(!tb)return;const cols=[...tb.querySelectorAll('col')],ths=[...tb.querySelectorAll('tr:first-child th')];if(!cols.length||cols.length!==ths.length)return;
   if(!tb.parentElement.classList.contains('rzw')){const w=document.createElement('div');w.className='rzw';tb.parentElement.insertBefore(w,tb);w.appendChild(tb)}
@@ -2689,6 +2698,35 @@ function blkAsk(id,name,words){if(!words.length)return;
     closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?8000:10000);(BSEL[id]||new Set()).clear();blkLoad(id)};
   $('#bAi').onclick=()=>send('ai');$('#bGo').onclick=()=>send('redo')}
 const ISEL=new Set();
+/* v1.35.0：「导入 → 配音稿（起草）」：给选上的词起草精简版配音稿（不用 AI，在 WSL 里跑视频技能），看哪些还没起草、哪些画面改过要重新起草 */
+const DRSEL=new Set();let DRT=null;
+const DRST={none:['— 还没起草','var(--red)'],stale:['⚠ 画面改过，要重新起草','var(--amber)'],ok:['✓ 起草了','var(--pass)']};
+async function loadDraft(){const el=$('#impdraftBox');if(!el)return;let d;try{d=await api('/api/drafts')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
+  if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
+  const it=d.items,run=d.run,todo=it.filter(x=>x.status!=='ok'),n=DRSEL.size;
+  $$('[data-tc="impdraft"]').forEach(e=>e.textContent=todo.length||'');
+  if(!it.length){el.innerHTML='<p class="small muted" style="margin:0">「选词」里还没有选上的词。</p>';return}
+  el.innerHTML=`<div class="line" style="gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px">
+    <span class="small">选上的 ${it.length} 个词：起草了 ${it.length-todo.length} 个${todo.length?`，<b style="color:var(--amber)">${todo.length} 个还没起草或者要重新起草</b>（排前面）`:''}</span><span style="flex:1"></span>
+    ${run.running?`<span class="small"><span class="spin"></span> 正在起草 ${run.done+1} / ${run.total}：<b>${esc(run.cur)}</b></span><button class="btn ghost sm drStop">停</button>`
+      :`<button class="btn sm drSel" ${n?'':'disabled'}>起草选中的${n?' '+n+' 个':''}</button><button class="btn ghost sm drTodo" ${todo.length?'':'disabled'}>起草没起草的和要重新起草的 ${todo.length} 个</button>`}</div>
+  ${run.msg&&!run.running?`<p class="small" style="margin:0 0 8px">上一次：${esc(run.msg)}</p>`:''}
+  <table style="width:100%;table-layout:fixed"><colgroup><col style="width:28px"><col style="width:150px"><col style="width:170px"><col><col style="width:110px"></colgroup>
+  <tr><th><input type="checkbox" class="drall"></th><th>单词</th><th>配音稿</th><th>起草检查（还要补什么）</th><th>操作</th></tr>
+  ${it.map(x=>{const [t,col]=DRST[x.status]||['',''];return `<tr style="vertical-align:top"><td><input type="checkbox" class="drck" value="${esc(x.word)}" ${DRSEL.has(x.word)?'checked':''}></td>
+    <td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a><div class="small faint">${x.pic?'有画面设置':'还没做画面'}</div></td>
+    <td class="small"><span style="color:${col};font-weight:600">${t}</span>${x.ts?`<div class="faint">起草于 ${esc(x.ts)} · 念 ${x.segs} 句</div>`:''}${x.status==='stale'?`<div class="faint">画面改于 ${esc(x.picTs)}</div>`:''}</td>
+    <td class="small" style="word-break:break-word">${x.line?esc(x.line):'<span class="faint">'+(x.ts?'（这一次起草不是在这里做的，结果看「含义拆分」各块）':'—')+'</span>'}${x.rts?`<div class="faint" style="font-size:11px">${esc(x.rts)}</div>`:''}</td>
+    <td class="small"><a href="#" class="drOne" data-w="${esc(x.word)}">${x.status==='ok'?'重新起草':'起草'}</a></td></tr>`}).join('')}</table>`;
+  rzInit(el.querySelector('table'),'draft');
+  const go2=async ws=>{let r;try{r=await api('/api/drafts',{words:ws})}catch(e){r={ok:false,msg:e.message}}toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?5000:9000);if(r.ok)DRSEL.clear();loadDraft()};
+  el.querySelector('.drall').onchange=e=>{el.querySelectorAll('.drck').forEach(c=>e.target.checked?DRSEL.add(c.value):DRSEL.delete(c.value));loadDraft()};
+  el.querySelectorAll('.drck').forEach(c=>c.onchange=()=>{c.checked?DRSEL.add(c.value):DRSEL.delete(c.value);loadDraft()});
+  el.querySelectorAll('.drOne').forEach(a=>a.onclick=e=>{e.preventDefault();go2([a.dataset.w])});
+  const s1=el.querySelector('.drSel');if(s1)s1.onclick=()=>go2([...DRSEL]);
+  const s2=el.querySelector('.drTodo');if(s2)s2.onclick=()=>go2(todo.map(x=>x.word));
+  const sp=el.querySelector('.drStop');if(sp)sp.onclick=async()=>{const r=await api('/api/drafts',{op:'stop'});toast((r.ok?'✓ ':'✗ ')+(r.msg||''),4000)};
+  clearTimeout(DRT);if(run.running&&page==='impdraft')DRT=setTimeout(loadDraft,3000)}
 async function loadImp(){const el=$('#impBox');if(!el)return;let d;try{d=await api('/api/imp')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
   if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
   if(!d.items.length){el.innerHTML='<p class="small muted" style="margin:0">「选词」里还没有选上的词。</p>';return}

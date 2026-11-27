@@ -41,7 +41,7 @@ AI_EDIT = {"pron", "parts", "combo", "scene", "evolve", "example", "dist", "kaod
 # “还要补”的一条归到哪一块（先看前面的）
 TODO_MAP = [("dist", r"同义词辨析|辨析"), ("pron", r"读音|音标|sylIpa"), ("evolve", r"意思怎么|演变|flow"),
             ("example", r"例句"), ("combo", r"拼起来|comboPic|合起来"), ("parts", r"词缀|词根|partPics|图标|icons|卡片"),
-            ("scene", r"意思的画|场景|背景|pics|画得太简单"), ("kaodian", r"考点"), ("board", r"小黑板|扩展"), ("lianxi", r"练习|题")]
+            ("scene", r"意思的画|场景|背景|pics|画得太简单"), ("lianxi", r"练习题|lianxi"), ("kaodian", r"考点"), ("board", r"小黑板|扩展"), ("lianxi", r"练习|题")]
 
 
 def _prefs(word):
@@ -682,8 +682,8 @@ def do_verify(R, tid, p):
 # ═══════════════ v1.34.0：每一块只写视频里讲的（精简版配音稿），不把总表整段抄过来 ═══════════════
 # 用户：“含义拆分的部分……内容非常多，这个是直接来自总表的……视频里面不会把这么多内容一起全写出来，所以这里只写视频里要讲的内容。
 #   其他部分：拼起来，意思场景，演变等等都要这样”
-SCENE_OF = {"pron": ("syl", "sylnote", "duyin"), "parts": ("split", "part", "yinbian", "xingtai", "fengong"),
-            "combo": ("combo", "route", "variant", "related", "origin", "rule", "steps"), "scene": ("meaning",), "evolve": ("evolve",),
+SCENE_OF = {"pron": ("syl", "sylnote", "duyin"), "parts": ("split", "part", "yinbian", "xingtai", "fengong", "variant", "related", "origin"),
+            "combo": ("combo", "route", "rule", "steps"), "scene": ("meaning",), "evolve": ("evolve",),
             "example": ("example",), "dist": ("distinguish",), "kaodian": ("kaodian",), "board": ("board",), "lianxi": ("lianxi",)}
 LABEL_OF = {"part": "卡 %d", "example": "例句 %d", "kaodian": "考点第 %d 页", "lianxi": "第 %d 题", "duyin": "读音现象 %d", "yinbian": "音变 %d", "xingtai": "形态 %d"}
 _PL = {}                                            # 单词文件夹 → (读的时间, 起草时间, 配音稿)

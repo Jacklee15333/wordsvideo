@@ -15,7 +15,8 @@ import video as V
 import selfup as SU
 import relay_browser as RB
 import clear as CL                             # v1.27.0：清除做好的题目、画面、视频
-import sections as SEC                         # v1.29.0：单词简历                     # v1.23.0：软件自己控制网页 AI 的浏览器窗口
+import sections as SEC                         # v1.29.0：单词简历
+import drafts as DR                            # v1.35.0：起草配音稿                     # v1.23.0：软件自己控制网页 AI 的浏览器窗口
 import check as CK
 import pool as PL
 import results as RS
@@ -742,7 +743,8 @@ GET = {
     "/api/done": lambda qs: CL.done_page(qs.get("what", ""), qs.get("find", ""), int(qs.get("page") or 1), int(qs.get("size") or 50), qs.get("picked") == "1"),         # v1.28.0 / v1.31.0：分页
     "/api/profile": lambda qs: SEC.profile(qs.get("word", "")),      # v1.29.0：单词简历
     "/api/blocks": lambda qs: SEC.blocks(qs.get("sec", "")),          # v1.30.0：按块的步骤
-    "/api/imp": lambda qs: SEC.imp_list(),                            # v1.30.0：导入（不用 AI 的几块）                # v1.22.0：浏览器小助手来问
+    "/api/imp": lambda qs: SEC.imp_list(),                            # v1.30.0：导入（不用 AI 的几块）
+    "/api/drafts": lambda qs: DR.status(),                            # v1.35.0：起草配音稿                # v1.22.0：浏览器小助手来问
     "/api/fixlater": lambda qs: __import__("pics").later_get(),
     "/api/fixwords": lambda qs: __import__("pics").fix_list(),
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
@@ -772,6 +774,7 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/done": lambda b: CL.done_op(b.get("op"), b.get("what"), b.get("words") or [], b.get("find", ""), bool(b.get("picked"))),      # v1.28.0
         "/api/blocks": api_blocks,                                         # v1.30.0 / v1.31.0 / v1.33.0
         "/api/imp": api_imp,                                               # v1.33.0：AI 核对总表
+        "/api/drafts": lambda b: DR.stop() if b.get("op") == "stop" else DR.start(b.get("words") or []),      # v1.35.0
         "/api/profile": lambda b: SEC.save(b.get("word", ""), b.get("sec", ""), b.get("data")) if b.get("op") == "save" else SEC.redo(b.get("word", ""), b.get("sec", ""), b.get("note", "")),      # v1.29.0
         "/api/check": lambda b: CK.fix_all() if b.get("op") == "fix" else CK.start(b.get("what") or "all"),      # v1.21.1：一键修复
         "/api/qres": lambda b: RS.export_words(b.get("words") or []),

@@ -1,0 +1,895 @@
+# -*- coding: utf-8 -*-
+"""单词工作台 · 本地服务。双击「启动.bat」运行；界面在 http://127.0.0.1:8766 。"""
+import json, os, re, sys, threading, time, traceback, urllib.parse, webbrowser
+from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
+from pathlib import Path
+
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
+except Exception:
+    pass
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import core as C
+import video as V
+import selfup as SU
+import relay_browser as RB
+import clear as CL                             # v1.27.0：清除做好的题目、画面、视频
+import sections as SEC                         # v1.29.0：单词简历                     # v1.23.0：软件自己控制网页 AI 的浏览器窗口
+import check as CK
+import pool as PL
+import results as RS
+
+WEB = Path(__file__).resolve().parent / "web"
+MIME = {".html": "text/html; charset=utf-8", ".js": "application/javascript; charset=utf-8",
+        ".css": "text/css; charset=utf-8", ".png": "image/png", ".svg": "image/svg+xml", ".ico": "image/x-icon"}
+
+
+def wm():
+    try:
+        import web_model
+        return web_model
+    except Exception:
+        return None
+
+
+def prepare_repo():
+    try:
+        C.ensure_repo()
+        C.log("仓库就绪：%s，总表 %s" % (C.STATE.get("head"), C.STATE.get("version")))
+        C.RUNNER.wake.set()
+    except Exception as e:
+        if C.STATE.get("repo") != "等令牌":
+            C.STATE["repo"] = "出错"
+        C.STATE["repoError"] = str(e)
+        C.log("仓库没准备好：%s" % e)
+
+
+def repo_watch():
+    """仓库出错（多半是网络）或离线时，每 3 分钟自己再试一次。"""
+    while True:
+        time.sleep(180)
+        if C.RUNNER.task:
+            continue
+        if C.STATE.get("repo") == "出错" or C.STATE.get("offline"):
+            C.log("再试一次连 GitHub…")
+            prepare_repo()
+
+
+# ═══════════════════════ API ═══════════════════════
+def api_status(qs):
+    r = C.RUNNER
+    t = r.task
+    cur = None
+    if t:
+        cur = C.q("SELECT * FROM tasks WHERE id=?", (t["id"],), one=True)
+    s = {}
+    try:
+        s = C.stats()
+    except Exception as e:
+        s = {"error": str(e)}
+    cfg = C.load_cfg()
+    return {"repo": C.STATE, "stats": s, "runner": {"state": r.state, "stage": r.stage, "task": cur},
+            "pending": C.pending_changes() if C.STATE.get("repo") == "就绪" else 0,
+            "provider": cfg.get("provider"), "window": cfg.get("window"), "inWindow": C.in_window(cfg),
+            "logs": C.live_logs(60), "now": C.now(), "version": SU.version(),
+            "newer": (UPD["info"] or {}).get("remote") if (UPD["info"] or {}).get("newer") else ""}
+
+
+def api_settings_get(qs):
+    c = C.load_cfg()
+    c["githubToken"] = "（已填）" if c.get("githubToken") else ""
+    c["api"] = dict(c["api"], key="（已填）" if c["api"].get("key") else "")
+    c["relayInbox"] = dict(C.inbox_cfg(c), token="（已填）" if C.inbox_cfg(c)["token"] else "")
+    w = {}
+    m = wm()
+    if m:
+        wc = m.load_config()
+        w = {k: wc.get(k) for k in ("aiUsername", "sitePath", "serviceName", "browserHidden", "headless",
+                                    "preferredModel", "aiPoolProxy", "newTaskMode")}
+        w["aiPassword"] = "（已填）" if wc.get("aiPassword") else ""
+        w["playwright"] = bool(m.is_available())
+    return {"cfg": c, "web": w}
+
+
+def api_settings_post(b):
+    cfg = b.get("cfg") or {}
+    if cfg.get("githubToken") in ("（已填）",):
+        cfg.pop("githubToken")
+    if isinstance(cfg.get("api"), dict) and cfg["api"].get("key") == "（已填）":
+        cfg["api"].pop("key")
+    if isinstance(cfg.get("relayInbox"), dict) and cfg["relayInbox"].get("token") in ("（已填）", None):
+        cfg["relayInbox"].pop("token", None)
+    old_pv = C.load_cfg().get("provider")
+    C.save_cfg(cfg)
+    if cfg.get("provider") and C.load_cfg().get("provider") != old_pv:
+        CK.reset("ai")                      # 换了用哪个 AI：开始页 ① 回到“还没检测”
+    web = b.get("web") or {}
+    m = wm()
+    if m and web:
+        web = {k: v for k, v in web.items() if k != "playwright"}
+        if web.get("aiPassword") in ("（已填）", None):
+            web.pop("aiPassword", None)
+        m.save_config(web)
+    C.RUNNER.wake.set()
+    if C.STATE.get("repo") in ("出错", "等令牌", "未准备"):
+        C.STATE["repo"], C.STATE["repoError"] = "正在克隆仓库", ""
+        threading.Thread(target=prepare_repo, daemon=True).start()
+    return {"ok": True}
+
+
+def api_tasks(qs):
+    return {"tasks": C.q("SELECT * FROM tasks ORDER BY CASE status WHEN '运行中' THEN 0 WHEN '排队' THEN 1 "
+                         "WHEN '已暂停' THEN 2 ELSE 3 END, id DESC LIMIT 200"),
+            "schedules": C.q("SELECT * FROM schedules ORDER BY at")}
+
+
+def api_task_add(b):
+    kind = b.get("kind", "chuti")
+    params = b.get("params") or {}
+    ra = 0
+    if b.get("runAt"):
+        ra = time.mktime(time.strptime(b["runAt"].replace("T", " ")[:16], "%Y-%m-%d %H:%M"))
+    # v1.18.0：用 AI 的任务一次只能有一个没做完的：有没做完的（在做、排着队、暂停了），先做完或者取消它，才能开始新的——
+    # 不然网页 AI 那边两份提示词传上来的会混在一起（以前是悄悄把旧的取消掉）
+    fam = lambda k, p: "pic" if k in ("pics", "verify") else ("q" if k in ("chuti", "redo") or (k == "words" and "chuti" in (p.get("steps") or ["chuti"])) else k)
+    me = fam(kind, params)
+    if me in ("q", "pic"):
+        for t in C.q("SELECT id,kind,params,title,status FROM tasks WHERE status IN ('运行中','已暂停','排队') AND run_after<=? ORDER BY id",
+                     (time.time(),)):
+            try:
+                tp = json.loads(t["params"] or "{}")
+            except Exception:
+                tp = {}
+            if fam(t["kind"], tp) in ("q", "pic"):
+                where = "画面" if fam(t["kind"], tp) == "pic" else "出题"
+                return {"error": "还有没做完的任务 #%d（%s，%s）：先到「%s」页点「继续未完成」做完，或者取消它，再开始新的（免得网页 AI 传上来的混在一起）"
+                                 % (t["id"], t["title"], t["status"].replace("运行中", "正在做").replace("已暂停", "暂停了").replace("排队", "排着队"), where),
+                        "busy": t["id"]}
+    tid = C.add_task(kind, params, ra, title=(b.get("title") or "")[:60])
+    C.RUNNER.wake.set()
+    return {"id": tid}
+
+
+def api_task_op(b):
+    tid, op = int(b["id"]), b["op"]
+    t = C.q("SELECT * FROM tasks WHERE id=?", (tid,), one=True)
+    if not t:
+        return {"error": "没有这个任务"}
+    running = C.RUNNER.task and C.RUNNER.task["id"] == tid
+    if op in ("pause", "cancel"):
+        if running:
+            C.RUNNER.request_stop(op)
+        elif t["status"] in ("排队", "已暂停", "失败"):
+            C.x("UPDATE tasks SET status=? WHERE id=?", ("已暂停" if op == "pause" else "已取消", tid))
+    elif op == "resume":
+        C.x("UPDATE tasks SET status='排队', run_after=0 WHERE id=?", (tid,))
+    elif op == "delete" and not running:
+        C.x("DELETE FROM tasks WHERE id=?", (tid,))
+    C.RUNNER.wake.set()
+    return {"ok": True}
+
+
+def api_sched(b):
+    op = b.get("op")
+    if op == "delete":
+        C.x("DELETE FROM schedules WHERE id=?", (int(b["id"]),))
+    elif op == "toggle":
+        C.x("UPDATE schedules SET enabled=1-enabled WHERE id=?", (int(b["id"]),))
+    else:
+        C.x("INSERT INTO schedules(name,kind,params,at,days,enabled) VALUES(?,?,?,?,?,1)",
+            (b.get("name", ""), b.get("kind", "chuti"), json.dumps(b.get("params") or {}, ensure_ascii=False),
+             b.get("at", "23:00"), b.get("days", "1234567")))
+    return {"ok": True}
+
+
+def api_logs(qs):
+    tid = qs.get("task")
+    if tid:
+        return {"logs": C.q("SELECT ts,msg FROM logs WHERE task_id=? ORDER BY id DESC LIMIT 400", (int(tid),))}
+    return {"logs": C.q("SELECT ts,msg,task_id FROM logs ORDER BY id DESC LIMIT 400")}
+
+
+def api_word(qs):
+    d = C.word_detail(qs.get("w", ""))
+    return d or {"error": "索引里没有这个词"}
+
+
+def api_word_check(b):
+    w = b["word"]
+    lines = [l.strip() for l in (b.get("draft") or "").split("\n") if l.strip() and not l.strip().startswith("@")]
+    qs_, errs = C.check(w, lines)
+    if errs or not b.get("save"):
+        if errs and C.q("SELECT 1 FROM manual WHERE word=?", (w,), one=True):
+            C.x("UPDATE manual SET draft=?, errors=? WHERE word=?",
+                ("\n".join(lines), json.dumps(errs, ensure_ascii=False), w))
+        return {"ok": not errs, "errors": errs}
+    C.save_word(w, qs_, C.STATE["version"], "人工（单词工作台）")
+    C.log("人工保存了 %s（还没上传，点「上传」或等下一组出题时一起传）" % w)
+    return {"ok": True, "saved": True}
+
+
+def api_blocks(b):
+    """v1.30.0：只重做一块（退回）；v1.31.0：删掉这一块；v1.33.0：「马上让 AI 重做」——退回以后直接开始补画面（只收这一块）"""
+    op, sid, ws = b.get("op"), b.get("sec", ""), b.get("words") or []
+    if op == "clear":
+        return SEC.clear_block(sid, ws)
+    r = SEC.redo_many(sid, ws, b.get("note", ""))
+    if op != "ai" or not r.get("ok"):
+        return r
+    name = SEC.BY_ID[sid]["name"]
+    t = api_task_add({"kind": "pics", "params": {"words": ws, "fix": True, "batch": ""},
+                      "title": "重做「%s」：%s%s" % (name, "、".join(ws[:4]), " 等 %d 个" % len(ws) if len(ws) > 4 else "")})
+    if t.get("error"):
+        return {"ok": False, "msg": "退回去了，可是没开始：%s（等它做完再点，或者到「含义拆分 → 一次做全」点「补画面」）" % t["error"]}
+    relay = C.load_cfg().get("provider") == "relay"
+    return {"ok": True, "msg": "开始重做「%s」：%d 个词，AI 只改这一块。%s" % (name, len(ws), "到「含义拆分 → 一次做全」把提示词交给网页 AI" if relay else "过程在「含义拆分 → 一次做全」")}
+
+
+def api_imp(b):
+    """v1.33.0：「导入」页——让 AI 核对总表"""
+    ws = [w for w in (b.get("words") or []) if isinstance(w, str) and w.strip()]
+    if not ws:
+        return {"ok": False, "msg": "一个都没选"}
+    t = api_task_add({"kind": "verify", "params": {"words": ws}, "title": "AI 核对总表：%s%s" % ("、".join(ws[:4]), " 等 %d 个" % len(ws) if len(ws) > 4 else "")})
+    if t.get("error"):
+        return {"ok": False, "msg": t["error"]}
+    relay = C.load_cfg().get("provider") == "relay"
+    return {"ok": True, "msg": "开始让 AI 核对总表：%d 个词。%s" % (len(ws), "提示词交给网页 AI（和出题、做画面一样）" if relay else "结果回来会写在这一页")}
+
+
+def api_manual(b):
+    op, words = b.get("op"), b.get("words") or []
+    if op == "add":
+        for w in words:
+            C.x("INSERT OR IGNORE INTO manual(word,errors,draft,attempts,ts,source) VALUES(?,?,?,?,?,?)",
+                (w, "[]", "", 0, C.now(), "人工标记"))
+    elif op == "remove":
+        for w in words:
+            C.x("DELETE FROM manual WHERE word=?", (w,))
+    elif op == "redo":
+        C.add_task("redo", {"words": words})
+        C.RUNNER.wake.set()
+    return {"ok": True}
+
+
+def api_ai(b):
+    op = b.get("op")
+    m = wm()
+    if not m:
+        return {"ok": False, "msg": "web_model 加载失败"}
+    if op in ("show", "hide"):
+        ok, msg = m.request_window(op)
+        return {"ok": ok, "msg": msg}
+    if op == "test":
+        r = m.test_login()
+        return {"ok": bool(r.get("ok")), "msg": r.get("error") or r.get("reply") or json.dumps(r, ensure_ascii=False)[:300]}
+    if op == "probe":
+        ok, msg = m.probe_pool()
+        return {"ok": ok, "msg": msg}
+    return {"ok": False, "msg": "不认识的操作"}
+
+
+def api_ai_live(qs):
+    m = wm()
+    if not m or C.load_cfg().get("provider") != "web":
+        return {"state": "off"}
+    try:
+        d = m.live_state(watch=qs.get("watch") == "1")
+        d.pop("log", None)
+        return d
+    except Exception as e:
+        return {"state": "error", "error": str(e)}
+
+
+def api_repo(b):
+    op = b.get("op")
+    if op == "sync":
+        C.add_task("sync")
+    elif op == "push":
+        C.add_task("push")
+    elif op == "reclone":
+        if C.RUNNER.task:
+            return {"ok": False, "msg": "有任务在跑，先停掉"}
+        with C.REPO_LOCK:
+            try:
+                C.rmtree(C.REPO)
+                (C.DATA / "repo_ok").unlink(missing_ok=True)
+            except Exception as e:
+                return {"ok": False, "msg": str(e)}
+            C.STATE.update(repo="正在克隆仓库", xlsx="", repoError="")
+        threading.Thread(target=prepare_repo, daemon=True).start()
+    elif op == "token":
+        ok, msg = C.check_token()
+        return {"ok": ok, "msg": msg}
+    elif op == "inbox":
+        ok, msg = C.check_inbox()
+        return {"ok": ok, "msg": msg}
+    C.RUNNER.wake.set()
+    return {"ok": True}
+
+
+# ═══════════════════════ 视频 ═══════════════════════
+def api_video_get(qs):
+    what = qs.get("what")
+    if what == "env":
+        return V.env_status()
+    if what == "envchk":                                  # v1.11.0：出片前检查，一项一项的
+        return V.envchk_get()
+    if what == "live":                                    # v1.11.0：批次的实时情况、电脑占用
+        return V.live([x for x in (qs.get("open") or "").split("|") if x])
+    if what == "batches":
+        return {"items": V.batch_list()}
+    if what == "setup":
+        return {"text": V.setup_status(qs.get("step", "boot"))}
+    if what == "pick":                                    # v1.20.0：选词列表——只列现在就能出视频的
+        return V.pick_info()
+    if what == "words":
+        pw, vd = V.pic_words(), V.videos()
+        idx = {}
+        try:
+            _, rows = C.read_index()
+            idx = {V.folder_of(r[2]): r for r in rows}
+        except Exception:
+            pass
+        try:
+            import pics
+            unc = pics.unchecked_words()
+        except Exception:
+            unc = set()
+        items = [{"word": idx[w][2] if w in idx else w, "folder": w, "inTable": w in idx, "video": vd.get(w),
+                  "picTodo": (idx[w][2] if w in idx else w) in unc,
+                  "meaning": idx[w][3] if w in idx else "", "q": bool(w in idx and idx[w][4] != "缺")} for w in sorted(pw)]
+        return {"items": items, "videos": list(vd.values()), "nPic": len(pw), "nVideo": len(vd)}
+    return {"error": "不认识"}
+
+
+def api_video_post(b):
+    op = b.get("op")
+    if op == "sync":
+        ok, t = V.sync_engine()
+    elif op == "setup":
+        ok, t = V.setup_start(b.get("step"), b.get("proxy", ""))
+    elif op == "new":
+        words = [w.strip() for w in re.split(r"[,，、\n]+", b.get("words") or "") if w.strip()]
+        d = V.batch_new(b.get("name", "").strip(), words)
+        d["msg"] = C.mask(d.get("msg", ""))
+        return d
+    elif op == "vdel":                                     # v1.21.0：删掉旧版视频（这些词回到选词列表，按新版重做）
+        return V.delete_old(b.get("words") or None)
+    elif op == "envchk":
+        return V.envchk_start()
+    elif op == "go":                                       # v1.19.0：开工（继续、接着做）——① 出片前检查 ② 单词检测 ③ 开工
+        return V.go_start((b.get("name") or "").strip(), bool(b.get("nocheck")))
+    elif op == "ack":                                      # v1.19.0：做完、停止的批次「知道了」→ 收进「生成历史」
+        V.ack_set((b.get("name") or "").strip(), b.get("on", True) is not False)
+        return {"ok": True}
+    elif op == "fixpics":                                  # v1.11.1：补画面（起草检查没过的交给 AI 改；补好的批次里接着做）
+        bn = (b.get("name") or "").strip()
+        ws = V.fix_words(bn, b.get("words") or [])
+        if not ws:
+            return {"ok": False, "msg": "没有要补画面的词：画面都过了起草检查"}
+        r = api_task_add({"kind": "pics", "params": {"words": ws, "fix": True, "batch": bn},
+                          "title": "补画面：%s%s" % ("、".join(ws[:4]), " 等 %d 个" % len(ws) if len(ws) > 4 else "")})
+        if r.get("error"):                                 # v1.19.0：有没做完的任务时说清楚（以前照样说“开始补画面”）
+            return {"ok": False, "msg": r["error"]}
+        relay = C.load_cfg().get("provider") == "relay"
+        return {"ok": True, "n": len(ws), "msg": "开始补画面：%d 个词。%s%s" % (
+            len(ws), "到「画面」页，把提示词粘贴给网页 AI" if relay else "AI 自己改，过程在「画面」页",
+            "；补好一个，批次 %s 就接着做一个" % bn if bn else "")}
+    elif op == "fix":
+        return V.envfix(b.get("what", ""))
+    elif op == "batch":
+        ok, t = V.batch_op(b.get("name", ""), b.get("action", ""), b.get("word", ""), b.get("stage", ""))
+    elif op == "scan":
+        n = V.scan_videos()
+        ok, t = True, "新登记了 %d 个视频" % n
+    elif op == "keepalive":
+        V.keepalive()
+        ok, t = True, "开了"
+    else:
+        return {"ok": False, "msg": "不认识的操作"}
+    return {"ok": ok, "msg": C.mask(t)}
+
+
+def video_file(handler, qs):
+    root = Path(V.vcfg()["winDir"]).resolve()
+    p = (root / qs.get("p", "")).resolve()
+    if root not in p.parents or not p.is_file():
+        return handler._send(404, {"error": "没有这个文件"})
+    ct = {".jpg": "image/jpeg", ".png": "image/png", ".mp4": "video/mp4"}.get(p.suffix.lower(), "application/octet-stream")
+    if p.suffix.lower() == ".mp4":                         # 视频大：分段读，浏览器能拖进度条
+        size = p.stat().st_size
+        rng = handler.headers.get("Range")
+        a, z = 0, size - 1
+        if rng:
+            m = re.match(r"bytes=(\d*)-(\d*)", rng)
+            if m:
+                a = int(m.group(1) or 0); z = int(m.group(2) or z)
+        z = min(z, a + 8 * 1024 * 1024 - 1, size - 1)
+        with open(p, "rb") as f:
+            f.seek(a); data = f.read(z - a + 1)
+        handler.send_response(206 if rng else 200)
+        handler.send_header("Content-Type", ct); handler.send_header("Accept-Ranges", "bytes")
+        handler.send_header("Content-Range", "bytes %d-%d/%d" % (a, z, size)); handler.send_header("Content-Length", str(len(data)))
+        handler.end_headers(); handler.wfile.write(data)
+        return
+    return handler._send(200, p.read_bytes(), ct)
+
+
+# ═══════════════════════ 软件：版本、更新、改写 ═══════════════════════
+UPD = {"info": None, "at": 0}
+
+
+def check_update_bg():
+    try:
+        UPD["info"], UPD["at"] = SU.check_update(), time.time()
+        if UPD["info"].get("newer"):
+            C.log("有新版本 v%s（现在 v%s）：到「软件」页点「更新」" % (UPD["info"]["remote"], UPD["info"]["local"]))
+    except Exception as e:
+        C.log("检查更新出错：%s" % e)
+
+
+def api_self_get(qs):
+    if qs.get("check"):
+        check_update_bg()
+    p = SU.ROOT / "CHANGELOG.md"
+    return {"version": SU.version(), "clone": SU.is_clone(), "update": UPD["info"], "backups": SU.backups(), "prev": SU.prev_backup(),
+            "changelog": p.read_text(encoding="utf-8")[:20000] if p.exists() else "",
+            "changes": C.q("SELECT id,request,status,files,notes,error,ts,task_id FROM changes ORDER BY id DESC LIMIT 50"),
+            "files": SU.app_files()}
+
+
+def api_self_post(b):
+    op = b.get("op")
+    if op == "request":
+        text = (b.get("text") or "").strip()
+        if len(text) < 4:
+            return {"ok": False, "msg": "先写清楚要改什么"}
+        cid = C.x("INSERT INTO changes(request,status,ts) VALUES(?,?,?)", (text, "排队", C.now()))
+        tid = C.add_task("selfedit", {"change": cid, "files": b.get("files") or []}, title="改软件：" + text.split("\n")[0][:30])
+        C.x("UPDATE changes SET task_id=? WHERE id=?", (tid, cid))
+        C.RUNNER.wake.set()
+        return {"ok": True, "msg": "交给 AI 了（任务 #%d），改好会出现在下面，等你确认" % tid}
+    if op == "apply":
+        ok, msg = SU.apply_change(int(b["id"]))
+    elif op == "discard":
+        C.x("UPDATE changes SET status='放弃了' WHERE id=?", (int(b["id"]),))
+        ok, msg = True, "放弃了"
+    elif op == "update":
+        ok, msg = SU.update()
+    elif op == "rollback":
+        ok, msg = SU.rollback(b.get("name", ""))
+    else:
+        return {"ok": False, "msg": "不认识的操作"}
+    if ok:
+        threading.Thread(target=check_update_bg, daemon=True).start()
+    return {"ok": ok, "msg": C.mask(msg)}
+
+
+def api_live(qs):
+    """任务页的实时画面：现在在做哪个任务、哪一步、AI 正在写什么、浏览器画面、步骤记录。"""
+    r = C.RUNNER
+    t = r.task
+    cfg = C.load_cfg()
+    out = {"relay": C.RELAY.get("status") == "等你操作", "running": bool(t), "provider": C.provider_name(), "pv": cfg.get("provider"),
+           "relayUrl": cfg.get("relayUrl", ""), "inbox": C.inbox_on(cfg), "stage": r.stage,
+           "state": r.state, "ai": {k: v for k, v in C.AI_LIVE.items()}, "web": None, "logs": []}
+    if t:
+        out["task"] = C.q("SELECT id,title,kind,params,progress,started FROM tasks WHERE id=?", (t["id"],), one=True)
+        out["logs"] = [l for l in C.live_logs(300) if l.get("task") == t["id"]][-60:]
+    out["ai"]["reply"] = (out["ai"].get("reply") or "")[-6000:]
+    if out["pv"] == "web":
+        m = wm()
+        if m:
+            try:
+                d = m.live_state(watch=qs.get("watch") == "1")
+                d.pop("log", None)
+                out["web"] = d
+            except Exception as e:
+                out["web"] = {"error": str(e)}
+    return out
+
+
+def api_relay_get(qs):
+    if qs.get("raw"):                          # v1.15.0：看网页 AI 原文：最近收到的文件、它最后的汇报
+        return {"files": [{"t": x["t"], "f": x["f"], "len": len(x["text"])} for x in C.RELAY_RAW][::-1],
+                "text": next((x["text"] for x in reversed(C.RELAY_RAW) if x["f"] == qs["raw"]), "") if qs["raw"] != "1" else
+                (C.RELAY_RAW[-1]["text"] if C.RELAY_RAW else ""),
+                "f": qs["raw"] if qs["raw"] != "1" else (C.RELAY_RAW[-1]["f"] if C.RELAY_RAW else ""),
+                "report": C.RELAY.get("aiReport")}
+    r = dict(C.RELAY)
+    t = C.RUNNER.task
+    r["show"] = bool(t and t["id"] == r.get("tid") and r.get("phase") in ("send", "checking", "ok", "fail"))
+    r["hist"] = [dict(h) for h in C.RELAY_HIST]
+    r["inboxNow"] = list(C.INBOX_LAST.get("files") or [])
+    r["uploads"] = list(C.INBOX_LAST.get("uploads") or [])
+    r["pollSec"] = max(5, int(C.inbox_cfg().get("pollSec") or 15))
+    r["now"] = time.time()
+    try:                                       # 这个任务一共几个词（黄框写“第几个 / 共几个”）
+        tp = json.loads((t or {}).get("params") or "{}")
+        r["total"] = len(tp.get("words") or []) or int(tp.get("count") or 0)
+    except Exception:
+        r["total"] = 0
+    if r.get("doneTid") != (t or {}).get("id"):
+        r["done"] = []
+    if r["show"] and r.get("ts"):                  # v1.13.0：第 ③ 步一行一行的经过＝这一份开始以后的步骤记录
+        try:
+            since = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(float(r["ts"]) - 2))
+            r["rows"] = [dict(x) for x in C.q("SELECT id, ts, msg FROM logs WHERE task_id=? AND ts>=? ORDER BY id LIMIT 400",
+                                              (r.get("tid"), since))]
+        except Exception:
+            r["rows"] = []
+    if qs.get("full") != "1":
+        r["promptLen"] = len(r.get("prompt") or "")
+        r["prompt"] = (r.get("prompt") or "")[:600]
+    r.pop("reply", None)
+    cfg = C.load_cfg()
+    r["url"] = cfg.get("relayUrl", "")
+    r["helper"] = C.helper_info()                     # v1.22.0：自动继续点了几次、发了几次
+    r["browser"] = RB.status()                        # v1.23.0：软件控制的网页 AI 窗口
+    r["label"] = C.batch_label((r.get("inbox") or "").rsplit(".", 1)[0]) if r.get("inbox") else ""
+    sk = C.KIND_SIZE.get(r.get("kind") or "", "")     # v1.11.2：黄框里能改一批几个词、每写完几个传一次
+    r["sizeKind"] = sk
+    if sk:
+        r["sizeChunk"], r["sizeRound"] = C.relay_size(sk, cfg)
+    ib = C.inbox_cfg(cfg)
+    r["inboxUrl"] = "https://github.com/%s/tree/%s/%s" % (ib["repo"], ib.get("branch") or "main", ib["dir"]) if ib.get("repo") else ""
+    return r
+
+
+def api_open(b):
+    """用你平时的浏览器打开网页 AI。软件自己的窗口用的是单独的浏览器资料夹，在那里打开没登录 zd87。"""
+    url = (C.load_cfg().get("relayUrl") or "").strip()
+    if re.match(r"^https?://", url) and not b.get("plain"):     # v1.23.0：先用软件自己控制的窗口开（能自己贴、自己点「继续」）
+        ok, msg = RB.open_ai(url)
+        if ok:
+            return {"ok": True, "msg": msg}
+    if not re.match(r"^https?://", url):
+        return {"ok": False, "msg": "网页 AI 地址要以 http:// 或 https:// 开头：黄框第 ② 步「发到网页 AI」右边的齿轮里改"}
+    try:
+        if sys.platform == "win32":
+            os.startfile(url)
+        else:
+            webbrowser.open(url, new=2)
+        return {"ok": True, "msg": "已经用你平时的浏览器打开 " + url}
+    except Exception as e:
+        return {"ok": False, "msg": "没打开（%s）：请把地址复制到浏览器 %s" % (str(e)[:80], url)}
+
+
+def helper_script(port):
+    """v1.22.0：按现在的端口和网页 AI 地址填好小助手脚本。"""
+    t = (WEB / "autocont.tpl.js").read_text(encoding="utf-8")
+    hosts = ["https://zd87.com/*", "https://claude.ai/*"]
+    m = re.match(r"^(https?://[^/]+)", (C.load_cfg().get("relayUrl") or "").strip())
+    if m and m.group(1) + "/*" not in hosts:
+        hosts.insert(0, m.group(1) + "/*")
+    ver = (Path(__file__).parent / "VERSION").read_text(encoding="utf-8").strip()
+    return t.replace("__PORT__", str(port)).replace("__VER__", ver).replace("__MATCHES__", "\n".join("// @match        " + h for h in hosts))
+
+
+def api_relay_post(b):
+    if b.get("op") == "bsend":                       # v1.23.0：发到网页 AI——软件自己开窗口、开新对话、贴提示词、发送
+        url = (C.load_cfg().get("relayUrl") or "").strip()
+        p = C.RELAY.get("prompt") or ""
+        if C.RELAY.get("status") != "等你操作" or not p:
+            return {"ok": False, "msg": "现在没有要交给网页 AI 的提示词"}
+        if not re.match(r"^https?://", url):
+            return {"ok": False, "msg": "网页 AI 地址要以 http:// 或 https:// 开头：黄框第 ② 步右边的齿轮里改"}
+        ok, msg = RB.send(url, p)
+        if ok:
+            return {"ok": True, "msg": msg}
+        r = api_open({"plain": True})
+        return {"ok": r.get("ok"), "msg": "软件控制不了浏览器（%s）：%s，提示词在剪贴板里，粘贴、发送" % (msg, r.get("msg") or "")}
+    if b.get("op") == "autocont":                    # v1.22.0：自动继续开 / 关
+        C.save_cfg({"autoCont": bool(b.get("on"))})
+        return {"ok": True, "msg": "自动继续打开了" if b.get("on") else "自动继续关了：网页 AI 停下来要你自己点「继续」"}
+    if b.get("op") == "helper":                      # v1.22.0：用你平时的浏览器打开小助手的安装页
+        url = "http://127.0.0.1:%d/autocont.user.js" % int(os.environ.get("CHUTI_PORT") or C.load_cfg().get("port", 8766))
+        try:
+            if sys.platform == "win32":
+                os.startfile(url)
+            else:
+                webbrowser.open(url, new=2)
+            return {"ok": True, "msg": "用你平时的浏览器打开了安装页：在 Tampermonkey 的页面上点「安装」"}
+        except Exception as e:
+            return {"ok": False, "msg": "没打开（%s）：把 %s 复制到浏览器" % (str(e)[:80], url)}
+    if b.get("op") == "pollnow":                     # v1.11.2：立即查看中转仓库
+        ok, msg = C.relay_poll_now()
+        return {"ok": ok, "msg": msg}
+    if b.get("op") == "url":                         # v1.16.0：第 ② 步齿轮里改要打开的网页 AI
+        ok, msg = C.relay_url_set(b.get("url"))
+        return {"ok": ok, "msg": msg}
+    if b.get("op") == "contmsg":                     # v1.11.4：在同一个对话里接着写——一句短话
+        t = C.relay_cont_msg()
+        return {"ok": bool(t), "text": t, "msg": "" if t else "这一批没有剩下的词了"}
+    if b.get("op") == "size":                        # v1.11.2：一批几个词、每写完几个传一次
+        ok, msg = C.relay_size_set(b.get("kind", ""), b.get("chunk"), b.get("round"))
+        return {"ok": ok, "msg": msg}
+    if b.get("op") in ("newchat", "skiprest"):        # v1.10.9：一份好几个词：剩下的另开对话继续 / 剩下的先跳过
+        ok, msg = C.relay_act(b.get("id", 0), b["op"])
+        return {"ok": ok, "msg": msg}
+    if b.get("skip") and C.RELAY.get("multi"):
+        ok, msg = C.relay_act(b.get("id", 0), "skiprest")
+        return {"ok": ok, "msg": msg}
+    ok, msg = C.relay_submit(b.get("id", 0), b.get("reply", ""), skip=bool(b.get("skip")))
+    return {"ok": ok, "msg": msg}
+
+
+def next_unready(n):
+    """按总表（索引）顺序，接下来还没准备好（缺题目或缺画面）的 n 个词；画面做不成、出题没过的先跳过。"""
+    pw = V.pic_words()
+    skip = {r["word"] for r in C.q("SELECT word FROM picfail")} | set(C.manual_words())
+    _, rows = C.read_index()
+    out = []
+    for r in rows:
+        w = r[2]
+        if w in out or w in skip:
+            continue
+        if r[4] in ("细节数据有", "总表有") and V.folder_of(w) in pw:
+            continue
+        out.append(w)
+        if len(out) >= n:
+            break
+    return out
+
+
+def api_prep(b):
+    """开始页的大按钮：指定的词，或者按总表顺序接着做 n 个，都是出题 → 画面 → 检查一条龙。"""
+    if b.get("mode") == "next":
+        ws = next_unready(max(1, min(200, int(b.get("n") or 5))))
+        if not ws:
+            return {"ok": False, "msg": "总表里的词都准备好了"}
+        return api_words_task({"text": ",".join(ws), "steps": ["chuti", "pics"]})
+    if b.get("mode") == "pool":                     # 从备选单词里勾的
+        ws = [w for w in (b.get("words") or []) if w]
+        if not ws:
+            return {"ok": False, "msg": "先在备选单词里勾要做的词（「全选这些」能一下勾上）"}
+        return api_words_task({"text": "\n".join(ws), "steps": ["chuti", "pics"]})
+    return api_words_task({"text": b.get("text") or "", "steps": ["chuti", "pics"]})
+
+
+def api_words_task(b):
+    raw = b.get("text") or ""
+    ws = [w.strip() for w in re.split(r"[\n,，、;；]+", raw) if w.strip()]
+    if not ws:
+        return {"ok": False, "msg": "先输入单词"}
+    _, rows = C.read_index()
+    known = {r[2] for r in rows}
+    low = {r[2].lower(): r[2] for r in rows}
+    found, miss = [], []
+    for w in ws:
+        k = w if w in known else low.get(w.lower())
+        (found if k else miss).append(k or w)
+    found = list(dict.fromkeys(found))
+    steps = [x for x in (b.get("steps") or []) if x in ("chuti", "pics")]
+    if not found:
+        return {"ok": False, "msg": "这些词总表里都没有：%s" % "、".join(miss[:20])}
+    if not steps:
+        return {"ok": False, "msg": "至少勾一步（出题 / 做视频画面）"}
+    tid = C.add_task("words", {"words": found, "steps": steps},
+                     title="做指定的 %d 个词：%s" % (len(found), "、".join(found[:5]) + ("…" if len(found) > 5 else "")))
+    C.RUNNER.wake.set()
+    return {"ok": True, "found": len(found), "miss": miss, "task": tid,
+            "msg": "开始了（任务 #%d），%d 个词%s" % (tid, len(found), ("；总表里没有、跳过的：" + "、".join(miss[:20])) if miss else "")}
+
+
+def api_find(qs):
+    """选词「从总表里找」：整张总表分两段。mode=q：没题目的在前（能选），有题目的在后（灰的，不能选）；
+    mode=pic：没画面的在前（有题目的排最前，能直接做画面；没题目的要先出题），有画面的在后（灰的）。"""
+    mode, t = qs.get("mode") or "q", (qs.get("q") or "").strip().lower()
+    page, size = max(1, int(qs.get("page") or 1)), 60
+    seen, rows = set(), []
+    for r in C.word_rows():
+        if r["word"] not in seen:
+            seen.add(r["word"])
+            rows.append(r)
+    hasq = lambda r: r["status"] in ("done", "orig")
+    sel = (lambda r: not r["pic"]) if mode == "pic" else (lambda r: not hasq(r))
+    hit = [r for r in rows if not t or t in r["word"].lower() or t in (r["meaning"] or "")]
+    A = [r for r in hit if sel(r)]
+    if mode == "pic":
+        A.sort(key=lambda r: 0 if hasq(r) else 1)         # 有题目的排前面：选上就能直接做画面
+    B = [r for r in hit if not sel(r)]
+    PL._db()
+    pool = {x["word"]: x for x in C.q("SELECT word, picked FROM pool")}
+    out = A + B
+    items = [{"word": r["word"], "meaning": r["meaning"], "q": hasq(r), "manual": r["status"] == "manual", "pic": r["pic"],
+              "video": r["video"], "sel": sel(r), "inPool": r["word"] in pool, "picked": bool((pool.get(r["word"]) or {}).get("picked"))}
+             for r in out[(page - 1) * size: page * size]]
+    return {"items": items, "total": len(out), "nSel": len(A), "nOther": len(B), "page": page, "size": size, "mode": mode,
+            "all": [r["word"] for r in A] if len(A) <= 3000 else []}
+
+
+def api_results(qs):
+    """成果：做好的词，一个词一行（总表里一个词可能有好几行）。f＝video 有视频 / ready 题目和画面都好了、还没出视频 / q 有题目。"""
+    f, t = qs.get("f") or "video", (qs.get("q") or "").strip().lower()
+    page, size = max(1, int(qs.get("page") or 1)), 60
+    seen, rows = set(), []
+    for r in C.word_rows():
+        if r["word"] not in seen:
+            seen.add(r["word"])
+            rows.append(r)
+    hasq = lambda r: r["status"] in ("done", "orig")
+    counts = {"video": sum(1 for r in rows if r["video"]), "ready": sum(1 for r in rows if r["ready"] == "ready"),
+              "q": sum(1 for r in rows if hasq(r))}
+    keep = {"video": lambda r: r["video"], "ready": lambda r: r["ready"] == "ready", "q": hasq}.get(f, lambda r: r["video"])
+    out = [r for r in rows if keep(r) and (not t or t in r["word"].lower() or t in (r["meaning"] or ""))]
+    vd = V.videos()
+    items = [dict(r, vfile=(vd.get(V.folder_of(r["word"])) or {})) for r in out[(page - 1) * size: page * size]]
+    return {"items": items, "total": len(out), "page": page, "counts": counts, "root": str(RS.out_root())}
+
+
+GET = {
+    "/api/status": api_status, "/api/settings": api_settings_get, "/api/tasks": api_tasks, "/api/logs": api_logs,
+    "/api/word": api_word, "/api/ai/live": api_ai_live,
+    "/api/words": lambda qs: C.search_words(qs.get("q", ""), qs.get("status", ""), int(qs.get("page", 1)), ready=qs.get("ready", "")),
+    "/api/map": lambda qs: C.word_map(),
+    "/api/manual": lambda qs: {"items": C.q("SELECT * FROM manual ORDER BY ts DESC")},
+    "/api/picfail": lambda qs: {"items": C.q("SELECT * FROM picfail ORDER BY ts DESC")},
+    "/api/groups": lambda qs: {"items": C.q("SELECT * FROM groups ORDER BY id DESC LIMIT 200")},
+    "/api/calls": lambda qs: {"items": C.q("SELECT id,task_id,ts,kind,words,secs,ok,error,provider,length(prompt) AS plen,"
+                                           "length(reply) AS rlen FROM calls ORDER BY id DESC LIMIT 200")},
+    "/api/call": lambda qs: C.q("SELECT * FROM calls WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
+    "/api/issues": lambda qs: {"readme": C.readme_issues(),
+                               "mine": [r["text"] for r in C.q("SELECT text FROM issues")]},
+    "/api/video": api_video_get,
+    "/api/self": api_self_get,
+    "/api/live": api_live,
+    "/api/relay": api_relay_get,
+    "/api/relay/auto": lambda qs: C.relay_auto(qs),
+    "/api/clear": lambda qs: CL.listing(qs.get("what", "")),          # v1.27.0
+    "/api/done": lambda qs: CL.done_page(qs.get("what", ""), qs.get("find", ""), int(qs.get("page") or 1), int(qs.get("size") or 50), qs.get("picked") == "1"),         # v1.28.0 / v1.31.0：分页
+    "/api/profile": lambda qs: SEC.profile(qs.get("word", "")),      # v1.29.0：单词简历
+    "/api/blocks": lambda qs: SEC.blocks(qs.get("sec", "")),          # v1.30.0：按块的步骤
+    "/api/imp": lambda qs: SEC.imp_list(),                            # v1.30.0：导入（不用 AI 的几块）                # v1.22.0：浏览器小助手来问
+    "/api/fixlater": lambda qs: __import__("pics").later_get(),
+    "/api/fixwords": lambda qs: __import__("pics").fix_list(),
+    "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
+    "/api/next": lambda qs: {"words": next_unready(int(qs.get("n", 5)))},
+    "/api/check": lambda qs: CK.snapshot(watch=qs.get("watch") == "1"),
+    "/api/results": api_results,
+    "/api/find": api_find,
+    "/api/genhist": lambda qs: {"items": C.gen_hist_list(qs.get("kind") or "pic")[:300], "dirs": RS.dirs()},
+    "/api/qres": lambda qs: {"items": RS.q_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
+    "/api/qhist": lambda qs: {"items": C.q_hist(), "dirs": RS.dirs()},
+    "/api/pres": lambda qs: {"items": RS.p_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
+    "/api/pool": lambda qs: PL.summary() if qs.get("brief") else PL.tasks() if qs.get("tasks") else PL.items(),
+    "/api/prompt-preview": lambda qs: {"text": C.build_prompt(C.RUNNER.pick(int(qs.get("n", 3))) or ["make"])},
+}
+NEED_REPO = {"/api/fixwords", "/api/qhist", "/api/next", "/api/pool", "/api/find", "/api/results", "/api/qres", "/api/pres", "/api/picfail", "/api/words", "/api/map", "/api/word", "/api/issues", "/api/prompt-preview", "/api/manual"}
+POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/task/op": api_task_op,
+        "/api/schedule": api_sched, "/api/word/check": api_word_check, "/api/manual": api_manual,
+        "/api/ai": api_ai, "/api/repo": api_repo, "/api/video": api_video_post,
+        "/api/self": api_self_post,
+        "/api/relay": api_relay_post,
+        "/api/fixlater": lambda b: __import__("pics").later_op(b),
+        "/api/pictyped": lambda b: __import__("pics").check_typed(b.get("text", "")),
+        "/api/open": api_open,
+        "/api/words-task": api_words_task,
+        "/api/prep": api_prep,
+        "/api/clear": lambda b: CL.clear(b.get("what"), b.get("words") or []),      # v1.27.0
+        "/api/done": lambda b: CL.done_op(b.get("op"), b.get("what"), b.get("words") or [], b.get("find", ""), bool(b.get("picked"))),      # v1.28.0
+        "/api/blocks": api_blocks,                                         # v1.30.0 / v1.31.0 / v1.33.0
+        "/api/imp": api_imp,                                               # v1.33.0：AI 核对总表
+        "/api/profile": lambda b: SEC.save(b.get("word", ""), b.get("sec", ""), b.get("data")) if b.get("op") == "save" else SEC.redo(b.get("word", ""), b.get("sec", ""), b.get("note", "")),      # v1.29.0
+        "/api/check": lambda b: CK.fix_all() if b.get("op") == "fix" else CK.start(b.get("what") or "all"),      # v1.21.1：一键修复
+        "/api/qres": lambda b: RS.export_words(b.get("words") or []),
+        "/api/pres": lambda b: RS.draw(b.get("word") or ""),
+        "/api/open-path": lambda b: RS.open_path(b.get("what") or "", b.get("word") or ""),
+        "/api/pool": lambda b: PL.op(b) if C.STATE.get("repo") in ("就绪", "索引和总表对不上") else {
+            "ok": False, "msg": "词库还没准备好（%s），等左下角显示“仓库 就绪”再导入" % C.STATE.get("repo")},
+        "/api/prepare": lambda b: C.prepare(b.get("words") or [])}
+
+
+class H(BaseHTTPRequestHandler):
+    def log_message(self, *a):
+        pass
+
+    def _send(self, code, body, ctype="application/json; charset=utf-8"):
+        if not isinstance(body, (bytes, bytearray)):
+            body = json.dumps(body, ensure_ascii=False, default=str).encode("utf-8")
+        self.send_response(code)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        self.wfile.write(body)
+
+    def do_GET(self):
+        u = urllib.parse.urlparse(self.path)
+        qs = {k: v[0] for k, v in urllib.parse.parse_qs(u.query).items()}
+        try:
+            if u.path in NEED_REPO and C.STATE.get("repo") not in ("就绪", "索引和总表对不上"):
+                return self._send(200, {"notReady": True, "msg": "仓库还没准备好：%s %s" % (
+                    C.STATE.get("repo"), C.STATE.get("repoError") or ""), "items": [], "total": 0, "codes": "", "vcodes": "",
+                    "words": [], "readme": [], "mine": [], "counts": {}})
+            if u.path in GET:
+                return self._send(200, GET[u.path](qs))
+            if u.path == "/api/video/file":
+                return video_file(self, qs)
+            if u.path == "/api/art":                       # v1.32.0：画面设置里的一张画（单词简历、各块的页面点开看）
+                data, ct = SEC.art_file(qs.get("w", ""), qs.get("p", ""))
+                return self._send(200, data, ct) if data is not None else self._send(404, {"error": "没有这张画"})
+            if u.path == "/api/res/file":                  # 成果文件夹里的图（画面的 svg）
+                data, ct = RS.res_file(qs.get("p", ""))
+                return self._send(200, data, ct) if data is not None else self._send(404, {"error": "没有这个文件"})
+            if u.path == "/api/ai/shot":
+                m = wm()
+                data = m.live_shot()[0] if m else b""
+                return self._send(200, data or b"", "image/jpeg")
+            if u.path == "/autocont.user.js":                  # v1.22.0：浏览器小助手（Tampermonkey 打开这个地址就会装）
+                return self._send(200, helper_script(self.server.server_address[1]).encode("utf-8"), "text/javascript; charset=utf-8")
+            p = WEB / ("index.html" if u.path in ("/", "") else u.path.lstrip("/"))
+            if p.resolve().parent == WEB.resolve() and p.exists():
+                return self._send(200, p.read_bytes(), MIME.get(p.suffix, "application/octet-stream"))
+            self._send(404, {"error": "没有这个地址"})
+        except Exception as e:
+            traceback.print_exc()
+            self._send(500, {"error": C.mask(str(e))})
+
+    def _same_origin(self):
+        """v1.11.0：别的网站不能借你的浏览器给单词工作台发指令（删批次、停任务……）：带着 Origin 的，只认本机这个地址。"""
+        o = self.headers.get("Origin")
+        if o is None:
+            return True
+        u = urllib.parse.urlparse(o)
+        return u.scheme == "http" and u.hostname in ("127.0.0.1", "localhost") and u.port == self.server.server_address[1]
+
+    def do_POST(self):
+        u = urllib.parse.urlparse(self.path)
+        if not self._same_origin():
+            return self._send(403, {"error": "只接受单词工作台自己的页面发来的操作"})
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+            b = json.loads(self.rfile.read(n).decode("utf-8") or "{}") if n else {}
+            if u.path in POST:
+                return self._send(200, POST[u.path](b))
+            self._send(404, {"error": "没有这个地址"})
+        except Exception as e:
+            traceback.print_exc()
+            self._send(500, {"error": C.mask(str(e))})
+
+
+def open_window(url):
+    if os.environ.get("CHUTI_NO_BROWSER"):
+        return
+    for p in (r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+              r"C:\Program Files\Microsoft\Edge\Application\msedge.exe"):
+        if os.path.exists(p):
+            import subprocess
+            # 用单独的浏览器资料夹：不和平时的 Edge 混在一起、不用 Edge 缓存的旧图标，任务栏上单独一个图标
+            subprocess.Popen([p, "--app=" + url, "--window-size=1360,900", "--user-data-dir=" + str(C.DATA / "edge-app"),
+                              "--no-first-run", "--no-default-browser-check"])
+            return
+    webbrowser.open(url)
+
+
+def main():
+    port = int(os.environ.get("CHUTI_PORT") or C.load_cfg().get("port", 8766))
+    try:
+        srv = ThreadingHTTPServer(("127.0.0.1", port), H)
+    except OSError:
+        print("端口 %d 已被占用：单词工作台可能已经开着了，直接打开 http://127.0.0.1:%d" % (port, port))
+        open_window("http://127.0.0.1:%d" % port)
+        return
+    m = wm()
+    if m:
+        m.set_logger(lambda s: print(s, flush=True))
+    threading.Thread(target=prepare_repo, daemon=True).start()
+    threading.Thread(target=repo_watch, daemon=True).start()
+    C.RUNNER.start()
+    V.startup()                                    # v1.11.0：有批次正在出片，就接着记电脑占用
+    threading.Timer(20, check_update_bg).start()
+    threading.Timer(6, RB.attach_if_running).start()       # v1.23.0：上次开的网页 AI 窗口还在，就再连上
+    url = "http://127.0.0.1:%d" % port
+    print("单词工作台已启动：%s （关掉这个窗口就退出）" % url, flush=True)
+    threading.Timer(1.0, open_window, args=(url,)).start()
+    try:
+        srv.serve_forever()
+    except KeyboardInterrupt:
+        pass
+
+
+if __name__ == "__main__":
+    main()
