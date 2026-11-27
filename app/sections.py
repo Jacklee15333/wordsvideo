@@ -192,6 +192,7 @@ def profile(word):
             ts, ver = str((rec or {}).get("画面生成") or ""), str((rec or {}).get("画面技能版本") or "")
         st = "fix" if issues else ("ok" if has else ("none" if P is not None or s["id"] == "lianxi" else "nopic"))
         secs.append({"id": s["id"], "cat": s["cat"], "name": s["name"], "src": s["src"], "status": st, "ts": ts, "ver": ver,
+                     "table": table_lines(s["id"], trow), "pics": pics_struct(s["id"], word, part) if P is not None else [],
                      "issues": issues, "lines": _brief(s, part, trow, rec), "data": part if s["id"] in AI_EDIT and P is not None else None,
                      "editable": s["id"] in AI_EDIT and P is not None})
     vd = V.videos().get(V.folder_of(word)) or {}
@@ -330,6 +331,7 @@ def blocks(sid):
             st = "na"                                 # 只有一个部分的词（make）：没有“拼起来”、词根词缀卡也不用画
         cnt[st] = cnt.get(st, 0) + 1
         items.append({"word": w, "meaning": trow.get("初中含义") or "", "status": st, "issues": issues,
+                      "table": table_lines(sid, trow), "pics": pics_struct(sid, w, part) if P is not None else [],
                       "lines": _brief(s, part, trow, rec)[:4] if P is not None else [], "ts": str((rec or {}).get("画面生成") or "") if P is not None else "",
                       "ver": str((rec or {}).get("画面技能版本") or "") if P is not None else ""})
     order = {"fix": 0, "none": 1, "nopic": 2, "ok": 3, "na": 4}
@@ -399,3 +401,104 @@ def clear_block(sid, words):
     import pics
     pics.send_back({w: ["用户删掉了「%s」这一块，要按最新的视频技能重做这一块，别的照旧" % s["name"]] for w in done}, src="「%s」删掉" % s["name"])
     return {"ok": True, "n": len(done), "msg": "删掉了 %d 个词的「%s」：退回去了，到「一次做全」点「补画面」重做这一块" % (len(done), s["name"])}
+
+
+
+# ═══════════════ v1.32.0：总表和视频各块的关系；画能点开看 ═══════════════
+# 用户：“词根词缀内容要查看仓库中的总表，里面有内容；拼起来也是……意思场景具体画了什么，要有超链接，点击可以查看图片；意思查看也在总表里面有”
+TABLE_OF = {   # 视频的块 ← 总表的列
+    "pron": ["读音现象"],
+    "parts": ["拆分", "前缀", "词根", "单词部分", "后缀", "词根变体处理"],
+    "combo": ["组合 → 现在的含义"],
+    "scene": ["含义", "初中含义"],
+    "evolve": ["组合 → 现在的含义", "新·背景（只写在词族第一个词上）"],
+    "example": [],
+    "dist": ["辨析"],
+    "kaodian": ["考点"],
+    "board": ["音变 / 字母变化"],
+    "lianxi": [],
+}
+
+
+def table_lines(sid, trow):
+    out = []
+    for k in TABLE_OF.get(sid, []):
+        v = str(trow.get(k) or "").strip()
+        if v and v not in ("-", "—"):
+            if sid == "combo" and "【演变】" in v:
+                v = v.split("【演变】")[0].strip()
+            if sid == "evolve" and k.startswith("组合") :
+                v = ("【演变】" + v.split("【演变】", 1)[1].strip()) if "【演变】" in v else v
+            out.append({"k": k.replace("（只写在词族第一个词上）", ""), "v": v})
+    return out
+
+
+def _art_path(word, rel):
+    """画面设置里的 art/xxx.svg → 实际文件：词库/画面设置/art/<词>/xxx.svg，没有再找视频技能自带的场景和 kit"""
+    name = str(rel or "").split("/")[-1]
+    if not name or ".." in name:
+        return None
+    f = V.folder_of(word)
+    for p in (C.REPO / V.EXTRA / "art" / f / name, C.REPO / "引擎" / "视频" / "references" / "scenes" / name,
+              C.REPO / "引擎" / "视频" / "references" / "kit-7A-U4" / "art" / name):
+        if p.is_file():
+            return p
+    return None
+
+
+def art_file(word, rel):
+    p = _art_path(word, rel)
+    if not p:
+        return None, None
+    return p.read_bytes(), "image/svg+xml"
+
+
+def _pic_struct(word, label, p):
+    if not isinstance(p, dict):
+        return None
+    img = p.get("img") or (("art/%s.svg" % p["bg"]) if p.get("bg") and p.get("bg") not in ("blank",) else "")
+    items = []
+    for it in p.get("items") or []:
+        if not isinstance(it, dict):
+            continue
+        src = it.get("svg") or ""
+        nm = str(src or it.get("emoji") or it.get("text") or it.get("pose") or it.get("actor") or "").split("/")[-1].replace(".svg", "")
+        items.append({"name": nm or "（人物）", "src": src if src and _art_path(word, src) else "", "x": it.get("x"), "y": it.get("y"), "s": it.get("s"), "emoji": it.get("emoji") or ""})
+    return {"label": label, "bg": str(img).split("/")[-1].replace(".svg", "") if img else "", "bgSrc": img if img and _art_path(word, img) else "",
+            "items": items, "text": str(p.get("text") or "")}
+
+
+def pics_struct(sid, word, part):
+    out = []
+    if sid == "scene":
+        for i, x in enumerate(part.get("pics") or []):
+            r = _pic_struct(word, "第 %d 个意思" % (i + 1), x)
+            if r:
+                out.append(r)
+    elif sid == "example":
+        for i, x in enumerate(part.get("pics") or []):
+            if isinstance(x, dict) and isinstance(x.get("exPic"), dict):
+                r = _pic_struct(word, "第 %d 个意思的例句动画" % (i + 1), x["exPic"])
+                if r:
+                    out.append(r)
+    elif sid == "combo" and isinstance(part.get("comboPic"), dict):
+        r = _pic_struct(word, "拼起来那一格", part["comboPic"])
+        if r:
+            out.append(r)
+    elif sid == "parts":
+        for k in ("partPics",):
+            v = part.get(k)
+            if isinstance(v, dict):
+                for pk, pv in v.items():
+                    r = _pic_struct(word, "第 %s 部分的画" % pk.replace("p", ""), pv)
+                    if r:
+                        out.append(r)
+    elif sid == "dist":
+        d = part.get("distinguish") or {}
+        pics = d.get("pics") if isinstance(d, dict) else None
+        if isinstance(pics, dict):
+            for k, v in pics.items():
+                r = _pic_struct(word, "%s 的画" % k, v)
+                if r:
+                    out.append(r)
+    return out

@@ -778,6 +778,9 @@ class H(BaseHTTPRequestHandler):
                 return self._send(200, GET[u.path](qs))
             if u.path == "/api/video/file":
                 return video_file(self, qs)
+            if u.path == "/api/art":                       # v1.32.0：画面设置里的一张画（单词简历、各块的页面点开看）
+                data, ct = SEC.art_file(qs.get("w", ""), qs.get("p", ""))
+                return self._send(200, data, ct) if data is not None else self._send(404, {"error": "没有这张画"})
             if u.path == "/api/res/file":                  # 成果文件夹里的图（画面的 svg）
                 data, ct = RS.res_file(qs.get("p", ""))
                 return self._send(200, data, ct) if data is not None else self._send(404, {"error": "没有这个文件"})

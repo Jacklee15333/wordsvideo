@@ -524,7 +524,8 @@ def check_token():
 
 # ═══════════════════════ 总表、索引、README ═══════════════════════
 TABLE = {"key": None, "words": {}, "order": []}
-FIELDS = ["批次", "序号", "单词", "初中含义", "含义", "考点", "辨析", "拆分", "组合 → 现在的含义"]
+FIELDS = ["批次", "序号", "单词", "初中含义", "含义", "考点", "辨析", "拆分", "组合 → 现在的含义",
+          "类型", "前缀", "词根", "单词部分", "后缀", "新·背景（只写在词族第一个词上）", "音变 / 字母变化", "词根变体处理", "读音现象"]      # v1.32.0：单词简历、各块的页面看总表
 
 
 def load_table():
@@ -532,7 +533,7 @@ def load_table():
     if not p or not p.exists():
         raise Fatal("总表文件不在：%s" % p)
     st = p.stat()
-    key = (str(p), st.st_size, int(st.st_mtime))
+    key = (str(p), st.st_size, int(st.st_mtime), "列v2")      # v1.32.0：多读了几列，旧缓存不用
     if TABLE["key"] == key:
         return TABLE
     cache = DATA / "table_cache.pkl"
