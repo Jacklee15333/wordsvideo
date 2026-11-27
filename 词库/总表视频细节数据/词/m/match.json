@@ -943,57 +943,280 @@
   ],
   "distinguish": {
    "key": "比赛有 match、game；对手有 match、rival、opponent、opposition；比得上有 match、rival、equal",
-   "items": {
-    "match": {
+   "items": [
+    {
      "w": "match",
-     "m": "比赛（英式多说）；对手（旗鼓相当、配得上的人）；比得上",
+     "group": "比赛、对手、比得上",
+     "gloss": "比赛；对手；比得上",
+     "note": "比赛英式多说 match；做“对手”时指旗鼓相当、配得上和你较量的人",
+     "m": "比赛；对手；比得上（比赛英式多说 match；做“对手”时指旗鼓相当、配得上和你较量的人）",
      "ex": "We won the match.",
      "exZh": "我们赢了那场比赛。",
-     "gloss": "比赛",
-     "note": "英式多说）；对手（旗鼓相当、配得上的人）；比得上"
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "svg": "art/desk.svg",
+        "x": 0.5,
+        "y": 0.92,
+        "s": 0.5,
+        "z": 5
+       },
+       {
+        "svg": "art/chess.svg",
+        "x": 0.5,
+        "y": 0.62,
+        "s": 0.55,
+        "z": 6,
+        "anim": "pulse"
+       },
+       {
+        "actor": "west-man-present",
+        "x": 0.15,
+        "y": 0.6,
+        "s": 0.9,
+        "z": 3,
+        "id": "pm",
+        "seq": "talk",
+        "turn": [
+         0,
+         2
+        ]
+       },
+       {
+        "actor": "cn-teacher-listen",
+        "x": 0.85,
+        "y": 0.6,
+        "s": 0.9,
+        "z": 3,
+        "flip": true,
+        "turn": [
+         1,
+         2
+        ],
+        "nodWith": "pm"
+       }
+      ]
+     }
     },
-    "game": {
+    {
      "w": "game",
-     "m": "比赛（美式多说，也指游戏）",
+     "group": "比赛",
+     "gloss": "比赛",
+     "note": "美式多说 game，也指游戏",
+     "m": "比赛（美式多说 game，也指游戏）",
      "ex": "Let's watch the basketball game.",
      "exZh": "我们看篮球比赛吧。",
-     "gloss": "比赛",
-     "note": "美式多说，也指游戏"
+     "pic": {
+      "bg": "blank",
+      "img": "art/park-bg.svg",
+      "items": [
+       {
+        "svg": "art/goal.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 0.6
+       },
+       {
+        "svg": "art/ball.svg",
+        "x": 0.3,
+        "y": 0.8,
+        "s": 0.3,
+        "go": [
+         0.5,
+         0.55
+        ],
+        "dur": 1.0,
+        "loop": true,
+        "anim": "spin",
+        "z": 5
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.5,
+        "y": 0.8,
+        "s": 0.46,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.04,
+          0.8
+         ],
+         "to": [
+          0.96,
+          0.8
+         ],
+         "offset": 0.6
+        }
+       }
+      ]
+     }
     },
-    "rival": {
+    {
      "w": "rival",
-     "m": "对手（长期互相竞争、较劲的人）；也作动词“比得上”",
+     "group": "对手、比得上",
+     "gloss": "对手；比得上",
+     "note": "长期互相竞争、较劲的人；也能作动词“比得上”",
+     "m": "对手；比得上（长期互相竞争、较劲的人；也能作动词“比得上”）",
      "ex": "The two boys are old rivals.",
      "exZh": "这两个男孩是老对手了。",
-     "gloss": "对手",
-     "note": "长期互相竞争、较劲的人）；也作动词“比得上”"
+     "pic": {
+      "bg": "blank",
+      "img": "art/stage-bg.svg",
+      "items": [
+       {
+        "svg": "art/trophy.svg",
+        "x": 0.5,
+        "y": 0.55,
+        "s": 0.62,
+        "anim": "pulse"
+       },
+       {
+        "svg": "art/trophy.svg",
+        "x": 0.2,
+        "y": 0.6,
+        "s": 0.45,
+        "anim": "shake"
+       },
+       {
+        "svg": "art/scoreboard.svg",
+        "x": 0.82,
+        "y": 0.5,
+        "s": 0.5
+       }
+      ]
+     }
     },
-    "opponent": {
+    {
      "w": "opponent",
-     "m": "对手（比赛、辩论中跟你交手的那个人）",
+     "group": "对手",
+     "gloss": "对手",
+     "note": "比赛、辩论中正在跟你交手的那个人，不管水平高低",
+     "m": "对手（比赛、辩论中正在跟你交手的那个人，不管水平高低）",
      "ex": "My opponent played well.",
      "exZh": "我的对手打得很好。",
-     "gloss": "对手",
-     "note": "比赛、辩论中跟你交手的那个人"
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/desk.svg",
+        "x": 0.5,
+        "y": 0.9,
+        "s": 0.5,
+        "z": 5
+       },
+       {
+        "svg": "art/chess.svg",
+        "x": 0.42,
+        "y": 0.6,
+        "s": 0.55,
+        "z": 6,
+        "anim": "pulse"
+       },
+       {
+        "actor": "cn-teacher-laugh",
+        "x": 0.8,
+        "y": 0.6,
+        "s": 0.9,
+        "z": 3
+       }
+      ]
+     }
     },
-    "opposition": {
+    {
      "w": "opposition",
-     "m": "对方（整个对手队伍，常说 the opposition）",
+     "group": "对手",
+     "gloss": "对方",
+     "note": "指对面整个队伍，常说 the opposition",
+     "m": "对方（指对面整个队伍，常说 the opposition）",
      "ex": "The opposition scored first.",
      "exZh": "对方先进了球。",
-     "gloss": "对方",
-     "note": "整个对手队伍，常说 the opposition"
+     "pic": {
+      "bg": "blank",
+      "img": "art/park-bg.svg",
+      "items": [
+       {
+        "svg": "art/goal.svg",
+        "x": 0.3,
+        "y": 0.5,
+        "s": 0.6
+       },
+       {
+        "svg": "art/ball.svg",
+        "x": 0.7,
+        "y": 0.75,
+        "s": 0.3,
+        "go": [
+         0.32,
+         0.55
+        ],
+        "dur": 1.0,
+        "loop": true,
+        "anim": "spin",
+        "z": 5
+       },
+       {
+        "svg": "art/scoreboard.svg",
+        "x": 0.82,
+        "y": 0.45,
+        "s": 0.5
+       },
+       {
+        "actor": "walk-cn-girl",
+        "x": 0.5,
+        "y": 0.8,
+        "s": 0.46,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.96,
+          0.8
+         ],
+         "to": [
+          0.04,
+          0.8
+         ],
+         "offset": 0.9
+        }
+       }
+      ]
+     }
     },
-    "equal": {
+    {
      "w": "equal",
-     "m": "比得上（数量、水平一样）",
+     "group": "比得上",
+     "gloss": "比得上",
+     "note": "重在数量、水平一样多、一样好",
+     "m": "比得上（重在数量、水平一样多、一样好）",
      "ex": "Nobody can equal her.",
      "exZh": "没有人比得上她。",
-     "gloss": "比得上",
-     "note": "数量、水平一样"
+     "pic": {
+      "bg": "blank",
+      "img": "art/classroom-bg.svg",
+      "items": [
+       {
+        "svg": "art/scale.svg",
+        "x": 0.5,
+        "y": 0.56,
+        "s": 0.75,
+        "anim": "pulse"
+       },
+       {
+        "label": "=",
+        "x": 0.8,
+        "y": 0.4,
+        "size": 0.3,
+        "color": "#7A3E00",
+        "border": "#E0A800",
+        "bg": "#FFF6D8"
+       }
+      ]
+     }
     }
-   },
-   "logic": "比赛：英式多说 match，美式多说 game；对手：match 重“旗鼓相当、配得上”，opponent 只是对面那个人，opposition 是对面整个队；rival 重长期竞争；equal 重一样多、一样好",
+   ],
+   "logic": "比赛：英式多说 match，美式多说 game；对手：match 重“旗鼓相当、配得上”，opponent 只是对面那个人，opposition 是对面整个队，rival 重长期竞争；比得上：equal 重一样多、一样好",
    "tip": "英国人看 football match，美国人看 basketball game",
    "pics": {
     "game": {
@@ -1190,7 +1413,13 @@
        "x": 0.15,
        "y": 0.6,
        "s": 0.9,
-       "z": 3
+       "z": 3,
+       "id": "pm",
+       "seq": "talk",
+       "turn": [
+        0,
+        2
+       ]
       },
       {
        "actor": "cn-teacher-listen",
@@ -1198,7 +1427,12 @@
        "y": 0.6,
        "s": 0.9,
        "z": 3,
-       "flip": true
+       "flip": true,
+       "turn": [
+        1,
+        2
+       ],
+       "nodWith": "pm"
       }
      ]
     }
@@ -1298,5 +1532,5 @@
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面技能版本": "视频技能 6.55.0",
  "画面生成": "2026-11-27 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }

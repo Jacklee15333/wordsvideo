@@ -981,42 +981,188 @@
    }
   ],
   "distinguish": {
-   "key": "汉语一个“做”，英语分 make 和 do；“制造”还有 produce，“使”还有 get",
-   "items": {
-    "make": {
+   "key": "汉语一个“做”，英语分 make 和 do；“制造”还有 produce；“使、让”还有 get",
+   "items": [
+    {
      "w": "make",
-     "m": "做、制造（重在造出东西、产生结果：make a cake / a mistake / a decision）",
-     "ex": "I can make a cake.",
-     "exZh": "我会做蛋糕。",
-     "gloss": "做、制造",
-     "note": "重在造出东西、产生结果：make a cake / a mistake / a decision"
+     "group": "做、制造、使",
+     "gloss": "做、制造；使、让",
+     "note": "重在造出一样东西、产生一个结果，make a cake、make a decision；“使、让”说 make sb. do，后面不带 to",
+     "m": "做、制造；使、让（重在造出一样东西、产生一个结果，make a cake、make a decision；“使、让”说 make sb. do，后面不带 to）",
+     "ex": "I made a cake for my mom.",
+     "exZh": "我给妈妈做了一个蛋糕。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/desk.svg",
+        "x": 0.5,
+        "y": 0.9,
+        "s": 0.5,
+        "z": 5
+       },
+       {
+        "svg": "art/cake.svg",
+        "x": 0.42,
+        "y": 0.55,
+        "s": 0.6,
+        "z": 6,
+        "pop": true,
+        "anim": "pulse"
+       },
+       {
+        "actor": "west-girl-raise",
+        "x": 0.8,
+        "y": 0.6,
+        "s": 0.9,
+        "z": 3
+       }
+      ]
+     }
     },
-    "do": {
+    {
      "w": "do",
-     "m": "做（重在从事一项活动：do homework / do the dishes）",
+     "group": "做",
+     "gloss": "做",
+     "note": "重在从事一项活动，不一定造出东西：do homework、do the dishes",
+     "m": "做（重在从事一项活动，不一定造出东西：do homework、do the dishes）",
      "ex": "I do my homework every day.",
      "exZh": "我每天都做作业。",
-     "gloss": "做",
-     "note": "重在从事一项活动：do homework / do the dishes"
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "svg": "art/desk.svg",
+        "x": 0.5,
+        "y": 0.9,
+        "s": 0.5,
+        "z": 5
+       },
+       {
+        "svg": "art/desk-papers.svg",
+        "x": 0.42,
+        "y": 0.55,
+        "s": 0.5,
+        "z": 6,
+        "anim": "bob"
+       },
+       {
+        "svg": "art/books.svg",
+        "x": 0.66,
+        "y": 0.56,
+        "s": 0.42,
+        "z": 6
+       },
+       {
+        "svg": "art/clock.svg",
+        "x": 0.84,
+        "y": 0.25,
+        "s": 0.3,
+        "anim": "pulse"
+       }
+      ]
+     }
     },
-    "produce": {
+    {
      "w": "produce",
-     "m": "生产、制造（多指工厂成批地生产）",
+     "group": "制造",
+     "gloss": "生产、制造",
+     "note": "多指工厂、农场成批地生产",
+     "m": "生产、制造（多指工厂、农场成批地生产）",
      "ex": "This factory produces toys.",
      "exZh": "这家工厂生产玩具。",
-     "gloss": "生产、制造",
-     "note": "多指工厂成批地生产"
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "svg": "art/factory.svg",
+        "x": 0.42,
+        "y": 0.55,
+        "s": 0.8
+       },
+       {
+        "emit": true,
+        "svg": "art/apple.svg",
+        "x": 0.65,
+        "y": 0.8,
+        "s": 0.18,
+        "every": 1.0,
+        "life": 2,
+        "to": [
+         0.3,
+         0
+        ]
+       },
+       {
+        "svg": "art/coins.svg",
+        "x": 0.85,
+        "y": 0.7,
+        "s": 0.3
+       },
+       {
+        "actor": "walk-west-man-case",
+        "x": 0.5,
+        "y": 0.8,
+        "s": 0.46,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.04,
+          0.8
+         ],
+         "to": [
+          0.96,
+          0.8
+         ],
+         "offset": 0.6
+        }
+       }
+      ]
+     }
     },
-    "get": {
+    {
      "w": "get",
-     "m": "使、让（get sb. to do 要带 to，常指说动别人去做；make sb. do 不带 to）",
+     "group": "使、让",
+     "gloss": "使、让",
+     "note": "get sb. to do 后面要带 to，常指说动别人去做",
+     "m": "使、让（get sb. to do 后面要带 to，常指说动别人去做）",
      "ex": "I will get my brother to help me.",
      "exZh": "我会让弟弟来帮我。",
-     "gloss": "使、让",
-     "note": "get sb. to do 要带 to，常指说动别人去做；make sb. do 不带 to"
+     "pic": {
+      "bg": "blank",
+      "img": "art/room-bg.svg",
+      "items": [
+       {
+        "actor": "west-man-hello",
+        "x": 0.4,
+        "y": 0.6,
+        "s": 1.0,
+        "z": 3
+       },
+       {
+        "svg": "art/books.svg",
+        "x": 0.75,
+        "y": 0.7,
+        "s": 0.4,
+        "anim": "shake"
+       },
+       {
+        "label": "get sb. to do",
+        "x": 0.75,
+        "y": 0.2,
+        "size": 0.18,
+        "color": "#7A3E00",
+        "border": "#E0A800",
+        "bg": "#FFF6D8"
+       }
+      ]
+     }
     }
-   },
-   "logic": "make 重“造出一个结果”，do 重“干一件事”；produce 是工厂成批地造；get 让人做事是说动他，后面带 to",
+   ],
+   "logic": "make 重“造出一个结果”，do 重“干一件事”；produce 是工厂成批地造；make 让人做事是硬让，不带 to，get 让人做事是说动他，后面带 to",
    "tip": "做出东西、做出决定用 make；做作业、做家务用 do",
    "pics": {
     "do": {
@@ -1258,5 +1404,5 @@
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
  "画面技能版本": "视频技能 6.55.0",
  "画面生成": "2026-11-27 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "检查": "还要补：都齐了（起草检查）"
 }
