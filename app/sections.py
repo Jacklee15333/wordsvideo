@@ -369,7 +369,7 @@ def redo_many(sid, words, note=""):
     pend_add(done, sid)
     if not done:
         return {"ok": False, "msg": "没退回去：选的词还没有画面设置"}
-    return {"ok": True, "n": len(done), "msg": "%d 个词的「%s」退回去重做了：到「画面 → 整套做」点「补画面」，AI 只改这一块" % (len(done), s["name"])}
+    return {"ok": True, "n": len(done), "msg": "%d 个词的「%s」退回去重做了：到「视频图片 → 整套做」点「补画面」，AI 只改这一块" % (len(done), s["name"])}
 
 
 def imp_list():
