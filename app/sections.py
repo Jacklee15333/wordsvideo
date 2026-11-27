@@ -172,6 +172,10 @@ def profile(word):
     pp, P = _prefs(word)
     chk = str((rec or {}).get("检查") or "")
     todo = [x.strip() for x in re.split(r"[；;]", chk.split("还要补：", 1)[1]) if x.strip()] if "还要补：" in chk and "都齐了" not in chk else []
+    try:
+        _pl = plans([word]).get(V.folder_of(word)) or ("", None)
+    except Exception:
+        _pl = ("", None)
     secs = []
     for s in SECTIONS:
         part = _slice(P, s) if P else {}
@@ -193,7 +197,8 @@ def profile(word):
             ts, ver = str((rec or {}).get("画面生成") or ""), str((rec or {}).get("画面技能版本") or "")
         st = "fix" if issues else ("ok" if has else ("none" if P is not None or s["id"] == "lianxi" else "nopic"))
         secs.append({"id": s["id"], "cat": s["cat"], "name": s["name"], "src": s["src"], "status": st, "ts": ts, "ver": ver,
-                     "table": table_lines(s["id"], trow), "pics": pics_struct(s["id"], word, part) if P is not None else [],
+                     "say": plan_lines(s["id"], _pl[1]), "sayTs": _pl[0], "table": table_short(s["id"], trow),
+                     "pics": pics_struct(s["id"], word, part) if P is not None else [],
                      "issues": issues, "lines": _brief(s, part, trow, rec), "data": part if s["id"] in AI_EDIT and P is not None else None,
                      "editable": s["id"] in AI_EDIT and P is not None})
     vd = V.videos().get(V.folder_of(word)) or {}
@@ -322,7 +327,12 @@ def blocks(sid):
         pass
     _, rows = C.read_index()
     items, cnt = [], {"ok": 0, "fix": 0, "none": 0, "nopic": 0}
-    for w in _picked():
+    pk = _picked()
+    try:
+        pl = plans(pk)
+    except Exception:
+        pl = {}
+    for w in pk:
         _, P = _prefs(w)
         rec = _rec_of(w, rows)
         trow = ((C.TABLE.get("words") or {}).get(w) or [{}])[0]
@@ -333,7 +343,8 @@ def blocks(sid):
             st = "na"                                 # 只有一个部分的词（make）：没有“拼起来”、词根词缀卡也不用画
         cnt[st] = cnt.get(st, 0) + 1
         items.append({"word": w, "meaning": trow.get("初中含义") or "", "status": st, "issues": issues,
-                      "table": table_lines(sid, trow), "pics": pics_struct(sid, w, part) if P is not None else [], "pending": sid in pend_get(w),
+                      "say": plan_lines(sid, (pl.get(V.folder_of(w)) or ("", None))[1]), "sayTs": (pl.get(V.folder_of(w)) or ("", None))[0],
+                      "table": table_short(sid, trow), "pics": pics_struct(sid, w, part) if P is not None else [], "pending": sid in pend_get(w),
                       "lines": _brief(s, part, trow, rec)[:4] if P is not None else [], "ts": str((rec or {}).get("画面生成") or "") if P is not None else "",
                       "ver": str((rec or {}).get("画面技能版本") or "") if P is not None else ""})
     for x in items:                                   # v1.33.0：这一块自己记的时间、版本（单独重做过的）
@@ -501,7 +512,7 @@ def pics_struct(sid, word, part):
             v = part.get(k)
             if isinstance(v, dict):
                 for pk, pv in v.items():
-                    r = _pic_struct(word, "第 %s 部分的画" % pk.replace("p", ""), pv)
+                    r = _pic_struct(word, "第 %d 部分的画" % (int(re.sub(r"\D", "", str(pk)) or 0) + 1), pv)
                     if r:
                         out.append(r)
     elif sid == "dist":
@@ -666,3 +677,74 @@ def do_verify(R, tid, p):
             C.log("AI 核对总表：%s 没回结果（回复里没认出来）" % "、".join(miss), tid)
         _VER().write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
         C.log("AI 核对总表：%d 个词，%d 个有问题" % (len(seen), sum(1 for w in seen if not res[w]["ok"])), tid)
+
+
+# ═══════════════ v1.34.0：每一块只写视频里讲的（精简版配音稿），不把总表整段抄过来 ═══════════════
+# 用户：“含义拆分的部分……内容非常多，这个是直接来自总表的……视频里面不会把这么多内容一起全写出来，所以这里只写视频里要讲的内容。
+#   其他部分：拼起来，意思场景，演变等等都要这样”
+SCENE_OF = {"pron": ("syl", "sylnote", "duyin"), "parts": ("split", "part", "yinbian", "xingtai", "fengong"),
+            "combo": ("combo", "route", "variant", "related", "origin", "rule", "steps"), "scene": ("meaning",), "evolve": ("evolve",),
+            "example": ("example",), "dist": ("distinguish",), "kaodian": ("kaodian",), "board": ("board",), "lianxi": ("lianxi",)}
+LABEL_OF = {"part": "卡 %d", "example": "例句 %d", "kaodian": "考点第 %d 页", "lianxi": "第 %d 题", "duyin": "读音现象 %d", "yinbian": "音变 %d", "xingtai": "形态 %d"}
+_PL = {}                                            # 单词文件夹 → (读的时间, 起草时间, 配音稿)
+
+
+def plans(words, ttl=90):
+    """从 WSL 读这些词精简版的配音稿（~/wordfilm-work/<词>/brief/plan.json：起草检查、出片时写的），一次读完，缓存一会儿"""
+    now = time.time()
+    fs = sorted({V.folder_of(w) for w in words})
+    need = [f for f in fs if f not in _PL or now - _PL[f][0] > ttl]
+    if need:
+        sh = "for f in %s; do p=~/wordfilm-work/$f/brief/plan.json; if [ -f \"$p\" ]; then printf '@@%%s %%s\\n' \"$f\" \"$(date -r \"$p\" '+%%Y-%%m-%%d %%H:%%M')\"; cat \"$p\"; printf '\\n'; fi; done" % " ".join(V.q(f) for f in need)
+        try:
+            rc, out = V.wsl(sh, 60)
+        except Exception:
+            rc, out = 1, ""
+        got = {}
+        if rc == 0 and out:
+            for chunk in out.split("@@")[1:]:
+                head, _, body = chunk.partition("\n")
+                f, _, ts = head.partition(" ")
+                try:
+                    got[f] = (ts.strip(), json.loads(body))
+                except Exception:
+                    pass
+        for f in need:
+            _PL[f] = (now,) + got.get(f, ("", None))
+    return {f: _PL[f][1:] for f in fs}
+
+
+def _seg_text(x):
+    t = str(x.get("t", "")) if isinstance(x, dict) else str(x)
+    t = t.strip()
+    if re.match(r"^qz\S*$", t):
+        return "〔念这一块的音〕"
+    return re.sub(r"\bqz\S+", "〔念音〕", t)
+
+
+def plan_lines(sid, plan):
+    """配音稿里这一块的几幕：念的话"""
+    if not plan:
+        return []
+    out = []
+    keys = SCENE_OF.get(sid, ())
+    for k, sc in (plan.get("scenes") or {}).items():
+        m = re.match(r"^([a-z]+?)(\d*)$", k)
+        if not m or m.group(1) not in keys:
+            continue
+        say = [_seg_text(x) for x in ([sc.get("intro")] if sc.get("intro") else []) + list(sc.get("segs") or [])]
+        say = [x for x in say if x]
+        if not say:
+            continue
+        lab = (LABEL_OF.get(m.group(1), "") % (int(m.group(2)) + 1)) if m.group(2) and m.group(1) in LABEL_OF else ""
+        out.append({"label": lab, "say": say})
+    return out
+
+
+def table_short(sid, trow):
+    """还没起草时：总表里这一块的几列，只摘头一句"""
+    out = []
+    for t in table_lines(sid, trow):
+        v = re.split(r"[\n；;。]", t["v"].replace("【构词逻辑】", "").replace("【演变】", ""), 1)[0].strip()
+        out.append({"k": t["k"], "v": (v[:60] + "…") if len(v) > 60 else v})
+    return out
