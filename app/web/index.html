@@ -250,6 +250,7 @@ nav a.on .sn{background:var(--base);border-color:var(--base);color:#fff}
 .upw{border:1px solid var(--rule);border-radius:6px;padding:6px 10px;margin:6px 0}.upw summary{cursor:pointer}.uph{font-size:12px;font-weight:600;color:var(--muted);margin:8px 0 2px}
 .updel{color:#B42318;text-decoration:line-through;text-decoration-color:#e8a0a0}.upadd{color:var(--pass)}
 .upsteps{margin:6px 0 10px;padding-left:4px;list-style:none;line-height:1.75}.upsteps li{margin:3px 0}.uptab td,.uptab th{font-size:12.5px;vertical-align:top}.lbbh{font-size:12px;white-space:nowrap}
+.lbsee{color:var(--pass);text-decoration:underline dotted;text-underline-offset:3px;white-space:nowrap}.lbsee:hover{text-decoration-style:solid}.wpc.wpHi{border-color:var(--pass)!important;box-shadow:0 0 0 2px rgba(46,139,87,.25)}
 .lblook{margin:-2px 0 8px;padding:6px 10px;background:#EEF3FB;border-radius:6px}.lbmk{color:var(--amber);font-weight:600;white-space:nowrap}
 .lbf{font-size:13px;padding:4px 11px;border:1px solid var(--rule);border-radius:14px;color:var(--muted);text-decoration:none;background:#fff}.lbf b{font-weight:600;color:var(--ink);margin-left:2px}.lbf.on{background:var(--base);border-color:var(--base);color:#fff}.lbf.on b{color:#fff}
 .ngrp{font-size:11.5px;color:#8C9CB8;letter-spacing:.05em;padding:10px 14px 4px 20px;white-space:nowrap;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}
@@ -2811,10 +2812,11 @@ function doneAsk(w,op,words,total){const all=op==='clearall',n=all?total:words.l
     closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);(all?[...DSEL[w]]:words).forEach(x=>DSEL[w].delete(x));
     doneLoad(w);if(w==='v'&&typeof vWordsLoad==='function')vWordsLoad()}}
 /* v1.29.0：单词简历——一个词的视频分成哪几块、每块从哪来、做好没、什么时候用哪个版本做的；能看、能改（画面设置那几块）、能单独重做 */
-document.addEventListener('click',e=>{const a=e.target.closest('.wpo');if(!a)return;e.preventDefault();e.stopPropagation();wpOpen(a.dataset.w)});
+document.addEventListener('click',e=>{const a=e.target.closest('.wpo');if(!a)return;e.preventDefault();e.stopPropagation();wpOpen(a.dataset.w,a.dataset.sec)});
 const WPST={ok:['✓ 做好了','var(--pass)'],fix:['⚠ 要补','var(--amber)'],none:['— 还没有','var(--faint,#999)'],nopic:['— 还没做画面','var(--faint,#999)']};
-async function wpOpen(w){let d;try{d=await api('/api/profile?word='+encodeURIComponent(w))}catch(e){toast('✗ '+e.message,8000);return}
+async function wpOpen(w,sec){let d;try{d=await api('/api/profile?word='+encodeURIComponent(w))}catch(e){toast('✗ '+e.message,8000);return}
   if(!d.ok){toast('✗ '+(d.msg||''),8000);return}
+  if(sec==='video'&&d.video&&d.video.file){vPlay(d.video.file,d.word);return}   // v1.49.0：点「视频 ✓ 有了」直接放
   const cats=[];d.sections.forEach(s=>{let c=cats.find(x=>x.cat===s.cat);if(!c)cats.push(c={cat:s.cat,ss:[]});c.ss.push(s)});
   const card=s=>{const [t,col]=WPST[s.status]||['',''];return `<div class="wpc" data-sec="${s.id}" style="border:1px solid var(--rule);border-radius:8px;padding:8px 12px;margin:6px 0">
     <div class="line" style="gap:8px;align-items:baseline;flex-wrap:wrap"><b>${esc(s.name)}</b><span class="tag">${esc(s.src)}</span><span style="color:${col};font-weight:600" class="small">${t}${s.issues.length?' '+s.issues.length+' 处':''}</span>
@@ -2828,6 +2830,7 @@ async function wpOpen(w){let d;try{d=await api('/api/profile?word='+encodeURICom
     ${d.hasPic?`<div class="small faint" style="margin-bottom:6px">画面：${esc(d.picTs||'')}${d.picVer?' · '+esc(d.picVer):''}　${esc(d.picCheck||'')}</div>`:'<div class="small faint" style="margin-bottom:6px">还没有画面设置</div>'}
     <div style="max-height:66vh;overflow:auto;padding-right:4px">${cats.map(c=>`<div style="margin-top:8px"><div class="small" style="font-weight:700;color:var(--ink)">${esc(c.cat)}</div>${c.ss.map(card).join('')}</div>`).join('')}</div>`);
   const body=$('#mBody'),secOf=id=>d.sections.find(s=>s.id===id);
+  if(sec&&sec!=='video'){const c=body.querySelector('.wpc[data-sec="'+sec+'"]');if(c){c.classList.add('wpHi');setTimeout(()=>c.scrollIntoView({block:'start'}),30)}}   // v1.49.0：从总表点哪一格，就框出、滚到哪一块
   body.querySelectorAll('.wpEdit').forEach(a=>a.onclick=e=>{e.preventDefault();const s=secOf(a.dataset.sec),box=a.closest('.wpc').querySelector('.wpBox');
     box.innerHTML=`<p class="small muted" style="margin:6px 0">这一块在画面设置里的样子（JSON）。改好点「保存」：写回画面设置，出片前再做一次起草检查。</p><textarea style="width:100%;height:220px;font-family:var(--mono,monospace);font-size:12px">${esc(JSON.stringify(s.data||{},null,1))}</textarea>
       <div class="line" style="gap:8px;margin-top:6px"><button class="btn sm wpSave">保存</button><button class="btn ghost sm wpCancel">不改了</button><span class="small wpMsg"></span></div>`;
@@ -3052,13 +3055,14 @@ async function libLoad(mode){const L=LIBS[mode],el=$(mode==='lib'?'#libBox':'#fp
   const acts=isLib?`<span class="small muted">勾的词：</span><button class="btn ghost sm lbDo" data-part="draft" ${n?'':'disabled'}>写讲稿 ▸</button><button class="btn ghost sm lbDo" data-part="q" ${n?'':'disabled'}>出题 ▸</button><button class="btn ghost sm lbDo" data-part="pic" ${n?'':'disabled'}>做画面 ▸</button><button class="btn sm lbUp" ${n?'':'disabled'}>按 ${cv} 更新 ▸</button>`
     :`<button class="btn sm lbAdd" ${n?'':'disabled'}>挑进来${n?' '+n+' 个':''}</button>`;
   const mk=(i,part,txt,cls)=>isLib?`<a href="#" class="lbmk ${cls||''}" data-w="${esc(i.word)}" data-part="${part}">${txt||'做'} ▸</a>`:`<span style="color:var(--amber)">${esc(txt||'—')}</span>`;
+  const see=(i,sec,h,tip)=>`<a href="#" class="wpo lbsee" data-w="${esc(i.word)}"${sec?` data-sec="${sec}"`:''} title="${tip||'点开看做好的内容'}">${h}</a>`;   // v1.49.0
   const blkCell=(i,id)=>{if(!i.q||i.manual)return '<span class="faint">先出题</span>';
     if(!i.pic)return mk(i,'pic','做','lite');const b=(i.blk||{})[id];
-    if(!b)return '<span style="color:var(--pass)" title="视频技能自带的画面">✓</span><span class="faint" style="font-size:10.5px"> 自带</span>';
+    if(!b)return see(i,id,'✓<span class="faint" style="font-size:10.5px"> 自带</span>','视频技能自带的画面：点开看');
     if(b.st==='na')return '<span class="faint">不用</span>';
     if(b.st==='none')return mk(i,'b_'+id,'做');
     if(b.st==='fix')return mk(i,'b_'+id,'补 '+b.n+' 处');
-    return b.old?`<span style="color:var(--pass)">✓</span> ${mk(i,'b_'+id,vs(b.ver),'old')}`:`<span style="color:var(--pass)">✓</span>${b.ver?` <span class="vgood" title="视频技能 ${esc(b.ver)} 做的，是现在这一版">${vs(b.ver)}</span>`:''}`};
+    return b.old?`${see(i,id,'✓')} ${mk(i,'b_'+id,vs(b.ver),'old')}`:see(i,id,`✓${b.ver?` <span class="vgood">${vs(b.ver)}</span>`:''}`,b.ver?`视频技能 ${esc(b.ver)} 做的，是现在这一版：点开看`:'')};
   const cols=isLib?BLKS.map(([id,nm])=>`<th class="lbbh">${nm}</th>`).join(''):'<th>画面</th>';
   const colw=isLib?BLKS.map(()=>'<col style="width:74px">').join(''):'<col style="width:110px">';
   el.innerHTML=ask+fl+`<div class="line" style="gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px">
@@ -3069,11 +3073,11 @@ async function libLoad(mode){const L=LIBS[mode],el=$(mode==='lib'?'#libBox':'#fp
     <tr><th><input type="checkbox" class="lball"></th><th>单词</th><th>讲稿</th><th>题目</th>${cols}<th>视频</th><th>素材</th></tr>
     ${d.items.length?d.items.map(i=>`<tr style="vertical-align:top"><td><input type="checkbox" class="lbck" value="${esc(i.word)}" ${L.sel.has(i.word)?'checked':''}></td>
       <td><a href="#" class="w wpo" data-w="${esc(i.word)}">${esc(i.word)}</a><div class="small faint">${esc(i.meaning)}</div></td>
-      <td class="small">${i.draft?(i.old.includes('讲稿')?`<span style="color:var(--pass)">✓</span> ${mk(i,'draft',vs(i.draftVer),'old')}`:i.draftVer?`<span style="color:var(--pass)">✓</span> <span class="vgood">${vs(i.draftVer)}</span>`:libMk(true,i.draft.slice(5,10))):mk(i,'draft','写')}</td>
-      <td class="small">${i.q&&!i.manual?libMk(true):mk(i,'q',i.manual?'没过，改':'出题')}</td>
-      ${isLib?BLKS.map(([id])=>`<td class="small">${blkCell(i,id)}</td>`).join(''):`<td class="small">${i.pic&&!i.picTodo?libMk(true):!i.q?'<span class="faint">先出题</span>':mk(i,'pic',i.picTodo?'还要补':'做画面')}</td>`}
-      <td class="small">${i.video?libMk(true,'有了'):i.inb?libMk(false,'在出片','var(--blue)'):libMk(false)}</td>
-      <td class="small">${i.st==='ready'?`<b style="color:var(--pass)">✓ 齐了，能出片</b>`:i.st==='video'?'<span style="color:var(--pass)">✓ 视频做好了</span>':i.st==='inb'?'<span class="faint">正在出片</span>':`<span style="color:var(--amber)">缺：${esc(i.miss.join('、').replace(/还没有/g,''))}</span>`}${Object.entries(i.blk||{}).filter(([k,b])=>b.extra).map(([k,b])=>`<div style="font-size:11px"><a href="#" class="lbwr" data-w="${esc(i.word)}">${esc(b.name)}要补 ${b.n} 处 ▸</a></div>`).join('')}${i.old.length?`<div style="color:var(--amber);font-size:11px" title="${esc(i.old.join('、'))}">${i.old.length} 块不是 ${vs(d.skill)} 做的</div>`:''}</td></tr>`).join('')
+      <td class="small">${i.draft?(i.old.includes('讲稿')?`${see(i,'','✓','点开看讲稿：每一块视频里说的话')} ${mk(i,'draft',vs(i.draftVer),'old')}`:see(i,'',i.draftVer?`✓ <span class="vgood">${vs(i.draftVer)}</span>`:libMk(true,i.draft.slice(5,10)),'点开看讲稿：每一块视频里说的话')):mk(i,'draft','写')}</td>
+      <td class="small">${i.q&&!i.manual?see(i,'lianxi',libMk(true),'点开看题目'):mk(i,'q',i.manual?'没过，改':'出题')}</td>
+      ${isLib?BLKS.map(([id])=>`<td class="small">${blkCell(i,id)}</td>`).join(''):`<td class="small">${i.pic&&!i.picTodo?see(i,'',libMk(true),'点开看画面'):!i.q?'<span class="faint">先出题</span>':mk(i,'pic',i.picTodo?'还要补':'做画面')}</td>`}
+      <td class="small">${i.video?see(i,'video',libMk(true,'有了'),'点开放视频'):i.inb?libMk(false,'在出片','var(--blue)'):libMk(false)}</td>
+      <td class="small">${i.st==='ready'?see(i,'','<b>✓ 齐了，能出片</b>','点开看单词简历'):i.st==='video'?see(i,'video','✓ 视频做好了','点开放视频'):i.st==='inb'?'<span class="faint">正在出片</span>':`<span style="color:var(--amber)">缺：${esc(i.miss.join('、').replace(/还没有/g,''))}</span>`}${Object.entries(i.blk||{}).filter(([k,b])=>b.extra).map(([k,b])=>`<div style="font-size:11px"><a href="#" class="lbwr" data-w="${esc(i.word)}">${esc(b.name)}要补 ${b.n} 处 ▸</a></div>`).join('')}${i.old.length?`<div style="color:var(--amber);font-size:11px" title="${esc(i.old.join('、'))}">${i.old.length} 块不是 ${vs(d.skill)} 做的</div>`:''}</td></tr>`).join('')
       :`<tr><td colspan="${isLib?11:7}" class="pempty">${mode==='fplib'?'没有能挑的了：素材齐了的词都挑进来了，或者还没有素材齐了的词（到素材那边做题目、画面）':'没有符合的词'}</td></tr>`}</table></div>
     <div class="line" style="gap:10px;align-items:center;justify-content:center;margin-top:8px"><button class="btn ghost sm lbp" ${d.page>1?'':'disabled'}>上一页</button><span class="small">第 ${d.page} / ${d.pages} 页 · 共 ${d.total.toLocaleString()} 个</span><button class="btn ghost sm lbn" ${d.page<d.pages?'':'disabled'}>下一页</button></div>`;
   rzInit(el.querySelector('table'),'lib3_'+mode);
