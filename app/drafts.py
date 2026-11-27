@@ -58,11 +58,11 @@ def _todo(line):
     return out
 
 
-def status():
+def status(words=None):
     """v1.37.0：一份配音稿，两处看——
     「导入 → 讲稿」：总表来的几块要说的话（不用画面）；「画面设计 → 定稿」：画面做好以后，把画上的话也写进去，对一遍还要补什么。"""
     import pics as P
-    words = SEC._picked()
+    words = SEC._picked() if words is None else words
     try:
         pl = SEC.plans(words)
     except Exception:

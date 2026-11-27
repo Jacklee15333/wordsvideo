@@ -2330,7 +2330,8 @@ def pick_info():
         todo = pics.todo_all()
     except Exception:
         todo = {}
-    items = [i for i in pool.items()["items"] if i.get("picked")]
+    import film                                  # v1.39.0：出视频用「出片 → 挑词」挑的词（不再用素材那边的「选词」）
+    items = film.pick_info_items()
     pend, done = inbatch()
     out = {"n": len(items), "ready": [], "video": [], "inb": [], "pic": [], "q": []}
     for i in items:
