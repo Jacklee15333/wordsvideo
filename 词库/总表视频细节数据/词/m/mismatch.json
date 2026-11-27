@@ -1,7 +1,766 @@
 {
  "单词": "mismatch",
- "画面": null,
- "插图": [],
+ "画面": {
+  "style": "core",
+  "board": true,
+  "text": {
+   "final": "不匹配；实力悬殊的比赛"
+  },
+  "sylIpa": [
+   "mɪs",
+   "mætʃ"
+  ],
+  "kaodian": {
+   "rows": [
+    [
+     "变形",
+     "n. 复数 mismatches（加 es）"
+    ],
+    [
+     "构词",
+     "mis（错）+ match（相配）= 配错了"
+    ],
+    [
+     "易混",
+     "mismatch 配错了；unmatched、matchless 却是“无人能比的”"
+    ]
+   ]
+  },
+  "partPics": {
+   "p0": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.38,
+      "y": 0.55,
+      "s": 0.5,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/sock-blue.svg",
+      "x": 0.62,
+      "y": 0.55,
+      "s": 0.5,
+      "anim": "shake"
+     },
+     {
+      "label": "✗",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 0.2,
+      "color": "#C92A2A",
+      "border": "#E03131",
+      "bg": "#FFF5F5",
+      "delay": 0.6
+     }
+    ]
+   },
+   "p1": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.38,
+      "y": 0.55,
+      "s": 0.5
+     },
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.62,
+      "y": 0.55,
+      "s": 0.5,
+      "anim": "bob"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.07,
+      "every": 1.1,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.16
+      ],
+      "spin": true
+     }
+    ]
+   }
+  },
+  "icons": {
+   "p0": "art/icon-mis.svg",
+   "p1": "art/icon-pair.svg"
+  },
+  "comboPic": {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/sock-red.svg",
+     "x": 0.32,
+     "y": 0.55,
+     "s": 0.6
+    },
+    {
+     "svg": "art/sock-blue.svg",
+     "x": 0.85,
+     "y": 0.55,
+     "s": 0.6,
+     "go": [
+      0.58,
+      0.55
+     ],
+     "dur": 1.0,
+     "wait": 0.4,
+     "anim": "shake"
+    },
+    {
+     "label": "配错了",
+     "x": 0.45,
+     "y": 0.12,
+     "size": 0.12,
+     "color": "#C92A2A",
+     "border": "#E03131",
+     "bg": "#FFF5F5",
+     "delay": 1.4
+    }
+   ]
+  },
+  "pics": [
+   {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "text": "不匹配、不对口",
+    "pos": "名词",
+    "diff": "两样东西凑在一起却不合适",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.36,
+      "y": 0.56,
+      "s": 0.5,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/sock-blue.svg",
+      "x": 0.56,
+      "y": 0.56,
+      "s": 0.5,
+      "anim": "shake"
+     },
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.82,
+      "y": 0.56,
+      "s": 0.9,
+      "z": 3
+     }
+    ],
+    "ex": "The two socks are a mismatch.",
+    "exzh": "这两只袜子不配。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/bed.svg",
+       "x": 0.7,
+       "y": 0.75,
+       "s": 0.4,
+       "z": 1
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.35,
+       "y": 0.55,
+       "s": 0.55,
+       "pop": true,
+       "when": "two socks"
+      },
+      {
+       "svg": "art/sock-blue.svg",
+       "x": 0.6,
+       "y": 0.55,
+       "s": 0.55,
+       "pop": true,
+       "when": "two socks",
+       "delay": 0.3,
+       "anim": "shake"
+      },
+      {
+       "label": "mismatch",
+       "x": 0.48,
+       "y": 0.12,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "mismatch"
+      },
+      {
+       "label": "不配",
+       "x": 0.48,
+       "y": 0.9,
+       "size": 0.1,
+       "color": "#C92A2A",
+       "border": "#E03131",
+       "bg": "#FFF5F5",
+       "when": "不配"
+      }
+     ]
+    }
+   },
+   {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "text": "实力悬殊的比赛",
+    "pos": "名词",
+    "diff": "一边强一边弱，根本配不上做对手",
+    "items": [
+     {
+      "svg": "art/scoreboard.svg",
+      "x": 0.38,
+      "y": 0.45,
+      "s": 0.6
+     },
+     {
+      "label": "10 : 0",
+      "x": 0.38,
+      "y": 0.47,
+      "size": 0.15,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "delay": 0.3
+     },
+     {
+      "svg": "art/goal.svg",
+      "x": 0.82,
+      "y": 0.55,
+      "s": 0.4
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.62,
+      "y": 0.82,
+      "s": 0.16,
+      "go": [
+       0.82,
+       0.6
+      ],
+      "dur": 0.8,
+      "loop": true,
+      "anim": "spin",
+      "z": 5
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.1,
+      "y": 0.6,
+      "s": 0.7,
+      "z": 4
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.04,
+        0.8
+       ],
+       "to": [
+        0.96,
+        0.8
+       ],
+       "offset": 0.0
+      }
+     }
+    ],
+    "ex": "The game was a mismatch: ten to nothing.",
+    "exzh": "这场比赛实力悬殊，十比零。",
+    "exPic": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/goal.svg",
+       "x": 0.6,
+       "y": 0.5,
+       "s": 0.55
+      },
+      {
+       "svg": "art/ball.svg",
+       "x": 0.3,
+       "y": 0.82,
+       "s": 0.2,
+       "go": [
+        0.6,
+        0.55
+       ],
+       "dur": 0.8,
+       "loop": true,
+       "anim": "spin",
+       "z": 5,
+       "when": "mismatch"
+      },
+      {
+       "actor": "cn-boy-raise",
+       "x": 0.16,
+       "y": 0.55,
+       "s": 0.8,
+       "z": 3
+      },
+      {
+       "svg": "art/scoreboard.svg",
+       "x": 0.88,
+       "y": 0.35,
+       "s": 0.36
+      },
+      {
+       "label": "10 : 0",
+       "x": 0.88,
+       "y": 0.37,
+       "size": 0.09,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "ten to nothing"
+      },
+      {
+       "label": "实力悬殊",
+       "x": 0.6,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "实力悬殊"
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.5,
+       "y": 0.8,
+       "s": 0.46,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.96,
+         0.8
+        ],
+        "to": [
+         0.04,
+         0.8
+        ],
+        "offset": 0.3
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "flow": [
+   {
+    "node": "mis + match = 配错了",
+    "say": [
+     "mis 是错，match 是相配。",
+     "合起来，就是配错了。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "label": "mis 错",
+       "x": 0.2,
+       "y": 0.14,
+       "size": 0.09,
+       "color": "#C92A2A",
+       "border": "#E03131",
+       "bg": "#FFF5F5",
+       "when": "mis 是错"
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.35,
+       "y": 0.56,
+       "s": 0.52,
+       "when": "match 是相配"
+      },
+      {
+       "svg": "art/sock-blue.svg",
+       "x": 0.85,
+       "y": 0.56,
+       "s": 0.52,
+       "when": "配错了",
+       "go": [
+        0.6,
+        0.56
+       ],
+       "dur": 0.9,
+       "anim": "shake"
+      },
+      {
+       "label": "配错了",
+       "x": 0.6,
+       "y": 0.12,
+       "size": 0.1,
+       "color": "#C92A2A",
+       "border": "#E03131",
+       "bg": "#FFF5F5",
+       "when": "配错了"
+      }
+     ]
+    }
+   },
+   {
+    "via": "两样东西凑在一起却不合适",
+    "node": "① 不匹配、不对口",
+    "pos": "动词 → 名词",
+    "pic": 0,
+    "rule": "英语里，动词也常常直接拿来当名词用",
+    "ruleEx": "mismatch 配错 → 不匹配      walk 走 → 散步（take a walk）",
+    "cap": "配错 → 不匹配",
+    "say": [
+     "四百多年前，mismatch 先当动词用，意思是配得不当，后来常说婚姻。",
+     "英语里，动词也常常直接拿来当名词用：walk 是走，take a walk 就是散一次步。",
+     "mismatch 也一样：两样东西凑在一起不合适，就是不匹配、不对口。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "label": "配得不当",
+       "x": 0.5,
+       "y": 0.12,
+       "size": 0.085,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "配得不当",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/heart-l.svg",
+       "x": 0.42,
+       "y": 0.52,
+       "s": 0.5,
+       "when": "婚姻",
+       "hideCue": 1
+      },
+      {
+       "svg": "art/heart-r.svg",
+       "x": 0.6,
+       "y": 0.58,
+       "s": 0.5,
+       "when": "婚姻",
+       "hideCue": 1,
+       "anim": "shake",
+       "rot": 12
+      },
+      {
+       "label": "动词 → 名词",
+       "x": 0.5,
+       "y": 0.1,
+       "size": 0.09,
+       "color": "#7048E8",
+       "border": "#7048E8",
+       "when": "当名词用",
+       "hideCue": 2
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.2,
+       "y": 0.62,
+       "s": 0.6,
+       "z": 3,
+       "cue": 1,
+       "when": "walk 是走",
+       "hideCue": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "label": "take a walk 散步",
+       "x": 0.5,
+       "y": 0.88,
+       "size": 0.08,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "cue": 1,
+       "when": "take a walk",
+       "hideCue": 2
+      },
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.38,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "两样东西"
+      },
+      {
+       "svg": "art/sock-blue.svg",
+       "x": 0.62,
+       "y": 0.56,
+       "s": 0.5,
+       "when": "两样东西",
+       "anim": "shake"
+      },
+      {
+       "label": "不匹配",
+       "x": 0.5,
+       "y": 0.9,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "不匹配、不对口"
+      }
+     ]
+    }
+   },
+   {
+    "via": "比赛两边配不上做对手",
+    "node": "② 实力悬殊的比赛",
+    "pos": "名词",
+    "pic": 1,
+    "say": [
+     "比赛的两边，一边强一边弱，根本配不上做对手。",
+     "这样的比赛也叫 mismatch，就是实力悬殊的比赛。"
+    ],
+    "fig": {
+     "bg": "blank",
+     "img": "art/park-bg.svg",
+     "items": [
+      {
+       "svg": "art/scoreboard.svg",
+       "x": 0.4,
+       "y": 0.45,
+       "s": 0.6,
+       "when": "比赛的两边"
+      },
+      {
+       "label": "10 : 0",
+       "x": 0.4,
+       "y": 0.47,
+       "size": 0.15,
+       "color": "#7A3E00",
+       "border": "#E0A800",
+       "bg": "#FFF6D8",
+       "when": "一边强一边弱"
+      },
+      {
+       "svg": "art/goal.svg",
+       "x": 0.84,
+       "y": 0.55,
+       "s": 0.38,
+       "when": "配不上"
+      },
+      {
+       "svg": "art/ball.svg",
+       "x": 0.66,
+       "y": 0.82,
+       "s": 0.16,
+       "go": [
+        0.84,
+        0.6
+       ],
+       "dur": 0.8,
+       "loop": true,
+       "anim": "spin",
+       "z": 5,
+       "when": "配不上"
+      },
+      {
+       "label": "实力悬殊",
+       "x": 0.4,
+       "y": 0.9,
+       "size": 0.1,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "when": "实力悬殊的比赛"
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 0.5,
+       "y": 0.8,
+       "s": 0.46,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.04,
+         0.8
+        ],
+        "to": [
+         0.96,
+         0.8
+        ],
+        "offset": 0.6
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "extend": [
+   {
+    "w": "misunderstand",
+    "m": "误解",
+    "share": "mis"
+   },
+   {
+    "w": "mistake",
+    "m": "错误",
+    "share": "mis"
+   },
+   {
+    "w": "unmatched",
+    "m": "无人能比的",
+    "share": "match"
+   }
+  ],
+  "distinguish": {
+   "key": "同一个 match，前后一加，意思差很远",
+   "items": {
+    "mismatch": {
+     "w": "mismatch",
+     "m": "不匹配、配错了（mis 错 + match 相配）",
+     "ex": "The two socks are a mismatch.",
+     "exZh": "这两只袜子不配。",
+     "gloss": "不匹配、配错了",
+     "note": "mis 错 + match 相配"
+    },
+    "unmatched": {
+     "w": "unmatched",
+     "m": "无人能比的（un 没有 + matched 被比上：没有人比得上）",
+     "ex": "Her singing is unmatched.",
+     "exZh": "她的歌声无人能比。",
+     "gloss": "无人能比的",
+     "note": "un 没有 + matched 被比上：没有人比得上"
+    },
+    "matchless": {
+     "w": "matchless",
+     "m": "无敌的（match 对手 + less 没有：找不到对手）",
+     "ex": "He is a matchless player.",
+     "exZh": "他是一个无敌的选手。",
+     "gloss": "无敌的",
+     "note": "match 对手 + less 没有：找不到对手"
+    }
+   },
+   "logic": "mismatch 里的 match 是“相配”，加 mis 是配错了；unmatched、matchless 里的 match 是“对手、比得上”，加 un-、-less 是没人比得上",
+   "tip": "看 match 是“相配”还是“对手”，再看前后加的是“错”还是“没有”",
+   "pics": {
+    "unmatched": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/podium.svg",
+       "x": 0.5,
+       "y": 0.8,
+       "s": 0.4,
+       "z": 5
+      },
+      {
+       "actor": "west-man-speech",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.85,
+       "z": 4,
+       "id": "u",
+       "seq": "talk"
+      },
+      {
+       "svg": "art/mic.svg",
+       "x": 0.58,
+       "y": 0.55,
+       "s": 0.22,
+       "z": 6
+      },
+      {
+       "waves": true,
+       "x": 0.64,
+       "y": 0.32,
+       "dir": 0,
+       "with": "u"
+      }
+     ]
+    },
+    "matchless": {
+     "bg": "blank",
+     "img": "art/stage-bg.svg",
+     "items": [
+      {
+       "svg": "art/trophy.svg",
+       "x": 0.42,
+       "y": 0.55,
+       "s": 0.65,
+       "anim": "pulse"
+      },
+      {
+       "actor": "west-man-hello",
+       "x": 0.76,
+       "y": 0.6,
+       "s": 0.9,
+       "z": 3
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.42,
+       "y": 0.25,
+       "s": 0.07,
+       "every": 1.1,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.16
+       ],
+       "spin": true
+      }
+     ]
+    },
+    "mismatch": {
+     "bg": "blank",
+     "img": "art/bedroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/sock-red.svg",
+       "x": 0.4,
+       "y": 0.55,
+       "s": 0.65,
+       "anim": "shake"
+      },
+      {
+       "svg": "art/sock-blue.svg",
+       "x": 0.6,
+       "y": 0.55,
+       "s": 0.65,
+       "anim": "shake"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "插图": [
+  "mismatchai"
+ ],
  "总表版本": "第七十九版",
  "题目": {
   "题目1": "【听力】听录音，回答问题：那场比赛怎么样？\n听：The game was a mismatch; our team was much stronger.\nA. 两队打成平局\nB. 两队实力相差很大\nC. 比赛被取消了\nD. 两队实力差不多",
@@ -88,5 +847,8 @@
   }
  ],
  "题目生成": "2026-11-19 Claude（云端）",
- "题目检查": "维护技能 lianxi.py 体检 0 个问题"
+ "题目检查": "维护技能 lianxi.py 体检 0 个问题",
+ "画面技能版本": "视频技能 6.55.0",
+ "画面生成": "2026-11-27 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

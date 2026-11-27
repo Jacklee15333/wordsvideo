@@ -1,0 +1,889 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "匹配者；匹配器、匹配程序"
+ },
+ "sylIpa": [
+  "mætʃ",
+  "ər"
+ ],
+ "kaodian": {
+  "rows": [
+   [
+    "变形",
+    "n. 复数 matchers"
+   ],
+   [
+    "构词",
+    "match（配对）+ er（做…的人或东西）：动词 → 名词"
+   ]
+  ]
+ },
+ "partPics": {
+  "p0": {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "items": [
+    {
+     "svg": "art/sock-red.svg",
+     "x": 0.25,
+     "y": 0.55,
+     "s": 0.5,
+     "go": [
+      0.42,
+      0.55
+     ],
+     "dur": 1.2,
+     "wait": 0.5
+    },
+    {
+     "svg": "art/sock-red.svg",
+     "x": 0.78,
+     "y": 0.55,
+     "s": 0.5,
+     "go": [
+      0.6,
+      0.55
+     ],
+     "dur": 1.2,
+     "wait": 0.5
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.5,
+     "y": 0.3,
+     "s": 0.07,
+     "every": 1.1,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.16
+     ],
+     "spin": true,
+     "delay": 1.6
+    }
+   ]
+  },
+  "p1": {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.4,
+     "z": 5
+    },
+    {
+     "actor": "west-clerk-happy",
+     "x": 0.28,
+     "y": 0.55,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "svg": "art/computer.svg",
+     "x": 0.7,
+     "y": 0.58,
+     "s": 0.5,
+     "z": 6
+    },
+    {
+     "eq": true,
+     "x": 0.7,
+     "y": 0.52,
+     "w": 0.2,
+     "h": 0.12,
+     "n": 5
+    }
+   ]
+  }
+ },
+ "icons": {
+  "p0": "art/icon-pair.svg",
+  "p1": "art/icon-er.svg"
+ },
+ "comboPic": {
+  "bg": "blank",
+  "img": "art/room-bg.svg",
+  "items": [
+   {
+    "svg": "art/desk.svg",
+    "x": 0.5,
+    "y": 0.92,
+    "s": 0.4,
+    "z": 5
+   },
+   {
+    "svg": "art/computer.svg",
+    "x": 0.62,
+    "y": 0.55,
+    "s": 0.55,
+    "z": 6
+   },
+   {
+    "svg": "art/sock-red.svg",
+    "x": 0.18,
+    "y": 0.55,
+    "s": 0.36,
+    "go": [
+     0.28,
+     0.55
+    ],
+    "dur": 1.0,
+    "wait": 0.4
+   },
+   {
+    "svg": "art/sock-red.svg",
+    "x": 0.42,
+    "y": 0.55,
+    "s": 0.36,
+    "go": [
+     0.34,
+     0.55
+    ],
+    "dur": 1.0,
+    "wait": 0.4
+   },
+   {
+    "label": "做配对的人或东西",
+    "x": 0.5,
+    "y": 0.1,
+    "size": 0.09,
+    "color": "#2B8A3E",
+    "border": "#2B8A3E",
+    "delay": 1.4
+   }
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "text": "匹配者",
+   "pos": "名词",
+   "diff": "给人或东西配对的人",
+   "items": [
+    {
+     "actor": "cn-teacher-point",
+     "x": 0.3,
+     "y": 0.55,
+     "s": 0.95,
+     "z": 3,
+     "seq": "talk"
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.6,
+     "y": 0.93,
+     "s": 0.28,
+     "z": 6
+    },
+    {
+     "label": "Tom",
+     "x": 0.66,
+     "y": 0.3,
+     "size": 0.08,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.4
+    },
+    {
+     "label": "李华",
+     "x": 0.88,
+     "y": 0.3,
+     "size": 0.08,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.7
+    },
+    {
+     "ray": [
+      [
+       0.71,
+       0.3
+      ],
+      [
+       0.83,
+       0.3
+      ]
+     ],
+     "color": "#E03131",
+     "lw": 0.012,
+     "dur": 0.6,
+     "delay": 1.0
+    },
+    {
+     "label": "Anna",
+     "x": 0.66,
+     "y": 0.5,
+     "size": 0.08,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8",
+     "delay": 1.3
+    },
+    {
+     "label": "王明",
+     "x": 0.88,
+     "y": 0.5,
+     "size": 0.08,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8",
+     "delay": 1.6
+    },
+    {
+     "ray": [
+      [
+       0.71,
+       0.5
+      ],
+      [
+       0.83,
+       0.5
+      ]
+     ],
+     "color": "#E03131",
+     "lw": 0.012,
+     "dur": 0.6,
+     "delay": 1.9
+    }
+   ],
+   "ex": "My teacher is a good matcher.",
+   "exzh": "我的老师很会给人配对。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.25,
+      "y": 0.55,
+      "s": 0.95,
+      "z": 3
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.6,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 6
+     },
+     {
+      "label": "Tom",
+      "x": 0.55,
+      "y": 0.3,
+      "size": 0.085,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "matcher"
+     },
+     {
+      "label": "李华",
+      "x": 0.85,
+      "y": 0.3,
+      "size": 0.085,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "matcher",
+      "delay": 0.2
+     },
+     {
+      "ray": [
+       [
+        0.61,
+        0.3
+       ],
+       [
+        0.78,
+        0.3
+       ]
+      ],
+      "color": "#E03131",
+      "lw": 0.012,
+      "dur": 0.6,
+      "when": "matcher",
+      "delay": 0.4
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.7,
+      "y": 0.2,
+      "s": 0.07,
+      "every": 1.1,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.16
+      ],
+      "spin": true,
+      "when": "matcher"
+     },
+     {
+      "label": "配对",
+      "x": 0.7,
+      "y": 0.55,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "配对"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "text": "匹配器、匹配程序",
+   "pos": "名词",
+   "diff": "自动把两边配起来的程序",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.4,
+     "z": 5
+    },
+    {
+     "svg": "art/computer.svg",
+     "x": 0.5,
+     "y": 0.55,
+     "s": 0.6,
+     "z": 6
+    },
+    {
+     "eq": true,
+     "x": 0.5,
+     "y": 0.5,
+     "w": 0.22,
+     "h": 0.14,
+     "n": 5,
+     "z": 7
+    },
+    {
+     "label": "求职者",
+     "x": 0.14,
+     "y": 0.3,
+     "size": 0.08,
+     "color": "#2F6FB3",
+     "border": "#2F6FB3",
+     "delay": 0.4
+    },
+    {
+     "label": "岗位",
+     "x": 0.86,
+     "y": 0.3,
+     "size": 0.08,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8",
+     "delay": 0.7
+    },
+    {
+     "ray": [
+      [
+       0.22,
+       0.3
+      ],
+      [
+       0.78,
+       0.3
+      ]
+     ],
+     "color": "#E03131",
+     "lw": 0.012,
+     "dur": 1.0,
+     "delay": 1.1
+    }
+   ],
+   "ex": "The job matcher found a job for my dad.",
+   "exzh": "招聘配对程序给我爸爸找到了一份工作。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.7,
+      "y": 0.82,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.7,
+      "y": 0.55,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.28,
+      "y": 0.52,
+      "s": 0.55,
+      "pop": true,
+      "when": "job matcher",
+      "anim": "shake",
+      "z": 5
+     },
+     {
+      "label": "found a job",
+      "x": 0.28,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "found a job"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.7,
+      "y": 0.2,
+      "s": 0.07,
+      "every": 1.1,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.16
+      ],
+      "spin": true,
+      "when": "found a job"
+     },
+     {
+      "label": "找到了一份工作",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "找到了一份工作"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "match + er = 做配对的人或东西",
+   "rule": "动词加上 er，就变成做这件事的人或东西",
+   "ruleEx": "match 配对 → matcher 匹配者      teach 教 → teacher 老师",
+   "cap": "动词 → 名词",
+   "say": [
+    "match 是配对，er 是做这件事的人或东西。",
+    "英语里，动词加上 er，就变成名词：teach 是教，teacher 就是教书的人。",
+    "match 也一样：matcher，就是做配对的人或东西。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.25,
+      "y": 0.56,
+      "s": 0.5,
+      "when": "match 是配对",
+      "go": [
+       0.4,
+       0.56
+      ],
+      "dur": 1.0,
+      "hideCue": 1
+     },
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.75,
+      "y": 0.56,
+      "s": 0.5,
+      "when": "match 是配对",
+      "go": [
+       0.6,
+       0.56
+      ],
+      "dur": 1.0,
+      "hideCue": 1
+     },
+     {
+      "label": "er 人或东西",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "做这件事的人或东西",
+      "hideCue": 1
+     },
+     {
+      "label": "动词 → 名词",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "变成名词",
+      "hideCue": 2
+     },
+     {
+      "actor": "west-man-present",
+      "x": 0.4,
+      "y": 0.56,
+      "s": 0.92,
+      "z": 3,
+      "cue": 1,
+      "when": "teacher 就是",
+      "hideCue": 2
+     },
+     {
+      "label": "teach → teacher",
+      "x": 0.78,
+      "y": 0.4,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "cue": 1,
+      "when": "teacher 就是",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.2,
+      "y": 0.62,
+      "s": 0.4,
+      "cue": 2,
+      "when": "matcher",
+      "go": [
+       0.3,
+       0.62
+      ],
+      "dur": 0.8
+     },
+     {
+      "svg": "art/sock-red.svg",
+      "x": 0.42,
+      "y": 0.62,
+      "s": 0.4,
+      "cue": 2,
+      "when": "matcher",
+      "go": [
+       0.36,
+       0.62
+      ],
+      "dur": 0.8
+     },
+     {
+      "svg": "art/computer.svg",
+      "x": 0.74,
+      "y": 0.58,
+      "s": 0.5,
+      "cue": 2,
+      "when": "做配对的人或东西",
+      "anim": "pulse"
+     },
+     {
+      "label": "matcher",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "cue": 2,
+      "when": "matcher"
+     }
+    ]
+   }
+  },
+  {
+   "via": "做配对的人",
+   "node": "① 匹配者",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "做配对的人，就是匹配者。",
+    "比如老师给同学两两配好学习搭档。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.28,
+      "y": 0.55,
+      "s": 0.95,
+      "z": 3,
+      "when": "做配对的人"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.6,
+      "y": 0.94,
+      "s": 0.26,
+      "z": 6
+     },
+     {
+      "label": "匹配者",
+      "x": 0.28,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "匹配者"
+     },
+     {
+      "label": "Tom",
+      "x": 0.62,
+      "y": 0.32,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "两两配好"
+     },
+     {
+      "label": "李华",
+      "x": 0.88,
+      "y": 0.32,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "两两配好",
+      "delay": 0.2
+     },
+     {
+      "ray": [
+       [
+        0.67,
+        0.32
+       ],
+       [
+        0.82,
+        0.32
+       ]
+      ],
+      "color": "#E03131",
+      "lw": 0.012,
+      "dur": 0.6,
+      "when": "学习搭档"
+     },
+     {
+      "label": "学习搭档",
+      "x": 0.75,
+      "y": 0.55,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "学习搭档"
+     }
+    ]
+   }
+  },
+  {
+   "via": "做配对的东西（技术）",
+   "node": "② 匹配器、匹配程序",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "做配对的东西，就是匹配器、匹配程序。",
+    "招聘网站把求职者和岗位一对一对配起来，用的就是它。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.4,
+      "z": 5
+     },
+     {
+      "svg": "art/computer.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.6,
+      "z": 6,
+      "when": "做配对的东西"
+     },
+     {
+      "eq": true,
+      "x": 0.5,
+      "y": 0.5,
+      "w": 0.22,
+      "h": 0.14,
+      "n": 5,
+      "z": 7,
+      "when": "匹配程序"
+     },
+     {
+      "label": "求职者",
+      "x": 0.14,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "求职者"
+     },
+     {
+      "label": "岗位",
+      "x": 0.86,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "岗位"
+     },
+     {
+      "ray": [
+       [
+        0.22,
+        0.3
+       ],
+       [
+        0.78,
+        0.3
+       ]
+      ],
+      "color": "#E03131",
+      "lw": 0.012,
+      "dur": 0.8,
+      "when": "配起来"
+     },
+     {
+      "label": "匹配器",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "匹配器"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "teacher",
+   "m": "教师",
+   "share": "er"
+  },
+  {
+   "w": "speaker",
+   "m": "说话者；扬声器",
+   "share": "er"
+  },
+  {
+   "w": "rematch",
+   "m": "再赛",
+   "share": "match"
+  }
+ ],
+ "distinguish": false,
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：这个网站能帮学生做什么？",
+    "listen": "This website is a good job matcher for students.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "找到合适的工作",
+     "学英语",
+     "买书",
+     "交朋友"
+    ],
+    "ans": "A",
+    "why": "job matcher 把人和工作配对的工具。",
+    "kd": ""
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "The two ______ work for the same company. (matcher)",
+    "opts": [],
+    "ans": "matchers",
+    "why": "two 后面用复数 matchers。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Someone who matches people with jobs is a job ______.",
+    "opts": [
+     "match",
+     "matching",
+     "matches",
+     "matcher"
+    ],
+    "ans": "D",
+    "why": "做……的人用 -er：match → matcher。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 match、matcher、matching 中选一个填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "She wore a red hat with ______ gloves.",
+    "opts": [],
+    "ans": "matching",
+    "why": "修饰名词 gloves，用形容词 matching（配套的）。",
+    "kd": "词性转换"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The matcher help me find a part-time job last month.",
+    "opts": [],
+    "ans": "help → helped",
+    "why": "last month 说过去的事，用过去式 helped。",
+    "kd": ""
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这些匹配程序非常有用。",
+    "stem": "These ______ are very useful.",
+    "opts": [],
+    "ans": "matchers",
+    "why": "these 后面用复数 matchers。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Does this tie ______ my shirt?",
+    "opts": [
+     "matcher",
+     "match",
+     "matching",
+     "matches"
+    ],
+    "ans": "B",
+    "why": "Does 后面用动词原形 match（相配）；matcher 是名词。",
+    "kd": "词性转换"
+   }
+  ]
+ }
+}

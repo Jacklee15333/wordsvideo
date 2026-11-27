@@ -1,0 +1,1301 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "比赛、对手、相配、比得上"
+ },
+ "sylIpa": [
+  "mætʃ"
+ ],
+ "kaodian": {
+  "rows": [
+   [
+    "变形",
+    "n. 复数 matches（加 es）；v. 三单 matches（加 es），过去式、过去分词 matched，现在分词 matching"
+   ],
+   [
+    "易混",
+    "match 指颜色、款式等协调一致（Your shoes match your bag）；fit 指尺寸合身"
+   ],
+   [
+    "用法",
+    "be a match for sb. 是某人的对手；no match for 比不上"
+   ]
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/park-bg.svg",
+   "text": "比赛",
+   "pos": "名词",
+   "diff": "两边一较高下的一场较量",
+   "items": [
+    {
+     "svg": "art/goal.svg",
+     "x": 0.62,
+     "y": 0.5,
+     "s": 0.56
+    },
+    {
+     "svg": "art/ball.svg",
+     "x": 0.2,
+     "y": 0.78,
+     "s": 0.22,
+     "go": [
+      0.62,
+      0.55
+     ],
+     "dur": 1.0,
+     "wait": 1.0,
+     "loop": true,
+     "anim": "spin",
+     "z": 5
+    },
+    {
+     "actor": "cn-boy-raise",
+     "x": 0.2,
+     "y": 0.55,
+     "s": 0.8,
+     "z": 4
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.62,
+     "y": 0.3,
+     "s": 0.07,
+     "every": 1.1,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.16
+     ],
+     "spin": true
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.5,
+     "y": 0.8,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.04,
+       0.8
+      ],
+      "to": [
+       0.96,
+       0.8
+      ],
+      "offset": 0.0
+     }
+    }
+   ],
+   "ex": "We watched a football match on TV.",
+   "exzh": "我们在电视上看了一场足球赛。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/computer.svg",
+      "x": 0.32,
+      "y": 0.55,
+      "s": 0.55,
+      "z": 3
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.24,
+      "y": 0.48,
+      "s": 0.12,
+      "go": [
+       0.4,
+       0.46
+      ],
+      "dur": 0.8,
+      "loop": true,
+      "z": 4,
+      "when": "football match"
+     },
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.72,
+      "y": 0.82,
+      "s": 0.4,
+      "z": 2
+     },
+     {
+      "actor": "west-girl-listen",
+      "x": 0.72,
+      "y": 0.56,
+      "s": 0.85,
+      "z": 3,
+      "seq": "blink"
+     },
+     {
+      "label": "足球赛",
+      "x": 0.32,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "足球赛"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "text": "对手",
+   "pos": "名词",
+   "diff": "和你旗鼓相当的人",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.9,
+     "s": 0.44,
+     "z": 5
+    },
+    {
+     "svg": "art/chess.svg",
+     "x": 0.42,
+     "y": 0.62,
+     "s": 0.48,
+     "z": 6,
+     "anim": "pulse"
+    },
+    {
+     "actor": "west-clerk-think",
+     "x": 0.78,
+     "y": 0.55,
+     "s": 0.92,
+     "z": 3,
+     "seq": "blink"
+    }
+   ],
+   "ex": "She is a good match for me at chess.",
+   "exzh": "下棋时她是我的好对手。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.44,
+      "z": 5
+     },
+     {
+      "actor": "west-girl-explain",
+      "x": 0.18,
+      "y": 0.55,
+      "s": 0.9,
+      "z": 3,
+      "id": "g",
+      "turn": [
+       0,
+       2
+      ]
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.82,
+      "y": 0.55,
+      "s": 0.9,
+      "z": 3,
+      "turn": [
+       1,
+       2
+      ],
+      "nodWith": "g"
+     },
+     {
+      "svg": "art/chess.svg",
+      "x": 0.5,
+      "y": 0.66,
+      "s": 0.46,
+      "z": 6,
+      "when": "chess",
+      "pop": true
+     },
+     {
+      "label": "好对手",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "好对手"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/bedroom-bg.svg",
+   "text": "相配、匹配",
+   "pos": "动词",
+   "diff": "颜色、款式等协调一致",
+   "items": [
+    {
+     "svg": "art/bag.svg",
+     "x": 0.62,
+     "y": 0.52,
+     "s": 0.52,
+     "shadow": true,
+     "pop": true,
+     "z": 4
+    },
+    {
+     "svg": "art/shoes.svg",
+     "x": 0.3,
+     "y": 0.74,
+     "s": 0.3,
+     "shadow": true,
+     "pop": true,
+     "delay": 0.4,
+     "z": 5
+    },
+    {
+     "svg": "art/mirror.svg",
+     "x": 0.86,
+     "y": 0.45,
+     "s": 0.5,
+     "z": 2
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.46,
+     "y": 0.4,
+     "s": 0.07,
+     "every": 1.1,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.16
+     ],
+     "spin": true
+    }
+   ],
+   "ex": "Your shoes match your bag.",
+   "exzh": "你的鞋和你的包很相配。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "actor": "west-girl-surprised",
+      "x": 0.2,
+      "y": 0.56,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/shoes.svg",
+      "x": 0.5,
+      "y": 0.74,
+      "s": 0.3,
+      "pop": true,
+      "when": "shoes",
+      "z": 5
+     },
+     {
+      "svg": "art/bag.svg",
+      "x": 0.76,
+      "y": 0.5,
+      "s": 0.5,
+      "pop": true,
+      "when": "bag",
+      "z": 4
+     },
+     {
+      "ray": [
+       [
+        0.55,
+        0.62
+       ],
+       [
+        0.7,
+        0.52
+       ]
+      ],
+      "color": "#E03131",
+      "lw": 0.012,
+      "dash": true,
+      "dur": 0.6,
+      "when": "match"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.62,
+      "y": 0.3,
+      "s": 0.07,
+      "every": 1.1,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.16
+      ],
+      "spin": true,
+      "when": "match"
+     },
+     {
+      "label": "很相配",
+      "x": 0.62,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "很相配"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/stage-bg.svg",
+   "text": "比得上",
+   "pos": "动词",
+   "diff": "能和对方抗衡、不比他差",
+   "items": [
+    {
+     "svg": "art/trophy.svg",
+     "x": 0.4,
+     "y": 0.55,
+     "s": 0.6,
+     "shadow": true,
+     "anim": "pulse",
+     "z": 4
+    },
+    {
+     "actor": "west-man-hello",
+     "x": 0.74,
+     "y": 0.55,
+     "s": 0.9,
+     "z": 3
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.4,
+     "y": 0.25,
+     "s": 0.07,
+     "every": 1.1,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.16
+     ],
+     "spin": true
+    }
+   ],
+   "ex": "No one can match him in English speeches.",
+   "exzh": "英语演讲谁也比不上他。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/podium.svg",
+      "x": 0.5,
+      "y": 0.78,
+      "s": 0.4,
+      "z": 5
+     },
+     {
+      "actor": "west-man-speech",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.82,
+      "z": 4,
+      "id": "sp",
+      "seq": "talk"
+     },
+     {
+      "svg": "art/mic.svg",
+      "x": 0.58,
+      "y": 0.55,
+      "s": 0.22,
+      "z": 6
+     },
+     {
+      "waves": true,
+      "x": 0.62,
+      "y": 0.32,
+      "dir": 0,
+      "n": 3,
+      "with": "sp"
+     },
+     {
+      "svg": "art/audience-wide.svg",
+      "x": 0.5,
+      "y": 0.95,
+      "s": 0.24,
+      "z": 8,
+      "crowd": 9,
+      "nodWith": "sp"
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.15,
+      "y": 0.55,
+      "s": 0.36,
+      "when": "No one can match",
+      "pop": true
+     },
+     {
+      "label": "谁也比不上他",
+      "x": 0.82,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "比不上"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "使合适、拼成一对",
+   "say": [
+    "match 和 make 是一家人，最早的意思是：使合适。",
+    "两个半边严丝合缝，正好拼成一对。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "label": "match ≈ make",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "一家人"
+     },
+     {
+      "label": "使合适",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "使合适"
+     },
+     {
+      "svg": "art/heart-l.svg",
+      "x": 0.3,
+      "y": 0.52,
+      "s": 0.55,
+      "when": "两个半边",
+      "go": [
+       0.47,
+       0.52
+      ],
+      "goWhen": "拼成一对",
+      "dur": 1.0,
+      "z": 4
+     },
+     {
+      "svg": "art/heart-r.svg",
+      "x": 0.7,
+      "y": 0.52,
+      "s": 0.55,
+      "when": "两个半边",
+      "go": [
+       0.53,
+       0.52
+      ],
+      "goWhen": "拼成一对",
+      "dur": 1.0,
+      "z": 4
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.07,
+      "every": 1.1,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.16
+      ],
+      "spin": true,
+      "when": "拼成一对"
+     }
+    ]
+   }
+  },
+  {
+   "via": "配成一对的另一半",
+   "node": "相配的人或物；相配、匹配",
+   "pos": "名词 → 动词",
+   "pic": 2,
+   "rule": "英语里，名词常常直接拿来当动词用",
+   "ruleEx": "match 相配的一方 → 相配      water 水 → 浇水",
+   "cap": "相配的一方 → 相配",
+   "say": [
+    "拼成一对的另一半，就是和你相配的人或物。",
+    "英语里，名词常常直接拿来当动词用：water 是水，也能当动词，就是浇水。",
+    "match 也一样：两样东西配成一对，就是相配、匹配，比如鞋和包一样红。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/bedroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/heart-l.svg",
+      "x": 0.47,
+      "y": 0.5,
+      "s": 0.45,
+      "when": "另一半",
+      "hideCue": 1,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/heart-r.svg",
+      "x": 0.53,
+      "y": 0.5,
+      "s": 0.45,
+      "when": "另一半",
+      "hideCue": 1,
+      "anim": "pulse"
+     },
+     {
+      "label": "相配的人或物",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "相配的人或物",
+      "hideCue": 1
+     },
+     {
+      "label": "名词 → 动词",
+      "x": 0.5,
+      "y": 0.1,
+      "size": 0.09,
+      "color": "#7048E8",
+      "border": "#7048E8",
+      "when": "当动词用",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/plant.svg",
+      "x": 0.3,
+      "y": 0.58,
+      "s": 0.5,
+      "cue": 1,
+      "when": "water 是水",
+      "hideCue": 2,
+      "anim": "sway"
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.3,
+      "y": 0.25,
+      "s": 0.06,
+      "every": 0.5,
+      "life": 0.9,
+      "to": [
+       0,
+       0.2
+      ],
+      "cue": 1,
+      "when": "浇水",
+      "hideCue": 2
+     },
+     {
+      "label": "water 水 → 浇水",
+      "x": 0.72,
+      "y": 0.4,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "cue": 1,
+      "when": "浇水",
+      "hideCue": 2
+     },
+     {
+      "svg": "art/shoes.svg",
+      "x": 0.32,
+      "y": 0.72,
+      "s": 0.3,
+      "when": "鞋",
+      "z": 5,
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/bag.svg",
+      "x": 0.68,
+      "y": 0.5,
+      "s": 0.5,
+      "when": "包",
+      "z": 4,
+      "pop": true,
+      "anim": "bob"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.3,
+      "s": 0.07,
+      "every": 1.1,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.16
+      ],
+      "spin": true,
+      "cue": 2,
+      "when": "相配、匹配"
+     },
+     {
+      "label": "match 相配",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "cue": 2,
+      "when": "相配、匹配"
+     }
+    ]
+   }
+  },
+  {
+   "via": "旗鼓相当、配得上做你对手的人",
+   "node": "对手",
+   "pos": "名词",
+   "pic": 1,
+   "say": [
+    "下棋时，和你旗鼓相当、配得上做你对手的人，也叫 match。",
+    "这就是对手。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.44,
+      "z": 5
+     },
+     {
+      "svg": "art/chess.svg",
+      "x": 0.4,
+      "y": 0.66,
+      "s": 0.46,
+      "z": 6,
+      "when": "下棋",
+      "pop": true
+     },
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.8,
+      "y": 0.55,
+      "s": 0.9,
+      "z": 3,
+      "when": "旗鼓相当"
+     },
+     {
+      "label": "旗鼓相当",
+      "x": 0.4,
+      "y": 0.14,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "旗鼓相当"
+     },
+     {
+      "label": "对手",
+      "x": 0.4,
+      "y": 0.3,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "这就是对手"
+     }
+    ]
+   }
+  },
+  {
+   "via": "两个对手一较高下",
+   "node": "比赛",
+   "pos": "名词",
+   "pic": 0,
+   "say": [
+    "两个对手碰在一起，要一较高下。",
+    "这一场较量也叫 match，就是比赛。英式说 football match，美式多说 game。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/goal.svg",
+      "x": 0.6,
+      "y": 0.5,
+      "s": 0.55,
+      "when": "一较高下"
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.18,
+      "y": 0.8,
+      "s": 0.2,
+      "go": [
+       0.6,
+       0.55
+      ],
+      "goWhen": "较量",
+      "dur": 1.0,
+      "anim": "spin",
+      "z": 5
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.2,
+      "y": 0.55,
+      "s": 0.8,
+      "z": 3,
+      "when": "两个对手"
+     },
+     {
+      "label": "一较高下",
+      "x": 0.6,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "一较高下"
+     },
+     {
+      "label": "football match",
+      "x": 0.6,
+      "y": 0.9,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "football match"
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.96,
+        0.8
+       ],
+       "to": [
+        0.04,
+        0.8
+       ],
+       "offset": 0.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "能做你的对手：和你抗衡",
+   "node": "比得上",
+   "pos": "动词",
+   "pic": 3,
+   "say": [
+    "能做你的对手，就是能和你抗衡，不比你差。",
+    "像天平两边一样重，这就是比得上。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/scale.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.62,
+      "when": "天平",
+      "anim": "pulse",
+      "z": 4
+     },
+     {
+      "label": "不比你差",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "不比你差"
+     },
+     {
+      "label": "比得上",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "比得上"
+     }
+    ]
+   }
+  },
+  {
+   "via": "注意：同形的另一个词",
+   "node": "火柴（另一个词）",
+   "say": [
+    "match 还有火柴的意思，它来自古法语的灯芯，是另一个词，和这里无关。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.36,
+      "z": 5
+     },
+     {
+      "svg": "art/matchstick.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.45,
+      "when": "火柴",
+      "z": 6,
+      "anim": "shake"
+     },
+     {
+      "label": "灯芯",
+      "x": 0.25,
+      "y": 0.15,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "灯芯"
+     },
+     {
+      "label": "另一个词",
+      "x": 0.75,
+      "y": 0.15,
+      "size": 0.09,
+      "color": "#C92A2A",
+      "border": "#E03131",
+      "bg": "#FFF5F5",
+      "when": "另一个词"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "rematch",
+   "m": "再赛、复赛",
+   "share": "match"
+  },
+  {
+   "w": "mismatch",
+   "m": "不匹配",
+   "share": "match"
+  },
+  {
+   "w": "matcher",
+   "m": "匹配者",
+   "share": "match"
+  },
+  {
+   "w": "make",
+   "m": "做、制造",
+   "share": ""
+  }
+ ],
+ "distinguish": {
+  "key": "比赛有 match、game；对手有 match、rival、opponent、opposition；比得上有 match、rival、equal",
+  "items": {
+   "match": {
+    "w": "match",
+    "m": "比赛（英式多说）；对手（旗鼓相当、配得上的人）；比得上",
+    "ex": "We won the match.",
+    "exZh": "我们赢了那场比赛。",
+    "gloss": "比赛",
+    "note": "英式多说）；对手（旗鼓相当、配得上的人）；比得上"
+   },
+   "game": {
+    "w": "game",
+    "m": "比赛（美式多说，也指游戏）",
+    "ex": "Let's watch the basketball game.",
+    "exZh": "我们看篮球比赛吧。",
+    "gloss": "比赛",
+    "note": "美式多说，也指游戏"
+   },
+   "rival": {
+    "w": "rival",
+    "m": "对手（长期互相竞争、较劲的人）；也作动词“比得上”",
+    "ex": "The two boys are old rivals.",
+    "exZh": "这两个男孩是老对手了。",
+    "gloss": "对手",
+    "note": "长期互相竞争、较劲的人）；也作动词“比得上”"
+   },
+   "opponent": {
+    "w": "opponent",
+    "m": "对手（比赛、辩论中跟你交手的那个人）",
+    "ex": "My opponent played well.",
+    "exZh": "我的对手打得很好。",
+    "gloss": "对手",
+    "note": "比赛、辩论中跟你交手的那个人"
+   },
+   "opposition": {
+    "w": "opposition",
+    "m": "对方（整个对手队伍，常说 the opposition）",
+    "ex": "The opposition scored first.",
+    "exZh": "对方先进了球。",
+    "gloss": "对方",
+    "note": "整个对手队伍，常说 the opposition"
+   },
+   "equal": {
+    "w": "equal",
+    "m": "比得上（数量、水平一样）",
+    "ex": "Nobody can equal her.",
+    "exZh": "没有人比得上她。",
+    "gloss": "比得上",
+    "note": "数量、水平一样"
+   }
+  },
+  "logic": "比赛：英式多说 match，美式多说 game；对手：match 重“旗鼓相当、配得上”，opponent 只是对面那个人，opposition 是对面整个队；rival 重长期竞争；equal 重一样多、一样好",
+  "tip": "英国人看 football match，美国人看 basketball game",
+  "pics": {
+   "game": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/goal.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.6
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.3,
+      "y": 0.8,
+      "s": 0.3,
+      "go": [
+       0.5,
+       0.55
+      ],
+      "dur": 1.0,
+      "loop": true,
+      "anim": "spin",
+      "z": 5
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.04,
+        0.8
+       ],
+       "to": [
+        0.96,
+        0.8
+       ],
+       "offset": 0.6
+      }
+     }
+    ]
+   },
+   "rival": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.5,
+      "y": 0.55,
+      "s": 0.62,
+      "anim": "pulse"
+     },
+     {
+      "svg": "art/trophy.svg",
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.45,
+      "anim": "shake"
+     },
+     {
+      "svg": "art/scoreboard.svg",
+      "x": 0.82,
+      "y": 0.5,
+      "s": 0.5
+     }
+    ]
+   },
+   "opponent": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.5,
+      "z": 5
+     },
+     {
+      "svg": "art/chess.svg",
+      "x": 0.42,
+      "y": 0.6,
+      "s": 0.55,
+      "z": 6,
+      "anim": "pulse"
+     },
+     {
+      "actor": "cn-teacher-laugh",
+      "x": 0.8,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     }
+    ]
+   },
+   "opposition": {
+    "bg": "blank",
+    "img": "art/park-bg.svg",
+    "items": [
+     {
+      "svg": "art/goal.svg",
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.6
+     },
+     {
+      "svg": "art/ball.svg",
+      "x": 0.7,
+      "y": 0.75,
+      "s": 0.3,
+      "go": [
+       0.32,
+       0.55
+      ],
+      "dur": 1.0,
+      "loop": true,
+      "anim": "spin",
+      "z": 5
+     },
+     {
+      "svg": "art/scoreboard.svg",
+      "x": 0.82,
+      "y": 0.45,
+      "s": 0.5
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.96,
+        0.8
+       ],
+       "to": [
+        0.04,
+        0.8
+       ],
+       "offset": 0.9
+      }
+     }
+    ]
+   },
+   "equal": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/scale.svg",
+      "x": 0.5,
+      "y": 0.56,
+      "s": 0.75,
+      "anim": "pulse"
+     },
+     {
+      "label": "=",
+      "x": 0.8,
+      "y": 0.4,
+      "size": 0.3,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "match": {
+    "bg": "blank",
+    "img": "art/stage-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.5,
+      "z": 5
+     },
+     {
+      "svg": "art/chess.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.55,
+      "z": 6,
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-man-present",
+      "x": 0.15,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "actor": "cn-teacher-listen",
+      "x": 0.85,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3,
+      "flip": true
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：他们昨晚做了什么？",
+    "listen": "We watched an exciting football match last night.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "踢了一场足球",
+     "买了一个足球",
+     "看了一部电影",
+     "看了一场足球比赛"
+    ],
+    "ans": "D",
+    "why": "football match 足球比赛。",
+    "kd": ""
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 match、fit 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "These shoes don't ______ me. They're too small.",
+    "opts": [],
+    "ans": "fit",
+    "why": "尺寸合不合身用 fit；颜色、款式相配用 match。",
+    "kd": "易混"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Her bag ______ her red dress well. (match)",
+    "opts": [],
+    "ans": "matches",
+    "why": "主语 her bag 是第三人称单数，match 以 ch 结尾加 es。",
+    "kd": "变形"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Our class won the basketball ______ yesterday.",
+    "opts": [
+     "player",
+     "ball",
+     "match",
+     "rule"
+    ],
+    "ans": "C",
+    "why": "won 赢得，赢的是比赛 match。",
+    "kd": ""
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "We have two matchs this week.",
+    "opts": [],
+    "ans": "matchs → matches",
+    "why": "match 以 ch 结尾，复数加 es。",
+    "kd": "变形"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "这顶帽子和你的外套很配。",
+    "stem": "This hat ______ your coat very well.",
+    "opts": [],
+    "ans": "matches",
+    "why": "颜色、款式相配用 match，主语 this hat 是单数，加 es。",
+    "kd": "易混"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "She bought a ______ hat and scarf.",
+    "opts": [
+     "matched",
+     "matching",
+     "match",
+     "matches"
+    ],
+    "ans": "B",
+    "why": "修饰名词 hat and scarf，用形容词 matching（配套的）。",
+    "kd": "变形"
+   }
+  ]
+ }
+}

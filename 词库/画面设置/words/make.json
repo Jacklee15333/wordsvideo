@@ -1,0 +1,1263 @@
+{
+ "style": "core",
+ "board": true,
+ "text": {
+  "final": "做、使、构成、挣得"
+ },
+ "sylIpa": [
+  "meɪk"
+ ],
+ "kaodian": {
+  "rows": [
+   [
+    "变形",
+    "三单 makes；过去式、过去分词 made（不规则）；现在分词 making（去 e 加 ing）"
+   ],
+   [
+    "短语",
+    "make progress 取得进步；make a decision 作出决定；make friends with 与……交朋友；make a mistake 出差错、犯错误"
+   ],
+   [
+    "用法",
+    "make sb. do（不带 to）；被动 be made to do（带 to）"
+   ],
+   [
+    "易混",
+    "be made of 由…制成（看得出原料）；be made up of 由…组成（几部分合成）"
+   ]
+  ]
+ },
+ "pics": [
+  {
+   "bg": "blank",
+   "img": "art/room-bg.svg",
+   "text": "做、制造",
+   "pos": "动词",
+   "diff": "把材料做成一件东西",
+   "items": [
+    {
+     "svg": "art/desk.svg",
+     "x": 0.5,
+     "y": 0.9,
+     "s": 0.34,
+     "z": 5
+    },
+    {
+     "svg": "art/cake.svg",
+     "x": 0.36,
+     "y": 0.55,
+     "s": 0.5,
+     "shadow": true,
+     "pop": true,
+     "z": 6,
+     "anim": "pulse"
+    },
+    {
+     "actor": "west-girl-explain",
+     "x": 0.72,
+     "y": 0.56,
+     "s": 0.92,
+     "z": 3
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.36,
+     "y": 0.3,
+     "s": 0.07,
+     "every": 1.1,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.16
+     ],
+     "spin": true
+    }
+   ],
+   "ex": "I made a cake for my mom.",
+   "exzh": "我给妈妈做了一个蛋糕。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.34,
+      "z": 5
+     },
+     {
+      "actor": "west-man-present",
+      "x": 0.7,
+      "y": 0.55,
+      "s": 0.95,
+      "z": 3
+     },
+     {
+      "svg": "art/cake.svg",
+      "x": 0.34,
+      "y": 0.6,
+      "s": 0.5,
+      "shadow": true,
+      "pop": true,
+      "z": 6,
+      "when": "made a cake"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.34,
+      "y": 0.36,
+      "s": 0.07,
+      "every": 1.1,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.16
+      ],
+      "spin": true,
+      "when": "made a cake"
+     },
+     {
+      "label": "做了一个蛋糕",
+      "x": 0.34,
+      "y": 0.12,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "做了一个蛋糕"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "text": "使、让",
+   "pos": "动词",
+   "diff": "让人变成某种样子、做某件事",
+   "items": [
+    {
+     "actor": "cn-teacher-laugh",
+     "x": 0.45,
+     "y": 0.55,
+     "s": 0.95,
+     "z": 3
+    },
+    {
+     "svg": "art/class-desks.svg",
+     "x": 0.5,
+     "y": 0.92,
+     "s": 0.3,
+     "z": 6
+    },
+    {
+     "svg": "art/books.svg",
+     "x": 0.8,
+     "y": 0.8,
+     "s": 0.22,
+     "z": 7,
+     "anim": "bob"
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.45,
+     "y": 0.2,
+     "s": 0.07,
+     "every": 1.1,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.16
+     ],
+     "spin": true
+    }
+   ],
+   "ex": "The news made her happy.",
+   "exzh": "这个消息让她很开心。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/sofa.svg",
+      "x": 0.62,
+      "y": 0.8,
+      "s": 0.42,
+      "z": 2
+     },
+     {
+      "actor": "west-girl-music",
+      "x": 0.62,
+      "y": 0.55,
+      "s": 0.9,
+      "z": 3
+     },
+     {
+      "svg": "art/smartphone.svg",
+      "x": 0.25,
+      "y": 0.52,
+      "s": 0.5,
+      "pop": true,
+      "anim": "shake",
+      "when": "news",
+      "z": 5
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.62,
+      "y": 0.2,
+      "s": 0.07,
+      "every": 1.1,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.16
+      ],
+      "spin": true,
+      "when": "happy"
+     },
+     {
+      "label": "让她很开心",
+      "x": 0.25,
+      "y": 0.9,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "开心"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/classroom-bg.svg",
+   "text": "构成、等于",
+   "pos": "动词",
+   "diff": "几样东西合起来成为一个整体",
+   "items": [
+    {
+     "svg": "art/apple.svg",
+     "x": 0.2,
+     "y": 0.62,
+     "s": 0.3,
+     "pop": true,
+     "go": [
+      0.42,
+      0.6
+     ],
+     "dur": 1.2,
+     "wait": 1.0
+    },
+    {
+     "svg": "art/apple.svg",
+     "x": 0.32,
+     "y": 0.62,
+     "s": 0.3,
+     "pop": true,
+     "go": [
+      0.5,
+      0.52
+     ],
+     "dur": 1.2,
+     "wait": 1.0
+    },
+    {
+     "svg": "art/apple.svg",
+     "x": 0.68,
+     "y": 0.62,
+     "s": 0.3,
+     "pop": true,
+     "delay": 0.4,
+     "go": [
+      0.58,
+      0.6
+     ],
+     "dur": 1.2,
+     "wait": 0.6
+    },
+    {
+     "svg": "art/apple.svg",
+     "x": 0.8,
+     "y": 0.62,
+     "s": 0.3,
+     "pop": true,
+     "delay": 0.4,
+     "go": [
+      0.5,
+      0.68
+     ],
+     "dur": 1.2,
+     "wait": 0.6
+    },
+    {
+     "svg": "art/apple.svg",
+     "x": 0.9,
+     "y": 0.62,
+     "s": 0.3,
+     "pop": true,
+     "delay": 0.4,
+     "go": [
+      0.66,
+      0.66
+     ],
+     "dur": 1.2,
+     "wait": 0.6
+    },
+    {
+     "label": "2 + 3 = 5",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 0.12,
+     "color": "#7A3E00",
+     "border": "#E0A800",
+     "bg": "#FFF6D8",
+     "delay": 2.0
+    }
+   ],
+   "ex": "Two and two make four.",
+   "exzh": "二加二等于四。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/apple.svg",
+      "x": 0.18,
+      "y": 0.6,
+      "s": 0.46,
+      "pop": true,
+      "anim": "bob",
+      "when": "Two and"
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.32,
+      "y": 0.6,
+      "s": 0.46,
+      "pop": true,
+      "when": "Two and",
+      "delay": 0.2
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.66,
+      "y": 0.6,
+      "s": 0.46,
+      "pop": true,
+      "anim": "bob",
+      "when": "and two"
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.8,
+      "y": 0.6,
+      "s": 0.46,
+      "pop": true,
+      "when": "and two",
+      "delay": 0.2
+     },
+     {
+      "label": "2 + 2 = 4",
+      "x": 0.5,
+      "y": 0.15,
+      "size": 0.12,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "four"
+     },
+     {
+      "label": "等于四",
+      "x": 0.5,
+      "y": 0.9,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "等于四"
+     }
+    ]
+   }
+  },
+  {
+   "bg": "blank",
+   "img": "art/street-bg.svg",
+   "text": "挣得",
+   "pos": "动词",
+   "diff": "用劳动挣到钱",
+   "items": [
+    {
+     "svg": "art/books.svg",
+     "x": 0.22,
+     "y": 0.78,
+     "s": 0.3,
+     "z": 4
+    },
+    {
+     "actor": "west-clerk-happy",
+     "x": 0.45,
+     "y": 0.56,
+     "s": 0.92,
+     "z": 3
+    },
+    {
+     "svg": "art/coins.svg",
+     "x": 0.76,
+     "y": 0.62,
+     "s": 0.46,
+     "pop": true,
+     "anim": "pulse",
+     "delay": 0.6,
+     "z": 5
+    },
+    {
+     "emit": true,
+     "svg": "art/star.svg",
+     "x": 0.76,
+     "y": 0.4,
+     "s": 0.07,
+     "every": 1.1,
+     "life": 1.6,
+     "to": [
+      0,
+      -0.16
+     ],
+     "spin": true
+    },
+    {
+     "actor": "walk-west-woman-case",
+     "x": 0.5,
+     "y": 0.8,
+     "s": 0.46,
+     "z": 2,
+     "walk": {
+      "from": [
+       0.04,
+       0.8
+      ],
+      "to": [
+       0.96,
+       0.8
+      ],
+      "offset": 0.0
+     }
+    }
+   ],
+   "ex": "She makes money by teaching.",
+   "exzh": "她靠教书挣钱。",
+   "exPic": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "actor": "cn-teacher-point",
+      "x": 0.34,
+      "y": 0.55,
+      "s": 0.95,
+      "z": 3,
+      "seq": "talk"
+     },
+     {
+      "svg": "art/class-desks.svg",
+      "x": 0.4,
+      "y": 0.93,
+      "s": 0.26,
+      "z": 6
+     },
+     {
+      "svg": "art/coins.svg",
+      "x": 0.76,
+      "y": 0.58,
+      "s": 0.5,
+      "pop": true,
+      "when": "makes money",
+      "z": 5
+     },
+     {
+      "emit": true,
+      "svg": "art/coins.svg",
+      "x": 0.76,
+      "y": 0.3,
+      "s": 0.12,
+      "every": 0.9,
+      "life": 1.4,
+      "to": [
+       0,
+       0.2
+      ],
+      "when": "makes money"
+     },
+     {
+      "label": "挣钱",
+      "x": 0.76,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "挣钱"
+     }
+    ]
+   }
+  }
+ ],
+ "flow": [
+  {
+   "node": "揉捏、使成形",
+   "say": [
+    "make 最早的意思，是把一团面揉一揉，揉成想要的样子。",
+    "古英语里说做，本来多用另一个词，就是后来的 work；慢慢地，make 用得越来越多。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.36,
+      "z": 5
+     },
+     {
+      "svg": "art/dough.svg",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.5,
+      "shadow": true,
+      "anim": "pulse",
+      "when": "一团面",
+      "z": 6
+     },
+     {
+      "label": "揉成想要的样子",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.08,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "揉成",
+      "hideCue": 1
+     },
+     {
+      "label": "work 的前身",
+      "x": 0.25,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "另一个词"
+     },
+     {
+      "label": "make 后来居上",
+      "x": 0.72,
+      "y": 0.14,
+      "size": 0.075,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "越来越多"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.4,
+      "s": 0.07,
+      "every": 1.1,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.16
+      ],
+      "spin": true,
+      "cue": 1,
+      "when": "越来越多"
+     }
+    ]
+   }
+  },
+  {
+   "via": "把材料弄成一件东西",
+   "node": "① 做、制造",
+   "pos": "动词",
+   "pic": 0,
+   "say": [
+    "面揉一揉、烤一烤，材料就弄成了一件东西。",
+    "这就是 make 最常用的意思：做、制造，比如 make a cake，做蛋糕。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.92,
+      "s": 0.36,
+      "z": 5
+     },
+     {
+      "svg": "art/dough.svg",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.46,
+      "z": 6,
+      "when": "面揉一揉",
+      "hideWhen": "弄成",
+      "anim": "shake"
+     },
+     {
+      "svg": "art/cake.svg",
+      "x": 0.5,
+      "y": 0.58,
+      "s": 0.55,
+      "z": 6,
+      "shadow": true,
+      "pop": true,
+      "when": "弄成"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.5,
+      "y": 0.32,
+      "s": 0.07,
+      "every": 1.1,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.16
+      ],
+      "spin": true,
+      "when": "弄成"
+     },
+     {
+      "label": "做、制造",
+      "x": 0.2,
+      "y": 0.14,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "做、制造"
+     },
+     {
+      "label": "make a cake",
+      "x": 0.78,
+      "y": 0.14,
+      "size": 0.08,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "make a cake"
+     }
+    ]
+   }
+  },
+  {
+   "via": "把一个人“弄成”某种样子",
+   "node": "② 使、让",
+   "pos": "动词",
+   "pic": 1,
+   "say": [
+    "不光能把面弄成蛋糕，也能把一个人弄成某种样子。",
+    "make him happy，就是让他高兴。这就是使、让。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/cake.svg",
+      "x": 0.2,
+      "y": 0.7,
+      "s": 0.3,
+      "when": "蛋糕",
+      "hideCue": 1
+     },
+     {
+      "actor": "west-man-smile",
+      "x": 0.55,
+      "y": 0.56,
+      "s": 0.95,
+      "z": 3,
+      "when": "一个人"
+     },
+     {
+      "label": "make him happy",
+      "x": 0.55,
+      "y": 0.1,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "make him happy"
+     },
+     {
+      "emit": true,
+      "svg": "art/star.svg",
+      "x": 0.55,
+      "y": 0.25,
+      "s": 0.07,
+      "every": 1.1,
+      "life": 1.6,
+      "to": [
+       0,
+       -0.16
+      ],
+      "spin": true,
+      "cue": 1,
+      "when": "高兴"
+     },
+     {
+      "label": "使、让",
+      "x": 0.85,
+      "y": 0.5,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "使、让"
+     }
+    ]
+   }
+  },
+  {
+   "via": "几样东西合起来“做成”一个整体",
+   "node": "③ 构成、等于",
+   "pos": "动词",
+   "pic": 2,
+   "say": [
+    "几样东西合起来，也能做成一个整体。",
+    "两个苹果加三个苹果，合成五个苹果：two and three make five。这就是构成、等于。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/classroom-bg.svg",
+    "items": [
+     {
+      "svg": "art/apple.svg",
+      "x": 0.14,
+      "y": 0.62,
+      "s": 0.3,
+      "cue": 1,
+      "when": "两个苹果",
+      "go": [
+       0.4,
+       0.62
+      ],
+      "goWhen": "合成",
+      "dur": 1.0
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.27,
+      "y": 0.62,
+      "s": 0.3,
+      "cue": 1,
+      "when": "两个苹果",
+      "go": [
+       0.5,
+       0.55
+      ],
+      "goWhen": "合成",
+      "dur": 1.0
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.66,
+      "y": 0.62,
+      "s": 0.3,
+      "when": "三个苹果",
+      "go": [
+       0.6,
+       0.62
+      ],
+      "goWhen": "合成",
+      "dur": 1.0
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.78,
+      "y": 0.62,
+      "s": 0.3,
+      "when": "三个苹果",
+      "go": [
+       0.45,
+       0.72
+      ],
+      "goWhen": "合成",
+      "dur": 1.0
+     },
+     {
+      "svg": "art/apple.svg",
+      "x": 0.9,
+      "y": 0.62,
+      "s": 0.3,
+      "when": "三个苹果",
+      "go": [
+       0.56,
+       0.74
+      ],
+      "goWhen": "合成",
+      "dur": 1.0
+     },
+     {
+      "label": "合起来",
+      "x": 0.5,
+      "y": 0.22,
+      "size": 0.08,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "合起来"
+     },
+     {
+      "label": "2 + 3 = 5",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.11,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "五个苹果"
+     },
+     {
+      "label": "构成、等于",
+      "x": 0.5,
+      "y": 0.92,
+      "size": 0.085,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "构成、等于"
+     }
+    ]
+   }
+  },
+  {
+   "via": "用劳动“做”出钱来",
+   "node": "④ 挣得",
+   "pos": "动词",
+   "pic": 3,
+   "say": [
+    "人干活，也能做出一样东西来：钱。",
+    "make money，就是挣钱。这就是挣得。"
+   ],
+   "fig": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-point",
+      "x": 0.32,
+      "y": 0.56,
+      "s": 0.92,
+      "z": 3,
+      "when": "人干活"
+     },
+     {
+      "svg": "art/coins.svg",
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.5,
+      "pop": true,
+      "cue": 0,
+      "when": "钱",
+      "anim": "pulse",
+      "z": 5
+     },
+     {
+      "label": "make money",
+      "x": 0.72,
+      "y": 0.14,
+      "size": 0.085,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
+      "when": "make money"
+     },
+     {
+      "label": "挣得",
+      "x": 0.72,
+      "y": 0.9,
+      "size": 0.1,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "挣得"
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.96,
+        0.8
+       ],
+       "to": [
+        0.04,
+        0.8
+       ],
+       "offset": 0.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "via": "一路赶到目的地（原是水手的说法）",
+   "node": "赶上、办成",
+   "say": [
+    "四百年前，水手们说 make，还指一路开船，赶到目的地。",
+    "今天说 make it，就是赶上了、办成了。"
+   ],
+   "fig": {
+    "bg": "sea",
+    "items": [
+     {
+      "svg": "art/ship.svg",
+      "x": 0.2,
+      "y": 0.55,
+      "s": 0.55,
+      "go": [
+       0.72,
+       0.55
+      ],
+      "goWhen": "一路开船",
+      "dur": 2.4,
+      "anim": "ride"
+     },
+     {
+      "label": "目的地",
+      "x": 0.86,
+      "y": 0.3,
+      "size": 0.08,
+      "color": "#C92A2A",
+      "border": "#E03131",
+      "bg": "#FFF5F5",
+      "when": "目的地"
+     },
+     {
+      "waves": true,
+      "x": 0.2,
+      "y": 0.82,
+      "dir": 180,
+      "n": 3,
+      "color": "#FFFFFF",
+      "when": "一路开船"
+     },
+     {
+      "label": "make it 赶上、办成",
+      "x": 0.5,
+      "y": 0.12,
+      "size": 0.09,
+      "color": "#2B8A3E",
+      "border": "#2B8A3E",
+      "when": "make it"
+     }
+    ]
+   }
+  }
+ ],
+ "extend": [
+  {
+   "w": "maker",
+   "m": "制造者",
+   "share": "make"
+  },
+  {
+   "w": "remake",
+   "m": "重做、翻拍",
+   "share": "make"
+  },
+  {
+   "w": "match",
+   "m": "比赛；相配",
+   "share": ""
+  }
+ ],
+ "distinguish": {
+  "key": "汉语一个“做”，英语分 make 和 do；“制造”还有 produce，“使”还有 get",
+  "items": {
+   "make": {
+    "w": "make",
+    "m": "做、制造（重在造出东西、产生结果：make a cake / a mistake / a decision）",
+    "ex": "I can make a cake.",
+    "exZh": "我会做蛋糕。",
+    "gloss": "做、制造",
+    "note": "重在造出东西、产生结果：make a cake / a mistake / a decision"
+   },
+   "do": {
+    "w": "do",
+    "m": "做（重在从事一项活动：do homework / do the dishes）",
+    "ex": "I do my homework every day.",
+    "exZh": "我每天都做作业。",
+    "gloss": "做",
+    "note": "重在从事一项活动：do homework / do the dishes"
+   },
+   "produce": {
+    "w": "produce",
+    "m": "生产、制造（多指工厂成批地生产）",
+    "ex": "This factory produces toys.",
+    "exZh": "这家工厂生产玩具。",
+    "gloss": "生产、制造",
+    "note": "多指工厂成批地生产"
+   },
+   "get": {
+    "w": "get",
+    "m": "使、让（get sb. to do 要带 to，常指说动别人去做；make sb. do 不带 to）",
+    "ex": "I will get my brother to help me.",
+    "exZh": "我会让弟弟来帮我。",
+    "gloss": "使、让",
+    "note": "get sb. to do 要带 to，常指说动别人去做；make sb. do 不带 to"
+   }
+  },
+  "logic": "make 重“造出一个结果”，do 重“干一件事”；produce 是工厂成批地造；get 让人做事是说动他，后面带 to",
+  "tip": "做出东西、做出决定用 make；做作业、做家务用 do",
+  "pics": {
+   "do": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.5,
+      "z": 5
+     },
+     {
+      "svg": "art/desk-papers.svg",
+      "x": 0.42,
+      "y": 0.55,
+      "s": 0.5,
+      "z": 6,
+      "anim": "bob"
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.66,
+      "y": 0.56,
+      "s": 0.42,
+      "z": 6
+     },
+     {
+      "svg": "art/clock.svg",
+      "x": 0.84,
+      "y": 0.25,
+      "s": 0.3,
+      "anim": "pulse"
+     }
+    ]
+   },
+   "produce": {
+    "bg": "blank",
+    "img": "art/street-bg.svg",
+    "items": [
+     {
+      "svg": "art/factory.svg",
+      "x": 0.42,
+      "y": 0.55,
+      "s": 0.8
+     },
+     {
+      "emit": true,
+      "svg": "art/apple.svg",
+      "x": 0.65,
+      "y": 0.8,
+      "s": 0.18,
+      "every": 1.0,
+      "life": 2,
+      "to": [
+       0.3,
+       0
+      ]
+     },
+     {
+      "svg": "art/coins.svg",
+      "x": 0.85,
+      "y": 0.7,
+      "s": 0.3
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.5,
+      "y": 0.8,
+      "s": 0.46,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.04,
+        0.8
+       ],
+       "to": [
+        0.96,
+        0.8
+       ],
+       "offset": 0.6
+      }
+     }
+    ]
+   },
+   "get": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "actor": "west-man-hello",
+      "x": 0.4,
+      "y": 0.6,
+      "s": 1.0,
+      "z": 3
+     },
+     {
+      "svg": "art/books.svg",
+      "x": 0.75,
+      "y": 0.7,
+      "s": 0.4,
+      "anim": "shake"
+     },
+     {
+      "label": "get sb. to do",
+      "x": 0.75,
+      "y": 0.2,
+      "size": 0.18,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8"
+     }
+    ]
+   },
+   "make": {
+    "bg": "blank",
+    "img": "art/room-bg.svg",
+    "items": [
+     {
+      "svg": "art/desk.svg",
+      "x": 0.5,
+      "y": 0.9,
+      "s": 0.5,
+      "z": 5
+     },
+     {
+      "svg": "art/cake.svg",
+      "x": 0.42,
+      "y": 0.55,
+      "s": 0.6,
+      "z": 6,
+      "pop": true,
+      "anim": "pulse"
+     },
+     {
+      "actor": "west-girl-raise",
+      "x": 0.8,
+      "y": 0.6,
+      "s": 0.9,
+      "z": 3
+     }
+    ]
+   }
+  }
+ },
+ "lianxi": {
+  "qs": [
+   {
+    "type": "听力",
+    "ask": "听录音，回答问题：妈妈做了什么？",
+    "listen": "My mother made a cake for my birthday.",
+    "zh": "",
+    "stem": "",
+    "opts": [
+     "买了一个生日蛋糕",
+     "订了一个生日蛋糕",
+     "画了一个生日蛋糕",
+     "做了一个生日蛋糕"
+    ],
+    "ans": "D",
+    "why": "made a cake 做了一个蛋糕，made 是 make 的过去式。",
+    "kd": ""
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "The funny story made all of us ______.",
+    "opts": [
+     "to laugh",
+     "laughing",
+     "laugh",
+     "laughed"
+    ],
+    "ans": "C",
+    "why": "make sb. do，后面用不带 to 的动词原形 laugh。",
+    "kd": "用法"
+   },
+   {
+    "type": "选词填空",
+    "ask": "从 make、do 中选一个，用适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Don't ______ the same mistake again.",
+    "opts": [],
+    "ans": "make",
+    "why": "make a mistake 犯错误，固定搭配用 make。",
+    "kd": "短语"
+   },
+   {
+    "type": "适当形式填空",
+    "ask": "用所给单词的适当形式填空。",
+    "listen": "",
+    "zh": "",
+    "stem": "Tom is ______ a model plane in his room now. (make)",
+    "opts": [],
+    "ans": "making",
+    "why": "now 表示正在进行，用 is making；make 去 e 加 ing。",
+    "kd": "变形"
+   },
+   {
+    "type": "改错",
+    "ask": "句子里有一处错误，找出来并改正。",
+    "listen": "",
+    "zh": "",
+    "stem": "The boy was made clean the classroom.",
+    "opts": [],
+    "ans": "clean → to clean",
+    "why": "make sb. do 变成被动要加 to：be made to do。",
+    "kd": "用法"
+   },
+   {
+    "type": "完成句子",
+    "ask": "根据中文完成句子，每空一词。",
+    "listen": "",
+    "zh": "他很快就和新同学交上了朋友。",
+    "stem": "He soon ______ ______ with his new classmates.",
+    "opts": [],
+    "ans": [
+     "made",
+     "friends"
+    ],
+    "why": "make friends with 和……交朋友；讲过去的事，用过去式 made。",
+    "kd": "短语"
+   },
+   {
+    "type": "单项选择",
+    "ask": "选出最恰当的一项。",
+    "listen": "",
+    "zh": "",
+    "stem": "Our class is made ______ 40 students.",
+    "opts": [
+     "up of",
+     "of",
+     "from",
+     "into"
+    ],
+    "ans": "A",
+    "why": "班级由学生组成，用 be made up of；be made of 是由某种材料制成。",
+    "kd": "易混"
+   }
+  ]
+ }
+}
