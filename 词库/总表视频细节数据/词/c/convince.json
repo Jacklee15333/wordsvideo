@@ -901,7 +901,7 @@
    "items": [
     {
      "w": "convince",
-     "m": "使确信",
+     "m": "使确信（摆出证据和道理，让人心里相信）",
      "say": "convince 打动的是理智：摆出证据和道理，让人相信一件事是真的。",
      "text": "convince 打动的是理智：摆出证据和道理，让人相信一件事是真的。",
      "diff": "convince 打动的是理智：摆出证据和道理，让人相信一件事是真的。",
@@ -947,7 +947,7 @@
         "z": 5
        },
        {
-        "label": "证据 → 相信",
+        "label": "相信",
         "x": 0.84,
         "y": 0.2,
         "size": 0.12,
@@ -956,11 +956,16 @@
         "z": 6
        }
       ]
-     }
+     },
+     "word": "convince",
+     "zh": "使确信",
+     "note": "convince 打动的是理智：摆出证据和道理，让人相信一件事是真的。",
+     "ex": "His words convinced me that he was honest.",
+     "exZh": "他的话让我相信他是诚实的。"
     },
     {
      "w": "persuade",
-     "m": "说服（去做）",
+     "m": "说服（劝人动起来，去做一件事）",
      "say": "persuade 打动的是意志：劝人去做一件事，说劝某人去做，persuade sb. to do 更规范。",
      "text": "persuade 打动的是意志：劝人去做一件事，说劝某人去做，persuade sb. to do 更规范。",
      "diff": "persuade 打动的是意志：劝人去做一件事，说劝某人去做，persuade sb. to do 更规范。",
@@ -1003,11 +1008,16 @@
         "z": 6
        }
       ]
-     }
+     },
+     "word": "persuade",
+     "zh": "说服（去做）",
+     "note": "persuade 打动的是意志：劝人去做一件事，说劝某人去做，persuade sb. to do 更规范。",
+     "ex": "Mom persuaded me to eat vegetables.",
+     "exZh": "妈妈说服我吃蔬菜。"
     },
     {
      "w": "assure",
-     "m": "向…保证",
+     "m": "向…保证（用自己的话让人放心）",
      "say": "assure 是向人保证，让人放心，靠的是你说的话。",
      "text": "assure 是向人保证，让人放心，靠的是你说的话。",
      "diff": "assure 是向人保证，让人放心，靠的是你说的话。",
@@ -1040,7 +1050,7 @@
         "z": 2
        },
        {
-        "label": "放心吧，我保证！",
+        "label": "保证",
         "x": 0.75,
         "y": 0.16,
         "size": 0.12,
@@ -1049,11 +1059,16 @@
         "z": 6
        }
       ]
-     }
+     },
+     "word": "assure",
+     "zh": "向…保证",
+     "note": "assure 是向人保证，让人放心，靠的是你说的话。",
+     "ex": "I assure you it is safe.",
+     "exZh": "我向你保证，这很安全。"
     },
     {
      "w": "satisfy",
-     "m": "使确信、使满意",
+     "m": "使确信、使满意（证据、条件够了，让人放心）",
      "say": "satisfy 是证据、条件够了，让人满意、放下心来。",
      "text": "satisfy 是证据、条件够了，让人满意、放下心来。",
      "diff": "satisfy 是证据、条件够了，让人满意、放下心来。",
@@ -1084,7 +1099,7 @@
         "anim": "pulse"
        },
        {
-        "label": "满意、放心",
+        "label": "满意",
         "x": 0.8,
         "y": 0.2,
         "size": 0.12,
@@ -1093,9 +1108,184 @@
         "z": 6
        }
       ]
-     }
+     },
+     "word": "satisfy",
+     "zh": "使确信、使满意",
+     "note": "satisfy 是证据、条件够了，让人满意、放下心来。",
+     "ex": "Her answer satisfied the teacher.",
+     "exZh": "她的回答让老师很满意。"
     }
    ],
+   "pics": {
+    "convince": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.5,
+       "z": 2
+      },
+      {
+       "svg": "art/desk-papers.svg",
+       "x": 0.32,
+       "y": 0.6,
+       "s": 0.5,
+       "z": 3
+      },
+      {
+       "svg": "art/photo.svg",
+       "x": 0.62,
+       "y": 0.55,
+       "s": 0.55,
+       "z": 4,
+       "rot": -5
+      },
+      {
+       "emit": true,
+       "svg": "art/star.svg",
+       "x": 0.62,
+       "y": 0.3,
+       "every": 0.9,
+       "life": 1.6,
+       "to": [
+        0,
+        -0.14
+       ],
+       "s": 0.08,
+       "spin": true,
+       "z": 5
+      },
+      {
+       "label": "相信",
+       "x": 0.84,
+       "y": 0.2,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "z": 6
+      }
+     ]
+    },
+    "persuade": {
+     "bg": "blank",
+     "img": "art/classroom-bg.svg",
+     "items": [
+      {
+       "svg": "art/poster.svg",
+       "x": 0.78,
+       "y": 0.48,
+       "s": 0.8,
+       "z": 2
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.2,
+       "y": 0.6,
+       "s": 0.86,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.05,
+         0.6
+        ],
+        "to": [
+         0.62,
+         0.6
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "label": "去做",
+       "x": 0.45,
+       "y": 0.14,
+       "size": 0.13,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "z": 6
+      }
+     ]
+    },
+    "assure": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "actor": "west-clerk-happy",
+       "x": 0.4,
+       "y": 0.58,
+       "s": 0.95,
+       "z": 3,
+       "id": "c"
+      },
+      {
+       "waves": true,
+       "on": "c",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "c",
+       "n": 3
+      },
+      {
+       "svg": "art/sofa.svg",
+       "x": 0.75,
+       "y": 0.8,
+       "s": 0.45,
+       "z": 2
+      },
+      {
+       "label": "保证",
+       "x": 0.75,
+       "y": 0.16,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "z": 6
+      }
+     ]
+    },
+    "satisfy": {
+     "bg": "blank",
+     "img": "art/room-bg.svg",
+     "items": [
+      {
+       "svg": "art/desk.svg",
+       "x": 0.5,
+       "y": 0.9,
+       "s": 0.5,
+       "z": 2
+      },
+      {
+       "svg": "art/computer.svg",
+       "x": 0.42,
+       "y": 0.52,
+       "s": 0.62,
+       "z": 3
+      },
+      {
+       "svg": "art/mug.svg",
+       "x": 0.7,
+       "y": 0.68,
+       "s": 0.28,
+       "z": 4,
+       "anim": "pulse"
+      },
+      {
+       "label": "满意",
+       "x": 0.8,
+       "y": 0.2,
+       "size": 0.12,
+       "color": "#2B8A3E",
+       "border": "#2B8A3E",
+       "z": 6
+      }
+     ]
+    }
+   },
    "logic": "convince 是彻底战胜对方的看法，让人心里信；persuade 是让人动起来去做。",
    "tip": "如今 convince 和 persuade 常混用，但劝人去做，写 persuade sb. to do 更稳妥。"
   },
@@ -1296,6 +1486,6 @@
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
- "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "画面生成": "2026-11-27 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

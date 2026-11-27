@@ -312,6 +312,42 @@
      "border": "#2B8A3E",
      "delay": 1.5,
      "z": 6
+    },
+    {
+     "actor": "walk-west-boy-pack",
+     "x": 0.98,
+     "y": 0.9,
+     "s": 0.36,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.98,
+       0.9
+      ],
+      "to": [
+       0.02,
+       0.9
+      ],
+      "offset": 0.2
+     }
+    },
+    {
+     "actor": "walk-cn-girl",
+     "x": 0.02,
+     "y": 0.92,
+     "s": 0.38,
+     "z": 1,
+     "walk": {
+      "from": [
+       0.02,
+       0.92
+      ],
+      "to": [
+       0.98,
+       0.92
+      ],
+      "offset": 0.6
+     }
     }
    ],
    "ex": "The family got an eviction notice.",
@@ -370,6 +406,42 @@
       "border": "#2B8A3E",
       "when": "驱逐通知",
       "z": 6
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.98,
+      "y": 0.9,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.9
+       ],
+       "to": [
+        0.02,
+        0.9
+       ],
+       "offset": 0.3
+      }
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.02,
+      "y": 0.92,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.92
+       ],
+       "to": [
+        0.98,
+        0.92
+       ],
+       "offset": 0.7
+      }
      }
     ]
    }
@@ -422,6 +494,42 @@
       "color": "#2B8A3E",
       "border": "#2B8A3E",
       "delay": 1.2
+     },
+     {
+      "actor": "walk-west-boy-pack",
+      "x": 0.98,
+      "y": 0.9,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.9
+       ],
+       "to": [
+        0.02,
+        0.9
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-girl",
+      "x": 0.02,
+      "y": 0.92,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.92
+       ],
+       "to": [
+        0.98,
+        0.92
+       ],
+       "offset": 0.5
+      }
      }
     ]
    }
@@ -526,7 +634,8 @@
       "s": 0.2,
       "when": "剥夺",
       "pop": true,
-      "z": 4
+      "z": 4,
+      "anim": "shake"
      },
      {
       "label": "1580s",
@@ -558,6 +667,42 @@
       "cue": 1,
       "when": "不许再占着",
       "z": 5
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.98,
+      "y": 0.9,
+      "s": 0.36,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.98,
+        0.9
+       ],
+       "to": [
+        0.02,
+        0.9
+       ],
+       "offset": 0.25
+      }
+     },
+     {
+      "actor": "walk-west-man-case",
+      "x": 0.02,
+      "y": 0.92,
+      "s": 0.38,
+      "z": 1,
+      "walk": {
+       "from": [
+        0.02,
+        0.92
+       ],
+       "to": [
+        0.98,
+        0.92
+       ],
+       "offset": 0.65
+      }
      }
     ]
    }
@@ -697,6 +842,96 @@
    "share": "ion"
   }
  ],
+ "demo": {
+  "reading": {
+   "icons": [
+    "art/icon-read.svg",
+    "art/icon-ing.svg"
+   ],
+   "lit": "读这件事",
+   "pic": {
+    "bg": "studio",
+    "tint": "warm",
+    "diagram": true,
+    "items": [
+     {
+      "svg": "art/book-open.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.66,
+      "anim": "pulse",
+      "shadow": true
+     }
+    ]
+   }
+  },
+  "action": {
+   "icons": [
+    "art/icon-act.svg",
+    "art/icon-ion.svg"
+   ],
+   "lit": "做这件事",
+   "pic": {
+    "bg": "studio",
+    "tint": "blue",
+    "diagram": true,
+    "items": [
+     {
+      "svg": "art/hammer.svg",
+      "x": 0.5,
+      "y": 0.52,
+      "s": 0.7,
+      "anim": "shake",
+      "shadow": true
+     }
+    ]
+   }
+  },
+  "movement": {
+   "icons": [
+    "art/icon-move.svg",
+    "art/icon-ment.svg"
+   ],
+   "lit": "移动这件事",
+   "pic": {
+    "bg": "studio",
+    "tint": "green",
+    "diagram": true,
+    "items": [
+     {
+      "svg": "art/boxes.svg",
+      "x": 0.3,
+      "y": 0.56,
+      "s": 0.5,
+      "go": [
+       0.7,
+       0.56
+      ],
+      "dur": 1.6,
+      "wait": 0.2,
+      "loop": true,
+      "shadow": true
+     },
+     {
+      "ray": [
+       [
+        0.2,
+        0.18
+       ],
+       [
+        0.8,
+        0.18
+       ]
+      ],
+      "color": "#E8590C",
+      "lw": 0.03,
+      "arrow": true,
+      "dur": 0.8
+     }
+    ]
+   }
+  }
+ },
  "lianxi": {
   "qs": [
    {

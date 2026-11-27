@@ -732,8 +732,8 @@
     {
      "w": "theory",
      "word": "theory",
-     "m": "理论；原理；（口语）看法、推测",
-     "zh": "理论；原理；（口语）看法、推测",
+     "m": "理论；看法、推测（看清、想明白之后的一整套解释；口语里常只是猜想）",
+     "zh": "理论；原理；看法、推测",
      "say": "theory 是看清楚、想明白之后的一套解释；日常口语里常只是猜想。",
      "text": "theory 是看清楚、想明白之后的一套解释；日常口语里常只是猜想。",
      "note": "theory 是看清楚、想明白之后的一套解释；日常口语里常只是猜想。",
@@ -755,12 +755,14 @@
         "anim": "bob"
        }
       ]
-     }
+     },
+     "ex": "Scientists tested the theory many times.",
+     "exZh": "科学家们把这个理论检验了很多次。"
     },
     {
      "w": "principle",
      "word": "principle",
-     "m": "原理、原则",
+     "m": "原理、原则（一条最基本的道理或规则）",
      "zh": "原理、原则",
      "say": "principle 是一条最基本的道理、规则，比如物理原理。",
      "text": "principle 是一条最基本的道理、规则，比如物理原理。",
@@ -783,12 +785,14 @@
         "anim": "bob"
        }
       ]
-     }
+     },
+     "ex": "This machine works on a simple principle.",
+     "exZh": "这台机器的工作原理很简单。"
     },
     {
      "w": "opinion",
      "word": "opinion",
-     "m": "看法、意见",
+     "m": "看法、意见（个人觉得好不好、对不对）",
      "zh": "看法、意见",
      "say": "opinion 是个人觉得好不好、对不对，in my opinion 我认为。",
      "text": "opinion 是个人觉得好不好、对不对，in my opinion 我认为。",
@@ -811,12 +815,14 @@
         "anim": "bob"
        }
       ]
-     }
+     },
+     "ex": "In my opinion, the film is great.",
+     "exZh": "在我看来，这部电影很棒。"
     },
     {
      "w": "outlook",
      "word": "outlook",
-     "m": "观点、前景",
+     "m": "观点、前景（看待事情的总的眼光）",
      "zh": "观点、前景",
      "say": "outlook 是看待事情的总的眼光，也指前景。",
      "text": "outlook 是看待事情的总的眼光，也指前景。",
@@ -875,12 +881,14 @@
         }
        }
       ]
-     }
+     },
+     "ex": "She has a positive outlook on life.",
+     "exZh": "她对生活的看法很积极。"
     },
     {
      "w": "attitude",
      "word": "attitude",
-     "m": "态度",
+     "m": "态度（对一件事愿意不愿意、喜欢不喜欢）",
      "zh": "态度",
      "say": "attitude 是对一件事的态度，愿意不愿意。",
      "text": "attitude 是对一件事的态度，愿意不愿意。",
@@ -903,12 +911,14 @@
         "anim": "bob"
        }
       ]
-     }
+     },
+     "ex": "He has a good attitude to work.",
+     "exZh": "他的工作态度很好。"
     },
     {
      "w": "viewpoint",
      "word": "viewpoint",
-     "m": "观点、立场",
+     "m": "观点、立场（从哪个角度看）",
      "zh": "观点、立场",
      "say": "viewpoint 是从哪个角度看。",
      "text": "viewpoint 是从哪个角度看。",
@@ -966,12 +976,14 @@
         }
        }
       ]
-     }
+     },
+     "ex": "Try to see it from my viewpoint.",
+     "exZh": "试着从我的角度看看。"
     },
     {
      "w": "sentiment",
      "word": "sentiment",
-     "m": "情绪、看法",
+     "m": "情绪、看法（带着感情的看法）",
      "zh": "情绪、看法",
      "say": "sentiment 带着感情的看法。",
      "text": "sentiment 带着感情的看法。",
@@ -994,12 +1006,14 @@
         "anim": "pulse"
        }
       ]
-     }
+     },
+     "ex": "Many people share this sentiment.",
+     "exZh": "很多人都有这种看法。"
     },
     {
      "w": "supposition",
      "word": "supposition",
-     "m": "假定、推测",
+     "m": "假定、推测（没有证据、只是假设）",
      "zh": "假定、推测",
      "say": "supposition 是没有证据、只是假设的推想。",
      "text": "supposition 是没有证据、只是假设的推想。",
@@ -1028,11 +1042,11 @@
         "anim": "bob"
        }
       ]
-     }
+     },
+     "ex": "That is only a supposition.",
+     "exZh": "那只是一种推测。"
     }
    ],
-   "logic": "theory 有一套道理撑着；opinion、attitude、sentiment 偏个人感受；supposition 只是假设。",
-   "tip": "科学上的 theory 是经过大量证据检验的系统解释，不是“猜测”。",
    "pics": {
     "theory": {
      "bg": "blank",
@@ -1263,7 +1277,9 @@
       }
      ]
     }
-   }
+   },
+   "logic": "theory 有一套道理撑着；opinion、attitude、sentiment 偏个人感受；supposition 只是假设。",
+   "tip": "科学上的 theory 是经过大量证据检验的系统解释，不是“猜测”。"
   }
  },
  "插图": [
@@ -1357,6 +1373,6 @@
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
- "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "还要补：同义词辨析：theory 还没有例句（prefs.distinguish.items 里给这个词写 ex：一句用到它的简单英文例句，exZh：例句的中文；精简版视频里要念）；同义词辨析：principle 还没有例句（prefs.distinguish.items 里给这个词写 ex：一句用到它的简单英文例句，exZh：例句的中文；同义词辨析：opinion 还没有例句（prefs.distinguish.items 里给这个词写 ex：一句用到它的简单英文例句，exZh：例句的中文（批次 1126-2 单词检测退回）"
+ "画面生成": "2026-11-27 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }

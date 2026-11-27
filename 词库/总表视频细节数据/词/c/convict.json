@@ -63,7 +63,7 @@
       "z": 4
      },
      {
-      "label": "满满的：一点不剩",
+      "label": "彻底",
       "x": 0.5,
       "y": 0.08,
       "size": 0.075,
@@ -447,16 +447,25 @@
      "items": [
       {
        "svg": "art/desk-papers.svg",
-       "x": 0.5,
-       "y": 0.6,
-       "s": 0.52,
+       "x": 0.32,
+       "y": 0.62,
+       "s": 0.46,
        "z": 3,
-       "pop": true
+       "pop": true,
+       "anim": "pulse"
+      },
+      {
+       "svg": "art/scales.svg",
+       "x": 0.7,
+       "y": 0.56,
+       "s": 0.56,
+       "z": 3,
+       "anim": "swing"
       },
       {
        "label": "con 彻底",
        "x": 0.18,
-       "y": 0.2,
+       "y": 0.16,
        "size": 0.085,
        "color": "#2F6FB3",
        "border": "#2F6FB3",
@@ -465,7 +474,7 @@
       {
        "label": "vict 驳倒",
        "x": 0.82,
-       "y": 0.2,
+       "y": 0.16,
        "size": 0.085,
        "color": "#7A3E00",
        "bg": "#FFF6D8",
@@ -497,18 +506,38 @@
      "img": "art/court-bg.svg",
      "items": [
       {
+       "actor": "west-girl-explain",
+       "id": "e",
+       "x": 0.22,
+       "y": 0.6,
+       "s": 0.84,
+       "z": 4,
+       "seq": "talk",
+       "talkWhen": "用道理"
+      },
+      {
+       "waves": true,
+       "on": "e",
+       "x": 452,
+       "y": 186,
+       "dir": 0,
+       "with": "e",
+       "n": 3
+      },
+      {
        "svg": "art/scales.svg",
-       "x": 0.5,
-       "y": 0.55,
-       "s": 0.72,
+       "x": 0.68,
+       "y": 0.56,
+       "s": 0.62,
        "when": "用道理",
        "pop": true,
+       "anim": "swing",
        "z": 3
       },
       {
        "label": "道理",
-       "x": 0.18,
-       "y": 0.16,
+       "x": 0.44,
+       "y": 0.12,
        "size": 0.075,
        "color": "#2F6FB3",
        "border": "#2F6FB3",
@@ -516,8 +545,8 @@
       },
       {
        "label": "只好认罪",
-       "x": 0.82,
-       "y": 0.16,
+       "x": 0.8,
+       "y": 0.12,
        "size": 0.075,
        "color": "#7A3E00",
        "bg": "#FFF6D8",
@@ -752,27 +781,218 @@
    "items": [
     {
      "w": "convict",
-     "m": "已决犯；定罪",
-     "say": "convict 当名词，是被法庭判了罪的人；当动词，是法庭定罪。"
+     "word": "convict",
+     "m": "定罪；已决犯（法庭已经判定有罪）",
+     "zh": "定罪；已决犯",
+     "say": "convict 是法庭定罪：证据摆出来，判定他有罪；当名词，就是被判了罪的人。",
+     "text": "convict 是法庭定罪：证据摆出来，判定他有罪；当名词，就是被判了罪的人。",
+     "note": "convict 是法庭定罪：证据摆出来，判定他有罪；当名词，就是被判了罪的人。",
+     "ex": "He was convicted of stealing a car.",
+     "exZh": "他被判犯有偷车罪。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/court-bg.svg",
+      "items": [
+       {
+        "svg": "art/bench.svg",
+        "x": 0.5,
+        "y": 0.8,
+        "s": 0.7,
+        "z": 3
+       },
+       {
+        "svg": "art/gavel_f0.svg",
+        "frames": [
+         "art/gavel_f0.svg",
+         "art/gavel_f1.svg"
+        ],
+        "fps": 2,
+        "x": 0.5,
+        "y": 0.42,
+        "s": 0.6,
+        "z": 4
+       },
+       {
+        "label": "定罪",
+        "x": 0.84,
+        "y": 0.2,
+        "size": 0.13,
+        "color": "#C0392B",
+        "border": "#C0392B",
+        "z": 6
+       }
+      ]
+     }
     },
     {
      "w": "prisoner",
-     "m": "囚犯、被关的人",
-     "say": "prisoner 是被关起来的人，不一定判了罪，战俘也叫 prisoner。"
+     "word": "prisoner",
+     "m": "囚犯（被关起来的人，不一定判了罪）",
+     "zh": "囚犯",
+     "say": "prisoner 是被关起来的人，不一定判了罪，战俘也叫 prisoner。",
+     "text": "prisoner 是被关起来的人，不一定判了罪，战俘也叫 prisoner。",
+     "note": "prisoner 是被关起来的人，不一定判了罪，战俘也叫 prisoner。",
+     "ex": "The prisoner looked out of the window.",
+     "exZh": "那个囚犯望着窗外。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/cell-bg.svg",
+      "items": [
+       {
+        "actor": "west-clerk-happy",
+        "x": 0.5,
+        "y": 0.6,
+        "s": 0.9,
+        "z": 2,
+        "seq": "blink"
+       },
+       {
+        "svg": "art/bars.svg",
+        "x": 0.5,
+        "y": 0.5,
+        "s": 1.0,
+        "z": 4
+       },
+       {
+        "label": "被关起来",
+        "x": 0.84,
+        "y": 0.2,
+        "size": 0.12,
+        "color": "#2B8A3E",
+        "border": "#2B8A3E",
+        "z": 6
+       }
+      ]
+     }
     },
     {
      "w": "sentence",
-     "m": "判刑",
-     "say": "sentence 是判刑：定了罪以后，再判关几年。"
+     "word": "sentence",
+     "m": "判刑（定了罪以后，再判关几年）",
+     "zh": "判刑",
+     "say": "sentence 是判刑：定了罪以后，再判关几年。",
+     "text": "sentence 是判刑：定了罪以后，再判关几年。",
+     "note": "sentence 是判刑：定了罪以后，再判关几年。",
+     "ex": "The judge sentenced him to five years.",
+     "exZh": "法官判了他五年。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/court-bg.svg",
+      "items": [
+       {
+        "svg": "art/judgment.svg",
+        "x": 0.42,
+        "y": 0.52,
+        "s": 0.86,
+        "z": 3,
+        "pop": true
+       },
+       {
+        "svg": "art/gavel_f0.svg",
+        "frames": [
+         "art/gavel_f0.svg",
+         "art/gavel_f1.svg"
+        ],
+        "fps": 2,
+        "x": 0.72,
+        "y": 0.6,
+        "s": 0.5,
+        "z": 4
+       },
+       {
+        "label": "判刑",
+        "x": 0.84,
+        "y": 0.2,
+        "size": 0.12,
+        "color": "#7A3E00",
+        "bg": "#FFF6D8",
+        "border": "#E0A800",
+        "z": 6
+       }
+      ]
+     }
     },
     {
      "w": "accuse",
-     "m": "指控",
-     "say": "accuse 和 charge 只是指控，说他做了坏事，还没定罪。"
+     "word": "accuse",
+     "m": "指控（说某人做了坏事，还没定罪）",
+     "zh": "指控",
+     "say": "accuse 和 charge 只是指控，说他做了坏事，还没定罪。",
+     "text": "accuse 和 charge 只是指控，说他做了坏事，还没定罪。",
+     "note": "accuse 和 charge 只是指控，说他做了坏事，还没定罪。",
+     "ex": "She accused him of lying.",
+     "exZh": "她指控他撒谎。",
+     "pic": {
+      "bg": "blank",
+      "img": "art/street-bg.svg",
+      "items": [
+       {
+        "actor": "cn-teacher-point",
+        "x": 0.4,
+        "y": 0.58,
+        "s": 0.95,
+        "z": 3,
+        "id": "t",
+        "seq": "talk"
+       },
+       {
+        "waves": true,
+        "on": "t",
+        "x": 452,
+        "y": 186,
+        "dir": 0,
+        "with": "t",
+        "n": 3
+       },
+       {
+        "actor": "walk-west-woman-case",
+        "x": 0.02,
+        "y": 0.88,
+        "s": 0.4,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.02,
+          0.88
+         ],
+         "to": [
+          0.98,
+          0.88
+         ],
+         "offset": 0.2
+        }
+       },
+       {
+        "actor": "walk-cn-boy-pack",
+        "x": 0.98,
+        "y": 0.9,
+        "s": 0.38,
+        "z": 2,
+        "walk": {
+         "from": [
+          0.98,
+          0.9
+         ],
+         "to": [
+          0.02,
+          0.9
+         ],
+         "offset": 0.6
+        }
+       },
+       {
+        "label": "指控",
+        "x": 0.8,
+        "y": 0.2,
+        "size": 0.12,
+        "color": "#C0392B",
+        "border": "#C0392B",
+        "z": 6
+       }
+      ]
+     }
     }
    ],
-   "logic": "先指控（accuse、charge），再定罪（convict），最后判刑（sentence）。",
-   "tip": "口语里的 con（囚犯）就是 convict 截短来的。",
    "pics": {
     "convict": {
      "bg": "blank",
@@ -813,11 +1033,12 @@
      "img": "art/cell-bg.svg",
      "items": [
       {
-       "actor": "cn-boy-raise",
+       "actor": "west-clerk-happy",
        "x": 0.5,
        "y": 0.6,
        "s": 0.9,
-       "z": 2
+       "z": 2,
+       "seq": "blink"
       },
       {
        "svg": "art/bars.svg",
@@ -827,7 +1048,7 @@
        "z": 4
       },
       {
-       "label": "被关着",
+       "label": "被关起来",
        "x": 0.84,
        "y": 0.2,
        "size": 0.12,
@@ -862,7 +1083,7 @@
        "z": 4
       },
       {
-       "label": "判 5 年",
+       "label": "判刑",
        "x": 0.84,
        "y": 0.2,
        "size": 0.12,
@@ -883,7 +1104,8 @@
        "y": 0.58,
        "s": 0.95,
        "z": 3,
-       "id": "t"
+       "id": "t",
+       "seq": "talk"
       },
       {
        "waves": true,
@@ -895,7 +1117,43 @@
        "n": 3
       },
       {
-       "label": "是你干的！",
+       "actor": "walk-west-woman-case",
+       "x": 0.02,
+       "y": 0.88,
+       "s": 0.4,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.02,
+         0.88
+        ],
+        "to": [
+         0.98,
+         0.88
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.98,
+       "y": 0.9,
+       "s": 0.38,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.98,
+         0.9
+        ],
+        "to": [
+         0.02,
+         0.9
+        ],
+        "offset": 0.6
+       }
+      },
+      {
+       "label": "指控",
        "x": 0.8,
        "y": 0.2,
        "size": 0.12,
@@ -905,7 +1163,9 @@
       }
      ]
     }
-   }
+   },
+   "logic": "先指控（accuse、charge），再定罪（convict），最后判刑（sentence）。",
+   "tip": "口语里的 con（囚犯）就是 convict 截短来的。"
   },
   "kaodian": {
    "rows": [
@@ -943,7 +1203,74 @@
     "m": "使确信",
     "share": "con"
    }
-  ]
+  ],
+  "demo": {
+   "combine": {
+    "icons": [
+     "art/icon-together.svg",
+     "art/icon-two.svg"
+    ],
+    "lit": "两个放到一起",
+    "pic": {
+     "bg": "studio",
+     "tint": "warm",
+     "diagram": true,
+     "items": [
+      {
+       "svg": "art/puzzle.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.66,
+       "anim": "pulse",
+       "shadow": true
+      }
+     ]
+    }
+   },
+   "connect": {
+    "icons": [
+     "art/icon-together.svg",
+     "art/icon-knot.svg"
+    ],
+    "lit": "绑在一起",
+    "pic": {
+     "bg": "studio",
+     "tint": "blue",
+     "diagram": true,
+     "items": [
+      {
+       "svg": "art/plug.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.6,
+       "anim": "pulse",
+       "shadow": true
+      }
+     ]
+    }
+   },
+   "cooperate": {
+    "icons": [
+     "art/icon-together.svg",
+     "art/icon-gear.svg"
+    ],
+    "lit": "一起干活",
+    "pic": {
+     "bg": "studio",
+     "tint": "green",
+     "diagram": true,
+     "items": [
+      {
+       "svg": "art/gears.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "s": 0.72,
+       "anim": "spin"
+      }
+     ]
+    }
+   }
+  }
  },
  "插图": [
   "convictai"
@@ -1041,6 +1368,6 @@
  ],
  "题目生成": "2026-11-26 网页 AI 手动接力（单词工作台）",
  "题目检查": "维护技能 lianxi.py 体检 0 个问题",
- "画面生成": "2026-11-26 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
- "检查": "本机检查通过，出片时再起草检查"
+ "画面生成": "2026-11-27 手动接力（你在网页 AI 里粘贴、发送；它写完自己把 Excel 传到中转仓库）",
+ "检查": "还要补：都齐了（起草检查）"
 }
