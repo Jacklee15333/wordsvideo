@@ -51,6 +51,39 @@ def load(p, dflt=None):
         return dflt
 
 
+def drop_unknown(t, i, prefs, pool):
+    """6.56：扩展词、同族词、小黑板“扩展”那一行里不在总表的词，去掉（画面设置里 AI 多写的），返回去掉了哪些。
+    用户的批次 1127-1：make 卡在“渲染：先不渲染”，日志里看不到是哪个词——这些词少了也不影响视频，去掉接着做"""
+    from ety_table import key_of
+    ok = lambda w: key_of(w) in t.by_key and (pool is None or key_of(w) in pool)
+    gone = []
+    if isinstance(prefs.get('extend'), list):
+        _, bad = t.normalize_extend(i, prefs['extend'], pool)
+        if bad:
+            bset = {key_of(b) for b in bad}
+            keep = [x for x in prefs['extend'] if key_of(x.get('w', '') if isinstance(x, dict) else str(x)) not in bset]
+            gone += list(bad)
+            prefs['extend'] = keep
+    if isinstance(prefs.get('familyWords'), list):
+        bad = [w for w in prefs['familyWords'] if not ok(w)]
+        if bad:
+            gone += bad
+            prefs['familyWords'] = [w for w in prefs['familyWords'] if ok(w)]
+    board = prefs.get('board')
+    if isinstance(board, dict) and isinstance(board.get('lines'), list):
+        keep = []
+        for ln in board['lines']:
+            if isinstance(ln, dict) and str(ln.get('label', '')) in ('扩展', '扩展词', '同根', '同族'):
+                text = ' '.join(str(sg[0]) for sg in ln.get('segs') or [] if sg)
+                bad = [w for w in re.findall(r"[A-Za-z][A-Za-z'-]+", text) if not ok(w)]
+                if bad:
+                    gone += bad
+                    continue
+            keep.append(ln)
+        board['lines'] = keep
+    return gone
+
+
 def check_words(t, i, prefs, pool, prefer):
     """扩展词、同一词族手写的词都要在总表（和 --pool）里。返回（要不要写回 prefs，问题列表）"""
     from ety_table import key_of
@@ -293,11 +326,18 @@ def main():
         changed, probs = check_words(table, i, prefs, pool, prefer_set)
         if changed:
             json.dump(prefs, open(prefs_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        if probs and not a.force:                   # 6.56：不在总表的扩展词先去掉，接着做（不卡住）
+            gone = drop_unknown(table, i, prefs, pool)
+            changed2, probs2 = check_words(table, i, prefs, pool, prefer_set)
+            if gone and not probs2:
+                json.dump(prefs, open(prefs_p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+                print('提醒：扩展词不在总表里，去掉了：%s（画面设置里可以换成总表里有的词）' % '、'.join(dict.fromkeys(gone)))
+                probs = []
         if probs:
             word_probs[w] = probs
             print('；'.join(probs))
             if not a.force:
-                print('先不渲染：改 %s 再跑（或者加 --force）' % prefs_p)
+                print('先不渲染：%s。改 %s 再跑（或者加 --force）' % ('；'.join(probs)[:200], prefs_p))
                 continue
         # 6.19：两个版本（用户：“视频讲解的太复杂了，我希望视频能分成两个版本：一、精简版，放前面：精简版词根词缀的各种音变，各种形态这些不讲，直降关键的部分；二、详解版，让学生选看，就是现在的版本”）。
         #   精简版：<work>/<单词>/brief/ 里一份自己的画面设置（详解版的 prefs + 不讲音变、形态、辨析，见 brief_prefs）和配音稿，

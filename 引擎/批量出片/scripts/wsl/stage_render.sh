@@ -10,7 +10,7 @@ touch "$J/render.start"
 python3 run.py --table "$TABLE" --syl "$SYL" --words "$word" --number "$n" --out "$OUT" --edits "$WORK/edits_$w.json" \
     --edition brief --work "$J" > "$J/render.log" 2>&1
 rc=$?
-grep -av "resampler\|sample_rate\|AcceptWaveform\|^ *in_sample_rate\|^ *output_sample_rate" "$J/render.log" | grep -a "画面：\|字幕：\|音效：\|秒，\|先不渲染\|跳过\|Error\|出错" | tail -n 8
+grep -av "resampler\|sample_rate\|AcceptWaveform\|^ *in_sample_rate\|^ *output_sample_rate" "$J/render.log" | grep -a "画面：\|字幕：\|音效：\|秒，\|先不渲染\|不在总表\|去掉了\|跳过\|Error\|出错" | tail -n 8
 if grep -aq "先不渲染" "$J/render.log"; then need "run.py 没有渲染：$(grep -a '先不渲染' "$J/render.log" | tail -1)"; fi
 f="$OUT/$n $word.mp4"; [ -f "$f" ] || f=$(ls -t "$OUT"/*" $word.mp4" 2>/dev/null | head -1)
 if [ $rc = 0 ] && [ -f "$f" ] && { [ "$f" -nt "$J/render.start" ] || grep -aq "视频已经做好了" "$J/render.log"; }; then
