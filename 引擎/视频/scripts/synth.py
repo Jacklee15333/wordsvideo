@@ -180,9 +180,24 @@ def _ckey(text, speed, role):
     return h.hexdigest()[:16]
 
 
+def _mkdir(p):
+    """6.55：建文件夹；路上有悬空的链接（连的文件夹被删了）就先删掉链接——不然 makedirs 报“File exists / No such file”，配音整个崩"""
+    parts = []
+    while p and p != os.path.dirname(p):
+        parts.append(p)
+        p = os.path.dirname(p)
+    for q in reversed(parts):
+        if os.path.islink(q) and not os.path.exists(q):
+            try:
+                os.remove(q)
+            except FileNotFoundError:
+                pass
+    os.makedirs(parts[0], exist_ok=True)
+
+
 def cache_put(key, x):
     if CACHE and key:
-        os.makedirs(CACHE, exist_ok=True)
+        _mkdir(CACHE)
         p = os.path.join(CACHE, key + '.wav')
         tmp = '%s.%d.tmp' % (p, os.getpid())          # 6.35：几个进程一起念时，先写临时文件再换名，别人读不到写了一半的
         sf.write(tmp, x.astype(np.float32), SR, format='WAV')
@@ -927,7 +942,7 @@ def sent_get(key):
 
 def sent_put(key, path, meta):
     d = os.path.join(CACHE, 'sent')
-    os.makedirs(d, exist_ok=True)
+    _mkdir(d)
     tmp = os.path.join(d, '%s.%d.tmp' % (key, os.getpid()))
     shutil.copyfile(path, tmp)
     os.replace(tmp, os.path.join(d, key + '.wav'))

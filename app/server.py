@@ -13,7 +13,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import core as C
 import video as V
 import selfup as SU
-import relay_browser as RB                     # v1.23.0：软件自己控制网页 AI 的浏览器窗口
+import relay_browser as RB
+import clear as CL                             # v1.27.0：清除做好的题目、画面、视频                     # v1.23.0：软件自己控制网页 AI 的浏览器窗口
 import check as CK
 import pool as PL
 import results as RS
@@ -706,7 +707,8 @@ GET = {
     "/api/self": api_self_get,
     "/api/live": api_live,
     "/api/relay": api_relay_get,
-    "/api/relay/auto": lambda qs: C.relay_auto(qs),                # v1.22.0：浏览器小助手来问
+    "/api/relay/auto": lambda qs: C.relay_auto(qs),
+    "/api/clear": lambda qs: CL.listing(qs.get("what", "")),          # v1.27.0                # v1.22.0：浏览器小助手来问
     "/api/fixlater": lambda qs: __import__("pics").later_get(),
     "/api/fixwords": lambda qs: __import__("pics").fix_list(),
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
@@ -732,6 +734,7 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/open": api_open,
         "/api/words-task": api_words_task,
         "/api/prep": api_prep,
+        "/api/clear": lambda b: CL.clear(b.get("what"), b.get("words") or []),      # v1.27.0
         "/api/check": lambda b: CK.fix_all() if b.get("op") == "fix" else CK.start(b.get("what") or "all"),      # v1.21.1：一键修复
         "/api/qres": lambda b: RS.export_words(b.get("words") or []),
         "/api/pres": lambda b: RS.draw(b.get("word") or ""),

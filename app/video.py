@@ -193,7 +193,7 @@ rm -rf ~/skills/word-construction-video; mkdir -p ~/skills ~/kit-extra/words ~/w
 cp -r "$S/引擎/视频" ~/skills/word-construction-video
 find ~/skills/word-construction-video -type f \\( -name '*.sh' -o -name '*.py' \\) -exec sed -i 's/\\r$//' {} +
 ln -sfn ~/skills/word-construction-video/references/kit-7A-U4 ~/kit
-[ -d "$S/%(extra)s" ] && cp -r "$S/%(extra)s/." ~/kit-extra/ || true
+rm -rf ~/kit-extra; mkdir -p ~/kit-extra/words; [ -d "$S/%(extra)s" ] && cp -r "$S/%(extra)s/." ~/kit-extra/ || true
 touch ~/.wordfilm-local.env
 setv() { sed -i "/^$1=/d" ~/.wordfilm-local.env; printf '%%s=%%s\\n' "$1" "$2" >> ~/.wordfilm-local.env; }
 cp -f %(table)s ~/wv-data/总表.xlsx; setv TABLE "$HOME/wv-data/总表.xlsx"; setv VER %(ver)s
@@ -317,13 +317,13 @@ def _try_wsl(sh):
         pass
 
 
-def delete_old(words=None):
+def delete_old(words=None, only_old=True):
     """v1.21.0：删掉旧版视频（视频技能 6.43.0 以前做的）——出片文件夹里的 mp4 和关键画面图、视频清单里的登记，WSL 里的成片也删。
     这些词回到「出视频」的选词列表（当时批次里“做好了”的记号不再算数）；批次的生成历史留着。words 不给就删全部旧版。"""
     have = videos()
-    pick = [k for k, v in have.items() if v.get("old") and (not words or k in words)]
+    pick = [k for k, v in have.items() if (v.get("old") or not only_old) and (not words or k in words)]      # v1.27.0：only_old=False 不管新旧（「清除视频」）
     if not pick:
-        return {"ok": False, "msg": "没有旧版视频了"}
+        return {"ok": False, "msg": "没有旧版视频了" if only_old else "选的视频都没登记"}
     root = Path(vcfg()["winDir"])
     with _INB["lock"]:
         inb = {n: [x[0] for x in ws if len(x) > 1 and x[1] == "done"] for n, ws in _inb().items()}
@@ -352,7 +352,7 @@ def delete_old(words=None):
         sh = "; ".join("rm -f -- ~/wordfilm-out/%s ~/wordfilm-out/%s" % (q(x + ".mp4"), q(x + "_关键画面.jpg")) for x in rm)
         threading.Thread(target=_try_wsl, args=(sh,), daemon=True).start()      # WSL 里的成片也删（不等它）
         C.log("删掉了 %d 个旧版视频（%s）：这些词回到「出视频」的选词列表" % (len(gone), "、".join(gone[:6]) + (" 等" if len(gone) > 6 else "")))
-    msg = ("删掉了 %d 个旧版视频：这些词回到「出视频」的选词列表了，建批次、开工就是新版" % len(gone)) if gone else ""
+    msg = ("删掉了 %d 个%s视频：这些词回到「出视频」的选词列表了，建批次、开工就是新版" % (len(gone), "旧版" if only_old else "")) if gone else ""
     if bad:
         msg += ("；" if msg else "") + "%d 个没删掉（可能正在播放）：%s" % (len(bad), "、".join(bad[:3]))
     return {"ok": bool(gone) and not bad, "n": len(gone), "msg": msg}

@@ -785,7 +785,7 @@ details.vgk>.vgo{margin-top:6px}
 
 <section id="p-q">
   <div class="phead"><div><h2><i class="sn">4</i>出题：每个词 7 道练习题</h2>
-    <p class="muted">视频最后的练习和答案。AI 写，软件按规矩检查，过了才存进词库、上传；没过的退回给 AI 改，改几次还不过就放进“待人工”。</p></div></div>
+    <p class="muted">视频最后的练习和答案。AI 写，软件按规矩检查，过了才存进词库、上传；没过的退回给 AI 改，改几次还不过就放进“待人工”。</p></div><button class="btn ghost sm" style="align-self:flex-start;white-space:nowrap" onclick="clrOpen('q')" title="改版以后，旧的不要了就清掉：清掉的词回到要做的列表，按新版重做">清除做好的题目</button></div>
   <div class="mtabs stabs"><a data-go="q" class="on">出题</a><a data-go="qfail" class="">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="">批量和定时</a><a data-go="qset" class="">规矩和时间</a><a data-go="history" class="">记录</a></div>
   <div class="box">
     <h3 style="margin-top:0"><span class="hv" title="第 3 步「选词」里选上的词，还要出题的。出好一个，这里少一个；都出好了，列表就空了。已经有题目的不列在这里，开始时写进汇报。要换词，到「选词」去勾。">这次要出题的词</span> <span class="small faint" id="qPickN"></span></h3>
@@ -922,7 +922,7 @@ details.vgk>.vgo{margin-top:6px}
 
 <section id="p-pic">
   <div class="phead"><div><h2><i class="sn">5</i>画面：视频里的画</h2>
-    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
+    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div><button class="btn ghost sm" style="align-self:flex-start;white-space:nowrap" onclick="clrOpen('p')" title="改版以后，旧的不要了就清掉：清掉的词回到要做的列表，按新版重做">清除做好的画面</button></div>
   <div class="mtabs stabs"><a data-go="pic" class="on">画面</a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0"><span class="hv" title="第 3 步「选词」里选上的词，还要做画面的：还没有画面的、画面还要补的（出视频退回来的、起草检查没过的）、上次没做成的，一起做。做好一个，这里少一个；都做好了，列表就空了，下面出“本轮任务完成”的汇报。本来就做好了的、还没题目的不列在这里，开始时写进汇报。">这次要做画面的词</span> <span class="small faint" id="picPickN"></span></h3>
@@ -2406,7 +2406,7 @@ $('#p-video').addEventListener('change',e=>{if(e.target.id==='vAll')$$('#vReady 
 function vVideos(vs){const all=vs.slice().reverse(),show=VALLV?all:all.slice(0,12);
   $('#vListN').textContent=all.length?`（${all.length} 个）`:'';$$('[data-tn="vdone"]').forEach(e=>e.textContent=all.length||'');
   const old=all.filter(v=>v.old);
-  $('#vList').innerHTML=(old.length?vOldBar(old.length):'')+(all.length?'<table><tr><th>单词</th><th>批次</th><th>大小</th><th>时间</th><th></th></tr>'+show.map(v=>`<tr><td style="font-family:var(--en);font-size:14px">${esc(v.word)}${v.old?' <span class="tag hv" title="视频技能 6.43 以前做的">旧版</span>':''}</td><td>${esc(v.batch)}</td><td>${esc(v.size)}</td><td>${esc(v.ts)}</td>
+  $('#vList').innerHTML=(all.length?'<div class="line" style="justify-content:flex-end;margin-bottom:6px"><button class="btn ghost sm" onclick="clrOpen(\'v\')" title="不管新旧，勾哪个删哪个">清除视频…</button></div>':'')+(old.length?vOldBar(old.length):'')+(all.length?'<table><tr><th>单词</th><th>批次</th><th>大小</th><th>时间</th><th></th></tr>'+show.map(v=>`<tr><td style="font-family:var(--en);font-size:14px">${esc(v.word)}${v.old?' <span class="tag hv" title="视频技能 6.43 以前做的">旧版</span>':''}</td><td>${esc(v.batch)}</td><td>${esc(v.size)}</td><td>${esc(v.ts)}</td>
     <td><a href="/api/video/file?p=${encodeURIComponent(v.file)}" target="_blank">播放</a></td></tr>`).join('')+'</table>'+
     (all.length>12?`<div style="margin-top:6px"><button class="btn ghost sm" onclick="VALLV=!VALLV;vVideos((VW&&VW.videos)||[])">${VALLV?'收起':'看全部 '+all.length+' 个'}</button></div>`:'')
     :'<div class="pempty">还没有做好的视频</div>')}
@@ -2423,6 +2423,25 @@ function vDelOld(n){
   $('#vdYes').onclick=async()=>{const b=$('#vdYes');b.disabled=true;$('#vdNo').disabled=true;b.textContent='正在删…';
     let d;try{d=await api('/api/video',{op:'vdel'})}catch(e){d={ok:false,msg:e.message}}
     closeModal();toast((d.ok?'✓ ':'✗ ')+(d.msg||''),d.ok?6000:9000);vVideosLoad();if(typeof vWordsLoad==='function')vWordsLoad()}}
+/* v1.27.0：清除做好的题目、画面、视频（改版以后旧的不要了：清掉的词回到要做的列表） */
+const CLRN={q:'题目',p:'画面',v:'视频'},CLRP={q:'出题',p:'画面',v:'出视频'};
+async function clrOpen(w){let d;try{d=await api('/api/clear?what='+w)}catch(e){toast('✗ '+e.message,8000);return}
+  if(!d.ok){toast('✗ '+(d.msg||''),8000);return}
+  const it=d.items||[];if(!it.length){toast('没有做好的'+CLRN[w]+'可以清除',4000);return}
+  modal('清除做好的'+CLRN[w],`<p class="small" style="margin-top:0">改版以后，旧的${CLRN[w]}不要了就清掉：清掉的词回到「${CLRP[w]}」要做的列表，按新版重做。${w==='v'?'<b>视频文件会从出片文件夹里删掉，删了找不回来。</b>':w==='q'?'只清单词工作台 AI 出的题目，原来题库里就有的不动。词库的改动会上传 GitHub，以前的在 GitHub 历史里还找得到。':'只清 AI 做的画面设置，视频技能自带的不动。词库的改动会上传 GitHub，以前的在 GitHub 历史里还找得到。'}</p>
+    <div class="line" style="gap:12px;margin-bottom:6px"><a href="#" id="clrAll">全选</a><a href="#" id="clrNone">全不选</a><span class="small faint" id="clrN"></span></div>
+    <div style="max-height:46vh;overflow:auto;border:1px solid var(--rule);border-radius:6px;padding:6px 10px">${it.map(x=>`<label style="display:block;padding:2px 0;cursor:pointer"><input type="checkbox" class="clrc" value="${esc(x.word)}" checked> <span class="w">${esc(x.word)}</span>　<span class="small faint">${esc(x.info||'')}</span></label>`).join('')}</div>
+    <div class="line" style="margin-top:12px;gap:8px"><button class="btn warn" id="clrGo">清除</button><button class="btn ghost" id="clrNo">不清了</button></div>`);
+  const cs=()=>[...document.querySelectorAll('.clrc')];
+  const upd=()=>{const n=cs().filter(c=>c.checked).length;$('#clrN').textContent=`选了 ${n} / ${it.length} 个`;$('#clrGo').textContent=n?`清除选中的 ${n} 个`:'清除';$('#clrGo').disabled=!n};
+  cs().forEach(c=>c.onchange=upd);upd();
+  $('#clrAll').onclick=e=>{e.preventDefault();cs().forEach(c=>c.checked=true);upd()};
+  $('#clrNone').onclick=e=>{e.preventDefault();cs().forEach(c=>c.checked=false);upd()};
+  $('#clrNo').onclick=closeModal;
+  $('#clrGo').onclick=async()=>{const ws=cs().filter(c=>c.checked).map(c=>c.value),b=$('#clrGo');b.disabled=true;b.textContent='正在清除…';
+    let r;try{r=await api('/api/clear',{what:w,words:ws})}catch(e){r={ok:false,msg:e.message}}
+    closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);
+    try{if(w==='v')vVideosLoad();if(typeof vWordsLoad==='function')vWordsLoad();if(typeof loadPage==='function')loadPage(page)}catch(_){}}}
 async function vVideosLoad(){try{const d=await api('/api/video?what=words');VW=d;vVideos(d.videos||[]);VVN=(d.videos||[]).length}catch(e){}}
 $('#vScan').onclick=async e=>{const b=e.currentTarget;b.disabled=true;try{const d=await api('/api/video',{op:'scan'});toast((d.ok?'✓ ':'✗ ')+d.msg)}catch(x){toast('✗ '+x.message)}b.disabled=false;vVideosLoad()};
 

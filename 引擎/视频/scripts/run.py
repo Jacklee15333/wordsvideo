@@ -147,6 +147,9 @@ def make_brief(wdir, prefs_p, details, w, style, list_json, redraft):
     for src, dst in ((os.path.join(wdir, 'art'), os.path.join(ew, 'art')), (os.path.join(wdir, 'audio', 'cache'), os.path.join(ew, 'audio', 'cache'))):
         if src.endswith('cache'):
             os.makedirs(src, exist_ok=True)
+        src = os.path.realpath(src)              # 6.55：连到真的文件夹，不经过 ~/wf-jobs/<词>/<词> 这种中转链接（中转的删了，这里就悬空：配音崩“File exists”）
+        if os.path.islink(dst) and (not os.path.exists(dst) or os.path.realpath(dst) != src):
+            os.remove(dst)                       # 6.55：悬空的、连错的，换掉
         if os.path.isdir(src) and not os.path.lexists(dst):
             os.symlink(src, dst)
     bp = os.path.join(ew, 'prefs.json')
