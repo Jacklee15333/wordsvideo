@@ -27,7 +27,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 nav{width:188px;flex:none;background:var(--ink);color:#DCE3EE;display:flex;flex-direction:column;padding:18px 0}
 nav h1{font:600 17px/1.3 var(--ui);margin:0;color:#fff;letter-spacing:.5px;flex:1;min-width:0}
 /* v1.11.6：左边栏能收起（左上角的按钮），收起来只剩图标；记住上次是收着还是开着 */
-nav{transition:width .18s ease;overflow:hidden}
+nav{transition:width .18s ease;overflow-x:hidden;overflow-y:auto}
 .nhead{position:relative;display:flex;align-items:flex-start;padding:0 6px 0 16px;margin-bottom:22px}
 nav h1 .tx{display:block;white-space:nowrap}
 .ntog{position:absolute;top:-3px;right:5px;width:26px;height:26px;border:0;border-radius:6px;background:transparent;color:#9FB0C8;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
@@ -249,9 +249,14 @@ nav a.on .sn{background:var(--base);border-color:var(--base);color:#fff}
 .upsteps{margin:6px 0 10px;padding-left:4px;list-style:none;line-height:1.75}.upsteps li{margin:3px 0}.uptab td,.uptab th{font-size:12.5px;vertical-align:top}.lbbh{font-size:12px;white-space:nowrap}
 .lblook{margin:-2px 0 8px;padding:6px 10px;background:#EEF3FB;border-radius:6px}.lbmk{color:var(--amber);font-weight:600;white-space:nowrap}
 .lbf{font-size:13px;padding:4px 11px;border:1px solid var(--rule);border-radius:14px;color:var(--muted);text-decoration:none;background:#fff}.lbf b{font-weight:600;color:var(--ink);margin-left:2px}.lbf.on{background:var(--base);border-color:var(--base);color:#fff}.lbf.on b{color:#fff}
-.ngrp{font-size:11.5px;color:#8C9CB8;letter-spacing:.05em;padding:10px 20px 4px;white-space:nowrap}
+.ngrp{font-size:11.5px;color:#8C9CB8;letter-spacing:.05em;padding:10px 14px 4px 20px;white-space:nowrap;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}
+.ngrp:hover{color:#fff}.ncv{display:inline-flex;transition:transform .15s}.ng.shut .ncv{transform:rotate(-90deg)}.ng.shut .ngb{display:none}
+.ng.shut.hason .ngrp{color:#fff}.ng.shut.hasrun .ngrp .tx::before{content:"在跑";font-size:10.5px;background:var(--base);color:#fff;border-radius:8px;padding:0 6px;margin-right:6px;letter-spacing:0}.ng.shut.hason .ngrp .tx::after{content:" ●";color:var(--base)}
+body.navmini .ng.shut .ngb{display:block}body.navmini .ncv{display:none}
+.ntc{font-size:11px;font-weight:600;background:#B45309;color:#fff;border-radius:9px;padding:0 6px;line-height:17px;align-self:center}.ntc:empty{display:none}
+body.navmini .ntc{display:none}
 body.navmini .ngrp{padding:0;height:1px;margin:8px 14px;background:#33416A}
-body.navmini .ngrp:first-of-type{background:none}
+body.navmini .ng:first-of-type .ngrp{background:none}
 .phead{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px}
 .phead h2{display:flex;align-items:center;margin:0 0 4px}
 .phead h2 .sn{width:26px;height:26px;border-radius:13px;font-size:14px;background:var(--base);border-color:var(--base);color:#fff;margin-right:10px}
@@ -695,24 +700,34 @@ details.vgk>.vgo{margin-top:6px}
 <nav>
   <div class="nhead"><h1><img src="/icon2-192.png?v=1.2.1" alt="" class="logo"><span class="tx">单词工作台<small>words · questions · films</small></span></h1>
     <button type="button" class="ntog" id="navTog" aria-label="收起左边栏" title="收起左边栏"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M9 4v16"/></svg></button></div>
-  <div class="ngrp"><span class="tx">素材 · 平时积累</span></div>
+  <div class="ng" data-g="sc"><div class="ngrp" role="button" tabindex="0" title="点一下收起 / 展开"><span class="tx">素材 · 平时积累</span><i class="ncv" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></i></div><div class="ngb">
   <div class="snav">
   <a data-p="lib"><span class="nl"><i class="sn">1</i><span class="tx">总表</span></span></a>
   <a data-p="impdraft"><span class="nl"><i class="sn">2</i><span class="tx">讲稿</span></span><span class="n" data-nb="draft" hidden></span></a>
   <a data-p="q"><span class="nl"><i class="sn">3</i><span class="tx">题目</span></span><span class="n" data-nb="q" hidden></span></a>
-  <a data-p="pic"><span class="nl"><i class="sn">4</i><span class="tx">画面</span></span><span class="n" data-nb="pic" hidden></span></a>
   </div>
-  <div class="ngrp"><span class="tx">出片 · 从素材里取</span></div>
+  </div></div>
+  <div class="ng" data-g="pc"><div class="ngrp" role="button" tabindex="0" title="点一下收起 / 展开"><span class="tx">画面 · 视频里的画</span><i class="ncv" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></i></div><div class="ngb">
+  <div class="snav">
+  <a data-p="pic"><span class="nl"><i class="sn">全</i><span class="tx">一次做全</span></span><span class="n" data-nb="pic" hidden></span></a>
+  <a data-p="b_parts"><span class="nl"><i class="sn">1</i><span class="tx">词根词缀卡</span></span><b class="ntc" data-tc="b_parts"></b></a>
+  <a data-p="b_combo"><span class="nl"><i class="sn">2</i><span class="tx">拼起来</span></span><b class="ntc" data-tc="b_combo"></b></a>
+  <a data-p="b_scene"><span class="nl"><i class="sn">3</i><span class="tx">意思场景</span></span><b class="ntc" data-tc="b_scene"></b></a>
+  <a data-p="b_evolve"><span class="nl"><i class="sn">4</i><span class="tx">意思演变</span></span><b class="ntc" data-tc="b_evolve"></b></a>
+  <a data-p="b_example"><span class="nl"><i class="sn">5</i><span class="tx">例句动画</span></span><b class="ntc" data-tc="b_example"></b></a>
+  <a data-p="b_dist"><span class="nl"><i class="sn">6</i><span class="tx">同义词辨析</span></span><b class="ntc" data-tc="b_dist"></b></a>
+  </div>
+  </div></div>
+  <div class="ng" data-g="fm"><div class="ngrp" role="button" tabindex="0" title="点一下收起 / 展开"><span class="tx">出片 · 从素材里取</span><i class="ncv" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></i></div><div class="ngb">
   <div class="snav">
   <a data-p="fpick"><span class="nl"><i class="sn">1</i><span class="tx">挑词</span></span></a>
   <a data-p="dfinal"><span class="nl"><i class="sn">2</i><span class="tx">定稿</span></span><span class="n" data-nb="draft2" hidden></span></a>
   <a data-p="video"><span class="nl"><i class="sn">3</i><span class="tx">出视频</span></span></a>
   </div>
-  <div class="navsep"></div>
-  <a data-p="ai"><span class="nl"><i class="ni"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></i><span class="tx">选 AI</span></span></a>
-  <a data-p="check" class="on"><span class="nl"><i class="ni"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.8-5"/></svg></i><span class="tx">检测</span></span></a>
   <a data-p="home"><span class="nl"><i class="ni"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></i><span class="tx">总览</span></span></a>
   <a data-p="done"><span class="nl"><i class="ni"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></i><span class="tx">成果</span></span></a>
+  </div></div>
+  <div class="navsep"></div>
   <a data-p="settings"><span class="nl"><i class="ni"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg></i><span class="tx">设置</span></span><span class="n" id="nSoft" hidden>新</span></a>
   <div class="foot" id="foot">正在连接…</div>
 </nav>
@@ -751,9 +766,10 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-check">
-  <div class="phead"><div><h2>检测：三样准备好了没</h2>
+  <div class="phead"><div><h2>设置 · 检测：三样准备好了没</h2>
     <p class="muted">出题、画画面要用 AI 和词库，出视频要用这台电脑的出片环境。点「一键检测」，三样都打 ✓ 就可以往下做。</p></div>
     <button class="btn ghost sm" id="tHelp">怎么用？</button></div>
+  <div class="mtabs stabs"><a data-go="settings" class="">设置</a><a data-go="ai" class="">选 AI</a><a data-go="check" class="on">检测</a></div>
   <div class="box kready" id="kBox">
     <div class="khead"><button class="btn" id="kAll">一键检测</button><button class="btn" id="kFix" hidden title="检测出来没好、软件自己能修的（同步到 WSL、装系统软件、装声音模型、重新同步词库），在这一页就修，修完自己再检测一遍">一键修复</button><span id="kAllMsg" class="small muted">三样一起测，每一步都写在下面的「检测详情」里</span></div>
     <div class="krow"><span class="kok" id="kAIOk">–</span><span class="kname">AI</span>
@@ -833,7 +849,7 @@ details.vgk>.vgo{margin-top:6px}
   <div class="box">
     <h3 style="margin-top:0"><span class="hv" title="「素材 → 总表」里选上的词，还要出题的。出好一个，这里少一个；都出好了，列表就空了。已经有题目的不列在这里，开始时写进汇报。要换词，到「总表」去勾。">这次要出题的词</span> <span class="small faint" id="qPickN"></span></h3>
     <div class="plist" id="qPick"></div>
-    <div class="pgo"><button class="btn kbig" id="tAdd">给要出的词出题 ▶</button><button class="btn kbig" id="qNext" hidden onclick="go('pic')">下一步：含义拆分 ▶</button><span class="small muted" id="qMsg">只出题，不做画面。做的过程就在下面。</span></div>
+    <div class="pgo"><button class="btn kbig" id="tAdd">给要出的词出题 ▶</button><button class="btn kbig" id="qNext" hidden onclick="go('pic')">下一步：画面 ▶</button><span class="small muted" id="qMsg">只出题，不做画面。做的过程就在下面。</span></div>
   </div>
   <div class="sprog" data-step="q">
     <h3>这一步的进度</h3>
@@ -971,9 +987,9 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-pic">
-  <div class="phead"><div><h2><i class="sn">4</i>含义拆分：一次做全</h2>
+  <div class="phead"><div><h2><i class="sn">全</i>画面：一次做全</h2>
     <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="on">一次做全</a><a data-go="b_parts" class="">词根词缀卡 <b class="tc" data-tc="b_parts"></b></a><a data-go="b_combo" class="">拼起来 <b class="tc" data-tc="b_combo"></b></a><a data-go="b_scene" class="">意思场景 <b class="tc" data-tc="b_scene"></b></a><a data-go="b_evolve" class="">意思演变 <b class="tc" data-tc="b_evolve"></b></a><a data-go="b_example" class="">例句动画 <b class="tc" data-tc="b_example"></b></a><a data-go="b_dist" class="">同义词辨析 <b class="tc" data-tc="b_dist"></b></a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="on">一次做全</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0"><span class="hv" title="「素材 → 总表」里选上的词，还要做画面的：还没有画面的、画面还要补的（出视频退回来的、起草检查没过的）、上次没做成的，一起做。做好一个，这里少一个；都做好了，列表就空了，下面出“本轮任务完成”的汇报。本来就做好了的、还没题目的不列在这里，开始时写进汇报。">这次要做画面的词</span> <span class="small faint" id="picPickN"></span></h3>
     <div class="plist" id="picPick"></div>
@@ -989,9 +1005,9 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-pichist">
-  <div class="phead"><div><h2><i class="sn">4</i>含义拆分：一次做全</h2>
+  <div class="phead"><div><h2><i class="sn">全</i>画面：一次做全</h2>
     <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="b_parts" class="">词根词缀卡 <b class="tc" data-tc="b_parts"></b></a><a data-go="b_combo" class="">拼起来 <b class="tc" data-tc="b_combo"></b></a><a data-go="b_scene" class="">意思场景 <b class="tc" data-tc="b_scene"></b></a><a data-go="b_evolve" class="">意思演变 <b class="tc" data-tc="b_evolve"></b></a><a data-go="b_example" class="">例句动画 <b class="tc" data-tc="b_example"></b></a><a data-go="b_dist" class="">同义词辨析 <b class="tc" data-tc="b_dist"></b></a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="on">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="on">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0">生成历史 <span class="small faint" id="ghN"></span></h3>
     <p class="small muted" style="margin:-4px 0 6px">做完一批，这里多一行：几点做的、哪些词、做好几个、没做成几个。点一行看这一批每个词，点词看它的画面。</p>
@@ -1008,51 +1024,51 @@ details.vgk>.vgo{margin-top:6px}
 
 
 <section id="p-picdone">
-  <div class="phead"><div><h2><i class="sn">4</i>含义拆分 · 做好的画面</h2>
+  <div class="phead"><div><h2><i class="sn">全</i>画面 · 做好的画面</h2>
     <p class="muted">已经做好画面的词：每个词写着哪天做的、用的哪个版本的视频技能、起草检查过没过。技能改版了，旧的不要了：单个或者勾几个点「重做」（画面删掉，回到要做画面的列表）、「删除」，或者「清空」。只列 AI 做的，视频技能自带的不动。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="b_parts" class="">词根词缀卡 <b class="tc" data-tc="b_parts"></b></a><a data-go="b_combo" class="">拼起来 <b class="tc" data-tc="b_combo"></b></a><a data-go="b_scene" class="">意思场景 <b class="tc" data-tc="b_scene"></b></a><a data-go="b_evolve" class="">意思演变 <b class="tc" data-tc="b_evolve"></b></a><a data-go="b_example" class="">例句动画 <b class="tc" data-tc="b_example"></b></a><a data-go="b_dist" class="">同义词辨析 <b class="tc" data-tc="b_dist"></b></a><a data-go="picdone" class="on">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="picdone" class="on">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><div id="picdoneBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
 <section id="p-b_parts">
-  <div class="phead"><div><h2><i class="sn">4</i>含义拆分 · 词根词缀卡</h2>
+  <div class="phead"><div><h2><i class="sn">1</i>画面 · 词根词缀卡</h2>
     <p class="muted">每个词根、前缀、后缀一张卡：字从总表来（拆分、各部分解释、记），画和小图标是 AI 做的。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="b_parts" class="on">词根词缀卡 <b class="tc" data-tc="b_parts"></b></a><a data-go="b_combo" class="">拼起来 <b class="tc" data-tc="b_combo"></b></a><a data-go="b_scene" class="">意思场景 <b class="tc" data-tc="b_scene"></b></a><a data-go="b_evolve" class="">意思演变 <b class="tc" data-tc="b_evolve"></b></a><a data-go="b_example" class="">例句动画 <b class="tc" data-tc="b_example"></b></a><a data-go="b_dist" class="">同义词辨析 <b class="tc" data-tc="b_dist"></b></a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  
   <div class="box"><div id="b_partsBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
 <section id="p-b_combo">
-  <div class="phead"><div><h2><i class="sn">4</i>含义拆分 · 拼起来</h2>
+  <div class="phead"><div><h2><i class="sn">2</i>画面 · 拼起来</h2>
     <p class="muted">几个部分拼起来那一格的画（只有一个部分的词没有这一块）。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="b_parts" class="">词根词缀卡 <b class="tc" data-tc="b_parts"></b></a><a data-go="b_combo" class="on">拼起来 <b class="tc" data-tc="b_combo"></b></a><a data-go="b_scene" class="">意思场景 <b class="tc" data-tc="b_scene"></b></a><a data-go="b_evolve" class="">意思演变 <b class="tc" data-tc="b_evolve"></b></a><a data-go="b_example" class="">例句动画 <b class="tc" data-tc="b_example"></b></a><a data-go="b_dist" class="">同义词辨析 <b class="tc" data-tc="b_dist"></b></a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  
   <div class="box"><div id="b_comboBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
 <section id="p-b_scene">
-  <div class="phead"><div><h2><i class="sn">4</i>含义拆分 · 意思场景</h2>
+  <div class="phead"><div><h2><i class="sn">3</i>画面 · 意思场景</h2>
     <p class="muted">每个意思一幅会动的场景。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="b_parts" class="">词根词缀卡 <b class="tc" data-tc="b_parts"></b></a><a data-go="b_combo" class="">拼起来 <b class="tc" data-tc="b_combo"></b></a><a data-go="b_scene" class="on">意思场景 <b class="tc" data-tc="b_scene"></b></a><a data-go="b_evolve" class="">意思演变 <b class="tc" data-tc="b_evolve"></b></a><a data-go="b_example" class="">例句动画 <b class="tc" data-tc="b_example"></b></a><a data-go="b_dist" class="">同义词辨析 <b class="tc" data-tc="b_dist"></b></a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  
   <div class="box"><div id="b_sceneBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
 <section id="p-b_evolve">
-  <div class="phead"><div><h2><i class="sn">4</i>含义拆分 · 意思演变</h2>
+  <div class="phead"><div><h2><i class="sn">4</i>画面 · 意思演变</h2>
     <p class="muted">意思怎么一步步变过来的示意图。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="b_parts" class="">词根词缀卡 <b class="tc" data-tc="b_parts"></b></a><a data-go="b_combo" class="">拼起来 <b class="tc" data-tc="b_combo"></b></a><a data-go="b_scene" class="">意思场景 <b class="tc" data-tc="b_scene"></b></a><a data-go="b_evolve" class="on">意思演变 <b class="tc" data-tc="b_evolve"></b></a><a data-go="b_example" class="">例句动画 <b class="tc" data-tc="b_example"></b></a><a data-go="b_dist" class="">同义词辨析 <b class="tc" data-tc="b_dist"></b></a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  
   <div class="box"><div id="b_evolveBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
 <section id="p-b_example">
-  <div class="phead"><div><h2><i class="sn">4</i>含义拆分 · 例句动画</h2>
+  <div class="phead"><div><h2><i class="sn">5</i>画面 · 例句动画</h2>
     <p class="muted">每个意思的例句、中文，和例句的动画。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="b_parts" class="">词根词缀卡 <b class="tc" data-tc="b_parts"></b></a><a data-go="b_combo" class="">拼起来 <b class="tc" data-tc="b_combo"></b></a><a data-go="b_scene" class="">意思场景 <b class="tc" data-tc="b_scene"></b></a><a data-go="b_evolve" class="">意思演变 <b class="tc" data-tc="b_evolve"></b></a><a data-go="b_example" class="on">例句动画 <b class="tc" data-tc="b_example"></b></a><a data-go="b_dist" class="">同义词辨析 <b class="tc" data-tc="b_dist"></b></a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  
   <div class="box"><div id="b_exampleBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
 <section id="p-b_dist">
-  <div class="phead"><div><h2><i class="sn">4</i>画面 · 同义词辨析</h2>
+  <div class="phead"><div><h2><i class="sn">6</i>画面 · 同义词辨析</h2>
     <p class="muted">同义词辨析：几个意思相近的词，每个一幅画、一句区别、一句例句。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="b_parts" class="">词根词缀卡 <b class="tc" data-tc="b_parts"></b></a><a data-go="b_combo" class="">拼起来 <b class="tc" data-tc="b_combo"></b></a><a data-go="b_scene" class="">意思场景 <b class="tc" data-tc="b_scene"></b></a><a data-go="b_evolve" class="">意思演变 <b class="tc" data-tc="b_evolve"></b></a><a data-go="b_example" class="">例句动画 <b class="tc" data-tc="b_example"></b></a><a data-go="b_dist" class="on">同义词辨析 <b class="tc" data-tc="b_dist"></b></a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  
   <div class="box"><div id="b_distBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
@@ -1099,9 +1115,9 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-picfail">
-  <div class="phead"><div><h2><i class="sn">4</i>含义拆分：一次做全</h2>
+  <div class="phead"><div><h2><i class="sn">全</i>画面：一次做全</h2>
     <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="b_parts" class="">词根词缀卡 <b class="tc" data-tc="b_parts"></b></a><a data-go="b_combo" class="">拼起来 <b class="tc" data-tc="b_combo"></b></a><a data-go="b_scene" class="">意思场景 <b class="tc" data-tc="b_scene"></b></a><a data-go="b_evolve" class="">意思演变 <b class="tc" data-tc="b_evolve"></b></a><a data-go="b_example" class="">例句动画 <b class="tc" data-tc="b_example"></b></a><a data-go="b_dist" class="">同义词辨析 <b class="tc" data-tc="b_dist"></b></a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><h3 style="margin-top:0">画面没做成的词</h3><p class="small muted" style="margin:-4px 0 8px">AI 改了几轮还没过检查的画面。看一下原因，点「这些再试一次」交给 AI 重做。</p>
       <div id="picFail" class="small">—</div>
       <div class="line"><button class="btn ghost sm" id="tPicRedo">这些再试一次</button></div></div></div>
@@ -1109,9 +1125,9 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-picbulk">
-  <div class="phead"><div><h2><i class="sn">4</i>含义拆分：一次做全</h2>
+  <div class="phead"><div><h2><i class="sn">全</i>画面：一次做全</h2>
     <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="b_parts" class="">词根词缀卡 <b class="tc" data-tc="b_parts"></b></a><a data-go="b_combo" class="">拼起来 <b class="tc" data-tc="b_combo"></b></a><a data-go="b_scene" class="">意思场景 <b class="tc" data-tc="b_scene"></b></a><a data-go="b_evolve" class="">意思演变 <b class="tc" data-tc="b_evolve"></b></a><a data-go="b_example" class="">例句动画 <b class="tc" data-tc="b_example"></b></a><a data-go="b_dist" class="">同义词辨析 <b class="tc" data-tc="b_dist"></b></a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="on">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="on">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><div class="tally" id="picStats">—</div></div>
   <div class="box" style="margin-top:14px">
     <h3 style="margin-top:0">按总表顺序接着做</h3>
@@ -1151,8 +1167,9 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-ai">
-  <div class="phead"><div><h2>选 AI：用哪个 AI 出题、画画面</h2>
+  <div class="phead"><div><h2>设置 · 选 AI：用哪个 AI 出题、画画面</h2>
     <p class="muted">一种 AI 一个标签，点标签看它的设置。正在用的那个标着「正在用」；要换，点右上角「改用这个」。选好、填好以后，到下一步「检测」测一下能不能用。</p></div></div>
+  <div class="mtabs stabs"><a data-go="settings" class="">设置</a><a data-go="ai" class="on">选 AI</a><a data-go="check" class="">检测</a></div>
   <div class="mtabs" id="mTabs">
     <a data-m="web">网页镜像 ChatGPT<span class="use" hidden>正在用</span></a>
     <a data-m="api">接口 AI<span class="use" hidden>正在用</span></a>
@@ -1330,6 +1347,7 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-settings">
   <div class="phead"><div><h2>设置</h2>
     <p class="muted">不属于哪一步的：存词库的 GitHub 仓库、软件版本和更新。用哪个 AI 在「选 AI」；出题的规矩、什么时候干活在「素材 → 题目」的「规矩和时间」。</p></div></div>
+  <div class="mtabs stabs"><a data-go="settings" class="on">设置</a><a data-go="ai" class="">选 AI</a><a data-go="check" class="">检测</a></div>
   <div class="row">
   <div class="col">
   </div>
@@ -1397,8 +1415,8 @@ $('#modal').onclick=e=>{if(e.target.id==='modal')closeModal()};
 let WD_HOME=null;
 function wdHome(){const b=$('#wDetail');if(b&&WD_HOME&&b.parentElement!==WD_HOME)WD_HOME.appendChild(b)}
 function wordInModal(w,title){const b=$('#wDetail');if(!WD_HOME)WD_HOME=b.parentElement;modal((title||'改稿：')+w,'');$('#mBody').appendChild(b);openWord(w,true)}
-let page='check';
-const PARENT={qdone:'q',qfail:'q',qbulk:'q',qset:'q',history:'q',pichist:'pic',picdone:'pic',b_parts:'pic',b_combo:'pic',b_scene:'pic',b_evolve:'pic',b_example:'pic',b_dist:'pic',picfail:'pic',picbulk:'pic',pick:'lib',pickhist:'lib',words:'lib',imp:'lib',vdone:'video',vhist:'video',venv:'video'};
+let page='lib';
+const PARENT={qdone:'q',qfail:'q',qbulk:'q',qset:'q',history:'q',pichist:'pic',picdone:'pic',ai:'settings',check:'settings',picfail:'pic',picbulk:'pic',pick:'lib',pickhist:'lib',words:'lib',imp:'lib',vdone:'video',vhist:'video',venv:'video'};
 /* v1.36.0：出题、含义拆分、同义词辨析合成一步「画面设计」——页面、功能都不变，只是挂到同一步下面，上面多一排「出题 · 含义拆分 · 同义词辨析」 */
 const DGRP={};
 Object.keys(DGRP).forEach(k=>PARENT[k]='design');
@@ -1409,10 +1427,15 @@ Object.entries(DGRP).forEach(([id,g])=>{const sec=document.getElementById('p-'+i
   ph.after(d)});
 let DLAST='q';try{DLAST=localStorage.getItem('designLast')||'q';if(!DGRP[DLAST])DLAST='q'}catch(e){}
 function go(p){if(p==='manual')p='q';if(p==='run')p='q';if(p==='design')p='pic';if(DGRP[p]){DLAST=p;try{localStorage.setItem('designLast',p)}catch(e){}}page=p;const top=PARENT[p]||p;
-  $$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===top));
+  $$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===top));if(typeof ngMark==='function')ngMark();
   $$('main section').forEach(s=>s.classList.toggle('on',s.id==='p-'+p));
   ({check:loadCheck,pick:loadPick,q:loadQ,qdone:()=>doneLoad('q'),picdone:()=>doneLoad('p'),b_parts:()=>blkLoad('parts'),b_combo:()=>blkLoad('combo'),b_scene:()=>blkLoad('scene'),b_evolve:()=>blkLoad('evolve'),b_example:()=>blkLoad('example'),b_dist:()=>blkLoad('dist'),imp:loadImp,impdraft:loadDraft,dfinal:loadFinal,lib:()=>libLoad('lib'),fpick:loadFpick,qfail:loadManual,qbulk:loadQbulk,qset:loadQset,pic:loadPic,picfail:loadPicfail,picbulk:loadPicbulk,pichist:loadPichist,pickhist:loadPickhist,done:loadDone,ai:loadAI,video:loadVideo,vdone:loadVdone,vhist:loadVhist,venv:loadVenv,words:loadWords,history:loadHistory,settings:loadSettings,home:loadHome}[p]||(()=>{}))()}
 $$('nav a').forEach(a=>a.onclick=()=>go(a.dataset.p));
+/* v1.43.0：左边每个大类能收起、展开，记住 */
+let NSHUT={};try{NSHUT=JSON.parse(localStorage.getItem('navShut')||'{}')}catch(e){}
+function ngMark(){$$('nav .ng').forEach(g=>{g.classList.toggle('shut',!!NSHUT[g.dataset.g]);g.classList.toggle('hason',!!g.querySelector('a.on'));g.classList.toggle('hasrun',!!g.querySelector('.ngb .n:not([hidden])'))})}
+$$('nav .ngrp').forEach(h=>{const t=()=>{const g=h.parentElement.dataset.g;NSHUT[g]=!NSHUT[g];try{localStorage.setItem('navShut',JSON.stringify(NSHUT))}catch(e){}ngMark()};h.onclick=t;h.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}}});
+ngMark();
 function navMini(on){document.body.classList.toggle('navmini',on);const b=$('#navTog'),t=on?'展开左边栏':'收起左边栏';b.title=t;b.setAttribute('aria-label',t);
   $$('nav a').forEach(a=>{const x=a.querySelector('.tx');if(on&&x)a.title=x.textContent;else a.removeAttribute('title')});
   try{localStorage.setItem('navMini',on?'1':'0')}catch(e){}}
@@ -1519,7 +1542,7 @@ $('#sDays').innerHTML='星期 '+DAYN.map((d,i)=>`<label><input type="checkbox" v
 const ST_WORD={'运行中':'正在做','排队':'排队中','已暂停':'暂停了','已完成':'做完了','失败':'没做成','已取消':'取消了'};
 $('#tAdd').onclick=()=>busy($('#tAdd'),$('#qMsg'),'正在安排',async()=>{
   const have=picked().filter(i=>i.q).map(i=>i.word);
-  if(!PQ.length)return{ok:false,msg:have.length?`选上的 ${have.length} 个都已经有题目，都跳过了，这次不用出题。下一步：含义拆分`:'选上的词里没有要出题的：到「素材 → 总表」选上要做的词'};
+  if(!PQ.length)return{ok:false,msg:have.length?`选上的 ${have.length} 个都已经有题目，都跳过了，这次不用出题。下一步：画面`:'选上的词里没有要出题的：到「素材 → 总表」选上要做的词'};
   await api('/api/task',{kind:'words',params:{words:PQ,steps:['chuti'],skipped:{q:have}},title:`出题：${PQ.slice(0,4).join('、')}${PQ.length>4?' 等 '+PQ.length+' 个':''}`});
   poll();setTimeout(()=>{loadQ();stepScroll()},700);
   return{ok:true,msg:`开始了：这次出 ${PQ.length} 个${have.length?`；已经有题目、跳过 ${have.length} 个`:''}。做的过程在下面，做完有汇报`}});
@@ -1629,7 +1652,7 @@ function stepOf(t){if(!t)return '';let p={};try{p=typeof t.params==='string'?JSO
   if(t.kind==='words'){const st=p.steps||['chuti','pics'];return st.includes('chuti')?'q':'pic'}
   if(t.kind==='chuti'||t.kind==='redo')return 'q';if(t.kind==='pics')return 'pic';return 'more'}
 function navBadges(){const t=(ST.runner||{}).task,st=t?stepOf(t):'',wait=typeof RL!=='undefined'&&RL.status==='等你操作';
-  $$('[data-nb]').forEach(e=>{const on=e.dataset.nb===st||(e.dataset.nb==='design'&&(st==='q'||st==='pic'));e.hidden=!on;e.textContent=on?(wait?'要你操作':'在跑'):''})}
+  $$('[data-nb]').forEach(e=>{const on=e.dataset.nb===st||(e.dataset.nb==='design'&&(st==='q'||st==='pic'));e.hidden=!on;e.textContent=on?(wait?'要你操作':'在跑'):''});if(typeof ngMark==='function')ngMark()}
 let TLt=0;const TOPEN={},SDONE={};
 async function stepTasks(step){TLt=Date.now();
   const sec=document.querySelector(`.sprog[data-step="${step}"]`);if(!sec)return;
@@ -1690,7 +1713,7 @@ function qPickRender(){const pk=picked(),list=pk.filter(i=>!i.q||i.manual);
       const doing=i.st==='doing'&&!i.q,fix=i.q&&i.manual;
       const st=doing?'<span class="pst pst-doing">正在出</span>':fix?'<a class="small" onclick="go(\'qfail\')" style="color:var(--amber)">题目要改：到「没过的词」里改</a>':i.manual?'<span class="ck-bad">上次没过，这次再出</span>':'<span class="pst pst-will">要出</span>';
       return `<tr><td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,32)}</td><td>${st}</td></tr>`}).join('')+'</table>'
-    :`<div class="pempty">${pk.length?`选上的 ${pk.length} 个词都有题目了。下一步：<a onclick="go('pic')">含义拆分</a>`:'还没有选上的词。到「素材 → <a onclick="go(\'lib\')">总表</a>」勾上要出题的词。'}</div>`;
+    :`<div class="pempty">${pk.length?`选上的 ${pk.length} 个词都有题目了。下一步：<a onclick="go('pic')">画面</a>`:'还没有选上的词。到「素材 → <a onclick="go(\'lib\')">总表</a>」勾上要出题的词。'}</div>`;
   $('#tAdd').textContent=PQ.length?`给这 ${PQ.length} 个词出题 ▶`:'给要出的词出题 ▶';$('#tAdd').disabled=!PQ.length;
   const allQ=pk.length&&!list.length;$('#qNext').hidden=!allQ;
   if(allQ)$('#qMsg').textContent='选上的词都有题目了，点「下一步：画面」去做画面。';
@@ -2590,7 +2613,7 @@ async function clrOpen(w){let d;try{d=await api('/api/clear?what='+w)}catch(e){t
     closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);
     try{if(w==='v')vVideosLoad();if(typeof vWordsLoad==='function')vWordsLoad();if(typeof loadPage==='function')loadPage(page)}catch(_){}}}
 /* v1.28.0 / v1.31.0：「做好的」——单词（和意思）、内容（能展开、能改）、做好的时间、用的版本、备注、操作（改、重做、删除）；分页、搜索、只看选上的 */
-const DN={q:{name:'题目',page:'出题',box:'#qdoneBox',tn:'qdone'},p:{name:'画面',page:'含义拆分',box:'#picdoneBox',tn:'picdone'},v:{name:'视频',page:'出视频',box:'#vListT',tn:'vdone'}};
+const DN={q:{name:'题目',page:'出题',box:'#qdoneBox',tn:'qdone'},p:{name:'画面',page:'画面',box:'#picdoneBox',tn:'picdone'},v:{name:'视频',page:'出视频',box:'#vListT',tn:'vdone'}};
 const DSZ={q:10,p:20,v:20},DONE={q:null,p:null,v:null},DSEL={q:new Set(),p:new Set(),v:new Set()},DFILT={q:'',p:'',v:''},DPG={q:1,p:1,v:1},DPICK={q:false,p:false,v:false},DOPEN={q:new Set(),p:new Set(),v:new Set()};
 let DFT=null;
 async function doneLoad(w){const el=$(DN[w].box);if(!el)return;let d;
@@ -2723,7 +2746,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('.artA');if(a){e.
 function blkRender(id,d){const el=$('#b_'+id+'Box'),sel=BSEL[id]=BSEL[id]||new Set(),f=BF[id]||'',c=d.counts,sz=BSZ[id]||10;
   const all=d.items.filter(x=>!f||x.status===f),pages=Math.max(1,Math.ceil(all.length/sz));BPG[id]=Math.min(Math.max(1,BPG[id]||1),pages);
   const it=all.slice((BPG[id]-1)*sz,BPG[id]*sz),n=sel.size;
-  if(!d.items.length){el.innerHTML='<p class="small muted" style="margin:0">「总表」里还没有选上的词。</p>';return}
+  if(!d.items.length){el.innerHTML='<p class="small muted" style="margin:0">还没有这次要做的词：到「总表」点缺的那一格「做 ▸」。</p>';return}
   const chip=(k,t)=>`<a href="#" class="bfc" data-f="${k}" style="${f===k?'font-weight:700;text-decoration:underline':''}">${t}</a>`;
   const picOnly=['scene','combo','parts'].includes(id);
   el.innerHTML=`<div class="line" style="gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:8px">${chip('','全部 '+d.items.length)}${chip('fix','要补 '+(c.fix||0))}${chip('none','还没有 '+(c.none||0))}${chip('ok','做好了 '+(c.ok||0))}${c.nopic?chip('nopic','还没做画面 '+c.nopic):''}${c.na?chip('na','这个词不用 '+c.na):''}
@@ -2823,7 +2846,7 @@ let DPT=null;
 async function dpLoop(pg,reload){clearTimeout(DPT);const box=$('#'+pg+'Box .dproc');if(!box)return;let d;
   try{d=await api('/api/drafts?proc=1')}catch(e){return}
   const run=d.run||{};dpPaint(box,run);
-  const nb=$$('[data-nb="draft"],[data-nb="draft2"]');nb.forEach(e=>{const on=run.running&&e.dataset.nb===(run.from==='dfinal'?'draft2':'draft');e.hidden=!on;e.textContent=on?'在跑':''});
+  const nb=$$('[data-nb="draft"],[data-nb="draft2"]');nb.forEach(e=>{const on=run.running&&e.dataset.nb===(run.from==='dfinal'?'draft2':'draft');e.hidden=!on;e.textContent=on?'在跑':''});if(typeof ngMark==='function')ngMark();
   if(page!==pg)return;
   if(run.running){box.dataset.was='1';DPT=setTimeout(()=>dpLoop(pg,reload),1000)}
   else if(box.dataset.was==='1'){box.dataset.was='';reload()}}
@@ -2963,7 +2986,7 @@ async function loadDraft(){const el=$('#impdraftBox');if(!el)return;const d=awai
   if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
   const it=[...d.items].sort((x,y)=>({none:0,stale:1,ok:2}[x.sstatus]-{none:0,stale:1,ok:2}[y.sstatus])),run=d.run,todo=it.filter(x=>x.sstatus!=='ok'),n=DRSEL.size;
   $$('[data-tc="impdraft"]').forEach(e=>e.textContent=todo.length||'');
-  if(!it.length){el.innerHTML='<p class="small muted" style="margin:0">「总表」里还没有选上的词。</p>';return}
+  if(!it.length){el.innerHTML='<p class="small muted" style="margin:0">还没有这次要做的词：到「总表」点缺的那一格「做 ▸」。</p>';return}
   el.innerHTML=`<div class="line" style="gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px">
     <span class="small">选上的 ${it.length} 个词：讲稿写好了 ${it.length-todo.length} 个${todo.length?`，<b style="color:var(--amber)">${todo.length} 个还没写或者要重写</b>（排前面）`:''}</span><span style="flex:1"></span>${drRunBar(run,n,todo.length,'写','drs')}</div>
   <div class="dproc"></div>
@@ -2997,7 +3020,7 @@ async function loadFinal(){const el=$('#dfinalBox');if(!el)return;const d=await 
     return `<tr style="vertical-align:top"><td>${can?`<input type="checkbox" class="drck" value="${esc(x.word)}" ${DFSEL.has(x.word)?'checked':''}>`:''}</td>
     <td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a></td>
     <td class="small"><span style="color:${col};font-weight:600">${t}</span>${x.ts&&x.fstatus!=='none'&&can?`<div class="faint">定稿于 ${esc(x.ts)} · 念 ${x.segs} 句</div>`:''}${x.fstatus==='stale'?`<div class="faint">画面改于 ${esc(x.picTs)}</div>`:''}</td>
-    <td class="small" style="line-height:1.7;word-break:break-word">${x.fstatus==='nopic'?'<span class="faint">先到 <a href="#" onclick="go(\'pic\');return false">含义拆分</a> 做画面</span>'
+    <td class="small" style="line-height:1.7;word-break:break-word">${x.fstatus==='nopic'?'<span class="faint">先到 <a href="#" onclick="go(\'pic\');return false">画面</a> 做画面</span>'
       :x.fstatus==='err'?esc(x.line):x.todo.length?x.todo.map(t=>`<div>${blk(t)}</div>`).join(''):x.fstatus==='ok'?'<span style="color:var(--pass)">都齐了</span>':'<span class="faint">—</span>'}</td>
     <td class="small">${can?`<a href="#" class="drOne" data-w="${esc(x.word)}">${['none'].includes(x.fstatus)?'定稿':'重新定稿'}</a>`:''}</td></tr>`}).join('')}</table>`;
   rzInit(el.querySelector('table'),'dfinal');
@@ -3005,7 +3028,7 @@ async function loadFinal(){const el=$('#dfinalBox');if(!el)return;const d=await 
   dpLoop('dfinal',loadFinal)}
 async function loadImp(){const el=$('#impBox');if(!el)return;let d;try{d=await api('/api/imp')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
   if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
-  if(!d.items.length){el.innerHTML='<p class="small muted" style="margin:0">「总表」里还没有选上的词。</p>';return}
+  if(!d.items.length){el.innerHTML='<p class="small muted" style="margin:0">还没有这次要做的词：到「总表」点缺的那一格「做 ▸」。</p>';return}
   const bad=d.items.filter(x=>x.flags.length).length,vb=d.items.filter(x=>x.verify&&!x.verify.ok).length,vn=d.items.filter(x=>!x.verify).length,n=ISEL.size;
   el.innerHTML=`<div class="line" style="gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px"><span class="small">总表 ${esc(d.version||'')}：选上的 ${d.items.length} 个词${bad?`，<b style="color:var(--red)">${bad} 个缺东西</b>`:''}；AI 核对过 ${d.items.length-vn} 个${vb?`，<b style="color:var(--amber)">${vb} 个有问题</b>`:''}（有问题的排前面）</span>
     <span style="flex:1"></span><button class="btn sm iVer" ${n?'':'disabled'}>让 AI 核对选中的${n?' '+n+' 个':''}</button><button class="btn ghost sm iVerNew" ${vn?'':'disabled'}>核对还没核对过的 ${vn} 个</button></div>
@@ -3459,7 +3482,7 @@ $$('[data-repo]').forEach(b=>b.onclick=async()=>{const op=b.dataset.repo;
   b.disabled=true;try{const d=await api('/api/repo',{op});toast(op==='token'?((d.ok?'✓ ':'✗ ')+d.msg):(d.msg||'好的，在后台做，看「动态」'),6000)}catch(e){toast('✗ '+e.message)}b.disabled=false});
 $('#pPrev').onclick=async()=>{const d=await api('/api/prompt-preview?n=3');modal('发给 AI 的提示词（用下一批 3 个词举例）','<pre>'+esc(d.text)+'</pre>')};
 
-go('check');poll().then(()=>{const t=ST.runner&&ST.runner.task,st=t?stepOf(t):'';if(['q','pic'].includes(st))go(st)});setInterval(poll,3000);
+go('lib');poll().then(()=>{const t=ST.runner&&ST.runner.task,st=t?stepOf(t):'';if(['q','pic'].includes(st))go(st)});setInterval(poll,3000);
 </script>
 </body>
 </html>
