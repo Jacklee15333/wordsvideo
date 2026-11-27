@@ -228,6 +228,24 @@ def api_blocks(b):
     return {"ok": True, "msg": "开始重做「%s」：%d 个词，AI 只改这一块。%s" % (name, len(ws), "到「含义拆分 → 一次做全」把提示词交给网页 AI" if relay else "过程在「含义拆分 → 一次做全」")}
 
 
+def api_film(b):
+    """v1.39.0：素材库、出片挑词；v1.42.0：按现在的视频技能更新（① 本地 up1；② AI up2，now=True 马上开始补画面）"""
+    if b.get("op") == "up1":
+        return DR.start(b.get("words") or [], "upgrade")
+    if b.get("op") == "up2":
+        r = FM.upgrade_ai(b.get("words") or [])
+        if not r.get("ok") or not b.get("now"):
+            return r
+        ws = r["words"]
+        t = api_task_add({"kind": "pics", "params": {"words": ws, "fix": True, "batch": ""},
+                          "title": "按新技能补画面：%s%s" % ("、".join(ws[:4]), " 等 %d 个" % len(ws) if len(ws) > 4 else "")})
+        if t.get("error"):
+            return {"ok": False, "msg": "交给 AI 了，可是没开始：%s（等它做完再点，或者到「画面 → 一次做全」点「补画面」）" % t["error"]}
+        relay = C.load_cfg().get("provider") == "relay"
+        return {"ok": True, "msg": r["msg"] + "。" + ("到「画面 → 一次做全」把提示词交给网页 AI" if relay else "过程在「画面 → 一次做全」")}
+    return FM.op(b)
+
+
 def api_imp(b):
     """v1.33.0：「导入」页——让 AI 核对总表"""
     ws = [w for w in (b.get("words") or []) if isinstance(w, str) and w.strip()]
@@ -746,7 +764,8 @@ GET = {
     "/api/blocks": lambda qs: SEC.blocks(qs.get("sec", "")),          # v1.30.0：按块的步骤
     "/api/imp": lambda qs: SEC.imp_list(),                            # v1.30.0：导入（不用 AI 的几块）
     "/api/drafts": lambda qs: DR.proc() if qs.get("proc") else DR.status(FM.picked() if qs.get("film") else None),
-    "/api/film": lambda qs: FM.lib(qs) if qs.get("what") == "lib" else {"ok": True, "items": FM.pick_info_items()},      # v1.39.0：素材库、出片挑词                            # v1.35.0：起草配音稿                # v1.22.0：浏览器小助手来问
+    "/api/film": lambda qs: FM.lib(qs) if qs.get("what") == "lib" else ({"ok": True, "items": FM.info([w for w in (qs.get("words") or "").split("|") if w]), "skill": FM._ctx()["sv"][0]}
+                                                                    if qs.get("what") == "info" else {"ok": True, "items": FM.pick_info_items()}),      # v1.39.0：素材库、出片挑词                            # v1.35.0：起草配音稿                # v1.22.0：浏览器小助手来问
     "/api/fixlater": lambda qs: __import__("pics").later_get(),
     "/api/fixwords": lambda qs: __import__("pics").fix_list(),
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
@@ -776,7 +795,7 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/done": lambda b: CL.done_op(b.get("op"), b.get("what"), b.get("words") or [], b.get("find", ""), bool(b.get("picked"))),      # v1.28.0
         "/api/blocks": api_blocks,                                         # v1.30.0 / v1.31.0 / v1.33.0
         "/api/imp": api_imp,                                               # v1.33.0：AI 核对总表
-        "/api/film": lambda b: FM.op(b),                                   # v1.39.0
+        "/api/film": api_film,                                   # v1.39.0
         "/api/drafts": lambda b: DR.stop() if b.get("op") == "stop" else DR.start(b.get("words") or [], b.get("from") or ""),      # v1.35.0
         "/api/profile": lambda b: SEC.save(b.get("word", ""), b.get("sec", ""), b.get("data")) if b.get("op") == "save" else SEC.redo(b.get("word", ""), b.get("sec", ""), b.get("note", "")),      # v1.29.0
         "/api/check": lambda b: CK.fix_all() if b.get("op") == "fix" else CK.start(b.get("what") or "all"),      # v1.21.1：一键修复

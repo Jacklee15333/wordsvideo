@@ -295,6 +295,12 @@ def _run(words):
             _RES().write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
             SEC._PL.pop(f, None)                      # 配音稿换了，下次重读
             todo = _todo(line) if code == 0 else []
+            if ST.get("from") == "upgrade" and code == 0 and res[f].get("pic"):      # v1.42.0：按新技能更新的第 ① 步
+                try:
+                    import film
+                    film.stamp(w, line, res[f].get("ver", ""))
+                except Exception as e:
+                    C.log("按新技能更新：%s 记版本没成功（%s）" % (w, str(e)[:120]))
             with _LOCK:
                 pr.finish("err" if code else ("fix" if todo else "ok"), line, todo)
                 ST["done"] += 1

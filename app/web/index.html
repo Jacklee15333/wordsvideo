@@ -245,7 +245,8 @@ nav a.on .sn{background:var(--base);border-color:var(--base);color:#fff}
 .nl{display:inline-flex;align-items:center}
 .navsep{height:1px;background:#33416A;margin:6px 20px 8px}
 .lbask{display:flex;gap:8px;align-items:stretch;margin-bottom:8px}.lbask textarea{flex:1;min-height:40px;resize:vertical}.lbaskb{display:flex;flex-direction:column;gap:6px}
-.lbver{font-size:12.5px;margin:0 0 8px;padding:7px 10px;border:1px solid var(--rule);border-radius:6px;background:#FAFBFC}.lbmk.lite{color:#9AA5B5;font-weight:400}.lbmk.lite:hover{color:var(--amber)}.lbmk.old{color:#9A6A12;font-weight:500;font-size:11px}.lbbh{font-size:12px;white-space:nowrap}
+.lbver{font-size:12.5px;margin:0 0 8px;padding:7px 10px;border:1px solid var(--rule);border-radius:6px;background:#FAFBFC}.lbwr{color:var(--amber)}.lbmk.lite{color:#9AA5B5;font-weight:400}.lbmk.lite:hover{color:var(--amber)}.lbmk.old{color:#9A6A12;font-weight:600;font-size:11px}.vgood{color:var(--pass);font-size:11px;font-weight:600}
+.upsteps{margin:6px 0 10px;padding-left:4px;list-style:none;line-height:1.75}.upsteps li{margin:3px 0}.uptab td,.uptab th{font-size:12.5px;vertical-align:top}.lbbh{font-size:12px;white-space:nowrap}
 .lblook{margin:-2px 0 8px;padding:6px 10px;background:#EEF3FB;border-radius:6px}.lbmk{color:var(--amber);font-weight:600;white-space:nowrap}
 .lbf{font-size:13px;padding:4px 11px;border:1px solid var(--rule);border-radius:14px;color:var(--muted);text-decoration:none;background:#fff}.lbf b{font-weight:600;color:var(--ink);margin-left:2px}.lbf.on{background:var(--base);border-color:var(--base);color:#fff}.lbf.on b{color:#fff}
 .ngrp{font-size:11.5px;color:#8C9CB8;letter-spacing:.05em;padding:10px 20px 4px;white-space:nowrap}
@@ -1065,7 +1066,7 @@ details.vgk>.vgo{margin-top:6px}
 
 <section id="p-lib">
   <div class="phead"><div><h2><i class="sn">1</i>总表：每个词的素材做好了没</h2>
-    <p class="muted">总表里所有的词一张表：讲稿、题目，画面按块分开（词根词缀卡、拼起来、意思场景、意思演变、例句动画、同义词辨析），还有视频。缺哪一样，点那一格的「做 ▸」就到那一步去做；勾几个词，点「写讲稿 ▸」「出题 ▸」「做画面 ▸」一起做。素材是旧版视频技能做的，那一格标「旧版 ▸」。题目、画面都好了就“能出片”。点单词看它的单词简历。</p></div></div>
+    <p class="muted">总表里所有的词一张表：讲稿、题目，画面按块分开（词根词缀卡、拼起来、意思场景、意思演变、例句动画、同义词辨析），还有视频。缺哪一样，点那一格的「做 ▸」就到那一步去做；勾几个词，点「写讲稿 ▸」「出题 ▸」「做画面 ▸」一起做。每一格写着是哪一版视频技能做的：绿色是现在这一版，黄色不是；勾上点「按现在的版本更新 ▸」，能本地对得上的不用 AI，对不上的才交给 AI。题目、画面都好了就“能出片”。点单词看它的单词简历。</p></div></div>
   <div class="mtabs stabs"><a data-go="lib" class="on">总表</a><a data-go="pick" class="">这次要做的词</a><a data-go="imp" class="">核对总表内容</a></div>
   <div class="box"><div id="libBox"><p class="small muted">正在读…</p></div></div>
 </section>
@@ -2832,19 +2833,21 @@ const LIBS={lib:{words:'',q:'',f:'all',b:'',page:1,size:20,sel:new Set()},fplib:
 const LIBF=[['all','全部'],['old','旧版技能做的'],['ready','能出片'],['noq','缺题目'],['nopic','缺画面'],['fix','画面还要补'],['inb','在批次里'],['video','有视频']];
 const libMk=(ok,t,col)=>ok?`<span style="color:var(--pass)">✓</span>${t?` <span class="faint" style="font-size:11px">${esc(t)}</span>`:''}`:t?`<span style="color:${col||'var(--amber)'}">${esc(t)}</span>`:'<span class="faint">—</span>';
 const LIBGO={draft:'impdraft',q:'q',pic:'pic'};
+const vs=v=>v?'v'+String(v).replace(/\.0$/,''):'';
 const BLKS=[['parts','词根词缀卡'],['combo','拼起来'],['scene','意思场景'],['evolve','意思演变'],['example','例句动画'],['dist','同义词辨析']];
 async function libLoad(mode){const L=LIBS[mode],el=$(mode==='lib'?'#libBox':'#fplibBox');if(!el)return;let d;
   const qs=new URLSearchParams({what:'lib',q:L.q,f:L.f,page:L.page,size:L.size});if(mode==='fplib')qs.set('notpicked','1');if(L.words)qs.set('words',L.words);
   try{d=await api('/api/film?'+qs)}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
   if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
   L.page=d.page;const n=L.sel.size,c=d.counts,isLib=mode==='lib';
-  const ask=isLib?`<div class="lbver">现在的视频技能：<b>${esc(d.skill||'?')}</b>（${esc(d.skillEd||'')}）${c.old?`　<a href="#" class="lbf2" data-f="old" style="color:var(--amber)">⚠ ${c.old} 个词有素材是旧版技能做的</a>`:'　<span style="color:var(--pass)">✓ 素材都是按这一版做的</span>'}
-      <span class="faint">　技能换了不一定都要重做：看这一版改了什么，要重做的点那一格的「旧版 ▸」</span></div>
+  const cv=vs(d.skill);
+  const ask=isLib?`<div class="lbver">现在的视频技能：<b class="vgood">${esc(cv||'?')}</b>（${esc(d.skillEd||'')}）${c.old?`　<a href="#" class="lbf2" data-f="old" style="color:var(--amber)">⚠ ${c.old} 个词有素材不是 ${cv} 做的</a>`:'　<span style="color:var(--pass)">✓ 素材都是 '+cv+' 做的</span>'}
+      <span class="faint">　每一格写着是哪一版技能做的：<span class="vgood">绿色</span>是 ${cv}，<span style="color:#9A6A12">黄色</span>不是。要更新，勾上这些词点「按 ${cv} 更新 ▸」</span></div>
     <div class="lbask"><textarea class="lbw" rows="2" placeholder="查看：输入一个单词；或者输入几个单词（空格、逗号、换行隔开），按你输入的顺序批量查看">${esc(L.words)}</textarea>
       <div class="lbaskb"><button class="btn sm lbgo">查看</button>${L.words?'<button class="btn ghost sm lbclr">回到全部</button>':''}</div></div>
     ${d.look||(L.words&&d.notFound.length)?`<div class="small lblook">按你输入的顺序：找到 <b>${d.total}</b> 个${d.notFound.length?`；<span style="color:var(--red)">总表里没有：${d.notFound.map(esc).join('、')}</span>`:''}</div>`:''}`:'';
-  const fl=isLib&&!d.look?`<div class="line" style="gap:6px;flex-wrap:wrap;margin-bottom:8px">${LIBF.map(([k,t])=>`<a href="#" class="lbf ${L.f===k?'on':''}" data-f="${k}">${t} <b>${(c[k]||0).toLocaleString()}</b></a>`).join('')}</div>`:'';
-  const acts=isLib?`<span class="small muted">勾的词：</span><button class="btn ghost sm lbDo" data-part="draft" ${n?'':'disabled'}>写讲稿 ▸</button><button class="btn ghost sm lbDo" data-part="q" ${n?'':'disabled'}>出题 ▸</button><button class="btn ghost sm lbDo" data-part="pic" ${n?'':'disabled'}>做画面 ▸</button>`
+  const fl=isLib&&!d.look?`<div class="line" style="gap:6px;flex-wrap:wrap;margin-bottom:8px">${LIBF.map(([k,t])=>`<a href="#" class="lbf ${L.f===k?'on':''}" data-f="${k}">${k==='old'?'不是 '+cv+' 做的':t} <b>${(c[k]||0).toLocaleString()}</b></a>`).join('')}</div>`:'';
+  const acts=isLib?`<span class="small muted">勾的词：</span><button class="btn ghost sm lbDo" data-part="draft" ${n?'':'disabled'}>写讲稿 ▸</button><button class="btn ghost sm lbDo" data-part="q" ${n?'':'disabled'}>出题 ▸</button><button class="btn ghost sm lbDo" data-part="pic" ${n?'':'disabled'}>做画面 ▸</button><button class="btn sm lbUp" ${n?'':'disabled'}>按 ${cv} 更新 ▸</button>`
     :`<button class="btn sm lbAdd" ${n?'':'disabled'}>挑进来${n?' '+n+' 个':''}</button>`;
   const mk=(i,part,txt,cls)=>isLib?`<a href="#" class="lbmk ${cls||''}" data-w="${esc(i.word)}" data-part="${part}">${txt||'做'} ▸</a>`:`<span style="color:var(--amber)">${esc(txt||'—')}</span>`;
   const blkCell=(i,id)=>{if(!i.q||i.manual)return '<span class="faint">先出题</span>';
@@ -2853,7 +2856,7 @@ async function libLoad(mode){const L=LIBS[mode],el=$(mode==='lib'?'#libBox':'#fp
     if(b.st==='na')return '<span class="faint">不用</span>';
     if(b.st==='none')return mk(i,'b_'+id,'做');
     if(b.st==='fix')return mk(i,'b_'+id,'补 '+b.n+' 处');
-    return b.old?`<span style="color:var(--pass)">✓</span> ${mk(i,'b_'+id,'旧版 '+b.ver,'old')}`:`<span style="color:var(--pass)" title="视频技能 ${esc(b.ver)} 做的">✓</span>`};
+    return b.old?`<span style="color:var(--pass)">✓</span> ${mk(i,'b_'+id,vs(b.ver),'old')}`:`<span style="color:var(--pass)">✓</span>${b.ver?` <span class="vgood" title="视频技能 ${esc(b.ver)} 做的，是现在这一版">${vs(b.ver)}</span>`:''}`};
   const cols=isLib?BLKS.map(([id,nm])=>`<th class="lbbh">${nm}</th>`).join(''):'<th>画面</th>';
   const colw=isLib?BLKS.map(()=>'<col style="width:74px">').join(''):'<col style="width:110px">';
   el.innerHTML=ask+fl+`<div class="line" style="gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px">
@@ -2864,11 +2867,11 @@ async function libLoad(mode){const L=LIBS[mode],el=$(mode==='lib'?'#libBox':'#fp
     <tr><th><input type="checkbox" class="lball"></th><th>单词</th><th>讲稿</th><th>题目</th>${cols}<th>视频</th><th>素材</th></tr>
     ${d.items.length?d.items.map(i=>`<tr style="vertical-align:top"><td><input type="checkbox" class="lbck" value="${esc(i.word)}" ${L.sel.has(i.word)?'checked':''}></td>
       <td><a href="#" class="w wpo" data-w="${esc(i.word)}">${esc(i.word)}</a><div class="small faint">${esc(i.meaning)}</div></td>
-      <td class="small">${i.draft?(i.old.includes('讲稿')?`<span style="color:var(--pass)">✓</span> ${mk(i,'draft','旧版 '+i.draftVer,'old')}`:libMk(true,i.draft.slice(5,10))):mk(i,'draft','写')}</td>
+      <td class="small">${i.draft?(i.old.includes('讲稿')?`<span style="color:var(--pass)">✓</span> ${mk(i,'draft',vs(i.draftVer),'old')}`:i.draftVer?`<span style="color:var(--pass)">✓</span> <span class="vgood">${vs(i.draftVer)}</span>`:libMk(true,i.draft.slice(5,10))):mk(i,'draft','写')}</td>
       <td class="small">${i.q&&!i.manual?libMk(true):mk(i,'q',i.manual?'没过，改':'出题')}</td>
       ${isLib?BLKS.map(([id])=>`<td class="small">${blkCell(i,id)}</td>`).join(''):`<td class="small">${i.pic&&!i.picTodo?libMk(true):!i.q?'<span class="faint">先出题</span>':mk(i,'pic',i.picTodo?'还要补':'做画面')}</td>`}
       <td class="small">${i.video?libMk(true,'有了'):i.inb?libMk(false,'在出片','var(--blue)'):libMk(false)}</td>
-      <td class="small">${i.st==='ready'?`<b style="color:var(--pass)">✓ 齐了，能出片</b>`:i.st==='video'?'<span style="color:var(--pass)">✓ 视频做好了</span>':i.st==='inb'?'<span class="faint">正在出片</span>':`<span style="color:var(--amber)">缺：${esc(i.miss.join('、').replace(/还没有/g,''))}</span>`}${i.old.length?`<div style="color:var(--amber);font-size:11px" title="${esc(i.old.join('、'))}">${i.old.length} 块是旧版技能做的</div>`:''}</td></tr>`).join('')
+      <td class="small">${i.st==='ready'?`<b style="color:var(--pass)">✓ 齐了，能出片</b>`:i.st==='video'?'<span style="color:var(--pass)">✓ 视频做好了</span>':i.st==='inb'?'<span class="faint">正在出片</span>':`<span style="color:var(--amber)">缺：${esc(i.miss.join('、').replace(/还没有/g,''))}</span>`}${Object.entries(i.blk||{}).filter(([k,b])=>b.extra).map(([k,b])=>`<div style="font-size:11px"><a href="#" class="lbwr" data-w="${esc(i.word)}">${esc(b.name)}要补 ${b.n} 处 ▸</a></div>`).join('')}${i.old.length?`<div style="color:var(--amber);font-size:11px" title="${esc(i.old.join('、'))}">${i.old.length} 块不是 ${vs(d.skill)} 做的</div>`:''}</td></tr>`).join('')
       :`<tr><td colspan="${isLib?11:7}" class="pempty">${mode==='fplib'?'没有能挑的了：素材齐了的词都挑进来了，或者还没有素材齐了的词（到素材那边做题目、画面）':'没有符合的词'}</td></tr>`}</table></div>
     <div class="line" style="gap:10px;align-items:center;justify-content:center;margin-top:8px"><button class="btn ghost sm lbp" ${d.page>1?'':'disabled'}>上一页</button><span class="small">第 ${d.page} / ${d.pages} 页 · 共 ${d.total.toLocaleString()} 个</span><button class="btn ghost sm lbn" ${d.page<d.pages?'':'disabled'}>下一页</button></div>`;
   rzInit(el.querySelector('table'),'lib3_'+mode);
@@ -2884,8 +2887,49 @@ async function libLoad(mode){const L=LIBS[mode],el=$(mode==='lib'?'#libBox':'#fp
   el.querySelectorAll('.lbck').forEach(c=>c.onchange=()=>{c.checked?L.sel.add(c.value):L.sel.delete(c.value);re()});
   const goPart=p=>go(LIBGO[p]||p);
   el.querySelectorAll('.lbmk').forEach(a=>a.onclick=e=>{e.preventDefault();filmOp('make',[a.dataset.w],r=>{if(r.ok)goPart(a.dataset.part)})});
+  el.querySelectorAll('.lbwr').forEach(a=>a.onclick=e=>{e.preventDefault();wpOpen(a.dataset.w)});
   el.querySelectorAll('.lbDo').forEach(bt=>bt.onclick=()=>filmOp('make',[...L.sel],r=>{if(r.ok){L.sel.clear();goPart(bt.dataset.part)}}));
+  if(q1('.lbUp'))q1('.lbUp').onclick=()=>upDialog([...L.sel]);
   if(q1('.lbAdd'))q1('.lbAdd').onclick=()=>filmOp('add',[...L.sel],()=>{L.sel.clear();mode==='fplib'?loadFpick():re()})}
+
+/* v1.42.0：按现在的视频技能更新——① 本地重写讲稿、逐块检查（不用 AI），对得上的块直接记成现在的版本；② 没过的块才交给 AI */
+let UPT=null;
+async function upInfo(words){return api('/api/film?what=info&words='+encodeURIComponent(words.join('|')))}
+function upRows(items,cv,after){return `<table class="uptab" style="width:100%"><tr><th style="width:120px">单词</th><th>${after?'更新以后':'不是 '+cv+' 做的'}</th><th style="width:34%">${after?'要 AI 补的':'说明'}</th></tr>`+items.map(i=>{
+    const bl=Object.values(i.blk||{});const notCur=bl.filter(b=>b.old).map(b=>`${b.name} <span style="color:#9A6A12">${vs(b.ver)}</span>`);
+    const fix=bl.filter(b=>b.st==='fix').map(b=>`${b.name}（${b.n} 处）`);const ok=bl.filter(b=>!b.old&&b.st==='ok').length;
+    const note=!i.pic?'还没做画面：只重写讲稿':!(i.blk&&Object.keys(i.blk).length)?'视频技能自带的画面：只重写讲稿':'';
+    return `<tr><td><b>${esc(i.word)}</b></td><td>${after?(note||`<span style="color:var(--pass)">${ok} 块是 ${cv}</span>${notCur.length?'；还不是：'+notCur.join('、'):''}`):(note||notCur.join('、')||`<span style="color:var(--pass)">画面都是 ${cv}</span>`)}${i.old.includes('讲稿')?`${note||notCur.length?'；':''}讲稿 <span style="color:#9A6A12">${vs(i.draftVer)}</span>`:''}</td>
+      <td>${after?(fix.length?`<span style="color:var(--amber)">${fix.join('、')}</span>`:'<span style="color:var(--pass)">不用</span>'):(fix.length?`已经有要补的：${fix.join('、')}`:'')}</td></tr>`}).join('')+'</table>'}
+async function upDialog(words){modal('按现在的视频技能更新这 '+words.length+' 个词','<div id="upBox"><p class="small muted">正在读…</p></div>');
+  let d;try{d=await upInfo(words)}catch(e){$('#upBox').innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
+  const cv=vs(d.skill);
+  $('#upBox').innerHTML=`<p style="margin:0 0 4px">现在的视频技能是 <b class="vgood" style="font-size:14px">${cv}</b>。分两步，<b>能本地做的不用 AI</b>：</p>
+    <ol class="upsteps"><li><b>① 本地重新检查</b>（不用 AI，一个词几秒）：用 ${cv} 重写讲稿，把画面一块一块对一遍。<b>对得上的块直接记成 ${cv}</b>（变绿），不用重做。</li>
+      <li><b>② 交给 AI</b>（只做第 ① 步没过的块）：AI 只改这几块，别的块原样保住。</li></ol>
+    <p class="small muted" style="margin:0 0 10px">题目不用动：题目不是视频技能做的，只有总表里的考点改了才要重出。还没做画面、视频技能自带画面的词，只重写讲稿。</p>
+    ${upRows(d.items,cv,false)}
+    <div class="line" style="gap:10px;margin-top:14px"><button class="btn" id="up1">开始第 ① 步：本地检查 ▶</button><button class="btn ghost" onclick="closeModal()">不了</button></div>`;
+  $('#up1').onclick=async()=>{let r;try{r=await api('/api/film',{op:'up1',words})}catch(e){r={ok:false,msg:e.message}}
+    if(!r.ok){toast('✗ '+(r.msg||''),9000);return}
+    $('#upBox').innerHTML=`<p style="margin:0 0 8px"><b>第 ① 步：本地检查</b>（不用 AI）——一个词一个词来，过程在下面：</p><div class="dproc"></div><p class="small muted" id="upMsg">做完会自动往下走。</p>`;
+    DPAUTO=true;upLoop(words,cv)}}
+async function upLoop(words,cv){clearTimeout(UPT);const box=$('#upBox .dproc');if(!box)return;let d;
+  try{d=await api('/api/drafts?proc=1')}catch(e){UPT=setTimeout(()=>upLoop(words,cv),1500);return}
+  dpPaint(box,d.run||{});
+  if((d.run||{}).running){UPT=setTimeout(()=>upLoop(words,cv),1000);return}
+  let f;try{f=await upInfo(words)}catch(e){return}
+  const fixN=f.items.reduce((a,i)=>a+Object.values(i.blk||{}).filter(b=>b.st==='fix').length,0),fw=f.items.filter(i=>Object.values(i.blk||{}).some(b=>b.st==='fix')).map(i=>i.word);
+  const res=document.createElement('div');
+  res.innerHTML=`<p style="margin:12px 0 6px"><b>第 ① 步做完了：</b>${fixN?`对得上的块都记成 ${cv} 了；<b style="color:var(--amber)">${fw.length} 个词、${fixN} 块对不上</b>，要交给 AI：`:`<b style="color:var(--pass)">都对得上，都记成 ${cv} 了，不用 AI ✓</b>`}</p>
+    ${upRows(f.items,cv,true)}
+    <div class="line" style="gap:10px;margin-top:14px;flex-wrap:wrap">${fixN?`<button class="btn" id="up2now">第 ② 步：马上让 AI 补这 ${fixN} 块 ▶</button><button class="btn ghost" id="up2later">先记下，等会儿到「画面 → 一次做全」补</button>`:''}<button class="btn ghost" id="upClose">关闭</button></div>`;
+  const m=$('#upMsg');if(m)m.replaceWith(res);else $('#upBox').appendChild(res);
+  const two=async now=>{let r;try{r=await api('/api/film',{op:'up2',words:fw,now})}catch(e){r={ok:false,msg:e.message}}toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?7000:9000);
+    if(r.ok){closeModal();LIBS.lib.sel.clear();go(now?'pic':'pic')}};
+  if($('#up2now'))$('#up2now').onclick=()=>two(true);
+  if($('#up2later'))$('#up2later').onclick=()=>two(false);
+  $('#upClose').onclick=()=>{closeModal();LIBS.lib.sel.clear();libLoad('lib')}}
 async function filmOp(op,words,after,extra){let r;try{r=await api('/api/film',Object.assign({op,words},extra||{}))}catch(e){r={ok:false,msg:e.message}}toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);if(after)after(r)}
 const FPSEL=new Set();
 async function loadFpick(){const el=$('#fpickBox');if(!el)return;let d;try{d=await api('/api/film?what=pick')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}

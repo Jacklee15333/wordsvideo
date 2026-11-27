@@ -144,6 +144,10 @@ def _blocks(w, rs, X):
         vn = _vnum(ver)
         out[sid] = {"name": sec["name"], "st": st, "ver": "%d.%d.%d" % vn if vn else "", "n": len(issues),
                     "old": bool(st in ("ok", "fix") and vn and X["cur"] and vn < X["cur"])}
+    for sid in ("pron", "kaodian", "board"):           # 不在画面那几列里、可也要在画面设置里补的（比如读音拆分的音标 sylIpa）
+        n = len([t for t in todo if SEC._sec_of(t) == sid])
+        if n:
+            out[sid] = {"name": SEC.BY_ID[sid]["name"], "st": "fix", "ver": "", "n": n, "old": False, "extra": True}
     return out
 
 
@@ -287,3 +291,69 @@ def op(b):
         _LOCK_T["v"] = None
         return {"ok": r.get("ok"), "msg": "送回素材那边、加进这次要做的词 %d 个：到题目、画面那几步补齐，齐了再来挑" % len(words) if r.get("ok") else r.get("msg")}
     return {"ok": False, "msg": "不认识的操作"}
+
+
+# ═══════════ v1.42.0：按现在的视频技能更新——① 本地（不用 AI）重写讲稿、逐块检查，对得上的块直接记成新版本；② 没过的块交给 AI 只补那几块 ═══════════
+def stamp(w, line, ver):
+    """第 ① 步每写好一个词调一次：line 是这次起草检查的“还要补：…”，ver 是这次用的视频技能版本"""
+    import sections as SEC
+    import pics
+    if not ver:
+        return
+    _, P = SEC._prefs(w)
+    if P is None:                                      # 视频技能自带的画面、还没画面：不管
+        return
+    import drafts as DR
+    todo = [t for t in DR._todo(line)]                 # [{sec, name, text}]（练习题已经去掉）
+    bad = {t["sec"] for t in todo}
+    p = pics._rec_path(w)
+    with C.REPO_LOCK:
+        try:
+            rec = json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+        except Exception:
+            rec = None
+        if rec is None:
+            return
+        bk = rec.setdefault("板块", {})
+        now = C.now()
+        for sid in BLKS:
+            sec = SEC.BY_ID[sid]
+            if sid not in bad and SEC._has(SEC._slice(P, sec)):
+                b = bk.setdefault(sid, {})
+                b.update({"时间": b.get("时间") or str(rec.get("画面生成") or "")[:16], "版本": "视频技能 %s" % ver,
+                          "检查": "%s 用视频技能 %s 本地检查过了" % (now[:16], ver)})
+        if not todo:
+            rec["检查"] = "还要补：都齐了（%s 用视频技能 %s 本地检查）" % (now[:16], ver)
+            rec["画面技能版本"] = "视频技能 %s" % ver
+        p.write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
+    if todo:                                           # 没过的块：记下还要补什么（画面页、补画面的提示词都看它），先不交给 AI
+        pics.send_back({w: [("【%s】" % t["name"] if t["name"] else "") + t["text"] for t in todo]}, src="视频技能 %s 本地检查" % ver)
+    else:
+        pics._UC["t"] = 0.0
+        try:
+            C.commit_pending("词库：%s 按视频技能 %s 本地检查过了，画面不用重做" % (w, ver))
+        except Exception:
+            pass
+    _LOCK_T["v"] = None
+
+
+def upgrade_ai(words):
+    """第 ② 步：第 ① 步查出来要补的块，退回给 AI，只收这几块"""
+    import sections as SEC
+    import pics
+    X = _ctx()
+    rs_all = X["by_word"]
+    out = {}
+    for w in words:
+        rec = SEC._rec_of(w, rs_all.get(w) or [])
+        sids = {SEC._sec_of(t) for t in SEC._todo_of(rec)} & SEC.AI_EDIT
+        if sids:
+            out[w] = sorted(sids)
+    for w, sids in out.items():
+        for sid in sids:
+            SEC.pend_add([w], sid)
+    pics._UC["t"] = 0.0
+    _LOCK_T["v"] = None
+    n = sum(len(v) for v in out.values())
+    return {"ok": bool(out), "words": list(out), "n": n,
+            "msg": ("%d 个词、%d 块交给 AI 补，AI 只改这几块" % (len(out), n)) if out else "没有要 AI 补的块"}
