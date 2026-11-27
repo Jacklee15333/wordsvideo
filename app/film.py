@@ -294,14 +294,81 @@ def op(b):
 
 
 # ═══════════ v1.42.0：按现在的视频技能更新——① 本地（不用 AI）重写讲稿、逐块检查，对得上的块直接记成新版本；② 没过的块交给 AI 只补那几块 ═══════════
-def stamp(w, line, ver):
-    """第 ① 步每写好一个词调一次：line 是这次起草检查的“还要补：…”，ver 是这次用的视频技能版本"""
+_UPLOG = lambda: C.DATA / "upgrade_log.json"
+
+
+def _say_flat(plan):
+    """配音稿 → {块名: [“卡 1：……”, …]}"""
+    import sections as SEC
+    out = {}
+    for sid in ("pron", "parts", "combo", "scene", "evolve", "example", "dist", "kaodian", "board"):
+        ls = []
+        for g in SEC.plan_lines(sid, plan):
+            ls.append(("%s：" % g["label"] if g["label"] else "") + " ".join(g["say"]))
+        if ls:
+            out[SEC.BY_ID[sid]["name"]] = ls
+    return out
+
+
+def _draft_diff(old, new):
+    """讲稿哪几块改了：[{name, old:[…], new:[…]}]；原来没有讲稿就是 None"""
+    if not old:
+        return None
+    a, b = _say_flat(old), _say_flat(new or {})
+    out = []
+    for name in list(dict.fromkeys(list(a) + list(b))):
+        if a.get(name) != b.get(name):
+            oa, nb = a.get(name) or [], b.get(name) or []
+            out.append({"name": name, "old": [x for x in oa if x not in nb][:6], "new": [x for x in nb if x not in oa][:6]})
+    return out
+
+
+def uplog(words):
+    try:
+        d = json.loads(_UPLOG().read_text(encoding="utf-8"))
+    except Exception:
+        d = {}
+    return {w: d.get(w) for w in words if d.get(w)}
+
+
+def _uplog_put(w, v):
+    try:
+        d = json.loads(_UPLOG().read_text(encoding="utf-8"))
+    except Exception:
+        d = {}
+    d[w] = v
+    _UPLOG().write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def skill_changes(old_vers):
+    """视频技能从这几个旧版本到现在，中间每一版改了什么（读 SKILL.md 的“这一版改了什么”）"""
+    import pics
+    try:
+        t = pics._p(pics.SKILL).read_text(encoding="utf-8")
+    except Exception:
+        return []
+    lo = min([v for v in (_vnum(x) for x in old_vers) if v] or [None]) if old_vers else None
+    out = []
+    for m in re.finditer(r"(?m)^## 这一版改了什么（(\d+\.\d+\.\d+)，(第[^：）]+版)[：:]?([^）]*)）\n(.*?)(?=^## |\Z)", t, re.S):
+        v = _vnum(m.group(1))
+        if lo and v and v > lo:
+            pts = [re.sub(r"`", "", x.strip()[2:]) for x in m.group(4).splitlines() if x.strip().startswith("- ")]
+            out.append({"ver": m.group(1), "ed": m.group(2), "title": m.group(3).strip(), "points": [p[:160] for p in pts if "打包存档" not in p][:5]})
+    return out
+
+
+def stamp(w, line, ver, old_plan=None, new_plan=None):
+    """第 ① 步每写好一个词调一次：line 是这次起草检查的“还要补：…”，ver 是这次用的视频技能版本；
+    v1.46.0：同时记下这个词改了什么（每一块从哪一版到哪一版、检查过了还是要补；讲稿哪几句变了），弹框里给你看"""
     import sections as SEC
     import pics
     if not ver:
         return
+    diff = _draft_diff(old_plan, new_plan)
     _, P = SEC._prefs(w)
-    if P is None:                                      # 视频技能自带的画面、还没画面：不管
+    log = {"ts": C.now(), "ver": ver, "blocks": [], "draft": diff, "pic": P is not None}
+    if P is None:                                      # 视频技能自带的画面、还没画面：只记讲稿
+        _uplog_put(w, log)
         return
     import drafts as DR
     todo = [t for t in DR._todo(line)]                 # [{sec, name, text}]（练习题已经去掉）
@@ -316,6 +383,17 @@ def stamp(w, line, ver):
             return
         bk = rec.setdefault("板块", {})
         now = C.now()
+        for sid in BLKS:                               # 记下每一块：原来是哪一版、这次怎样
+            sec = SEC.BY_ID[sid]
+            has = SEC._has(SEC._slice(P, sec))
+            was = _vnum((bk.get(sid) or {}).get("版本") or rec.get("画面技能版本"))
+            its = [t["text"] for t in todo if t["sec"] == sid]
+            if has or its:
+                log["blocks"].append({"sid": sid, "name": sec["name"], "from": "%d.%d.%d" % was if was else "",
+                                      "st": "fix" if its else "ok", "issues": its[:4]})
+        for t in todo:
+            if t["sec"] not in BLKS:
+                log["blocks"].append({"sid": t["sec"], "name": t["name"] or "其他", "from": "", "st": "fix", "issues": [t["text"]]})
         for sid in BLKS:
             sec = SEC.BY_ID[sid]
             if sid not in bad and SEC._has(SEC._slice(P, sec)):
@@ -326,6 +404,7 @@ def stamp(w, line, ver):
             rec["检查"] = "还要补：都齐了（%s 用视频技能 %s 本地检查）" % (now[:16], ver)
             rec["画面技能版本"] = "视频技能 %s" % ver
         p.write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
+    _uplog_put(w, log)
     if todo:                                           # 没过的块：记下还要补什么（画面页、补画面的提示词都看它），先不交给 AI
         pics.send_back({w: [("【%s】" % t["name"] if t["name"] else "") + t["text"] for t in todo]}, src="视频技能 %s 本地检查" % ver)
     else:

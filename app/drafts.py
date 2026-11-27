@@ -269,6 +269,13 @@ def _run(words):
                 ST["log"].append(pr.w)
             f = V.folder_of(w)
             out = []
+            up = ST.get("from") == "upgrade"
+            if up:                                     # v1.46.0：按新技能更新——先记下原来的讲稿，写完比一比改了哪几句
+                SEC._PL.pop(f, None)
+                try:
+                    old_plan = SEC.plans([w]).get(f, ("", None))[1]
+                except Exception:
+                    old_plan = None
 
             def on_line(l):
                 out.append(l)
@@ -295,10 +302,15 @@ def _run(words):
             _RES().write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
             SEC._PL.pop(f, None)                      # 配音稿换了，下次重读
             todo = _todo(line) if code == 0 else []
-            if ST.get("from") == "upgrade" and code == 0 and res[f].get("pic"):      # v1.42.0：按新技能更新的第 ① 步
+            if up and code == 0:      # v1.42.0：按新技能更新的第 ① 步
                 try:
                     import film
-                    film.stamp(w, line, res[f].get("ver", ""))
+                    SEC._PL.pop(f, None)
+                    try:
+                        new_plan = SEC.plans([w]).get(f, ("", None))[1]
+                    except Exception:
+                        new_plan = None
+                    film.stamp(w, line, res[f].get("ver", ""), old_plan, new_plan)
                 except Exception as e:
                     C.log("按新技能更新：%s 记版本没成功（%s）" % (w, str(e)[:120]))
             with _LOCK:

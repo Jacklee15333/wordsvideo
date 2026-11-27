@@ -365,7 +365,12 @@ def redo_many(sid, words, note=""):
         return {"ok": False, "msg": "一个都没选"}
     import pics
     item = "用户要重做「%s」这一块：%s只改这一块，别的照旧" % (s["name"], (note.strip().rstrip("。") + "。") if (note or "").strip() else "按最新的视频技能重新做；")
-    done = pics.send_back({w: [item] for w in words}, src="「%s」" % s["name"]) or []
+    _, rows = C.read_index()
+    back = {}
+    for w in words:                                    # v1.46.0：这一块原来就记着要补的，一起交给 AI
+        old = [t for t in _todo_of(_rec_of(w, rows)) if _sec_of(t) == sid]
+        back[w] = [item] + old
+    done = pics.send_back(back, src="「%s」" % s["name"]) or []
     pend_add(done, sid)
     if not done:
         return {"ok": False, "msg": "没退回去：选的词还没有画面设置"}

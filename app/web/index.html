@@ -246,6 +246,9 @@ nav a.on .sn{background:var(--base);border-color:var(--base);color:#fff}
 .navsep{height:1px;background:#33416A;margin:6px 20px 8px}
 .lbask{display:flex;gap:8px;align-items:stretch;margin-bottom:8px}.lbask textarea{flex:1;min-height:40px;resize:vertical}.lbaskb{display:flex;flex-direction:column;gap:6px}
 .lbver{font-size:12.5px;margin:0 0 8px;padding:7px 10px;border:1px solid var(--rule);border-radius:6px;background:#FAFBFC}.lbwr{color:var(--amber)}.lbmk.lite{color:#9AA5B5;font-weight:400}.lbmk.lite:hover{color:var(--amber)}.lbmk.old{color:#9A6A12;font-weight:600;font-size:11px}.vgood{color:var(--pass);font-size:11px;font-weight:600}
+.upch{margin:4px 0 8px;padding:8px 10px;background:#FAFBFC;border:1px solid var(--rule);border-radius:6px;font-size:12.5px}.upch summary{cursor:pointer}.upv{margin:6px 0 0}.upv ul{margin:2px 0 0;padding-left:18px;color:var(--muted)}
+.upw{border:1px solid var(--rule);border-radius:6px;padding:6px 10px;margin:6px 0}.upw summary{cursor:pointer}.uph{font-size:12px;font-weight:600;color:var(--muted);margin:8px 0 2px}
+.updel{color:#B42318;text-decoration:line-through;text-decoration-color:#e8a0a0}.upadd{color:var(--pass)}
 .upsteps{margin:6px 0 10px;padding-left:4px;list-style:none;line-height:1.75}.upsteps li{margin:3px 0}.uptab td,.uptab th{font-size:12.5px;vertical-align:top}.lbbh{font-size:12px;white-space:nowrap}
 .lblook{margin:-2px 0 8px;padding:6px 10px;background:#EEF3FB;border-radius:6px}.lbmk{color:var(--amber);font-weight:600;white-space:nowrap}
 .lbf{font-size:13px;padding:4px 11px;border:1px solid var(--rule);border-radius:14px;color:var(--muted);text-decoration:none;background:#fff}.lbf b{font-weight:600;color:var(--ink);margin-left:2px}.lbf.on{background:var(--base);border-color:var(--base);color:#fff}.lbf.on b{color:#fff}
@@ -1038,6 +1041,20 @@ details.vgk>.vgo{margin-top:6px}
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 词根词缀卡</h2>
     <p class="muted">每个词根、前缀、后缀一张卡：字从总表来（拆分、各部分解释、记），画和小图标是 AI 做的。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
   
+  <div class="box">
+    <h3 style="margin-top:0">这次要让 AI 做「词根词缀卡」的词 <span class="small faint" id="bq_partsN"></span></h3>
+    <div id="bq_parts"><p class="small muted">正在读…</p></div>
+    <div class="pgate" id="bg_parts" hidden></div>
+    <textarea id="bn_parts" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
+    <div class="pgo"><button class="btn kbig" id="bgo_parts">让 AI 做「词根词缀卡」 ▶</button><span class="small muted">AI 只做「词根词缀卡」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+  </div>
+  <div class="sprog" data-step="b_parts">
+    <h3>这一步的进度</h3>
+    <div class="tslot"></div>
+    <div class="sother" hidden></div>
+    <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
+  </div>
+  <h3 style="margin:22px 0 8px">每个词的「词根词缀卡」：看、改、单个重做</h3>
   <div class="box"><div id="b_partsBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
@@ -1045,6 +1062,20 @@ details.vgk>.vgo{margin-top:6px}
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 拼起来</h2>
     <p class="muted">几个部分拼起来那一格的画（只有一个部分的词没有这一块）。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
   
+  <div class="box">
+    <h3 style="margin-top:0">这次要让 AI 做「拼起来」的词 <span class="small faint" id="bq_comboN"></span></h3>
+    <div id="bq_combo"><p class="small muted">正在读…</p></div>
+    <div class="pgate" id="bg_combo" hidden></div>
+    <textarea id="bn_combo" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
+    <div class="pgo"><button class="btn kbig" id="bgo_combo">让 AI 做「拼起来」 ▶</button><span class="small muted">AI 只做「拼起来」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+  </div>
+  <div class="sprog" data-step="b_combo">
+    <h3>这一步的进度</h3>
+    <div class="tslot"></div>
+    <div class="sother" hidden></div>
+    <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
+  </div>
+  <h3 style="margin:22px 0 8px">每个词的「拼起来」：看、改、单个重做</h3>
   <div class="box"><div id="b_comboBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
@@ -1052,6 +1083,20 @@ details.vgk>.vgo{margin-top:6px}
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 意思场景</h2>
     <p class="muted">每个意思一幅会动的场景。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
   
+  <div class="box">
+    <h3 style="margin-top:0">这次要让 AI 做「意思场景」的词 <span class="small faint" id="bq_sceneN"></span></h3>
+    <div id="bq_scene"><p class="small muted">正在读…</p></div>
+    <div class="pgate" id="bg_scene" hidden></div>
+    <textarea id="bn_scene" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
+    <div class="pgo"><button class="btn kbig" id="bgo_scene">让 AI 做「意思场景」 ▶</button><span class="small muted">AI 只做「意思场景」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+  </div>
+  <div class="sprog" data-step="b_scene">
+    <h3>这一步的进度</h3>
+    <div class="tslot"></div>
+    <div class="sother" hidden></div>
+    <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
+  </div>
+  <h3 style="margin:22px 0 8px">每个词的「意思场景」：看、改、单个重做</h3>
   <div class="box"><div id="b_sceneBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
@@ -1059,6 +1104,20 @@ details.vgk>.vgo{margin-top:6px}
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 意思演变</h2>
     <p class="muted">意思怎么一步步变过来的示意图。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
   
+  <div class="box">
+    <h3 style="margin-top:0">这次要让 AI 做「意思演变」的词 <span class="small faint" id="bq_evolveN"></span></h3>
+    <div id="bq_evolve"><p class="small muted">正在读…</p></div>
+    <div class="pgate" id="bg_evolve" hidden></div>
+    <textarea id="bn_evolve" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
+    <div class="pgo"><button class="btn kbig" id="bgo_evolve">让 AI 做「意思演变」 ▶</button><span class="small muted">AI 只做「意思演变」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+  </div>
+  <div class="sprog" data-step="b_evolve">
+    <h3>这一步的进度</h3>
+    <div class="tslot"></div>
+    <div class="sother" hidden></div>
+    <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
+  </div>
+  <h3 style="margin:22px 0 8px">每个词的「意思演变」：看、改、单个重做</h3>
   <div class="box"><div id="b_evolveBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
@@ -1066,6 +1125,20 @@ details.vgk>.vgo{margin-top:6px}
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 例句动画</h2>
     <p class="muted">每个意思的例句、中文，和例句的动画。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
   
+  <div class="box">
+    <h3 style="margin-top:0">这次要让 AI 做「例句动画」的词 <span class="small faint" id="bq_exampleN"></span></h3>
+    <div id="bq_example"><p class="small muted">正在读…</p></div>
+    <div class="pgate" id="bg_example" hidden></div>
+    <textarea id="bn_example" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
+    <div class="pgo"><button class="btn kbig" id="bgo_example">让 AI 做「例句动画」 ▶</button><span class="small muted">AI 只做「例句动画」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+  </div>
+  <div class="sprog" data-step="b_example">
+    <h3>这一步的进度</h3>
+    <div class="tslot"></div>
+    <div class="sother" hidden></div>
+    <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
+  </div>
+  <h3 style="margin:22px 0 8px">每个词的「例句动画」：看、改、单个重做</h3>
   <div class="box"><div id="b_exampleBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
@@ -1073,6 +1146,20 @@ details.vgk>.vgo{margin-top:6px}
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 同义词辨析</h2>
     <p class="muted">同义词辨析：几个意思相近的词，每个一幅画、一句区别、一句例句。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块。</p></div></div>
   
+  <div class="box">
+    <h3 style="margin-top:0">这次要让 AI 做「同义词辨析」的词 <span class="small faint" id="bq_distN"></span></h3>
+    <div id="bq_dist"><p class="small muted">正在读…</p></div>
+    <div class="pgate" id="bg_dist" hidden></div>
+    <textarea id="bn_dist" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
+    <div class="pgo"><button class="btn kbig" id="bgo_dist">让 AI 做「同义词辨析」 ▶</button><span class="small muted">AI 只做「同义词辨析」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+  </div>
+  <div class="sprog" data-step="b_dist">
+    <h3>这一步的进度</h3>
+    <div class="tslot"></div>
+    <div class="sother" hidden></div>
+    <div class="box tlist"><p class="muted" style="margin:0">这一步现在没有在做、排队的任务。</p></div>
+  </div>
+  <h3 style="margin:22px 0 8px">每个词的「同义词辨析」：看、改、单个重做</h3>
   <div class="box"><div id="b_distBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
@@ -1662,16 +1749,17 @@ function stepOf(t){if(!t)return '';let p={};try{p=typeof t.params==='string'?JSO
 function navBadges(){const t=(ST.runner||{}).task,st=t?stepOf(t):'',wait=typeof RL!=='undefined'&&RL.status==='等你操作';
   $$('[data-nb]').forEach(e=>{const on=e.dataset.nb===st||(e.dataset.nb==='design'&&(st==='q'||st==='pic'));e.hidden=!on;e.textContent=on?(wait?'要你操作':'在跑'):''});if(typeof ngMark==='function')ngMark()}
 let TLt=0;const TOPEN={},SDONE={};
+const SP=p=>String(p||'').startsWith('b_')?'pic':p;
 async function stepTasks(step){TLt=Date.now();
   const sec=document.querySelector(`.sprog[data-step="${step}"]`);if(!sec)return;
   let d;try{d=await api('/api/tasks')}catch(e){return}
-  const mine=d.tasks.filter(t=>stepOf(t)===step),act=['运行中','排队','已暂停'];
+  const mine=d.tasks.filter(t=>stepOf(t)===SP(step)),act=['运行中','排队','已暂停'];
   {const u=d.tasks.filter(t=>act.includes(t.status)&&['q','pic'].includes(stepOf(t))&&!(t.status==='排队'&&t.run_after>Date.now()/1000)).sort((a,b)=>a.id-b.id)[0];
    let p={};try{p=JSON.parse((u||{}).progress||'{}')}catch(e){}
-   PGATE=u?{id:u.id,title:u.title,status:u.status,done:p.processed,total:p.total}:null;picGate()}
+   PGATE=u?{id:u.id,title:u.title,status:u.status,done:p.processed,total:p.total}:null;picGate();if(String(page).startsWith('b_'))blkGate(page.slice(2))}
   const live=mine.filter(t=>act.includes(t.status)),done=mine.filter(t=>!act.includes(t.status)).slice(0,10);
   if(step==='q'||step==='pic')repRender(step,d.tasks);
-  const sig=live.map(t=>t.id+t.status).join()+'|'+done.length;if(SDONE[step]!==undefined&&SDONE[step]!==sig){if(step==='q')loadQ();if(step==='pic')loadPic()}SDONE[step]=sig;
+  const sig=live.map(t=>t.id+t.status).join()+'|'+done.length;if(SDONE[step]!==undefined&&SDONE[step]!==sig){if(step==='q')loadQ();if(step==='pic')loadPic();if(step.startsWith('b_'))blkLoad(step.slice(2))}SDONE[step]=sig;
   // v1.11.6：正在做、黄框里等着的那个任务，并进黄框第 ③ 步（点小三角看），下面不再重复一张卡片
   const LV=$('#tLive'),mid=RL&&RL.show&&RL.tid&&sec.contains(LV)&&!LV.hidden?RL.tid:0,mg=live.find(t=>t.id===mid&&t.status==='运行中'),rest=live.filter(t=>t!==mg);
   if(sec.contains(LV)){const R3=$('#r3Task');R3.hidden=!mg;
@@ -1859,11 +1947,11 @@ $$('[data-lt]').forEach(a=>a.onclick=e=>{e.preventDefault();LT=a.dataset.lt;$$('
   $('#lReply').hidden=LT!=='reply';$('#lLog').hidden=LT!=='log'});
 const secs=t=>{t=Math.max(0,Math.round(t));return t<60?t+' 秒':Math.floor(t/60)+' 分 '+(t%60)+' 秒'};
 async function liveTick(){
-  if(!['check','q','pic'].includes(page))return;
+  if(!['check','q','pic'].includes(SP(page)))return;
   let d;try{d=await api('/api/live?watch='+(page==='check'?0:1))}catch(e){return}
   $('#tWho').querySelector('b').textContent=d.provider;$('#tOpen').hidden=d.pv!=='relay';kTick(d);
   if(page==='check')return;
-  const rs=d.running?stepOf(d.task):'',mine=rs===page,sec=document.querySelector(`.sprog[data-step="${page}"]`),L=$('#tLive');if(!sec)return;
+  const rs=d.running?stepOf(d.task):'',mine=rs===SP(page),sec=document.querySelector(`.sprog[data-step="${page}"]`),L=$('#tLive');if(!sec)return;
   if(mine&&L.parentElement!==sec.querySelector('.tslot'))sec.querySelector('.tslot').appendChild(L);
   L.hidden=!mine;
   const o=sec.querySelector('.sother');o.hidden=!d.running||mine;
@@ -2315,8 +2403,8 @@ $('#rView').onclick=async()=>{let f;try{f=await api('/api/relay?full=1')}catch(e
   $('#pvCopy').onclick=async()=>{const ok=await copyText(t);$('#pvCopy').textContent=ok?'复制好了 ✓':'没复制上，再点一次'}};
 /* 这一轮做完了（黄框没了）：「这一步的进度」最上面一张卡片——一共几个、做好几个、没做成的和原因 */
 function rFinalRender(d){const F=d.final,el=$('#rFinal');let seen=0;try{seen=+localStorage.getItem('rfinalSeen')||0}catch(e){}
-  const on=!!F&&!d.show&&page==='pic'&&F.t>(Date.now()/1000-6*3600)&&seen!==F.t&&['做画面','补画面'].includes(F.kind);
-  if(on){const sl=document.querySelector('.sprog[data-step="pic"] .tslot');if(sl&&el.parentElement!==sl)sl.insertBefore(el,sl.firstChild)}
+  const on=!!F&&!d.show&&SP(page)==='pic'&&F.t>(Date.now()/1000-6*3600)&&seen!==F.t&&['做画面','补画面'].includes(F.kind);
+  if(on){const sl=document.querySelector(`.sprog[data-step="${page}"] .tslot`);if(sl&&el.parentElement!==sl)sl.insertBefore(el,sl.firstChild)}
   el.hidden=!on;if(!on)return;const bad=F.bad||[],sig=F.t+'|'+bad.length+'|'+!!F.aiSaid,SK=F.skip||{};
   const aiLine=()=>{const a=$('#rFinalAi');if(!a)return;a.textContent=F.aiSaid?`网页 AI 也汇报了：${{done:'写完了',stop:'停下了',wait:'等检查结果'}[F.aiSaid.state]||'说了一句'}（${hm(F.aiSaid.t).slice(0,5)}）`:
     (Date.now()/1000-F.t<600?'网页 AI 那边还在收尾（等检查结果、写最后的汇报，一般一两分钟），不用管它：画面都存好了':'')};
@@ -2717,9 +2805,36 @@ async function wpOpen(w){let d;try{d=await api('/api/profile?word='+encodeURICom
 /* v1.30.0：按块的步骤——「含义拆分」五个小类、「同义词辨析」：选上的词这一块做好没、要补什么，勾几个只重做这一块；「导入」：不用 AI 的几块从总表来 */
 const BST={ok:['✓ 做好了','var(--pass)'],fix:['⚠ 要补','var(--amber)'],none:['— 还没有','var(--red)'],nopic:['还没做画面','#999'],na:['这个词不用','#999']};
 const BSEL={},BF={};
+
+/* v1.46.0：每一块像出题那样让 AI 做——上面列出这一块还没有、要补的词（默认都勾上），点「让 AI 做」，过程在下面 */
+const BTOPX={};
+function blkTop(id,d){const box=$('#bq_'+id);if(!box)return;const X=BTOPX[id]=BTOPX[id]||new Set();
+  const need=d.items.filter(x=>x.status==='fix'||x.status==='none'||x.pending),nop=d.items.filter(x=>x.status==='nopic');
+  $('#bq_'+id+'N').textContent=need.length?`（${need.length} 个）`:'';
+  box.innerHTML=(need.length?`<table class="small" style="width:100%"><tr><th style="width:26px"><input type="checkbox" class="bqall" ${need.every(x=>!X.has(x.word))?'checked':''}></th><th style="width:140px">单词</th><th>为什么要做</th></tr>
+    ${need.map(x=>`<tr style="vertical-align:top"><td><input type="checkbox" class="bqck" value="${esc(x.word)}" ${X.has(x.word)?'':'checked'}></td><td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a></td>
+      <td>${x.pending?'<span style="color:var(--blue)">等着重做这一块</span>　':''}${x.status==='none'?'还没有这一块':x.issues.length?`<span style="color:var(--amber)">要补：${esc(x.issues.map(t=>t.replace(/^【[^】]+】/,'')).join('；')).slice(0,240)}</span>`:''}</td></tr>`).join('')}</table>`
+    :'<div class="pempty">这一块没有要做的词了：都做好了，或者还没有这次要做的词（到「总表」点那一格的「做 ▸」）。做好了的想重做，在下面的列表里勾上点「只重做这一块」。</div>')
+    +(nop.length?`<p class="small muted" style="margin:6px 0 0">还没做视频图片的 ${nop.length} 个（${nop.slice(0,8).map(x=>esc(x.word)).join('、')}${nop.length>8?'…':''}）：要先到「<a href="#" onclick="go('pic');return false">视频图片 · 整套做</a>」把整套图片做出来，才能单做这一块。</p>`:'');
+  const on=()=>need.filter(x=>!X.has(x.word)).map(x=>x.word),bt=$('#bgo_'+id);
+  const sync=()=>{const n=on().length;bt.disabled=!n||(PGATE&&PGATE.status==='已暂停');bt.textContent=`让 AI 做「${d.name}」${n?'（'+n+' 个）':''} ▶`};
+  const all=box.querySelector('.bqall');if(all)all.onchange=e=>{need.forEach(x=>e.target.checked?X.delete(x.word):X.add(x.word));blkTop(id,d)};
+  box.querySelectorAll('.bqck').forEach(c=>c.onchange=()=>{c.checked?X.delete(c.value):X.add(c.value);sync()});
+  sync();blkGate(id);
+  bt.onclick=async()=>{const ws=on();if(!ws.length)return;bt.disabled=true;let r;
+    try{r=await api('/api/blocks',{op:'ai',sec:id,words:ws,note:$('#bn_'+id).value.trim()})}catch(e){r={ok:false,msg:e.message}}
+    toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:12000);if(r.ok){$('#bn_'+id).value='';stepScroll()}setTimeout(()=>{blkLoad(id);poll()},800)}}
+function blkGate(id){const g=$('#bg_'+id);if(!g)return;const t=PGATE;
+  if(!t||t.status!=='已暂停'){g.hidden=true;return}
+  const bt=$('#bgo_'+id);if(bt)bt.disabled=true;
+  g.hidden=false;g.innerHTML=`<b>还有一个没做完的任务 #${t.id}</b>（${esc(t.title)}，暂停了）。它做完或者取消了，才能开始新的（免得网页 AI 传上来的混在一起）。
+    <span class="line" style="gap:8px;margin-top:6px"><button class="btn sm" id="bgr_${id}">接着做它 ▶</button><button class="btn ghost sm" id="bgc_${id}">取消它</button></span>`;
+  $('#bgr_'+id).onclick=async()=>{await api('/api/task/op',{id:t.id,op:'resume'});toast('接着做了：过程在下面',5000);PGATE=null;setTimeout(()=>{poll();stepTasks(page);stepScroll()},600)};
+  $('#bgc_'+id).onclick=async()=>{if(!confirm(`取消没做完的任务 #${t.id}（${t.title}）？\n已经做好的留着；没做完的词，以后再做。`))return;
+    await api('/api/task/op',{id:t.id,op:'cancel'});toast('取消了，现在可以开始新的',5000);PGATE=null;setTimeout(()=>{poll();stepTasks(page);blkLoad(id)},600)}}
 async function blkLoad(id){const el=$('#b_'+id+'Box');if(!el)return;let d;try{d=await api('/api/blocks?sec='+id)}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
   if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
-  $$(`[data-tc="b_${id}"]`).forEach(e=>e.textContent=(d.counts.fix||0)+(d.counts.none||0)||'');blkRender(id,d)}
+  $$(`[data-tc="b_${id}"]`).forEach(e=>e.textContent=(d.counts.fix||0)+(d.counts.none||0)||'');blkRender(id,d);blkTop(id,d);if(page==='b_'+id){stepTasks(page);liveTick()}}
 const BPG={},BSZ={};
 const PICREG=[];
 function picLinks(w,list){return (list||[]).map(p=>{const k=PICREG.push({w,p})-1;
@@ -2945,15 +3060,33 @@ async function upDialog(words){modal('按现在的视频技能更新这 '+words.
     if(!r.ok){toast('✗ '+(r.msg||''),9000);return}
     $('#upBox').innerHTML=`<p style="margin:0 0 8px"><b>第 ① 步：本地检查</b>（不用 AI）——一个词一个词来，过程在下面：</p><div class="dproc"></div><p class="small muted" id="upMsg">做完会自动往下走。</p>`;
     DPAUTO=true;upLoop(words,cv)}}
+
+/* v1.46.0：更新做完——每个词到底改了什么、怎么改的；视频技能中间这几版改了什么 */
+function upDetail(words,u,cv){const L=u.log||{},C=u.changes||[];
+  const ch=C.length?`<details class="upch" open><summary><b>视频技能这几版改了什么</b>（${C.map(c=>vs(c.ver)).join('、')}）</summary>${C.map(c=>`<div class="upv"><b>${vs(c.ver)}</b>（${esc(c.ed)}）${c.title?'：'+esc(c.title):''}${c.points.length?`<ul>${c.points.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}</div>`).join('')}</details>`
+    :`<p class="small muted" style="margin:4px 0 8px">这几个词原来的版本和现在一样（${cv}），技能没有新改动；这次是按 ${cv} 重新检查了一遍。</p>`;
+  const card=w=>{const g=L[w];if(!g)return `<div class="upw"><b>${esc(w)}</b>　<span class="faint">这次没写成（看上面的过程）</span></div>`;
+    const bl=g.blocks||[],ok=bl.filter(b=>b.st==='ok'),fx=bl.filter(b=>b.st==='fix'),d=g.draft;
+    const sum=[g.pic?`视频图片：${ok.length} 块检查过了，记成 ${vs(g.ver)}`:'还没做视频图片 / 视频技能自带的图片',fx.length?`<span style="color:var(--amber)">${fx.length} 块要 AI 补</span>`:'',d===null?'讲稿：新写的':d.length?`<span style="color:var(--blue)">讲稿：改了 ${d.length} 块</span>`:'讲稿：一句没变'].filter(Boolean).join('；');
+    const bRows=bl.map(b=>`<tr><td style="width:96px"><b>${esc(b.name)}</b></td><td style="width:130px">${b.from?`<span style="color:${b.from===g.ver?'var(--pass)':'#9A6A12'}">${vs(b.from)}</span>`:'—'}${b.st==='ok'?` → <span class="vgood">${vs(g.ver)}</span>`:''}</td>
+      <td>${b.st==='ok'?(b.from===g.ver?'本来就是这一版，又检查了一遍：画和讲的话对得上。<b>内容没改</b>':`用 ${vs(g.ver)} 重新检查：画和讲的话对得上，新版本的要求也都满足。<b>图片、文字都没改</b>，只把版本记成 ${vs(g.ver)}`)
+        :`<span style="color:var(--amber)">对不上，要补：</span>${b.issues.map(esc).join('；')}<div class="faint">→ 交给 AI 时，AI 只改这一块，按上面这几条改；别的块原样保住</div>`}</td></tr>`).join('');
+    const dRows=d===null?'<p class="small muted" style="margin:4px 0">原来没有讲稿，这次按 '+vs(g.ver)+' 新写了一份（在「讲稿」页能看全文）。</p>'
+      :!d.length?'<p class="small muted" style="margin:4px 0">按 '+vs(g.ver)+' 重写了一遍讲稿，和原来的一句不差。</p>'
+      :`<table class="uptab" style="width:100%">${d.map(x=>`<tr><td style="width:96px"><b>${esc(x.name)}</b></td><td>${x.old.map(t=>`<div class="updel">原来：${esc(t)}</div>`).join('')}${x.new.map(t=>`<div class="upadd">现在：${esc(t)}</div>`).join('')}</td></tr>`).join('')}</table>`;
+    return `<details class="upw" ${fx.length||(d&&d.length)?'open':''}><summary><b>${esc(w)}</b>　<span class="small">${sum}</span></summary>
+      ${bl.length?`<div class="uph">视频图片（每一块怎么处理的）</div><table class="uptab" style="width:100%">${bRows}</table>`:''}
+      <div class="uph">讲稿（视频里念的话，改了哪几句）</div>${dRows}</details>`};
+  return ch+`<div class="uph" style="margin-top:10px">每个词改了什么</div>`+words.map(card).join('')}
 async function upLoop(words,cv){clearTimeout(UPT);const box=$('#upBox .dproc');if(!box)return;let d;
   try{d=await api('/api/drafts?proc=1')}catch(e){UPT=setTimeout(()=>upLoop(words,cv),1500);return}
   dpPaint(box,d.run||{});
   if((d.run||{}).running){UPT=setTimeout(()=>upLoop(words,cv),1000);return}
-  let f;try{f=await upInfo(words)}catch(e){return}
+  let f,u;try{f=await upInfo(words);u=await api('/api/film?what=uplog&words='+encodeURIComponent(words.join('|')))}catch(e){return}
   const fixN=f.items.reduce((a,i)=>a+Object.values(i.blk||{}).filter(b=>b.st==='fix').length,0),fw=f.items.filter(i=>Object.values(i.blk||{}).some(b=>b.st==='fix')).map(i=>i.word);
   const res=document.createElement('div');
   res.innerHTML=`<p style="margin:12px 0 6px"><b>第 ① 步做完了：</b>${fixN?`对得上的块都记成 ${cv} 了；<b style="color:var(--amber)">${fw.length} 个词、${fixN} 块对不上</b>，要交给 AI：`:`<b style="color:var(--pass)">都对得上，都记成 ${cv} 了，不用 AI ✓</b>`}</p>
-    ${upRows(f.items,cv,true)}
+    ${upDetail(words,u,cv)}
     <div class="line" style="gap:10px;margin-top:14px;flex-wrap:wrap">${fixN?`<button class="btn" id="up2now">第 ② 步：马上让 AI 补这 ${fixN} 块 ▶</button><button class="btn ghost" id="up2later">先记下，等会儿到「视频图片 → 整套做」补</button>`:''}<button class="btn ghost" id="upClose">关闭</button></div>`;
   const m=$('#upMsg');if(m)m.replaceWith(res);else $('#upBox').appendChild(res);
   const two=async now=>{let r;try{r=await api('/api/film',{op:'up2',words:fw,now})}catch(e){r={ok:false,msg:e.message}}toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?7000:9000);

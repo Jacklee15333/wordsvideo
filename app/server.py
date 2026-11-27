@@ -228,6 +228,14 @@ def api_blocks(b):
     return {"ok": True, "msg": "开始重做「%s」：%d 个词，AI 只改这一块。%s" % (name, len(ws), "到「视频图片 → 整套做」把提示词交给网页 AI" if relay else "过程在「视频图片 → 整套做」")}
 
 
+def api_film_uplog(qs):
+    """v1.46.0：按新技能更新做完以后——每个词改了什么，视频技能中间这几版改了什么"""
+    ws = [w for w in (qs.get("words") or "").split("|") if w]
+    lg = FM.uplog(ws)
+    olds = [b.get("from") for v in lg.values() for b in v.get("blocks") or [] if b.get("from")]
+    return {"ok": True, "log": lg, "changes": FM.skill_changes(olds), "skill": FM._ctx()["sv"][0]}
+
+
 def api_film(b):
     """v1.39.0：素材库、出片挑词；v1.42.0：按现在的视频技能更新（① 本地 up1；② AI up2，now=True 马上开始补画面）"""
     if b.get("op") == "up1":
@@ -764,7 +772,7 @@ GET = {
     "/api/blocks": lambda qs: SEC.blocks(qs.get("sec", "")),          # v1.30.0：按块的步骤
     "/api/imp": lambda qs: SEC.imp_list(),                            # v1.30.0：导入（不用 AI 的几块）
     "/api/drafts": lambda qs: DR.proc() if qs.get("proc") else DR.status(FM.picked() if qs.get("film") else None),
-    "/api/film": lambda qs: FM.lib(qs) if qs.get("what") == "lib" else ({"ok": True, "items": FM.info([w for w in (qs.get("words") or "").split("|") if w]), "skill": FM._ctx()["sv"][0]}
+    "/api/film": lambda qs: api_film_uplog(qs) if qs.get("what") == "uplog" else FM.lib(qs) if qs.get("what") == "lib" else ({"ok": True, "items": FM.info([w for w in (qs.get("words") or "").split("|") if w]), "skill": FM._ctx()["sv"][0]}
                                                                     if qs.get("what") == "info" else {"ok": True, "items": FM.pick_info_items()}),      # v1.39.0：素材库、出片挑词                            # v1.35.0：起草配音稿                # v1.22.0：浏览器小助手来问
     "/api/fixlater": lambda qs: __import__("pics").later_get(),
     "/api/fixwords": lambda qs: __import__("pics").fix_list(),
