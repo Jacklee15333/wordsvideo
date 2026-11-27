@@ -586,7 +586,12 @@ def save(word, P, svgs, checked):
         p = C.REPO / C.D / rel
         p.parent.mkdir(parents=True, exist_ok=True)
         rec = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {"单词": word, "题目": None}
-        rec.update({"画面": P, "插图": [f + "ai"], "画面生成": time.strftime("%Y-%m-%d") + " " + C.provider_name(),
+        try:
+            sv = skill_version()[0]
+        except Exception:
+            sv = ""
+        rec.update({"画面技能版本": ("视频技能 %s" % sv) if sv else "",                       # v1.28.0：「做好的」里看用的哪个版本的视频技能
+                    "画面": P, "插图": [f + "ai"], "画面生成": time.strftime("%Y-%m-%d") + " " + C.provider_name(),
                     "检查": "还要补：都齐了（起草检查）" if checked else "本机检查通过，出片时再起草检查"})
         p.write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
         for r in rows:

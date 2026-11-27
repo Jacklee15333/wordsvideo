@@ -785,8 +785,8 @@ details.vgk>.vgo{margin-top:6px}
 
 <section id="p-q">
   <div class="phead"><div><h2><i class="sn">4</i>出题：每个词 7 道练习题</h2>
-    <p class="muted">视频最后的练习和答案。AI 写，软件按规矩检查，过了才存进词库、上传；没过的退回给 AI 改，改几次还不过就放进“待人工”。</p></div><button class="btn ghost sm" style="align-self:flex-start;white-space:nowrap" onclick="clrOpen('q')" title="改版以后，旧的不要了就清掉：清掉的词回到要做的列表，按新版重做">清除做好的题目</button></div>
-  <div class="mtabs stabs"><a data-go="q" class="on">出题</a><a data-go="qfail" class="">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="">批量和定时</a><a data-go="qset" class="">规矩和时间</a><a data-go="history" class="">记录</a></div>
+    <p class="muted">视频最后的练习和答案。AI 写，软件按规矩检查，过了才存进词库、上传；没过的退回给 AI 改，改几次还不过就放进“待人工”。</p></div></div>
+  <div class="mtabs stabs"><a data-go="q" class="on">出题</a><a data-go="qdone" class="">做好的 <b class="tn" data-tn="qdone"></b></a><a data-go="qfail" class="">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="">批量和定时</a><a data-go="qset" class="">规矩和时间</a><a data-go="history" class="">记录</a></div>
   <div class="box">
     <h3 style="margin-top:0"><span class="hv" title="第 3 步「选词」里选上的词，还要出题的。出好一个，这里少一个；都出好了，列表就空了。已经有题目的不列在这里，开始时写进汇报。要换词，到「选词」去勾。">这次要出题的词</span> <span class="small faint" id="qPickN"></span></h3>
     <div class="plist" id="qPick"></div>
@@ -855,10 +855,17 @@ details.vgk>.vgo{margin-top:6px}
   </div>
 </section>
 
+<section id="p-qdone">
+  <div class="phead"><div><h2><i class="sn">4</i>出题：做好的题目</h2>
+    <p class="muted">已经出好题目的词：每个词写着哪天出的、用的哪个版本。视频有新要求、技能改版了，旧的不要了：单个或者勾几个点「重做」（题目删掉，回到要出题的列表）、「删除」，或者「清空」。只列软件里 AI 出的，原来题库里就有的不动。</p></div></div>
+  <div class="mtabs stabs"><a data-go="q" class="">出题</a><a data-go="qdone" class="on">做好的 <b class="tn" data-tn="qdone"></b></a><a data-go="qfail" class="">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="">批量和定时</a><a data-go="qset" class="">规矩和时间</a><a data-go="history" class="">记录</a></div>
+  <div class="box"><div id="qdoneBox"><p class="small muted">正在读…</p></div></div>
+</section>
+
 <section id="p-qfail">
   <div class="phead"><div><h2><i class="sn">4</i>出题：没过的词</h2>
     <p class="muted">AI 改了几轮还没过检查的词（待人工）。勾几个交给 AI 再试；或者点单词，就在这一页弹出来自己改稿。</p></div></div>
-  <div class="mtabs stabs"><a data-go="q" class="">出题</a><a data-go="qfail" class="on">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="">批量和定时</a><a data-go="qset" class="">规矩和时间</a><a data-go="history" class="">记录</a></div>
+  <div class="mtabs stabs"><a data-go="q" class="">出题</a><a data-go="qdone" class="">做好的 <b class="tn" data-tn="qdone"></b></a><a data-go="qfail" class="on">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="">批量和定时</a><a data-go="qset" class="">规矩和时间</a><a data-go="history" class="">记录</a></div>
   <div class="box"><h3 style="margin-top:0">出题没过的词（待人工）</h3>
         <p class="small muted" style="margin:0 0 8px">AI 改了几轮还没过检查的词放在这里，按顺序出题会跳过它们。点单词自己改稿（就在这一页弹出来改），或者勾几个交给 AI 再试。</p>
         <div style="display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap"><button class="btn sm" id="mRedo">交给 AI 重做勾的</button><button class="btn ghost sm" id="mRemove">移出待人工</button></div>
@@ -868,7 +875,7 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-qbulk">
   <div class="phead"><div><h2><i class="sn">4</i>出题：批量和定时</h2>
     <p class="muted">不按选上的词，按总表顺序一口气出一批；或者每天到点自动出。做的过程在「出题」那一页下面。</p></div></div>
-  <div class="mtabs stabs"><a data-go="q" class="">出题</a><a data-go="qfail" class="">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="on">批量和定时</a><a data-go="qset" class="">规矩和时间</a><a data-go="history" class="">记录</a></div>
+  <div class="mtabs stabs"><a data-go="q" class="">出题</a><a data-go="qdone" class="">做好的 <b class="tn" data-tn="qdone"></b></a><a data-go="qfail" class="">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="on">批量和定时</a><a data-go="qset" class="">规矩和时间</a><a data-go="history" class="">记录</a></div>
   <div class="box"><div class="tally" id="qStats">—</div></div>
   <div class="row" style="margin-top:14px">
     <div class="col"><div class="box">
@@ -891,7 +898,7 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-qset">
   <div class="phead"><div><h2><i class="sn">4</i>出题：规矩和时间</h2>
     <p class="muted">出题时软件按这些规矩发给 AI、检查 AI 写的题；什么时候干活对出题和画画面都管用。改了点「保存」。</p></div></div>
-  <div class="mtabs stabs"><a data-go="q" class="">出题</a><a data-go="qfail" class="">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="">批量和定时</a><a data-go="qset" class="on">规矩和时间</a><a data-go="history" class="">记录</a></div>
+  <div class="mtabs stabs"><a data-go="q" class="">出题</a><a data-go="qdone" class="">做好的 <b class="tn" data-tn="qdone"></b></a><a data-go="qfail" class="">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="">批量和定时</a><a data-go="qset" class="on">规矩和时间</a><a data-go="history" class="">记录</a></div>
   <div class="row">
   <div class="col">
   <div class="box">
@@ -922,8 +929,8 @@ details.vgk>.vgo{margin-top:6px}
 
 <section id="p-pic">
   <div class="phead"><div><h2><i class="sn">5</i>画面：视频里的画</h2>
-    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div><button class="btn ghost sm" style="align-self:flex-start;white-space:nowrap" onclick="clrOpen('p')" title="改版以后，旧的不要了就清掉：清掉的词回到要做的列表，按新版重做">清除做好的画面</button></div>
-  <div class="mtabs stabs"><a data-go="pic" class="on">画面</a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
+  <div class="mtabs stabs"><a data-go="pic" class="on">画面</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0"><span class="hv" title="第 3 步「选词」里选上的词，还要做画面的：还没有画面的、画面还要补的（出视频退回来的、起草检查没过的）、上次没做成的，一起做。做好一个，这里少一个；都做好了，列表就空了，下面出“本轮任务完成”的汇报。本来就做好了的、还没题目的不列在这里，开始时写进汇报。">这次要做画面的词</span> <span class="small faint" id="picPickN"></span></h3>
     <div class="plist" id="picPick"></div>
@@ -941,7 +948,7 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-pichist">
   <div class="phead"><div><h2><i class="sn">5</i>画面：视频里的画</h2>
     <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="on">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="on">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0">生成历史 <span class="small faint" id="ghN"></span></h3>
     <p class="small muted" style="margin:-4px 0 6px">做完一批，这里多一行：几点做的、哪些词、做好几个、没做成几个。点一行看这一批每个词，点词看它的画面。</p>
@@ -957,10 +964,17 @@ details.vgk>.vgo{margin-top:6px}
 
 
 
+<section id="p-picdone">
+  <div class="phead"><div><h2><i class="sn">5</i>画面：做好的画面</h2>
+    <p class="muted">已经做好画面的词：每个词写着哪天做的、用的哪个版本的视频技能、起草检查过没过。技能改版了，旧的不要了：单个或者勾几个点「重做」（画面删掉，回到要做画面的列表）、「删除」，或者「清空」。只列 AI 做的，视频技能自带的不动。</p></div></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picdone" class="on">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="box"><div id="picdoneBox"><p class="small muted">正在读…</p></div></div>
+</section>
+
 <section id="p-picfail">
   <div class="phead"><div><h2><i class="sn">5</i>画面：视频里的画</h2>
     <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><h3 style="margin-top:0">画面没做成的词</h3><p class="small muted" style="margin:-4px 0 8px">AI 改了几轮还没过检查的画面。看一下原因，点「这些再试一次」交给 AI 重做。</p>
       <div id="picFail" class="small">—</div>
       <div class="line"><button class="btn ghost sm" id="tPicRedo">这些再试一次</button></div></div></div>
@@ -970,7 +984,7 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-picbulk">
   <div class="phead"><div><h2><i class="sn">5</i>画面：视频里的画</h2>
     <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picbulk" class="on">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">画面</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="on">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><div class="tally" id="picStats">—</div></div>
   <div class="box" style="margin-top:14px">
     <h3 style="margin-top:0">按总表顺序接着做</h3>
@@ -1165,7 +1179,7 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-history">
   <div class="phead"><div><h2><i class="sn">4</i>出题：每个词 7 道练习题</h2>
     <p class="muted">视频最后的练习和答案。AI 写，软件按规矩检查，过了才存进词库、上传；没过的退回给 AI 改，改几次还不过就放进“待人工”。</p></div></div>
-  <div class="mtabs stabs"><a data-go="q" class="">出题</a><a data-go="qfail" class="">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="">批量和定时</a><a data-go="qset" class="">规矩和时间</a><a data-go="history" class="on">记录</a></div>
+  <div class="mtabs stabs"><a data-go="q" class="">出题</a><a data-go="qdone" class="">做好的 <b class="tn" data-tn="qdone"></b></a><a data-go="qfail" class="">没过的词 <b class="tc" data-tc="qfail"></b></a><a data-go="qbulk" class="">批量和定时</a><a data-go="qset" class="">规矩和时间</a><a data-go="history" class="on">记录</a></div>
   <div class="box">
     <h3 style="margin-top:0">出题记录 <span class="small faint" id="qhN"></span></h3>
     <p class="small muted" style="margin:-4px 0 6px">做完一个任务，这里多一行：几点做的、哪些词、出好几个、没过几个。点「出题结果」看这个任务的每个词，点词看它的 7 道题。</p>
@@ -1257,11 +1271,11 @@ let WD_HOME=null;
 function wdHome(){const b=$('#wDetail');if(b&&WD_HOME&&b.parentElement!==WD_HOME)WD_HOME.appendChild(b)}
 function wordInModal(w,title){const b=$('#wDetail');if(!WD_HOME)WD_HOME=b.parentElement;modal((title||'改稿：')+w,'');$('#mBody').appendChild(b);openWord(w,true)}
 let page='check';
-const PARENT={pickhist:'pick',words:'pick',qset:'q',history:'q',qfail:'q',qbulk:'q',picfail:'pic',picbulk:'pic',pichist:'pic',vdone:'video',vhist:'video',venv:'video'};
+const PARENT={qdone:'q',picdone:'pic',pickhist:'pick',words:'pick',qset:'q',history:'q',qfail:'q',qbulk:'q',picfail:'pic',picbulk:'pic',pichist:'pic',vdone:'video',vhist:'video',venv:'video'};
 function go(p){if(p==='manual')p='q';if(p==='run')p='q';page=p;const top=PARENT[p]||p;
   $$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===top));
   $$('main section').forEach(s=>s.classList.toggle('on',s.id==='p-'+p));
-  ({check:loadCheck,pick:loadPick,q:loadQ,qfail:loadManual,qbulk:loadQbulk,qset:loadQset,pic:loadPic,picfail:loadPicfail,picbulk:loadPicbulk,pichist:loadPichist,pickhist:loadPickhist,done:loadDone,ai:loadAI,video:loadVideo,vdone:loadVdone,vhist:loadVhist,venv:loadVenv,words:loadWords,history:loadHistory,settings:loadSettings,home:loadHome}[p]||(()=>{}))()}
+  ({check:loadCheck,pick:loadPick,q:loadQ,qdone:()=>doneLoad('q'),picdone:()=>doneLoad('p'),qfail:loadManual,qbulk:loadQbulk,qset:loadQset,pic:loadPic,picfail:loadPicfail,picbulk:loadPicbulk,pichist:loadPichist,pickhist:loadPickhist,done:loadDone,ai:loadAI,video:loadVideo,vdone:loadVdone,vhist:loadVhist,venv:loadVenv,words:loadWords,history:loadHistory,settings:loadSettings,home:loadHome}[p]||(()=>{}))()}
 $$('nav a').forEach(a=>a.onclick=()=>go(a.dataset.p));
 function navMini(on){document.body.classList.toggle('navmini',on);const b=$('#navTog'),t=on?'展开左边栏':'收起左边栏';b.title=t;b.setAttribute('aria-label',t);
   $$('nav a').forEach(a=>{const x=a.querySelector('.tx');if(on&&x)a.title=x.textContent;else a.removeAttribute('title')});
@@ -2403,13 +2417,10 @@ $('#p-video').addEventListener('change',e=>{if(e.target.id==='vAll')$$('#vReady 
   if(e.target.matches('.vck,#vAll')){$$('#vReady .vck').forEach(c=>c.checked?VUNCK.delete(c.value):VUNCK.add(c.value));vNewBtn()}});
 
 /* 做好的视频 */
-function vVideos(vs){const all=vs.slice().reverse(),show=VALLV?all:all.slice(0,12);
+function vVideos(vs){const all=vs.slice().reverse();
   $('#vListN').textContent=all.length?`（${all.length} 个）`:'';$$('[data-tn="vdone"]').forEach(e=>e.textContent=all.length||'');
-  const old=all.filter(v=>v.old);
-  $('#vList').innerHTML=(all.length?'<div class="line" style="justify-content:flex-end;margin-bottom:6px"><button class="btn ghost sm" onclick="clrOpen(\'v\')" title="不管新旧，勾哪个删哪个">清除视频…</button></div>':'')+(old.length?vOldBar(old.length):'')+(all.length?'<table><tr><th>单词</th><th>批次</th><th>大小</th><th>时间</th><th></th></tr>'+show.map(v=>`<tr><td style="font-family:var(--en);font-size:14px">${esc(v.word)}${v.old?' <span class="tag hv" title="视频技能 6.43 以前做的">旧版</span>':''}</td><td>${esc(v.batch)}</td><td>${esc(v.size)}</td><td>${esc(v.ts)}</td>
-    <td><a href="/api/video/file?p=${encodeURIComponent(v.file)}" target="_blank">播放</a></td></tr>`).join('')+'</table>'+
-    (all.length>12?`<div style="margin-top:6px"><button class="btn ghost sm" onclick="VALLV=!VALLV;vVideos((VW&&VW.videos)||[])">${VALLV?'收起':'看全部 '+all.length+' 个'}</button></div>`:'')
-    :'<div class="pempty">还没有做好的视频</div>')}
+  const old=all.filter(v=>v.old);DONE.v=all.map(v=>({word:v.word,ts:v.ts,ver:v.ver?'视频技能 '+v.ver:'',batch:v.batch,file:v.file,old:v.old,size:v.size}));
+  $('#vList').innerHTML=(old.length?vOldBar(old.length):'')+'<div id="vListT"></div>';doneRender('v')}
 /* v1.21.0：旧版视频（视频技能 6.43 以前做的）一起删掉：这些词回到「出视频」的选词列表，建批次开工就是新版 */
 function vOldBar(n){return `<div class="line" style="margin-bottom:8px;align-items:center;gap:10px"><span class="small muted hv" title="视频技能 6.43 起精简版再精简：读音拆分只念一块一块、词缀词根直接说“英语前缀”、同义词辨析只念单词给特写。这以前做的是旧版">旧版 ${n} 个</span><button class="btn warn sm" onclick="vDelOld(${n})">删掉旧版</button></div>`}
 function vDelOld(n){
@@ -2442,6 +2453,47 @@ async function clrOpen(w){let d;try{d=await api('/api/clear?what='+w)}catch(e){t
     let r;try{r=await api('/api/clear',{what:w,words:ws})}catch(e){r={ok:false,msg:e.message}}
     closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);
     try{if(w==='v')vVideosLoad();if(typeof vWordsLoad==='function')vWordsLoad();if(typeof loadPage==='function')loadPage(page)}catch(_){}}}
+/* v1.28.0：「做好的」标签——出题、画面、出视频三步一样：看每个词哪天做的、用的哪个版本；单个或者勾几个重做、删除，或者清空 */
+const DN={q:{name:'题目',page:'出题',box:'#qdoneBox',tn:'qdone'},p:{name:'画面',page:'画面',box:'#picdoneBox',tn:'picdone'},v:{name:'视频',page:'出视频',box:'#vListT',tn:'vdone'}};
+const DONE={q:[],p:[],v:[]},DSEL={q:new Set(),p:new Set(),v:new Set()},DFILT={q:'',p:'',v:''};
+async function doneLoad(w){const el=$(DN[w].box);if(!el)return;let d;try{d=await api('/api/done?what='+w)}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
+  if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
+  DONE[w]=d.items||[];$$(`[data-tn="${DN[w].tn}"]`).forEach(e=>e.textContent=DONE[w].length||'');doneRender(w)}
+function doneRender(w){const el=$(DN[w].box);if(!el)return;const all=DONE[w],f=DFILT[w].trim().toLowerCase();
+  [...DSEL[w]].forEach(k=>{if(!all.find(x=>x.word===k))DSEL[w].delete(k)});
+  if(!all.length){el.innerHTML=`<p class="small muted" style="margin:0">还没有做好的${DN[w].name}。</p>`;return}
+  const it=f?all.filter(x=>((x.show||x.word)+' '+(x.meaning||'')).toLowerCase().includes(f)):all,n=DSEL[w].size;
+  el.innerHTML=`<div class="line" style="gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap">
+    <input class="dfilt" placeholder="找词…" value="${esc(DFILT[w])}" style="width:150px">
+    <button class="btn sm dRedo" ${n?'':'disabled'}>重做选中的${n?' '+n+' 个':''}</button>
+    <button class="btn ghost sm dDel" ${n?'':'disabled'}>删除选中的${n?' '+n+' 个':''}</button>
+    <button class="btn warn sm dClr">清空（全部 ${all.length} 个）</button>
+    <span class="small faint">${f?'找到 '+it.length+' 个':'一共 '+all.length+' 个'}${n?'，选了 '+n+' 个':''}</span></div>
+  <div style="max-height:62vh;overflow:auto"><table style="width:100%"><tr><th style="width:28px"><input type="checkbox" class="dall" ${it.length&&it.every(x=>DSEL[w].has(x.word))?'checked':''}></th><th>单词</th><th>做好的时间</th><th>用的版本</th><th>${w==='v'?'批次':'备注'}</th><th></th></tr>
+  ${it.map(x=>`<tr><td><input type="checkbox" class="dck" value="${esc(x.word)}" ${DSEL[w].has(x.word)?'checked':''}></td>
+    <td><span class="w">${esc(x.show||x.word)}</span>${x.meaning?`<div class="small faint">${esc(x.meaning)}</div>`:''}</td>
+    <td class="small" style="white-space:nowrap">${esc(x.ts||'')}</td>
+    <td class="small">${x.ver?esc(x.ver):'<span class="faint">没记（v1.28 以前做的）</span>'}${x.old?' <span class="tag">旧版</span>':''}</td>
+    <td class="small faint">${esc(w==='v'?(x.batch||''):(x.note||''))}</td>
+    <td style="white-space:nowrap">${w==='v'&&x.file?`<a href="#" class="dPlay" data-f="${esc(x.file)}" data-w="${esc(x.word)}">▶ 播放</a>　`:''}<a href="#" class="dOne" data-op="redo" data-w="${esc(x.word)}">重做</a>　<a href="#" class="dOne" data-op="delete" data-w="${esc(x.word)}" style="color:var(--red)">删除</a></td></tr>`).join('')}</table></div>`;
+  const fi=el.querySelector('.dfilt');fi.oninput=()=>{DFILT[w]=fi.value;const p=fi.selectionStart;doneRender(w);const g=$(DN[w].box).querySelector('.dfilt');g.focus();g.setSelectionRange(p,p)};
+  el.querySelector('.dall').onchange=e=>{it.forEach(x=>e.target.checked?DSEL[w].add(x.word):DSEL[w].delete(x.word));doneRender(w)};
+  el.querySelectorAll('.dck').forEach(c=>c.onchange=()=>{c.checked?DSEL[w].add(c.value):DSEL[w].delete(c.value);doneRender(w)});
+  el.querySelector('.dRedo').onclick=()=>doneAsk(w,'redo',[...DSEL[w]]);
+  el.querySelector('.dDel').onclick=()=>doneAsk(w,'delete',[...DSEL[w]]);
+  el.querySelector('.dClr').onclick=()=>doneAsk(w,'delete',all.map(x=>x.word),true);
+  el.querySelectorAll('.dOne').forEach(a=>a.onclick=e=>{e.preventDefault();doneAsk(w,a.dataset.op,[a.dataset.w])});
+  el.querySelectorAll('.dPlay').forEach(a=>a.onclick=e=>{e.preventDefault();vPlay(a.dataset.f,a.dataset.w)})}
+function doneAsk(w,op,words,isAll){if(!words.length)return;const nm=DN[w].name,n=words.length,show=words.map(k=>{const x=DONE[w].find(y=>y.word===k);return x&&x.show||k});
+  const t=op==='redo'?`重做 ${n} 个词的${nm}？`:isAll?`清空全部 ${n} 个做好的${nm}？`:`删除 ${n} 个词的${nm}？`;
+  const what=op==='redo'?`现在的${nm}删掉，这些词回到「${DN[w].page}」要做的列表（自动选上），按新的技能重做。`:`现在的${nm}删掉。`;
+  modal(t,`<p class="small" style="margin-top:0">${what}${w==='v'?'<b>视频文件会从出片文件夹里删掉，删了找不回来。</b>':'词库的改动会上传 GitHub，以前的在 GitHub 历史里还找得到。'}</p>
+    <p class="small faint" style="max-height:22vh;overflow:auto;margin:0">${show.slice(0,80).map(esc).join('、')}${n>80?' 等':''}</p>
+    <div class="line" style="gap:8px;margin-top:12px"><button class="btn ${op==='redo'?'':'warn'}" id="dnGo">${op==='redo'?'重做':isAll?'清空':'删除'}${n>1?' '+n+' 个':''}</button><button class="btn ghost" id="dnNo">不了</button></div>`);
+  $('#dnNo').onclick=closeModal;
+  $('#dnGo').onclick=async()=>{const b=$('#dnGo');b.disabled=true;b.textContent='正在处理…';let r;try{r=await api('/api/done',{op,what:w,words})}catch(e){r={ok:false,msg:e.message}}
+    closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);words.forEach(x=>DSEL[w].delete(x));
+    if(w==='v'){vVideosLoad();if(typeof vWordsLoad==='function')vWordsLoad()}else doneLoad(w)}}
 async function vVideosLoad(){try{const d=await api('/api/video?what=words');VW=d;vVideos(d.videos||[]);VVN=(d.videos||[]).length}catch(e){}}
 $('#vScan').onclick=async e=>{const b=e.currentTarget;b.disabled=true;try{const d=await api('/api/video',{op:'scan'});toast((d.ok?'✓ ':'✗ ')+d.msg)}catch(x){toast('✗ '+x.message)}b.disabled=false;vVideosLoad()};
 

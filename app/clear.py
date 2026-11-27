@@ -168,3 +168,68 @@ def clear(what, words):
                                                           "出题" if what == "q" else "画面"))
     threading.Thread(target=lambda: C.commit_pending("词库：清除做好的%s（%d 个词，单词工作台）" % (NAMES[what], len(done))), daemon=True).start()
     return {"ok": True, "n": len(done), "msg": "清除了 %d 个词做好的%s：这些词回到「%s」要做的列表，按新版重做" % (len(done), NAMES[what], "出题" if what == "q" else "画面")}
+
+
+# ═══════════════════════ v1.28.0：「做好的」标签（出题、画面、出视频三步各一个） ═══════════════════════
+# 用户：“这几个部分都要有一个标签：做好的……可以单个点击重做，也可以批量点击重做，也可以点击删除单个，也可以点击清空，批量删除……
+#   每个单词列表里面要列举这个单词的题目，画面是什么时候生成的，用的是哪个版本的技能”
+def _index_maps():
+    _, rows = C.read_index()
+    meaning, rel, word_of = {}, {}, {}
+    for r in rows:
+        w = r[2]
+        meaning.setdefault(w, r[3] if len(r) > 3 else "")
+        if len(r) > 6 and r[6]:
+            rel.setdefault(w, r[6])
+        word_of.setdefault(V.folder_of(w), w)
+    return meaning, rel, word_of
+
+
+def done_list(what):
+    try:
+        if what == "q":
+            meaning, _, _ = _index_maps()
+            items = []
+            for w, rl in _q_words().items():
+                rec = _rec(rl)[1] if rl else None
+                if not (rec or {}).get("题目生成"):
+                    continue
+                items.append({"word": w, "meaning": meaning.get(w, ""), "ts": str(rec.get("题目生成") or ""), "ver": str(rec.get("题目版本") or ""),
+                              "note": str(rec.get("题目检查") or "")[:40]})
+            items.sort(key=lambda x: x["ts"], reverse=True)
+            return {"ok": True, "items": items}
+        if what == "p":
+            meaning, rel, word_of = _index_maps()
+            items = []
+            for f, _, info in _p_rows():
+                w = word_of.get(f, f)
+                rec = _rec(rel[w])[1] if rel.get(w) else None
+                rec = rec or {}
+                items.append({"word": f, "show": w, "meaning": meaning.get(w, ""), "ts": str(rec.get("画面生成") or info or ""),
+                              "ver": str(rec.get("画面技能版本") or ""), "note": str(rec.get("检查") or "")[:40]})
+            items.sort(key=lambda x: x["ts"], reverse=True)
+            return {"ok": True, "items": items}
+        if what == "v":
+            return {"ok": True, "items": [{"word": k, "ts": v.get("ts", ""), "ver": ("视频技能 " + v["ver"]) if v.get("ver") else "", "batch": v.get("batch", ""),
+                                           "file": v.get("file", ""), "old": bool(v.get("old"))} for k, v in V.videos().items()]}
+    except Exception as e:
+        return {"ok": False, "msg": "没读到（%s）" % str(e)[:120]}
+    return {"ok": False, "msg": "不认识要列什么"}
+
+
+def done_op(op, what, words):
+    words = [w for w in (words or []) if isinstance(w, str) and w.strip()]
+    if op not in ("redo", "delete"):
+        return {"ok": False, "msg": "不认识要做什么"}
+    r = clear(what, words)
+    if op == "redo" and r.get("ok"):
+        import pool
+        pool._db()
+        inpool = [x["word"] for x in C.q("SELECT word FROM pool")]
+        want = set(words) | {V.folder_of(w) for w in words}
+        real = [w for w in inpool if w in want or V.folder_of(w) in want]
+        if real:
+            pool.pick(real, True)
+        page = {"q": "出题", "p": "画面", "v": "出视频"}[what]
+        r["msg"] = "重做 %d 个：现在的%s删掉了，这些词回到「%s」要做的列表（选上了），按新的技能做" % (r.get("n", len(real)), NAMES[what], page)
+    return r

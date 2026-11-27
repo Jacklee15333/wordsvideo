@@ -792,7 +792,12 @@ def save_word(word, qs, version, attribution):
     with REPO_LOCK:
         p.parent.mkdir(parents=True, exist_ok=True)
         rec = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {"单词": word, "画面": None, "插图": []}
+        try:
+            av = (Path(__file__).parent / "VERSION").read_text(encoding="utf-8").strip()
+        except Exception:
+            av = ""
         rec.update({"总表版本": version, "题目": dict(zip(L.COLS, cells), 答案=daan), "题目原稿": qs,
+                    "题目版本": ("单词工作台 v%s（出题规矩）、总表%s" % (av, version)) if av else "",      # v1.28.0：「做好的」里看用的哪个版本
                     "题目生成": time.strftime("%Y-%m-%d") + " " + attribution,
                     "题目检查": "维护技能 lianxi.py 体检 0 个问题"})
         p.write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
