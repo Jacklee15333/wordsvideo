@@ -100,6 +100,17 @@ def pick(x, ph, transcribe, tries=40):
     return best[1] if best else None
 
 
+def _check_source(path):
+    """6.54：用户定的规矩——男声只从仓库「素材/音色/5音色.m4a、6音色.m4a」里截（见 assets/voice/来源.md）。别的录音截出来先提醒"""
+    try:
+        import hashlib, voice_config as _VC
+        h = hashlib.md5(open(path, 'rb').read()).hexdigest()
+        if h not in set(getattr(_VC, 'VOICE_SOURCES', {}).values()):
+            print('提醒：%s 不是用户定的那两个录音（素材/音色/5音色.m4a、6音色.m4a）。用户的规矩：男声只用那两个，见 assets/voice/来源.md' % path)
+    except Exception:
+        pass
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('audio', nargs='+')
@@ -109,6 +120,8 @@ def main():
     ap.add_argument('--test', help='做好后用新声音念这一句，存成 test.wav 听听')
     ap.add_argument('--role', choices=['translate', 'question'], help='这一段是“念例句翻译”或“问句”用的参考（不写就是讲解用的）')
     a = ap.parse_args()
+    for _p in a.audio:
+        _check_source(_p)                      # 6.54：男声只用素材/音色那两个录音
     from voice_clean import noise_sample, denoise
     xs = [load(p) for p in a.audio]
     noise = np.concatenate([noise_sample(x, SR) for x in xs])[:8 * SR]      # 底噪样本 8 秒够用

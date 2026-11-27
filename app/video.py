@@ -169,6 +169,7 @@ echo "ffmpeg=$(command -v ffmpeg)"
 echo "node=$(command -v node)"
 echo "chrome=$(ls -d ~/.cache/ms-playwright/chromium* 2>/dev/null | head -1)"
 echo "models=$(du -sh ~/wordfilm-models 2>/dev/null | cut -f1)"
+echo "voice=$(md5sum ~/skills/word-construction-video/assets/voice/ref.wav 2>/dev/null | cut -c1-32)"
 echo "gpu=$([ -f ~/.wordfilm-gpu.env ] && echo 1)"
 echo "mem=$(free -g | awk '/Mem/{print $2}')G"
 echo "cores=$(nproc)"
@@ -618,7 +619,7 @@ def batch_op(name, op, word="", stage="", why=""):
 
 # ═══════════════════════ v1.11.0：出片前检查——一项一项打勾，有问题的那一行后面就是修的按钮 ═══════════════════════
 EC_ITEMS = (("wsl", "WSL"), ("skill", "视频技能"), ("scripts", "出片脚本"), ("table", "总表"),
-            ("syl", "音节划分表"), ("sys", "系统软件"), ("models", "声音模型"), ("gpu", "显卡"), ("windir", "出片文件夹"))
+            ("syl", "音节划分表"), ("sys", "系统软件"), ("models", "声音模型"), ("voice", "男声"), ("gpu", "显卡"), ("windir", "出片文件夹"))
 EC_NAME = dict(EC_ITEMS)
 FIX_NAME = {"sync": "同步到 WSL", "boot": "装系统软件", "models": "装声音模型", "gpu": "开显卡"}
 
@@ -735,6 +736,15 @@ def _probe_env(on_item):
                 put("models", "ok", "装好了（%s）" % v)
             else:
                 put("models", "bad", "还没装（约 1.6 GB）", "models")
+            run("voice")
+        elif k == "voice":                     # v1.26.0：男声用的是哪个录音（用户：“你先检查一下你用的是什么音色”）
+            want, lab = _voice_ref()
+            if not v:
+                put("voice", "bad", "WSL 里没有男声的参考录音：要同步", "sync")
+            elif want and v != want:
+                put("voice", "bad", "WSL 里的男声参考录音和仓库里的不一样：要同步", "sync")
+            else:
+                put("voice", "ok", "你的声音：" + lab)
             run("gpu")
         elif k == "gpu":
             if v:
@@ -771,6 +781,22 @@ def _env_verdict(res):
     txt = lambda k: (res.get(k) or ("", ""))[1]
     return "ok", "都好了：视频技能 %s；声音模型%s；显卡%s" % (
         txt("skill").split("，")[0], txt("models").replace("装好了", ""), "开了" if st("gpu") == "ok" else "没开（可选）"), ""
+
+
+def _voice_ref():
+    """v1.26.0：仓库里男声参考录音的 md5，和它从哪儿来（视频技能 assets/voice/来源.md 第一行）"""
+    import hashlib
+    d = C.REPO / "引擎" / "视频" / "assets" / "voice"
+    try:
+        h = hashlib.md5((d / "ref.wav").read_bytes()).hexdigest()
+    except Exception:
+        h = ""
+    try:
+        first = (d / "来源.md").read_text(encoding="utf-8").splitlines()[0].replace("当前：", "").strip()
+        lab = "取自「素材/音色」" + first
+    except Exception:
+        lab = "技能自带的参考录音"
+    return h, lab
 
 
 def env_check(say, acts=None):
