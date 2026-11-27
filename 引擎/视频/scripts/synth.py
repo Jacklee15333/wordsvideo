@@ -162,6 +162,9 @@ def clean_out(x):
             print('提醒：降噪没做（%s）' % e)
     x = lpf(high_shelf(x, SR, 7000.0, -4.0), SR, 10500)
     x = match_eq(x, SR, VC.EQ_BANDS)            # 6.46：音色往真人录音上靠（不那么闷、不那么尖）
+    if getattr(VC, 'DEESS', None):              # 6.52：高频冒尖的那几下（擦音太冲、刺耳）压下去
+        from voice_clean import deess
+        x = deess(x, SR, *VC.DEESS)
     return gate(x, SR) if VC.GATE else x        # 6.47 起不用静音门（它让停顿里忽大忽小，听着像震动）
 
 

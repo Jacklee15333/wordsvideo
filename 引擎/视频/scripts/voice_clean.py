@@ -226,3 +226,28 @@ def tail_tame(x, sr, drop_db=12.0, fade_ms=80):
         y[s:s + k] *= (0.5 + 0.5 * np.cos(np.linspace(0, np.pi, k))).astype(np.float32)
     y[s + k:] = 0
     return y
+
+
+def deess(x, sr, thr_db=12.0, ratio=0.5, max_cut=6.0, lo=2500, hi=9500):
+    """6.52：去“刺耳”（用户：“还是有一些刺耳的声音”）——高频突然冒尖的那几下（s、sh、x、c、z 这类擦音念得太冲）压下去。
+    实测：每 20 ms 一帧算 2.5～8 kHz 比 0.3～2.5 kHz 高多少，合成的第 95 百分位比真人录音高 3 dB；平常的帧（中位数）一样。
+    只动高频冒尖的帧：比门限（thr_db）高多少，就把 lo～hi 这一段压 ratio 倍那么多（最多 max_cut dB），前后各 1 帧平滑；别的帧不动。"""
+    from scipy.signal import stft, istft
+    x = np.asarray(x, dtype=np.float32)
+    if len(x) < 2048:
+        return x
+    n = 512
+    f, t, Z = stft(x, sr, nperseg=n, noverlap=n - 128)
+    P = np.abs(Z) ** 2
+    hb = (f >= lo) & (f <= hi)
+    r = 10 * np.log10((P[(f >= 2500) & (f <= 8000)].sum(0) + 1e-12) / (P[(f >= 300) & (f < 2500)].sum(0) + 1e-12))
+    loud = 10 * np.log10(P.sum(0) + 1e-12)
+    cut = np.clip((r - thr_db) * ratio, 0, max_cut) * (loud > loud.max() - 45)
+    cut = np.maximum(cut, np.maximum(np.r_[cut[1:], 0], np.r_[0, cut[:-1]]) * 0.7)      # 前后各一帧，免得一下一下的
+    g = 10 ** (-cut / 20)
+    Z[hb, :] *= g[None, :]
+    _, y = istft(Z, sr, nperseg=n, noverlap=n - 128)
+    y = y[:len(x)]
+    if len(y) < len(x):
+        y = np.concatenate([y, np.zeros(len(x) - len(y))])
+    return y.astype(np.float32)
