@@ -14,7 +14,8 @@ import core as C
 import video as V
 import selfup as SU
 import relay_browser as RB
-import clear as CL                             # v1.27.0：清除做好的题目、画面、视频                     # v1.23.0：软件自己控制网页 AI 的浏览器窗口
+import clear as CL                             # v1.27.0：清除做好的题目、画面、视频
+import sections as SEC                         # v1.29.0：单词简历                     # v1.23.0：软件自己控制网页 AI 的浏览器窗口
 import check as CK
 import pool as PL
 import results as RS
@@ -709,7 +710,8 @@ GET = {
     "/api/relay": api_relay_get,
     "/api/relay/auto": lambda qs: C.relay_auto(qs),
     "/api/clear": lambda qs: CL.listing(qs.get("what", "")),          # v1.27.0
-    "/api/done": lambda qs: CL.done_list(qs.get("what", "")),         # v1.28.0：「做好的」标签                # v1.22.0：浏览器小助手来问
+    "/api/done": lambda qs: CL.done_list(qs.get("what", "")),         # v1.28.0：「做好的」标签
+    "/api/profile": lambda qs: SEC.profile(qs.get("word", "")),      # v1.29.0：单词简历                # v1.22.0：浏览器小助手来问
     "/api/fixlater": lambda qs: __import__("pics").later_get(),
     "/api/fixwords": lambda qs: __import__("pics").fix_list(),
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
@@ -737,6 +739,7 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/prep": api_prep,
         "/api/clear": lambda b: CL.clear(b.get("what"), b.get("words") or []),      # v1.27.0
         "/api/done": lambda b: CL.done_op(b.get("op"), b.get("what"), b.get("words") or []),      # v1.28.0
+        "/api/profile": lambda b: SEC.save(b.get("word", ""), b.get("sec", ""), b.get("data")) if b.get("op") == "save" else SEC.redo(b.get("word", ""), b.get("sec", ""), b.get("note", "")),      # v1.29.0
         "/api/check": lambda b: CK.fix_all() if b.get("op") == "fix" else CK.start(b.get("what") or "all"),      # v1.21.1：一键修复
         "/api/qres": lambda b: RS.export_words(b.get("words") or []),
         "/api/pres": lambda b: RS.draw(b.get("word") or ""),

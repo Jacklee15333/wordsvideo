@@ -2471,7 +2471,7 @@ function doneRender(w){const el=$(DN[w].box);if(!el)return;const all=DONE[w],f=D
     <span class="small faint">${f?'找到 '+it.length+' 个':'一共 '+all.length+' 个'}${n?'，选了 '+n+' 个':''}</span></div>
   <div style="max-height:62vh;overflow:auto"><table style="width:100%"><tr><th style="width:28px"><input type="checkbox" class="dall" ${it.length&&it.every(x=>DSEL[w].has(x.word))?'checked':''}></th><th>单词</th><th>做好的时间</th><th>用的版本</th><th>${w==='v'?'批次':'备注'}</th><th></th></tr>
   ${it.map(x=>`<tr><td><input type="checkbox" class="dck" value="${esc(x.word)}" ${DSEL[w].has(x.word)?'checked':''}></td>
-    <td><span class="w">${esc(x.show||x.word)}</span>${x.meaning?`<div class="small faint">${esc(x.meaning)}</div>`:''}</td>
+    <td><a href="#" class="w wpo" data-w="${esc(x.show||x.word)}" title="点开看这个词的单词简历">${esc(x.show||x.word)}</a>${x.meaning?`<div class="small faint">${esc(x.meaning)}</div>`:''}</td>
     <td class="small" style="white-space:nowrap">${esc(x.ts||'')}</td>
     <td class="small">${x.ver?esc(x.ver):'<span class="faint">没记（v1.28 以前做的）</span>'}${x.old?' <span class="tag">旧版</span>':''}</td>
     <td class="small faint">${esc(w==='v'?(x.batch||''):(x.note||''))}</td>
@@ -2494,6 +2494,35 @@ function doneAsk(w,op,words,isAll){if(!words.length)return;const nm=DN[w].name,n
   $('#dnGo').onclick=async()=>{const b=$('#dnGo');b.disabled=true;b.textContent='正在处理…';let r;try{r=await api('/api/done',{op,what:w,words})}catch(e){r={ok:false,msg:e.message}}
     closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);words.forEach(x=>DSEL[w].delete(x));
     if(w==='v'){vVideosLoad();if(typeof vWordsLoad==='function')vWordsLoad()}else doneLoad(w)}}
+/* v1.29.0：单词简历——一个词的视频分成哪几块、每块从哪来、做好没、什么时候用哪个版本做的；能看、能改（画面设置那几块）、能单独重做 */
+document.addEventListener('click',e=>{const a=e.target.closest('.wpo');if(!a)return;e.preventDefault();e.stopPropagation();wpOpen(a.dataset.w)});
+const WPST={ok:['✓ 做好了','var(--pass)'],fix:['⚠ 要补','var(--amber)'],none:['— 还没有','var(--faint,#999)'],nopic:['— 还没做画面','var(--faint,#999)']};
+async function wpOpen(w){let d;try{d=await api('/api/profile?word='+encodeURIComponent(w))}catch(e){toast('✗ '+e.message,8000);return}
+  if(!d.ok){toast('✗ '+(d.msg||''),8000);return}
+  const cats=[];d.sections.forEach(s=>{let c=cats.find(x=>x.cat===s.cat);if(!c)cats.push(c={cat:s.cat,ss:[]});c.ss.push(s)});
+  const card=s=>{const [t,col]=WPST[s.status]||['',''];return `<div class="wpc" data-sec="${s.id}" style="border:1px solid var(--rule);border-radius:8px;padding:8px 12px;margin:6px 0">
+    <div class="line" style="gap:8px;align-items:baseline;flex-wrap:wrap"><b>${esc(s.name)}</b><span class="tag">${esc(s.src)}</span><span style="color:${col};font-weight:600" class="small">${t}${s.issues.length?' '+s.issues.length+' 处':''}</span>
+      <span class="small faint">${esc([s.ts,s.ver].filter(Boolean).join(' · '))}</span><span style="flex:1"></span>
+      ${s.editable?`<a href="#" class="wpEdit" data-sec="${s.id}">改</a>`:''}${s.id==='lianxi'||s.editable?`　<a href="#" class="wpRedo" data-sec="${s.id}">重做这一块</a>`:''}</div>
+    ${s.lines.length?`<div class="small" style="margin-top:4px;line-height:1.7">${s.lines.map(l=>esc(l)).join('<br>')}</div>`:''}
+    ${s.issues.length?`<div class="small" style="margin-top:4px;color:var(--red)">要补：${s.issues.map(esc).join('；')}</div>`:''}
+    <div class="wpBox"></div></div>`};
+  modal('单词简历：'+d.word,`<div class="line" style="gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px"><b style="font-family:var(--en);font-size:20px">${esc(d.word)}</b><span>${esc(d.meaning||'')}</span>
+      ${d.video&&d.video.file?`<a href="#" onclick="vPlay('${esc(d.video.file).replace(/\\/g,'\\\\').replace(/'/g,"\\'")}','${esc(d.word)}');return false">▶ 看视频</a><span class="small faint">${esc(d.video.ts)}${d.video.ver?' · 视频技能 '+esc(d.video.ver):''}</span>`:'<span class="small faint">还没有视频</span>'}</div>
+    ${d.hasPic?`<div class="small faint" style="margin-bottom:6px">画面：${esc(d.picTs||'')}${d.picVer?' · '+esc(d.picVer):''}　${esc(d.picCheck||'')}</div>`:'<div class="small faint" style="margin-bottom:6px">还没有画面设置</div>'}
+    <div style="max-height:66vh;overflow:auto;padding-right:4px">${cats.map(c=>`<div style="margin-top:8px"><div class="small" style="font-weight:700;color:var(--ink)">${esc(c.cat)}</div>${c.ss.map(card).join('')}</div>`).join('')}</div>`);
+  const body=$('#mBody'),secOf=id=>d.sections.find(s=>s.id===id);
+  body.querySelectorAll('.wpEdit').forEach(a=>a.onclick=e=>{e.preventDefault();const s=secOf(a.dataset.sec),box=a.closest('.wpc').querySelector('.wpBox');
+    box.innerHTML=`<p class="small muted" style="margin:6px 0">这一块在画面设置里的样子（JSON）。改好点「保存」：写回画面设置，出片前再做一次起草检查。</p><textarea style="width:100%;height:220px;font-family:var(--mono,monospace);font-size:12px">${esc(JSON.stringify(s.data||{},null,1))}</textarea>
+      <div class="line" style="gap:8px;margin-top:6px"><button class="btn sm wpSave">保存</button><button class="btn ghost sm wpCancel">不改了</button><span class="small wpMsg"></span></div>`;
+    box.querySelector('.wpCancel').onclick=()=>box.innerHTML='';
+    box.querySelector('.wpSave').onclick=async()=>{let data;try{data=JSON.parse(box.querySelector('textarea').value)}catch(err){box.querySelector('.wpMsg').textContent='✗ JSON 格式不对：'+err.message;return}
+      const r=await api('/api/profile',{op:'save',word:d.word,sec:s.id,data});toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?5000:9000);if(r.ok)wpOpen(d.word)}});
+  body.querySelectorAll('.wpRedo').forEach(a=>a.onclick=e=>{e.preventDefault();const s=secOf(a.dataset.sec),box=a.closest('.wpc').querySelector('.wpBox');
+    box.innerHTML=`<p class="small muted" style="margin:6px 0">${s.id==='lianxi'?'现在的题目删掉，这个词回到「出题」要出题的列表。':'这个词退回「画面」：补画面时只交给 AI 重做「'+esc(s.name)+'」，别的块不动。'}想怎么改可以写一句（可以不写）：</p><textarea style="width:100%;height:60px" placeholder="比如：例句换成和学校有关的"></textarea>
+      <div class="line" style="gap:8px;margin-top:6px"><button class="btn sm wpGo">重做这一块</button><button class="btn ghost sm wpCancel">不了</button></div>`;
+    box.querySelector('.wpCancel').onclick=()=>box.innerHTML='';
+    box.querySelector('.wpGo').onclick=async()=>{const r=await api('/api/profile',{op:'redo',word:d.word,sec:s.id,note:box.querySelector('textarea').value});toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);if(r.ok)wpOpen(d.word)}})}
 async function vVideosLoad(){try{const d=await api('/api/video?what=words');VW=d;vVideos(d.videos||[]);VVN=(d.videos||[]).length}catch(e){}}
 $('#vScan').onclick=async e=>{const b=e.currentTarget;b.disabled=true;try{const d=await api('/api/video',{op:'scan'});toast((d.ok?'✓ ':'✗ ')+d.msg)}catch(x){toast('✗ '+x.message)}b.disabled=false;vVideosLoad()};
 
@@ -2715,7 +2744,7 @@ function vWordRows(b,out){
     if(w.status==='running')return [`<span>正在做</span>`,esc(VSTN[w.stage]||'')];
     return [`<span class="faint">还没做</span>`,''];};
   return `<table class="vwrows" style="width:100%;border-collapse:collapse">${rows.map(w=>{const [a,c]=st(w);
-    return `<tr style="border-top:1px solid var(--rule)"><td style="padding:4px 8px 4px 0;white-space:nowrap" class="small faint">${esc(w.no||'')}</td><td style="padding:4px 10px 4px 0;white-space:nowrap"><span class="w">${esc(vWn(w.word))}</span></td><td style="padding:4px 10px 4px 0;white-space:nowrap">${a}</td><td style="padding:4px 0">${c}</td></tr>`}).join('')}</table>`}
+    return `<tr style="border-top:1px solid var(--rule)"><td style="padding:4px 8px 4px 0;white-space:nowrap" class="small faint">${esc(w.no||'')}</td><td style="padding:4px 10px 4px 0;white-space:nowrap"><a href="#" class="w wpo" data-w="${esc(vWn(w.word))}" title="单词简历">${esc(vWn(w.word))}</a></td><td style="padding:4px 10px 4px 0;white-space:nowrap">${a}</td><td style="padding:4px 0">${c}</td></tr>`}).join('')}</table>`}
 function vPlay(f,w){modal(w||'播放',`<video src="/api/video/file?p=${encodeURIComponent(f)}" controls autoplay style="width:100%;max-height:72vh;background:#000;border-radius:6px"></video>
   <div class="small faint" style="margin-top:6px">${esc(f)}　<a href="#" data-open="vfile" data-word="${esc(f)}">在文件夹里找出来</a></div>`)}
 function vReport(b){
