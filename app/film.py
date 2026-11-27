@@ -57,7 +57,11 @@ def _ctx():
         pf = {r["word"] for r in C.q("SELECT word FROM picfail")}
     except Exception:
         pf = set()
-    v = {"by_low": by_low, "by_word": by_word, "pw": V.pic_words(), "vd": V.videos(), "man": set(C.manual_words()),
+    try:
+        sel = {r["word"] for r in C.q("SELECT word FROM pool WHERE picked=1")}
+    except Exception:
+        sel = set()
+    v = {"sel": sel, "by_low": by_low, "by_word": by_word, "pw": V.pic_words(), "vd": V.videos(), "man": set(C.manual_words()),
          "pf": pf, "unc": unc, "todo": todo, "dr": dr, "pend": pend, "done": done}
     _LOCK_T.update(t=time.time(), v=v)
     return v
@@ -70,7 +74,7 @@ def _one(w, X):
     pic = f in X["pw"]
     it = {"word": w, "meaning": (rs[0][3] if rs and len(rs[0]) > 3 else "")[:40], "batch": rs[0][0] if rs else "",
           "inTable": bool(rs), "q": q, "manual": w in X["man"], "pic": pic, "picfail": w in X["pf"],
-          "picTodo": pic and w in X["unc"], "video": f in X["vd"] or f in X["done"], "inb": X["pend"].get(f, "")}
+          "picTodo": pic and w in X["unc"], "sel": w in X["sel"], "video": f in X["vd"] or f in X["done"], "inb": X["pend"].get(f, "")}
     d = X["dr"].get(f) or {}
     it["draft"] = d.get("ts", "") if d.get("rc") == 0 else ""
     miss = []
@@ -97,9 +101,42 @@ def info(words):
     return [_one(w, X) for w in words]
 
 
-FILTERS = {"all": lambda i: True, "ready": lambda i: i["st"] == "ready", "need": lambda i: i["st"] == "need",
+FILTERS = {"all": lambda i: True, "sel": lambda i: i["sel"], "ready": lambda i: i["st"] == "ready", "need": lambda i: i["st"] == "need",
            "noq": lambda i: not i["q"] or i["manual"], "nopic": lambda i: not i["pic"], "fix": lambda i: i["picTodo"],
            "video": lambda i: i["video"], "inb": lambda i: bool(i["inb"])}
+
+
+def parse_words(text):
+    """查看用：逗号、换行、空格都能隔开，按输入的顺序；词组（alarm clock）整个认，认不出的写出来"""
+    import pool
+    by_low, _ = pool._index()
+    found, miss = [], []
+    for cell in pool._SPLIT.split(text or ""):
+        cell = cell.strip()
+        if not cell:
+            continue
+        if cell.lower() in by_low:
+            toks = [cell]
+        else:
+            toks = cell.split()
+        i = 0
+        while i < len(toks):
+            hit = None
+            for j in range(min(len(toks), i + 4), i, -1):          # 先试长的：词组
+                k = " ".join(toks[i:j]).lower()
+                if k in by_low:
+                    hit = (by_low[k], j)
+                    break
+            if hit:
+                if hit[0] not in found:
+                    found.append(hit[0])
+                i = hit[1]
+            else:
+                t = toks[i].strip("'\"“”‘’()（）[]【】<>《》*·•.-—")
+                if re.search(r"[A-Za-z]", t) and t not in miss:
+                    miss.append(t[:40])
+                i += 1
+    return found, miss
 
 
 def lib(qs):
@@ -113,14 +150,26 @@ def lib(qs):
     for i in items:
         if i["batch"] and i["batch"] not in batches:
             batches.append(i["batch"])
+    # v1.40.0：输入一个或几个单词查看——按输入的顺序列出来，总表里没有的写出来；只有一个词又没对上，就当成搜
+    look, nf = [], []
+    if (qs.get("words") or "").strip():
+        import pool
+        look, nf = parse_words(qs.get("words"))
+        if not look and len(re.split(r"[\s,，;；、]+", qs["words"].strip())) == 1:
+            qs = dict(qs, q=qs["words"].strip())
+            nf = []
     s = (qs.get("q") or "").strip().lower()
     f = qs.get("f") or "all"
     b = qs.get("b") or ""
     if qs.get("notpicked"):
         pk = set(picked())
         items = [i for i in items if i["word"] not in pk]
-    items = [i for i in items if FILTERS.get(f, FILTERS["all"])(i) and (not b or i["batch"] == b)
-             and (not s or s in i["word"].lower() or s in i["meaning"].lower())]
+    if look:
+        by = {i["word"]: i for i in items}
+        items = [by[w] for w in look if w in by]
+    else:
+        items = [i for i in items if FILTERS.get(f, FILTERS["all"])(i) and (not b or i["batch"] == b)
+                 and (not s or s in i["word"].lower() or s in i["meaning"].lower())]
     try:
         size = max(5, min(200, int(qs.get("size") or 50)))
         page = max(1, int(qs.get("page") or 1))
@@ -130,7 +179,7 @@ def lib(qs):
     pages = max(1, (total + size - 1) // size)
     page = min(page, pages)
     return {"ok": True, "items": items[(page - 1) * size: page * size], "total": total, "page": page, "pages": pages,
-            "size": size, "counts": counts, "batches": batches, "picked": len(picked())}
+            "size": size, "counts": counts, "batches": batches, "picked": len(picked()), "look": bool(look), "notFound": nf}
 
 
 def pick_info_items():
@@ -168,9 +217,21 @@ def op(b):
     if o == "clear":
         _save([])
         return {"ok": True, "msg": "清空了出片挑的词（%d 个，素材都还在）" % len(cur)}
-    if o == "back":                                    # 送回素材那边补：加进「素材 → 选词」并选上
+    if o in ("sel", "make"):                          # v1.40.0：总表里选上做素材（make：点了缺的那一格，选上再去那一步做）
+        import pool
+        r = pool.add("\n".join(words), "总表里选的", True)
+        _LOCK_T["v"] = None
+        if not r.get("ok"):
+            return r
+        return {"ok": True, "msg": ("选上了 %d 个，在讲稿、题目、画面几步里做" % len(words)) if o == "sel" else ("选上了 %s，去做" % "、".join(words))}
+    if o == "unsel":
+        import pool
+        pool.pick(words, False)
+        _LOCK_T["v"] = None
+        return {"ok": True, "msg": "不选了 %d 个（做好的素材都还在）" % len(words)}
+    if o == "back":                                    # 送回素材那边补：在总表里选上
         import pool
         r = pool.add("\n".join(words), "出片送回来补", True)
         _LOCK_T["v"] = None
-        return {"ok": r.get("ok"), "msg": "送回「素材 → 选词」并选上了 %d 个：到题目、画面那几步补齐，齐了再来挑" % len(words) if r.get("ok") else r.get("msg")}
+        return {"ok": r.get("ok"), "msg": "送回素材那边、在「总表」里选上了 %d 个：到题目、画面那几步补齐，齐了再来挑" % len(words) if r.get("ok") else r.get("msg")}
     return {"ok": False, "msg": "不认识的操作"}
