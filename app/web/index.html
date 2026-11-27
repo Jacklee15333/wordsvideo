@@ -1040,13 +1040,15 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-b_parts">
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 词根词缀卡</h2>
     <p class="muted">每个词根、前缀、后缀一张卡：字从总表来（拆分、各部分解释、记），画和小图标是 AI 做的。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
+  <div class="mtabs stabs btabs" data-b="parts"><a data-v="main" class="on">做「词根词缀卡」</a><a data-v="done">做好的 <b class="tn" id="bdn_parts"></b></a><a data-v="hist">记录</a></div>
+  <div class="bv" data-v="main">
   
   <div class="box">
     <h3 style="margin-top:0">这次要让 AI 做「词根词缀卡」的词 <span class="small faint" id="bq_partsN"></span></h3>
     <div id="bq_parts"><p class="small muted">正在读…</p></div>
     <div class="pgate" id="bg_parts" hidden></div>
     <textarea id="bn_parts" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
-    <div class="pgo"><button class="btn kbig" id="bgo_parts">让 AI 做「词根词缀卡」 ▶</button><span class="small muted">AI 只做「词根词缀卡」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+    <div class="pgo"><button class="btn kbig" id="bgo_parts">让 AI 做「词根词缀卡」 ▶</button><span class="small muted">AI 只做「词根词缀卡」这一块，别的块原样保住；做好自动检查（只看这一块）。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span><a href="#" class="small" onclick="blkPrompt('parts');return false">看看要发给 AI 的提示词</a></div>
   </div>
   <div class="sprog" data-step="b_parts">
     <h3>这一步的进度</h3>
@@ -1056,18 +1058,23 @@ details.vgk>.vgo{margin-top:6px}
   </div>
   <h3 style="margin:22px 0 8px">每个词的「词根词缀卡」：看、改、单个重做</h3>
   <div class="box"><div id="b_partsBox"><p class="small muted">正在读…</p></div></div>
+  </div>
+  <div class="bv" data-v="done" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">词库里「词根词缀卡」做好了的词（不只是这次要做的）：写着哪天做的、用的哪一版视频技能。能看、能改、能只重做这一块、能删掉这一块。</p><div id="bd_partsBox"><p class="small muted">正在读…</p></div></div></div>
+  <div class="bv" data-v="hist" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">每次让 AI 做「词根词缀卡」的记录：哪天、用的哪个 AI、哪些词、每个词做好没有（没做好的写原因）。</p><div id="bh_partsBox"><p class="small muted">正在读…</p></div></div></div>
 </section>
 
 <section id="p-b_combo">
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 拼起来</h2>
     <p class="muted">几个部分拼起来那一格的画（只有一个部分的词没有这一块）。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
+  <div class="mtabs stabs btabs" data-b="combo"><a data-v="main" class="on">做「拼起来」</a><a data-v="done">做好的 <b class="tn" id="bdn_combo"></b></a><a data-v="hist">记录</a></div>
+  <div class="bv" data-v="main">
   
   <div class="box">
     <h3 style="margin-top:0">这次要让 AI 做「拼起来」的词 <span class="small faint" id="bq_comboN"></span></h3>
     <div id="bq_combo"><p class="small muted">正在读…</p></div>
     <div class="pgate" id="bg_combo" hidden></div>
     <textarea id="bn_combo" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
-    <div class="pgo"><button class="btn kbig" id="bgo_combo">让 AI 做「拼起来」 ▶</button><span class="small muted">AI 只做「拼起来」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+    <div class="pgo"><button class="btn kbig" id="bgo_combo">让 AI 做「拼起来」 ▶</button><span class="small muted">AI 只做「拼起来」这一块，别的块原样保住；做好自动检查（只看这一块）。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span><a href="#" class="small" onclick="blkPrompt('combo');return false">看看要发给 AI 的提示词</a></div>
   </div>
   <div class="sprog" data-step="b_combo">
     <h3>这一步的进度</h3>
@@ -1077,18 +1084,23 @@ details.vgk>.vgo{margin-top:6px}
   </div>
   <h3 style="margin:22px 0 8px">每个词的「拼起来」：看、改、单个重做</h3>
   <div class="box"><div id="b_comboBox"><p class="small muted">正在读…</p></div></div>
+  </div>
+  <div class="bv" data-v="done" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">词库里「拼起来」做好了的词（不只是这次要做的）：写着哪天做的、用的哪一版视频技能。能看、能改、能只重做这一块、能删掉这一块。</p><div id="bd_comboBox"><p class="small muted">正在读…</p></div></div></div>
+  <div class="bv" data-v="hist" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">每次让 AI 做「拼起来」的记录：哪天、用的哪个 AI、哪些词、每个词做好没有（没做好的写原因）。</p><div id="bh_comboBox"><p class="small muted">正在读…</p></div></div></div>
 </section>
 
 <section id="p-b_scene">
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 意思场景</h2>
     <p class="muted">每个意思一幅会动的场景。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
+  <div class="mtabs stabs btabs" data-b="scene"><a data-v="main" class="on">做「意思场景」</a><a data-v="done">做好的 <b class="tn" id="bdn_scene"></b></a><a data-v="hist">记录</a></div>
+  <div class="bv" data-v="main">
   
   <div class="box">
     <h3 style="margin-top:0">这次要让 AI 做「意思场景」的词 <span class="small faint" id="bq_sceneN"></span></h3>
     <div id="bq_scene"><p class="small muted">正在读…</p></div>
     <div class="pgate" id="bg_scene" hidden></div>
     <textarea id="bn_scene" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
-    <div class="pgo"><button class="btn kbig" id="bgo_scene">让 AI 做「意思场景」 ▶</button><span class="small muted">AI 只做「意思场景」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+    <div class="pgo"><button class="btn kbig" id="bgo_scene">让 AI 做「意思场景」 ▶</button><span class="small muted">AI 只做「意思场景」这一块，别的块原样保住；做好自动检查（只看这一块）。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span><a href="#" class="small" onclick="blkPrompt('scene');return false">看看要发给 AI 的提示词</a></div>
   </div>
   <div class="sprog" data-step="b_scene">
     <h3>这一步的进度</h3>
@@ -1098,18 +1110,23 @@ details.vgk>.vgo{margin-top:6px}
   </div>
   <h3 style="margin:22px 0 8px">每个词的「意思场景」：看、改、单个重做</h3>
   <div class="box"><div id="b_sceneBox"><p class="small muted">正在读…</p></div></div>
+  </div>
+  <div class="bv" data-v="done" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">词库里「意思场景」做好了的词（不只是这次要做的）：写着哪天做的、用的哪一版视频技能。能看、能改、能只重做这一块、能删掉这一块。</p><div id="bd_sceneBox"><p class="small muted">正在读…</p></div></div></div>
+  <div class="bv" data-v="hist" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">每次让 AI 做「意思场景」的记录：哪天、用的哪个 AI、哪些词、每个词做好没有（没做好的写原因）。</p><div id="bh_sceneBox"><p class="small muted">正在读…</p></div></div></div>
 </section>
 
 <section id="p-b_evolve">
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 意思演变</h2>
     <p class="muted">意思怎么一步步变过来的示意图。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
+  <div class="mtabs stabs btabs" data-b="evolve"><a data-v="main" class="on">做「意思演变」</a><a data-v="done">做好的 <b class="tn" id="bdn_evolve"></b></a><a data-v="hist">记录</a></div>
+  <div class="bv" data-v="main">
   
   <div class="box">
     <h3 style="margin-top:0">这次要让 AI 做「意思演变」的词 <span class="small faint" id="bq_evolveN"></span></h3>
     <div id="bq_evolve"><p class="small muted">正在读…</p></div>
     <div class="pgate" id="bg_evolve" hidden></div>
     <textarea id="bn_evolve" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
-    <div class="pgo"><button class="btn kbig" id="bgo_evolve">让 AI 做「意思演变」 ▶</button><span class="small muted">AI 只做「意思演变」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+    <div class="pgo"><button class="btn kbig" id="bgo_evolve">让 AI 做「意思演变」 ▶</button><span class="small muted">AI 只做「意思演变」这一块，别的块原样保住；做好自动检查（只看这一块）。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span><a href="#" class="small" onclick="blkPrompt('evolve');return false">看看要发给 AI 的提示词</a></div>
   </div>
   <div class="sprog" data-step="b_evolve">
     <h3>这一步的进度</h3>
@@ -1119,18 +1136,23 @@ details.vgk>.vgo{margin-top:6px}
   </div>
   <h3 style="margin:22px 0 8px">每个词的「意思演变」：看、改、单个重做</h3>
   <div class="box"><div id="b_evolveBox"><p class="small muted">正在读…</p></div></div>
+  </div>
+  <div class="bv" data-v="done" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">词库里「意思演变」做好了的词（不只是这次要做的）：写着哪天做的、用的哪一版视频技能。能看、能改、能只重做这一块、能删掉这一块。</p><div id="bd_evolveBox"><p class="small muted">正在读…</p></div></div></div>
+  <div class="bv" data-v="hist" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">每次让 AI 做「意思演变」的记录：哪天、用的哪个 AI、哪些词、每个词做好没有（没做好的写原因）。</p><div id="bh_evolveBox"><p class="small muted">正在读…</p></div></div></div>
 </section>
 
 <section id="p-b_example">
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 例句动画</h2>
     <p class="muted">每个意思的例句、中文，和例句的动画。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块，别的不动。</p></div></div>
+  <div class="mtabs stabs btabs" data-b="example"><a data-v="main" class="on">做「例句动画」</a><a data-v="done">做好的 <b class="tn" id="bdn_example"></b></a><a data-v="hist">记录</a></div>
+  <div class="bv" data-v="main">
   
   <div class="box">
     <h3 style="margin-top:0">这次要让 AI 做「例句动画」的词 <span class="small faint" id="bq_exampleN"></span></h3>
     <div id="bq_example"><p class="small muted">正在读…</p></div>
     <div class="pgate" id="bg_example" hidden></div>
     <textarea id="bn_example" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
-    <div class="pgo"><button class="btn kbig" id="bgo_example">让 AI 做「例句动画」 ▶</button><span class="small muted">AI 只做「例句动画」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+    <div class="pgo"><button class="btn kbig" id="bgo_example">让 AI 做「例句动画」 ▶</button><span class="small muted">AI 只做「例句动画」这一块，别的块原样保住；做好自动检查（只看这一块）。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span><a href="#" class="small" onclick="blkPrompt('example');return false">看看要发给 AI 的提示词</a></div>
   </div>
   <div class="sprog" data-step="b_example">
     <h3>这一步的进度</h3>
@@ -1140,18 +1162,23 @@ details.vgk>.vgo{margin-top:6px}
   </div>
   <h3 style="margin:22px 0 8px">每个词的「例句动画」：看、改、单个重做</h3>
   <div class="box"><div id="b_exampleBox"><p class="small muted">正在读…</p></div></div>
+  </div>
+  <div class="bv" data-v="done" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">词库里「例句动画」做好了的词（不只是这次要做的）：写着哪天做的、用的哪一版视频技能。能看、能改、能只重做这一块、能删掉这一块。</p><div id="bd_exampleBox"><p class="small muted">正在读…</p></div></div></div>
+  <div class="bv" data-v="hist" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">每次让 AI 做「例句动画」的记录：哪天、用的哪个 AI、哪些词、每个词做好没有（没做好的写原因）。</p><div id="bh_exampleBox"><p class="small muted">正在读…</p></div></div></div>
 </section>
 
 <section id="p-b_dist">
   <div class="phead"><div><h2><i class="sn">4</i>视频图片 · 同义词辨析</h2>
     <p class="muted">同义词辨析：几个意思相近的词，每个一幅画、一句区别、一句例句。这里看选上的词这一块做好没、要补什么；勾几个点「重做这一块」，补画面时 AI 只改这一块。</p></div></div>
+  <div class="mtabs stabs btabs" data-b="dist"><a data-v="main" class="on">做「同义词辨析」</a><a data-v="done">做好的 <b class="tn" id="bdn_dist"></b></a><a data-v="hist">记录</a></div>
+  <div class="bv" data-v="main">
   
   <div class="box">
     <h3 style="margin-top:0">这次要让 AI 做「同义词辨析」的词 <span class="small faint" id="bq_distN"></span></h3>
     <div id="bq_dist"><p class="small muted">正在读…</p></div>
     <div class="pgate" id="bg_dist" hidden></div>
     <textarea id="bn_dist" rows="1" style="width:100%;margin-top:8px" placeholder="想怎么改可以写一句（可以不写），比如：例句换成和学校有关的"></textarea>
-    <div class="pgo"><button class="btn kbig" id="bgo_dist">让 AI 做「同义词辨析」 ▶</button><span class="small muted">AI 只做「同义词辨析」这一块，别的块原样保住；做好自动检查。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span></div>
+    <div class="pgo"><button class="btn kbig" id="bgo_dist">让 AI 做「同义词辨析」 ▶</button><span class="small muted">AI 只做「同义词辨析」这一块，别的块原样保住；做好自动检查（只看这一块）。做的过程就在下面。用的是「设置 → 选 AI」里选的 AI。</span><a href="#" class="small" onclick="blkPrompt('dist');return false">看看要发给 AI 的提示词</a></div>
   </div>
   <div class="sprog" data-step="b_dist">
     <h3>这一步的进度</h3>
@@ -1161,6 +1188,9 @@ details.vgk>.vgo{margin-top:6px}
   </div>
   <h3 style="margin:22px 0 8px">每个词的「同义词辨析」：看、改、单个重做</h3>
   <div class="box"><div id="b_distBox"><p class="small muted">正在读…</p></div></div>
+  </div>
+  <div class="bv" data-v="done" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">词库里「同义词辨析」做好了的词（不只是这次要做的）：写着哪天做的、用的哪一版视频技能。能看、能改、能只重做这一块、能删掉这一块。</p><div id="bd_distBox"><p class="small muted">正在读…</p></div></div></div>
+  <div class="bv" data-v="hist" hidden><div class="box"><p class="small muted" style="margin:0 0 8px">每次让 AI 做「同义词辨析」的记录：哪天、用的哪个 AI、哪些词、每个词做好没有（没做好的写原因）。</p><div id="bh_distBox"><p class="small muted">正在读…</p></div></div></div>
 </section>
 
 <section id="p-imp">
@@ -2832,6 +2862,25 @@ function blkGate(id){const g=$('#bg_'+id);if(!g)return;const t=PGATE;
   $('#bgr_'+id).onclick=async()=>{await api('/api/task/op',{id:t.id,op:'resume'});toast('接着做了：过程在下面',5000);PGATE=null;setTimeout(()=>{poll();stepTasks(page);stepScroll()},600)};
   $('#bgc_'+id).onclick=async()=>{if(!confirm(`取消没做完的任务 #${t.id}（${t.title}）？\n已经做好的留着；没做完的词，以后再做。`))return;
     await api('/api/task/op',{id:t.id,op:'cancel'});toast('取消了，现在可以开始新的',5000);PGATE=null;setTimeout(()=>{poll();stepTasks(page);blkLoad(id)},600)}}
+
+/* v1.47.0：每一块的页面像「题目」那样分标签：做「…」· 做好的 · 记录 */
+const BVIEW={};
+function bView(k,v){BVIEW[k]=v;const sec=document.getElementById('p-b_'+k);if(!sec)return;
+  sec.querySelectorAll('.btabs a').forEach(a=>a.classList.toggle('on',a.dataset.v===v));
+  sec.querySelectorAll('.bv').forEach(x=>x.hidden=x.dataset.v!==v);
+  if(v==='done')blkDone(k);if(v==='hist')blkHist(k)}
+document.querySelectorAll('.btabs').forEach(t=>t.querySelectorAll('a').forEach(a=>a.onclick=e=>{e.preventDefault();bView(t.dataset.b,a.dataset.v)}));
+async function blkDone(k){const el=$('#bd_'+k+'Box');let d;try{d=await api('/api/blocks?sec='+k+'&done=1')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
+  $('#bdn_'+k).textContent=d.items.length||'';blkRender(k,d,'#bd_'+k+'Box',k+'_done')}
+async function blkHist(k){const el=$('#bh_'+k+'Box'),nm=(BLKS.find(x=>x[0]===k)||[])[1]||k;let d;try{d=await api('/api/genhist?kind=pic')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
+  const it=(d.items||[]).filter(h=>String(h.src||'').includes('「'+nm+'」'));
+  el.innerHTML=it.length?it.map(h=>{const ws=h.words||[],ok=ws.filter(w=>(h.res[w]||{}).ok).length;
+    return `<details class="upw"><summary><b>${esc(new Date(h.t*1000).toLocaleString('zh-CN',{hour12:false}).slice(0,16))}</b>　${esc(h.src||'')}　<span class="small">${ws.length} 个词：<span style="color:var(--pass)">做好了 ${ok}</span>${ws.length-ok?`，<span style="color:var(--red)">没做好 ${ws.length-ok}</span>`:''}</span></summary>
+      <table class="uptab" style="width:100%">${ws.map(w=>{const r=h.res[w]||{};return `<tr><td style="width:140px"><a href="#" class="w wpo" data-w="${esc(w)}">${esc(w)}</a></td><td>${r.ok?'<span style="color:var(--pass)">✓ 做好了</span>':'<span style="color:var(--red)">✗ '+esc(r.detail||'没做好')+'</span>'}</td></tr>`}).join('')}</table></details>`}).join('')
+    :'<p class="small muted" style="margin:0">还没有记录。点「做「'+esc(nm)+'」」那一页的「让 AI 做」，做完一批这里多一条。</p>'}
+async function blkPrompt(k){const ws=[...document.querySelectorAll(`#bq_${k} .bqck:checked`)].map(c=>c.value);if(!ws.length){toast('先勾上要做的词',3000);return}
+  modal('要发给网页 AI 的提示词（只讲这一块）','<p class="small muted">正在生成…</p>');let r;try{r=await api('/api/blockprompt?sec='+k+'&words='+encodeURIComponent(ws.join('|')))}catch(e){$('#mBody').innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
+  const t=r.prompt||'';$('#mBody').innerHTML=`<p class="small muted" style="margin:0 0 8px">${t.length.toLocaleString()} 字。真正发的时候，最后还会接上“写完怎么上传”的那一段。</p><pre class="vlog" style="max-height:62vh;white-space:pre-wrap">${esc(t)}</pre>`}
 async function blkLoad(id){const el=$('#b_'+id+'Box');if(!el)return;let d;try{d=await api('/api/blocks?sec='+id)}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
   if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
   $$(`[data-tc="b_${id}"]`).forEach(e=>e.textContent=(d.counts.fix||0)+(d.counts.none||0)||'');blkRender(id,d);blkTop(id,d);if(page==='b_'+id){stepTasks(page);liveTick()}}
@@ -2866,16 +2915,16 @@ document.addEventListener('click',e=>{const a=e.target.closest('.artA');if(a){e.
         :`<span title="${esc(it.name)}" style="position:absolute;left:${x*100}%;top:${y*100}%;transform:translate(-50%,-100%);font-size:28px">${esc(it.emoji||'🧍')}</span>`}).join('')}
       ${p.text?`<div style="position:absolute;left:0;right:0;top:6%;text-align:center;font-weight:700;font-size:22px">${esc(p.text)}</div>`:''}</div>
       <p class="small faint">按画面设置里的位置大致摆一下（视频里还会动），人物这里用 🧍 代替。</p>`)}});
-function blkRender(id,d){const el=$('#b_'+id+'Box'),sel=BSEL[id]=BSEL[id]||new Set(),f=BF[id]||'',c=d.counts,sz=BSZ[id]||10;
-  const all=d.items.filter(x=>!f||x.status===f),pages=Math.max(1,Math.ceil(all.length/sz));BPG[id]=Math.min(Math.max(1,BPG[id]||1),pages);
-  const it=all.slice((BPG[id]-1)*sz,BPG[id]*sz),n=sel.size;
-  if(!d.items.length){el.innerHTML='<p class="small muted" style="margin:0">还没有这次要做的词：到「总表」点缺的那一格「做 ▸」。</p>';return}
+function blkRender(id,d,box,key){const K=key||id,el=box?$(box):$('#b_'+id+'Box');if(!el)return;const sel=BSEL[K]=BSEL[K]||new Set(),f=BF[K]||'',c=d.counts,sz=BSZ[K]||10;
+  const all=d.items.filter(x=>!f||x.status===f),pages=Math.max(1,Math.ceil(all.length/sz));BPG[K]=Math.min(Math.max(1,BPG[K]||1),pages);
+  const it=all.slice((BPG[K]-1)*sz,BPG[K]*sz),n=sel.size;
+  if(!d.items.length){el.innerHTML=key?'<p class="small muted" style="margin:0">词库里还没有这一块做好了的词。</p>':'<p class="small muted" style="margin:0">还没有这次要做的词：到「总表」点缺的那一格「做 ▸」。</p>';return}
   const chip=(k,t)=>`<a href="#" class="bfc" data-f="${k}" style="${f===k?'font-weight:700;text-decoration:underline':''}">${t}</a>`;
   const picOnly=['scene','combo','parts'].includes(id);
   el.innerHTML=`<div class="line" style="gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:8px">${chip('','全部 '+d.items.length)}${chip('fix','要补 '+(c.fix||0))}${chip('none','还没有 '+(c.none||0))}${chip('ok','做好了 '+(c.ok||0))}${c.nopic?chip('nopic','还没做画面 '+c.nopic):''}${c.na?chip('na','这个词不用 '+c.na):''}
-    <span style="flex:1"></span><button class="btn sm bRedo" ${n?'':'disabled'}>只重做这一块${n?'（'+n+' 个）':''}</button><button class="btn ghost sm bClr" ${n?'':'disabled'}>删掉这一块${n?'（'+n+' 个）':''}</button><button class="btn ghost sm" onclick="go('pic')">去补画面 ▶</button>
-    <select class="bsz">${[10,20,50].map(k=>`<option value="${k}" ${sz===k?'selected':''}>每页 ${k} 个</option>`).join('')}</select><span class="small faint">第 ${BPG[id]} / ${pages} 页</span>
-    <button class="btn ghost sm bPrev" ${BPG[id]>1?'':'disabled'}>上一页</button><button class="btn ghost sm bNext" ${BPG[id]<pages?'':'disabled'}>下一页</button></div>
+    <span style="flex:1"></span><button class="btn sm bRedo" ${n?'':'disabled'}>只重做这一块${n?'（'+n+' 个）':''}</button><button class="btn ghost sm bClr" ${n?'':'disabled'}>删掉这一块${n?'（'+n+' 个）':''}</button>
+    <select class="bsz">${[10,20,50].map(k=>`<option value="${k}" ${sz===k?'selected':''}>每页 ${k} 个</option>`).join('')}</select><span class="small faint">第 ${BPG[K]} / ${pages} 页</span>
+    <button class="btn ghost sm bPrev" ${BPG[K]>1?'':'disabled'}>上一页</button><button class="btn ghost sm bNext" ${BPG[K]<pages?'':'disabled'}>下一页</button></div>
   <table style="width:100%;table-layout:fixed"><colgroup><col style="width:28px"><col style="width:140px"><col><col style="width:92px"><col style="width:112px"><col style="width:150px"><col style="width:140px"></colgroup>
   <tr><th><input type="checkbox" class="ball"></th><th>单词</th><th>${esc(d.name)}：视频里讲的、画的</th><th>做好的时间</th><th>用的版本</th><th>备注</th><th>操作</th></tr>
   ${it.map(x=>{const [t,col]=BST[x.status]||['',''],can=x.status!=='nopic'&&x.status!=='na';return `<tr style="vertical-align:top"><td>${can?`<input type="checkbox" class="bck" value="${esc(x.word)}" ${sel.has(x.word)?'checked':''}>`:''}</td>
@@ -2886,11 +2935,11 @@ function blkRender(id,d){const el=$('#b_'+id+'Box'),sel=BSEL[id]=BSEL[id]||new S
     <td class="small" style="word-break:break-word;color:${x.issues.length?'var(--red)':'inherit'}">${x.issues.length?'要补：'+x.issues.map(esc).join('；'):''}</td>
     <td style="white-space:nowrap;line-height:1.9">${can?`<a href="#" class="bOne" data-w="${esc(x.word)}">只重做</a>　<a href="#" class="bDel" data-w="${esc(x.word)}" style="color:var(--red)">删掉</a>`:''}</td></tr>`}).join('')}</table>`;
   rzInit(el.querySelector('table'),'blk');
-  el.querySelectorAll('.bfc').forEach(a=>a.onclick=e=>{e.preventDefault();BF[id]=a.dataset.f;BPG[id]=1;blkRender(id,d)});
-  el.querySelector('.bsz').onchange=e=>{BSZ[id]=+e.target.value;BPG[id]=1;blkRender(id,d)};
-  el.querySelector('.bPrev').onclick=()=>{BPG[id]--;blkRender(id,d)};el.querySelector('.bNext').onclick=()=>{BPG[id]++;blkRender(id,d)};
-  el.querySelector('.ball').onchange=e=>{el.querySelectorAll('.bck').forEach(c=>e.target.checked?sel.add(c.value):sel.delete(c.value));blkRender(id,d)};
-  el.querySelectorAll('.bck').forEach(c=>c.onchange=()=>{c.checked?sel.add(c.value):sel.delete(c.value);blkRender(id,d)});
+  el.querySelectorAll('.bfc').forEach(a=>a.onclick=e=>{e.preventDefault();BF[K]=a.dataset.f;BPG[K]=1;blkRender(id,d,box,key)});
+  el.querySelector('.bsz').onchange=e=>{BSZ[K]=+e.target.value;BPG[K]=1;blkRender(id,d,box,key)};
+  el.querySelector('.bPrev').onclick=()=>{BPG[K]--;blkRender(id,d,box,key)};el.querySelector('.bNext').onclick=()=>{BPG[K]++;blkRender(id,d,box,key)};
+  el.querySelector('.ball').onchange=e=>{el.querySelectorAll('.bck').forEach(c=>e.target.checked?sel.add(c.value):sel.delete(c.value));blkRender(id,d,box,key)};
+  el.querySelectorAll('.bck').forEach(c=>c.onchange=()=>{c.checked?sel.add(c.value):sel.delete(c.value);blkRender(id,d,box,key)});
   el.querySelector('.bRedo').onclick=()=>blkAsk(id,d.name,[...sel]);
   el.querySelector('.bClr').onclick=()=>blkClr(id,d.name,[...sel]);
   el.querySelectorAll('.bOne').forEach(a=>a.onclick=e=>{e.preventDefault();blkAsk(id,d.name,[a.dataset.w])});

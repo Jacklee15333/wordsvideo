@@ -220,8 +220,8 @@ def api_blocks(b):
     if op != "ai" or not r.get("ok"):
         return r
     name = SEC.BY_ID[sid]["name"]
-    t = api_task_add({"kind": "pics", "params": {"words": ws, "fix": True, "batch": ""},
-                      "title": "重做「%s」：%s%s" % (name, "、".join(ws[:4]), " 等 %d 个" % len(ws) if len(ws) > 4 else "")})
+    t = api_task_add({"kind": "pics", "params": {"words": ws, "fix": True, "batch": "", "block": sid},
+                      "title": "做「%s」：%s%s" % (name, "、".join(ws[:4]), " 等 %d 个" % len(ws) if len(ws) > 4 else "")})
     if t.get("error"):
         return {"ok": False, "msg": "退回去了，可是没开始：%s（等它做完再点，或者到「视频图片 → 整套做」点「补画面」）" % t["error"]}
     relay = C.load_cfg().get("provider") == "relay"
@@ -769,7 +769,7 @@ GET = {
     "/api/clear": lambda qs: CL.listing(qs.get("what", "")),          # v1.27.0
     "/api/done": lambda qs: CL.done_page(qs.get("what", ""), qs.get("find", ""), int(qs.get("page") or 1), int(qs.get("size") or 50), qs.get("picked") == "1"),         # v1.28.0 / v1.31.0：分页
     "/api/profile": lambda qs: SEC.profile(qs.get("word", "")),      # v1.29.0：单词简历
-    "/api/blocks": lambda qs: SEC.blocks(qs.get("sec", "")),          # v1.30.0：按块的步骤
+    "/api/blocks": lambda qs: SEC.blocks(qs.get("sec", ""), bool(qs.get("done"))),          # v1.30.0：按块的步骤
     "/api/imp": lambda qs: SEC.imp_list(),                            # v1.30.0：导入（不用 AI 的几块）
     "/api/drafts": lambda qs: DR.proc() if qs.get("proc") else DR.status(FM.picked() if qs.get("film") else None),
     "/api/film": lambda qs: api_film_uplog(qs) if qs.get("what") == "uplog" else FM.lib(qs) if qs.get("what") == "lib" else ({"ok": True, "items": FM.info([w for w in (qs.get("words") or "").split("|") if w]), "skill": FM._ctx()["sv"][0]}
@@ -781,6 +781,7 @@ GET = {
     "/api/check": lambda qs: CK.snapshot(watch=qs.get("watch") == "1"),
     "/api/results": api_results,
     "/api/find": api_find,
+    "/api/blockprompt": lambda qs: {"ok": True, "prompt": __import__("blockai").build_prompt(qs.get("sec"), [w for w in (qs.get("words") or "").split("|") if w], 3)},   # v1.47.0：看看给 AI 的提示词
     "/api/genhist": lambda qs: {"items": C.gen_hist_list(qs.get("kind") or "pic")[:300], "dirs": RS.dirs()},
     "/api/qres": lambda qs: {"items": RS.q_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
     "/api/qhist": lambda qs: {"items": C.q_hist(), "dirs": RS.dirs()},

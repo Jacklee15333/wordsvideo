@@ -1000,6 +1000,9 @@ def _try(R, tid, w, rounds, force=False, need=""):
 
 def do_pics(R, tid, p):
     """任务：给有题目、还没有画面的词做画面。R 是 core.RUNNER。"""
+    if p.get("block"):                               # v1.47.0：只做一块（词根词缀卡、同义词辨析……）：专门的提示词、只收这一块
+        import blockai
+        return blockai.run(R, tid, p)
     total = int(p.get("count") or 0)
     only = set(p.get("words") or []) or None
     extra = [w for w in (p.get("extra") or []) if isinstance(w, str) and w]

@@ -25,7 +25,7 @@ import video as V
 # id, 大类, 名字, 来源, 画面设置里的键（pics 按字段分给“意思场景”“例句动画”）
 SECTIONS = [
     {"id": "pron", "cat": "一、读音拆分", "name": "读音拆分", "src": "总表·音节表", "keys": ["sylIpa", "ipa", "pron"]},
-    {"id": "parts", "cat": "二、含义拆分", "name": "词根词缀卡", "src": "字：总表；画：AI", "keys": ["partPics", "icons", "text"]},
+    {"id": "parts", "cat": "二、含义拆分", "name": "词根词缀卡", "src": "字：总表；画：AI", "keys": ["partPics", "icons", "originPic", "text"]},
     {"id": "combo", "cat": "二、含义拆分", "name": "拼起来", "src": "AI", "keys": ["comboPic", "route"]},
     {"id": "scene", "cat": "二、含义拆分", "name": "意思场景", "src": "AI", "keys": ["pics"], "fields": ["bg", "img", "text", "pos", "diff", "items"]},
     {"id": "evolve", "cat": "二、含义拆分", "name": "意思演变", "src": "AI", "keys": ["flow"]},
@@ -40,7 +40,7 @@ AI_EDIT = {"pron", "parts", "combo", "scene", "evolve", "example", "dist", "kaod
 
 # “还要补”的一条归到哪一块（先看前面的）
 TODO_MAP = [("dist", r"同义词辨析|辨析"), ("pron", r"读音|音标|sylIpa"), ("evolve", r"意思怎么|演变|flow"),
-            ("example", r"例句"), ("combo", r"拼起来|comboPic|合起来"), ("parts", r"词缀|词根|partPics|图标|icons|卡片"),
+            ("example", r"例句"), ("combo", r"拼起来|comboPic|合起来"), ("parts", r"词缀|词根|partPics|图标|icons|卡片|originPic|来历"),
             ("scene", r"意思的画|场景|背景|pics|画得太简单"), ("lianxi", r"练习题|lianxi"), ("kaodian", r"考点"), ("board", r"小黑板|扩展"), ("lianxi", r"练习|题")]
 
 
@@ -316,8 +316,19 @@ def _rec_of(word, rows):
         return None
 
 
-def blocks(sid):
-    """一个块的步骤页：选上的词，这一块做好没、要补什么"""
+def lib_words():
+    """v1.47.0：词库里有 AI 做的画面设置的词（「做好的」列这些）"""
+    fs = {p.stem for p in (C.REPO / V.EXTRA / "words").glob("*.json")}
+    _, rows = C.read_index()
+    out = []
+    for r in rows:
+        if V.folder_of(r[2]) in fs and r[2] not in out:
+            out.append(r[2])
+    return out
+
+
+def blocks(sid, done=False):
+    """一个块的步骤页：选上的词，这一块做好没、要补什么；done=True：词库里这一块做好了的词（v1.47.0「做好的」）"""
     s = BY_ID.get(sid)
     if not s:
         return {"ok": False, "msg": "不认识这一块"}
@@ -327,7 +338,7 @@ def blocks(sid):
         pass
     _, rows = C.read_index()
     items, cnt = [], {"ok": 0, "fix": 0, "none": 0, "nopic": 0}
-    pk = _picked()
+    pk = lib_words() if done else _picked()
     try:
         pl = plans(pk)
     except Exception:
@@ -353,6 +364,9 @@ def blocks(sid):
             x["ts"], x["ver"] = b.get("时间") or x["ts"], b.get("版本") or x["ver"]
     order = {"fix": 0, "none": 1, "nopic": 2, "ok": 3, "na": 4}
     items.sort(key=lambda x: order[x["status"]])
+    if done:
+        items = sorted([x for x in items if x["status"] == "ok"], key=lambda x: x.get("ts") or "", reverse=True)
+        cnt = {"ok": len(items)}
     return {"ok": True, "sec": sid, "name": s["name"], "cat": s["cat"], "items": items, "counts": cnt}
 
 
