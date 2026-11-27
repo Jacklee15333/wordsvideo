@@ -825,7 +825,12 @@ if (film.board) console.log('  总结：' + (film.board.pages === 2
   (film.parts || []).forEach(pt => { if (!pt.bx) return; (pt.fgSay || []).forEach(i => (((pt.fgRows || [])[i] || {}).uses || []).slice(0, 2).forEach(u => { if (u.demo) shown.push((u.tag ? '加在' + u.tag + '：' : '') + u.demo.terms.map(t => t.t + '（' + t.g + '）').join(' + ') + ' =“' + u.demo.lit + '” ' + u.demo.w); })); });
   if (shown.length) console.log('  辨析的演示：' + shown.join(' ｜ '));
 }
-console.log('  还要补：' + (todo.join('；') || '都齐了'));
+// 6.57（第一百零一版）：每一条“还要补”前面标上它属于视频的哪一块（单词工作台按块分到「含义拆分」的小类、「同义词辨析」……只退回那一块）
+const BLOCK_OF = [['同义词辨析', /同义词辨析|辨析/], ['读音拆分', /读音|音标|sylIpa/], ['意思演变', /意思怎么|演变|flow/], ['例句动画', /例句/],
+  ['拼起来', /拼起来|comboPic|合起来/], ['词根词缀卡', /词缀|词根|partPics|图标|icons|卡片/], ['意思场景', /意思的画|场景|背景|pics|画得太简单/],
+  ['考点', /考点/], ['总结小黑板', /小黑板|扩展/], ['练习题', /练习|题目/]];
+const tagged = todo.map(t => /^【[^】]+】/.test(t) ? t : (b => b ? '【' + b + '】' + t : t)((BLOCK_OF.find(([, re]) => re.test(t)) || [])[0]));
+console.log('  还要补：' + (tagged.join('；') || '都齐了'));
 console.log('  例句：' + (film.pics.filter(x => x.ex).map(x => x.ex + (x.exzh ? ' ' + x.exzh : '') + (x.exPic ? '［有动画］' : '［用上面那幅画］')).join(' ｜ ') || '（没有，要在 pics 里写 ex、exzh）'));
 console.log('  扩展词（小黑板）：' + (film.extend.map(x => x.w + ' ' + x.m).join(' · ') || '（没有）') +
   ((d.extend || []).filter(x => !x.pick).length ? '；候选还有：' + d.extend.filter(x => !x.pick).slice(0, 8).map(x => x.w).join('、') : ''));

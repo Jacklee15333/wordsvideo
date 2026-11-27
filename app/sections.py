@@ -43,13 +43,6 @@ TODO_MAP = [("dist", r"同义词辨析|辨析"), ("pron", r"读音|音标|sylIpa
             ("scene", r"意思的画|场景|背景|pics|画得太简单"), ("kaodian", r"考点"), ("board", r"小黑板|扩展"), ("lianxi", r"练习|题")]
 
 
-def _sec_of(line):
-    for sid, pat in TODO_MAP:
-        if re.search(pat, line):
-            return sid
-    return ""
-
-
 def _prefs(word):
     p = C.REPO / V.EXTRA / "words" / (V.folder_of(word) + ".json")
     try:
@@ -255,3 +248,103 @@ def redo(word, sid, note=""):
     if not done:
         return {"ok": False, "msg": "没退回去：这个词还没有画面设置（先到「画面」做）"}
     return {"ok": True, "msg": "退回「画面」了：%s 只重做「%s」（补画面时交给 AI，别的块不动）" % (word, s["name"])}
+
+
+# ═══════════════ v1.30.0：按块的步骤（「含义拆分」五个小类、「同义词辨析」）和「导入」 ═══════════════
+BY_NAME = {s["name"]: s["id"] for s in SECTIONS}
+
+
+def _sec_of(line):                                   # 视频技能 6.57 起“还要补”每条带【块名】，先认它
+    m = re.match(r"\s*【([^】]+)】", line or "")
+    if m and m.group(1) in BY_NAME:
+        return BY_NAME[m.group(1)]
+    for sid, pat in TODO_MAP:
+        if re.search(pat, line or ""):
+            return sid
+    return ""
+
+
+def _picked():
+    import pool
+    pool._db()
+    return [r["word"] for r in C.q("SELECT word FROM pool WHERE picked=1 ORDER BY ord")]
+
+
+def _todo_of(rec):
+    chk = str((rec or {}).get("检查") or "")
+    if "还要补：" not in chk or "都齐了" in chk:
+        return []
+    return [x.strip() for x in re.split(r"[；;]", chk.split("还要补：", 1)[1]) if x.strip()]
+
+
+def _rec_of(word, rows):
+    rel = next((r[6] for r in rows if r[2] == word and len(r) > 6 and r[6]), "")
+    if not rel:
+        return None
+    try:
+        return json.loads((C.REPO / C.D / rel).read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def blocks(sid):
+    """一个块的步骤页：选上的词，这一块做好没、要补什么"""
+    s = BY_ID.get(sid)
+    if not s:
+        return {"ok": False, "msg": "不认识这一块"}
+    try:
+        C.load_table()
+    except Exception:
+        pass
+    _, rows = C.read_index()
+    items, cnt = [], {"ok": 0, "fix": 0, "none": 0, "nopic": 0}
+    for w in _picked():
+        _, P = _prefs(w)
+        rec = _rec_of(w, rows)
+        trow = ((C.TABLE.get("words") or {}).get(w) or [{}])[0]
+        issues = [t for t in _todo_of(rec) if _sec_of(t) == sid]
+        part = _slice(P, s) if P else {}
+        st = "nopic" if P is None else ("fix" if issues else ("ok" if _has(part) else "none"))
+        if st == "none" and sid in ("combo", "parts") and "+" not in (trow.get("拆分") or ""):
+            st = "na"                                 # 只有一个部分的词（make）：没有“拼起来”、词根词缀卡也不用画
+        cnt[st] = cnt.get(st, 0) + 1
+        items.append({"word": w, "meaning": trow.get("初中含义") or "", "status": st, "issues": issues,
+                      "lines": _brief(s, part, trow, rec)[:4] if P is not None else [], "ts": str((rec or {}).get("画面生成") or "") if P is not None else "",
+                      "ver": str((rec or {}).get("画面技能版本") or "") if P is not None else ""})
+    order = {"fix": 0, "none": 1, "nopic": 2, "ok": 3, "na": 4}
+    items.sort(key=lambda x: order[x["status"]])
+    return {"ok": True, "sec": sid, "name": s["name"], "cat": s["cat"], "items": items, "counts": cnt}
+
+
+def redo_many(sid, words, note=""):
+    s = BY_ID.get(sid)
+    if not s or sid not in AI_EDIT:
+        return {"ok": False, "msg": "这一块不能在这里重做"}
+    words = [w for w in (words or []) if isinstance(w, str) and w.strip()]
+    if not words:
+        return {"ok": False, "msg": "一个都没选"}
+    import pics
+    item = "用户要重做「%s」这一块：%s只改这一块，别的照旧" % (s["name"], (note.strip().rstrip("。") + "。") if (note or "").strip() else "按最新的视频技能重新做；")
+    done = pics.send_back({w: [item] for w in words}, src="「%s」" % s["name"]) or []
+    if not done:
+        return {"ok": False, "msg": "没退回去：选的词还没有画面设置"}
+    return {"ok": True, "n": len(done), "msg": "%d 个词的「%s」退回去重做了：到「含义拆分 → 一次做全」点「补画面」，AI 只改这一块" % (len(done), s["name"])}
+
+
+def imp_list():
+    """「导入」：不用 AI 的几块——意思、拆分、考点、辨析从总表来；读音拆分从音节表来（出片时起草检查对齐）"""
+    try:
+        C.load_table()
+    except Exception as e:
+        return {"ok": False, "msg": "总表没读到（%s）" % str(e)[:120]}
+    items = []
+    for w in _picked():
+        rs = (C.TABLE.get("words") or {}).get(w) or []
+        r = rs[0] if rs else {}
+        _, P = _prefs(w)
+        flags = [x for x, ok in (("总表里没有这个词", bool(rs)), ("缺拆分", bool(r.get("拆分"))), ("缺考点", bool(r.get("考点")))) if not ok]
+        items.append({"word": w, "meaning": r.get("初中含义") or r.get("含义") or "", "split": r.get("拆分", ""), "kaodian": r.get("考点", ""),
+                      "bianxi": r.get("辨析", ""), "combo": r.get("组合 → 现在的含义", ""), "sylIpa": " + ".join(map(str, (P or {}).get("sylIpa") or [])),
+                      "flags": flags, "rows": len(rs)})
+    items.sort(key=lambda x: (not x["flags"], x["word"].lower()))
+    return {"ok": True, "items": items, "version": C.STATE.get("version") or ""}

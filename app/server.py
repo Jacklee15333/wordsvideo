@@ -711,7 +711,9 @@ GET = {
     "/api/relay/auto": lambda qs: C.relay_auto(qs),
     "/api/clear": lambda qs: CL.listing(qs.get("what", "")),          # v1.27.0
     "/api/done": lambda qs: CL.done_list(qs.get("what", "")),         # v1.28.0：「做好的」标签
-    "/api/profile": lambda qs: SEC.profile(qs.get("word", "")),      # v1.29.0：单词简历                # v1.22.0：浏览器小助手来问
+    "/api/profile": lambda qs: SEC.profile(qs.get("word", "")),      # v1.29.0：单词简历
+    "/api/blocks": lambda qs: SEC.blocks(qs.get("sec", "")),          # v1.30.0：按块的步骤
+    "/api/imp": lambda qs: SEC.imp_list(),                            # v1.30.0：导入（不用 AI 的几块）                # v1.22.0：浏览器小助手来问
     "/api/fixlater": lambda qs: __import__("pics").later_get(),
     "/api/fixwords": lambda qs: __import__("pics").fix_list(),
     "/api/self/change": lambda qs: C.q("SELECT * FROM changes WHERE id=?", (int(qs.get("id", 0)),), one=True) or {},
@@ -739,6 +741,7 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/prep": api_prep,
         "/api/clear": lambda b: CL.clear(b.get("what"), b.get("words") or []),      # v1.27.0
         "/api/done": lambda b: CL.done_op(b.get("op"), b.get("what"), b.get("words") or []),      # v1.28.0
+        "/api/blocks": lambda b: SEC.redo_many(b.get("sec", ""), b.get("words") or [], b.get("note", "")),      # v1.30.0
         "/api/profile": lambda b: SEC.save(b.get("word", ""), b.get("sec", ""), b.get("data")) if b.get("op") == "save" else SEC.redo(b.get("word", ""), b.get("sec", ""), b.get("note", "")),      # v1.29.0
         "/api/check": lambda b: CK.fix_all() if b.get("op") == "fix" else CK.start(b.get("what") or "all"),      # v1.21.1：一键修复
         "/api/qres": lambda b: RS.export_words(b.get("words") or []),
