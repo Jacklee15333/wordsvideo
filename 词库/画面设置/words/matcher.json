@@ -274,40 +274,38 @@
       "z": 6
      },
      {
-      "label": "Tom",
-      "x": 0.55,
+      "label": "matcher",
+      "x": 0.7,
       "y": 0.3,
-      "size": 0.085,
-      "color": "#2F6FB3",
-      "border": "#2F6FB3",
+      "size": 0.1,
+      "color": "#7A3E00",
+      "border": "#E0A800",
+      "bg": "#FFF6D8",
       "when": "matcher"
      },
      {
-      "label": "李华",
-      "x": 0.85,
-      "y": 0.3,
-      "size": 0.085,
-      "color": "#2F6FB3",
-      "border": "#2F6FB3",
-      "when": "matcher",
-      "delay": 0.2
+      "svg": "art/sock-red.svg",
+      "x": 0.6,
+      "y": 0.6,
+      "s": 0.3,
+      "when": "good matcher",
+      "go": [
+       0.66,
+       0.6
+      ],
+      "dur": 0.8
      },
      {
-      "ray": [
-       [
-        0.61,
-        0.3
-       ],
-       [
-        0.78,
-        0.3
-       ]
+      "svg": "art/sock-red.svg",
+      "x": 0.82,
+      "y": 0.6,
+      "s": 0.3,
+      "when": "good matcher",
+      "go": [
+       0.76,
+       0.6
       ],
-      "color": "#E03131",
-      "lw": 0.012,
-      "dur": 0.6,
-      "when": "matcher",
-      "delay": 0.4
+      "dur": 0.8
      },
      {
       "emit": true,
@@ -327,7 +325,7 @@
      {
       "label": "配对",
       "x": 0.7,
-      "y": 0.55,
+      "y": 0.85,
       "size": 0.1,
       "color": "#2B8A3E",
       "border": "#2B8A3E",
@@ -608,7 +606,7 @@
    "pic": 0,
    "say": [
     "做配对的人，就是匹配者。",
-    "比如老师给同学两两配好学习搭档。"
+    "比如老师给同学两两配好学习搭档：Tom 和李华一组。"
    ],
    "fig": {
     "bg": "blank",
@@ -645,7 +643,7 @@
       "size": 0.08,
       "color": "#2F6FB3",
       "border": "#2F6FB3",
-      "when": "两两配好"
+      "when": "Tom"
      },
      {
       "label": "李华",
@@ -654,8 +652,7 @@
       "size": 0.08,
       "color": "#2F6FB3",
       "border": "#2F6FB3",
-      "when": "两两配好",
-      "delay": 0.2
+      "when": "李华"
      },
      {
       "ray": [
