@@ -808,7 +808,7 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-pick">
   <div class="phead"><div><h2><i class="sn">1</i>总表 · 这次要做的词：讲稿、题目、画面几步做哪些词</h2>
     <p class="muted">这一步只管选词：把要做的词导进「备选单词」，勾上就是“选上”了（软件记着，关了再开也在）。选好了，到「出题」「画面」两步去做。每个词做到哪一步每次现查，不会忘了哪些还没处理。</p></div></div>
-  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="on">这次要做的词</a><a data-go="imp" class="">核对总表内容</a></div>
+  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="on">这次要做的词</a><a data-go="imp" class="">核对总表内容</a><a data-go="tblimp" class="">导入</a></div>
   <div class="box">
     <h3 style="margin-top:0"><span class="hv" title="导进来的词，还没做好的列在这里：没题目的去「出题」，有题目、没画面（或画面还要补）的去「画面」。题目、画面都好了，这个词就不在这里了；一次导入的词都做好了，这个任务放进「历史」，有汇报。">备选单词</span> <span class="small faint" id="kPoolN"></span></h3>
     <div class="pbar">
@@ -833,7 +833,7 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-pickhist">
   <div class="phead"><div><h2><i class="sn">1</i>总表 · 这次要做的词：讲稿、题目、画面几步做哪些词</h2>
     <p class="muted">这一步只管选词：把要做的词导进「备选单词」，勾上就是“选上”了（软件记着，关了再开也在）。选好了，到「出题」「画面」两步去做。每个词做到哪一步每次现查，不会忘了哪些还没处理。</p></div></div>
-  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="">这次要做的词</a><a data-go="imp" class="">核对总表内容</a></div>
+  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="">这次要做的词</a><a data-go="imp" class="">核对总表内容</a><a data-go="tblimp" class="">导入</a></div>
   <div class="box">
     <h3 style="margin-top:0">做完的选词任务 <span class="small faint" id="phN"></span></h3>
     <p class="small muted" style="margin:-4px 0 6px">一次导入的词是一个任务。这些词的题目、画面都做好了，这个任务就放到这里：几点导入、几点做完、几个词、有视频几个。点一行看每个词。</p>
@@ -1196,15 +1196,22 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-imp">
   <div class="phead"><div><h2><i class="sn">1</i>总表 · 核对内容：不用 AI 的几块</h2>
     <p class="muted">片头的意思、词根词缀卡上的字（拆分）、考点、辨析从总表来，读音拆分从音节表来，都不用 AI 做。这里看选上的每个词总表里有没有、缺什么（缺的到总表补）。勾几个点「让 AI 核对」，AI 核对这些对不对，结果写在最后一栏。</p></div></div>
-  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="">这次要做的词</a><a data-go="imp" class="on">核对总表内容</a></div>
+  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="">这次要做的词</a><a data-go="imp" class="on">核对总表内容</a><a data-go="tblimp" class="">导入</a></div>
   
   <div class="box"><div id="impBox"><p class="small muted">正在读…</p></div></div>
+</section>
+
+<section id="p-tblimp">
+  <div class="phead"><div><h2><i class="sn">1</i>总表 · 导入：总表放进软件，按列拆开</h2>
+    <p class="muted">总表放进软件里，软件自己管：软件各页面读软件里的，不用每次打开 Excel。原来挤在一格里的内容按列拆开：一眼能拆的（考点、演变、同义词组、背景、来历）软件本地拆；要动脑子的（每部分卡片的身份、意思、记法……，辨析里每个词的区别）导出来交给 AI 聊天拆，拆好再导入。视频技能照旧读原来那一份 Excel。</p></div></div>
+  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="">这次要做的词</a><a data-go="imp" class="">核对总表内容</a><a data-go="tblimp" class="on">导入</a></div>
+  <div id="tblBox"><p class="small muted">正在读…</p></div>
 </section>
 
 <section id="p-lib">
   <div class="phead"><div><h2><i class="sn">1</i>总表：每个词的素材做好了没</h2>
     <p class="muted">总表里所有的词一张表：讲稿、题目，画面按块分开（词根词缀卡、拼起来、意思场景、意思演变、例句动画、同义词辨析），还有视频。缺哪一样，点那一格的「做 ▸」就到那一步去做；勾几个词，点「写讲稿 ▸」「出题 ▸」「做画面 ▸」一起做。每一格写着是哪一版视频技能做的：绿色是现在这一版，黄色不是；勾上点「按现在的版本更新 ▸」，能本地对得上的不用 AI，对不上的才交给 AI。题目、画面都好了就“能出片”。点单词看它的单词简历。</p></div></div>
-  <div class="mtabs stabs"><a data-go="lib" class="on">总表</a><a data-go="pick" class="">这次要做的词</a><a data-go="imp" class="">核对总表内容</a></div>
+  <div class="mtabs stabs"><a data-go="lib" class="on">总表</a><a data-go="pick" class="">这次要做的词</a><a data-go="imp" class="">核对总表内容</a><a data-go="tblimp" class="">导入</a></div>
   <div class="box"><div id="libBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
@@ -1265,7 +1272,7 @@ details.vgk>.vgo{margin-top:6px}
 <section id="p-words">
   <div class="phead"><div><h2><i class="sn">1</i>总表 · 从总表里找</h2>
     <p class="muted">在整张总表里搜单词、按准备情况筛，勾几个点「加进备选单词」，它们就进了备选单词、并且选上了。点一个词看它的题目和准备情况。</p></div></div>
-  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="on">这次要做的词</a><a data-go="imp" class="">核对总表内容</a></div>
+  <div class="mtabs stabs"><a data-go="lib" class="">总表</a><a data-go="pick" class="on">这次要做的词</a><a data-go="imp" class="">核对总表内容</a><a data-go="tblimp" class="">导入</a></div>
   <div class="row">
     <div style="width:196px;flex:none"><div class="cats wmode" id="wChips">
       <div class="hd">找哪种词</div>
@@ -1541,7 +1548,7 @@ let WD_HOME=null;
 function wdHome(){const b=$('#wDetail');if(b&&WD_HOME&&b.parentElement!==WD_HOME)WD_HOME.appendChild(b)}
 function wordInModal(w,title){const b=$('#wDetail');if(!WD_HOME)WD_HOME=b.parentElement;modal((title||'改稿：')+w,'');$('#mBody').appendChild(b);openWord(w,true)}
 let page='lib';
-const PARENT={qdone:'q',qfail:'q',qbulk:'q',qset:'q',history:'q',pichist:'pic',picdone:'pic',ai:'settings',check:'settings',picfail:'pic',picbulk:'pic',pick:'lib',pickhist:'lib',words:'lib',imp:'lib',vdone:'video',vhist:'video',venv:'video'};
+const PARENT={tblimp:'lib',qdone:'q',qfail:'q',qbulk:'q',qset:'q',history:'q',pichist:'pic',picdone:'pic',ai:'settings',check:'settings',picfail:'pic',picbulk:'pic',pick:'lib',pickhist:'lib',words:'lib',imp:'lib',vdone:'video',vhist:'video',venv:'video'};
 /* v1.36.0：出题、含义拆分、同义词辨析合成一步「画面设计」——页面、功能都不变，只是挂到同一步下面，上面多一排「出题 · 含义拆分 · 同义词辨析」 */
 const DGRP={};
 Object.keys(DGRP).forEach(k=>PARENT[k]='design');
@@ -1554,7 +1561,7 @@ let DLAST='q';try{DLAST=localStorage.getItem('designLast')||'q';if(!DGRP[DLAST])
 function go(p){if(p==='manual')p='q';if(p==='run')p='q';if(p==='design')p='pic';if(DGRP[p]){DLAST=p;try{localStorage.setItem('designLast',p)}catch(e){}}page=p;const top=PARENT[p]||p;
   $$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===top));if(typeof ngMark==='function')ngMark();
   $$('main section').forEach(s=>s.classList.toggle('on',s.id==='p-'+p));
-  ({check:loadCheck,pick:loadPick,q:loadQ,qdone:()=>doneLoad('q'),picdone:()=>doneLoad('p'),b_parts:()=>blkLoad('parts'),b_combo:()=>blkLoad('combo'),b_scene:()=>blkLoad('scene'),b_evolve:()=>blkLoad('evolve'),b_example:()=>blkLoad('example'),b_dist:()=>blkLoad('dist'),imp:loadImp,impdraft:loadDraft,dfinal:loadFinal,lib:()=>libLoad('lib'),fpick:loadFpick,qfail:loadManual,qbulk:loadQbulk,qset:loadQset,pic:loadPic,picfail:loadPicfail,picbulk:loadPicbulk,pichist:loadPichist,pickhist:loadPickhist,done:loadDone,ai:loadAI,video:loadVideo,vdone:loadVdone,vhist:loadVhist,venv:loadVenv,words:loadWords,history:loadHistory,settings:loadSettings,home:loadHome}[p]||(()=>{}))()}
+  ({check:loadCheck,pick:loadPick,q:loadQ,qdone:()=>doneLoad('q'),picdone:()=>doneLoad('p'),b_parts:()=>blkLoad('parts'),b_combo:()=>blkLoad('combo'),b_scene:()=>blkLoad('scene'),b_evolve:()=>blkLoad('evolve'),b_example:()=>blkLoad('example'),b_dist:()=>blkLoad('dist'),imp:loadImp,impdraft:loadDraft,tblimp:loadTbl,dfinal:loadFinal,lib:()=>libLoad('lib'),fpick:loadFpick,qfail:loadManual,qbulk:loadQbulk,qset:loadQset,pic:loadPic,picfail:loadPicfail,picbulk:loadPicbulk,pichist:loadPichist,pickhist:loadPickhist,done:loadDone,ai:loadAI,video:loadVideo,vdone:loadVdone,vhist:loadVhist,venv:loadVenv,words:loadWords,history:loadHistory,settings:loadSettings,home:loadHome}[p]||(()=>{}))()}
 $$('nav a').forEach(a=>a.onclick=()=>go(a.dataset.p));
 /* v1.43.0：左边每个大类能收起、展开，记住 */
 let NSHUT={};try{NSHUT=JSON.parse(localStorage.getItem('navShut')||'{}')}catch(e){}
@@ -3143,6 +3150,58 @@ async function upLoop(words,cv){clearTimeout(UPT);const box=$('#upBox .dproc');i
   if($('#up2now'))$('#up2now').onclick=()=>two(true);
   if($('#up2later'))$('#up2later').onclick=()=>two(false);
   $('#upClose').onclick=()=>{closeModal();LIBS.lib.sel.clear();libLoad('lib')}}
+
+/* v1.48.0：总表放进软件；导出给 AI 拆、导入拆好的表 */
+function dlB64(name,b64){const bin=atob(b64),u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([u]));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},2000)}
+async function tblDl(q){let r;try{r=await api('/api/tabledb?'+q)}catch(e){toast('✗ '+e.message,8000);return}if(!r.ok){toast('✗ '+(r.msg||''),8000);return}
+  dlB64(r.name,r.b64);toast('✓ 下载了：'+r.name+(r.n!==undefined?`（${r.n} 行）`:''),5000)}
+let TBLPV=null;
+async function loadTbl(){const el=$('#tblBox');let d;try{d=await api('/api/tabledb')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
+  const m=d.meta||{},c=d.cnt||{},pv=TBLPV||d.pending;
+  const st=!d.has?`<p style="margin:0 0 10px">软件里还没有总表。点下面的按钮，把仓库里的「${esc(d.excelVer||'')}」Excel 总表读进软件（几秒钟），能拆的列本地先拆好。</p>`
+    :`<p style="margin:0 0 6px">软件里的总表：<b>${d.words.toLocaleString()}</b> 个词（${d.rows.toLocaleString()} 行），来自「${esc(m.版本||'')}」，${esc(m.导入||'')} 导入${m.拆分导入?`；${esc(m.拆分导入)} 导入过拆好的表`:''}。</p>
+      ${d.stale?`<p style="margin:0 0 6px;color:var(--amber)">⚠ 仓库里的 Excel 总表换成了「${esc(d.excelVer)}」：点「重新从 Excel 导入」更新（AI 拆过、这一行又没改的留着）。没更新以前，软件照旧读 Excel。</p>`:''}`;
+  const row=(n,a,b,who)=>`<tr><td>${n}</td><td>${who}</td><td>${b?`<b>${(a||0).toLocaleString()}</b> / ${b.toLocaleString()}`:`<b>${(a||0).toLocaleString()}</b> 行有`}</td></tr>`;
+  el.innerHTML=`<div class="box"><h3 style="margin-top:0">① 总表放进软件</h3>${st}
+      <button class="btn" id="tblEx">${d.has?'重新从 Excel 导入':'从 Excel 总表导入'}</button> <span class="small muted">读仓库里的「${esc(d.excelVer||'')}」</span>
+      ${d.has?`<table class="small" style="margin-top:12px;width:auto;min-width:520px"><tr><th>拆开的列</th><th>谁拆</th><th>拆好了</th></tr>
+        ${row('每部分卡片（身份、来源、意思、记法、音变……）',d.splitDone,d.split,'<span style="color:#9A6A12">AI</span>')}
+        ${row('辨析：每个词的区别',c.区别,0,'<span style="color:#9A6A12">AI</span>')}${row('词缀辨析',c.词缀辨析,0,'<span style="color:#9A6A12">AI</span>')}
+        ${row('来历（不拆的词）',c.来历,0,'本地')}${row('构词逻辑',c.构词逻辑,0,'本地')}${row('演变步骤',c.演变步骤,0,'本地')}${row('演变史',c.演变史,0,'本地')}
+        ${row('同义词组',c.同义词组,0,'本地')}${row('考点：变形',c.变形,0,'本地')}${row('考点：易混',c.易混,0,'本地')}
+        ${row('例句',c.例句,0,'<span class="faint">以后补</span>')}</table>`:''}</div>
+    ${d.has?`<div class="box" style="margin-top:14px"><h3 style="margin-top:0">② 拿给 AI 聊天拆</h3>
+      <p class="small muted" style="margin:0 0 8px">把这三样发给一个新的 AI 聊天：拆分说明、导入模板（有 make、rematch、popular 三行拆好的样子）、要拆的表。它照说明把黄色的列填好，交回 .xlsx，在下面 ③ 导入。一份一两百行比较稳，太多它写不完。</p>
+      <div class="line" style="gap:8px;flex-wrap:wrap;margin-bottom:10px"><button class="btn ghost sm" onclick="tblDl('what=guide')">下载：给 AI 的拆分说明</button><button class="btn ghost sm" onclick="tblDl('what=template')">下载：导入模板</button></div>
+      <div class="line" style="gap:8px;align-items:center;flex-wrap:wrap">导出要拆的表：从第 <select id="tblFrm">${d.batches.map(b=>`<option>${esc(b)}</option>`).join('')}</select> 批
+        到第 <select id="tblTo">${d.batches.map((b,i)=>`<option ${i===Math.min(4,d.batches.length-1)?'selected':''}>${esc(b)}</option>`).join('')}</select> 批，
+        <label class="small"><input type="checkbox" id="tblNeed" checked> 只要还没拆的</label>，每份最多 <input id="tblLim" value="200" style="width:60px"> 行
+        <button class="btn sm" id="tblExp">导出</button></div>
+      <p class="small faint" style="margin:6px 0 0">还没拆的：${(d.needAI||0).toLocaleString()} 行（拆开的词里还没填「部分1」的）。</p></div>
+    <div class="box" style="margin-top:14px"><h3 style="margin-top:0">③ 导入拆好的表</h3>
+      <div class="line" style="gap:8px;align-items:center;flex-wrap:wrap"><input type="file" id="tblFile" accept=".xlsx" multiple><button class="btn sm" id="tblPv">看看要导入什么</button>
+        <span class="small muted">可以一次选好几个文件。只收 AI 拆的那几列（黄色）；软件拆的、原样的列不会被覆盖。</span></div>
+      <div id="tblPvBox" style="margin-top:10px"></div></div>`:''}`;
+  $('#tblEx').onclick=async()=>{const b=$('#tblEx');b.disabled=true;b.textContent='正在导入…';let r;try{r=await api('/api/tabledb',{op:'excel'})}catch(e){r={ok:false,msg:e.message}}
+    toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?8000:10000);loadTbl()};
+  if(!d.has)return;
+  $('#tblExp').onclick=()=>tblDl(`what=export&frm=${encodeURIComponent($('#tblFrm').value)}&to=${encodeURIComponent($('#tblTo').value)}&need=${$('#tblNeed').checked?1:0}&limit=${encodeURIComponent($('#tblLim').value||200)}`);
+  $('#tblPv').onclick=async()=>{const fs=[...$('#tblFile').files];if(!fs.length){toast('先选拆好的 .xlsx 文件',3000);return}
+    const files=await Promise.all(fs.map(f=>new Promise(res=>{const rd=new FileReader();rd.onload=()=>res({name:f.name,b64:String(rd.result).split(',')[1]});rd.readAsDataURL(f)})));
+    $('#tblPvBox').innerHTML='<p class="small muted"><span class="spin"></span> 正在读、对一遍…</p>';let r;try{r=await api('/api/tabledb',{op:'preview',files})}catch(e){r={ok:false,msg:e.message}}
+    if(!r.ok){$('#tblPvBox').innerHTML=`<div class="errs">${esc(r.msg||'')}</div>`;return}TBLPV=r;tblPvRender(r)};
+  if(pv)tblPvRender(pv)}
+function tblPvRender(r){const b=$('#tblPvBox');if(!b)return;const w=r.warn||[];
+  b.innerHTML=`<div class="lbver">读了 <b>${r.rows}</b> 行（${esc((r.files||[]).join('、'))}），对上 <b>${r.match}</b> 行，<b>${r.changed}</b> 行有新拆的内容。
+      ${(r.unknownCols||[]).length?`<div style="color:var(--amber)">不认识的列（不收）：${(r.unknownCols||[]).map(esc).join('、')}</div>`:''}
+      ${(r.notFound||[]).length?`<div style="color:var(--amber)">软件里没找到的词：${r.notFound.map(esc).join('、')}</div>`:''}</div>
+    ${w.length?`<p class="small" style="margin:8px 0 4px;color:var(--amber)"><b>${w.length} 行要看一下</b>（原表里有些话拆完找不到了，或者有放不进去的）：</p>
+      <table class="small" style="width:100%">${w.slice(0,60).map(x=>`<tr><td style="width:120px"><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a></td><td>${esc(x.why)}</td></tr>`).join('')}</table>`:'<p class="small" style="color:var(--pass);margin:8px 0">✓ 对过了：原表里的话拆完都找得到。</p>'}
+    ${(r.sample||[]).length?`<details class="small" style="margin-top:6px"><summary>要改的行（前 ${r.sample.length} 个）</summary>${r.sample.map(x=>`<div><b>${esc(x.word)}</b>：${x.cols.map(esc).join('、')}</div>`).join('')}</details>`:''}
+    <div class="line" style="gap:8px;margin-top:10px"><button class="btn sm" id="tblOk" ${r.changed?'':'disabled'}>确认导入 ${r.changed} 行</button><button class="btn ghost sm" id="tblNo">不导入</button></div>`;
+  $('#tblOk').onclick=async()=>{let x;try{x=await api('/api/tabledb',{op:'apply'})}catch(e){x={ok:false,msg:e.message}}toast((x.ok?'✓ ':'✗ ')+(x.msg||''),x.ok?6000:9000);TBLPV=null;loadTbl()};
+  $('#tblNo').onclick=async()=>{await api('/api/tabledb',{op:'cancel'});TBLPV=null;loadTbl()}}
 async function filmOp(op,words,after,extra){let r;try{r=await api('/api/film',Object.assign({op,words},extra||{}))}catch(e){r={ok:false,msg:e.message}}toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?6000:9000);if(after)after(r)}
 const FPSEL=new Set();
 async function loadFpick(){const el=$('#fpickBox');if(!el)return;let d;try{d=await api('/api/film?what=pick')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}

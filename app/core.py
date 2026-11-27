@@ -532,6 +532,15 @@ def load_table():
     p = REPO / STATE["xlsx"] if STATE.get("xlsx") else None
     if not p or not p.exists():
         raise Fatal("总表文件不在：%s" % p)
+    try:                                              # v1.48.0：软件里有这一版总表就读软件里的，不再打开 Excel
+        import tabledb
+        v = tabledb.table_for_core()
+        if v:
+            if TABLE["key"] != v[0]:
+                TABLE.update(key=v[0], words=v[1], order=v[2])
+            return TABLE
+    except Exception:
+        pass
     st = p.stat()
     key = (str(p), st.st_size, int(st.st_mtime), "列v2")      # v1.32.0：多读了几列，旧缓存不用
     if TABLE["key"] == key:

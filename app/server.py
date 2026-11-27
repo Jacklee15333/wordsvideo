@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """单词工作台 · 本地服务。双击「启动.bat」运行；界面在 http://127.0.0.1:8766 。"""
-import json, os, re, sys, threading, time, traceback, urllib.parse, webbrowser
+import base64, json, os, re, sys, threading, time, traceback, urllib.parse, webbrowser
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
 
@@ -16,6 +16,7 @@ import selfup as SU
 import relay_browser as RB
 import clear as CL                             # v1.27.0：清除做好的题目、画面、视频
 import sections as SEC                         # v1.29.0：单词简历
+import tabledb as TDB                            # v1.48.0：总表放进软件
 import film as FM                               # v1.39.0：素材库、出片挑词
 import drafts as DR                            # v1.35.0：起草配音稿                     # v1.23.0：软件自己控制网页 AI 的浏览器窗口
 import check as CK
@@ -226,6 +227,33 @@ def api_blocks(b):
         return {"ok": False, "msg": "退回去了，可是没开始：%s（等它做完再点，或者到「视频图片 → 整套做」点「补画面」）" % t["error"]}
     relay = C.load_cfg().get("provider") == "relay"
     return {"ok": True, "msg": "开始重做「%s」：%d 个词，AI 只改这一块。%s" % (name, len(ws), "到「视频图片 → 整套做」把提示词交给网页 AI" if relay else "过程在「视频图片 → 整套做」")}
+
+
+def api_tabledb_get(qs):
+    """v1.48.0：总表放进软件——状态；下载模板、说明、要拆的表（b64）"""
+    w = qs.get("what")
+    if w == "template":
+        return {"ok": True, "name": "总表导入模板.xlsx", "b64": base64.b64encode(TDB.template()).decode()}
+    if w == "guide":
+        t = (Path(__file__).parent / "tabledb_guide.md").read_text(encoding="utf-8")
+        return {"ok": True, "name": "给AI的总表拆分说明.md", "b64": base64.b64encode(t.encode("utf-8")).decode()}
+    if w == "export":
+        name, data, n = TDB.export_for_ai(qs.get("frm") or "", qs.get("to") or "", qs.get("need", "1") == "1", int(qs.get("limit") or 400))
+        return {"ok": True, "name": name, "n": n, "b64": base64.b64encode(data).decode()}
+    return TDB.status()
+
+
+def api_tabledb_post(b):
+    op = b.get("op")
+    if op == "excel":
+        return TDB.import_excel()
+    if op == "preview":
+        return TDB.preview(b.get("files") or [])
+    if op == "apply":
+        return TDB.apply()
+    if op == "cancel":
+        return TDB.cancel()
+    return {"ok": False, "msg": "不认识的操作"}
 
 
 def api_film_uplog(qs):
@@ -781,6 +809,7 @@ GET = {
     "/api/check": lambda qs: CK.snapshot(watch=qs.get("watch") == "1"),
     "/api/results": api_results,
     "/api/find": api_find,
+    "/api/tabledb": lambda qs: api_tabledb_get(qs),                   # v1.48.0
     "/api/blockprompt": lambda qs: {"ok": True, "prompt": __import__("blockai").build_prompt(qs.get("sec"), [w for w in (qs.get("words") or "").split("|") if w], 3)},   # v1.47.0：看看给 AI 的提示词
     "/api/genhist": lambda qs: {"items": C.gen_hist_list(qs.get("kind") or "pic")[:300], "dirs": RS.dirs()},
     "/api/qres": lambda qs: {"items": RS.q_items([w for w in (qs.get("w") or "").split("|") if w]), "dirs": RS.dirs()},
@@ -804,7 +833,8 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/done": lambda b: CL.done_op(b.get("op"), b.get("what"), b.get("words") or [], b.get("find", ""), bool(b.get("picked"))),      # v1.28.0
         "/api/blocks": api_blocks,                                         # v1.30.0 / v1.31.0 / v1.33.0
         "/api/imp": api_imp,                                               # v1.33.0：AI 核对总表
-        "/api/film": api_film,                                   # v1.39.0
+        "/api/film": api_film,
+        "/api/tabledb": api_tabledb_post,                                  # v1.48.0                                   # v1.39.0
         "/api/drafts": lambda b: DR.stop() if b.get("op") == "stop" else DR.start(b.get("words") or [], b.get("from") or ""),      # v1.35.0
         "/api/profile": lambda b: SEC.save(b.get("word", ""), b.get("sec", ""), b.get("data")) if b.get("op") == "save" else SEC.redo(b.get("word", ""), b.get("sec", ""), b.get("note", "")),      # v1.29.0
         "/api/check": lambda b: CK.fix_all() if b.get("op") == "fix" else CK.start(b.get("what") or "all"),      # v1.21.1：一键修复
