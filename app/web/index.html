@@ -1017,7 +1017,7 @@ details.vgk>.vgo{margin-top:6px}
 
 <section id="p-imp">
   <div class="phead"><div><h2><i class="sn">4</i>导入：不用 AI 的几块</h2>
-    <p class="muted">片头的意思、词根词缀卡上的字（拆分）、考点、辨析从总表来，读音拆分从音节表来，都不用 AI 做。这里看选上的每个词总表里有没有、缺什么（缺的到总表补）。AI 验证（让 AI 核对这些对不对）下一轮加。</p></div></div>
+    <p class="muted">片头的意思、词根词缀卡上的字（拆分）、考点、辨析从总表来，读音拆分从音节表来，都不用 AI 做。这里看选上的每个词总表里有没有、缺什么（缺的到总表补）。勾几个点「让 AI 核对」，AI 核对这些对不对，结果写在最后一栏。</p></div></div>
   
   <div class="box"><div id="impBox"><p class="small muted">正在读…</p></div></div>
 </section>
@@ -2631,7 +2631,7 @@ function blkRender(id,d){const el=$('#b_'+id+'Box'),sel=BSEL[id]=BSEL[id]||new S
   <table style="width:100%;table-layout:fixed"><colgroup><col style="width:28px"><col style="width:140px"><col><col style="width:92px"><col style="width:112px"><col style="width:150px"><col style="width:140px"></colgroup>
   <tr><th><input type="checkbox" class="ball"></th><th>单词</th><th>${esc(d.name)}的内容（总表 + AI 做的）</th><th>做好的时间</th><th>用的版本</th><th>备注</th><th>操作</th></tr>
   ${it.map(x=>{const [t,col]=BST[x.status]||['',''],can=x.status!=='nopic'&&x.status!=='na';return `<tr style="vertical-align:top"><td>${can?`<input type="checkbox" class="bck" value="${esc(x.word)}" ${sel.has(x.word)?'checked':''}>`:''}</td>
-    <td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a><div class="small faint">${esc(x.meaning||'')}</div><div class="small" style="color:${col};font-weight:600">${t}</div></td>
+    <td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a><div class="small faint">${esc(x.meaning||'')}</div><div class="small" style="color:${col};font-weight:600">${t}</div>${x.pending?'<div class="small" style="color:var(--amber)">等着重做这一块</div>':''}</td>
     <td class="small" style="line-height:1.65;word-break:break-word">${tabLines(x.table)}${picLinks(x.word,x.pics)}${(picOnly?[]:x.lines).map(l=>`<div>${esc(l)}</div>`).join('')}${!(x.table||[]).length&&!(x.pics||[]).length&&!(picOnly?[]:x.lines).length?'<span class="faint">—</span>':''}
       ${can?`<div style="margin-top:2px"><a href="#" class="bEdit" data-w="${esc(x.word)}">✎ 改这一块</a></div>`:''}<div class="bEd" data-w="${esc(x.word)}"></div></td>
     <td class="small">${esc((x.ts||'').slice(0,10))}</td><td class="small">${x.ver?esc(x.ver):(x.ts?'<span class="faint">没记</span>':'')}</td>
@@ -2661,22 +2661,34 @@ function blkClr(id,name,words){if(!words.length)return;
   $('#bcNo').onclick=closeModal;
   $('#bcGo').onclick=async()=>{let r;try{r=await api('/api/blocks',{op:'clear',sec:id,words})}catch(e){r={ok:false,msg:e.message}}closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?7000:9000);(BSEL[id]||new Set()).clear();blkLoad(id)}}
 function blkAsk(id,name,words){if(!words.length)return;
-  modal(`只重做「${name}」（${words.length} 个词）？`,`<p class="small" style="margin-top:0">这几个词退回去：补画面时只交给 AI 重做「${esc(name)}」这一块，别的块不动。退回以后到「含义拆分 → 一次做全」点「补画面」。</p>
+  modal(`重做「${name}」（${words.length} 个词）？`,`<p class="small" style="margin-top:0">只重做「${esc(name)}」这一块：AI 只改这一块，存的时候也只收这一块，<b>别的块原样保住</b>。</p>
     <p class="small faint" style="max-height:16vh;overflow:auto;margin:0 0 8px">${words.map(esc).join('、')}</p>
     <p class="small" style="margin:0 0 4px">想怎么改可以写一句（可以不写）：</p><textarea id="bNote" style="width:100%;height:60px" placeholder="比如：例句换成和学校有关的"></textarea>
-    <div class="line" style="gap:8px;margin-top:10px"><button class="btn" id="bGo">只重做这一块</button><button class="btn ghost" id="bNo">不了</button></div>`);
+    <div class="line" style="gap:8px;margin-top:10px;flex-wrap:wrap"><button class="btn" id="bAi" title="退回以后马上开始：和「一次做全」的补画面一样，过程在那一页">马上让 AI 重做</button><button class="btn ghost" id="bGo" title="先记下，等会儿和别的词一起在「一次做全」点「补画面」">先退回，等会儿一起做</button><button class="btn ghost" id="bNo">不了</button></div>`);
   $('#bNo').onclick=closeModal;
-  $('#bGo').onclick=async()=>{const b=$('#bGo');b.disabled=true;b.textContent='正在退回…';let r;try{r=await api('/api/blocks',{sec:id,words,note:$('#bNote').value})}catch(e){r={ok:false,msg:e.message}}
-    closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?7000:9000);(BSEL[id]||new Set()).clear();blkLoad(id)}}
+  const send=async op=>{$$('#bAi,#bGo').forEach(b=>b.disabled=true);let r;try{r=await api('/api/blocks',{op,sec:id,words,note:$('#bNote').value})}catch(e){r={ok:false,msg:e.message}}
+    closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?8000:10000);(BSEL[id]||new Set()).clear();blkLoad(id)};
+  $('#bAi').onclick=()=>send('ai');$('#bGo').onclick=()=>send('redo')}
+const ISEL=new Set();
 async function loadImp(){const el=$('#impBox');if(!el)return;let d;try{d=await api('/api/imp')}catch(e){el.innerHTML=`<div class="errs">${esc(e.message)}</div>`;return}
   if(!d.ok){el.innerHTML=`<p class="small muted">${esc(d.msg||'')}</p>`;return}
   if(!d.items.length){el.innerHTML='<p class="small muted" style="margin:0">「选词」里还没有选上的词。</p>';return}
-  const bad=d.items.filter(x=>x.flags.length).length;
-  el.innerHTML=`<p class="small" style="margin:0 0 8px">总表 ${esc(d.version||'')}：选上的 ${d.items.length} 个词${bad?`，<b style="color:var(--red)">${bad} 个缺东西</b>（排在最前面）`:'，都有'}。读音拆分出片时按音节表对齐，对不齐的会在起草检查里说。</p>
-  <div style="max-height:66vh;overflow:auto"><table style="width:100%"><tr><th>单词</th><th>意思</th><th>拆分（词根词缀卡上的字）</th><th>考点</th><th>辨析</th></tr>
-  ${d.items.map(x=>`<tr><td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a>${x.flags.length?`<div class="small" style="color:var(--red)">${x.flags.map(esc).join('、')}</div>`:''}</td>
-    <td class="small">${esc(x.meaning)}</td><td class="small">${esc(x.split||'—')}${x.sylIpa?`<div class="faint">音标：${esc(x.sylIpa)}</div>`:''}</td>
-    <td class="small" title="${esc(x.kaodian)}">${esc((x.kaodian||'—').slice(0,80))}${(x.kaodian||'').length>80?'…':''}</td><td class="small" title="${esc(x.bianxi)}">${esc((x.bianxi||'—').slice(0,60))}${(x.bianxi||'').length>60?'…':''}</td></tr>`).join('')}</table></div>`}
+  const bad=d.items.filter(x=>x.flags.length).length,vb=d.items.filter(x=>x.verify&&!x.verify.ok).length,vn=d.items.filter(x=>!x.verify).length,n=ISEL.size;
+  el.innerHTML=`<div class="line" style="gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px"><span class="small">总表 ${esc(d.version||'')}：选上的 ${d.items.length} 个词${bad?`，<b style="color:var(--red)">${bad} 个缺东西</b>`:''}；AI 核对过 ${d.items.length-vn} 个${vb?`，<b style="color:var(--amber)">${vb} 个有问题</b>`:''}（有问题的排前面）</span>
+    <span style="flex:1"></span><button class="btn sm iVer" ${n?'':'disabled'}>让 AI 核对选中的${n?' '+n+' 个':''}</button><button class="btn ghost sm iVerNew" ${vn?'':'disabled'}>核对还没核对过的 ${vn} 个</button></div>
+  <p class="small faint" style="margin:0 0 8px">AI 核对：拆分和词源说法对不对、各部分解释对不对、考点有没有错、初中生看不看得懂。结果写在「AI 核对」那一栏；要改的到维护技能里改总表。读音拆分出片时按音节表对齐，对不齐的会在起草检查里说。</p>
+  <table style="width:100%;table-layout:fixed"><colgroup><col style="width:28px"><col style="width:140px"><col><col><col style="width:22%"><col style="width:22%"></colgroup>
+  <tr><th><input type="checkbox" class="iall"></th><th>单词</th><th>拆分（词根词缀卡上的字）</th><th>考点</th><th>辨析</th><th>AI 核对</th></tr>
+  ${d.items.map(x=>{const v=x.verify;return `<tr style="vertical-align:top"><td><input type="checkbox" class="ick" value="${esc(x.word)}" ${ISEL.has(x.word)?'checked':''}></td>
+    <td><a href="#" class="w wpo" data-w="${esc(x.word)}">${esc(x.word)}</a><div class="small faint">${esc(x.meaning)}</div>${x.flags.length?`<div class="small" style="color:var(--red)">${x.flags.map(esc).join('、')}</div>`:''}</td>
+    <td class="small">${esc(x.split||'—')}${x.sylIpa?`<div class="faint">音标：${esc(x.sylIpa)}</div>`:''}</td>
+    <td class="small" title="${esc(x.kaodian)}">${esc((x.kaodian||'—').slice(0,120))}${(x.kaodian||'').length>120?'…':''}</td><td class="small" title="${esc(x.bianxi)}">${esc((x.bianxi||'—').slice(0,90))}${(x.bianxi||'').length>90?'…':''}</td>
+    <td class="small">${!v?'<span class="faint">还没核对</span>':v.ok?`<span style="color:var(--pass);font-weight:600">✓ 没问题</span>`:`<span style="color:var(--amber);font-weight:600">⚠ ${v.issues.length} 处</span><div>${v.issues.map(esc).join('<br>')}</div>`}${v?`<div class="faint" style="font-size:11px">${esc(v.ts||'')} · ${esc(v.provider||'')}</div>`:''}</td></tr>`}).join('')}</table>`;
+  el.querySelector('.iall').onchange=e=>{el.querySelectorAll('.ick').forEach(c=>e.target.checked?ISEL.add(c.value):ISEL.delete(c.value));loadImp()};
+  el.querySelectorAll('.ick').forEach(c=>c.onchange=()=>{c.checked?ISEL.add(c.value):ISEL.delete(c.value);loadImp()});
+  const ver=async ws=>{let r;try{r=await api('/api/imp',{words:ws})}catch(e){r={ok:false,msg:e.message}}toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?7000:9000);if(r.ok)ISEL.clear()};
+  el.querySelector('.iVer').onclick=()=>ver([...ISEL]);
+  el.querySelector('.iVerNew').onclick=()=>ver(d.items.filter(x=>!x.verify).map(x=>x.word))}
 async function vVideosLoad(){try{const d=await api('/api/video?what=words');VW=d;vVideos(d.videos||[]);VVN=(d.videos||[]).length}catch(e){}}
 $('#vScan').onclick=async e=>{const b=e.currentTarget;b.disabled=true;try{const d=await api('/api/video',{op:'scan'});toast((d.ok?'✓ ':'✗ ')+d.msg)}catch(x){toast('✗ '+x.message)}b.disabled=false;vVideosLoad()};
 

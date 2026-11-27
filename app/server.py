@@ -132,7 +132,7 @@ def api_task_add(b):
         ra = time.mktime(time.strptime(b["runAt"].replace("T", " ")[:16], "%Y-%m-%d %H:%M"))
     # v1.18.0：用 AI 的任务一次只能有一个没做完的：有没做完的（在做、排着队、暂停了），先做完或者取消它，才能开始新的——
     # 不然网页 AI 那边两份提示词传上来的会混在一起（以前是悄悄把旧的取消掉）
-    fam = lambda k, p: "pic" if k == "pics" else ("q" if k in ("chuti", "redo") or (k == "words" and "chuti" in (p.get("steps") or ["chuti"])) else k)
+    fam = lambda k, p: "pic" if k in ("pics", "verify") else ("q" if k in ("chuti", "redo") or (k == "words" and "chuti" in (p.get("steps") or ["chuti"])) else k)
     me = fam(kind, params)
     if me in ("q", "pic"):
         for t in C.q("SELECT id,kind,params,title,status FROM tasks WHERE status IN ('运行中','已暂停','排队') AND run_after<=? ORDER BY id",
@@ -207,6 +207,35 @@ def api_word_check(b):
     C.save_word(w, qs_, C.STATE["version"], "人工（单词工作台）")
     C.log("人工保存了 %s（还没上传，点「上传」或等下一组出题时一起传）" % w)
     return {"ok": True, "saved": True}
+
+
+def api_blocks(b):
+    """v1.30.0：只重做一块（退回）；v1.31.0：删掉这一块；v1.33.0：「马上让 AI 重做」——退回以后直接开始补画面（只收这一块）"""
+    op, sid, ws = b.get("op"), b.get("sec", ""), b.get("words") or []
+    if op == "clear":
+        return SEC.clear_block(sid, ws)
+    r = SEC.redo_many(sid, ws, b.get("note", ""))
+    if op != "ai" or not r.get("ok"):
+        return r
+    name = SEC.BY_ID[sid]["name"]
+    t = api_task_add({"kind": "pics", "params": {"words": ws, "fix": True, "batch": ""},
+                      "title": "重做「%s」：%s%s" % (name, "、".join(ws[:4]), " 等 %d 个" % len(ws) if len(ws) > 4 else "")})
+    if t.get("error"):
+        return {"ok": False, "msg": "退回去了，可是没开始：%s（等它做完再点，或者到「含义拆分 → 一次做全」点「补画面」）" % t["error"]}
+    relay = C.load_cfg().get("provider") == "relay"
+    return {"ok": True, "msg": "开始重做「%s」：%d 个词，AI 只改这一块。%s" % (name, len(ws), "到「含义拆分 → 一次做全」把提示词交给网页 AI" if relay else "过程在「含义拆分 → 一次做全」")}
+
+
+def api_imp(b):
+    """v1.33.0：「导入」页——让 AI 核对总表"""
+    ws = [w for w in (b.get("words") or []) if isinstance(w, str) and w.strip()]
+    if not ws:
+        return {"ok": False, "msg": "一个都没选"}
+    t = api_task_add({"kind": "verify", "params": {"words": ws}, "title": "AI 核对总表：%s%s" % ("、".join(ws[:4]), " 等 %d 个" % len(ws) if len(ws) > 4 else "")})
+    if t.get("error"):
+        return {"ok": False, "msg": t["error"]}
+    relay = C.load_cfg().get("provider") == "relay"
+    return {"ok": True, "msg": "开始让 AI 核对总表：%d 个词。%s" % (len(ws), "提示词交给网页 AI（和出题、做画面一样）" if relay else "结果回来会写在这一页")}
 
 
 def api_manual(b):
@@ -741,7 +770,8 @@ POST = {"/api/settings": api_settings_post, "/api/task": api_task_add, "/api/tas
         "/api/prep": api_prep,
         "/api/clear": lambda b: CL.clear(b.get("what"), b.get("words") or []),      # v1.27.0
         "/api/done": lambda b: CL.done_op(b.get("op"), b.get("what"), b.get("words") or [], b.get("find", ""), bool(b.get("picked"))),      # v1.28.0
-        "/api/blocks": lambda b: SEC.clear_block(b.get("sec", ""), b.get("words") or []) if b.get("op") == "clear" else SEC.redo_many(b.get("sec", ""), b.get("words") or [], b.get("note", "")),      # v1.30.0 / v1.31.0
+        "/api/blocks": api_blocks,                                         # v1.30.0 / v1.31.0 / v1.33.0
+        "/api/imp": api_imp,                                               # v1.33.0：AI 核对总表
         "/api/profile": lambda b: SEC.save(b.get("word", ""), b.get("sec", ""), b.get("data")) if b.get("op") == "save" else SEC.redo(b.get("word", ""), b.get("sec", ""), b.get("note", "")),      # v1.29.0
         "/api/check": lambda b: CK.fix_all() if b.get("op") == "fix" else CK.start(b.get("what") or "all"),      # v1.21.1：一键修复
         "/api/qres": lambda b: RS.export_words(b.get("words") or []),

@@ -2729,7 +2729,7 @@ def mock_reply(prompt, words):
 
 
 # ═══════════════════════ 任务 ═══════════════════════
-KIND_NAMES = {"words": "做指定的词", "pics": "做视频画面", "selfedit": "改软件", "chuti": "出题", "redo": "重做待人工的词", "push": "上传到 GitHub", "sync": "同步仓库"}
+KIND_NAMES = {"words": "做指定的词", "pics": "做视频画面", "verify": "AI 核对总表", "selfedit": "改软件", "chuti": "出题", "redo": "重做待人工的词", "push": "上传到 GitHub", "sync": "同步仓库"}
 
 
 def add_task(kind, params=None, run_after=0, title=""):
@@ -2850,6 +2850,9 @@ class Runner:
             elif t["kind"] == "pics":
                 import pics
                 pics.do_pics(self, tid, p)
+            elif t["kind"] == "verify":                       # v1.33.0：AI 核对总表（「导入」页）
+                import sections
+                sections.do_verify(self, tid, p)
             elif t["kind"] == "selfedit":
                 import selfup
                 selfup.do_selfedit(tid, p)

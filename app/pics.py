@@ -558,6 +558,17 @@ def fix_word_pys():
 def save(word, P, svgs, checked):
     f = V.folder_of(word)
     base = C.REPO / EXTRA
+    try:                                             # v1.33.0：只重做某几块的：只收这几块，别的照上次的
+        import sections as SEC
+        _sids = SEC.pend_get(word)
+        _old = json.loads((base / "words" / (f + ".json")).read_text(encoding="utf-8")) if (base / "words" / (f + ".json")).exists() else None
+        if _old is not None:
+            _old.pop("lianxi", None)
+        if _sids and _old is not None:
+            P = SEC.merge_blocks(_old, P, _sids)
+        _changed = (_old is None) or json.dumps(_old, sort_keys=True, ensure_ascii=False) != json.dumps({k: v for k, v in P.items() if k != "lianxi"}, sort_keys=True, ensure_ascii=False)
+    except Exception:
+        SEC, _sids, _changed = None, [], True
     with C.REPO_LOCK:
         (base / "words").mkdir(parents=True, exist_ok=True)
         art = base / "art" / f
@@ -590,6 +601,11 @@ def save(word, P, svgs, checked):
             sv = skill_version()[0]
         except Exception:
             sv = ""
+        if SEC is not None and (_sids or _changed):     # v1.33.0：每一块记自己的时间、版本
+            try:
+                SEC.stamp(rec, _sids or SEC.AI_BLOCKS, C.provider_name())
+            except Exception:
+                pass
         rec.update({"画面技能版本": ("视频技能 %s" % sv) if sv else "",                       # v1.28.0：「做好的」里看用的哪个版本的视频技能
                     "画面": P, "插图": [f + "ai"], "画面生成": time.strftime("%Y-%m-%d") + " " + C.provider_name(),
                     "检查": "还要补：都齐了（起草检查）" if checked else "本机检查通过，出片时再起草检查"})
@@ -603,6 +619,8 @@ def save(word, P, svgs, checked):
         C.write_index(head, rows)
     _UC["t"] = 0.0
     C.x("DELETE FROM picfail WHERE word=?", (word,))
+    if SEC is not None and _sids:
+        SEC.pend_clear(word)
     try:                                   # v1.9.9：画面里的图也拷到成果文件夹（画面\<单词>\）
         import results
         results.copy_ai_pics(word)
@@ -1315,8 +1333,13 @@ def _fix_seg(w, todos):
     P.pop("lianxi", None)
     arts = sorted(_old_svgs(w))
     items = _items(todos.get(w, ""))
+    try:                                             # v1.33.0：只重做某几块的，写清楚只改哪几个字段
+        import sections as SEC
+        ft = SEC.focus_text(w, items)
+    except Exception:
+        ft = ""
     return "@%s\n还要补（视频技能检查出来的，每一条都要做到）：\n%s\n总表材料：%s\n上次已经画好的插图：%s\n上次的画面设置：\n```json\n%s\n```" % (
-        w, "\n".join("- " + x for x in items) if items else "- 没记下具体缺什么：照规矩每一条再对一遍，缺的补上",
+        w, ("\n".join("- " + x for x in items) if items else "- 没记下具体缺什么：照规矩每一条再对一遍，缺的补上") + (("\n" + ft) if ft else ""),
         _mat_short(w, 500), "、".join("art/" + a for a in arts) or "没有",
         json.dumps(P, ensure_ascii=False, separators=(",", ":"))[:14000])
 

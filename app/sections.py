@@ -17,6 +17,7 @@
 画面设置的改动写回 词库/画面设置/words/<词>.json，标成“改过，出片时再起草检查”，提交、上传。"""
 import json
 import re
+import time
 
 import core as C
 import video as V
@@ -267,6 +268,7 @@ def redo(word, sid, note=""):
     import pics
     item = "用户要重做「%s」这一块：%s只改这一块，别的照旧" % (s["name"], (note.strip().rstrip("。") + "。") if note.strip() else "按最新的视频技能重新做；")
     done = pics.send_back({word: [item]}, src="单词简历")
+    pend_add(done or [], sid)
     if not done:
         return {"ok": False, "msg": "没退回去：这个词还没有画面设置（先到「画面」做）"}
     return {"ok": True, "msg": "退回「画面」了：%s 只重做「%s」（补画面时交给 AI，别的块不动）" % (word, s["name"])}
@@ -331,9 +333,13 @@ def blocks(sid):
             st = "na"                                 # 只有一个部分的词（make）：没有“拼起来”、词根词缀卡也不用画
         cnt[st] = cnt.get(st, 0) + 1
         items.append({"word": w, "meaning": trow.get("初中含义") or "", "status": st, "issues": issues,
-                      "table": table_lines(sid, trow), "pics": pics_struct(sid, w, part) if P is not None else [],
+                      "table": table_lines(sid, trow), "pics": pics_struct(sid, w, part) if P is not None else [], "pending": sid in pend_get(w),
                       "lines": _brief(s, part, trow, rec)[:4] if P is not None else [], "ts": str((rec or {}).get("画面生成") or "") if P is not None else "",
                       "ver": str((rec or {}).get("画面技能版本") or "") if P is not None else ""})
+    for x in items:                                   # v1.33.0：这一块自己记的时间、版本（单独重做过的）
+        b = ((_rec_of(x["word"], rows) or {}).get("板块") or {}).get(sid)
+        if b:
+            x["ts"], x["ver"] = b.get("时间") or x["ts"], b.get("版本") or x["ver"]
     order = {"fix": 0, "none": 1, "nopic": 2, "ok": 3, "na": 4}
     items.sort(key=lambda x: order[x["status"]])
     return {"ok": True, "sec": sid, "name": s["name"], "cat": s["cat"], "items": items, "counts": cnt}
@@ -349,6 +355,7 @@ def redo_many(sid, words, note=""):
     import pics
     item = "用户要重做「%s」这一块：%s只改这一块，别的照旧" % (s["name"], (note.strip().rstrip("。") + "。") if (note or "").strip() else "按最新的视频技能重新做；")
     done = pics.send_back({w: [item] for w in words}, src="「%s」" % s["name"]) or []
+    pend_add(done, sid)
     if not done:
         return {"ok": False, "msg": "没退回去：选的词还没有画面设置"}
     return {"ok": True, "n": len(done), "msg": "%d 个词的「%s」退回去重做了：到「含义拆分 → 一次做全」点「补画面」，AI 只改这一块" % (len(done), s["name"])}
@@ -369,7 +376,10 @@ def imp_list():
         items.append({"word": w, "meaning": r.get("初中含义") or r.get("含义") or "", "split": r.get("拆分", ""), "kaodian": r.get("考点", ""),
                       "bianxi": r.get("辨析", ""), "combo": r.get("组合 → 现在的含义", ""), "sylIpa": " + ".join(map(str, (P or {}).get("sylIpa") or [])),
                       "flags": flags, "rows": len(rs)})
-    items.sort(key=lambda x: (not x["flags"], x["word"].lower()))
+    vr = verify_load()
+    for x in items:
+        x["verify"] = vr.get(x["word"])
+    items.sort(key=lambda x: (not x["flags"], not (x["verify"] and not x["verify"].get("ok")), x["word"].lower()))
     return {"ok": True, "items": items, "version": C.STATE.get("version") or ""}
 
 
@@ -400,6 +410,7 @@ def clear_block(sid, words):
         return {"ok": False, "msg": "选的词还没有画面设置"}
     import pics
     pics.send_back({w: ["用户删掉了「%s」这一块，要按最新的视频技能重做这一块，别的照旧" % s["name"]] for w in done}, src="「%s」删掉" % s["name"])
+    pend_add(done, sid)
     return {"ok": True, "n": len(done), "msg": "删掉了 %d 个词的「%s」：退回去了，到「一次做全」点「补画面」重做这一块" % (len(done), s["name"])}
 
 
@@ -502,3 +513,156 @@ def pics_struct(sid, word, part):
                 if r:
                     out.append(r)
     return out
+
+
+# ═══════════════ v1.33.0：每一块单独让 AI 做（只改这一块，别的块原样保住）；每一块记自己的时间、版本；AI 核对总表 ═══════════════
+_PEND = lambda: C.DATA / "block_redo.json"          # {单词: [要重做的块]}：补画面时只收这几块，别的照旧
+
+
+def _pend_load():
+    try:
+        return json.loads(_PEND().read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def pend_add(words, sid):
+    d = _pend_load()
+    for w in words:
+        if sid not in d.setdefault(w, []):
+            d[w].append(sid)
+    _PEND().write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def pend_get(word):
+    return list(_pend_load().get(word) or [])
+
+
+def pend_clear(word):
+    d = _pend_load()
+    if d.pop(word, None) is not None:
+        _PEND().write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+BLOCK_TIPS = {
+    "parts": "每个部分（前缀、词根、单词部分、后缀）一张卡：partPics 里 p0、p1… 每张一幅小画，icons 里每张一个小图标；画要和这一部分的意思对得上（看总表的前缀、词根、单词部分、后缀）。",
+    "combo": "comboPic：几个部分拼起来以后、这个词现在的意思的一幅画（看总表「组合 → 现在的含义」的【构词逻辑】）。",
+    "scene": "pics 里每个意思一幅生活场景（bg / img 背景、items 里的东西和人物、text 写这个意思）：一眼能看出是这个意思，东西要摆得像真的场景。",
+    "evolve": "flow：意思怎么一步步变过来的几步（node 一步的字、say 念的话、fig 小图），照总表【演变】和【构词逻辑】。",
+    "example": "pics 里每个意思的例句：ex 一句简单的英文例句（初中生看得懂，用到这个词），exzh 中文，exPic 例句的动画（背景、东西、人物，和例句说的事对得上）。",
+    "dist": "distinguish：同义词辨析——items 里每个词写 m（意思、区别一句话）、ex（一句例句）、exZh（中文）；pics 里每个词一幅画；key、logic、tip 照规矩。",
+    "pron": "sylIpa：每一块的音标（和音节表的分块一一对上）。",
+    "kaodian": "kaodian：考点（照总表「考点」，可以改写得更适合视频）。",
+    "board": "board、extend：总结小黑板、扩展词（扩展词要是总表里有的词）。",
+}
+
+
+def focus_text(word, items):
+    """补画面的提示词里：这个词要是只重做某几块，写清楚只改哪几个字段"""
+    sids = pend_get(word)
+    for it in items or []:
+        for m in re.finditer(r"「([^」]+)」这一块", it):
+            if m.group(1) in BY_NAME and BY_NAME[m.group(1)] not in sids:
+                sids.append(BY_NAME[m.group(1)])
+    sids = [x for x in sids if x in BY_ID]
+    if not sids:
+        return ""
+    parts = []
+    for x in sids:
+        s = BY_ID[x]
+        keys = "、".join(s["keys"]) + (("（pics 里只改 %s）" % "、".join(s["fields"])) if s.get("fields") else "")
+        parts.append("「%s」——画面设置里的 %s。%s" % (s["name"], keys, BLOCK_TIPS.get(x, "")))
+    return ("这一次只重做下面这几块，**别的字段照抄上次的画面设置，一个字都不要改**（程序只收这几块，别的你改了也不会用）：\n"
+            + "\n".join("- " + p for p in parts))
+
+
+def merge_blocks(old, new, sids):
+    """只收 sids 这几块：别的照旧"""
+    out = json.loads(json.dumps(old or {}))
+    for x in sids:
+        s = BY_ID.get(x)
+        if not s:
+            continue
+        for k in s["keys"]:
+            if k == "pics" and s.get("fields"):
+                op, np_ = out.get("pics") or [], (new or {}).get("pics") or []
+                for i, nx in enumerate(np_):
+                    if not isinstance(nx, dict):
+                        continue
+                    if i >= len(op):
+                        op.append({f: nx[f] for f in nx})
+                        continue
+                    for f in s["fields"]:
+                        if f in nx:
+                            op[i][f] = nx[f]
+                        else:
+                            op[i].pop(f, None)
+                out["pics"] = op
+            elif k in (new or {}):
+                out[k] = new[k]
+            else:
+                out.pop(k, None)
+    return out
+
+
+def stamp(rec, sids, prov):
+    """词库记录里每一块记自己的时间、版本"""
+    try:
+        import pics
+        sv = pics.skill_version()[0]
+    except Exception:
+        sv = ""
+    b = rec.setdefault("板块", {})
+    for x in sids:
+        b[x] = {"时间": time.strftime("%Y-%m-%d %H:%M"), "版本": ("视频技能 %s" % sv) if sv else "", "来源": prov}
+
+
+AI_BLOCKS = ["parts", "combo", "scene", "evolve", "example", "dist"]
+_VER = lambda: C.DATA / "verify.json"               # AI 核对总表的结果 {单词: {ts, ok, issues, provider}}
+
+
+def verify_load():
+    try:
+        return json.loads(_VER().read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+VERIFY_PROMPT = """【核对总表 · %d 个词】你在帮一位初中英语老师核对“词源拆分总表”。下面每个词有总表里的几列（拆分、前缀、词根、单词部分、后缀、组合 → 现在的含义、考点、读音现象）。
+请逐个检查：拆分和词源说法对不对（有没有编造、张冠李戴）；各部分的解释和例子对不对；考点（变形、短语、用法）有没有错；对初中生是不是讲得清楚。
+只回一段 JSON，不要别的字：[{"word": "单词", "ok": true 或 false, "issues": ["哪一列：什么问题，应该怎么改", …]}]。没问题的 issues 写 []。
+
+%s"""
+
+
+def do_verify(R, tid, p):
+    words = [w for w in (p.get("words") or []) if isinstance(w, str) and w.strip()]
+    C.load_table()
+    res = verify_load()
+    cols = ["拆分", "前缀", "词根", "单词部分", "后缀", "组合 → 现在的含义", "考点", "读音现象"]
+    for i in range(0, len(words), 12):
+        R.check_stop()
+        grp = words[i:i + 12]
+        mat = []
+        for w in grp:
+            r = ((C.TABLE.get("words") or {}).get(w) or [{}])[0]
+            mat.append("@%s（%s）\n%s" % (w, r.get("初中含义") or r.get("含义") or "", "\n".join("【%s】%s" % (k, str(r.get(k) or "—")[:500]) for k in cols)))
+        rep = R.ask(tid, "核对总表", VERIFY_PROMPT % (len(grp), "\n\n".join(mat)), grp) or ""
+        m = re.search(r"\[[\s\S]*\]", rep)
+        got = []
+        try:
+            got = json.loads(m.group(0)) if m else []
+        except Exception:
+            got = []
+        prov = C.provider_name()
+        seen = set()
+        for x in got if isinstance(got, list) else []:
+            if isinstance(x, dict) and x.get("word") in grp:
+                iss = [str(t) for t in (x.get("issues") or []) if str(t).strip()]
+                res[x["word"]] = {"ts": time.strftime("%Y-%m-%d %H:%M"), "ok": bool(x.get("ok")) and not iss, "issues": iss, "provider": prov}
+                seen.add(x["word"])
+        miss = [w for w in grp if w not in seen]
+        if miss:
+            C.log("AI 核对总表：%s 没回结果（回复里没认出来）" % "、".join(miss), tid)
+        _VER().write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
+        C.log("AI 核对总表：%d 个词，%d 个有问题" % (len(seen), sum(1 for w in seen if not res[w]["ok"])), tid)
