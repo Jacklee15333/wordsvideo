@@ -309,8 +309,8 @@
    "text": "人口众多的、人口稠密的",
    "pos": "形容词",
    "diff": "只说“人多”",
-   "ex": "Shanghai is a populous city.",
-   "exzh": "上海是一座人口众多的城市。",
+   "ex": "This city is very populous.",
+   "exzh": "这座城市人口非常多。",
    "exPic": {
     "bg": "blank",
     "img": "art/station-bg.svg",
@@ -406,8 +406,36 @@
       }
      },
      {
-      "label": "populous",
-      "x": 0.5,
+      "actor": "walk-cn-teacher-case",
+      "x": 0.62,
+      "y": 0.64,
+      "s": 0.52,
+      "z": 2,
+      "walk": {
+       "from": [
+        0.62,
+        0.64
+       ],
+       "to": [
+        -0.05,
+        0.64
+       ],
+       "offset": 0.85
+      },
+      "when": "very"
+     },
+     {
+      "label": "city 城市",
+      "x": 0.16,
+      "y": 0.1,
+      "size": 0.075,
+      "color": "#2F6FB3",
+      "border": "#2F6FB3",
+      "when": "city"
+     },
+     {
+      "label": "very populous",
+      "x": 0.56,
       "y": 0.1,
       "size": 0.075,
       "color": "#7A3E00",
@@ -416,13 +444,13 @@
       "when": "populous"
      },
      {
-      "label": "人口众多",
-      "x": 0.5,
+      "label": "人口非常多",
+      "x": 0.56,
       "y": 0.24,
       "size": 0.075,
       "color": "#2B8A3E",
       "border": "#2B8A3E",
-      "when": "人口众多"
+      "when": "人口非常多"
      }
     ]
    }
@@ -644,6 +672,176 @@
   }
  ],
  "distinguish": {
+  "key": "形近词",
+  "items": [
+   {
+    "w": "populous",
+    "word": "populous",
+    "m": "人口众多的（只说一个地方人多）",
+    "zh": "人口众多的",
+    "say": "populous 只说人多：一个地方住的人很多，比如 a populous city，人口众多的城市。",
+    "text": "populous 只说人多：一个地方住的人很多，比如 a populous city，人口众多的城市。",
+    "note": "populous 只说人多：一个地方住的人很多，比如 a populous city，人口众多的城市。",
+    "ex": "This city is very populous.",
+    "exZh": "这座城市人口非常多。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/station-bg.svg",
+     "items": [
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      },
+      {
+       "actor": "walk-cn-girl",
+       "x": 0.25,
+       "y": 0.7,
+       "s": 0.6,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.25,
+         0.7
+        ],
+        "to": [
+         1.0,
+         0.7
+        ],
+        "offset": 0.7
+       }
+      },
+      {
+       "actor": "walk-west-man-case",
+       "x": 1.0,
+       "y": 0.6,
+       "s": 0.54,
+       "z": 2,
+       "walk": {
+        "from": [
+         1.0,
+         0.6
+        ],
+        "to": [
+         0.0,
+         0.6
+        ],
+        "offset": 0.2
+       }
+      },
+      {
+       "actor": "walk-west-boy-pack",
+       "x": 0.0,
+       "y": 0.68,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.0,
+         0.68
+        ],
+        "to": [
+         1.0,
+         0.68
+        ],
+        "offset": 0.55
+       }
+      }
+     ]
+    }
+   },
+   {
+    "w": "popular",
+    "word": "popular",
+    "m": "受欢迎的（大家都喜欢）",
+    "zh": "受欢迎的",
+    "say": "popular 是受欢迎：大家都喜欢，比如 a popular ice cream，一种受欢迎的冰淇淋。",
+    "text": "popular 是受欢迎：大家都喜欢，比如 a popular ice cream，一种受欢迎的冰淇淋。",
+    "note": "popular 是受欢迎：大家都喜欢，比如 a popular ice cream，一种受欢迎的冰淇淋。",
+    "ex": "This ice cream is very popular.",
+    "exZh": "这种冰淇淋很受欢迎。",
+    "pic": {
+     "bg": "blank",
+     "img": "art/street-bg.svg",
+     "items": [
+      {
+       "svg": "art/icecream.svg",
+       "x": 0.5,
+       "y": 0.55,
+       "s": 0.7,
+       "anim": "bob"
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.05,
+       "y": 0.62,
+       "s": 0.56,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.05,
+         0.62
+        ],
+        "to": [
+         0.95,
+         0.62
+        ],
+        "offset": 0
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.9,
+       "y": 0.66,
+       "s": 0.5,
+       "z": 2,
+       "walk": {
+        "from": [
+         0.9,
+         0.66
+        ],
+        "to": [
+         0.1,
+         0.66
+        ],
+        "offset": 0.4
+       }
+      }
+     ]
+    }
+   }
+  ],
   "pics": {
    "populous": {
     "bg": "blank",

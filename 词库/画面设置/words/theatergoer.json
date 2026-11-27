@@ -630,8 +630,8 @@
    {
     "w": "theatergoer",
     "word": "theatergoer",
-    "m": "去看戏的人（一个个的人）",
-    "zh": "去看戏的人（一个个的人）",
+    "m": "常看戏的人、看戏的观众（说的是一个一个去剧院看戏的人）",
+    "zh": "看戏的人",
     "say": "theatergoer 说的是一个个去剧院看戏的人，常常是爱看戏的人。",
     "text": "theatergoer 说的是一个个去剧院看戏的人，常常是爱看戏的人。",
     "note": "theatergoer 说的是一个个去剧院看戏的人，常常是爱看戏的人。",
@@ -689,13 +689,15 @@
        }
       }
      ]
-    }
+    },
+    "ex": "My uncle is a regular theatergoer.",
+    "exZh": "我叔叔是个常看戏的人。"
    },
    {
     "w": "audience",
     "word": "audience",
-    "m": "一场演出的观众（总称）",
-    "zh": "一场演出的观众（总称）",
+    "m": "观众（一场演出台下的全体观众，是一个整体）",
+    "zh": "观众（总称）",
     "say": "audience 是一场演出台下的全体观众，是一个整体：a large audience。",
     "text": "audience 是一场演出台下的全体观众，是一个整体：a large audience。",
     "note": "audience 是一场演出台下的全体观众，是一个整体：a large audience。",
@@ -717,11 +719,11 @@
        "crowd": 9
       }
      ]
-    }
+    },
+    "ex": "The audience clapped after the play.",
+    "exZh": "演出结束后，观众鼓起了掌。"
    }
   ],
-  "logic": "theatergoer 是“去剧院的人”，一个一个数；audience 是台下那一群人的总称。",
-  "tip": "-goer 可以接各种场所和活动：churchgoer、moviegoer、partygoer。",
   "pics": {
    "theatergoer": {
     "bg": "blank",
@@ -797,7 +799,9 @@
      }
     ]
    }
-  }
+  },
+  "logic": "theatergoer 是“去剧院的人”，一个一个数；audience 是台下那一群人的总称。",
+  "tip": "-goer 可以接各种场所和活动：churchgoer、moviegoer、partygoer。"
  },
  "lianxi": {
   "qs": [

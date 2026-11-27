@@ -538,8 +538,8 @@
    {
     "w": "theatrical",
     "word": "theatrical",
-    "m": "戏剧的；（贬）演出来的、做作的",
-    "zh": "戏剧的；（贬）演出来的、做作的",
+    "m": "戏剧的；做作的（说人时是贬义：像在台上演给人看，不真诚）",
+    "zh": "戏剧的；做作的",
     "say": "theatrical 从剧院来：说人时是贬义，演出来的、不真诚。",
     "text": "theatrical 从剧院来：说人时是贬义，演出来的、不真诚。",
     "note": "theatrical 从剧院来：说人时是贬义，演出来的、不真诚。",
@@ -568,12 +568,14 @@
        "anim": "bob"
       }
      ]
-    }
+    },
+    "ex": "Stop being so theatrical!",
+    "exZh": "别那么做作了！"
    },
    {
     "w": "dramatic",
     "word": "dramatic",
-    "m": "戏剧性的、激动人心的",
+    "m": "戏剧性的（变化大、激动人心，不一定是贬义）",
     "zh": "戏剧性的、激动人心的",
     "say": "dramatic 从 drama 来，多说变化大、激动人心，a dramatic change 就是剧变，不一定贬。",
     "text": "dramatic 从 drama 来，多说变化大、激动人心，a dramatic change 就是剧变，不一定贬。",
@@ -591,17 +593,70 @@
       {
        "svg": "art/storm-cloud.svg",
        "x": 0.5,
-       "y": 0.45,
-       "s": 0.8,
-       "anim": "shake"
+       "y": 0.36,
+       "s": 0.62,
+       "anim": "shake",
+       "z": 2
+      },
+      {
+       "emit": true,
+       "svg": "art/drop.svg",
+       "x": 0.5,
+       "y": 0.5,
+       "every": 0.25,
+       "life": 0.9,
+       "to": [
+        0,
+        0.4
+       ],
+       "s": 0.05,
+       "z": 3
+      },
+      {
+       "actor": "walk-west-woman-case",
+       "x": 0.02,
+       "y": 0.8,
+       "s": 0.5,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.02,
+         0.8
+        ],
+        "to": [
+         0.98,
+         0.8
+        ],
+        "offset": 0.1
+       }
+      },
+      {
+       "actor": "walk-cn-boy-pack",
+       "x": 0.98,
+       "y": 0.82,
+       "s": 0.48,
+       "z": 4,
+       "walk": {
+        "from": [
+         0.98,
+         0.82
+        ],
+        "to": [
+         0.02,
+         0.82
+        ],
+        "offset": 0.55
+       }
       }
      ]
-    }
+    },
+    "ex": "There was a dramatic change in the weather.",
+    "exZh": "天气发生了巨大的变化。"
    },
    {
     "w": "unnatural",
     "word": "unnatural",
-    "m": "不自然的、反常的",
+    "m": "不自然的（不像平常的样子，不一定是故意演的）",
     "zh": "不自然的、反常的",
     "say": "unnatural 是 un 加 natural，不自然，不一定是故意演给人看。",
     "text": "unnatural 是 un 加 natural，不自然，不一定是故意演给人看。",
@@ -631,11 +686,11 @@
        "anim": "sway"
       }
      ]
-    }
+    },
+    "ex": "Her smile looked unnatural.",
+    "exZh": "她的笑容看起来很不自然。"
    }
   ],
-  "logic": "theatrical 是“像在剧院里演”，dramatic 是“像戏一样起伏大”，unnatural 只是“不自然”。",
-  "tip": "theatrical 作贬义是“演出来的、不真诚”。",
   "pics": {
    "theatrical": {
     "bg": "blank",
@@ -676,9 +731,60 @@
      {
       "svg": "art/storm-cloud.svg",
       "x": 0.5,
-      "y": 0.45,
-      "s": 0.8,
-      "anim": "shake"
+      "y": 0.36,
+      "s": 0.62,
+      "anim": "shake",
+      "z": 2
+     },
+     {
+      "emit": true,
+      "svg": "art/drop.svg",
+      "x": 0.5,
+      "y": 0.5,
+      "every": 0.25,
+      "life": 0.9,
+      "to": [
+       0,
+       0.4
+      ],
+      "s": 0.05,
+      "z": 3
+     },
+     {
+      "actor": "walk-west-woman-case",
+      "x": 0.02,
+      "y": 0.8,
+      "s": 0.5,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.02,
+        0.8
+       ],
+       "to": [
+        0.98,
+        0.8
+       ],
+       "offset": 0.1
+      }
+     },
+     {
+      "actor": "walk-cn-boy-pack",
+      "x": 0.98,
+      "y": 0.82,
+      "s": 0.48,
+      "z": 4,
+      "walk": {
+       "from": [
+        0.98,
+        0.82
+       ],
+       "to": [
+        0.02,
+        0.82
+       ],
+       "offset": 0.55
+      }
      }
     ]
    },
@@ -708,7 +814,9 @@
      }
     ]
    }
-  }
+  },
+  "logic": "theatrical 是“像在剧院里演”，dramatic 是“像戏一样起伏大”，unnatural 只是“不自然”。",
+  "tip": "theatrical 作贬义是“演出来的、不真诚”。"
  },
  "demo": {
   "careful": {
