@@ -223,9 +223,9 @@ def api_blocks(b):
     t = api_task_add({"kind": "pics", "params": {"words": ws, "fix": True, "batch": ""},
                       "title": "重做「%s」：%s%s" % (name, "、".join(ws[:4]), " 等 %d 个" % len(ws) if len(ws) > 4 else "")})
     if t.get("error"):
-        return {"ok": False, "msg": "退回去了，可是没开始：%s（等它做完再点，或者到「画面 → 一次做全」点「补画面」）" % t["error"]}
+        return {"ok": False, "msg": "退回去了，可是没开始：%s（等它做完再点，或者到「画面 → 整套做」点「补画面」）" % t["error"]}
     relay = C.load_cfg().get("provider") == "relay"
-    return {"ok": True, "msg": "开始重做「%s」：%d 个词，AI 只改这一块。%s" % (name, len(ws), "到「画面 → 一次做全」把提示词交给网页 AI" if relay else "过程在「画面 → 一次做全」")}
+    return {"ok": True, "msg": "开始重做「%s」：%d 个词，AI 只改这一块。%s" % (name, len(ws), "到「画面 → 整套做」把提示词交给网页 AI" if relay else "过程在「画面 → 整套做」")}
 
 
 def api_film(b):
@@ -240,9 +240,9 @@ def api_film(b):
         t = api_task_add({"kind": "pics", "params": {"words": ws, "fix": True, "batch": ""},
                           "title": "按新技能补画面：%s%s" % ("、".join(ws[:4]), " 等 %d 个" % len(ws) if len(ws) > 4 else "")})
         if t.get("error"):
-            return {"ok": False, "msg": "交给 AI 了，可是没开始：%s（等它做完再点，或者到「画面 → 一次做全」点「补画面」）" % t["error"]}
+            return {"ok": False, "msg": "交给 AI 了，可是没开始：%s（等它做完再点，或者到「画面 → 整套做」点「补画面」）" % t["error"]}
         relay = C.load_cfg().get("provider") == "relay"
-        return {"ok": True, "msg": r["msg"] + "。" + ("到「画面 → 一次做全」把提示词交给网页 AI" if relay else "过程在「画面 → 一次做全」")}
+        return {"ok": True, "msg": r["msg"] + "。" + ("到「画面 → 整套做」把提示词交给网页 AI" if relay else "过程在「画面 → 整套做」")}
     return FM.op(b)
 
 

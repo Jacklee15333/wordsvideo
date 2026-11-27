@@ -253,6 +253,7 @@ nav a.on .sn{background:var(--base);border-color:var(--base);color:#fff}
 .ngrp:hover{color:#fff}.ncv{display:inline-flex;transition:transform .15s}.ng.shut .ncv{transform:rotate(-90deg)}.ng.shut .ngb{display:none}
 .ng.shut.hason .ngrp{color:#fff}.ng.shut.hasrun .ngrp .tx::before{content:"在跑";font-size:10.5px;background:var(--base);color:#fff;border-radius:8px;padding:0 6px;margin-right:6px;letter-spacing:0}.ng.shut.hason .ngrp .tx::after{content:" ●";color:var(--base)}
 body.navmini .ng.shut .ngb{display:block}body.navmini .ncv{display:none}
+.nsub{font-size:11px;color:#71809E;padding:6px 20px 2px 53px;white-space:nowrap}body.navmini .nsub{display:none}
 .ntc{font-size:11px;font-weight:600;background:#B45309;color:#fff;border-radius:9px;padding:0 6px;line-height:17px;align-self:center}.ntc:empty{display:none}
 body.navmini .ntc{display:none}
 body.navmini .ngrp{padding:0;height:1px;margin:8px 14px;background:#33416A}
@@ -708,8 +709,9 @@ details.vgk>.vgo{margin-top:6px}
   </div>
   </div></div>
   <div class="ng" data-g="pc"><div class="ngrp" role="button" tabindex="0" title="点一下收起 / 展开"><span class="tx">画面 · 视频里的画</span><i class="ncv" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></i></div><div class="ngb">
+  <a data-p="pic" title="新词先在这里：AI 一次把六块画都做出来"><span class="nl"><i class="ni"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></i><span class="tx">整套做（新词）</span></span><span class="n" data-nb="pic" hidden></span></a>
+  <div class="nsub"><span class="tx">按块看、按块改</span></div>
   <div class="snav">
-  <a data-p="pic"><span class="nl"><i class="sn">全</i><span class="tx">一次做全</span></span><span class="n" data-nb="pic" hidden></span></a>
   <a data-p="b_parts"><span class="nl"><i class="sn">1</i><span class="tx">词根词缀卡</span></span><b class="ntc" data-tc="b_parts"></b></a>
   <a data-p="b_combo"><span class="nl"><i class="sn">2</i><span class="tx">拼起来</span></span><b class="ntc" data-tc="b_combo"></b></a>
   <a data-p="b_scene"><span class="nl"><i class="sn">3</i><span class="tx">意思场景</span></span><b class="ntc" data-tc="b_scene"></b></a>
@@ -987,9 +989,11 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-pic">
-  <div class="phead"><div><h2><i class="sn">全</i>画面：一次做全</h2>
-    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="on">一次做全</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="phead"><div><h2>画面 · 整套做：新词的画，一次让 AI 全做出来</h2>
+    <p class="muted"><b>新词第一次做画面在这里。</b>AI 一次把这个词视频里要的六块画都做出来：词根词缀卡、拼起来、意思场景、意思演变、例句动画、同义词辨析。做完自动起草检查，过了才算做好；有要补的，也在这里点「补画面」。<br>
+      只想改其中一块，到左边那一块的页面去「只重做这一块」，别的块不动。<br>
+      <span class="faint">这不是定稿：定稿在「出片 → 定稿」，是出视频前把讲稿和画上的话合成要念的配音稿、再对一遍。题目要先出好，才能做画面。</span></p></div></div>
+  <div class="mtabs stabs"><a data-go="pic" class="on">整套做</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0"><span class="hv" title="「素材 → 总表」里选上的词，还要做画面的：还没有画面的、画面还要补的（出视频退回来的、起草检查没过的）、上次没做成的，一起做。做好一个，这里少一个；都做好了，列表就空了，下面出“本轮任务完成”的汇报。本来就做好了的、还没题目的不列在这里，开始时写进汇报。">这次要做画面的词</span> <span class="small faint" id="picPickN"></span></h3>
     <div class="plist" id="picPick"></div>
@@ -1005,9 +1009,11 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-pichist">
-  <div class="phead"><div><h2><i class="sn">全</i>画面：一次做全</h2>
-    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="on">生成历史</a></div>
+  <div class="phead"><div><h2>画面 · 整套做：新词的画，一次让 AI 全做出来</h2>
+    <p class="muted"><b>新词第一次做画面在这里。</b>AI 一次把这个词视频里要的六块画都做出来：词根词缀卡、拼起来、意思场景、意思演变、例句动画、同义词辨析。做完自动起草检查，过了才算做好；有要补的，也在这里点「补画面」。<br>
+      只想改其中一块，到左边那一块的页面去「只重做这一块」，别的块不动。<br>
+      <span class="faint">这不是定稿：定稿在「出片 → 定稿」，是出视频前把讲稿和画上的话合成要念的配音稿、再对一遍。题目要先出好，才能做画面。</span></p></div></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">整套做</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="on">生成历史</a></div>
   <div class="box">
     <h3 style="margin-top:0">生成历史 <span class="small faint" id="ghN"></span></h3>
     <p class="small muted" style="margin:-4px 0 6px">做完一批，这里多一行：几点做的、哪些词、做好几个、没做成几个。点一行看这一批每个词，点词看它的画面。</p>
@@ -1024,9 +1030,9 @@ details.vgk>.vgo{margin-top:6px}
 
 
 <section id="p-picdone">
-  <div class="phead"><div><h2><i class="sn">全</i>画面 · 做好的画面</h2>
+  <div class="phead"><div><h2>画面 · 整套做 · 做好的画面</h2>
     <p class="muted">已经做好画面的词：每个词写着哪天做的、用的哪个版本的视频技能、起草检查过没过。技能改版了，旧的不要了：单个或者勾几个点「重做」（画面删掉，回到要做画面的列表）、「删除」，或者「清空」。只列 AI 做的，视频技能自带的不动。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="picdone" class="on">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">整套做</a><a data-go="picdone" class="on">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><div id="picdoneBox"><p class="small muted">正在读…</p></div></div>
 </section>
 
@@ -1115,9 +1121,11 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-picfail">
-  <div class="phead"><div><h2><i class="sn">全</i>画面：一次做全</h2>
-    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="phead"><div><h2>画面 · 整套做：新词的画，一次让 AI 全做出来</h2>
+    <p class="muted"><b>新词第一次做画面在这里。</b>AI 一次把这个词视频里要的六块画都做出来：词根词缀卡、拼起来、意思场景、意思演变、例句动画、同义词辨析。做完自动起草检查，过了才算做好；有要补的，也在这里点「补画面」。<br>
+      只想改其中一块，到左边那一块的页面去「只重做这一块」，别的块不动。<br>
+      <span class="faint">这不是定稿：定稿在「出片 → 定稿」，是出视频前把讲稿和画上的话合成要念的配音稿、再对一遍。题目要先出好，才能做画面。</span></p></div></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">整套做</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="">批量</a><a data-go="picfail" class="on">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><h3 style="margin-top:0">画面没做成的词</h3><p class="small muted" style="margin:-4px 0 8px">AI 改了几轮还没过检查的画面。看一下原因，点「这些再试一次」交给 AI 重做。</p>
       <div id="picFail" class="small">—</div>
       <div class="line"><button class="btn ghost sm" id="tPicRedo">这些再试一次</button></div></div></div>
@@ -1125,9 +1133,11 @@ details.vgk>.vgo{margin-top:6px}
 </section>
 
 <section id="p-picbulk">
-  <div class="phead"><div><h2><i class="sn">全</i>画面：一次做全</h2>
-    <p class="muted">给有题目的词设计视频里的画：每个意思一幅会动的场景、例句动画、意思怎么变过来的图。按仓库里最新的视频技能做，起草检查过了才算做好，做好的词就能出视频。</p></div></div>
-  <div class="mtabs stabs"><a data-go="pic" class="">一次做全</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="on">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
+  <div class="phead"><div><h2>画面 · 整套做：新词的画，一次让 AI 全做出来</h2>
+    <p class="muted"><b>新词第一次做画面在这里。</b>AI 一次把这个词视频里要的六块画都做出来：词根词缀卡、拼起来、意思场景、意思演变、例句动画、同义词辨析。做完自动起草检查，过了才算做好；有要补的，也在这里点「补画面」。<br>
+      只想改其中一块，到左边那一块的页面去「只重做这一块」，别的块不动。<br>
+      <span class="faint">这不是定稿：定稿在「出片 → 定稿」，是出视频前把讲稿和画上的话合成要念的配音稿、再对一遍。题目要先出好，才能做画面。</span></p></div></div>
+  <div class="mtabs stabs"><a data-go="pic" class="">整套做</a><a data-go="picdone" class="">做好的 <b class="tn" data-tn="picdone"></b></a><a data-go="picbulk" class="on">批量</a><a data-go="picfail" class="">没做成的词 <b class="tc" data-tc="picfail"></b></a><a data-go="pichist" class="">生成历史</a></div>
   <div class="box"><div class="tally" id="picStats">—</div></div>
   <div class="box" style="margin-top:14px">
     <h3 style="margin-top:0">按总表顺序接着做</h3>
@@ -1487,7 +1497,7 @@ async function loadHome(quiet){OVt=Date.now();
   const ck2=(on,bad,t)=>on?'<span style="color:var(--pass)">✓</span>':bad?`<span style="color:var(--red)">${t}</span>`:'<span class="faint">—</span>';
   $('#ovWords').innerHTML=N?'<table><tr><th>单词</th><th>意思</th><th>题目</th><th>画面</th><th>视频</th><th>现在</th></tr>'+pk.map(i=>`<tr><td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,30)}</td>
     <td>${ck2(i.q,i.manual,'没过')}</td><td>${ck2(i.pic,i.picfail,'没做成')}</td><td>${ck2(i.video,false,'')}</td><td><span class="pst pst-${i.st}">${esc(i.stName)}</span></td></tr>`).join('')+'</table>'
-    :'<div class="pempty">还没有选上的词：到「素材 → 总表」勾几个。</div>';
+    :'<div class="pempty">还没有这次要做的词：到「素材 → 总表」勾几个。</div>';
   if(!quiet)renderHome()}
 
 /* 成果：做好的都在这里 */
@@ -1713,7 +1723,7 @@ function qPickRender(){const pk=picked(),list=pk.filter(i=>!i.q||i.manual);
       const doing=i.st==='doing'&&!i.q,fix=i.q&&i.manual;
       const st=doing?'<span class="pst pst-doing">正在出</span>':fix?'<a class="small" onclick="go(\'qfail\')" style="color:var(--amber)">题目要改：到「没过的词」里改</a>':i.manual?'<span class="ck-bad">上次没过，这次再出</span>':'<span class="pst pst-will">要出</span>';
       return `<tr><td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,32)}</td><td>${st}</td></tr>`}).join('')+'</table>'
-    :`<div class="pempty">${pk.length?`选上的 ${pk.length} 个词都有题目了。下一步：<a onclick="go('pic')">画面</a>`:'还没有选上的词。到「素材 → <a onclick="go(\'lib\')">总表</a>」勾上要出题的词。'}</div>`;
+    :`<div class="pempty">${pk.length?`选上的 ${pk.length} 个词都有题目了。下一步：<a onclick="go('pic')">画面</a>`:'还没有这次要做的词。到「素材 → <a onclick="go(\'lib\')">总表</a>」点题目那一格的「出题 ▸」。'}</div>`;
   $('#tAdd').textContent=PQ.length?`给这 ${PQ.length} 个词出题 ▶`:'给要出的词出题 ▶';$('#tAdd').disabled=!PQ.length;
   const allQ=pk.length&&!list.length;$('#qNext').hidden=!allQ;
   if(allQ)$('#qMsg').textContent='选上的词都有题目了，点「下一步：画面」去做画面。';
@@ -1771,7 +1781,7 @@ function picPickRender(){const pk=picked(),list=pk.filter(picNeed),noq=pk.filter
       const st=doing?'<span class="pst pst-doing">正在做</span>':i.picTodo?`<span class="pst pst-needpic hv" title="${esc(why?why.replace(/^还要补[:：]/,'').split(/[；;]/).map(x=>'· '+x.trim()).join('\n'):'画面还没过起草检查：先在 WSL 里查一遍，还要补的交给 AI 在上次的画面上改')}">补画面${i.todoN?`（${i.todoN} 处）`:''}</span>`
         :i.picfail?'<span class="ck-bad">上次没做成，这次再做</span>':'<span class="pst pst-will">新做</span>';
       return `<tr><td class="w">${esc(i.word)}</td><td class="small muted">${esc(i.meaning).slice(0,30)}</td><td>${st}</td></tr>`}).join('')+'</table>'
-    :`<div class="pempty">${!pk.length?'还没有选上的词。到「素材 → <a onclick="go(\'lib\')">总表</a>」勾上要做画面的词。':
+    :`<div class="pempty">${!pk.length?'还没有这次要做的词。到「素材 → <a onclick="go(\'lib\')">总表</a>」点画面那几格的「做 ▸」。':
       noq===pk.length?`选上的 ${pk.length} 个词都还没有题目：先到「<a onclick="go('q')">出题</a>」`:`选上的词画面都做好了${noq?`（还有 ${noq} 个没题目，先到「<a onclick="go('q')">出题</a>」）`:''}。下一步：<a onclick="go('video')">出视频</a>`}</div>`;
   $('#tPics').textContent=PP.length?`做画面（${PP.length} 个）▶`:'做画面 ▶';$('#tPics').disabled=!PP.length;
   const allP=pk.length&&!list.length&&!noq;$('#picNext').hidden=!allP;
@@ -2790,7 +2800,7 @@ function blkAsk(id,name,words){if(!words.length)return;
   modal(`重做「${name}」（${words.length} 个词）？`,`<p class="small" style="margin-top:0">只重做「${esc(name)}」这一块：AI 只改这一块，存的时候也只收这一块，<b>别的块原样保住</b>。</p>
     <p class="small faint" style="max-height:16vh;overflow:auto;margin:0 0 8px">${words.map(esc).join('、')}</p>
     <p class="small" style="margin:0 0 4px">想怎么改可以写一句（可以不写）：</p><textarea id="bNote" style="width:100%;height:60px" placeholder="比如：例句换成和学校有关的"></textarea>
-    <div class="line" style="gap:8px;margin-top:10px;flex-wrap:wrap"><button class="btn" id="bAi" title="退回以后马上开始：和「一次做全」的补画面一样，过程在那一页">马上让 AI 重做</button><button class="btn ghost" id="bGo" title="先记下，等会儿和别的词一起在「一次做全」点「补画面」">先退回，等会儿一起做</button><button class="btn ghost" id="bNo">不了</button></div>`);
+    <div class="line" style="gap:8px;margin-top:10px;flex-wrap:wrap"><button class="btn" id="bAi" title="退回以后马上开始：和「整套做」的补画面一样，过程在那一页">马上让 AI 重做</button><button class="btn ghost" id="bGo" title="先记下，等会儿和别的词一起在「整套做」点「补画面」">先退回，等会儿一起做</button><button class="btn ghost" id="bNo">不了</button></div>`);
   $('#bNo').onclick=closeModal;
   const send=async op=>{$$('#bAi,#bGo').forEach(b=>b.disabled=true);let r;try{r=await api('/api/blocks',{op,sec:id,words,note:$('#bNote').value})}catch(e){r={ok:false,msg:e.message}}
     closeModal();toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?8000:10000);(BSEL[id]||new Set()).clear();blkLoad(id)};
@@ -2946,7 +2956,7 @@ async function upLoop(words,cv){clearTimeout(UPT);const box=$('#upBox .dproc');i
   const res=document.createElement('div');
   res.innerHTML=`<p style="margin:12px 0 6px"><b>第 ① 步做完了：</b>${fixN?`对得上的块都记成 ${cv} 了；<b style="color:var(--amber)">${fw.length} 个词、${fixN} 块对不上</b>，要交给 AI：`:`<b style="color:var(--pass)">都对得上，都记成 ${cv} 了，不用 AI ✓</b>`}</p>
     ${upRows(f.items,cv,true)}
-    <div class="line" style="gap:10px;margin-top:14px;flex-wrap:wrap">${fixN?`<button class="btn" id="up2now">第 ② 步：马上让 AI 补这 ${fixN} 块 ▶</button><button class="btn ghost" id="up2later">先记下，等会儿到「画面 → 一次做全」补</button>`:''}<button class="btn ghost" id="upClose">关闭</button></div>`;
+    <div class="line" style="gap:10px;margin-top:14px;flex-wrap:wrap">${fixN?`<button class="btn" id="up2now">第 ② 步：马上让 AI 补这 ${fixN} 块 ▶</button><button class="btn ghost" id="up2later">先记下，等会儿到「画面 → 整套做」补</button>`:''}<button class="btn ghost" id="upClose">关闭</button></div>`;
   const m=$('#upMsg');if(m)m.replaceWith(res);else $('#upBox').appendChild(res);
   const two=async now=>{let r;try{r=await api('/api/film',{op:'up2',words:fw,now})}catch(e){r={ok:false,msg:e.message}}toast((r.ok?'✓ ':'✗ ')+(r.msg||''),r.ok?7000:9000);
     if(r.ok){closeModal();LIBS.lib.sel.clear();go(now?'pic':'pic')}};

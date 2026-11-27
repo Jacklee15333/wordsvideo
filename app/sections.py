@@ -369,7 +369,7 @@ def redo_many(sid, words, note=""):
     pend_add(done, sid)
     if not done:
         return {"ok": False, "msg": "没退回去：选的词还没有画面设置"}
-    return {"ok": True, "n": len(done), "msg": "%d 个词的「%s」退回去重做了：到「画面 → 一次做全」点「补画面」，AI 只改这一块" % (len(done), s["name"])}
+    return {"ok": True, "n": len(done), "msg": "%d 个词的「%s」退回去重做了：到「画面 → 整套做」点「补画面」，AI 只改这一块" % (len(done), s["name"])}
 
 
 def imp_list():
@@ -422,7 +422,7 @@ def clear_block(sid, words):
     import pics
     pics.send_back({w: ["用户删掉了「%s」这一块，要按最新的视频技能重做这一块，别的照旧" % s["name"]] for w in done}, src="「%s」删掉" % s["name"])
     pend_add(done, sid)
-    return {"ok": True, "n": len(done), "msg": "删掉了 %d 个词的「%s」：退回去了，到「一次做全」点「补画面」重做这一块" % (len(done), s["name"])}
+    return {"ok": True, "n": len(done), "msg": "删掉了 %d 个词的「%s」：退回去了，到「整套做」点「补画面」重做这一块" % (len(done), s["name"])}
 
 
 
